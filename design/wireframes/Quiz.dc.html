@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Quiz</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#3C7DF0}a:hover{color:#2A5FC4}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F8FB; font-family: 'Nunito', system-ui, sans-serif; color: #1F2937; display: flex; flex-direction: column; padding: 20px; gap: 16px; overflow: hidden">
+  <div style="display: flex; align-items: center; gap: 12px">
+    <a href="Lesson.dc.html" aria-label="Thoát quiz" style="width: 36px; height: 36px; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 8px rgba(31,41,55,0.06)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></a>
+    <div style="flex: 1; height: 12px; border-radius: 6px; background: #E8EDF5"><div style="width: 50%; height: 12px; border-radius: 6px; background: {{accent}}"></div></div>
+    <div style="font-size: 13px; font-weight: 800; color: #6B7280">3/6</div>
+  </div>
+  <div style="background: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 2px 8px rgba(31,41,55,0.06)">
+    <div style="display: flex; align-items: flex-start; gap: 10px">
+      <button aria-label="Đọc to câu hỏi" style="width: 36px; height: 36px; border-radius: 12px; border: none; background: #EAF2FF; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3C7DF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16 9a4 4 0 0 1 0 6"></path></svg></button>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <div style="font-size: 16px; font-weight: 800; line-height: 1.35">Hình nào cho thấy sự phong hoá?</div>
+        <div style="font-size: 12px; color: #6B7280">Which image shows weathering?</div>
+      </div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+    <button style="border: 3px solid {{accent}}; background: #FFFFFF; border-radius: 18px; padding: 10px; font-family: inherit; display: flex; flex-direction: column; gap: 8px; cursor: pointer; position: relative">
+      <span style="position: absolute; top: 8px; right: 8px; width: 24px; height: 24px; border-radius: 12px; background: {{accent}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4 10-11"></path></svg></span>
+      <span style="height: 96px; border-radius: 12px; background: #E8EDF5; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18L9 8l3 5 2-3 6 8z"></path><path d="M9 8l1.5-2M12 13l1-4"></path></svg></span>
+      <span style="font-size: 13px; font-weight: 800; color: #1F2937">Đá nứt vỡ dần</span>
+    </button>
+    <button style="border: 3px solid #E8EDF5; background: #FFFFFF; border-radius: 18px; padding: 10px; font-family: inherit; display: flex; flex-direction: column; gap: 8px; cursor: pointer">
+      <span style="height: 96px; border-radius: 12px; background: #E8EDF5; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20h8l2-9-4 2-2-6-2 6-4-2z"></path><path d="M12 4v3"></path></svg></span>
+      <span style="font-size: 13px; font-weight: 800; color: #1F2937">Núi lửa phun</span>
+    </button>
+    <button style="border: 3px solid #E8EDF5; background: #FFFFFF; border-radius: 18px; padding: 10px; font-family: inherit; display: flex; flex-direction: column; gap: 8px; cursor: pointer">
+      <span style="height: 96px; border-radius: 12px; background: #E8EDF5; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-8"></path><path d="M12 12c0-4 3-6 6-6-1 4-3 6-6 6zM12 14c0-3-2.5-5-5-5 .8 3.2 2.5 5 5 5z"></path></svg></span>
+      <span style="font-size: 13px; font-weight: 800; color: #1F2937">Cây nảy mầm</span>
+    </button>
+    <button style="border: 3px solid #E8EDF5; background: #FFFFFF; border-radius: 18px; padding: 10px; font-family: inherit; display: flex; flex-direction: column; gap: 8px; cursor: pointer">
+      <span style="height: 96px; border-radius: 12px; background: #E8EDF5; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path></svg></span>
+      <span style="font-size: 13px; font-weight: 800; color: #1F2937">Sóng biển</span>
+    </button>
+  </div>
+  <div style="background: #E9F7F0; border: 1px solid #BEE5D2; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E9465" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16.5v.5"></path></svg>
+    <div style="font-size: 12px; color: #1F7A4D; line-height: 1.5"><span style="font-weight: 800">Gợi ý:</span> Phong hoá là khi đá bị vỡ vụn từ từ bởi thời tiết — không phải do núi lửa đâu nhé!</div>
+  </div>
+  <div style="flex: 1"></div>
+  <button style="border: none; background: {{accent}}; color: #FFFFFF; font-family: inherit; font-weight: 800; font-size: 16px; padding: 16px; border-radius: 18px; cursor: pointer">Kiểm tra đáp án</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3C7DF0","options":["#3C7DF0","#7C5CFC","#2E9465","#FF8A3D"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#3C7DF0' };
+  }
+}
+</script>
+</body>
+</html>

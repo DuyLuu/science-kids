@@ -1,0 +1,17 @@
+# Science Kids
+
+App học khoa học song ngữ Anh–Việt cho trẻ 5–11 tuổi. Syllabus tham khảo khung primary science của Oak National Academy (UK); nội dung, hình ảnh, thiết kế tự làm riêng.
+
+## Tài liệu
+
+| File | Nội dung | Artifact gốc |
+| --- | --- | --- |
+| [prd.md](prd.md) | PRD đầy đủ 10 mục | [PRD (tab PRD)](https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe) |
+| [syllabus.md](syllabus.md) | Syllabus 3 nhóm tuổi, lộ trình học, timeline sản xuất GĐ 0 | [PRD (tab Syllabus & nội dung)](https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe) |
+| [design/wireframes/](design/wireframes/) | 7 màn hình wireframe (canvas.json + *.dc.html) | [Science Kids Wireframes](https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ) |
+
+## Workflow review
+
+1. **Review và sửa trực tiếp các file .md trong repo** — đây là nguồn chính trong giai đoạn plan.
+2. Khi plan chốt, nói Claude **publish lại artifact** từ các file .md (artifact chỉ để chia sẻ/trình bày, có sơ đồ vẽ).
+3. Wireframes: sửa file trong `design/wireframes/` rồi nhờ Claude publish lên canvas, hoặc sửa trực tiếp trên canvas.

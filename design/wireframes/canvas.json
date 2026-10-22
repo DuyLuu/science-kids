@@ -1,0 +1,22 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-21T10:00:00Z"},
+  "title": "Science Kids Wireframes",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Onboarding.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "1 · Onboarding", "radius": 24, "is_interactive": true},
+    "Main.dc.html": {"x": 470, "y": 0, "w": 390, "h": 844, "title": "2 · Trang chủ", "radius": 24, "is_interactive": true},
+    "Unit.dc.html": {"x": 940, "y": 0, "w": 390, "h": 844, "title": "3 · Chủ đề (Unit)", "radius": 24, "is_interactive": true},
+    "Lesson.dc.html": {"x": 1410, "y": 0, "w": 390, "h": 844, "title": "4 · Bài học", "radius": 24, "is_interactive": true},
+    "Quiz.dc.html": {"x": 0, "y": 1200, "w": 390, "h": 844, "title": "5 · Quiz", "radius": 24, "is_interactive": true},
+    "Progress.dc.html": {"x": 470, "y": 1200, "w": 390, "h": 844, "title": "6 · Huy hiệu & tiến độ", "radius": 24, "is_interactive": true},
+    "Parent.dc.html": {"x": 940, "y": 1200, "w": 390, "h": 844, "title": "7 · Góc phụ huynh", "radius": 24, "is_interactive": true}
+  },
+  "order": ["Onboarding.dc.html", "Main.dc.html", "Unit.dc.html", "Lesson.dc.html", "Quiz.dc.html", "Progress.dc.html", "Parent.dc.html"],
+  "notes": {
+    "t1": {"x": 0, "y": -260, "text": "Science Kids — Luồng học chính", "kind": "title1", "maxW": 1800},
+    "t2": {"x": 0, "y": 940, "text": "Quiz · Tiến độ · Phụ huynh", "kind": "title1", "maxW": 1330}
+  },
+  "designSystems": []
+}

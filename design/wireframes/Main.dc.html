@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Trang chủ</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#3C7DF0}a:hover{color:#2A5FC4}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F8FB; font-family: 'Nunito', system-ui, sans-serif; color: #1F2937; display: flex; flex-direction: column; overflow: hidden">
+  <div style="flex: 1; min-height: 0; padding: 24px 20px 12px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <div style="width: 44px; height: 44px; border-radius: 22px; background: #FFD66B; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: #7A5200">A</div>
+      <div style="flex: 1; display: flex; flex-direction: column">
+        <div style="font-size: 18px; font-weight: 800">Chào An!</div>
+        <div style="font-size: 12px; color: #6B7280">Year 3 · Lớp 3</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; background: #FFF1DC; border-radius: 16px; padding: 6px 12px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E07B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1 4-5 6-5 11a5 5 0 0 0 10 0c0-2-1-3.5-1-3.5s3 1.5 3 4.5"></path></svg>
+        <span style="font-weight: 800; color: #E07B00; font-size: 14px">5 ngày</span>
+      </div>
+    </div>
+    <div style="background: #FFFFFF; border-radius: 20px; padding: 16px; box-shadow: 0 2px 8px rgba(31,41,55,0.06); display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: {{accent}}">HỌC TIẾP</div>
+      <div style="font-size: 16px; font-weight: 800">Đá và đất · Rocks and soils</div>
+      <div style="font-size: 13px; color: #6B7280">Bài 4/16 · Hoá thạch hình thành thế nào?</div>
+      <div style="height: 8px; border-radius: 4px; background: #E8EDF5"><div style="width: 25%; height: 8px; border-radius: 4px; background: {{accent}}"></div></div>
+      <a href="Lesson.dc.html" style="align-self: flex-start; text-decoration: none; background: {{accent}}; color: #FFFFFF; font-weight: 800; font-size: 14px; padding: 10px 22px; border-radius: 14px">Tiếp tục</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <div style="font-size: 15px; font-weight: 800">Chủ đề Year 3</div>
+        <a href="Unit.dc.html" style="font-size: 12px; font-weight: 700; text-decoration: none">Xem tất cả</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <a href="Unit.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 2px 8px rgba(31,41,55,0.06)">
+          <div style="width: 40px; height: 40px; border-radius: 12px; background: #E7F0FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3C7DF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18L14 6l-4 7-3-4z"></path></svg></div>
+          <div style="font-size: 13px; font-weight: 800; line-height: 1.25">Đá và đất</div>
+          <div style="font-size: 11px; color: #6B7280">Rocks and soils</div>
+          <div style="font-size: 11px; font-weight: 700; color: #2E9465">4/16 bài</div>
+        </a>
+        <a href="Unit.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 2px 8px rgba(31,41,55,0.06)">
+          <div style="width: 40px; height: 40px; border-radius: 12px; background: #FFF3DC; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E07B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg></div>
+          <div style="font-size: 13px; font-weight: 800; line-height: 1.25">Ánh sáng và bóng tối</div>
+          <div style="font-size: 11px; color: #6B7280">Light and shadows</div>
+          <div style="font-size: 11px; font-weight: 700; color: #9AA3B2">0/14 bài</div>
+        </a>
+        <a href="Unit.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 2px 8px rgba(31,41,55,0.06)">
+          <div style="width: 40px; height: 40px; border-radius: 12px; background: #EDE7FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C5CFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4v7a6 6 0 0 0 12 0V4"></path><path d="M6 4h4v6M14 4h4v6"></path></svg></div>
+          <div style="font-size: 13px; font-weight: 800; line-height: 1.25">Lực và nam châm</div>
+          <div style="font-size: 11px; color: #6B7280">Simple forces including magnets</div>
+          <div style="font-size: 11px; font-weight: 700; color: #9AA3B2">0/15 bài</div>
+        </a>
+        <a href="Unit.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 2px 8px rgba(31,41,55,0.06)">
+          <div style="width: 40px; height: 40px; border-radius: 12px; background: #E0F4EA; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E9465" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"></circle><path d="M12 10v6M8 14h8M9 21l3-5 3 5"></path></svg></div>
+          <div style="font-size: 13px; font-weight: 800; line-height: 1.25">Bộ xương và cơ</div>
+          <div style="font-size: 11px; color: #6B7280">Skeleton and muscles</div>
+          <div style="font-size: 11px; font-weight: 700; color: #9AA3B2">0/14 bài</div>
+        </a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 15px; font-weight: 800">Câu hỏi lớn · Big Questions</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <div style="background: #EDE7FF; color: #5B3FBF; font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 14px">Vật được làm từ gì?</div>
+        <div style="background: #E0F4EA; color: #1F7A4D; font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 14px">Lực hoạt động ra sao?</div>
+        <div style="background: #FFE9E3; color: #B14A2A; font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 14px">Sinh vật sống là gì?</div>
+      </div>
+    </div>
+  </div>
+  <div style="background: #FFFFFF; border-top: 1px solid #E8EDF5; display: flex; padding: 10px 8px 22px">
+    <a href="Main.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: {{accent}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg><span style="font-size: 10px; font-weight: 800">Trang chủ</span></a>
+    <a href="Unit.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA3B2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-2 5-4 2 2-5z"></path></svg><span style="font-size: 10px; font-weight: 700">Khám phá</span></a>
+    <a href="Quiz.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA3B2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 3v5h-5"></path></svg><span style="font-size: 10px; font-weight: 700">Ôn tập</span></a>
+    <a href="Progress.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA3B2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 4-6 8-6s7 2 8 6"></path></svg><span style="font-size: 10px; font-weight: 700">Hồ sơ</span></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3C7DF0","options":["#3C7DF0","#7C5CFC","#2E9465","#FF8A3D"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#3C7DF0' };
+  }
+}
+</script>
+</body>
+</html>

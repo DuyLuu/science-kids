@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Onboarding</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#3C7DF0}a:hover{color:#2A5FC4}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F8FB; font-family: 'Nunito', system-ui, sans-serif; color: #1F2937; display: flex; flex-direction: column; padding: 32px 24px 28px; gap: 22px; overflow: hidden">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+    <div style="width: 72px; height: 72px; border-radius: 36px; background: {{accent}}; display: flex; align-items: center; justify-content: center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2"></circle><ellipse cx="12" cy="12" rx="10" ry="4.2"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"></ellipse></svg>
+    </div>
+    <div style="font-size: 26px; font-weight: 800">Science Kids</div>
+    <div style="font-size: 13px; color: #6B7280; text-align: center">Khoa học vui mỗi ngày · Science fun for kids</div>
+  </div>
+  <div style="background: #FFFFFF; border-radius: 20px; padding: 16px; box-shadow: 0 2px 8px rgba(31,41,55,0.06); display: flex; flex-direction: column; gap: 12px">
+    <div style="font-size: 14px; font-weight: 800">Chọn ngôn ngữ · Choose language</div>
+    <button style="display: flex; align-items: center; gap: 12px; background: #EAF2FF; border: 2px solid {{accent}}; border-radius: 14px; padding: 12px; font-family: inherit; text-align: left; cursor: pointer">
+      <span style="width: 36px; height: 36px; border-radius: 10px; background: {{accent}}; color: #FFFFFF; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center">VI</span>
+      <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Song ngữ Việt – Anh</span><span style="font-size: 12px; color: #6B7280">Tiếng Việt kèm tiếng Anh</span></span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3C7DF0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4 10-11"></path></svg>
+    </button>
+    <button style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 2px solid #E8EDF5; border-radius: 14px; padding: 12px; font-family: inherit; text-align: left; cursor: pointer">
+      <span style="width: 36px; height: 36px; border-radius: 10px; background: #E8EDF5; color: #4B5563; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center">EN</span>
+      <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 14px; font-weight: 800; color: #1F2937">English first</span><span style="font-size: 12px; color: #6B7280">Chạm vào từ để xem tiếng Việt</span></span>
+    </button>
+  </div>
+  <div style="background: #FFFFFF; border-radius: 20px; padding: 16px; box-shadow: 0 2px 8px rgba(31,41,55,0.06); display: flex; flex-direction: column; gap: 12px">
+    <div style="font-size: 14px; font-weight: 800">Bé bao nhiêu tuổi?</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+      <button style="border: 2px solid #E8EDF5; background: #FFFFFF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 1</span><span style="font-size: 11px; color: #6B7280">5–6 tuổi</span></button>
+      <button style="border: 2px solid #E8EDF5; background: #FFFFFF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 2</span><span style="font-size: 11px; color: #6B7280">6–7 tuổi</span></button>
+      <button style="border: 2px solid {{accent}}; background: #EAF2FF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 3</span><span style="font-size: 11px; color: #6B7280">7–8 tuổi</span></button>
+      <button style="border: 2px solid #E8EDF5; background: #FFFFFF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 4</span><span style="font-size: 11px; color: #6B7280">8–9 tuổi</span></button>
+      <button style="border: 2px solid #E8EDF5; background: #FFFFFF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 5</span><span style="font-size: 11px; color: #6B7280">9–10 tuổi</span></button>
+      <button style="border: 2px solid #E8EDF5; background: #FFFFFF; border-radius: 14px; padding: 10px 4px; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer"><span style="font-size: 14px; font-weight: 800; color: #1F2937">Year 6</span><span style="font-size: 11px; color: #6B7280">10–11 tuổi</span></button>
+    </div>
+    <div style="font-size: 11px; color: #9AA3B2">Year 3 tương đương Lớp 2–3 ở Việt Nam. Đổi được bất cứ lúc nào.</div>
+  </div>
+  <div style="flex: 1"></div>
+  <a href="Main.dc.html" style="text-decoration: none; background: {{accent}}; color: #FFFFFF; font-weight: 800; font-size: 16px; padding: 16px; border-radius: 18px; text-align: center">Bắt đầu khám phá!</a>
+  <div style="font-size: 12px; color: #9AA3B2; text-align: center">Học thử 3 bài miễn phí · Phụ huynh đăng ký sau</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3C7DF0","options":["#3C7DF0","#7C5CFC","#2E9465","#FF8A3D"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#3C7DF0' };
+  }
+}
+</script>
+</body>
+</html>
