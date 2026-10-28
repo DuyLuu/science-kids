@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Style B · Cắt giấy nhiều lớp · bảng style</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500;700;900&amp;family=Lexend:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#F2B33D}a:hover{color:#F5F2EA}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #1D4330; font-family: 'Lexend', 'Segoe UI', sans-serif; color: #F5F2EA">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperB" x="-10%" y="-10%" width="120%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="3" stdDeviation="2" flood-color="#06170E" flood-opacity="0.5"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px; display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="flex-shrink: 0"><g filter="url(#paperB)"><circle cx="28" cy="27" r="25" fill="#F2B33D"></circle></g><text x="28" y="37" text-anchor="middle" font-family="Grandstander, sans-serif" font-size="30" font-weight="900" fill="#3A1F05">B</text></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: 'Grandstander', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1">Cắt giấy nhiều lớp</span>
+        <span style="font-size: 14px; color: #CFE3C8">Diorama giấy trên lá chuối</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px">
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#1D4330" stroke="#7DB46C" stroke-width="1"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Lá đậm</span><span style="font-size: 10.5px; color: #CFE3C8">#1D4330</span></div>
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#3E8A57"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Lá</span><span style="font-size: 10.5px; color: #CFE3C8">#3E8A57</span></div>
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#F5F2EA"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Giấy</span><span style="font-size: 10.5px; color: #CFE3C8">#F5F2EA</span></div>
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#F2B33D"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Vạn thọ</span><span style="font-size: 10.5px; color: #CFE3C8">#F2B33D</span></div>
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#C2412A"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Cà chua</span><span style="font-size: 10.5px; color: #CFE3C8">#C2412A</span></div>
+      <div style="display: flex; flex-direction: column; gap: 3px"><svg width="100%" height="44" viewBox="0 0 54 44" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paperB)"><rect x="3" y="3" width="48" height="36" rx="3" fill="#2F5D9E"></rect></g></svg><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Men lam</span><span style="font-size: 10.5px; color: #CFE3C8">#2F5D9E</span></div>
+    </div>
+
+    <div style="filter: drop-shadow(0 4px 3px rgba(4, 20, 12, 0.45))">
+      <div style="background: #F5F2EA; color: #1D3B2A; padding: 18px 16px 12px 16px; clip-path: polygon(0 6px, 7% 1px, 14% 5px, 22% 0, 30% 4px, 39% 1px, 47% 6px, 55% 2px, 63% 5px, 71% 0, 80% 4px, 88% 1px, 95% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 4px">
+        <span style="font-family: 'Grandstander', sans-serif; font-size: 28px; font-weight: 900; line-height: 1.15">Ăn uống lành mạnh</span>
+        <span style="font-size: 17px; font-weight: 600">Chất đạm giúp cơ thể lớn lên.</span>
+        <span style="font-size: 12px; color: #3D5546">Grandstander — tiêu đề · Lexend — nội dung</span>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 10px">
+      <button style="position: relative; flex: 1; height: 62px; border: none; background: transparent; padding: 0; cursor: pointer; font-family: 'Grandstander', sans-serif; font-size: 21px; font-weight: 900; color: #3A1F05">
+        <svg width="100%" height="100%" viewBox="0 0 172 62" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperB)"><rect x="3" y="9" width="166" height="49" rx="14" fill="#C2412A"></rect></g><g filter="url(#paperB)"><rect x="3" y="3" width="166" height="49" rx="14" fill="#F2B33D"></rect></g></svg>
+        <span style="position: relative; display: flex; align-items: center; justify-content: center; height: 55px">Tiếp</span>
+      </button>
+      <button style="position: relative; flex: 1; height: 62px; border: none; background: transparent; padding: 0; cursor: pointer; font-family: 'Lexend', sans-serif; font-size: 17px; font-weight: 700; color: #1D3B2A">
+        <svg width="100%" height="100%" viewBox="0 0 172 62" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperB)"><rect x="3" y="9" width="166" height="49" rx="14" fill="#2B6544"></rect></g><g filter="url(#paperB)"><rect x="3" y="3" width="166" height="49" rx="14" fill="#F5F2EA"></rect></g></svg>
+        <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; height: 55px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D3B2A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"></path><path d="M16 9a4 4 0 0 1 0 6"></path></svg>Nghe lại</span>
+      </button>
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: center">
+      <div style="flex: 1; display: flex; align-items: center; gap: 8px">
+        <svg width="54" height="54" viewBox="0 0 52 52" aria-hidden="true"><g filter="url(#paperB)"><path d="M49 26 L38.9 31.4 L42.3 42.3 L31.4 38.9 L26 49 L20.6 38.9 L9.7 42.3 L13.1 31.4 L3 26 L13.1 20.6 L9.7 9.7 L20.6 13.1 L26 3 L31.4 13.1 L42.3 9.7 L38.9 20.6 Z" fill="#F2B33D"></path></g><path d="M18 26 l6 6 l10 -12" fill="none" stroke="#3A1F05" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span style="font-family: 'Grandstander', sans-serif; font-size: 20px; font-weight: 900">Đúng rồi!</span>
+      </div>
+      <div style="flex: 1; position: relative; filter: drop-shadow(0 3px 2px rgba(4, 20, 12, 0.45))">
+        <div style="background: #F5F2EA; color: #1D3B2A; height: 52px; display: flex; align-items: center; padding: 0 12px; font-size: 15px; font-weight: 700; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)">Thử lại nhé</div>
+        <span aria-hidden="true" style="position: absolute; top: 0; right: 0; width: 16px; height: 16px; background: #CFC7B2; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span>
+      </div>
+    </div>
+
+    <svg viewBox="0 0 340 150" role="img" aria-label="Ếch đồng bằng giấy cắt nhiều lớp, có nhãn mắt và chân sau" style="display: block; width: 100%; height: auto">
+      <g transform="translate(8 4) scale(0.9)">
+        <g filter="url(#paperB)"><path d="M48 104 C 14 104, 8 136, 40 138 L 64 132 Z" fill="#3E8A57"></path><path d="M152 104 C 186 104, 192 136, 160 138 L 136 132 Z" fill="#3E8A57"></path></g>
+        <g filter="url(#paperB)"><circle cx="70" cy="64" r="17" fill="#7DB46C"></circle><circle cx="130" cy="64" r="17" fill="#7DB46C"></circle></g>
+        <g filter="url(#paperB)"><path d="M36 100 C 36 62, 164 62, 164 100 C 164 128, 36 128, 36 100 Z" fill="#7DB46C"></path></g>
+        <g filter="url(#paperB)"><ellipse cx="100" cy="108" rx="44" ry="14" fill="#B4D69A"></ellipse></g>
+        <ellipse cx="100" cy="82" rx="9" ry="5" fill="#3E8A57"></ellipse>
+        <ellipse cx="74" cy="92" rx="6" ry="4" fill="#3E8A57"></ellipse>
+        <ellipse cx="126" cy="90" rx="6" ry="4" fill="#3E8A57"></ellipse>
+        <g filter="url(#paperB)"><circle cx="70" cy="64" r="10" fill="#F5F2EA"></circle><circle cx="130" cy="64" r="10" fill="#F5F2EA"></circle></g>
+        <circle cx="71" cy="65" r="5" fill="#10261A"></circle>
+        <circle cx="131" cy="65" r="5" fill="#10261A"></circle>
+        <path d="M80 97 Q 100 106 120 97" fill="none" stroke="#10261A" stroke-width="2.6" stroke-linecap="round"></path>
+        <g filter="url(#paperB)"><ellipse cx="84" cy="127" rx="12" ry="6" fill="#3E8A57"></ellipse><ellipse cx="116" cy="127" rx="12" ry="6" fill="#3E8A57"></ellipse></g>
+      </g>
+      <text x="206" y="34" font-family="Grandstander, sans-serif" font-size="22" font-weight="900" fill="#F5F2EA">Ếch đồng</text>
+      <g transform="translate(206 52) rotate(-3)">
+        <g filter="url(#paperB)"><rect width="88" height="26" rx="4" fill="#F5F2EA"></rect></g>
+        <circle cx="10" cy="13" r="3" fill="#1D4330"></circle>
+        <text x="18" y="18" font-family="Lexend, sans-serif" font-size="13" font-weight="700" fill="#1D3B2A">mắt · eye</text>
+      </g>
+      <g transform="translate(200 96) rotate(3)">
+        <g filter="url(#paperB)"><rect width="134" height="26" rx="4" fill="#F5F2EA"></rect></g>
+        <circle cx="10" cy="13" r="3" fill="#1D4330"></circle>
+        <text x="18" y="18" font-family="Lexend, sans-serif" font-size="13" font-weight="700" fill="#1D3B2A">chân sau · back leg</text>
+      </g>
+    </svg>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 13px; font-weight: 700; color: #CFE3C8">Cùng một lựa chọn đáp án ở 3 lứa tuổi</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 12px; font-weight: 600; color: #CFE3C8">5–7 tuổi</span>
+          <button aria-label="Quả trứng" style="height: 100px; border: none; border-radius: 12px; background: #F5F2EA; box-shadow: 0 5px 0 #0E2A1D; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+            <svg width="58" height="72" viewBox="0 0 64 78" aria-hidden="true"><g filter="url(#paperB)"><ellipse cx="32" cy="38" rx="25" ry="32" fill="#E8C08A"></ellipse></g></svg>
+          </button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 12px; font-weight: 600; color: #CFE3C8">7–9 tuổi</span>
+          <button style="height: 100px; border: none; border-radius: 12px; background: #F5F2EA; box-shadow: 0 5px 0 #0E2A1D; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0">
+            <svg width="38" height="48" viewBox="0 0 64 78" aria-hidden="true"><g filter="url(#paperB)"><ellipse cx="32" cy="38" rx="25" ry="32" fill="#E8C08A"></ellipse></g></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #1D3B2A">egg · trứng</span>
+          </button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 12px; font-weight: 600; color: #CFE3C8">9–11 tuổi</span>
+          <button style="height: 100px; border: none; border-radius: 12px; background: #F5F2EA; box-shadow: 0 5px 0 #0E2A1D; cursor: pointer; display: flex; align-items: center; padding: 10px; text-align: left; font-family: 'Lexend', sans-serif; font-size: 13.5px; font-weight: 600; line-height: 1.35; color: #1D3B2A">Eggs are rich in protein.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 2; pointer-events: none; mix-blend-mode: overlay; opacity: 0.22">
+    <filter id="fiberB" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="9"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberB)"></rect>
+  </svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

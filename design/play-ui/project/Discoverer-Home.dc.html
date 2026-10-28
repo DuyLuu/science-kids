@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Discoverer · Trang chủ hành trình</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px 20px 22px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div class="e-lay" style="display: flex; align-items: center; gap: 10px">
+      <a href="Discoverer-Profiles.dc.html" class="e-press" aria-label="Đổi hồ sơ, đang học: Minh" style="position: relative; width: 56px; height: 56px; flex-shrink: 0; display: block">
+      <svg width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="48.5" y="9" width="3" height="18" rx="1.5" fill="#1E1B18"></rect>
+        <g filter="url(#paperE)"><circle cx="50" cy="9" r="6.5" fill="#E2A52A"></circle></g>
+        <g filter="url(#paperE)"><circle cx="50" cy="58" r="36" fill="#3B6E6A"></circle></g>
+        <g filter="url(#paperE)"><ellipse cx="50" cy="73" rx="21" ry="14" fill="#F0E6CF"></ellipse></g>
+        <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+        <circle cx="40" cy="52" r="4.2" fill="#1E1B18"></circle><circle cx="64" cy="52" r="4.2" fill="#1E1B18"></circle>
+        <path d="M41 67 Q 50 77 59 67 Q 50 71 41 67 Z" fill="#1E1B18"></path>
+        <circle cx="27" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle><circle cx="73" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle>
+      </svg>
+      <span aria-hidden="true" style="position: absolute; right: -4px; bottom: -2px; width: 22px; height: 22px; border-radius: 11px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7z" fill="#4E4336"></path></svg></span>
+      </a>
+      <div style="display: flex; flex-direction: column; gap: 1px">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 23px; font-weight: 900; line-height: 1.1">Chào Minh!</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4E4336">Discoverer · Year 3</span>
+      </div>
+      <div style="flex: 1"></div>
+      <a href="Discoverer-Badges.dc.html" class="e-press" aria-label="Chuỗi 6 ngày, xem huy hiệu" style="height: 44px; text-decoration: none; color: #1E1B18; box-sizing: border-box; padding: 0 11px 0 9px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 5px; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-2 2-5 5-5 8 0 4 3 7 7 7z" fill="#A93A27"></path></g><path d="M12 21c2.2 0 3.8-1.6 3.8-3.8 0-2.2-1.6-3.3-2.2-5.4-1.1 1.1-1.6 2.2-1.6 3.3-.6-.6-1.1-1.1-1.1-2.2-1.1 1.1-2.7 2.7-2.7 4.3 0 2.2 1.6 3.8 3.8 3.8z" fill="#E2A52A"></path></svg>6
+      </a>
+      <a href="Discoverer-Badges.dc.html" class="e-press" aria-label="128 sao, xem huy hiệu" style="height: 44px; text-decoration: none; color: #1E1B18; box-sizing: border-box; padding: 0 11px 0 9px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 5px; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z" fill="#E2A52A"></path></g></svg>128
+      </a>
+    </div>
+
+    <div class="e-lay" style="--d: 110ms; position: relative; flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 16px; display: flex; flex-direction: column; gap: 6px; overflow: hidden">
+      <svg width="104" height="104" viewBox="50 26 240 240" aria-hidden="true" style="position: absolute; right: -14px; top: -20px">
+        <g transform="translate(6 236) rotate(-32)" filter="url(#paperE)">
+          <path d="M0 -2 C 70 -64, 260 -66, 360 -2 Z" fill="#3B6E6A"></path>
+          <path d="M0 2 C 70 60, 260 64, 360 2 Z" fill="#2F5B57"></path>
+        </g>
+        <g filter="url(#paperE)"><circle cx="170" cy="146" r="110" fill="#2E4A6E"></circle></g>
+        <circle cx="170" cy="146" r="101" fill="#FBF6EA"></circle>
+        <circle cx="170" cy="146" r="72" fill="#F4ECDA"></circle>
+        <g transform="translate(42 58) scale(0.8)">
+          <g filter="url(#paperE)"><path d="M128 47 C 138 26, 170 24, 186 46 Z" fill="#A93A27"></path><path d="M150 96 C 158 112, 176 112, 182 94 Z" fill="#A93A27"></path></g>
+          <g filter="url(#paperE)"><path d="M70 72 C 92 38, 168 30, 210 62 L 246 38 C 238 62 238 84 246 106 L 210 82 C 168 112, 92 106, 70 72 Z" fill="#E2A52A"></path></g>
+          <g filter="url(#paperE)"><path d="M96 74 C 122 58, 172 56, 202 70 C 172 84, 122 88, 96 74 Z" fill="#F0C873"></path></g>
+          <g filter="url(#paperE)"><path d="M212 63 L 246 38 C 238 62 238 84 246 106 L 212 81 Z" fill="#A93A27"></path></g>
+          <path d="M122 50 Q 107 72 122 94 Q 115 72 128 51 Z" fill="#B97F16"></path>
+          <g filter="url(#paperE)"><circle cx="98" cy="66" r="9" fill="#FBF6EA"></circle></g>
+          <circle cx="99" cy="66" r="4.5" fill="#1E1B18"></circle>
+        </g>
+        <g filter="url(#paperE)"><ellipse cx="124" cy="196" rx="23" ry="29" fill="#D9A066"></ellipse></g>
+        <g filter="url(#paperE)"><ellipse cx="168" cy="206" rx="22" ry="25" fill="#FFFFFF"></ellipse></g>
+        <g filter="url(#paperE)"><circle cx="168" cy="209" r="11" fill="#E2A52A"></circle></g>
+        <g transform="translate(66 64) scale(0.72)" filter="url(#paperE)">
+          <path d="M196 150 L 248 140 L 280 154 L 228 165 Z" fill="#F6E7B8"></path>
+          <path d="M196 150 L 228 165 L 228 204 L 196 189 Z" fill="#DDBB6E"></path>
+          <path d="M228 165 L 280 154 L 280 193 L 228 204 Z" fill="#EBD293"></path>
+        </g>
+      </svg>
+      <span style="align-self: flex-start; display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 10px; background: #A93A27; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Học tiếp · Miễn phí</span></span>
+      <span style="font-family: 'Phudu', sans-serif; font-size: 27px; font-weight: 900; line-height: 1.1">Ăn uống lành mạnh</span>
+      <span style="font-size: 15px; font-weight: 600; line-height: 1.4; color: #4E4336">Bài 1/5 · Thức ăn cho ta những gì?</span>
+      <div style="display: flex; align-items: center; gap: 12px; margin-top: 4px">
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+          <svg width="118" height="24" viewBox="0 0 118 24" aria-hidden="true">
+            <g filter="url(#paperE)">
+              <rect x="2" y="2" width="18" height="18" rx="2" fill="#E2A52A"></rect>
+              <rect x="26" y="2" width="18" height="18" rx="2" fill="#E2D4B4"></rect>
+              <rect x="50" y="2" width="18" height="18" rx="2" fill="#E2D4B4"></rect>
+              <rect x="74" y="2" width="18" height="18" rx="2" fill="#E2D4B4"></rect>
+              <rect x="98" y="2" width="18" height="18" rx="2" fill="#E2D4B4"></rect>
+            </g>
+          </svg>
+          <span style="font-size: 13px; font-weight: 600; color: #4E4336">0/5 bài · khoảng 8 phút</span>
+        </div>
+        <a href="Discoverer-Warmup.dc.html" class="e-press e-nudge" aria-label="Bắt đầu bài 1" style="width: 64px; height: 64px; flex-shrink: 0; display: block">
+          <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g filter="url(#paperE)"><circle cx="32" cy="35" r="27" fill="#6E2216"></circle></g><g filter="url(#paperE)"><circle cx="32" cy="29" r="27" fill="#A93A27"></circle></g><path d="M26 18.5l16 10.5-16 10.5z" fill="#FBF6EA"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="e-lay" style="--d: 190ms; display: flex; justify-content: space-between; align-items: baseline">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 900">Hành trình Year 3</span>
+      <span style="font-size: 13px; font-weight: 600; color: #4E4336">6 chủ đề · dễ → khó</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <a href="Discoverer-Topic.dc.html" class="e-lay e-press" style="--d: 250ms; display: flex; align-items: center; gap: 14px; text-decoration: none; color: #1E1B18; margin-left: 0px">
+        <span style="width: 56px; height: 56px; border-radius: 12px; background: #FBF6EA; box-shadow: 5px 6px 0 #E2A52A, 0 3px 4px rgba(91, 59, 23, 0.22); transform: rotate(-3deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="40" height="35" viewBox="14 10 92 80" aria-hidden="true">
+            <g filter="url(#paperE)"><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"></path></g>
+            <g filter="url(#paperE)"><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"></path></g>
+            <g filter="url(#paperE)"><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"></path></g>
+            <g filter="url(#paperE)"><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"></path></g>
+          </svg>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25">Ăn uống lành mạnh</span><span style="font-size: 12px; font-weight: 700; color: #A93A27">Mức 2 · Đang học</span></span>
+      </a>
+      <a href="Discoverer-Unlock.dc.html" class="e-lay e-press" style="--d: 320ms; display: flex; align-items: center; gap: 14px; margin-left: 44px; text-decoration: none; color: #1E1B18">
+        <span style="position: relative; width: 56px; height: 56px; border-radius: 12px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); transform: rotate(2deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-45 12 12)" fill="#4E4336"><rect x="5" y="10" width="14" height="4" rx="1"></rect><circle cx="5" cy="9.6" r="2.7"></circle><circle cx="5" cy="14.4" r="2.7"></circle><circle cx="19" cy="9.6" r="2.7"></circle><circle cx="19" cy="14.4" r="2.7"></circle></g></svg>
+          <span style="position: absolute; right: -6px; bottom: -6px; width: 24px; height: 24px; border-radius: 12px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #4E4336">Bộ xương và cơ bắp</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">Mức 3 · Nhờ bố mẹ mở khoá</span></span>
+      </a>
+      <div class="e-lay" style="--d: 390ms; display: flex; align-items: center; gap: 14px; margin-left: 88px">
+        <span style="position: relative; width: 56px; height: 56px; border-radius: 12px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><g fill="#4E4336"><circle cx="12" cy="12" r="4.6"></circle><rect x="11" y="1.5" width="2" height="4" rx="1"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(45 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(90 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(135 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(180 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(225 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(270 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(315 12 12)"></rect></g></svg>
+          <span style="position: absolute; right: -6px; bottom: -6px; width: 24px; height: 24px; border-radius: 12px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #4E4336">Ánh sáng và bóng tối</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">Mức 3</span></span>
+      </div>
+      <div class="e-lay" style="--d: 460ms; display: flex; align-items: center; gap: 14px; margin-left: 44px">
+        <span style="position: relative; width: 56px; height: 56px; border-radius: 12px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); transform: rotate(3deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5h5v7.5a2.5 2.5 0 0 0 5 0V3.5h5V11a7.5 7.5 0 0 1-15 0z" fill="#4E4336"></path><rect x="4.5" y="3.5" width="5" height="3" fill="#FBF6EA"></rect><rect x="14.5" y="3.5" width="5" height="3" fill="#FBF6EA"></rect></svg>
+          <span style="position: absolute; right: -6px; bottom: -6px; width: 24px; height: 24px; border-radius: 12px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #4E4336">Lực và nam châm</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">Mức 3</span></span>
+      </div>
+      <div class="e-lay" style="--d: 530ms; display: flex; align-items: center; gap: 14px; margin-left: 0px">
+        <span style="position: relative; width: 56px; height: 56px; border-radius: 12px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><g fill="#4E4336"><rect x="11" y="11" width="2" height="10" rx="1"></rect><path d="M12 13c0-4.4 3.2-7.6 8.5-7.6 0 4.4-3.2 7.6-8.5 7.6z"></path><path d="M12 15.5c0-3.4-2.3-5.6-6.5-5.6 0 3.4 2.3 5.6 6.5 5.6z"></path><rect x="6" y="20" width="12" height="2.2" rx="1.1"></rect></g></svg>
+          <span style="position: absolute; right: -6px; bottom: -6px; width: 24px; height: 24px; border-radius: 12px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #4E4336">Cây làm gì và cần gì</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">Mức 3</span></span>
+      </div>
+      <div class="e-lay" style="--d: 600ms; display: flex; align-items: center; gap: 14px; margin-left: 44px">
+        <span style="position: relative; width: 56px; height: 56px; border-radius: 12px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); transform: rotate(2deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 19.5l5.2-9.2 3.3 3.6 4.6-8.4 6 14z" fill="#4E4336"></path></svg>
+          <span style="position: absolute; right: -6px; bottom: -6px; width: 24px; height: 24px; border-radius: 12px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #4E4336">Đá và đất</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">Mức 3</span></span>
+      </div>
+    </div>
+
+    <div style="flex: 1"></div>
+    <div style="margin: 0 -20px -22px -20px; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
+      <nav aria-label="Điều hướng chính" style="background: #FBF6EA; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 14px 8px 18px 8px">
+        <a href="Discoverer-Home.dc.html" aria-current="page" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #1E1B18; font-size: 12px; font-weight: 700">
+          <span style="width: 50px; height: 32px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><g fill="#1E1B18"><path d="M2.5 6.2l6-2.2v14l-6 2.2z"></path><path d="M9.6 4l4.8 2v14l-4.8-2z"></path><path d="M15.5 6l6-2.2v14l-6 2.2z"></path></g></svg></span>Hành trình
+        </a>
+        <a href="Discoverer-Cards.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="2.5" width="12" height="15.5" rx="2" transform="rotate(8 14.5 10)" fill="#1E1B18"></rect><rect x="2.3" y="4.8" width="15" height="18.4" rx="2.6" fill="#FBF6EA"></rect><rect x="3.5" y="6" width="12.6" height="16" rx="2" fill="#1E1B18"></rect></svg></span>Thẻ
+        </a>
+        <a href="Discoverer-Badges.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13.5L6.5 22.5l5.5-3 5.5 3L16 13.5z" fill="#1E1B18"></path><circle cx="12" cy="9" r="7" fill="#FBF6EA"></circle><circle cx="12" cy="9" r="6" fill="#1E1B18"></circle><circle cx="12" cy="9" r="2.6" fill="#FBF6EA"></circle></svg></span>Huy hiệu
+        </a>
+        <a href="Discoverer-Words.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14.5H6.5A2.5 2.5 0 0 0 4 20z" fill="#1E1B18"></path><path d="M6.5 18.8H20V21H6.5a1.1 1.1 0 0 1 0-2.2z" fill="#1E1B18"></path><rect x="8.5" y="7" width="8" height="2.2" rx="1.1" fill="#FBF6EA"></rect></svg></span>Từ vựng
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

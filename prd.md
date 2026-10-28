@@ -3,7 +3,7 @@
 > Bản copy để review từ artifact (https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe).
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
 > Syllabus chi tiết: [syllabus.md](syllabus.md) · Wireframes: [design/wireframes/](design/wireframes/) và https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ
-> Cập nhật: 21/10/2026
+> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con)
 
 ## 1. Tổng quan & quyết định đã chốt
 
@@ -62,9 +62,10 @@ Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude A
 | Quiz engine | MCQ, true/false, multi-select, điền từ, câu hình; giải thích sau mỗi câu | MVP |
 | Media bài học | MVP: hình minh hoạ tĩnh + audio EN; animation đầy đủ ở GĐ 2 | MVP |
 | Flashcards từ vựng EN–VI | Sinh từ keywords mỗi bài; TTS tiếng Anh, nghĩa VI dạng text | MVP |
-| Freemium unlock | Chủ đề đầu mỗi nhóm free; mở khoá bằng subs tháng/năm | MVP |
+| Tài khoản phụ huynh + hồ sơ con | Free dùng chế độ khách, 1 hồ sơ con; Premium cần tài khoản phụ huynh, nhiều hồ sơ con (mục 6) | MVP |
+| Freemium unlock | Chủ đề đầu mỗi nhóm free; mở khoá bằng subs tháng/năm, cần đăng ký tài khoản phụ huynh trước khi trả tiền | MVP |
 | Gamification | Sao, streak, huy hiệu theo Big Questions | MVP |
-| Góc phụ huynh | PIN, báo cáo tuần, giới hạn thời gian, quản lý subscription | MVP |
+| Góc phụ huynh | PIN, báo cáo tuần, giới hạn thời gian, quản lý hồ sơ con và subscription | MVP |
 | Ôn tập ngắt quãng | Spaced repetition từ dữ liệu quiz | GĐ 2 |
 | Chế độ offline | Tải chủ đề về máy | GĐ 2 |
 | Lớp học giáo viên/trung tâm | Giao bài, xem điểm cả lớp | GĐ 3 |
@@ -72,7 +73,48 @@ Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude A
 
 Gamification thưởng cho nỗ lực và đều đặn, không xếp hạng so sánh giữa trẻ, không loot box.
 
-## 6. Kiến trúc kỹ thuật
+## 6. Tài khoản phụ huynh và hồ sơ con
+
+Ghi chú 28/10/2026 để implement. Bốn quy tắc đã chốt:
+
+- **Một gia đình có 1 tài khoản phụ huynh và nhiều hồ sơ con**, vì một nhà có thể có nhiều trẻ. Hồ sơ con không có email, mật khẩu hay đăng nhập riêng; trẻ chọn hồ sơ của mình khi mở app.
+- **Gói free chạy ở chế độ khách (guest):** không cần đăng ký, tạo được **1 hồ sơ con**.
+- **Hồ sơ con thứ 2 trở đi chỉ dành cho Premium.**
+- **Muốn mở khoá nội dung Premium thì phải đăng ký tài khoản phụ huynh** trước khi thanh toán.
+
+| | Khách (free) | Premium |
+| --- | --- | --- |
+| Tài khoản phụ huynh | Chưa có | Bắt buộc |
+| Số hồ sơ con | 1 | Nhiều (số tối đa còn mở) |
+| Nội dung | Chủ đề free đầu mỗi nhóm tuổi | Toàn bộ |
+| Tiến độ | Lưu theo thiết bị | Theo tài khoản, đồng bộ nhiều máy |
+
+Luồng chính:
+
+1. Cài app → bố mẹ chọn chế độ ngôn ngữ và tạo hồ sơ con đầu tiên → bé học ngay ở chế độ khách.
+2. Bé chạm nội dung Premium, hoặc bố mẹ chạm "Thêm hồ sơ con" → cổng phụ huynh → đăng ký tài khoản phụ huynh → chọn gói → thanh toán qua App Store / Google Play.
+3. Hồ sơ con và toàn bộ tiến độ đã có ở chế độ khách chuyển nguyên sang tài khoản vừa đăng ký, không mất gì.
+4. Có Premium thì thêm hồ sơ con thứ 2, thứ 3… trong Góc phụ huynh. Mỗi hồ sơ có nhóm tuổi, chế độ ngôn ngữ và tiến độ riêng.
+
+Thiết kế (canvas UI/UX học mà chơi, https://claude.ai/artifact/MLvDKD33FWJ7aTMS7XX3Zk): Discoverer màn 3 Chọn hồ sơ, màn 6 Nhờ bố mẹ mở khoá, màn 7 Đăng ký phụ huynh, màn 17 Góc phụ huynh (tab Hồ sơ và gói). Màn 3 và 17 có tweak Gói free / premium.
+
+Gợi ý kỹ thuật (Supabase):
+
+- Chế độ khách dùng anonymous sign-in của Supabase Auth. Khi bố mẹ đăng ký, liên kết email / Apple / Google vào chính user đó để giữ nguyên `user_id`, nhờ vậy dữ liệu tự chuyển sang mà không phải copy.
+- Bảng `child_profiles`: `id`, `owner_id` (auth user, khách hoặc phụ huynh), `display_name`, `avatar`, `grade`, `age_group`, `language_mode`, `created_at`, `archived_at`. Mọi bảng tiến độ (bài, quiz, thẻ, từ vựng, chuỗi ngày) khoá theo `child_profile_id`, không theo `owner_id`.
+- Quyền Premium (`entitlements`) gắn với tài khoản phụ huynh, không gắn với thiết bị, để gói mua trên iOS vẫn dùng được trên Android sau khi đăng nhập. Biên lai App Store / Google Play xác minh ở server.
+- Giới hạn số hồ sơ kiểm tra ở server (RLS cùng hàm tạo hồ sơ), không chỉ ở app: không có Premium thì tối đa 1 hồ sơ đang hoạt động.
+
+Còn phải quyết:
+
+- [ ] Số hồ sơ con tối đa của gói Premium.
+- [ ] Hết hạn Premium khi đang có từ 2 hồ sơ: giữ dữ liệu, nhưng hồ sơ nào còn được học? Đề xuất: bố mẹ chọn 1 hồ sơ học tiếp, các hồ sơ khác chỉ xem được, gia hạn thì mở lại.
+- [ ] Có mức "đã đăng ký nhưng không Premium" hay không (gặp khi hết hạn gói, hoặc bố mẹ muốn đồng bộ nhiều máy mà chưa trả tiền). Hiện mô hình chỉ có 2 mức.
+- [ ] Cách đăng nhập của phụ huynh: email + mã OTP, Apple, Google. Theo quy định App Store (mục 4.8), nếu có đăng nhập Google thì phải có thêm một lựa chọn bảo vệ quyền riêng tư tương đương, thường là Sign in with Apple.
+- [ ] PIN Góc phụ huynh ở chế độ khách: đặt PIN lưu trên máy ngay lúc thiết lập, hay chỉ dùng câu đố cho người lớn đến khi đăng ký?
+- [ ] Lúc nào nhắc bố mẹ đăng ký để giữ tiến độ ở chế độ khách (đổi máy hoặc xoá app là mất).
+
+## 7. Kiến trúc kỹ thuật
 
 Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết kế syllabus → Soạn & duyệt nội dung (CMS) → Supabase → App iOS + App Android + Góc phụ huynh (web)**. App chỉ đọc bản đã duyệt.
 
@@ -81,7 +123,7 @@ Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết k
 - Claude API hỗ trợ biên tập viên draft kịch bản + câu quiz nháp (không dùng output thẳng cho trẻ).
 - TTS tiếng Anh cho câu hỏi/từ vựng; tiếng Việt chỉ hiển thị text.
 
-## 7. Wireframes & định hướng thiết kế
+## 8. Wireframes & định hướng thiết kế
 
 7 màn hình (mobile 390×844), file nguồn tại [design/wireframes/](design/wireframes/), xem trực tiếp tại canvas: https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ (bấm Play để click theo luồng).
 
@@ -97,7 +139,7 @@ Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết k
 
 Visual: nền sáng, font Nunito, bo góc lớn, 1 accent xanh, nút chạm ≥ 44px.
 
-## 8. Roadmap
+## 9. Roadmap
 
 | Giai đoạn | Thời gian | Nội dung | Gate |
 | --- | --- | --- | --- |
@@ -107,7 +149,7 @@ Visual: nền sáng, font Nunito, bo góc lớn, 1 accent xanh, nút chạm ≥ 
 
 MVP chỉ làm 1 nhóm tuổi (pilot Year 3 / 7–9 tuổi) nhưng chạy song song 2 app native — phần tốn nhất là sản xuất nội dung, nên GĐ 0 dồn toàn lực vào syllabus + nội dung trước khi code app. Timeline chi tiết GĐ 0: xem [syllabus.md](syllabus.md).
 
-## 9. Chỉ số thành công
+## 10. Chỉ số thành công
 
 North star: **số bài học hoàn thành có exit quiz đạt ≥ 4/6 câu đúng mỗi tuần**.
 
@@ -122,14 +164,15 @@ North star: **số bài học hoàn thành có exit quiz đạt ≥ 4/6 câu đ�
 
 Beta (50 gia đình) cần đạt: D7 ≥ 25%, quiz ≥ 4/6, ≥ 3 bài/tuần/trẻ — gate để qua GĐ 2.
 
-## 10. Rủi ro & việc còn mở
+## 11. Rủi ro & việc còn mở
 
 | Rủi ro | Mức | Giảm thiểu |
 | --- | --- | --- |
 | Tốc độ/chất lượng sản xuất nội dung tự làm | Cao | Template chuẩn + bài mẫu làm thước đo; Claude API draft, người duyệt |
 | Chi phí duy trì 2 app native song song | Trung bình | Schema nội dung chung, app chỉ là renderer |
 | Nội dung dậy thì (Human development) | Trung bình | Cờ "nội dung nhạy cảm", phụ huynh bật/tắt |
-| Dữ liệu trẻ em (COPPA/GDPR-K, quy định VN) | Trung bình | Đăng ký qua phụ huynh, data tối thiểu |
+| Dữ liệu trẻ em (COPPA/GDPR-K, quy định VN) | Trung bình | Đăng ký qua phụ huynh, data tối thiểu; chế độ khách chỉ lưu tên gọi, hình đại diện, lớp và tiến độ — cần rà lại với luật trước khi launch |
+| Mất tiến độ ở chế độ khách khi đổi máy hoặc xoá app | Trung bình | Nhắc bố mẹ đăng ký để giữ tiến độ (nhắc ở Góc phụ huynh, không chặn trẻ đang học) |
 | Thương hiệu: không dùng tên/logo Oak | Thấp | Chỉ ghi "tham khảo khung chương trình" ở about |
 
 **Đã chốt (21/10/2026):** native iOS + Android · cả 2 thị trường · freemium unlock + subs tháng/năm · không TTS tiếng Việt · Oak chỉ làm sườn syllabus.
@@ -137,5 +180,6 @@ Beta (50 gia đình) cần đạt: D7 ≥ 25%, quiz ≥ 4/6, ≥ 3 bài/tuần/t
 **Còn mở:**
 - [ ] Chốt tên app — shortlist: **ToMo Science** ("tò mò", đọc dễ cả EN/VI), **SciBee**, **AtomKids** (khớp logo atom), **WonderLab Kids**, **Khám Phá Kids**; check trùng App Store/Google Play + nhãn hiệu VN trước khi chốt
 - [ ] Mức giá cụ thể gói tháng/năm cho từng thị trường
+- [ ] Các câu hỏi còn mở về tài khoản và hồ sơ con (mục 6)
 - [ ] Đội sản xuất nội dung: ai soạn kịch bản, ai duyệt chuyên môn
 - [ ] Phong cách hình ảnh / nhân vật mascot (liên quan tới tên app)

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Style A · Vở ô ly mực tím · bảng style</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&amp;family=Playpen+Sans:wght@400;600;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#3F2F8C}a:hover{color:#2A1F66}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; font-family: 'Andika', 'Trebuchet MS', sans-serif; color: #22223A; background-color: #FDFCF7; background-image: repeating-linear-gradient(0deg, rgba(128, 108, 196, 0.36) 0px, rgba(128, 108, 196, 0.36) 1px, transparent 1px, transparent 28px), repeating-linear-gradient(0deg, rgba(150, 132, 210, 0.18) 0px, rgba(150, 132, 210, 0.18) 1px, transparent 1px, transparent 7px), repeating-linear-gradient(90deg, rgba(128, 108, 196, 0.26) 0px, rgba(128, 108, 196, 0.26) 1px, transparent 1px, transparent 28px); display: flex; flex-direction: column; gap: 16px; padding: 18px">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="wobA" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+      <filter id="pencilA" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"></feTurbulence>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.7 1.5" result="m"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="m" operator="in" result="g"></feComposite>
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="2" result="w"></feTurbulence>
+        <feDisplacementMap in="g" in2="w" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+    </defs>
+  </svg>
+
+  <div style="display: flex; align-items: center; gap: 12px">
+    <span aria-hidden="true" style="width: 52px; height: 52px; flex-shrink: 0; box-sizing: border-box; border: 2.5px solid #3F2F8C; border-radius: 52% 46% 50% 44%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Playpen Sans', cursive; font-size: 28px; font-weight: 800; color: #3F2F8C">A</span>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-family: 'Playpen Sans', cursive; font-size: 26px; font-weight: 800; line-height: 1.1; color: #3F2F8C">Vở ô ly mực tím</span>
+      <span style="font-size: 14px; color: #4A4766">Vở khoa học cắt dán, lời phê bút đỏ</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px">
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; border-radius: 3px; background: #3F2F8C; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.25); transform: rotate(-2deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Mực tím</span><span style="font-size: 10.5px; color: #4A4766">#3F2F8C</span></div>
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; border-radius: 3px; background: #C8372D; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.25); transform: rotate(1.5deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Bút đỏ</span><span style="font-size: 10.5px; color: #4A4766">#C8372D</span></div>
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; border-radius: 3px; background: #B8ACDD; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.25); transform: rotate(-1deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Ô ly</span><span style="font-size: 10.5px; color: #4A4766">#B8ACDD</span></div>
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; border-radius: 3px; background: #FFE066; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.25); transform: rotate(2deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Dạ quang</span><span style="font-size: 10.5px; color: #4A4766">#FFE066</span></div>
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; border-radius: 3px; background: #5E8A3A; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.25); transform: rotate(-1.5deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Lá</span><span style="font-size: 10.5px; color: #4A4766">#5E8A3A</span></div>
+    <div style="display: flex; flex-direction: column; gap: 3px"><span style="height: 44px; box-sizing: border-box; border-radius: 3px; background: #FDFCF7; border: 1px solid #B8ACDD; box-shadow: 0 1px 3px rgba(34, 34, 58, 0.18); transform: rotate(1deg)"></span><span style="font-size: 11px; font-weight: 700; line-height: 1.2">Giấy</span><span style="font-size: 10.5px; color: #4A4766">#FDFCF7</span></div>
+  </div>
+
+  <div style="position: relative; transform: rotate(-0.6deg); background: #FFFFFF; border-radius: 4px; box-shadow: 0 4px 10px rgba(34, 34, 58, 0.1); padding: 14px 16px 12px 16px; display: flex; flex-direction: column; gap: 4px">
+    <span aria-hidden="true" style="position: absolute; top: -9px; left: 50%; width: 70px; height: 20px; margin-left: -35px; background: rgba(240, 222, 150, 0.78); transform: rotate(-3deg)"></span>
+    <span style="font-family: 'Playpen Sans', cursive; font-size: 28px; font-weight: 800; line-height: 1.15; color: #3F2F8C">Ăn uống lành mạnh</span>
+    <span style="font-size: 18px; font-weight: 700">Chất đạm giúp cơ thể lớn lên.</span>
+    <span style="font-size: 12px; color: #4A4766">Playpen Sans — tiêu đề, nhãn · Andika — nội dung</span>
+  </div>
+
+  <div style="display: flex; gap: 10px">
+    <button style="flex: 1; height: 56px; border: none; border-radius: 18px 14px 20px 12px; background: #3F2F8C; color: #FFFFFF; font-family: 'Andika', sans-serif; font-size: 19px; font-weight: 700; box-shadow: 0 3px 0 #251A5E; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px">Tiếp<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    <button style="flex: 1; height: 56px; box-sizing: border-box; border: 2.5px solid #3F2F8C; border-radius: 14px 18px 12px 20px; background: #FFFFFF; color: #3F2F8C; font-family: 'Andika', sans-serif; font-size: 18px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3F2F8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"></path><path d="M16 9a4 4 0 0 1 0 6"></path></svg>Nghe lại</button>
+  </div>
+
+  <div style="display: flex; gap: 10px">
+    <div style="flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #FFFFFF; border-radius: 4px; box-shadow: 0 3px 8px rgba(34, 34, 58, 0.1); transform: rotate(-1deg)">
+      <svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true"><path d="M3 16 L12 25 L31 4" fill="none" stroke="#C8372D" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#wobA)"></path></svg>
+      <span style="font-family: 'Playpen Sans', cursive; font-size: 18px; font-weight: 800; color: #C8372D">Đúng rồi!</span>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #FFFFFF; border-radius: 4px; box-shadow: 0 3px 8px rgba(34, 34, 58, 0.1); transform: rotate(1deg)">
+      <svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true"><ellipse cx="17" cy="15" rx="14" ry="11" fill="none" stroke="#6B6880" stroke-width="2" stroke-dasharray="4 3" filter="url(#wobA)"></ellipse></svg>
+      <span style="font-family: 'Playpen Sans', cursive; font-size: 15px; font-weight: 600; color: #5A5670">Xem lại hình nhé</span>
+    </div>
+  </div>
+
+  <div style="position: relative; transform: rotate(0.8deg); background: #FFFFFF; border-radius: 4px; box-shadow: 0 4px 10px rgba(34, 34, 58, 0.1); padding: 6px 8px">
+    <span aria-hidden="true" style="position: absolute; top: -8px; right: 30px; width: 62px; height: 20px; background: rgba(240, 222, 150, 0.78); transform: rotate(4deg)"></span>
+    <svg viewBox="0 0 340 140" role="img" aria-label="Ếch đồng vẽ chì màu, ghi nhãn mắt và chân sau" style="display: block; width: 100%; height: auto">
+      <g transform="translate(6 2) scale(0.9)">
+        <g filter="url(#pencilA)">
+          <path d="M48 104 C 14 104, 8 136, 40 138 L 64 132 Z" fill="#6E9440"></path>
+          <path d="M152 104 C 186 104, 192 136, 160 138 L 136 132 Z" fill="#6E9440"></path>
+          <path d="M36 100 C 36 62, 164 62, 164 100 C 164 128, 36 128, 36 100 Z" fill="#8DB255"></path>
+          <circle cx="70" cy="64" r="17" fill="#8DB255"></circle>
+          <circle cx="130" cy="64" r="17" fill="#8DB255"></circle>
+          <ellipse cx="100" cy="84" rx="9" ry="5" fill="#5E8A3A"></ellipse>
+          <ellipse cx="74" cy="94" rx="6" ry="4" fill="#5E8A3A"></ellipse>
+          <ellipse cx="126" cy="92" rx="6" ry="4" fill="#5E8A3A"></ellipse>
+          <ellipse cx="84" cy="127" rx="12" ry="6" fill="#6E9440"></ellipse>
+          <ellipse cx="116" cy="127" rx="12" ry="6" fill="#6E9440"></ellipse>
+        </g>
+        <circle cx="70" cy="64" r="10" fill="#FFFFFF"></circle>
+        <circle cx="130" cy="64" r="10" fill="#FFFFFF"></circle>
+        <g filter="url(#wobA)" fill="none" stroke="#2B2350" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48 104 C 14 104, 8 136, 40 138 L 64 132"></path>
+          <path d="M152 104 C 186 104, 192 136, 160 138 L 136 132"></path>
+          <path d="M36 100 C 36 62, 164 62, 164 100 C 164 128, 36 128, 36 100 Z"></path>
+          <circle cx="70" cy="64" r="17"></circle>
+          <circle cx="130" cy="64" r="17"></circle>
+          <path d="M80 98 Q 100 108 120 98"></path>
+          <ellipse cx="84" cy="127" rx="12" ry="6"></ellipse>
+          <ellipse cx="116" cy="127" rx="12" ry="6"></ellipse>
+        </g>
+        <circle cx="71" cy="65" r="5" fill="#2B2350"></circle>
+        <circle cx="131" cy="65" r="5" fill="#2B2350"></circle>
+      </g>
+      <g filter="url(#wobA)" fill="none" stroke="#3F2F8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M210 62 Q 180 50 142 58"></path>
+        <path d="M149 52 L 142 58 L 150 62"></path>
+        <path d="M210 108 Q 196 116 180 120"></path>
+      </g>
+      <g font-family="'Playpen Sans', cursive" fill="#3F2F8C">
+        <text x="204" y="30" font-size="21" font-weight="800">Ếch đồng</text>
+        <text x="214" y="66" font-size="15" font-weight="600">mắt · eye</text>
+        <text x="214" y="108" font-size="15" font-weight="600">chân sau</text>
+        <text x="214" y="126" font-size="15" font-weight="600">back leg</text>
+      </g>
+    </svg>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <span style="font-family: 'Playpen Sans', cursive; font-size: 14px; font-weight: 700; color: #C8372D">Cùng một lựa chọn đáp án ở 3 lứa tuổi</span>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 13px; font-weight: 600; color: #3F2F8C">5–7 tuổi</span>
+        <button aria-label="Quả trứng" style="height: 104px; box-sizing: border-box; border: 2px solid #3F2F8C; border-radius: 14px 10px 16px 12px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+          <svg width="62" height="76" viewBox="0 0 64 78" aria-hidden="true"><g filter="url(#pencilA)"><ellipse cx="32" cy="40" rx="25" ry="32" fill="#EBC795"></ellipse></g><ellipse cx="32" cy="40" rx="25" ry="32" fill="none" stroke="#2B2350" stroke-width="2.4" filter="url(#wobA)"></ellipse></svg>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 13px; font-weight: 600; color: #3F2F8C">7–9 tuổi</span>
+        <button style="height: 104px; box-sizing: border-box; border: 2px solid #3F2F8C; border-radius: 12px 16px 10px 14px; background: #FFFFFF; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0">
+          <svg width="40" height="50" viewBox="0 0 64 78" aria-hidden="true"><g filter="url(#pencilA)"><ellipse cx="32" cy="40" rx="25" ry="32" fill="#EBC795"></ellipse></g><ellipse cx="32" cy="40" rx="25" ry="32" fill="none" stroke="#2B2350" stroke-width="3" filter="url(#wobA)"></ellipse></svg>
+          <span style="font-family: 'Playpen Sans', cursive; font-size: 15px; font-weight: 700; color: #3F2F8C">egg · trứng</span>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 13px; font-weight: 600; color: #3F2F8C">9–11 tuổi</span>
+        <button style="height: 104px; box-sizing: border-box; border: 2px solid #3F2F8C; border-radius: 16px 12px 14px 10px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; padding: 10px; text-align: left; font-family: 'Andika', sans-serif; font-size: 14px; font-weight: 700; line-height: 1.35; color: #22223A">Eggs are rich in protein.</button>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

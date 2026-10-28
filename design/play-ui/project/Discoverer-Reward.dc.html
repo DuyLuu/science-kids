@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Discoverer · Thưởng: hoàn thành bài</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@keyframes eTurn { from { opacity: 0.3; rotate: y 90deg; } to { opacity: 1; rotate: y 0deg; } }
+.e-turn { animation: eTurn 420ms cubic-bezier(.2, .8, .2, 1) backwards; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge, .e-turn { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <svg width="390" height="270" viewBox="0 0 390 270" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <g filter="url(#paperE)">
+      <rect class="e-fall e-svg" style="--d: 80ms" x="10" y="44" width="16" height="10" rx="1" fill="#A93A27" transform="rotate(20 18 49)"></rect>
+      <path class="e-fall e-svg" style="--d: 135ms" d="M284 34 L 300 42 L 286 52 Z" fill="#E2A52A"></path>
+      <rect class="e-fall e-svg" style="--d: 190ms" x="306" y="166" width="14" height="9" rx="1" fill="#3B6E6A" transform="rotate(-25 313 170)"></rect>
+      <path class="e-fall e-svg" style="--d: 245ms" d="M58 174 L 72 180 L 60 190 Z" fill="#2E4A6E"></path>
+      <rect class="e-fall e-svg" style="--d: 300ms" x="196" y="22" width="12" height="12" rx="1" fill="#E2A52A" transform="rotate(35 202 28)"></rect>
+      <rect class="e-fall e-svg" style="--d: 355ms" x="236" y="48" width="10" height="16" rx="1" fill="#2E4A6E" transform="rotate(15 241 56)"></rect>
+      <path class="e-fall e-svg" style="--d: 410ms" d="M126 38 L 142 42 L 132 54 Z" fill="#A93A27"></path>
+      <rect class="e-fall e-svg" style="--d: 465ms" x="14" y="198" width="14" height="9" rx="1" fill="#3B6E6A" transform="rotate(-12 21 202)"></rect>
+      <rect class="e-fall e-svg" style="--d: 520ms" x="352" y="206" width="10" height="14" rx="1" fill="#A93A27" transform="rotate(28 357 213)"></rect>
+      <path class="e-fall e-svg" style="--d: 575ms" d="M62 30 L 76 26 L 72 40 Z" fill="#3B6E6A"></path>
+    </g>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 16px 20px 20px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; justify-content: flex-end">
+      <a href="Discoverer-Home.dc.html" class="e-press" aria-label="Đóng, về hành trình" style="width: 56px; height: 56px; display: block">
+        <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#FBF6EA"></circle></g><path d="M20 19l16 16M36 19L20 35" stroke="#1E1B18" stroke-width="3.4" stroke-linecap="round"></path></svg>
+      </a>
+    </div>
+
+    <div class="e-lay" style="--d: 120ms; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 34px; font-weight: 900; line-height: 1.05; color: #A93A27">Hoàn thành bài 1!</span>
+      <span style="font-size: 15px; font-weight: 600; line-height: 1.4; color: #4E4336">Lesson complete · Thức ăn cho ta những gì?</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+      <div style="display: flex; gap: 10px; align-items: flex-end" aria-label="Được 2 trên 3 sao">
+        <svg class="e-stamp" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true" style="--d: 380ms; transform: rotate(-8deg)"><g filter="url(#paperE)"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z" transform="scale(2.4)" fill="#E2A52A"></path></g></svg>
+        <svg class="e-stamp" width="66" height="66" viewBox="0 0 58 58" aria-hidden="true" style="--d: 560ms"><g filter="url(#paperE)"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z" transform="scale(2.4)" fill="#E2A52A"></path></g></svg>
+        <svg class="e-lay" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true" style="--d: 740ms; transform: rotate(8deg)"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z" transform="scale(2.4)" fill="#E2D4B4"></path></svg>
+      </div>
+      <span class="e-lay" style="--d: 760ms; font-size: 13px; font-weight: 600; line-height: 1.4; color: #4E4336; text-align: center">Ôn lại vào ngày mai để lấy sao thứ 3 · thành thạo</span>
+    </div>
+
+    <div class="e-lay" style="--d: 820ms; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+      <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1">5/6</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">câu đúng</span></div>
+      <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #A93A27">+40</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">XP</span></div>
+      <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; display: flex; align-items: center; gap: 4px"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-2 2-5 5-5 8 0 4 3 7 7 7z" fill="#A93A27"></path></g><path d="M12 21c2.2 0 3.8-1.6 3.8-3.8 0-2.2-1.6-3.3-2.2-5.4-1.1 1.1-1.6 2.2-1.6 3.3-.6-.6-1.1-1.1-1.1-2.2-1.1 1.1-2.7 2.7-2.7 4.3 0 2.2 1.6 3.8 3.8 3.8z" fill="#E2A52A"></path></svg>6</span><span style="font-size: 12px; font-weight: 600; color: #4E4336">ngày liên tiếp</span></div>
+    </div>
+
+    <div class="e-lay" style="--d: 900ms; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 700">Thẻ mới cho bộ sưu tập · chạm để lật</span>
+      <button onClick="{{flip}}" aria-label="Thẻ rau muống, chạm để lật" class="e-press" style="position: relative; height: 176px; margin: 2px 6px 6px 6px; box-sizing: border-box; border: none; background: transparent; padding: 0; transform: rotate(-2deg); cursor: pointer; font-family: inherit; color: #1E1B18; text-align: left">
+        <span aria-hidden="true" style="position: absolute; left: -7px; right: -5px; top: -4px; bottom: -8px; border-radius: 12px; background: #2E4A6E; transform: rotate(1.6deg); box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3)"></span>
+        <span style="position: relative; height: 100%; box-sizing: border-box; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(30, 27, 24, 0.3); padding: 14px; display: flex; align-items: center; gap: 14px">
+          <sc-if value="{{front}}" hint-placeholder-val="{{true}}">
+            <span class="e-turn" style="width: 110px; height: 110px; border-radius: 8px; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+              <svg width="80" height="86" viewBox="18 0 84 90" aria-hidden="true">
+                <g filter="url(#paperE)">
+                  <path d="M58 84 C 28 74, 20 34, 42 8 C 58 24, 64 56, 58 84 Z" fill="#2F5B57"></path>
+                  <path d="M62 84 C 92 74, 100 34, 78 8 C 62 24, 56 56, 62 84 Z" fill="#2F5B57"></path>
+                </g>
+                <g filter="url(#paperE)"><path d="M60 80 C 48 58, 50 28, 60 4 C 70 28, 72 58, 60 80 Z" fill="#3B6E6A"></path></g>
+                <g filter="url(#paperE)"><path d="M53 86 C 50 70, 52 56, 57 46 L 63 46 C 68 56, 70 70, 67 86 Z" fill="#EFE3C2"></path></g>
+              </svg>
+            </span>
+            <span class="e-turn" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 4px">
+              <span style="padding: 3px 9px; border-radius: 3px; background: #A93A27; color: #FBF6EA; transform: rotate(-6deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 900; letter-spacing: 0.5px">Mới!</span>
+              <span style="font-family: 'Phudu', sans-serif; font-size: 27px; font-weight: 900; line-height: 1.05">Rau muống</span>
+              <span style="font-size: 15px; font-weight: 600; color: #4E4336">water spinach</span>
+              <span style="height: 26px; box-sizing: border-box; padding: 0 9px 0 7px; border-radius: 3px; background: #F0E6CF; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.25); display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #3B6E6A"></span>Vitamin &amp; khoáng chất</span>
+              <span style="font-size: 12px; font-weight: 600; color: #4E4336">Thẻ thực phẩm · 3/24</span>
+            </span>
+          </sc-if>
+          <sc-if value="{{back}}" hint-placeholder-val="{{false}}">
+            <span class="e-turn" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 6px">
+              <span style="display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 10px; background: #A93A27; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Em có biết?</span></span>
+              <span style="font-size: 19px; font-weight: 700; line-height: 1.3">Water spinach has vitamins and fibre.</span>
+              <span style="font-size: 14px; line-height: 1.4; color: #4E4336">Rau muống có nhiều vitamin và chất xơ — món rau quen thuộc trong mâm cơm Việt.</span>
+            </span>
+          </sc-if>
+        </span>
+      </button>
+    </div>
+
+    <div class="e-lay" style="--d: 980ms; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 700">Thử thách tuần</span>
+        <span style="font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; color: #4E4336">1/3 bài</span>
+      </div>
+      <span style="font-size: 13px; line-height: 1.4; color: #4E4336">Xong 3 bài trong tuần để mở một thẻ hiếm</span>
+      <div aria-hidden="true" style="display: flex; gap: 6px; margin-top: 2px">
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #A93A27; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3)"></span>
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"></span>
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"></span>
+      </div>
+    </div>
+
+    <div style="flex: 1"></div>
+    <div class="e-lay" style="--d: 1040ms; display: flex; gap: 12px; align-items: flex-start">
+      <a href="Discoverer-Cards.dc.html" class="e-press" style="flex: 1; height: 56px; margin-top: 1px; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center; text-decoration: none; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; color: #1E1B18">Xem bộ thẻ</a>
+      <a href="Discoverer-Home.dc.html" class="e-press" style="flex: 1.4; position: relative; display: block; height: 66px; text-decoration: none; font-family: 'Phudu', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.5px; color: #FBF6EA">
+        <svg width="100%" height="100%" viewBox="0 0 200 66" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="3" y="10" width="194" height="52" rx="10" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="3" y="3" width="194" height="52" rx="10" fill="#A93A27"></rect></g></svg>
+        <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; height: 58px">Về hành trình<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span>
+      </a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { flipped: false };
+  }
+  renderVals() {
+    const f = this.state.flipped;
+    return {
+      front: !f,
+      back: f,
+      flip: () => this.setState({ flipped: !f })
+    };
+  }
+}
+</script>
+</body>
+</html>

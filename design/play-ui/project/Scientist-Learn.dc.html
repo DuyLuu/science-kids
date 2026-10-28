@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Scientist · Học: vòng đời của ếch</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+#frog-stage{-webkit-appearance:none;appearance:none;background:transparent;cursor:pointer}
+#frog-stage::-webkit-slider-runnable-track{height:10px;border-radius:3px;background:#E6D9BC;box-shadow:inset 0 2px 5px rgba(91,59,23,0.28)}
+#frog-stage::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;margin-top:-10px;border:none;border-radius:50%;background:#E2A52A;box-shadow:0 2px 3px rgba(91,59,23,0.35)}
+#frog-stage::-moz-range-track{height:10px;border-radius:3px;background:#E6D9BC;box-shadow:inset 0 2px 5px rgba(91,59,23,0.28)}
+#frog-stage::-moz-range-thumb{width:30px;height:30px;border:none;border-radius:50%;background:#E2A52A;box-shadow:0 2px 3px rgba(91,59,23,0.35)}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 16px 20px 20px 20px; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="Scientist-Home.dc.html" aria-label="Về trạm nhiệm vụ" style="width: 48px; height: 48px; flex-shrink: 0; display: block; line-height: 0">
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#paperE)"><circle cx="24" cy="23" r="21" fill="#FBF6EA"></circle></g><path d="M27 15l-8 8 8 8" fill="none" stroke="#1E1B18" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 900; line-height: 1.1">Vòng đời của ếch</span>
+        <span style="font-size: 12px; font-weight: 600; color: #4E4336">Sinh sản ở động vật · Bài 2/6</span>
+      </div>
+      <button onClick="{{toggleVi}}" aria-pressed="{{viPressed}}" aria-label="Hiện phụ đề tiếng Việt" style="width: 48px; height: 48px; flex-shrink: 0; border: none; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center">
+        <span style="width: 42px; height: 42px; margin-top: -2px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 0.5px; {{viStyle}}">VI</span>
+      </button>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Bước 2 trên 4: Học">
+        <g filter="url(#paperE)">
+          <rect x="4" y="2" width="22" height="22" rx="2" fill="#A93A27"></rect>
+          <rect x="34" y="2" width="22" height="22" rx="2" fill="#E2A52A"></rect>
+          <rect x="64" y="2" width="22" height="22" rx="2" fill="#E2D4B4"></rect>
+          <rect x="94" y="2" width="22" height="22" rx="2" fill="#E2D4B4"></rect>
+        </g>
+        <path d="M10 13.5l3.6 3.6 6.6-7.2" fill="none" stroke="#FBF6EA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span style="font-size: 12px; font-weight: 600; color: #4E4336">bước 2 · Học</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 3px">
+      <span style="font-size: 16px; font-weight: 600; line-height: 1.35">I can describe the life cycle of an amphibian.</span>
+      <sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; color: #4E4336; line-height: 1.35">Em mô tả được vòng đời của một loài lưỡng cư.</span></sc-if>
+    </div>
+
+    <div style="position: relative; height: 162px; flex-shrink: 0; filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.28))">
+      <div style="position: relative; height: 100%; overflow: hidden; background: #FBF6EA; clip-path: polygon(0 3px, 3px 0, 124px 0, 142px 24px, calc(100% - 6px) 24px, 100% 30px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px)); display: flex; align-items: center; justify-content: center">
+        <svg width="350" height="162" viewBox="0 0 350 162" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+          <g filter="url(#paperE)"><path d="M0 100 C 48 92, 96 106, 150 98 S 248 90, 300 100 S 340 104, 350 98 V162 H0 Z" fill="#DCE2EA"></path></g>
+          <g filter="url(#paperE)"><path d="M0 136 C 56 128, 112 142, 176 134 S 292 128, 350 136 V162 H0 Z" fill="#2E4A6E"></path></g>
+        </svg>
+        <span style="position: absolute; left: 12px; top: 0; height: 24px; display: flex; align-items: center; font-family: 'Phudu', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2E4A6E"><span>Giai đoạn {{stageNo}}/4</span></span>
+        <span style="position: absolute; left: 14px; top: 30px; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.1">{{cur.name}}</span>
+        <div style="position: relative; margin-top: 28px; line-height: 0">
+          <sc-if value="{{is.egg}}" hint-placeholder-val="{{true}}"><svg width="116" height="116" viewBox="0 0 100 100" role="img" aria-label="Trứng ếch trong lớp thạch"><g filter="url(#paperE)" fill="#FFFFFF"><circle cx="35" cy="50" r="9.5"></circle><circle cx="50" cy="44" r="9.5"></circle><circle cx="65" cy="51" r="9.5"></circle><circle cx="42" cy="64" r="9.5"></circle><circle cx="58" cy="64" r="9.5"></circle><circle cx="50" cy="77" r="9.5"></circle><circle cx="29" cy="66" r="9.5"></circle><circle cx="71" cy="66" r="9.5"></circle></g><g fill="#1E1B18"><circle cx="35" cy="50" r="3.4"></circle><circle cx="50" cy="44" r="3.4"></circle><circle cx="65" cy="51" r="3.4"></circle><circle cx="42" cy="64" r="3.4"></circle><circle cx="58" cy="64" r="3.4"></circle><circle cx="50" cy="77" r="3.4"></circle><circle cx="29" cy="66" r="3.4"></circle><circle cx="71" cy="66" r="3.4"></circle></g></svg></sc-if>
+          <sc-if value="{{is.tadpole}}" hint-placeholder-val="{{false}}"><svg width="116" height="116" viewBox="0 0 100 100" role="img" aria-label="Nòng nọc"><g filter="url(#paperE)"><path d="M46 62 C 58 52, 70 60, 80 54 C 86 51, 90 52, 94 50 C 90 58, 84 62, 78 64 C 68 68, 58 72, 46 70 Z" fill="#3B6E6A"></path></g><g filter="url(#paperE)"><ellipse cx="36" cy="65" rx="15" ry="12" fill="#2F5B57"></ellipse></g><g filter="url(#paperE)"><circle cx="29" cy="61" r="3.6" fill="#FBF6EA"></circle></g><circle cx="28.6" cy="61.4" r="1.9" fill="#1E1B18"></circle></svg></sc-if>
+          <sc-if value="{{is.froglet}}" hint-placeholder-val="{{false}}"><svg width="116" height="116" viewBox="0 0 100 100" role="img" aria-label="Ếch con còn đuôi ngắn"><g filter="url(#paperE)" fill="#2F5B57"><path d="M60 62 C 68 58, 76 64, 86 60 C 82 68, 72 70, 60 69 Z"></path><path d="M50 64 C 60 62, 70 70, 68 78 L 56 80 L 57 76 L 62 75 C 60 71, 54 70, 48 70 Z"></path><path d="M33 68 L 38 68 L 35 79 L 28 80 L 29 77 L 32 76 Z"></path></g><g filter="url(#paperE)" fill="#3B6E6A"><ellipse cx="46" cy="62" rx="18" ry="12"></ellipse><circle cx="35" cy="52" r="6.5"></circle></g><g filter="url(#paperE)"><ellipse cx="44" cy="68" rx="11" ry="4" fill="#E2A52A"></ellipse></g><g filter="url(#paperE)"><circle cx="35" cy="51.5" r="3.8" fill="#FBF6EA"></circle></g><circle cx="34.5" cy="52" r="2" fill="#1E1B18"></circle></svg></sc-if>
+          <sc-if value="{{is.frog}}" hint-placeholder-val="{{false}}"><svg width="116" height="116" viewBox="0 0 100 100" role="img" aria-label="Ếch trưởng thành"><g transform="translate(2 12) scale(0.48)"><g filter="url(#paperE)"><path d="M48 104 C 14 104, 8 136, 40 138 L 64 132 Z M152 104 C 186 104, 192 136, 160 138 L 136 132 Z" fill="#2F5B57"></path></g><g filter="url(#paperE)" fill="#3B6E6A"><path d="M36 100 C 36 62, 164 62, 164 100 C 164 128, 36 128, 36 100 Z"></path><circle cx="70" cy="64" r="17"></circle><circle cx="130" cy="64" r="17"></circle></g><g fill="#2F5B57"><circle cx="56" cy="90" r="6"></circle><circle cx="144" cy="88" r="5"></circle><circle cx="100" cy="76" r="4.5"></circle></g><g filter="url(#paperE)"><ellipse cx="100" cy="107" rx="36" ry="13" fill="#E2A52A"></ellipse></g><g filter="url(#paperE)" fill="#FBF6EA"><circle cx="70" cy="62" r="9"></circle><circle cx="130" cy="62" r="9"></circle></g><circle cx="71" cy="63" r="4.6" fill="#1E1B18"></circle><circle cx="131" cy="63" r="4.6" fill="#1E1B18"></circle><path d="M80 87 Q 100 96 120 87 Q 100 92 80 87 Z" fill="#1E1B18"></path><g filter="url(#paperE)" fill="#2F5B57"><ellipse cx="84" cy="128" rx="12" ry="6"></ellipse><ellipse cx="116" cy="128" rx="12" ry="6"></ellipse></g></g></svg></sc-if>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <label for="frog-stage" style="font-size: 13px; font-weight: 600; color: #4E4336">Kéo để xem ếch lớn lên</label>
+      <input id="frog-stage" type="range" min="0" max="3" step="1" value="{{stage}}" onChange="{{onScrub}}" style="width: 100%; height: 32px; margin: 0">
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 2px">
+        <sc-for list="{{ticks}}" as="t" hint-placeholder-count="4">
+          <button onClick="{{t.pick}}" aria-pressed="{{t.pressed}}" style="min-height: 48px; box-sizing: border-box; border: none; border-radius: 6px; cursor: pointer; padding: 4px; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; {{t.style}}">{{t.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.3))">
+      <div style="background: #FBF6EA; padding: 16px 12px 12px 14px; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; align-items: flex-start; gap: 10px">
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 16px; font-weight: 700; line-height: 1.4">{{cur.en}}</span>
+          <sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; color: #4E4336; line-height: 1.4">{{cur.vi}}</span></sc-if>
+        </div>
+        <button aria-label="Nghe đoạn này" style="width: 48px; height: 48px; flex-shrink: 0; padding: 0; border: none; background: transparent; cursor: pointer; line-height: 0">
+          <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#paperE)"><circle cx="24" cy="23" r="21" fill="#2E4A6E"></circle></g><g transform="translate(13 11)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#FBF6EA"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#FBF6EA" stroke-width="2.4" stroke-linecap="round"></path></g></svg>
+        </button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 6px">
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); font-size: 13px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span><span>life cycle<sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-weight: 600; color: #4E4336"> · vòng đời</span></sc-if></span></span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); font-size: 13px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span><span>metamorphosis<sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-weight: 600; color: #4E4336"> · biến thái</span></sc-if></span></span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); font-size: 13px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span><span>tadpole<sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-weight: 600; color: #4E4336"> · nòng nọc</span></sc-if></span></span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); font-size: 13px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span><span>amphibian<sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-weight: 600; color: #4E4336"> · lưỡng cư</span></sc-if></span></span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); font-size: 13px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span><span>gills<sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-weight: 600; color: #4E4336"> · mang</span></sc-if></span></span>
+    </div>
+
+    <div style="flex: 1"></div>
+    <a href="Scientist-Play.dc.html" style="position: relative; display: block; height: 60px; flex-shrink: 0; text-decoration: none; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: 0.3px">
+      <svg width="100%" height="100%" viewBox="0 0 350 60" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="3" y="10" width="344" height="46" rx="8" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="3" y="3" width="344" height="46" rx="8" fill="#A93A27"></rect></g></svg>
+      <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px">Vào phòng thí nghiệm<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span>
+    </a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { stage: 1, vi: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const stages = [
+      { key: 'egg', label: 'Egg', name: 'Egg · Trứng', en: 'A frog lays many eggs in water. Jelly protects each egg.', vi: 'Ếch đẻ rất nhiều trứng trong nước. Lớp thạch bảo vệ mỗi quả trứng.' },
+      { key: 'tadpole', label: 'Tadpole', name: 'Tadpole · Nòng nọc', en: 'A tadpole hatches. It lives in water and breathes with gills.', vi: 'Nòng nọc nở ra, sống dưới nước và thở bằng mang.' },
+      { key: 'froglet', label: 'Froglet', name: 'Froglet · Ếch con', en: 'The tadpole grows legs, and its tail gets shorter.', vi: 'Nòng nọc mọc chân, đuôi ngắn dần thành ếch con.' },
+      { key: 'frog', label: 'Frog', name: 'Adult frog · Ếch trưởng thành', en: 'The adult frog lives on land and in water. It breathes with lungs and skin.', vi: 'Ếch trưởng thành sống cả trên cạn lẫn dưới nước, thở bằng phổi và da.' }
+    ];
+    const cur = stages[s.stage];
+    const is = {};
+    stages.forEach((st, i) => { is[st.key] = i === s.stage; });
+    return {
+      stage: s.stage,
+      stageNo: s.stage + 1,
+      cur,
+      is,
+      vi: s.vi,
+      viPressed: s.vi ? 'true' : 'false',
+      viStyle: s.vi ? 'background: #E2A52A; color: #1E1B18; box-shadow: 0 2.5px 3px rgba(91, 59, 23, 0.32);' : 'background: #FBF6EA; color: #1E1B18; box-shadow: 0 2.5px 3px rgba(91, 59, 23, 0.32);',
+      toggleVi: () => this.setState({ vi: !s.vi }),
+      onScrub: (e) => this.setState({ stage: Number(e.target.value) }),
+      ticks: stages.map((st, i) => ({
+        label: st.label,
+        pressed: i === s.stage ? 'true' : 'false',
+        style: i === s.stage ? 'background: #E2A52A; color: #1E1B18; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3);' : 'background: #FBF6EA; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.24);',
+        pick: () => this.setState({ stage: i })
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

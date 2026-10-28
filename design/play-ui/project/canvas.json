@@ -1,0 +1,535 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-26T09:00:00Z"
+  },
+  "title": "Science Kids · Học mà chơi",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1400,
+      "title": "0 · Một khung, ba lứa tuổi",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Home.dc.html": {
+      "x": 0,
+      "y": 1780,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 1 · Trang chủ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Learn.dc.html": {
+      "x": 470,
+      "y": 1780,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 2 · Học",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Play.dc.html": {
+      "x": 940,
+      "y": 1780,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 3 · Chơi",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Quiz.dc.html": {
+      "x": 1410,
+      "y": 1780,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 4 · Quiz",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Reward.dc.html": {
+      "x": 1880,
+      "y": 1780,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 5 · Thưởng",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Home.dc.html": {
+      "x": 1410,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 4 · Trang chủ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Learn.dc.html": {
+      "x": 470,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 9 · Học",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Play.dc.html": {
+      "x": 940,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 10 · Chơi",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Quiz.dc.html": {
+      "x": 1410,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 11 · Quiz câu 5",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Reward.dc.html": {
+      "x": 2350,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 13 · Thưởng",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Scientist-Home.dc.html": {
+      "x": 0,
+      "y": 6676,
+      "w": 390,
+      "h": 844,
+      "title": "Scientist 1 · Trạm nhiệm vụ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Scientist-Learn.dc.html": {
+      "x": 470,
+      "y": 6676,
+      "w": 390,
+      "h": 844,
+      "title": "Scientist 2 · Học",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Scientist-Play.dc.html": {
+      "x": 940,
+      "y": 6676,
+      "w": 390,
+      "h": 844,
+      "title": "Scientist 3 · Thí nghiệm",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Scientist-Quiz.dc.html": {
+      "x": 1410,
+      "y": 6676,
+      "w": 390,
+      "h": 844,
+      "title": "Scientist 4 · Quiz",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Scientist-Reward.dc.html": {
+      "x": 1880,
+      "y": 6676,
+      "w": 390,
+      "h": 844,
+      "title": "Scientist 5 · Thưởng",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Style-A-Screen.dc.html": {
+      "x": 3100,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "A · Vở ô ly mực tím — màn Học",
+      "radius": 24
+    },
+    "Style-B-Screen.dc.html": {
+      "x": 3570,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "B · Cắt giấy nhiều lớp — màn Học",
+      "radius": 24
+    },
+    "Style-C-Screen.dc.html": {
+      "x": 4040,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "C · Sách khoa học in Riso — màn Học",
+      "radius": 24
+    },
+    "Style-D-Screen.dc.html": {
+      "x": 4510,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "D · Tranh Đông Hồ đương đại — màn Học",
+      "radius": 24
+    },
+    "Style-A-Tile.dc.html": {
+      "x": 3100,
+      "y": 1264,
+      "w": 390,
+      "h": 844,
+      "title": "A · Vở ô ly mực tím — bảng style",
+      "radius": 16
+    },
+    "Style-B-Tile.dc.html": {
+      "x": 3570,
+      "y": 1264,
+      "w": 390,
+      "h": 844,
+      "title": "B · Cắt giấy nhiều lớp — bảng style",
+      "radius": 16
+    },
+    "Style-C-Tile.dc.html": {
+      "x": 4040,
+      "y": 1264,
+      "w": 390,
+      "h": 844,
+      "title": "C · Sách khoa học in Riso — bảng style",
+      "radius": 16
+    },
+    "Style-D-Tile.dc.html": {
+      "x": 4510,
+      "y": 1264,
+      "w": 390,
+      "h": 844,
+      "title": "D · Tranh Đông Hồ đương đại — bảng style",
+      "radius": 16
+    },
+    "Style-E-Screen.dc.html": {
+      "x": 5140,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "E · Giấy cắt Đông Hồ (B + D gọn) — màn Học",
+      "radius": 24
+    },
+    "Style-E-Quiz.dc.html": {
+      "x": 5610,
+      "y": 300,
+      "w": 390,
+      "h": 844,
+      "title": "E · Giấy cắt Đông Hồ — màn Đố vui",
+      "radius": 24
+    },
+    "Style-E-Tile.dc.html": {
+      "x": 5140,
+      "y": 1264,
+      "w": 390,
+      "h": 844,
+      "title": "E · Giấy cắt Đông Hồ — bảng style",
+      "radius": 16
+    },
+    "Discoverer-Welcome.dc.html": {
+      "x": 0,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 1 · Chào mừng",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Profile.dc.html": {
+      "x": 470,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 2 · Hồ sơ của bé",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Topic.dc.html": {
+      "x": 1880,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 5 · Chủ đề",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Unlock.dc.html": {
+      "x": 2350,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 6 · Nhờ bố mẹ mở khoá",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Warmup.dc.html": {
+      "x": 0,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 8 · Khởi động",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-QuizMyth.dc.html": {
+      "x": 1880,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 12 · Quiz câu 6",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Cards.dc.html": {
+      "x": 0,
+      "y": 5452,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 14 · Bộ thẻ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Badges.dc.html": {
+      "x": 470,
+      "y": 5452,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 15 · Huy hiệu",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Words.dc.html": {
+      "x": 940,
+      "y": 5452,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 16 · Từ vựng",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Parent.dc.html": {
+      "x": 1410,
+      "y": 5452,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 17 · Góc phụ huynh",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Profiles.dc.html": {
+      "x": 940,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 3 · Chọn hồ sơ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Signup.dc.html": {
+      "x": 2820,
+      "y": 3004,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 7 · Đăng ký phụ huynh",
+      "radius": 24,
+      "is_interactive": true
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Explorer-Home.dc.html",
+    "Explorer-Learn.dc.html",
+    "Explorer-Play.dc.html",
+    "Explorer-Quiz.dc.html",
+    "Explorer-Reward.dc.html",
+    "Discoverer-Welcome.dc.html",
+    "Discoverer-Profile.dc.html",
+    "Discoverer-Profiles.dc.html",
+    "Discoverer-Home.dc.html",
+    "Discoverer-Topic.dc.html",
+    "Discoverer-Unlock.dc.html",
+    "Discoverer-Signup.dc.html",
+    "Discoverer-Warmup.dc.html",
+    "Discoverer-Learn.dc.html",
+    "Discoverer-Play.dc.html",
+    "Discoverer-Quiz.dc.html",
+    "Discoverer-QuizMyth.dc.html",
+    "Discoverer-Reward.dc.html",
+    "Discoverer-Cards.dc.html",
+    "Discoverer-Badges.dc.html",
+    "Discoverer-Words.dc.html",
+    "Discoverer-Parent.dc.html",
+    "Scientist-Home.dc.html",
+    "Scientist-Learn.dc.html",
+    "Scientist-Play.dc.html",
+    "Scientist-Quiz.dc.html",
+    "Scientist-Reward.dc.html",
+    "Style-A-Screen.dc.html",
+    "Style-B-Screen.dc.html",
+    "Style-C-Screen.dc.html",
+    "Style-D-Screen.dc.html",
+    "Style-A-Tile.dc.html",
+    "Style-B-Tile.dc.html",
+    "Style-C-Tile.dc.html",
+    "Style-D-Tile.dc.html",
+    "Style-E-Screen.dc.html",
+    "Style-E-Quiz.dc.html",
+    "Style-E-Tile.dc.html"
+  ],
+  "notes": {
+    "explorerTitle": {
+      "x": 0,
+      "y": 1530,
+      "text": "Explorer 5–7 tuổi · Sân chơi",
+      "kind": "title1",
+      "maxW": 2270
+    },
+    "discovererTitle": {
+      "x": 0,
+      "y": 2754,
+      "text": "Discoverer 7–9 tuổi · 1 Bắt đầu và hành trình",
+      "kind": "title1",
+      "maxW": 3210
+    },
+    "scientistTitle": {
+      "x": 0,
+      "y": 6426,
+      "text": "Scientist 9–11 tuổi · Phòng thí nghiệm",
+      "kind": "title1",
+      "maxW": 2270
+    },
+    "explorerRules": {
+      "x": 2390,
+      "y": 1780,
+      "w": 400,
+      "fill": "orange",
+      "size": "m",
+      "text": "Quy tắc Explorer\n• Chưa cần biết đọc: mascot đọc to mọi câu, chữ chủ yếu cho phụ huynh\n• Vùng chạm ≥ 72px; chạm–chạm thay cho kéo–thả\n• Đáp án bằng hình, 2–3 lựa chọn\n• Không đồng hồ, không điểm số; sai thì được gợi ý\n• Thưởng bằng sticker dán sổ\n• Bài mẫu: Gọi tên và nhóm động vật\n• Style E: màu thế giới gỉ đồng, mảnh giấy to bo 18–22px, đồi giấy nhiều lớp ở nền"
+    },
+    "discovererRules": {
+      "x": 3330,
+      "y": 3004,
+      "w": 400,
+      "fill": "blue",
+      "size": "m",
+      "text": "Quy tắc Discoverer (pilot)\n• Câu EN ≤ 8–10 từ, phụ đề VI bật sẵn, nút nghe ở mọi câu\n• Vùng chạm ≥ 56px\n• Chơi = dùng ngay điều vừa học: xếp mâm cơm Việt cân bằng\n• Quiz 3–4 lựa chọn, có câu chọn nhiều đáp án, gợi ý tiếng Việt\n• Thưởng: sao 3 mức, XP, thẻ sưu tầm, thử thách tuần\n• Bài mẫu: Ăn uống lành mạnh — bài 1\n• Luồng đủ 17 màn: bắt đầu → bài học → sưu tập và phụ huynh\n• Style E: đủ bộ màu Đông Hồ như màn mẫu; mâm cơm trên lá chuối, đường hành trình bằng đĩa giấy"
+    },
+    "scientistRules": {
+      "x": 2390,
+      "y": 6676,
+      "w": 400,
+      "fill": "purple",
+      "size": "m",
+      "text": "Quy tắc Scientist\n• Giao diện 'lớn' hơn: trạm nhiệm vụ, sổ nhật ký, không trẻ con hoá\n• Câu EN ≤ 12–15 từ, VI ẩn — chạm nút VI để xem\n• Vùng chạm ≥ 48px\n• Chơi = kỹ năng khoa học: thiết kế thí nghiệm công bằng\n• Quiz 4 lựa chọn, câu suy luận chọn bằng chứng\n• Thưởng: cấp bậc, nhật ký, thẻ mẫu vật — không bảng xếp hạng\n• Style E: màu thế giới chàm, kiểu sổ hồ sơ và thẻ mẫu vật, bo 6–8px; không dùng nền tối cả màn"
+    },
+    "styleTitle": {
+      "x": 3100,
+      "y": 0,
+      "text": "Khám phá style · 4 hướng cho cùng một màn Học",
+      "kind": "title1",
+      "maxW": 1800
+    },
+    "styleWhyAI": {
+      "x": 2580,
+      "y": 300,
+      "w": 440,
+      "fill": "gray",
+      "size": "m",
+      "text": "Vì sao bản hiện tại trông 'AI'\n• Màu mặc định kiểu Tailwind (#2563EB) và combo navy + lime + tím: bảng màu của app SaaS\n• Nunito đậm 800–900 ở mọi chỗ: font 'thân thiện' mặc định\n• Mọi thứ là thẻ bo góc 14–24px, viền xám 1px, cùng một padding\n• Hình ghép từ hình tròn, ellipse; icon nét đều kiểu thư viện\n• Gamification bê nguyên: XP, streak, 3 sao, nút 3D\n• Không có chất liệu (giấy, mực, nét tay), không có gì là khoa học hay Việt Nam\n\nBốn hướng bên phải đổi chất liệu và cách vẽ trước, UI lùi về sau. Cùng một nội dung: Discoverer · Ăn uống lành mạnh · bài 1 · bước Học (Chất đạm). Hàng trên: màn thật. Hàng dưới: màu, chữ, nút, phản hồi, hình con vật và cách co giãn theo tuổi."
+    },
+    "styleA": {
+      "x": 3100,
+      "y": 2188,
+      "w": 390,
+      "fill": "purple",
+      "size": "s",
+      "text": "A · Vở ô ly mực tím\nÝ tưởng: mỗi bài là một trang vở khoa học: dán hình, ghi nhãn, cô phê bút đỏ.\nMạnh: trẻ và phụ huynh Việt nhận ra ngay; 'quan sát và ghi nhãn' chính là kỹ năng khoa học; co giãn 5–11 tuổi dễ.\nRủi ro: dễ trầm, ít chất game; nền ô ly rối mắt nếu không tiết chế; trường quốc tế có thể thấy quá 'Việt'.\nSản xuất: trung bình — cần hoạ sĩ vẽ chì màu, UI đơn giản."
+    },
+    "styleB": {
+      "x": 3570,
+      "y": 2188,
+      "w": 390,
+      "fill": "green",
+      "size": "s",
+      "text": "B · Cắt giấy nhiều lớp\nÝ tưởng: mỗi bài là một diorama giấy; chạm vào thì lớp giấy nhấc lên.\nMạnh: vui, có cảm giác sờ được; hợp nhất với 5–7; parallax nhiều lớp làm bằng SwiftUI/Compose rất tự nhiên.\nRủi ro: 9–11 có thể thấy trẻ con; nhiều lớp và bóng đổ nặng trên máy Android rẻ; nền tối kén ảnh minh hoạ.\nSản xuất: trung bình — hình khối vector cộng texture, dễ làm hàng loạt."
+    },
+    "styleC": {
+      "x": 4040,
+      "y": 2188,
+      "w": 390,
+      "fill": "pink",
+      "size": "s",
+      "text": "C · Sách khoa học in Riso\nÝ tưởng: app như cuốn sách tranh khoa học in 3 màu mực, có Hình 1, Hình 2, chú thích đánh số.\nMạnh: cá tính nhất, 'ngầu' với 9–11; chỉ 3 màu nên hệ thống chặt, rẻ khi nhân rộng; kiểu 'hình đánh số' dạy đọc sơ đồ.\nRủi ro: màu huỳnh quang không dùng được cho chữ; màu đồ ăn không thật (cá xanh) có thể làm 5–7 bối rối.\nSản xuất: thấp–trung bình — hình phẳng, texture bằng overlay/shader."
+    },
+    "styleD": {
+      "x": 4510,
+      "y": 2188,
+      "w": 390,
+      "fill": "orange",
+      "size": "s",
+      "text": "D · Tranh Đông Hồ đương đại\nÝ tưởng: mộc bản, giấy điệp, màu khoáng và cây cỏ; mascot có thể là thầy đồ Cóc.\nMạnh: không lẫn với app nào; phụ huynh Việt thấy gần gũi; khớp nội dung bản địa (mâm cơm, ếch đồng).\nRủi ro: dễ thành 'cổ' và nặng; trường quốc tế có thể không hợp; khó giữ đều chất lượng hình qua hàng trăm bài.\nSản xuất: cao — cần hoạ sĩ hiểu dòng tranh, mỗi hình như một bản khắc."
+    },
+    "styleETitle": {
+      "x": 5140,
+      "y": 0,
+      "text": "Vòng 2 · E = B + D, bớt nét",
+      "kind": "title1",
+      "maxW": 860
+    },
+    "styleE": {
+      "x": 5610,
+      "y": 1264,
+      "w": 390,
+      "fill": "green",
+      "size": "m",
+      "text": "E · Giấy cắt Đông Hồ (B + D, gọn hơn)\nÝ tưởng: tranh Đông Hồ làm bằng giấy cắt dán. Lấy màu khoáng và giấy điệp của D, cách chồng lớp giấy có bóng của B.\nBỏ: viền đen khắc gỗ, khung đôi, vân gỗ, vảy cá và gân lá vẽ nét, đan rổ, vành đĩa vẽ nét, nền xanh tối phủ cả màn.\nGiữ từ B: hình là các mảnh giấy chồng lớp, bóng đổ thay cho viền; thẻ nhãn giấy; nút hai lớp giấy; mép giấy xé.\nGiữ từ D: nền giấy điệp lấp lánh; màu đỏ son, vàng hoè, gỉ đồng, chàm, than tre; chữ Phudu; triện đỏ và khung nhãn đỏ.\nQuy tắc: không có nét viền, chiều sâu chỉ đến từ lớp giấy và bóng. Đỏ son cho nút chính và phản hồi đúng; vàng hoè cho bước hiện tại và lựa chọn đang chọn.\nRủi ro: giấy sáng trên nền điệp sáng gần màu nhau, phải giữ bóng đủ rõ; nhiều lớp bóng nặng trên Android rẻ, nên khi làm app thì vẽ sẵn bóng vào ảnh.\n27/10: đã áp E vào 15 màn của 3 nhóm tuổi và bảng tổng quan 0."
+    },
+    "discovererLessonTitle": {
+      "x": 0,
+      "y": 3978,
+      "text": "Discoverer · 2 Một bài học, từ khởi động đến thưởng",
+      "kind": "title1",
+      "maxW": 2740
+    },
+    "discovererCollectTitle": {
+      "x": 0,
+      "y": 5202,
+      "text": "Discoverer · 3 Sưu tập, tiến độ và góc phụ huynh",
+      "kind": "title1",
+      "maxW": 1800
+    },
+    "discovererMotion": {
+      "x": 2860,
+      "y": 4228,
+      "w": 400,
+      "fill": "teal",
+      "size": "m",
+      "text": "Chuyển động · Discoverer\n• Mỗi màn có một lượt hiện: các mảnh giấy được đặt xuống theo thứ tự đọc, xong trong khoảng 0,5 giây; câu chính đọc được trước 0,3 giây\n• Chọn đáp án thì đóng triện; báo đúng hoặc sai thì tờ giấy trượt lên từ dưới\n• Được thưởng: sao đóng dấu từng cái, thẻ mới bật lên, giấy vụn rơi; giấy vụn chỉ dùng ở màn Thưởng\n• Mỗi màn tối đa một chuyển động lặp: mascot đung đưa hoặc nút chính nhún nhẹ\n• Sai thì không rung, không nhấp nháy; máy bật Giảm chuyển động thì tắt hết"
+    },
+    "discovererAccount": {
+      "x": 3770,
+      "y": 3004,
+      "w": 400,
+      "fill": "pink",
+      "size": "m",
+      "text": "Tài khoản (PRD mục 6)\n• Gói free là chế độ khách: không đăng ký, 1 hồ sơ con, tiến độ lưu trên máy\n• Hồ sơ con thứ 2 trở đi chỉ có ở Premium\n• Mở khoá Premium: câu đố cho bố mẹ (màn 6) → đăng ký tài khoản phụ huynh (màn 7) → chọn gói → thanh toán; hồ sơ và tiến độ của chế độ khách chuyển sang nguyên vẹn\n• Mở app: nhà có từ 2 hồ sơ thì hiện màn 3 Chọn hồ sơ; nhà 1 hồ sơ vào thẳng Trang chủ, chạm avatar để mở màn 3\n• Màn 3 và 17 có tweak Gói (free / premium) để xem cả hai trạng thái"
+    }
+  },
+  "designSystems": []
+}

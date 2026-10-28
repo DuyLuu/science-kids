@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Discoverer · Bộ thẻ thực phẩm</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px 20px 22px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div class="e-lay" style="--d: 0ms; flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 24px; font-weight: 900; line-height: 1.1">Bộ thẻ thực phẩm</span>
+        <span style="font-size: 13px; font-weight: 600; line-height: 1.35; color: #4E4336">Chạm thẻ đã có để xem mặt sau</span>
+      </div>
+      <span style="height: 40px; flex-shrink: 0; box-sizing: border-box; padding: 0 11px 0 9px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 5px; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><rect x="8.5" y="2.5" width="12" height="15.5" rx="2" transform="rotate(8 14.5 10)" fill="#2E4A6E"></rect></g><g filter="url(#paperE)"><rect x="3.5" y="6" width="12.6" height="16" rx="2" fill="#A93A27"></rect></g></svg>
+        <span>3/24</span><span style="font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600; color: #4E4336">thẻ</span>
+      </span>
+    </div>
+
+    <div class="e-lay" role="group" aria-label="Lọc theo nhóm chất" style="--d: 60ms; flex-shrink: 0; display: flex; gap: 6px">
+      <sc-for list="{{chips}}" as="f" hint-placeholder-count="5">
+        <button class="e-press" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="flex: 1 1 auto; min-width: 44px; height: 44px; box-sizing: border-box; padding: 0 9px; border: none; border-radius: 3px; white-space: nowrap; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 700; color: #1E1B18; {{f.st}}">{{f.label}}</button>
+      </sc-for>
+    </div>
+
+    <div style="flex-shrink: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px">
+      <sc-for list="{{cards}}" as="c" hint-placeholder-count="12">
+        <div class="e-lay" style="--d: {{c.d}}; position: relative; height: 136px">
+          <sc-if value="{{c.got}}" hint-placeholder-val="{{true}}">
+            <button class="e-press" onClick="{{c.open}}" aria-label="{{c.label}}" style="position: relative; display: block; width: 100%; height: 100%; box-sizing: border-box; border: none; background: transparent; padding: 0; cursor: pointer; font-family: inherit; color: #1E1B18; text-align: center">
+              <span aria-hidden="true" style="position: absolute; left: -3px; right: -3px; top: -2px; bottom: -5px; border-radius: 12px; background: #2E4A6E; transform: rotate({{c.tilt}}); box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3)"></span>
+              <span style="position: relative; height: 100%; box-sizing: border-box; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(30, 27, 24, 0.3); padding: 7px 7px 9px 7px; display: flex; flex-direction: column; align-items: center; gap: 2px">
+                <span style="position: relative; align-self: stretch; height: 72px; flex-shrink: 0; margin-bottom: 4px; border-radius: 7px; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center">
+                  <span aria-hidden="true" style="position: absolute; left: 6px; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: {{c.dot}}"></span>
+                  <sc-if value="{{c.isRau}}" hint-placeholder-val="{{true}}">
+                    <svg width="52" height="56" viewBox="18 0 84 90" aria-hidden="true">
+                      <g filter="url(#paperE)">
+                        <path d="M58 84 C 28 74, 20 34, 42 8 C 58 24, 64 56, 58 84 Z" fill="#2F5B57"></path>
+                        <path d="M62 84 C 92 74, 100 34, 78 8 C 62 24, 56 56, 62 84 Z" fill="#2F5B57"></path>
+                      </g>
+                      <g filter="url(#paperE)"><path d="M60 80 C 48 58, 50 28, 60 4 C 70 28, 72 58, 60 80 Z" fill="#3B6E6A"></path></g>
+                      <g filter="url(#paperE)"><path d="M53 86 C 50 70, 52 56, 57 46 L 63 46 C 68 56, 70 70, 67 86 Z" fill="#EFE3C2"></path></g>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{c.isCom}}" hint-placeholder-val="{{false}}">
+                    <svg width="62" height="61" viewBox="14 0 92 90" aria-hidden="true">
+                      <rect x="76" y="0" width="3.6" height="52" rx="1.8" transform="rotate(32 78 26)" fill="#8A5E3B"></rect>
+                      <rect x="85" y="2" width="3.6" height="52" rx="1.8" transform="rotate(32 87 28)" fill="#8A5E3B"></rect>
+                      <g filter="url(#paperE)"><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"></path></g>
+                      <g filter="url(#paperE)"><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"></path></g>
+                      <g filter="url(#paperE)"><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"></path></g>
+                      <g filter="url(#paperE)"><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"></path></g>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{c.isCa}}" hint-placeholder-val="{{false}}">
+                    <svg width="66" height="59" viewBox="0 0 100 90" aria-hidden="true">
+                      <g filter="url(#paperE)"><path d="M60 32 C 63 20, 70 12, 80 7 C 75 16, 70 24, 66 33 Z" fill="#3B6E6A"></path><path d="M66 33 C 72 24, 80 20, 90 19 C 83 25, 77 30, 72 35 Z" fill="#2F5B57"></path></g>
+                      <g filter="url(#paperE)"><path d="M18 41 C 17 27, 31 20, 43 24 C 52 27, 55 35, 52 41 Z" fill="#B97F16"></path></g>
+                      <g filter="url(#paperE)"><path d="M46 41 C 46 28, 59 21, 71 25 C 80 28, 83 35, 81 41 Z" fill="#A86C12"></path></g>
+                      <path d="M25 40 C 25 31, 34 27, 42 29.5 C 47 31.5, 48 36, 46 40 Z" fill="#D9A066"></path>
+                      <path d="M53 40 C 53 32, 61 28, 69 30.5 C 74 32.5, 76 36, 74.5 40 Z" fill="#D9A066"></path>
+                      <circle cx="36" cy="35" r="1.8" fill="#FBF6EA"></circle><circle cx="63" cy="35.5" r="1.8" fill="#FBF6EA"></circle>
+                      <g filter="url(#paperE)"><circle cx="49" cy="31" r="4.2" fill="#A93A27"></circle></g>
+                      <circle cx="49" cy="31" r="1.5" fill="#F0C873"></circle>
+                      <g filter="url(#paperE)"><ellipse cx="9" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse><ellipse cx="91" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse></g>
+                      <g filter="url(#paperE)"><path d="M14 46 H86 C 86 70, 70 84, 50 84 C 30 84, 14 70, 14 46 Z" fill="#8A5E3B"></path></g>
+                      <path d="M16.5 57 H83.5 C 82.8 60, 81.8 62.5, 80.5 65 H19.5 C 18.2 62.5, 17.2 60, 16.5 57 Z" fill="#6B4A2E"></path>
+                      <g filter="url(#paperE)"><rect x="9" y="38" width="82" height="10" rx="5" fill="#6B4A2E"></rect></g>
+                    </svg>
+                  </sc-if>
+                </span>
+                <span style="font-size: 15px; font-weight: 700; line-height: 1.2">{{c.vi}}</span>
+                <span style="font-size: 12px; font-weight: 600; line-height: 1.25; color: #4E4336">{{c.en}}</span>
+              </span>
+              <sc-if value="{{c.isNew}}" hint-placeholder-val="{{true}}">
+                <span class="e-stamp" aria-hidden="true" style="--d: 480ms; position: absolute; right: -7px; top: -8px; padding: 3px 7px; border-radius: 3px; background: #A93A27; color: #FBF6EA; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-family: 'Phudu', sans-serif; font-size: 13px; font-weight: 900; line-height: 1.2; letter-spacing: 0.5px">MỚI</span>
+              </sc-if>
+            </button>
+          </sc-if>
+          <sc-if value="{{c.hidden}}" hint-placeholder-val="{{false}}">
+            <div role="img" aria-label="{{c.label}}" style="position: relative; height: 100%; box-sizing: border-box; border-radius: 10px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28); padding: 8px 6px 9px 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center">
+              <span aria-hidden="true" style="position: absolute; left: 9px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: {{c.dot}}"></span>
+              <span aria-hidden="true" style="position: relative; width: 64px; height: 64px; flex-shrink: 0; display: flex; align-items: center; justify-content: center">
+                <sc-if value="{{c.sRound}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="0 0 60 60" style="position: absolute; left: 6px; top: 6px"><g fill="#D3C29C"><circle cx="30" cy="34" r="20"></circle><path d="M30 14c0-6 5-10 11-10 0 6-5 10-11 10z"></path></g></svg></sc-if>
+                <sc-if value="{{c.sEgg}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="0 0 60 60" style="position: absolute; left: 6px; top: 6px"><ellipse cx="30" cy="31" rx="17" ry="22" fill="#D3C29C"></ellipse></svg></sc-if>
+                <sc-if value="{{c.sLeaf}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="0 0 60 60" style="position: absolute; left: 6px; top: 6px"><path d="M30 57 C 12 47, 10 21, 30 4 C 50 21, 48 47, 30 57 Z" fill="#D3C29C"></path></svg></sc-if>
+                <sc-if value="{{c.sBottle}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="0 0 60 60" style="position: absolute; left: 6px; top: 6px"><g fill="#D3C29C"><rect x="25" y="2" width="10" height="7" rx="1.5"></rect><path d="M26 8h8v5l5 7v34a3 3 0 0 1-3 3H24a3 3 0 0 1-3-3V20l5-7z"></path></g></svg></sc-if>
+                <span style="position: relative; font-family: 'Phudu', sans-serif; font-size: 32px; font-weight: 900; line-height: 1; color: #4E4336">?</span>
+              </span>
+              <sc-if value="{{c.rare}}" hint-placeholder-val="{{false}}"><span style="font-family: 'Phudu', sans-serif; font-size: 13px; font-weight: 700; line-height: 1.1; color: #A93A27">Thẻ hiếm</span></sc-if>
+              <span style="font-size: 12px; font-weight: 700; line-height: 1.25; color: #4E4336">{{c.from}}</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{c.more}}" hint-placeholder-val="{{false}}">
+            <div style="position: relative; height: 100%">
+              <span aria-hidden="true" style="position: absolute; left: 4px; right: -2px; top: 4px; bottom: -3px; border-radius: 10px; background: #D3C29C; transform: rotate(4deg)"></span>
+              <div style="position: relative; height: 100%; box-sizing: border-box; border-radius: 10px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); padding: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center">
+                <span style="font-family: 'Phudu', sans-serif; font-size: 30px; font-weight: 900; line-height: 1.05; color: #4E4336">+13</span>
+                <span style="font-size: 12px; font-weight: 700; line-height: 1.3; color: #4E4336">thẻ ở các chủ đề sau</span>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{filtered}}" hint-placeholder-val="{{false}}">
+      <span class="e-lay" style="--d: 200ms; flex-shrink: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #4E4336">{{note}}</span>
+    </sc-if>
+
+    <div style="flex: 1"></div>
+    <div style="margin: 0 -20px -22px -20px; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
+      <nav aria-label="Điều hướng chính" style="background: #FBF6EA; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 14px 8px 18px 8px">
+        <a href="Discoverer-Home.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><g fill="#1E1B18"><path d="M2.5 6.2l6-2.2v14l-6 2.2z"></path><path d="M9.6 4l4.8 2v14l-4.8-2z"></path><path d="M15.5 6l6-2.2v14l-6 2.2z"></path></g></svg></span>Hành trình
+        </a>
+        <a href="Discoverer-Cards.dc.html" aria-current="page" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #1E1B18; font-size: 12px; font-weight: 700">
+          <span style="width: 50px; height: 32px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="2.5" width="12" height="15.5" rx="2" transform="rotate(8 14.5 10)" fill="#1E1B18"></rect><rect x="2.3" y="4.8" width="15" height="18.4" rx="2.6" fill="#E2A52A"></rect><rect x="3.5" y="6" width="12.6" height="16" rx="2" fill="#1E1B18"></rect></svg></span>Thẻ
+        </a>
+        <a href="Discoverer-Badges.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13.5L6.5 22.5l5.5-3 5.5 3L16 13.5z" fill="#1E1B18"></path><circle cx="12" cy="9" r="7" fill="#FBF6EA"></circle><circle cx="12" cy="9" r="6" fill="#1E1B18"></circle><circle cx="12" cy="9" r="2.6" fill="#FBF6EA"></circle></svg></span>Huy hiệu
+        </a>
+        <a href="Discoverer-Words.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14.5H6.5A2.5 2.5 0 0 0 4 20z" fill="#1E1B18"></path><path d="M6.5 18.8H20V21H6.5a1.1 1.1 0 0 1 0-2.2z" fill="#1E1B18"></path><rect x="8.5" y="7" width="8" height="2.2" rx="1.1" fill="#FBF6EA"></rect></svg></span>Từ vựng
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <sc-if value="{{isOpen}}" hint-placeholder-val="{{false}}">
+    <div role="dialog" aria-modal="true" aria-label="{{cur.dialogLabel}}" style="position: absolute; left: 0; top: 0; width: 390px; height: 844px; z-index: 2; box-sizing: border-box; background: rgba(214, 198, 164, 0.94); padding: 18px 20px 22px 20px; display: flex; flex-direction: column; gap: 14px">
+      <div style="flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+        <span style="flex: 1; font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 900; line-height: 1.1">Bộ thẻ thực phẩm</span>
+        <button class="e-press" onClick="{{close}}" aria-label="Đóng thẻ" style="width: 56px; height: 56px; flex-shrink: 0; padding: 0; border: none; background: transparent; cursor: pointer">
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#FBF6EA"></circle></g><path d="M20 19l16 16M36 19L20 35" stroke="#1E1B18" stroke-width="3.4" stroke-linecap="round"></path></svg>
+        </button>
+      </div>
+
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px">
+        <div class="e-pop" style="--d: 0ms; flex-shrink: 0">
+          <button class="e-press" onClick="{{flip}}" aria-label="{{cur.flipLabel}}" aria-pressed="{{flippedStr}}" style="display: block; width: 300px; height: 400px; perspective: 900px; border: none; background: transparent; padding: 0; cursor: pointer; font-family: inherit; color: #1E1B18; text-align: left">
+            <span class="e-flip" style="position: relative; display: block; width: 100%; height: 100%; rotate: {{cardRot}}">
+              <span style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden">
+                <span aria-hidden="true" style="position: absolute; left: -8px; right: -6px; top: -5px; bottom: -9px; border-radius: 14px; background: #2E4A6E; transform: rotate(1.6deg); box-shadow: 0 4px 6px rgba(91, 59, 23, 0.3)"></span>
+                <span style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; box-sizing: border-box; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(30, 27, 24, 0.3); padding: 16px; display: flex; flex-direction: column; gap: 10px">
+                  <span style="height: 28px; flex-shrink: 0; display: flex; align-items: center; gap: 8px">
+                    <span style="height: 26px; box-sizing: border-box; padding: 0 9px 0 7px; border-radius: 3px; background: #F0E6CF; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.25); display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{cur.dot}}"></span>{{cur.groupVi}}</span>
+                    <span style="flex: 1"></span>
+                    <sc-if value="{{cur.isNew}}" hint-placeholder-val="{{true}}">
+                      <span class="e-stamp" style="--d: 260ms; padding: 4px 9px; border-radius: 3px; background: #A93A27; color: #FBF6EA; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 900; line-height: 1.2; letter-spacing: 0.5px">MỚI</span>
+                    </sc-if>
+                  </span>
+                  <span style="height: 196px; flex-shrink: 0; border-radius: 8px; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center">
+                    <sc-if value="{{cur.isRau}}" hint-placeholder-val="{{true}}">
+                      <svg width="140" height="150" viewBox="18 0 84 90" aria-hidden="true">
+                        <g filter="url(#paperE)">
+                          <path d="M58 84 C 28 74, 20 34, 42 8 C 58 24, 64 56, 58 84 Z" fill="#2F5B57"></path>
+                          <path d="M62 84 C 92 74, 100 34, 78 8 C 62 24, 56 56, 62 84 Z" fill="#2F5B57"></path>
+                        </g>
+                        <g filter="url(#paperE)"><path d="M60 80 C 48 58, 50 28, 60 4 C 70 28, 72 58, 60 80 Z" fill="#3B6E6A"></path></g>
+                        <g filter="url(#paperE)"><path d="M53 86 C 50 70, 52 56, 57 46 L 63 46 C 68 56, 70 70, 67 86 Z" fill="#EFE3C2"></path></g>
+                      </svg>
+                    </sc-if>
+                    <sc-if value="{{cur.isCom}}" hint-placeholder-val="{{false}}">
+                      <svg width="160" height="156" viewBox="14 0 92 90" aria-hidden="true">
+                        <rect x="76" y="0" width="3.6" height="52" rx="1.8" transform="rotate(32 78 26)" fill="#8A5E3B"></rect>
+                        <rect x="85" y="2" width="3.6" height="52" rx="1.8" transform="rotate(32 87 28)" fill="#8A5E3B"></rect>
+                        <g filter="url(#paperE)"><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"></path></g>
+                        <g filter="url(#paperE)"><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"></path></g>
+                        <g filter="url(#paperE)"><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"></path></g>
+                        <g filter="url(#paperE)"><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"></path></g>
+                      </svg>
+                    </sc-if>
+                    <sc-if value="{{cur.isCa}}" hint-placeholder-val="{{false}}">
+                      <svg width="172" height="155" viewBox="0 0 100 90" aria-hidden="true">
+                        <g filter="url(#paperE)"><path d="M60 32 C 63 20, 70 12, 80 7 C 75 16, 70 24, 66 33 Z" fill="#3B6E6A"></path><path d="M66 33 C 72 24, 80 20, 90 19 C 83 25, 77 30, 72 35 Z" fill="#2F5B57"></path></g>
+                        <g filter="url(#paperE)"><path d="M18 41 C 17 27, 31 20, 43 24 C 52 27, 55 35, 52 41 Z" fill="#B97F16"></path></g>
+                        <g filter="url(#paperE)"><path d="M46 41 C 46 28, 59 21, 71 25 C 80 28, 83 35, 81 41 Z" fill="#A86C12"></path></g>
+                        <path d="M25 40 C 25 31, 34 27, 42 29.5 C 47 31.5, 48 36, 46 40 Z" fill="#D9A066"></path>
+                        <path d="M53 40 C 53 32, 61 28, 69 30.5 C 74 32.5, 76 36, 74.5 40 Z" fill="#D9A066"></path>
+                        <circle cx="36" cy="35" r="1.8" fill="#FBF6EA"></circle><circle cx="63" cy="35.5" r="1.8" fill="#FBF6EA"></circle>
+                        <g filter="url(#paperE)"><circle cx="49" cy="31" r="4.2" fill="#A93A27"></circle></g>
+                        <circle cx="49" cy="31" r="1.5" fill="#F0C873"></circle>
+                        <g filter="url(#paperE)"><ellipse cx="9" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse><ellipse cx="91" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse></g>
+                        <g filter="url(#paperE)"><path d="M14 46 H86 C 86 70, 70 84, 50 84 C 30 84, 14 70, 14 46 Z" fill="#8A5E3B"></path></g>
+                        <path d="M16.5 57 H83.5 C 82.8 60, 81.8 62.5, 80.5 65 H19.5 C 18.2 62.5, 17.2 60, 16.5 57 Z" fill="#6B4A2E"></path>
+                        <g filter="url(#paperE)"><rect x="9" y="38" width="82" height="10" rx="5" fill="#6B4A2E"></rect></g>
+                      </svg>
+                    </sc-if>
+                  </span>
+                  <span style="flex-shrink: 0; font-family: 'Phudu', sans-serif; font-size: 36px; font-weight: 900; line-height: 1.05">{{cur.vi}}</span>
+                  <span style="flex-shrink: 0; font-size: 17px; font-weight: 600; line-height: 1.3; color: #4E4336">{{cur.en}}</span>
+                  <span style="flex: 1"></span>
+                  <span style="flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; font-size: 12px; font-weight: 600; color: #4E4336"><span>Thẻ thực phẩm · mặt trước</span><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#4E4336" stroke-width="2.6" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#4E4336"></path></svg></span>
+                </span>
+              </span>
+
+              <span style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg)">
+                <span aria-hidden="true" style="position: absolute; left: -6px; right: -8px; top: -5px; bottom: -9px; border-radius: 14px; background: #2E4A6E; transform: rotate(-1.6deg); box-shadow: 0 4px 6px rgba(91, 59, 23, 0.3)"></span>
+                <span style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; box-sizing: border-box; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(30, 27, 24, 0.3); padding: 20px; display: flex; flex-direction: column; gap: 14px">
+                  <span style="align-self: flex-start; flex-shrink: 0; display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 10px; background: #A93A27; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Em có biết?</span></span>
+                  <span style="flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+                    <span aria-hidden="true" style="width: 84px; height: 84px; flex-shrink: 0; border-radius: 50%; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center">
+                      <sc-if value="{{cur.isRau}}" hint-placeholder-val="{{true}}">
+                        <svg width="50" height="54" viewBox="18 0 84 90">
+                          <g filter="url(#paperE)">
+                            <path d="M58 84 C 28 74, 20 34, 42 8 C 58 24, 64 56, 58 84 Z" fill="#2F5B57"></path>
+                            <path d="M62 84 C 92 74, 100 34, 78 8 C 62 24, 56 56, 62 84 Z" fill="#2F5B57"></path>
+                          </g>
+                          <g filter="url(#paperE)"><path d="M60 80 C 48 58, 50 28, 60 4 C 70 28, 72 58, 60 80 Z" fill="#3B6E6A"></path></g>
+                          <g filter="url(#paperE)"><path d="M53 86 C 50 70, 52 56, 57 46 L 63 46 C 68 56, 70 70, 67 86 Z" fill="#EFE3C2"></path></g>
+                        </svg>
+                      </sc-if>
+                      <sc-if value="{{cur.isCom}}" hint-placeholder-val="{{false}}">
+                        <svg width="58" height="57" viewBox="14 0 92 90">
+                          <rect x="76" y="0" width="3.6" height="52" rx="1.8" transform="rotate(32 78 26)" fill="#8A5E3B"></rect>
+                          <rect x="85" y="2" width="3.6" height="52" rx="1.8" transform="rotate(32 87 28)" fill="#8A5E3B"></rect>
+                          <g filter="url(#paperE)"><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"></path></g>
+                          <g filter="url(#paperE)"><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"></path></g>
+                          <g filter="url(#paperE)"><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"></path></g>
+                          <g filter="url(#paperE)"><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"></path></g>
+                        </svg>
+                      </sc-if>
+                      <sc-if value="{{cur.isCa}}" hint-placeholder-val="{{false}}">
+                        <svg width="62" height="56" viewBox="0 0 100 90">
+                          <g filter="url(#paperE)"><path d="M60 32 C 63 20, 70 12, 80 7 C 75 16, 70 24, 66 33 Z" fill="#3B6E6A"></path><path d="M66 33 C 72 24, 80 20, 90 19 C 83 25, 77 30, 72 35 Z" fill="#2F5B57"></path></g>
+                          <g filter="url(#paperE)"><path d="M18 41 C 17 27, 31 20, 43 24 C 52 27, 55 35, 52 41 Z" fill="#B97F16"></path></g>
+                          <g filter="url(#paperE)"><path d="M46 41 C 46 28, 59 21, 71 25 C 80 28, 83 35, 81 41 Z" fill="#A86C12"></path></g>
+                          <path d="M25 40 C 25 31, 34 27, 42 29.5 C 47 31.5, 48 36, 46 40 Z" fill="#D9A066"></path>
+                          <path d="M53 40 C 53 32, 61 28, 69 30.5 C 74 32.5, 76 36, 74.5 40 Z" fill="#D9A066"></path>
+                          <g filter="url(#paperE)"><circle cx="49" cy="31" r="4.2" fill="#A93A27"></circle></g>
+                          <g filter="url(#paperE)"><ellipse cx="9" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse><ellipse cx="91" cy="55" rx="6" ry="4" fill="#6B4A2E"></ellipse></g>
+                          <g filter="url(#paperE)"><path d="M14 46 H86 C 86 70, 70 84, 50 84 C 30 84, 14 70, 14 46 Z" fill="#8A5E3B"></path></g>
+                          <g filter="url(#paperE)"><rect x="9" y="38" width="82" height="10" rx="5" fill="#6B4A2E"></rect></g>
+                        </svg>
+                      </sc-if>
+                    </span>
+                    <span style="display: flex; flex-direction: column; gap: 2px">
+                      <span style="font-family: 'Phudu', sans-serif; font-size: 25px; font-weight: 900; line-height: 1.05">{{cur.vi}}</span>
+                      <span style="font-size: 14px; font-weight: 600; line-height: 1.3; color: #4E4336">{{cur.en}}</span>
+                    </span>
+                  </span>
+                  <span style="flex-shrink: 0; font-size: 21px; font-weight: 700; line-height: 1.3">{{cur.factEn}}</span>
+                  <span style="flex-shrink: 0; font-size: 15px; line-height: 1.45; color: #4E4336">{{cur.factVi}}</span>
+                  <span style="flex: 1"></span>
+                  <span style="flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+                    <span style="height: 26px; box-sizing: border-box; padding: 0 9px 0 7px; border-radius: 3px; background: #F0E6CF; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.25); display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{cur.dot}}"></span>{{cur.groupVi}}</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#4E4336" stroke-width="2.6" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#4E4336"></path></svg>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="e-lay" style="--d: 180ms; flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+          <button class="e-press" aria-label="Nghe thẻ này" style="width: 56px; height: 56px; flex-shrink: 0; padding: 0; border: none; background: transparent; cursor: pointer">
+            <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#FBF6EA"></circle></g><g transform="translate(16 15)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg>
+          </button>
+          <span style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #1E1B18"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.6" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg>Chạm để lật thẻ</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { group: 'all', open: null, flipped: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const chipLabel = { all: 'Tất cả', carb: 'Bột đường', protein: 'Đạm', fat: 'Béo', vit: 'Vitamin' };
+    const groupVi = { carb: 'Chất bột đường', protein: 'Chất đạm', fat: 'Chất béo', vit: 'Vitamin & khoáng chất' };
+    const color = { carb: '#E2A52A', protein: '#A93A27', fat: '#8A5E3B', vit: '#3B6E6A' };
+    const foods = {
+      rau: { vi: 'Rau muống', en: 'water spinach', group: 'vit', isNew: true, factEn: 'Water spinach has vitamins and fibre.', factVi: 'Rau muống có nhiều vitamin và chất xơ.' },
+      com: { vi: 'Cơm', en: 'rice', group: 'carb', isNew: false, factEn: 'Rice gives us energy.', factVi: 'Cơm cho ta năng lượng.' },
+      ca: { vi: 'Cá kho', en: 'braised fish', group: 'protein', isNew: false, factEn: 'Fish helps our body grow.', factVi: 'Cá giúp cơ thể lớn lên.' }
+    };
+    const slots = [
+      { id: 'rau' }, { id: 'com' }, { id: 'ca' },
+      { group: 'protein', from: 'Bài 2', shape: 'egg' },
+      { group: 'carb', from: 'Bài 2', shape: 'round' },
+      { group: 'vit', from: 'Bài 3', shape: 'leaf' },
+      { group: 'fat', from: 'Bài 3', shape: 'bottle' },
+      { group: 'protein', from: 'Bài 4', shape: 'round' },
+      { group: 'fat', from: 'Bài 4', shape: 'egg' },
+      { group: 'carb', from: 'Bài 5', shape: 'leaf' },
+      { group: 'vit', from: 'Thử thách tuần', shape: 'round', rare: true },
+      { more: true }
+    ];
+    const groupOf = (x) => (x.id ? foods[x.id].group : x.group);
+    const shown = slots.filter((x) => (x.more ? s.group === 'all' : (s.group === 'all' || groupOf(x) === s.group)));
+    const cards = shown.map((x, i) => {
+      const base = {
+        d: (120 + (Math.floor(i / 3) + (i % 3)) * 50) + 'ms',
+        got: false, hidden: false, more: false, isNew: false, rare: false,
+        isRau: false, isCom: false, isCa: false,
+        sRound: false, sEgg: false, sLeaf: false, sBottle: false,
+        vi: '', en: '', from: '', label: '', dot: '#4E4336', tilt: '0deg',
+        open: () => {}
+      };
+      if (x.more) return { ...base, more: true };
+      if (x.id) {
+        const f = foods[x.id];
+        return {
+          ...base, got: true, vi: f.vi, en: f.en, isNew: f.isNew,
+          isRau: x.id === 'rau', isCom: x.id === 'com', isCa: x.id === 'ca',
+          dot: color[f.group], tilt: i % 2 ? '-1.6deg' : '1.6deg',
+          label: 'Thẻ ' + f.vi + (f.isNew ? ', thẻ mới' : '') + '. Chạm để mở',
+          open: () => this.setState({ open: x.id, flipped: false })
+        };
+      }
+      return {
+        ...base, hidden: true, from: x.from, rare: !!x.rare, dot: color[x.group],
+        sRound: x.shape === 'round', sEgg: x.shape === 'egg', sLeaf: x.shape === 'leaf', sBottle: x.shape === 'bottle',
+        label: 'Thẻ chưa mở, nhóm ' + groupVi[x.group] + (x.rare ? ', thẻ hiếm' : '') + ', có ở ' + x.from
+      };
+    });
+    const chips = ['all', 'carb', 'protein', 'fat', 'vit'].map((g) => ({
+      label: chipLabel[g],
+      pressed: s.group === g ? 'true' : 'false',
+      st: s.group === g ? 'background: #E2A52A; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3);' : 'background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28);',
+      pick: () => this.setState({ group: g })
+    }));
+    let note = '';
+    if (s.group !== 'all') {
+      const inGroup = slots.filter((x) => !x.more && groupOf(x) === s.group);
+      const have = inGroup.filter((x) => x.id).length;
+      note = groupVi[s.group] + ' · đã có ' + have + '/' + inGroup.length + ' thẻ trong chủ đề này';
+    }
+    const f = foods[s.open] || foods.rau;
+    const cur = {
+      vi: f.vi, en: f.en, groupVi: groupVi[f.group], dot: color[f.group], isNew: !!f.isNew,
+      factEn: f.factEn, factVi: f.factVi,
+      isRau: f === foods.rau, isCom: f === foods.com, isCa: f === foods.ca,
+      dialogLabel: 'Thẻ ' + f.vi,
+      flipLabel: s.flipped ? 'Mặt sau thẻ ' + f.vi + '. Chạm để lật lại' : 'Thẻ ' + f.vi + '. Chạm để lật thẻ'
+    };
+    return {
+      chips, cards,
+      filtered: s.group !== 'all',
+      note,
+      isOpen: !!s.open,
+      cur,
+      cardRot: s.flipped ? 'y 180deg' : 'y 0deg',
+      flippedStr: s.flipped ? 'true' : 'false',
+      flip: () => this.setState({ flipped: !s.flipped }),
+      close: () => this.setState({ open: null, flipped: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Discoverer · Huy hiệu và chuỗi ngày</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px 20px 22px 20px; display: flex; flex-direction: column; gap: 10px">
+    <div class="e-lay" style="--d: 0ms; flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+      <span style="flex: 1; min-width: 0; font-family: 'Phudu', sans-serif; font-size: 23px; font-weight: 900; line-height: 1.1; text-wrap: balance">Huy hiệu và chuỗi ngày</span>
+      <span style="height: 40px; flex-shrink: 0; box-sizing: border-box; padding: 0 11px 0 9px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 5px; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z" fill="#E2A52A"></path></g></svg>
+        <span>128</span><span style="font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600; color: #4E4336">sao</span>
+      </span>
+    </div>
+
+    <div class="e-lay" style="--d: 80ms; flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px 14px 14px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; align-items: center; gap: 8px">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><g filter="url(#paperE)"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-2 2-5 5-5 8 0 4 3 7 7 7z" fill="#A93A27"></path></g><path d="M12 21c2.2 0 3.8-1.6 3.8-3.8 0-2.2-1.6-3.3-2.2-5.4-1.1 1.1-1.6 2.2-1.6 3.3-.6-.6-1.1-1.1-1.1-2.2-1.1 1.1-2.7 2.7-2.7 4.3 0 2.2 1.6 3.8 3.8 3.8z" fill="#E2A52A"></path></svg>
+        <span style="font-family: 'Phudu', sans-serif; font-size: 20px; font-weight: 900; line-height: 1.1">Chuỗi 6 ngày</span>
+        <span style="flex: 1"></span>
+        <span style="font-size: 13px; font-weight: 600; color: #4E4336">Tuần này</span>
+      </div>
+      <div role="img" aria-label="Tuần này: đã học thứ Hai, thứ Ba, thứ Tư; nghỉ thứ Năm; đã học thứ Sáu, thứ Bảy và hôm nay Chủ nhật" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 140ms; width: 36px; height: 36px; border-radius: 2px; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#FBF6EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T2</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 200ms; width: 36px; height: 36px; border-radius: 2px; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(1.5deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#FBF6EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T3</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 260ms; width: 36px; height: 36px; border-radius: 2px; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(-1deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#FBF6EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T4</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 320ms; width: 36px; height: 36px; border-radius: 2px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(2deg); display: flex; align-items: center; justify-content: center"><svg class="e-sway" width="22" height="22" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 10 10 5.5 18.5 5.5c0 8.5-4.5 13-13 13z" fill="#3B6E6A"></path><path d="M6.5 17.5l6.5-6.5" fill="none" stroke="#FBF6EA" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T5</span>
+          <span style="font-size: 11px; font-weight: 700; line-height: 1.25; color: #3B6E6A; white-space: nowrap">nghỉ</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 380ms; width: 36px; height: 36px; border-radius: 2px; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(-1.5deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#FBF6EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T6</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 440ms; width: 36px; height: 36px; border-radius: 2px; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(1deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#FBF6EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">T7</span>
+        </span>
+        <span style="display: flex; flex-direction: column; align-items: center; gap: 3px">
+          <span class="e-pop" style="--d: 500ms; width: 36px; height: 36px; border-radius: 2px; background: #E2A52A; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#1E1B18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <span style="font-size: 12px; font-weight: 700; line-height: 1.3; color: #1E1B18">CN</span>
+          <span style="font-size: 11px; font-weight: 700; line-height: 1.25; color: #1E1B18; white-space: nowrap">hôm nay</span>
+        </span>
+      </div>
+      <span style="font-size: 13px; line-height: 1.4; color: #4E4336">Mỗi tuần có 1 ngày nghỉ, chuỗi không bị mất.</span>
+    </div>
+
+    <div class="e-lay" style="--d: 150ms; flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 700">Thử thách tuần</span>
+        <span style="font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; color: #4E4336">1/3 bài</span>
+      </div>
+      <span style="font-size: 13px; line-height: 1.4; color: #4E4336">Xong 3 bài trong tuần để mở một thẻ hiếm</span>
+      <div aria-hidden="true" style="display: flex; gap: 6px; margin-top: 2px">
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #A93A27; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3)"></span>
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"></span>
+        <span style="flex: 1; height: 12px; border-radius: 2px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"></span>
+      </div>
+    </div>
+
+    <div class="e-lay" style="--d: 210ms; flex-shrink: 0; display: flex; justify-content: space-between; align-items: baseline">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 20px; font-weight: 900">Câu hỏi lớn</span>
+      <span style="font-size: 13px; font-weight: 600; color: #4E4336">Chạm để xem chủ đề</span>
+    </div>
+
+    <div style="flex-shrink: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 6px">
+      <div class="e-lay" style="--d: 240ms">
+        <button class="e-press" onClick="{{pick.body}}" aria-pressed="{{pressed.body}}" aria-label="Cơ thể ta cần gì? Đang học, 1/2 chủ đề" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.body}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <g filter="url(#paperE)"><circle cx="34" cy="34" r="33" fill="#FBF6EA"></circle></g>
+              <path d="M31.70 66.92 A33 33 0 0 1 31.70 1.08 L32.12 7.06 A27 27 0 0 0 32.12 60.94 Z" fill="#E2D4B4"></path>
+              <g filter="url(#paperE)"><path d="M36.30 1.08 A33 33 0 0 1 36.30 66.92 L35.88 60.94 A27 27 0 0 0 35.88 7.06 Z" fill="#E2A52A"></path></g>
+              <g filter="url(#paperE)"><circle cx="34" cy="34" r="22" fill="#A93A27"></circle></g>
+              <g transform="translate(22 22.4)"><path d="M12 20.6C6.4 16.8 3.2 13.4 3.2 9.7 3.2 7.1 5.2 5.1 7.7 5.1c1.8 0 3.3.9 4.3 2.4 1-1.5 2.5-2.4 4.3-2.4 2.5 0 4.5 2 4.5 4.6 0 3.7-3.2 7.1-8.8 10.9z" fill="#FBF6EA"></path></g>
+            </svg>
+            <span aria-hidden="true" style="position: absolute; right: -7px; bottom: 0; padding: 2px 5px; border-radius: 3px; background: #A93A27; color: #FBF6EA; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-family: 'Phudu', sans-serif; font-size: 12px; font-weight: 900; line-height: 1.2">1/2</span>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #1E1B18">Cơ thể ta cần gì?</span>
+        </button>
+      </div>
+      <div class="e-lay" style="--d: 290ms">
+        <button class="e-press" onClick="{{pick.move}}" aria-pressed="{{pressed.move}}" aria-label="Vì sao vật chuyển động? Chưa bắt đầu" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.move}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <circle cx="34" cy="34" r="33" fill="#E2D4B4"></circle>
+              <circle cx="34" cy="32.8" r="23" fill="#CDBB94"></circle>
+              <circle cx="34" cy="34.6" r="23" fill="#E6D9BC"></circle>
+              <g transform="translate(22 22.6)" fill="#4E4336"><circle cx="15" cy="12" r="6.5"></circle><rect x="1.5" y="6.6" width="6.5" height="2.4" rx="1.2"></rect><rect x="0.5" y="10.8" width="6.5" height="2.4" rx="1.2"></rect><rect x="1.5" y="15" width="6.5" height="2.4" rx="1.2"></rect></g>
+            </svg>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #4E4336">Vì sao vật chuyển động?</span>
+        </button>
+      </div>
+      <div class="e-lay" style="--d: 340ms">
+        <button class="e-press" onClick="{{pick.light}}" aria-pressed="{{pressed.light}}" aria-label="Ánh sáng đi đâu? Chưa bắt đầu" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.light}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <circle cx="34" cy="34" r="33" fill="#E2D4B4"></circle>
+              <circle cx="34" cy="32.8" r="23" fill="#CDBB94"></circle>
+              <circle cx="34" cy="34.6" r="23" fill="#E6D9BC"></circle>
+              <g transform="translate(22 22.6)" fill="#4E4336"><circle cx="12" cy="12" r="4.6"></circle><rect x="11" y="1.5" width="2" height="4" rx="1"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(45 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(90 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(135 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(180 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(225 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(270 12 12)"></rect><rect x="11" y="1.5" width="2" height="4" rx="1" transform="rotate(315 12 12)"></rect></g>
+            </svg>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #4E4336">Ánh sáng đi đâu?</span>
+        </button>
+      </div>
+      <div class="e-lay" style="--d: 390ms">
+        <button class="e-press" onClick="{{pick.plant}}" aria-pressed="{{pressed.plant}}" aria-label="Cây sống thế nào? Chưa bắt đầu" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.plant}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <circle cx="34" cy="34" r="33" fill="#E2D4B4"></circle>
+              <circle cx="34" cy="32.8" r="23" fill="#CDBB94"></circle>
+              <circle cx="34" cy="34.6" r="23" fill="#E6D9BC"></circle>
+              <g transform="translate(22 22.6)" fill="#4E4336"><rect x="11" y="11" width="2" height="10" rx="1"></rect><path d="M12 13c0-4.4 3.2-7.6 8.5-7.6 0 4.4-3.2 7.6-8.5 7.6z"></path><path d="M12 15.5c0-3.4-2.3-5.6-6.5-5.6 0 3.4 2.3 5.6 6.5 5.6z"></path><rect x="6" y="20" width="12" height="2.2" rx="1.1"></rect></g>
+            </svg>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #4E4336">Cây sống thế nào?</span>
+        </button>
+      </div>
+      <div class="e-lay" style="--d: 440ms">
+        <button class="e-press" onClick="{{pick.earth}}" aria-pressed="{{pressed.earth}}" aria-label="Trái Đất làm từ gì? Chưa bắt đầu" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.earth}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <circle cx="34" cy="34" r="33" fill="#E2D4B4"></circle>
+              <circle cx="34" cy="32.8" r="23" fill="#CDBB94"></circle>
+              <circle cx="34" cy="34.6" r="23" fill="#E6D9BC"></circle>
+              <g transform="translate(22 22.6)" fill="#4E4336"><path d="M2.5 19.5l5.2-9.2 3.3 3.6 4.6-8.4 6 14z"></path></g>
+            </svg>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #4E4336">Trái Đất làm từ gì?</span>
+        </button>
+      </div>
+      <div class="e-lay" style="--d: 490ms">
+        <button class="e-press" onClick="{{pick.sound}}" aria-pressed="{{pressed.sound}}" aria-label="Âm thanh từ đâu ra? Chưa bắt đầu" style="width: 100%; min-height: 56px; box-sizing: border-box; border: none; background: transparent; padding: 4px 2px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center">
+          <span style="position: relative; display: block; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%; transition: box-shadow 160ms ease; {{ring.sound}}">
+            <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true" style="display: block">
+              <circle cx="34" cy="34" r="33" fill="#E2D4B4"></circle>
+              <circle cx="34" cy="32.8" r="23" fill="#CDBB94"></circle>
+              <circle cx="34" cy="34.6" r="23" fill="#E6D9BC"></circle>
+              <g transform="translate(22 22.6)" fill="#4E4336"><path d="M12 3.2c.9 0 1.6.7 1.6 1.6v.5c2.8.7 4.8 3.2 4.8 6.2v3.8l1.8 2.4c.4.6 0 1.3-.7 1.3H4.5c-.7 0-1.1-.7-.7-1.3l1.8-2.4v-3.8c0-3 2-5.5 4.8-6.2v-.5c0-.9.7-1.6 1.6-1.6z"></path><circle cx="12" cy="20.8" r="2"></circle></g>
+            </svg>
+          </span>
+          <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #4E4336">Âm thanh từ đâu ra?</span>
+        </button>
+      </div>
+    </div>
+
+    <div role="status" style="flex-shrink: 0">
+      <sc-if value="{{cap.body}}" hint-placeholder-val="{{true}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Cơ thể ta cần gì?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #A93A27; white-space: nowrap">Đang học · 1/2 chủ đề</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Ăn uống lành mạnh · Bộ xương và cơ bắp</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{cap.move}}" hint-placeholder-val="{{false}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Vì sao vật chuyển động?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #4E4336; white-space: nowrap">Chưa bắt đầu</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Lực và nam châm</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{cap.light}}" hint-placeholder-val="{{false}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Ánh sáng đi đâu?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #4E4336; white-space: nowrap">Chưa bắt đầu</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Ánh sáng và bóng tối</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{cap.plant}}" hint-placeholder-val="{{false}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Cây sống thế nào?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #4E4336; white-space: nowrap">Chưa bắt đầu</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Cây làm gì và cần gì</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{cap.earth}}" hint-placeholder-val="{{false}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Trái Đất làm từ gì?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #4E4336; white-space: nowrap">Chưa bắt đầu</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Đá và đất</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{cap.sound}}" hint-placeholder-val="{{false}}">
+        <div class="e-slide" style="--d: {{capDelay}}; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); padding: 10px 14px; display: flex; flex-direction: column; gap: 3px">
+          <div style="display: flex; align-items: center; gap: 8px">
+            <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25">Âm thanh từ đâu ra?</span>
+            <span style="flex: 1"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #4E4336; white-space: nowrap">Chưa bắt đầu</span>
+          </div>
+          <span style="padding-left: 15px; font-size: 13px; font-weight: 600; line-height: 1.4">Âm thanh · Year 4</span>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="flex: 1"></div>
+    <div style="margin: 0 -20px -22px -20px; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
+      <nav aria-label="Điều hướng chính" style="background: #FBF6EA; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 14px 8px 18px 8px">
+        <a href="Discoverer-Home.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><g fill="#1E1B18"><path d="M2.5 6.2l6-2.2v14l-6 2.2z"></path><path d="M9.6 4l4.8 2v14l-4.8-2z"></path><path d="M15.5 6l6-2.2v14l-6 2.2z"></path></g></svg></span>Hành trình
+        </a>
+        <a href="Discoverer-Cards.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="2.5" width="12" height="15.5" rx="2" transform="rotate(8 14.5 10)" fill="#1E1B18"></rect><rect x="2.3" y="4.8" width="15" height="18.4" rx="2.6" fill="#FBF6EA"></rect><rect x="3.5" y="6" width="12.6" height="16" rx="2" fill="#1E1B18"></rect></svg></span>Thẻ
+        </a>
+        <a href="Discoverer-Badges.dc.html" aria-current="page" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #1E1B18; font-size: 12px; font-weight: 700">
+          <span style="width: 50px; height: 32px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13.5L6.5 22.5l5.5-3 5.5 3L16 13.5z" fill="#1E1B18"></path><circle cx="12" cy="9" r="7" fill="#E2A52A"></circle><circle cx="12" cy="9" r="6" fill="#1E1B18"></circle><circle cx="12" cy="9" r="2.6" fill="#E2A52A"></circle></svg></span>Huy hiệu
+        </a>
+        <a href="Discoverer-Words.dc.html" class="e-press" style="min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #4E4336; font-size: 12px; font-weight: 600">
+          <span style="width: 50px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14.5H6.5A2.5 2.5 0 0 0 4 20z" fill="#1E1B18"></path><path d="M6.5 18.8H20V21H6.5a1.1 1.1 0 0 1 0-2.2z" fill="#1E1B18"></path><rect x="8.5" y="7" width="8" height="2.2" rx="1.1" fill="#FBF6EA"></rect></svg></span>Từ vựng
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sel: 'body', touched: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const ids = ['body', 'move', 'light', 'plant', 'earth', 'sound'];
+    const pick = {}, pressed = {}, ring = {}, cap = {};
+    ids.forEach((id) => {
+      const on = s.sel === id;
+      pick[id] = () => this.setState({ sel: id, touched: true });
+      pressed[id] = on ? 'true' : 'false';
+      ring[id] = on ? 'box-shadow: 4px 5px 0 #E2A52A, 0 3px 4px rgba(91, 59, 23, 0.22);' : 'box-shadow: none;';
+      cap[id] = on;
+    });
+    return {
+      pick, pressed, ring, cap,
+      capDelay: s.touched ? '0ms' : '540ms'
+    };
+  }
+}
+</script>
+</body>
+</html>

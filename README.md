@@ -6,8 +6,10 @@ App học khoa học song ngữ Anh–Việt cho trẻ 5–11 tuổi. Syllabus t
 
 | File | Nội dung | Artifact gốc |
 | --- | --- | --- |
-| [prd.md](prd.md) | PRD đầy đủ 10 mục | [PRD (tab PRD)](https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe) |
+| [prd.md](prd.md) | PRD đầy đủ 11 mục, gồm mô hình tài khoản phụ huynh và hồ sơ con | [PRD (tab PRD)](https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe) |
 | [syllabus.md](syllabus.md) | Syllabus 3 nhóm tuổi, lộ trình học, timeline sản xuất GĐ 0 | [PRD (tab Syllabus & nội dung)](https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe) |
+| [syllabus-progression.md](syllabus-progression.md) | Đề xuất xếp syllabus theo độ khó tăng dần: rubric 5 tiêu chí, 6 mạch, độ khó trong bài và quiz, tiếng Anh, ngưỡng thành thạo, kèm nguồn research | Chưa publish |
+| [design/play-ui/](design/play-ui/project/) | UI/UX học mà chơi, style E "Giấy cắt Đông Hồ": bảng tổng quan, Discoverer đủ 17 màn có animation (gồm tài khoản phụ huynh và hồ sơ con), Explorer và Scientist mỗi nhóm 5 màn, khu khám phá style A–E | [Science Kids · Học mà chơi](https://claude.ai/artifact/MLvDKD33FWJ7aTMS7XX3Zk) |
 | [design/wireframes/](design/wireframes/) | 7 màn hình wireframe (canvas.json + *.dc.html) | [Science Kids Wireframes](https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ) |
 
 ## Workflow review

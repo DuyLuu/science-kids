@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Scientist · Thí nghiệm: thiết kế thí nghiệm công bằng</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 16px 20px 20px 20px; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="Scientist-Learn.dc.html" aria-label="Quay lại phần học" style="width: 48px; height: 48px; flex-shrink: 0; display: block; line-height: 0">
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#paperE)"><circle cx="24" cy="23" r="21" fill="#FBF6EA"></circle></g><path d="M27 15l-8 8 8 8" fill="none" stroke="#1E1B18" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 900; line-height: 1.1">Thiết kế thí nghiệm công bằng</span>
+        <span style="font-size: 12px; font-weight: 600; color: #4E4336">Fair test · thí nghiệm trên giấy</span>
+      </div>
+      <button onClick="{{toggleVi}}" aria-pressed="{{viPressed}}" aria-label="Hiện phụ đề tiếng Việt" style="width: 48px; height: 48px; flex-shrink: 0; border: none; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center">
+        <span style="width: 42px; height: 42px; margin-top: -2px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 0.5px; {{viStyle}}">VI</span>
+      </button>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px">
+      <svg width="120" height="28" viewBox="0 0 120 28" role="img" aria-label="Bước 3 trên 4: Thí nghiệm">
+        <g filter="url(#paperE)">
+          <rect x="4" y="2" width="22" height="22" rx="2" fill="#A93A27"></rect>
+          <rect x="34" y="2" width="22" height="22" rx="2" fill="#A93A27"></rect>
+          <rect x="64" y="2" width="22" height="22" rx="2" fill="#E2A52A"></rect>
+          <rect x="94" y="2" width="22" height="22" rx="2" fill="#E2D4B4"></rect>
+        </g>
+        <path d="M10 13.5l3.6 3.6 6.6-7.2M40 13.5l3.6 3.6 6.6-7.2" fill="none" stroke="#FBF6EA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span style="font-size: 12px; font-weight: 600; color: #4E4336">bước 3 · Thí nghiệm</span>
+    </div>
+
+    <div style="filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.28))">
+      <div style="background: #FBF6EA; clip-path: polygon(0 3px, 3px 0, 150px 0, 166px 22px, calc(100% - 6px) 22px, 100% 28px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px)); padding: 0 14px 11px 14px; display: flex; flex-direction: column; gap: 3px">
+        <span style="height: 22px; display: flex; align-items: center; font-family: 'Phudu', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2E4A6E">Câu hỏi nghiên cứu</span>
+        <span style="margin-top: 5px; font-size: 17px; font-weight: 700; line-height: 1.3">Does warmer water make tadpoles grow legs faster?</span>
+        <sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; color: #4E4336; line-height: 1.35">Nước ấm hơn có làm nòng nọc mọc chân nhanh hơn không?</span></sc-if>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; padding: 2px 5px 0 0">
+      <sc-for list="{{remaining}}" as="v" hint-placeholder-count="5">
+        <button onClick="{{v.pick}}" aria-pressed="{{v.pressed}}" style="min-height: 48px; box-sizing: border-box; border: none; border-radius: 3px; cursor: pointer; padding: 6px 10px 6px 9px; font-family: 'Be Vietnam Pro', sans-serif; color: #1E1B18; display: flex; align-items: center; gap: 7px; text-align: left; {{v.style}}">
+          <span aria-hidden="true" style="width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>
+          <span style="display: flex; flex-direction: column; align-items: flex-start">
+            <span style="font-size: 13px; font-weight: 700; line-height: 1.25">{{v.en}}</span>
+            <sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-size: 12px; line-height: 1.25; color: #4E4336">{{v.vi}}</span></sc-if>
+          </span>
+        </button>
+      </sc-for>
+      <sc-if value="{{noneLeft}}" hint-placeholder-val="{{false}}"><span style="grid-column: 1 / -1; align-self: center; font-size: 13px; font-weight: 600; color: #4E4336">Đã xếp hết 5 biến.</span></sc-if>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <sc-for list="{{bins}}" as="b" hint-placeholder-count="3">
+        <button onClick="{{b.drop}}" style="min-height: 48px; box-sizing: border-box; border: none; border-radius: 6px; cursor: pointer; padding: 7px 10px 7px 12px; font-family: 'Be Vietnam Pro', sans-serif; color: #1E1B18; display: flex; align-items: center; gap: 10px; text-align: left; {{b.style}}">
+          <span style="width: 116px; flex-shrink: 0; display: flex; flex-direction: column"><span style="font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.15">{{b.title}}</span><span style="font-size: 11px; font-weight: 600; color: #4E4336">{{b.hint}}</span></span>
+          <span style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px">
+            <sc-for list="{{b.items}}" as="it" hint-placeholder-count="1">
+              <span style="display: inline-flex; align-items: center; gap: 5px; background: #FBF6EA; border-radius: 3px; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.28); padding: 4px 8px 4px 6px; font-size: 12px; font-weight: 700; color: #1E1B18"><span aria-hidden="true" style="width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: #A93A27"></span>{{it}}</span>
+            </sc-for>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+
+    <div style="filter: drop-shadow(0 2px 3px rgba(91, 59, 23, 0.28))">
+      <div style="position: relative; background: #FBF6EA; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); padding: 6px 18px 6px 10px; display: flex; align-items: flex-start; gap: 8px">
+        <span aria-hidden="true" style="position: absolute; top: 0; right: 0; width: 16px; height: 16px; background: #E2D4B4; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span>
+        <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true" style="flex-shrink: 0">
+          <rect x="48.5" y="9" width="3" height="18" rx="1.5" fill="#1E1B18"></rect>
+          <g filter="url(#paperE)"><circle cx="50" cy="9" r="6.5" fill="#E2A52A"></circle></g>
+          <g filter="url(#paperE)"><circle cx="50" cy="58" r="36" fill="#3B6E6A"></circle></g>
+          <g filter="url(#paperE)"><ellipse cx="50" cy="73" rx="21" ry="14" fill="#F0E6CF"></ellipse></g>
+          <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+          <circle cx="40" cy="52" r="4.2" fill="#1E1B18"></circle><circle cx="64" cy="52" r="4.2" fill="#1E1B18"></circle>
+          <path d="M41 67 Q 50 77 59 67 Q 50 71 41 67 Z" fill="#1E1B18"></path>
+          <circle cx="27" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle><circle cx="73" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle>
+        </svg>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 2px; padding-top: 1px">
+          <span style="font-size: 16px; font-weight: 600; line-height: 1.35; {{msgStyle}}">{{msgEn}}</span>
+          <sc-if value="{{vi}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; color: #4E4336; line-height: 1.35">{{msgVi}}</span></sc-if>
+        </div>
+      </div>
+    </div>
+
+    <span style="font-size: 12px; font-weight: 600; line-height: 1.4; color: #4E4336; display: flex; align-items: flex-start; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0; margin-top: 1px"><path d="M11 21.5V13C6.5 13 3.5 10 3.5 5.5 8 5.5 11 8.5 11 12.5 11 7 14.5 3 20.5 3 20.5 9 17 12.5 13 13V21.5z" fill="#3B6E6A"></path></svg>Thí nghiệm trên giấy — không cần (và không nên) bắt nòng nọc thật.</span>
+
+    <div style="flex: 1"></div>
+    <sc-if value="{{done}}" hint-placeholder-val="{{false}}">
+      <a href="Scientist-Quiz.dc.html" style="position: relative; display: block; height: 60px; flex-shrink: 0; text-decoration: none; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: 0.3px">
+        <svg width="100%" height="100%" viewBox="0 0 350 60" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="3" y="10" width="344" height="46" rx="8" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="3" y="3" width="344" height="46" rx="8" fill="#A93A27"></rect></g></svg>
+        <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px">Thiết kế xong · Làm quiz<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span>
+      </a>
+    </sc-if>
+    <sc-if value="{{notDone}}" hint-placeholder-val="{{true}}">
+      <div style="position: relative; height: 60px; flex-shrink: 0; color: #4E4336; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: 0.3px">
+        <svg width="100%" height="100%" viewBox="0 0 350 60" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="3" y="10" width="344" height="46" rx="8" fill="#C9B993"></rect></g><g filter="url(#paperE)"><rect x="3" y="3" width="344" height="46" rx="8" fill="#E2D4B4"></rect></g></svg>
+        <span style="position: relative; display: flex; align-items: center; justify-content: center; height: 52px"><span>Đã xếp {{placedCount}}/5 biến</span></span>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: null, placed: {}, last: 'start', vi: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const V = {
+      temp: { en: 'Water temperature', vi: 'Nhiệt độ nước', bin: 'change' },
+      days: { en: 'Days until legs appear', vi: 'Số ngày đến khi mọc chân', bin: 'measure' },
+      food: { en: 'Amount of food', vi: 'Lượng thức ăn', bin: 'same' },
+      tank: { en: 'Size of tank', vi: 'Kích thước bể', bin: 'same' },
+      count: { en: 'Number of tadpoles', vi: 'Số nòng nọc mỗi bể', bin: 'same' }
+    };
+    const ids = Object.keys(V);
+    const placedCount = ids.filter((id) => s.placed[id]).length;
+    const M = {
+      start: ['Pick a variable, then tap the box it belongs in.', 'Chọn một biến, rồi chạm vào ô phù hợp.'],
+      picked: ['Change it, measure it, or keep it the same?', 'Biến này: thay đổi, đo, hay giữ nguyên?'],
+      noPick: ['Pick a variable first.', 'Hãy chọn một biến trước.'],
+      okChange: ['Yes! Temperature is what you test, so you change it.', 'Đúng! Nhiệt độ là điều em kiểm tra nên em thay đổi nó.'],
+      okMeasure: ['Yes! The number of days is your result.', 'Đúng! Số ngày là kết quả em đo.'],
+      okSame: ['Yes! Keep it the same so the test is fair.', 'Đúng! Giữ nguyên để thí nghiệm công bằng.'],
+      wrongTemp: ['Temperature is what you want to test. It must change.', 'Nhiệt độ là điều em muốn kiểm tra — nó phải thay đổi.'],
+      wrongDays: ['The number of days is what you observe. Measure it.', 'Số ngày là điều em quan sát được — hãy đo nó.'],
+      wrongToChange: ['If you change this too, you won’t know what caused the difference.', 'Nếu đổi cả biến này, em sẽ không biết điều gì gây ra khác biệt.'],
+      wrongToMeasure: ['This is not your result. Keep it the same.', 'Đây không phải kết quả. Hãy giữ nguyên nó.'],
+      done: ['Fair test designed! Only the temperature changes.', 'Thí nghiệm công bằng! Chỉ có nhiệt độ thay đổi.']
+    };
+    const key = placedCount === 5 ? 'done' : s.last;
+    const isWrong = key.startsWith('wrong');
+    const drop = (bin) => () => {
+      if (!s.picked) { this.setState({ last: 'noPick' }); return; }
+      const v = V[s.picked];
+      if (v.bin === bin) {
+        const last = bin === 'change' ? 'okChange' : bin === 'measure' ? 'okMeasure' : 'okSame';
+        this.setState({ placed: { ...s.placed, [s.picked]: bin }, picked: null, last });
+      } else {
+        let last = 'wrongToChange';
+        if (s.picked === 'temp') last = 'wrongTemp';
+        else if (s.picked === 'days') last = 'wrongDays';
+        else if (bin === 'measure') last = 'wrongToMeasure';
+        this.setState({ last });
+      }
+    };
+    const remaining = ids.filter((id) => !s.placed[id]).map((id) => ({
+      en: V[id].en,
+      vi: V[id].vi,
+      pressed: s.picked === id ? 'true' : 'false',
+      style: s.picked === id ? 'background: #FBF6EA; box-shadow: 4px 5px 0 #E2A52A, 0 2px 3px rgba(91, 59, 23, 0.28);' : 'background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28);',
+      pick: () => this.setState({ picked: id, last: 'picked' })
+    }));
+    const binStyle = s.picked ? 'background: #DCE2EA; box-shadow: inset 0 2px 5px rgba(36, 57, 90, 0.32);' : 'background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28);';
+    const itemsIn = (bin) => ids.filter((id) => s.placed[id] === bin).map((id) => (s.vi ? V[id].vi : V[id].en));
+    return {
+      vi: s.vi,
+      viPressed: s.vi ? 'true' : 'false',
+      viStyle: s.vi ? 'background: #E2A52A; color: #1E1B18; box-shadow: 0 2.5px 3px rgba(91, 59, 23, 0.32);' : 'background: #FBF6EA; color: #1E1B18; box-shadow: 0 2.5px 3px rgba(91, 59, 23, 0.32);',
+      toggleVi: () => this.setState({ vi: !s.vi }),
+      remaining,
+      noneLeft: remaining.length === 0,
+      bins: [
+        { title: 'Thay đổi', hint: 'change · 1 biến', style: binStyle, items: itemsIn('change'), drop: drop('change') },
+        { title: 'Đo', hint: 'measure · 1 biến', style: binStyle, items: itemsIn('measure'), drop: drop('measure') },
+        { title: 'Giữ nguyên', hint: 'keep the same · 3', style: binStyle, items: itemsIn('same'), drop: drop('same') }
+      ],
+      msgEn: M[key][0],
+      msgVi: M[key][1],
+      msgStyle: isWrong ? 'color: #1E1B18;' : (key === 'done' || key.startsWith('ok') ? 'color: #A93A27; font-weight: 700;' : 'color: #1E1B18;'),
+      placedCount,
+      done: placedCount === 5,
+      notDone: placedCount < 5
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Style A · Vở ô ly mực tím · màn Học</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&amp;family=Playpen+Sans:wght@400;600;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#3F2F8C}a:hover{color:#2A1F66}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; font-family: 'Andika', 'Trebuchet MS', sans-serif; color: #22223A; background-color: #FDFCF7; background-image: linear-gradient(90deg, transparent 43px, rgba(208, 72, 72, 0.5) 43px, rgba(208, 72, 72, 0.5) 45px, transparent 45px), repeating-linear-gradient(0deg, rgba(128, 108, 196, 0.36) 0px, rgba(128, 108, 196, 0.36) 1px, transparent 1px, transparent 28px), repeating-linear-gradient(0deg, rgba(150, 132, 210, 0.18) 0px, rgba(150, 132, 210, 0.18) 1px, transparent 1px, transparent 7px), repeating-linear-gradient(90deg, rgba(128, 108, 196, 0.26) 0px, rgba(128, 108, 196, 0.26) 1px, transparent 1px, transparent 28px); display: flex; flex-direction: column; gap: 16px; padding: 16px 18px 22px 18px">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="wobA" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+      <filter id="pencilA" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"></feTurbulence>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.7 1.5" result="m"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="m" operator="in" result="g"></feComposite>
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="2" result="w"></feTurbulence>
+        <feDisplacementMap in="g" in2="w" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+    </defs>
+  </svg>
+
+  <div style="display: flex; align-items: center; gap: 12px">
+    <button aria-label="Đóng bài học" style="width: 56px; height: 56px; flex-shrink: 0; box-sizing: border-box; padding: 0; border: 2.5px solid #3F2F8C; border-radius: 16px 12px 18px 14px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3F2F8C" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0px">
+      <svg width="176" height="34" viewBox="0 0 176 34" role="img" aria-label="Bước 2 trên 5: Học">
+        <g filter="url(#wobA)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="54" cy="17" rx="17" ry="14" fill="#FFE066" stroke="none"></ellipse>
+          <circle cx="18" cy="17" r="11" stroke="#3F2F8C" stroke-width="2.2"></circle>
+          <path d="M12 17l4 4.5 8-9.5" stroke="#C8372D" stroke-width="2.8"></path>
+          <circle cx="54" cy="17" r="11" stroke="#3F2F8C" stroke-width="3"></circle>
+          <circle cx="90" cy="17" r="11" stroke="#9C92C4" stroke-width="2"></circle>
+          <circle cx="126" cy="17" r="11" stroke="#9C92C4" stroke-width="2"></circle>
+          <circle cx="162" cy="17" r="11" stroke="#9C92C4" stroke-width="2"></circle>
+        </g>
+      </svg>
+      <span style="font-family: 'Playpen Sans', cursive; font-size: 12px; font-weight: 600; color: #3F2F8C">bước 2 · Học</span>
+    </div>
+    <button aria-label="Nghe câu tiếng Anh" style="width: 56px; height: 56px; flex-shrink: 0; box-sizing: border-box; padding: 0; border: 2.5px solid #3F2F8C; border-radius: 14px 18px 12px 16px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F2F8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"></path><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"></path></svg>
+    </button>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 18px; padding-left: 38px">
+    <div style="align-self: flex-start; transform: rotate(-1.5deg); background: #FFFFFF; border: 2px solid #2D5BA8; border-radius: 14px; box-shadow: inset 0 0 0 4px #FFFFFF, inset 0 0 0 5.5px #2D5BA8, 0 2px 0 rgba(34, 34, 58, 0.12); padding: 12px 18px; display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 13px; font-weight: 700; color: #2D5BA8">Bài 1 · Ăn uống lành mạnh · nhóm 2/4</span>
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 34px; font-weight: 800; line-height: 1.1; color: #3F2F8C">Protein</span>
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 20px; font-weight: 600; color: #3F2F8C">chất đạm</span>
+      </div>
+    </div>
+
+    <div style="position: relative; transform: rotate(1deg); background: #FFFFFF; border-radius: 6px; box-shadow: 0 1px 0 rgba(34, 34, 58, 0.08), 0 6px 14px rgba(34, 34, 58, 0.12); padding: 14px 10px 8px 10px">
+      <span aria-hidden="true" style="position: absolute; top: -10px; left: 26px; width: 74px; height: 22px; background: rgba(240, 222, 150, 0.78); transform: rotate(-6deg)"></span>
+      <span aria-hidden="true" style="position: absolute; top: -8px; right: 22px; width: 66px; height: 22px; background: rgba(240, 222, 150, 0.78); transform: rotate(5deg)"></span>
+      <svg viewBox="0 0 320 236" role="img" aria-label="Cá, trứng và đậu phụ: thức ăn giàu chất đạm" style="display: block; width: 100%; height: auto">
+        <g filter="url(#pencilA)">
+          <path d="M128 47 C 138 26, 170 24, 186 46 Z" fill="#B8642A"></path>
+          <path d="M150 96 C 158 112, 176 112, 182 94 Z" fill="#B8642A"></path>
+          <path d="M70 72 C 92 38, 168 30, 210 62 L 246 38 C 238 62 238 84 246 106 L 210 82 C 168 112, 92 106, 70 72 Z" fill="#E39B3A"></path>
+          <path d="M92 84 C 120 100, 172 100, 206 80 C 176 108, 112 106, 92 84 Z" fill="#B8642A"></path>
+          <path d="M212 64 L 244 42 C 238 62 238 84 244 102 L 212 80 Z" fill="#C97A30"></path>
+          <ellipse cx="84" cy="168" rx="27" ry="34" fill="#EBC795"></ellipse>
+          <ellipse cx="140" cy="178" rx="26" ry="29" fill="#F3EEE4"></ellipse>
+          <circle cx="140" cy="181" r="13" fill="#F2AE2E"></circle>
+          <path d="M196 150 L 248 140 L 280 154 L 228 165 Z" fill="#FBEFC8"></path>
+          <path d="M196 150 L 228 165 L 228 204 L 196 189 Z" fill="#E6CC86"></path>
+          <path d="M228 165 L 280 154 L 280 193 L 228 204 Z" fill="#F2DEA4"></path>
+        </g>
+        <g filter="url(#wobA)" fill="none" stroke="#2B2350" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M70 72 C 92 38, 168 30, 210 62 L 246 38 C 238 62 238 84 246 106 L 210 82 C 168 112, 92 106, 70 72 Z"></path>
+          <path d="M128 47 C 138 26, 170 24, 186 46"></path>
+          <path d="M150 96 C 158 112, 176 112, 182 94"></path>
+          <path d="M122 50 Q 112 72 122 94"></path>
+          <path d="M140 62 q 6 6 0 12 M156 58 q 6 6 0 12 M172 60 q 6 6 0 12 M188 64 q 5 5 0 10"></path>
+          <circle cx="96" cy="65" r="6"></circle>
+          <ellipse cx="84" cy="168" rx="27" ry="34"></ellipse>
+          <path d="M70 150 q 4 -8 12 -10" stroke-width="1.8"></path>
+          <ellipse cx="140" cy="178" rx="26" ry="29"></ellipse>
+          <circle cx="140" cy="181" r="13"></circle>
+          <path d="M196 150 L 248 140 L 280 154 L 228 165 Z M196 150 L 196 189 L 228 204 L 280 193 L 280 154 M228 165 L 228 204"></path>
+        </g>
+        <circle cx="97" cy="65" r="2.6" fill="#2B2350"></circle>
+        <g filter="url(#wobA)" fill="none" stroke="#3F2F8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M46 34 Q 62 42 70 60"></path>
+          <path d="M62 58 L 70 60 L 69 52"></path>
+          <path d="M70 218 Q 76 210 80 204"></path>
+          <path d="M236 220 Q 240 212 242 206"></path>
+        </g>
+        <g font-family="'Playpen Sans', cursive" font-weight="600" font-size="15" fill="#3F2F8C">
+          <text x="6" y="28">fish · cá</text>
+          <text x="34" y="232">egg · trứng</text>
+          <text x="196" y="232">tofu · đậu phụ</text>
+        </g>
+      </svg>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0px">
+      <p style="margin: 0; font-size: 22px; font-weight: 700; line-height: 28px; color: #22223A">Protein helps your body <span style="background: linear-gradient(transparent 52%, #FFE066 52%, #FFE066 92%, transparent 92%)">grow strong</span>.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 28px; color: #4A4766">Chất đạm giúp cơ thể lớn lên khoẻ mạnh.</p>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap">
+      <span style="font-family: 'Playpen Sans', cursive; font-size: 15px; font-weight: 600; color: #C8372D; margin-right: 4px">Từ mới:</span>
+      <button aria-label="Nghe từ protein" style="min-height: 44px; padding: 0 6px; border: none; background: transparent; cursor: pointer; font-family: 'Playpen Sans', cursive; font-size: 17px; font-weight: 600; color: #3F2F8C; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: #C8372D; text-underline-offset: 5px">protein</button>
+      <button aria-label="Nghe từ grow" style="min-height: 44px; padding: 0 6px; border: none; background: transparent; cursor: pointer; font-family: 'Playpen Sans', cursive; font-size: 17px; font-weight: 600; color: #3F2F8C; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: #C8372D; text-underline-offset: 5px">grow</button>
+      <button aria-label="Nghe từ strong" style="min-height: 44px; padding: 0 6px; border: none; background: transparent; cursor: pointer; font-family: 'Playpen Sans', cursive; font-size: 17px; font-weight: 600; color: #3F2F8C; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: #C8372D; text-underline-offset: 5px">strong</button>
+    </div>
+  </div>
+
+  <div style="flex: 1"></div>
+
+  <div style="display: flex; align-items: center; gap: 14px; padding-left: 38px">
+    <span style="font-family: 'Playpen Sans', cursive; font-size: 15px; font-weight: 600; color: #3F2F8C">Nhóm 2/4</span>
+    <button style="flex: 1; height: 60px; border: none; border-radius: 18px 14px 20px 12px; background: #3F2F8C; color: #FFFFFF; font-family: 'Andika', sans-serif; font-size: 20px; font-weight: 700; box-shadow: 0 3px 0 #251A5E; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px">Tiếp<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

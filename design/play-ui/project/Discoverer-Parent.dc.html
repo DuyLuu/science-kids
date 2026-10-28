@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Discoverer · Góc phụ huynh</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px 20px 22px 20px; display: flex; flex-direction: column">
+    <sc-if value="{{locked}}" hint-placeholder-val="{{true}}">
+      <div style="flex: 1; display: flex; flex-direction: column">
+        <div class="e-lay" style="--d: 0ms; flex-shrink: 0; display: flex; align-items: center">
+          <a href="Discoverer-Home.dc.html" class="e-press" aria-label="Đóng, về hành trình" style="width: 48px; height: 48px; flex-shrink: 0; display: block">
+            <svg width="48" height="48" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#FBF6EA"></circle></g><path d="M20 19l16 16M36 19L20 35" stroke="#1E1B18" stroke-width="3.4" stroke-linecap="round"></path></svg>
+          </a>
+        </div>
+        <div style="flex: 1"></div>
+        <div class="e-lay" style="--d: 80ms; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+          <span style="display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 12px; background: #2E4A6E; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Góc phụ huynh</span></span>
+          <span style="font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 900; line-height: 1.1">Nhập mã PIN 4 số</span>
+          <span style="font-size: 15px; line-height: 1.4; color: #4E4336">Phần này dành cho bố mẹ.</span>
+          <div role="img" aria-label="{{pinLabel}}" style="margin-top: 12px; display: flex; gap: 18px">
+            <span style="position: relative; width: 22px; height: 22px; border-radius: 50%; background: #E6D9BC; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.3)"><sc-if value="{{dots.d1}}" hint-placeholder-val="{{true}}"><span class="e-pop" style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3)"></span></sc-if></span>
+            <span style="position: relative; width: 22px; height: 22px; border-radius: 50%; background: #E6D9BC; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.3)"><sc-if value="{{dots.d2}}" hint-placeholder-val="{{false}}"><span class="e-pop" style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3)"></span></sc-if></span>
+            <span style="position: relative; width: 22px; height: 22px; border-radius: 50%; background: #E6D9BC; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.3)"><sc-if value="{{dots.d3}}" hint-placeholder-val="{{false}}"><span class="e-pop" style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3)"></span></sc-if></span>
+            <span style="position: relative; width: 22px; height: 22px; border-radius: 50%; background: #E6D9BC; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.3)"><sc-if value="{{dots.d4}}" hint-placeholder-val="{{false}}"><span class="e-pop" style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #A93A27; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3)"></span></sc-if></span>
+          </div>
+        </div>
+        <div style="height: 36px; flex-shrink: 0"></div>
+        <div class="e-lay" style="--d: 160ms; flex-shrink: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+          <button class="e-press" onClick="{{press.k1}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">1</button>
+          <button class="e-press" onClick="{{press.k2}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">2</button>
+          <button class="e-press" onClick="{{press.k3}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">3</button>
+          <button class="e-press" onClick="{{press.k4}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">4</button>
+          <button class="e-press" onClick="{{press.k5}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">5</button>
+          <button class="e-press" onClick="{{press.k6}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">6</button>
+          <button class="e-press" onClick="{{press.k7}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">7</button>
+          <button class="e-press" onClick="{{press.k8}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">8</button>
+          <button class="e-press" onClick="{{press.k9}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">9</button>
+          <span aria-hidden="true"></span>
+          <button class="e-press" onClick="{{press.k0}}" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 28px; font-weight: 700; color: #1E1B18">0</button>
+          <button class="e-press" onClick="{{del}}" aria-label="Xoá số vừa nhập" style="height: 68px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; display: flex; align-items: center; justify-content: center">
+            <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 5h11a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-11L2.5 12z" fill="#1E1B18"></path><path d="M11.5 9l5 6M16.5 9l-5 6" stroke="#FBF6EA" stroke-width="2" stroke-linecap="round"></path></svg>
+          </button>
+        </div>
+        <div style="flex: 1"></div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{open}}" hint-placeholder-val="{{false}}">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 12px">
+        <div class="e-lay" style="--d: 0ms; flex-shrink: 0; display: flex; align-items: center; gap: 12px">
+          <sc-if value="{{isFree}}" hint-placeholder-val="{{true}}">
+            <svg width="48" height="48" viewBox="0 0 64 64" role="img" aria-label="Hình đại diện của Minh: ếch" style="flex-shrink: 0; overflow: visible">
+              <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#A93A27"></circle></g>
+              <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#FBF6EA"></circle></g>
+              <g transform="translate(7 6) scale(0.8)">
+                <g filter="url(#paperE)" fill="#3B6E6A"><circle cx="19" cy="21" r="9"></circle><circle cx="41" cy="21" r="9"></circle><ellipse cx="30" cy="36" rx="24" ry="16"></ellipse></g>
+                <circle cx="30" cy="29" r="2.2" fill="#2F5B57"></circle>
+                <g filter="url(#paperE)"><ellipse cx="30" cy="46" rx="13" ry="5" fill="#E2A52A"></ellipse></g>
+                <g filter="url(#paperE)" fill="#FBF6EA"><circle cx="19" cy="20" r="5"></circle><circle cx="41" cy="20" r="5"></circle></g>
+                <circle cx="19.6" cy="20.6" r="2.6" fill="#1E1B18"></circle><circle cx="41.6" cy="20.6" r="2.6" fill="#1E1B18"></circle>
+                <path d="M19 37 Q 30 43 41 37 Q 30 40.5 19 37 Z" fill="#1E1B18"></path>
+                <circle cx="13" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle><circle cx="47" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle>
+              </g>
+            </svg>
+          </sc-if>
+          <sc-if value="{{isPremium}}" hint-placeholder-val="{{false}}">
+            <span role="img" aria-label="Hình đại diện của Minh (ếch) và Su (gà)" style="position: relative; display: block; width: 78px; height: 48px; flex-shrink: 0">
+              <svg width="48" height="48" viewBox="0 0 64 64" aria-hidden="true" style="position: absolute; left: 30px; top: 0; overflow: visible">
+                <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#3B6E6A"></circle></g>
+                <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#FBF6EA"></circle></g>
+                <g transform="translate(4 5) scale(0.9)">
+                  <g filter="url(#paperE)" fill="#A93A27"><circle cx="24" cy="14" r="4.5"></circle><circle cx="30" cy="11" r="5"></circle><circle cx="36" cy="14" r="4.5"></circle></g>
+                  <g filter="url(#paperE)"><circle cx="30" cy="32" r="17" fill="#F0C873"></circle></g>
+                  <circle cx="23" cy="28" r="2.6" fill="#1E1B18"></circle><circle cx="37" cy="28" r="2.6" fill="#1E1B18"></circle>
+                  <g filter="url(#paperE)"><path d="M25.5 33 H 34.5 L 30 40.5 Z" fill="#D9893A"></path></g>
+                  <ellipse cx="30" cy="43.5" rx="2.6" ry="3.4" fill="#A93A27"></ellipse>
+                  <circle cx="19.5" cy="35" r="2.6" fill="#A93A27" opacity="0.45"></circle><circle cx="40.5" cy="35" r="2.6" fill="#A93A27" opacity="0.45"></circle>
+                </g>
+              </svg>
+              <svg width="48" height="48" viewBox="0 0 64 64" aria-hidden="true" style="position: absolute; left: 0; top: 0; overflow: visible">
+                <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#A93A27"></circle></g>
+                <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#FBF6EA"></circle></g>
+                <g transform="translate(7 6) scale(0.8)">
+                  <g filter="url(#paperE)" fill="#3B6E6A"><circle cx="19" cy="21" r="9"></circle><circle cx="41" cy="21" r="9"></circle><ellipse cx="30" cy="36" rx="24" ry="16"></ellipse></g>
+                  <circle cx="30" cy="29" r="2.2" fill="#2F5B57"></circle>
+                  <g filter="url(#paperE)"><ellipse cx="30" cy="46" rx="13" ry="5" fill="#E2A52A"></ellipse></g>
+                  <g filter="url(#paperE)" fill="#FBF6EA"><circle cx="19" cy="20" r="5"></circle><circle cx="41" cy="20" r="5"></circle></g>
+                  <circle cx="19.6" cy="20.6" r="2.6" fill="#1E1B18"></circle><circle cx="41.6" cy="20.6" r="2.6" fill="#1E1B18"></circle>
+                  <path d="M19 37 Q 30 43 41 37 Q 30 40.5 19 37 Z" fill="#1E1B18"></path>
+                  <circle cx="13" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle><circle cx="47" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle>
+                </g>
+              </svg>
+            </span>
+          </sc-if>
+          <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px">
+            <span style="display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 3px 9px; background: #2E4A6E; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Góc phụ huynh</span></span>
+            <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 900; line-height: 1.15">{{family}}</span>
+          </div>
+          <a href="Discoverer-Home.dc.html" class="e-press" aria-label="Thoát góc phụ huynh, về hành trình" style="width: 48px; height: 48px; flex-shrink: 0; display: block">
+            <svg width="48" height="48" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#FBF6EA"></circle></g><path d="M20 19l16 16M36 19L20 35" stroke="#1E1B18" stroke-width="3.4" stroke-linecap="round"></path></svg>
+          </a>
+        </div>
+
+        <div class="e-lay" role="group" aria-label="Mục trong góc phụ huynh" style="--d: 60ms; flex-shrink: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 10px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28)">
+          <sc-for list="{{tabs}}" as="t" hint-placeholder-count="2">
+            <button class="e-press" onClick="{{t.pick}}" aria-pressed="{{t.pressed}}" style="height: 44px; box-sizing: border-box; padding: 0 6px; border: none; border-radius: 7px; cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.1; {{t.st}}">{{t.label}}</button>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{isReport}}" hint-placeholder-val="{{true}}">
+          <div style="flex-shrink: 0; display: flex; flex-direction: column; gap: 12px">
+            <sc-if value="{{isPremium}}" hint-placeholder-val="{{false}}">
+              <div class="e-lay" role="group" aria-label="Xem báo cáo của bé" style="--d: 110ms; flex-shrink: 0; display: flex; gap: 10px">
+                <button class="e-press" onClick="{{kid.minh.pick}}" aria-pressed="{{kid.minh.pressed}}" style="height: 44px; box-sizing: border-box; padding: 0 16px 0 6px; border: none; border-radius: 3px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 15px; color: #1E1B18; {{kid.minh.chipSt}}">
+                  <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" style="flex-shrink: 0; overflow: visible">
+                    <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#A93A27"></circle></g>
+                    <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#FBF6EA"></circle></g>
+                    <g transform="translate(7 6) scale(0.8)">
+                      <g filter="url(#paperE)" fill="#3B6E6A"><circle cx="19" cy="21" r="9"></circle><circle cx="41" cy="21" r="9"></circle><ellipse cx="30" cy="36" rx="24" ry="16"></ellipse></g>
+                      <g filter="url(#paperE)"><ellipse cx="30" cy="46" rx="13" ry="5" fill="#E2A52A"></ellipse></g>
+                      <g filter="url(#paperE)" fill="#FBF6EA"><circle cx="19" cy="20" r="5"></circle><circle cx="41" cy="20" r="5"></circle></g>
+                      <circle cx="19.6" cy="20.6" r="2.6" fill="#1E1B18"></circle><circle cx="41.6" cy="20.6" r="2.6" fill="#1E1B18"></circle>
+                      <path d="M19 37 Q 30 43 41 37 Q 30 40.5 19 37 Z" fill="#1E1B18"></path>
+                    </g>
+                  </svg>
+                  <span>Minh</span>
+                </button>
+                <button class="e-press" onClick="{{kid.su.pick}}" aria-pressed="{{kid.su.pressed}}" style="height: 44px; box-sizing: border-box; padding: 0 16px 0 6px; border: none; border-radius: 3px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 15px; color: #1E1B18; {{kid.su.chipSt}}">
+                  <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" style="flex-shrink: 0; overflow: visible">
+                    <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#3B6E6A"></circle></g>
+                    <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#FBF6EA"></circle></g>
+                    <g transform="translate(4 5) scale(0.9)">
+                      <g filter="url(#paperE)" fill="#A93A27"><circle cx="24" cy="14" r="4.5"></circle><circle cx="30" cy="11" r="5"></circle><circle cx="36" cy="14" r="4.5"></circle></g>
+                      <g filter="url(#paperE)"><circle cx="30" cy="32" r="17" fill="#F0C873"></circle></g>
+                      <circle cx="23" cy="28" r="2.6" fill="#1E1B18"></circle><circle cx="37" cy="28" r="2.6" fill="#1E1B18"></circle>
+                      <g filter="url(#paperE)"><path d="M25.5 33 H 34.5 L 30 40.5 Z" fill="#D9893A"></path></g>
+                      <ellipse cx="30" cy="43.5" rx="2.6" ry="3.4" fill="#A93A27"></ellipse>
+                    </g>
+                  </svg>
+                  <span>Su</span>
+                </button>
+              </div>
+            </sc-if>
+
+            <div class="e-lay" style="--d: 150ms; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px">
+              <div style="display: flex; justify-content: space-between; align-items: baseline">
+                <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900">Tuần này của {{rep.name}}</span>
+                <span style="font-size: 13px; font-weight: 600; color: #4E4336">T2 – CN</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+                <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 9px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center">
+                  <span style="font-family: 'Phudu', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.1; display: flex; align-items: baseline; gap: 3px"><span>{{rep.lessons}}</span><span style="font-size: 14px; font-weight: 700">bài</span></span>
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">mục tiêu 3 bài/tuần</span>
+                </div>
+                <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 9px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center">
+                  <span style="font-family: 'Phudu', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.1; display: flex; align-items: baseline; gap: 3px"><span>{{rep.minutes}}</span><span style="font-size: 14px; font-weight: 700">phút</span></span>
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">cả tuần</span>
+                </div>
+                <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 9px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center">
+                  <span style="font-family: 'Phudu', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.1; color: {{rep.thirdColor}}">{{rep.thirdV}}</span>
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">{{rep.thirdL}}</span>
+                </div>
+                <div style="background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 9px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center">
+                  <span style="font-family: 'Phudu', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.1">{{rep.words}}</span>
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">từ mới</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="e-lay" style="--d: 210ms; flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px; display: flex; flex-direction: column; gap: 10px">
+              <div style="display: flex; justify-content: space-between; align-items: baseline">
+                <span style="font-size: 15px; font-weight: 700">Phút học mỗi ngày</span>
+                <span style="font-size: 13px; font-weight: 600; color: #4E4336">{{rep.total}}</span>
+              </div>
+              <div role="img" aria-label="{{rep.chartLabel}}" style="display: flex; flex-direction: column">
+                <div style="height: 84px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; align-items: end">
+                  <sc-for list="{{bars}}" as="b" hint-placeholder-count="7">
+                    <span style="height: 84px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px">
+                      <span style="font-family: 'Phudu', sans-serif; font-size: 13px; font-weight: 700; line-height: 1.2; color: {{b.valColor}}">{{b.val}}</span>
+                      <sc-if value="{{b.has}}" hint-placeholder-val="{{true}}"><span class="e-grow" style="--d: {{b.d}}; width: 26px; height: {{b.h}}; flex-shrink: 0; border-radius: 3px 3px 1px 1px; background: #2E4A6E; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3)"></span></sc-if>
+                    </span>
+                  </sc-for>
+                </div>
+                <span aria-hidden="true" style="display: block; height: 6px; margin-top: 2px; border-radius: 3px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.3)"></span>
+                <div aria-hidden="true" style="margin-top: 4px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px">
+                  <sc-for list="{{bars}}" as="b" hint-placeholder-count="7">
+                    <span style="text-align: center; font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">{{b.day}}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+
+            <div class="e-lay" style="--d: 270ms; flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px; display: flex; flex-direction: column; gap: 10px">
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: #F0E6CF; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center">
+                  <sc-if value="{{rep.isMinh}}" hint-placeholder-val="{{true}}">
+                    <svg width="28" height="25" viewBox="14 10 92 80">
+                      <g filter="url(#paperE)"><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"></path></g>
+                      <g filter="url(#paperE)"><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"></path></g>
+                      <g filter="url(#paperE)"><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"></path></g>
+                      <g filter="url(#paperE)"><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"></path></g>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{rep.isSu}}" hint-placeholder-val="{{false}}">
+                    <svg width="30" height="30" viewBox="0 0 60 60">
+                      <g filter="url(#paperE)"><path d="M42 30 L 54 19 C 51 26, 51 34, 54 41 Z" fill="#A93A27"></path><path d="M20 20 C 24 12, 34 11, 39 19 Z" fill="#A93A27"></path></g>
+                      <g filter="url(#paperE)"><path d="M6 30 C 12 18, 32 15, 44 26 L 44 34 C 32 45, 12 42, 6 30 Z" fill="#E2A52A"></path></g>
+                      <g filter="url(#paperE)"><path d="M15 31 C 23 26, 34 26, 41 30 C 34 35, 23 36, 15 31 Z" fill="#F0C873"></path></g>
+                      <g filter="url(#paperE)"><circle cx="14" cy="27" r="3.8" fill="#FBF6EA"></circle></g>
+                      <circle cx="13.6" cy="27.2" r="2" fill="#1E1B18"></circle>
+                    </svg>
+                  </sc-if>
+                </span>
+                <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">Bé đang học</span>
+                  <span style="font-size: 15px; font-weight: 700; line-height: 1.3">{{rep.topic}}</span>
+                </span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: #F0E6CF; box-shadow: inset 0 2px 4px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center">
+                  <svg width="24" height="24" viewBox="0 0 24 24"><g filter="url(#paperE)"><path d="M12 2.5a6.5 6.5 0 0 0-4.3 11.4c.9.8 1.3 1.6 1.3 2.6h6c0-1 .4-1.8 1.3-2.6A6.5 6.5 0 0 0 12 2.5z" fill="#E2A52A"></path></g><rect x="9" y="17.5" width="6" height="2.2" rx="1.1" fill="#1E1B18"></rect><rect x="10" y="20.6" width="4" height="2.2" rx="1.1" fill="#1E1B18"></rect></svg>
+                </span>
+                <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+                  <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">{{rep.reviewLabel}}</span>
+                  <span style="font-size: 15px; font-weight: 700; line-height: 1.3">{{rep.review}}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{isFamily}}" hint-placeholder-val="{{false}}">
+          <div style="flex-shrink: 0; display: flex; flex-direction: column; gap: 12px">
+            <div class="e-lay" style="--d: 110ms; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px">
+              <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.2">Tài khoản</span>
+              <sc-if value="{{isFree}}" hint-placeholder-val="{{true}}">
+                <div style="flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 14px; display: flex; flex-direction: column; gap: 12px">
+                  <div style="display: flex; flex-direction: column; gap: 3px">
+                    <span style="font-size: 15px; font-weight: 700; line-height: 1.3">Chế độ khách · chưa có tài khoản</span>
+                    <span style="font-size: 13px; font-weight: 600; line-height: 1.4; color: #4E4336">Tiến độ đang lưu trên máy này. Đăng ký để giữ tiến độ và học trên máy khác.</span>
+                  </div>
+                  <a href="Discoverer-Signup.dc.html" class="e-press" style="position: relative; display: block; height: 56px; flex-shrink: 0; text-decoration: none; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; color: #FBF6EA">
+                    <svg width="100%" height="100%" viewBox="0 0 322 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="3" y="9" width="316" height="44" rx="10" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="3" y="3" width="316" height="44" rx="10" fill="#A93A27"></rect></g></svg>
+                    <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; height: 50px; white-space: nowrap">Đăng ký tài khoản<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span>
+                  </a>
+                </div>
+              </sc-if>
+              <sc-if value="{{isPremium}}" hint-placeholder-val="{{false}}">
+                <div style="flex-shrink: 0; background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 12px 14px; display: flex; align-items: center; gap: 12px">
+                  <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px">
+                    <span style="font-size: 15px; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere">[email phụ huynh]</span>
+                    <span style="display: flex; align-items: center; gap: 6px">
+                      <span aria-hidden="true" style="width: 18px; height: 18px; flex-shrink: 0; border-radius: 3px; background: #A93A27; transform: rotate(-8deg); box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span>
+                      <span style="font-size: 13px; font-weight: 700; line-height: 1.3">Premium · Theo năm</span>
+                    </span>
+                  </span>
+                  <button type="button" class="e-press" style="height: 44px; flex-shrink: 0; box-sizing: border-box; padding: 0 14px; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 4px rgba(91, 59, 23, 0.32); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 700; color: #1E1B18">Quản lý gói</button>
+                </div>
+              </sc-if>
+            </div>
+
+            <div style="flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; padding-right: 6px">
+              <div class="e-lay" style="--d: 170ms; flex-shrink: 0; display: flex; justify-content: space-between; align-items: baseline">
+                <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.2">Hồ sơ của các con</span>
+                <span style="font-size: 13px; font-weight: 600; color: #4E4336">{{profileCount}}</span>
+              </div>
+
+              <div class="e-lay" style="--d: 220ms; flex-shrink: 0; border-radius: 10px; background: #FBF6EA; {{kid.minh.cardSt}}">
+                <button class="e-press" onClick="{{kid.minh.pick}}" aria-expanded="{{kid.minh.pressed}}" style="width: 100%; min-height: 64px; box-sizing: border-box; padding: 10px 12px; border: none; border-radius: 10px; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #1E1B18; text-align: left">
+                  <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" style="flex-shrink: 0; overflow: visible">
+                    <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#A93A27"></circle></g>
+                    <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#F0E6CF"></circle></g>
+                    <g transform="translate(7 6) scale(0.8)">
+                      <g filter="url(#paperE)" fill="#3B6E6A"><circle cx="19" cy="21" r="9"></circle><circle cx="41" cy="21" r="9"></circle><ellipse cx="30" cy="36" rx="24" ry="16"></ellipse></g>
+                      <circle cx="30" cy="29" r="2.2" fill="#2F5B57"></circle>
+                      <g filter="url(#paperE)"><ellipse cx="30" cy="46" rx="13" ry="5" fill="#E2A52A"></ellipse></g>
+                      <g filter="url(#paperE)" fill="#FBF6EA"><circle cx="19" cy="20" r="5"></circle><circle cx="41" cy="20" r="5"></circle></g>
+                      <circle cx="19.6" cy="20.6" r="2.6" fill="#1E1B18"></circle><circle cx="41.6" cy="20.6" r="2.6" fill="#1E1B18"></circle>
+                      <path d="M19 37 Q 30 43 41 37 Q 30 40.5 19 37 Z" fill="#1E1B18"></path>
+                      <circle cx="13" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle><circle cx="47" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle>
+                    </g>
+                  </svg>
+                  <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+                    <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.15">Minh</span>
+                    <span style="font-size: 13px; font-weight: 600; line-height: 1.3; color: #4E4336">Discoverer · Year 3 · Song ngữ</span>
+                  </span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0; transform: {{kid.minh.chev}}"><path d="M5 9l7 7 7-7z" fill="#4E4336"></path></svg>
+                </button>
+                <sc-if value="{{kid.minh.open}}" hint-placeholder-val="{{true}}">
+                  <div class="e-slide" style="padding: 0 12px 12px 12px; display: flex; flex-direction: column; gap: 10px">
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                      <span id="limit-minh" style="font-size: 14px; font-weight: 700; line-height: 1.4">Giới hạn mỗi ngày</span>
+                      <div role="group" aria-labelledby="limit-minh" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 10px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28)">
+                        <sc-for list="{{seg}}" as="o" hint-placeholder-count="4">
+                          <button class="e-press" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="height: 44px; box-sizing: border-box; padding: 0 4px; border: none; border-radius: 7px; cursor: pointer; font-family: inherit; font-size: 13px; line-height: 1.15; {{o.st}}">{{o.label}}</button>
+                        </sc-for>
+                      </div>
+                    </div>
+                    <a href="Discoverer-Welcome.dc.html" class="e-press" style="min-height: 48px; box-sizing: border-box; padding: 0 10px 0 12px; border-radius: 8px; background: #F0E6CF; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1E1B18">
+                      <span style="flex: 1; font-size: 14px; font-weight: 600; color: #4E4336">Chế độ ngôn ngữ</span>
+                      <span style="font-size: 15px; font-weight: 700">Song ngữ</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5.5l6.5 6.5L9 18.5" fill="none" stroke="#1E1B18" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                  </div>
+                </sc-if>
+              </div>
+
+              <sc-if value="{{isPremium}}" hint-placeholder-val="{{false}}">
+                <div class="e-lay" style="--d: 270ms; flex-shrink: 0; border-radius: 10px; background: #FBF6EA; {{kid.su.cardSt}}">
+                  <button class="e-press" onClick="{{kid.su.pick}}" aria-expanded="{{kid.su.pressed}}" style="width: 100%; min-height: 64px; box-sizing: border-box; padding: 10px 12px; border: none; border-radius: 10px; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #1E1B18; text-align: left">
+                    <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" style="flex-shrink: 0; overflow: visible">
+                      <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#3B6E6A"></circle></g>
+                      <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#F0E6CF"></circle></g>
+                      <g transform="translate(4 5) scale(0.9)">
+                        <g filter="url(#paperE)" fill="#A93A27"><circle cx="24" cy="14" r="4.5"></circle><circle cx="30" cy="11" r="5"></circle><circle cx="36" cy="14" r="4.5"></circle></g>
+                        <g filter="url(#paperE)"><circle cx="30" cy="32" r="17" fill="#F0C873"></circle></g>
+                        <circle cx="23" cy="28" r="2.6" fill="#1E1B18"></circle><circle cx="37" cy="28" r="2.6" fill="#1E1B18"></circle>
+                        <g filter="url(#paperE)"><path d="M25.5 33 H 34.5 L 30 40.5 Z" fill="#D9893A"></path></g>
+                        <ellipse cx="30" cy="43.5" rx="2.6" ry="3.4" fill="#A93A27"></ellipse>
+                        <circle cx="19.5" cy="35" r="2.6" fill="#A93A27" opacity="0.45"></circle><circle cx="40.5" cy="35" r="2.6" fill="#A93A27" opacity="0.45"></circle>
+                      </g>
+                    </svg>
+                    <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+                      <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 900; line-height: 1.15">Su</span>
+                      <span style="font-size: 13px; font-weight: 600; line-height: 1.3; color: #4E4336">Explorer · 5–7 tuổi · Song ngữ</span>
+                    </span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0; transform: {{kid.su.chev}}"><path d="M5 9l7 7 7-7z" fill="#4E4336"></path></svg>
+                  </button>
+                  <sc-if value="{{kid.su.open}}" hint-placeholder-val="{{false}}">
+                    <div class="e-slide" style="padding: 0 12px 12px 12px; display: flex; flex-direction: column; gap: 10px">
+                      <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span id="limit-su" style="font-size: 14px; font-weight: 700; line-height: 1.4">Giới hạn mỗi ngày</span>
+                        <div role="group" aria-labelledby="limit-su" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 10px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28)">
+                          <sc-for list="{{seg}}" as="o" hint-placeholder-count="4">
+                            <button class="e-press" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="height: 44px; box-sizing: border-box; padding: 0 4px; border: none; border-radius: 7px; cursor: pointer; font-family: inherit; font-size: 13px; line-height: 1.15; {{o.st}}">{{o.label}}</button>
+                          </sc-for>
+                        </div>
+                      </div>
+                      <a href="Discoverer-Welcome.dc.html" class="e-press" style="min-height: 48px; box-sizing: border-box; padding: 0 10px 0 12px; border-radius: 8px; background: #F0E6CF; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1E1B18">
+                        <span style="flex: 1; font-size: 14px; font-weight: 600; color: #4E4336">Chế độ ngôn ngữ</span>
+                        <span style="font-size: 15px; font-weight: 700">Song ngữ</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5.5l6.5 6.5L9 18.5" fill="none" stroke="#1E1B18" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </a>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{isFree}}" hint-placeholder-val="{{true}}">
+                <button class="e-lay e-press" onClick="{{openUpsell}}" aria-haspopup="dialog" style="--d: 280ms; flex-shrink: 0; width: 100%; min-height: 64px; box-sizing: border-box; padding: 10px 12px; border: none; border-radius: 10px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.22); cursor: pointer; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #4E4336; text-align: left">
+                  <span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: #F0E6CF; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3h-2.6V8a1.9 1.9 0 0 0-3.8 0v3z" fill="#4E4336"></path><rect x="5" y="10.5" width="14" height="10.5" rx="2" fill="#4E4336"></rect></svg></span>
+                  <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+                    <span style="font-size: 15px; font-weight: 700; line-height: 1.3">Thêm hồ sơ con</span>
+                    <span style="font-size: 12px; font-weight: 600; line-height: 1.35">Hồ sơ thứ 2 dành cho gói Premium</span>
+                  </span>
+                  <span style="flex-shrink: 0; display: inline-block; transform: rotate(-3deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 3px 9px; background: #E2A52A; color: #1E1B18; font-family: 'Phudu', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Premium</span></span>
+                </button>
+              </sc-if>
+              <sc-if value="{{isPremium}}" hint-placeholder-val="{{false}}">
+                <a href="Discoverer-Profile.dc.html" class="e-lay e-press" style="--d: 320ms; flex-shrink: 0; min-height: 56px; box-sizing: border-box; padding: 8px 12px; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E1B18">
+                  <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" style="flex-shrink: 0"><g filter="url(#paperE)"><circle cx="20" cy="22" r="17" fill="#6E2216"></circle></g><g filter="url(#paperE)"><circle cx="20" cy="18" r="17" fill="#A93A27"></circle></g><rect x="18.5" y="10" width="3" height="16" rx="1.5" fill="#FBF6EA"></rect><rect x="12" y="16.5" width="16" height="3" rx="1.5" fill="#FBF6EA"></rect></svg>
+                  <span style="flex: 1; font-size: 15px; font-weight: 700">Thêm hồ sơ con</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5.5l6.5 6.5L9 18.5" fill="none" stroke="#1E1B18" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="flex: 1"></div>
+      </div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{showUpsell}}" hint-placeholder-val="{{false}}">
+    <div role="dialog" aria-modal="true" aria-labelledby="upsell-title" style="position: absolute; left: 0; top: 0; width: 390px; height: 844px; z-index: 2; box-sizing: border-box; display: flex; flex-direction: column; background: rgba(214, 198, 164, 0.86)">
+      <button onClick="{{closeUpsell}}" aria-label="Đóng" style="flex: 1; display: block; width: 100%; border: none; background: transparent; padding: 0; cursor: pointer"></button>
+      <div class="e-rise" style="flex-shrink: 0; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
+        <div style="background: #FBF6EA; padding: 24px 20px 22px 20px; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 14px">
+          <div aria-hidden="true" style="display: flex; align-items: center; gap: 10px">
+            <svg width="56" height="56" viewBox="0 0 64 64" style="flex-shrink: 0; overflow: visible">
+              <g filter="url(#paperE)"><circle cx="33" cy="34" r="29" fill="#A93A27"></circle></g>
+              <g filter="url(#paperE)"><circle cx="31" cy="31" r="28" fill="#F0E6CF"></circle></g>
+              <g transform="translate(7 6) scale(0.8)">
+                <g filter="url(#paperE)" fill="#3B6E6A"><circle cx="19" cy="21" r="9"></circle><circle cx="41" cy="21" r="9"></circle><ellipse cx="30" cy="36" rx="24" ry="16"></ellipse></g>
+                <circle cx="30" cy="29" r="2.2" fill="#2F5B57"></circle>
+                <g filter="url(#paperE)"><ellipse cx="30" cy="46" rx="13" ry="5" fill="#E2A52A"></ellipse></g>
+                <g filter="url(#paperE)" fill="#FBF6EA"><circle cx="19" cy="20" r="5"></circle><circle cx="41" cy="20" r="5"></circle></g>
+                <circle cx="19.6" cy="20.6" r="2.6" fill="#1E1B18"></circle><circle cx="41.6" cy="20.6" r="2.6" fill="#1E1B18"></circle>
+                <path d="M19 37 Q 30 43 41 37 Q 30 40.5 19 37 Z" fill="#1E1B18"></path>
+                <circle cx="13" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle><circle cx="47" cy="33" r="2.6" fill="#A93A27" opacity="0.55"></circle>
+              </g>
+            </svg>
+            <span class="e-pop" style="--d: 300ms; width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24"><rect x="10.5" y="3.5" width="3" height="17" rx="1.5" fill="#4E4336"></rect><rect x="3.5" y="10.5" width="17" height="3" rx="1.5" fill="#4E4336"></rect></svg></span>
+            <span style="flex: 1"></span>
+            <span style="flex-shrink: 0; display: inline-block; transform: rotate(-3deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 11px; background: #E2A52A; color: #1E1B18; font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Premium</span></span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span id="upsell-title" style="font-family: 'Phudu', sans-serif; font-size: 24px; font-weight: 900; line-height: 1.15">Thêm hồ sơ cho bé thứ hai</span>
+            <span style="font-size: 15px; font-weight: 400; line-height: 1.4; color: #4E4336">Gói Premium cho cả nhà: mỗi bé một hồ sơ, tiến độ và báo cáo riêng.</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <a href="Discoverer-Signup.dc.html" class="e-press" style="position: relative; display: block; height: 66px; flex-shrink: 0; text-decoration: none; font-family: 'Phudu', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 0.4px; color: #FBF6EA">
+              <svg width="100%" height="100%" viewBox="0 0 350 66" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="4" y="10" width="342" height="52" rx="10" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="4" y="3" width="342" height="52" rx="10" fill="#A93A27"></rect></g></svg>
+              <span style="position: relative; display: flex; align-items: center; justify-content: center; gap: 10px; height: 58px">Đăng ký và mở khoá<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span>
+            </a>
+            <button onClick="{{closeUpsell}}" class="e-press" style="height: 56px; flex-shrink: 0; box-sizing: border-box; border: none; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.28); cursor: pointer; font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; color: #1E1B18">Để sau</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"plan":{"editor":"enum","options":["free","premium"],"default":"free"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { pin: '', unlocked: false, tab: 'report', child: 'minh', limits: { minh: 20, su: 15 }, upsell: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const plan = this.props.plan ?? 'free';
+    const premium = plan === 'premium';
+    const child = premium ? s.child : 'minh';
+
+    const press = {};
+    ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].forEach((k) => {
+      press['k' + k] = () => {
+        if (s.unlocked || s.pin.length >= 4) return;
+        const pin = s.pin + k;
+        this.setState({ pin });
+        if (pin.length === 4) setTimeout(() => this.setState({ unlocked: true, pin: '' }), 420);
+      };
+    });
+    const dots = {};
+    [1, 2, 3, 4].forEach((n) => { dots['d' + n] = s.pin.length >= n; });
+
+    const tabs = [
+      { id: 'report', label: 'Báo cáo tuần' },
+      { id: 'family', label: 'Hồ sơ và gói' }
+    ].map((t) => {
+      const on = s.tab === t.id;
+      return {
+        label: t.label,
+        pressed: on ? 'true' : 'false',
+        st: on ? 'background: #E2A52A; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3);' : 'background: transparent; color: #4E4336; box-shadow: none;',
+        pick: () => this.setState({ tab: t.id, upsell: false })
+      };
+    });
+
+    const kid = {};
+    ['minh', 'su'].forEach((id) => {
+      const on = child === id;
+      kid[id] = {
+        open: on,
+        pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ child: id }),
+        chipSt: on ? 'background: #E2A52A; font-weight: 700; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3);' : 'background: #FBF6EA; font-weight: 600; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.24);',
+        cardSt: on ? 'box-shadow: 5px 6px 0 #E2A52A, 0 3px 4px rgba(91, 59, 23, 0.22);' : 'box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22);',
+        chev: on ? 'rotate(180deg)' : 'none'
+      };
+    });
+
+    const limitOpts = [
+      { v: 15, label: '15 phút' },
+      { v: 20, label: '20 phút' },
+      { v: 30, label: '30 phút' },
+      { v: 0, label: 'Không giới hạn' }
+    ];
+    const curLimit = s.limits[child];
+    const seg = limitOpts.map((l) => {
+      const on = curLimit === l.v;
+      return {
+        label: l.label,
+        pressed: on ? 'true' : 'false',
+        st: on ? 'background: #E2A52A; color: #1E1B18; font-weight: 700; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3);' : 'background: transparent; color: #4E4336; font-weight: 600; box-shadow: none;',
+        pick: () => this.setState({ limits: Object.assign({}, s.limits, { [child]: l.v }) })
+      };
+    });
+
+    const reports = {
+      minh: {
+        name: 'Minh', lessons: '1', thirdV: '5/6', thirdL: 'Quiz đúng', thirdColor: '#A93A27', words: '8',
+        mins: [5, 6, 4, 0, 5, 6, 8],
+        topic: 'Ăn uống lành mạnh · Bài 1/5',
+        reviewLabel: 'Nên ôn cùng bé · theo kết quả quiz',
+        review: 'chất đạm và chất béo'
+      },
+      su: {
+        name: 'Su', lessons: '2', thirdV: '4', thirdL: 'sticker mới', thirdColor: '#1E1B18', words: '6',
+        mins: [4, 0, 5, 0, 3, 6, 0],
+        topic: 'Gọi tên và nhóm động vật · Bài 1/4',
+        reviewLabel: 'Nên ôn cùng bé · theo trò chơi',
+        review: 'nhóm chim và nhóm cá'
+      }
+    };
+    const r = reports[child];
+    const days = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
+    const dayNames = ['thứ Hai', 'thứ Ba', 'thứ Tư', 'thứ Năm', 'thứ Sáu', 'thứ Bảy', 'Chủ nhật'];
+    const total = r.mins.reduce((a, b) => a + b, 0);
+    const bars = r.mins.map((v, i) => ({
+      day: days[i],
+      val: String(v),
+      valColor: v > 0 ? '#1E1B18' : '#4E4336',
+      has: v > 0,
+      h: Math.round((v / 8) * 64) + 'px',
+      d: (260 + i * 50) + 'ms'
+    }));
+    const rep = {
+      name: r.name,
+      lessons: r.lessons,
+      minutes: String(total),
+      thirdV: r.thirdV,
+      thirdL: r.thirdL,
+      thirdColor: r.thirdColor,
+      words: r.words,
+      total: 'Tổng ' + total + ' phút',
+      chartLabel: 'Phút học mỗi ngày tuần này của ' + r.name + ': ' + dayNames.map((d, i) => d + ' ' + r.mins[i]).join(', '),
+      topic: r.topic,
+      reviewLabel: r.reviewLabel,
+      review: r.review,
+      isMinh: child === 'minh',
+      isSu: child === 'su'
+    };
+
+    return {
+      locked: !s.unlocked,
+      open: s.unlocked,
+      press,
+      del: () => this.setState({ pin: s.pin.slice(0, -1) }),
+      dots,
+      pinLabel: 'Đã nhập ' + s.pin.length + ' trên 4 số',
+      isFree: !premium,
+      isPremium: premium,
+      family: premium ? 'Gia đình Minh và Su' : 'Gia đình Minh',
+      tabs,
+      isReport: s.tab === 'report',
+      isFamily: s.tab === 'family',
+      kid,
+      seg,
+      rep,
+      bars,
+      profileCount: premium ? '2 hồ sơ' : '1 hồ sơ',
+      showUpsell: s.unlocked && s.tab === 'family' && !premium && s.upsell,
+      openUpsell: () => this.setState({ upsell: true }),
+      closeUpsell: () => this.setState({ upsell: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

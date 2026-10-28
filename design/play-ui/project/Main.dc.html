@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Một khung, ba lứa tuổi</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1400px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="1440" height="1400" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="1440" height="1400" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="1440" height="1400" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 1400px; box-sizing: border-box; padding: 56px 64px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 940px">
+        <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4E4336">Science Kids · UI/UX học mà chơi · style E Giấy cắt Đông Hồ</span>
+        <h1 style="margin: 0; font-family: 'Phudu', sans-serif; font-size: 60px; line-height: 1.05; font-weight: 900">Một bộ khung, ba lứa tuổi</h1>
+        <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #4E4336">Cả ba nhóm dùng chung cấu trúc bài học và bộ thành phần giao diện, nên app iOS và Android chỉ cần một bộ renderer. Mỗi nhóm khác nhau ở cách chơi, lượng chữ, kích thước vùng chạm và phần thưởng.</p>
+      </div>
+      <svg width="140" height="140" viewBox="0 0 100 100" aria-hidden="true" style="flex-shrink: 0">
+        <rect x="48.5" y="9" width="3" height="18" rx="1.5" fill="#1E1B18"></rect>
+        <g filter="url(#paperE)"><circle cx="50" cy="9" r="6.5" fill="#E2A52A"></circle></g>
+        <g filter="url(#paperE)"><circle cx="50" cy="58" r="36" fill="#3B6E6A"></circle></g>
+        <g filter="url(#paperE)"><ellipse cx="50" cy="73" rx="21" ry="14" fill="#F0E6CF"></ellipse></g>
+        <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+        <circle cx="40" cy="52" r="4.2" fill="#1E1B18"></circle><circle cx="64" cy="52" r="4.2" fill="#1E1B18"></circle>
+        <path d="M41 67 Q 50 77 59 67 Q 50 71 41 67 Z" fill="#1E1B18"></path>
+        <circle cx="27" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle><circle cx="73" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle>
+      </svg>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <span style="display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 6px 14px; background: #A93A27; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 20px; font-weight: 700; clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px)">Vòng lặp một bài học</span></span>
+        <span style="font-size: 16px; color: #4E4336">chung cho cả 3 nhóm</span>
+      </div>
+      <div style="display: flex; align-items: stretch; gap: 10px">
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">1</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Khởi động</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">2–3 câu ôn bài cũ, giãn cách 1 ngày · 1 tuần · 1 tháng</span>
+        </div>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="align-self: center; flex-shrink: 0"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg>
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">2</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Học</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">Chạm để khám phá, mỗi lần một ý; từ cụ thể đến trừu tượng</span>
+        </div>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="align-self: center; flex-shrink: 0"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg>
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">3</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Chơi</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">Mini-game dùng ngay điều vừa học; sai thì được gợi ý, không bị phạt</span>
+        </div>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="align-self: center; flex-shrink: 0"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg>
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">4</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Quiz</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">6 câu xếp dễ → khó; có một câu bắt quan niệm sai</span>
+        </div>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="align-self: center; flex-shrink: 0"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg>
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">5</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Thưởng</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">1 sao hoàn thành · 2 sao đạt 5/6 · 3 sao thành thạo</span>
+        </div>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="align-self: center; flex-shrink: 0"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg>
+        <div style="flex: 1; background: #FBF6EA; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 3px; transform: rotate(-6deg); background: #A93A27; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center">6</span><span style="font-family: 'Phudu', sans-serif; font-size: 21px; font-weight: 700">Ôn lại</span></div>
+          <span style="font-size: 14px; line-height: 1.45; color: #4E4336">Quay lại sau ít nhất 1 ngày, đạt 5/6 lần nữa để lấy sao thứ 3</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 200px repeat(3, minmax(0, 1fr)); gap: 10px">
+      <div></div>
+      <div style="background: #3B6E6A; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; color: #FBF6EA; box-shadow: 0 4px 5px rgba(91, 59, 23, 0.28)">
+        <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Phudu', sans-serif; font-size: 30px; font-weight: 900">Explorer</span><span style="font-size: 16px; font-weight: 700">5–7 tuổi</span></div>
+        <span style="font-size: 16px; font-weight: 600">Sân chơi · màu thế giới gỉ đồng</span>
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <div style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 24px; height: 24px; border-radius: 3px; background: #2F5B57; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #F0C873; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #A93A27; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span></div>
+          <a href="Explorer-Home.dc.html" style="font-size: 15px; font-weight: 700; color: #FBF6EA">Xem màn hình →</a>
+        </div>
+      </div>
+      <div style="background: #A93A27; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; color: #FBF6EA; box-shadow: 0 4px 5px rgba(91, 59, 23, 0.28)">
+        <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Phudu', sans-serif; font-size: 30px; font-weight: 900">Discoverer</span><span style="font-size: 16px; font-weight: 700">7–9 tuổi · pilot</span></div>
+        <span style="font-size: 16px; font-weight: 600">Cuộc phiêu lưu · đủ bộ màu Đông Hồ</span>
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <div style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 24px; height: 24px; border-radius: 3px; background: #6E2216; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #2E4A6E; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #3B6E6A; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span></div>
+          <a href="Discoverer-Welcome.dc.html" style="font-size: 15px; font-weight: 700; color: #FBF6EA">Xem cả luồng →</a>
+        </div>
+      </div>
+      <div style="background: #2E4A6E; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; color: #FBF6EA; box-shadow: 0 4px 5px rgba(91, 59, 23, 0.28)">
+        <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Phudu', sans-serif; font-size: 30px; font-weight: 900">Scientist</span><span style="font-size: 16px; font-weight: 700">9–11 tuổi</span></div>
+        <span style="font-size: 16px; font-weight: 600">Phòng thí nghiệm · màu thế giới chàm</span>
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <div style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 24px; height: 24px; border-radius: 3px; background: #24395A; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #DCE2EA; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #E2A52A; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #A93A27; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span><span style="width: 24px; height: 24px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 2px rgba(30, 27, 24, 0.35)"></span></div>
+          <a href="Scientist-Home.dc.html" style="font-size: 15px; font-weight: 700; color: #FBF6EA">Xem màn hình →</a>
+        </div>
+      </div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Trang chủ</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Các đảo chủ đề trên một con đường; một nút thật to "Chơi tiếp"</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Đường hành trình theo thứ tự độ khó; thẻ "Học tiếp", chuỗi ngày, sao</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Trạm nhiệm vụ: nhiệm vụ theo Mức 3 → 5, tiến độ 6 mạch kiến thức, cấp bậc</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Vai trò mascot</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Dẫn từng bước, đọc to mọi câu, ăn mừng mỗi lần đúng</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Bạn đồng hành: nhắc cách chơi, gợi ý khi sai</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Trợ lý thu nhỏ: chỉ xuất hiện khi trẻ cần gợi ý</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Kiểu chơi</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Chạm để khám phá · chạm–chạm phân nhóm · ghép hình</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Xếp mâm cơm · gắn nhãn sơ đồ · thí nghiệm ảo đơn giản · sưu tầm thẻ</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Thiết kế thí nghiệm (chọn biến) · kéo thanh thời gian · đọc bảng dữ liệu</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Quiz</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">2–3 đáp án bằng hình · tự đọc câu hỏi · DOK 3·3·0</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">3–4 đáp án · chọn nhiều · điền từ · gợi ý tiếng Việt · DOK 2·3·1</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">4 đáp án · đọc bảng, đồ thị · chọn bằng chứng · DOK 1·3·2</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Chữ và tiếng</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≤ 15 từ EN/màn hình · 2–3 từ mới/bài · chữ VI cho phụ huynh</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≤ 25–30 từ · 3–4 từ mới · phụ đề VI bật sẵn</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≤ 40–50 từ · 4–5 từ mới · VI ẩn, chạm để xem</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Vùng chạm · cỡ chữ</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≥ 72px · chữ 20–32px · mảnh giấy to, bo 18–22px</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≥ 56px · chữ 15–24px · thẻ giấy bo 10px</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">≥ 48px · chữ 14–20px · lưới gọn kiểu sổ hồ sơ, bo 6–8px</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Phần thưởng</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Sticker dán vào sổ, mascot nhảy mừng</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Sao 3 mức · XP · thẻ thực phẩm, sinh vật · thử thách tuần</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">Cấp bậc nhà khoa học · nhật ký tự ghi · thẻ mẫu vật</div>
+
+      <div style="background: #E2D4B4; border-radius: 6px; padding: 14px 16px; font-family: 'Phudu', sans-serif; font-size: 17px; font-weight: 700; display: flex; align-items: center">Phiên học</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">5–7 phút · không đồng hồ đếm ngược</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">8–10 phút · chuỗi ngày có ngày nghỉ</div>
+      <div style="background: #FBF6EA; border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.45; color: #4E4336; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.18)">10–12 phút · nhiệm vụ nhiều bước</div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; margin-right: 4px">Chung cho cả 3 nhóm:</span>
+      <span style="background: #FBF6EA; border-radius: 3px; padding: 9px 14px 9px 12px; font-size: 14px; font-weight: 700; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #A93A27"></span>Không xếp hạng giữa các trẻ</span>
+      <span style="background: #FBF6EA; border-radius: 3px; padding: 9px 14px 9px 12px; font-size: 14px; font-weight: 700; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #A93A27"></span>Không loot box, không quảng cáo</span>
+      <span style="background: #FBF6EA; border-radius: 3px; padding: 9px 14px 9px 12px; font-size: 14px; font-weight: 700; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #A93A27"></span>Sai không bị trừ điểm, chỉ có gợi ý</span>
+      <span style="background: #FBF6EA; border-radius: 3px; padding: 9px 14px 9px 12px; font-size: 14px; font-weight: 700; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #A93A27"></span>Chuỗi ngày có ngày nghỉ</span>
+      <span style="background: #FBF6EA; border-radius: 3px; padding: 9px 14px 9px 12px; font-size: 14px; font-weight: 700; color: #1E1B18; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #A93A27"></span>Góc phụ huynh khoá bằng thao tác người lớn</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
