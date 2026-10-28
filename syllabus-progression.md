@@ -259,7 +259,7 @@ Như vậy trẻ trong nhóm pilot (7–9 tuổi) phần lớn mới ở mức *
 | Số từ EN trên một màn hình | ≤ 15 | ≤ 25–30 | ≤ 40–50 |
 | Từ mới mỗi bài | **2–3** | **3–4** | **4–5** |
 | Số lần gặp lại mỗi từ | ≥ 8–10 (trong bài và các lần ôn) | ≥ 10 | ≥ 10 |
-| Hỗ trợ tiếng Việt | Audio EN đọc toàn bộ; phụ đề VI chủ yếu cho phụ huynh | Phụ đề VI bật mặc định | Phụ đề VI có thể ẩn, chạm để xem |
+| Hỗ trợ tiếng Việt | Audio EN và VI đọc toàn bộ (bé chưa đọc được chữ) | Phụ đề VI bật mặc định | Phụ đề VI có thể ẩn, chạm để xem |
 
 Nguyên tắc chung:
 - **Ngoài từ mới của bài, mọi từ trên màn hình phải là từ trẻ đã biết** (trong danh sách Starters/Movers hoặc đã học trong app). Nghiên cứu cho thấy cần biết khoảng 95–98% số từ thì mới đọc hiểu được.

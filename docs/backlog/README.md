@@ -1,0 +1,3 @@
+# Backlog
+
+Mỗi ticket một file `<id>-<slug>.md`, mẫu trong [CLAUDE.md](../../CLAUDE.md). Id tăng dần SK-001, SK-002…

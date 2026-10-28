@@ -11,9 +11,10 @@
 
 Quyết định đã chốt (21/10/2026):
 - Nền tảng: **iOS native (Swift/SwiftUI) + Android native (Kotlin/Jetpack Compose)** — không React Native.
+- Thứ tự (28/10/2026): **iOS làm trước, universal iPhone + iPad ngay từ đầu**; Android bắt đầu khi iOS vào beta. Backend chốt Supabase.
 - Thị trường: **cả hai** — phụ huynh VN đại trà + trường quốc tế/song ngữ/trung tâm tiếng Anh (chỉ khác chế độ ngôn ngữ mặc định).
 - Giá: **freemium unlock** — chủ đề đầu mỗi nhóm tuổi free, mở khoá bằng subscription tháng hoặc năm.
-- Ngôn ngữ: EN là chính; **VI chỉ là phụ đề/text, không TTS tiếng Việt** (TTS chỉ tiếng Anh).
+- Ngôn ngữ: EN là chính; VI là phụ đề và giải thích. **Giọng đọc có cả tiếng Anh và tiếng Việt** (đổi 28/10/2026, trước đó chỉ TTS tiếng Anh): bé 5–7 chưa đọc được chữ tiếng Việt nên phụ đề VI cũng phải nghe được. Giọng đọc là lựa chọn lúc bắt đầu: chỉ EN, chỉ VI, hoặc cả hai.
 - Oak: **chỉ tham khảo sườn** (chủ đề, thứ tự, mục tiêu, từ vựng, misconception). Ví dụ phần animals: lấy sườn cách nhóm động vật; hình ảnh, thiết kế, nội dung làm riêng.
 
 ## 2. Phân tích Oak National Academy (tóm tắt)
@@ -29,7 +30,7 @@ Nguồn: https://www.thenational.academy/teachers/programmes/science-primary/uni
 
 | Persona | Mô tả | Nhu cầu chính | Hàm ý thiết kế |
 | --- | --- | --- | --- |
-| Bé 5–7 (Explorer) | Chưa đọc thạo, chú ý ngắn | Xem – nghe – chạm, bài 5–7 phút | Audio EN đọc mọi thứ, đáp án bằng hình, ít chữ, nút to |
+| Bé 5–7 (Explorer) | Chưa đọc thạo, chú ý ngắn | Xem – nghe – chạm, bài 5–7 phút | Audio EN và VI đọc mọi thứ, đáp án bằng hình, ít chữ, nút to |
 | Bé 7–9 (Discoverer) — **pilot** | Đọc tốt, thích thi đua | Quiz, điểm, huy hiệu, streak | Gamification, flashcard EN–VI, thử thách tuần |
 | Bé 9–11 (Scientist) | Tư duy trừu tượng hơn | Thử thách, thí nghiệm | Đọc hiểu EN dài hơn, câu hỏi mở |
 | Phụ huynh | Bận, muốn con học có định hướng | Theo dõi tiến độ, kiểm soát thời gian | Dashboard + PIN, báo cáo tuần, giới hạn phiên học |
@@ -47,11 +48,11 @@ Nguyên tắc: Oak cho **cái sườn** — chủ đề, thứ tự, mục tiêu
 | Chủ đề (unit) | Tên chủ đề, prior knowledge, "why this why now" | Tên VI, mô tả, icon, số bài rút gọn (4–8 bài/chủ đề) |
 | Bài học | Mục tiêu "I can…", 5 key points, 5 keywords, 1 misconception | Kịch bản, lời thoại EN + phụ đề VI, hình/animation |
 | Quiz | Cấu trúc 6 câu + các dạng câu hỏi | Toàn bộ câu chữ và hình đáp án |
-| Media | Cách giảng trong video mẫu (tham khảo) | Hình minh hoạ, animation, audio EN tự sản xuất |
+| Media | Cách giảng trong video mẫu (tham khảo) | Hình minh hoạ, animation, audio EN và VI tự sản xuất |
 
-Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude API draft kịch bản EN theo template, biên tập viên sửa → phụ đề VI + hình riêng → CMS → QA → publish (draft → reviewed → published).
+Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude API draft kịch bản EN theo template, biên tập viên sửa → phụ đề VI + hình riêng → markdown trong repo + CLI publish ở MVP (CMS ở GĐ 2, đổi 28/10/2026) → QA → publish (draft → reviewed → published).
 
-3 chế độ ngôn ngữ: Song ngữ (EN + phụ đề VI — mặc định VN đại trà) · EN-first (trường quốc tế/trung tâm) · VI-first (mới bắt đầu). TTS chỉ tiếng Anh.
+3 chế độ ngôn ngữ: Song ngữ (EN + phụ đề VI — mặc định VN đại trà) · EN-first (trường quốc tế/trung tâm) · VI-first (mới bắt đầu). **Giọng đọc là một lựa chọn lúc bắt đầu** (bố mẹ chọn khi thiết lập, đổi được trong Góc phụ huynh): chỉ tiếng Anh · chỉ tiếng Việt · cả hai (EN đọc trước, VI đọc theo sau). Mặc định gợi ý theo chế độ ngôn ngữ: Song ngữ → cả hai, EN-first → chỉ EN, VI-first → cả hai; với bé 5–7 gợi ý cả hai vì bé chưa đọc được chữ.
 
 ## 5. Tính năng cốt lõi
 
@@ -60,8 +61,8 @@ Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude A
 | Onboarding chọn tuổi + ngôn ngữ | Map Year 1–6 sang độ tuổi/lớp VN; 3 chế độ ngôn ngữ | MVP |
 | Vòng lặp bài học | Khởi động (ôn bài cũ) → nội dung → exit quiz 6 câu | MVP |
 | Quiz engine | MCQ, true/false, multi-select, điền từ, câu hình; giải thích sau mỗi câu | MVP |
-| Media bài học | MVP: hình minh hoạ tĩnh + audio EN; animation đầy đủ ở GĐ 2 | MVP |
-| Flashcards từ vựng EN–VI | Sinh từ keywords mỗi bài; TTS tiếng Anh, nghĩa VI dạng text | MVP |
+| Media bài học | MVP: hình minh hoạ tĩnh + audio EN và VI; animation đầy đủ ở GĐ 2 | MVP |
+| Flashcards từ vựng EN–VI | Sinh từ keywords mỗi bài; nghe được cả từ EN lẫn nghĩa VI | MVP |
 | Tài khoản phụ huynh + hồ sơ con | Free dùng chế độ khách, 1 hồ sơ con; Premium cần tài khoản phụ huynh, nhiều hồ sơ con (mục 6) | MVP |
 | Freemium unlock | Chủ đề đầu mỗi nhóm free; mở khoá bằng subs tháng/năm, cần đăng ký tài khoản phụ huynh trước khi trả tiền | MVP |
 | Gamification | Sao, streak, huy hiệu theo Big Questions | MVP |
@@ -116,12 +117,12 @@ Còn phải quyết:
 
 ## 7. Kiến trúc kỹ thuật
 
-Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết kế syllabus → Soạn & duyệt nội dung (CMS) → Supabase → App iOS + App Android + Góc phụ huynh (web)**. App chỉ đọc bản đã duyệt.
+Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết kế syllabus → Soạn & duyệt nội dung (markdown + CLI ở MVP, CMS ở GĐ 2) → Supabase → App iOS + App Android + Góc phụ huynh (web)**. App chỉ đọc bản đã duyệt.
 
-- Stack: iOS native (Swift/SwiftUI) + Android native (Kotlin/Jetpack Compose); backend Supabase (Postgres, Auth, Storage) + CMS Next.js dùng chung.
+- Stack: iOS native (Swift/SwiftUI) + Android native (Kotlin/Jetpack Compose); backend Supabase (Postgres, Auth, Storage); CMS Next.js ở GĐ 2 (28/10/2026: MVP dùng markdown + CLI).
 - Nội dung đóng gói JSON theo schema thống nhất để iOS và Android render giống nhau, không hard-code bài học trong app.
 - Claude API hỗ trợ biên tập viên draft kịch bản + câu quiz nháp (không dùng output thẳng cho trẻ).
-- TTS tiếng Anh cho câu hỏi/từ vựng; tiếng Việt chỉ hiển thị text.
+- TTS cho cả tiếng Anh và tiếng Việt (câu hỏi, câu học, từ vựng, lời mascot); sinh lúc publish, không sinh trên máy bé.
 
 ## 8. Wireframes & định hướng thiết kế
 
@@ -143,9 +144,9 @@ Visual: nền sáng, font Nunito, bo góc lớn, 1 accent xanh, nút chạm ≥ 
 
 | Giai đoạn | Thời gian | Nội dung | Gate |
 | --- | --- | --- | --- |
-| **GĐ 0 · Thiết kế nội dung** | T11/2026–T1/2027 (~8 tuần) | Syllabus 3 nhóm; soạn nội dung pilot Year 3 (chủ đề 1–6, ~34 bài); CMS | Nội dung Y3 sẵn sàng (16/1/2027) |
+| **GĐ 0 · Thiết kế nội dung** | T11/2026–T1/2027 (~8 tuần) | Syllabus 3 nhóm; soạn nội dung pilot Year 3 (chủ đề 1–6, ~34 bài); schema + CLI publish (CMS lùi GĐ 2) | Nội dung Y3 sẵn sàng (16/1/2027) |
 | **GĐ 1 · MVP 2 app native** | T1–T4/2027 | Vòng lặp bài học + quiz, gamification, góc phụ huynh | Beta 50 gia đình đạt |
-| **GĐ 2 · Mở rộng** | T4–T7/2027 | Đủ Year 1–6, ôn ngắt quãng, offline, animation đầy đủ | Lên App Store / CH Play |
+| **GĐ 2 · Mở rộng** | T4–T7/2027 | Đủ Year 1–6, ôn ngắt quãng, offline, animation đầy đủ, CMS Next.js | Lên App Store / CH Play |
 
 MVP chỉ làm 1 nhóm tuổi (pilot Year 3 / 7–9 tuổi) nhưng chạy song song 2 app native — phần tốn nhất là sản xuất nội dung, nên GĐ 0 dồn toàn lực vào syllabus + nội dung trước khi code app. Timeline chi tiết GĐ 0: xem [syllabus.md](syllabus.md).
 
@@ -175,7 +176,7 @@ Beta (50 gia đình) cần đạt: D7 ≥ 25%, quiz ≥ 4/6, ≥ 3 bài/tuần/t
 | Mất tiến độ ở chế độ khách khi đổi máy hoặc xoá app | Trung bình | Nhắc bố mẹ đăng ký để giữ tiến độ (nhắc ở Góc phụ huynh, không chặn trẻ đang học) |
 | Thương hiệu: không dùng tên/logo Oak | Thấp | Chỉ ghi "tham khảo khung chương trình" ở about |
 
-**Đã chốt (21/10/2026):** native iOS + Android · cả 2 thị trường · freemium unlock + subs tháng/năm · không TTS tiếng Việt · Oak chỉ làm sườn syllabus.
+**Đã chốt (21/10/2026):** native iOS + Android · cả 2 thị trường · freemium unlock + subs tháng/năm · Oak chỉ làm sườn syllabus. **Đổi 28/10/2026:** giọng đọc có cả tiếng Việt (trước đó chốt không TTS tiếng Việt).
 
 **Còn mở:**
 - [ ] Chốt tên app — shortlist: **ToMo Science** ("tò mò", đọc dễ cả EN/VI), **SciBee**, **AtomKids** (khớp logo atom), **WonderLab Kids**, **Khám Phá Kids**; check trùng App Store/Google Play + nhãn hiệu VN trước khi chốt

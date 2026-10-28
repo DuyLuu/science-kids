@@ -12,7 +12,7 @@ Chia theo giai đoạn đọc–viết thay vì theo lớp: trẻ VN cùng tuổ
 
 | Nhóm | Tuổi | Sườn Oak | Bài/chủ đề | Độ dài bài | Đặc thù format |
 | --- | --- | --- | --- | --- | --- |
-| **Explorer** | 5–7 | Year 1–2 (12 chủ đề) | 4–5 | 5–7 phút | Chưa cần biết đọc: audio EN đọc toàn bộ, đáp án bằng hình, thao tác kéo–thả, phụ đề VI chủ yếu cho phụ huynh |
+| **Explorer** | 5–7 | Year 1–2 (12 chủ đề) | 4–5 | 5–7 phút | Chưa cần biết đọc: audio EN và VI đọc toàn bộ, đáp án bằng hình, thao tác kéo–thả, phụ đề VI chủ yếu cho phụ huynh |
 | **Discoverer** | 7–9 | Year 3–4 (12 chủ đề) | 5–6 | 8–10 phút | Đọc được EN đơn giản; flashcard từ vựng, điền từ, thử thách tuần |
 | **Scientist** | 9–11 | Year 5–6 (14 chủ đề, gồm 2 mở rộng) | 6–8 | 10–12 phút | Đoạn đọc hiểu EN dài hơn, thí nghiệm tại nhà, câu hỏi mở |
 
@@ -107,7 +107,7 @@ Mỗi nhóm vừa khớp 1 năm học → bán gói năm theo nhóm tuổi là t
 | --- | --- |
 | Chốt syllabus + template bài | 27/10 – 14/11/2026 |
 | Soạn nội dung Year 3, chủ đề 1–6 (bắt đầu từ Ăn uống lành mạnh) | 10/11 – 19/12/2026 |
-| Hình minh hoạ + audio EN | 17/11 – 26/12/2026 |
+| Hình minh hoạ + audio EN và VI | 17/11 – 26/12/2026 |
 | CMS + schema nội dung | 24/11 – 12/12/2026 |
 | **Pilot sẵn sàng (gate GĐ 0)** | **16/1/2027** |
 
