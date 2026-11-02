@@ -1,0 +1,171 @@
+[
+  {
+    "file": "fixtures/invalid/quiz-5-items.json",
+    "description": "quiz có 5 câu (phải đúng 6)",
+    "stage": "schema",
+    "pointer": "/quiz",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/spoken-missing-vi.json",
+    "description": "một Spoken thiếu vi",
+    "stage": "schema",
+    "pointer": "/learn/0/groups/1/sentence/vi",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/uuid-bad-format.json",
+    "description": "UUID sai dạng (thiếu đoạn cuối), ở misconception của topic",
+    "stage": "schema",
+    "pointer": "/misconceptions/0/id",
+    "context": []
+  },
+  {
+    "file": "fixtures/invalid/single-choice-two-correct.json",
+    "description": "single_choice có 2 đáp án đúng",
+    "stage": "schema",
+    "pointer": "/quiz/0/options",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/multi-choice-no-correct.json",
+    "description": "multi_choice không có đáp án đúng",
+    "stage": "schema",
+    "pointer": "/quiz/4/options",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/block-unknown-type.json",
+    "description": "block có type lạ (hotspot_image chưa có trong v1)",
+    "stage": "schema",
+    "pointer": "/learn/1/type",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/image-missing-alt.json",
+    "description": "Image thiếu alt",
+    "stage": "schema",
+    "pointer": "/learn/0/groups/0/image/alt",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/misconception-id-not-in-topic.json",
+    "description": "misconception_id không có trong misconceptions của topic",
+    "stage": "refs",
+    "pointer": "/quiz/5/misconception_id",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/uuid-duplicate.json",
+    "description": "hai từ vựng trùng UUID",
+    "stage": "refs",
+    "pointer": "/vocab/1/id",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/vocab-9-terms.json",
+    "description": "vocab có 9 từ (tối đa 8)",
+    "stage": "schema",
+    "pointer": "/vocab",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/key-points-2.json",
+    "description": "key_points có 2 ý (phải đúng 3)",
+    "stage": "schema",
+    "pointer": "/key_points",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/warmup-missing-recall-from.json",
+    "description": "câu warmup thiếu recall_from",
+    "stage": "schema",
+    "pointer": "/warmup/1/recall_from",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/quiz-has-recall-from.json",
+    "description": "câu quiz có recall_from (chỉ warmup được có)",
+    "stage": "schema",
+    "pointer": "/quiz/0/recall_from",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/quiz-item-unknown-field.json",
+    "description": "câu quiz có trường audio riêng (đã bỏ, audio gắn vào từng Spoken)",
+    "stage": "schema",
+    "pointer": "/quiz/0/audio",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/key-duplicate-in-lesson.json",
+    "description": "hai câu quiz trùng key trong bài",
+    "stage": "refs",
+    "pointer": "/quiz/1/key",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/word-list-unknown-term.json",
+    "description": "word_list trỏ tới key không có trong vocab",
+    "stage": "refs",
+    "pointer": "/learn/1/term_keys/4",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/lesson-topic-id-unknown.json",
+    "description": "topic_id không trỏ tới topic nào được đưa vào",
+    "stage": "refs",
+    "pointer": "/topic_id",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/fill-blank-answers-mismatch.json",
+    "description": "fill_blank_bank có 1 ô trống nhưng 2 đáp án",
+    "stage": "refs",
+    "pointer": "/warmup/0/answers",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/tray-item-unknown-group.json",
+    "description": "món trong build_tray trỏ tới nhóm không có",
+    "stage": "refs",
+    "pointer": "/play/items/0/group",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  }
+]

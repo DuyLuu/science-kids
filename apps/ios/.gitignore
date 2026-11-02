@@ -1,0 +1,5 @@
+# Local to apps/ios (the root .gitignore already covers xcodeproj, xcuserdata, .build, DerivedData, Local.xcconfig).
+# Xcode creates .swiftpm/ inside local packages when it resolves them.
+.swiftpm/
+# Output of `xcodebuild` run without -derivedDataPath in legacy target mode.
+build/

@@ -1,0 +1,590 @@
+{
+  "kind": "lesson",
+  "schema_version": 1,
+  "id": "00000000-0000-4000-8000-000000000110",
+  "topic_id": "00000000-0000-4000-8000-000000000100",
+  "slug": "fixture-explorer-lesson",
+  "order": 1,
+  "stage": "opener",
+  "title": {
+    "en": "Test lesson",
+    "vi": "Bài thử"
+  },
+  "objective": {
+    "en": "I can name animals.",
+    "vi": "Em gọi tên được con vật."
+  },
+  "key_points": [
+    {
+      "en": "Animals move.",
+      "vi": "Con vật di chuyển."
+    },
+    {
+      "en": "Animals eat.",
+      "vi": "Con vật ăn."
+    },
+    {
+      "en": "Animals grow.",
+      "vi": "Con vật lớn lên."
+    }
+  ],
+  "est_minutes": 5,
+  "warmup": [
+    {
+      "id": "00000000-0000-4000-8000-000000000120",
+      "key": "w1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which one can fly?",
+        "vi": "Con nào biết bay?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "options": [
+        {
+          "key": "w1_bird",
+          "label": {
+            "en": "bird",
+            "vi": "con chim"
+          },
+          "image": {
+            "alt": {
+              "en": "A bird",
+              "vi": "con chim"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "w1_cat",
+          "label": {
+            "en": "cat",
+            "vi": "con mèo"
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "con mèo"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000121",
+      "key": "w2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "A fish can swim.",
+        "vi": "Cá biết bơi."
+      },
+      "image": {
+        "alt": {
+          "en": "A fish",
+          "vi": "Con cá"
+        }
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "answer": true
+    }
+  ],
+  "learn": [
+    {
+      "id": "00000000-0000-4000-8000-000000000111",
+      "key": "card",
+      "type": "sentence_card",
+      "version": 1,
+      "text": {
+        "en": "A hen has feathers.",
+        "vi": "Gà mái có lông vũ."
+      }
+    }
+  ],
+  "play": {
+    "id": "00000000-0000-4000-8000-000000000112",
+    "key": "tray",
+    "type": "build_tray",
+    "version": 1,
+    "prompt": {
+      "en": "Pick an animal.",
+      "vi": "Chọn một con vật."
+    },
+    "capacity": 1,
+    "groups": [
+      {
+        "key": "tray_animal",
+        "label": {
+          "en": "Animal",
+          "vi": "Con vật"
+        },
+        "color": "do_son",
+        "role": "required"
+      }
+    ],
+    "items": [
+      {
+        "key": "tray_hen",
+        "label": {
+          "en": "hen",
+          "vi": "gà mái"
+        },
+        "group": "tray_animal",
+        "image": {
+          "alt": {
+            "en": "A hen",
+            "vi": "Gà mái"
+          }
+        }
+      }
+    ],
+    "messages": {
+      "start": {
+        "en": "Pick one.",
+        "vi": "Chọn một nhé."
+      },
+      "full": {
+        "en": "The tray is full.",
+        "vi": "Khay đầy rồi."
+      },
+      "balanced": {
+        "en": "Well done.",
+        "vi": "Giỏi lắm."
+      },
+      "has_limited": {
+        "en": "Try again.",
+        "vi": "Thử lại nhé."
+      },
+      "missing": {
+        "tray_animal": {
+          "en": "Add an animal.",
+          "vi": "Thêm một con vật."
+        }
+      }
+    },
+    "success_when": "all_required_and_no_limit"
+  },
+  "quiz": [
+    {
+      "id": "00000000-0000-4000-8000-000000000130",
+      "key": "q1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which animal can fly?",
+        "vi": "Con nào biết bay?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "options": [
+        {
+          "key": "q1_bird",
+          "label": {
+            "en": "bird",
+            "vi": "con chim"
+          },
+          "image": {
+            "alt": {
+              "en": "A bird",
+              "vi": "con chim"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q1_cow",
+          "label": {
+            "en": "cow",
+            "vi": "con bò"
+          },
+          "image": {
+            "alt": {
+              "en": "A cow",
+              "vi": "con bò"
+            }
+          },
+          "correct": false
+        },
+        {
+          "key": "q1_fish",
+          "label": {
+            "en": "fish",
+            "vi": "con cá"
+          },
+          "image": {
+            "alt": {
+              "en": "A fish",
+              "vi": "con cá"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000131",
+      "key": "q2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "A cow can fly.",
+        "vi": "Con bò biết bay."
+      },
+      "image": {
+        "alt": {
+          "en": "A cow",
+          "vi": "Con bò"
+        }
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "answer": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000132",
+      "key": "q3",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which one lives in water?",
+        "vi": "Con nào sống dưới nước?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "options": [
+        {
+          "key": "q3_fish",
+          "label": {
+            "en": "fish",
+            "vi": "con cá"
+          },
+          "image": {
+            "alt": {
+              "en": "A fish",
+              "vi": "con cá"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q3_cat",
+          "label": {
+            "en": "cat",
+            "vi": "con mèo"
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "con mèo"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000133",
+      "key": "q4",
+      "format": "order_sequence",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Put them in order.",
+        "vi": "Xếp theo thứ tự."
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "items": [
+        {
+          "key": "q4_egg",
+          "label": {
+            "en": "egg",
+            "vi": "quả trứng"
+          },
+          "image": {
+            "alt": {
+              "en": "A egg",
+              "vi": "quả trứng"
+            }
+          }
+        },
+        {
+          "key": "q4_chick",
+          "label": {
+            "en": "chick",
+            "vi": "gà con"
+          },
+          "image": {
+            "alt": {
+              "en": "A chick",
+              "vi": "gà con"
+            }
+          }
+        },
+        {
+          "key": "q4_hen",
+          "label": {
+            "en": "hen",
+            "vi": "gà mái"
+          },
+          "image": {
+            "alt": {
+              "en": "A hen",
+              "vi": "gà mái"
+            }
+          }
+        },
+        {
+          "key": "q4_rooster",
+          "label": {
+            "en": "rooster",
+            "vi": "gà trống"
+          },
+          "image": {
+            "alt": {
+              "en": "A rooster",
+              "vi": "gà trống"
+            }
+          }
+        }
+      ],
+      "answer": [
+        "q4_egg",
+        "q4_chick",
+        "q4_hen",
+        "q4_rooster"
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000134",
+      "key": "q5",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "What does a cow eat?",
+        "vi": "Con bò ăn gì?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "options": [
+        {
+          "key": "q5_grass",
+          "label": {
+            "en": "grass",
+            "vi": "cỏ"
+          },
+          "image": {
+            "alt": {
+              "en": "A grass",
+              "vi": "cỏ"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q5_fish",
+          "label": {
+            "en": "fish",
+            "vi": "cá"
+          },
+          "image": {
+            "alt": {
+              "en": "A fish",
+              "vi": "cá"
+            }
+          },
+          "correct": false
+        },
+        {
+          "key": "q5_meat",
+          "label": {
+            "en": "meat",
+            "vi": "thịt"
+          },
+          "image": {
+            "alt": {
+              "en": "A meat",
+              "vi": "thịt"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000135",
+      "key": "q6",
+      "format": "true_false",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "A bat is a bird.",
+        "vi": "Con dơi là chim."
+      },
+      "image": {
+        "alt": {
+          "en": "A bat",
+          "vi": "Con dơi"
+        }
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "misconception_id": "00000000-0000-4000-8000-000000000101",
+      "answer": false
+    }
+  ],
+  "vocab": [
+    {
+      "id": "00000000-0000-4000-8000-000000000113",
+      "key": "bird",
+      "term": {
+        "en": "bird",
+        "vi": "bird"
+      },
+      "example": {
+        "en": "I can see a bird.",
+        "vi": "Em thấy con bird."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000114",
+      "key": "fish",
+      "term": {
+        "en": "fish",
+        "vi": "fish"
+      },
+      "example": {
+        "en": "I can see a fish.",
+        "vi": "Em thấy con fish."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000115",
+      "key": "cow",
+      "term": {
+        "en": "cow",
+        "vi": "cow"
+      },
+      "example": {
+        "en": "I can see a cow.",
+        "vi": "Em thấy con cow."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000116",
+      "key": "hen",
+      "term": {
+        "en": "hen",
+        "vi": "hen"
+      },
+      "example": {
+        "en": "I can see a hen.",
+        "vi": "Em thấy con hen."
+      }
+    }
+  ],
+  "reward": {}
+}

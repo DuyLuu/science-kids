@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="166" viewBox="0 0 350 166">
+<!-- From design/play-ui/project (Discoverer canvas), paperE filter removed: SK-011. -->
+<g><circle cx="58" cy="44" r="20" fill="#E2A52A"/></g>
+        <circle cx="58" cy="44" r="12" fill="#F0C873"/>
+        <g><path d="M20 166 C 70 132, 125 122, 175 124 C 225 122, 280 132, 330 166 Z" fill="#2F5B57"/></g>
+        <rect x="289" y="128" width="3" height="24" rx="1.5" fill="#2F5B57"/>
+        <g>
+          <path d="M290 144 C 277 140, 271 128, 275 118 C 287 122, 293 132, 290 144 Z" fill="#3B6E6A"/>
+          <path d="M291 136 C 302 130, 310 120, 308 110 C 296 112, 290 124, 291 136 Z" fill="#3B6E6A"/>
+        </g>
+        <g><path d="M66 166 C 100 138, 140 128, 175 128 C 210 128, 250 138, 284 166 Z" fill="#3B6E6A"/></g>
+        <g><path d="M250 166 C 272 148, 312 144, 350 156 L 350 166 Z" fill="#F0C873"/></g>
+        <ellipse cx="175" cy="129" rx="30" ry="4" fill="#2F5B57"/>
+</svg>

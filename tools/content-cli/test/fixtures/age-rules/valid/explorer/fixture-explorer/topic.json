@@ -1,0 +1,37 @@
+{
+  "kind": "topic",
+  "schema_version": 1,
+  "id": "00000000-0000-4000-8000-000000000100",
+  "slug": "fixture-explorer",
+  "age_group": "explorer",
+  "order": 1,
+  "title": {
+    "en": "Test topic",
+    "vi": "Chủ đề thử"
+  },
+  "strand": "plants_animals",
+  "level": 1,
+  "difficulty": {
+    "abstraction": 1,
+    "prior_knowledge": 1,
+    "misconception": 1,
+    "vocabulary": 1,
+    "science_skill": 1
+  },
+  "prerequisite_topic_ids": [],
+  "is_free": true,
+  "misconceptions": [
+    {
+      "id": "00000000-0000-4000-8000-000000000101",
+      "key": "bats_are_birds",
+      "statement": {
+        "en": "Bats are birds.",
+        "vi": "Bats are birds."
+      },
+      "correction": {
+        "en": "Test data",
+        "vi": "Dữ liệu test"
+      }
+    }
+  ]
+}

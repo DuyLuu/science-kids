@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content-cli/v1/rules.schema.json",
+  "title": "content/rules.json",
+  "description": "Tham số luật chấm và thưởng theo nhóm tuổi (technical-plan.md B4.4, B4.1, B5.3), cộng luật soạn bài theo nhóm tuổi (authoring, SK-026). build chép nguyên file vào manifest.rules; publish chép sang app_config (rules.<age_group>). Phần luật chấm phải trùng default_rules của packages/content-schema/test-vectors (test/rules.test.ts kiểm).",
+  "type": "object",
+  "minProperties": 1,
+  "propertyNames": { "enum": ["explorer", "discoverer", "scientist"] },
+  "additionalProperties": { "$ref": "#/$defs/AgeGroupRules" },
+  "$defs": {
+    "AgeGroupRules": {
+      "type": "object",
+      "required": [
+        "max_tries",
+        "partial_order_min",
+        "pass_threshold",
+        "mastery_gap_days",
+        "rest_days_per_week",
+        "warmup",
+        "xp_per_correct",
+        "xp_lesson_complete",
+        "xp_game_complete",
+        "xp_mastery_review",
+        "default_voice_mode"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "max_tries": { "description": "Số lần thử tối đa một câu (B4.4)", "type": "integer", "minimum": 1 },
+        "partial_order_min": { "description": "Sắp thứ tự: số vị trí đúng tối thiểu để có điểm; null = tắt", "oneOf": [{ "type": "null" }, { "type": "integer", "minimum": 1 }] },
+        "pass_threshold": { "description": "Ngưỡng ⭐⭐, so bằng correct * den >= num * max", "$ref": "#/$defs/Fraction" },
+        "mastery_gap_days": { "description": "⭐⭐⭐: đạt lại ngưỡng cách lần đạt đầu ít nhất ngần này ngày", "type": "integer", "minimum": 0 },
+        "rest_days_per_week": { "description": "Số ngày nghỉ mỗi tuần ISO không đứt chuỗi", "type": "integer", "minimum": 0, "maximum": 6 },
+        "warmup": { "$ref": "#/$defs/WarmupRules" },
+        "xp_per_correct": { "description": "XP mỗi câu quiz đúng ở lần thử đầu (B4.4)", "$ref": "#/$defs/Xp" },
+        "xp_lesson_complete": { "description": "XP khi hoàn thành bài", "$ref": "#/$defs/Xp" },
+        "xp_game_complete": { "description": "XP khi xong mini-game", "$ref": "#/$defs/Xp" },
+        "xp_mastery_review": { "description": "XP khi ôn lại đạt thành thạo (⭐⭐⭐)", "$ref": "#/$defs/Xp" },
+        "default_voice_mode": {
+          "description": "voice_mode gợi ý lúc onboarding theo language_mode (B4.1)",
+          "type": "object",
+          "required": ["bilingual", "en_first", "vi_first"],
+          "additionalProperties": false,
+          "properties": {
+            "bilingual": { "$ref": "#/$defs/VoiceMode" },
+            "en_first": { "$ref": "#/$defs/VoiceMode" },
+            "vi_first": { "$ref": "#/$defs/VoiceMode" }
+          }
+        },
+        "authoring": { "$ref": "#/$defs/Authoring" }
+      }
+    },
+    "Fraction": {
+      "type": "object",
+      "required": ["num", "den"],
+      "additionalProperties": false,
+      "properties": { "num": { "type": "integer", "minimum": 0 }, "den": { "type": "integer", "minimum": 1 } }
+    },
+    "WarmupRules": {
+      "description": "Khởi động: số câu và cửa sổ tuổi (ngày) của câu cách ~7 và ~30 ngày (SK-003)",
+      "type": "object",
+      "required": ["min", "max", "week", "month", "exclude_dok"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 1 },
+        "week": { "$ref": "#/$defs/Window" },
+        "month": { "$ref": "#/$defs/Window" },
+        "exclude_dok": { "type": "array", "uniqueItems": true, "items": { "enum": [1, 2, 3] } }
+      }
+    },
+    "Window": {
+      "type": "object",
+      "required": ["target", "min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "target": { "type": "integer", "minimum": 0 },
+        "min": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "Xp": { "type": "integer", "minimum": 0 },
+    "VoiceMode": { "enum": ["en", "vi", "both"] },
+    "Authoring": {
+      "description": "Luật soạn Khởi động và Quiz theo nhóm tuổi (SK-026, bảng Đặc tả). Chỉ content-cli validate và build đọc; app và server bỏ qua khoá này. Nhóm thiếu authoring thì validate và build báo age_rules_missing.",
+      "type": "object",
+      "required": ["quiz_formats", "warmup_formats", "option_count", "image_required", "dok_mix", "first_item_dok", "misconception_items", "min_formats"],
+      "additionalProperties": false,
+      "properties": {
+        "quiz_formats": { "description": "Format được dùng ở Quiz", "$ref": "#/$defs/FormatList" },
+        "warmup_formats": { "description": "Format được dùng ở Khởi động", "$ref": "#/$defs/FormatList" },
+        "option_count": {
+          "description": "[min, max] số phần tử theo format: options (single_choice, multi_choice, picture_bar_chart), items (order_sequence), bank (fill_blank_bank). Format không có ở đây chỉ theo giới hạn của content schema",
+          "type": "object",
+          "propertyNames": { "enum": ["single_choice", "multi_choice", "fill_blank_bank", "order_sequence", "picture_bar_chart"] },
+          "additionalProperties": { "$ref": "#/$defs/Range" }
+        },
+        "image_required": {
+          "description": "Chỗ bắt buộc có image: choice_option = mọi lựa chọn của single_choice, multi_choice, picture_bar_chart; sequence_item = mọi thẻ của order_sequence; true_false = chính câu true_false",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["choice_option", "sequence_item", "true_false"] }
+        },
+        "dok_mix": {
+          "description": "Số câu DOK 1, 2, 3 trong quiz; tổng bằng 6 (quiz đúng 6 câu, content-cli kiểm khi đọc file)",
+          "type": "array",
+          "prefixItems": [{ "type": "integer", "minimum": 0 }, { "type": "integer", "minimum": 0 }, { "type": "integer", "minimum": 0 }],
+          "items": false,
+          "minItems": 3
+        },
+        "first_item_dok": { "description": "DOK bắt buộc của câu quiz 1", "enum": [1, 2, 3] },
+        "misconception_items": { "description": "[min, max] số câu quiz có misconception_id", "$ref": "#/$defs/Range" },
+        "min_formats": { "description": "Số format khác nhau tối thiểu trong quiz", "type": "integer", "minimum": 1, "maximum": 6 },
+        "max_words_en": { "description": "Số từ tối đa mỗi câu EN trên mọi Spoken của topic và bài; vượt thì cảnh báo age_words_en. Thiếu thì không kiểm", "type": "integer", "minimum": 1 }
+      }
+    },
+    "FormatList": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/QuizFormat" } },
+    "QuizFormat": {
+      "description": "Trùng enum format của packages/content-schema/schema/quiz-item.schema.json (test/age-rules.test.ts kiểm)",
+      "enum": ["single_choice", "multi_choice", "true_false", "fill_blank_bank", "order_sequence", "picture_bar_chart"]
+    },
+    "Range": {
+      "description": "[min, max], min <= max (content-cli kiểm khi đọc file)",
+      "type": "array",
+      "prefixItems": [{ "type": "integer", "minimum": 0 }, { "type": "integer", "minimum": 0 }],
+      "items": false,
+      "minItems": 2
+    }
+  }
+}

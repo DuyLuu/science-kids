@@ -1,0 +1,92 @@
+{
+  "explorer": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    },
+    "xp_per_correct": 10,
+    "xp_lesson_complete": 20,
+    "xp_game_complete": 10,
+    "xp_mastery_review": 20,
+    "default_voice_mode": { "bilingual": "both", "en_first": "both", "vi_first": "both" },
+    "authoring": {
+      "quiz_formats": ["single_choice", "true_false", "order_sequence"],
+      "warmup_formats": ["single_choice", "true_false"],
+      "option_count": { "single_choice": [2, 3], "order_sequence": [3, 3] },
+      "image_required": ["choice_option", "sequence_item", "true_false"],
+      "dok_mix": [3, 3, 0],
+      "first_item_dok": 1,
+      "misconception_items": [1, 1],
+      "min_formats": 2,
+      "max_words_en": 8
+    }
+  },
+  "discoverer": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    },
+    "xp_per_correct": 10,
+    "xp_lesson_complete": 20,
+    "xp_game_complete": 10,
+    "xp_mastery_review": 20,
+    "default_voice_mode": { "bilingual": "both", "en_first": "en", "vi_first": "both" },
+    "authoring": {
+      "quiz_formats": ["single_choice", "multi_choice", "true_false", "fill_blank_bank", "order_sequence", "picture_bar_chart"],
+      "warmup_formats": ["single_choice", "multi_choice", "true_false", "fill_blank_bank"],
+      "option_count": { "single_choice": [3, 4], "multi_choice": [2, 6], "order_sequence": [3, 5], "picture_bar_chart": [3, 4] },
+      "image_required": [],
+      "dok_mix": [2, 3, 1],
+      "first_item_dok": 1,
+      "misconception_items": [1, 1],
+      "min_formats": 3,
+      "max_words_en": 10
+    }
+  },
+  "scientist": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    },
+    "xp_per_correct": 10,
+    "xp_lesson_complete": 20,
+    "xp_game_complete": 10,
+    "xp_mastery_review": 20,
+    "default_voice_mode": { "bilingual": "both", "en_first": "en", "vi_first": "both" },
+    "authoring": {
+      "quiz_formats": ["single_choice", "multi_choice", "true_false", "fill_blank_bank", "order_sequence", "picture_bar_chart"],
+      "warmup_formats": ["single_choice", "multi_choice", "true_false", "fill_blank_bank"],
+      "option_count": { "single_choice": [4, 4], "multi_choice": [2, 6], "order_sequence": [3, 6], "picture_bar_chart": [4, 4] },
+      "image_required": [],
+      "dok_mix": [1, 3, 2],
+      "first_item_dok": 1,
+      "misconception_items": [1, 2],
+      "min_formats": 3,
+      "max_words_en": 15
+    }
+  }
+}

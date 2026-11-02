@@ -1,0 +1,15 @@
+{
+  "name": "@science-kids/design-tokens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Science Kids design tokens v1 (style E): tokens.json (source) + Swift export for the iOS DesignSystem module",
+  "type": "module",
+  "engines": {
+    "node": "^22.18.0 || >=23.6.0"
+  },
+  "scripts": {
+    "export:swift": "node scripts/export-swift.mjs",
+    "check:swift": "node scripts/export-swift.mjs --check",
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

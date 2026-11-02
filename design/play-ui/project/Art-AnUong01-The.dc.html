@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Hình bài 1 · Thẻ rau muống (màn Thưởng)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+
+<div style="width: 740px; height: 820px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+    </defs>
+  </svg>
+
+  <svg width="740" height="820" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="740" height="820" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="740" height="820" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 820px; box-sizing: border-box; padding: 40px 48px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px">
+      <span style="display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 10px; background: #A93A27; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">Ăn uống lành mạnh · Bài 1</span></span>
+      <span style="font-family: 'Phudu', sans-serif; font-size: 34px; font-weight: 900; line-height: 1.1">Thẻ rau muống · màn Thưởng</span>
+      <span style="font-size: 15px; line-height: 1.45; color: #4E4336">SK-018 đợt 1 · chờ Duy duyệt. Mỗi khung là một artboard SVG giấy cắt 120 × 120, xem ở 240 px (2×); id khung là key trong bài. Bóng bằng filter paperE, không nét viền, không gradient.</span>
+    </div>
+    <div style="display: flex; gap: 48px; align-items: flex-start">
+      <section aria-label="rau_muong" style="width: 240px; display: flex; flex-direction: column; gap: 12px">
+        <span style="min-height: 40px; display: flex; align-items: flex-start; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; margin-top: 3px; border-radius: 7px; flex-shrink: 0; background: #3B6E6A; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3)"></span><span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 15px; font-weight: 700; line-height: 1.2">Thẻ thực phẩm</span><span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">Vitamin và chất khoáng</span></span></span>
+        <div style="width: 240px; height: 240px; border-radius: 10px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22)"><svg id="rau_muong" width="240" height="240" viewBox="0 0 120 120" role="img" aria-label="Một bó rau muống" style="display: block"><g data-vat="bó rau muống" transform="translate(70 64) rotate(-32) scale(0.94) translate(-61 -60)"><g data-lop="lá phía sau" filter="url(#paperE)" fill="#2F5B57"><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(47 25) rotate(-128) scale(0.86 -0.86)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(57 15) rotate(-104) scale(0.8 -0.8)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(68 17) rotate(-70) scale(0.84 0.84)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(78 34) rotate(-28) scale(0.86 0.86)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(40 44) rotate(175) scale(0.86 -0.86)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(80 52) rotate(5) scale(0.8 0.8)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(62 36) rotate(-50) scale(0.76 0.76)"></path></g><g data-lop="cọng non" filter="url(#paperE)" fill="#A3B86C"><path d="M56.7 79.3 Q47.6 52 34 26.6 L32 27.4 Q44.9 53.1 53.3 80.7 Z"></path><path d="M58.8 79.6 Q52.1 47.4 43.1 15.7 L40.9 16.3 Q49.3 48.1 55.2 80.4 Z"></path><path d="M60.8 79.8 Q57.5 44.3 53.1 8.9 L50.9 9.1 Q54.7 44.6 57.2 80.2 Z"></path><path d="M62.8 80 Q62.9 43 63.1 6 L60.9 6 Q60.1 43 59.2 80 Z"></path><path d="M64.8 80.2 Q68.3 45.1 73.1 10.1 L70.9 9.9 Q65.5 44.7 61.2 79.8 Z"></path><path d="M66.7 80.4 Q73.2 49.1 82.1 18.3 L79.9 17.7 Q70.4 48.3 63.3 79.6 Z"></path><path d="M68.7 80.7 Q76.9 54.6 89.5 30.4 L87.5 29.6 Q74.2 53.5 65.3 79.3 Z"></path><path d="M52.7 78.9 Q52.2 94.7 51.6 110.5 L54.8 110.7 Q55.4 94.9 56.1 79.1 Z"></path><path d="M55.9 79 Q55.7 96.2 55.4 113.4 L58.6 113.4 Q58.9 96.2 59.3 79 Z"></path><path d="M59.1 79 Q59.1 95.1 59.2 111.2 L62.4 111.2 Q62.4 95.1 62.5 79 Z"></path><path d="M62.3 79 Q62.8 96.4 63.2 113.8 L66.4 113.8 Q66 96.4 65.7 79 Z"></path><path d="M65.5 79.1 Q66.4 94.4 67.2 109.7 L70.4 109.5 Q69.6 94.2 68.9 78.9 Z"></path></g><g data-lop="lá phía trước" filter="url(#paperE)" fill="#3B6E6A"><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(45.1 56.1) rotate(168) scale(0.92 -0.92)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(34.5 30.7) rotate(-150) scale(0.8 -0.8)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(55.1 40.9) rotate(-166) scale(0.78 -0.78)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(62 7.5) rotate(-100) scale(0.72 -0.72)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(68 41.5) rotate(-20) scale(0.86 0.86)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(76 59) rotate(12) scale(0.9 0.9)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(87 33.5) rotate(-40) scale(0.8 0.8)"></path><path d="M0 0 C -0.8 -1.3, -2 -2.6, -3.4 -3.6 C -0.2 -4.6, 3.6 -5, 7.4 -4.6 C 13.4 -3.9, 20 -1.6, 26.4 2.6 C 19.4 2.6, 12.6 4, 7 4.6 C 3.2 5, -0.6 4.8, -3.6 4.1 C -2.2 2.7, -0.9 1.3, 0 0 Z" transform="translate(78.1 29.2) rotate(-70) scale(0.74 0.74)"></path></g><g data-lop="ngọn non" filter="url(#paperE)" fill="#A3B86C"><path d="M0 0 C 3.6 -2.4, 9 -2.8, 15 -0.4 C 9 1.8, 3.6 2.2, 0 0 Z" transform="translate(42 17) rotate(-106) scale(0.9 -0.9)"></path><path d="M0 0 C 3.6 -2.4, 9 -2.8, 15 -0.4 C 9 1.8, 3.6 2.2, 0 0 Z" transform="translate(52 10) rotate(-98) scale(0.85 -0.85)"></path><path d="M0 0 C 3.6 -2.4, 9 -2.8, 15 -0.4 C 9 1.8, 3.6 2.2, 0 0 Z" transform="translate(72 11) rotate(-80) scale(0.85 0.85)"></path><path d="M0 0 C 3.6 -2.4, 9 -2.8, 15 -0.4 C 9 1.8, 3.6 2.2, 0 0 Z" transform="translate(81 19) rotate(-72) scale(0.85 0.85)"></path></g><g data-lop="lạt tre" filter="url(#paperE)" fill="#C9B993"><path d="M52.2 77.4 C 58.4 76.4, 65.2 76, 70.4 76.4 L 70.8 82.2 C 64.6 82.6, 58.4 83, 52.1 83.6 Z"></path><path d="M67.8 79 C 72.4 80.6, 77.4 83.6, 81.8 88.3 L 79.6 90.1 C 75.6 85.9, 71.2 83.1, 66.8 81.8 Z"></path><path d="M68.2 78.3 C 72.8 76.9, 77.2 74.3, 80.2 70.9 L 82.2 72.8 C 78.8 76.4, 74.2 79.4, 68.8 80.8 Z"></path></g></g></svg></div>
+        <div style="min-height: 112px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 16px; font-weight: 700; line-height: 1.25; color: #1E1B18">rau_muong</span>
+          <span style="font-size: 13px; line-height: 1.4; color: #4E4336">Bó rau muống tươi buộc lạt tre, cọng xanh non, lá nhọn, kiểu bán ở chợ quê</span>
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.4; color: #4E4336">bó rau muống 5 lớp</span>
+        </div>
+      </section>
+      <div style="display: flex; flex-direction: column; gap: 22px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">Thẻ Thưởng · phone, ô hình 110 (hình 96)</span>
+          <div aria-hidden="true" style="position: relative; width: 338px; height: 176px; margin: 4px 6px 8px 6px; transform: rotate(-2deg)">
+            <span style="position: absolute; left: -7px; right: -5px; top: -4px; bottom: -8px; border-radius: 12px; background: #2E4A6E; transform: rotate(1.6deg); box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3)"></span>
+            <span style="position: relative; height: 100%; box-sizing: border-box; border-radius: 10px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(30, 27, 24, 0.3); padding: 14px; display: flex; align-items: center; gap: 14px">
+              <span style="width: 110px; height: 110px; border-radius: 8px; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="96" height="96" viewBox="0 0 96 96" style="display: block"><use href="#rau_muong" width="96" height="96"></use></svg></span>
+              <span style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 4px">
+                <span style="padding: 3px 9px; border-radius: 3px; background: #A93A27; color: #FBF6EA; transform: rotate(-6deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 900; letter-spacing: 0.5px">Mới!</span>
+                <span style="font-family: 'Phudu', sans-serif; font-size: 27px; font-weight: 900; line-height: 1.05">Rau muống</span>
+                <span style="font-size: 15px; font-weight: 600; color: #4E4336">water spinach</span>
+                <span style="height: 26px; box-sizing: border-box; padding: 0 9px 0 7px; border-radius: 3px; background: #F0E6CF; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.25); display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1E1B18"><span style="width: 7px; height: 7px; border-radius: 50%; background: #3B6E6A"></span>Vitamin và chất khoáng</span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #4E4336">Thẻ Thưởng · iPad, ô hình 165 (hình 144)</span>
+          <span aria-hidden="true" style="width: 165px; height: 165px; border-radius: 8px; background: #F0E6CF; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.2); display: flex; align-items: center; justify-content: center"><svg width="144" height="144" viewBox="0 0 144 144" style="display: block"><use href="#rau_muong" width="144" height="144"></use></svg></span>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; color: #A93A27">Màu token</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px"><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.3; color: #1E1B18"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; background: #2F5B57; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.35)"></span>gi_dong_deep <span style="color: #4E4336">#2F5B57</span></span><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.3; color: #1E1B18"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; background: #3B6E6A; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.35)"></span>gi_dong <span style="color: #4E4336">#3B6E6A</span></span><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.3; color: #1E1B18"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; background: #C9B993; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.35)"></span>giay_lom_deep <span style="color: #4E4336">#C9B993</span></span></div>
+      <span style="font-family: 'Phudu', sans-serif; font-size: 15px; font-weight: 700; color: #A93A27; margin-top: 4px">Màu tự nhiên ngoài token</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px"><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.3; color: #1E1B18"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; background: #A3B86C; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.35)"></span>xanh non · cọng rau muống (mới) <span style="color: #4E4336">#A3B86C</span></span></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":740,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+{
+  "format": "science-kids/tts-variants@1",
+  "note": "Biến thể seed do bước tự kiểm của content-cli tts --lang vi chọn (SK-024). Không sửa tay.",
+  "engines": {
+    "d1b64b46cfb15d05": {
+      "label": "VieNeu-TTS v3 Turbo ONNX fp32 (vieneu 3.8.3, rev 61b85e3) · giọng Kim Thanh · tốc độ mặc định",
+      "texts": {
+        "Chất bột đường": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chất bột đường",
+            "chất bột đường"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.812Z"
+        },
+        "Chất bột đường cho ta năng lượng để chạy nhảy, vui chơi.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chất bột đường cho ta năng lượng để chạy nhảy vui chơi",
+            "chất bột đường cho ta năng lượng để chạy nhảy vui chơi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T18:00:31.792Z"
+        },
+        "Chọn từ còn thiếu": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chọn từ còn thiếu",
+            "chọn từ còn thiếu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-01T07:03:39.833Z"
+        },
+        "Cá giàu chất đạm.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cá dầu chất đạm",
+            "cá giàu chất đạm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T18:00:31.792Z"
+        },
+        "Cá, trứng và đậu phụ đều giàu chất đạm.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá trứng và đậu phụ đều giàu chất đạm",
+            "cá trứng và đậu phụ đều giàu chất đạm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.816Z"
+        },
+        "Các món giàu chất đạm là cá, trứng và đậu phụ.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "các món giàu chất đạm là cá trứng và đậu phụ",
+            "các món giàu chất đạm là cá trứng và đậu phụ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.817Z"
+        },
+        "Câu này sai. Cây tự làm ra thức ăn, còn con người phải ăn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "câu này sai cây tự làm ra thức ăn còn con người phải ăn",
+            "câu này sai cây tự làm ra thức ăn còn con người phải ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-01T07:03:39.833Z"
+        },
+        "Kẹo": {
+          "variant": 1,
+          "flags_before": [],
+          "flags_after": [],
+          "heard": [],
+          "tried": [
+            1
+          ],
+          "chosen_at": "2026-10-31T17:51:47.857Z",
+          "note": "SK-024: thử 6 ngữ cảnh ASR, biến thể 0 có lần nghe ra 'kèo' (SK-023 nghe ra 'keo'), biến thể 1 không lần nào sai thanh"
+        },
+        "Mỗi nhóm chất dinh dưỡng làm một việc riêng trong cơ thể.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "mỗi nhóm chất dinh dưỡng làm một việc riêng trong cơ thể",
+            "mỗi nhóm chất dinh dưỡng làm một việc riêng trong cơ thể"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.808Z"
+        },
+        "Na chưa đúng": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "na chưa đúng",
+            "na chưa đúng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.820Z"
+        },
+        "Na chưa đúng. Ta cần một ít chất béo, nhưng không ăn quá nhiều.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "na chưa đúng ta cần một ít chất béo nhưng không ăn quá nhiều",
+            "na chưa đúng ta cần một ít chất béo nhưng không ăn quá nhiều"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.819Z"
+        },
+        "Na nói đúng không?": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "na nói đúng không",
+            "na nói đúng không"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.817Z"
+        },
+        "Na đúng": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "na đúng",
+            "na đúng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.819Z"
+        },
+        "Nam bị trầy đầu gối. Chất nào giúp cơ thể Nam tự phục hồi?": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "nam bị chạy đầu gối chất nào giúp cơ thể nam tự phục hồi",
+            "nam bị chạy đầu gối chất nào giúp cơ thể nam tự phục hồi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T18:00:31.792Z"
+        },
+        "Rau có chất xơ.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rau có chất sơ",
+            "rau có chất sơ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.820Z"
+        },
+        "Rau muống": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rau muống",
+            "rau muống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-01T07:03:39.834Z"
+        },
+        "Thêm một món giàu chất đạm nhé!": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thêm một món rào chất đạm nhé",
+            "thêm một món giàu chất đạm nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.814Z"
+        },
+        "Thử thách: bắt lỗi sai": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thử thách bắt lỗi sai",
+            "thử thách bắt lỗi sai"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.818Z"
+        },
+        "Xếp mâm cơm cân bằng": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "xếp mâm cơm cân bằng",
+            "xếp mâm cơm cân bằng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.813Z"
+        },
+        "kẹo": {
+          "variant": 0,
+          "flags_before": [],
+          "flags_after": [],
+          "heard": [
+            "kẹo",
+            "kẹo",
+            "kẹo",
+            "kẹo"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:45:41.293Z"
+        },
+        "rau muống": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rau muống",
+            "rau muống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.813Z"
+        },
+        "ánh nắng": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ánh nắng",
+            "ánh nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-10-31T17:43:00.815Z"
+        }
+      }
+    }
+  }
+}

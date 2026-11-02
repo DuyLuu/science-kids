@@ -91,8 +91,17 @@
       "radius": 24,
       "is_interactive": true
     },
-    "Discoverer-Quiz.dc.html": {
+    "Discoverer-QuizFill.dc.html": {
       "x": 1410,
+      "y": 4228,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 11 · Quiz câu 2 · điền từ",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Quiz.dc.html": {
+      "x": 1880,
       "y": 4228,
       "w": 390,
       "h": 844,
@@ -101,7 +110,7 @@
       "is_interactive": true
     },
     "Discoverer-Reward.dc.html": {
-      "x": 2350,
+      "x": 2820,
       "y": 4228,
       "w": 390,
       "h": 844,
@@ -111,7 +120,7 @@
     },
     "Scientist-Home.dc.html": {
       "x": 0,
-      "y": 6676,
+      "y": 8250,
       "w": 390,
       "h": 844,
       "title": "Scientist 1 · Trạm nhiệm vụ",
@@ -120,7 +129,7 @@
     },
     "Scientist-Learn.dc.html": {
       "x": 470,
-      "y": 6676,
+      "y": 8250,
       "w": 390,
       "h": 844,
       "title": "Scientist 2 · Học",
@@ -129,7 +138,7 @@
     },
     "Scientist-Play.dc.html": {
       "x": 940,
-      "y": 6676,
+      "y": 8250,
       "w": 390,
       "h": 844,
       "title": "Scientist 3 · Thí nghiệm",
@@ -138,7 +147,7 @@
     },
     "Scientist-Quiz.dc.html": {
       "x": 1410,
-      "y": 6676,
+      "y": 8250,
       "w": 390,
       "h": 844,
       "title": "Scientist 4 · Quiz",
@@ -147,7 +156,7 @@
     },
     "Scientist-Reward.dc.html": {
       "x": 1880,
-      "y": 6676,
+      "y": 8250,
       "w": 390,
       "h": 844,
       "title": "Scientist 5 · Thưởng",
@@ -288,7 +297,7 @@
       "is_interactive": true
     },
     "Discoverer-QuizMyth.dc.html": {
-      "x": 1880,
+      "x": 2350,
       "y": 4228,
       "w": 390,
       "h": 844,
@@ -332,6 +341,51 @@
       "radius": 24,
       "is_interactive": true
     },
+    "Discoverer-Home-iPad.dc.html": {
+      "x": 0,
+      "y": 6676,
+      "w": 834,
+      "h": 1194,
+      "title": "Discoverer 4 · Trang chủ · iPad",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Learn-iPad.dc.html": {
+      "x": 914,
+      "y": 6676,
+      "w": 834,
+      "h": 1194,
+      "title": "Discoverer 9 · Học · iPad",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Play-iPad.dc.html": {
+      "x": 1828,
+      "y": 6676,
+      "w": 834,
+      "h": 1194,
+      "title": "Discoverer 10 · Chơi · iPad",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-QuizFill-iPad.dc.html": {
+      "x": 2742,
+      "y": 6676,
+      "w": 834,
+      "h": 1194,
+      "title": "Discoverer 11 · Quiz câu 2 · điền từ · iPad",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Quiz-iPad.dc.html": {
+      "x": 3656,
+      "y": 6676,
+      "w": 834,
+      "h": 1194,
+      "title": "Discoverer 11 · Quiz câu 5 · iPad",
+      "radius": 24,
+      "is_interactive": true
+    },
     "Discoverer-Profiles.dc.html": {
       "x": 940,
       "y": 3004,
@@ -349,6 +403,66 @@
       "title": "Discoverer 7 · Đăng ký phụ huynh",
       "radius": 24,
       "is_interactive": true
+    },
+    "Art-AnUong01-Nhom-chat.dc.html": {
+      "x": 4400,
+      "y": 4228,
+      "w": 1164,
+      "h": 1020,
+      "title": "Hình bài 1 · Nhóm chất (màn Học)",
+      "radius": 16
+    },
+    "Art-AnUong01-The.dc.html": {
+      "x": 5644,
+      "y": 4228,
+      "w": 740,
+      "h": 820,
+      "title": "Hình bài 1 · Thẻ rau muống (màn Thưởng)",
+      "radius": 16
+    },
+    "Explorer-Quiz-A.dc.html": {
+      "x": 0,
+      "y": 9594,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 4 · Quiz · phương án A · Bạn kể chuyện",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Quiz-B.dc.html": {
+      "x": 470,
+      "y": 9594,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 4 · Quiz · phương án B · Sách tranh",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-Quiz-C.dc.html": {
+      "x": 940,
+      "y": 9594,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 4 · Quiz · phương án C · Tranh treo",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-QuizTF.dc.html": {
+      "x": 1410,
+      "y": 9594,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer 6 · Quiz Đúng/Sai · khung A, dấu đề xuất",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Explorer-QuizTF-Icons.dc.html": {
+      "x": 1880,
+      "y": 9594,
+      "w": 390,
+      "h": 844,
+      "title": "Explorer · Biểu tượng Đúng/Sai · 2 phương án",
+      "radius": 16
     }
   },
   "order": [
@@ -358,6 +472,11 @@
     "Explorer-Play.dc.html",
     "Explorer-Quiz.dc.html",
     "Explorer-Reward.dc.html",
+    "Explorer-Quiz-A.dc.html",
+    "Explorer-Quiz-B.dc.html",
+    "Explorer-Quiz-C.dc.html",
+    "Explorer-QuizTF.dc.html",
+    "Explorer-QuizTF-Icons.dc.html",
     "Discoverer-Welcome.dc.html",
     "Discoverer-Profile.dc.html",
     "Discoverer-Profiles.dc.html",
@@ -368,6 +487,7 @@
     "Discoverer-Warmup.dc.html",
     "Discoverer-Learn.dc.html",
     "Discoverer-Play.dc.html",
+    "Discoverer-QuizFill.dc.html",
     "Discoverer-Quiz.dc.html",
     "Discoverer-QuizMyth.dc.html",
     "Discoverer-Reward.dc.html",
@@ -375,6 +495,13 @@
     "Discoverer-Badges.dc.html",
     "Discoverer-Words.dc.html",
     "Discoverer-Parent.dc.html",
+    "Discoverer-Home-iPad.dc.html",
+    "Discoverer-Learn-iPad.dc.html",
+    "Discoverer-Play-iPad.dc.html",
+    "Discoverer-QuizFill-iPad.dc.html",
+    "Discoverer-Quiz-iPad.dc.html",
+    "Art-AnUong01-Nhom-chat.dc.html",
+    "Art-AnUong01-The.dc.html",
     "Scientist-Home.dc.html",
     "Scientist-Learn.dc.html",
     "Scientist-Play.dc.html",
@@ -409,7 +536,7 @@
     },
     "scientistTitle": {
       "x": 0,
-      "y": 6426,
+      "y": 8000,
       "text": "Scientist 9–11 tuổi · Phòng thí nghiệm",
       "kind": "title1",
       "maxW": 2270
@@ -428,11 +555,11 @@
       "w": 400,
       "fill": "blue",
       "size": "m",
-      "text": "Quy tắc Discoverer (pilot)\n• Câu EN ≤ 8–10 từ, phụ đề VI bật sẵn, nút nghe ở mọi câu\n• Vùng chạm ≥ 56px\n• Chơi = dùng ngay điều vừa học: xếp mâm cơm Việt cân bằng\n• Quiz 3–4 lựa chọn, có câu chọn nhiều đáp án, gợi ý tiếng Việt\n• Thưởng: sao 3 mức, XP, thẻ sưu tầm, thử thách tuần\n• Bài mẫu: Ăn uống lành mạnh — bài 1\n• Luồng đủ 17 màn: bắt đầu → bài học → sưu tập và phụ huynh\n• Style E: đủ bộ màu Đông Hồ như màn mẫu; mâm cơm trên lá chuối, đường hành trình bằng đĩa giấy"
+      "text": "Quy tắc Discoverer (pilot)\n• Câu EN ≤ 8–10 từ, phụ đề VI bật sẵn, nút nghe ở mọi câu\n• Vùng chạm ≥ 56px\n• Chơi = dùng ngay điều vừa học: xếp mâm cơm Việt cân bằng\n• Quiz 3–4 lựa chọn, có câu chọn nhiều đáp án, gợi ý tiếng Việt\n• Thưởng: sao 3 mức, XP, thẻ sưu tầm, thử thách tuần\n• Bài mẫu: Ăn uống lành mạnh — bài 1\n• Luồng đủ 17 màn: bắt đầu → bài học → sưu tập và phụ huynh\n• Style E: đủ bộ màu Đông Hồ như màn mẫu; mâm cơm trên lá chuối, đường hành trình bằng đĩa giấy\n• Báo đúng bằng lá tre #3F7A33: triện ĐÚNG, viền lệch ô đúng, ô tiến độ đã xong, nhóm chất đã đủ ở Chơi. Báo sai giữ giấy lõm. Triện đánh dấu (đã chọn, đã xem, món trong mâm) vẫn đỏ son (29/10)"
     },
     "scientistRules": {
       "x": 2390,
-      "y": 6676,
+      "y": 8250,
       "w": 400,
       "fill": "purple",
       "size": "m",
@@ -498,14 +625,14 @@
       "w": 390,
       "fill": "green",
       "size": "m",
-      "text": "E · Giấy cắt Đông Hồ (B + D, gọn hơn)\nÝ tưởng: tranh Đông Hồ làm bằng giấy cắt dán. Lấy màu khoáng và giấy điệp của D, cách chồng lớp giấy có bóng của B.\nBỏ: viền đen khắc gỗ, khung đôi, vân gỗ, vảy cá và gân lá vẽ nét, đan rổ, vành đĩa vẽ nét, nền xanh tối phủ cả màn.\nGiữ từ B: hình là các mảnh giấy chồng lớp, bóng đổ thay cho viền; thẻ nhãn giấy; nút hai lớp giấy; mép giấy xé.\nGiữ từ D: nền giấy điệp lấp lánh; màu đỏ son, vàng hoè, gỉ đồng, chàm, than tre; chữ Phudu; triện đỏ và khung nhãn đỏ.\nQuy tắc: không có nét viền, chiều sâu chỉ đến từ lớp giấy và bóng. Đỏ son cho nút chính và phản hồi đúng; vàng hoè cho bước hiện tại và lựa chọn đang chọn.\nRủi ro: giấy sáng trên nền điệp sáng gần màu nhau, phải giữ bóng đủ rõ; nhiều lớp bóng nặng trên Android rẻ, nên khi làm app thì vẽ sẵn bóng vào ảnh.\n27/10: đã áp E vào 15 màn của 3 nhóm tuổi và bảng tổng quan 0."
+      "text": "E · Giấy cắt Đông Hồ (B + D, gọn hơn)\nÝ tưởng: tranh Đông Hồ làm bằng giấy cắt dán. Lấy màu khoáng và giấy điệp của D, cách chồng lớp giấy có bóng của B.\nBỏ: viền đen khắc gỗ, khung đôi, vân gỗ, vảy cá và gân lá vẽ nét, đan rổ, vành đĩa vẽ nét, nền xanh tối phủ cả màn.\nGiữ từ B: hình là các mảnh giấy chồng lớp, bóng đổ thay cho viền; thẻ nhãn giấy; nút hai lớp giấy; mép giấy xé.\nGiữ từ D: nền giấy điệp lấp lánh; màu đỏ son, vàng hoè, gỉ đồng, chàm, than tre; chữ Phudu; triện đỏ và khung nhãn đỏ.\nQuy tắc: không có nét viền, chiều sâu chỉ đến từ lớp giấy và bóng. Đỏ son cho nút chính; vàng hoè cho bước hiện tại và lựa chọn đang chọn; lá tre #3F7A33 cho phản hồi đúng (Duy đổi 29/10, trước là đỏ son); sai thì giấy lõm gấp góc.\nRủi ro: giấy sáng trên nền điệp sáng gần màu nhau, phải giữ bóng đủ rõ; nhiều lớp bóng nặng trên Android rẻ, nên khi làm app thì vẽ sẵn bóng vào ảnh.\n27/10: đã áp E vào 15 màn của 3 nhóm tuổi và bảng tổng quan 0."
     },
     "discovererLessonTitle": {
       "x": 0,
       "y": 3978,
       "text": "Discoverer · 2 Một bài học, từ khởi động đến thưởng",
       "kind": "title1",
-      "maxW": 2740
+      "maxW": 3210
     },
     "discovererCollectTitle": {
       "x": 0,
@@ -515,12 +642,20 @@
       "maxW": 1800
     },
     "discovererMotion": {
-      "x": 2860,
+      "x": 3330,
       "y": 4228,
       "w": 400,
       "fill": "teal",
       "size": "m",
       "text": "Chuyển động · Discoverer\n• Mỗi màn có một lượt hiện: các mảnh giấy được đặt xuống theo thứ tự đọc, xong trong khoảng 0,5 giây; câu chính đọc được trước 0,3 giây\n• Chọn đáp án thì đóng triện; báo đúng hoặc sai thì tờ giấy trượt lên từ dưới\n• Được thưởng: sao đóng dấu từng cái, thẻ mới bật lên, giấy vụn rơi; giấy vụn chỉ dùng ở màn Thưởng\n• Mỗi màn tối đa một chuyển động lặp: mascot đung đưa hoặc nút chính nhún nhẹ\n• Sai thì không rung, không nhấp nháy; máy bật Giảm chuyển động thì tắt hết"
+    },
+    "discovererFillBlank": {
+      "x": 3810,
+      "y": 4228,
+      "w": 400,
+      "fill": "orange",
+      "size": "m",
+      "text": "Từ điền chỗ trống · 4 trạng thái (designer 29/10)\n• Từ điền là chữ trong câu: không chip, không lề, không bo góc, không bóng; nằm giữa dấu cách sẵn có và dấu câu của câu\n• Ô trống: khe lõm điệp thẫm có “?” chữ phụ (6,89:1)\n• Đang chọn (đã điền, chưa Kiểm tra): mực đậm 700 trên nền vàng hoè sát chữ, cùng màu tấm giấy lệch sau ô từ đang chọn (7,88:1)\n• Đúng: lá tre đậm 700, bỏ nền: từ nhập vào câu (4,82:1)\n• Sai: chữ phụ thường 400 trên nền giấy lõm sát chữ, cùng màu nhãn “Chưa đúng” (6,56:1)\n• Không nhìn màu vẫn phân biệt: đang chọn = có nền + đậm; đúng = không nền; sai = có nền + chữ mảnh\n• Cụm nhiều chữ (“năng lượng”) không tách dòng\n• Không gạch chân: vạch đè lên dấu nặng (lượng, đạm, kẹo) và là nét, style E không dùng\n• Khởi động chạm là trả lời ngay nên chỉ có ô trống và đúng; đủ các trạng thái xem ở Quiz câu 2 (tweak blank)"
     },
     "discovererAccount": {
       "x": 3770,
@@ -529,6 +664,51 @@
       "fill": "pink",
       "size": "m",
       "text": "Tài khoản (PRD mục 6)\n• Gói free là chế độ khách: không đăng ký, 1 hồ sơ con, tiến độ lưu trên máy\n• Hồ sơ con thứ 2 trở đi chỉ có ở Premium\n• Mở khoá Premium: câu đố cho bố mẹ (màn 6) → đăng ký tài khoản phụ huynh (màn 7) → chọn gói → thanh toán; hồ sơ và tiến độ của chế độ khách chuyển sang nguyên vẹn\n• Mở app: nhà có từ 2 hồ sơ thì hiện màn 3 Chọn hồ sơ; nhà 1 hồ sơ vào thẳng Trang chủ, chạm avatar để mở màn 3\n• Màn 3 và 17 có tweak Gói (free / premium) để xem cả hai trạng thái"
+    },
+    "discovererIpadTitle": {
+      "x": 0,
+      "y": 6426,
+      "text": "Discoverer · 4 iPad (regular width, 834×1194)",
+      "kind": "title1",
+      "maxW": 4490
+    },
+    "discovererIpadRules": {
+      "x": 4570,
+      "y": 6676,
+      "w": 400,
+      "fill": "blue",
+      "size": "m",
+      "text": "Quy tắc iPad (technical-plan B7.10)\n• Bố cục theo size class, không theo góc xoay: iPad ngang 1194×834 dùng cùng quy tắc, không dựng màn riêng\n• Split View, Slide Over: theo size class hệ thống báo; compact (như Split View 1/3) dùng bố cục phone 390\n• Học, Chơi, Quiz: nội dung trong khung giấy rộng 600pt canh giữa, hai bên là nền điệp\n• Trang chủ (và Bộ thẻ, Huy hiệu, Từ vựng): hai cột kiểu NavigationSplitView; 4 mục của dải tab lên thanh bên giấy\n• Lưới lựa chọn giữ số cột của phone (Quiz 3 × 2, Chơi 4 × 2) nhưng ô to hơn: Quiz 104 → 150pt, Chơi 96 → 124pt; mâm cơm rộng 544pt, chỗ trong mâm 70 → 96pt\n• Cỡ chữ giữ như phone; hình minh hoạ to tối đa 1,5× (đang dùng 1,35–1,45×)\n• Vùng chạm ≥ 56pt, không co; nút Từ mới và chip chuỗi ngày, sao nâng từ 48/44 lên 56\n• Motion: chép nguyên bộ CSS của phone (lay, stamp, rise, pop, slide, sway, nudge); tắt hết khi bật Giảm chuyển động\n• Trang chủ có tweak Bố cục: A chủ đề ở thanh bên (theo SK-004), B thanh bên chỉ có điều hướng, chủ đề nằm ở cột nội dung"
+    },
+    "artAnUong01Title": {
+      "x": 4400,
+      "y": 3978,
+      "text": "Hình bài 1 · Ăn uống lành mạnh (SK-018, đợt 1)",
+      "kind": "title1",
+      "maxW": 1984
+    },
+    "artAnUong01Rules": {
+      "x": 6464,
+      "y": 4228,
+      "w": 400,
+      "fill": "green",
+      "size": "m",
+      "text": "Quy ước hình minh hoạ (technical-plan B9, SK-018)\n• Mỗi hình là một artboard SVG 120 × 120, id khung = key trong bài; xem ở 240px, đủ cho cỡ lớn nhất trên iPad (ô thẻ 165pt)\n• Mỗi vật là một nhóm data-vat, mỗi lớp giấy là một nhóm data-lop có filter paperE; 3–6 lớp mỗi vật\n• Không nét viền, không gradient, không chữ hay nhãn hiệu trong hình\n• Hình dùng chung vẽ một lần: bó rau muống của thẻ rau_muong cũng nằm sau quả cam ở explore_vit\n• Xuất (chờ content-cli assets): chèn filter paperE vào từng SVG, nướng bóng, ra WebP @2x/@3x\n• Đợt 1 có 5 hình, chờ Duy duyệt trước khi vẽ 31 chỗ còn lại"
+    },
+    "explorerQuizTitle": {
+      "x": 0,
+      "y": 9344,
+      "text": "Explorer · Quiz không cần đọc · phương án SK-026 (Duy chốt 2/11: khung A + triện và góc bong của B)",
+      "kind": "title1",
+      "maxW": 2270
+    },
+    "explorerQuizOptions": {
+      "x": 2390,
+      "y": 9594,
+      "w": 400,
+      "fill": "orange",
+      "size": "m",
+      "text": "Quiz Explorer không cần đọc (SK-026, designer 1/11)\n• Chung: chữ chỉ ở câu hỏi và lời linh vật (D2); chạm thẻ là trả lời, app đọc tên hình rồi mới chấm (D4); không số câu đúng, không XP, ô tiến độ đã làm cùng một màu (D1); thẻ, nút, dấu không có chữ; vùng chạm ≥ 72\n• A · Bạn kể chuyện: linh vật và bong bóng lời ở trên, bong bóng là nút nghe lại; đang đọc = linh vật há miệng, đung đưa, loa vàng hoè; đúng = dấu tròn lá tre; sai = thẻ lõm, hình xám, mẩu giấy gấp góc có mũi tên vòng; sang câu = nút đỏ to chỉ có mũi tên\n• B · Sách tranh: tranh ghim nghiêng, phụ đề ở chân trang, linh vật ló sau mép giấy; đang đọc = tô vàng hoè từ đang đọc (karaoke); đúng = triện vuông lá tre như Discoverer; sai = tranh bong ghim, góc lật có mũi tên vòng; sang câu = chạm góc trang cong\n• C · Tranh treo: 3 tranh dọc treo trên thanh, câu hỏi giữ ở đầu màn; đang đọc = dải giấy vàng hoè chạy dưới câu; đúng = triện hoa thị ở chân tranh; sai = tranh lật úp, mặt sau có mũi tên vòng; hết lượt chỉ tranh đáp án còn ngửa; sang câu = mũi tên băng giấy\n• Duy chốt 2/11 theo đề xuất: A, thay dấu tròn bằng triện vuông và mẩu gấp góc bằng góc bong của B (màn câu 6 Đúng/Sai dựng theo cách này); biểu tượng Đúng/Sai bộ 1 gật đầu / lắc đầu, bộ ngón cái giữ để playtest\n• Xem trạng thái: tweak state (đang đọc câu hỏi, vừa chạm, đúng, sai lần 1, hết lượt, sang câu) và showVi; chạm thẻ trên bảng để chơi tiếp. Màn Đúng/Sai có thêm tweak icons"
     }
   },
   "designSystems": []

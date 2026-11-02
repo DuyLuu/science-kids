@@ -1,0 +1,3138 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "avatar.ca" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fish"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cá"
+          }
+        }
+      }
+    },
+    "avatar.chim" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparrow"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chim sẻ"
+          }
+        }
+      }
+    },
+    "avatar.ech" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frog"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ếch"
+          }
+        }
+      }
+    },
+    "avatar.ga" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chick"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gà"
+          }
+        }
+      }
+    },
+    "avatar.meo" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mèo"
+          }
+        }
+      }
+    },
+    "avatar.trau" : {
+      "comment" : "Avatar name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buffalo"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trâu"
+          }
+        }
+      }
+    },
+    "collectible.set.food" : {
+      "comment" : "Name of the collectible set food.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ thực phẩm"
+          }
+        }
+      }
+    },
+    "content.error.body" : {
+      "comment" : "Screen when the lessons bundled in the app fail their checks: text for a parent.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The lesson files in the app are damaged. Tap Try again. If that does not help, please reinstall the app."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dữ liệu bài học trong app bị lỗi. Bố mẹ bấm Thử lại. Nếu vẫn lỗi, hãy cài lại app nhé."
+          }
+        }
+      }
+    },
+    "content.error.retry" : {
+      "comment" : "Screen when the lessons fail their checks: button that reads them again.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử lại"
+          }
+        }
+      }
+    },
+    "content.error.title" : {
+      "comment" : "Screen when the lessons bundled in the app fail their checks: title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The lessons can't open"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa mở được bài học"
+          }
+        }
+      }
+    },
+    "home.avatar_a11y %@" : {
+      "comment" : "VoiceOver label of the avatar on Home.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hồ sơ: %@"
+          }
+        }
+      }
+    },
+    "home.continue" : {
+      "comment" : "Home: tag on the continue card.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học tiếp"
+          }
+        }
+      }
+    },
+    "home.continue.lesson %lld %lld %@" : {
+      "comment" : "Home card: lesson number, lesson count, lesson title (from the content).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld/%2$lld · %3$@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld/%2$lld · %3$@"
+          }
+        }
+      }
+    },
+    "home.continue.progress %lld %lld %lld" : {
+      "comment" : "Home card: lessons done, lesson count, minutes of the next lesson.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld lessons · about %3$lld min"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld bài · khoảng %3$lld phút"
+          }
+        }
+      }
+    },
+    "home.continue.start %lld" : {
+      "comment" : "Home: play button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start lesson %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu bài %lld"
+          }
+        }
+      }
+    },
+    "home.continue_free" : {
+      "comment" : "Home: tag on the continue card of a free topic.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue · Free"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học tiếp · Miễn phí"
+          }
+        }
+      }
+    },
+    "home.empty" : {
+      "comment" : "Home: no topic in the content.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This build has no lessons yet."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bản này chưa có bài học nào."
+          }
+        }
+      }
+    },
+    "home.greeting %@" : {
+      "comment" : "Home: greeting with the child's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi %@!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chào %@!"
+          }
+        }
+      }
+    },
+    "home.journey.count %lld" : {
+      "comment" : "Home: number of topics on the journey.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld topic · easy → hard"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld topics · easy → hard"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld chủ đề · dễ → khó"
+          }
+        }
+      }
+    },
+    "home.journey.current %lld" : {
+      "comment" : "Home: status of the topic being learnt.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %lld · Learning now"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức %lld · Đang học"
+          }
+        }
+      }
+    },
+    "home.journey.more" : {
+      "comment" : "Home: last stop of the journey while the pack has one topic.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More topics coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sắp có thêm chủ đề"
+          }
+        }
+      }
+    },
+    "home.journey.open %lld" : {
+      "comment" : "Home: status of another open topic.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức %lld"
+          }
+        }
+      }
+    },
+    "home.journey.title %lld" : {
+      "comment" : "Home: journey title with the UK school year.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Year %lld journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hành trình Year %lld"
+          }
+        }
+      }
+    },
+    "home.stars_a11y %lld" : {
+      "comment" : "Stars chip on Home (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld star, see badges"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld stars, see badges"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sao, xem huy hiệu"
+          }
+        }
+      }
+    },
+    "home.streak_a11y %lld" : {
+      "comment" : "Streak chip on Home (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-day streak, see badges"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-day streak, see badges"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuỗi %lld ngày, xem huy hiệu"
+          }
+        }
+      }
+    },
+    "home.subtitle %@ %lld" : {
+      "comment" : "Home: world name and UK school year under the greeting.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Year %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Year %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.back" : {
+      "comment" : "Lesson header: back button (icon only), leaves the lesson; the attempt stays saved.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về hành trình"
+          }
+        }
+      }
+    },
+    "lesson.caption %@ %lld %lld" : {
+      "comment" : "Lesson header caption: topic name (content), lesson number, lesson count.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Lesson %2$lld/%3$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Bài %2$lld/%3$lld"
+          }
+        }
+      }
+    },
+    "lesson.check" : {
+      "comment" : "Main button of a quiz question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiểm tra"
+          }
+        }
+      }
+    },
+    "lesson.hint" : {
+      "comment" : "Button that opens the hint of a quiz question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hint"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gợi ý"
+          }
+        }
+      }
+    },
+    "lesson.learn.need_all" : {
+      "comment" : "Learn: line over the disabled button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open every group to unlock the game."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm hết các nhóm để mở phần chơi."
+          }
+        }
+      }
+    },
+    "lesson.learn.seen %lld %lld" : {
+      "comment" : "Learn: groups seen / groups.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "lesson.learn.seen_mark" : {
+      "comment" : "VoiceOver value of a group already opened.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seen"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã xem"
+          }
+        }
+      }
+    },
+    "lesson.learn.to_play" : {
+      "comment" : "Learn: button to the game.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's play"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi thôi"
+          }
+        }
+      }
+    },
+    "lesson.learn.to_quiz" : {
+      "comment" : "Learn: button to the quiz when the lesson has no game.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take the quiz"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Làm quiz"
+          }
+        }
+      }
+    },
+    "lesson.listen" : {
+      "comment" : "Listen button of a lesson (icon only), when no more precise label fits.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe"
+          }
+        }
+      }
+    },
+    "lesson.listen.card" : {
+      "comment" : "Thưởng: speaker button of the collectible card's name (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe tên thẻ"
+          }
+        }
+      }
+    },
+    "lesson.listen.explanation" : {
+      "comment" : "Result sheet: speaker button of the explanation (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the explanation"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe lời giải thích"
+          }
+        }
+      }
+    },
+    "lesson.listen.fact" : {
+      "comment" : "Thưởng: speaker button of the card's back, 'Did you know?' (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the back of the card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe mặt sau của thẻ"
+          }
+        }
+      }
+    },
+    "lesson.listen.hint" : {
+      "comment" : "Speaker button of a hint (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the hint"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe gợi ý"
+          }
+        }
+      }
+    },
+    "lesson.listen.instruction" : {
+      "comment" : "Học: speaker button of the instruction 'Tap each group' (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to what to do"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe hướng dẫn"
+          }
+        }
+      }
+    },
+    "lesson.listen.message" : {
+      "comment" : "Chơi: speaker button of the mascot's message (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the message"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe lời nhắn"
+          }
+        }
+      }
+    },
+    "lesson.listen.objective" : {
+      "comment" : "Học: speaker button of the lesson goal 'I can…' (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the lesson goal"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe mục tiêu bài học"
+          }
+        }
+      }
+    },
+    "lesson.listen.question" : {
+      "comment" : "Lesson: speaker button at the end of the question (icon only, canvas 'Nghe câu hỏi').",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the question"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe câu hỏi"
+          }
+        }
+      }
+    },
+    "lesson.listen.sentence" : {
+      "comment" : "Học: speaker button of the open group's sentence and foods (icon only, canvas 'Nghe câu này').",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to this sentence"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe câu này"
+          }
+        }
+      }
+    },
+    "lesson.mark.answer" : {
+      "comment" : "Mark on the right answer not picked (one answer).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đáp án"
+          }
+        }
+      }
+    },
+    "lesson.mark.correct" : {
+      "comment" : "Mark on a picked right answer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Right"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng"
+          }
+        }
+      }
+    },
+    "lesson.mark.missed" : {
+      "comment" : "Mark on a right answer not picked (multi choice).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ sót"
+          }
+        }
+      }
+    },
+    "lesson.mark.wrong" : {
+      "comment" : "Mark on a picked wrong answer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa đúng"
+          }
+        }
+      }
+    },
+    "lesson.next" : {
+      "comment" : "Button to the next question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp"
+          }
+        }
+      }
+    },
+    "lesson.play.back" : {
+      "comment" : "Play header: back button (icon only), to Learn.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the lesson"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay lại phần học"
+          }
+        }
+      }
+    },
+    "lesson.play.done" : {
+      "comment" : "Play: button once the tray succeeds.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balanced! Take the quiz"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mâm cân bằng! Làm quiz"
+          }
+        }
+      }
+    },
+    "lesson.play.mascot" : {
+      "comment" : "VoiceOver label of the mascot beside the tray message.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your paper-cut buddy"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn đồng hành giấy cắt"
+          }
+        }
+      }
+    },
+    "lesson.play.meter_missing" : {
+      "comment" : "VoiceOver value of a food-group chip.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "missing"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "còn thiếu"
+          }
+        }
+      }
+    },
+    "lesson.play.meter_ok" : {
+      "comment" : "VoiceOver value of a food-group chip.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "on the tray"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đã có"
+          }
+        }
+      }
+    },
+    "lesson.play.need %@" : {
+      "comment" : "Play: what the tray needs; the group names come from the content.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You need %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần đủ %@"
+          }
+        }
+      }
+    },
+    "lesson.play.remove %@" : {
+      "comment" : "VoiceOver label of a food on the tray (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take %@ off the tray"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ %@ khỏi mâm"
+          }
+        }
+      }
+    },
+    "lesson.play.tray_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the tray.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your tray, %1$lld of %2$lld places filled"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mâm của em, có %1$lld trên %2$lld món"
+          }
+        }
+      }
+    },
+    "lesson.play.tray_label" : {
+      "comment" : "Play: line over the tray.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your tray · tap a food on it to take it off"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mâm của em · chạm món trong mâm để bỏ ra"
+          }
+        }
+      }
+    },
+    "lesson.quiz.close" : {
+      "comment" : "Quiz header: close button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave the quiz"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoát quiz"
+          }
+        }
+      }
+    },
+    "lesson.quiz.counter %lld %lld" : {
+      "comment" : "Quiz header: question number / count.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q %1$lld/%2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Câu %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "lesson.quiz.done" : {
+      "comment" : "Button after the last quiz question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See the result"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem kết quả"
+          }
+        }
+      }
+    },
+    "lesson.quiz.progress_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the quiz squares.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question %1$lld of %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Câu %1$lld trên %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.result.correct_first" : {
+      "comment" : "Result sheet: right on the first try.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chính xác!"
+          }
+        }
+      }
+    },
+    "lesson.result.correct_later" : {
+      "comment" : "Result sheet: right on a later try (no points).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That's right!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng rồi!"
+          }
+        }
+      }
+    },
+    "lesson.result.wrong" : {
+      "comment" : "Result sheet: wrong on the last try; the explanation and the right answer follow.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's look again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cùng xem lại nhé"
+          }
+        }
+      }
+    },
+    "lesson.retry" : {
+      "comment" : "Button after a first wrong try.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử lại"
+          }
+        }
+      }
+    },
+    "lesson.retry.title" : {
+      "comment" : "Folded note after a first wrong try; the hint follows.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearly!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gần đúng!"
+          }
+        }
+      }
+    },
+    "lesson.reward.card_a11y %@" : {
+      "comment" : "VoiceOver label of the collectible card (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ card, tap to turn"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ %@, chạm để lật"
+          }
+        }
+      }
+    },
+    "lesson.reward.card_label" : {
+      "comment" : "Reward: line over the collectible card.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A new card for your collection · tap to turn"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ mới cho bộ sưu tập · chạm để lật"
+          }
+        }
+      }
+    },
+    "lesson.reward.cards" : {
+      "comment" : "Reward: button to the Cards tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See my cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem bộ thẻ"
+          }
+        }
+      }
+    },
+    "lesson.reward.close" : {
+      "comment" : "Reward: close button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close, back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng, về hành trình"
+          }
+        }
+      }
+    },
+    "lesson.reward.fact" : {
+      "comment" : "Back of the collectible card.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Did you know?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em có biết?"
+          }
+        }
+      }
+    },
+    "lesson.reward.hint_days %lld" : {
+      "comment" : "Reward: what the third star needs (mastery gap in days).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Review in %lld days for the 3rd star · mastery"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ôn lại sau %lld ngày để lấy sao thứ 3 · thành thạo"
+          }
+        }
+      }
+    },
+    "lesson.reward.hint_mastered" : {
+      "comment" : "Reward: three stars.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mastered!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thành thạo rồi!"
+          }
+        }
+      }
+    },
+    "lesson.reward.hint_pass %lld %lld" : {
+      "comment" : "Reward: what the second star needs (pass threshold from the rules).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get %1$lld/%2$lld right for the 2nd star"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng từ %1$lld/%2$lld câu để lấy sao thứ 2"
+          }
+        }
+      }
+    },
+    "lesson.reward.hint_tomorrow" : {
+      "comment" : "Reward: what the third star needs (mastery gap 1 day).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Review tomorrow for the 3rd star · mastery"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ôn lại vào ngày mai để lấy sao thứ 3 · thành thạo"
+          }
+        }
+      }
+    },
+    "lesson.reward.home" : {
+      "comment" : "Reward: main button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về hành trình"
+          }
+        }
+      }
+    },
+    "lesson.reward.new" : {
+      "comment" : "Tag on a new collectible.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mới!"
+          }
+        }
+      }
+    },
+    "lesson.reward.score %lld %lld" : {
+      "comment" : "Reward: quiz points / quiz length.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "lesson.reward.score_caption" : {
+      "comment" : "Reward: line under the score.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "right"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "câu đúng"
+          }
+        }
+      }
+    },
+    "lesson.reward.stars_a11y %lld" : {
+      "comment" : "VoiceOver label of the stars.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld of 3 stars"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld of 3 stars"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Được %lld trên 3 sao"
+          }
+        }
+      }
+    },
+    "lesson.reward.subtitle %@" : {
+      "comment" : "Reward subtitle with the lesson name (content); the canvas keeps the English words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson complete · %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson complete · %@"
+          }
+        }
+      }
+    },
+    "lesson.reward.title %lld" : {
+      "comment" : "Reward title with the lesson number.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %lld done!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn thành bài %lld!"
+          }
+        }
+      }
+    },
+    "lesson.reward.xp %lld" : {
+      "comment" : "Reward: XP of the attempt.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        }
+      }
+    },
+    "lesson.seal.correct" : {
+      "comment" : "Seal on a right answer (upper case, short: 52pt square).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RIGHT"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ĐÚNG"
+          }
+        }
+      }
+    },
+    "lesson.step.learn" : {
+      "comment" : "Lesson step square label.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learn"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học"
+          }
+        }
+      }
+    },
+    "lesson.step.play" : {
+      "comment" : "Lesson step square label.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi"
+          }
+        }
+      }
+    },
+    "lesson.step.quiz" : {
+      "comment" : "Lesson step square label.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz"
+          }
+        }
+      }
+    },
+    "lesson.step.warmup" : {
+      "comment" : "Lesson step square label.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warm-up"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động"
+          }
+        }
+      }
+    },
+    "lesson.step_a11y %lld %lld %@" : {
+      "comment" : "VoiceOver label of the step squares.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step %1$lld of %2$lld: %3$@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước %1$lld trên %2$lld: %3$@"
+          }
+        }
+      }
+    },
+    "lesson.tf.false.en" : {
+      "comment" : "Default true/false label, English line (content language).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "False"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "False"
+          }
+        }
+      }
+    },
+    "lesson.tf.false.vi" : {
+      "comment" : "Default true/false label, Vietnamese line (content language).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sai"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sai"
+          }
+        }
+      }
+    },
+    "lesson.tf.true.en" : {
+      "comment" : "Default true/false label, English line (content language, same in every interface language).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "True"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "True"
+          }
+        }
+      }
+    },
+    "lesson.tf.true.vi" : {
+      "comment" : "Default true/false label, Vietnamese line (content language).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng"
+          }
+        }
+      }
+    },
+    "lesson.vi.hide" : {
+      "comment" : "English first mode: VI chip in the header, hides the Vietnamese lines.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide Vietnamese"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ẩn tiếng Việt"
+          }
+        }
+      }
+    },
+    "lesson.vi.show" : {
+      "comment" : "English first mode: VI chip in the header (icon-like), shows the Vietnamese lines.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Vietnamese"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện tiếng Việt"
+          }
+        }
+      }
+    },
+    "lesson.warmup.count %lld" : {
+      "comment" : "Warm-up: number of questions.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld quick question"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld quick questions"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld câu nhanh"
+          }
+        }
+      }
+    },
+    "lesson.warmup.done" : {
+      "comment" : "Button after the last warm-up question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the lesson"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vào bài học"
+          }
+        }
+      }
+    },
+    "lesson.warmup.progress_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the warm-up squares.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question %1$lld of %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Câu %1$lld trên %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.warmup.recall_lesson" : {
+      "comment" : "Warm-up tag for a question from an earlier lesson.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remember · an earlier lesson"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhớ lại · bài trước"
+          }
+        }
+      }
+    },
+    "lesson.warmup.recall_prior" : {
+      "comment" : "Warm-up tag for a prior-knowledge question (SK-002).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remember what you know"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhớ lại · điều em đã biết"
+          }
+        }
+      }
+    },
+    "lesson.xp_plus %lld" : {
+      "comment" : "XP earned (result sheet, game chip).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld XP"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld XP"
+          }
+        }
+      }
+    },
+    "profile.avatar.label" : {
+      "comment" : "Profile: avatar grid title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a picture"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn hình đại diện"
+          }
+        }
+      }
+    },
+    "profile.back" : {
+      "comment" : "Back button (icon only) on Profile.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the learning mode"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay lại chọn chế độ học"
+          }
+        }
+      }
+    },
+    "profile.grade %lld" : {
+      "comment" : "Profile: one grade chip (Vietnamese school grade 1–5).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grade %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lớp %lld"
+          }
+        }
+      }
+    },
+    "profile.grade.label" : {
+      "comment" : "Profile: grade chips title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which grade is your child in?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bé đang học lớp mấy?"
+          }
+        }
+      }
+    },
+    "profile.name.label" : {
+      "comment" : "Profile: name field label.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your child's name"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên gọi của bé"
+          }
+        }
+      }
+    },
+    "profile.name.prompt" : {
+      "comment" : "Profile: placeholder of the empty name field.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A nickname, e.g. Minh"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên gọi, ví dụ Minh"
+          }
+        }
+      }
+    },
+    "profile.privacy" : {
+      "comment" : "Profile: privacy note (B12).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We only keep your child's nickname and grade. No email or photo needed."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chỉ lưu tên gọi và lớp của bé. Không cần email hay ảnh của bé."
+          }
+        }
+      }
+    },
+    "profile.save_failed" : {
+      "comment" : "Profile: saving the file failed.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The profile could not be saved. Please try again."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa lưu được hồ sơ. Bố mẹ thử lại nhé."
+          }
+        }
+      }
+    },
+    "profile.setup_step" : {
+      "comment" : "Profile header caption.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parent setup · 2/2"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bố mẹ thiết lập · 2/2"
+          }
+        }
+      }
+    },
+    "profile.start" : {
+      "comment" : "Profile main button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu hành trình"
+          }
+        }
+      }
+    },
+    "profile.step_a11y" : {
+      "comment" : "VoiceOver label of the two step squares on Profile.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 2 of 2: your child's profile"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 2 trên 2: Hồ sơ của bé"
+          }
+        }
+      }
+    },
+    "profile.title" : {
+      "comment" : "Profile screen title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your child's profile"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hồ sơ của bé"
+          }
+        }
+      }
+    },
+    "profile.voice.both" : {
+      "comment" : "Voice mode both.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Both"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cả hai"
+          }
+        }
+      }
+    },
+    "profile.voice.en" : {
+      "comment" : "Voice mode en.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English only"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chỉ tiếng Anh"
+          }
+        }
+      }
+    },
+    "profile.voice.hint" : {
+      "comment" : "Profile: line under the voice chips.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Both: English first, then Vietnamese."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cả hai: đọc tiếng Anh trước, tiếng Việt nối theo."
+          }
+        }
+      }
+    },
+    "profile.voice.label" : {
+      "comment" : "Profile: voice chips title (voice_mode, B4.1).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which voice will your child hear?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bé nghe giọng đọc nào?"
+          }
+        }
+      }
+    },
+    "profile.voice.vi" : {
+      "comment" : "Voice mode vi.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vietnamese only"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chỉ tiếng Việt"
+          }
+        }
+      }
+    },
+    "profile.world.caption" : {
+      "comment" : "Profile: line under the world name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your child's learning world"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thế giới học của bé"
+          }
+        }
+      }
+    },
+    "profile.world.discoverer" : {
+      "comment" : "Profile: ages of the Discoverer world.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ages 7–9 · Year 3–4"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7–9 tuổi · Year 3–4"
+          }
+        }
+      }
+    },
+    "profile.world.explorer" : {
+      "comment" : "Profile: ages of the Explorer world.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ages 5–7 · Year 1–2"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5–7 tuổi · Year 1–2"
+          }
+        }
+      }
+    },
+    "profile.world.scientist" : {
+      "comment" : "Profile: ages of the Scientist world.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ages 9–11 · Year 5–6"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9–11 tuổi · Year 5–6"
+          }
+        }
+      }
+    },
+    "profile.world.trial" : {
+      "comment" : "Profile: world without content yet (B18 #14).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming soon. Until then your child tries Discoverer."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sắp ra mắt. Trong lúc chờ, bé học thử Discoverer."
+          }
+        }
+      }
+    },
+    "soon.back" : {
+      "comment" : "Coming-soon page: button back to the Journey tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về hành trình"
+          }
+        }
+      }
+    },
+    "soon.badges.body" : {
+      "comment" : "Coming-soon page: Badges tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stars, streaks and badges will show here soon."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao, chuỗi ngày và huy hiệu sẽ sớm hiện ở đây."
+          }
+        }
+      }
+    },
+    "soon.badges.title" : {
+      "comment" : "Coming-soon page: Badges tab title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badges"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huy hiệu"
+          }
+        }
+      }
+    },
+    "soon.cards.body" : {
+      "comment" : "Coming-soon page: Cards tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish a lesson to win your first card. This page is on its way."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học xong một bài để nhận thẻ đầu tiên. Trang này sắp có."
+          }
+        }
+      }
+    },
+    "soon.cards.title" : {
+      "comment" : "Coming-soon page: Cards tab title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Card deck"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bộ thẻ"
+          }
+        }
+      }
+    },
+    "soon.tag" : {
+      "comment" : "Tag on a page that is not built yet.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sắp có"
+          }
+        }
+      }
+    },
+    "soon.words.body" : {
+      "comment" : "Coming-soon page: Words tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The new words of every lesson will be gathered here soon."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ mới của từng bài sẽ sớm được gom về đây."
+          }
+        }
+      }
+    },
+    "soon.words.title" : {
+      "comment" : "Coming-soon page: Words tab title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ vựng"
+          }
+        }
+      }
+    },
+    "speaker.na" : {
+      "comment" : "Name of the child Na who says a statement in a quiz (speaker na).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na"
+          }
+        }
+      }
+    },
+    "tab.badges" : {
+      "comment" : "Bottom tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badges"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huy hiệu"
+          }
+        }
+      }
+    },
+    "tab.cards" : {
+      "comment" : "Bottom tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ"
+          }
+        }
+      }
+    },
+    "tab.journey" : {
+      "comment" : "Bottom tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hành trình"
+          }
+        }
+      }
+    },
+    "tab.navigation" : {
+      "comment" : "VoiceOver label of the bottom strip.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main navigation"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều hướng chính"
+          }
+        }
+      }
+    },
+    "tab.words" : {
+      "comment" : "Bottom tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ vựng"
+          }
+        }
+      }
+    },
+    "topic.back" : {
+      "comment" : "Topic: back button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về hành trình"
+          }
+        }
+      }
+    },
+    "topic.free" : {
+      "comment" : "Topic: tag of a free topic.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miễn phí"
+          }
+        }
+      }
+    },
+    "topic.lesson.current %lld" : {
+      "comment" : "Topic: status of the open lesson.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "~%lld min · Learning now"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "~%lld phút · Đang học"
+          }
+        }
+      }
+    },
+    "topic.lesson.locked %lld" : {
+      "comment" : "Topic: locked lesson.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens after lesson %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở sau bài %lld"
+          }
+        }
+      }
+    },
+    "topic.lesson.locked_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of a locked lesson.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld, locked, opens after lesson %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld, khoá, mở sau bài %2$lld"
+          }
+        }
+      }
+    },
+    "topic.lesson.number %lld" : {
+      "comment" : "Topic: locked lesson without content yet (no title is made up).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %lld"
+          }
+        }
+      }
+    },
+    "topic.lesson.open_a11y %lld %@ %lld" : {
+      "comment" : "VoiceOver label of the open lesson (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld: %2$@. About %3$lld minutes, learning now"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld: %2$@. Khoảng %3$lld phút, đang học"
+          }
+        }
+      }
+    },
+    "topic.level %lld" : {
+      "comment" : "Topic: difficulty level of the topic.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức %lld"
+          }
+        }
+      }
+    },
+    "topic.listen" : {
+      "comment" : "Topic: speaker button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the question"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe câu hỏi"
+          }
+        }
+      }
+    },
+    "topic.progress %lld %lld" : {
+      "comment" : "Topic: lessons done / lesson count.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld lessons"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld bài"
+          }
+        }
+      }
+    },
+    "topic.progress_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the lesson squares.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld of %2$lld, none finished yet"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld trên %2$lld, chưa xong bài nào"
+          }
+        }
+      }
+    },
+    "topic.show_vi" : {
+      "comment" : "Topic, English first mode: shows the hidden Vietnamese line.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to see Vietnamese"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để xem tiếng Việt"
+          }
+        }
+      }
+    },
+    "topic.words %lld" : {
+      "comment" : "Topic: button to the topic words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Topic words · %lld word"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Topic words · %lld words"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ vựng chủ đề · %lld từ"
+          }
+        }
+      }
+    },
+    "welcome.brand" : {
+      "comment" : "Welcome header: app name (temporary, SK-020).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science Kids"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science Kids"
+          }
+        }
+      }
+    },
+    "welcome.hero_a11y" : {
+      "comment" : "VoiceOver label of the Welcome illustration.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A paper-cut buddy standing on a hill"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn đồng hành giấy cắt đứng trên đồi"
+          }
+        }
+      }
+    },
+    "welcome.mode.bilingual" : {
+      "comment" : "Language mode bilingual: title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilingual"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Song ngữ"
+          }
+        }
+      }
+    },
+    "welcome.mode.bilingual.badge" : {
+      "comment" : "Badge on the bilingual mode.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommended"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khuyên dùng"
+          }
+        }
+      }
+    },
+    "welcome.mode.bilingual.detail" : {
+      "comment" : "Language mode bilingual: line under the title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English, with Vietnamese subtitles"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Anh, có phụ đề tiếng Việt"
+          }
+        }
+      }
+    },
+    "welcome.mode.en_first" : {
+      "comment" : "Language mode en_first: title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English first"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Anh trước"
+          }
+        }
+      }
+    },
+    "welcome.mode.en_first.detail" : {
+      "comment" : "Language mode en_first: line under the title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vietnamese hidden, tap to see · for international schools and centres"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Việt ẩn, chạm để xem · cho trường quốc tế, trung tâm"
+          }
+        }
+      }
+    },
+    "welcome.mode.vi_first" : {
+      "comment" : "Language mode vi_first: title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vietnamese first"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Việt trước"
+          }
+        }
+      }
+    },
+    "welcome.mode.vi_first.detail" : {
+      "comment" : "Language mode vi_first: line under the title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For children just starting out"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cho bé mới bắt đầu"
+          }
+        }
+      }
+    },
+    "welcome.next" : {
+      "comment" : "Welcome main button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp"
+          }
+        }
+      }
+    },
+    "welcome.question" : {
+      "comment" : "Welcome: title of the three language modes.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which mode will your child learn in?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bé học theo chế độ nào?"
+          }
+        }
+      }
+    },
+    "welcome.setup_step" : {
+      "comment" : "Welcome header caption.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parent setup · 1/2"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bố mẹ thiết lập · 1/2"
+          }
+        }
+      }
+    },
+    "welcome.step_a11y" : {
+      "comment" : "VoiceOver label of the two step squares on Welcome.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 1 of 2: choose a learning mode"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 1 trên 2: Chọn chế độ học"
+          }
+        }
+      }
+    },
+    "welcome.tagline" : {
+      "comment" : "Welcome tagline, English line (shown as is in both languages).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science in English, one small step a day."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science in English, one small step a day."
+          }
+        }
+      }
+    },
+    "welcome.tagline_sub" : {
+      "comment" : "Welcome tagline, line under it.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learn science in English, a little every day."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học khoa học bằng tiếng Anh, mỗi ngày một chút."
+          }
+        }
+      }
+    },
+    "world.discoverer" : {
+      "comment" : "Name of the 7–9 learning world.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discoverer"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discoverer"
+          }
+        }
+      }
+    },
+    "world.explorer" : {
+      "comment" : "Name of the 5–7 learning world (a proper name, same in both languages).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorer"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorer"
+          }
+        }
+      }
+    },
+    "world.scientist" : {
+      "comment" : "Name of the 9–11 learning world.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scientist"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scientist"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

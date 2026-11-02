@@ -1,0 +1,194 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "streak",
+  "version": 1,
+  "source": "technical-plan.md B4.4 (Chuỗi ngày), B5.1 (local_date), B5.3 (activity_days), B5.5; SK-003 D5",
+  "function": "compute_streak(studied_dates, today, rules) -> {studied_days, chain_start, rest_days[]}",
+  "platforms": ["app", "server"],
+  "notes": [
+    "studied_dates là các local_date có ít nhất 1 bài hoàn thành, không trùng, không cần sắp xếp. today là local_date hôm nay của hồ sơ.",
+    "D5: nếu hôm nay đã học thì tính hôm nay; rồi đi lùi từ hôm qua. Ngày có học thì cộng vào studied_days và dời chain_start về ngày đó. Ngày không học thì dùng phần nghỉ của tuần ISO chứa ngày đó nếu còn (rest_days_per_week), hết phần thì chuỗi đứt. Ngày nghỉ nằm trước chain_start bị bỏ.",
+    "rest_days sắp tăng dần. chain_start là ngày học sớm nhất của chuỗi, null khi chuỗi không có ngày học.",
+    "derived.calendar ghi thứ và tuần ISO của các ngày quan trọng để người đọc kiểm; check-vectors.mjs đối chiếu với Node và với lệnh date của hệ điều hành. Harness bỏ qua derived."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "streak-001",
+      "description": "Học liền 5 ngày thứ Hai 02/11 → thứ Sáu 06/11, hôm nay 06/11 → studied_days 5, chain_start 02/11. Chủ nhật 01/11 không học là ngày nghỉ nằm trước ngày học đầu tiên nên bị bỏ; 31/10 hết phần nghỉ của tuần W44 → dừng.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 5, "chain_start": "2026-11-02", "rest_days": [] },
+      "derived": { "calendar": { "2026-10-31": "Sat 2026-W44", "2026-11-01": "Sun 2026-W44", "2026-11-02": "Mon 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-002",
+      "description": "Nghỉ 1 ngày trong tuần: học 02, 03, 05, 06/11, nghỉ thứ Tư 04/11 (W45 còn 1 phần nghỉ) → chuỗi không đứt, studied_days 4, rest_days [04/11].",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-05", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 4, "chain_start": "2026-11-02", "rest_days": ["2026-11-04"] },
+      "derived": { "calendar": { "2026-11-02": "Mon 2026-W45", "2026-11-04": "Wed 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-003",
+      "description": "Nghỉ 2 ngày trong cùng tuần ISO W45 (thứ Ba 03/11 và thứ Năm 05/11) → đi lùi từ 05/11: 05/11 dùng phần nghỉ của W45, 04/11 có học, 03/11 hết phần → đứt. Chuỗi chỉ còn 04 và 06/11.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-04", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 2, "chain_start": "2026-11-04", "rest_days": ["2026-11-05"] },
+      "derived": { "calendar": { "2026-11-03": "Tue 2026-W45", "2026-11-04": "Wed 2026-W45", "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-004",
+      "description": "Nghỉ Chủ nhật 08/11 (W45) rồi nghỉ tiếp thứ Hai 09/11 (W46): hai ngày nghỉ liền nhau nhưng thuộc hai tuần ISO khác nhau, mỗi tuần dùng 1 phần nghỉ → không đứt. studied_days 8 (02–07/11, 10, 11/11).",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-10", "2026-11-11"], "today": "2026-11-11" },
+      "expected": { "studied_days": 8, "chain_start": "2026-11-02", "rest_days": ["2026-11-08", "2026-11-09"] },
+      "derived": { "calendar": { "2026-11-07": "Sat 2026-W45", "2026-11-08": "Sun 2026-W45", "2026-11-09": "Mon 2026-W46", "2026-11-11": "Wed 2026-W46" } }
+    },
+    {
+      "id": "streak-005",
+      "description": "Hôm nay 06/11 chưa học, học liền 02–05/11 → hôm nay không tính là nghỉ và không làm đứt chuỗi; studied_days 4, rest_days rỗng (D5).",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05"], "today": "2026-11-06" },
+      "expected": { "studied_days": 4, "chain_start": "2026-11-02", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-006",
+      "description": "Hôm nay 06/11 chưa học và hôm qua 05/11 cũng không học: hôm nay bỏ qua, 05/11 dùng phần nghỉ của W45, chuỗi 02–04/11 vẫn còn → studied_days 3, rest_days [05/11].",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-04"], "today": "2026-11-06" },
+      "expected": { "studied_days": 3, "chain_start": "2026-11-02", "rest_days": ["2026-11-05"] },
+      "derived": { "calendar": { "2026-11-04": "Wed 2026-W45", "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-007",
+      "description": "Hôm nay 06/11 chưa học, 05/11 và 04/11 đều không học (cùng W45): 05/11 dùng phần nghỉ, 04/11 hết phần → đứt trước khi gặp ngày học nào → studied_days 0, chain_start null, ngày nghỉ 05/11 bị bỏ.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03"], "today": "2026-11-06" },
+      "expected": { "studied_days": 0, "chain_start": null, "rest_days": [] },
+      "derived": { "calendar": { "2026-11-04": "Wed 2026-W45", "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-008",
+      "description": "Chỉ học hôm nay 06/11 → studied_days 1, chain_start 06/11; 05/11 là ngày nghỉ trước ngày học đầu tiên nên bị bỏ, 04/11 hết phần nghỉ → dừng.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 1, "chain_start": "2026-11-06", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-009",
+      "description": "Ngày nghỉ ở đầu chuỗi bị bỏ: học 04–06/11, 03/11 không học (tạm dùng phần nghỉ W45), 02/11 không học → đứt. 03/11 nằm trước ngày học đầu tiên 04/11 nên không có trong rest_days. Ngày học 29/10 ở xa không được tính.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-10-29", "2026-11-04", "2026-11-05", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 3, "chain_start": "2026-11-04", "rest_days": [] },
+      "derived": { "calendar": { "2026-10-29": "Thu 2026-W44", "2026-11-02": "Mon 2026-W45", "2026-11-03": "Tue 2026-W45", "2026-11-04": "Wed 2026-W45" } }
+    },
+    {
+      "id": "streak-010",
+      "description": "Phần nghỉ không cộng dồn sang tuần khác: hôm nay thứ Ba 10/11, học 09, 10/11 và 06/11. Chủ nhật 08/11 dùng phần nghỉ W45, thứ Bảy 07/11 cũng thuộc W45 → hết phần → đứt; phần nghỉ chưa dùng của W46 không bù cho W45. 08/11 nằm trước ngày học đầu tiên 09/11 nên bị bỏ.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-06", "2026-11-09", "2026-11-10"], "today": "2026-11-10" },
+      "expected": { "studied_days": 2, "chain_start": "2026-11-09", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-06": "Fri 2026-W45", "2026-11-07": "Sat 2026-W45", "2026-11-08": "Sun 2026-W45", "2026-11-09": "Mon 2026-W46", "2026-11-10": "Tue 2026-W46" } }
+    },
+    {
+      "id": "streak-011",
+      "description": "rest_days_per_week = 0: học 02, 03, 05, 06/11, nghỉ 04/11 → không có phần nghỉ nên đứt ở 04/11; chuỗi chỉ còn 05, 06/11.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "rules": { "rest_days_per_week": 0 },
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-05", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 2, "chain_start": "2026-11-05", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-04": "Wed 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-012",
+      "description": "rest_days_per_week = 0 và hôm nay 06/11 chưa học: hôm nay không dùng phần nghỉ nên chuỗi 02–05/11 vẫn còn, studied_days 4 (D5: hôm nay chưa học không làm đứt chuỗi, kể cả khi không có ngày nghỉ).",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "rules": { "rest_days_per_week": 0 },
+      "input": { "studied_dates": ["2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05"], "today": "2026-11-06" },
+      "expected": { "studied_days": 4, "chain_start": "2026-11-02", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-05": "Thu 2026-W45", "2026-11-06": "Fri 2026-W45" } }
+    },
+    {
+      "id": "streak-013",
+      "description": "rest_days_per_week = 2: học 02, 04, 06/11, nghỉ 03 và 05/11 (cùng W45, dùng đủ 2 phần) → không đứt, studied_days 3, rest_days [03/11, 05/11]. 01/11 và 31/10 (W44) là ngày nghỉ trước chuỗi nên bị bỏ.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "rules": { "rest_days_per_week": 2 },
+      "input": { "studied_dates": ["2026-11-02", "2026-11-04", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 3, "chain_start": "2026-11-02", "rest_days": ["2026-11-03", "2026-11-05"] },
+      "derived": { "calendar": { "2026-10-30": "Fri 2026-W44", "2026-10-31": "Sat 2026-W44", "2026-11-01": "Sun 2026-W44", "2026-11-03": "Tue 2026-W45", "2026-11-05": "Thu 2026-W45" } }
+    },
+    {
+      "id": "streak-014",
+      "description": "rest_days_per_week = 2 nhưng nghỉ 3 ngày 03, 04, 05/11 trong W45 → 05 và 04/11 dùng hết 2 phần, 03/11 đứt. Chuỗi chỉ còn hôm nay 06/11; hai ngày nghỉ nằm trước chain_start nên bị bỏ.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "rules": { "rest_days_per_week": 2 },
+      "input": { "studied_dates": ["2026-11-02", "2026-11-06"], "today": "2026-11-06" },
+      "expected": { "studied_days": 1, "chain_start": "2026-11-06", "rest_days": [] },
+      "derived": { "calendar": { "2026-11-03": "Tue 2026-W45", "2026-11-04": "Wed 2026-W45", "2026-11-05": "Thu 2026-W45" } }
+    },
+    {
+      "id": "streak-015",
+      "description": "Qua tuần 53: 28/12/2026 – 03/01/2027 đều là 2026-W53. Nghỉ thứ Năm 31/12/2026 và Chủ nhật 03/01/2027 là 2 ngày nghỉ trong cùng một tuần ISO dù khác năm dương lịch → đi lùi từ 03/01: dùng phần nghỉ W53, 02 và 01/01 có học, 31/12 hết phần → đứt.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-12-28", "2026-12-29", "2026-12-30", "2027-01-01", "2027-01-02", "2027-01-04"], "today": "2027-01-04" },
+      "expected": { "studied_days": 3, "chain_start": "2027-01-01", "rest_days": ["2027-01-03"] },
+      "derived": { "calendar": { "2026-12-28": "Mon 2026-W53", "2026-12-31": "Thu 2026-W53", "2027-01-01": "Fri 2026-W53", "2027-01-03": "Sun 2026-W53", "2027-01-04": "Mon 2027-W01" } }
+    },
+    {
+      "id": "streak-016",
+      "description": "Qua tuần 53 sang 2027-W01: học 28/12/2026 – 02/01/2027 và 05/01/2027, nghỉ Chủ nhật 03/01 (2026-W53) và thứ Hai 04/01 (2027-W01) → mỗi tuần 1 phần nghỉ → không đứt, studied_days 7. 27/12 (W52) là ngày nghỉ trước chuỗi nên bị bỏ.",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-12-28", "2026-12-29", "2026-12-30", "2026-12-31", "2027-01-01", "2027-01-02", "2027-01-05"], "today": "2027-01-05" },
+      "expected": { "studied_days": 7, "chain_start": "2026-12-28", "rest_days": ["2027-01-03", "2027-01-04"] },
+      "derived": { "calendar": { "2026-12-26": "Sat 2026-W52", "2026-12-27": "Sun 2026-W52", "2026-12-28": "Mon 2026-W53", "2027-01-03": "Sun 2026-W53", "2027-01-04": "Mon 2027-W01", "2027-01-05": "Tue 2027-W01" } }
+    },
+    {
+      "id": "streak-017",
+      "description": "Chưa học ngày nào → studied_days 0, chain_start null, rest_days rỗng.",
+      "status": "confirmed",
+      "input": { "studied_dates": [], "today": "2026-11-06" },
+      "expected": { "studied_days": 0, "chain_start": null, "rest_days": [] }
+    },
+    {
+      "id": "streak-018",
+      "description": "Chuỗi dài 3 tuần ISO (W45, W46, W47), mỗi tuần nghỉ đúng 1 ngày (05, 12, 18/11), studied_dates không sắp xếp; hôm nay Chủ nhật 22/11 có học → studied_days 18, chain_start 02/11, rest_days [05/11, 12/11, 18/11].",
+      "status": "proposed",
+      "decision": "SK-003/D5",
+      "input": { "studied_dates": ["2026-11-15", "2026-11-02", "2026-11-22", "2026-11-09", "2026-11-19", "2026-11-06", "2026-11-13", "2026-11-03", "2026-11-20", "2026-11-07", "2026-11-16", "2026-11-10", "2026-11-04", "2026-11-21", "2026-11-08", "2026-11-14", "2026-11-17", "2026-11-11"], "today": "2026-11-22" },
+      "expected": { "studied_days": 18, "chain_start": "2026-11-02", "rest_days": ["2026-11-05", "2026-11-12", "2026-11-18"] },
+      "derived": { "calendar": { "2026-11-05": "Thu 2026-W45", "2026-11-12": "Thu 2026-W46", "2026-11-18": "Wed 2026-W47", "2026-11-22": "Sun 2026-W47" } }
+    }
+  ]
+}

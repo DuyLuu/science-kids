@@ -1,0 +1,46 @@
+{
+  "kind": "topic",
+  "schema_version": 1,
+  "id": "d3a514ef-02cd-4386-a358-f01e425a10f8",
+  "slug": "an-uong-lanh-manh",
+  "age_group": "discoverer",
+  "order": 1,
+  "title": {
+    "en": "Healthy eating",
+    "vi": "Ăn uống lành mạnh"
+  },
+  "question": {
+    "en": "What should we eat to stay healthy?",
+    "vi": "Ta cần ăn gì để khoẻ mạnh?"
+  },
+  "strand": "humans_health",
+  "level": 2,
+  "difficulty": {
+    "abstraction": 1,
+    "prior_knowledge": 2,
+    "misconception": 2,
+    "vocabulary": 3,
+    "science_skill": 1
+  },
+  "prerequisite_topic_ids": [],
+  "is_free": true,
+  "oak_unit_ref": "Y3 Healthy eating",
+  "sensitive": false,
+  "archived": false,
+  "ai_draft": true,
+  "misconceptions": [
+    {
+      "id": "93c51bb0-1d45-45df-99c5-a0397967fe10",
+      "key": "all_fat_bad",
+      "statement": {
+        "en": "All fat is bad for you.",
+        "vi": "Chất béo lúc nào cũng có hại."
+      },
+      "correction": {
+        "en": "Our body needs some fat for energy, to keep warm and to take in some vitamins. The problem is eating too much of it.",
+        "vi": "Cơ thể cần một lượng chất béo vừa đủ để có năng lượng, giữ ấm và hấp thu một số vitamin. Chỉ ăn quá nhiều chất béo mới không tốt."
+      },
+      "note": "Trẻ hay nghe \"đồ béo không tốt\" rồi khái quát thành mọi chất béo đều có hại. Sửa ở bài một (nhóm chất béo trong phần Học và câu sáu của Quiz) và quay lại ở bài ba \"Đồ ngọt, đồ béo: ăn bao nhiêu?\"."
+    }
+  ]
+}

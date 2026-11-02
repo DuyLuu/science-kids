@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/common.schema.json",
+  "title": "Science Kids content v1: kiểu dùng chung",
+  "$defs": {
+    "NonEmptyString": {
+      "description": "không được rỗng hoặc chỉ có khoảng trắng",
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "Text": {
+      "description": "Cặp song ngữ cho chữ nội bộ hoặc cho phụ huynh. Không có audio.",
+      "type": "object",
+      "properties": {
+        "en": { "$ref": "#/$defs/NonEmptyString" },
+        "vi": { "$ref": "#/$defs/NonEmptyString" }
+      },
+      "required": ["en", "vi"],
+      "additionalProperties": false
+    },
+    "SpokenAudio": {
+      "description": "Clip đọc của một chuỗi Spoken, mỗi thứ tiếng một clip. Trống lúc soạn; --require-assets bắt buộc đủ en và vi.",
+      "type": "object",
+      "properties": {
+        "en": { "$ref": "#/$defs/AssetHash" },
+        "vi": { "$ref": "#/$defs/AssetHash" }
+      },
+      "additionalProperties": false
+    },
+    "Spoken": {
+      "description": "Text + audio. Dùng cho mọi chữ trẻ thấy hoặc nghe.",
+      "type": "object",
+      "properties": {
+        "en": { "$ref": "#/$defs/NonEmptyString" },
+        "vi": { "$ref": "#/$defs/NonEmptyString" },
+        "audio": { "$ref": "#/$defs/SpokenAudio" }
+      },
+      "required": ["en", "vi"],
+      "additionalProperties": false
+    },
+    "Image": {
+      "description": "Hình. brief là gợi ý cho hoạ sĩ (VI), bỏ đi khi build gói. --require-assets bắt buộc có asset.",
+      "type": "object",
+      "properties": {
+        "alt": { "$ref": "#/$defs/Text" },
+        "brief": { "$ref": "#/$defs/NonEmptyString" },
+        "asset": { "$ref": "#/$defs/AssetHash" }
+      },
+      "required": ["alt"],
+      "additionalProperties": false
+    },
+    "AssetHash": {
+      "description": "phải là sha256 hex: 64 ký tự 0-9 a-f chữ thường",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "Uuid": {
+      "description": "phải là UUID chữ thường dạng 8-4-4-4-12 (vd 3f2b8c1e-0a4d-4c6e-9b1a-7d5e2f8a9c01)",
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "Key": {
+      "description": "phải là key: bắt đầu bằng chữ a-z, chỉ gồm a-z 0-9 _, tối đa 40 ký tự",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,39}$"
+    },
+    "Slug": {
+      "description": "phải là slug: chữ thường không dấu và số, nối bằng dấu - (vd an-uong-lanh-manh)",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "AppVersion": {
+      "description": "phải là phiên bản app dạng MAJOR.MINOR.PATCH (vd 1.2.0)",
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "ColorToken": {
+      "description": "Tên tạm theo màu style E; đồng bộ lại khi có packages/design-tokens.",
+      "type": "string",
+      "enum": ["do_son", "vang_hoe", "gi_dong", "cham", "nau_dat"]
+    },
+    "SchemaVersion": {
+      "description": "Phiên bản schema nội dung. v1 = 1.",
+      "const": 1
+    }
+  }
+}

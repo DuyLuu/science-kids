@@ -1,0 +1,11 @@
+// Copy to Config/Local.xcconfig (gitignored) for per-machine settings.
+// Values here override Base.xcconfig. Never put server secrets in the app.
+
+// Signing for a real device (SK-020): your Apple Developer Team ID.
+// DEVELOPMENT_TEAM = ABCDE12345
+
+// Supabase (SK-022): the project URL and its publishable key (Dashboard → Project Settings → API
+// Keys → "Publishable key", starts with sb_publishable_). Never the secret / service_role key.
+// "//" starts a comment in an xcconfig file, so write the URL with $() between the slashes.
+// SK_SUPABASE_URL = https:/$()/<project-ref>.supabase.co
+// SK_SUPABASE_PUBLISHABLE_KEY = sb_publishable_xxxxxxxxxxxxxxxxxxxxxxxx

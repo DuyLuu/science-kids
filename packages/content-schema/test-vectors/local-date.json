@@ -1,0 +1,120 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "local-date",
+  "version": 1,
+  "source": "technical-plan.md B5.1 (local_date tính từ completed_at và child_profiles.timezone, server-side)",
+  "function": "local_date(completed_at, timezone) -> \"YYYY-MM-DD\"",
+  "platforms": ["app", "server"],
+  "notes": [
+    "expected là chuỗi YYYY-MM-DD (hàm trả chuỗi, không trả object).",
+    "Múi giờ theo tên IANA, phải dùng cơ sở dữ liệu tz của nền tảng (Foundation TimeZone, java.time.ZoneId, Postgres AT TIME ZONE), không cộng offset cố định: London và Los Angeles đổi giờ mùa hè.",
+    "completed_at có thể có phần lẻ giây (local-date-012). Swift: ISO8601DateFormatter cần .withFractionalSeconds cho chuỗi có phần lẻ và không có tuỳ chọn đó cho chuỗi không có phần lẻ."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "local-date-001",
+      "description": "Asia/Ho_Chi_Minh (UTC+7): 2026-11-02T16:59:59Z là 23:59:59 ngày 02/11 giờ VN → 2026-11-02.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-11-02T16:59:59Z", "timezone": "Asia/Ho_Chi_Minh" },
+      "expected": "2026-11-02"
+    },
+    {
+      "id": "local-date-002",
+      "description": "Asia/Ho_Chi_Minh: 2026-11-02T17:00:00Z là 00:00:00 ngày 03/11 giờ VN → 2026-11-03, dù theo UTC vẫn là ngày 02/11.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-11-02T17:00:00Z", "timezone": "Asia/Ho_Chi_Minh" },
+      "expected": "2026-11-03"
+    },
+    {
+      "id": "local-date-003",
+      "description": "Europe/London ngày đổi giờ mùa hè 28/3/2027: 00:59:59Z là 00:59:59 GMT, giây cuối trước khi đổi giờ → 2027-03-28.",
+      "status": "confirmed",
+      "input": { "completed_at": "2027-03-28T00:59:59Z", "timezone": "Europe/London" },
+      "expected": "2027-03-28"
+    },
+    {
+      "id": "local-date-004",
+      "description": "Europe/London cùng ngày 28/3/2027 sau khi đổi giờ: 22:59:59Z là 23:59:59 BST (UTC+1) → 2027-03-28.",
+      "status": "confirmed",
+      "input": { "completed_at": "2027-03-28T22:59:59Z", "timezone": "Europe/London" },
+      "expected": "2027-03-28"
+    },
+    {
+      "id": "local-date-005",
+      "description": "Europe/London: 2027-03-28T23:00:00Z là 00:00 ngày 29/3 BST → 2027-03-29. Cài đặt cộng cố định UTC+0 (GMT) sẽ ra 28/3, sai.",
+      "status": "confirmed",
+      "input": { "completed_at": "2027-03-28T23:00:00Z", "timezone": "Europe/London" },
+      "expected": "2027-03-29"
+    },
+    {
+      "id": "local-date-006",
+      "description": "America/Los_Angeles giờ chuẩn PST (UTC−8, sau khi hết giờ mùa hè 1/11/2026): 2026-11-03T07:30:00Z là 23:30 ngày 02/11 → 2026-11-02.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-11-03T07:30:00Z", "timezone": "America/Los_Angeles" },
+      "expected": "2026-11-02"
+    },
+    {
+      "id": "local-date-007",
+      "description": "America/Los_Angeles giờ mùa hè PDT (UTC−7): 2026-10-28T06:59:59Z là 23:59:59 ngày 27/10 → 2026-10-27. Nếu cộng cố định UTC−8 vẫn ra 27/10, nhưng 07:00:00Z thì PDT ra 28/10.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-10-28T06:59:59Z", "timezone": "America/Los_Angeles" },
+      "expected": "2026-10-27"
+    },
+    {
+      "id": "local-date-008",
+      "description": "America/Los_Angeles PDT: 2026-10-28T07:00:00Z là 00:00 ngày 28/10 PDT → 2026-10-28. Cài đặt cộng cố định UTC−8 sẽ ra 27/10, sai.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-10-28T07:00:00Z", "timezone": "America/Los_Angeles" },
+      "expected": "2026-10-28"
+    },
+    {
+      "id": "local-date-009",
+      "description": "Qua giao thừa ở Asia/Ho_Chi_Minh: 2026-12-31T17:00:00Z là 00:00 ngày 01/01/2027 giờ VN → 2027-01-01 (đổi cả năm).",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-12-31T17:00:00Z", "timezone": "Asia/Ho_Chi_Minh" },
+      "expected": "2027-01-01"
+    },
+    {
+      "id": "local-date-010",
+      "description": "Giao thừa ở Asia/Ho_Chi_Minh: 2026-12-31T16:59:59Z là 23:59:59 ngày 31/12/2026 → 2026-12-31.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-12-31T16:59:59Z", "timezone": "Asia/Ho_Chi_Minh" },
+      "expected": "2026-12-31"
+    },
+    {
+      "id": "local-date-011",
+      "description": "Giao thừa ở America/Los_Angeles: 2027-01-01T07:59:59Z, theo UTC đã sang năm mới nhưng ở LA là 23:59:59 ngày 31/12/2026 → 2026-12-31.",
+      "status": "confirmed",
+      "input": { "completed_at": "2027-01-01T07:59:59Z", "timezone": "America/Los_Angeles" },
+      "expected": "2026-12-31"
+    },
+    {
+      "id": "local-date-012",
+      "description": "Phần lẻ giây: 2026-11-02T16:59:59.999Z ở Asia/Ho_Chi_Minh vẫn là 23:59:59.999 ngày 02/11 → 2026-11-02; parser phải nhận phần lẻ giây và không làm tròn lên giây kế tiếp.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-11-02T16:59:59.999Z", "timezone": "Asia/Ho_Chi_Minh" },
+      "expected": "2026-11-02"
+    },
+    {
+      "id": "local-date-013",
+      "description": "Múi giờ lệch nửa giờ Asia/Kolkata (UTC+5:30): 2026-11-02T18:30:00Z là 00:00 ngày 03/11 → 2026-11-03. Cài đặt chỉ lưu offset theo giờ chẵn sẽ sai.",
+      "status": "confirmed",
+      "input": { "completed_at": "2026-11-02T18:30:00Z", "timezone": "Asia/Kolkata" },
+      "expected": "2026-11-03"
+    }
+  ]
+}

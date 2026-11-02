@@ -66,10 +66,10 @@ a{color:#A93A27}a:hover{color:#1E1B18}
       <div style="flex: 1; display: flex; justify-content: center" aria-hidden="true">
         <svg width="168" height="30" viewBox="0 0 168 30">
           <g filter="url(#paperE)">
-            <rect x="3" y="3" width="22" height="22" rx="2" fill="#A93A27"></rect>
-            <rect x="31" y="3" width="22" height="22" rx="2" fill="#A93A27"></rect>
-            <rect x="59" y="3" width="22" height="22" rx="2" fill="#A93A27"></rect>
-            <rect x="87" y="3" width="22" height="22" rx="2" fill="#A93A27"></rect>
+            <rect x="3" y="3" width="22" height="22" rx="2" fill="#3F7A33"></rect>
+            <rect x="31" y="3" width="22" height="22" rx="2" fill="#3F7A33"></rect>
+            <rect x="59" y="3" width="22" height="22" rx="2" fill="#3F7A33"></rect>
+            <rect x="87" y="3" width="22" height="22" rx="2" fill="#3F7A33"></rect>
             <rect x="115" y="3" width="22" height="22" rx="2" fill="#E2A52A"></rect>
             <rect x="143" y="3" width="22" height="22" rx="2" fill="#E2D4B4"></rect>
           </g>
@@ -170,10 +170,10 @@ a{color:#A93A27}a:hover{color:#1E1B18}
       <div role="status" class="e-rise" style="margin: 0 -20px -22px -20px; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
         <div style="background: #FBF6EA; padding: 18px 20px 16px 20px; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 10px">
           <div style="display: flex; align-items: flex-start; gap: 14px">
-            <span aria-hidden="true" class="e-stamp" style="--d: 260ms; width: 52px; height: 52px; flex-shrink: 0; margin-top: 2px; transform: rotate(-8deg); background: #A93A27; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
+            <span aria-hidden="true" class="e-stamp" style="--d: 260ms; width: 52px; height: 52px; flex-shrink: 0; margin-top: 2px; transform: rotate(-8deg); background: #3F7A33; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
             <div style="flex: 1; display: flex; flex-direction: column; gap: 3px">
               <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px">
-                <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #A93A27">Chính xác!</span>
+                <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #3F7A33">Chính xác!</span>
                 <span style="font-family: 'Phudu', sans-serif; font-size: 18px; font-weight: 700; color: #1E1B18">+10 XP</span>
               </div>
               <span style="font-size: 16px; font-weight: 700; line-height: 1.35">Cá, trứng và đậu phụ đều giàu chất đạm.</span>
@@ -224,7 +224,7 @@ class Component extends DCLogic {
       let style = on ? 'background: #FBF6EA; box-shadow: 5px 6px 0 #E2A52A, 0 3px 4px rgba(91, 59, 23, 0.22);' : 'background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22);';
       mark[id] = false;
       if (s.checked) {
-        if (on && correct[id]) { style = 'background: #FBF6EA; box-shadow: 5px 6px 0 #A93A27, 0 3px 4px rgba(91, 59, 23, 0.22);'; mark[id] = true; markText[id] = 'Đúng'; markStyle[id] = 'background: #A93A27; color: #FBF6EA; border-radius: 3px; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;'; }
+        if (on && correct[id]) { style = 'background: #FBF6EA; box-shadow: 5px 6px 0 #3F7A33, 0 3px 4px rgba(91, 59, 23, 0.22);'; mark[id] = true; markText[id] = 'Đúng'; markStyle[id] = 'background: #3F7A33; color: #FBF6EA; border-radius: 3px; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;'; }
         else if (on && !correct[id]) { style = 'background: #FBF6EA; box-shadow: 5px 6px 0 #E2D4B4, 0 3px 4px rgba(91, 59, 23, 0.22);'; mark[id] = true; markText[id] = 'Chưa đúng'; markStyle[id] = 'background: #E2D4B4; color: #1E1B18; padding-right: 11px; clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%);'; }
         else if (!on && correct[id]) { style = 'background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22);'; mark[id] = true; markText[id] = 'Bỏ sót'; markStyle[id] = 'background: #F0C873; color: #1E1B18; border-radius: 3px; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.25);'; }
       }

@@ -1,0 +1,722 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "warmup-selection",
+  "version": 1,
+  "source": "technical-plan.md B4.4 (Khởi động), B5.5 (get_warmup_items); syllabus-progression.md mục 7 (giãn cách 1 ngày · 1 tuần · 1 tháng); SK-001 (recall_from); SK-003 D6, T6",
+  "function": "select_warmup(history, current_lesson, today, rules) -> {items: [{item_id, from, slot}]}",
+  "platforms": ["server", "app_offline"],
+  "context": { "timezone": "Asia/Ho_Chi_Minh" },
+  "notes": [
+    "history: các bài hồ sơ đã hoàn thành, mỗi bài { lesson_id, last_completed_at, last_completed_date, items[] }; items là câu bé đã trả lời { item_id, slot (quiz | warmup), order, dok, last_correct }. last_completed_date = local_date(last_completed_at, context.timezone).",
+    "age = today − last_completed_date (ngày lịch). derived.ages ghi sẵn để người đọc kiểm; check-vectors.mjs tính lại bằng công cụ. Harness bỏ qua derived.",
+    "current_lesson: { lesson_id, warmup[] } với warmup là câu khởi động soạn sẵn { item_id, order, recall_from: { kind: prior_knowledge } | { kind: lesson, lesson_id } }.",
+    "slot của output: recent · week · month (khe giãn cách), fill (lấp bằng bài kế tiếp có age nhỏ nhất), recent_second (câu thứ 2 của bài recent), prior_knowledge (câu soạn sẵn của bài đang học). from là lesson_id nguồn. items theo đúng thứ tự chọn: recent, week, month, fill, recent_second, prior_knowledge (T6).",
+    "Hầu hết bài trong history chỉ ghi 3 câu (q1 DOK 1, q2 DOK 2, q6 DOK 3) thay vì đủ 6 câu cho gọn; luật chọn không phụ thuộc số câu."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "warmup-selection-001",
+      "description": "Chưa có lịch sử (bài đầu tiên), bài đang học có 2 câu soạn sẵn recall_from prior_knowledge như bài 1 trên canvas → dùng 2 câu đó theo order (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w2", "order": 2, "recall_from": { "kind": "prior_knowledge" } },
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "prior_knowledge" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "cur-w1", "from": "cur", "slot": "prior_knowledge" },
+        { "item_id": "cur-w2", "from": "cur", "slot": "prior_knowledge" }
+      ] }
+    },
+    {
+      "id": "warmup-selection-002",
+      "description": "Chưa có lịch sử và bài đang học không có câu soạn sẵn → items rỗng, không có màn khởi động (B4.4: bài đầu tiên của bé không có khởi động).",
+      "status": "confirmed",
+      "input": {
+        "history": [],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [] }
+    },
+    {
+      "id": "warmup-selection-003",
+      "description": "Chưa có lịch sử, bài đang học có 3 câu prior_knowledge → chỉ lấy 2 câu order nhỏ nhất, vì mỗi bước dự phòng chỉ lấp cho đủ min = 2 (T6, cần Duy chốt: hay lấy cả 3 vì max = 3?).",
+      "status": "proposed",
+      "decision": ["SK-003/D6", "SK-003/T6"],
+      "input": {
+        "history": [],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "prior_knowledge" } },
+          { "item_id": "cur-w2", "order": 2, "recall_from": { "kind": "prior_knowledge" } },
+          { "item_id": "cur-w3", "order": 3, "recall_from": { "kind": "prior_knowledge" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "cur-w1", "from": "cur", "slot": "prior_knowledge" },
+        { "item_id": "cur-w2", "from": "cur", "slot": "prior_knowledge" }
+      ] }
+    },
+    {
+      "id": "warmup-selection-004",
+      "description": "Chưa có lịch sử, bài đang học chỉ có câu soạn sẵn recall_from kind lesson (nhớ lại một bài cụ thể) → D6 chỉ dùng câu prior_knowledge nên items rỗng (cần Duy chốt: câu kind lesson dùng khi nào?).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "lesson", "lesson_id": "l09" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [] }
+    },
+    {
+      "id": "warmup-selection-005",
+      "description": "Chỉ có đúng 1 bài trong lịch sử (l01, age 1) → khe recent lấy l01-q1; không còn bài nào để lấp nên lấy câu thứ 2 của bài recent (l01-q2, slot recent_second). l01-q6 là DOK 3 nên bị loại dù lần trước làm sai. Đã đủ min 2 nên không dùng câu soạn sẵn của bài đang học (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": false }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "prior_knowledge" } },
+          { "item_id": "cur-w2", "order": 2, "recall_from": { "kind": "prior_knowledge" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l01-q2", "from": "l01", "slot": "recent_second" }
+      ] },
+      "derived": { "ages": { "l01": 1 } }
+    },
+    {
+      "id": "warmup-selection-006",
+      "description": "Chỉ lấp được khe recent: bé học 3 ngày liền (age 1, 2, 3), không bài nào trong cửa sổ tuần [5, 10] hay tháng [21, 45] → recent l01, rồi lấp bằng bài kế tiếp có age nhỏ nhất l02 (slot fill) cho đủ min 2; l03 không dùng (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-29T02:00:00Z", "last_completed_date": "2026-11-29", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l02-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-28T02:00:00Z", "last_completed_date": "2026-11-28", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l03-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "fill" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 2, "l03": 3 } }
+    },
+    {
+      "id": "warmup-selection-007",
+      "description": "Có bài gần nhất (age 1) và bài ở cửa sổ tuần (age 7), không có bài ở cửa sổ tháng → 2 câu recent + week. Đã đủ min 2 nên không lấp thêm bằng l02 (age 3), dù max là 3 (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-28T02:00:00Z", "last_completed_date": "2026-11-28", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l02-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l03-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 3, "l03": 7 } }
+    },
+    {
+      "id": "warmup-selection-008",
+      "description": "Đủ cả 3 khe: recent l01 (age 1), week l03 (age 7), month l04 (age 30) → 3 câu, đúng max. l02 (age 3) không được chọn (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-28T02:00:00Z", "last_completed_date": "2026-11-28", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l02-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l03-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] },
+          { "lesson_id": "l04", "last_completed_at": "2026-11-01T02:00:00Z", "last_completed_date": "2026-11-01", "items": [
+            { "item_id": "l04-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l04-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l04-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "week" },
+        { "item_id": "l04-q1", "from": "l04", "slot": "month" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 3, "l03": 7, "l04": 30 } }
+    },
+    {
+      "id": "warmup-selection-009",
+      "description": "Biên dưới cửa sổ tuần: l02 có age 5 → nằm trong [5, 10] nên vào khe week (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-26T02:00:00Z", "last_completed_date": "2026-11-26", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 5 } }
+    },
+    {
+      "id": "warmup-selection-010",
+      "description": "Ngoài biên dưới cửa sổ tuần: l02 có age 4 → không vào khe week; vẫn được chọn nhưng với slot fill (lấp cho đủ min 2) (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-27T02:00:00Z", "last_completed_date": "2026-11-27", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "fill" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 4 } }
+    },
+    {
+      "id": "warmup-selection-011",
+      "description": "Biên trên cửa sổ tuần: l02 có age 10 → nằm trong [5, 10] nên vào khe week (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-21T02:00:00Z", "last_completed_date": "2026-11-21", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 10 } }
+    },
+    {
+      "id": "warmup-selection-012",
+      "description": "Biên dưới cửa sổ tháng: l03 có age 21 → nằm trong [21, 45] nên vào khe month; cùng với recent l01 và week l02 (age 7) đủ 3 câu (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-10T02:00:00Z", "last_completed_date": "2026-11-10", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "month" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7, "l03": 21 } }
+    },
+    {
+      "id": "warmup-selection-013",
+      "description": "Biên trên cửa sổ tháng: l03 có age 45 → nằm trong [21, 45] nên vào khe month (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-10-17T02:00:00Z", "last_completed_date": "2026-10-17", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "month" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7, "l03": 45 } }
+    },
+    {
+      "id": "warmup-selection-014",
+      "description": "Ngoài biên trên cửa sổ tháng: l03 có age 46 → không vào khe month; recent + week đã đủ min 2 nên không lấp, kết quả chỉ 2 câu (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-10-16T02:00:00Z", "last_completed_date": "2026-10-16", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7, "l03": 46 } }
+    },
+    {
+      "id": "warmup-selection-015",
+      "description": "Hai bài cách đều target tuần 7: l02 age 6 và l03 age 8 (cùng cách 1 ngày) → chọn bài cũ hơn l03 (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-25T02:00:00Z", "last_completed_date": "2026-11-25", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-23T02:00:00Z", "last_completed_date": "2026-11-23", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 6, "l03": 8 } }
+    },
+    {
+      "id": "warmup-selection-016",
+      "description": "Hai bài cách đều target tháng 30: l03 age 25 và l04 age 35 (cùng cách 5 ngày) → khe month chọn bài cũ hơn l04 (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-06T02:00:00Z", "last_completed_date": "2026-11-06", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l04", "last_completed_at": "2026-10-27T02:00:00Z", "last_completed_date": "2026-10-27", "items": [
+            { "item_id": "l04-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l04-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" },
+        { "item_id": "l04-q1", "from": "l04", "slot": "month" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7, "l03": 25, "l04": 35 } }
+    },
+    {
+      "id": "warmup-selection-017",
+      "description": "Loại câu DOK 3: trong l01, câu duy nhất lần trước làm sai là l01-q6 (DOK 3) → bị loại theo exclude_dok [3], chọn l01-q1 (đúng, order nhỏ nhất trong các câu còn lại) (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": false }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7 } }
+    },
+    {
+      "id": "warmup-selection-018",
+      "description": "Cùng lịch sử với warmup-selection-017 nhưng rules.warmup.exclude_dok = [] → l01-q6 (DOK 3, lần trước sai) được ưu tiên vì làm sai. Kiểm exclude_dok là tham số, không viết cứng (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "rules": { "warmup": { "min": 2, "max": 3, "week": { "target": 7, "min": 5, "max": 10 }, "month": { "target": 30, "min": 21, "max": 45 }, "exclude_dok": [] } },
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": false }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q6", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7 } }
+    },
+    {
+      "id": "warmup-selection-019",
+      "description": "Ưu tiên câu lần trước làm sai: chỉ có l01 trong lịch sử, l01-q3 và l01-q4 (DOK 2) lần trước sai → recent lấy l01-q3 (sai, order nhỏ hơn), recent_second lấy l01-q4; hai câu đúng q1, q2 xếp sau (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true },
+            { "item_id": "l01-q4", "slot": "quiz", "order": 4, "dok": 2, "last_correct": false },
+            { "item_id": "l01-q3", "slot": "quiz", "order": 3, "dok": 2, "last_correct": false },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q3", "from": "l01", "slot": "recent" },
+        { "item_id": "l01-q4", "from": "l01", "slot": "recent_second" }
+      ] },
+      "derived": { "ages": { "l01": 1 } }
+    },
+    {
+      "id": "warmup-selection-020",
+      "description": "Hai bài cùng age 1 (cùng ngày 30/11): l01 xong lúc 08:00, l02 xong lúc 19:00 giờ VN → khe recent chọn bài có last_completed_at muộn hơn (l02); l01 lấp vào slot fill (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T01:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-30T12:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l02-q1", "from": "l02", "slot": "recent" },
+        { "item_id": "l01-q1", "from": "l01", "slot": "fill" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 1 } }
+    },
+    {
+      "id": "warmup-selection-021",
+      "description": "Bài đang học (cur) đã có trong lịch sử vì bé học lại, xong lúc 08:30 hôm nay (age 0) → bị loại khỏi ứng viên; recent là l01 (age 1), week là l02 (age 7) (D6: trừ bài đang học).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "cur", "last_completed_at": "2026-12-01T01:30:00Z", "last_completed_date": "2026-12-01", "items": [
+            { "item_id": "cur-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": false },
+            { "item_id": "cur-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "cur": 0, "l01": 1, "l02": 7 } }
+    },
+    {
+      "id": "warmup-selection-022",
+      "description": "Câu khởi động (slot warmup) mà bé đã trả lời ở bài l01 không phải ứng viên: l01-w1 lần trước sai nhưng bị bỏ, chọn câu quiz l01-q1 (D6: ứng viên là câu quiz).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-w1", "slot": "warmup", "order": 1, "dok": 1, "last_correct": false },
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "week" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 7 } }
+    },
+    {
+      "id": "warmup-selection-023",
+      "description": "Lấp bằng bài ngoài mọi cửa sổ: l01 age 1 và l02 age 60 → recent l01; l02 không vào khe week/month nhưng là bài kế tiếp có age nhỏ nhất nên vào slot fill (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-10-02T02:00:00Z", "last_completed_date": "2026-10-02", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "fill" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 60 } }
+    },
+    {
+      "id": "warmup-selection-024",
+      "description": "rules.warmup.min = 3: recent l01 (age 1), week l03 (age 7), không có khe month → lấp thêm l02 (age 3) để đủ 3; thứ tự output recent, week, fill (D6, T6).",
+      "status": "proposed",
+      "decision": ["SK-003/D6", "SK-003/T6"],
+      "rules": { "warmup": { "min": 3, "max": 3, "week": { "target": 7, "min": 5, "max": 10 }, "month": { "target": 30, "min": 21, "max": 45 }, "exclude_dok": [3] } },
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l02", "last_completed_at": "2026-11-28T02:00:00Z", "last_completed_date": "2026-11-28", "items": [
+            { "item_id": "l02-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l02-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] },
+          { "lesson_id": "l03", "last_completed_at": "2026-11-24T02:00:00Z", "last_completed_date": "2026-11-24", "items": [
+            { "item_id": "l03-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l03-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l03-q1", "from": "l03", "slot": "week" },
+        { "item_id": "l02-q1", "from": "l02", "slot": "fill" }
+      ] },
+      "derived": { "ages": { "l01": 1, "l02": 3, "l03": 7 } }
+    },
+    {
+      "id": "warmup-selection-025",
+      "description": "Chuỗi dự phòng đến bước cuối: chỉ có l01 và l01 chỉ còn 1 câu hợp lệ (q6 là DOK 3) → recent l01-q1; không có bài để lấp, không có câu thứ 2 của bài recent → lấy câu prior_knowledge cur-w1 của bài đang học cho đủ min 2 (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-30T02:00:00Z", "last_completed_date": "2026-11-30", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q6", "slot": "quiz", "order": 6, "dok": 3, "last_correct": false }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "prior_knowledge" } },
+          { "item_id": "cur-w2", "order": 2, "recall_from": { "kind": "prior_knowledge" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "cur-w1", "from": "cur", "slot": "prior_knowledge" }
+      ] },
+      "derived": { "ages": { "l01": 1 } }
+    },
+    {
+      "id": "warmup-selection-026",
+      "description": "Chưa có lịch sử, bài đang học chỉ có 1 câu prior_knowledge → trả về 1 câu dù chưa đủ min 2 (T6, cần Duy chốt: hiện màn khởi động 1 câu hay bỏ màn khởi động?).",
+      "status": "proposed",
+      "decision": ["SK-003/D6", "SK-003/T6"],
+      "input": {
+        "history": [],
+        "current_lesson": { "lesson_id": "cur", "warmup": [
+          { "item_id": "cur-w1", "order": 1, "recall_from": { "kind": "prior_knowledge" } }
+        ] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "cur-w1", "from": "cur", "slot": "prior_knowledge" }
+      ] }
+    },
+    {
+      "id": "warmup-selection-027",
+      "description": "Bài duy nhất trong lịch sử có age 30 (nằm trong cửa sổ tháng) → vẫn vào khe recent trước vì recent luôn lấy bài có age nhỏ nhất; khe month không còn bài → lấy câu thứ 2 của bài recent (D6).",
+      "status": "proposed",
+      "decision": "SK-003/D6",
+      "input": {
+        "history": [
+          { "lesson_id": "l01", "last_completed_at": "2026-11-01T02:00:00Z", "last_completed_date": "2026-11-01", "items": [
+            { "item_id": "l01-q1", "slot": "quiz", "order": 1, "dok": 1, "last_correct": true },
+            { "item_id": "l01-q2", "slot": "quiz", "order": 2, "dok": 2, "last_correct": true }
+          ] }
+        ],
+        "current_lesson": { "lesson_id": "cur", "warmup": [] },
+        "today": "2026-12-01"
+      },
+      "expected": { "items": [
+        { "item_id": "l01-q1", "from": "l01", "slot": "recent" },
+        { "item_id": "l01-q2", "from": "l01", "slot": "recent_second" }
+      ] },
+      "derived": { "ages": { "l01": 30 } }
+    }
+  ]
+}

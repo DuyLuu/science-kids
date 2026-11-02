@@ -1,0 +1,325 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "stars",
+  "version": 1,
+  "source": "technical-plan.md B4.4 (Sao), B5.1 (local_date theo timezone), B5.3 (lesson_progress.first_pass_at, mastered_at); syllabus-progression.md mục 10; SK-003 D3, D4",
+  "function": "compute_stars(attempts, rules) -> {stars, first_pass_date, mastered_date}",
+  "platforms": ["app", "server"],
+  "context": { "timezone": "Asia/Ho_Chi_Minh" },
+  "notes": [
+    "attempts là mọi lần làm của một hồ sơ cho một bài: { attempt_id, completed, completed_at, local_date, correct, max }. local_date đã tính sẵn bằng local_date(completed_at, context.timezone); lần làm chưa xong có completed_at và local_date là null.",
+    "Đạt khi correct * pass_threshold.den >= pass_threshold.num * max, so bằng số nguyên (D3). Khoảng cách thành thạo tính bằng ngày lịch giữa hai local_date (D4).",
+    "Thứ tự phần tử trong attempts không có nghĩa; engine sắp theo completed_at (stars-019).",
+    "Case nào kết quả phụ thuộc ngưỡng 4/6 hay 5/6 thì ghi rules.pass_threshold tường minh, để đổi default_rules không làm sai case đó."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "stars-001",
+      "description": "Chưa có lần làm nào → 0 sao, chưa có ngày đạt và ngày thành thạo.",
+      "status": "confirmed",
+      "input": { "attempts": [] },
+      "expected": { "stars": 0, "first_pass_date": null, "mastered_date": null }
+    },
+    {
+      "id": "stars-002",
+      "description": "Một lần làm xong với điểm thấp 2/6 → ⭐ vì hoàn thành bài (B4.4: ⭐ hoàn thành bài, mọi điểm). 2/6 dưới cả ngưỡng 4/6 lẫn 5/6.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 2, "max": 6 }
+      ] },
+      "expected": { "stars": 1, "first_pass_date": null, "mastered_date": null }
+    },
+    {
+      "id": "stars-003",
+      "description": "Một lần làm 6/6 ngày 02/11 → ⭐⭐, first_pass_date = 2026-11-02; chưa có lần đạt lại nên chưa thành thạo.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-004",
+      "description": "Biên của ngưỡng 5/6: đúng 5/6 → đạt vì 5*6 >= 5*6 (so ≥, bằng nhau vẫn đạt) → ⭐⭐.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 5, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-005",
+      "description": "Đạt 6/6 lúc 09:00 và đạt lại 6/6 lúc 20:00 cùng ngày 02/11 (giờ VN) → vẫn ⭐⭐ vì cách 0 ngày < mastery_gap_days 1.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-02T13:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-006",
+      "description": "Đạt 6/6 ngày 02/11 lúc 09:00, đạt lại 6/6 ngày 03/11 lúc 10:00 (cách 25 giờ, cách 1 ngày lịch) → ⭐⭐⭐, mastered_date = 2026-11-03.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-007",
+      "description": "Trượt 3/6 lúc 09:00 rồi đạt 6/6 lúc 15:00 cùng ngày → ⭐⭐; first_pass_date là ngày của lần đạt (lần 2), không phải lần làm đầu.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 3, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-02T08:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-008",
+      "description": "Trượt 3/6 ngày 02/11, đạt 5/6 ngày 03/11, đạt 6/6 ngày 04/11 → first_pass_date 03/11, mastered_date 04/11 (cách 1 ngày) → ⭐⭐⭐. 3/6 trượt và 5/6 đạt ở cả hai ngưỡng 4/6, 5/6.",
+      "status": "confirmed",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 3, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 5, "max": 6 },
+        { "attempt_id": "a3", "completed": true, "completed_at": "2026-11-04T02:00:00Z", "local_date": "2026-11-04", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-03", "mastered_date": "2026-11-04" }
+    },
+    {
+      "id": "stars-009",
+      "description": "Đã ⭐⭐⭐ (đạt 02/11, đạt lại 03/11), lần làm 04/11 chỉ 1/6 → vẫn ⭐⭐⭐, ngày đạt và ngày thành thạo giữ nguyên (D4: sao không bao giờ giảm).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 },
+        { "attempt_id": "a3", "completed": true, "completed_at": "2026-11-04T02:00:00Z", "local_date": "2026-11-04", "correct": 1, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-010",
+      "description": "Đạt 6/6 ngày 02/11 (⭐⭐), lần sau ngày 05/11 chỉ 2/6 → vẫn ⭐⭐, không tụt về ⭐; lần trượt cũng không phải lần đạt lại (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-05T02:00:00Z", "local_date": "2026-11-05", "correct": 2, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-011",
+      "description": "mastery_gap_days = 2: đạt 02/11, đạt lại 03/11 (cách 1 ngày < 2) → vẫn ⭐⭐.",
+      "status": "confirmed",
+      "rules": { "mastery_gap_days": 2 },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-012",
+      "description": "mastery_gap_days = 2: đạt 02/11, đạt lại 04/11 (cách 2 ngày ≥ 2) → ⭐⭐⭐, mastered_date = 2026-11-04.",
+      "status": "confirmed",
+      "rules": { "mastery_gap_days": 2 },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-04T02:00:00Z", "local_date": "2026-11-04", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-04" }
+    },
+    {
+      "id": "stars-013",
+      "description": "mastery_gap_days = 2: đạt 02/11, 03/11 và 04/11 → thành thạo ngày 04/11 vì khoảng cách đo từ first_pass_date (02/11), không đo từ lần đạt ngay trước (03/11) (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "rules": { "mastery_gap_days": 2 },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 },
+        { "attempt_id": "a3", "completed": true, "completed_at": "2026-11-04T02:00:00Z", "local_date": "2026-11-04", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-04" }
+    },
+    {
+      "id": "stars-014",
+      "description": "Đạt 02/11, đạt lại 03/11 và 05/11 → mastered_date là lần đạt lại đủ khoảng cách sớm nhất (03/11), không phải lần gần nhất (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 },
+        { "attempt_id": "a3", "completed": true, "completed_at": "2026-11-05T02:00:00Z", "local_date": "2026-11-05", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-015",
+      "description": "Hai lần đạt chỉ cách 40 phút nhưng qua nửa đêm giờ VN: 23:30 ngày 02/11 (16:30Z) và 00:10 ngày 03/11 (17:10Z) → khác local_date nên tính là cách 1 ngày → ⭐⭐⭐ (D4: tính theo ngày lịch, không theo 24 giờ).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T16:30:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-02T17:10:00Z", "local_date": "2026-11-03", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-016",
+      "description": "Hai lần đạt cách gần 24 giờ (23 giờ 58 phút 30 giây) nhưng cùng ngày 02/11 giờ VN: 00:00:30 (01/11 17:00:30Z) và 23:59 (02/11 16:59Z) → cùng local_date, cách 0 ngày → vẫn ⭐⭐ (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-01T17:00:30Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-02T16:59:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-017",
+      "description": "Chỉ có một lần làm dở (completed = false), 5 câu đã trả lời đều đúng nên correct 5/6 → 0 sao: lần làm chưa xong không cho ⭐ và không được tính là đạt dù 5*6 >= 5*6 (D4: ⭐ cần lần làm completed).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": false, "completed_at": null, "local_date": null, "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 0, "first_pass_date": null, "mastered_date": null }
+    },
+    {
+      "id": "stars-018",
+      "description": "Đạt 6/6 ngày 02/11, ngày 03/11 có một lần làm dở với 5 câu đúng → vẫn ⭐⭐: lần làm dở không được tính là lần đạt lại (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": false, "completed_at": null, "local_date": null, "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-019",
+      "description": "attempts không theo thứ tự thời gian (hàng đợi offline từ hai máy): a3 đạt 04/11, a2 đạt 02/11, a1 trượt 01/11. Sắp theo completed_at thì lần đạt đầu là a2 (02/11), đạt lại a3 (04/11) → ⭐⭐⭐. Nếu lấy theo thứ tự mảng sẽ ra sai (D4).",
+      "status": "proposed",
+      "decision": "SK-003/D4",
+      "input": { "attempts": [
+        { "attempt_id": "a3", "completed": true, "completed_at": "2026-11-04T02:00:00Z", "local_date": "2026-11-04", "correct": 6, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 6, "max": 6 },
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-01T02:00:00Z", "local_date": "2026-11-01", "correct": 3, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-04" }
+    },
+    {
+      "id": "stars-020",
+      "description": "Lịch sử H1 (một lần 4/6 ngày 02/11), ngưỡng 4/6 (PRD): 4*6 >= 4*6 → đạt → ⭐⭐. So với stars-021 cùng lịch sử.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 4, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 4, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-021",
+      "description": "Lịch sử H1 (một lần 4/6 ngày 02/11), ngưỡng 5/6 (đề xuất): 4*6 = 24 < 5*6 = 30 → chưa đạt → chỉ ⭐. Khác stars-020.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 5, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 4, "max": 6 }
+      ] },
+      "expected": { "stars": 1, "first_pass_date": null, "mastered_date": null }
+    },
+    {
+      "id": "stars-022",
+      "description": "Lịch sử H2 (5/6 ngày 02/11, 4/6 ngày 03/11), ngưỡng 4/6: cả hai đều đạt, lần 2 cách 1 ngày → ⭐⭐⭐. So với stars-023.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 4, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 5, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 4, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-023",
+      "description": "Lịch sử H2 (5/6 ngày 02/11, 4/6 ngày 03/11), ngưỡng 5/6: chỉ lần 1 đạt, lần 4/6 không phải lần đạt lại → ⭐⭐. Khác stars-022.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 5, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 5, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 4, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-024",
+      "description": "Lịch sử H3 (4/6 ngày 02/11, 5/6 ngày 03/11), ngưỡng 4/6: lần đạt đầu là 02/11, đạt lại 03/11 → ⭐⭐⭐. So với stars-025.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 4, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 4, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 3, "first_pass_date": "2026-11-02", "mastered_date": "2026-11-03" }
+    },
+    {
+      "id": "stars-025",
+      "description": "Lịch sử H3 (4/6 ngày 02/11, 5/6 ngày 03/11), ngưỡng 5/6: 4/6 trượt nên lần đạt đầu là 03/11, chưa có lần đạt lại → ⭐⭐, first_pass_date = 2026-11-03. Khác stars-024 cả số sao lẫn ngày.",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 5, "den": 6 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 4, "max": 6 },
+        { "attempt_id": "a2", "completed": true, "completed_at": "2026-11-03T03:00:00Z", "local_date": "2026-11-03", "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-03", "mastered_date": null }
+    },
+    {
+      "id": "stars-026",
+      "description": "Ngưỡng viết dạng tối giản {2, 3} (= 4/6), làm 4/6: 4*3 = 12 >= 2*6 = 12 → đạt → ⭐⭐. Phân số không cần cùng mẫu với max (D3).",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 2, "den": 3 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 4, "max": 6 }
+      ] },
+      "expected": { "stars": 2, "first_pass_date": "2026-11-02", "mastered_date": null }
+    },
+    {
+      "id": "stars-027",
+      "description": "Ngưỡng {84, 100} (84%), làm 5/6 ≈ 83,3%: 5*100 = 500 < 84*6 = 504 → chưa đạt → ⭐. Kiểm phép so nguyên, không làm tròn 5/6 lên 0,84 (D3).",
+      "status": "proposed",
+      "decision": "SK-003/D3",
+      "rules": { "pass_threshold": { "num": 84, "den": 100 } },
+      "input": { "attempts": [
+        { "attempt_id": "a1", "completed": true, "completed_at": "2026-11-02T02:00:00Z", "local_date": "2026-11-02", "correct": 5, "max": 6 }
+      ] },
+      "expected": { "stars": 1, "first_pass_date": null, "mastered_date": null }
+    }
+  ]
+}

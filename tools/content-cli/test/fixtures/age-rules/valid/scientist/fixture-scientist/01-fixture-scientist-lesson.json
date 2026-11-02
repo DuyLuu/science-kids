@@ -1,0 +1,531 @@
+{
+  "kind": "lesson",
+  "schema_version": 1,
+  "id": "00000000-0000-4000-8000-000000000210",
+  "topic_id": "00000000-0000-4000-8000-000000000200",
+  "slug": "fixture-scientist-lesson",
+  "order": 1,
+  "stage": "opener",
+  "title": {
+    "en": "Test lesson",
+    "vi": "Bài thử"
+  },
+  "objective": {
+    "en": "I can name animals.",
+    "vi": "Em gọi tên được con vật."
+  },
+  "key_points": [
+    {
+      "en": "Animals move.",
+      "vi": "Con vật di chuyển."
+    },
+    {
+      "en": "Animals eat.",
+      "vi": "Con vật ăn."
+    },
+    {
+      "en": "Animals grow.",
+      "vi": "Con vật lớn lên."
+    }
+  ],
+  "est_minutes": 5,
+  "warmup": [
+    {
+      "id": "00000000-0000-4000-8000-000000000220",
+      "key": "w1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which part of a plant makes food?",
+        "vi": "Bộ phận nào của cây làm ra thức ăn?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "options": [
+        {
+          "key": "w1_a",
+          "label": {
+            "en": "leaf",
+            "vi": "lá"
+          },
+          "correct": true
+        },
+        {
+          "key": "w1_b",
+          "label": {
+            "en": "root",
+            "vi": "rễ"
+          },
+          "correct": false
+        },
+        {
+          "key": "w1_c",
+          "label": {
+            "en": "stem",
+            "vi": "thân"
+          },
+          "correct": false
+        },
+        {
+          "key": "w1_d",
+          "label": {
+            "en": "flower",
+            "vi": "hoa"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000221",
+      "key": "w2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Plants need light to grow.",
+        "vi": "Cây cần ánh sáng để lớn."
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "answer": true
+    }
+  ],
+  "learn": [
+    {
+      "id": "00000000-0000-4000-8000-000000000211",
+      "key": "card",
+      "type": "sentence_card",
+      "version": 1,
+      "text": {
+        "en": "A hen has feathers.",
+        "vi": "Gà mái có lông vũ."
+      }
+    }
+  ],
+  "play": {
+    "id": "00000000-0000-4000-8000-000000000212",
+    "key": "tray",
+    "type": "build_tray",
+    "version": 1,
+    "prompt": {
+      "en": "Pick an animal.",
+      "vi": "Chọn một con vật."
+    },
+    "capacity": 1,
+    "groups": [
+      {
+        "key": "tray_animal",
+        "label": {
+          "en": "Animal",
+          "vi": "Con vật"
+        },
+        "color": "do_son",
+        "role": "required"
+      }
+    ],
+    "items": [
+      {
+        "key": "tray_hen",
+        "label": {
+          "en": "hen",
+          "vi": "gà mái"
+        },
+        "group": "tray_animal",
+        "image": {
+          "alt": {
+            "en": "A hen",
+            "vi": "Gà mái"
+          }
+        }
+      }
+    ],
+    "messages": {
+      "start": {
+        "en": "Pick one.",
+        "vi": "Chọn một nhé."
+      },
+      "full": {
+        "en": "The tray is full.",
+        "vi": "Khay đầy rồi."
+      },
+      "balanced": {
+        "en": "Well done.",
+        "vi": "Giỏi lắm."
+      },
+      "has_limited": {
+        "en": "Try again.",
+        "vi": "Thử lại nhé."
+      },
+      "missing": {
+        "tray_animal": {
+          "en": "Add an animal.",
+          "vi": "Thêm một con vật."
+        }
+      }
+    },
+    "success_when": "all_required_and_no_limit"
+  },
+  "quiz": [
+    {
+      "id": "00000000-0000-4000-8000-000000000230",
+      "key": "q1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which part of a plant makes food?",
+        "vi": "Bộ phận nào của cây làm ra thức ăn?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "options": [
+        {
+          "key": "q1_a",
+          "label": {
+            "en": "leaf",
+            "vi": "lá"
+          },
+          "correct": true
+        },
+        {
+          "key": "q1_b",
+          "label": {
+            "en": "root",
+            "vi": "rễ"
+          },
+          "correct": false
+        },
+        {
+          "key": "q1_c",
+          "label": {
+            "en": "stem",
+            "vi": "thân"
+          },
+          "correct": false
+        },
+        {
+          "key": "q1_d",
+          "label": {
+            "en": "flower",
+            "vi": "hoa"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000231",
+      "key": "q2",
+      "format": "multi_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Which things does a plant need?",
+        "vi": "Cây cần những gì?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "options": [
+        {
+          "key": "q2_light",
+          "label": {
+            "en": "light",
+            "vi": "ánh sáng"
+          },
+          "correct": true
+        },
+        {
+          "key": "q2_water",
+          "label": {
+            "en": "water",
+            "vi": "nước"
+          },
+          "correct": true
+        },
+        {
+          "key": "q2_sweets",
+          "label": {
+            "en": "sweets",
+            "vi": "kẹo"
+          },
+          "correct": false
+        },
+        {
+          "key": "q2_music",
+          "label": {
+            "en": "music",
+            "vi": "âm nhạc"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000232",
+      "key": "q3",
+      "format": "true_false",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "A heavy ball falls faster than a light one.",
+        "vi": "Quả bóng nặng rơi nhanh hơn quả bóng nhẹ."
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "misconception_id": "00000000-0000-4000-8000-000000000201",
+      "answer": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000233",
+      "key": "q4",
+      "format": "fill_blank_bank",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Fill in the gap.",
+        "vi": "Điền vào chỗ trống."
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "sentence": {
+        "en": "Plants need light and {1} to grow.",
+        "vi": "Cây cần ánh sáng và {1} để lớn."
+      },
+      "bank": [
+        {
+          "key": "q4_water",
+          "label": {
+            "en": "water",
+            "vi": "nước"
+          }
+        },
+        {
+          "key": "q4_sand",
+          "label": {
+            "en": "sand",
+            "vi": "cát"
+          }
+        },
+        {
+          "key": "q4_salt",
+          "label": {
+            "en": "salt",
+            "vi": "muối"
+          }
+        }
+      ],
+      "answers": [
+        "q4_water"
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000234",
+      "key": "q5",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 3,
+      "prompt": {
+        "en": "Where does a plant get its food from?",
+        "vi": "Cây lấy thức ăn từ đâu?"
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "misconception_id": "00000000-0000-4000-8000-000000000202",
+      "options": [
+        {
+          "key": "q5_a",
+          "label": {
+            "en": "leaf",
+            "vi": "lá"
+          },
+          "correct": true
+        },
+        {
+          "key": "q5_b",
+          "label": {
+            "en": "root",
+            "vi": "rễ"
+          },
+          "correct": false
+        },
+        {
+          "key": "q5_c",
+          "label": {
+            "en": "stem",
+            "vi": "thân"
+          },
+          "correct": false
+        },
+        {
+          "key": "q5_d",
+          "label": {
+            "en": "flower",
+            "vi": "hoa"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000235",
+      "key": "q6",
+      "format": "true_false",
+      "version": 1,
+      "dok": 3,
+      "prompt": {
+        "en": "A plant in a dark box will stay green for months.",
+        "vi": "Cây trong hộp tối sẽ xanh tốt nhiều tháng."
+      },
+      "hint": {
+        "en": "Look at the pictures.",
+        "vi": "Em nhìn hình nhé."
+      },
+      "explanation_correct": {
+        "en": "Yes, well done.",
+        "vi": "Đúng rồi."
+      },
+      "explanation_wrong": {
+        "en": "Let us look again.",
+        "vi": "Mình xem lại nhé."
+      },
+      "answer": false
+    }
+  ],
+  "vocab": [
+    {
+      "id": "00000000-0000-4000-8000-000000000213",
+      "key": "bird",
+      "term": {
+        "en": "bird",
+        "vi": "bird"
+      },
+      "example": {
+        "en": "I can see a bird.",
+        "vi": "Em thấy con bird."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000214",
+      "key": "fish",
+      "term": {
+        "en": "fish",
+        "vi": "fish"
+      },
+      "example": {
+        "en": "I can see a fish.",
+        "vi": "Em thấy con fish."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000215",
+      "key": "cow",
+      "term": {
+        "en": "cow",
+        "vi": "cow"
+      },
+      "example": {
+        "en": "I can see a cow.",
+        "vi": "Em thấy con cow."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000216",
+      "key": "hen",
+      "term": {
+        "en": "hen",
+        "vi": "hen"
+      },
+      "example": {
+        "en": "I can see a hen.",
+        "vi": "Em thấy con hen."
+      }
+    }
+  ],
+  "reward": {}
+}

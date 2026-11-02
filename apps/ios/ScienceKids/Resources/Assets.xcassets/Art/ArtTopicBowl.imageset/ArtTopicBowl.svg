@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="14 10 92 80">
+<!-- From design/play-ui/project (Discoverer canvas), paperE filter removed: SK-011. -->
+<g><path d="M28 46 C 28 26, 46 15, 60 16 C 74 15, 92 26, 92 46 Z" fill="#FFFDF6"/></g>
+            <g><path d="M18 44 H102 C 102 66, 85 78, 60 78 C 35 78, 18 66, 18 44 Z" fill="#2E4A6E"/></g>
+            <g><path d="M23 52 H97 C 96 56, 94.5 59, 92.5 62 H27.5 C 25.5 59, 24 56, 23 52 Z" fill="#E2A52A"/></g>
+            <g><path d="M48 77 H72 L 69 85 H51 Z" fill="#24395A"/></g>
+</svg>

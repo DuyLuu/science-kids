@@ -1,6 +1,6 @@
 # Syllabus theo độ khó tăng dần
 
-> **Trạng thái:** thứ tự chủ đề, cột Free, Mức và Mạch **đã áp dụng** vào [syllabus.md](syllabus.md) (26/10/2026). Các đề xuất còn lại (ngưỡng 5/6, từ vựng theo nhóm, PRD, schema) vẫn chờ duyệt — xem mục 12.
+> **Trạng thái:** thứ tự chủ đề, cột Free, Mức và Mạch **đã áp dụng** vào [syllabus.md](syllabus.md) (26/10/2026). Các đề xuất còn lại (ngưỡng 5/6, từ vựng theo nhóm, PRD, schema) vẫn chờ duyệt — xem mục 12. Sửa 1/11/2026: mục 7 thêm cách hiện quiz theo nhóm tuổi (Duy chốt SK-026).
 > Liên quan: [prd.md](prd.md) · [syllabus.md](syllabus.md) · Nguồn research ở [cuối file](#nguồn-tham-khảo)
 > Cập nhật: 22/10/2026
 
@@ -227,9 +227,18 @@ Số bài theo nhóm: Explorer 4–5 (gộp các bài giữa), Discoverer 5–6,
 | --- | --- | --- | --- |
 | DOK 1 · 2 · 3 | 3 · 3 · 0 | 2 · 3 · 1 | 1 · 3 · 2 |
 | Số lựa chọn | 2–3 (bằng hình) | 3–4 | 4 |
-| Dạng câu | Chọn hình; đúng/sai có audio; kéo–thả phân nhóm; sắp thứ tự hình | Thêm: chọn nhiều đáp án; điền từ từ ngân hàng từ; gắn nhãn sơ đồ; đọc biểu đồ cột dạng tranh | Thêm: điền từ không gợi ý; đọc bảng hoặc biểu đồ đường; chọn biến cần giữ nguyên; chọn lý do đúng nhất |
+| Dạng câu | Chọn hình; đúng/sai bằng biểu tượng, có audio *(1/11)*; kéo–thả phân nhóm; sắp thứ tự hình | Thêm: chọn nhiều đáp án; điền từ từ ngân hàng từ; gắn nhãn sơ đồ; đọc biểu đồ cột dạng tranh | Thêm: điền từ không gợi ý; đọc bảng hoặc biểu đồ đường; chọn biến cần giữ nguyên; chọn lý do đúng nhất |
 | Câu misconception | 1 (câu 6, bằng hình) | 1 | 1–2 |
+| Hình bắt buộc *(1/11)* | Mọi lựa chọn, mọi thẻ sắp thứ tự và phân nhóm; câu đúng/sai có hình | Không | Không |
+| Cách trả lời *(1/11)* | Chạm thẻ là trả lời ngay, không có nút "Kiểm tra"; app đọc tên hình vừa chọn | Chọn rồi bấm "Kiểm tra" | Chọn rồi bấm "Kiểm tra" |
+| Chữ trên màn quiz *(1/11)* | Câu hỏi và lời linh vật có chữ ngắn làm phụ đề; lựa chọn, đúng/sai và nút không có chữ | Chữ EN, phụ đề VI | Chữ EN; VI ẩn, chạm để xem |
+| Tự đọc *(1/11)* | Câu hỏi khi mở, gợi ý khi sai, giải thích khi xong câu | Câu hỏi khi mở; gợi ý và giải thích có nút nghe | Không tự đọc; có nút nghe |
+| Bé thấy gì sau quiz *(1/11)* | Sao và sticker; không thấy số câu đúng, không có XP (vẫn chấm ngầm) | Sao, XP | Sao, XP |
+| Số dạng câu khác nhau trong 6 câu *(đề xuất SK-026)* | ≥ 2 | ≥ 3 | ≥ 3 |
+| Số thẻ sắp thứ tự, phân nhóm *(đề xuất SK-026)* | Sắp thứ tự 3; phân nhóm 2–3 nhóm, 3–4 thẻ | Sắp thứ tự 3–5 | Sắp thứ tự 3–6 |
 | Tỉ lệ đúng kỳ vọng cả quiz* | ~85% | ~80% | ~77% |
+
+Dòng ghi *(1/11)* do Duy chốt ngày 1/11/2026 ở SK-026. Dòng ghi *(đề xuất SK-026)* là số đề xuất, hiệu chỉnh sau playtest. Bảng đầy đủ theo nhóm, gồm format ở Khởi động và vùng chạm, nằm ở [docs/backlog/SK-026](docs/backlog/SK-026-quiz-formats-by-age.md). `content-cli` kiểm các luật này từ GĐ 0, đọc `rules.<age_group>.authoring` trong `content/rules.json`.
 
 \* Tỉ lệ đúng mục tiêu theo từng mức DOK: DOK 1 ≈ 90%+, DOK 2 ≈ 75–85%, DOK 3 ≈ 60–70%. Cả quiz nằm trong vùng 75–85% mà nghiên cứu luyện tập thích ứng khuyến nghị (mục 10). Đây là con số **đề xuất**; hiệu chỉnh lại bằng dữ liệu beta, mỗi câu lưu `p_correct`.
 

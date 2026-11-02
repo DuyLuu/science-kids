@@ -1,0 +1,251 @@
+{
+  "valid": [
+    {
+      "group": "explorer",
+      "files": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json",
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/01-fixture-explorer-lesson.json"
+      ]
+    },
+    {
+      "group": "discoverer",
+      "files": [
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/topic.json",
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json"
+      ]
+    },
+    {
+      "group": "scientist",
+      "files": [
+        "test/fixtures/age-rules/valid/scientist/fixture-scientist/topic.json",
+        "test/fixtures/age-rules/valid/scientist/fixture-scientist/01-fixture-scientist-lesson.json"
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-option-no-image.json",
+      "description": "Explorer single_choice bỏ image của lựa chọn 2",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/0/options/1",
+          "code": "age_image_required"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-single-choice-4-options.json",
+      "description": "Explorer single_choice có 4 lựa chọn",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/0/options",
+          "code": "age_option_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-fill-blank-bank.json",
+      "description": "Explorer có một câu fill_blank_bank (thay q3, cùng DOK 1)",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/2/format",
+          "code": "age_format_not_allowed"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-true-false-no-image.json",
+      "description": "Explorer true_false bỏ image",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/1",
+          "code": "age_image_required"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/discoverer-single-choice-2-options.json",
+      "description": "Discoverer single_choice còn 2 lựa chọn",
+      "group": "discoverer",
+      "context": [
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/0/options",
+          "code": "age_option_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/scientist-single-choice-3-options.json",
+      "description": "Scientist single_choice còn 3 lựa chọn",
+      "group": "scientist",
+      "context": [
+        "test/fixtures/age-rules/valid/scientist/fixture-scientist/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/0/options",
+          "code": "age_option_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/discoverer-first-item-dok.json",
+      "description": "Discoverer đổi chỗ q1 (DOK 1) với q3 (DOK 2)",
+      "group": "discoverer",
+      "context": [
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/0/dok",
+          "code": "age_first_item_dok"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/discoverer-no-misconception.json",
+      "description": "Discoverer không câu nào có misconception_id",
+      "group": "discoverer",
+      "context": [
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz",
+          "code": "age_misconception_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/scientist-3-misconceptions.json",
+      "description": "Scientist có 3 câu misconception (thêm ở q1)",
+      "group": "scientist",
+      "context": [
+        "test/fixtures/age-rules/valid/scientist/fixture-scientist/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz",
+          "code": "age_misconception_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/discoverer-2-formats.json",
+      "description": "Discoverer chỉ dùng 2 format (q2 fill_blank_bank và q5 multi_choice đổi thành single_choice, giữ DOK)",
+      "group": "discoverer",
+      "context": [
+        "../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz",
+          "code": "age_format_variety"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-warmup-multi-choice.json",
+      "description": "Explorer Khởi động dùng multi_choice",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/warmup/0/format",
+          "code": "age_format_not_allowed"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-warmup-option-no-image.json",
+      "description": "Explorer Khởi động: lựa chọn 1 thiếu image",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/warmup/0/options/0",
+          "code": "age_image_required"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-sequence-item-no-image.json",
+      "description": "Explorer order_sequence: thẻ 2 thiếu image",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/3/items/1",
+          "code": "age_image_required"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-order-sequence-4-items.json",
+      "description": "Explorer order_sequence có 4 thẻ",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz/3/items",
+          "code": "age_option_count"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-dok-mix.json",
+      "description": "Explorer q6 thành DOK 3 (phân bổ 3·2·1)",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz",
+          "code": "age_dok_mix"
+        }
+      ]
+    },
+    {
+      "file": "test/fixtures/age-rules/invalid/explorer-2-misconceptions.json",
+      "description": "Explorer có 2 câu misconception",
+      "group": "explorer",
+      "context": [
+        "test/fixtures/age-rules/valid/explorer/fixture-explorer/topic.json"
+      ],
+      "errors": [
+        {
+          "pointer": "/quiz",
+          "code": "age_misconception_count"
+        }
+      ]
+    }
+  ]
+}

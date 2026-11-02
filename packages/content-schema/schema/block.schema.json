@@ -1,0 +1,462 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/block.schema.json",
+  "title": "Science Kids content v1: block học và chơi",
+  "$ref": "#/$defs/Block",
+  "$defs": {
+    "Block": {
+      "description": "Mọi block v1. Trường riêng nằm phẳng cạnh type (không bọc trong data).",
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "explore_groups",
+            "sentence_card",
+            "word_list",
+            "build_tray"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "explore_groups"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/ExploreGroups"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "sentence_card"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/SentenceCard"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "word_list"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/WordList"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "build_tray"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/BuildTray"
+          }
+        }
+      ]
+    },
+    "LearnBlock": {
+      "description": "Block dùng ở lesson.learn",
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "explore_groups",
+            "sentence_card",
+            "word_list"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "explore_groups"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/ExploreGroups"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "sentence_card"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/SentenceCard"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "word_list"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/WordList"
+          }
+        }
+      ]
+    },
+    "PlayBlock": {
+      "description": "Block dùng ở lesson.play",
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "build_tray"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "build_tray"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/BuildTray"
+          }
+        }
+      ]
+    },
+    "BlockBase": {
+      "description": "Trường chung của mọi block. Không dùng một mình: luôn qua Block, LearnBlock hoặc PlayBlock.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/Uuid"
+        },
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "min_app_version": {
+          "$ref": "common.schema.json#/$defs/AppVersion",
+          "description": "Bản app thấp nhất render được block này"
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "type",
+        "version"
+      ]
+    },
+    "ExploreGroups": {
+      "description": "Học: chạm từng nhóm, mỗi nhóm có câu + món ví dụ (Discoverer Học)",
+      "$ref": "#/$defs/BlockBase",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "explore_groups"
+        },
+        "prompt": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExploreGroup"
+          },
+          "minItems": 2,
+          "maxItems": 6
+        },
+        "complete_when": {
+          "const": "all_seen"
+        }
+      },
+      "required": [
+        "prompt",
+        "groups",
+        "complete_when"
+      ],
+      "unevaluatedProperties": false
+    },
+    "ExploreGroup": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "color": {
+          "$ref": "common.schema.json#/$defs/ColorToken"
+        },
+        "sentence": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Spoken"
+          },
+          "minItems": 1,
+          "maxItems": 4
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "color",
+        "sentence",
+        "examples"
+      ],
+      "additionalProperties": false
+    },
+    "SentenceCard": {
+      "description": "Học: một câu kèm hình",
+      "$ref": "#/$defs/BlockBase",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "sentence_card"
+        },
+        "text": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "unevaluatedProperties": false
+    },
+    "WordList": {
+      "description": "Học: ô Từ mới, trỏ vào vocab của bài",
+      "$ref": "#/$defs/BlockBase",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "word_list"
+        },
+        "title": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "term_keys": {
+          "description": "key của từ trong lesson.vocab",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Key"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "term_keys"
+      ],
+      "unevaluatedProperties": false
+    },
+    "BuildTray": {
+      "description": "Chơi: chọn món vào mâm, ràng buộc theo nhóm (Discoverer Chơi)",
+      "$ref": "#/$defs/BlockBase",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "build_tray"
+        },
+        "prompt": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "capacity": {
+          "description": "Số chỗ trên mâm",
+          "type": "integer",
+          "minimum": 1
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TrayGroup"
+          },
+          "minItems": 1
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TrayItem"
+          },
+          "minItems": 1
+        },
+        "messages": {
+          "$ref": "#/$defs/TrayMessages"
+        },
+        "success_when": {
+          "const": "all_required_and_no_limit"
+        }
+      },
+      "required": [
+        "prompt",
+        "capacity",
+        "groups",
+        "items",
+        "messages",
+        "success_when"
+      ],
+      "unevaluatedProperties": false
+    },
+    "TrayGroup": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "color": {
+          "$ref": "common.schema.json#/$defs/ColorToken"
+        },
+        "role": {
+          "description": "required = mâm phải có; limit = không được có; neutral = tuỳ",
+          "type": "string",
+          "enum": [
+            "required",
+            "limit",
+            "neutral"
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "color",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "TrayItem": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "group": {
+          "$ref": "common.schema.json#/$defs/Key",
+          "description": "key của một nhóm trong groups"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "group"
+      ],
+      "additionalProperties": false
+    },
+    "TrayMessages": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "full": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "balanced": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "has_limited": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "missing": {
+          "description": "Lời nhắc khi mâm thiếu một nhóm required, theo key nhóm",
+          "type": "object",
+          "propertyNames": {
+            "$ref": "common.schema.json#/$defs/Key"
+          },
+          "additionalProperties": {
+            "$ref": "common.schema.json#/$defs/Spoken"
+          },
+          "minProperties": 1
+        }
+      },
+      "required": [
+        "start",
+        "full",
+        "balanced",
+        "has_limited",
+        "missing"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

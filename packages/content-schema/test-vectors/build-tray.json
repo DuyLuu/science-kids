@@ -1,0 +1,479 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "build-tray",
+  "version": 1,
+  "source": "docs/backlog/SK-012 (tiêu chí Mâm cơm, 7 lời nhắn); SK-001 build_tray và success_when = all_required_and_no_limit; SK-002 (Chơi, 7 lời nhắn); SK-009 (thứ tự missing theo groups); canvas Discoverer-Play.dc.html (hàm render, dòng 237–262); SK-012 T1–T4 và quyết định 3 (Duy chốt 29/10)",
+  "function": "build_tray(block, tray, taps) -> {tray[], full, missing[], has_limited, success, message} | {error}",
+  "platforms": ["app"],
+  "notes": [
+    "block chỉ gồm phần luật của build_tray ở SK-001: capacity; groups[].key và role; items[].key và group. Chữ hiển thị (label, messages) bỏ đi. Block \"A\" là block thật của bài 1 (fixture 01-thuc-an-cho-ta-nhung-gi, groups theo thứ tự protein, veg, carb, sweet); check-vectors đối chiếu với fixture. Các block có key không có tiền tố tray_ là block tự đặt, dùng để chứng minh thứ tự xét missing lấy từ groups chứ không khoá trong code.",
+    "tray là mâm lúc bắt đầu (key món theo thứ tự đặt, rỗng khi vào màn). taps là chuỗi key món bé chạm, theo thứ tự. Hàm chạy lần lượt từng lần chạm rồi tính trạng thái cuối. taps rỗng nghĩa là chỉ đánh giá mâm có sẵn.",
+    "Một lần chạm: món đang có trong mâm thì bỏ ra và tắt full; món chưa có mà mâm còn chỗ thì thêm vào cuối và tắt full; món chưa có mà mâm đã đủ capacity thì không đổi mâm và bật full (T1). full chỉ là cờ tạm, không suy ra từ độ dài mâm (T1, Duy chốt 29/10).",
+    "missing: các nhóm required chưa có món nào trong mâm, theo thứ tự groups. has_limited: có món thuộc nhóm limit. success = missing rỗng và has_limited false (success_when). Nhóm neutral không ảnh hưởng.",
+    "message là khoá lời nhắn, không phải chữ: start, full, balanced, has_limited hoặc missing.<key nhóm>. Thứ tự ưu tiên: balanced (khi success, kể cả khi cờ full đang bật), full, has_limited, mâm trống thì start, còn lại missing.<nhóm đầu của missing theo thứ tự groups> (T2 và T3, Duy chốt 29/10). Khi cờ full bật và success thì cờ full vẫn true nhưng message là balanced.",
+    "Lỗi: unknown_item (món không thuộc block, ở mâm khởi đầu hoặc chuỗi chạm), invalid_tray (mâm khởi đầu có món trùng hoặc quá capacity) (T4). Mỗi case lỗi chỉ có đúng một lỗi."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": {
+      "num": 5,
+      "den": 6
+    },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": {
+        "target": 7,
+        "min": 5,
+        "max": 10
+      },
+      "month": {
+        "target": 30,
+        "min": 21,
+        "max": 45
+      },
+      "exclude_dok": [
+        3
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "build-tray-001",
+      "description": "Mâm trống, chưa chạm gì: lời nhắn mở đầu \"start\"; chưa có nhóm nào nên thiếu cả ba nhóm bắt buộc, liệt kê theo thứ tự groups của bài 1 (protein, veg, carb); success false (success_when cần đủ nhóm bắt buộc).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": []
+      },
+      "expected": {"tray":[],"full":false,"missing":["tray_protein","tray_veg","tray_carb"],"has_limited":false,"success":false,"message":"start"}
+    },
+    {
+      "id": "build-tray-002",
+      "description": "Chạm cơm vào mâm trống: mâm có bột đường, còn thiếu đạm và rau quả. Theo thứ tự groups (protein, veg, carb) đạm đứng trước nên lời nhắn là missing.tray_protein.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["tray_rice"]
+      },
+      "expected": {"tray":["tray_rice"],"full":false,"missing":["tray_protein","tray_veg"],"has_limited":false,"success":false,"message":"missing.tray_protein"}
+    },
+    {
+      "id": "build-tray-003",
+      "description": "Mâm đủ ba nhóm bắt buộc (cơm, cá kho, rau muống), không có đồ ngọt, còn thừa 1 chỗ: success true, lời nhắn balanced (success_when = all_required_and_no_limit).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_greens"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-004",
+      "description": "Mâm đủ 4/4 chỗ và cân bằng (cơm, cá kho, rau muống, chuối), không chạm thêm gì: success true, lời nhắn balanced, full false. Trên canvas \"mâm đầy\" chỉ bật khi chạm món thứ 5, nên mâm vừa đầy chưa phải full (T1; Duy chốt 29/10).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_greens","tray_banana"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens","tray_banana"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-005",
+      "description": "Một bộ món khác (bánh mì, trứng, chuối) cũng đủ ba nhóm: success phụ thuộc nhóm của món chứ không phụ thuộc món cụ thể.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_bread","tray_egg","tray_banana"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_bread","tray_egg","tray_banana"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-006",
+      "description": "Thiếu đúng nhóm bột đường (cá kho + rau muống): lời nhắn missing.tray_carb.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_fish","tray_greens"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_fish","tray_greens"],"full":false,"missing":["tray_carb"],"has_limited":false,"success":false,"message":"missing.tray_carb"}
+    },
+    {
+      "id": "build-tray-007",
+      "description": "Thiếu đúng nhóm đạm (cơm + rau muống): lời nhắn missing.tray_protein.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_greens"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_greens"],"full":false,"missing":["tray_protein"],"has_limited":false,"success":false,"message":"missing.tray_protein"}
+    },
+    {
+      "id": "build-tray-008",
+      "description": "Thiếu đúng nhóm rau và quả (cơm + cá kho): lời nhắn missing.tray_veg.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_fish"],"full":false,"missing":["tray_veg"],"has_limited":false,"success":false,"message":"missing.tray_veg"}
+    },
+    {
+      "id": "build-tray-009",
+      "description": "Mâm chỉ có cá kho: thiếu rau quả và bột đường. Xét theo thứ tự groups của bài 1 (protein, veg, carb) nên lời nhắn là missing.tray_veg, trùng với canvas. Duy chốt 29/10: luật là theo groups (SK-012 quyết định 3, T3).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_fish"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_fish"],"full":false,"missing":["tray_veg","tray_carb"],"has_limited":false,"success":false,"message":"missing.tray_veg"}
+    },
+    {
+      "id": "build-tray-010",
+      "description": "Mâm chỉ có rau muống: thiếu đạm và bột đường. Xét theo groups (protein, veg, carb) nên lời nhắn là missing.tray_protein, trùng với canvas. Duy chốt 29/10 (SK-012 quyết định 3, T3).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_greens"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_greens"],"full":false,"missing":["tray_protein","tray_carb"],"has_limited":false,"success":false,"message":"missing.tray_protein"}
+    },
+    {
+      "id": "build-tray-011",
+      "description": "Hai món cùng nhóm (cơm và bánh mì) chỉ tính là một nhóm bột đường, vẫn thiếu đạm và rau quả: có hai món không có nghĩa là có hai nhóm.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_bread"],"full":false,"missing":["tray_protein","tray_veg"],"has_limited":false,"success":false,"message":"missing.tray_protein"}
+    },
+    {
+      "id": "build-tray-012",
+      "description": "Mâm chỉ có kẹo: có nhóm limit và còn thiếu cả ba nhóm bắt buộc (theo groups: protein, veg, carb). Lời nhắn là has_limited, không phải missing (has_limited đứng trước missing, T2; Duy chốt 29/10).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_candy"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_candy"],"full":false,"missing":["tray_protein","tray_veg","tray_carb"],"has_limited":true,"success":false,"message":"has_limited"}
+    },
+    {
+      "id": "build-tray-013",
+      "description": "Đủ ba nhóm bắt buộc nhưng thêm kẹo: success false vì có nhóm limit (success_when cần không có đồ ngọt), không thiếu nhóm nào, lời nhắn has_limited (không phải balanced).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_greens","tray_candy"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens","tray_candy"],"full":false,"missing":[],"has_limited":true,"success":false,"message":"has_limited"}
+    },
+    {
+      "id": "build-tray-014",
+      "description": "Cơm và nước ngọt: có đồ ngọt và còn thiếu đạm, rau quả. Lời nhắn has_limited đứng trước missing (T2; Duy chốt 29/10).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_soda"],
+        "taps": []
+      },
+      "expected": {"tray":["tray_rice","tray_soda"],"full":false,"missing":["tray_protein","tray_veg"],"has_limited":true,"success":false,"message":"has_limited"}
+    },
+    {
+      "id": "build-tray-015",
+      "description": "Nhóm neutral (nước lọc) không ảnh hưởng success: đủ ba nhóm bắt buộc kèm nước lọc vẫn success true, balanced (block có 5 chỗ).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":5,"groups":[{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"carb","role":"required"},{"key":"drink","role":"neutral"},{"key":"sweet","role":"limit"}],"items":[{"key":"fish","group":"protein"},{"key":"greens","group":"veg"},{"key":"rice","group":"carb"},{"key":"water","group":"drink"},{"key":"candy","group":"sweet"}]},
+        "tray": ["fish","greens","rice","water"],
+        "taps": []
+      },
+      "expected": {"tray":["fish","greens","rice","water"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-016",
+      "description": "Chỉ có món neutral (nước lọc): không thuộc nhóm bắt buộc nên vẫn thiếu cả ba, không phải đồ ngọt. Lời nhắn theo groups của block này (protein trước).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":5,"groups":[{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"carb","role":"required"},{"key":"drink","role":"neutral"},{"key":"sweet","role":"limit"}],"items":[{"key":"fish","group":"protein"},{"key":"greens","group":"veg"},{"key":"rice","group":"carb"},{"key":"water","group":"drink"},{"key":"candy","group":"sweet"}]},
+        "tray": ["water"],
+        "taps": []
+      },
+      "expected": {"tray":["water"],"full":false,"missing":["protein","veg","carb"],"has_limited":false,"success":false,"message":"missing.protein"}
+    },
+    {
+      "id": "build-tray-017",
+      "description": "Block tự đặt có groups thứ tự bột, rau, đạm (khác bài 1); mâm chỉ có cơm, thiếu rau và đạm. Xét theo groups ra missing.veg. Thứ tự xét lấy từ groups của chính block, không khoá theo canvas (đạm, rau, bột) và không theo thứ tự items (Duy chốt 29/10, T3).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":3,"groups":[{"key":"carb","role":"required"},{"key":"veg","role":"required"},{"key":"protein","role":"required"}],"items":[{"key":"fish","group":"protein"},{"key":"greens","group":"veg"},{"key":"rice","group":"carb"}]},
+        "tray": ["rice"],
+        "taps": []
+      },
+      "expected": {"tray":["rice"],"full":false,"missing":["veg","protein"],"has_limited":false,"success":false,"message":"missing.veg"}
+    },
+    {
+      "id": "build-tray-018",
+      "description": "Mâm đã cân bằng 4/4, chạm thêm kẹo: không còn chỗ nên mâm giữ nguyên, cờ full true, nhưng success true nên lời nhắn là balanced (\"Tuyệt!\" thắng \"Mâm đầy rồi\"; T1, T2 mới, Duy chốt 29/10). Trước đây case này ra message full.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_greens","tray_banana"],
+        "taps": ["tray_candy"]
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens","tray_banana"],"full":true,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-019",
+      "description": "Mâm đầy 4/4 chỗ nhưng thiếu rau quả (cơm, bánh mì, cá kho, trứng); chạm rau muống: bị từ chối, mâm giữ nguyên, full true, chưa success nên lời nhắn full thắng missing.tray_veg (T1, T2). Missing vẫn liệt kê rau quả.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_egg"],
+        "taps": ["tray_greens"]
+      },
+      "expected": {"tray":["tray_rice","tray_bread","tray_fish","tray_egg"],"full":true,"missing":["tray_veg"],"has_limited":false,"success":false,"message":"full"}
+    },
+    {
+      "id": "build-tray-020",
+      "description": "Mâm đầy và đang full; chạm bỏ trứng ra: full tắt, mâm còn 3 món, thiếu rau quả nên lời nhắn là missing.tray_veg. Chạm bỏ món là thao tác đổi được mâm (T1).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_egg"],
+        "taps": ["tray_greens","tray_egg"]
+      },
+      "expected": {"tray":["tray_rice","tray_bread","tray_fish"],"full":false,"missing":["tray_veg"],"has_limited":false,"success":false,"message":"missing.tray_veg"}
+    },
+    {
+      "id": "build-tray-021",
+      "description": "Mâm đầy và đang full; chạm tiếp món khác chưa có (kẹo) vẫn bị từ chối: mâm giữ nguyên, full vẫn true (chỉ thao tác đổi được mâm mới tắt full, T1).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_egg"],
+        "taps": ["tray_greens","tray_candy"]
+      },
+      "expected": {"tray":["tray_rice","tray_bread","tray_fish","tray_egg"],"full":true,"missing":["tray_veg"],"has_limited":false,"success":false,"message":"full"}
+    },
+    {
+      "id": "build-tray-022",
+      "description": "Đường thoát khi mâm đầy thiếu rau quả: chạm rau muống (full), bỏ trứng, chạm rau muống lần nữa → rau muống vào được, mâm (cơm, bánh mì, cá kho, rau muống) đủ ba nhóm, success true, full false, balanced.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_egg"],
+        "taps": ["tray_greens","tray_egg","tray_greens"]
+      },
+      "expected": {"tray":["tray_rice","tray_bread","tray_fish","tray_greens"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-023",
+      "description": "Chạm món đang có trong mâm thì bỏ ra (ticket: chạm món để đặt vào hoặc bỏ ra): cơm vào rồi ra, mâm về trống, lời nhắn quay lại start.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["tray_rice","tray_rice"]
+      },
+      "expected": {"tray":[],"full":false,"missing":["tray_protein","tray_veg","tray_carb"],"has_limited":false,"success":false,"message":"start"}
+    },
+    {
+      "id": "build-tray-024",
+      "description": "Dựng mâm từng bước bằng chạm: cơm, cá kho, rau muống → success true; thứ tự trong mâm là thứ tự đặt.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["tray_rice","tray_fish","tray_greens"]
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-025",
+      "description": "Bỏ món ở giữa mâm: mâm (cơm, cá kho, rau muống), bỏ cá kho rồi đặt trứng → (cơm, rau muống, trứng); các món còn lại giữ thứ tự, món mới nối vào cuối.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_greens"],
+        "taps": ["tray_fish","tray_egg"]
+      },
+      "expected": {"tray":["tray_rice","tray_greens","tray_egg"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-026",
+      "description": "Thêm kẹo rồi bỏ kẹo: cơm, kẹo, cá kho, rau muống (has_limited, success false) rồi chạm kẹo lần nữa để bỏ → mâm cân bằng, balanced. Đồ ngọt bỏ ra thì hết bị phạt.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["tray_rice","tray_candy","tray_fish","tray_greens","tray_candy"]
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-027",
+      "description": "capacity đọc từ block chứ không cố định 4: block 3 chỗ, mâm (cơm, cá kho, rau muống) đã đầy và cân bằng; chạm chuối bị từ chối, cờ full true nhưng success true nên lời nhắn balanced (T2 mới). Trước đây message full.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":3,"groups":[{"key":"carb","role":"required"},{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"sweet","role":"limit"}],"items":[{"key":"rice","group":"carb"},{"key":"fish","group":"protein"},{"key":"greens","group":"veg"},{"key":"banana","group":"veg"},{"key":"candy","group":"sweet"}]},
+        "tray": ["rice","fish","greens"],
+        "taps": ["banana"]
+      },
+      "expected": {"tray":["rice","fish","greens"],"full":true,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-028",
+      "description": "Block 5 chỗ: mâm 4 món (cá, rau, cơm, nước lọc) chạm thêm kẹo vẫn vừa (món thứ 5 không phải thứ 6): full false; có đồ ngọt nên lời nhắn has_limited, success false.",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":5,"groups":[{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"carb","role":"required"},{"key":"drink","role":"neutral"},{"key":"sweet","role":"limit"}],"items":[{"key":"fish","group":"protein"},{"key":"greens","group":"veg"},{"key":"rice","group":"carb"},{"key":"water","group":"drink"},{"key":"candy","group":"sweet"}]},
+        "tray": ["fish","greens","rice","water"],
+        "taps": ["candy"]
+      },
+      "expected": {"tray":["fish","greens","rice","water","candy"],"full":false,"missing":[],"has_limited":true,"success":false,"message":"has_limited"}
+    },
+    {
+      "id": "build-tray-029",
+      "description": "Chạm món không thuộc block (pizza): lỗi unknown_item, không đoán, không bỏ qua. Dữ liệu hỏng không được chấm.",
+      "status": "proposed",
+      "decision": "SK-012/T4",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["pizza"]
+      },
+      "expected": {"error":"unknown_item"}
+    },
+    {
+      "id": "build-tray-030",
+      "description": "Chuỗi chạm có một món lạ ở giữa (cơm rồi pizza): cả lần gọi trả unknown_item, không trả kết quả dở dang của cơm.",
+      "status": "proposed",
+      "decision": "SK-012/T4",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": [],
+        "taps": ["tray_rice","pizza"]
+      },
+      "expected": {"error":"unknown_item"}
+    },
+    {
+      "id": "build-tray-031",
+      "description": "Mâm khởi đầu (đã lưu khi dừng giữa bài) chứa món lạ: unknown_item.",
+      "status": "proposed",
+      "decision": "SK-012/T4",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_pizza"],
+        "taps": []
+      },
+      "expected": {"error":"unknown_item"}
+    },
+    {
+      "id": "build-tray-032",
+      "description": "Mâm khởi đầu có món trùng (cơm hai lần): invalid_tray. Mâm theo chạm không bao giờ có món trùng, nên mâm như vậy là dữ liệu hỏng.",
+      "status": "proposed",
+      "decision": "SK-012/T4",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_rice"],
+        "taps": []
+      },
+      "expected": {"error":"invalid_tray"}
+    },
+    {
+      "id": "build-tray-033",
+      "description": "Mâm khởi đầu nhiều hơn capacity (5 món trên mâm 4 chỗ): invalid_tray.",
+      "status": "proposed",
+      "decision": "SK-012/T4",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_egg","tray_greens"],
+        "taps": []
+      },
+      "expected": {"error":"invalid_tray"}
+    },
+    {
+      "id": "build-tray-034",
+      "description": "Bắt lỗi khoá cứng thứ tự: block tự đặt có groups carb, protein, veg (đảo so với canvas: đạm, rau, bột). Mâm chỉ có cá kho, thiếu bột đường và rau quả. Xét theo groups ra missing.carb; bản cài khoá canvas ra missing.veg, bản cài khoá thứ tự cũ cũng ra carb nhưng sẽ sai ở 035 (T3; Duy chốt 29/10).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"carb","role":"required"},{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"sweet","role":"limit"}],"items":[{"key":"rice","group":"carb"},{"key":"bread","group":"carb"},{"key":"fish","group":"protein"},{"key":"egg","group":"protein"},{"key":"greens","group":"veg"},{"key":"banana","group":"veg"},{"key":"candy","group":"sweet"},{"key":"soda","group":"sweet"}]},
+        "tray": ["fish"],
+        "taps": []
+      },
+      "expected": {"tray":["fish"],"full":false,"missing":["carb","veg"],"has_limited":false,"success":false,"message":"missing.carb"}
+    },
+    {
+      "id": "build-tray-035",
+      "description": "Bắt lỗi khoá cứng thứ tự: block tự đặt có groups veg, carb, protein. Mâm chỉ có cơm, thiếu rau quả và đạm. Xét theo groups ra missing.veg; canvas (đạm trước) ra missing.protein, thứ tự cũ (bột, đạm, rau) cũng ra missing.protein (T3).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"veg","role":"required"},{"key":"carb","role":"required"},{"key":"protein","role":"required"},{"key":"sweet","role":"limit"}],"items":[{"key":"rice","group":"carb"},{"key":"bread","group":"carb"},{"key":"fish","group":"protein"},{"key":"egg","group":"protein"},{"key":"greens","group":"veg"},{"key":"banana","group":"veg"},{"key":"candy","group":"sweet"},{"key":"soda","group":"sweet"}]},
+        "tray": ["rice"],
+        "taps": []
+      },
+      "expected": {"tray":["rice"],"full":false,"missing":["veg","protein"],"has_limited":false,"success":false,"message":"missing.veg"}
+    },
+    {
+      "id": "build-tray-036",
+      "description": "Block tự đặt có groups carb, protein, veg; dựng mâm bằng chạm: bỏ ra rồi thêm lại. Chạm rau muống, rồi cá kho, rồi bỏ rau muống: mâm còn cá kho, thiếu bột đường và rau quả, missing.carb (missing tính lại từ mâm cuối, vẫn theo groups).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"carb","role":"required"},{"key":"protein","role":"required"},{"key":"veg","role":"required"},{"key":"sweet","role":"limit"}],"items":[{"key":"rice","group":"carb"},{"key":"bread","group":"carb"},{"key":"fish","group":"protein"},{"key":"egg","group":"protein"},{"key":"greens","group":"veg"},{"key":"banana","group":"veg"},{"key":"candy","group":"sweet"},{"key":"soda","group":"sweet"}]},
+        "tray": [],
+        "taps": ["greens","fish","greens"]
+      },
+      "expected": {"tray":["fish"],"full":false,"missing":["carb","veg"],"has_limited":false,"success":false,"message":"missing.carb"}
+    },
+    {
+      "id": "build-tray-037",
+      "description": "Mâm đầy và đạt, vừa bị từ chối món không phải đồ ngọt: mâm (cơm, bánh mì, cá kho, rau muống) đủ ba nhóm, chạm trứng bị từ chối. Cờ full true, success true nên lời nhắn balanced (T2: balanced thắng full).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_greens"],
+        "taps": ["tray_egg"]
+      },
+      "expected": {"tray":["tray_rice","tray_bread","tray_fish","tray_greens"],"full":true,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    },
+    {
+      "id": "build-tray-038",
+      "description": "Mâm đầy, chưa đạt, vừa bị từ chối món: mâm (cơm, cá kho, kẹo, nước ngọt) đủ chỗ, thiếu rau quả và có đồ ngọt; chạm rau muống bị từ chối. Cờ full true, chưa success nên lời nhắn full (full thắng has_limited và missing; T1, T2).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_fish","tray_candy","tray_soda"],
+        "taps": ["tray_greens"]
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_candy","tray_soda"],"full":true,"missing":["tray_veg"],"has_limited":true,"success":false,"message":"full"}
+    },
+    {
+      "id": "build-tray-039",
+      "description": "Mâm đầy, đạt, bị từ chối món rồi bé bỏ một món: cờ full tắt, mâm còn 3 món cân bằng, lời nhắn balanced. Cùng lời nhắn với trước khi bỏ, nhưng full phải về false (T1).",
+      "status": "confirmed",
+      "input": {
+        "block": {"capacity":4,"groups":[{"key":"tray_protein","role":"required"},{"key":"tray_veg","role":"required"},{"key":"tray_carb","role":"required"},{"key":"tray_sweet","role":"limit"}],"items":[{"key":"tray_rice","group":"tray_carb"},{"key":"tray_bread","group":"tray_carb"},{"key":"tray_fish","group":"tray_protein"},{"key":"tray_egg","group":"tray_protein"},{"key":"tray_greens","group":"tray_veg"},{"key":"tray_banana","group":"tray_veg"},{"key":"tray_candy","group":"tray_sweet"},{"key":"tray_soda","group":"tray_sweet"}]},
+        "tray": ["tray_rice","tray_bread","tray_fish","tray_greens"],
+        "taps": ["tray_egg","tray_bread"]
+      },
+      "expected": {"tray":["tray_rice","tray_fish","tray_greens"],"full":false,"missing":[],"has_limited":false,"success":true,"message":"balanced"}
+    }
+  ]
+}

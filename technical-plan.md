@@ -1,6 +1,6 @@
 # Science Kids — Tóm tắt PRD và Technical plan
 
-> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Chưa publish artifact; khi chốt sẽ publish như PRD.
+> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Sửa 31/10: giọng tiếng Việt lên ưu tiên, Duy chọn thử VieNeu-TTS giọng Nam (B9, B16, B18 #3, B20). Sửa 1/11: Duy chốt giọng VI Kim Thanh (B9, B16, B18 #3, B20). Sửa 1/11: dạng quiz theo nhóm tuổi (SK-026) (A2, B4.1, B4.2, B4.3, B4.4, B5.3, B8.0, B16). Chưa publish artifact; khi chốt sẽ publish như PRD.
 > **Cách đọc nhãn:** *(PRD)* = đã chốt trong prd.md · *(canvas)* = Duy đã duyệt trên canvas thiết kế nhưng chưa ghi vào PRD · *(đề xuất)* = từ syllabus-progression hoặc plan này, chưa chốt.
 > Nguồn: [prd.md](prd.md) · [syllabus.md](syllabus.md) · [syllabus-progression.md](syllabus-progression.md) · thiết kế [design/play-ui/](design/play-ui/project/) (canvas https://claude.ai/artifact/MLvDKD33FWJ7aTMS7XX3Zk).
 > Quy ước kỹ thuật theo cách bạn đang làm ở ise_center: Supabase CLI migrations, Next.js + TanStack Query + zod, Vercel.
@@ -28,9 +28,9 @@
 
 | Nhóm | Tuổi / khung Oak | Đặc điểm thiết kế |
 | --- | --- | --- |
-| Explorer | 5–7 · Year 1–2 | Chưa đọc thạo; mascot đọc to; chạm ≥ 72px *(canvas)*; đáp án bằng hình; không điểm số |
+| Explorer | 5–7 · Year 1–2 | Chưa đọc thạo; mascot đọc to; chạm ≥ 72px *(canvas)*; đáp án bằng hình. **Làm được quiz chỉ bằng nghe và nhìn:** chạm thẻ hình là trả lời, app đọc tên hình vừa chọn; Đúng/Sai bằng biểu tượng; lựa chọn và nút không có chữ, câu hỏi có chữ ngắn làm phụ đề. **Chấm ngầm:** bé thấy sao và sticker, không thấy số câu đúng, không có XP (`xp_*` = 0). *(1/11, Duy chốt SK-026; trước ghi "không điểm số")* |
 | **Discoverer (pilot)** | 7–9 · Year 3–4 | Câu EN ≤ 8–10 từ, phụ đề VI bật sẵn; chạm ≥ 56px *(canvas)*; sao, streak, huy hiệu *(PRD)*; XP, thẻ sưu tầm, thử thách tuần *(canvas, mở rộng so với PRD)* |
-| Scientist | 9–11 · Year 5–6 | Câu dài hơn, VI ẩn; chạm ≥ 48px *(canvas)*; thí nghiệm công bằng, chọn bằng chứng, nhật ký |
+| Scientist | 9–11 · Year 5–6 | Câu dài hơn, VI ẩn; chạm ≥ 48px *(canvas)*; thí nghiệm công bằng, chọn bằng chứng, nhật ký; quiz không tự đọc, có nút nghe *(1/11, Duy chốt SK-026)* |
 | Phụ huynh | — | PIN, báo cáo tuần, giới hạn thời gian, quản lý hồ sơ con và gói |
 | Giáo viên / trung tâm | GĐ 3 | Ngoài MVP |
 
@@ -156,7 +156,7 @@ science-kids/
 ├── tools/
 │   └── content-cli/         # MVP: validate markdown → JSON, sinh TTS, build gói, upload (Node/TS)
 ├── packages/
-│   ├── content-schema/      # JSON Schema nội dung + zod + model Swift/Kotlin sinh tự động + fixtures + test vectors
+│   ├── content-schema/      # JSON Schema nội dung + zod + fixtures + test vectors (model Swift/Kotlin viết tay, không codegen ở MVP)
 │   ├── design-tokens/       # tokens.json (màu, chữ, bán kính, bóng, motion) → Swift, Kotlin, CSS
 │   └── shared/              # Kiểu TypeScript sinh từ Supabase, hằng số dùng chung
 ├── database/supabase/
@@ -192,6 +192,11 @@ Mọi chuỗi hiển thị là cặp song ngữ: `{"en": "...", "vi": "..."}`. C
 
 **Giọng đọc là lựa chọn của hồ sơ** (`child_profiles.voice_mode`: `en` · `vi` · `both`), bố mẹ chọn lúc thiết lập và đổi trong Góc phụ huynh. `both` = EN đọc trước, VI đọc nối theo; `en` hoặc `vi` chỉ phát một thứ tiếng, nút nghe thứ tiếng kia vẫn có để chạm khi cần. Mặc định gợi ý lúc onboarding lấy từ `rules`: Song ngữ → `both`, EN-first → `en`, VI-first → `both`; Explorer luôn gợi ý `both`. Lời mascot, gợi ý và giải thích đáp án (phần lớn là VI) cũng có audio, vì bé nhỏ nhận gợi ý bằng tai. Gói nội dung luôn chứa cả hai clip; app chỉ tải trước clip của thứ tiếng đang bật.
 
+**Tự đọc ở Khởi động và Quiz theo nhóm tuổi** *(1/11, Duy chốt SK-026)*:
+- **Explorer:** tự đọc câu hỏi khi mở; không đọc tên lựa chọn trước khi chọn; chạm thẻ thì đọc tên hình vừa chọn; sai thì tự đọc gợi ý; xong câu thì tự đọc giải thích.
+- **Discoverer:** tự đọc câu hỏi khi mở; gợi ý và giải thích có nút nghe (SK-016 câu 4 còn mở).
+- **Scientist:** không tự đọc; có nút nghe ở câu hỏi, lời nhân vật và lựa chọn.
+
 ### B4.2 Kiểu block (registry)
 
 Mỗi block có `type` và `version`. App gặp `type` không biết thì bỏ qua block đó và báo analytics, không crash. Bước publish (CLI ở MVP, CMS ở GĐ 2) chặn block mà `min_app_version` của nó cao hơn bản app đang phổ biến.
@@ -206,10 +211,17 @@ Mỗi block có `type` và `version`. App gặp `type` không biết thì bỏ q
 | Chơi | `build_tray` (chọn món vào mâm, ràng buộc theo nhóm chất) | Discoverer Chơi |
 | Chơi | `fair_test` (xếp biến vào Thay đổi / Đo / Giữ nguyên) | Scientist Thí nghiệm |
 | Chơi | `label_diagram` (GĐ 2) | — |
-| Quiz | `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank`, `fill_blank_free` (Scientist), `order_sequence`, `picture_bar_chart` (đọc biểu đồ cột dạng tranh, Discoverer), `evidence_choice` (Scientist) | Quiz, Khởi động, Quiz câu 6 |
+| Quiz | `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank`, `fill_blank_free` (Scientist), `order_sequence`, `picture_bar_chart` (đọc biểu đồ cột dạng tranh, Discoverer), `evidence_choice` (Scientist), `sort_into_groups` (phân nhóm trong quiz, Explorer và Discoverer, GĐ 2; *1/11, Duy chốt SK-026*) | Quiz, Khởi động, Quiz câu 6 |
 | Quiz | `label_diagram` | GĐ 2 (cả Chơi và Quiz) |
 
-Trường chung của `quiz_item`: `id`, `format`, `dok` (1–3), `prompt`, `options[]` (mỗi lựa chọn có `id`, `label`, `image?`, `correct`), `hint` (gợi ý, thường là VI), `explanation_correct`, `explanation_wrong`, `misconception_id?`, `p_correct?` (điền sau beta), `audio`. `topic` và `lesson` có cờ `sensitive` (nội dung dậy thì, PRD mục 11) để app ẩn cho tới khi phụ huynh bật.
+Trường chung của `quiz_item`: `id`, `format`, `dok` (1–3), `prompt`, `options[]` (mỗi lựa chọn có `id`, `label`, `image?`, `correct`), `hint` (gợi ý, thường là VI), `explanation_correct`, `explanation_wrong`, `misconception_id?`, `p_correct?` (điền sau beta), `audio`.
+
+**Dạng câu và cách hiện theo nhóm tuổi** *(1/11, Duy chốt SK-026; bảng đầy đủ ở SK-026)*:
+- Nhóm nào được dùng format nào, số lựa chọn, hình bắt buộc và DOK là luật soạn trong `rules.<age_group>.authoring` (B5.3), do `content-cli` kiểm (B8.0). JSON Schema giữ chung cho mọi nhóm.
+- Explorer bắt buộc có `image` ở mọi lựa chọn, mọi thẻ sắp thứ tự, và ở câu `true_false`. `label` vẫn bắt buộc: đó là tên app đọc sau khi bé chọn và nhãn VoiceOver.
+- Một ý mới mà thiếu nó câu hỏi mất nghĩa thì phải là format mới, không phải trường tuỳ chọn. Lý do: app cũ bỏ qua khoá lạ nhưng vẫn hiện câu. Ví dụ `evidence_choice` có `claim` + `speaker`, không phải `single_choice` thêm `statement`.
+
+`topic` và `lesson` có cờ `sensitive` (nội dung dậy thì, PRD mục 11) để app ẩn cho tới khi phụ huynh bật.
 
 **Id ổn định:** id của chủ đề, bài, block, câu quiz, từ vựng là UUID cấp một lần (ở MVP: biên tập ghi `id` trong frontmatter markdown, CLI sinh nếu thiếu và ghi ngược lại file) và không đổi qua các lần publish; sửa nội dung giữ id, bỏ nội dung thì `archived` chứ không xoá, để `lesson_progress` và `vocab_progress` không mồ côi. `p_correct` hiệu chỉnh theo cặp (`item_id`, `content_version`).
 
@@ -236,7 +248,9 @@ Trường chung của `quiz_item`: `id`, `format`, `dok` (1–3), `prompt`, `opt
 - **Nơi đặt file (28/10, sau research free tier):** asset (hình, audio — phần lớn dung lượng) và gói free đặt trên **Cloudflare R2** (10 GB free, **egress 0 đồng**, có CDN); gói premium `pack.json` (nhỏ, vài trăm KB) đặt ở Supabase Storage bucket riêng tư `content-premium`, app tải bằng token của user qua Storage RLS kiểm `billing_entitlements` (B6). Lý do: gói free của Supabase chỉ có 5 GB egress/tháng, 50 gia đình tải vài chủ đề 15 MB là hết; R2 không tính egress. Asset dùng chung để public vì tách riêng không có giá trị bảo vệ đáng kể.
 - **Phiên bản:** một bản publish là bất biến. App giữ phiên bản đã tải cho tới khi bé học xong bài đang dở, rồi mới chuyển bản mới. Mỗi lần làm bài ghi `content_version` để báo cáo và hiệu chỉnh `p_correct` không bị lẫn phiên bản.
 - **Ước lượng dung lượng:** mỗi bài khoảng 15 hình WebP (≈ 60 KB) + 60 clip audio EN và VI (≈ 30 KB), tức khoảng 3 MB/bài, khoảng 15 MB/chủ đề. MVP tải theo chủ đề khi bé mở; GĐ 2 cho phụ huynh tải trước để học offline.
-- **Schema:** `packages/content-schema` giữ JSON Schema (nguồn), zod (CLI/CMS validate), model Swift `Codable` và Kotlin `@Serializable` sinh tự động. Đổi schema kiểu phá vỡ thì tăng `schema_version`; manifest khai báo `min_app_version` để app cũ hiện "Cập nhật app để học chủ đề này".
+- **Schema:** `packages/content-schema` giữ JSON Schema (nguồn), zod (CLI/CMS validate), model Swift `Codable` và Kotlin `@Serializable` viết tay ở MVP, kiểm bằng cách decode toàn bộ fixtures trong CI (B3). Đổi schema kiểu phá vỡ thì tăng `schema_version`; manifest khai báo `min_app_version` để app cũ hiện "Cập nhật app để học chủ đề này".
+  - *(1/11, Duy chốt SK-026)* App iOS hiện từ chối cả gói khi `schema_version` khác 1. Vì vậy mọi bổ sung (format mới, trường tuỳ chọn) giữ `schema_version` 1 ("v1.1"), chỉ thêm, không đổi, không bỏ.
+  - App cũ gặp format lạ thì bỏ câu, và quiz còn dưới 6 câu. Nên `build` giữ bảng `format → bản app đầu tiên hiện được` và báo lỗi khi `min_app_version` của chủ đề chưa hiện được một format trong bài. Bản 0.1.0 chưa hiện được `order_sequence` và `picture_bar_chart`.
 
 ### B4.4 Luật chấm và thưởng (v1, tham số trong `rules`)
 
@@ -250,7 +264,7 @@ Phần này là cái mà engine, test vector và pgTAP cùng dựa vào; sprint 
 | Điểm bài | `score` = số câu đúng / 6. Khởi động không tính điểm |
 | Sao | ⭐ hoàn thành bài; ⭐⭐ `score ≥ pass_threshold` (`4/6` theo PRD hiện tại, `5/6` theo đề xuất, là tham số); ⭐⭐⭐ đạt lại `pass_threshold` ở lần làm cách lần đạt đầu ≥ `mastery_gap_days` (mặc định 1) |
 | Ôn nhanh / siêu sao *(đề xuất syllabus §10)* | `score ≤ 3/6` → `lesson_progress.needs_quick_review = true`, app gợi ý ôn trước bài sau; 6/6 ở 2 bài liên tiếp → `superstar_unlocked = true`, mở câu DOK 3 tuỳ chọn (nội dung GĐ 2) |
-| XP | `xp_per_correct` 10 · `xp_lesson_complete` 20 · `xp_game_complete` 10 · ôn lại đạt thành thạo 20; XP chỉ cộng, không trừ |
+| XP | `xp_per_correct` 10 · `xp_lesson_complete` 20 · `xp_game_complete` 10 · ôn lại đạt thành thạo 20; XP chỉ cộng, không trừ. **Explorer:** `xp_*` = 0; vẫn chấm điểm và sao như trên, nhưng màn của bé không hiện số câu đúng *(1/11, Duy chốt SK-026)*. Chưa đặt vào `rules.json`: chờ chốt luật lấy theo nhóm của hồ sơ hay của chủ đề (SK-026) |
 | Chuỗi ngày | Ngày tính theo `local_date` của bé (B5.1); một ngày "đã học" khi hoàn thành ≥ 1 bài; mỗi tuần ISO được `rest_days_per_week` (1) ngày không học mà không đứt chuỗi |
 | Khởi động | Cần 2–3 câu: 1 câu từ bài gần nhất, 1 câu từ bài cách ~7 ngày, 1 câu cách ~30 ngày; thiếu lịch sử thì lấy câu từ các bài đã học gần nhất; bài đầu tiên của bé không có khởi động (màn "Hôm nay bắt đầu") |
 | Dừng giữa bài | Lưu `attempt_id`, bước và các câu đã trả lời trên máy; mở lại tiếp đúng chỗ; attempt bỏ dở quá 7 ngày thì huỷ |
@@ -259,7 +273,7 @@ Phần này là cái mà engine, test vector và pgTAP cùng dựa vào; sprint 
 
 ### B5.1 Quy ước (giống ise_center)
 
-- Migration: `database/supabase/migrations/YYYYMMDDHHMMSS_<tên>.sql`, giờ VN (`TZ='Asia/Ho_Chi_Minh' date +"%Y%m%d%H%M%S"`). Không tự `db push`; Duy review và chạy tay.
+- Schema khai báo `database/supabase/schemas/*.sql` là nguồn đối chiếu (trạng thái đầy đủ hiện tại). Mỗi thay đổi một file delta `database/supabase/migrations/YYYYMMDDHHMMSS_<tên>.sql`, giờ VN (`TZ='Asia/Ho_Chi_Minh' date +"%Y%m%d%H%M%S"`); giữ mọi delta. Agent tự apply delta lên staging bằng `scripts/db-apply.mjs` (psql qua session pooler, ghi vào `supabase_migrations.schema_migrations`) rồi chạy pgTAP; Duy không duyệt từng delta. Production Duy chạy tay (Duy chốt 29/10; khác ise_center ở điểm này).
 - Bảng `snake_case`. Bảng soạn nội dung có tiền tố `cms_`; bảng dữ liệu app không tiền tố; bảng thanh toán `billing_`; analytics `analytics_`.
 - Mỗi `CREATE TABLE public.*` kèm `ENABLE ROW LEVEL SECURITY`, policy và `GRANT` tường minh cho `authenticated` / `service_role` (không grant `anon` trừ khi cần đọc công khai).
 - RPC: tham số tiền tố `p_`, trả `jsonb` dạng `{ success, error_code, error, data }`, `SECURITY DEFINER` + `SET search_path = ''`, tên bảng đầy đủ `public.xxx`.
@@ -307,6 +321,9 @@ Trạng thái nội dung: `draft → in_review → approved → published` (và 
 | `rate_counters` | `owner_id`, `bucket`, `window_start`, `count` | Đếm cho giới hạn tốc độ trong RPC |
 
 **`rules` có một nguồn:** MVP là file `content/rules.json` trong repo (GĐ 2 chuyển vào `cms_age_groups.rules`); lúc publish, CLI chép sang `app_config` (`rules.<age_group>`, RPC đọc ở đây) và vào manifest (app đọc để tính tạm). Hai bản chỉ là bản sao của cùng một lần publish.
+- *(1/11, Duy chốt SK-026)* Mỗi nhóm có thêm `authoring`: luật soạn quiz theo nhóm, gồm format dùng ở Quiz và Khởi động, số lựa chọn, hình bắt buộc, phân bổ DOK, số câu misconception, số format tối thiểu, số từ EN mỗi câu. `content-cli` đọc khoá này (B8.0).
+- GĐ 2 thêm `presentation` (cách hiện quiz theo nhóm), nếu ios-dev đồng ý làm theo tham số.
+- App và RPC bỏ qua khoá lạ, nên thêm khoá không ảnh hưởng bản đang chạy.
 
 View tổng hợp (security invoker): `child_stats` (tổng sao, XP, chuỗi hiện tại), `parent_weekly_report` (tuần ISO theo múi giờ hồ sơ). KPI nội bộ ở MVP là vài câu SQL lưu trong `docs/`, chưa cần view riêng.
 
@@ -416,7 +433,7 @@ Các luật phải cho cùng kết quả trên 2 nền tảng: chấm quiz từn
 
 ### B7.5 Design system và motion
 
-- `packages/design-tokens/tokens.json` là nguồn: màu (điệp `#F0E6CF`, giấy `#FBF6EA`, than tre `#1E1B18`, đỏ son `#A93A27`, vàng hoè `#E2A52A`, gỉ đồng `#3B6E6A`, chàm `#2E4A6E`…), chữ (Phudu, Be Vietnam Pro — đóng gói font trong app, không tải từ mạng), bán kính theo nhóm tuổi, vùng chạm tối thiểu (72/56/48), bóng giấy.
+- `packages/design-tokens/tokens.json` là nguồn: màu (điệp `#F0E6CF`, giấy `#FBF6EA`, than tre `#1E1B18`, đỏ son `#A93A27` (nút chính), lá tre `#3F7A33` (chỉ để báo đúng, Duy chốt 29/10), vàng hoè `#E2A52A`, gỉ đồng `#3B6E6A`, chàm `#2E4A6E`…), chữ (Phudu, Be Vietnam Pro — đóng gói font trong app, không tải từ mạng), bán kính theo nhóm tuổi, vùng chạm tối thiểu (72/56/48), bóng giấy.
 - Motion: chuyển bộ CSS trên canvas sang preset native. `lay` (đặt giấy, ~460 ms), `stamp` (đóng triện, ~520 ms), `rise` (tờ giấy trượt lên, ~440 ms), `pop`, `slide`, `grow`, `flip` (lật thẻ 3D), `fall` (giấy vụn, chỉ màn Thưởng). Quy tắc giữ nguyên: mỗi màn 1 lượt hiện, tối đa 1 chuyển động lặp, sai không rung.
 - Giảm chuyển động: đọc `accessibilityReduceMotion` (iOS) / `ANIMATOR_DURATION_SCALE = 0` hoặc cài đặt trong app (Android) → tắt hết preset.
 - Canvas thiết kế là spec trực quan; khi có thay đổi lớn ở thiết kế, cập nhật tokens trước rồi mới tới code.
@@ -443,9 +460,10 @@ Thiết kế gốc là 390×844. Trên iPad không phóng to màn điện thoạ
 | Tình huống | Cách bố trí |
 | --- | --- |
 | iPhone (compact width) | Đúng như canvas 390×844; iPhone lớn thêm khoảng trắng theo lưới, không giãn chữ |
-| iPad dọc và iPad ngang, Slide Over, Split View (regular width) | Nội dung bài học đặt trong **khung giấy tối đa ~600pt** canh giữa, hai bên là nền điệp; mini-game và quiz tận dụng chiều ngang: lưới lựa chọn 3–4 cột thay vì 2, mâm cơm và khay xếp nhóm rộng hơn, hình minh hoạ to hơn nhưng không vượt 1,5× |
+| iPad dọc và iPad ngang, Split View 1/2 (regular width) | Nội dung bài học đặt trong **khung giấy tối đa ~600pt** canh giữa, hai bên là nền điệp; mini-game và quiz tận dụng chiều ngang: lưới lựa chọn 3–4 cột thay vì 2, mâm cơm và khay xếp nhóm rộng hơn, hình minh hoạ to hơn nhưng không vượt 1,5× |
 | Trang chủ, Bộ thẻ, Huy hiệu, Từ vựng trên iPad | Hai cột: cột trái là điều hướng/hành trình, cột phải là nội dung (`NavigationSplitView` ở regular, `TabView` ở compact) |
 | Góc phụ huynh trên iPad | Báo cáo và Hồ sơ hiện cạnh nhau |
+| iPad Slide Over và Split View 1/3 (compact width) | Dùng bố cục iPhone |
 | Xoay màn hình | iPhone khoá dọc; iPad hỗ trợ cả hai chiều, layout đổi theo size class, không theo góc xoay |
 
 Quy tắc kỹ thuật:
@@ -474,7 +492,7 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 
 | Lệnh | Việc làm |
 | --- | --- |
-| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng |
+| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng. *(1/11, Duy chốt SK-026)* Luật theo tuổi đọc `rules.<age_group>.authoring`, gồm cả format được dùng và hình bắt buộc của Explorer; mã lỗi ở SK-026. Làm ngay ở GĐ 0 cho cả 3 nhóm với 6 format v1: chạy trên JSON trước, chạy cả trong `build`, rồi dùng lại khi có parser markdown |
 | `tts` | Sinh clip còn thiếu: EN bằng **Kokoro** chạy local, VI bằng nhà cung cấp chọn ở B9; đặt tên theo hash nội dung + giọng; cache trong `content/.audio/` (gitignore) |
 | `assets` | Xuất SVG từ canvas Claude Design sang WebP, tính hash |
 | `build` | Gộp thành `pack.json` + manifest cho một chủ đề, kiểm `min_app_version` |
@@ -514,8 +532,16 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 
 - **Hình:** hoạ sĩ vẽ trên **Claude Design** (28/10, chốt dùng Claude Design cho toàn bộ thiết kế): mỗi hình là một artboard SVG giấy cắt trong `design/play-ui/project/`, cùng filter `paperE` và bảng màu style E; xuất bằng script sang WebP (bóng và vân giấy nướng sẵn vào ảnh) ở @2x/@3x, Android theo density. Xuất WebP @3x (iOS dùng @2x/@3x, Android theo density) với bóng và vân giấy vẽ sẵn; ảnh nền dài dùng lại tile vân giấy. Đặt tên theo hash khi upload.
 - **Animation minh hoạ** (GĐ 2): cân nhắc Lottie hoặc Rive cho cảnh động; MVP chỉ dùng motion UI native.
-- **Audio EN — Kokoro (chốt 28/10):** Kokoro-82M v1.0, Apache-2.0 (dùng thương mại được), chạy offline trên CPU qua `kokoro-onnx` (nhanh gấp 2–5 lần thời gian thật trên laptop), gọi từ `content-cli tts`. Giọng đề xuất `af_heart` hoặc `af_bella` (nữ Mỹ, chất lượng cao nhất), `bf_emma` nếu muốn giọng Anh; không có giọng trẻ con. Hạn chế phải xử lý trong CLI: không SSML, số và năm đọc sai kiểu → chuẩn hoá số thành chữ trước khi sinh; viết tắt bị đánh vần; từ đơn và câu rất ngắn đôi khi kém tự nhiên → nghe duyệt riêng phần từ vựng, có thể ép phát âm bằng cú pháp `[word](/IPA/)`. Kokoro **không có tiếng Việt chính thức**.
-- **Audio VI — chưa chốt, listening test trước 28/11** trên cùng bộ 30 câu + 30 từ đơn có số và tên khoa học, biên tập chấm:
+- **Audio EN — Kokoro (chốt 28/10):** Kokoro-82M v1.0, Apache-2.0 (dùng thương mại được), chạy offline trên CPU qua `kokoro-onnx` (nhanh gấp 2–5 lần thời gian thật trên laptop), gọi từ `content-cli tts`. **Giọng chốt `af_heart`** (nữ Mỹ; Duy nghe duyệt 28/10 trên bài 1). Không có giọng trẻ con. Runtime thực tế là `kokoro-js` trong Node thay cho `kokoro-onnx`, model fp32 ghim phiên bản (SK-014). Hạn chế phải xử lý trong CLI: không SSML, số và năm đọc sai kiểu → chuẩn hoá số thành chữ trước khi sinh; viết tắt bị đánh vần; từ đơn và câu rất ngắn đôi khi kém tự nhiên → nghe duyệt riêng phần từ vựng, có thể ép phát âm bằng cú pháp `[word](/IPA/)`. Kokoro **không có tiếng Việt chính thức**.
+- **Audio VI — VieNeu-TTS (chốt 1/11):** VieNeu-TTS v3 Turbo ONNX fp32 (`vieneu` 3.8.3, model ghim bản `61b85e3`), Apache-2.0, chạy offline trên CPU qua môi trường `uv` Python 3.12, gọi từ `content-cli tts --lang vi` (SK-024). **Giọng chốt Kim Thanh** (nữ miền Nam, tốc độ mặc định): chấm bằng máy ở SK-023, Duy nghe bài 1 và chốt 1/11. Dự phòng: giọng Đức Trí (nam miền Nam).
+  - Hạn chế đã biết: không có tham số tốc độ; câu hỏi không lên giọng (VieNeu đổi "?" thành "."); giọng Nam đọc "gi" gần "d", "ây" gần "ay". Clip sinh trên máy khác nhau có thể khác nhau, nên máy Mac của Duy là máy sinh chính.
+  - Lịch sử: Duy đưa giọng VI lên ưu tiên ngày 31/10 (làm ngay, không chờ 17/11), chọn thử VieNeu-TTS, chỉ giọng Nam; lần này không thử Google, FPT, Azure.
+  - Việc chia thành 3 ticket: listening test và chốt giọng ([SK-023](docs/backlog/SK-023-tts-vi-listening-test.md)); `content-cli tts` cho VI ([SK-024](docs/backlog/SK-024-content-cli-tts-vi.md)); app phát VI ([SK-025](docs/backlog/SK-025-ios-vi-voice.md)).
+  - Bộ thử: 30 câu + 30 từ đơn, có số, đơn vị và tên khoa học (`content/tts-vi/listening-set.md`). Chấm mù theo phiếu của biên tập; Duy và biên tập viên chấm.
+  - Trước khi sinh mẫu, dev xác minh giấy phép của đúng bản model.
+  - Nếu không giọng Nam nào đạt, hỏi lại Duy theo thứ tự còn lại của danh sách dưới (2, rồi 3).
+
+  Danh sách ứng viên lập 28/10:
   1. **VieNeu-TTS v3 Turbo** (mã nguồn mở, Apache-2.0, 25 giọng Bắc/Trung/Nam, chạy CPU qua ONNX, `pip install vieneu`): ứng viên chính nếu muốn pipeline hoàn toàn offline và miễn phí. Tránh bản 0.3B cũ (CC-BY-NC).
   2. **Google Cloud TTS vi-VN Chirp 3 HD** (30 giọng, 1 triệu ký tự miễn phí mỗi tháng — toàn bộ pilot Year 3 ước dưới 300k ký tự): phương án thương mại ít rủi ro.
   3. **FPT.AI Ban Mai** hoặc **Azure HoaiMy**: giọng Bắc quen tai người Việt, rẻ (FPT ~13 USD/1M ký tự, free 100k/tháng; Azure ~15 USD/1M, free 0,5M/tháng).
@@ -604,7 +630,7 @@ View `kpi_weekly` tính các chỉ số ở A7; dashboard nội bộ ở MVP là
   - `apps/cms`: lint, type-check, test, build (Vercel preview cho mỗi PR).
   - `apps/ios`: build + unit test + snapshot test (macOS runner hoặc Xcode Cloud), fastlane đẩy TestFlight.
   - `apps/android`: Gradle build + unit test + screenshot test, đẩy Play internal testing.
-- **Phát hành:** migration (Duy chạy tay, tương thích ngược) → gói nội dung (CLI) → app. App bật tính năng mới qua `app_config`. Gói nội dung publish độc lập, không cần ra app.
+- **Phát hành:** migration (staging do agent tự apply bằng `scripts/db-apply.mjs`; production Duy chạy tay; tương thích ngược) → gói nội dung (CLI) → app. App bật tính năng mới qua `app_config`. Gói nội dung publish độc lập, không cần ra app.
 - **Giám sát:** log Supabase và Edge Functions; crash qua Xcode Organizer và Play Console vitals ở MVP; cân nhắc Sentry (lọc PII) sau khi luật sư đồng ý cho app trẻ em.
 
 ## B15. Kiểm thử
@@ -629,8 +655,11 @@ Soạn nội dung bắt đầu 10/11 (syllabus mục 6) trước khi CMS sẵn s
 | Việc | Ai | Thời gian | Kết quả |
 | --- | --- | --- | --- |
 | Chốt content schema v1 + luật chấm (B4.4) + khung markdown cho biên tập | Duy + biên tập | 4/11 – 14/11 | `packages/content-schema`, fixtures bài mẫu |
-| Dựng Kokoro EN trong CLI; listening test TTS VI (VieNeu · Google Chirp 3 HD · FPT/Azure) | Duy + biên tập | 17/11 – 28/11 | Chốt giọng VI (B18 #3) |
-| Migrations `cms_*` + RLS + `cms_staff` | Duy | 24/11 – 30/11 | DB staging |
+| Dựng Kokoro EN trong CLI | dev | đã dựng 28/10 (SK-014, đang review) | Giọng EN `af_heart` |
+| Listening test TTS VI: VieNeu-TTS, giọng Nam (Duy chọn 31/10). **Duy ưu tiên 31/10: làm ngay, không chờ 17/11** | dev sinh mẫu, biên tập soạn bộ câu, Duy + biên tập chấm | từ 31/10, thay lịch 17/11 – 28/11 | Chốt giọng VI (B18 #3, SK-023): **xong 1/11, Kim Thanh** |
+| Sinh audio VI bài 1 và app phát VI | dev, ios-dev | ngay sau listening test (SK-024, SK-025) | Bản thử iOS có giọng VI |
+| Luật quiz theo nhóm tuổi trong `content-cli` cho cả 3 nhóm, 6 format v1: chạy trên JSON trong `validate` và `build`, chặn format app chưa hiện được *(1/11, Duy chốt SK-026)* | dev | trước khi biên tập soạn bài 2–5 của chủ đề 1 | Bài pilot lệch quy tắc bị báo lỗi ngay |
+| Migration đầu: `content_publishes`, `app_config` + RLS (bảng `cms_*` là GĐ 2) | Duy | 24/11 – 30/11 | DB staging |
 | `content-cli`: parse markdown → JSON, validate schema + quy tắc quiz, báo lỗi dễ đọc | Duy | 1/12 – 12/12 | Biên tập chạy được `validate` trên máy |
 | `content-cli`: sinh TTS EN (Kokoro) + VI, build gói, upload, ghi `content_publishes`, cập nhật manifest | Duy | 15/12 – 9/1 | Gói chủ đề 1 chạy được |
 | Spike iOS: liên kết user ẩn danh với Apple/Google; RevenueCat sandbox | Mobile dev iOS (nếu đã có) hoặc Duy, ≤ 3 ngày | 15/12 – 19/12 | Chốt B18 #1 và B10 |
@@ -658,7 +687,10 @@ Bỏ CMS khỏi GĐ 0 giảm tải việc của Duy xuống khoảng 6 tuần tr
 
 Beta 50 gia đình chạy **4 tuần (1/6 – 26/6)** để đo D7 và ≥ 3 bài/tuần; gate GĐ 1 vì vậy rơi vào **cuối T6/2027**, không phải T4 như PRD mục 9 — **PRD cần sửa roadmap** (GĐ 2 bắt đầu T7, lên store sớm nhất T9/2027). Xét duyệt Kids Category có thể mất 1–3 tuần, tính vào GĐ 2.
 
-Explorer và Scientist (GĐ 2) chủ yếu là block/mini-game mới (`hotspot_image`, `timeline_slider`, `fair_test`, `label_diagram`) và tokens theo nhóm tuổi; nền tảng giữ nguyên.
+Explorer và Scientist (GĐ 2) chủ yếu là block/mini-game mới (`hotspot_image`, `timeline_slider`, `fair_test`, `label_diagram`) và tokens theo nhóm tuổi; nền tảng giữ nguyên. Thêm *(1/11, Duy chốt SK-026)*:
+- format quiz mới `sort_into_groups`, `fill_blank_free`, `evidence_choice`;
+- cách hiện quiz theo nhóm: Explorer không cần đọc chữ (chạm thẻ là trả lời, tự đọc gợi ý và giải thích, Đúng/Sai bằng biểu tượng, không hiện số câu đúng hay XP); Scientist không tự đọc, có nút nghe;
+- giọng đọc cho chữ giao diện của Explorer.
 
 ## B17. Rủi ro kỹ thuật
 
@@ -684,7 +716,7 @@ Explorer và Scientist (GĐ 2) chủ yếu là block/mini-game mới (`hotspot_i
 | 2 | Bản iOS tối thiểu | iOS 17 (chốt kèm quyết định universal app); iPadOS 17 |
 | 16 | Thứ tự nền tảng | **Chốt 28/10:** iOS + iPad trước, Android sau beta |
 | 17 | Backend | **Chốt 28/10:** Supabase (free tới beta, tự ping và pg_dump) + Cloudflare R2 |
-| 3 | TTS tiếng Việt (EN đã chốt Kokoro) | VieNeu-TTS v3 nếu đạt ở từ đơn; không thì Google Chirp 3 HD (free 1M ký tự/tháng) |
+| 3 | TTS tiếng Việt (EN đã chốt Kokoro) | **Chốt 1/11: VieNeu-TTS v3 Turbo, giọng Kim Thanh (nữ miền Nam), tốc độ mặc định** (SK-023). Dự phòng giọng Đức Trí; nếu bỏ VieNeu thì hỏi lại Duy: Google Chirp 3 HD (free 1M ký tự/tháng), rồi FPT/Azure |
 | 4 | Lưu trữ local | GRDB (iOS), Room (Android) |
 | 5 | Monorepo | Turborepo + Yarn workspaces cho phần JS; iOS/Android dùng code sinh ra đã commit |
 | 6 | Crash/monitoring bên thứ ba | Chưa dùng ở MVP; xem lại sau khi luật sư rà |
@@ -721,7 +753,7 @@ Con số là ước lượng để lập ngân sách, cần kiểm lại khi ch�
 | Đã cân nhắc và không chọn | Firebase (Storage/Functions ép lên Blaze kèm thẻ, Auth đặt ở US, Analytics kéo advertising-ID dễ bị Families từ chối); Cloudflare toàn bộ (phải tự ghép auth); Convex (không có Singapore, egress file 1 GB); Appwrite (đóng băng khi chạm quota); Neon/PocketBase (chỉ giải quyết DB) | | |
 | Nội dung | Markdown trong repo + `tools/content-cli` (Node/TS); review bằng PR; CMS Next.js ở GĐ 2 | Free | |
 | Soạn nháp | Claude API (`claude-opus-5-5`), tuỳ chọn | Trả theo token, vài chục USD/chủ đề | Không chạy cho trẻ |
-| TTS | EN: **Kokoro** offline. VI: listening test VieNeu-TTS v3 · Google Chirp 3 HD · FPT/Azure | Free hoặc trong hạn mức free | Chuẩn hoá số/viết tắt trước khi sinh; nghe duyệt từ đơn |
+| TTS | EN: **Kokoro** offline. VI: **VieNeu-TTS giọng Kim Thanh** (Duy chốt 1/11, SK-023); dự phòng Google Chirp 3 HD, rồi FPT/Azure | Free hoặc trong hạn mức free | Chuẩn hoá số/viết tắt trước khi sinh; nghe duyệt từ đơn; xác minh giấy phép đúng bản model |
 | Thiết kế | **Claude Design** cho toàn bộ màn hình và hình minh hoạ SVG giấy cắt; design tokens xuất bằng script | Theo gói Claude | Không Figma |
 | App iOS | Swift 6, SwiftUI, GRDB, `supabase-swift`, AVFoundation, StoreKit 2 | Xcode free; Apple Developer 99 USD/năm | Kids Category; cần Sign in with Apple khi có Google; liên kết id token native cần spike |
 | App Android | Kotlin, Compose, Room, Hilt, `supabase-kt`, Media3, Credential Manager, Play Billing | Android Studio free; Google Play 25 USD một lần | Tài khoản cá nhân mới phải closed testing ≥ 12 tester trong 14 ngày; Families policy; `supabase-kt` là thư viện cộng đồng |

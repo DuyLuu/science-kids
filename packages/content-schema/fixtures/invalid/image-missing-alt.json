@@ -1,0 +1,1108 @@
+{
+  "kind": "lesson",
+  "schema_version": 1,
+  "id": "4b11eb40-9a47-4e5e-b4b5-bea60264ded3",
+  "topic_id": "d3a514ef-02cd-4386-a358-f01e425a10f8",
+  "slug": "thuc-an-cho-ta-nhung-gi",
+  "order": 1,
+  "stage": "opener",
+  "title": {
+    "en": "What does food give us?",
+    "vi": "Thức ăn cho ta những gì?"
+  },
+  "objective": {
+    "en": "I can name the main nutrients in food.",
+    "vi": "Em kể được các nhóm chất dinh dưỡng chính."
+  },
+  "key_points": [
+    {
+      "en": "Food has nutrients that our body needs.",
+      "vi": "Thức ăn có chất dinh dưỡng mà cơ thể cần."
+    },
+    {
+      "en": "Different foods give us different nutrients.",
+      "vi": "Các loại thức ăn cho ta những chất dinh dưỡng khác nhau."
+    },
+    {
+      "en": "Each nutrient does a different job in our body.",
+      "vi": "Mỗi nhóm chất dinh dưỡng làm một việc riêng trong cơ thể."
+    }
+  ],
+  "est_minutes": 8,
+  "sensitive": false,
+  "archived": false,
+  "ai_draft": true,
+  "warmup": [
+    {
+      "id": "8c88f06a-e6dc-4c85-8da8-3d41913f3f03",
+      "key": "w1",
+      "format": "fill_blank_bank",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Pick the missing word",
+        "vi": "Chọn từ còn thiếu"
+      },
+      "hint": {
+        "en": "What do we breathe in every second?",
+        "vi": "Thứ gì mình hít vào mỗi giây?"
+      },
+      "explanation_correct": {
+        "en": "We need air to breathe.",
+        "vi": "Ta cần không khí để thở."
+      },
+      "explanation_wrong": {
+        "en": "The answer is air. We need air to breathe.",
+        "vi": "Đáp án là không khí. Ta cần không khí để thở."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Prior knowledge: animals, including humans, need food, water and air to live. In the app this is in the Explorer topic Em khoẻ mạnh.",
+          "vi": "Kiến thức nền: động vật, kể cả con người, cần thức ăn, nước và không khí để sống. Trong app, ý này nằm ở chủ đề Em khoẻ mạnh của nhóm Explorer."
+        }
+      },
+      "sentence": {
+        "en": "Animals, including humans, need food, water and {1} to live.",
+        "vi": "Động vật, kể cả con người, cần thức ăn, nước và không khí để sống."
+      },
+      "bank": [
+        {
+          "key": "w1_air",
+          "label": {
+            "en": "air",
+            "vi": "không khí"
+          }
+        },
+        {
+          "key": "w1_toys",
+          "label": {
+            "en": "toys",
+            "vi": "đồ chơi"
+          }
+        },
+        {
+          "key": "w1_sweets",
+          "label": {
+            "en": "sweets",
+            "vi": "kẹo"
+          }
+        }
+      ],
+      "answers": [
+        "w1_air"
+      ]
+    },
+    {
+      "id": "fd376a92-d053-4447-a292-979c91698c9b",
+      "key": "w2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Humans can make their own food, like plants.",
+        "vi": "Con người tự làm ra thức ăn, giống như cây."
+      },
+      "image": {
+        "alt": {
+          "en": "A young plant in the sunlight",
+          "vi": "Cây non dưới ánh nắng"
+        },
+        "brief": "Cây non hai lá trong chậu đất nung trên bậu cửa sổ, nắng chiếu xiên; nhãn \"plant · cây\" chỉ vào cây, nhãn \"sunlight · nắng\" chỉ vào tia nắng"
+      },
+      "hint": {
+        "en": "Plants use sunlight to make food. What about us?",
+        "vi": "Cây dùng ánh nắng để làm thức ăn. Còn mình thì sao?"
+      },
+      "explanation_correct": {
+        "en": "Plants make food from sunlight. We need to eat food.",
+        "vi": "Cây tự làm thức ăn từ ánh nắng. Con người phải ăn."
+      },
+      "explanation_wrong": {
+        "en": "This is false. Plants make food, but humans must eat.",
+        "vi": "Câu này sai. Cây tự làm ra thức ăn, còn con người phải ăn."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Prior knowledge: plants make their own food using sunlight, but humans and animals must eat. In the app this is in the Explorer topic Chuỗi thức ăn.",
+          "vi": "Kiến thức nền: cây tự làm ra thức ăn nhờ ánh nắng, còn người và động vật phải ăn. Trong app, ý này nằm ở chủ đề Chuỗi thức ăn của nhóm Explorer."
+        }
+      },
+      "answer": false
+    }
+  ],
+  "learn": [
+    {
+      "id": "3a560eb7-9c22-43d6-a271-16e027e99c50",
+      "key": "explore",
+      "type": "explore_groups",
+      "version": 1,
+      "prompt": {
+        "en": "Tap each group",
+        "vi": "Chạm từng nhóm"
+      },
+      "groups": [
+        {
+          "key": "explore_carb",
+          "label": {
+            "en": "Carbohydrates",
+            "vi": "Chất bột đường"
+          },
+          "color": "vang_hoe",
+          "sentence": {
+            "en": "Carbohydrates give us energy.",
+            "vi": "Chất bột đường cho ta năng lượng."
+          },
+          "image": {
+            "brief": "Bát cơm trắng bốc khói trong bát sành men lam, kiểu bát ăn cơm của nhà Việt"
+          },
+          "examples": [
+            {
+              "en": "rice",
+              "vi": "cơm"
+            },
+            {
+              "en": "bread",
+              "vi": "bánh mì"
+            },
+            {
+              "en": "sweet potato",
+              "vi": "khoai lang"
+            }
+          ]
+        },
+        {
+          "key": "explore_protein",
+          "label": {
+            "en": "Protein",
+            "vi": "Chất đạm"
+          },
+          "color": "do_son",
+          "sentence": {
+            "en": "Protein helps our body grow and repair.",
+            "vi": "Chất đạm giúp cơ thể lớn lên và tự phục hồi."
+          },
+          "image": {
+            "alt": {
+              "en": "A fried egg",
+              "vi": "Trứng ốp la"
+            },
+            "brief": "Quả trứng ốp la lòng đỏ tròn trên đĩa sứ trắng"
+          },
+          "examples": [
+            {
+              "en": "fish",
+              "vi": "cá"
+            },
+            {
+              "en": "egg",
+              "vi": "trứng"
+            },
+            {
+              "en": "tofu",
+              "vi": "đậu phụ"
+            }
+          ]
+        },
+        {
+          "key": "explore_fat",
+          "label": {
+            "en": "Fats",
+            "vi": "Chất béo"
+          },
+          "color": "nau_dat",
+          "sentence": {
+            "en": "Fats give us energy and keep us warm.",
+            "vi": "Chất béo cho năng lượng và giữ ấm cơ thể."
+          },
+          "image": {
+            "alt": {
+              "en": "A bottle of cooking oil",
+              "vi": "Chai dầu ăn"
+            },
+            "brief": "Chai dầu ăn bằng nhựa trong, nắp đỏ, kiểu chai bán ở chợ Việt Nam, không có nhãn hiệu thật"
+          },
+          "examples": [
+            {
+              "en": "cooking oil",
+              "vi": "dầu ăn"
+            },
+            {
+              "en": "peanuts",
+              "vi": "lạc"
+            },
+            {
+              "en": "avocado",
+              "vi": "quả bơ"
+            }
+          ]
+        },
+        {
+          "key": "explore_vit",
+          "label": {
+            "en": "Vitamins, minerals",
+            "vi": "Vitamin, chất khoáng"
+          },
+          "color": "gi_dong",
+          "sentence": {
+            "en": "Vitamins and minerals help us stay healthy.",
+            "vi": "Vitamin và chất khoáng giúp ta khoẻ mạnh."
+          },
+          "image": {
+            "alt": {
+              "en": "An orange and some vegetables",
+              "vi": "Quả cam và rau"
+            },
+            "brief": "Quả cam sành bổ đôi đặt cạnh bó rau muống buộc lạt"
+          },
+          "examples": [
+            {
+              "en": "water spinach",
+              "vi": "rau muống"
+            },
+            {
+              "en": "orange",
+              "vi": "cam"
+            },
+            {
+              "en": "milk",
+              "vi": "sữa"
+            }
+          ]
+        }
+      ],
+      "complete_when": "all_seen"
+    },
+    {
+      "id": "c233cec2-d80d-4957-b9a0-1fcd96eb8ab8",
+      "key": "new_words",
+      "type": "word_list",
+      "version": 1,
+      "title": {
+        "en": "New words",
+        "vi": "Từ mới"
+      },
+      "term_keys": [
+        "nutrient",
+        "carbohydrate",
+        "protein",
+        "fat"
+      ]
+    }
+  ],
+  "play": {
+    "id": "bd0706ad-2c42-4e59-a6ee-66c1feac9ff7",
+    "key": "tray",
+    "type": "build_tray",
+    "version": 1,
+    "prompt": {
+      "en": "Build a balanced meal",
+      "vi": "Xếp mâm cơm cân bằng"
+    },
+    "capacity": 4,
+    "groups": [
+      {
+        "key": "tray_carb",
+        "label": {
+          "en": "Carbohydrates",
+          "vi": "Bột đường"
+        },
+        "color": "vang_hoe",
+        "role": "required"
+      },
+      {
+        "key": "tray_protein",
+        "label": {
+          "en": "Protein",
+          "vi": "Đạm"
+        },
+        "color": "do_son",
+        "role": "required"
+      },
+      {
+        "key": "tray_veg",
+        "label": {
+          "en": "Vegetables and fruit",
+          "vi": "Rau và quả"
+        },
+        "color": "gi_dong",
+        "role": "required"
+      },
+      {
+        "key": "tray_sweet",
+        "label": {
+          "en": "Sweets: just a little",
+          "vi": "Đồ ngọt: nên ăn ít"
+        },
+        "color": "cham",
+        "role": "limit"
+      }
+    ],
+    "items": [
+      {
+        "key": "tray_rice",
+        "label": {
+          "en": "Rice",
+          "vi": "Cơm"
+        },
+        "group": "tray_carb",
+        "image": {
+          "alt": {
+            "en": "A bowl of rice",
+            "vi": "Bát cơm"
+          },
+          "brief": "Bát cơm trắng nhìn từ trên xuống, vừa một ô mâm"
+        }
+      },
+      {
+        "key": "tray_bread",
+        "label": {
+          "en": "Bread",
+          "vi": "Bánh mì"
+        },
+        "group": "tray_carb",
+        "image": {
+          "alt": {
+            "en": "A Vietnamese bread roll",
+            "vi": "Ổ bánh mì"
+          },
+          "brief": "Ổ bánh mì Việt Nam vỏ vàng giòn, chưa kẹp nhân"
+        }
+      },
+      {
+        "key": "tray_fish",
+        "label": {
+          "en": "Braised fish",
+          "vi": "Cá kho"
+        },
+        "group": "tray_protein",
+        "image": {
+          "alt": {
+            "en": "Braised fish in a clay pot",
+            "vi": "Cá kho trong nồi đất"
+          },
+          "brief": "Cá kho tộ màu nâu cánh gián trong nồi đất nhỏ, vài lát ớt đỏ"
+        }
+      },
+      {
+        "key": "tray_egg",
+        "label": {
+          "en": "Egg",
+          "vi": "Trứng"
+        },
+        "group": "tray_protein",
+        "image": {
+          "alt": {
+            "en": "Boiled eggs",
+            "vi": "Trứng luộc"
+          },
+          "brief": "Hai quả trứng luộc, một quả đã bóc vỏ và bổ đôi"
+        }
+      },
+      {
+        "key": "tray_greens",
+        "label": {
+          "en": "Water spinach",
+          "vi": "Rau muống"
+        },
+        "group": "tray_veg",
+        "image": {
+          "alt": {
+            "en": "A plate of boiled water spinach",
+            "vi": "Đĩa rau muống luộc"
+          },
+          "brief": "Đĩa rau muống luộc xanh mướt, kiểu đĩa rau trong mâm cơm miền Bắc"
+        }
+      },
+      {
+        "key": "tray_banana",
+        "label": {
+          "en": "Banana",
+          "vi": "Chuối"
+        },
+        "group": "tray_veg",
+        "image": {
+          "alt": {
+            "en": "A bunch of bananas",
+            "vi": "Nải chuối"
+          },
+          "brief": "Nải chuối tiêu chín vàng, ba quả"
+        }
+      },
+      {
+        "key": "tray_candy",
+        "label": {
+          "en": "Sweets",
+          "vi": "Kẹo"
+        },
+        "group": "tray_sweet",
+        "image": {
+          "alt": {
+            "en": "Some sweets",
+            "vi": "Mấy viên kẹo"
+          },
+          "brief": "Vài viên kẹo bọc giấy nhiều màu, xoắn hai đầu"
+        }
+      },
+      {
+        "key": "tray_soda",
+        "label": {
+          "en": "Fizzy drink",
+          "vi": "Nước ngọt"
+        },
+        "group": "tray_sweet",
+        "image": {
+          "alt": {
+            "en": "A can of fizzy drink",
+            "vi": "Lon nước ngọt"
+          },
+          "brief": "Lon nước ngọt có ga màu đỏ, có bọt ở miệng lon, không có nhãn hiệu thật"
+        }
+      }
+    ],
+    "messages": {
+      "start": {
+        "en": "Pick foods for a healthy tray.",
+        "vi": "Chọn món cho mâm cơm khoẻ mạnh nhé."
+      },
+      "full": {
+        "en": "Your tray is full!",
+        "vi": "Mâm đầy rồi — chạm món trong mâm để bỏ ra."
+      },
+      "balanced": {
+        "en": "Great! Your tray is balanced.",
+        "vi": "Tuyệt! Mâm cơm cân bằng rồi."
+      },
+      "has_limited": {
+        "en": "Sweets are for sometimes.",
+        "vi": "Kẹo và nước ngọt chỉ nên ăn ít thôi."
+      },
+      "missing": {
+        "tray_protein": {
+          "en": "Add some protein!",
+          "vi": "Thêm một món giàu chất đạm nhé!"
+        },
+        "tray_veg": {
+          "en": "Add vegetables or fruit!",
+          "vi": "Mâm còn thiếu rau hoặc quả!"
+        },
+        "tray_carb": {
+          "en": "Add some carbohydrates!",
+          "vi": "Thêm cơm hoặc bánh mì nhé!"
+        }
+      }
+    },
+    "success_when": "all_required_and_no_limit"
+  },
+  "quiz": [
+    {
+      "id": "1462983f-bd03-44ee-a91b-65b4ee731e51",
+      "key": "q1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which food has lots of vitamins?",
+        "vi": "Món nào có nhiều vitamin?"
+      },
+      "hint": {
+        "en": "Vitamins are in vegetables and fruit.",
+        "vi": "Vitamin có nhiều trong rau và quả."
+      },
+      "explanation_correct": {
+        "en": "Oranges have lots of vitamins.",
+        "vi": "Quả cam có nhiều vitamin."
+      },
+      "explanation_wrong": {
+        "en": "The answer is the orange. Fruit gives us vitamins.",
+        "vi": "Đáp án là quả cam. Hoa quả cho ta vitamin."
+      },
+      "options": [
+        {
+          "key": "q1_orange",
+          "label": {
+            "en": "orange",
+            "vi": "quả cam"
+          },
+          "correct": true,
+          "image": {
+            "alt": {
+              "en": "An orange cut in half",
+              "vi": "Quả cam bổ đôi"
+            },
+            "brief": "Quả cam sành vỏ xanh bổ đôi, ruột vàng mọng nước"
+          }
+        },
+        {
+          "key": "q1_rice",
+          "label": {
+            "en": "rice",
+            "vi": "cơm"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "A bowl of rice",
+              "vi": "Bát cơm"
+            },
+            "brief": "Dùng lại hình bát cơm của món tray_rice"
+          }
+        },
+        {
+          "key": "q1_sweets",
+          "label": {
+            "en": "sweets",
+            "vi": "kẹo"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "Some sweets",
+              "vi": "Mấy viên kẹo"
+            },
+            "brief": "Dùng lại hình kẹo của món tray_candy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aeb7debc-28ed-4fd8-a192-8a9e5a581455",
+      "key": "q2",
+      "format": "fill_blank_bank",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Pick the missing word",
+        "vi": "Chọn từ còn thiếu"
+      },
+      "hint": {
+        "en": "Rice helps you run and play. What does it give you?",
+        "vi": "Cơm giúp em chạy nhảy, vui chơi. Cơm cho em thứ gì?"
+      },
+      "explanation_correct": {
+        "en": "Carbohydrates give us energy to run and play.",
+        "vi": "Chất bột đường cho ta năng lượng để chạy nhảy, vui chơi."
+      },
+      "explanation_wrong": {
+        "en": "The answer is energy. Rice and bread give us energy.",
+        "vi": "Đáp án là năng lượng. Cơm và bánh mì cho ta năng lượng."
+      },
+      "sentence": {
+        "en": "Carbohydrates give us {1}.",
+        "vi": "Chất bột đường cho ta năng lượng."
+      },
+      "bank": [
+        {
+          "key": "q2_energy",
+          "label": {
+            "en": "energy",
+            "vi": "năng lượng"
+          }
+        },
+        {
+          "key": "q2_air",
+          "label": {
+            "en": "air",
+            "vi": "không khí"
+          }
+        },
+        {
+          "key": "q2_sunlight",
+          "label": {
+            "en": "sunlight",
+            "vi": "ánh nắng"
+          }
+        }
+      ],
+      "answers": [
+        "q2_energy"
+      ]
+    },
+    {
+      "id": "b06b6e26-f1b1-412e-b110-78e00e3d510f",
+      "key": "q3",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Which food is in the same group as these noodles?",
+        "vi": "Món nào cùng nhóm chất với bún?"
+      },
+      "image": {
+        "alt": {
+          "en": "Some fresh rice noodles",
+          "vi": "Một rổ bún tươi"
+        },
+        "brief": "Một rổ bún tươi sợi trắng trên lá chuối, không kèm thịt hay rau để trẻ không nhầm sang nhóm khác"
+      },
+      "hint": {
+        "en": "These noodles are made from rice. Which group is rice in?",
+        "vi": "Bún làm từ gạo. Gạo thuộc nhóm chất nào?"
+      },
+      "explanation_correct": {
+        "en": "Noodles and sweet potatoes are both carbohydrates.",
+        "vi": "Bún và khoai lang đều thuộc nhóm chất bột đường."
+      },
+      "explanation_wrong": {
+        "en": "The answer is sweet potato. Both are carbohydrates.",
+        "vi": "Đáp án là khoai lang. Bún và khoai lang đều thuộc nhóm chất bột đường."
+      },
+      "options": [
+        {
+          "key": "q3_sweet_potato",
+          "label": {
+            "en": "sweet potato",
+            "vi": "khoai lang"
+          },
+          "correct": true,
+          "image": {
+            "alt": {
+              "en": "A sweet potato cut in half",
+              "vi": "Củ khoai lang bổ đôi"
+            },
+            "brief": "Củ khoai lang vỏ tím, một nửa luộc chín ruột vàng"
+          }
+        },
+        {
+          "key": "q3_egg",
+          "label": {
+            "en": "egg",
+            "vi": "trứng"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "Boiled eggs",
+              "vi": "Trứng luộc"
+            },
+            "brief": "Dùng lại hình trứng luộc của món tray_egg"
+          }
+        },
+        {
+          "key": "q3_water_spinach",
+          "label": {
+            "en": "water spinach",
+            "vi": "rau muống"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "A plate of boiled water spinach",
+              "vi": "Đĩa rau muống luộc"
+            },
+            "brief": "Dùng lại hình đĩa rau muống luộc của món tray_greens"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00bb56f5-6adc-4d54-b48a-5bbbbae20eab",
+      "key": "q4",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Nam hurt his knee. Which nutrient helps his body repair?",
+        "vi": "Nam bị trầy đầu gối. Chất nào giúp cơ thể Nam tự phục hồi?"
+      },
+      "image": {
+        "alt": {
+          "en": "Nam with a plaster on his knee",
+          "vi": "Bạn Nam dán băng ở đầu gối"
+        },
+        "brief": "Bạn Nam mặc áo sơ mi trắng, quần xanh, ngồi trên ghế đá sân trường, đầu gối dán băng cá nhân, vẻ mặt bình thường, không có máu"
+      },
+      "hint": {
+        "en": "Remember the nutrient that helps us grow.",
+        "vi": "Nhớ lại chất giúp cơ thể lớn lên."
+      },
+      "explanation_correct": {
+        "en": "Protein helps our body grow and repair.",
+        "vi": "Chất đạm giúp cơ thể lớn lên và tự phục hồi."
+      },
+      "explanation_wrong": {
+        "en": "The answer is protein. It helps our body repair.",
+        "vi": "Đáp án là chất đạm. Chất đạm giúp cơ thể tự phục hồi."
+      },
+      "options": [
+        {
+          "key": "q4_protein",
+          "label": {
+            "en": "Protein",
+            "vi": "Chất đạm"
+          },
+          "correct": true
+        },
+        {
+          "key": "q4_fats",
+          "label": {
+            "en": "Fats",
+            "vi": "Chất béo"
+          },
+          "correct": false
+        },
+        {
+          "key": "q4_carbs",
+          "label": {
+            "en": "Carbohydrates",
+            "vi": "Chất bột đường"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "59dd3f4a-3967-436a-aec9-4048d8bb501c",
+      "key": "q5",
+      "format": "multi_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Tap all the foods with lots of protein.",
+        "vi": "Chạm vào tất cả thức ăn giàu chất đạm."
+      },
+      "instruction": {
+        "en": "Pick all the right answers.",
+        "vi": "Chọn tất cả đáp án đúng"
+      },
+      "hint": {
+        "en": "Protein helps us grow. Fish, meat, eggs and beans have it.",
+        "vi": "Chất đạm giúp cơ thể lớn lên. Thường có trong cá, thịt, trứng và các loại đậu."
+      },
+      "explanation_correct": {
+        "en": "Fish, eggs and tofu are all rich in protein.",
+        "vi": "Cá, trứng và đậu phụ đều giàu chất đạm."
+      },
+      "explanation_wrong": {
+        "en": "The protein foods are fish, eggs and tofu.",
+        "vi": "Các món giàu chất đạm là cá, trứng và đậu phụ."
+      },
+      "options": [
+        {
+          "key": "q5_fish",
+          "label": {
+            "en": "fish",
+            "vi": "cá"
+          },
+          "correct": true,
+          "image": {
+            "alt": {
+              "en": "A fresh fish",
+              "vi": "Con cá tươi"
+            },
+            "brief": "Con cá rô phi tươi nguyên con nằm trên lá chuối"
+          }
+        },
+        {
+          "key": "q5_rice",
+          "label": {
+            "en": "rice",
+            "vi": "cơm"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "A bowl of rice",
+              "vi": "Bát cơm"
+            },
+            "brief": "Dùng lại hình bát cơm của món tray_rice"
+          }
+        },
+        {
+          "key": "q5_egg",
+          "label": {
+            "en": "egg",
+            "vi": "trứng"
+          },
+          "correct": true,
+          "image": {
+            "alt": {
+              "en": "Boiled eggs",
+              "vi": "Trứng luộc"
+            },
+            "brief": "Dùng lại hình trứng luộc của món tray_egg"
+          }
+        },
+        {
+          "key": "q5_banana",
+          "label": {
+            "en": "banana",
+            "vi": "chuối"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "A bunch of bananas",
+              "vi": "Nải chuối"
+            },
+            "brief": "Dùng lại hình nải chuối của món tray_banana"
+          }
+        },
+        {
+          "key": "q5_tofu",
+          "label": {
+            "en": "tofu",
+            "vi": "đậu phụ"
+          },
+          "correct": true,
+          "image": {
+            "alt": {
+              "en": "Pieces of tofu on a plate",
+              "vi": "Đĩa đậu phụ"
+            },
+            "brief": "Bìa đậu phụ trắng cắt miếng vuông trên đĩa, vài miếng rán vàng"
+          }
+        },
+        {
+          "key": "q5_bread",
+          "label": {
+            "en": "bread",
+            "vi": "bánh mì"
+          },
+          "correct": false,
+          "image": {
+            "alt": {
+              "en": "A Vietnamese bread roll",
+              "vi": "Ổ bánh mì"
+            },
+            "brief": "Dùng lại hình ổ bánh mì của món tray_bread"
+          }
+        }
+      ]
+    },
+    {
+      "id": "9efe4b78-71d1-4398-b9f8-e4e9e1c250d4",
+      "key": "q6",
+      "format": "true_false",
+      "version": 1,
+      "dok": 3,
+      "prompt": {
+        "en": "Is Na right?",
+        "vi": "Na nói đúng không?"
+      },
+      "instruction": {
+        "en": "Challenge: spot the mistake",
+        "vi": "Thử thách: bắt lỗi sai"
+      },
+      "hint": {
+        "en": "Remember: fats give us energy and keep us warm.",
+        "vi": "Nhớ lại phần học: Chất béo cho ta năng lượng và giữ ấm cơ thể."
+      },
+      "explanation_correct": {
+        "en": "A little fat gives us energy and keeps us warm.",
+        "vi": "Cơ thể cần một ít chất béo để có năng lượng và giữ ấm."
+      },
+      "explanation_wrong": {
+        "en": "Na is not right. We need a little fat, not too much.",
+        "vi": "Na chưa đúng. Ta cần một ít chất béo, nhưng không ăn quá nhiều."
+      },
+      "misconception_id": "93c51bb0-1d45-45df-99c5-a0397967fe10",
+      "answer": false,
+      "statement": {
+        "en": "All fat is bad for you.",
+        "vi": "Chất béo lúc nào cũng có hại."
+      },
+      "speaker": "na",
+      "labels": {
+        "true": {
+          "en": "Yes",
+          "vi": "Na đúng"
+        },
+        "false": {
+          "en": "No",
+          "vi": "Na chưa đúng"
+        }
+      }
+    }
+  ],
+  "vocab": [
+    {
+      "id": "6656ad65-b2dd-4f06-808c-fe1d1995e085",
+      "key": "nutrient",
+      "term": {
+        "en": "nutrient",
+        "vi": "chất dinh dưỡng"
+      },
+      "example": {
+        "en": "Food gives us nutrients.",
+        "vi": "Thức ăn cho ta chất dinh dưỡng."
+      },
+      "image": {
+        "alt": {
+          "en": "Rice, an egg, oil and vegetables together",
+          "vi": "Cơm, trứng, dầu ăn và rau đặt cạnh nhau"
+        },
+        "brief": "Bát cơm, quả trứng, chai dầu ăn và bó rau đặt cạnh nhau, mỗi món có một chấm màu của nhóm chất"
+      },
+      "tier": "core"
+    },
+    {
+      "id": "728f378a-1bee-4106-ba15-612d17927b73",
+      "key": "carbohydrate",
+      "term": {
+        "en": "carbohydrate",
+        "vi": "chất bột đường"
+      },
+      "example": {
+        "en": "Rice is a carbohydrate.",
+        "vi": "Cơm thuộc nhóm chất bột đường."
+      },
+      "image": {
+        "alt": {
+          "en": "A bowl of rice",
+          "vi": "Bát cơm"
+        },
+        "brief": "Dùng lại hình bát cơm của nhóm explore_carb"
+      },
+      "tier": "core"
+    },
+    {
+      "id": "8477b4f7-9605-457b-9a21-1bc5832484a0",
+      "key": "protein",
+      "term": {
+        "en": "protein",
+        "vi": "chất đạm"
+      },
+      "example": {
+        "en": "Fish is rich in protein.",
+        "vi": "Cá giàu chất đạm."
+      },
+      "image": {
+        "alt": {
+          "en": "A fresh fish",
+          "vi": "Con cá tươi"
+        },
+        "brief": "Dùng lại hình con cá tươi của lựa chọn q5_fish"
+      },
+      "tier": "core"
+    },
+    {
+      "id": "ee8c53bc-21cd-419e-a0d5-ef087d093f64",
+      "key": "fat",
+      "term": {
+        "en": "fat",
+        "vi": "chất béo"
+      },
+      "example": {
+        "en": "Fat keeps us warm.",
+        "vi": "Chất béo giữ ấm cơ thể."
+      },
+      "image": {
+        "alt": {
+          "en": "Cooking oil and peanuts",
+          "vi": "Dầu ăn và lạc rang"
+        },
+        "brief": "Chai dầu ăn và một nắm lạc rang đặt cạnh nhau"
+      },
+      "tier": "core"
+    },
+    {
+      "id": "cfa86593-542f-4519-bdc2-00bfe1cb6018",
+      "key": "vitamin",
+      "term": {
+        "en": "vitamin",
+        "vi": "vitamin"
+      },
+      "example": {
+        "en": "Oranges have vitamins.",
+        "vi": "Quả cam có vitamin."
+      },
+      "image": {
+        "alt": {
+          "en": "An orange cut in half",
+          "vi": "Quả cam bổ đôi"
+        },
+        "brief": "Dùng lại hình quả cam bổ đôi của lựa chọn q1_orange"
+      },
+      "tier": "extra"
+    },
+    {
+      "id": "59b5cb47-2f15-49c1-8358-71ac83e735a1",
+      "key": "fibre",
+      "term": {
+        "en": "fibre",
+        "vi": "chất xơ"
+      },
+      "example": {
+        "en": "Vegetables have fibre.",
+        "vi": "Rau có chất xơ."
+      },
+      "image": {
+        "alt": {
+          "en": "A basket of vegetables",
+          "vi": "Rổ rau"
+        },
+        "brief": "Rổ tre đựng rau muống, rau cải và mấy quả mướp"
+      },
+      "tier": "extra"
+    },
+    {
+      "id": "4b314313-1ed2-47a5-8147-75b6e175efb2",
+      "key": "energy",
+      "term": {
+        "en": "energy",
+        "vi": "năng lượng"
+      },
+      "example": {
+        "en": "Food gives us energy.",
+        "vi": "Thức ăn cho ta năng lượng."
+      },
+      "image": {
+        "alt": {
+          "en": "A child running in the school yard",
+          "vi": "Bạn nhỏ chạy trên sân trường"
+        },
+        "brief": "Bạn nhỏ mặc đồng phục chạy nhảy trên sân trường giờ ra chơi, tóc bay"
+      },
+      "tier": "extra"
+    },
+    {
+      "id": "0cac2335-c9b2-4136-b724-ecff59a95f80",
+      "key": "healthy",
+      "term": {
+        "en": "healthy",
+        "vi": "khoẻ mạnh"
+      },
+      "example": {
+        "en": "We eat well to stay healthy.",
+        "vi": "Ta ăn uống đủ chất để khoẻ mạnh."
+      },
+      "image": {
+        "alt": {
+          "en": "A happy family eating together",
+          "vi": "Gia đình vui vẻ ăn cơm cùng nhau"
+        },
+        "brief": "Gia đình ba thế hệ ngồi quanh mâm cơm trên chiếu, bạn nhỏ cười tươi, má hồng"
+      },
+      "tier": "extra"
+    }
+  ],
+  "reward": {
+    "collectible": {
+      "id": "43376993-bf69-49cc-bb35-837581f0cc1a",
+      "key": "rau_muong",
+      "set": "food",
+      "name": {
+        "en": "water spinach",
+        "vi": "Rau muống"
+      },
+      "tag": {
+        "en": "Vitamins and minerals",
+        "vi": "Vitamin và chất khoáng"
+      },
+      "image": {
+        "alt": {
+          "en": "A bunch of water spinach",
+          "vi": "Một bó rau muống"
+        },
+        "brief": "Bó rau muống tươi buộc lạt tre, cọng xanh non, lá nhọn, kiểu bán ở chợ quê"
+      },
+      "fact": {
+        "en": "Water spinach has vitamins and fibre.",
+        "vi": "Rau muống có nhiều vitamin và chất xơ — món rau quen thuộc trong mâm cơm Việt."
+      },
+      "rarity": "common"
+    }
+  }
+}

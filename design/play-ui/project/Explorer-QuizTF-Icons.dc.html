@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Explorer · Biểu tượng Đúng/Sai · 2 phương án</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+      <symbol id="ic-nod" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g filter="url(#paperE)" fill="#C9B993"><circle cx="60" cy="48" r="27"></circle><circle cx="60" cy="74" r="27"></circle></g><g filter="url(#paperE)"><circle cx="60" cy="58" r="27" fill="#3A2A20"></circle></g><g filter="url(#paperE)" fill="#E9C39A"><circle cx="37" cy="67" r="5.5"></circle><circle cx="83" cy="67" r="5.5"></circle><ellipse cx="60" cy="66" rx="22.5" ry="21"></ellipse></g><path d="M37.5 60 Q39 41 60 41 Q81 41 82.5 60 Q73 50.5 60 52 Q47 50.5 37.5 60 Z" fill="#3A2A20"></path><circle cx="52" cy="67" r="2.9" fill="#1E1B18"></circle><circle cx="68" cy="67" r="2.9" fill="#1E1B18"></circle><path d="M53.5 75.5 Q60 81.5 66.5 75.5 Q60 78.2 53.5 75.5 Z" fill="#1E1B18"></path><circle cx="46.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><circle cx="73.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><path d="M47 22 L60 10 L73 22 L67.5 25.5 L60 18.5 L52.5 25.5 Z" fill="#3B6E6A"></path><path d="M47 100 L60 112 L73 100 L67.5 96.5 L60 103.5 L52.5 96.5 Z" fill="#3B6E6A"></path></symbol>
+      <symbol id="ic-shake" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g filter="url(#paperE)" fill="#C9B993"><circle cx="46" cy="61" r="27"></circle><circle cx="74" cy="61" r="27"></circle></g><g filter="url(#paperE)"><circle cx="60" cy="58" r="27" fill="#3A2A20"></circle></g><g filter="url(#paperE)" fill="#E9C39A"><circle cx="37" cy="67" r="5.5"></circle><circle cx="83" cy="67" r="5.5"></circle><ellipse cx="60" cy="66" rx="22.5" ry="21"></ellipse></g><path d="M37.5 60 Q39 41 60 41 Q81 41 82.5 60 Q73 50.5 60 52 Q47 50.5 37.5 60 Z" fill="#3A2A20"></path><circle cx="52" cy="67" r="2.9" fill="#1E1B18"></circle><circle cx="68" cy="67" r="2.9" fill="#1E1B18"></circle><path d="M53.5 75.5 Q60 81.5 66.5 75.5 Q60 78.2 53.5 75.5 Z" fill="#1E1B18"></path><circle cx="46.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><circle cx="73.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><path d="M20 48 L8 61 L20 74 L23.5 68.5 L16.5 61 L23.5 53.5 Z" fill="#3B6E6A"></path><path d="M100 48 L112 61 L100 74 L96.5 68.5 L103.5 61 L96.5 53.5 Z" fill="#3B6E6A"></path></symbol>
+      <symbol id="ic-up" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g transform="translate(2 -2)"><g filter="url(#paperE)"><rect x="22" y="72" width="26" height="40" rx="5" fill="#2E4A6E"></rect></g><g filter="url(#paperE)"><rect x="40" y="58" width="46" height="48" rx="14" fill="#A86F43"></rect></g><g filter="url(#paperE)" fill="#8E5A34"><rect x="68" y="60" width="26" height="12" rx="6"></rect><rect x="68" y="71.5" width="26" height="12" rx="6"></rect><rect x="68" y="83" width="26" height="12" rx="6"></rect><rect x="66" y="94.5" width="24" height="11" rx="5.5"></rect></g><g filter="url(#paperE)"><rect x="43" y="16" width="19" height="50" rx="9.5" fill="#A86F43"></rect></g><rect x="46.5" y="19.5" width="12" height="10" rx="5" fill="#C99467"></rect></g></symbol>
+      <symbol id="ic-down" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g transform="rotate(180 60 61) translate(2 -2)"><g filter="url(#paperE)"><rect x="22" y="72" width="26" height="40" rx="5" fill="#2E4A6E"></rect></g><g filter="url(#paperE)"><rect x="40" y="58" width="46" height="48" rx="14" fill="#A86F43"></rect></g><g filter="url(#paperE)" fill="#8E5A34"><rect x="68" y="60" width="26" height="12" rx="6"></rect><rect x="68" y="71.5" width="26" height="12" rx="6"></rect><rect x="68" y="83" width="26" height="12" rx="6"></rect><rect x="66" y="94.5" width="24" height="11" rx="5.5"></rect></g><g filter="url(#paperE)"><rect x="43" y="16" width="19" height="50" rx="9.5" fill="#A86F43"></rect></g><rect x="46.5" y="19.5" width="12" height="10" rx="5" fill="#C99467"></rect></g></symbol>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 20px 20px 18px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <span style="align-self: flex-start; display: inline-block; transform: rotate(-2deg); filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32))"><span style="display: block; padding: 4px 10px; background: #3B6E6A; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700; clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px)">SK-026 · Explorer · câu true_false</span></span>
+      <span style="font-family: 'Phudu', sans-serif; font-size: 23px; font-weight: 900; line-height: 1.1">Đúng/Sai không chữ · 2 phương án</span>
+      <span style="font-size: 13px; font-weight: 600; line-height: 1.4; color: #4E4336">Thẻ để chọn và dấu kết quả không dùng chung hình, màu hay vị trí.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; line-height: 1.2">1 · Gật đầu / lắc đầu</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px"><span style="width: 160px; height: 104px; border-radius: 20px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; justify-content: center"><svg width="100" height="100" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-nod"></use></svg></span><span style="font-size: 13px; font-weight: 600; color: #4E4336">Đúng · bạn gật</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px"><span style="width: 160px; height: 104px; border-radius: 20px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; justify-content: center"><svg width="100" height="100" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-shake"></use></svg></span><span style="font-size: 13px; font-weight: 600; color: #4E4336">Sai · bạn lắc</span></div>
+      </div>
+      <span style="font-size: 13px; line-height: 1.45; color: #1E1B18">Cử chỉ bé dùng hằng ngày. Bóng đầu và mũi nhọn chỉ hướng cử động; khi đọc hướng dẫn, thẻ được nhắc tới nhún một nhịp. Hai mặt cùng cười, để "Sai" không thành "buồn".</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; line-height: 1.2">2 · Ngón cái lên / xuống</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px"><span style="width: 160px; height: 104px; border-radius: 20px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; justify-content: center"><svg width="100" height="100" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-up"></use></svg></span><span style="font-size: 13px; font-weight: 600; color: #4E4336">Đúng · ngón cái lên</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px"><span style="width: 160px; height: 104px; border-radius: 20px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; justify-content: center"><svg width="100" height="100" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-down"></use></svg></span><span style="font-size: 13px; font-weight: 600; color: #4E4336">Sai · ngón cái xuống</span></div>
+      </div>
+      <span style="font-size: 13px; line-height: 1.45; color: #1E1B18">Bé quen từ video và người lớn. Rủi ro: dễ hiểu thành thích / không thích, và hình bàn tay dễ ngả sang clip-art.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="font-family: 'Phudu', sans-serif; font-size: 19px; font-weight: 700; line-height: 1.2">Dấu kết quả của 3 phương án màn</span>
+      <div style="display: flex; justify-content: space-between; padding: 0 4px">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><svg width="46" height="46" viewBox="0 0 66 66"><g filter="url(#paperE)"><circle cx="33" cy="32" r="29" fill="#3F7A33"></circle></g><path transform="translate(13.5 12.8) scale(1.6)" d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">A</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><span style="width: 42px; height: 42px; transform: rotate(-8deg); border-radius: 3px; background: #3F7A33; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">B</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><svg width="48" height="48" viewBox="0 0 66 66" style="transform: rotate(-8deg)"><g filter="url(#paperE)" fill="#3F7A33"><circle cx="33" cy="32" r="21"></circle><circle cx="33" cy="11" r="9"></circle><circle cx="33" cy="53" r="9"></circle><circle cx="12" cy="32" r="9"></circle><circle cx="54" cy="32" r="9"></circle><circle cx="18.2" cy="17.2" r="9"></circle><circle cx="47.8" cy="17.2" r="9"></circle><circle cx="18.2" cy="46.8" r="9"></circle><circle cx="47.8" cy="46.8" r="9"></circle></g><path transform="translate(14.7 14) scale(1.5)" d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">C</span></div>
+        <span style="width: 2px"></span>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><span style="filter: drop-shadow(0 2px 3px rgba(91, 59, 23, 0.3))"><span style="position: relative; width: 44px; height: 44px; background: #FBF6EA; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); display: flex; align-items: center; justify-content: center"><span style="position: absolute; top: 0; right: 0; width: 12px; height: 12px; background: #C9B993; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg></span></span></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">A</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><span style="filter: drop-shadow(0 2px 3px rgba(91, 59, 23, 0.28))"><span style="position: relative; display: block; width: 48px; height: 44px; border-radius: 8px; background: #E2D4B4; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%)"><span style="position: absolute; top: 0; right: 0; width: 30px; height: 30px; background: #C9B993; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span><span style="position: absolute; top: 14px; right: 14px; width: 14px; height: 14px"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg></span></span></span></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">B</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="position: relative; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center"><span style="width: 34px; height: 48px; border-radius: 8px; background: #E2D4B4; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center"><span style="width: 26px; height: 26px; border-radius: 50%; background: #FBF6EA; display: flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg></span></span></span><span style="font-family: 'Phudu', sans-serif; font-size: 14px; font-weight: 700">C</span></div>
+      </div>
+      <span style="font-size: 13px; line-height: 1.45; color: #1E1B18">Trái: dấu đúng (lá tre, dấu tích). Phải: dấu thử lại (giấy lõm, mũi tên vòng). Thẻ chọn không dùng lá tre, dấu tích, X hay mũi tên vòng.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

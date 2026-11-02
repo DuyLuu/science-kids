@@ -1,0 +1,604 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/quiz-item.schema.json",
+  "title": "Science Kids content v1: câu hỏi (quiz_item)",
+  "$ref": "#/$defs/QuizItem",
+  "$defs": {
+    "QuizItem": {
+      "description": "Một câu hỏi. Trường đáp án theo format.",
+      "type": "object",
+      "required": [
+        "format"
+      ],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "single_choice",
+            "multi_choice",
+            "true_false",
+            "fill_blank_bank",
+            "order_sequence",
+            "picture_bar_chart"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "single_choice"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/SingleChoice"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "multi_choice"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/MultiChoice"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "true_false"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/TrueFalse"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "fill_blank_bank"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/FillBlankBank"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "order_sequence"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/OrderSequence"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "picture_bar_chart"
+              }
+            },
+            "required": [
+              "format"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/PictureBarChart"
+          }
+        }
+      ]
+    },
+    "QuizBase": {
+      "description": "Trường chung của mọi format. Không dùng một mình: luôn qua QuizItem.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/Uuid"
+        },
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "format": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "dok": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "prompt": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "instruction": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        },
+        "hint": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "explanation_correct": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "explanation_wrong": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "misconception_id": {
+          "$ref": "common.schema.json#/$defs/Uuid",
+          "description": "id của một misconception trong topic của bài"
+        },
+        "p_correct": {
+          "description": "Tỉ lệ trả lời đúng, điền sau beta",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "recall_from": {
+          "$ref": "#/$defs/RecallFrom"
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "format",
+        "version",
+        "dok",
+        "prompt",
+        "hint",
+        "explanation_correct",
+        "explanation_wrong"
+      ]
+    },
+    "RecallFrom": {
+      "description": "Câu khởi động nhớ lại từ đâu. Bắt buộc ở warmup, cấm ở quiz (lesson.schema.json).",
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "prior_knowledge",
+            "lesson"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "prior_knowledge"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/RecallFromPriorKnowledge"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "lesson"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/RecallFromLesson"
+          }
+        }
+      ]
+    },
+    "RecallFromPriorKnowledge": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "prior_knowledge"
+        },
+        "note": {
+          "$ref": "common.schema.json#/$defs/Text"
+        }
+      },
+      "required": [
+        "kind",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "RecallFromLesson": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "lesson"
+        },
+        "lesson_id": {
+          "$ref": "common.schema.json#/$defs/Uuid",
+          "description": "id của bài được nhớ lại"
+        }
+      },
+      "required": [
+        "kind",
+        "lesson_id"
+      ],
+      "additionalProperties": false
+    },
+    "ChoiceOption": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        },
+        "correct": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "correct"
+      ],
+      "additionalProperties": false
+    },
+    "SingleChoice": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "single_choice"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChoiceOption"
+          },
+          "minItems": 2,
+          "maxItems": 6,
+          "description": "cần đúng 1 lựa chọn có correct: true",
+          "contains": {
+            "type": "object",
+            "properties": {
+              "correct": {
+                "const": true
+              }
+            },
+            "required": [
+              "correct"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      },
+      "required": [
+        "options"
+      ],
+      "unevaluatedProperties": false
+    },
+    "MultiChoice": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "multi_choice"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChoiceOption"
+          },
+          "minItems": 2,
+          "maxItems": 8,
+          "allOf": [
+            {
+              "description": "multi_choice cần ít nhất 1 lựa chọn đúng (correct: true)",
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "correct": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "correct"
+                ]
+              }
+            },
+            {
+              "description": "multi_choice cần ít nhất 1 lựa chọn sai (correct: false)",
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "correct": {
+                    "const": false
+                  }
+                },
+                "required": [
+                  "correct"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "options"
+      ],
+      "unevaluatedProperties": false
+    },
+    "TrueFalse": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "true_false"
+        },
+        "answer": {
+          "type": "boolean"
+        },
+        "statement": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "Lời nhân vật, vd Na nói"
+        },
+        "speaker": {
+          "$ref": "common.schema.json#/$defs/Key",
+          "description": "Nhân vật nói statement, vd na"
+        },
+        "labels": {
+          "$ref": "#/$defs/TrueFalseLabels"
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "unevaluatedProperties": false
+    },
+    "TrueFalseLabels": {
+      "type": "object",
+      "properties": {
+        "true": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "false": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        }
+      },
+      "required": [
+        "true",
+        "false"
+      ],
+      "additionalProperties": false
+    },
+    "FillBlankBank": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "fill_blank_bank"
+        },
+        "sentence": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "Ô trống {1}, {2}… trong en (vi không bắt buộc)"
+        },
+        "bank": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/BankWord"
+          },
+          "minItems": 2
+        },
+        "answers": {
+          "description": "Phần tử thứ i là key đáp án của ô {i+1}",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Key"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "sentence",
+        "bank",
+        "answers"
+      ],
+      "unevaluatedProperties": false
+    },
+    "BankWord": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "OrderSequence": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "order_sequence"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SequenceItem"
+          },
+          "minItems": 3,
+          "maxItems": 6
+        },
+        "answer": {
+          "description": "Hoán vị đúng của items, theo key",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Key"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "items",
+        "answer"
+      ],
+      "unevaluatedProperties": false
+    },
+    "SequenceItem": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "PictureBarChart": {
+      "$ref": "#/$defs/QuizBase",
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "picture_bar_chart"
+        },
+        "chart": {
+          "$ref": "#/$defs/BarChart"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChoiceOption"
+          },
+          "minItems": 2,
+          "maxItems": 6,
+          "description": "cần đúng 1 lựa chọn có correct: true",
+          "contains": {
+            "type": "object",
+            "properties": {
+              "correct": {
+                "const": true
+              }
+            },
+            "required": [
+              "correct"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      },
+      "required": [
+        "chart",
+        "options"
+      ],
+      "unevaluatedProperties": false
+    },
+    "BarChart": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "unit": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "bars": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Bar"
+          },
+          "minItems": 2,
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "bars"
+      ],
+      "additionalProperties": false
+    },
+    "Bar": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key"
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "value"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

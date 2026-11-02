@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/lesson.schema.json",
+  "title": "Science Kids content v1: bài học (file <nn>-<slug>.json)",
+  "$ref": "#/$defs/Lesson",
+  "$defs": {
+    "Lesson": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "lesson"
+        },
+        "schema_version": {
+          "$ref": "common.schema.json#/$defs/SchemaVersion"
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/Uuid"
+        },
+        "topic_id": {
+          "$ref": "common.schema.json#/$defs/Uuid",
+          "description": "id của topic chứa bài"
+        },
+        "slug": {
+          "$ref": "common.schema.json#/$defs/Slug"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "opener",
+            "core",
+            "apply",
+            "review"
+          ]
+        },
+        "title": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "objective": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "I can…"
+        },
+        "key_points": {
+          "description": "Đúng 3 ý chính",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Spoken"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "est_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sensitive": {
+          "description": "Nội dung nhạy cảm, app ẩn tới khi phụ huynh bật",
+          "type": "boolean",
+          "default": false
+        },
+        "archived": {
+          "description": "Bỏ nội dung thì archived, không xoá",
+          "type": "boolean",
+          "default": false
+        },
+        "ai_draft": {
+          "description": "Nháp do AI soạn, chưa duyệt",
+          "type": "boolean",
+          "default": false
+        },
+        "warmup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/WarmupItem"
+          },
+          "maxItems": 3
+        },
+        "learn": {
+          "type": "array",
+          "items": {
+            "$ref": "block.schema.json#/$defs/LearnBlock"
+          },
+          "minItems": 1
+        },
+        "play": {
+          "$ref": "block.schema.json#/$defs/PlayBlock"
+        },
+        "quiz": {
+          "description": "Đúng 6 câu",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LessonQuizItem"
+          },
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "vocab": {
+          "type": "array",
+          "items": {
+            "$ref": "vocab-term.schema.json#/$defs/VocabTerm"
+          },
+          "minItems": 4,
+          "maxItems": 8
+        },
+        "reward": {
+          "$ref": "#/$defs/Reward"
+        }
+      },
+      "required": [
+        "kind",
+        "schema_version",
+        "id",
+        "topic_id",
+        "slug",
+        "order",
+        "stage",
+        "title",
+        "objective",
+        "key_points",
+        "est_minutes",
+        "warmup",
+        "learn",
+        "play",
+        "quiz",
+        "vocab",
+        "reward"
+      ],
+      "additionalProperties": false
+    },
+    "WarmupItem": {
+      "description": "câu warmup phải có recall_from (prior_knowledge hoặc lesson)",
+      "$ref": "quiz-item.schema.json#/$defs/QuizItem",
+      "type": "object",
+      "required": [
+        "recall_from"
+      ]
+    },
+    "LessonQuizItem": {
+      "$ref": "quiz-item.schema.json#/$defs/QuizItem",
+      "type": "object",
+      "properties": {
+        "recall_from": {
+          "description": "recall_from chỉ dùng cho câu warmup; câu quiz không được có",
+          "not": {}
+        }
+      }
+    },
+    "Reward": {
+      "type": "object",
+      "properties": {
+        "collectible": {
+          "$ref": "collectible.schema.json#/$defs/Collectible"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

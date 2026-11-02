@@ -1,0 +1,380 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "item-scoring",
+  "version": 1,
+  "source": "technical-plan.md B4.4 (Điểm một câu, Chọn nhiều, Điền từ/sắp thứ tự); SK-001 Hợp đồng trường v1 (QuizItem theo format); SK-003 D1, D2, T1–T3",
+  "function": "score_item(item, tries, rules) -> {points, try_results[], final_correct, tries_used} | {error}",
+  "platforms": ["app"],
+  "notes": [
+    "item chỉ gồm trường đáp án của SK-001: format; options[].key, options[].correct; answer; bank[].key và answers; items[].key và answer. Chữ hiển thị (label, prompt…) bỏ đi.",
+    "try_results[i] là true khi lần thử i khớp hoàn toàn đáp án. points chỉ đến từ lần thử 1 (D1), trừ điểm sắp thứ tự từng phần (D2).",
+    "Mỗi case lỗi chỉ có đúng một lỗi; thứ tự ưu tiên giữa các mã lỗi chưa chốt nên vector không trộn hai lỗi."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "item-scoring-001",
+      "description": "single_choice đúng ngay lần thử 1 → được 1 điểm, chỉ dùng 1 lần thử (B4.4: 1 điểm nếu đúng ở lần thử đầu).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "fish" } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-002",
+      "description": "single_choice sai lần 1 (rice) rồi đúng lần 2 (fish) → 0 điểm vì lần thử sau không được điểm, nhưng final_correct = true (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "rice" }, { "selected": "fish" } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-003",
+      "description": "single_choice sai cả 2 lần (hết max_tries mặc định 2) → 0 điểm, final_correct = false; không trừ điểm (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "rice" }, { "selected": "banana" } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false], "final_correct": false, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-004",
+      "description": "max_tries = 1: sai ở lần thử duy nhất → 0 điểm, final_correct = false, không có lần thử lại.",
+      "status": "confirmed",
+      "rules": { "max_tries": 1 },
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "banana" } ]
+      },
+      "expected": { "points": 0, "try_results": [false], "final_correct": false, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-005",
+      "description": "max_tries = 1 nhưng có 2 lần thử → lỗi too_many_tries. D1: max_tries là tổng số lần thử tính cả lần đầu, nên max_tries 1 nghĩa là không được thử lại.",
+      "status": "proposed",
+      "decision": "SK-003/D1",
+      "rules": { "max_tries": 1 },
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "banana" }, { "selected": "fish" } ]
+      },
+      "expected": { "error": "too_many_tries" }
+    },
+    {
+      "id": "item-scoring-006",
+      "description": "max_tries = 3: sai, sai, rồi đúng ở lần 3 → 0 điểm (chỉ lần 1 có điểm), final_correct = true, dùng 3 lần.",
+      "status": "confirmed",
+      "rules": { "max_tries": 3 },
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "rice" }, { "selected": "banana" }, { "selected": "fish" } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false, true], "final_correct": true, "tries_used": 3 }
+    },
+    {
+      "id": "item-scoring-007",
+      "description": "max_tries = 3: sai cả 3 lần → 0 điểm, final_correct = false.",
+      "status": "confirmed",
+      "rules": { "max_tries": 3 },
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "rice" }, { "selected": "banana" }, { "selected": "rice" } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false, false], "final_correct": false, "tries_used": 3 }
+    },
+    {
+      "id": "item-scoring-008",
+      "description": "max_tries mặc định 2 nhưng có 3 lần thử → lỗi too_many_tries. D1: 2 là tổng số lần (lần đầu + 1 lần thử lại), không phải 2 lần thử lại.",
+      "status": "proposed",
+      "decision": "SK-003/D1",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "rice" }, { "selected": "banana" }, { "selected": "fish" } ]
+      },
+      "expected": { "error": "too_many_tries" }
+    },
+    {
+      "id": "item-scoring-009",
+      "description": "multi_choice chọn đúng bằng tập đáp án {fish, egg} ở lần 1 → 1 điểm (B4.4: all-or-nothing).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "multi_choice", "options": [ { "key": "fish", "correct": true }, { "key": "egg", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": ["fish", "egg"] } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-010",
+      "description": "multi_choice chọn thiếu (chỉ fish) ở lần 1 → sai; lần 2 chọn đủ {fish, egg} → đúng nhưng 0 điểm. Chọn thiếu không được điểm từng phần (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "multi_choice", "options": [ { "key": "fish", "correct": true }, { "key": "egg", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": ["fish"] }, { "selected": ["fish", "egg"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-011",
+      "description": "multi_choice chọn thừa {fish, egg, rice} ở lần 1 và lần 2 chọn thiếu {egg} → cả hai sai vì tập chọn khác tập đáp án; 0 điểm, final_correct = false (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "multi_choice", "options": [ { "key": "fish", "correct": true }, { "key": "egg", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": ["fish", "egg", "rice"] }, { "selected": ["egg"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false], "final_correct": false, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-012",
+      "description": "multi_choice chọn đúng tập nhưng khác thứ tự (egg trước fish) → vẫn đúng, 1 điểm: so sánh theo tập, không theo thứ tự chạm.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "multi_choice", "options": [ { "key": "fish", "correct": true }, { "key": "egg", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": ["egg", "fish"] } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-013",
+      "description": "true_false đáp án là false (câu của Na sai), bé chọn false ở lần 1 → 1 điểm.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "true_false", "answer": false },
+        "tries": [ { "value": false } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-014",
+      "description": "true_false đáp án false, bé chọn true rồi false → 0 điểm, final_correct = true.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "true_false", "answer": false },
+        "tries": [ { "value": true }, { "value": false } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-015",
+      "description": "true_false đáp án true, bé chọn true ở lần 1 → 1 điểm (kiểm engine không mặc định đáp án là false).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "true_false", "answer": true },
+        "tries": [ { "value": true } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-016",
+      "description": "fill_blank_bank 2 ô, điền đúng cả hai [energy, grow] ở lần 1 → 1 điểm (answers[i] là đáp án ô {i+1}, SK-001).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "fill_blank_bank", "bank": [ { "key": "energy" }, { "key": "grow" }, { "key": "sleep" } ], "answers": ["energy", "grow"] },
+        "tries": [ { "filled": ["energy", "grow"] } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-017",
+      "description": "fill_blank_bank 2 ô, lần 1 sai 1 ô (ô 2 điền sleep) → sai cả câu, không có điểm từng ô; lần 2 đúng → 0 điểm, final_correct = true (B4.4: điền từ đúng khi khớp hoàn toàn).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "fill_blank_bank", "bank": [ { "key": "energy" }, { "key": "grow" }, { "key": "sleep" } ], "answers": ["energy", "grow"] },
+        "tries": [ { "filled": ["energy", "sleep"] }, { "filled": ["energy", "grow"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-018",
+      "description": "fill_blank_bank điền đúng từ nhưng đảo ô [grow, energy] ở lần 1, lần 2 vẫn sai 1 ô → cả hai sai vì so theo vị trí ô; 0 điểm, final_correct = false.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "fill_blank_bank", "bank": [ { "key": "energy" }, { "key": "grow" }, { "key": "sleep" } ], "answers": ["energy", "grow"] },
+        "tries": [ { "filled": ["grow", "energy"] }, { "filled": ["sleep", "grow"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false], "final_correct": false, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-019",
+      "description": "fill_blank_bank với partial_order_min = 1, lần 1 đúng 1/2 ô → vẫn 0 điểm: điểm từng phần (D2) chỉ áp cho order_sequence.",
+      "status": "proposed",
+      "decision": "SK-003/D2",
+      "rules": { "partial_order_min": 1 },
+      "input": {
+        "item": { "format": "fill_blank_bank", "bank": [ { "key": "energy" }, { "key": "grow" }, { "key": "sleep" } ], "answers": ["energy", "grow"] },
+        "tries": [ { "filled": ["energy", "sleep"] }, { "filled": ["energy", "grow"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-020",
+      "description": "order_sequence 5 bước vòng đời cây, sắp đúng hoàn toàn ở lần 1 → 1 điểm.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "seedling", "flower", "fruit"] } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-021",
+      "description": "order_sequence, partial_order_min = null (mặc định tắt). Lần 1 đúng vị trí 3/5 (seed, sprout, fruit; đảo seedling↔flower) → 0 điểm; lần 2 đúng → final_correct = true, vẫn 0 điểm (B4.4: sắp thứ tự đúng khi khớp hoàn toàn).",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "flower", "seedling", "fruit"] }, { "order": ["seed", "sprout", "seedling", "flower", "fruit"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-022",
+      "description": "order_sequence, partial_order_min = 3. Lần 1 đúng vị trí 3/5 (seed, sprout, fruit) → được 1 điểm từng phần; try_results[0] vẫn false vì chưa khớp hoàn toàn, nên bé vẫn được thử lại; lần 2 đúng → final_correct = true, points giữ 1 (D2).",
+      "status": "proposed",
+      "decision": "SK-003/D2",
+      "rules": { "partial_order_min": 3 },
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "flower", "seedling", "fruit"] }, { "order": ["seed", "sprout", "seedling", "flower", "fruit"] } ]
+      },
+      "expected": { "points": 1, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-023",
+      "description": "order_sequence, partial_order_min = 3. Lần 1 chỉ đúng vị trí 2/5 (seed, sprout) → dưới ngưỡng, 0 điểm. Lần 2 đúng vị trí 3/5 nhưng không được điểm vì D2 chỉ xét lần thử 1; final_correct = false.",
+      "status": "proposed",
+      "decision": "SK-003/D2",
+      "rules": { "partial_order_min": 3 },
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "flower", "fruit", "seedling"] }, { "order": ["seed", "sprout", "flower", "seedling", "fruit"] } ]
+      },
+      "expected": { "points": 0, "try_results": [false, false], "final_correct": false, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-024",
+      "description": "order_sequence, partial_order_min = 3. Lần 1 đúng vị trí 3/5 → 1 điểm từng phần; lần 2 vẫn sai → final_correct = false nhưng points vẫn 1. Kiểm points và final_correct độc lập nhau (D2).",
+      "status": "proposed",
+      "decision": "SK-003/D2",
+      "rules": { "partial_order_min": 3 },
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "flower", "seedling", "fruit"] }, { "order": ["sprout", "seed", "seedling", "fruit", "flower"] } ]
+      },
+      "expected": { "points": 1, "try_results": [false, false], "final_correct": false, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-025",
+      "description": "order_sequence, partial_order_min = 3, sắp đúng hoàn toàn ở lần 1 → 1 điểm như bình thường; bật điểm từng phần không làm hỏng điểm đủ.",
+      "status": "confirmed",
+      "rules": { "partial_order_min": 3 },
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "seedling", "flower", "fruit"] } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-026",
+      "description": "picture_bar_chart chấm như single_choice: chọn mango (cột cao nhất) ở lần 1 → 1 điểm.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "picture_bar_chart", "options": [ { "key": "banana", "correct": false }, { "key": "mango", "correct": true }, { "key": "apple", "correct": false } ] },
+        "tries": [ { "selected": "mango" } ]
+      },
+      "expected": { "points": 1, "try_results": [true], "final_correct": true, "tries_used": 1 }
+    },
+    {
+      "id": "item-scoring-027",
+      "description": "picture_bar_chart chọn banana rồi mango → 0 điểm, final_correct = true.",
+      "status": "confirmed",
+      "input": {
+        "item": { "format": "picture_bar_chart", "options": [ { "key": "banana", "correct": false }, { "key": "mango", "correct": true }, { "key": "apple", "correct": false } ] },
+        "tries": [ { "selected": "banana" }, { "selected": "mango" } ]
+      },
+      "expected": { "points": 0, "try_results": [false, true], "final_correct": true, "tries_used": 2 }
+    },
+    {
+      "id": "item-scoring-028",
+      "description": "Đã đúng ở lần 1 mà vẫn có lần thử 2 → lỗi try_after_correct. App không cho thử tiếp sau khi đúng, nên dữ liệu như vậy là hỏng và không được chấm (đề xuất tester T1).",
+      "status": "proposed",
+      "decision": "SK-003/T1",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "fish" }, { "selected": "rice" } ]
+      },
+      "expected": { "error": "try_after_correct" }
+    },
+    {
+      "id": "item-scoring-029",
+      "description": "Không có lần thử nào (tries rỗng) → lỗi no_tries; câu chưa trả lời không được chấm là sai (đề xuất tester T2).",
+      "status": "proposed",
+      "decision": "SK-003/T2",
+      "input": {
+        "item": { "format": "true_false", "answer": true },
+        "tries": []
+      },
+      "expected": { "error": "no_tries" }
+    },
+    {
+      "id": "item-scoring-030",
+      "description": "single_choice chọn key không có trong options (meat) → lỗi invalid_answer, không chấm là sai (đề xuất tester T3).",
+      "status": "proposed",
+      "decision": "SK-003/T3",
+      "input": {
+        "item": { "format": "single_choice", "options": [ { "key": "fish", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": "meat" } ]
+      },
+      "expected": { "error": "invalid_answer" }
+    },
+    {
+      "id": "item-scoring-031",
+      "description": "order_sequence gửi thứ tự không phải hoán vị của items (thiếu fruit, lặp seed) → lỗi invalid_answer (đề xuất tester T3).",
+      "status": "proposed",
+      "decision": "SK-003/T3",
+      "input": {
+        "item": { "format": "order_sequence", "items": [ { "key": "seed" }, { "key": "sprout" }, { "key": "seedling" }, { "key": "flower" }, { "key": "fruit" } ], "answer": ["seed", "sprout", "seedling", "flower", "fruit"] },
+        "tries": [ { "order": ["seed", "sprout", "seedling", "flower", "seed"] } ]
+      },
+      "expected": { "error": "invalid_answer" }
+    },
+    {
+      "id": "item-scoring-032",
+      "description": "fill_blank_bank câu có 2 ô nhưng filled chỉ có 1 phần tử → lỗi invalid_answer, không chấm là sai (đề xuất tester T3).",
+      "status": "proposed",
+      "decision": "SK-003/T3",
+      "input": {
+        "item": { "format": "fill_blank_bank", "bank": [ { "key": "energy" }, { "key": "grow" }, { "key": "sleep" } ], "answers": ["energy", "grow"] },
+        "tries": [ { "filled": ["energy"] } ]
+      },
+      "expected": { "error": "invalid_answer" }
+    },
+    {
+      "id": "item-scoring-033",
+      "description": "multi_choice gửi trùng một lựa chọn [fish, fish, egg] → lỗi invalid_answer thay vì gộp thành tập {fish, egg} (đề xuất tester T3).",
+      "status": "proposed",
+      "decision": "SK-003/T3",
+      "input": {
+        "item": { "format": "multi_choice", "options": [ { "key": "fish", "correct": true }, { "key": "egg", "correct": true }, { "key": "rice", "correct": false }, { "key": "banana", "correct": false } ] },
+        "tries": [ { "selected": ["fish", "fish", "egg"] } ]
+      },
+      "expected": { "error": "invalid_answer" }
+    }
+  ]
+}

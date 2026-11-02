@@ -1,0 +1,25 @@
+// Science Kids: build settings shared by every target and configuration.
+// project.yml attaches this file to the project (Debug and Release).
+
+// Temporary bundle id (SK-005 decision 1, final choice in SK-020).
+// This is the ONLY place the id is written: the app uses $(SK_BUNDLE_ID),
+// the unit test bundle uses $(SK_BUNDLE_ID).tests. To rename, edit this line
+// and run ./bootstrap.sh again.
+SK_BUNDLE_ID = vn.sciencekids.app
+
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+
+// Empty on purpose: simulator builds need no signing team and no Apple ID.
+// Device signing (SK-020) sets DEVELOPMENT_TEAM in Config/Local.xcconfig.
+DEVELOPMENT_TEAM =
+CODE_SIGN_STYLE = Automatic
+
+// Supabase project of this build (SK-022), read by the app from Info.plist (SKSupabaseURL,
+// SKSupabasePublishableKey). Empty here: set them in Config/Local.xcconfig (gitignored). Empty
+// means the app runs without a server (no sync), which is fine for the simulator.
+SK_SUPABASE_URL =
+SK_SUPABASE_PUBLISHABLE_KEY =
+
+// Per-machine overrides, not in git (see Local.xcconfig.example).
+#include? "Local.xcconfig"

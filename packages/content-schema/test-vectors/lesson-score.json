@@ -1,0 +1,241 @@
+{
+  "$schema": "./vector.schema.json",
+  "suite": "lesson-score",
+  "version": 1,
+  "source": "technical-plan.md B4.4 (Điểm bài: score = số câu đúng / 6, khởi động không tính điểm); SK-001 (quiz đúng 6 câu); SK-003 D2, D6, T4, T5",
+  "function": "score_lesson(quiz_results, warmup_results) -> {correct, max, completed} | {error}",
+  "platforms": ["app", "server"],
+  "notes": [
+    "Mỗi phần tử của quiz_results và warmup_results là { item_id, points, final_correct }, lấy từ output của score_item.",
+    "correct = tổng points của quiz_results (không dùng final_correct). max luôn là 6 vì quiz có đúng 6 câu (B4.4, SK-001). completed = đủ 6 câu quiz có kết quả (T4)."
+  ],
+  "default_rules": {
+    "max_tries": 2,
+    "partial_order_min": null,
+    "pass_threshold": { "num": 5, "den": 6 },
+    "mastery_gap_days": 1,
+    "rest_days_per_week": 1,
+    "warmup": {
+      "min": 2,
+      "max": 3,
+      "week": { "target": 7, "min": 5, "max": 10 },
+      "month": { "target": 30, "min": 21, "max": 45 },
+      "exclude_dok": [3]
+    }
+  },
+  "cases": [
+    {
+      "id": "lesson-score-001",
+      "description": "Đúng cả 6 câu ở lần thử 1 → correct 6/6, completed = true.",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 1, "final_correct": true },
+          { "item_id": "w2", "points": 1, "final_correct": true }
+        ]
+      },
+      "expected": { "correct": 6, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-002",
+      "description": "Sai cả 6 câu ở lần thử 1 (có 3 câu đúng ở lần 2) → correct 0/6, vẫn completed = true vì đã trả lời đủ 6 câu; điểm thấp không chặn bài (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 0, "final_correct": true },
+          { "item_id": "q2", "points": 0, "final_correct": false },
+          { "item_id": "q3", "points": 0, "final_correct": true },
+          { "item_id": "q4", "points": 0, "final_correct": false },
+          { "item_id": "q5", "points": 0, "final_correct": true },
+          { "item_id": "q6", "points": 0, "final_correct": false }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 1, "final_correct": true },
+          { "item_id": "w2", "points": 0, "final_correct": true }
+        ]
+      },
+      "expected": { "correct": 0, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-003",
+      "description": "5/6: câu q4 đúng ở lần thử 2 (final_correct = true nhưng points 0) nên không được tính; 5 câu còn lại đúng lần 1 → correct 5 (B4.4: lần thử sau không được điểm).",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 0, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 1, "final_correct": true },
+          { "item_id": "w2", "points": 1, "final_correct": true }
+        ]
+      },
+      "expected": { "correct": 5, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-004",
+      "description": "Khởi động sai hết cả 3 câu, quiz đúng 6/6 → correct vẫn 6; khởi động không tính điểm và không trừ điểm (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 0, "final_correct": false },
+          { "item_id": "w2", "points": 0, "final_correct": false },
+          { "item_id": "w3", "points": 0, "final_correct": false }
+        ]
+      },
+      "expected": { "correct": 6, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-005",
+      "description": "Khởi động đúng hết 2 câu, quiz đúng 3/6 → correct 3; điểm khởi động không cộng vào điểm bài (B4.4).",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 0, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 0, "final_correct": false },
+          { "item_id": "q6", "points": 0, "final_correct": false }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 1, "final_correct": true },
+          { "item_id": "w2", "points": 1, "final_correct": true }
+        ]
+      },
+      "expected": { "correct": 3, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-006",
+      "description": "Mới trả lời 5 câu (thiếu q6), cả 5 đều đúng lần 1 → correct 5, max vẫn 6, completed = false. Bài chưa xong không được tính là đạt dù 5/6 (xem stars-017).",
+      "status": "confirmed",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 1, "final_correct": true },
+          { "item_id": "w2", "points": 0, "final_correct": true }
+        ]
+      },
+      "expected": { "correct": 5, "max": 6, "completed": false }
+    },
+    {
+      "id": "lesson-score-007",
+      "description": "Bài không có màn khởi động (warmup_results rỗng, ví dụ bài đầu tiên không có câu soạn sẵn) → vẫn completed = true khi đủ 6 câu quiz (D6: kết quả chọn khởi động rỗng thì không có màn khởi động).",
+      "status": "proposed",
+      "decision": ["SK-003/D6", "SK-003/T4"],
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 0, "final_correct": false },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 0, "final_correct": true }
+        ],
+        "warmup_results": []
+      },
+      "expected": { "correct": 4, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-008",
+      "description": "Khởi động bỏ dở (mới trả lời 1/2 câu), quiz đủ 6 câu → completed = true; khởi động không ảnh hưởng completed (đề xuất tester T4).",
+      "status": "proposed",
+      "decision": "SK-003/T4",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 0, "final_correct": false }
+        ],
+        "warmup_results": [
+          { "item_id": "w1", "points": 0, "final_correct": false }
+        ]
+      },
+      "expected": { "correct": 5, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-009",
+      "description": "Câu order_sequence q6 được 1 điểm từng phần (points 1, final_correct false, D2) → vẫn tính vào correct vì correct cộng points, không đếm final_correct: 5 + 1 = 6.",
+      "status": "proposed",
+      "decision": "SK-003/D2",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 1, "final_correct": false }
+        ],
+        "warmup_results": []
+      },
+      "expected": { "correct": 6, "max": 6, "completed": true }
+    },
+    {
+      "id": "lesson-score-010",
+      "description": "quiz_results có item_id trùng (q3 hai lần, ví dụ hàng đợi offline gửi lặp) → lỗi invalid_results thay vì cộng điểm hai lần hoặc coi là đủ 6 câu (đề xuất tester T5).",
+      "status": "proposed",
+      "decision": "SK-003/T5",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": []
+      },
+      "expected": { "error": "invalid_results" }
+    },
+    {
+      "id": "lesson-score-011",
+      "description": "quiz_results có 7 phần tử khác nhau (quá 6 câu) → lỗi invalid_results, để correct không bao giờ vượt max (đề xuất tester T5).",
+      "status": "proposed",
+      "decision": "SK-003/T5",
+      "input": {
+        "quiz_results": [
+          { "item_id": "q1", "points": 1, "final_correct": true },
+          { "item_id": "q2", "points": 1, "final_correct": true },
+          { "item_id": "q3", "points": 1, "final_correct": true },
+          { "item_id": "q4", "points": 1, "final_correct": true },
+          { "item_id": "q5", "points": 1, "final_correct": true },
+          { "item_id": "q6", "points": 1, "final_correct": true },
+          { "item_id": "q7", "points": 1, "final_correct": true }
+        ],
+        "warmup_results": []
+      },
+      "expected": { "error": "invalid_results" }
+    }
+  ]
+}

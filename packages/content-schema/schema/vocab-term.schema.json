@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/vocab-term.schema.json",
+  "title": "Science Kids content v1: từ vựng",
+  "$ref": "#/$defs/VocabTerm",
+  "$defs": {
+    "VocabTerm": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/Uuid" },
+        "key": { "$ref": "common.schema.json#/$defs/Key" },
+        "term": { "$ref": "common.schema.json#/$defs/Spoken", "description": "en = từ tiếng Anh, vi = nghĩa" },
+        "example": { "$ref": "common.schema.json#/$defs/Spoken" },
+        "image": { "$ref": "common.schema.json#/$defs/Image" },
+        "tier": {
+          "description": "core = từ mới của bài, được kiểm tra; extra = từ đọc thêm",
+          "type": "string",
+          "enum": ["core", "extra"],
+          "default": "core"
+        }
+      },
+      "required": ["id", "key", "term", "example"],
+      "additionalProperties": false
+    }
+  }
+}

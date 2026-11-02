@@ -3,7 +3,7 @@
 > Bản copy để review từ artifact (https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe).
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
 > Syllabus chi tiết: [syllabus.md](syllabus.md) · Wireframes: [design/wireframes/](design/wireframes/) và https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ
-> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con)
+> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con); 1/11/2026 (mục 3: quiz của bé 5–7 làm được bằng nghe và nhìn, không hiện điểm; Duy chốt SK-026)
 
 ## 1. Tổng quan & quyết định đã chốt
 
@@ -30,7 +30,7 @@ Nguồn: https://www.thenational.academy/teachers/programmes/science-primary/uni
 
 | Persona | Mô tả | Nhu cầu chính | Hàm ý thiết kế |
 | --- | --- | --- | --- |
-| Bé 5–7 (Explorer) | Chưa đọc thạo, chú ý ngắn | Xem – nghe – chạm, bài 5–7 phút | Audio EN và VI đọc mọi thứ, đáp án bằng hình, ít chữ, nút to |
+| Bé 5–7 (Explorer) | Chưa đọc thạo, chú ý ngắn | Xem – nghe – chạm, bài 5–7 phút | Audio EN và VI đọc mọi thứ, đáp án bằng hình, ít chữ, nút to. Làm được quiz chỉ bằng nghe và nhìn: lựa chọn, Đúng/Sai và nút không có chữ. Không hiện điểm số hay XP; thưởng bằng sao và sticker (1/11/2026, SK-026) |
 | Bé 7–9 (Discoverer) — **pilot** | Đọc tốt, thích thi đua | Quiz, điểm, huy hiệu, streak | Gamification, flashcard EN–VI, thử thách tuần |
 | Bé 9–11 (Scientist) | Tư duy trừu tượng hơn | Thử thách, thí nghiệm | Đọc hiểu EN dài hơn, câu hỏi mở |
 | Phụ huynh | Bận, muốn con học có định hướng | Theo dõi tiến độ, kiểm soát thời gian | Dashboard + PIN, báo cáo tuần, giới hạn phiên học |

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Explorer · Quiz câu 6 · Đúng/Sai bằng biểu tượng</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#A93A27}a:hover{color:#1E1B18}
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F0E6CF; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18">
+  <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+    <defs>
+      <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+      </filter>
+      <symbol id="m-body" viewBox="0 0 100 100">
+        <rect x="48.5" y="9" width="3" height="18" rx="1.5" fill="#1E1B18"></rect>
+        <g filter="url(#paperE)"><circle cx="50" cy="9" r="6.5" fill="#E2A52A"></circle></g>
+        <g filter="url(#paperE)"><circle cx="50" cy="58" r="36" fill="#3B6E6A"></circle></g>
+        <g filter="url(#paperE)"><ellipse cx="50" cy="73" rx="21" ry="14" fill="#F0E6CF"></ellipse></g>
+        <circle cx="27" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle><circle cx="73" cy="62" r="4.5" fill="#A93A27" opacity="0.55"></circle>
+      </symbol>
+      <symbol id="m-talk" viewBox="0 0 100 100">
+        <use href="#m-body"></use>
+        <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+        <circle cx="40" cy="52" r="4.2" fill="#1E1B18"></circle><circle cx="64" cy="52" r="4.2" fill="#1E1B18"></circle>
+        <ellipse cx="50" cy="69.5" rx="7" ry="6" fill="#1E1B18"></ellipse><ellipse cx="50" cy="72.6" rx="4" ry="2.3" fill="#A93A27"></ellipse>
+      </symbol>
+      <symbol id="m-idle" viewBox="0 0 100 100">
+        <use href="#m-body"></use>
+        <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+        <circle cx="40" cy="52" r="4.2" fill="#1E1B18"></circle><circle cx="64" cy="52" r="4.2" fill="#1E1B18"></circle>
+        <path d="M41 67 Q 50 77 59 67 Q 50 71 41 67 Z" fill="#1E1B18"></path>
+      </symbol>
+      <symbol id="m-happy" viewBox="0 0 100 100">
+        <use href="#m-body"></use>
+        <path d="M29 54 Q38 39 47 54 Q38 47 29 54 Z" fill="#1E1B18"></path><path d="M53 54 Q62 39 71 54 Q62 47 53 54 Z" fill="#1E1B18"></path>
+        <path d="M38 64 Q50 83 62 64 Q50 70 38 64 Z" fill="#1E1B18"></path>
+      </symbol>
+      <symbol id="m-think" viewBox="0 0 100 100">
+        <use href="#m-body"></use>
+        <g filter="url(#paperE)"><circle cx="38" cy="50" r="9.5" fill="#FBF6EA"></circle><circle cx="62" cy="50" r="9.5" fill="#FBF6EA"></circle></g>
+        <circle cx="35.5" cy="46.5" r="4.2" fill="#1E1B18"></circle><circle cx="59.5" cy="46.5" r="4.2" fill="#1E1B18"></circle>
+        <ellipse cx="54" cy="69" rx="3.6" ry="3.3" fill="#1E1B18"></ellipse>
+      </symbol>
+      <symbol id="pic-penguin" viewBox="0 0 100 100">
+        <g filter="url(#paperE)"><ellipse cx="40" cy="92" rx="9" ry="4.2" fill="#D9803A"></ellipse><ellipse cx="60" cy="92" rx="9" ry="4.2" fill="#D9803A"></ellipse></g>
+        <g filter="url(#paperE)"><ellipse cx="50" cy="55" rx="26" ry="37" fill="#33363D"></ellipse></g>
+        <g filter="url(#paperE)" fill="#262A30"><path d="M25 46 Q11 64 18 82 Q27 68 29 52 Z"></path><path d="M75 46 Q89 64 82 82 Q73 68 71 52 Z"></path></g>
+        <g filter="url(#paperE)"><ellipse cx="50" cy="65" rx="17" ry="25" fill="#FBF6EA"></ellipse></g>
+        <g filter="url(#paperE)"><path d="M36 33 Q50 18 64 33 Q65 45 50 47 Q35 45 36 33 Z" fill="#FBF6EA"></path></g>
+        <circle cx="44" cy="33" r="3" fill="#1E1B18"></circle><circle cx="56" cy="33" r="3" fill="#1E1B18"></circle>
+        <g filter="url(#paperE)"><path d="M44.5 39 L55.5 39 L50 47.5 Z" fill="#E2A52A"></path></g>
+      </symbol>
+      <symbol id="ic-nod" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g filter="url(#paperE)" fill="#C9B993"><circle cx="60" cy="48" r="27"></circle><circle cx="60" cy="74" r="27"></circle></g><g filter="url(#paperE)"><circle cx="60" cy="58" r="27" fill="#3A2A20"></circle></g><g filter="url(#paperE)" fill="#E9C39A"><circle cx="37" cy="67" r="5.5"></circle><circle cx="83" cy="67" r="5.5"></circle><ellipse cx="60" cy="66" rx="22.5" ry="21"></ellipse></g><path d="M37.5 60 Q39 41 60 41 Q81 41 82.5 60 Q73 50.5 60 52 Q47 50.5 37.5 60 Z" fill="#3A2A20"></path><circle cx="52" cy="67" r="2.9" fill="#1E1B18"></circle><circle cx="68" cy="67" r="2.9" fill="#1E1B18"></circle><path d="M53.5 75.5 Q60 81.5 66.5 75.5 Q60 78.2 53.5 75.5 Z" fill="#1E1B18"></path><circle cx="46.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><circle cx="73.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><path d="M47 22 L60 10 L73 22 L67.5 25.5 L60 18.5 L52.5 25.5 Z" fill="#3B6E6A"></path><path d="M47 100 L60 112 L73 100 L67.5 96.5 L60 103.5 L52.5 96.5 Z" fill="#3B6E6A"></path></symbol>
+      <symbol id="ic-shake" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g filter="url(#paperE)" fill="#C9B993"><circle cx="46" cy="61" r="27"></circle><circle cx="74" cy="61" r="27"></circle></g><g filter="url(#paperE)"><circle cx="60" cy="58" r="27" fill="#3A2A20"></circle></g><g filter="url(#paperE)" fill="#E9C39A"><circle cx="37" cy="67" r="5.5"></circle><circle cx="83" cy="67" r="5.5"></circle><ellipse cx="60" cy="66" rx="22.5" ry="21"></ellipse></g><path d="M37.5 60 Q39 41 60 41 Q81 41 82.5 60 Q73 50.5 60 52 Q47 50.5 37.5 60 Z" fill="#3A2A20"></path><circle cx="52" cy="67" r="2.9" fill="#1E1B18"></circle><circle cx="68" cy="67" r="2.9" fill="#1E1B18"></circle><path d="M53.5 75.5 Q60 81.5 66.5 75.5 Q60 78.2 53.5 75.5 Z" fill="#1E1B18"></path><circle cx="46.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><circle cx="73.5" cy="74" r="3.6" fill="#A93A27" opacity="0.35"></circle><path d="M20 48 L8 61 L20 74 L23.5 68.5 L16.5 61 L23.5 53.5 Z" fill="#3B6E6A"></path><path d="M100 48 L112 61 L100 74 L96.5 68.5 L103.5 61 L96.5 53.5 Z" fill="#3B6E6A"></path></symbol>
+      <symbol id="ic-up" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g transform="translate(2 -2)"><g filter="url(#paperE)"><rect x="22" y="72" width="26" height="40" rx="5" fill="#2E4A6E"></rect></g><g filter="url(#paperE)"><rect x="40" y="58" width="46" height="48" rx="14" fill="#A86F43"></rect></g><g filter="url(#paperE)" fill="#8E5A34"><rect x="68" y="60" width="26" height="12" rx="6"></rect><rect x="68" y="71.5" width="26" height="12" rx="6"></rect><rect x="68" y="83" width="26" height="12" rx="6"></rect><rect x="66" y="94.5" width="24" height="11" rx="5.5"></rect></g><g filter="url(#paperE)"><rect x="43" y="16" width="19" height="50" rx="9.5" fill="#A86F43"></rect></g><rect x="46.5" y="19.5" width="12" height="10" rx="5" fill="#C99467"></rect></g></symbol>
+      <symbol id="ic-down" viewBox="0 0 120 120"><g filter="url(#paperE)"><circle cx="60" cy="61" r="54" fill="#F0E6CF"></circle></g><g transform="rotate(180 60 61) translate(2 -2)"><g filter="url(#paperE)"><rect x="22" y="72" width="26" height="40" rx="5" fill="#2E4A6E"></rect></g><g filter="url(#paperE)"><rect x="40" y="58" width="46" height="48" rx="14" fill="#A86F43"></rect></g><g filter="url(#paperE)" fill="#8E5A34"><rect x="68" y="60" width="26" height="12" rx="6"></rect><rect x="68" y="71.5" width="26" height="12" rx="6"></rect><rect x="68" y="83" width="26" height="12" rx="6"></rect><rect x="66" y="94.5" width="24" height="11" rx="5.5"></rect></g><g filter="url(#paperE)"><rect x="43" y="16" width="19" height="50" rx="9.5" fill="#A86F43"></rect></g><rect x="46.5" y="19.5" width="12" height="10" rx="5" fill="#C99467"></rect></g></symbol>
+    </defs>
+  </svg>
+
+  <svg width="390" height="844" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 0">
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+    <rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect>
+    <rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 1; height: 844px; box-sizing: border-box; padding: 18px 20px 22px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div class="e-lay" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0">
+      <a href="Explorer-Home.dc.html" class="e-press" aria-label="Thoát quiz, về trang chủ" style="display: block; width: 72px; height: 72px; flex-shrink: 0">
+        <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#paperE)"><circle cx="36" cy="35" r="32" fill="#FBF6EA"></circle></g><path d="M26.5 25.5l19 19M45.5 25.5l-19 19" fill="none" stroke="#1E1B18" stroke-width="4.2" stroke-linecap="round"></path></svg>
+      </a>
+      <div style="flex: 1; display: flex; justify-content: center; padding-right: 72px">
+        <div role="img" aria-label="Câu 6 trên 6" style="display: flex; align-items: center; gap: 9px; height: 40px">
+          <span style="{{pips.p1}}"></span>
+          <span style="{{pips.p2}}"></span>
+          <span style="{{pips.p3}}"></span>
+          <span style="{{pips.p4}}"></span>
+          <span style="{{pips.p5}}"></span>
+          <span style="{{pips.p6}}"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="e-lay" style="--d: 60ms; display: flex; align-items: flex-end; gap: 6px; flex-shrink: 0">
+      <span aria-hidden="true" class="e-sway" style="display: block; width: 96px; height: 96px; flex-shrink: 0; animation-name: {{swayName}}">
+        <svg width="96" height="96" viewBox="0 0 100 100"><use href="{{face}}"></use></svg>
+      </span>
+      <button onClick="{{replay}}" class="e-press" style="position: relative; flex: 1; min-width: 0; min-height: 96px; box-sizing: border-box; border: none; border-radius: 22px 22px 22px 6px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); cursor: pointer; padding: 12px 34px 13px 16px; font-family: inherit; color: #1E1B18; text-align: left; display: flex; flex-direction: column; justify-content: center; gap: 3px">
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap">Nghe lại: </span>
+        <span aria-hidden="true" style="position: absolute; left: -9px; bottom: 9px; width: 12px; height: 16px; background: #FBF6EA; clip-path: polygon(100% 0, 0 100%, 100% 100%)"></span>
+        <span style="font-size: 21px; font-weight: 700; line-height: 1.22">{{msgEn}}</span>
+        <sc-if value="{{showVi}}"><span style="font-size: 15px; line-height: 1.35; color: #4E4336">{{msgVi}}</span></sc-if>
+        <span aria-hidden="true" style="position: absolute; right: -10px; top: -14px; width: 48px; height: 48px">
+          <sc-if value="{{talking}}"><svg width="48" height="48" viewBox="0 0 48 48"><g filter="url(#paperE)"><circle cx="24" cy="23" r="21" fill="#E2A52A"></circle></g><g transform="translate(10.5 10.4) scale(1.12)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M15.6 9.2a3.8 3.8 0 0 1 0 5.6M18.2 6.8a7.4 7.4 0 0 1 0 10.4M20.8 4.4a11 11 0 0 1 0 15.2" fill="none" stroke="#1E1B18" stroke-width="2.2" stroke-linecap="round"></path></g></svg></sc-if>
+          <sc-if value="{{quiet}}"><svg width="48" height="48" viewBox="0 0 48 48"><g filter="url(#paperE)"><circle cx="24" cy="23" r="21" fill="#3B6E6A"></circle></g><g transform="translate(10.5 10.4) scale(1.12)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#FBF6EA"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#FBF6EA" stroke-width="2.4" stroke-linecap="round"></path></g></svg></sc-if>
+        </span>
+      </button>
+    </div>
+
+    <div class="e-lay" style="--d: 120ms; height: 214px; flex-shrink: 0; border-radius: 22px; background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; align-items: center; justify-content: center">
+      <svg width="196" height="196" viewBox="0 0 100 100" role="img" aria-label="Chim cánh cụt"><use href="#pic-penguin"></use></svg>
+    </div>
+
+    <div role="group" aria-label="Đúng hay sai" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0 5px 6px 0; flex-shrink: 0">
+        <span style="display: block; filter: {{yes.drop}}">
+          <button onClick="{{yes.tap}}" aria-label="Đúng" aria-pressed="{{yes.pressed}}" aria-disabled="{{yes.off}}" class="e-lay e-press" style="--d: {{yes.d}}; position: relative; display: flex; width: 100%; height: 168px; box-sizing: border-box; border: none; border-radius: 20px; cursor: pointer; padding: 0; align-items: center; justify-content: center; {{yes.style}}">
+            <span class="e-nudge" style="display: block; width: 132px; height: 132px; animation-name: {{yes.nudge}}; {{yes.pic}}">
+              <sc-if value="{{set1}}"><svg width="132" height="132" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-nod"></use></svg></sc-if>
+              <sc-if value="{{set2}}"><svg width="132" height="132" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-up"></use></svg></sc-if>
+            </span>
+            <sc-if value="{{yes.peel}}"><span aria-hidden="true" class="e-pop" style="position: absolute; top: 0; right: 0; width: 64px; height: 64px; background: #C9B993; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span></sc-if>
+            <sc-if value="{{yes.retry}}"><span aria-hidden="true" class="e-pop" style="--d: 140ms; position: absolute; top: 32px; right: 32px; width: 28px; height: 28px"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg></span></sc-if>
+            <sc-if value="{{yes.seal}}"><span aria-hidden="true" class="e-stamp" style="--d: 100ms; position: absolute; right: -8px; top: -12px; width: 54px; height: 54px; transform: rotate(-8deg); border-radius: 4px; background: #3F7A33; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></sc-if>
+          </button>
+        </span>
+        <span style="display: block; filter: {{no.drop}}">
+          <button onClick="{{no.tap}}" aria-label="Sai" aria-pressed="{{no.pressed}}" aria-disabled="{{no.off}}" class="e-lay e-press" style="--d: {{no.d}}; position: relative; display: flex; width: 100%; height: 168px; box-sizing: border-box; border: none; border-radius: 20px; cursor: pointer; padding: 0; align-items: center; justify-content: center; {{no.style}}">
+            <span class="e-nudge" style="display: block; width: 132px; height: 132px; animation-name: {{no.nudge}}; {{no.pic}}">
+              <sc-if value="{{set1}}"><svg width="132" height="132" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-shake"></use></svg></sc-if>
+              <sc-if value="{{set2}}"><svg width="132" height="132" viewBox="0 0 120 120" aria-hidden="true"><use href="#ic-down"></use></svg></sc-if>
+            </span>
+            <sc-if value="{{no.peel}}"><span aria-hidden="true" class="e-pop" style="position: absolute; top: 0; right: 0; width: 64px; height: 64px; background: #C9B993; clip-path: polygon(0 0, 0 100%, 100% 100%)"></span></sc-if>
+            <sc-if value="{{no.retry}}"><span aria-hidden="true" class="e-pop" style="--d: 140ms; position: absolute; top: 32px; right: 32px; width: 28px; height: 28px"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 8.4A7 7 0 1 1 5 13" fill="none" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path><path d="M3.2 4.2v6.6h6.6z" fill="#1E1B18"></path></svg></span></sc-if>
+            <sc-if value="{{no.seal}}"><span aria-hidden="true" class="e-stamp" style="--d: 100ms; position: absolute; right: -8px; top: -12px; width: 54px; height: 54px; transform: rotate(-8deg); border-radius: 4px; background: #3F7A33; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></sc-if>
+          </button>
+        </span>
+    </div>
+
+    <div style="flex: 1"></div>
+    <div style="height: 84px; flex-shrink: 0">
+      <sc-if value="{{done}}">
+        <div class="e-rise" style="--d: 160ms">
+          <a href="Explorer-Reward.dc.html" aria-label="Xem phần thưởng" class="e-nudge e-press" style="position: relative; display: block; height: 84px"><svg width="100%" height="100%" viewBox="0 0 350 84" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0"><g filter="url(#paperE)"><rect x="4" y="10" width="342" height="70" rx="20" fill="#6E2216"></rect></g><g filter="url(#paperE)"><rect x="4" y="3" width="342" height="70" rx="20" fill="#A93A27"></rect></g></svg><span aria-hidden="true" style="position: relative; display: flex; align-items: center; justify-content: center; height: 76px"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#FBF6EA"></path></svg></span></a>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"icons":{"editor":"enum","options":["1 · gật / lắc đầu","2 · ngón cái"],"default":"1 · gật / lắc đầu"},"state":{"editor":"enum","options":["hướng dẫn lần đầu","đang đọc câu","vừa chạm: đọc tên","đúng","sai lần 1: gợi ý","đúng ở lần 2"],"default":"hướng dẫn lần đầu"},"showVi":{"editor":"boolean","default":true},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { p: null };
+  }
+  renderVals() {
+    const SETS = {
+      '1 · gật / lắc đầu': { n: 1, intro: ['True? Tap the nod. Not true? Tap the shake.', 'Đúng thì chạm bạn gật đầu, sai thì chạm bạn lắc đầu.'] },
+      '2 · ngón cái': { n: 2, intro: ['True? Thumb up. Not true? Thumb down.', 'Đúng thì chạm ngón cái lên, sai thì chạm ngón cái xuống.'] }
+    };
+    const set = SETS[this.props.icons] || SETS['1 · gật / lắc đầu'];
+    // Tweak "state" đặt màn về một trạng thái; chạm trên bảng thì chơi tiếp từ trạng thái đó.
+    const PRESETS = {
+      'hướng dẫn lần đầu': { intro: true, tries: [], pending: null },
+      'đang đọc câu': { intro: false, tries: [], pending: null },
+      'vừa chạm: đọc tên': { intro: false, tries: [], pending: 'yes' },
+      'đúng': { intro: false, tries: ['yes'], pending: null },
+      'sai lần 1: gợi ý': { intro: false, tries: ['no'], pending: null },
+      'đúng ở lần 2': { intro: false, tries: ['no', 'yes'], pending: null }
+    };
+    const key = (this.props.state in PRESETS ? this.props.state : 'hướng dẫn lần đầu') + '|' + set.n;
+    const s = this.state.p === key ? this.state : { ...PRESETS[key.split('|')[0]], again: false };
+    const go = (next) => this.setState({ intro: s.intro, tries: s.tries, pending: s.pending, again: false, ...next, p: key });
+    const ANS = 'yes';
+    const NAMES = { yes: ['True.', 'Đúng.'], no: ['Not true.', 'Sai.'] };
+    const last = s.tries.length ? s.tries[s.tries.length - 1] : null;
+    // Hai lựa chọn, max_tries 2: sai lần 1 thì lần 2 chỉ còn một thẻ, nên không có trạng thái "hết lượt".
+    const done = s.tries.includes(ANS) || s.tries.length >= 2;
+    const right = done && last === ANS;
+    const retry = !done && s.tries.length === 1;
+    let msg = ['A penguin is a bird.', 'Chim cánh cụt là một loài chim.'], mood = 'talk', talking = true;
+    if (s.intro && !s.pending && !s.tries.length) msg = set.intro;
+    if (s.pending) msg = NAMES[s.pending];
+    else if (right) { msg = ['Yes! Penguins have feathers.', 'Đúng rồi! Cánh cụt có lông vũ và mỏ.']; mood = 'happy'; talking = false; }
+    else if (retry) { msg = ['Look! Does it have feathers?', 'Nhìn kìa! Nó có lông vũ không?']; mood = 'think'; }
+    if (s.again) talking = true;
+    const intro = s.intro && !s.pending && !s.tries.length;
+    const PAPER = 'background: #FBF6EA; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22);';
+    const SEL = 'background: #FBF6EA; box-shadow: 5px 6px 0 #E2A52A, 0 3px 4px rgba(91, 59, 23, 0.22);';
+    const RIGHT = 'background: #FBF6EA; box-shadow: 5px 6px 0 #3F7A33, 0 3px 4px rgba(91, 59, 23, 0.22);';
+    const PEELED = 'background: #E2D4B4; clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 0 100%);';
+    const card = (id, i) => {
+      const tried = s.tries.includes(id);
+      let style = PAPER, pic = '', drop = 'none';
+      if (s.pending === id) style = SEL;
+      else if (right && id === ANS) style = RIGHT;
+      else if (tried) { style = PEELED; pic = 'filter: grayscale(1); opacity: 0.42;'; drop = 'drop-shadow(0 3px 3px rgba(91, 59, 23, 0.28))'; }
+      return {
+        d: (180 + 60 * i) + 'ms', style, pic, drop,
+        // Lúc đọc hướng dẫn, thẻ "Đúng" nhún (gật) một nhịp lặp; đây là chuyển động lặp duy nhất của màn lúc đó.
+        nudge: intro && id === 'yes' ? 'eNudge' : 'none',
+        pressed: (s.pending === id || (tried && id === last)) ? 'true' : 'false',
+        off: (done || tried || !!s.pending) ? 'true' : 'false',
+        seal: right && id === ANS,
+        peel: tried && id !== ANS,
+        retry: retry && tried,
+        tap: () => {
+          if (done || s.pending || tried) return;
+          const tries = [...s.tries, id];
+          go({ pending: id });
+          setTimeout(() => this.setState({ intro: false, tries, pending: null, again: false, p: key }), 900);
+        }
+      };
+    };
+    const pips = {};
+    for (let i = 1; i <= 6; i++) {
+      const cur = i === 6, sz = cur ? 30 : 24, f = cur ? '#E2A52A' : '#3B6E6A';
+      pips['p' + i] = 'width: ' + sz + 'px; height: ' + sz + 'px; flex-shrink: 0; border-radius: 2px; background: ' + f + '; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28);';
+    }
+    return {
+      showVi: this.props.showVi ?? true,
+      set1: set.n === 1, set2: set.n === 2,
+      pips,
+      face: '#m-' + mood,
+      swayName: talking && !done && !intro ? 'eSway' : 'none',
+      talking, quiet: !talking,
+      msgEn: msg[0], msgVi: msg[1],
+      replay: () => go({ again: true }),
+      yes: card('yes', 0), no: card('no', 1),
+      done
+    };
+  }
+}
+</script>
+</body>
+</html>

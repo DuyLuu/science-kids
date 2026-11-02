@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/topic.schema.json",
+  "title": "Science Kids content v1: chủ đề (file topic.json)",
+  "$ref": "#/$defs/Topic",
+  "$defs": {
+    "Topic": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "topic"
+        },
+        "schema_version": {
+          "$ref": "common.schema.json#/$defs/SchemaVersion"
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/Uuid"
+        },
+        "slug": {
+          "$ref": "common.schema.json#/$defs/Slug",
+          "description": "Trùng tên thư mục chủ đề"
+        },
+        "age_group": {
+          "type": "string",
+          "enum": [
+            "explorer",
+            "discoverer",
+            "scientist"
+          ]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "question": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "Câu hỏi lớn trên màn Chủ đề"
+        },
+        "strand": {
+          "type": "string",
+          "enum": [
+            "plants_animals",
+            "living_environment",
+            "humans_health",
+            "materials",
+            "energy_forces",
+            "earth_sky"
+          ]
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "difficulty": {
+          "$ref": "#/$defs/Difficulty"
+        },
+        "prerequisite_topic_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Uuid"
+          },
+          "uniqueItems": true
+        },
+        "is_free": {
+          "type": "boolean"
+        },
+        "oak_unit_ref": {
+          "$ref": "common.schema.json#/$defs/NonEmptyString",
+          "description": "Nội bộ, không bao giờ hiện cho trẻ"
+        },
+        "sensitive": {
+          "description": "Nội dung nhạy cảm, app ẩn tới khi phụ huynh bật",
+          "type": "boolean",
+          "default": false
+        },
+        "archived": {
+          "description": "Bỏ nội dung thì archived, không xoá",
+          "type": "boolean",
+          "default": false
+        },
+        "ai_draft": {
+          "description": "Nháp do AI soạn, chưa duyệt",
+          "type": "boolean",
+          "default": false
+        },
+        "misconceptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Misconception"
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "schema_version",
+        "id",
+        "slug",
+        "age_group",
+        "order",
+        "title",
+        "strand",
+        "level",
+        "difficulty",
+        "prerequisite_topic_ids",
+        "is_free",
+        "misconceptions"
+      ],
+      "additionalProperties": false
+    },
+    "Difficulty": {
+      "description": "Rubric syllabus-progression mục 3, mỗi ô 1–3",
+      "type": "object",
+      "properties": {
+        "abstraction": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "prior_knowledge": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "misconception": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "vocabulary": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "science_skill": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "abstraction",
+        "prior_knowledge",
+        "misconception",
+        "vocabulary",
+        "science_skill"
+      ],
+      "additionalProperties": false
+    },
+    "Misconception": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/Uuid"
+        },
+        "key": {
+          "$ref": "common.schema.json#/$defs/Key",
+          "description": "Duy nhất trong chủ đề"
+        },
+        "statement": {
+          "$ref": "common.schema.json#/$defs/Text"
+        },
+        "correction": {
+          "$ref": "common.schema.json#/$defs/Text"
+        },
+        "note": {
+          "$ref": "common.schema.json#/$defs/NonEmptyString"
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "statement",
+        "correction"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

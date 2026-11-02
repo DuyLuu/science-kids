@@ -1,0 +1,49 @@
+{
+  "kind": "topic",
+  "schema_version": 1,
+  "id": "00000000-0000-4000-8000-000000000200",
+  "slug": "fixture-scientist",
+  "age_group": "scientist",
+  "order": 1,
+  "title": {
+    "en": "Test topic",
+    "vi": "Chủ đề thử"
+  },
+  "strand": "plants_animals",
+  "level": 1,
+  "difficulty": {
+    "abstraction": 1,
+    "prior_knowledge": 1,
+    "misconception": 1,
+    "vocabulary": 1,
+    "science_skill": 1
+  },
+  "prerequisite_topic_ids": [],
+  "is_free": true,
+  "misconceptions": [
+    {
+      "id": "00000000-0000-4000-8000-000000000201",
+      "key": "heavy_falls_faster",
+      "statement": {
+        "en": "Heavy things fall faster.",
+        "vi": "Heavy things fall faster."
+      },
+      "correction": {
+        "en": "Test data",
+        "vi": "Dữ liệu test"
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000202",
+      "key": "food_from_soil",
+      "statement": {
+        "en": "Plants get food from soil.",
+        "vi": "Plants get food from soil."
+      },
+      "correction": {
+        "en": "Test data",
+        "vi": "Dữ liệu test"
+      }
+    }
+  ]
+}

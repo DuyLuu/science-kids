@@ -1,0 +1,39 @@
+[project]
+name = "science-kids-tts-vi"
+version = "0.1.0"
+description = "Vietnamese TTS for Science Kids content-cli (SK-023 listening test): VieNeu-TTS v3 Turbo on CPU via ONNX Runtime."
+requires-python = "==3.12.*"
+dependencies = [
+    "vieneu==3.8.3",
+]
+
+[tool.uv]
+# Script folder, not an installable package.
+package = false
+# Runtime deps pinned to the versions in upstream VieNeu-TTS uv.lock (vieneu 3.8.3, Python 3.12),
+# the environment its benchmarks were measured on. Newer onnxruntime (>= 1.31) refuses the model's
+# external data file through the Hugging Face cache symlinks ("External data path escapes model directory").
+constraint-dependencies = [
+    "onnxruntime==1.24.4",
+    "huggingface-hub==0.36.0",
+    "sea-g2p==0.9.1",
+    "tokenizers==0.22.2",
+    "numpy==2.3.4",
+    "soxr==1.0.0",
+    "kaldi-native-fbank==1.22.3",
+    "soundfile==0.13.1",
+    "librosa==0.11.0",
+    "gradio==5.49.1",
+]
+
+[dependency-groups]
+# Machine scoring of VI clips (SK-023 evaluation, SK-024 self-check). Not part of the synthesis env:
+#   UV_PROJECT_ENVIRONMENT=.venv-eval uv sync --only-group eval
+#   UV_PROJECT_ENVIRONMENT=.venv-eval uv run --only-group eval python evaluate.py ...
+# ASR model: faster-whisper large-v3-turbo, read from the local Hugging Face cache only (no download).
+eval = [
+    "faster-whisper==1.2.1",
+    "librosa==0.11.0",
+    "soundfile==0.13.1",
+    "numpy==2.3.4",
+]

@@ -3,3 +3,21 @@ CLAUDE.md
 .claude/
 
 .DS_Store
+
+# iOS (SK-005): project sinh bằng XcodeGen, không đưa vào git
+apps/ios/*.xcodeproj/
+apps/ios/**/xcuserdata/
+apps/ios/**/.build/
+apps/ios/DerivedData/
+apps/ios/Config/Local.xcconfig
+
+# content-cli (SK-014): clip, gói build, model TTS
+content/.audio/
+content/.build/
+tools/content-cli/node_modules/
+tools/content-cli/.models/
+tools/content-cli/.venv/
+
+# Database (SK-021): chuỗi kết nối staging có mật khẩu DB, Duy tự điền
+database/.env.local
+database/.env.*.local

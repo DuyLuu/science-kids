@@ -134,9 +134,9 @@ a{color:#A93A27}a:hover{color:#1E1B18}
                 <span style="font-size: 13px; font-weight: 700; line-height: 1.3">{{airLabel}}</span>
               </span>
             </div>
-            <span style="display: block; font-size: 20px; font-weight: 700; line-height: 1.35">Animals, including humans, need food, water and <span style="position: relative; display: inline-flex; vertical-align: middle; align-items: center; justify-content: center; width: 80px; height: 34px; margin: 0 2px; border-radius: 3px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28)"><sc-if value="{{q1Right}}" hint-placeholder-val="{{false}}"><span class="e-pop" style="display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.28); color: #A93A27">air</span></sc-if><sc-if value="{{q1Empty}}" hint-placeholder-val="{{true}}"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap">chỗ trống</span></sc-if></span> to live.</span>
+            <span style="display: block; font-size: 20px; font-weight: 700; line-height: 1.35">Animals, including humans, need food, water and <sc-if value="{{q1Empty}}" hint-placeholder-val="{{true}}"><span style="position: relative; display: inline-flex; vertical-align: middle; align-items: center; justify-content: center; width: 80px; height: 34px; margin: 0 2px; border-radius: 3px; background: #E6D9BC; box-shadow: inset 0 2px 5px rgba(91, 59, 23, 0.28)"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap">chỗ trống</span></span></sc-if><sc-if value="{{q1Right}}" hint-placeholder-val="{{false}}"><span style="white-space: nowrap; font-weight: 700; color: #3F7A33">air</span></sc-if> to live.</span>
             <div style="display: flex; align-items: center; gap: 10px">
-              <span style="flex: 1; display: block; font-size: 15px; line-height: 1.5; color: #4E4336">Động vật, kể cả con người, cần thức ăn, nước và <span style="display: inline-flex; vertical-align: middle; align-items: center; justify-content: center; min-width: 76px; height: 22px; padding: 0 4px; box-sizing: border-box; border-radius: 3px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"><sc-if value="{{q1Right}}" hint-placeholder-val="{{false}}"><span class="e-pop" style="--d: 120ms; display: inline-block; font-size: 13px; font-weight: 700; color: #1E1B18">không khí</span></sc-if></span> để sống.</span>
+              <span style="flex: 1; display: block; font-size: 15px; line-height: 1.5; color: #4E4336">Động vật, kể cả con người, cần thức ăn, nước và <sc-if value="{{q1Empty}}" hint-placeholder-val="{{true}}"><span aria-hidden="true" style="display: inline-flex; vertical-align: middle; min-width: 76px; height: 22px; box-sizing: border-box; border-radius: 3px; background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28)"></span></sc-if><sc-if value="{{q1Right}}" hint-placeholder-val="{{false}}"><span style="white-space: nowrap; font-weight: 700; color: #3F7A33">không khí</span></sc-if> để sống.</span>
               <button aria-label="Nghe câu hỏi" class="e-press" style="width: 56px; height: 56px; flex-shrink: 0; padding: 0; border: none; background: transparent; cursor: pointer">
                 <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28" cy="27" r="25" fill="#F0E6CF"></circle></g><g transform="translate(16 15)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg>
               </button>
@@ -224,7 +224,7 @@ a{color:#A93A27}a:hover{color:#1E1B18}
             <button onClick="{{tf.f.tap}}" aria-pressed="{{tf.f.pressed}}" class="e-press" style="position: relative; flex: 1; height: 76px; box-sizing: border-box; border: none; border-radius: 10px; cursor: pointer; padding: 6px 10px; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; {{tf.f.style}}">
               <span style="font-family: 'Phudu', sans-serif; font-size: 27px; font-weight: 800; line-height: 1.1">Sai</span>
               <span style="font-size: 14px; font-weight: 600; color: #4E4336">False</span>
-              <sc-if value="{{isDone}}" hint-placeholder-val="{{false}}"><svg class="e-stamp" width="26" height="26" viewBox="0 0 24 24" role="img" aria-label="Đáp án đúng" style="position: absolute; top: -8px; right: -7px; border-radius: 3px; background: #A93A27; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3)"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" transform="translate(3.6 3.6) scale(0.7)" fill="#FBF6EA"></path></svg></sc-if>
+              <sc-if value="{{isDone}}" hint-placeholder-val="{{false}}"><svg class="e-stamp" width="26" height="26" viewBox="0 0 24 24" role="img" aria-label="Đáp án đúng" style="position: absolute; top: -8px; right: -7px; border-radius: 3px; background: #3F7A33; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3)"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" transform="translate(3.6 3.6) scale(0.7)" fill="#FBF6EA"></path></svg></sc-if>
             </button>
           </div>
         </div>
@@ -247,9 +247,9 @@ a{color:#A93A27}a:hover{color:#1E1B18}
       <div role="status" class="e-rise" style="margin: 0 -20px -22px -20px; flex-shrink: 0; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
         <div style="background: #FBF6EA; padding: 18px 20px 22px 20px; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 12px">
           <div style="display: flex; align-items: center; gap: 14px">
-            <span aria-hidden="true" class="e-stamp" style="--d: 220ms; width: 52px; height: 52px; flex-shrink: 0; transform: rotate(-8deg); background: #A93A27; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
+            <span aria-hidden="true" class="e-stamp" style="--d: 220ms; width: 52px; height: 52px; flex-shrink: 0; transform: rotate(-8deg); background: #3F7A33; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
             <div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
-              <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #A93A27">Đúng rồi!</span>
+              <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #3F7A33">Đúng rồi!</span>
               <span style="font-size: 16px; font-weight: 700; line-height: 1.35">We need air to breathe.</span>
               <span style="font-size: 14px; line-height: 1.4; color: #4E4336">Ta cần không khí để thở.</span>
             </div>
@@ -266,9 +266,9 @@ a{color:#A93A27}a:hover{color:#1E1B18}
       <div role="status" class="e-rise" style="margin: 0 -20px -22px -20px; flex-shrink: 0; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.22))">
         <div style="background: #FBF6EA; padding: 18px 20px 22px 20px; clip-path: polygon(0 6px, 6% 1px, 12% 5px, 19% 0, 27% 4px, 35% 1px, 43% 6px, 52% 2px, 60% 5px, 68% 0, 77% 4px, 85% 1px, 93% 5px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 12px">
           <div style="display: flex; align-items: flex-start; gap: 14px">
-            <span aria-hidden="true" class="e-stamp" style="--d: 220ms; width: 52px; height: 52px; flex-shrink: 0; margin-top: 2px; transform: rotate(-8deg); background: #A93A27; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
+            <span aria-hidden="true" class="e-stamp" style="--d: 220ms; width: 52px; height: 52px; flex-shrink: 0; margin-top: 2px; transform: rotate(-8deg); background: #3F7A33; border-radius: 3px; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #FBF6EA">ĐÚNG</span>
             <div style="flex: 1; display: flex; flex-direction: column; gap: 3px">
-              <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #A93A27">Chính xác!</span>
+              <span style="font-family: 'Phudu', sans-serif; font-size: 26px; font-weight: 900; line-height: 1.1; color: #3F7A33">Chính xác!</span>
               <span style="font-size: 16px; font-weight: 700; line-height: 1.35">Plants make food from sunlight. We need to eat food.</span>
               <span style="font-size: 14px; line-height: 1.4; color: #4E4336">Cây tự làm thức ăn từ ánh nắng. Con người phải ăn.</span>
             </div>
@@ -321,13 +321,13 @@ class Component extends DCLogic {
         tap: () => { if (isDone) return; this.setState({ pick2: 'true' }); }
       },
       f: {
-        style: isDone ? 'background: #FBF6EA; color: #1E1B18; box-shadow: 5px 6px 0 #A93A27, 0 3px 4px rgba(91, 59, 23, 0.22);' : CARD,
+        style: isDone ? 'background: #FBF6EA; color: #1E1B18; box-shadow: 5px 6px 0 #3F7A33, 0 3px 4px rgba(91, 59, 23, 0.22);' : CARD,
         pressed: isDone ? 'true' : 'false',
         tap: () => { if (isDone) return; this.setState({ pick2: 'false', q: 'done' }); }
       }
     };
 
-    const RED = 'background: #A93A27; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3);';
+    const DONE = 'background: #3F7A33; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3);';
     const CUR = 'background: #E2A52A; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.3);';
     const NOT = 'background: #E6D9BC; box-shadow: inset 0 1px 3px rgba(91, 59, 23, 0.28);';
 
@@ -343,8 +343,8 @@ class Component extends DCLogic {
       airLabel: q1Right ? 'air' : '?',
       ch,
       tf,
-      sq1: s.q === 1 ? CUR : RED,
-      sq2: s.q === 1 ? NOT : (isDone ? RED : CUR),
+      sq1: s.q === 1 ? CUR : DONE,
+      sq2: s.q === 1 ? NOT : (isDone ? DONE : CUR),
       qAria: isDone ? 'Xong 2 trên 2 câu' : (s.q === 1 ? 'Câu 1 trên 2' : 'Câu 2 trên 2'),
       toQ2: () => this.setState({ q: 2 })
     };
