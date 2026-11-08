@@ -32,7 +32,7 @@ Kế hoạch ở [docs/ios-test-build.md](../ios-test-build.md), Duy duyệt 28/
 | [SK-013](SK-013-ios-ipad-layouts.md) | I9 · Bố cục iPad cho Trang chủ, Học, Chơi, Quiz | ios-dev | tester | review (tester đạt có điều kiện 29/10; L9–L11 đã sửa 29/10, còn L12; từ điền theo designer đã làm 31/10, audit màn Học sửa và đạt trên iPhone 16 Pro; nhãn ô từ đã thêm và vắt mép mọi ô 31/10 (Duy chọn a), đạt trên iPhone 16 Pro; chờ designer sửa canvas câu 5) | SK-011, SK-012; Duy chọn Trang chủ A (29/10) |
 | [SK-014](SK-014-content-cli-tts-en.md) | C1 · `content-cli tts` tiếng Anh bằng Kokoro | dev | tester | review | Không |
 | [SK-015](SK-015-content-cli-build-pack.md) | C2 · `content-cli build`: gói bài 1 để app nhúng | dev | tester | review | SK-014; nên chạy lại sau SK-017 |
-| [SK-016](SK-016-ios-audio-content-kit.md) | I10 · AudioKit và ContentKit: đọc gói, phát giọng EN | ios-dev | tester | review (tester đạt 29/10) | SK-012, SK-015 |
+| [SK-016](SK-016-ios-audio-content-kit.md) | I10 · AudioKit và ContentKit: đọc gói, phát giọng EN | ios-dev | tester | review (tester đạt 29/10; 2/11 sửa lỗi sandbox khi build vào DerivedData mặc định, 251 test xanh trên iPhone 16 Pro) | SK-012, SK-015 |
 | [SK-017](SK-017-fix-sk002-bugs.md) | N1 · Sửa 3 lỗi SK-002 và cập nhật fixture | content-editor → dev | tester | review | Không |
 | [SK-018](SK-018-lesson1-paper-art.md) | D1 · Hình giấy cắt thật cho bài 1 | designer | tester | review (đợt 1) | Không; chưa vào gói khi chưa có `content-cli assets` |
 | [SK-019](SK-019-ios-golden-path-test.md) | T1 · Kiểm luồng vàng trên 5 simulator | tester | pm | todo | SK-012, SK-013, SK-016 |
@@ -66,3 +66,20 @@ Duy 1/11: mỗi nhóm tuổi có dạng quiz riêng; bé chưa biết chữ làm
 | Id | Tên | Phụ trách | Tester | Trạng thái | Phụ thuộc |
 | --- | --- | --- | --- | --- | --- |
 | [SK-026](SK-026-quiz-formats-by-age.md) | Dạng câu và cách hiện quiz theo Explorer, Discoverer, Scientist; luật kiểm theo tuổi trong `content-cli` | GĐ 0: dev, content-editor, designer; GĐ 2: thêm ios-dev | tester | done cho GĐ 0 (tester đạt 1/11: content-cli 215/215, unit iOS 68/68; Duy chốt D2 ngày 2/11: khung A, triện và góc bong của B, biểu tượng gật/lắc đầu). Phần GĐ 2 tách ticket con khi mở GĐ 2 | GĐ 2: renderer `order_sequence` (GĐ 1 S4); câu kỹ thuật "luật của nhóm nào" trước khi đặt `xp_*` = 0 |
+
+## Đường nội dung từ markdown (mở 2/11/2026)
+
+Duy 2/11 giao ngay: biên tập soạn bài 2 trở đi từ 10/11, nên `content-cli` phải đọc markdown trước đó (kéo lên từ B16 1/12–12/12).
+
+| Id | Tên | Phụ trách | Tester | Trạng thái | Phụ thuộc |
+| --- | --- | --- | --- | --- | --- |
+| [SK-027](SK-027-content-cli-import-markdown.md) | `content-cli` đọc markdown: `validate` báo lỗi theo dòng, `import` ra JSON schema v1, `ids` điền id | dev | tester | done (2/11: markdown bài 1 ra JSON trùng từng byte fixture, gói trùng sha256 mốc; tester đạt sau một vòng sửa L1–L6, `npm test` 273/273; còn L7, L8 nhẹ không chặn. Duy chốt: phiên chính chạy `validate` hộ content-editor) | SK-001, SK-015, SK-026 |
+| [SK-028](SK-028-lesson2-mam-com-can-bang.md) | Bài 2 "Mâm cơm cân bằng" (Ăn uống lành mạnh), bài đầu tiên đi trọn đường markdown; kèm sửa TEMPLATE theo lệnh mới | content-editor; phiên chính chạy lệnh | tester | done (2/11: bài 2 đi trọn đường markdown → gói, `validate` 0 lỗi, sửa theo 17 góp ý của tester, `check-pack` OK; test content-cli 273/273, content-schema 98/98, iOS 38/38. Nội dung vẫn là nháp AI: chờ duyệt chuyên môn, Duy nghe; gói 2 bài chưa nhúng vào app) | SK-027 |
+
+## Icon và màn khởi động (mở 2/11/2026)
+
+Duy 2/11: thiết kế bộ app icon và màn khởi động trước khi build lên máy thật (SK-020).
+
+| Id | Tên | Phụ trách | Tester | Trạng thái | Phụ thuộc |
+| --- | --- | --- | --- | --- | --- |
+| [SK-029](SK-029-app-icon-launch-screen.md) | Bộ app icon (sáng, tối, tinted) và màn khởi động theo style E; 3 hướng icon để Duy chọn | designer → ios-dev | tester | review (Duy chọn icon B linh vật và khởi động PA2, 3/11; 8/11 đã vào app: icon sáng và màn khởi động đúng trên iPhone 16 Pro, 251 test xanh; icon Dark, Tinted và iPad kiểm trên máy thật ở SK-020) | Không; SK-020 dùng thay "icon tạm" |

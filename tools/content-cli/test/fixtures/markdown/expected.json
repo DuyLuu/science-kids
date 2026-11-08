@@ -1,0 +1,882 @@
+{
+  "_comment": "SK-027 B1: mỗi ca là bản chép valid/ (bài 1) với đúng một lỗi. edits: replace [tìm, thay] (chuỗi tìm phải có đúng một lần), cut [từ, tới) bỏ đoạn từ chuỗi đầu tới trước chuỗi sau, write (tạo file), rename. Gốc nội dung khi chạy = thư mục tạm chứa bản chép; lệnh chạy trên discoverer/an-uong-lanh-manh. errors: đúng các dòng lỗi (không tính cảnh báo); line là dòng thật trong file đã sửa.",
+  "valid": [
+    "discoverer/an-uong-lanh-manh/_topic.md",
+    "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md"
+  ],
+  "cases": [
+    {
+      "name": "01-missing-section",
+      "description": "bỏ cả mục ## Mục tiêu: chỉ vào dòng ## Ý chính",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "## Mục tiêu\nen: I can name the main nutrients in food.\nvi: Em kể được các nhóm chất dinh dưỡng chính.\n\n",
+            ""
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 17,
+          "pointer": "/objective",
+          "code": "md_missing_section"
+        }
+      ]
+    },
+    {
+      "name": "02-section-typo",
+      "description": "## Tu vung: một dòng md_unknown_section, không kèm \"thiếu mục Từ vựng\"",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "## Từ vựng\n",
+            "## Tu vung\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 522,
+          "pointer": "/",
+          "code": "md_unknown_section"
+        }
+      ]
+    },
+    {
+      "name": "03-format-typo",
+      "description": "format: single_choise, có gợi ý tên đúng",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nformat: single_choice\n",
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nformat: single_choise\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 293,
+          "pointer": "/quiz/0/format",
+          "code": "md_unknown_format"
+        }
+      ],
+      "message_includes": [
+        "\"single_choice\""
+      ]
+    },
+    {
+      "name": "04-type-typo",
+      "description": "type: explore_group",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "type: explore_groups\n",
+            "type: explore_group\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 93,
+          "pointer": "/learn/0/type",
+          "code": "md_unknown_type"
+        }
+      ],
+      "message_includes": [
+        "\"explore_groups\""
+      ]
+    },
+    {
+      "name": "05-uuid-duplicate-same-lesson",
+      "description": "q4 dùng lại UUID của q3",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "id: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\n",
+            "id: b06b6e26-f1b1-412e-b110-78e00e3d510f\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 400,
+          "pointer": "/quiz/3/id",
+          "code": "md_id_duplicate"
+        }
+      ],
+      "message_includes": [
+        "dòng 359"
+      ]
+    },
+    {
+      "name": "06-uuid-duplicate-other-lesson",
+      "description": "UUID của q3 trùng id một bài khác trong gốc nội dung (không có trong lần gọi)",
+      "edits": [
+        {
+          "file": "discoverer/chu-de-khac/_topic.md",
+          "write": "---\nid: 5f0c1d2e-3a4b-4c5d-8e6f-7a8b9c0d1e2f\nslug: chu-de-khac\nage_group: discoverer\norder: 2\nstrand: humans_health\nlevel: 2\ndifficulty:\n  abstraction: 1\n  prior_knowledge: 1\n  misconception: 1\n  vocabulary: 1\n  science_skill: 1\nprerequisites: []\nis_free: false\n---\n\n## Tiêu đề\nen: Another topic\nvi: Chủ đề khác\n\n## Câu hỏi lớn\n\n## Misconceptions\n"
+        },
+        {
+          "file": "discoverer/chu-de-khac/01-bai-khac.md",
+          "write": "---\nid: b06b6e26-f1b1-412e-b110-78e00e3d510f\ntopic: chu-de-khac\nslug: bai-khac\norder: 1\nstage: opener\nest_minutes: 8\n---\n"
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 359,
+          "pointer": "/quiz/2/id",
+          "code": "md_id_duplicate"
+        }
+      ],
+      "message_includes": [
+        "chu-de-khac/01-bai-khac.md:2"
+      ]
+    },
+    {
+      "name": "07-id-empty",
+      "description": "một dòng id: trống (q3); bước 2, 3 vẫn chạy",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "id: b06b6e26-f1b1-412e-b110-78e00e3d510f\n",
+            "id:\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 359,
+          "pointer": "/quiz/2/id",
+          "code": "md_id_missing"
+        }
+      ]
+    },
+    {
+      "name": "08-uuid-bad-format",
+      "description": "UUID sai dạng (thiếu một ký tự)",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "id: 1462983f-bd03-44ee-a91b-65b4ee731e51\n",
+            "id: 1462983f-bd03-44ee-a91b-65b4ee731e5\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 292,
+          "pointer": "/quiz/0/id",
+          "code": "md_id_invalid"
+        }
+      ]
+    },
+    {
+      "name": "09-option-no-label-vi",
+      "description": "option q1_rice thiếu label.vi: chỉ vào dòng label.en",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_rice\ncorrect: false\nlabel.en: rice\nlabel.vi: cơm\n",
+            "#### option q1_rice\ncorrect: false\nlabel.en: rice\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 315,
+          "pointer": "/quiz/0/options/1/label/vi",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "label.vi"
+      ]
+    },
+    {
+      "name": "10-option-no-label",
+      "description": "option q1_rice thiếu cả label.en và label.vi: chỉ vào dòng #### option",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_rice\ncorrect: false\nlabel.en: rice\nlabel.vi: cơm\n",
+            "#### option q1_rice\ncorrect: false\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 313,
+          "pointer": "/quiz/0/options/1/label",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "#### option q1_rice",
+        "label.en và label.vi"
+      ]
+    },
+    {
+      "name": "11-table-in-quiz",
+      "description": "bảng markdown trong câu q1: một dòng ở dòng đầu bảng",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "prompt.vi: Món nào có nhiều vitamin?\n",
+            "prompt.vi: Món nào có nhiều vitamin?\n| en | vi |\n| --- | --- |\n| orange | cam |\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 298,
+          "pointer": "/quiz/0",
+          "code": "md_bad_line"
+        }
+      ]
+    },
+    {
+      "name": "12a-term-keys-dash-list",
+      "description": "term_keys viết thành danh sách - nhiều dòng",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "term_keys: nutrient, carbohydrate, protein, fat\n",
+            "term_keys:\n- nutrient\n- carbohydrate\n- protein\n- fat\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 170,
+          "pointer": "/learn/1/term_keys",
+          "code": "md_bad_value"
+        }
+      ]
+    },
+    {
+      "name": "12b-answers-brackets",
+      "description": "answers: [q2_energy]",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "answers: q2_energy\n",
+            "answers: [q2_energy]\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 338,
+          "pointer": "/quiz/1/answers",
+          "code": "md_bad_value"
+        }
+      ]
+    },
+    {
+      "name": "13-field-typo",
+      "description": "promt.en thay cho prompt.en, có gợi ý",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "prompt.en: Which food has lots of vitamins?\n",
+            "promt.en: Which food has lots of vitamins?\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 296,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        }
+      ],
+      "message_includes": [
+        "\"prompt.en\""
+      ]
+    },
+    {
+      "name": "14-duplicate-field",
+      "description": "hint.en viết hai lần trong q1",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "hint.vi: Vitamin có nhiều trong rau và quả.\n",
+            "hint.vi: Vitamin có nhiều trong rau và quả.\nhint.en: Look at the colours.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 300,
+          "pointer": "/quiz/0/hint/en",
+          "code": "md_duplicate_field"
+        }
+      ]
+    },
+    {
+      "name": "15-missing-colon",
+      "description": "dòng thiếu dấu :",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "hint.en: Vitamins are in vegetables and fruit.\n",
+            "hint.en Vitamins are in vegetables and fruit.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 298,
+          "pointer": "/quiz/0",
+          "code": "md_bad_line"
+        }
+      ]
+    },
+    {
+      "name": "16-misconception-unknown",
+      "description": "misconception: trỏ tới key không có trong _topic.md",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "misconception: all_fat_bad\n",
+            "misconception: all_fats_bad\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 502,
+          "pointer": "/quiz/5/misconception_id",
+          "code": "md_ref_unknown"
+        }
+      ],
+      "message_includes": [
+        "\"all_fat_bad\""
+      ]
+    },
+    {
+      "name": "17-bank-in-single-choice",
+      "description": "#### bank trong câu single_choice",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_sweets\n",
+            "#### bank q1_sweets\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 321,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_child"
+        }
+      ]
+    },
+    {
+      "name": "18a-dok-word",
+      "description": "dok: hai",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 1\ndok: 1\n",
+            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 1\ndok: hai\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 333,
+          "pointer": "/quiz/1/dok",
+          "code": "md_bad_value"
+        }
+      ]
+    },
+    {
+      "name": "18b-correct-yes",
+      "description": "correct: yes",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_orange\ncorrect: true\n",
+            "#### option q1_orange\ncorrect: yes\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 306,
+          "pointer": "/quiz/0/options/0/correct",
+          "code": "md_bad_value"
+        }
+      ]
+    },
+    {
+      "name": "19-quiz-5-items",
+      "description": "Quiz còn 5 câu (bỏ q4, DOK 2): mã schema, chỉ vào ## Quiz",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "cut": [
+            "### q4\nid: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\n",
+            "### q5\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 289,
+          "pointer": "/quiz",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "## Quiz",
+        "6 câu"
+      ]
+    },
+    {
+      "name": "20-first-item-dok",
+      "description": "q1 dok: 2 (q3 đổi sang dok: 1 để giữ phân bổ 2·3·1): age_first_item_dok ở dòng dok của q1",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nformat: single_choice\nversion: 1\ndok: 1\n",
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nformat: single_choice\nversion: 1\ndok: 2\n"
+          ]
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q3\nid: b06b6e26-f1b1-412e-b110-78e00e3d510f\nformat: single_choice\nversion: 1\ndok: 2\n",
+            "### q3\nid: b06b6e26-f1b1-412e-b110-78e00e3d510f\nformat: single_choice\nversion: 1\ndok: 1\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 295,
+          "pointer": "/quiz/0/dok",
+          "code": "age_first_item_dok"
+        }
+      ]
+    },
+    {
+      "name": "21-filename-order",
+      "description": "tên file 03-… trong khi order: 2",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "order: 1\n",
+            "order: 2\n"
+          ]
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "rename": "discoverer/an-uong-lanh-manh/03-thuc-an-cho-ta-nhung-gi.md"
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/03-thuc-an-cho-ta-nhung-gi.md",
+          "line": 5,
+          "pointer": "/order",
+          "code": "md_filename"
+        }
+      ]
+    },
+    {
+      "name": "22-block-heading-deleted",
+      "description": "(thêm) xoá dòng ### q3: các dòng của q3 rơi vào #### bank cuối của q2; một dòng, chỉ vào chỗ thiếu tiêu đề",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q3\n",
+            ""
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 358,
+          "pointer": "/quiz/1/bank/2",
+          "code": "md_unknown_field"
+        }
+      ]
+    },
+    {
+      "name": "23-section-heading-deleted",
+      "description": "(thêm) xoá dòng ## Chơi: ### tray rơi vào ## Học; chỉ một dòng md_missing_section",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "## Chơi\n",
+            ""
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 288,
+          "pointer": "/play",
+          "code": "md_missing_section"
+        }
+      ],
+      "message_includes": [
+        "giữa \"## Học\" (dòng 89) và \"## Quiz\" (dòng 288)",
+        "dòng 176 (\"### tray\")"
+      ]
+    },
+    {
+      "name": "24-frontmatter-no-markers",
+      "description": "(thêm) bỏ cả hai dòng --- của frontmatter: một dòng md_frontmatter",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "---\nid: 4b11eb40",
+            "id: 4b11eb40"
+          ]
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "ai_draft: true\n---\n",
+            "ai_draft: true\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 1,
+          "pointer": "/",
+          "code": "md_frontmatter"
+        }
+      ]
+    },
+    {
+      "name": "25-orphan-fields",
+      "description": "(thêm) dòng ### tray bị biến thành ghi chú: các trường nằm ngay dưới ## Chơi, một dòng",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### tray\n",
+            "> ### tray\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 178,
+          "pointer": "/play",
+          "code": "md_unknown_field"
+        }
+      ]
+    },
+    {
+      "name": "26-two-typos",
+      "description": "(thêm) hai lỗi gõ (promt.en, promt.vi): hai dòng, mỗi dòng có gợi ý",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "prompt.en: Which food has lots of vitamins?\nprompt.vi: Món nào có nhiều vitamin?\n",
+            "promt.en: Which food has lots of vitamins?\npromt.vi: Món nào có nhiều vitamin?\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 296,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 297,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        }
+      ],
+      "message_includes": [
+        "Có phải"
+      ]
+    },
+    {
+      "name": "27-misnamed-lesson-file",
+      "description": "(thêm) file 2-mam-com.md trong thư mục chủ đề: md_filename, không đọc file",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/2-mam-com.md",
+          "write": "không phải markdown của bài\n"
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/2-mam-com.md",
+          "line": 1,
+          "pointer": "/",
+          "code": "md_filename"
+        }
+      ]
+    },
+    {
+      "name": "28-heading-extra-hash",
+      "description": "(nghiệm thu L1) ### q2 viết thành #### q2: một dòng md_heading_level, các #### bank của q2 không kéo theo",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q2\n",
+            "#### q2\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 329,
+          "pointer": "/quiz/1",
+          "code": "md_heading_level"
+        }
+      ],
+      "message_includes": [
+        "thừa một #",
+        "\"### q2\""
+      ]
+    },
+    {
+      "name": "29-heading-missing-hash",
+      "description": "(nghiệm thu L2) #### option q1_rice viết thành ### option q1_rice: một dòng md_heading_level, không kèm md_unknown_format hay md_id_missing",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_rice\n",
+            "### option q1_rice\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 313,
+          "pointer": "/quiz/0/options/1",
+          "code": "md_heading_level"
+        }
+      ],
+      "message_includes": [
+        "thiếu một #",
+        "\"#### option q1_rice\""
+      ]
+    },
+    {
+      "name": "30-field-capital",
+      "description": "(nghiệm thu L3) Format: viết hoa: chỉ vào đúng dòng đó, nhắc viết chữ thường",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nformat: single_choice\n",
+            "### q1\nid: 1462983f-bd03-44ee-a91b-65b4ee731e51\nFormat: single_choice\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 293,
+          "pointer": "/quiz/0/format",
+          "code": "md_unknown_field"
+        }
+      ],
+      "message_includes": [
+        "chữ thường",
+        "\"format:\""
+      ]
+    },
+    {
+      "name": "31-section-lookalike",
+      "description": "(nghiệm thu L4) ## Quiz viết thành ### Quiz: một dòng, nói giữa hai mục nào và chỉ dòng giống tiêu đề",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "## Quiz\n",
+            "### Quiz\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 522,
+          "pointer": "/quiz",
+          "code": "md_missing_section"
+        }
+      ],
+      "message_includes": [
+        "giữa \"## Chơi\" (dòng 172) và \"## Từ vựng\" (dòng 522)",
+        "dòng 289 \"### Quiz\""
+      ]
+    },
+    {
+      "name": "32-section-heading-deleted-start",
+      "description": "(nghiệm thu L4) xoá dòng ## Học: nói giữa hai mục nào và nội dung Học bắt đầu ở dòng nào",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "## Học\n",
+            ""
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 171,
+          "pointer": "/learn",
+          "code": "md_missing_section"
+        }
+      ],
+      "message_includes": [
+        "giữa \"## Khởi động\" (dòng 29) và \"## Chơi\" (dòng 171)",
+        "dòng 90 (\"### explore\")"
+      ]
+    },
+    {
+      "name": "33-two-typos-no-hint",
+      "description": "(nghiệm thu L5) hai tên trường lạ không có gợi ý, cách nhau: hai dòng, không gộp thành \"thiếu tiêu đề\"",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "hint.en: Vitamins are in vegetables and fruit.\n",
+            "xyz.en: Vitamins are in vegetables and fruit.\n"
+          ]
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "explanation_wrong.vi: Đáp án là quả cam. Hoa quả cho ta vitamin.\n",
+            "qqq.vi: Đáp án là quả cam. Hoa quả cho ta vitamin.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 298,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        },
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 303,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        }
+      ]
+    },
+    {
+      "name": "34-suggest-missing-name",
+      "description": "(nghiệm thu L6) prompt.vn: gợi ý prompt.vi (tên còn thiếu), không gợi ý prompt.en đã có",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "prompt.vi: Món nào có nhiều vitamin?\n",
+            "prompt.vn: Món nào có nhiều vitamin?\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 297,
+          "pointer": "/quiz/0",
+          "code": "md_unknown_field"
+        }
+      ],
+      "message_includes": [
+        "Có phải \"prompt.vi\"?"
+      ]
+    }
+  ],
+  "warning_cases": [
+    {
+      "name": "b2-words-en",
+      "description": "prompt.en của q1 dài 13 từ: cảnh báo age_words_en ở đúng dòng prompt.en",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "prompt.en: Which food has lots of vitamins?\n",
+            "prompt.en: Which food from the market has lots and lots of vitamins in it?\n"
+          ]
+        }
+      ],
+      "warnings": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 296,
+          "pointer": "/quiz/0/prompt/en",
+          "code": "age_words_en"
+        }
+      ]
+    }
+  ]
+}

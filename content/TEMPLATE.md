@@ -6,8 +6,24 @@ Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug
 
 **Tạo bài mới**
 1. Chép khung ở mục B vào file mới, ví dụ `content/discoverer/an-uong-lanh-manh/02-mam-com-can-bang.md`. `nn` là thứ tự bài, hai chữ số; phần sau `nn-` trùng `slug`.
-2. Điền từ trên xuống. Không đổi, không thêm, không bỏ tên mục `##`. Mục không dùng (ví dụ Thưởng) thì giữ tiêu đề, để trống.
-3. Xong thì mở pull request. Hiện `validate` chỉ kiểm file JSON và báo lỗi theo vị trí trong JSON (ví dụ `/quiz/1/sentence`), nên dev chép bài sang JSON rồi báo lại lỗi cho biên tập. Khi có `content-cli` (B8.0), máy kiểm thẳng file markdown và báo lỗi theo số dòng.
+2. Điền từ trên xuống. Không đổi, không thêm, không bỏ tên mục `##`. Mục không dùng (ví dụ Thưởng) thì giữ tiêu đề, để trống. Mọi dòng `id:` để trống (xem đoạn "id và key").
+   - Máy bắt buộc mọi mục của khung, trừ các mục Ghi chú: `## Ghi chú cho hoạ sĩ`, `## Ghi chú cho dev` (bài) và `## Ghi chú` (chủ đề). Biên tập vẫn viết đủ các mục Ghi chú.
+   - `## Câu hỏi lớn` của chủ đề phải có tiêu đề, phần dưới được để trống.
+3. Kiểm bài bằng máy (`content-cli`, SK-027). Hai lệnh, chạy từ gốc repo:
+   ```sh
+   npm --prefix tools/content-cli run validate -- content/discoverer/an-uong-lanh-manh   # kiểm cả chủ đề, không ghi gì
+   npm --prefix tools/content-cli run ids -- content/discoverer/an-uong-lanh-manh/02-mam-com-can-bang.md   # bài mới: điền id, chạy một lần
+   ```
+   - `validate` đọc thẳng file markdown. Máy kiểm cú pháp, rồi schema, rồi luật theo nhóm tuổi.
+   - Mỗi lỗi in một dòng `<file>:<dòng> <JSON pointer> [<mã>] <thông báo>`. Số dòng là dòng thật trong file `.md`; thông báo gọi theo tên trong markdown và nói cách sửa.
+   - Bảng mã lỗi và đường đi đầy đủ ở `tools/content-cli/README.md`, mục "Markdown: validate, import, ids".
+   - **Cách làm hiện tại** (SK-027, quyết định 7): agent content-editor không chạy lệnh.
+     1. Biên tập viết xong thì báo phiên chính.
+     2. Phiên chính chạy `validate` và gửi lại các dòng lỗi.
+     3. Biên tập sửa đúng các dòng đó. Lặp bước 2 và 3 tới khi `validate` báo 0 lỗi.
+     4. Phiên chính chạy `ids`, `import`, sinh giọng (`tts --lang en`, rồi `tts --lang vi`) và `build`.
+   - Cảnh báo (`md_needs_check`, `age_words_en`, `age_dok_order`…) không chặn, nhưng biên tập xem từng cái: sửa, hoặc ghi lý do giữ lại bằng một dòng `>`.
+   - Biên tập viên là người thật thì tự chạy hai lệnh trên máy mình, rồi mở pull request. Cần Node `^22.18.0` hoặc `>= 23.6.0`, và chạy `npm install` một lần trong `tools/content-cli`.
 
 **Cú pháp (máy đọc được)**
 - Mỗi dòng một trường `tên: giá trị`. Tên trường viết liền, không dấu cách. Giá trị nằm trên một dòng, không cần ngoặc kép.
@@ -18,8 +34,12 @@ Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug
 - Dòng bắt đầu bằng `>` là ghi chú cho người duyệt; máy bỏ qua.
 
 **id và key**
-- Bài mới: `id:` để trống. Máy sinh mã và ghi ngược vào file. Trước khi có `content-cli`, dev sinh mã lúc chép sang JSON và ghi ở ticket; biên tập chép mã đó vào đúng dòng `id:`, như bài mẫu.
-- Đã có mã thì không sửa, không xoá, không chép sang bài khác. Lấy bài mẫu làm điểm xuất phát thì xoá hết mã sau `id:`.
+- Bài mới và misconception mới: để trống mọi dòng `id:`, ở frontmatter và ngay dưới mỗi `###`. Không tự đặt, không bịa UUID. Lấy bài khác làm điểm xuất phát thì xoá hết mã sau `id:`.
+- Id trống không chặn việc kiểm. `validate` báo một dòng `md_id_missing` cho mỗi file, rồi vẫn kiểm hết phần còn lại.
+- Khi bài đã hết các lỗi khác, lệnh `ids` (bước 3) điền UUID vào đúng các dòng `id:` còn trống. Lệnh không đụng chữ nào khác; chạy lần hai không đổi gì.
+- `validate` và `import` không bao giờ sửa file. `import` chỉ ghi JSON khi không còn id trống.
+- Đã có mã thì không sửa, không xoá, không chép sang bài khác. Id trùng một id khác trong `content/` thì máy báo `md_id_duplicate`, kèm chỗ có id kia. Cách sửa: xoá id ở chỗ mới (để trống), rồi chạy `ids`.
+- Câu khởi động trỏ tới bài khác (`recall_from.lesson`) thì bài được trỏ tới phải đã có id.
 - `key`: chữ thường không dấu, số và `_`; bắt đầu bằng chữ; tối đa bốn mươi ký tự; không trùng trong cả bài.
 - Đặt key: câu quiz `q1`…`q6`; khởi động `w1`…`w3`; từ vựng là chính từ tiếng Anh (`carbohydrate`); key con = key cha + `_` + tên ngắn (`q1_orange`, `tray_rice`).
 - Bài đã phát hành thì không đổi key.
@@ -107,7 +127,7 @@ Số lấy từ SK-026, mục "Đặc tả theo nhóm tuổi", chỉ với 6 for
 - Hai ô của Scientist chốt theo đề xuất của content-editor (phiên chính, 1/11): `picture_bar_chart` 4 lựa chọn; số từ mỗi câu tối đa 15, soạn nhắm 12. Khớp `authoring` trong `content/rules.json`.
 - Format của GĐ 2 (`sort_into_groups`, `fill_blank_free`, `evidence_choice`) chưa có trong schema nên chưa vào bảng.
 
-**Máy kiểm (GĐ 0)** *(nháp AI)*: `content-cli validate` và `content-cli build` đọc `<nhóm>.authoring` trong `content/rules.json`, rồi kiểm bảng trên ở file JSON của bài, theo `age_group` của chủ đề. Lỗi báo theo mã `age_*` (bảng mã ở SK-026, mục "Phạm vi theo agent › GĐ 0 › dev"); có lỗi thì `build` dừng, không ra gói. `age_words_en` và `age_dok_order` chỉ là cảnh báo, không chặn `build`, nhưng biên tập vẫn sửa, trừ khi ghi lý do giữ lại bằng dòng `>`. `build` còn báo `format_not_rendered` khi bài dùng format mà bản app chưa hiện được: bản 0.1.0 chưa hiện `order_sequence` và `picture_bar_chart`. Bảy luật Explorer ở trên phần lớn do người duyệt kiểm; máy chỉ bắt thiếu hình, sai số lựa chọn, sai format và câu quá dài.
+**Máy kiểm (GĐ 0)** *(nháp AI)*: `content-cli validate` và `content-cli build` đọc `<nhóm>.authoring` trong `content/rules.json`, rồi kiểm bảng trên ở từng bài (`validate` đọc thẳng markdown, bước 3 ở trên; `build` đọc JSON), theo `age_group` của chủ đề. Lỗi báo theo mã `age_*` (bảng mã ở SK-026, mục "Phạm vi theo agent › GĐ 0 › dev"); có lỗi thì `build` dừng, không ra gói. `age_words_en` và `age_dok_order` chỉ là cảnh báo, không chặn `build`, nhưng biên tập vẫn sửa, trừ khi ghi lý do giữ lại bằng dòng `>`. `build` còn báo `format_not_rendered` khi bài dùng format mà bản app chưa hiện được: bản 0.1.0 chưa hiện `order_sequence` và `picture_bar_chart`. Bảy luật Explorer ở trên phần lớn do người duyệt kiểm; máy chỉ bắt thiếu hình, sai số lựa chọn, sai format và câu quá dài.
 
 **[CẦN KIỂM]**
 - Số liệu hay khẳng định khoa học chưa chắc: thêm dòng `> [CẦN KIỂM] <điều cần kiểm>` ngay dưới trường đó và chép sang ticket. Trường nằm trong frontmatter thì ghi dòng đó ở mục Ghi chú.
@@ -300,7 +320,7 @@ note: …
 Chữ tự do cho người duyệt và dev.
 ````
 
-Giá trị cho phép: `age_group` = `explorer` · `discoverer` · `scientist`. `strand` = `plants_animals` · `living_environment` · `humans_health` · `materials` · `energy_forces` · `earth_sky`. `level` 1–5. Mỗi ô `difficulty` 1–3 (rubric syllabus-progression mục 3, thứ tự A-B-C-D-E). `prerequisites` là danh sách slug chủ đề tiên quyết. `stage` = `opener` · `core` · `apply` · `review`.
+Giá trị cho phép: `age_group` = `explorer` · `discoverer` · `scientist`. `strand` = `plants_animals` · `living_environment` · `humans_health` · `materials` · `energy_forces` · `earth_sky`. `level` 1–5. Mỗi ô `difficulty` 1–3 (rubric syllabus-progression mục 3, thứ tự A-B-C-D-E). `prerequisites` là danh sách slug chủ đề tiên quyết, viết trên một dòng: `prerequisites: []` hoặc `prerequisites: [slug-a, slug-b]` (không viết dạng `- slug` nhiều dòng). `stage` = `opener` · `core` · `apply` · `review`.
 
 ## C. Mẫu theo `format` và block
 
@@ -419,7 +439,7 @@ image.alt.vi: …
 
 ## D. Bảng ánh xạ markdown → trường SK-001
 
-"Máy" là `content-cli` (B8.0); trước khi có CLI, dev chép tay sang fixture JSON. `[n]` là số thứ tự trong danh sách.
+"Máy" là lệnh `import` của `content-cli` (SK-027): đọc markdown, ghi JSON schema v1 vào `content/.build/json/`. JSON là sản phẩm dẫn xuất, không sửa tay. Máy chỉ ghi `kind` và `schema_version`, không tự điền giá trị mặc định. `[n]` là số thứ tự trong danh sách.
 
 **Kiểu chung**
 
@@ -430,7 +450,7 @@ image.alt.vi: …
 | `<tên>.brief:` | `Image.brief` | Bỏ đi khi đóng gói |
 | `<tên>.alt.en:` + `<tên>.alt.vi:` | `Image.alt` | Bắt buộc khi có hình |
 | (không viết) | `Image.asset` | Máy điền khi chạy `assets` |
-| `id:` (bài mới để trống) | `id` (`Uuid`) | Máy sinh, ghi ngược vào file; đã có thì không đổi |
+| `id:` (bài mới để trống) | `id` (`Uuid`) | Lệnh `ids` sinh và ghi vào file; đã có thì không đổi |
 | tên sau `###` / sau `#### <loại>` | `key` (`Key`) | Duy nhất trong bài |
 | `color:` | `ColorToken` | `do_son` · `vang_hoe` · `gi_dong` · `cham` · `nau_dat` |
 | `true` / `false`, số nguyên | boolean, number | Viết thường, không ngoặc kép |
@@ -527,7 +547,7 @@ image.alt.vi: …
 | `term.en` (từ tiếng Anh) · `term.vi` (nghĩa) | `term` |
 | `example.*` | `example` |
 | `image.*` | `image?` |
-| `tier:` | `tier` (`core` · `extra`, mặc định `core`) |
+| `tier:` | `tier` (`core` · `extra`; để trống thì JSON không có trường này, app hiểu là `core`) |
 
 **Collectible** (dưới `## Thưởng`)
 
@@ -537,4 +557,4 @@ image.alt.vi: …
 | `set:` | `set` (key của bộ thẻ, ví dụ `food`) |
 | `name.*` · `tag.*` · `fact.*` | `name` · `tag?` · `fact` ("Em có biết?") |
 | `image.*` | `image` (bắt buộc) |
-| `rarity:` | `rarity` (`common` · `rare`, mặc định `common`) |
+| `rarity:` | `rarity` (`common` · `rare`; để trống thì JSON không có trường này, app hiểu là `common`) |

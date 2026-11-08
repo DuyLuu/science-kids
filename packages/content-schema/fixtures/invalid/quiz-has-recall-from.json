@@ -64,7 +64,7 @@
       },
       "sentence": {
         "en": "Animals, including humans, need food, water and {1} to live.",
-        "vi": "Động vật, kể cả con người, cần thức ăn, nước và không khí để sống."
+        "vi": "Động vật, kể cả con người, cần thức ăn, nước và {1} để sống."
       },
       "bank": [
         {
@@ -307,15 +307,6 @@
     "capacity": 4,
     "groups": [
       {
-        "key": "tray_carb",
-        "label": {
-          "en": "Carbohydrates",
-          "vi": "Bột đường"
-        },
-        "color": "vang_hoe",
-        "role": "required"
-      },
-      {
         "key": "tray_protein",
         "label": {
           "en": "Protein",
@@ -331,6 +322,15 @@
           "vi": "Rau và quả"
         },
         "color": "gi_dong",
+        "role": "required"
+      },
+      {
+        "key": "tray_carb",
+        "label": {
+          "en": "Carbohydrates",
+          "vi": "Bột đường"
+        },
+        "color": "vang_hoe",
         "role": "required"
       },
       {
@@ -601,7 +601,7 @@
       },
       "sentence": {
         "en": "Carbohydrates give us {1}.",
-        "vi": "Chất bột đường cho ta năng lượng."
+        "vi": "Chất bột đường cho ta {1}."
       },
       "bank": [
         {

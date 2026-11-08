@@ -184,7 +184,7 @@ Hình dạng là đề xuất; dev chốt và ghi vào ticket.
    ```
 2. **Luật theo tuổi** trong `tools/content-cli`, ở một module riêng (ví dụ `src/validate/age-rules.ts`). Đọc `authoring` theo `age_group` của topic.
    - Chạy trong `build`: có lỗi thì exit 1 và không ghi gói.
-   - Chạy trong lệnh mới `validate <topic.json> <lesson.json>…`, đọc JSON. Parse markdown là việc khác, theo lịch 1/12–12/12 ở B16.
+   - Chạy trong lệnh mới `validate <topic.json> <lesson.json>…`, đọc JSON. Parse markdown là việc khác, theo lịch 1/12–12/12 ở B16. *(2/11: kéo lên làm ngay ở SK-027.)*
    - Dòng báo: `<file> <JSON pointer> [<mã>] <thông báo tiếng Việt>`. Cảnh báo không làm exit 1.
 3. **Mã lỗi** (tên do dev chốt; đổi tên thì sửa ticket):
 
@@ -283,7 +283,7 @@ Hình dạng là đề xuất; dev chốt và ghi vào ticket.
 - **Renderer `order_sequence` và `picture_bar_chart` cho Discoverer:** GĐ 1 S4 (technical-plan dòng 663).
 - **Soạn bài Explorer, Scientist thật**, ngoài 2 bài mẫu cho playtest ở GĐ 2.
 - **Đổi luật chấm B4.4 của Discoverer**; ôn tập thích ứng.
-- **Parse markdown và báo lỗi theo số dòng:** lịch B16. Luật theo tuổi chạy trên JSON trước, rồi dùng lại khi có parser.
+- **Parse markdown và báo lỗi theo số dòng:** lịch B16. Luật theo tuổi chạy trên JSON trước, rồi dùng lại khi có parser. *(2/11: làm ở SK-027, dòng báo thêm `:<dòng>` sau tên file, mã giữ nguyên.)*
 - **Sửa `prd.md`, `technical-plan.md`, `syllabus-progression.md`:** ticket này chỉ đề xuất (cuối ticket).
 
 ## Tiêu chí nghiệm thu

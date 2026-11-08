@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// content-cli: Science Kids content pipeline (MVP). Commands: tts, build, validate, fetch-model.
-// Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
+// content-cli: Science Kids content pipeline (MVP). Commands: validate, import, ids (markdown),
+// tts, build, fetch-model. Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
+// validate, import and ids never load a module of src/tts (no model, no Python, no network).
 
 // .ts runs through Node's type stripping (no build step): needs ^22.18 or >= 23.6.
 const [major = 0, minor = 0] = process.versions.node.split(".").map(Number);
@@ -12,26 +13,46 @@ if (major < 22 || (major === 22 && minor < 18) || (major === 23 && minor < 6)) {
 const { parseArgs } = await import("node:util");
 const path = await import("node:path");
 const { DEFAULT_AUDIO_DIR, DEFAULT_PACK_DIR, DEFAULT_REVIEW_DIR, DEFAULT_RULES_FILE, display } = await import("./paths.ts");
-const { DEFAULT_DTYPE, ensureModel, isDtype } = await import("./tts/kokoro-model.ts");
-const { DEFAULT_VOICE } = await import("./tts/kokoro-en.ts");
-const { DEFAULT_VI_VOICE } = await import("./tts/vieneu-vi.ts");
-const { DEFAULT_VI_NUMBER_STYLE } = await import("./normalize/numbers-vi.ts");
 const { parseAppVersion } = await import("./app-version.ts");
 
-/** --vi-numbers: "sgk" = linh, nghìn, bốn (textbook, default); "nam" = lẻ, ngàn, tư (Southern). */
-const VI_NUMBER_STYLES = {
-  sgk: DEFAULT_VI_NUMBER_STYLE,
-  nam: { zeroTens: "lẻ", thousand: "ngàn", fourAfterTens: "tư" },
-} as const;
+/** tts defaults shown in the usage text; loaded only for tts, fetch-model and help. */
+async function ttsDefaults() {
+  const { DEFAULT_DTYPE } = await import("./tts/kokoro-model.ts");
+  const { DEFAULT_VOICE } = await import("./tts/kokoro-en.ts");
+  const { DEFAULT_VI_VOICE } = await import("./tts/vieneu-vi.ts");
+  return { DEFAULT_DTYPE, DEFAULT_VOICE, DEFAULT_VI_VOICE };
+}
 
 /** build, validate: lowest app version for every topic = MARKETING_VERSION of the first iOS test build (SK-005). */
 const DEFAULT_MIN_APP_VERSION = "0.1.0";
 
-const USAGE = `Cách dùng:
+const MD_USAGE = `Cách dùng (markdown, SK-027):
+  node src/cli.ts validate <thư mục hoặc file .md>... [--content-root <thư mục>] [--rules <file>] [--min-app-version <x.y.z>]
+  node src/cli.ts import <thư mục hoặc file .md>... [--out <thư mục>] [--content-root <thư mục>] [--rules <file>] [--min-app-version <x.y.z>]
+  node src/cli.ts ids <thư mục hoặc file .md>... [--content-root <thư mục>]
+  Từ gốc repo: npm --prefix tools/content-cli run validate -- content/discoverer/an-uong-lanh-manh
+
+validate: đọc bài markdown (thư mục: mọi thư mục chủ đề có _topic.md bên trong; bài lẻ: tự lấy _topic.md cùng thư mục),
+     kiểm cú pháp, content-schema rồi luật theo nhóm tuổi. Mỗi dòng: <file .md>:<dòng> <JSON pointer> [<mã>] <thông báo>.
+     Không ghi gì. Không trộn .md với .json trong một lần gọi (exit 2); file .json thì kiểm như cũ.
+import: như validate; không có lỗi thì ghi JSON schema v1 vào --out (mặc định content/.build/json),
+     <age_group>/<topic_slug>/topic.json và <nn>-<slug>.json; thư mục của mỗi chủ đề bị thay cả. Có lỗi thì không ghi gì.
+ids: điền UUID vào các dòng "id:" còn trống (frontmatter và ngay dưới ###); không đụng id đã có.
+  --content-root <dir>  gốc nội dung để kiểm id trùng và tìm prerequisites, recall_from.lesson; mặc định content/
+                        (bản chép ngoài content/: thư mục trên <age_group>/ của chủ đề)`;
+
+function usage(defaults: { DEFAULT_DTYPE: string; DEFAULT_VOICE: string; DEFAULT_VI_VOICE: string }) {
+  const { DEFAULT_DTYPE, DEFAULT_VOICE, DEFAULT_VI_VOICE } = defaults;
+  return `Cách dùng:
+  node src/cli.ts validate <thư mục hoặc file .md>... [tuỳ chọn]       (markdown, xem dưới)
+  node src/cli.ts import <thư mục hoặc file .md>... [--out <thư mục>]
+  node src/cli.ts ids <thư mục hoặc file .md>...
   node src/cli.ts tts <file.json>... --out <thư mục> [tuỳ chọn]
   node src/cli.ts build <topic.json> <lesson.json>... [--out <thư mục>] [tuỳ chọn]
   node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] [--min-app-version <x.y.z>]
   node src/cli.ts fetch-model [--dtype fp32|fp16|q8]
+
+${MD_USAGE}
 
 tts: sinh clip cho mọi chuỗi Spoken (en hoặc vi) của các file topic/lesson, ghi bản sao có
      audio.<lang> (sha256 của file m4a) vào --out. Bài lẻ thì đưa kèm topic.json của chủ đề.
@@ -73,6 +94,8 @@ validate: kiểm file topic/lesson JSON bằng content-schema, rồi luật so�
 fetch-model: chỉ tải model Kokoro vào tools/content-cli/.models (tts cũng tự tải khi thiếu).
 
 Exit 0 = xong, 1 = lỗi nội dung hoặc lỗi chạy, 2 = sai cách gọi.`;
+}
+const fullUsage = async () => usage(await ttsDefaults());
 
 // `npm run tts -- <file>` runs in tools/content-cli; resolve relative paths against the
 // directory the user typed the command in.
@@ -87,10 +110,18 @@ const [command, ...rest] = process.argv.slice(2);
 
 async function main(): Promise<number> {
   if (!command || command === "-h" || command === "--help" || command === "help") {
-    console.log(USAGE);
+    console.log(await fullUsage());
     return command ? 0 : 2;
   }
   if (command === "tts") {
+    const { DEFAULT_DTYPE, DEFAULT_VOICE, DEFAULT_VI_VOICE } = await ttsDefaults();
+    const { isDtype } = await import("./tts/kokoro-model.ts");
+    const { DEFAULT_VI_NUMBER_STYLE } = await import("./normalize/numbers-vi.ts");
+    /** --vi-numbers: "sgk" = linh, nghìn, bốn (textbook, default); "nam" = lẻ, ngàn, tư (Southern). */
+    const VI_NUMBER_STYLES = {
+      sgk: DEFAULT_VI_NUMBER_STYLE,
+      nam: { zeroTens: "lẻ", thousand: "ngàn", fourAfterTens: "tư" },
+    } as const;
     let parsed;
     try {
       parsed = parseArgs({
@@ -117,12 +148,12 @@ async function main(): Promise<number> {
         },
       });
     } catch (error) {
-      console.error(`${(error as Error).message}\n\n${USAGE}`);
+      console.error(`${(error as Error).message}\n\n${await fullUsage()}`);
       return 2;
     }
     const { values, positionals } = parsed;
     if (values.help) {
-      console.log(USAGE);
+      console.log(await fullUsage());
       return 0;
     }
     const maxVariants = Number(values["max-variants"]);
@@ -140,7 +171,7 @@ async function main(): Promise<number> {
       return 2;
     }
     if (!values.out || positionals.length === 0) {
-      console.error(`${!values.out ? "Thiếu --out." : "Thiếu file JSON."}\n\n${USAGE}`);
+      console.error(`${!values.out ? "Thiếu --out." : "Thiếu file JSON."}\n\n${await fullUsage()}`);
       return 2;
     }
     if (values.lang !== "en" && values.lang !== "vi") {
@@ -188,16 +219,16 @@ async function main(): Promise<number> {
         },
       });
     } catch (error) {
-      console.error(`${(error as Error).message}\n\n${USAGE}`);
+      console.error(`${(error as Error).message}\n\n${await fullUsage()}`);
       return 2;
     }
     const { values, positionals } = parsed;
     if (values.help) {
-      console.log(USAGE);
+      console.log(await fullUsage());
       return 0;
     }
     if (positionals.length === 0) {
-      console.error(`Thiếu file JSON (topic.json và các bài).\n\n${USAGE}`);
+      console.error(`Thiếu file JSON (topic.json và các bài).\n\n${await fullUsage()}`);
       return 2;
     }
     const { runBuild } = await import("./build/command.ts");
@@ -220,7 +251,7 @@ async function main(): Promise<number> {
       display: shown,
     });
   }
-  if (command === "validate") {
+  if (command === "validate" || command === "import" || command === "ids") {
     let parsed;
     try {
       parsed = parseArgs({
@@ -229,35 +260,73 @@ async function main(): Promise<number> {
         options: {
           rules: { type: "string" },
           "min-app-version": { type: "string", default: DEFAULT_MIN_APP_VERSION },
+          "content-root": { type: "string" },
+          ...(command === "import" ? { out: { type: "string" as const } } : {}),
           help: { type: "boolean", short: "h", default: false },
         },
       });
     } catch (error) {
-      console.error(`${(error as Error).message}\n\n${USAGE}`);
+      console.error(`${(error as Error).message}\n\n${MD_USAGE}`);
       return 2;
     }
     const { values, positionals } = parsed;
     if (values.help) {
-      console.log(USAGE);
+      console.log(MD_USAGE);
       return 0;
     }
     if (positionals.length === 0) {
-      console.error(`Thiếu file JSON (topic.json và các bài).\n\n${USAGE}`);
+      console.error(`Thiếu thư mục hoặc file .md${command === "validate" ? " (hoặc các file .json: topic.json và các bài)" : ""}.\n\n${MD_USAGE}`);
       return 2;
     }
     if (!parseAppVersion(values["min-app-version"])) {
       console.error(`--min-app-version ${values["min-app-version"]} không hợp lệ (MAJOR.MINOR.PATCH, vd 0.1.0).`);
       return 2;
     }
-    const { runValidate } = await import("./validate/command.ts");
-    return runValidate({
-      files: positionals.map(fromUser),
+    // .json = the JSON validate of SK-026 (unchanged); .md or a folder = markdown (SK-027).
+    const json = positionals.filter((target) => target.toLowerCase().endsWith(".json"));
+    const markdown = positionals.filter((target) => !target.toLowerCase().endsWith(".json"));
+    if (json.length > 0 && markdown.length > 0) {
+      console.error(`Không trộn file .json với file .md hay thư mục trong một lần gọi: ${json.join(", ")} và ${markdown.join(", ")}. Gọi riêng từng loại.`);
+      return 2;
+    }
+    const other = markdown.filter((target) => /\.[A-Za-z0-9]+$/.test(path.basename(target)) && !target.toLowerCase().endsWith(".md"));
+    if (other.length > 0) {
+      console.error(`${command} chỉ đọc file .md hoặc thư mục${command === "validate" ? " (hoặc .json)" : ""}: ${other.join(", ")}`);
+      return 2;
+    }
+    if (json.length > 0) {
+      if (command !== "validate") {
+        console.error(`${command} chỉ đọc markdown (.md hoặc thư mục chủ đề), không đọc ${json.join(", ")}.\n\n${MD_USAGE}`);
+        return 2;
+      }
+      if (values["content-root"]) {
+        console.error("--content-root chỉ dùng với markdown.");
+        return 2;
+      }
+      const { runValidate } = await import("./validate/command.ts");
+      return runValidate({
+        files: positionals.map(fromUser),
+        rulesFile: values.rules ? fromUser(values.rules) : DEFAULT_RULES_FILE,
+        minAppVersion: values["min-app-version"],
+        display: shown,
+      });
+    }
+    const markdownCommand = await import("./markdown/command.ts");
+    const options = {
+      inputs: positionals.map(fromUser),
+      contentRoot: values["content-root"] ? fromUser(values["content-root"]) : undefined,
       rulesFile: values.rules ? fromUser(values.rules) : DEFAULT_RULES_FILE,
       minAppVersion: values["min-app-version"],
+      cwd: userCwd,
       display: shown,
-    });
+    };
+    if (command === "validate") return markdownCommand.runMarkdownValidate(options);
+    if (command === "ids") return markdownCommand.runIds(options);
+    const out = (values as { out?: string }).out;
+    return markdownCommand.runImport({ ...options, out: out ? fromUser(out) : markdownCommand.DEFAULT_JSON_DIR });
   }
   if (command === "fetch-model") {
+    const { DEFAULT_DTYPE, ensureModel, isDtype } = await import("./tts/kokoro-model.ts");
     const { values } = parseArgs({ args: rest, options: { dtype: { type: "string", default: DEFAULT_DTYPE } } });
     if (!isDtype(values.dtype)) {
       console.error(`--dtype ${values.dtype} không hợp lệ (fp32, fp16, q8).`);
@@ -267,7 +336,7 @@ async function main(): Promise<number> {
     console.log(downloaded ? `Đã tải ${downloaded} file.` : `Model ${values.dtype} đã có đủ, không tải gì.`);
     return 0;
   }
-  console.error(`Lệnh lạ: ${command}\n\n${USAGE}`);
+  console.error(`Lệnh lạ: ${command}\n\n${await fullUsage()}`);
   return 2;
 }
 

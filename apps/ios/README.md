@@ -55,7 +55,7 @@ Scheme `ScienceKids` chạy 10 bundle test trong một lệnh: `ScienceKidsTests
 
 ## Gói nội dung và giọng đọc (SK-016)
 
-- **Nhúng gói:** build phase "Embed content pack" (`scripts/embed-content-pack.sh`, khai trong `project.yml`) chép `content/.build/pack` (build setting `SK_CONTENT_PACK_DIR`) vào bundle thành `pack/` mỗi lần build. Không có gói thì in `warning: Content pack not found…` trong log build và app chạy bằng fixture, không có tiếng. Thử bản không gói mà không xoá gói: `xcodebuild build … SK_CONTENT_PACK_DIR=/khong-co`.
+- **Nhúng gói:** build phase "Embed content pack" (`scripts/embed-content-pack.sh`, khai trong `project.yml`) chép `content/.build/pack` (build setting `SK_CONTENT_PACK_DIR`) vào bundle thành `pack/` mỗi lần build. Không có gói thì in `warning: Content pack not found…` trong log build và app chạy bằng fixture, không có tiếng. Thử bản không gói mà không xoá gói: `xcodebuild build … SK_CONTENT_PACK_DIR=/khong-co`. Script chạy ngoài sandbox (`ENABLE_USER_SCRIPT_SANDBOXING: NO` riêng target `ScienceKids`): nó chép cả cây file không biết trước, còn sandbox chỉ cho ghi đúng đường dẫn đã khai trong `outputFiles` (SK-016, sửa 2/11).
 - **Đọc gói:** `ContentKit.ContentPack` đọc `catalog/v1/manifest.json`, kiểm `size` và `sha256` của từng `pack.json` trước khi decode (lệch: bỏ cả chủ đề, ghi log); asset kiểm khi được dùng (`assetData(for:)`; lệch: chỉ từ chối asset đó). Nguồn gói là protocol `PackSource` (`DirectoryPackSource` cho gói nhúng; GĐ 1 thêm nguồn tải mạng). Gói có trong app mà không mở được chủ đề nào thì app hiện `ContentErrorScreen` ("Chưa mở được bài học", nút Thử lại). Luật chấm lấy từ `rules` của manifest; `content_version` của lần làm bài là `topics[].version`.
 - **Giọng đọc:** `AudioKit.SpeechPlayer` phát từng `Utterance` (danh sách clip), một cái một lúc: chạm cái mới thì dừng cái cũ, chạm lại thì phát lại từ đầu. `AVAudioPlayer`, session theo `AudioSessionPolicy.current` (đang là `.ambient`, mặc định tạm tới SK-020). Clip theo `voice_mode` của hồ sơ: `en` chỉ EN, `vi` chỉ VI, `both` EN rồi VI; thiếu clip thì bỏ qua lặng lẽ, nút nghe ẩn khi giọng đó không có clip nào. Tải trước clip của bước đang hiện và bước kế (`LessonSession.clipsToPreload`).
 - **Tự phát** khi một bước mở (`LessonSession.autoplayUtterance`), không phát khi VoiceOver bật: câu hỏi ở Khởi động và Quiz (lời dặn, câu của bạn trong truyện, câu hỏi), lời dặn "Tap each group" ở Học, lời nhắn của linh vật ở Chơi. Thưởng không tự phát.
@@ -115,7 +115,7 @@ apps/ios/
       Fonts/               # Phudu, Be Vietnam Pro + OFL.txt; xem Fonts/README.md
       Localizable.xcstrings   # chuỗi giao diện EN + VI
       PrivacyInfo.xcprivacy
-      Assets.xcassets      # màu nền màn khởi động (LaunchBackground), hình giấy cắt SVG (Art/)
+      Assets.xcassets      # app icon (AppIcon: Any, Dark, Tinted), màn khởi động (LaunchBackground, LaunchMark), hình giấy cắt SVG (Art/)
   ScienceKidsTests/        # unit test của app (font, Info.plist, chuỗi, tham số khởi động, luồng mở app)
   ScienceKidsUITests/      # UI test: gallery (SK-008), luồng mở app (SK-011), bài học (SK-012)
   Packages/SKKit/          # Swift package nội bộ, một target mỗi module

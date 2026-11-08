@@ -37,6 +37,15 @@ correction.en: Our body needs some fat for energy, to keep warm and to take in s
 correction.vi: Cơ thể cần một lượng chất béo vừa đủ để có năng lượng, giữ ấm và hấp thu một số vitamin. Chỉ ăn quá nhiều chất béo mới không tốt.
 note: Trẻ hay nghe "đồ béo không tốt" rồi khái quát thành mọi chất béo đều có hại. Sửa ở bài một (nhóm chất béo trong phần Học và câu sáu của Quiz) và quay lại ở bài ba "Đồ ngọt, đồ béo: ăn bao nhiêu?".
 
+### one_food_enough
+id: e8da090c-a354-461d-b506-90c7bd9f5b3b
+statement.en: If a food is healthy, eating only that food is enough.
+statement.vi: Món nào tốt cho sức khoẻ thì chỉ ăn mỗi món đó là đủ.
+correction.en: No single food has every nutrient our body needs. A balanced meal mixes foods from different groups.
+correction.vi: Không có món ăn nào có đủ mọi chất dinh dưỡng cơ thể cần. Bữa ăn cân bằng kết hợp thức ăn của nhiều nhóm khác nhau.
+> [CẦN KIỂM] Đối chiếu cách nói "không có món nào có đủ mọi chất dinh dưỡng" với tài liệu của Viện Dinh dưỡng và sách Khoa học lớp bốn (ý "ăn phối hợp nhiều loại thức ăn"). Ý "trẻ hay nghĩ như vậy" là biên tập viết theo kinh nghiệm phổ thông, chưa có nguồn nghiên cứu.
+note: Trẻ hay chia đồ ăn thành món tốt và món không tốt, rồi nghĩ chỉ ăn mỗi món tốt (chỉ ăn rau, chỉ ăn quả) là đủ. Sửa ở bài hai "Mâm cơm cân bằng" (Chơi: mâm bốn nhóm; câu sáu của Quiz). Thêm ngày 2/11 cho SK-028, nháp AI.
+
 ## Ghi chú
 
 - `oak_unit_ref` là trường nội bộ, không bao giờ hiện cho trẻ. Hiện ghi theo tên unit trong syllabus.md.

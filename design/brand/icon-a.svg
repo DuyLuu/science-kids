@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<title>Science Kids · icon hướng A · Triện bình thí nghiệm</title>
+<desc>SK-029 vòng 1. Triện đỏ son hai lớp nghiêng -4 độ trên giấy điệp, bình thí nghiệm giấy sáng có nước vàng hoè (phát triển từ ArtBrandMark). 1024x1024, vuông đủ, không trong suốt, không chữ, không nét viền; hình chính trong vùng giữa 683.</desc>
+<defs>
+  <!-- paperE (tokens illustration.paper_e) phóng cho khung 1024: baseFrequency 0.04/8, mép lệch 2.2 -> 12, bóng dy 2.5 -> 18, mờ 1.8 -> 12; màu bóng muc_bong. -->
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="12" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="18" stdDeviation="12" flood-color="#5B3B17" flood-opacity="0.32"/>
+  </filter>
+  <!-- fiberE, diepE (tokens illustration.background_fiber, background_diep) phóng cho khung 1024. -->
+  <filter id="fiberE" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.004 0.1" numOctaves="2" seed="4"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"/>
+  </filter>
+  <filter id="diepE" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.16" numOctaves="1" seed="21"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"/>
+  </filter>
+</defs>
+<rect width="1024" height="1024" fill="#F0E6CF"/>
+<rect width="1024" height="1024" filter="url(#fiberE)" opacity="0.25"/>
+<rect width="1024" height="1024" filter="url(#diepE)" opacity="0.55"/>
+<!-- triện: 2 lớp giấy đỏ son, nghiêng -4 độ như dấu ở màn Chào mừng -->
+<g filter="url(#paperE)"><rect x="212" y="212" width="600" height="600" rx="46" fill="#6E2216" transform="translate(8 18) rotate(-4 512 512)"/></g>
+<g filter="url(#paperE)"><rect x="212" y="212" width="600" height="600" rx="46" fill="#A93A27" transform="rotate(-4 512 512)"/></g>
+<!-- bình thí nghiệm: giấy sáng -->
+<g filter="url(#paperE)"><g transform="rotate(-4 512 512) translate(512 512) scale(15.79) translate(-22 -21)" fill="#FBF6EA"><rect x="16" y="8.5" width="12" height="3" rx="1.5"/><path d="M18.5 10.5h7V18l7 12q1.6 3.5-2.4 3.5H13.9q-4 0-2.4-3.5l7-12z"/></g></g>
+<!-- nước trong bình: vàng hoè, mặt nước gợn -->
+<g filter="url(#paperE)"><g transform="rotate(-4 512 512) translate(512 512) scale(15.79) translate(-22 -21)" fill="#E2A52A"><path d="M14.4 26.3Q18.2 24.9 22 26.3T29.6 26.3l1.7 3.2q.9 2-1.3 2H14q-2.2 0-1.3-2z"/></g></g>
+<!-- bọt -->
+<g filter="url(#paperE)"><g transform="rotate(-4 512 512) translate(512 512) scale(15.79) translate(-22 -21)" fill="#E2A52A"><circle cx="20.2" cy="22.2" r="1.6"/><circle cx="23.8" cy="19.2" r="1.15"/></g></g>
+</svg>

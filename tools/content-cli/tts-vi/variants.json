@@ -140,6 +140,44 @@
           ],
           "chosen_at": "2026-11-01T07:03:39.833Z"
         },
+        "Em nghĩ tới cá và cơm. Rau muống có cho mình giống vậy không?": {
+          "variant": 1,
+          "flags_before": [
+            "long_pause"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới cá và cơm rau muống có cho mình giống vậy không",
+            "em nghĩ tới cá và cơm rau muốn có cho mình giống vậy không"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T07:27:17.370Z"
+        },
+        "Em nhận ra được bữa ăn nào cân bằng.": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhận ra được bữa ăn nào cân bằng",
+            "em nhận ra được bữa ăn nào cân bằng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.606Z"
+        },
         "Kẹo": {
           "variant": 1,
           "flags_before": [],
@@ -150,6 +188,25 @@
           ],
           "chosen_at": "2026-10-31T17:51:47.857Z",
           "note": "SK-024: thử 6 ngữ cảnh ASR, biến thể 0 có lần nghe ra 'kèo' (SK-023 nghe ra 'keo'), biến thể 1 không lần nào sai thanh"
+        },
+        "Mâm cơm cân bằng": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "mâm cơm cân bằng",
+            "mâm cơm cân bằng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.604Z"
         },
         "Mỗi nhóm chất dinh dưỡng làm một việc riêng trong cơ thể.": {
           "variant": 2,
@@ -188,6 +245,27 @@
             4
           ],
           "chosen_at": "2026-10-31T17:43:00.820Z"
+        },
+        "Na chưa đúng. Rau rất tốt, nhưng mình cần cả các nhóm khác nữa.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "nà chưa đúng rau rất tốt nhưng mình cần cả các nhóm khác nữa",
+            "nà chưa đúng rau rất tốt nhưng mình cần cả các nhóm khác nữa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
         },
         "Na chưa đúng. Ta cần một ít chất béo, nhưng không ăn quá nhiều.": {
           "variant": 3,
@@ -267,6 +345,82 @@
           ],
           "chosen_at": "2026-10-31T18:00:31.792Z"
         },
+        "Nam muốn bát cơm cân bằng hơn. Phần nào nên nhiều hơn?": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "nam muốn bát cơm cân bằng hơn phần nào nên nhiều hơn",
+            "nam muốn bát cơm cân bằng hơn phần nào nên nhiều hơn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T07:27:17.369Z"
+        },
+        "Nhớ lại mâm cơm em vừa xếp nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "nhớ lại mâm cơm em vừa xếp nhé",
+            "nhớ lại mâm cơm em vừa xếp nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
+        },
+        "Rau": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rau",
+            "rau"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.607Z"
+        },
+        "Rau có cho mình đủ mọi chất dinh dưỡng không?": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rau có cho mình đủ mọi chất dinh dưỡng không",
+            "rau có cho mình đủ mọi chất dinh dưỡng không"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
+        },
         "Rau có chất xơ.": {
           "variant": 1,
           "flags_before": [
@@ -305,6 +459,25 @@
           ],
           "chosen_at": "2026-11-01T07:03:39.834Z"
         },
+        "Thanh long": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thanh long",
+            "thanh long"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
+        },
         "Thêm một món giàu chất đạm nhé!": {
           "variant": 1,
           "flags_before": [
@@ -325,6 +498,46 @@
             4
           ],
           "chosen_at": "2026-10-31T17:43:00.814Z"
+        },
+        "Thêm một món giàu chất đạm, như đậu phụ hay thịt gà nhé!": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thêm một món dầu chất đạm như đậu phụ hay thịt gà nhé",
+            "thêm một món dầu chất đạm như đậu phụ hay thịt gà nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
+        },
+        "Thêm một món rau nhé!": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thêm một món rau nhé",
+            "thêm một món rau nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-02T06:40:11.608Z"
         },
         "Thử thách: bắt lỗi sai": {
           "variant": 1,

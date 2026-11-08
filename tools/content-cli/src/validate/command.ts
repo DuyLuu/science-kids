@@ -1,6 +1,7 @@
 // `content-cli validate <topic.json> <lesson.json>...`: content schema (packages/content-schema:
 // Ajv + zod + cross-file checks), then the authoring rules of the topic's age group (SK-026).
-// Reads JSON only; parsing markdown comes later (technical-plan.md B16). Writes nothing.
+// This file is the JSON path; .md files and folders go to src/markdown/command.ts (SK-027),
+// which runs the same two checks after converting the markdown. Writes nothing.
 // Exit 0 = no error (warnings allowed), 1 = content error, 2 = wrong usage (cli.ts).
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";

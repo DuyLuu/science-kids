@@ -1,6 +1,6 @@
 # Science Kids — Tóm tắt PRD và Technical plan
 
-> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Sửa 31/10: giọng tiếng Việt lên ưu tiên, Duy chọn thử VieNeu-TTS giọng Nam (B9, B16, B18 #3, B20). Sửa 1/11: Duy chốt giọng VI Kim Thanh (B9, B16, B18 #3, B20). Sửa 1/11: dạng quiz theo nhóm tuổi (SK-026) (A2, B4.1, B4.2, B4.3, B4.4, B5.3, B8.0, B16). Chưa publish artifact; khi chốt sẽ publish như PRD.
+> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Sửa 31/10: giọng tiếng Việt lên ưu tiên, Duy chọn thử VieNeu-TTS giọng Nam (B9, B16, B18 #3, B20). Sửa 1/11: Duy chốt giọng VI Kim Thanh (B9, B16, B18 #3, B20). Sửa 1/11: dạng quiz theo nhóm tuổi (SK-026) (A2, B4.1, B4.2, B4.3, B4.4, B5.3, B8.0, B16). Sửa 2/11: parse markdown kéo lên làm ngay, dev làm, Duy giao SK-027 (B4.2, B8.0, B16). Chưa publish artifact; khi chốt sẽ publish như PRD.
 > **Cách đọc nhãn:** *(PRD)* = đã chốt trong prd.md · *(canvas)* = Duy đã duyệt trên canvas thiết kế nhưng chưa ghi vào PRD · *(đề xuất)* = từ syllabus-progression hoặc plan này, chưa chốt.
 > Nguồn: [prd.md](prd.md) · [syllabus.md](syllabus.md) · [syllabus-progression.md](syllabus-progression.md) · thiết kế [design/play-ui/](design/play-ui/project/) (canvas https://claude.ai/artifact/MLvDKD33FWJ7aTMS7XX3Zk).
 > Quy ước kỹ thuật theo cách bạn đang làm ở ise_center: Supabase CLI migrations, Next.js + TanStack Query + zod, Vercel.
@@ -223,7 +223,7 @@ Trường chung của `quiz_item`: `id`, `format`, `dok` (1–3), `prompt`, `opt
 
 `topic` và `lesson` có cờ `sensitive` (nội dung dậy thì, PRD mục 11) để app ẩn cho tới khi phụ huynh bật.
 
-**Id ổn định:** id của chủ đề, bài, block, câu quiz, từ vựng là UUID cấp một lần (ở MVP: biên tập ghi `id` trong frontmatter markdown, CLI sinh nếu thiếu và ghi ngược lại file) và không đổi qua các lần publish; sửa nội dung giữ id, bỏ nội dung thì `archived` chứ không xoá, để `lesson_progress` và `vocab_progress` không mồ côi. `p_correct` hiệu chỉnh theo cặp (`item_id`, `content_version`).
+**Id ổn định:** id của chủ đề, bài, block, câu quiz, từ vựng là UUID cấp một lần (ở MVP: biên tập ghi `id` trong frontmatter markdown, CLI sinh nếu thiếu và ghi ngược lại file; *(2/11, SK-027)* việc ghi ngược do lệnh riêng `content-cli ids` làm, `validate` và `import` chỉ báo id trống và không sửa file) và không đổi qua các lần publish; sửa nội dung giữ id, bỏ nội dung thì `archived` chứ không xoá, để `lesson_progress` và `vocab_progress` không mồ côi. `p_correct` hiệu chỉnh theo cặp (`item_id`, `content_version`).
 
 **Hình dạng `data` của block** (ví dụ `explore_groups`; các block khác theo cùng kiểu, định nghĩa đầy đủ trong `packages/content-schema`):
 
@@ -492,7 +492,7 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 
 | Lệnh | Việc làm |
 | --- | --- |
-| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng. *(1/11, Duy chốt SK-026)* Luật theo tuổi đọc `rules.<age_group>.authoring`, gồm cả format được dùng và hình bắt buộc của Explorer; mã lỗi ở SK-026. Làm ngay ở GĐ 0 cho cả 3 nhóm với 6 format v1: chạy trên JSON trước, chạy cả trong `build`, rồi dùng lại khi có parser markdown |
+| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng. *(1/11, Duy chốt SK-026)* Luật theo tuổi đọc `rules.<age_group>.authoring`, gồm cả format được dùng và hình bắt buộc của Explorer; mã lỗi ở SK-026. Làm ngay ở GĐ 0 cho cả 3 nhóm với 6 format v1: chạy trên JSON trước, chạy cả trong `build`, rồi dùng lại khi có parser markdown. *(2/11, Duy giao SK-027)* Parser làm ngay: `validate` nhận thẳng file và thư mục markdown, báo `<file>:<dòng> <pointer> [<mã>]`; thêm `import` (ghi JSON vào `content/.build/json/` cho `tts` và `build`) và `ids` (điền id còn trống) |
 | `tts` | Sinh clip còn thiếu: EN bằng **Kokoro** chạy local, VI bằng nhà cung cấp chọn ở B9; đặt tên theo hash nội dung + giọng; cache trong `content/.audio/` (gitignore) |
 | `assets` | Xuất SVG từ canvas Claude Design sang WebP, tính hash |
 | `build` | Gộp thành `pack.json` + manifest cho một chủ đề, kiểm `min_app_version` |
@@ -659,8 +659,8 @@ Soạn nội dung bắt đầu 10/11 (syllabus mục 6) trước khi CMS sẵn s
 | Listening test TTS VI: VieNeu-TTS, giọng Nam (Duy chọn 31/10). **Duy ưu tiên 31/10: làm ngay, không chờ 17/11** | dev sinh mẫu, biên tập soạn bộ câu, Duy + biên tập chấm | từ 31/10, thay lịch 17/11 – 28/11 | Chốt giọng VI (B18 #3, SK-023): **xong 1/11, Kim Thanh** |
 | Sinh audio VI bài 1 và app phát VI | dev, ios-dev | ngay sau listening test (SK-024, SK-025) | Bản thử iOS có giọng VI |
 | Luật quiz theo nhóm tuổi trong `content-cli` cho cả 3 nhóm, 6 format v1: chạy trên JSON trong `validate` và `build`, chặn format app chưa hiện được *(1/11, Duy chốt SK-026)* | dev | trước khi biên tập soạn bài 2–5 của chủ đề 1 | Bài pilot lệch quy tắc bị báo lỗi ngay |
+| `content-cli`: parse markdown → JSON, validate schema + quy tắc quiz, báo lỗi dễ đọc *(2/11, Duy giao SK-027: kéo lên làm ngay, thay lịch 1/12 – 12/12 của Duy)* | dev | từ 2/11, xong trước 10/11 (bắt đầu soạn bài 2) | Biên tập chạy `validate` trên markdown, lỗi chỉ về file và dòng; từ bài 2 nội dung đi markdown → `import` → `tts` → `build` |
 | Migration đầu: `content_publishes`, `app_config` + RLS (bảng `cms_*` là GĐ 2) | Duy | 24/11 – 30/11 | DB staging |
-| `content-cli`: parse markdown → JSON, validate schema + quy tắc quiz, báo lỗi dễ đọc | Duy | 1/12 – 12/12 | Biên tập chạy được `validate` trên máy |
 | `content-cli`: sinh TTS EN (Kokoro) + VI, build gói, upload, ghi `content_publishes`, cập nhật manifest | Duy | 15/12 – 9/1 | Gói chủ đề 1 chạy được |
 | Spike iOS: liên kết user ẩn danh với Apple/Google; RevenueCat sandbox | Mobile dev iOS (nếu đã có) hoặc Duy, ≤ 3 ngày | 15/12 – 19/12 | Chốt B18 #1 và B10 |
 | Spike Android: hiệu năng giấy trên máy rẻ | Mobile dev Android, khi có | T1/2027 | Số đo trên máy thật |

@@ -282,3 +282,43 @@ Không có lỗi chặn, không có lỗi.
 ### Chưa kiểm
 - iPad Pro 11 / 13: **chưa kiểm: Duy giảm phạm vi 29/10, 1 lần 1 máy.**
 - Nghe tiếng thật (rõ, không trễ, không chồng), nút gạt im lặng, VoiceOver thật, ngắt âm thanh: Duy nghe tay / SK-020.
+
+## Sửa lỗi sandbox khi build vào DerivedData mặc định (ios-dev, 2/11)
+
+Lỗi do SK-028 phát hiện (dòng ~341). Duy giao sửa ngay.
+
+**Tái hiện** (chưa sửa gì; `xcodebuild build -project ScienceKids.xcodeproj -scheme ScienceKids -destination 'generic/platform=iOS Simulator'`, DerivedData mặc định `~/Library/Developer/Xcode/DerivedData/ScienceKids-dwofhntutqzumlcuuaivztqkrkql`): exit 65, `** BUILD FAILED **` ở `PhaseScriptExecution Embed\ content\ pack`, câu lỗi:
+```
+cp: …/DerivedData/ScienceKids-…/Build/Products/Debug-iphonesimulator/ScienceKids.app/pack/catalog: Operation not permitted
+```
+Bản build lỗi để lại `ScienceKids.app/pack/` rỗng: `mkdir` qua, `cp` bị chặn.
+
+**Nguyên nhân.** Profile sandbox Xcode sinh cho script (`….sb` trong `Intermediates.noindex/ScienceKids.build/…`) là `allow default`, rồi `deny file-read* file-write* (subpath …)` cho SRCROOT, OBJROOT, SYMROOT, CONFIGURATION_BUILD_DIR…, và chỉ mở lại `(literal SCRIPT_OUTPUT_FILE_0)` = đúng `…/ScienceKids.app/pack`. `literal` không gồm file con, nên script không ghi được gì dưới `pack/`. Gói là cả một cây (212 file hôm nay) không biết trước lúc build, nên không khai từng file trong `outputFiles` được. Đọc `content/.build/pack` thì không bị chặn vì nằm ngoài SRCROOT (`apps/ios`).
+
+**Vì sao `-derivedDataPath` dưới `/tmp` lại qua:** không phải sandbox cho ghi thư mục tạm. Luật `deny subpath` mang đường dẫn `/tmp/…` như được truyền vào, còn kernel so với đường dẫn thật `/private/tmp/…` (`/tmp` là symlink), nên luật không bao giờ khớp và sandbox coi như tắt. Đã thử bằng `sandbox-exec` với cùng kiểu profile: `SYMROOT=/tmp/…` thì `cp` vào `pack/` qua; `SYMROOT=/private/tmp/…` thì bị chặn (`Operation not permitted`). Hệ quả: mọi lần build trước dưới `/tmp` đều chạy script không sandbox, nên chưa ai thấy lỗi.
+
+**Cách sửa.** `apps/ios/project.yml` dòng 100–104: `ENABLE_USER_SCRIPT_SANDBOXING: NO` trong `settings.base` của target `ScienceKids`, kèm comment lý do. Dòng 22 giữ `YES` ở mức project, nên `ScienceKidsTests` và `ScienceKidsUITests` vẫn sandbox. Target `ScienceKids` chỉ có đúng một script ("Embed content pack"), nên chỉ script này ra khỏi sandbox. Sau `./bootstrap.sh`, `project.pbxproj` có NO ở Debug và Release của target `ScienceKids`, YES ở Debug và Release của project. Không đổi `embed-content-pack.sh`. README thêm một câu ở mục "Gói nội dung và giọng đọc".
+
+Cách giữ sandbox đã cân nhắc và bỏ:
+- Khai từng file trong `outputFiles` hay `outputFileLists`: danh sách đọc lúc lập kế hoạch build, trước khi script chạy; cây gói đổi theo nội dung nên danh sách sẽ cũ.
+- Chép gói vào `TARGET_TEMP_DIR` (sandbox cho ghi cả cây) rồi để Copy Bundle Resources chép thành folder reference: thư mục phải luôn có (rỗng khi thiếu gói), nên `.app` luôn có `pack/` rỗng, trái tiêu chí 6; thêm thứ tự phase và một bản chép thứ hai.
+- Đóng gói thành một file (tar) rồi app giải nén: phải đổi code app chỉ vì build.
+
+Câu "Sandbox của script cho đọc thư mục khai trong `inputFiles`" ở quyết định 2 bên trên không còn đúng: script nay chạy ngoài sandbox.
+
+**Kiểm** (DerivedData mặc định, không `-derivedDataPath`; log ở `/private/tmp/claude-501/-Users-buiduyluu-Documents-personal-science-kids/77c8c8c2-11a9-41ce-a20a-5e3cd0c8d4de/scratchpad/sandbox-fix/`):
+
+| # | Lệnh (trong `apps/ios`) | Kết quả |
+| --- | --- | --- |
+| 1 | `xcodebuild build -project ScienceKids.xcodeproj -scheme ScienceKids -destination 'generic/platform=iOS Simulator'` | `** BUILD SUCCEEDED **`; `note: Content pack embedded from …/content/.build/pack (212 files).`; `.app/pack/catalog/v1/manifest.json` có, `content_version` `803c0cb00461`; `diff -rq content/.build/pack ….app/pack` không khác. Log không còn `sandbox-exec` |
+| 2 | Lệnh 1 lần nữa, không clean | `** BUILD SUCCEEDED **`; script chạy lại (`PhaseScriptExecution Embed\ content\ pack`, cùng `note:` 212 file); không báo file đã có |
+| 3 | Lệnh 1 thêm `SK_CONTENT_PACK_DIR=/khong-co` | `** BUILD SUCCEEDED **`; `warning: Content pack not found at /khong-co. The app runs on the schema fixtures, without audio (SK-016)…`; `.app` không còn `pack/` |
+| 4 | `xcodebuild test -project ScienceKids.xcodeproj -scheme ScienceKids -destination 'id=14DF158D-5ED6-49CF-80A5-7519B0D594F5' -skip-testing:ScienceKidsUITests` (iPhone 16 Pro đã Booted sẵn, 1 lần) | `** TEST SUCCEEDED **`, 251 test, 0 lỗi: ScienceKidsTests 51, DesignSystem 41, ContentModel 20, LessonEngine 19, ContentKit 18, LessonPlayer 50, AudioKit 13, Profiles 21, Sync 18. Build của lần test nhúng lại gói (212 file) |
+
+Không boot hay tắt simulator nào; không xoá DerivedData.
+
+**Chưa chắc / chưa kiểm:**
+- ~~Build bằng Xcode IDE (bấm Run): chưa bấm thử.~~ Duy bấm Run trong Xcode ngày 2/11: chạy được.
+- Archive (Release, `ArchiveIntermediates`): chưa chạy. Setting nằm ở `settings.base` nên áp cho cả Release; kiểm ở bước TestFlight (SK-020).
+- UI test không chạy lần này (đã skip theo giao việc). Script và gói nhúng không đổi nên không có lý do UI test đổi kết quả.
+- Trong DerivedData còn một thư mục cũ `ScienceKids-cbivkrspfwobibdzccflulgmzbwx` không có `info.plist` (không trỏ tới project nào). Để nguyên.

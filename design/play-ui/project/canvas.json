@@ -463,6 +463,30 @@
       "h": 844,
       "title": "Explorer · Biểu tượng Đúng/Sai · 2 phương án",
       "radius": 16
+    },
+    "Brand-Icons.dc.html": {
+      "x": 0,
+      "y": 11038,
+      "w": 1840,
+      "h": 1760,
+      "title": "Thương hiệu · App icon · 3 hướng (SK-029)",
+      "radius": 16
+    },
+    "Brand-Launch.dc.html": {
+      "x": 1920,
+      "y": 11038,
+      "w": 2050,
+      "h": 1640,
+      "title": "Thương hiệu · Màn khởi động · 2 phương án (SK-029)",
+      "radius": 16
+    },
+    "Brand-Final.dc.html": {
+      "x": 4530,
+      "y": 11038,
+      "w": 1840,
+      "h": 1900,
+      "title": "Thương hiệu · Icon B và khởi động · bản hoàn thiện (SK-029)",
+      "radius": 16
     }
   },
   "order": [
@@ -517,7 +541,10 @@
     "Style-D-Tile.dc.html",
     "Style-E-Screen.dc.html",
     "Style-E-Quiz.dc.html",
-    "Style-E-Tile.dc.html"
+    "Style-E-Tile.dc.html",
+    "Brand-Icons.dc.html",
+    "Brand-Launch.dc.html",
+    "Brand-Final.dc.html"
   ],
   "notes": {
     "explorerTitle": {
@@ -709,6 +736,21 @@
       "fill": "orange",
       "size": "m",
       "text": "Quiz Explorer không cần đọc (SK-026, designer 1/11)\n• Chung: chữ chỉ ở câu hỏi và lời linh vật (D2); chạm thẻ là trả lời, app đọc tên hình rồi mới chấm (D4); không số câu đúng, không XP, ô tiến độ đã làm cùng một màu (D1); thẻ, nút, dấu không có chữ; vùng chạm ≥ 72\n• A · Bạn kể chuyện: linh vật và bong bóng lời ở trên, bong bóng là nút nghe lại; đang đọc = linh vật há miệng, đung đưa, loa vàng hoè; đúng = dấu tròn lá tre; sai = thẻ lõm, hình xám, mẩu giấy gấp góc có mũi tên vòng; sang câu = nút đỏ to chỉ có mũi tên\n• B · Sách tranh: tranh ghim nghiêng, phụ đề ở chân trang, linh vật ló sau mép giấy; đang đọc = tô vàng hoè từ đang đọc (karaoke); đúng = triện vuông lá tre như Discoverer; sai = tranh bong ghim, góc lật có mũi tên vòng; sang câu = chạm góc trang cong\n• C · Tranh treo: 3 tranh dọc treo trên thanh, câu hỏi giữ ở đầu màn; đang đọc = dải giấy vàng hoè chạy dưới câu; đúng = triện hoa thị ở chân tranh; sai = tranh lật úp, mặt sau có mũi tên vòng; hết lượt chỉ tranh đáp án còn ngửa; sang câu = mũi tên băng giấy\n• Duy chốt 2/11 theo đề xuất: A, thay dấu tròn bằng triện vuông và mẩu gấp góc bằng góc bong của B (màn câu 6 Đúng/Sai dựng theo cách này); biểu tượng Đúng/Sai bộ 1 gật đầu / lắc đầu, bộ ngón cái giữ để playtest\n• Xem trạng thái: tweak state (đang đọc câu hỏi, vừa chạm, đúng, sai lần 1, hết lượt, sang câu) và showVi; chạm thẻ trên bảng để chơi tiếp. Màn Đúng/Sai có thêm tweak icons"
+    },
+    "brandTitle": {
+      "x": 0,
+      "y": 10788,
+      "text": "Thương hiệu · App icon và màn khởi động (SK-029; Duy chọn icon B và khởi động PA2 ngày 3/11)",
+      "kind": "title1",
+      "maxW": 6370
+    },
+    "brandOptions": {
+      "x": 4050,
+      "y": 11038,
+      "w": 400,
+      "fill": "orange",
+      "size": "m",
+      "text": "App icon và màn khởi động (SK-029)\n• Duy chọn 3/11: icon B · Linh vật ló mép giấy; màn khởi động PA2 (nền LaunchBackground cộng hình giữa); không làm màn chào động\n• A và C giữ trên board Brand-Icons để lưu lại\n• Bản hoàn thiện ở board Brand-Final: icon B ba bản Any, Dark, Tinted và LaunchMark. SVG nguồn ở design/brand/, PNG ở design/brand/export/\n• Bản tối: nền đỏ son sẫm tự vẽ, không trong suốt (style E không dùng nền gradient của hệ thống). Bản tinted: ảnh xám trên nền trong suốt, vẽ riêng theo độ sáng để mặt linh vật tách khỏi nền\n• LaunchMark: iPhone 128 pt, iPad 160 pt, nền trong suốt, bóng nướng sẵn; đặt giữa nền #F0E6CF\n• Icon không chữ, không vùng trong suốt ở bản sáng, không nét viền; hình chính trong ô giữa 683 (66%) để sau làm adaptive icon Android\n• PNG xuất bằng Chrome (cùng renderer với canvas). Không dựng lại từ SVG bằng công cụ khác vì filter paperE sẽ mất bóng và vân giấy"
     }
   },
   "designSystems": []

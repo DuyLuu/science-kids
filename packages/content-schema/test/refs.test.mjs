@@ -44,7 +44,7 @@ test("UUID duplicated across files names both places", () => {
 test("misconception keys are unique within the topic", () => {
   const topic = validTopic();
   topic.misconceptions.push({ ...structuredClone(topic.misconceptions[0]), id: "00000000-0000-4000-8000-000000000009" });
-  only(validateDocuments([{ file: "t.json", data: topic }]), "/misconceptions/1/key");
+  only(validateDocuments([{ file: "t.json", data: topic }]), `/misconceptions/${topic.misconceptions.length - 1}/key`);
 });
 
 test("keys: one scope for the whole lesson, child keys included", () => {

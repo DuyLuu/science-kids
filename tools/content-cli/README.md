@@ -1,6 +1,6 @@
 # content-cli
 
-CLI cho pipeline nội dung của Science Kids ở MVP (technical-plan.md B8.0). Hiện có ba lệnh: `tts` sinh clip giọng đọc cho mọi chuỗi `Spoken` của file topic/lesson, chạy trên máy, rồi ghi bản sao JSON có `audio.en` / `audio.vi`: tiếng Anh bằng **Kokoro-82M v1.0** ([SK-014](../../docs/backlog/SK-014-content-cli-tts-en.md)), tiếng Việt bằng **VieNeu-TTS v3 Turbo**, giọng Kim Thanh ([SK-024](../../docs/backlog/SK-024-content-cli-tts-vi.md), mục "Tiếng Việt" bên dưới); `build` gói topic, bài và clip thành thư mục gói nội dung có manifest và sha256 cho app nhúng ([SK-015](../../docs/backlog/SK-015-content-cli-build-pack.md)); `validate` kiểm file JSON bằng content-schema rồi theo luật soạn của nhóm tuổi ([SK-026](../../docs/backlog/SK-026-quiz-formats-by-age.md), mục "validate: luật theo nhóm tuổi" bên dưới). Các lệnh `assets`, `publish` và `validate` trên markdown làm sau.
+CLI cho pipeline nội dung của Science Kids ở MVP (technical-plan.md B8.0). Hiện có ba lệnh: `tts` sinh clip giọng đọc cho mọi chuỗi `Spoken` của file topic/lesson, chạy trên máy, rồi ghi bản sao JSON có `audio.en` / `audio.vi`: tiếng Anh bằng **Kokoro-82M v1.0** ([SK-014](../../docs/backlog/SK-014-content-cli-tts-en.md)), tiếng Việt bằng **VieNeu-TTS v3 Turbo**, giọng Kim Thanh ([SK-024](../../docs/backlog/SK-024-content-cli-tts-vi.md), mục "Tiếng Việt" bên dưới); `build` gói topic, bài và clip thành thư mục gói nội dung có manifest và sha256 cho app nhúng ([SK-015](../../docs/backlog/SK-015-content-cli-build-pack.md)); `validate` kiểm file JSON bằng content-schema rồi theo luật soạn của nhóm tuổi ([SK-026](../../docs/backlog/SK-026-quiz-formats-by-age.md), mục "validate: luật theo nhóm tuổi" bên dưới). `validate`, `import`, `ids` đọc thẳng bài markdown của biên tập, báo lỗi theo file và số dòng, ghi JSON schema v1 và điền id ([SK-027](../../docs/backlog/SK-027-content-cli-import-markdown.md), mục "Markdown: validate, import, ids" bên dưới). Các lệnh `assets`, `publish` làm sau.
 
 ## Cần có
 
@@ -252,6 +252,117 @@ Một nguồn cho `rules` (B5.3). Khoá cấp 1 là nhóm tuổi; mỗi nhóm:
 
 GĐ 0 **chưa** đặt `xp_*` = 0 cho Explorer (D1 của SK-026): server lấy `rules` theo nhóm của hồ sơ (`submit_attempts` → `rules_for(child.age_group)`), app lấy theo nhóm của chủ đề, nên bé lớp 1 học thử Discoverer sẽ lệch XP. Chờ chốt câu "rules của nhóm nào" ở SK-026.
 
+## Markdown: validate, import, ids
+
+Biên tập soạn bài bằng markdown theo `content/TEMPLATE.md`; ba lệnh dưới đây đọc thẳng file `.md` ([SK-027](../../docs/backlog/SK-027-content-cli-import-markdown.md)). Không cần model Kokoro, môi trường Python VieNeu hay mạng, không nạp module nào của `tts`.
+
+**Lệnh cho biên tập** (chạy từ gốc repo; cần Node `^22.18.0` hoặc `>= 23.6.0` và `npm install` một lần trong `tools/content-cli`):
+
+```sh
+npm --prefix tools/content-cli run validate -- content/discoverer/an-uong-lanh-manh   # kiểm cả chủ đề
+npm --prefix tools/content-cli run validate -- content                                # kiểm cả kho
+npm --prefix tools/content-cli run ids -- content/discoverer/an-uong-lanh-manh/02-mam-com-can-bang.md   # bài mới: điền id
+```
+
+Mỗi dòng báo: `<file .md>:<dòng> <JSON pointer> [<mã>] <thông báo>`, bấm vào được trong terminal và VS Code. Ví dụ:
+
+```
+content/discoverer/an-uong-lanh-manh/02-mam-com-can-bang.md:118 /quiz/0/format [md_unknown_format] format "single_choise" không có. Có phải "single_choice"? Dùng được: single_choice, …
+content/discoverer/an-uong-lanh-manh/02-mam-com-can-bang.md:121 /quiz/0/dok [age_first_item_dok] câu 1 là DOK 2; nhóm discoverer cần câu 1 là DOK 1
+```
+
+| Lệnh | Làm gì | Ghi gì |
+| --- | --- | --- |
+| `validate <thư mục hoặc .md>...` | Đọc markdown → JSON trong bộ nhớ → content-schema → luật theo nhóm tuổi (SK-026) | Không ghi gì |
+| `import <thư mục hoặc .md>... [--out <thư mục>]` | Đúng các bước của `validate`; không có lỗi nào (kể cả `md_id_missing`) thì ghi JSON schema v1 | `--out` mặc định `content/.build/json/` (gitignore) |
+| `ids <thư mục hoặc .md>...` | Điền UUID v4 vào các chỗ chưa có id | Chỉ các dòng `id:` của file `.md` |
+
+Tuỳ chọn chung: `--content-root <thư mục>` (xem dưới); `validate` và `import` nhận thêm `--rules <file>`, `--min-app-version <x.y.z>` như `validate` JSON.
+
+**Đường dẫn**
+- Thư mục: máy tìm mọi thư mục chủ đề (có `_topic.md`) bên trong, kể cả chính nó. Trong mỗi thư mục chủ đề máy đọc `_topic.md` và mọi `<nn>-*.md`. File `.md` khác bắt đầu bằng chữ số mà sai dạng tên (`2-mam-com.md`, `02_mam.md`) thì báo `md_filename` và không đọc; các file khác (README…) bỏ qua.
+- Một bài lẻ: máy tự lấy `_topic.md` cùng thư mục (`ids` thì chỉ ghi vào bài đó).
+- Trộn `.md` (hoặc thư mục) với `.json` trong một lần gọi: exit 2. `validate` trên `.json` giữ nguyên như mục "validate: luật theo nhóm tuổi". Thư mục không có `_topic.md` nào, hoặc bài không có `_topic.md` cùng thư mục: exit 2. Đường dẫn không có: `<đường dẫn> / không tìm thấy file`, exit 1 (như validate JSON).
+- **Gốc nội dung** (`--content-root`): nơi máy tìm id trùng (`md_id_duplicate`) và chủ đề, bài được trỏ tới (`prerequisites`, `recall_from.lesson`). Mặc định `content/` khi mọi chủ đề nằm trong đó; bản chép ở chỗ khác (vd `/tmp/x/discoverer/an-uong-lanh-manh`) thì là thư mục trên `<age_group>/` (`/tmp/x`). Dòng tổng in gốc đã dùng.
+
+**Ba bước, nối tiếp theo từng chủ đề**
+1. Cú pháp markdown (`src/markdown/syntax.ts`, `convert.ts`): mã `md_*`.
+2. content-schema trên JSON trong bộ nhớ (`validateDocuments`, như validate JSON): mã `schema`.
+3. Luật theo nhóm tuổi (`src/validate/age-rules.ts`): mã của SK-026 (`age_*`, `format_not_rendered`).
+
+Chủ đề có lỗi ở một bước thì không chạy bước sau, trừ `md_id_missing`: `validate` dùng id tạm trong bộ nhớ để vẫn chạy bước 2, 3, nên biên tập thấy hết lỗi nội dung ngay lần đầu; id tạm không ghi ra đâu. Dòng tổng ghi chủ đề nào dừng ở bước nào.
+
+**Số dòng** là dòng thật trong file, đếm từ 1, tính cả frontmatter: lỗi ở một trường chỉ vào dòng của trường đó; thiếu nửa của một cặp (`label.vi`) chỉ vào nửa còn lại (`label.en`); thiếu cả trường chỉ vào tiêu đề `###`/`####` của khối (frontmatter: dòng 1); lỗi của cả mục (số câu Quiz, `age_dok_mix`) chỉ vào `##` của mục; thiếu cả một mục chỉ vào `##` ngay sau chỗ lẽ ra có mục đó. Một lỗi ra một dòng: mục gõ sai tên không kèm dòng "thiếu mục"; `format`/`type` lạ không kèm lỗi các `####` con, và khối không rõ `format`/`type` không kèm `md_id_missing`; thiếu một tiêu đề `##` thì các lỗi do nội dung của mục đó "rơi" vào mục trước không in ra; thiếu một tiêu đề `###`/`####` thì các dòng rơi vào khối trước báo một dòng "thiếu tiêu đề ngay phía trên dòng X" khi có dấu hiệu rõ (dòng lạ là trường chỉ khối `###` mới có: `id`, `format`, `type`, `version`, `dok`; hoặc từ ba dòng lạ liền nhau; hoặc cả một nhóm dòng lặp liền nhau như `label.en` + `label.vi`), còn hai lỗi gõ rời nhau vẫn ra hai dòng. Nhiều lỗi content-schema trên cùng một dòng gộp thành một dòng. Thông báo gọi theo tên trong markdown (`label.vi`, `#### option q1_rice`, `misconception`), pointer vẫn là JSON pointer của JSON mà `import` ghi.
+
+Thứ tự in: lỗi trước, cảnh báo sau; mỗi nhóm theo file (topic trước, rồi các bài) rồi theo dòng; cuối cùng một dòng tổng. Exit `0` = không lỗi (có thể có cảnh báo), `1` = có lỗi (`import` không ghi gì), `2` = sai cách gọi.
+
+**Mã `md_*`** (bước 1; `src/markdown/source.ts`, `MD_CODES`):
+
+| Mã | Mức | Khi nào |
+| --- | --- | --- |
+| `md_frontmatter` | lỗi | Thiếu dòng `---` mở hay đóng, dòng frontmatter sai dạng, thiếu khoá bắt buộc (`id` thì xem `md_id_missing`) |
+| `md_filename` | lỗi | Tên file không theo `<nn>-<slug>.md`; `nn` khác `order`; phần sau `nn-` khác `slug`; `topic` (bài) hoặc `slug` (chủ đề) khác tên thư mục |
+| `md_missing_section` | lỗi | Thiếu mục `##` bắt buộc (mọi mục của khung trừ các mục Ghi chú). Thông báo nói mục nằm giữa hai mục nào (kèm số dòng), chỉ dòng gần giống tiêu đề nếu có (`### Quiz`, `##Quiz`), không thì chỉ dòng nội dung của mục bắt đầu (vd `### explore` có `type: explore_groups`) |
+| `md_unknown_section` | lỗi | Mục `##` lạ (gợi ý tên gần nhất) hoặc viết hai lần; nội dung của mục đó không được đọc |
+| `md_bad_line` | lỗi | Ở chỗ có cấu trúc, dòng không phải `tên: giá trị`, `>` hay dòng trống (bảng, danh sách `-`, đoạn văn, thiếu `:`, `#`/`#####`, `###` dưới mục không có `###`). Nhiều dòng liền nhau báo một lần ở dòng đầu |
+| `md_unknown_field` | lỗi | Tên trường không dùng được ở loại khối này (theo `format`/`type`); gợi ý tên gần nhất mà khối còn thiếu (`prompt.vn` → `prompt.vi`). Tên chỉ khác chữ hoa (`Format:`) thì báo ở chính dòng đó, nhắc viết chữ thường, và vẫn đọc giá trị |
+| `md_duplicate_field` | lỗi | Một trường viết hai lần trong một khối |
+| `md_bad_value` | lỗi | Sai kiểu (số nguyên, `true`/`false`); danh sách sai cú pháp (`[a, b]`, `a; b`, các dòng `-`); `examples.<n>`/Ý chính đánh số không liền từ 1; `[CẦN KIỂM]` nằm trong giá trị |
+| `md_unknown_format` | lỗi | `format:` thiếu hoặc không thuộc 6 format v1 |
+| `md_unknown_type` | lỗi | `type:` thiếu, không thuộc block v1, hoặc không dùng ở mục này (`## Học`: `explore_groups`, `sentence_card`, `word_list`; `## Chơi`: `build_tray`) |
+| `md_unknown_child` | lỗi | `#### <loại>` không dùng được với `format`/`type` của khối cha (vd `#### bank` trong `single_choice`) |
+| `md_heading_level` | lỗi | Tiêu đề sai cấp: `#### q2` (một từ, không phải loại `####` nào) là `###` thừa một `#`; `### option q1_rice` ngay sau một `###` là `####` thiếu một `#`. Máy đọc tiếp như đã sửa, nên không có lỗi kéo theo; `ids` không đụng tới khối đó |
+| `md_block_count` | lỗi | `## Chơi` không có đúng một `###`; `## Thưởng` có hơn một `###` |
+| `md_ref_unknown` | lỗi | `misconception`, `prerequisites`, `recall_from.lesson`, `group`, `answers`, `answer`, `term_keys`, `messages.missing.<key>` trỏ tới thứ không có (có gợi ý) |
+| `md_id_missing` | lỗi | Còn chỗ chưa có id (dòng `id:` trống, hoặc khối không có dòng `id:`). Một dòng cho mỗi file, chỉ vào chỗ đầu, liệt kê các chỗ còn lại, nhắc chạy `ids` |
+| `md_id_invalid` | lỗi | `id` không phải UUID chữ thường 8-4-4-4-12 |
+| `md_id_duplicate` | lỗi | `id` trùng một id khác trong gốc nội dung; báo `file:dòng` của chỗ kia. Nhiều id trùng cùng một file khác (chép bài cũ quên xoá id) gộp một dòng |
+| `md_needs_check` | cảnh báo | File còn dòng `[CẦN KIỂM]`. Một dòng cho mỗi file, liệt kê số dòng |
+
+**Đọc markdown** (TEMPLATE mục A "Cú pháp", bảng ánh xạ mục D)
+- Parser tự viết, đọc theo dòng (không thư viện markdown hay YAML). Frontmatter là YAML tối giản: `tên: giá trị` ở cột 0, `difficulty:` với các dòng thụt lề bên dưới, `prerequisites: []` hoặc `[slug-a, slug-b]`, dòng `#` là chú thích. Giá trị đọc theo kiểu của schema, không đoán như YAML 1.1 (`no` không thành `false`), không bỏ ngoặc kép.
+- Bỏ qua: dòng `>`, dòng trống, cả mục `## Ghi chú cho hoạ sĩ` (hoặc "họa sĩ"), `## Ghi chú cho dev`, `## Ghi chú` (topic). Đọc được file có BOM và CRLF.
+- Giá trị tách tại dấu `:` đầu tiên (`Sweets: just a little` hợp lệ), bỏ khoảng trắng hai đầu. Trường có tên mà giá trị trống thì coi như không có (`labels.*` trống của Explorer hợp lệ).
+- `a, b, c` thành mảng, một phần tử vẫn là mảng. `messages.missing.<key>` giữ thứ tự dòng (thứ tự nhắc của mâm cơm). `topic` → `topic_id` (id trong `_topic.md` cùng thư mục), `misconception` → `misconception_id`, `prerequisites` → `prerequisite_topic_ids`, `recall_from.lesson: <slug chủ đề>/<slug bài>` → `recall_from.lesson_id`.
+- Máy chỉ ghi `kind` và `schema_version` = 1; không thêm giá trị mặc định (`tier`, `rarity`…). `## Thưởng` trống thành `reward: {}`.
+- **Thứ tự khoá** theo `properties` của JSON Schema v1, như fixture của `packages/content-schema` (sha256 của `pack.json` phụ thuộc thứ tự khoá). Một ngoại lệ theo fixture: lựa chọn (`ChoiceOption`) là `key, label, correct, image`, schema ghi `image` trước `correct`. `test/markdown.test.ts` kiểm từng loại khối.
+
+**`import`** ghi `<--out>/<age_group>/<topic_slug>/topic.json` và `<nn>-<slug>.json` (tên như fixture), nội dung `JSON.stringify(…, null, 2)` cộng xuống dòng cuối. Thư mục của mỗi chủ đề bị thay cả (ghi vào thư mục tạm cạnh nó, kiểm lại rồi đổi tên, như `build`) và chỉ chứa topic cùng các bài có trong lần gọi. Lệnh từ chối (exit 2) nếu thư mục đó có thứ khác ngoài `topic.json` và `<nn>-*.json`. JSON là sản phẩm dẫn xuất, không sửa tay; fixture ở `packages/content-schema` vẫn là dữ liệu test, bài 1 đổi thì sinh lại fixture bằng `import` (test khớp fixture sẽ đỏ tới khi đó).
+
+**`ids`** điền `crypto.randomUUID()` (v4, chữ thường) vào mọi dòng `id:` trống ở frontmatter và ngay dưới `###` của các mục có cấu trúc; khối không có dòng `id:` thì thêm `id: <uuid>` ngay dưới tiêu đề (frontmatter: dưới `---` mở), nhưng chỉ khi khối rõ loại (câu có `format:` đúng, block có `type:` đúng, từ vựng / thẻ / misconception có ít nhất một trường). Tiêu đề sai cấp (`md_heading_level`) và khối chưa rõ loại thì không đụng, in `<file>:<dòng> bỏ qua "<tiêu đề>": <lý do>`. Không đụng id đã có, mọi byte khác giữ nguyên (CRLF, dòng `>`). In `<file>:<dòng> <uuid>` cho từng id mới; chạy lần hai không đổi gì. `validate` và `import` không bao giờ sửa file `.md`. Id trùng thì `ids` không tự đổi: xoá id ở bài mới (để `id:` trống) rồi chạy `ids`.
+
+**Đường đi đầy đủ:** `import` → `tts --lang en` → `tts --lang vi` → `build`. `import` in sẵn ba lệnh tiếp theo. Với `--out` mặc định:
+
+```sh
+cd tools/content-cli
+npm run import -- ../../content/discoverer/an-uong-lanh-manh
+npm run tts -- ../../content/.build/json/discoverer/an-uong-lanh-manh/topic.json \
+               ../../content/.build/json/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json \
+               --lang en --out ../../content/.build/tts/discoverer/an-uong-lanh-manh
+npm run tts -- ../../content/.build/tts/discoverer/an-uong-lanh-manh/topic.json \
+               ../../content/.build/tts/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json \
+               --lang vi --out ../../content/.build/tts/discoverer/an-uong-lanh-manh
+npm run build -- ../../content/.build/tts/discoverer/an-uong-lanh-manh/topic.json \
+                 ../../content/.build/tts/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json
+```
+
+`tts` và `build` vẫn chỉ đọc JSON. Thư mục chứa `topic.json` phải mang tên slug của chủ đề (content-schema kiểm), nên bản chép ngoài `content/.build` đặt theo `<age_group>/<slug>/`.
+
+**Fixture** (`test/fixtures/markdown/`): `valid/` là bản chép bài 1 và `_topic.md` (test báo khi bản chép lệch `content/`); `expected.json` ghi tay mỗi ca lỗi dưới dạng sửa bản chép (thay một đoạn, cắt, thêm file, đổi tên) và dòng lỗi mong đợi (file, dòng, pointer, mã). Gốc nội dung khi chạy test là thư mục tạm chứa bản chép.
+
+Test chỉ gắn với `content/` qua `_topic.md` và bài 1 (SK-028): bài 2, 3… thêm vào hay đang soạn dở không làm đỏ test. **Đổi `_topic.md` hoặc bài 1 thì dev sinh lại, trong cùng lần sửa:**
+
+```sh
+cd tools/content-cli
+npm run import -- ../../content/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md --out <tạm>/json   # chỉ topic + bài 1
+cp <tạm>/json/discoverer/an-uong-lanh-manh/*.json ../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/
+(cd ../../packages/content-schema && node scripts/make-invalid-fixtures.mjs)        # fixtures/invalid theo bài mẫu mới
+cp ../../content/discoverer/an-uong-lanh-manh/{_topic.md,01-thuc-an-cho-ta-nhung-gi.md} test/fixtures/markdown/valid/discoverer/an-uong-lanh-manh/
+npm test && (cd ../../packages/content-schema && npm test)
+```
+
+Test iOS (`apps/ios/Packages/SKKit/Tests`) cũng đọc fixture này: báo ios-dev khi giá trị trong fixture đổi.
+
 ## validate: luật theo nhóm tuổi
 
 ```sh
@@ -260,7 +371,7 @@ npm run validate -- ../../packages/content-schema/fixtures/valid/discoverer/an-u
                     ../../packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json
 ```
 
-Hoặc `node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] [--min-app-version <x.y.z>]`. Đọc JSON (fixture gốc hoặc đầu ra của `tts`, như nhau); parse markdown làm sau (B16). Không ghi gì.
+Hoặc `node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] [--min-app-version <x.y.z>]`. Đọc JSON (fixture gốc hoặc đầu ra của `tts`, như nhau); file `.md` và thư mục chủ đề thì xem mục "Markdown: validate, import, ids" (cùng hai bước kiểm này, sau bước đọc markdown). Không ghi gì.
 
 1. Kiểm bằng `packages/content-schema` (Ajv + zod + kiểm chéo). Sai thì in lỗi schema, exit 1, chưa kiểm luật tuổi. Bài lẻ thì đưa kèm `topic.json`.
 2. Đọc `--rules` (mặc định `content/rules.json`).
@@ -324,7 +435,7 @@ App cũ gặp format chưa có renderer thì bỏ câu, quiz còn dưới 6 câu
 ## Kiểm thử
 
 ```sh
-npm test            # node --test: chuẩn hoá, lấy Spoken theo schema, khoá cache, WAV, chọn câu nghe thử, build (cache giả), rules.json so với vector và bảng SK-026, luật theo tuổi + fixture, validate, lỗi gọi CLI
+npm test            # node --test: chuẩn hoá, lấy Spoken theo schema, khoá cache, WAV, chọn câu nghe thử, build (cache giả), rules.json so với vector và bảng SK-026, luật theo tuổi + fixture, validate, lỗi gọi CLI, markdown (khớp fixture bài 1, mỗi ca một lỗi một dòng, ids, không nạp tts)
 npm run typecheck   # tsc
 ```
 
@@ -418,7 +529,7 @@ Chữ hiển thị không đổi; chỉ chữ đưa vào engine được chuẩn
 ## Thư mục
 
 ```
-src/cli.ts                 điểm vào, đọc cờ (tts, build, validate, fetch-model)
+src/cli.ts                 điểm vào, đọc cờ (validate, import, ids, tts, build, fetch-model)
 src/tts/command.ts         lệnh tts
 src/tts/kokoro-en.ts       Kokoro qua kokoro-js; kokoro-model.ts: ghim commit, sha256, tải model
 src/tts/vieneu-vi.ts       VieNeu qua tts-vi/vieneu_vi.py serve (JSON-lines, seed theo chữ)
@@ -427,7 +538,9 @@ src/tts/utterance.ts       tách câu tại ô trống, đệm quãng ngắt the
 tts-vi/                    môi trường Python VieNeu + bước chấm (README riêng)
 src/tts/review.ts          file nghe thử
 src/build/command.ts       lệnh build (gói nội dung); rules.ts: đọc và kiểm content/rules.json
-src/validate/command.ts    lệnh validate; age-rules.ts: luật theo nhóm tuổi (dùng chung với build)
+src/validate/command.ts    lệnh validate (JSON); age-rules.ts: luật theo nhóm tuổi (dùng chung với build)
+src/markdown/              validate, import, ids trên markdown (SK-027): syntax.ts đọc dòng, convert.ts ra JSON + số dòng,
+                           check.ts ba bước, files.ts tìm file và gốc nội dung, ids.ts, command.ts
 src/validate/format-renderers.ts  bảng format → bản app đầu tiên hiện được (format_not_rendered)
 src/app-version.ts         so sánh MAJOR.MINOR.PATCH
 scripts/make-age-fixtures.ts  sinh test/fixtures/age-rules/

@@ -114,7 +114,7 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
         #expect(topic.strand == .humansHealth)
         #expect(topic.difficulty.vocabulary == 3)
         #expect(topic.isFree)
-        #expect(topic.misconceptions.map(\.key) == ["all_fat_bad"])
+        #expect(topic.misconceptions.map(\.key) == ["all_fat_bad", "one_food_enough"])
         #expect(topic.question?.vi == "Ta cần ăn gì để khoẻ mạnh?")
     }
 

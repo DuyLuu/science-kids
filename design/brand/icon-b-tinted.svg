@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<title>Science Kids · icon B · bản tinted</title>
+<desc>SK-029 vòng 2. Ảnh xám trên nền trong suốt cho chế độ tinted iOS 18: hệ thống vẽ nền và phủ màu theo độ sáng. Dựng bằng màu token chọn theo độ sáng rồi đổi xám bằng filter grayE; mặt linh vật sáng hơn tờ giấy và nền để vẫn tách. Slot Tinted của AppIcon.</desc>
+<defs>
+  <!-- paperE (tokens illustration.paper_e) phóng cho khung 1024: baseFrequency 0.04/8, mép lệch 2.2 -> 12, bóng dy 2.5 -> 18, mờ 1.8 -> 12; màu bóng muc_bong. -->
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="12" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="18" stdDeviation="12" flood-color="#5B3B17" flood-opacity="0.32"/>
+  </filter>
+  <!-- fiberE, diepE (tokens illustration.background_fiber, background_diep) phóng cho khung 1024. -->
+  <filter id="fiberE" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.004 0.1" numOctaves="2" seed="4"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"/>
+  </filter>
+  <filter id="diepE" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.16" numOctaves="1" seed="21"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"/>
+  </filter>
+<!-- grayE: đổi sang ảnh xám (luma Rec.709 trên giá trị sRGB) để iOS 18 phủ màu tint -->
+<filter id="grayE" x="0" y="0" width="1024" height="1024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feColorMatrix type="saturate" values="0"/>
+</filter>
+</defs>
+<g filter="url(#grayE)">
+<!-- tờ giấy sau: chỉ ló ở hai bên linh vật -->
+<g filter="url(#paperE)"><path d="M-20 656 L65 671 L140 651 L235 676 L310 656 L406 666 L480 646 L576 671 L661 651 L757 676 L842 656 L938 671 L1044 651 L1044 1044 L-20 1044 Z" fill="#1E1B18"/></g>
+<!-- linh vật (ArtMascot): ăng-ten, thân, mắt nhìn lên -->
+<g transform="translate(512 676) scale(9) translate(-50 -58)"><rect x="48.4" y="9" width="3.2" height="20" rx="1.6" fill="#E2A52A"/></g>
+<g filter="url(#paperE)"><g transform="translate(512 676) scale(9) translate(-50 -58)"><circle cx="50" cy="9" r="6.8" fill="#FBF6EA"/></g></g>
+<g filter="url(#paperE)"><g transform="translate(512 676) scale(9) translate(-50 -58)"><circle cx="50" cy="58" r="36" fill="#E2A52A"/></g></g>
+<g filter="url(#paperE)"><g transform="translate(512 676) scale(9) translate(-50 -58)" fill="#FBF6EA"><circle cx="38" cy="50" r="9.5"/><circle cx="62" cy="50" r="9.5"/></g></g>
+<g transform="translate(512 676) scale(9) translate(-50 -58)" fill="#1E1B18"><circle cx="40.6" cy="47.6" r="4.4"/><circle cx="64.6" cy="47.6" r="4.4"/></g>
+<!-- tờ giấy trước: mép xé che miệng -->
+<g filter="url(#paperE)"><path d="M-20 769 L44 748 L108 765 L182 744 L267 761 L352 748 L438 769 L533 752 L618 765 L704 744 L799 761 L884 748 L970 765 L1044 752 L1044 1044 L-20 1044 Z" fill="#4E4336"/></g>
+<!-- hai tay bám mép giấy -->
+<g filter="url(#paperE)" fill="#E2A52A"><ellipse cx="318" cy="764" rx="66" ry="44" transform="rotate(-14 318 764)"/><ellipse cx="706" cy="760" rx="66" ry="44" transform="rotate(12 706 760)"/></g>
+</g>
+</svg>

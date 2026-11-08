@@ -2,7 +2,7 @@
   "name": "@science-kids/content-cli",
   "version": "0.1.0",
   "private": true,
-  "description": "Science Kids content pipeline CLI (MVP): tts (EN via Kokoro, VI via VieNeu), build (content pack), validate (content schema + authoring rules per age group). assets, publish come later.",
+  "description": "Science Kids content pipeline CLI (MVP): validate / import / ids on markdown lessons, tts (EN via Kokoro, VI via VieNeu), build (content pack), validate (content schema + authoring rules per age group). assets, publish come later.",
   "type": "module",
   "engines": {
     "node": "^22.18.0 || >=23.6.0"
@@ -11,6 +11,8 @@
     "tts": "node src/cli.ts tts",
     "build": "node src/cli.ts build",
     "validate": "node src/cli.ts validate",
+    "import": "node src/cli.ts import",
+    "ids": "node src/cli.ts ids",
     "make-age-fixtures": "node scripts/make-age-fixtures.ts",
     "fetch-model": "node src/cli.ts fetch-model",
     "test": "node --test \"test/*.test.ts\"",

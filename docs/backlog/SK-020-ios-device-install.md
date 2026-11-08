@@ -17,7 +17,7 @@ Duy cầm iPhone hoặc iPad thật chơi được bài 1 có tiếng. Nếu Duy
   - `ITSAppUsesNonExemptEncryption = NO`;
   - script `apps/ios/scripts/archive.sh`: `xcodebuild archive` rồi `-exportArchive` với `ExportOptions.plist` theo cách cài Duy chọn;
   - `PrivacyInfo.xcprivacy` rà lại đủ API đang dùng.
-- **Designer (B3):** icon tạm 1024×1024 theo style E (giấy cắt, không chữ nhỏ, không trong suốt), đặt vào asset catalog `AppIcon`. Nộp 2–3 phương án để Duy chọn.
+- ~~**Designer (B3):** icon tạm 1024×1024 theo style E (giấy cắt, không chữ nhỏ, không trong suốt), đặt vào asset catalog `AppIcon`. Nộp 2–3 phương án để Duy chọn.~~ Đã làm ở [SK-029](SK-029-app-icon-launch-screen.md) (8/11): icon B và màn khởi động đã có trong app. Trên máy thật cần kiểm thêm: icon Dark và Tinted (giữ màn hình chính → Edit → Customize), màn khởi động trên iPad có dùng bản 160 pt không.
 - **Nếu chọn TestFlight (B4):**
   - ios-dev viết mục "TestFlight" trong `apps/ios/README.md`: tạo app trên App Store Connect, upload bằng Xcode Organizer hoặc `archive.sh`, thêm tester nội bộ;
   - Duy tự bấm mọi bước trên App Store Connect. ios-dev không upload khi Duy chưa bảo rõ.

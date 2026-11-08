@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+<title>Science Kids · LaunchMark · linh vật ló mép giấy</title>
+<desc>SK-029 vòng 2, màn khởi động PA2. Khung 128 x 128 pt, nền trong suốt, đặt giữa màn trên nền LaunchBackground #F0E6CF. iPhone 128 pt (@2x 256, @3x 384 px); iPad 160 pt (@2x 320 px). Không chữ, không nét viền.</desc>
+<defs>
+  <!-- paperE (tokens illustration.paper_e) đúng tham số của màn: khung 128 đơn vị = 128 pt -->
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"/>
+  </filter>
+</defs>
+<!-- linh vật (ArtMascot) ló sau mẩu giấy đỏ son, cùng dáng với icon B -->
+<g transform="translate(64 70) scale(1.1) translate(-50 -58)"><rect x="48.4" y="9" width="3.2" height="20" rx="1.6" fill="#1E1B18"/></g>
+<g filter="url(#paperE)"><g transform="translate(64 70) scale(1.1) translate(-50 -58)"><circle cx="50" cy="9" r="6.8" fill="#E2A52A"/></g></g>
+<g filter="url(#paperE)"><g transform="translate(64 70) scale(1.1) translate(-50 -58)"><circle cx="50" cy="58" r="36" fill="#3B6E6A"/></g></g>
+<g filter="url(#paperE)"><g transform="translate(64 70) scale(1.1) translate(-50 -58)" fill="#FBF6EA"><circle cx="38" cy="50" r="9.5"/><circle cx="62" cy="50" r="9.5"/></g></g>
+<g transform="translate(64 70) scale(1.1) translate(-50 -58)" fill="#1E1B18"><circle cx="40.6" cy="47.6" r="4.4"/><circle cx="64.6" cy="47.6" r="4.4"/></g>
+<g transform="translate(64 70) scale(1.1) translate(-50 -58)" fill="#A93A27" opacity="0.55"><circle cx="27" cy="61" r="4.5"/><circle cx="73" cy="61" r="4.5"/></g>
+<!-- mẩu giấy: 2 lớp đỏ son, nghiêng -3 độ -->
+<g filter="url(#paperE)"><path d="M5.0 81.1 L12.1 78.1 L19.2 80.5 L27.4 77.5 L36.9 79.9 L46.3 78.1 L55.7 81.1 L66.4 78.7 L75.8 80.5 L85.2 77.5 L95.9 79.9 L105.3 78.1 L114.7 80.5 L123.0 78.7 L123.0 109.9 L113.6 111.2 L105.3 109.5 L94.7 111.7 L86.4 109.9 L75.8 110.8 L67.5 109.0 L56.9 111.2 L47.5 109.5 L36.9 111.7 L27.4 109.9 L16.8 111.2 L5.0 109.5 Z" fill="#6E2216" transform="translate(0 3.5) rotate(-3 64 96)"/></g>
+<g filter="url(#paperE)"><path d="M5.0 81.1 L12.1 78.1 L19.2 80.5 L27.4 77.5 L36.9 79.9 L46.3 78.1 L55.7 81.1 L66.4 78.7 L75.8 80.5 L85.2 77.5 L95.9 79.9 L105.3 78.1 L114.7 80.5 L123.0 78.7 L123.0 109.9 L113.6 111.2 L105.3 109.5 L94.7 111.7 L86.4 109.9 L75.8 110.8 L67.5 109.0 L56.9 111.2 L47.5 109.5 L36.9 111.7 L27.4 109.9 L16.8 111.2 L5.0 109.5 Z" fill="#A93A27" transform="rotate(-3 64 96)"/></g>
+<!-- hai tay bám mép -->
+<g filter="url(#paperE)" fill="#3B6E6A"><ellipse cx="40.5" cy="80.5" rx="8" ry="5.4" transform="rotate(-14 40.5 80.5)"/><ellipse cx="87.5" cy="78.5" rx="8" ry="5.4" transform="rotate(12 87.5 78.5)"/></g>
+</svg>

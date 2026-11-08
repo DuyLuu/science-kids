@@ -80,7 +80,7 @@ Tên trường `snake_case` tiếng Anh. SK-002 dựng khung markdown theo đún
 **Collectible**: `id`, `key`, `set: Key` (vd `food`), `name: Spoken`, `tag?: Spoken` (vd "Vitamin & khoáng chất"), `image: Image`, `fact: Spoken` ("Em có biết?"), `rarity` (`common` · `rare`, mặc định `common`).
 
 ## Ngoài phạm vi
-- `tools/content-cli` (parse markdown, `tts`, `assets`, `build`, `publish`): ticket sau, B16 1/12 – 12/12.
+- `tools/content-cli` (parse markdown, `tts`, `assets`, `build`, `publish`): ticket sau, B16 1/12 – 12/12. *(2/11: parse markdown kéo lên làm ngay ở SK-027.)*
 - Quy tắc theo nhóm tuổi: phân bổ DOK, câu 1 là DOK 1, đúng 1 câu misconception, số lựa chọn 3–4, độ dài câu EN. Các quy tắc này thuộc `content-cli validate` và đọc tham số từ `content/rules.json`; v1 chỉ kiểm cấu trúc.
 - Schema của `content/rules.json`, manifest, `pack.json`.
 - Model Swift/Kotlin. MVP không codegen (B3); model viết tay ở sprint 1.

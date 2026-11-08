@@ -92,11 +92,18 @@ targets:
         INFOPLIST_FILE: ScienceKids/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         ENABLE_PREVIEWS: YES
-        # No app icon until SK-020 (XcodeGen's preset expects one named AppIcon).
-        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        # SK-029: icon B (mascot peeking over the paper edge), one 1024 size with Any, Dark and
+        # Tinted, from the designer's PNGs in design/brand/export (not the SVGs: Xcode would drop
+        # the shadow and the paper grain). The launch screen's LaunchMark is set in Info.plist.
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         # SK-016: the content pack to embed (`content-cli build --out`). Override on the command
         # line to try another pack, or a missing one: `xcodebuild … SK_CONTENT_PACK_DIR=/nowhere`.
         SK_CONTENT_PACK_DIR: $(SRCROOT)/../../content/.build/pack
+        # "Embed content pack" copies a tree whose files are not known before the build. The user
+        # script sandbox lets a script write only the exact paths in outputFiles, not files under
+        # them, so it denied `cp` into `pack/` (2/11, SK-016). That script is this target's only
+        # one; the project-level YES stays for the other targets.
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
 
   # SK-008: gallery checks on the simulator (accessibility audit, touch targets, Reduce Motion).
   # SK-011: Welcome → Profile → Home → Topic flow, saved profile, touch targets, EN interface.
