@@ -1,0 +1,684 @@
+{
+  "kind": "lesson",
+  "schema_version": 1,
+  "id": "00000000-0000-4000-8000-0000000004b0",
+  "topic_id": "00000000-0000-4000-8000-0000000004a0",
+  "slug": "fixture-explorer-ios-lesson",
+  "order": 1,
+  "stage": "opener",
+  "title": {
+    "en": "Animal groups",
+    "vi": "Nhóm con vật"
+  },
+  "objective": {
+    "en": "I can name animals.",
+    "vi": "Em gọi tên được con vật."
+  },
+  "key_points": [
+    {
+      "en": "Animals move.",
+      "vi": "Con vật di chuyển."
+    },
+    {
+      "en": "Animals eat.",
+      "vi": "Con vật ăn."
+    },
+    {
+      "en": "Animals grow.",
+      "vi": "Con vật lớn lên."
+    }
+  ],
+  "est_minutes": 5,
+  "warmup": [
+    {
+      "id": "00000000-0000-4000-8000-0000000004c1",
+      "key": "w1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which one can fly?",
+        "vi": "Con nào biết bay?"
+      },
+      "hint": {
+        "en": "Look for wings!",
+        "vi": "Tìm con có cánh nhé!"
+      },
+      "explanation_correct": {
+        "en": "Yes! A bird can fly.",
+        "vi": "Đúng rồi! Chim biết bay."
+      },
+      "explanation_wrong": {
+        "en": "The bird can fly.",
+        "vi": "Con chim biết bay."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "options": [
+        {
+          "key": "w1_bird",
+          "label": {
+            "en": "bird",
+            "vi": "con chim"
+          },
+          "image": {
+            "alt": {
+              "en": "A bird",
+              "vi": "con chim"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "w1_cat",
+          "label": {
+            "en": "cat",
+            "vi": "con mèo"
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "con mèo"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c2",
+      "key": "w2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "A fish can swim.",
+        "vi": "Cá biết bơi."
+      },
+      "hint": {
+        "en": "Where does a fish live?",
+        "vi": "Cá sống ở đâu nhỉ?"
+      },
+      "explanation_correct": {
+        "en": "Yes! Fish swim in water.",
+        "vi": "Đúng rồi! Cá bơi dưới nước."
+      },
+      "explanation_wrong": {
+        "en": "A fish can swim.",
+        "vi": "Cá biết bơi đấy."
+      },
+      "recall_from": {
+        "kind": "prior_knowledge",
+        "note": {
+          "en": "Test data",
+          "vi": "Dữ liệu test"
+        }
+      },
+      "image": {
+        "alt": {
+          "en": "A fish",
+          "vi": "Con cá"
+        }
+      },
+      "answer": true
+    }
+  ],
+  "learn": [
+    {
+      "id": "00000000-0000-4000-8000-0000000004c3",
+      "key": "explore",
+      "type": "explore_groups",
+      "version": 1,
+      "prompt": {
+        "en": "Tap each group",
+        "vi": "Chạm từng nhóm"
+      },
+      "groups": [
+        {
+          "key": "g_birds",
+          "label": {
+            "en": "Birds",
+            "vi": "Chim"
+          },
+          "color": "vang_hoe",
+          "sentence": {
+            "en": "Birds have feathers.",
+            "vi": "Chim có lông vũ."
+          },
+          "image": {
+            "alt": {
+              "en": "A sparrow",
+              "vi": "Chim sẻ"
+            }
+          },
+          "examples": [
+            {
+              "en": "hen",
+              "vi": "gà"
+            },
+            {
+              "en": "duck",
+              "vi": "vịt"
+            }
+          ]
+        },
+        {
+          "key": "g_fish",
+          "label": {
+            "en": "Fish",
+            "vi": "Cá"
+          },
+          "color": "cham",
+          "sentence": {
+            "en": "Fish live in water.",
+            "vi": "Cá sống dưới nước."
+          },
+          "image": {
+            "alt": {
+              "en": "A goldfish",
+              "vi": "Cá vàng"
+            }
+          },
+          "examples": [
+            {
+              "en": "goldfish",
+              "vi": "cá vàng"
+            }
+          ]
+        },
+        {
+          "key": "g_mammals",
+          "label": {
+            "en": "Mammals",
+            "vi": "Thú"
+          },
+          "color": "nau_dat",
+          "sentence": {
+            "en": "Mammals have fur.",
+            "vi": "Thú có lông mao."
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "Con mèo"
+            }
+          },
+          "examples": [
+            {
+              "en": "cat",
+              "vi": "mèo"
+            },
+            {
+              "en": "dog",
+              "vi": "chó"
+            }
+          ]
+        }
+      ],
+      "complete_when": "all_seen"
+    }
+  ],
+  "play": {
+    "id": "00000000-0000-4000-8000-0000000004ca",
+    "key": "tray",
+    "type": "build_tray",
+    "version": 1,
+    "prompt": {
+      "en": "Pick an animal.",
+      "vi": "Chọn một con vật."
+    },
+    "capacity": 1,
+    "groups": [
+      {
+        "key": "tray_animal",
+        "label": {
+          "en": "Animal",
+          "vi": "Con vật"
+        },
+        "color": "do_son",
+        "role": "required"
+      }
+    ],
+    "items": [
+      {
+        "key": "tray_hen",
+        "label": {
+          "en": "hen",
+          "vi": "gà mái"
+        },
+        "group": "tray_animal",
+        "image": {
+          "alt": {
+            "en": "A hen",
+            "vi": "Gà mái"
+          }
+        }
+      }
+    ],
+    "messages": {
+      "start": {
+        "en": "Pick one.",
+        "vi": "Chọn một nhé."
+      },
+      "full": {
+        "en": "The tray is full.",
+        "vi": "Khay đầy rồi."
+      },
+      "balanced": {
+        "en": "Well done.",
+        "vi": "Giỏi lắm."
+      },
+      "has_limited": {
+        "en": "Try again.",
+        "vi": "Thử lại nhé."
+      },
+      "missing": {
+        "tray_animal": {
+          "en": "Add an animal.",
+          "vi": "Thêm một con vật."
+        }
+      }
+    },
+    "success_when": "all_required_and_no_limit"
+  },
+  "quiz": [
+    {
+      "id": "00000000-0000-4000-8000-0000000004c4",
+      "key": "q1",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which one is a bird?",
+        "vi": "Con nào là chim?"
+      },
+      "hint": {
+        "en": "Look for a beak and feathers!",
+        "vi": "Tìm con có mỏ và lông vũ nhé!"
+      },
+      "explanation_correct": {
+        "en": "Yes! A hen is a bird.",
+        "vi": "Đúng rồi! Gà có mỏ và lông vũ."
+      },
+      "explanation_wrong": {
+        "en": "The hen is the bird.",
+        "vi": "Con gà mới là chim."
+      },
+      "options": [
+        {
+          "key": "q1_fish",
+          "label": {
+            "en": "fish",
+            "vi": "con cá"
+          },
+          "image": {
+            "alt": {
+              "en": "A fish",
+              "vi": "con cá"
+            }
+          },
+          "correct": false
+        },
+        {
+          "key": "q1_hen",
+          "label": {
+            "en": "hen",
+            "vi": "con gà"
+          },
+          "image": {
+            "alt": {
+              "en": "A hen",
+              "vi": "con gà"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q1_dog",
+          "label": {
+            "en": "dog",
+            "vi": "con chó"
+          },
+          "image": {
+            "alt": {
+              "en": "A dog",
+              "vi": "con chó"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c5",
+      "key": "q2",
+      "format": "true_false",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "A cow can fly.",
+        "vi": "Con bò biết bay."
+      },
+      "hint": {
+        "en": "Does a cow have wings?",
+        "vi": "Bò có cánh không?"
+      },
+      "explanation_correct": {
+        "en": "Yes! A cow cannot fly.",
+        "vi": "Đúng rồi! Bò không biết bay."
+      },
+      "explanation_wrong": {
+        "en": "A cow cannot fly.",
+        "vi": "Bò không biết bay."
+      },
+      "image": {
+        "alt": {
+          "en": "A cow",
+          "vi": "Con bò"
+        }
+      },
+      "answer": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c6",
+      "key": "q3",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 1,
+      "prompt": {
+        "en": "Which one lives in water?",
+        "vi": "Con nào sống dưới nước?"
+      },
+      "hint": {
+        "en": "It can swim.",
+        "vi": "Con đó biết bơi."
+      },
+      "explanation_correct": {
+        "en": "Yes! A fish lives in water.",
+        "vi": "Đúng rồi! Cá sống dưới nước."
+      },
+      "explanation_wrong": {
+        "en": "The fish lives in water.",
+        "vi": "Con cá sống dưới nước."
+      },
+      "options": [
+        {
+          "key": "q3_fish",
+          "label": {
+            "en": "fish",
+            "vi": "con cá"
+          },
+          "image": {
+            "alt": {
+              "en": "A fish",
+              "vi": "con cá"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q3_cat",
+          "label": {
+            "en": "cat",
+            "vi": "con mèo"
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "con mèo"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c7",
+      "key": "q4",
+      "format": "order_sequence",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Put them in order.",
+        "vi": "Xếp theo thứ tự."
+      },
+      "hint": {
+        "en": "What comes first?",
+        "vi": "Cái gì có trước?"
+      },
+      "explanation_correct": {
+        "en": "Yes! Egg, chick, hen.",
+        "vi": "Đúng rồi! Trứng, gà con, gà mái."
+      },
+      "explanation_wrong": {
+        "en": "Egg, then chick, then hen.",
+        "vi": "Trứng, rồi gà con, rồi gà mái."
+      },
+      "items": [
+        {
+          "key": "q4_hen",
+          "label": {
+            "en": "hen",
+            "vi": "gà mái"
+          },
+          "image": {
+            "alt": {
+              "en": "A hen",
+              "vi": "gà mái"
+            }
+          }
+        },
+        {
+          "key": "q4_egg",
+          "label": {
+            "en": "egg",
+            "vi": "quả trứng"
+          },
+          "image": {
+            "alt": {
+              "en": "An egg",
+              "vi": "quả trứng"
+            }
+          }
+        },
+        {
+          "key": "q4_chick",
+          "label": {
+            "en": "chick",
+            "vi": "gà con"
+          },
+          "image": {
+            "alt": {
+              "en": "A chick",
+              "vi": "gà con"
+            }
+          }
+        }
+      ],
+      "answer": [
+        "q4_egg",
+        "q4_chick",
+        "q4_hen"
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c8",
+      "key": "q5",
+      "format": "single_choice",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "Which one has fur?",
+        "vi": "Con nào có lông mao?"
+      },
+      "hint": {
+        "en": "Fur is soft, like a coat.",
+        "vi": "Lông mao mềm, như áo ấm."
+      },
+      "explanation_correct": {
+        "en": "Yes! A cat has fur.",
+        "vi": "Đúng rồi! Mèo có lông mao."
+      },
+      "explanation_wrong": {
+        "en": "The cat has fur.",
+        "vi": "Con mèo có lông mao."
+      },
+      "options": [
+        {
+          "key": "q5_sparrow",
+          "label": {
+            "en": "sparrow",
+            "vi": "chim sẻ"
+          },
+          "image": {
+            "alt": {
+              "en": "A sparrow",
+              "vi": "chim sẻ"
+            }
+          },
+          "correct": false
+        },
+        {
+          "key": "q5_cat",
+          "label": {
+            "en": "cat",
+            "vi": "con mèo"
+          },
+          "image": {
+            "alt": {
+              "en": "A cat",
+              "vi": "con mèo"
+            }
+          },
+          "correct": true
+        },
+        {
+          "key": "q5_duck",
+          "label": {
+            "en": "duck",
+            "vi": "con vịt"
+          },
+          "image": {
+            "alt": {
+              "en": "A duck",
+              "vi": "con vịt"
+            }
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004c9",
+      "key": "q6",
+      "format": "true_false",
+      "version": 1,
+      "dok": 2,
+      "prompt": {
+        "en": "A penguin is a bird.",
+        "vi": "Chim cánh cụt là chim."
+      },
+      "hint": {
+        "en": "Look! Does it have feathers?",
+        "vi": "Nhìn kìa! Nó có lông vũ không?"
+      },
+      "explanation_correct": {
+        "en": "Yes! Penguins have feathers.",
+        "vi": "Đúng rồi! Cánh cụt có lông vũ."
+      },
+      "explanation_wrong": {
+        "en": "A penguin is a bird.",
+        "vi": "Cánh cụt là một loài chim."
+      },
+      "image": {
+        "alt": {
+          "en": "A penguin",
+          "vi": "Chim cánh cụt"
+        }
+      },
+      "answer": true,
+      "misconception_id": "00000000-0000-4000-8000-0000000004a1"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "00000000-0000-4000-8000-0000000004e0",
+      "key": "bird",
+      "term": {
+        "en": "bird",
+        "vi": "bird"
+      },
+      "example": {
+        "en": "I can see a bird.",
+        "vi": "Em thấy con bird."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004e1",
+      "key": "fish",
+      "term": {
+        "en": "fish",
+        "vi": "fish"
+      },
+      "example": {
+        "en": "I can see a fish.",
+        "vi": "Em thấy con fish."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004e2",
+      "key": "cow",
+      "term": {
+        "en": "cow",
+        "vi": "cow"
+      },
+      "example": {
+        "en": "I can see a cow.",
+        "vi": "Em thấy con cow."
+      }
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000000004e3",
+      "key": "hen",
+      "term": {
+        "en": "hen",
+        "vi": "hen"
+      },
+      "example": {
+        "en": "I can see a hen.",
+        "vi": "Em thấy con hen."
+      }
+    }
+  ],
+  "reward": {
+    "collectible": {
+      "id": "00000000-0000-4000-8000-0000000004cb",
+      "key": "sparrow",
+      "set": "animals",
+      "name": {
+        "en": "sparrow",
+        "vi": "Chim sẻ"
+      },
+      "tag": {
+        "en": "Birds",
+        "vi": "Chim"
+      },
+      "image": {
+        "alt": {
+          "en": "A sparrow",
+          "vi": "Chim sẻ"
+        }
+      },
+      "fact": {
+        "en": "A sparrow is a small bird.",
+        "vi": "Chim sẻ là loài chim nhỏ."
+      },
+      "rarity": "common"
+    }
+  }
+}

@@ -38,7 +38,7 @@ const CONTRACT = {
   TrueFalse: `${QUIZ_BASE} answer statement? speaker? labels?`,
   TrueFalseLabels: "true false",
   FillBlankBank: `${QUIZ_BASE} sentence bank answers`,
-  BankWord: "key label",
+  BankWord: "key label image?",
   OrderSequence: `${QUIZ_BASE} items answer`,
   SequenceItem: "key label image?",
   PictureBarChart: `${QUIZ_BASE} chart options`,

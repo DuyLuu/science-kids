@@ -1,0 +1,341 @@
+{
+  "note": "SK-033, chủ đề Khủng long bài 5. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chỗ dùng lại hình bài 1–2 chỉ ghi same_as + lesson (designer khác chọn ảnh gốc). Ảnh khác ý brief (ảnh chụp thay tranh phục dựng) có alt đề xuất trong note. Designer (agent) 10/11 chiều: thêm 15 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại); chi tiết ở review.html.",
+  "images": {
+    "w1": {
+      "same_as": "tray_long_neck",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_fish": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_lizard": {
+      "same_as": "w3_lizard",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_fern": {
+      "same_as": "tray_fern",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w2": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Footprint_of_an_Indian_Peafowl_Tamilnadu.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Footprint_of_an_Indian_Peafowl_Tamilnadu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Footprint of an Indian Peafowl Tamilnadu",
+      "author": "Sindugab",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief: ảnh chụp dấu chân chim công trên bùn thay cho tranh dấu chân khủng long. Alt đề xuất: EN «A bird footprint in mud» · VI «Dấu chân chim trên bùn»."
+    },
+    "learn.explore.explore_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Psyche_asteroid_(Artist%27s_Concept)_(5)_rock_and_metal_intimately_mixed.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Psyche_asteroid_%28Artist%27s_Concept%29_%285%29_rock_and_metal_intimately_mixed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Psyche asteroid (Artist's Concept) (5) rock and metal intimately mixed",
+      "author": "Maxar/ASU/P.Rubin/NASA/JPL-Caltech",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Psyche_asteroid_(Artist%27s_Concept)_(5)_rock_and_metal_intimately_mixed.jpg",
+      "note": "Khác ý brief: chỉ có khối đá (tiểu hành tinh Psyche, tranh NASA), không có Trái Đất. Alt đề xuất: EN «A painting of a giant space rock» · VI «Tranh vẽ khối đá khổng lồ trong vũ trụ». Lời đọc ở ô Học có thể giữ (khối đá bay tới Trái Đất). Dùng chung cho q1_rock, q6, từ asteroid."
+    },
+    "learn.explore.explore_survivors": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_Crocodiles_at_Samphran_Elephant_Ground_%26_Zoo_(II).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Siamese_Crocodiles_at_Samphran_Elephant_Ground_%26_Zoo_%28II%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese Crocodiles at Samphran Elephant Ground & Zoo (II)",
+      "author": "This Photo was taken by Supanut Arunoprayote . Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่…",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_dark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sequoia_Trees_at_Sequoia_National_Park.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Sequoia_Trees_at_Sequoia_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sequoia Trees at Sequoia National Park",
+      "author": "Daniel G. Rego",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief: ảnh rừng ngày nay thay cho tranh rừng thời khủng long. Alt đề xuất: EN «A dark forest in the daytime» · VI «Khu rừng tối mờ giữa ban ngày»."
+    },
+    "tray.tray_bare_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dead_Pine_Trees_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Dead_Pine_Trees_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dead Pine Trees - panoramio",
+      "author": "YourWorldExplorer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "tray.tray_sunny": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Blue_sky_and_sun.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Blue_sky_and_sun.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Blue sky and sun",
+      "author": "Matt R",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_green": {
+      "same_as": "tray_cycad",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc",
+      "note": "Khác ý brief: brief cần ảnh mới (vạn tuế ra vòng lá non trong nắng); không tìm được nên dùng lại tray_cycad của bài một. Alt giữ được nếu ảnh bài một là cây vạn tuế xanh."
+    },
+    "q1.q1_rock": {
+      "same_as": "learn.explore.explore_rock"
+    },
+    "q1.q1_storm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cyclone_Catarina_from_the_ISS_on_March_26_2004.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Cyclone_Catarina_from_the_ISS_on_March_26_2004.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cyclone Catarina from the ISS on March 26 2004",
+      "author": "Astronaut photograph ISS008-E-19646 was taken March 7, 2004, with a Kodak DCS760 digital camera equipped with an 50-mm lens, and is provided by the Earth Observations Laboratory, Johnson Space Center.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cyclone_Catarina_from_the_ISS_on_March_26_2004.JPG"
+    },
+    "q1.q1_hail": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hailstorm_damage_to_garden_plants_in_Dnipro_2026-05-30_by_baby-bear.org_.jpg_05.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Hailstorm_damage_to_garden_plants_in_Dnipro_2026-05-30_by_baby-bear.org_.jpg_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hailstorm damage to garden plants in Dnipro 2026-05-30 by baby-bear.org .jpg 05",
+      "author": "Natalka Ukraine",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q2": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q2.q2_sun": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q2.q2_sun.jpg",
+        "method": "drawn"
+      },
+      "title": "A bright sun in a blue sky",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ thêm để ba lựa chọn của câu q2 cùng kiểu với q2_food (dương xỉ khô, hình tự vẽ): Mặt Trời trắng chói, quầng sáng và tia mềm trên trời xanh, vài gợn mây trắng thấp. Món tray_sunny của kệ Chơi vẫn là ảnh chụp. 1024×768."
+    },
+    "q3.q3_frog": {
+      "same_as": "tray_frog",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_turtle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mauremys_caspica_119149878.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mauremys_caspica_119149878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mauremys caspica 119149878",
+      "author": "Kseniia Marianna Prondzynska",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Rùa mai cứng, đúng nhãn «con rùa». Alt giữ được: «A turtle walking»."
+    },
+    "q3.q3_croc": {
+      "same_as": "q1_reptiles",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q3.q3_trike": {
+      "same_as": "w1_triceratops",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Milky_Way_over_Flagstaff_(50155851437).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Milky_Way_over_Flagstaff_%2850155851437%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Milky Way over Flagstaff (50155851437)",
+      "author": "Deborah Lee Soltesz from Flagstaff, AZ",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5.q5_books": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leather_bound_books_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Leather_bound_books_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leather bound books (Unsplash)",
+      "author": "Chris Lawton chrislawton",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5.q5_rocks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cretaceous%E2%80%93Paleogene_boundary_in_Colorado_2.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Cretaceous%E2%80%93Paleogene_boundary_in_Colorado_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cretaceous–Paleogene boundary in Colorado 2",
+      "author": "Jeffrey Beall",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_rock"
+    },
+    "vocab.extinct": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "vocab.asteroid": {
+      "same_as": "learn.explore.explore_rock"
+    },
+    "vocab.dust": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hammersh%C3%B8i_Dust_motes_dancing.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hammersh%C3%B8i_Dust_motes_dancing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Danish: Støvkornenes dans i solstrålerne Dust Motes Dancing in Sunbeams",
+      "author": "Vilhelm Hammershøi",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Hammersh%C3%B8i_Dust_motes_dancing.jpg",
+      "note": "Khác ý brief: tranh sơn dầu cũ (public domain) thay cho ảnh chụp. Alt đề xuất: EN «A painting of a sunbeam with dust» · VI «Tranh vẽ vệt nắng có bụi»."
+    },
+    "vocab.sunlight": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "vocab.survive": {
+      "same_as": "learn.explore.explore_survivors"
+    },
+    "reward.crocodile": {
+      "same_as": "q1_reptiles",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "learn.explore.explore_dust": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2017_(Day_289_-_16th_Oct)-_The_day_the_sky_turned_yellow_(37061950033).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/2017_%28Day_289_-_16th_Oct%29-_The_day_the_sky_turned_yellow_%2837061950033%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2017 (Day 289 - 16th Oct)- The day the sky turned yellow (37061950033)",
+      "author": "Tim Walker from United Kingdom",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Ảnh chụp thật (Anh, 16/10/2017, bụi Sahara): nhìn ngước lên bầu trời đầy bụi vàng xám, Mặt Trời chỉ còn một đốm tròn mờ, tán cây lá kim và cây lá rộng ở mép. Không lửa, không con vật, không chữ. Khác ý brief «tranh phục dựng»: alt đề xuất EN «A dusty sky hides the Sun» · VI «Bầu trời đầy bụi che Mặt Trời»."
+    },
+    "tray.tray_dust": {
+      "same_as": "learn.explore.explore_dust"
+    },
+    "learn.explore.explore_food": {
+      "composed": {
+        "file": "content/images/composed/khung-long/vi-sao-khung-long-bien-mat.learn.explore.explore_food.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_triceratops",
+            "lesson": "khung-long/khung-long-la-gi"
+          },
+          {
+            "same_as": "q2.q2_ferns",
+            "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+          }
+        ]
+      },
+      "title": "Triceratops among dry ferns",
+      "note": "Ghép (designer 10/11): tranh CC0 «Triceratops 2026» tách nền, đặt trước ảnh dương xỉ thân gỗ Cyathea (public domain) đã đổi màu sang nâu khô và phủ lớp xám mờ. Cùng con, cùng chỗ với hình q1 (cặp trước và sau)."
+    },
+    "tray.tray_plant_eater": {
+      "same_as": "learn.explore.explore_food"
+    },
+    "tray.tray_meat_eater": {
+      "composed": {
+        "file": "content/images/composed/khung-long/vi-sao-khung-long-bien-mat.tray.tray_meat_eater.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_t_rex",
+            "lesson": "khung-long/khung-long-la-gi"
+          },
+          {
+            "same_as": "tray.tray_bare_tree"
+          }
+        ]
+      },
+      "title": "T. rex in a bare forest",
+      "note": "Ghép (designer 10/11): tranh CC0 «Tyrannosaurus 2026» tách nền, nghiêng đầu xuống một chút, đặt trong ảnh rừng thông chết (CC BY 3.0, lật ngang, giảm màu). Tranh gốc miệng hơi hé thấy răng; lưng ngang, đuôi không chạm đất."
+    },
+    "tray.tray_dry_fern": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.tray.tray_dry_fern.jpg",
+        "method": "drawn"
+      },
+      "title": "A dry brown fern",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bụi dương xỉ khô héo màu nâu, lá quăn, trên nền đất khô nứt."
+    },
+    "tray.tray_lots_food": {
+      "same_as": "q1"
+    },
+    "q1": {
+      "composed": {
+        "file": "content/images/composed/khung-long/vi-sao-khung-long-bien-mat.q1.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_triceratops",
+            "lesson": "khung-long/khung-long-la-gi"
+          },
+          {
+            "same_as": "q2.q2_ferns",
+            "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+          }
+        ]
+      },
+      "title": "Triceratops among green ferns",
+      "note": "Ghép (designer 10/11): tranh CC0 «Triceratops 2026» tách nền, đặt trước ảnh dương xỉ thân gỗ Cyathea xanh tốt (public domain). Không thấy trời và khối đá."
+    },
+    "q2.q2_food": {
+      "same_as": "tray.tray_dry_fern"
+    },
+    "q2.q2_rain": {
+      "same_as": "q1.q1_rain",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than",
+      "note": "Hình tự vẽ mưa to (vẽ 10/11 chiều cho câu q1 bài Động đất), để ba lựa chọn của câu q2 cùng kiểu hình vẽ."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A young bean plant next to a box",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cây đậu non xanh trong cốc nhựa trong có đất, cạnh hộp các-tông mở nắp, trên bàn cạnh cửa sổ."
+    },
+    "q4.q4_yellow": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q4.q4_yellow.jpg",
+        "method": "drawn"
+      },
+      "title": "A yellow, weak bean plant",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng cốc: thân dài mảnh ngả nghiêng, lá nhỏ vàng nhạt; nền trơn."
+    },
+    "q4.q4_green": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q4.q4_green.jpg",
+        "method": "drawn"
+      },
+      "title": "A green, strong bean plant",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng cốc, cùng cây với hình câu hỏi: thân mập, lá xanh đậm; nền trơn."
+    },
+    "q4.q4_flowers": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q4.q4_flowers.jpg",
+        "method": "drawn"
+      },
+      "title": "A bean plant with flowers",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng cốc: lá xanh, nở nhiều hoa nhỏ trắng tím; nền trơn."
+    },
+    "q5.q5_photos": {
+      "own": {
+        "file": "content/images/own/khung-long/vi-sao-khung-long-bien-mat.q5.q5_photos.jpg",
+        "method": "drawn"
+      },
+      "title": "A pile of old photos",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; ba tấm ảnh giấy cũ đen trắng ngả vàng (núi, hàng cây, đồi), không có người, trên bàn gỗ."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triceratops_Anava_Park.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Triceratops_Anava_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Triceratops model in a park",
+      "author": "McKaby",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.37,
+        "top": 0.12,
+        "width": 0.28,
+        "height": 0.373
+      },
+      "note": "Designer (agent) 10/11 chiều: mô hình khủng long ba sừng ở công viên Anava (Modi'in, Israel; cùng công viên với tray_longneck bài một), cắt vuông quanh diềm cổ có vảy, mắt, vai và lưng (mép dưới thấy mấy gai diềm của mô hình con nhỏ); thấy rõ da có vảy. Khác ý brief: không thấy chân sau và hông (chân sau bị mô hình con nhỏ che); không người, không chữ, không biển tên. Alt «A close look at a dinosaur model's scaly skin» · «Nhìn gần lớp da có vảy của mô hình khủng long» vẫn đúng."
+    }
+  }
+}

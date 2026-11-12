@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · new-life · tổ chim, trứng, chim non. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="40" cy="24" r="9"/><path d="M31 30 C 31 36, 49 36, 49 30 L49 40 H31 Z"/></g>
+  <g fill="#E2D4B4"><path d="M12 40 C 10 30, 14 18, 22 18 C 30 18, 34 30, 32 40 Z"/><path d="M30 38 L33 33 L36 37 L40 32 L44 37 L47 33 L50 38 L50 42 H30 Z"/></g>
+  <g fill="#A93A27"><path d="M48 22 L54 24.5 L48 27 Z"/></g>
+  <g fill="#1E1B18"><circle cx="43" cy="21.5" r="1.5"/></g>
+  <g fill="#8A5E3B"><path d="M6 38 H58 C 58 50, 48 58, 32 58 C 16 58, 6 50, 6 38 Z"/></g>
+  <g fill="#B97F16"><path d="M8 44 C 20 41, 44 41, 56 44 L55 47.5 C 44 45, 20 45, 9 47.5 Z"/><path d="M12 51 C 22 49, 42 49, 52 51 L50 54 C 40 52.5, 24 52.5, 14 54 Z"/></g>
+</svg>

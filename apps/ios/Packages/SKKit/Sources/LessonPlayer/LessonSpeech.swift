@@ -73,7 +73,8 @@ extension LessonSession {
         case .multiChoice(let choice): choice.options.map(\.label)
         case .fillBlankBank(let fill): fill.bank.map(\.label)
         case .trueFalse(let tf): tf.labels.map { [$0.trueLabel, $0.falseLabel] } ?? []
-        case .orderSequence, .pictureBarChart, .unknown: []
+        case .orderSequence(let order): order.items.map(\.label)
+        case .pictureBarChart, .unknown: []
         }
     }
 
@@ -94,9 +95,13 @@ extension LessonSession {
         case .learn:
             return exploreBlock.map { utterance("learn.prompt", $0.prompt) }
         case .play:
+            // Explorer (SK-040 lượt 2): the game's instruction too, then the message.
+            if isExplorer, let tray { return utterance("play.message", tray.prompt, trayMessage) }
             return trayMessage.map { utterance("play.message", $0) }
         case .reward:
-            return nil
+            // Explorer: the mascot names the new sticker (SK-040); Discoverer celebrates quietly.
+            guard isExplorer, let collectible = lesson.reward.collectible else { return nil }
+            return utterance("reward.card", collectible.name)
         }
     }
 
@@ -145,6 +150,81 @@ extension LessonSession {
     public func clipsToPreload(at step: Step) -> Set<String> {
         let steps = [step] + (self.step(after: step).map { [$0] } ?? [])
         return Set(steps.flatMap(spokenShown(on:)).flatMap { $0.voiceClips(for: context.voiceMode) }.map(\.hash))
+    }
+}
+
+// MARK: - Explorer (SK-040)
+
+extension LessonSession {
+    /// The name of a choice or sequence picture, read after the child taps it (SK-026 D4).
+    public static func answerName(_ item: QuizItem, key: String) -> Spoken? {
+        switch item.answer {
+        case .singleChoice(let choice): choice.options.first { $0.key == key }?.label
+        case .multiChoice(let choice): choice.options.first { $0.key == key }?.label
+        case .orderSequence(let order): order.items.first { $0.key == key }?.label
+        case .fillBlankBank(let fill): fill.bank.first { $0.key == key }?.label
+        case .trueFalse, .pictureBarChart, .unknown: nil
+        }
+    }
+
+    /// The content's own label of a true/false card, if it has one. Explorer content leaves
+    /// `labels` out (TEMPLATE, luật Explorer 5): the nod and the shake are not named aloud then.
+    public static func answerName(_ item: QuizItem, value: Bool) -> Spoken? {
+        guard case .trueFalse(let tf) = item.answer, let labels = tf.labels else { return nil }
+        return value ? labels.trueLabel : labels.falseLabel
+    }
+
+    /// What the mascot says about a question in its state, and what its bubble shows (SK-026,
+    /// "Explorer: một câu không cần đọc"): the question while it is open, the hint after a wrong
+    /// try with a try left, `explanation_correct` once right, `explanation_wrong` once out of tries.
+    public static func explorerLine(_ item: QuizItem, status: QuestionStatus) -> [Spoken] {
+        switch status {
+        case .open: questionSpoken(item)
+        case .retry: [item.hint]
+        case .done(let correct, _, _): [correct ? item.explanationCorrect : item.explanationWrong]
+        }
+    }
+
+    /// The bubble's line as its listen button replays it.
+    public func explorerLineUtterance(_ item: QuizItem, status: QuestionStatus) -> Utterance {
+        let suffix: String
+        switch status {
+        case .open: return questionUtterance(item)
+        case .retry: suffix = "hint"
+        case .done(let correct, _, _): suffix = correct ? "correct" : "wrong"
+        }
+        return utterance("explorer.\(item.key).\(suffix)", list: Self.explorerLine(item, status: status))
+    }
+
+    /// After a tap: the picture's name, then what the mascot says about the try (hint or
+    /// explanation), in one utterance so the two never overlap. `name` is `nil` for a card that
+    /// has no name (true/false without `labels`).
+    public func explorerAnswerUtterance(_ item: QuizItem, name: Spoken?, status: QuestionStatus) -> Utterance {
+        let line: [Spoken] = status == .open ? [] : Self.explorerLine(item, status: status)
+        return utterance("answer.\(item.key).\(tries(for: item, in: phaseOf(item)).count)", list: [name] + line)
+    }
+
+    /// Whether `item` is the first true/false question of the lesson: there the bubble also shows
+    /// how to answer with the nod and the shake (SK-026, "Nhãn Đúng/Sai").
+    public func isFirstTrueFalse(_ item: QuizItem) -> Bool {
+        (warmupItems + quizItems).first { if case .trueFalse = $0.answer { true } else { false } }?.id == item.id
+    }
+
+    /// Học, Explorer: a tapped group says its name, then its sentence (SK-040 lượt 2). The
+    /// examples are not read by themselves (each is a short name under a picture the child can
+    /// see; the sheet's listen button still reads them).
+    public func explorerGroupUtterance(_ group: ExploreGroup) -> Utterance {
+        utterance("learn.explore.\(group.key)", group.label, group.sentence)
+    }
+
+    /// Chơi, Explorer: a tapped item says its name, then the mascot's new message (the engine's,
+    /// after the tap), in one utterance. Call after `tapTrayItem`.
+    public func explorerTrayTapUtterance(_ item: TrayItem) -> Utterance {
+        utterance("play.tap.\(item.key).\(progress.tray.count)", item.label, trayMessage)
+    }
+
+    private func phaseOf(_ item: QuizItem) -> QuestionPhase {
+        warmupItems.contains { $0.id == item.id } ? .warmup : .quiz
     }
 }
 

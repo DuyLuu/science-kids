@@ -1,0 +1,447 @@
+{
+  "note": "SK-033, chủ đề Khủng long bài 2. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chưa có ảnh: learn.explore.explore_kinds, learn.explore.explore_reptiles (sơ đồ ghép, cần designer dựng), learn.explore.explore_not_dinosaurs (không có tranh thằn lằn bay và bò sát biển chung cảnh hợp quy tắc). q4 và q4.q4_lizard chọn ảnh riêng thay cho hai nửa của explore_reptiles; q6 dùng lại tray.tray_pterosaur (khác ý, alt đề xuất). Kệ Chơi: 6 tranh cùng bộ Plegadis (CC0), 4 tranh của hoạ sĩ khác. Xem content/.build/images/khung-long/khung-long-la-gi/review.html. Designer 10/11: đã ghép explore_reptiles (khung cắt mới của ảnh Giraffatitan, không biển chữ) và explore_not_dinosaurs (hai tranh cắt khỏi nền trắng, đặt trên biển giấy); explore_kinds vẫn chưa có (không có ảnh xe buýt không logo, xem review.html).",
+  "images": {
+    "w1": {
+      "same_as": "q2.q2_ferns",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w1.w1_dinosaurs": {
+      "same_as": "tray.tray_long_neck"
+    },
+    "w1.w1_mammoths": {
+      "same_as": "tray.tray_mammoth"
+    },
+    "w1.w1_people": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:People_walking_down_a_dirt_road_in_an_unknown_village_(15162818290).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/People_walking_down_a_dirt_road_in_an_unknown_village_%2815162818290%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "People walking down a dirt road in an unknown village (15162818290)",
+      "author": "simpleinsomnia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-11-23_Water_buffaloes_in_Hoi_An.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/2024-11-23_Water_buffaloes_in_Hoi_An.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-11-23 Water buffaloes in Hoi An",
+      "author": "Alexkom000",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bonsai_tree_beside_a_moon_gate_in_a_white_wall,_Lan_Su_Chinese_Garden.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bonsai_tree_beside_a_moon_gate_in_a_white_wall%2C_Lan_Su_Chinese_Garden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Garden corner with a bonsai and stones",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "w3.w3_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "w3.w3_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "w3.w3_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      }
+    },
+    "learn.explore.explore_reptiles": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.learn.explore.explore_reptiles.jpg",
+        "parts": [
+          {
+            "same_as": "q4.q4_lizard"
+          },
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Giraffatitan_brancai,_Berlin_Natural_History_Museum_(6)_(25311781497).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Giraffatitan_brancai%2C_Berlin_Natural_History_Museum_%286%29_%2825311781497%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Giraffatitan brancai, Berlin Natural History Museum (6) (25311781497)",
+            "author": "Richard Mortel from Riyadh, Saudi Arabia",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "crop": {
+              "left": 0.165,
+              "top": 0.5,
+              "width": 0.3,
+              "height": 0.41
+            }
+          }
+        ]
+      },
+      "title": "A lizard next to a dinosaur skeleton",
+      "note": "Hai ảnh đặt cạnh nhau trên giấy: trái là kỳ đà nước nhìn từ phía trước (q4_lizard, cắt sát), phải là bộ xương Giraffatitan nhìn chéo phía trước (cùng ảnh gốc với q4, khung cắt khác: thân và hai chân trước, không có biển chữ, không có người). Mũi tên giấy đỏ son chỉ hướng chân: trên ảnh kỳ đà chỉ sang hai bên, cạnh bộ xương chỉ thẳng xuống. Không có chữ. Hình vuông 1024."
+    },
+    "learn.explore.explore_not_dinosaurs": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.learn.explore.explore_not_dinosaurs.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_pterosaur"
+          },
+          {
+            "same_as": "tray.tray_sea_reptile"
+          }
+        ]
+      },
+      "title": "A flying reptile and a sea reptile",
+      "note": "Cắt hai tranh khỏi nền trắng, đặt lên cảnh biển bằng giấy: nửa trên trời giấy sáng, nửa dưới nước chàm nhạt; thằn lằn bay (Pteranodon) lượn trên mặt nước, bò sát biển cổ dài (Elasmosaurus) bơi dưới nước, cổ duỗi về phía trước. Cả hai sống ở biển nội địa Bắc Mỹ cuối kỷ Phấn Trắng. Không có đất liền, không có chữ. Hình vuông 1024."
+    },
+    "tray.tray_long_neck": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Brontosaurus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Brontosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Brontosaurus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_pterosaur": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pteranodon_TD.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Pteranodon_TD.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pteranodon TD",
+      "author": "TotalDino",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_chicken_size": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Compsognathus_TD.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Compsognathus_TD.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Compsognathus TD",
+      "author": "TotalDino",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_triceratops": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triceratops_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Triceratops_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Triceratops 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_mammoth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Woolly_mammoth_(Mammuthus_primigenius)_-_Mauricio_Ant%C3%B3n.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Woolly_mammoth_%28Mammuthus_primigenius%29_-_Mauricio_Ant%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Woolly mammoth (Mammuthus primigenius) - Mauricio Antón",
+      "author": "Mauricio Antón",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.05,
+        "top": 0.2,
+        "width": 0.34,
+        "height": 0.58
+      }
+    },
+    "tray.tray_t_rex": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tyrannosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tyrannosaurus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_stegosaurus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stegosaurus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Stegosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Stegosaurus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_sea_reptile": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elasmosaurus.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Elasmosaurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Elasmosaurus",
+      "author": "Corbin Rainbolt",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_feathered": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sinosauropteryx_color_pattern_(feathers).JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sinosauropteryx_color_pattern_%28feathers%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sinosauropteryx color pattern (feathers)",
+      "author": "Conty",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "tray.tray_armoured": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ankylosaurus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ankylosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ankylosaurus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q1": {
+      "same_as": "reward.t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q1.q1_fish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Common_Carp_%28Cyprinus_carpio%29_%2851022534501%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common carp",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg"
+    },
+    "q1.q1_insects": {
+      "same_as": "tray.tray_dragonfly",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc",
+      "note": "Khác ý brief. Alt đề xuất: EN «A dragonfly» · VI «Con chuồn chuồn». Ảnh gốc ở bài 1 là chuồn chuồn đậu trên cành, không phải lá dương xỉ."
+    },
+    "q1.q1_reptiles": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.38,
+        "width": 1,
+        "height": 0.5
+      }
+    },
+    "q2": {
+      "same_as": "tray.tray_triceratops"
+    },
+    "q2.q2_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Soleil_%C3%A0_travers_un_paysage_sous-marin_de_Bretagne_(Ifremer_00378-48922_-_902).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Soleil_%C3%A0_travers_un_paysage_sous-marin_de_Bretagne_%28Ifremer_00378-48922_-_902%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Soleil à travers un paysage sous-marin de Bretagne (Ifremer 00378-48922 - 902)",
+      "author": "Olivier Dugornay",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q2.q2_land": {
+      "same_as": "q2.q2_ferns",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q2.q2_sky": {
+      "same_as": "q2.q2_cloud",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q3": {
+      "same_as": "q5",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_feathered": {
+      "same_as": "tray.tray_feathered"
+    },
+    "q3.q3_sea_reptile": {
+      "same_as": "tray.tray_sea_reptile"
+    },
+    "q3.q3_stegosaurus": {
+      "same_as": "tray.tray_stegosaurus"
+    },
+    "q3.q3_mammoth": {
+      "same_as": "tray.tray_mammoth"
+    },
+    "q4": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.q4.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Giraffatitan_brancai,_Berlin_Natural_History_Museum_(6)_(25311781497).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Giraffatitan_brancai%2C_Berlin_Natural_History_Museum_%286%29_%2825311781497%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Giraffatitan brancai, Berlin Natural History Museum (6) (25311781497)",
+            "author": "Richard Mortel from Riyadh, Saudi Arabia",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "crop": {
+              "left": 0.0,
+              "top": 0.57,
+              "width": 0.5,
+              "height": 0.3333
+            }
+          }
+        ]
+      },
+      "title": "A dinosaur skeleton seen from the front",
+      "note": "Designer (agent) 10/11 chiều: cùng ảnh gốc Giraffatitan ở Berlin, khung vuông mới (trái 0, trên 0,57, rộng 0,5, cao 0,333): thân, bốn chân thẳng như cột tới bàn chân, đuôi; khung cũ lộ chữ «ARCHAEOPTERYX» trên tường, nay tô lại bằng màu tường (sửa ảnh, nên là hình ghép); không có người ngồi (khách ở nửa phải ảnh gốc, ngoài khung). Không chữ."
+    },
+    "q4.q4_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffaloes_in_L%C3%A0o_Cai,_Sa_Pa,_Vietnam,_20240125_1244_3437.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Water_buffaloes_in_L%C3%A0o_Cai%2C_Sa_Pa%2C_Vietnam%2C_20240125_1244_3437.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffaloes in Lào Cai, Sa Pa, Vietnam, 20240125 1244 3437",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.43,
+        "top": 0.36,
+        "width": 0.55,
+        "height": 0.56
+      }
+    },
+    "q4.q4_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Varano_acu%C3%A1tico_(Varanus_salvator).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Varano_acu%C3%A1tico_%28Varanus_salvator%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Varano acuático (Varanus salvator)",
+      "author": "Foundling",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Khác ý brief. Alt đề xuất: EN «A monitor lizard seen from the front» · VI «Con kỳ đà nhìn từ phía trước». Không bắt buộc: alt hiện tại «A lizard seen from the front» vẫn đúng."
+    },
+    "q4.q4_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q5.q5_dolphin_like": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ichthyosaurus_BW.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ichthyosaurus_BW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ichthyosaurus BW",
+      "author": "Nobu Tamura ( http://spinops.blogspot.com )",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "q5.q5_crested": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Parasaurolophus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Parasaurolophus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Parasaurolophus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5.q5_rhino": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Woolly_rhinoceros_(Coelodonta_antiquitatis)_-_Mauricio_Ant%C3%B3n.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Woolly_rhinoceros_%28Coelodonta_antiquitatis%29_-_Mauricio_Ant%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Woolly rhinoceros (Coelodonta antiquitatis) - Mauricio Antón",
+      "author": "Mauricio Antón",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.12,
+        "top": 0.05,
+        "width": 0.88,
+        "height": 0.9
+      }
+    },
+    "q6": {
+      "same_as": "tray.tray_pterosaur",
+      "note": "Khác ý brief. Alt đề xuất: EN «A painting of a flying reptile» · VI «Tranh vẽ thằn lằn bay». Brief: cắt nửa trên explore_not_dinosaurs (thằn lằn bay lượn trên biển); chưa có ảnh đó nên dùng tranh thằn lằn bay của kệ Chơi, không có biển."
+    },
+    "vocab.reptile": {
+      "same_as": "w3.w3_lizard"
+    },
+    "vocab.scales": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "c03f74cc-d318-4a4e-a50e-9f65e799816e",
+      "source_url": "https://www.flickr.com/photos/78428166@N00/14584515683",
+      "file_url": "https://live.staticflickr.com/3900/14584515683_ce772c753f_b.jpg",
+      "title": "Green Monitor",
+      "author": "Tobyotter",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.45,
+        "top": 0.5,
+        "width": 0.55,
+        "height": 0.5
+      },
+      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi CC BY 2.0 (license id 4). Cắt vùng thân có vảy. Khác ý brief. Alt đề xuất: EN «Monitor lizard scales up close» · VI «Vảy kỳ đà nhìn gần». Không bắt buộc: alt hiện tại «Lizard scales up close» vẫn đúng."
+    },
+    "vocab.pterosaur": {
+      "same_as": "tray.tray_pterosaur"
+    },
+    "vocab.sea_reptile": {
+      "same_as": "tray.tray_sea_reptile"
+    },
+    "vocab.mammoth": {
+      "same_as": "tray.tray_mammoth"
+    },
+    "reward.giant_pterosaur": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Quetzalcoatlus07.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Quetzalcoatlus07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Quetzalcoatlus07",
+      "author": "ДиБгд at Russian Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Quetzalcoatlus07.jpg"
+    },
+    "learn.explore.explore_kinds": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.learn.explore.explore_kinds.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_long_neck"
+          },
+          {
+            "same_as": "tray.tray_t_rex"
+          },
+          {
+            "same_as": "tray.tray_chicken_size"
+          },
+          {
+            "same_as": "w3.w3_hen"
+          },
+          {
+            "own": {
+              "file": "content/images/own/khung-long/khung-long-la-gi.learn.explore.explore_kinds.bus.jpg",
+              "method": "drawn"
+            },
+            "title": "A plain city bus"
+          }
+        ]
+      },
+      "title": "Dinosaur paintings next to a bus and a chicken",
+      "note": "Designer (agent) 10/11 chiều: bảng so kích thước trên nền kem, mọi hình cùng một tỉ lệ (37,5 px mỗi mét): khủng long cổ dài dài 22 m, khủng long bạo chúa 12,3 m, xe buýt thành phố 12 m, khủng long nhỏ 1 m, gà mái cao 0,45 m. Hai hàng, mỗi hàng một vạch nền (một hàng thì mọi hình nhỏ đi gần một nửa): hàng trên khủng long cổ dài, khủng long nhỏ, gà mái; hàng dưới khủng long bạo chúa cạnh xe buýt. Mỗi hình một ô, vạch chia mờ màu giấy lõm; tranh tách khỏi nền trắng, gà mái cắt theo đường viền vẽ tay; dấu chữ ký nhỏ của hoạ sĩ Plegadis ở góc tranh gốc bị bỏ. Xe buýt là hình tự vẽ (không tìm được ảnh xe buýt chụp ngang CC0/PD/CC BY mà không có logo, số tuyến, biển số, quảng cáo): xe trơn hai màu kem và gỉ đồng, không chữ, không biển số, không người. Không nhãn chữ (Duy 10/11). Lưu ý: đúng tỉ lệ thì khủng long nhỏ và gà mái chỉ là chấm nhỏ ở cỡ ô Học. Hình vuông 1024."
+    }
+  }
+}

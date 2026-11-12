@@ -1,0 +1,309 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi là ảnh chụp mẫu vật. Câu q1 (vỏ ốc, chuồn chuồn trong đá, dấu lá trên bùn) và các lựa chọn câu q5 là hình vẽ: không có ảnh hợp lệ cho dấu lá trên bùn ướt, vỏ sò trong lọ, vỏ sò vùi trong bùn.",
+  "images": {
+    "w1": {
+      "same_as": "tray_stream",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_erosion": {
+      "same_as": "explore_erosion",
+      "lesson": "da-va-dat/da-bi-bao-mon-theo-thoi-gian"
+    },
+    "w1.w1_weathering": {
+      "same_as": "explore_weathering",
+      "lesson": "da-va-dat/da-bi-bao-mon-theo-thoi-gian"
+    },
+    "w1.w1_erupt": {
+      "same_as": "explore_erupt",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w2": {
+      "same_as": "q4",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "learn.explore.explore_not_dino": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fossiliferous_limestone_(Upper_Ordovician;_Cincinnati_area,_USA).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Fossiliferous_limestone_%28Upper_Ordovician%3B_Cincinnati_area%2C_USA%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fossiliferous limestone (Upper Ordovician; Cincinnati area, USA)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Phiến đá vôi đầy vỏ tay cuộn (brachiopod) hoá thạch, Cincinnati; mẫu vật trên nền trắng, không nhãn."
+    },
+    "learn.explore.explore_decay": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-explore_decay.jpg",
+        "method": "drawn"
+      },
+      "title": "An empty shell on the sea floor",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_sediment": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-explore_sediment.jpg",
+        "method": "drawn"
+      },
+      "title": "Layers of mud and sand over a shell",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_imprint": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-explore_imprint.jpg",
+        "method": "drawn"
+      },
+      "title": "Hands pressing a shell into play dough",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_ammonite": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ammonite_fossil_(8606998286).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Ammonite_fossil_%288606998286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ammonite fossil (8606998286)",
+      "author": "Becks",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Cúc đá nguyên con trong mảng đá xám, không nhãn, không thước."
+    },
+    "tray.tray_dried_fish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dried_fish_in_Greenland.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Dried_fish_in_Greenland.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dried fish in Greenland",
+      "author": "Chmee2",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.4,
+        "width": 1.0,
+        "height": 0.58
+      },
+      "note": "Cá khô nguyên con bổ đôi, chụp từ trên xuống; cắt bỏ lát bánh mì ở trên (CC BY: đã cắt, giữ tên gốc)."
+    },
+    "tray.tray_leaf_fossil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pecopteris_plumosa_-_Naturmuseum_Freiburg_-_DSC06751.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Pecopteris_plumosa_-_Naturmuseum_Freiburg_-_DSC06751.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pecopteris plumosa - Naturmuseum Freiburg - DSC06751",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.82,
+        "height": 1.0
+      },
+      "note": "Dương xỉ Pecopteris in trên phiến đá xám (Naturmuseum Freiburg); cắt bỏ số nhỏ viết tay ở mép phải."
+    },
+    "tray.tray_fish_fossil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Knightia_eocaena_(fossil_fish)_(Green_River_Formation,_Lower_Eocene;_southwestern_Wyoming,_USA)_3_(33628006762).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Knightia_eocaena_%28fossil_fish%29_%28Green_River_Formation%2C_Lower_Eocene%3B_southwestern_Wyoming%2C_USA%29_3_%2833628006762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Knightia eocaena (fossil fish) (Green River Formation, Lower Eocene; southwestern Wyoming, USA) 3 (33628006762)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Cá Knightia trên đá màu kem, không thước, không nhãn."
+    },
+    "tray.tray_shell": {
+      "same_as": "tray_shell",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "tray.tray_shells_rock": {
+      "same_as": "learn.explore.explore_not_dino"
+    },
+    "tray.tray_insect_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mesurupetala,_dragonfly,_Late_Late_Jurassic,_Tithonian_Age,_Solnhofen_Lithographic_Limestone,_Solnhofen,_Bavaria,_Germany_-_Houston_Museum_of_Natural_Science_-_DSC01817.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Mesurupetala%2C_dragonfly%2C_Late_Late_Jurassic%2C_Tithonian_Age%2C_Solnhofen_Lithographic_Limestone%2C_Solnhofen%2C_Bavaria%2C_Germany_-_Houston_Museum_of_Natural_Science_-_DSC01817.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mesurupetala, dragonfly, Late Late Jurassic, Tithonian Age, Solnhofen Lithographic Limestone, Solnhofen, Bavaria, Germany - Houston Museum of Natural Science - DSC01817",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chuồn chuồn hoá thạch trên đá vôi Solnhofen màu kem; không nhãn trong khung."
+    },
+    "tray.tray_dry_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Lá khô vừa rụng trên mặt đất phủ lá, chụp gần từ trên xuống (Superior National Forest, public domain)."
+    },
+    "tray.tray_leaf_print": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lindgren_Fossils_LLC-_fossil_leaf_(ae11238d-cf03-4cc4-a85a-409e7235f1b5).tif",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Lindgren_Fossils_LLC-_fossil_leaf_%28ae11238d-cf03-4cc4-a85a-409e7235f1b5%29.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A leaf fossil in rock",
+      "author": "NPS photo",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Lindgren_Fossils_LLC-_fossil_leaf_(ae11238d-cf03-4cc4-a85a-409e7235f1b5).tif",
+      "note": "Dấu lá bản rộng trên phiến đá nâu nhạt (NPS, public domain)."
+    },
+    "q1": {
+      "same_as": "q2_museum",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q1.q1_shell": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q1_shell.jpg",
+        "method": "drawn"
+      },
+      "title": "A seashell on the sand",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Vẽ vì cả câu q1 phải cùng kiểu (dấu lá trên bùn chỉ vẽ được)."
+    },
+    "q1.q1_insect": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q1_insect.jpg",
+        "method": "drawn"
+      },
+      "title": "A dragonfly shape in rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Vẽ cùng câu q1; ảnh chuồn chuồn hoá thạch vẫn dùng ở kệ Chơi."
+    },
+    "q1.q1_mud_print": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q1_mud_print.jpg",
+        "method": "drawn"
+      },
+      "title": "A leaf print in wet mud",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh hợp lệ cho dấu lá trên bùn ướt (Commons 11/11)."
+    },
+    "q2": {
+      "same_as": "q1_mud",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q2.q2_sediment": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sediment_Layers_at_Crandberry_Bend_(27401667208).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Sediment_Layers_at_Crandberry_Bend_%2827401667208%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Layers of mud and sand on a riverbank",
+      "author": "USFWSmidwest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sediment_Layers_at_Crandberry_Bend_(27401667208).jpg",
+      "note": "Bờ sông lộ nhiều lớp trầm tích (USFWS, public domain)."
+    },
+    "q2.q2_soil": {
+      "same_as": "tray_red_soil",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q2.q2_lava": {
+      "same_as": "q4_slope",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_toy": {
+      "same_as": "q6",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_fern": {
+      "same_as": "tray_fern",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_dragonfly": {
+      "same_as": "tray_dragonfly",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_fish": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A sea snail on the sea floor",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_layers": {
+      "same_as": "learn.explore.explore_sediment"
+    },
+    "q4.q4_decay": {
+      "same_as": "learn.explore.explore_decay"
+    },
+    "q4.q4_found": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q4_found.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand brushing a shell in rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Semele_rosea_(rose_semele_clam)_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Semele_rosea_%28rose_semele_clam%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Semele rosea (rose semele clam) 2",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Một chiếc vỏ sò trắng hồng trên nền trắng; hình câu hỏi (ba lựa chọn là hình vẽ)."
+    },
+    "q5.q5_waves": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q5_waves.jpg",
+        "method": "drawn"
+      },
+      "title": "Shells on rocks with waves",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q5.q5_jar": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q5_jar.jpg",
+        "method": "drawn"
+      },
+      "title": "Shells in a glass jar",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q5.q5_mud": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b08-q5_mud.jpg",
+        "method": "drawn"
+      },
+      "title": "A shell half buried in mud",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Snail_(125170129).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Snail_%28125170129%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snail",
+      "author": "Romanos Kalamatianos",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Ốc sên trên lá xanh."
+    },
+    "vocab.sediment": {
+      "same_as": "q2.q2_sediment"
+    },
+    "vocab.decay": {
+      "same_as": "learn.explore.explore_decay"
+    },
+    "vocab.imprint": {
+      "same_as": "tray.tray_leaf_fossil"
+    },
+    "vocab.fossil": {
+      "same_as": "tray.tray_ammonite"
+    },
+    "vocab.pressure": {
+      "same_as": "learn.explore.explore_sediment"
+    },
+    "reward.ammonite_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ammonites_(55082679127).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Ammonites_%2855082679127%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ammonites (55082679127)",
+      "author": "Steve Jurvetson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Cúc đá cắt đôi thấy các ngăn, đặt trên đế đá, nền tối."
+    }
+  }
+}

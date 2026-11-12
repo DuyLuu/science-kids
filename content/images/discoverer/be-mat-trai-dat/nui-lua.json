@@ -1,0 +1,344 @@
+{
+  "note": "SK-033. Designer (agent) chọn 10/11/2026, chờ Duy duyệt; chưa fetch. 19 ảnh riêng, 12 chỗ dùng lại, 17 chỗ chưa có ảnh (không ghi trong file, xem review.html). Mục có «CẦN MỞ TAY» là ảnh Openverse ngoài Commons chưa xác nhận được ở trang gốc. Designer 10/11: thêm w1.w1_mantle, w1.w1_crust, w1.w1_core, w2 dùng lại hình ghép sơ đồ mặt cắt của bài ben-trong-trai-dat. Designer (agent) 10/11 chiều: thêm 9 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại); chi tiết ở review.html.",
+  "images": {
+    "w1.w1_mantle": {
+      "same_as": "q1.q1_mantle",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "w1.w1_crust": {
+      "same_as": "q1.q1_crust",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "w1.w1_core": {
+      "same_as": "q1.q1_core",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_mantle",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Koh_Mak_(island),_Thailand,_Palms_on_the_beach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Koh_Mak_%28island%29%2C_Thailand%2C_Palms_on_the_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Koh Mak (island), Thailand, Palms on the beach",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "learn.explore.explore_erupt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arenal_at_night.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Arenal_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arenal at night",
+      "author": "Scott Robinson (Clearly Ambiguous) from Rockville, MD, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_dark_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vesicular_basalt_(Quaternary;_Snake_River_Plain,_Idaho,_USA)_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Vesicular_basalt_%28Quaternary%3B_Snake_River_Plain%2C_Idaho%2C_USA%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vesicular basalt (Quaternary; Snake River Plain, Idaho, USA) 3",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_shell": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seashell_on_the_beach_-_Flickr_-_faktor1komma5.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Seashell_on_the_beach_-_Flickr_-_faktor1komma5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seashell on the beach - Flickr - faktor1komma5",
+      "author": "faktor1komma5 /by Claus P. Heibel from Didim/Aydın, Türkiye",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_coconut": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Koh_Mak_(island),_Thailand,_Palm_tree_on_the_beach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Koh_Mak_%28island%29%2C_Thailand%2C_Palm_tree_on_the_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Koh Mak (island), Thailand, Palm tree on the beach",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_shore_rocks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Basalt_rocks_at_G%C3%A0nh_%C4%90%C3%A1_%C4%90%C4%A9a.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Basalt_rocks_at_G%C3%A0nh_%C4%90%C3%A1_%C4%90%C4%A9a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Basalt rocks at Gành Đá Đĩa",
+      "author": "Prince Roy",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_boat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnamese_fishing_boat,_Lang_Co_beach,_Vietnam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Vietnamese_fishing_boat%2C_Lang_Co_beach%2C_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnamese fishing boat, Lang Co beach, Vietnam",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_island_crater": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:H%E1%BB%93_Th%E1%BB%9Bi_L%E1%BB%9Bi_(An_H%E1%BA%A3i-L%C3%BD_S%C6%A1n-Qu%E1%BA%A3ng_Ng%C3%A3i)_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/H%E1%BB%93_Th%E1%BB%9Bi_L%E1%BB%9Bi_%28An_H%E1%BA%A3i-L%C3%BD_S%C6%A1n-Qu%E1%BA%A3ng_Ng%C3%A3i%29_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hồ Thới Lới (An Hải-Lý Sơn-Quảng Ngãi) - panoramio",
+      "author": "Nghiem DangVi",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.18,
+        "width": 1,
+        "height": 0.6
+      }
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mayon_volcano.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Mayon_volcano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mayon volcano",
+      "author": "Jakub Michankow /fulloftravel.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q1.q1_ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ice_cubes_on_water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Ice_cubes_on_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ice cubes on water",
+      "author": "Cleiton Andrade Andrade from Alfenas, Brasil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.42,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.85
+      }
+    },
+    "q1.q1_melted_rock": {
+      "same_as": "q4.q4_slope"
+    },
+    "q1.q1_rain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heavy_rain_in_K%C3%B5rvemaa,_Estonia_(Fall_2024).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Heavy_rain_in_K%C3%B5rvemaa%2C_Estonia_%28Fall_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heavy rain in Kõrvemaa, Estonia (Fall 2024)",
+      "author": "Sillerkiil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief. Alt đề xuất: EN «Heavy rain falling» · VI «Mưa to đang rơi»."
+    },
+    "q2.q2_lava": {
+      "same_as": "q4.q4_slope"
+    },
+    "q2.q2_ash": {
+      "same_as": "q4.q4_ash"
+    },
+    "q3": {
+      "same_as": "q1"
+    },
+    "q3.q3_fire": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "72a38166-c541-4d7c-9aec-2ec5a5e0fad0",
+      "source_url": "https://www.flickr.com/photos/193754588@N02/51402504891",
+      "file_url": "https://live.staticflickr.com/65535/51402504891_682f5a1877_b.jpg",
+      "title": "Campfire",
+      "author": "kestingoforth",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 4 = CC BY 2.0."
+    },
+    "q3.q3_sun": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.55
+      }
+    },
+    "q3.q3_magma": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lava_fountaining_(11_September_2023)_(summit_of_Kilauea_Volcano,_Hawaii)_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Lava_fountaining_%2811_September_2023%29_%28summit_of_Kilauea_Volcano%2C_Hawaii%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lava fountaining (11 September 2023) (summit of Kilauea Volcano, Hawaii) 1",
+      "author": "James St. John",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Lava_fountaining_(11_September_2023)_(summit_of_Kilauea_Volcano,_Hawaii)_1.jpg"
+    },
+    "q4": {
+      "same_as": "q1"
+    },
+    "q4.q4_ash": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pavlof_volcano_on_the_alaska_peninsula_eruption.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Pavlof_volcano_on_the_alaska_peninsula_eruption.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pavlof volcano on the alaska peninsula eruption",
+      "author": "U.S. Fish and Wildlife Service",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pavlof_volcano_on_the_alaska_peninsula_eruption.jpg"
+    },
+    "q4.q4_slope": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stromboli_sciara_del_fuoco_2014-09-19.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Stromboli_sciara_del_fuoco_2014-09-19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Stromboli sciara del fuoco 2014-09-19",
+      "author": "Unukorno",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "q4.q4_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_Island_Lava_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Big_Island_Lava_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Big Island Lava (Unsplash)",
+      "author": "Buzz Andersen ldandersen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5": {
+      "same_as": "q4.q4_sea"
+    },
+    "q5.q5_water": {
+      "source": "Openverse/StockSnap",
+      "openverse_id": "a2296d6c-8c53-4d09-b6e5-005bd8ed34e4",
+      "source_url": "https://stocksnap.io/photo/ocean-wave-XSWSE5GPTK",
+      "file_url": "https://cdn.stocksnap.io/img-thumbs/960w/XSWSE5GPTK.jpg",
+      "title": "Ocean Wave",
+      "author": "Tim Sullivan",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Openverse/StockSnap CC0: trang gốc stocksnap.io chặn bot (Cloudflare), CẦN MỞ TAY xác nhận trước khi fetch."
+    },
+    "q5.q5_ice": {
+      "same_as": "q1.q1_ice"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_erupt"
+    },
+    "vocab.lava": {
+      "same_as": "q4.q4_slope"
+    },
+    "vocab.erupt": {
+      "same_as": "learn.explore.explore_erupt"
+    },
+    "vocab.ash": {
+      "same_as": "q4.q4_ash"
+    },
+    "vocab.extinct": {
+      "same_as": "tray.tray_island_crater"
+    },
+    "reward.ly_son": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ly_Son_Island_13_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ly_Son_Island_13_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ly Son Island 13 - panoramio",
+      "author": "Kim Yong Soo/Doosan …",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Khác ý brief. Alt đề xuất: EN «Ly Son Island by the sea» · VI «Đảo Lý Sơn bên biển xanh»."
+    },
+    "learn.explore.explore_magma": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/nui-lua.learn.explore.explore_magma.jpg",
+        "method": "drawn"
+      },
+      "title": "Magma under a volcano and lava outside",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; sơ đồ mặt cắt tự vẽ (Commons không có sơ đồ USGS public domain hợp đường ảnh): túi mác-ma riêng sâu dưới đất, ống dẫn lên miệng, dung nham chảy xuống sườn, mũi tên cong chỉ lên. Không nhãn chữ (Duy 10/11: không chữ trong hình); nhãn song ngữ nếu cần thì app/biên tập thêm ngoài hình."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/nui-lua.q2.jpg",
+        "method": "drawn"
+      },
+      "title": "Melted rock under and outside a volcano",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng sơ đồ explore_magma, bỏ mũi tên; không nhãn chữ để không lộ đáp án."
+    },
+    "q4.q4_underground": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/nui-lua.q4.q4_underground.jpg",
+        "method": "drawn"
+      },
+      "title": "Melted rock deep under the ground",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng sơ đồ explore_magma, chỉ phần dưới đất: núi lửa chưa phun, túi mác-ma và ống dẫn dừng sâu dưới đất; không dung nham bên ngoài, không chữ."
+    },
+    "q2.q2_magma": {
+      "same_as": "q4.q4_underground"
+    },
+    "vocab.magma": {
+      "same_as": "learn.explore.explore_magma"
+    },
+    "learn.explore.explore_new_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Waves_breaking_at_Holei_Sea_Arch_(52018487478).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Waves_breaking_at_Holei_Sea_Arch_%2852018487478%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Waves breaking at Holei Sea Arch (52018487478)",
+      "author": "Hawai‘i Volcanoes NPS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Waves_breaking_at_Holei_Sea_Arch_(52018487478).jpg",
+      "crop": {
+        "left": 0.3,
+        "top": 0,
+        "width": 0.7,
+        "height": 1
+      },
+      "note": "Ảnh NPS (public domain, khung video): vách đá dung nham đã nguội ở bờ biển Hōlei (Hawaii), sóng trắng, cỏ và bụi cây mọc trên đá ở góc dưới. Không có dung nham đỏ, không khói, không người, không chữ, không logo. Cắt bỏ phần biển trống bên trái."
+    },
+    "q5.q5_land": {
+      "same_as": "learn.explore.explore_new_rock"
+    },
+    "learn.explore.explore_vietnam": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ly_Son_Island_05_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Ly_Son_Island_05_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ly Son Island 05 - panoramio",
+      "author": "Kim Yong Soo/Doosan …",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.3,
+        "top": 0.3,
+        "width": 0.7,
+        "height": 0.55
+      },
+      "note": "Khác ý brief: không có ảnh Chư Đăng Ya/Tây Nguyên hợp giấy phép; dùng đồi núi lửa đã tắt trên đảo Lý Sơn (núi Thới Lới) sau ruộng và nhà dân, cắt sát ngọn đồi. Không thấy đất đỏ. Alt đề xuất: EN «An old volcano hill on Ly Son Island» · VI «Đồi núi lửa đã tắt trên đảo Lý Sơn»."
+    },
+    "vocab.volcano": {
+      "same_as": "learn.explore.explore_vietnam"
+    },
+    "w1": {
+      "same_as": "w2",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "tray.tray_red_soil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terra_roxa_(Sao_Paulo,_Brazil).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Terra_roxa_%28Sao_Paulo%2C_Brazil%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red basalt soil in a ploughed field",
+      "author": "Roundabout",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.26,
+        "top": 0.73,
+        "width": 0.39,
+        "height": 0.27
+      },
+      "note": "Designer (agent) 10/11 chiều: ruộng đất đỏ ba-dan (terra roxa) vừa cày ở bang São Paulo, Brasil; cùng loại đất đỏ ba-dan như Tây Nguyên. Cắt sát mặt ruộng, bỏ trời, hàng rào, cột điện; còn vài chồi cỏ nhỏ; ảnh hơi nhoè vì chụp từ xe chạy. Ảnh thay thế đã xem: đất đỏ Oklahoma (PD, rõ hơn nhưng không phải đất núi lửa). Alt «Red soil in a field» · «Đất đỏ trên ruộng» đúng."
+    },
+    "vocab.crater": {
+      "same_as": "tray.tray_island_crater",
+      "note": "Theo brief mới (content-editor 10/11): dùng lại ảnh miệng núi lửa Thới Lới; bỏ tray_hill_crater."
+    }
+  }
+}

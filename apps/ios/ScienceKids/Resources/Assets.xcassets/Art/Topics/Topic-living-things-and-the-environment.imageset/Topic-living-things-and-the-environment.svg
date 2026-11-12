@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · living-things-and-the-environment · đồi, sông, cây. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="50" cy="12" r="7"/></g>
+  <g fill="#2F5B57"><path d="M2 40 C 10 28, 22 24, 32 32 C 40 24, 54 24, 62 34 V60 H2 Z"/><circle cx="17" cy="23" r="7"/><rect x="16" y="26" width="2.4" height="10"/></g>
+  <g fill="#3B6E6A"><path d="M2 46 C 14 38, 30 38, 40 44 C 48 40, 56 40, 62 43 V60 H2 Z"/><circle cx="44" cy="30" r="5.5"/><rect x="43" y="32" width="2.2" height="10"/></g>
+  <g fill="#2E4A6E"><path d="M30 42 C 34 44, 38 46, 36 50 C 34 54, 24 54, 22 60 H34 C 38 55, 46 54, 46 48 C 46 44, 40 42, 34 41 Z"/></g>
+</svg>

@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content/v1/syllabus.schema.json",
+  "title": "Science Kids content v1: danh mục syllabus (file content/syllabus.json, SK-030)",
+  "description": "Mọi nhóm tuổi, chủ đề và bài theo thứ tự đã duyệt; app đọc từ bundle. Luật JSON Schema không diễn đạt được (key duy nhất, number liên tiếp, oak_lessons theo source.kind, topic_id/lesson_id có thật) nằm ở scripts/lib/syllabus.mjs.",
+  "$ref": "#/$defs/Syllabus",
+  "$defs": {
+    "Syllabus": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "$ref": "common.schema.json#/$defs/SchemaVersion"
+        },
+        "syllabus_version": {
+          "description": "phải là ngày duyệt dạng YYYY-MM-DD (vd 2026-11-09)",
+          "type": "string",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+        },
+        "ai_draft": {
+          "description": "Danh mục do máy sinh, chưa duyệt từng dòng",
+          "type": "boolean",
+          "default": false
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/NonEmptyString",
+          "description": "Nguồn sinh danh mục, chỉ dùng nội bộ"
+        },
+        "groups": {
+          "description": "Mỗi nhóm tuổi một mục, age_group không trùng",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SyllabusGroup"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "syllabus_version",
+        "groups"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusGroup": {
+      "type": "object",
+      "properties": {
+        "age_group": {
+          "$ref": "topic.schema.json#/$defs/Topic/properties/age_group"
+        },
+        "oak_years": {
+          "description": "Year của Oak mà nhóm này dùng",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "topics": {
+          "description": "Theo thứ tự hành trình; number 1..n liên tiếp",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SyllabusTopic"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "age_group",
+        "oak_years",
+        "topics"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusTopic": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "common.schema.json#/$defs/Slug",
+          "description": "Unit slug của Oak (bằng source.unit_slug), hoặc new-… cho chủ đề mới; duy nhất trong file"
+        },
+        "number": {
+          "description": "Thứ tự trong nhóm, 1..n liên tiếp",
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "$ref": "common.schema.json#/$defs/Text",
+          "description": "Chủ đề luôn có cả en và vi"
+        },
+        "strand": {
+          "$ref": "topic.schema.json#/$defs/Topic/properties/strand"
+        },
+        "level": {
+          "description": "Mức 1–5; null với chủ đề mới chưa chấm",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "source": {
+          "$ref": "#/$defs/SyllabusSource"
+        },
+        "topic_id": {
+          "$ref": "common.schema.json#/$defs/Uuid",
+          "description": "id của _topic.md; chỉ khi chủ đề đã có nội dung soạn"
+        },
+        "lessons": {
+          "description": "Theo thứ tự trong chủ đề; number 1..n liên tiếp",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SyllabusLesson"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "key",
+        "number",
+        "title",
+        "strand",
+        "level",
+        "source",
+        "lessons"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusSource": {
+      "description": "Chủ đề lấy từ một unit của Oak, hoặc chủ đề mới",
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "oak",
+            "new"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "oak"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/SyllabusSourceOak"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "new"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/SyllabusSourceNew"
+          }
+        }
+      ]
+    },
+    "SyllabusSourceOak": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "oak"
+        },
+        "unit_slug": {
+          "$ref": "common.schema.json#/$defs/Slug"
+        },
+        "year": {
+          "description": "Year của Oak, phải nằm trong oak_years của nhóm",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "unit_index": {
+          "description": "Thứ tự unit trong year của Oak",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "kind",
+        "unit_slug",
+        "year",
+        "unit_index"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusSourceNew": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "new"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusLesson": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "description": "Thứ tự trong chủ đề, 1..n liên tiếp",
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "$ref": "#/$defs/SyllabusLessonTitle"
+        },
+        "oak_lessons": {
+          "description": "Slug lesson của Oak; [] với chủ đề mới; nhiều slug khi gộp thí nghiệm",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Slug"
+          },
+          "uniqueItems": true
+        },
+        "statutory": {
+          "description": "Bắt buộc theo chương trình Anh (Oak); chủ đề mới ghi false",
+          "type": "boolean"
+        },
+        "sensitive": {
+          "description": "Nội dung nhạy cảm; chỉ ghi khi true",
+          "type": "boolean",
+          "default": false
+        },
+        "lesson_id": {
+          "$ref": "common.schema.json#/$defs/Uuid",
+          "description": "id của bài markdown; chỉ khi bài đã soạn, và bài đó thuộc topic_id của chủ đề"
+        }
+      },
+      "required": [
+        "number",
+        "title",
+        "oak_lessons",
+        "statutory"
+      ],
+      "additionalProperties": false
+    },
+    "SyllabusLessonTitle": {
+      "description": "en luôn có; vi null khi chưa dịch (app dùng en)",
+      "type": "object",
+      "properties": {
+        "en": {
+          "$ref": "common.schema.json#/$defs/NonEmptyString"
+        },
+        "vi": {
+          "description": "phải là chuỗi có chữ, hoặc null khi chưa dịch",
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "vi"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

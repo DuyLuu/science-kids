@@ -36,15 +36,22 @@ struct LearnStep<Header: View>: View {
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             BottomBar {
-                VStack(spacing: Tokens.Space.s6) {
-                    if !session.learnComplete {
-                        Text("lesson.learn.need_all")
-                            .typography(Tokens.Typography.caption)
-                            .foregroundStyle(Tokens.Role.textSecondary)
+                if session.isExplorer {
+                    // Explorer (SK-040 lượt 2): only the arrow, no word; it shows once every group is seen.
+                    if session.learnComplete {
+                        ExplorerNextButton(label: session.tray == nil ? "lesson.explorer.play.next" : "lesson.explorer.learn.next", action: session.advance)
                     }
-                    TwoLayerButton(session.tray == nil ? "lesson.learn.to_quiz" : "lesson.learn.to_play", icon: .arrowForward, action: session.advance)
-                        .disabled(!session.learnComplete)
-                        .accessibilityIdentifier("lesson.learn.next")
+                } else {
+                    VStack(spacing: Tokens.Space.s6) {
+                        if !session.learnComplete {
+                            Text("lesson.learn.need_all")
+                                .typography(Tokens.Typography.caption)
+                                .foregroundStyle(Tokens.Role.textSecondary)
+                        }
+                        TwoLayerButton(session.tray == nil ? "lesson.learn.to_quiz" : "lesson.learn.to_play", icon: .arrowForward, action: session.advance)
+                            .disabled(!session.learnComplete)
+                            .accessibilityIdentifier("lesson.learn.next")
+                    }
                 }
             }
             .reveal(order: 6)
@@ -96,7 +103,8 @@ struct LearnStep<Header: View>: View {
                 let selected = session.progress.exploreSelected == group.key
                 let seen = session.progress.exploreSeen.contains(group.key)
                 Button {
-                    speech?.play(session.utterance("word.\(group.key)", group.label))
+                    // Explorer: the name, then the sentence (SK-040 lượt 2); Discoverer: the name.
+                    speech?.play(session.isExplorer ? session.explorerGroupUtterance(group) : session.utterance("word.\(group.key)", group.label))
                     session.selectGroup(group.key)
                 } label: {
                     HStack(spacing: Tokens.Space.s10) {
@@ -151,11 +159,9 @@ struct LearnStep<Header: View>: View {
         TornSheet {
             VStack(alignment: .leading, spacing: Tokens.Space.s10) {
                 HStack(alignment: .center, spacing: Tokens.Space.s12) {
-                    PlaceholderArt(
-                        color: group.color.color, size: metrics.illustration(LessonMetrics.sheetArt),
-                        accessibilityLabel: group.image.map { Text(verbatim: $0.alt.en) }
-                    )
-                    .motion(Tokens.Motion.Preset.pop)
+                    // SK-033: the pack's picture on a piece of the group's colour, or the stand-in art.
+                    ContentPicture(image: group.image, color: group.color.color, size: metrics.illustration(LessonMetrics.sheetArt))
+                        .motion(Tokens.Motion.Preset.pop)
                     BilingualLines(spoken: group.sentence, mode: mode, showsSecond: showsSecond, secondary: Tokens.Typography.bodyS, identifier: "lesson.group_sentence")
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -198,11 +204,12 @@ extension LearnStep {
                 .frame(width: LessonMetrics.dot, height: LessonMetrics.dot)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 0) {
-                Text(verbatim: mode.sentence(term.term))
+                // A new word is an English word (SK-042: Tiếng Việt still shows it, with its meaning).
+                Text(verbatim: term.term.en)
                     .typography(Tokens.Typography.bodyStrong)
                     .foregroundStyle(Tokens.Role.textPrimary)
-                if showsSecond {
-                    Text(verbatim: mode.secondSentence(term.term))
+                if showsSecond || mode == .viFirst {
+                    Text(verbatim: term.term.vi)
                         .typography(Tokens.Typography.captionS)
                         .foregroundStyle(Tokens.Role.textSecondary)
                 }

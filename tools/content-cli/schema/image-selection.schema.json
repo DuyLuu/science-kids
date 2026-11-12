@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://science-kids.example/schema/content-cli/v1/image-selection.schema.json",
+  "title": "content/images/<age_group>/<topic_slug>/<lesson_slug>.json",
+  "description": "File chọn ảnh của một bài (SK-033), trong git. Mỗi khoá của images là khoá ổn định của một Image trong bài (content-cli images search in ra, vd q3, q3.q3_river, tray.tray_sea, learn.explore.explore_land). Một mục là ảnh nguồn (Picked), same_as (dùng lại ảnh của chỗ khác), hình ghép (Composed: file designer ghép từ nhiều ảnh nguồn) hoặc hình tự làm (Own: file Science Kids tự vẽ, không có nguồn ngoài). images fetch tải và kiểm lại giấy phép ở nguồn; build điền image.asset và credit vào gói. Ngoài schema, content-cli còn kiểm: crop không vượt khỏi hình, same_as (không có lesson, kể cả trong parts của hình ghép) trỏ tới một mục có ảnh trong cùng file; same_as có lesson được kiểm khi fetch và build.",
+  "type": "object",
+  "required": ["images"],
+  "additionalProperties": false,
+  "properties": {
+    "note": { "description": "Ghi chú tự do của người chọn", "type": "string" },
+    "images": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/ImageKey" },
+      "additionalProperties": { "$ref": "#/$defs/Entry" }
+    }
+  },
+  "$defs": {
+    "ImageKey": {
+      "description": "khoá hình: các key nối bằng dấu chấm (vd q3.q3_river)",
+      "type": "string",
+      "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+)*$"
+    },
+    "Entry": {
+      "if": { "type": "object", "properties": { "same_as": true }, "required": ["same_as"] },
+      "then": { "$ref": "#/$defs/SameAs" },
+      "else": {
+        "if": { "type": "object", "properties": { "composed": true }, "required": ["composed"] },
+        "then": { "$ref": "#/$defs/Composed" },
+        "else": {
+          "if": { "type": "object", "properties": { "own": true }, "required": ["own"] },
+          "then": { "$ref": "#/$defs/Own" },
+          "else": { "$ref": "#/$defs/Picked" }
+        }
+      }
+    },
+    "SameAs": {
+      "description": "Dùng lại ảnh đã chọn của chỗ khác (cùng một file ảnh trong gói). same_as là khoá hình (tray.tray_sea) hoặc key như brief viết (tray_sea, q3): khớp đúng khoá, không có thì khớp phần cuối khoá. Có lesson thì tìm trong file chọn ảnh của bài đó (cùng nhóm tuổi)",
+      "type": "object",
+      "required": ["same_as"],
+      "additionalProperties": false,
+      "properties": {
+        "same_as": { "$ref": "#/$defs/ImageKey" },
+        "lesson": {
+          "description": "<slug chủ đề>/<slug bài> của bài có ảnh gốc, vd be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*/[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "Picked": {
+      "description": "Một ảnh đã chọn. title, author, license, license_url, source, source_url vào credit của gói đúng như ghi ở đây (fetch kiểm giấy phép với nguồn).",
+      "type": "object",
+      "required": ["source", "source_url", "file_url", "title", "author", "license", "license_url"],
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "description": "Wikimedia Commons, hoặc Openverse/<nhà cung cấp> (vd Openverse/Flickr) kèm openverse_id",
+          "type": "string",
+          "pattern": "^(?:Wikimedia Commons|Openverse/\\S.*)$"
+        },
+        "openverse_id": {
+          "description": "id ảnh trên Openverse (bắt buộc khi source là Openverse/…, cấm khi không phải)",
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "source_url": { "description": "Trang gốc của ảnh (trang có giấy phép)", "$ref": "#/$defs/HttpsUrl" },
+        "file_url": {
+          "description": "URL file ảnh gốc như nguồn ghi (Commons: upload.wikimedia.org; Openverse: trường url)",
+          "$ref": "#/$defs/HttpsUrl"
+        },
+        "title": { "$ref": "#/$defs/CreditText" },
+        "author": {
+          "description": "Tác giả để ghi công; Unknown khi nguồn không ghi (chỉ với CC0, public domain, PDM)",
+          "$ref": "#/$defs/CreditText"
+        },
+        "license": {
+          "description": "CC0 1.0 | Public domain | PDM 1.0 | CC BY <phiên bản>[ <port>]",
+          "type": "string",
+          "pattern": "^(?:CC0 1\\.0|Public domain|PDM 1\\.0|CC BY [1-4]\\.[05](?: [a-z]{2,}(?:-[a-z]+)?)?)$"
+        },
+        "license_url": { "$ref": "#/$defs/HttpsUrl" },
+        "crop": { "$ref": "#/$defs/Crop" },
+        "note": { "description": "Ghi chú tự do (vd đã xem trang gốc ngày nào)", "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "source": { "type": "string", "pattern": "^Openverse/" } } },
+          "then": { "required": ["openverse_id"] },
+          "else": { "not": { "required": ["openverse_id"] } }
+        },
+        {
+          "if": { "properties": { "source": { "const": "Wikimedia Commons" } } },
+          "then": {
+            "properties": {
+              "source_url": { "type": "string", "pattern": "^https://commons\\.wikimedia\\.org/wiki/File:" },
+              "file_url": { "type": "string", "pattern": "^https://upload\\.wikimedia\\.org/" }
+            }
+          }
+        }
+      ]
+    },
+    "Composed": {
+      "description": "Hình ghép (SK-033 dev 10/11): designer ghép một file từ nhiều ảnh nguồn hợp lệ (trục thời gian, khủng long cạnh xe buýt, sơ đồ mặt cắt đã xoá nhãn, ảnh tô nổi một phần). credit trong gói: title ghi ở đây, author \"Science Kids\", source \"composed\", license chặt nhất trong các phần (CC BY nếu có phần CC BY), changes luôn có \"composed\", parts = credit của từng ảnh nguồn.",
+      "type": "object",
+      "required": ["composed", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "composed": {
+          "type": "object",
+          "required": ["file", "parts"],
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "description": "File designer ghép, trong repo: content/images/composed/<slug chủ đề>/<tên>.jpg (JPEG, cạnh dài ≤ 1024 px, sRGB, không metadata; fetch xử lý lại theo hợp đồng nếu cần)",
+              "type": "string",
+              "pattern": "^content/images/composed/[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9][a-z0-9._-]*\\.jpe?g$"
+            },
+            "parts": {
+              "description": "Các ảnh nguồn có trong hình, theo thứ tự hiện ở màn Nguồn hình",
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 12,
+              "items": { "$ref": "#/$defs/Part" }
+            }
+          }
+        },
+        "title": { "description": "Tên hình ghép ở màn Nguồn hình (tự đặt, trung tính)", "$ref": "#/$defs/CreditText" },
+        "note": { "description": "Ghi chú tự do (vd ghép thế nào, đã xoá nhãn gì)", "type": "string" }
+      }
+    },
+    "Part": {
+      "description": "Một ảnh nguồn của hình ghép: same_as tới ảnh đã có trong file chọn ảnh (cùng file, hoặc bài khác với lesson), một mục ảnh nguồn đầy đủ như ảnh thường (fetch kiểm giấy phép ở nguồn và tải về content/.images để designer ghép), hoặc một hình tự làm (Own). same_as tới một hình ghép khác thì lấy các ảnh nguồn của hình đó (chỉ một lớp).",
+      "if": { "type": "object", "properties": { "same_as": true }, "required": ["same_as"] },
+      "then": { "$ref": "#/$defs/SameAs" },
+      "else": {
+        "if": { "type": "object", "properties": { "own": true }, "required": ["own"] },
+        "then": { "$ref": "#/$defs/Own" },
+        "else": { "$ref": "#/$defs/Picked" }
+      }
+    },
+    "Own": {
+      "description": "Hình Science Kids tự làm (SK-033 dev 10/11; Duy 10/11: đồ vật không có ảnh miễn phí hợp lệ thì vẽ). Không có nguồn ngoài nên không có giấy phép bên thứ ba. images fetch kiểm file có thật và xử lý theo hợp đồng ảnh (không gọi mạng). credit trong gói: title ghi ở đây, author, license, source \"Science Kids\", license_url \"\", changes [method]. Dùng được làm phần của hình ghép và làm đích của same_as.",
+      "type": "object",
+      "required": ["own", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "own": {
+          "type": "object",
+          "required": ["file", "method"],
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "description": "File trong repo: content/images/own/<slug chủ đề>/<tên>.jpg (JPEG, cạnh dài ≤ 1024 px, sRGB, không metadata; fetch xử lý lại theo hợp đồng nếu cần)",
+              "type": "string",
+              "pattern": "^content/images/own/[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9][a-z0-9._-]*\\.jpe?g$"
+            },
+            "method": {
+              "description": "drawn: designer hoặc agent vẽ (kể cả vẽ bằng AI). Sau có thể thêm photo (tự chụp)",
+              "enum": ["drawn"]
+            }
+          }
+        },
+        "title": { "description": "Tên hình ở màn Nguồn hình (tự đặt, trung tính, tiếng Anh như alt.en)", "$ref": "#/$defs/CreditText" },
+        "note": { "description": "Ghi chú tự do (vd ai vẽ, vẽ bằng gì, theo brief nào)", "type": "string" }
+      }
+    },
+    "Crop": {
+      "description": "Phần giữ lại, tính bằng tỉ lệ 0–1 của ảnh gốc đã xoay theo EXIF: left + width <= 1, top + height <= 1",
+      "type": "object",
+      "required": ["left", "top", "width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "left": { "type": "number", "minimum": 0, "maximum": 1 },
+        "top": { "type": "number", "minimum": 0, "maximum": 1 },
+        "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    },
+    "HttpsUrl": { "type": "string", "pattern": "^https://[^\\s/]+\\.[^\\s/]+/\\S*$" },
+    "CreditText": { "type": "string", "pattern": "\\S", "maxLength": 200 }
+  }
+}

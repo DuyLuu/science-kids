@@ -20,6 +20,10 @@ final class OnboardingModel {
     private(set) var voiceMode: VoiceMode = .suggested(for: .bilingual, ageGroup: .discoverer)
     private(set) var parentChoseVoice = false
 
+    /// Worlds (`AgeGroup.rawValue`) with at least one written lesson in the content, set once the
+    /// content is open (SK-040). The profile screen says "coming soon" only for the others.
+    var worldsWithLessons: Set<String> = []
+
     /// Age group of the chosen grade (canvas: Lớp 1 Explorer, 2–3 Discoverer, 4–5 Scientist).
     var ageGroup: AgeGroup? { grade.flatMap(Grade.ageGroup(for:)) }
 

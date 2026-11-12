@@ -1,0 +1,366 @@
+{
+  "note": "SK-039. Designer (agent, phần bài 1–7) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố b0N-), hình ghép ở content/images/composed/da-va-dat/; trang duyệt content/.build/images/da-va-dat/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "tray_pink_granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w1.w1_magnifier": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w1.w1_binoculars": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-w1.w1_binoculars.jpg",
+        "method": "drawn"
+      },
+      "title": "A pair of binoculars",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét."
+    },
+    "w1.w1_sunglasses": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-w1.w1_sunglasses.jpg",
+        "method": "drawn"
+      },
+      "title": "A pair of sunglasses",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét."
+    },
+    "w2": {
+      "same_as": "w1_stone",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_scratch": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-learn.explore.explore_scratch.jpg",
+        "method": "drawn"
+      },
+      "title": "A fingernail scratching a white rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "learn.explore.explore_soft": {
+      "same_as": "vocab.chalk"
+    },
+    "learn.explore.explore_hard": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "learn.explore.explore_properties": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-learn.explore.explore_properties.jpg",
+        "parts": [
+          {
+            "same_as": "vocab.chalk"
+          },
+          {
+            "same_as": "vocab.marble"
+          },
+          {
+            "same_as": "granite",
+            "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+          }
+        ]
+      },
+      "title": "Three rocks in a row",
+      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Trái sang phải: đá phấn, đá cẩm thạch, đá hoa cương."
+    },
+    "tray.tray_marble": {
+      "same_as": "vocab.marble"
+    },
+    "tray.tray_tofu": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-tray.tray_tofu.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Northern_tofu.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Northern_tofu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Northern tofu",
+            "author": "Fumikas Sagisavas",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "crop": {
+              "left": 0.07,
+              "top": 0.53,
+              "width": 0.29,
+              "height": 0.32
+            }
+          }
+        ]
+      },
+      "title": "A white block of tofu",
+      "note": "Designer (agent) 12/11: cắt một ô đậu phụ của tấm đậu lớn (ảnh CC0, không có chữ), bo góc thành một miếng, đặt trên nền trắng ngà như các mẫu đá của kệ; không bao bì, không chữ."
+    },
+    "tray.tray_dark_rock": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "tray.tray_soapstone": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-tray.tray_soapstone.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Soapstone_1_(14805103732).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Soapstone_1_%2814805103732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Soapstone 1 (14805103732)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A grey-green rock",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn. Designer (agent) 11/11: ảnh gốc là cận cảnh mặt đá (không có ảnh mẫu cầm tay hợp lệ), nên cắt mặt đá theo hình một hòn đá, thêm sáng tối nhẹ và bóng, đặt trên nền trắng ngà như các mẫu khác (Quy ước hình mục ba)."
+    },
+    "tray.tray_candle": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-tray.tray_candle.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:White_candle_(transparent).png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/White_candle_%28transparent%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "White candle (transparent)",
+            "author": "Original image by: William Warby Extended and background removal with Pixelcut/Pixa by: Perquirius",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "crop": {
+              "left": 0,
+              "top": 0.33,
+              "width": 1,
+              "height": 0.67
+            }
+          }
+        ]
+      },
+      "title": "A white candle",
+      "note": "Designer (agent) 11/11: cắt bỏ ngọn lửa của ảnh nến, tách nền, đặt trên nền trắng ngà như các mẫu đá của kệ."
+    },
+    "tray.tray_chalk": {
+      "same_as": "vocab.chalk"
+    },
+    "tray.tray_granite": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "tray.tray_eraser": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eraser_(4360428119).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Eraser_%284360428119%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eraser (4360428119)",
+      "author": "sarah.mckenzie11",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Cục tẩy hồng không in chữ trên nền trơn (đề xuất đổi brief \"trắng\" thành \"hồng\")."
+    },
+    "tray.tray_limestone": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-tray.tray_limestone.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Limestone_(Sisson_Member,_St._Louis_Limestone,_Middle_Mississippian;_Putnam_County,_Indiana,_USA)_(34806273141).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Limestone_%28Sisson_Member%2C_St._Louis_Limestone%2C_Middle_Mississippian%3B_Putnam_County%2C_Indiana%2C_USA%29_%2834806273141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Limestone (Sisson Member, St. Louis Limestone, Middle Mississippian; Putnam County, Indiana, USA) (34806273141)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "crop": {
+              "left": 0.4,
+              "top": 0.25,
+              "width": 0.24,
+              "height": 0.37
+            }
+          }
+        ]
+      },
+      "title": "A pale grey rock",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn. Cắt mặt một hòn ở giữa ảnh nhiều hòn đá vôi, tạo hình hòn đá (nền ảnh gốc cùng màu đá, không tách được)."
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_properties"
+    },
+    "q1.q1_magnifier": {
+      "same_as": "q1_magnifier",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q1.q1_spoon": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q1.q1_spoon.jpg",
+        "method": "drawn"
+      },
+      "title": "A metal spoon",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét (kính lúp của bài hai là hình vẽ); cũng là hình câu q3."
+    },
+    "q1.q1_water": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q1.q1_water.jpg",
+        "method": "drawn"
+      },
+      "title": "A plastic cup of water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét; cốc nhựa trong, không vạch số; bài năm q1 dùng lại."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q2.jpg",
+        "method": "drawn"
+      },
+      "title": "A child's hand on a table",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); hình câu hỏi: bàn tay bạn nhỏ trên bàn gỗ, móng cắt ngắn (bài bốn q3 dùng lại)."
+    },
+    "q2.q2_hole": {
+      "same_as": "pumice",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q2.q2_scratch": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-q2.q2_scratch.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Limestone_(Sisson_Member,_St._Louis_Limestone,_Middle_Mississippian;_Putnam_County,_Indiana,_USA)_(34806273141).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Limestone_%28Sisson_Member%2C_St._Louis_Limestone%2C_Middle_Mississippian%3B_Putnam_County%2C_Indiana%2C_USA%29_%2834806273141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Limestone (Sisson Member, St. Louis Limestone, Middle Mississippian; Putnam County, Indiana, USA) (34806273141)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "crop": {
+              "left": 0.3,
+              "top": 0.6,
+              "width": 0.24,
+              "height": 0.38
+            }
+          }
+        ]
+      },
+      "title": "A scratch on a rock",
+      "note": "Designer (agent) 11/11: không có ảnh mẫu đá có vết xước hợp lệ; cắt một hòn đá vôi khác của cùng ảnh nhiều hòn (không phải hòn của `tray_limestone`), tách nền, vẽ thêm một vết xước trắng ngang mặt đá (brief cho phép)."
+    },
+    "q2.q2_layer": {
+      "same_as": "tray_sandstone",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q3": {
+      "same_as": "q1.q1_spoon"
+    },
+    "q3.q3_limestone": {
+      "same_as": "tray.tray_limestone"
+    },
+    "q3.q3_chalk": {
+      "same_as": "vocab.chalk"
+    },
+    "q3.q3_basalt": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3.q3_marble": {
+      "same_as": "vocab.marble"
+    },
+    "q4": {
+      "same_as": "q1",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q4.q4_soapstone": {
+      "same_as": "tray.tray_soapstone"
+    },
+    "q4.q4_granite": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q4.q4_slate": {
+      "same_as": "tray_slate",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q5.jpg",
+        "method": "drawn"
+      },
+      "title": "A spoon and three grey rocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "q5.q5_two": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q5.q5_two.jpg",
+        "method": "drawn"
+      },
+      "title": "A rock with two scratches",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "q5.q5_one": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q5.q5_one.jpg",
+        "method": "drawn"
+      },
+      "title": "A rock with one scratch",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "q5.q5_none": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b03-q5.q5_none.jpg",
+        "method": "drawn"
+      },
+      "title": "A rock with no scratches",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "q6": {
+      "same_as": "vocab.chalk"
+    },
+    "vocab.hardness": {
+      "same_as": "learn.explore.explore_properties"
+    },
+    "vocab.scratch": {
+      "same_as": "learn.explore.explore_scratch"
+    },
+    "vocab.property": {
+      "same_as": "q1",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "vocab.chalk": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-vocab.chalk.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Chalk_(Annona_Chalk,_Upper_Cretaceous;_White_Cliffs_of_the_Little_River,_Arkansas,_USA)_(40795385595).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Chalk_%28Annona_Chalk%2C_Upper_Cretaceous%3B_White_Cliffs_of_the_Little_River%2C_Arkansas%2C_USA%29_%2840795385595%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Chalk (Annona Chalk, Upper Cretaceous; White Cliffs of the Little River, Arkansas, USA) (40795385595)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A white rock",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "vocab.marble": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b03-vocab.marble.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Marble_(Murphy_Marble,_Ordovician;_quarry_near_Tate,_Georgia,_USA)_(16268833583).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Marble_%28Murphy_Marble%2C_Ordovician%3B_quarry_near_Tate%2C_Georgia%2C_USA%29_%2816268833583%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Marble (Murphy Marble, Ordovician; quarry near Tate, Georgia, USA) (16268833583)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A white rock with grey lines",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "reward.chalk_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seven_Sisters_Cliffs_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Seven_Sisters_Cliffs_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seven Sisters Cliffs - panoramio",
+      "author": "qwesy qwesy",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Vách đá phấn trắng Seven Sisters bên bờ biển (Anh), chụp xa; không người, không thuyền."
+    }
+  }
+}

@@ -95,10 +95,20 @@
           "additionalProperties": { "$ref": "#/$defs/Range" }
         },
         "image_required": {
-          "description": "Chỗ bắt buộc có image: choice_option = mọi lựa chọn của single_choice, multi_choice, picture_bar_chart; sequence_item = mọi thẻ của order_sequence; true_false = chính câu true_false",
+          "description": "Chỗ bắt buộc có image, thiếu thì lỗi age_image_required (xem ImageSlot)",
           "type": "array",
           "uniqueItems": true,
-          "items": { "enum": ["choice_option", "sequence_item", "true_false"] }
+          "items": { "$ref": "#/$defs/ImageSlot" }
+        },
+        "image_expected": {
+          "description": "Chỗ nên có image (SK-033), thiếu thì cảnh báo image_missing; chỗ có cả trong image_required thì là lỗi. Duy duyệt xong bài thử thì chuyển sang image_required. Thiếu khoá thì không kiểm",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/ImageSlot" }
+        },
+        "image_search_keywords": {
+          "description": "true: mọi Image có brief chứa \"Từ khoá tìm ảnh (EN): …\" (content-cli images search đọc), thiếu thì cảnh báo image_brief_keywords; brief bắt đầu bằng \"Dùng lại\" (hình dùng lại của chỗ khác) thì không cần. Thiếu khoá = false",
+          "type": "boolean"
         },
         "dok_mix": {
           "description": "Số câu DOK 1, 2, 3 trong quiz; tổng bằng 6 (quiz đúng 6 câu, content-cli kiểm khi đọc file)",
@@ -112,6 +122,10 @@
         "min_formats": { "description": "Số format khác nhau tối thiểu trong quiz", "type": "integer", "minimum": 1, "maximum": 6 },
         "max_words_en": { "description": "Số từ tối đa mỗi câu EN trên mọi Spoken của topic và bài; vượt thì cảnh báo age_words_en. Thiếu thì không kiểm", "type": "integer", "minimum": 1 }
       }
+    },
+    "ImageSlot": {
+      "description": "Chỗ đặt hình trong Khởi động và Quiz (và món Chơi): question = trường image của chính câu, mọi format; choice_option = mọi lựa chọn của single_choice, multi_choice, picture_bar_chart; sequence_item = mọi thẻ của order_sequence; true_false = trường image của chính câu true_false; bank_word = mọi thẻ từ trong bank của fill_blank_bank; tray_item = mọi món của build_tray ở Chơi",
+      "enum": ["question", "choice_option", "sequence_item", "true_false", "bank_word", "tray_item"]
     },
     "FormatList": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/QuizFormat" } },
     "QuizFormat": {

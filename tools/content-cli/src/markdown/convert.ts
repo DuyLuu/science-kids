@@ -383,11 +383,15 @@ const choiceOption: ChildBuilder = (_ctx, child, reader) => {
   ]);
 };
 
-const bankWord: ChildBuilder = (_ctx, child, reader) =>
-  assemble([
+const bankWord: ChildBuilder = (_ctx, child, reader) => {
+  const label = reader.pair("label", `${child.pointer}/label`);
+  const image = reader.image("image", `${child.pointer}/image`);
+  return assemble([
     ["key", child.key],
-    ["label", reader.pair("label", `${child.pointer}/label`)],
+    ["label", label],
+    ["image", image],
   ]);
+};
 
 const sequenceItem: ChildBuilder = (_ctx, child, reader) => {
   const label = reader.pair("label", `${child.pointer}/label`);

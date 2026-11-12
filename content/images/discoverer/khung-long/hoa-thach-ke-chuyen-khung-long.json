@@ -1,0 +1,430 @@
+{
+  "note": "SK-033, chủ đề Khủng long bài 3. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chỗ dùng lại hình bài 1–2 chỉ ghi same_as + lesson (designer khác chọn ảnh gốc). Chỗ dùng lại có cắt riêng trong bài ghi thành mục ảnh riêng cùng file_url, có crop. Ảnh khác ý brief có alt đề xuất trong note. Designer (agent) 10/11 chiều: thêm 7 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại); chi tiết ở review.html.",
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:-TravelTuesday_with_My_Public_Lands_(23897509860).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/-TravelTuesday_with_My_Public_Lands_%2823897509860%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "-TravelTuesday with My Public Lands (23897509860)",
+      "author": "mypubliclands",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:-TravelTuesday_with_My_Public_Lands_(23897509860).jpg",
+      "note": "Khác ý brief: ảnh chụp ngày nay thay cho tranh phục dựng bờ biển thời khủng long. Alt đề xuất: EN «Land, sea and sky» · VI «Đất liền, biển và bầu trời»."
+    },
+    "w1.w1_flying": {
+      "same_as": "tray_pterosaur",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_triceratops": {
+      "same_as": "tray_triceratops",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_sea": {
+      "same_as": "tray_sea_reptile",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w2": {
+      "same_as": "w3_hen",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w3": {
+      "same_as": "tray_cycad",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w3.w3_frog": {
+      "same_as": "tray_frog",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w3.w3_mammoth": {
+      "same_as": "tray_mammoth",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "w3.w3_buffalo": {
+      "same_as": "w1_buffalo",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "learn.explore.explore_bones": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "learn.explore.explore_tracks": {
+      "same_as": "tray.tray_rock_trackway"
+    },
+    "learn.explore.explore_pictures": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triceratops-Zachi-Evenor-003.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Triceratops-Zachi-Evenor-003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Triceratops-Zachi-Evenor-003",
+      "author": "Zachi Evenor ( Photography )",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Ảnh khác ý brief một chút: mô hình là mô hình nhỏ đặt cạnh bộ xương (bảo tàng London), không phải mô hình cỡ thật ở công viên của bài một. Alt giữ nguyên. Tấm biển nhỏ cạnh đế mô hình có chữ, không đọc được ở cỡ ô."
+    },
+    "tray.tray_rock_tooth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carcharodontosaurus_tooth_in_Vienna.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Carcharodontosaurus_tooth_in_Vienna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Carcharodontosaurus tooth in Vienna",
+      "author": "Gyik Toma (Tommy) from Arad, Romania",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_chicken_bone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_bone.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Chicken_bone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken bone",
+      "author": "Lemon tart",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief: một khúc xương gà nằm trên nền đất, không có đĩa, bát cơm, đôi đũa. Alt đề xuất: EN «A chicken bone» · VI «Khúc xương gà»."
+    },
+    "tray.tray_rock_print": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Magnoavipes_(theropod_dinosaur_track)_(Dakota_Sandstone,_Lower_Cretaceous;_Dinosaur_Ridge,_Colorado,_USA)_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Magnoavipes_%28theropod_dinosaur_track%29_%28Dakota_Sandstone%2C_Lower_Cretaceous%3B_Dinosaur_Ridge%2C_Colorado%2C_USA%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Magnoavipes (theropod dinosaur track) (Dakota Sandstone, Lower Cretaceous; Dinosaur Ridge, Colorado, USA) 3",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0,
+        "width": 0.85,
+        "height": 1
+      }
+    },
+    "tray.tray_rock_egg": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dendroolithus_sp._(dinosaur_egg)_(Majiacun_Formation,_Upper_Cretaceous;_Xixia_Basin,_Henan,_China).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Dendroolithus_sp._%28dinosaur_egg%29_%28Majiacun_Formation%2C_Upper_Cretaceous%3B_Xixia_Basin%2C_Henan%2C_China%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dendroolithus sp. (dinosaur egg) (Majiacun Formation, Upper Cretaceous; Xixia Basin, Henan, China)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.02,
+        "top": 0.02,
+        "width": 0.9,
+        "height": 0.96
+      },
+      "note": "Trứng Dendroolithus, chưa rõ loài khủng long nào đẻ, không phải trứng khủng long cổ dài như brief ưu tiên. Ảnh hưởng thẻ thưởng bài bốn long_neck_egg (xem file chọn ảnh bài bốn). Alt giữ được: «A fossil dinosaur egg»."
+    },
+    "tray.tray_sand_prints": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dog_paw_prints_in_the_sand_-_Lagos_-_The_Algarve,_Portugal_(1470423402).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Dog_paw_prints_in_the_sand_-_Lagos_-_The_Algarve%2C_Portugal_%281470423402%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dog paw prints in the sand - Lagos - The Algarve, Portugal (1470423402)",
+      "author": "Glen Bowman from Newcastle, England",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Khác ý brief: cát hơi khô, nhiều dấu chân lẫn nhau, không thấy mép nước. Alt giữ được."
+    },
+    "tray.tray_rock_bone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_Femur_(9974209864).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Dinosaur_Femur_%289974209864%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dinosaur Femur (9974209864)",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.18,
+        "width": 1,
+        "height": 0.72
+      }
+    },
+    "tray.tray_rock_trackway": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mill_Canyon_Tracksite_4_(37134294052).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Mill_Canyon_Tracksite_4_%2837134294052%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mill Canyon Tracksite 4 (37134294052)",
+      "author": "BLMUtah",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Mill_Canyon_Tracksite_4_(37134294052).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.88
+      }
+    },
+    "tray.tray_rock_nest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Macroelongatoolithus_nest_HGM_41HIII1219.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Macroelongatoolithus_nest_HGM_41HIII1219.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Macroelongatoolithus nest HGM 41HIII1219",
+      "author": "Gary Todd",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q1.q1_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Granite_boulder_beside_Argyll_and_Sutherland_Highlanders_War_Memorial,_Oban,_July_2020.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Granite_boulder_beside_Argyll_and_Sutherland_Highlanders_War_Memorial%2C_Oban%2C_July_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Granite boulder beside Argyll and Sutherland Highlanders War Memorial, Oban, July 2020",
+      "author": "Blood Red Sandman",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q1.q1_sand": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heap_of_Fine_Construction_Sand.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Heap_of_Fine_Construction_Sand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heap of Fine Construction Sand",
+      "author": "Paul The Writer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q1.q1_mud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Natural_Texture_in_Mud_(f4420e90-b757-4b6a-afdb-71398a608c3f).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Natural_Texture_in_Mud_%28f4420e90-b757-4b6a-afdb-71398a608c3f%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Natural Texture in Mud",
+      "author": "Andrew Cattoir (Lake Mead National Recreation Area)",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Natural_Texture_in_Mud_(f4420e90-b757-4b6a-afdb-71398a608c3f).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.6
+      }
+    },
+    "q2": {
+      "composed": {
+        "file": "content/images/composed/khung-long/hoa-thach-ke-chuyen-khung-long.q2.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Tristan_at_Museum_f%C3%BCr_Naturkunde.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Tristan_at_Museum_f%C3%BCr_Naturkunde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Tristan at Museum für Naturkunde",
+            "author": "Shadowgate",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A T. rex skull on a dark background",
+      "note": "Designer (agent) 10/11 chiều: thay ảnh cả phòng trưng bày (t_rex bài một, lộ đáp án «museum»). Ảnh gốc là hộp sọ thật của bộ xương Tristan (cùng con khủng long bạo chúa của ảnh t_rex) trong tủ kính tối; cắt sát hộp sọ, làm tối hết phần ngoài hộp sọ (đèn phản chiếu, mép kính, bảng chữ ở góc trái dưới), đặt giữa nền tối trơn hình vuông. Không thấy phòng, không chữ. Khác ý brief: chỉ có hộp sọ, không phải cả bộ xương. Alt đề xuất: EN «A T. rex skull» · VI «Hộp sọ khủng long bạo chúa»."
+    },
+    "q2.q2_zoo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Z%C3%A8bres_de_Gr%C3%A9vy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Z%C3%A8bres_de_Gr%C3%A9vy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zèbres de Grévy",
+      "author": "Photographie de André ALLIOT",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q2.q2_field": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q2.q2_museum": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mineral_gallery_-_Royal_Ontario_Museum_-_DSC00220.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Mineral_gallery_-_Royal_Ontario_Museum_-_DSC00220.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mineral gallery - Royal Ontario Museum - DSC00220",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q3.q3_dig": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q3.q3_dig.jpg",
+        "method": "drawn"
+      },
+      "title": "A palaeontologist digging out a fossil",
+      "note": "Designer (agent) 10/11 chiều: khung ba của hình tự vẽ explore_forms, xuất thành file riêng (cùng file vẽ của designer trước, scratchpad composed2/kl.mjs frame3): vách đá nhiều lớp, khúc xương hoá thạch nâu sẫm, bàn tay cầm cọ nhỏ (chỉ thấy tay áo và bàn tay, không mặt). Để ba lựa chọn của câu q3 cùng kiểu hình vẽ (q3_covered là khung hai). Ảnh chụp bàn tay đào hoá thạch ở Utah chuyển sang từ vựng palaeontologist. 1024×768."
+    },
+    "q3.q3_museum": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q3.q3_museum.jpg",
+        "method": "drawn"
+      },
+      "title": "Fossil bones in a museum",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Khung thứ tư của câu chuyện hoá thạch (đề xuất của content-editor ở brief q3_museum): khúc xương hoá thạch nâu sẫm của khung ba đặt trên hai giá đỡ trong tủ kính, trên bệ trắng, đèn chiếu từ trên; tường xanh xám; không bảng chữ, không người. Alt đề xuất: EN «A fossil bone in a museum» · VI «Xương hoá thạch trong bảo tàng». 1024×768."
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Paleontology_tools.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Paleontology_tools.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Paleontology tools",
+      "author": "Sergio Kaminski",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Paleontology_tools.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "Khác ý brief: dụng cụ bày trên nền trắng, không có vách đá bãi đào. Alt đề xuất: EN «Tools for finding fossils» · VI «Dụng cụ tìm hoá thạch». Bài bốn (w1, q2) dùng lại ảnh này."
+    },
+    "q4.q4_skull": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triceratops_skull_at_RSM_(4677017911).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Triceratops_skull_at_RSM_%284677017911%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Triceratops skull at RSM (4677017911)",
+      "author": "cdolivei",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.08,
+        "width": 0.9,
+        "height": 0.92
+      },
+      "note": "Khác ý brief: hộp sọ trưng bày trên nền đá trong tủ, không phải nằm trong đá ở bãi đào. Alt giữ được: «A skull with horns, partly in rock» (hộp sọ nằm lẫn trong đá, cây)."
+    },
+    "q4.q4_model": {
+      "same_as": "tray_longneck",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q4.q4_hen_eggs": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "e7a58298-ca19-4b6c-8ca4-94faf50affda",
+      "source_url": "https://www.flickr.com/photos/136594255@N06/25921784211",
+      "file_url": "https://live.staticflickr.com/1565/25921784211_5a977e77cd_b.jpg",
+      "title": "eggs in basket",
+      "author": "lisafree54",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.36,
+        "top": 0.18,
+        "width": 0.47,
+        "height": 0.32
+      },
+      "note": "Openverse/Flickr: đã mở trang gốc Flickr 10/11, ghi «CC0 (Public Domain Dedication)». Thay ảnh Rawpixel không kiểm được giấy phép ở trang gốc (main session quyết 10/11). Ảnh gốc có găng tay và bàn tay tượng, đã cắt bỏ."
+    },
+    "q4.q4_rock_eggs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Xixia_Dinosaur_Park_Dinosaur_Eggs_in_Situ_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Xixia_Dinosaur_Park_Dinosaur_Eggs_in_Situ_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Xixia Dinosaur Park Dinosaur Eggs in Situ 01",
+      "author": "Gary Todd",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5.q5_grass": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q5.q5_grass.jpg",
+        "method": "drawn"
+      },
+      "title": "A bone on dry grass",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Cùng khúc xương to màu trắng ngà của hình câu q5, nằm trên bãi cỏ khô vàng dưới nắng, cỏ che một phần chân xương; không con vật, không người. Vẽ thêm để ba lựa chọn cùng kiểu với q5_mud (đúng ý brief đầu: cùng một khúc xương ở ba chỗ). 1024×768."
+    },
+    "q5.q5_dog": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q5.q5_dog.jpg",
+        "method": "drawn"
+      },
+      "title": "A dog chewing a bone",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Con chó lông vàng nằm trên sàn, hai chân trước giữ khúc xương trắng ngà, đầu cúi gặm một đầu xương; không vòng cổ, không người. Vẽ thêm để ba lựa chọn cùng kiểu với q5_mud. 1024×768."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Apatosaurus_sp._(sauropod_dinosaur_femur)_(Morrison_Formation,_Upper_Jurassic;_Carnegie_Quarry,_Dinosaur_National_Monument,_Utah,_USA)_2_(48696547957).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Apatosaurus_sp._%28sauropod_dinosaur_femur%29_%28Morrison_Formation%2C_Upper_Jurassic%3B_Carnegie_Quarry%2C_Dinosaur_National_Monument%2C_Utah%2C_USA%29_2_%2848696547957%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Apatosaurus sp. (sauropod dinosaur femur) (Morrison Formation, Upper Jurassic; Carnegie Quarry, Dinosaur National Monument, Utah, USA) 2 (48696547957)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "vocab.fossil": {
+      "same_as": "q6"
+    },
+    "vocab.skeleton": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "vocab.footprint": {
+      "same_as": "tray.tray_rock_print"
+    },
+    "vocab.palaeontologist": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hanksville-Burpee_Quarry_(26136937265).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Hanksville-Burpee_Quarry_%2826136937265%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hanksville-Burpee Quarry (26136937265)",
+      "author": "BLMUtah",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Hanksville-Burpee_Quarry_(26136937265).jpg",
+      "crop": {
+        "left": 0.42,
+        "top": 0.5,
+        "width": 0.58,
+        "height": 0.5
+      },
+      "note": "Khác ý brief: ảnh chụp thật thay cho khung ba của tranh explore_forms (chưa có). Alt giữ được: «A palaeontologist digging out a fossil». Cắt bỏ phần người phía trên, chỉ còn tay."
+    },
+    "vocab.museum": {
+      "same_as": "q2.q2_museum"
+    },
+    "reward.fossil_poop": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_coprolite_(Morrison_Formation,_Upper_Jurassic;_Cortez,_Colorado,_USA).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Dinosaur_coprolite_%28Morrison_Formation%2C_Upper_Jurassic%3B_Cortez%2C_Colorado%2C_USA%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dinosaur coprolite (Morrison Formation, Upper Jurassic; Cortez, Colorado, USA)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.25,
+        "top": 0,
+        "width": 0.7,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_forms": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.learn.explore.explore_forms.jpg",
+        "method": "drawn"
+      },
+      "title": "How a bone becomes a fossil, in three steps",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; hình vuông ba khung nối mũi tên: (1) xương sạch nằm nửa chìm trong bùn ven sông, dương xỉ ở bờ; (2) mặt cắt: nhiều lớp bùn cát phủ dày lên xương; (3) vách đá nhiều lớp, bàn tay cầm chổi nhỏ chải lộ khúc xương nâu sẫm (chỉ thấy tay). Không thịt, không xác, không chữ; khung 1 và 2 có file riêng (q3, q1)."
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q1.jpg",
+        "method": "drawn"
+      },
+      "title": "Bones buried under mud and sand",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; khung hai của explore_forms: mặt cắt nhiều lớp bùn và cát phủ dày trên xương; xương vẫn màu ngà, không vẽ thành đá để không lộ đáp án."
+    },
+    "q3": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q3.jpg",
+        "method": "drawn"
+      },
+      "title": "Bones in mud by a river",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; khung một của explore_forms: vài khúc xương sạch nằm nửa chìm trong bùn ven sông, dương xỉ ở bờ."
+    },
+    "q3.q3_covered": {
+      "same_as": "q1"
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q5.jpg",
+        "method": "drawn"
+      },
+      "title": "A big bone",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; một khúc xương đùi to màu trắng ngà trên nền trơn, bóng mềm."
+    },
+    "q5.q5_mud": {
+      "own": {
+        "file": "content/images/own/khung-long/hoa-thach-ke-chuyen-khung-long.q5.q5_mud.jpg",
+        "method": "drawn"
+      },
+      "title": "A bone half buried in river mud",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cùng khúc xương của q5, nửa chìm trong bùn lòng suối, nước đục chảy qua."
+    },
+    "tray.tray_toy": {
+      "same_as": "q6",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    }
+  }
+}

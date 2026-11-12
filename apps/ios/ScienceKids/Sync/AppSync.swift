@@ -52,16 +52,21 @@ struct HomeProgress: Equatable {
         var bestStars: [UUID: Int] = [:]
         for record in own { bestStars[record.lessonId] = max(bestStars[record.lessonId] ?? 0, record.stars) }
         let localStars = bestStars.values.reduce(0, +)
-        let today: LocalDate
-        switch localDate(at: now, timeZone: timeZone) {
-        case .success(let date): today = date
-        case .failure: today = localDate(at: now, in: .current)
-        }
+        let today = Self.today(at: now, timeZone: timeZone)
         let streak = computeStreak(studiedDates: own.compactMap { LocalDate($0.localDate) }, today: today, rules: rules)
         if queued == 0, let server, server.today == today.description {
             return HomeProgress(streakDays: server.streak?.studiedDays ?? streak.studiedDays, stars: server.totalStars, source: .server)
         }
         return HomeProgress(streakDays: streak.studiedDays, stars: localStars, source: .device)
+    }
+
+    /// The child's local date now: in the profile's time zone, the device's when that name is
+    /// unknown. Shared with the week strip of Huy hiệu (`StreakWeek`, SK-035).
+    static func today(at now: Date, timeZone: String) -> LocalDate {
+        switch localDate(at: now, timeZone: timeZone) {
+        case .success(let date): date
+        case .failure: localDate(at: now, in: .current)
+        }
     }
 }
 

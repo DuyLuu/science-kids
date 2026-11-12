@@ -1,0 +1,307 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi toàn ảnh chụp; câu q4, q5, từ texture là hình vẽ.",
+  "images": {
+    "w1": {
+      "same_as": "prediction",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "w1.w1_clay": {
+      "same_as": "clay",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "w1.w1_stones": {
+      "same_as": "tray_stones",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "w1.w1_leaves": {
+      "same_as": "tray_rotting_leaves",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "w2": {
+      "same_as": "soil",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "w3": {
+      "same_as": "q1",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w3.w3_sandy": {
+      "same_as": "vocab.sandy_soil"
+    },
+    "w3.w3_rice": {
+      "same_as": "vocab.alluvial_soil"
+    },
+    "w3.w3_red": {
+      "same_as": "tray_red_soil",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_alluvial": {
+      "same_as": "explore_erosion",
+      "lesson": "da-va-dat/da-bi-bao-mon-theo-thoi-gian"
+    },
+    "learn.explore.explore_red": {
+      "same_as": "tray_red_soil",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_sandy": {
+      "same_as": "vocab.sandy_soil"
+    },
+    "learn.explore.explore_feel": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "tray.tray_rice": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "tray.tray_coffee": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam_-_coffee_plantation.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Vietnam_-_coffee_plantation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam - coffee plantation",
+      "author": "P. Hughes",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Vườn cà phê ở Việt Nam, đồi có đất đỏ phía xa, hồ nước; nhà ở rất xa."
+    },
+    "tray.tray_casuarina": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr-040711-0245-Casuarina_equisetifolia-view_coast-Malaekahana-Oahu_(24085990164).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Starr-040711-0245-Casuarina_equisetifolia-view_coast-Malaekahana-Oahu_%2824085990164%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr-040711-0245-Casuarina equisetifolia-view coast-Malaekahana-Oahu (24085990164)",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "note": "Phi lao ven biển trên bãi cát (Oahu, Hawaii)."
+    },
+    "tray.tray_cement": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grey_lightly_chipped_dirty_concrete_seamless_floor_texture.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Grey_lightly_chipped_dirty_concrete_seamless_floor_texture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A grey cement yard",
+      "author": "Sisters.seamless",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mặt sân xi măng xám (ảnh mẫu bề mặt, CC0); không dùng hình vẽ sân xi măng của bài 6 vì kệ bài 12 toàn ảnh chụp."
+    },
+    "tray.tray_orchard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Durian_plantation_out_of_season_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Durian_plantation_out_of_season_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rows of fruit trees",
+      "author": "Mx. Granger",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Vườn sầu riêng trồng thành hàng (CC0); không có ảnh vườn cây bên mương ở đồng bằng sông Cửu Long hợp lệ."
+    },
+    "tray.tray_red_soil": {
+      "same_as": "tray_red_soil",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "tray.tray_watermelon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Watermelon_on_the_ground_in_a_farm.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Watermelon_on_the_ground_in_a_farm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A watermelon growing on the ground",
+      "author": "Abza1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.42,
+        "width": 1.0,
+        "height": 0.58
+      },
+      "note": "Quả dưa hấu trên đất cát nâu nhạt; cắt bỏ ruộng ngô phía sau."
+    },
+    "tray.tray_road": {
+      "same_as": "tray_road",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "tray.tray_tiles": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orange_windmill_pattern_slightly_worn_seamless_brick_floor_paving_texture.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Red_orange_windmill_pattern_slightly_worn_seamless_brick_floor_paving_texture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A floor of red bricks",
+      "author": "Sisters.seamless",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Nền gạch đỏ lát (ảnh mẫu bề mặt, CC0)."
+    },
+    "q1": {
+      "same_as": "vocab.sandy_soil"
+    },
+    "q1.q1_coffee": {
+      "same_as": "tray.tray_coffee"
+    },
+    "q1.q1_watermelon": {
+      "same_as": "tray.tray_watermelon"
+    },
+    "q1.q1_casuarina": {
+      "same_as": "tray.tray_casuarina"
+    },
+    "q2": {
+      "same_as": "vocab.alluvial_soil"
+    },
+    "q2.q2_pumice": {
+      "same_as": "pumice",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q2.q2_lava_rock": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q2.q2_silt": {
+      "same_as": "silt",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q3": {
+      "same_as": "explore_erosion",
+      "lesson": "da-va-dat/da-bi-bao-mon-theo-thoi-gian"
+    },
+    "q3.q3_rice": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_pepper": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plantation_road_Coorg_Karnataka.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Plantation_road_Coorg_Karnataka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Plantation road Coorg Karnataka",
+      "author": "Dcrjsr",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Vườn hồ tiêu leo trụ ở Coorg, Ấn Độ."
+    },
+    "q3.q3_fruit": {
+      "same_as": "tray.tray_orchard"
+    },
+    "q3.q3_vegetables": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:8887Grasslands,_trees,_paddy_and_vegetable_fields_Angat_River_39.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/8887Grasslands%2C_trees%2C_paddy_and_vegetable_fields_Angat_River_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vegetable fields by a river",
+      "author": "Judgefloro",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Ruộng rau, lúa bên sông Angat, Philippines (CC0)."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A coffee branch with green berries",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh cành cà phê chỉ có quả xanh hợp lệ; hình câu hỏi vẽ."
+    },
+    "q4.q4_red": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q4_red.jpg",
+        "method": "drawn"
+      },
+      "title": "A handful of red crumbly soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_grey": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q4_grey.jpg",
+        "method": "drawn"
+      },
+      "title": "A handful of grey smooth soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_pale": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q4_pale.jpg",
+        "method": "drawn"
+      },
+      "title": "A handful of pale soil with big grains",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_dark": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q4_dark.jpg",
+        "method": "drawn"
+      },
+      "title": "A handful of dark crumbly soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q5.q5_smaller": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q5_smaller.jpg",
+        "method": "drawn"
+      },
+      "title": "Pale soil with grains smaller than the red soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5.q5_bigger": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q5_bigger.jpg",
+        "method": "drawn"
+      },
+      "title": "Pale soil with grains bigger than the red soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5.q5_same": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-q5_same.jpg",
+        "method": "drawn"
+      },
+      "title": "Pale soil with grains the same as the red soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Soil_Health_NR_05_(39071904661).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Soil_Health_NR_05_%2839071904661%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A handful of soil in a hand",
+      "author": "USDA NRCS Montana",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Soil_Health_NR_05_(39071904661).jpg",
+      "note": "Nắm đất nâu nhạt trong lòng bàn tay (USDA NRCS, public domain); không găng."
+    },
+    "vocab.alluvial_soil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plowed_Field_Texture_OGA.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Plowed_Field_Texture_OGA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Plowed Field Texture OGA",
+      "author": "Otto Halmén",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Mặt ruộng vừa cày, đất nâu mịn, chụp gần."
+    },
+    "vocab.red_soil": {
+      "same_as": "tray_red_soil",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "vocab.sandy_soil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sandy_soil_surface.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Sandy_soil_surface.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sandy soil surface",
+      "author": "Yesa050907",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mặt đất cát chụp gần (CC0, 800×460)."
+    },
+    "vocab.texture": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b12-texture.jpg",
+        "method": "drawn"
+      },
+      "title": "Gloved fingers rubbing a pinch of soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "vocab.loam": {
+      "same_as": "soil",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "reward.coffee_card": {
+      "same_as": "tray.tray_coffee"
+    }
+  }
+}

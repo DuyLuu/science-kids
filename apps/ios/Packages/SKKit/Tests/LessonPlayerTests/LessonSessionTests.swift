@@ -79,6 +79,7 @@ func rightTry(_ item: QuizItem) -> Try {
     case .multiChoice(let choice): .selectedSet(choice.options.filter(\.correct).map(\.key))
     case .trueFalse(let tf): .value(tf.answer)
     case .fillBlankBank(let fill): .filled(fill.answers)
+    case .orderSequence(let order): .order(order.answer)
     default: fatalError("no renderer for \(item.format)")
     }
 }
@@ -306,6 +307,44 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
         #expect(session.trayState?.message == .full)
         #expect(session.trayMessage == tray.messages.full)
         #expect(session.progress.tray == ["tray_rice", "tray_fish", "tray_greens", "tray_candy"])
+    }
+
+    // MARK: Chơi shelf (SK-031, kệ trung tính)
+
+    /// The shelf shows every item of the tray once, in the attempt's order; the app closed and
+    /// opened again (same attempt) shows the same shelf.
+    @Test func shelfKeepsItsOrderForTheAttempt() throws {
+        let harness = try SessionHarness()
+        defer { harness.cleanUp() }
+        let first = harness.session()
+        let tray = try #require(first.tray)
+        #expect(first.shelfItems.count == tray.items.count)
+        #expect(Set(first.shelfItems.map(\.key)) == Set(tray.items.map(\.key)))
+        #expect(first.shelfItems == ShelfOrder.shuffled(tray.items, seed: first.progress.attemptId))
+
+        let again = harness.session()
+        #expect(again.progress.attemptId == first.progress.attemptId)
+        #expect(again.shelfItems == first.shelfItems)
+    }
+
+    /// The content's order (group by group in lesson 1: rice, bread, fish, egg…) is not the
+    /// shelf's: each attempt id gives its own order, the same on every launch.
+    @Test func shelfOrderComesFromTheAttemptNotTheContent() throws {
+        let lesson = try Repo.lesson()
+        guard case .buildTray(let tray) = lesson.play else {
+            Issue.record("lesson 1 has no build_tray")
+            return
+        }
+        let contentOrder = tray.items.map(\.key)
+        let seeds = (1...8).map { UUID(uuidString: String(format: "00000000-0000-4000-8000-%012d", $0))! }
+        let orders = seeds.map { ShelfOrder.shuffled(tray.items, seed: $0).map(\.key) }
+        for (seed, order) in zip(seeds, orders) {
+            #expect(order.count == contentOrder.count)
+            #expect(Set(order) == Set(contentOrder))
+            #expect(ShelfOrder.shuffled(tray.items, seed: seed).map(\.key) == order, "same seed, same shelf")
+        }
+        #expect(Set(orders).count > 1, "different attempts, different shelves")
+        #expect(orders.contains { $0 != contentOrder })
     }
 
     // MARK: Stop and resume (B4.4)

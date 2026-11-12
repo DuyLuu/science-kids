@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · introduction-to-the-human-digestive-system · thực quản, dạ dày, ruột. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#D98A76"><path d="M16 44 C 16 40, 19 38.6, 23 38.6 H44 C 49 38.6, 52 41, 52 44.6 C 52 48.4, 49 50, 45 50 H24 C 22.6 50, 22.6 51.6, 24 51.6 H45 C 49.6 51.6, 52 54, 52 57 C 52 60.4, 49 61.6, 45 61.6 H18 V56.6 H45 C 46.6 56.6, 46.6 55.2, 45 55.2 H24 C 19.4 55.2, 16 53.6, 16 50.6 C 16 48.4, 17.4 47.2, 19 46.6 C 17.2 46, 16 45.2, 16 44 Z M24 43.4 C 22.6 43.4, 22.6 45, 24 45 H45 C 46.6 45, 46.6 43.4, 45 43.4 Z" fill-rule="evenodd"/></g>
+  <g fill="#A93A27"><path d="M22 3 H29 V12 C 33 13, 38 11, 44 12 C 52 13.5, 56 21, 53 28 C 50 35, 41 37, 33 35 C 28 34, 25.6 35.6, 24.4 39 L18.6 37.4 C 20 32, 24 29, 26 26 C 24 22, 22 17, 22 12 Z"/></g>
+  <g fill="#6E2216"><path d="M33 20 C 38 18, 45 19, 48 23 C 44 22.5, 39 23, 35 25 Z"/></g>
+</svg>

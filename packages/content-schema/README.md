@@ -36,6 +36,7 @@ Dùng từ code (content-cli sau này):
 ```ts
 import { Lesson, type Topic } from "@science-kids/content-schema";
 import { validateDocuments } from "@science-kids/content-schema/validate";
+import { validateSyllabus } from "@science-kids/content-schema/syllabus";   // content/syllabus.json, SK-030
 ```
 
 ## Cách kiểm
@@ -65,7 +66,7 @@ Luật theo nhóm tuổi (format được dùng, số lựa chọn, hình bắt 
 | `NonEmptyString` | chuỗi có ít nhất một ký tự không phải khoảng trắng |
 | `Text` | `{ en, vi }`, không có trường khác. Dùng cho chữ nội bộ hoặc cho phụ huynh, không có audio |
 | `Spoken` | `{ en, vi, audio?: { en?: AssetHash, vi?: AssetHash } }`. Dùng cho mọi chữ trẻ thấy hoặc nghe |
-| `Image` | `{ alt: Text, brief?: string, asset?: AssetHash }` |
+| `Image` | `{ alt: Text, brief?: string, asset?: AssetHash }`. `brief` chỉ ở nguồn (có "Từ khoá tìm ảnh (EN): …" cho `content-cli images search`), `build` bỏ khỏi gói. `asset` = sha256 của `assets/<sha256>.jpg` trong gói: `content-cli build` điền từ file chọn ảnh `content/images/…` (SK-033), không viết tay |
 | `AssetHash` | `^[0-9a-f]{64}$` (sha256 hex) |
 | `Uuid` | UUID chữ thường, `8-4-4-4-12` |
 | `Key` | `^[a-z][a-z0-9_]{0,39}$` |
@@ -128,7 +129,7 @@ Luật theo nhóm tuổi (format được dùng, số lựa chọn, hình bắt 
 | `single_choice` | `options[2..6]: { key, label, image?, correct }`, đúng 1 `correct: true` |
 | `multi_choice` | `options[2..8]`, ít nhất 1 đúng và 1 sai |
 | `true_false` | `answer: boolean`, `statement?`, `speaker?: Key`, `labels?: { true, false }` |
-| `fill_blank_bank` | `sentence` (ô `{1}`, `{2}`… trong `en`), `bank[2..]: { key, label }`, `answers: Key[1..]` |
+| `fill_blank_bank` | `sentence` (ô `{1}`, `{2}`… trong `en`), `bank[2..]: { key, label, image? }`, `answers: Key[1..]` |
 | `order_sequence` | `items[3..6]: { key, label, image? }`, `answer: Key[]` (hoán vị của `items`) |
 | `picture_bar_chart` | `chart: { title?, unit?, bars[2..6]: { key, label, image?, value ≥ 0 } }` + `options` như `single_choice` |
 
@@ -137,13 +138,37 @@ Luật theo nhóm tuổi (format được dùng, số lựa chọn, hình bắt 
 
 Mọi object đều đóng: trường không có trong bảng là lỗi.
 
+## Danh mục syllabus (`syllabus.schema.json`, SK-030)
+
+`content/syllabus.json`: mọi nhóm tuổi, chủ đề và bài theo thứ tự đã duyệt, app iOS đọc từ bundle ([SK-030](../../docs/backlog/SK-030-full-syllabus-no-lock.md)). Không có trường `kind`; file nhận ra theo tên. Chỉ có JSON Schema (Ajv), chưa có bản zod (thêm khi CMS cần).
+
+| Kiểu | Trường |
+| --- | --- |
+| `Syllabus` | `schema_version` (= 1), `syllabus_version` (`YYYY-MM-DD`), `ai_draft?`, `source?`, `groups: SyllabusGroup[1..]` |
+| `SyllabusGroup` | `age_group` (enum của Topic), `oak_years: int[1..]` (1–6, không trùng), `topics: SyllabusTopic[1..]` |
+| `SyllabusTopic` | `key` (Slug), `number` (≥ 1), `title: Text` (luôn đủ en, vi), `strand` (enum của Topic), `level` (1–5 hoặc `null`), `source`, `topic_id?` (Uuid), `lessons: SyllabusLesson[1..]` |
+| `source` | `{ kind: "oak", unit_slug, year (1–6), unit_index (≥ 1) }` hoặc `{ kind: "new" }` |
+| `SyllabusLesson` | `number` (≥ 1), `title: { en, vi }` (`vi` là chuỗi hoặc `null` khi chưa dịch, phải có mặt), `oak_lessons: Slug[]` (không trùng), `statutory`, `sensitive?`, `lesson_id?` (Uuid) |
+
+`age_group` và `strand` là `$ref` vào `topic.schema.json`, nên đổi enum ở Topic là syllabus theo. Kiểu `null` chỉ có ở syllabus, nên Ajv của syllabus bật `allowUnionTypes` riêng.
+
+Luật ngoài JSON Schema (`scripts/lib/syllabus.mjs`, chỉ chạy khi schema đã qua): `age_group` không trùng; `key` chủ đề duy nhất cả file; `number` chủ đề trong nhóm và bài trong chủ đề đi 1..n theo thứ tự trong file; chủ đề Oak có `key` = `source.unit_slug`, `source.year` thuộc `oak_years`, mỗi bài có ít nhất 1 slug Oak; chủ đề mới có `key` bắt đầu bằng `new-` và mọi `oak_lessons` rỗng; `topic_id`, `lesson_id`, slug lesson Oak không gắn hai lần; bài có `lesson_id` thì chủ đề phải có `topic_id`. Có danh sách nội dung (tuỳ chọn `content`) thì kiểm thêm: `topic_id` là id của một chủ đề cùng nhóm tuổi, `lesson_id` là id của một bài thuộc đúng chủ đề đó; nội dung chưa ô nào trỏ tới thì cảnh báo. Mã lỗi và cách chạy: [`tools/content-cli/README.md`, "Danh mục `syllabus.json`"](../../tools/content-cli/README.md#markdown-validate-import-ids).
+
+```ts
+import { validateSyllabus } from "@science-kids/content-schema/syllabus";
+validateSyllabus(data, { content: { root: "content", topics: [{ id, slug, age_group, file }], lessons: [{ id, slug, topic_id, topic_slug, file }] } });
+// -> { ok, schemaOk, refsChecked, issues: [{ pointer, code, severity, message }], counts }
+```
+
+`test/syllabus.test.mjs` kiểm mỗi luật bằng một mẫu nhỏ, rồi kiểm file thật `content/syllabus.json`: đúng schema và luật, số nhóm, chủ đề, bài theo nghiệm thu SK-030 (12, 17, 16 chủ đề; 73, 155, 156 bài), và mọi id đối chiếu với markdown trong `content/`. Markdown đọc bằng `contentIndex` của `tools/content-cli` (một parser duy nhất), nên test này cần `npm install` trong `tools/content-cli`. Duyệt lại syllabus làm đổi số chủ đề hay bài thì sửa con số trong test cùng lúc.
+
 ## Thư mục
 
 ```
-schema/                 JSON Schema (nguồn)
+schema/                 JSON Schema (nguồn); syllabus.schema.json là danh mục content/syllabus.json (SK-030)
 src/                    zod + kiểu TS, mỗi file khớp một file schema
 scripts/validate.mjs    CLI
-scripts/lib/            ajv.mjs · zod.mjs · refs.mjs · core.mjs · pointer.mjs
+scripts/lib/            ajv.mjs · zod.mjs · refs.mjs · core.mjs · pointer.mjs · syllabus.mjs
 scripts/make-invalid-fixtures.mjs   sinh fixtures/invalid/ + test/invalid-fixtures.json
 fixtures/valid/         bài mẫu Discoverer "Ăn uống lành mạnh", bài 1: chép tay 1:1 từ content/discoverer/an-uong-lanh-manh/ (_topic.md, 01-….md)
 fixtures/invalid/       mỗi file sai đúng một lỗi (sinh bằng script, đừng sửa tay)

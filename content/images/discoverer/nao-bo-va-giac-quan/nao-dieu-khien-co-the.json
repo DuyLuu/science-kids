@@ -1,0 +1,302 @@
+{
+  "note": "SK-037. Designer (agent) chọn 10/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/nao-bo-va-giac-quan/; chi tiết và chỗ còn trống ở content/.build/images/nao-bo-va-giac-quan/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2011-04-02_Viking_Rooster.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/2011-04-02_Viking_Rooster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2011-04-02 Viking Rooster",
+      "author": "Bernard McManus",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Gà trống gáy chụp cận đầu, mỏ há (không có ảnh cả con đang gáy hợp giấy phép trong lượt tìm)."
+    },
+    "w1.w1_eye": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.w1.w1_eye.jpg",
+        "method": "drawn"
+      },
+      "title": "An eye",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "w1.w1_nose": {
+      "same_as": "tray.tray_nose",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w1.w1_ear": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.w1.w1_ear.jpg",
+        "method": "drawn"
+      },
+      "title": "An ear",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jasminum_sambac_ou_jasmin_sambac_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Jasminum_sambac_ou_jasmin_sambac_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jasminum sambac ou jasmin sambac 01",
+      "author": "Azogbonon",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "w3": {
+      "same_as": "learn.explore.explore_dust",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "w3.w3_mask": {
+      "same_as": "learn.explore.explore_mask",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "w3.w3_hat": {
+      "same_as": "q1.q1_hat",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "w3.w3_raincoat": {
+      "same_as": "q1.q1_raincoat",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "learn.explore.explore_head": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.learn.explore.explore_head.jpg",
+        "method": "drawn"
+      },
+      "title": "A head with the brain inside the skull",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "learn.explore.explore_think": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.learn.explore.explore_think.jpg",
+        "method": "drawn"
+      },
+      "title": "Hands doing a jigsaw puzzle",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép. Ô Học dùng chung hình ghép tranh với món tray_puzzle (bài 1, bài 4) và từ remember."
+    },
+    "learn.explore.explore_move": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A-Boy-Playing-Football.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/A-Boy-Playing-Football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A-Boy-Playing-Football",
+      "author": "Pavan Prasad",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.15,
+        "top": 0.44,
+        "width": 0.7,
+        "height": 0.56
+      },
+      "note": "Cắt lấy chân và quả bóng; bỏ phần đầu, không thấy mặt."
+    },
+    "learn.explore.explore_always": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "tray.tray_book": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_book.jpg",
+        "method": "drawn"
+      },
+      "title": "A child reading a book",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_fan": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_fan.jpg",
+        "method": "drawn"
+      },
+      "title": "An electric fan spinning",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_bike": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_bike.jpg",
+        "method": "drawn"
+      },
+      "title": "A child riding a bike",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_pulse": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_pulse.jpg",
+        "method": "drawn"
+      },
+      "title": "Fingers feeling a heartbeat at the wrist",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_rain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_rain.jpg",
+        "method": "drawn"
+      },
+      "title": "Rain falling into a puddle",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_puzzle": {
+      "same_as": "learn.explore.explore_think"
+    },
+    "tray.tray_sweat": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_sweat.jpg",
+        "method": "drawn"
+      },
+      "title": "Drops of sweat on skin",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_jump": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_jump.jpg",
+        "method": "drawn"
+      },
+      "title": "Feet jumping over a rope",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "tray.tray_clock": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_clock.jpg",
+        "method": "drawn"
+      },
+      "title": "A wall clock",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để cả kệ Chơi bài 1 cùng là hình vẽ (phiên chính 10/11 tối): các món sách, xe đạp, bắt mạch, mồ hôi không có ảnh hợp giấy phép."
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.jpg",
+        "method": "drawn"
+      },
+      "title": "A child seen from the side",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q1.q1_chest": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_chest.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the chest shaded yellow",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q1.q1_head": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_head.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the head shaded yellow",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q1.q1_tummy": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_tummy.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the tummy shaded yellow",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q2.jpg",
+        "method": "drawn"
+      },
+      "title": "A skull",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q2.q2_brain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q2.q2_brain.jpg",
+        "method": "drawn"
+      },
+      "title": "A brain",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q2.q2_heart": {
+      "same_as": "tray.tray_heart",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q2.q2_stomach": {
+      "same_as": "tray.tray_stomach",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q3": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q3.q3_heart": {
+      "same_as": "tray.tray_pulse"
+    },
+    "q3.q3_read": {
+      "same_as": "tray.tray_book"
+    },
+    "q3.q3_ride": {
+      "same_as": "tray.tray_bike"
+    },
+    "q3.q3_sweat": {
+      "same_as": "tray.tray_sweat"
+    },
+    "q4": {
+      "same_as": "tray.tray_bike"
+    },
+    "q4.q4_brain": {
+      "same_as": "q2.q2_brain"
+    },
+    "q4.q4_heart": {
+      "same_as": "tray.tray_heart",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q4.q4_stomach": {
+      "same_as": "tray.tray_stomach",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q5": {
+      "same_as": "q2"
+    },
+    "q5.q5_pillow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2014-04-22 IMG 7242 베개",
+      "author": "최광모 (Choe Kwangmo)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q5.q5_hat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Marimekko_Bucket_Hat_Worn_by_Phyllis_Weber_-_DPLA_-_4a8c69c18acbe5807400172d80d0f461_(page_1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Marimekko_Bucket_Hat_Worn_by_Phyllis_Weber_-_DPLA_-_4a8c69c18acbe5807400172d80d0f461_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Marimekko Bucket Hat Worn by Phyllis Weber",
+      "author": "Marimekko",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Marimekko_Bucket_Hat_Worn_by_Phyllis_Weber_-_DPLA_-_4a8c69c18acbe5807400172d80d0f461_(page_1).jpg"
+    },
+    "q5.q5_helmet": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Helm-alt-01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Helm-alt-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Helm-alt-01",
+      "author": "Priwo",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Helm-alt-01.jpg",
+      "note": "Mũ nửa đầu màu trắng ngà, không logo; quai buông (không có ảnh mũ nửa đầu quai đã cài hợp giấy phép trong lượt tìm)."
+    },
+    "q6": {
+      "same_as": "q3.q3_hammock",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "vocab.brain": {
+      "same_as": "q2.q2_brain"
+    },
+    "vocab.skull": {
+      "same_as": "q2"
+    },
+    "vocab.heartbeat": {
+      "same_as": "tray.tray_pulse"
+    },
+    "vocab.remember": {
+      "same_as": "learn.explore.explore_think"
+    },
+    "vocab.in_charge": {
+      "same_as": "learn.explore.explore_head"
+    },
+    "reward.brain_card": {
+      "same_as": "q2.q2_brain"
+    }
+  }
+}

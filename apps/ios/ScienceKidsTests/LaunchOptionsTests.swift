@@ -26,6 +26,23 @@ import Testing
         #expect(!LaunchOptions.current.showsGallery)
         #expect(!LaunchOptions.current.reducesMotion)
         #expect(!LaunchOptions.current.resetsProfile)
+        #expect(LaunchOptions.current.contentFolder == nil)
+    }
+
+    /// SK-033: `-SKContentFolder <path>` plays a folder of content files instead of the bundle.
+    @Test func contentFolder() {
+        let options = LaunchOptions(arguments: ["app", "-SKContentFolder", "/tmp/content/valid"])
+        #expect(options.contentFolder == "/tmp/content/valid")
+        #expect(LaunchOptions(arguments: ["app"]).contentFolder == nil)
+        #expect(LaunchOptions(arguments: ["app", "-SKContentFolder"]).contentFolder == nil, "value missing")
+    }
+
+    /// SK-040: `-SKOpenLesson <lesson id>` opens a lesson once the content is ready.
+    @Test func openLesson() {
+        let id = "00000000-0000-4000-8000-0000000004B0"
+        #expect(LaunchOptions(arguments: ["app", "-SKOpenLesson", id]).openLesson?.uuidString == id)
+        #expect(LaunchOptions(arguments: ["app", "-SKOpenLesson", "not-an-id"]).openLesson == nil)
+        #expect(LaunchOptions(arguments: ["app"]).openLesson == nil)
     }
 
     /// SK-011: `-SKResetProfile YES` starts from Welcome as after a fresh install.

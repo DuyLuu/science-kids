@@ -1,0 +1,387 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "gsroffset": 20,
+    "continue": "gsroffset||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1003,
+        "ns": 6,
+        "title": "File:Public domain volcano.jpg",
+        "index": 3,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Public_domain_volcano.jpg/400px-Public_domain_volcano.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Public_domain_volcano.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Public_domain_volcano.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1003",
+            "width": 3000,
+            "height": 2000,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "Public domain volcano",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "NASA",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1001,
+        "ns": 6,
+        "title": "File:Blue sea horizon.jpg",
+        "index": 1,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Blue_sea_horizon.jpg/400px-Blue_sea_horizon.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Blue_sea_horizon.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Blue_sea_horizon.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1001",
+            "width": 4000,
+            "height": 3000,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "Blue sea horizon",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Example Author A",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-desc-page"
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1002,
+        "ns": 6,
+        "title": "File:Calm lake with trees.jpg",
+        "index": 2,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Calm_lake_with_trees.jpg/400px-Calm_lake_with_trees.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Calm_lake_with_trees.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Calm_lake_with_trees.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1002",
+            "width": 2400,
+            "height": 1600,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "Calm lake &amp; trees",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<bdi><a href=\"//commons.wikimedia.org/wiki/User:Example_B\" title=\"User:Example B\">Example&nbsp;Author B</a></bdi>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY 4.0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc-by-4.0",
+                "source": "commons-desc-page"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/4.0",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1004,
+        "ns": 6,
+        "title": "File:Share alike river.jpg",
+        "index": 4,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Share_alike_river.jpg/400px-Share_alike_river.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Share_alike_river.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Share_alike_river.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1004",
+            "width": 2000,
+            "height": 1500,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author C",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-desc-page"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1005,
+        "ns": 6,
+        "title": "File:Gfdl mountain.jpg",
+        "index": 5,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gfdl_mountain.jpg/400px-Gfdl_mountain.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Gfdl_mountain.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gfdl_mountain.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1005",
+            "width": 2000,
+            "height": 1500,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author D",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "GFDL",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "gfdl",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1006,
+        "ns": 6,
+        "title": "File:Market with people.jpg",
+        "index": 6,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Market_with_people.jpg/400px-Market_with_people.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Market_with_people.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Market_with_people.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1006",
+            "width": 2000,
+            "height": 1500,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author E",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY 2.0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc-by-2.0",
+                "source": "commons-desc-page"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/2.0",
+                "source": "commons-desc-page"
+              },
+              "Restrictions": {
+                "value": "personality",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1007,
+        "ns": 6,
+        "title": "File:Tiny pond.jpg",
+        "index": 7,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Tiny_pond.jpg/400px-Tiny_pond.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tiny_pond.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tiny_pond.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1007",
+            "width": 300,
+            "height": 200,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author F",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1008,
+        "ns": 6,
+        "title": "File:Animated stream.gif",
+        "index": 8,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Animated_stream.gif/400px-Animated_stream.gif",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Animated_stream.gif",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Animated_stream.gif",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1008",
+            "width": 1200,
+            "height": 900,
+            "mime": "image/gif",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author G",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1009,
+        "ns": 6,
+        "title": "File:Nameless island.jpg",
+        "index": 9,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Nameless_island.jpg/400px-Nameless_island.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Nameless_island.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nameless_island.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1009",
+            "width": 2000,
+            "height": 1500,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "LicenseShortName": {
+                "value": "CC BY 3.0",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "cc-by-3.0",
+                "source": "commons-desc-page"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/3.0",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 1010,
+        "ns": 6,
+        "title": "File:Attribution forest.jpg",
+        "index": 10,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a10/Attribution_forest.jpg/400px-Attribution_forest.jpg",
+            "thumbwidth": 400,
+            "thumbheight": 300,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a10/Attribution_forest.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Attribution_forest.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1010",
+            "width": 2000,
+            "height": 1500,
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "Artist": {
+                "value": "Example Author H",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Attribution",
+                "source": "commons-desc-page"
+              },
+              "License": {
+                "value": "attribution",
+                "source": "commons-desc-page"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

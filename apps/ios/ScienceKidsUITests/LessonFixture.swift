@@ -1,8 +1,14 @@
 import Foundation
+import XCTest
 
 /// Lesson 1 and the rules, read from the repo (`packages/content-schema/fixtures`, `content/rules.json`)
 /// through `#filePath`, the files the app bundles. The tests take the right and wrong answers and
 /// the expected texts from here, so no lesson text is written in the tests either.
+///
+/// SK-035 (tester 10/11 #1): the tests open this lesson through its topic (`open(in:)`), where the
+/// syllabus (`content/syllabus.json`) puts it. "Học tiếp" on Home opens the first written lesson
+/// of the journey, which is another lesson since SK-031 wrote Discoverer #1 and will move again as
+/// content is written.
 struct LessonFixture {
     struct Question {
         let key: String
@@ -29,12 +35,29 @@ struct LessonFixture {
     let xpGameComplete: Int
     let passNum: Int
     let passDen: Int
+    /// The syllabus topic that holds the lesson (`healthy-eating`) and its number there (2).
+    let topicKey: String
+    let lessonNumber: Int
 
     static func load(file: String = #filePath) throws -> LessonFixture {
         let lessonURL = try find("packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.json", from: file)
         let rulesURL = try find("content/rules.json", from: file)
         let lesson = try object(Data(contentsOf: lessonURL))
         let rules = try object(Data(contentsOf: rulesURL))
+        let syllabus = try object(Data(contentsOf: try find("content/syllabus.json", from: file)))
+        let lessonID = (lesson["id"] as? String ?? "").lowercased()
+        var place: (topic: String, number: Int)?
+        for group in syllabus["groups"] as? [[String: Any]] ?? [] {
+            for topic in group["topics"] as? [[String: Any]] ?? [] {
+                for entry in topic["lessons"] as? [[String: Any]] ?? []
+                where (entry["lesson_id"] as? String)?.lowercased() == lessonID {
+                    place = (topic["key"] as? String ?? "", entry["number"] as? Int ?? 0)
+                }
+            }
+        }
+        guard let place else {
+            throw NSError(domain: "LessonFixture", code: 2, userInfo: [NSLocalizedDescriptionKey: "lesson \(lessonID) is in no topic of content/syllabus.json"])
+        }
         let discoverer = rules["discoverer"] as? [String: Any] ?? [:]
         let play = lesson["play"] as? [String: Any] ?? [:]
         let groups = play["groups"] as? [[String: Any]] ?? []
@@ -62,7 +85,9 @@ struct LessonFixture {
             xpLessonComplete: discoverer["xp_lesson_complete"] as? Int ?? 0,
             xpGameComplete: discoverer["xp_game_complete"] as? Int ?? 0,
             passNum: threshold["num"] as? Int ?? 0,
-            passDen: threshold["den"] as? Int ?? 1
+            passDen: threshold["den"] as? Int ?? 1,
+            topicKey: place.topic,
+            lessonNumber: place.number
         )
     }
 
@@ -113,5 +138,25 @@ struct LessonFixture {
             dir.deleteLastPathComponent()
         }
         throw NSError(domain: "LessonFixture", code: 1, userInfo: [NSLocalizedDescriptionKey: "\(relative) not found above \(file)"])
+    }
+}
+
+extension LessonFixture {
+    /// Opens the fixture's lesson from Home: its topic on the journey (the tap scrolls the map to
+    /// it), then its row. `landing` is an element of the screen it should open on (a lesson left
+    /// half way opens where it stopped). Leaving the lesson with its close button goes back to
+    /// the topic, not to Home.
+    @MainActor
+    func open(in app: XCUIApplication, landing: String = "lesson.title", file: StaticString = #filePath, line: UInt = #line) {
+        let topic = app.buttons["home.topic.\(topicKey)"].firstMatch
+        XCTAssertTrue(topic.waitForExistence(timeout: 10), "no topic \(topicKey) on Home", file: file, line: line)
+        topic.tap()
+        let row = app.buttons["topic.lesson.\(lessonNumber)"].firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 5), "no lesson \(lessonNumber) in \(topicKey)", file: file, line: line)
+        row.tap()
+        XCTAssertTrue(
+            app.descendants(matching: .any)[landing].firstMatch.waitForExistence(timeout: 5),
+            "lesson did not open on \(landing)", file: file, line: line
+        )
     }
 }

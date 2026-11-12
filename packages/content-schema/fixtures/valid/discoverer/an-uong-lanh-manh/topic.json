@@ -24,7 +24,7 @@
   },
   "prerequisite_topic_ids": [],
   "is_free": true,
-  "oak_unit_ref": "Y3 Healthy eating",
+  "oak_unit_ref": "healthy-eating",
   "sensitive": false,
   "archived": false,
   "ai_draft": true,
@@ -40,7 +40,7 @@
         "en": "Our body needs some fat for energy, to keep warm and to take in some vitamins. The problem is eating too much of it.",
         "vi": "Cơ thể cần một lượng chất béo vừa đủ để có năng lượng, giữ ấm và hấp thu một số vitamin. Chỉ ăn quá nhiều chất béo mới không tốt."
       },
-      "note": "Trẻ hay nghe \"đồ béo không tốt\" rồi khái quát thành mọi chất béo đều có hại. Sửa ở bài một (nhóm chất béo trong phần Học và câu sáu của Quiz) và quay lại ở bài ba \"Đồ ngọt, đồ béo: ăn bao nhiêu?\"."
+      "note": "Trẻ hay nghe \"đồ béo không tốt\" rồi khái quát thành mọi chất béo đều có hại. Sửa ở bài một (nhóm chất béo trong phần Học và câu sáu của Quiz) và quay lại ở bài ba \"Ăn uống bao nhiêu là vừa?\"."
     },
     {
       "id": "e8da090c-a354-461d-b506-90c7bd9f5b3b",
@@ -54,6 +54,19 @@
         "vi": "Không có món ăn nào có đủ mọi chất dinh dưỡng cơ thể cần. Bữa ăn cân bằng kết hợp thức ăn của nhiều nhóm khác nhau."
       },
       "note": "Trẻ hay chia đồ ăn thành món tốt và món không tốt, rồi nghĩ chỉ ăn mỗi món tốt (chỉ ăn rau, chỉ ăn quả) là đủ. Sửa ở bài hai \"Mâm cơm cân bằng\" (Chơi: mâm bốn nhóm; câu sáu của Quiz). Thêm ngày 2/11 cho SK-028, nháp AI."
+    },
+    {
+      "id": "cb21a2f8-1ac6-4e16-87c1-3d659c51c14a",
+      "key": "meal_needs_meat",
+      "statement": {
+        "en": "A meal needs meat or fish to be balanced.",
+        "vi": "Bữa ăn phải có thịt hoặc cá mới cân bằng."
+      },
+      "correction": {
+        "en": "Tofu, beans and eggs give us protein too. A meal with tofu instead of meat or fish can still be balanced.",
+        "vi": "Đậu phụ, các loại đậu và trứng cũng cho ta chất đạm. Bữa ăn có đậu phụ thay cho thịt hay cá vẫn có thể cân bằng."
+      },
+      "note": "Trẻ hay coi chất đạm là thịt và cá, nên nghĩ bữa chay hay bữa không có thịt là thiếu chất, rồi cho rằng bạn ăn khác mình là ăn sai. Dự kiến sửa ở bài bốn \"Mỗi người ăn một kiểu\" (câu misconception của Quiz; phần Chơi có thể là xếp mâm cân bằng không có thịt, cá), nối lại đậu phụ trong nhóm chất đạm ở bài một và mâm bốn nhóm ở bài hai. Thêm ngày 8/11 khi đổi kế hoạch bài, nháp AI; chưa câu nào dùng key này."
     }
   ]
 }

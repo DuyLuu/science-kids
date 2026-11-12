@@ -30,6 +30,10 @@ xcodebuild test  -project ScienceKids.xcodeproj -scheme ScienceKids \
 
 Scheme `ScienceKids` chạy 10 bundle test trong một lệnh: `ScienceKidsTests` (app), `ScienceKidsUITests` (gallery SK-008, luồng mở app SK-011, bài học SK-012, giọng đọc SK-016, đồng bộ SK-022) và 8 target của SKKit. Chỉ chạy unit test (nhanh, khoảng 2 phút mỗi máy): thêm `-skip-testing:ScienceKidsUITests`. Chỉ chạy UI test của luồng mở app: `-only-testing:ScienceKidsUITests/OnboardingUITests` (khoảng 3 phút). Unit test dùng Swift Testing (`import Testing`); UI test dùng XCTest. Trong UI test, `testGalleryScreenshots` và `OnboardingUITests.testScreenshots` bị skip trừ khi có `TEST_RUNNER_SK_SCREENSHOT_DIR=<thư mục>` (lưu ảnh gallery dọc, và ngang trên iPad; ảnh 4 màn SK-011 tên `<máy>-<màn>.png`); `testReplayDoesNothingWithSystemReduceMotion` bị skip trừ khi simulator đang bật Reduce Motion.
 
+`TEST_RUNNER_SK_SCREENSHOT_DIR` phải là **biến môi trường của tiến trình `xcodebuild`**, đặt trước lệnh: `TEST_RUNNER_SK_SCREENSHOT_DIR=/đường/dẫn xcodebuild test …`. Viết sau `xcodebuild` như một build setting (`xcodebuild test … TEST_RUNNER_SK_SCREENSHOT_DIR=…`) thì test runner không nhận và không ra ảnh nào (tester SK-035).
+
+UI test mở bài fixture (`LessonFixture`, bài "Thức ăn cho ta những gì?") qua màn Chủ đề của nó (`LessonFixture.open(in:)`, vị trí đọc từ `content/syllabus.json`), không qua nút "Học tiếp": nút đó mở bài đã soạn đầu tiên của hành trình, bài này đổi mỗi khi có nội dung mới (SK-035).
+
 ## Luồng mở app và hồ sơ (SK-011)
 
 - Chưa có hồ sơ: Chào mừng → Hồ sơ của bé → Trang chủ. Có hồ sơ: vào thẳng Trang chủ. Trang chủ → Chủ đề → bài (route `AppRoute.lesson`, SK-012 gắn LessonPlayer vào `MainFlow.destination`).
@@ -40,7 +44,19 @@ Scheme `ScienceKids` chạy 10 bundle test trong một lệnh: `ScienceKidsTests
 - Mở lại từ màn Chào mừng như cài mới (bản Debug): `xcrun simctl launch booted vn.sciencekids.app -SKResetProfile YES`, hoặc `xcrun simctl uninstall booted vn.sciencekids.app` rồi cài lại.
 - Ngôn ngữ giao diện theo máy; thử EN: thêm `-AppleLanguages "(en)"` khi launch. Chữ của bài theo `language_mode` của hồ sơ.
 - Nội dung bản thử: từ SK-016 là gói của content-cli (mục "Gói nội dung và giọng đọc"); fixture `packages/content-schema/fixtures/valid` (folder reference, trong bundle là `valid/…`) chỉ dùng khi bản build không có gói.
+- Thử nội dung chưa có trong bundle (bản Debug, SK-033): `xcrun simctl launch booted vn.sciencekids.app -SKContentFolder <đường dẫn tuyệt đối> -SKSyncOff YES`. Thư mục có dạng `fixtures/valid` (`<nhóm tuổi>/<chủ đề>/topic.json` và các bài), đọc như fixture: không gói, không audio, `rules.json` và `syllabus.json` vẫn của bundle. Ví dụ chép `fixtures/valid` ra một thư mục tạm rồi thêm `image` cho thẻ từ để xem thẻ có hình.
+- Thử một gói nội dung khác gói trong bundle (bản Debug, SK-033): `xcrun simctl launch booted vn.sciencekids.app -SKContentPack <đường dẫn tuyệt đối tới thư mục gói> -SKSyncOff YES`. Thư mục là gốc của gói (chứa `catalog/v1/manifest.json`), app mở và kiểm như gói nhúng (sha256, size), có audio và ảnh thật. `-SKContentFolder` thắng nếu truyền cả hai. Trên simulator không phát được âm thanh, thêm `-SKAssumeVoiceOver YES` để tắt tự phát (lần thử 9/11: mỗi clip báo `didNotStart` sau khoảng 15 giây, màn hình đứng trong lúc đó).
+- Ảnh thật (SK-033): gói có asset `kind: "image"` (JPEG `assets/<sha256>.jpg`, `width`, `height`, `credit`) thì mọi chỗ có `Image.asset` trùng sha256 vẽ ảnh (`DesignSystem.ContentPicture`), không có thì vẽ `PlaceholderArt` như cũ. Ảnh đọc qua `ContentPack.imageData(for:)` (kiểm sha256), giải mã ở cỡ hiển thị ngoài main thread và giữ trong `PictureStore` (`NSCache`, tối đa 64 MB). Màn "Nguồn hình" · "Image credits" mở từ dòng cuối danh sách hành trình ở Trang chủ, chỉ hiện khi gói có ảnh; địa chỉ trang gốc và giấy phép là chữ, không bấm được (chưa có cổng phụ huynh).
+- Danh mục syllabus (SK-030): `content/syllabus.json` vào bundle thành `syllabus.json` (khai trong `project.yml`, đọc tại chỗ như `rules.json`). `ContentKit.Journey` đặt nội dung lên danh mục theo `topic_id`, `lesson_id`: Trang chủ hiện mọi chủ đề của nhóm theo `number` (mặc định nhóm của hồ sơ, ba chip để xem nhóm khác), màn Chủ đề hiện mọi bài; bài đã soạn chơi được, bài chưa soạn hiện "Chưa có nội dung". Không khoá bài nào. Nhãn "Miễn phí" tắt khi gói trả phí tắt (`AppFeatures.paidPlanEnabled`). Thiếu hoặc hỏng file danh mục thì app ghi log và chỉ hiện các chủ đề có nội dung.
 - Hình (giấy cắt từ canvas, đã bỏ filter `paperE`) là SVG trong `Assets.xcassets/Art`; tạo lại bằng `python3 apps/ios/scripts/extract-canvas-art.py` (chạy từ gốc repo) khi designer đổi hình trên canvas.
+- Biểu tượng chủ đề (SK-034, 45 icon của designer ở `design/icons/topics/<key>.svg`) nằm trong `Assets.xcassets/Art/Topics/Topic-<key>.imageset` (giữ vector, một cỡ); chép lại bằng `sh apps/ios/scripts/import-topic-icons.sh` khi designer sửa icon. Chủ đề chưa có icon dùng icon của mạch (`TopicIcon.strandIcons`).
+
+## Thẻ, Huy hiệu, Từ vựng (SK-035)
+
+- Ba tab làm từ bài bé đã học, không có luật riêng: thẻ của bài (`reward.collectible`) nhận khi bài xong (như màn Thưởng); bộ từ là `vocab` của từng bài đã xong; sao và chuỗi ngày là số của Trang chủ (`HomeProgress`), dải tuần T2–CN theo `computeStreak` hoặc chuỗi của server (`StreakWeek`). Phần tính nằm ở `ContentKit` (`CardCollection`, `WordDecks`, `WordReview`, `StrandBadge`), test ở `ContentKitTests/CollectionTests` và `ScienceKidsTests/CollectionAppTests`.
+- Huy hiệu: một huy hiệu mỗi mạch (`Topic.Strand`; mạch lạ gom vào huy hiệu "Khoa học"), tiến độ là số chủ đề "Đã xong" trên số chủ đề của mạch trong nhóm tuổi của hồ sơ; tên câu hỏi trong `strand.<mạch>.question`.
+- Một chủ đề "Đã xong" (bản đồ Hành trình, huy hiệu) khi bé xong **mọi bài của chủ đề trong danh mục**, kể cả bài chưa soạn, nên soạn thêm bài không kéo lùi tiến độ; "x/n bài" đếm mọi bài của danh mục (SK-035 lượt 2, mặc định của main session, Duy đổi được).
+- Từ đã nhớ lưu trên máy theo hồ sơ: `Library/Application Support/words/<child id>.json` (id các `VocabTerm`), không lên server. `-SKResetProfile YES` xoá cả thư mục `words/`.
 
 ## Bài học (SK-012)
 
@@ -98,13 +114,14 @@ Thêm `-derivedDataPath <thư mục>` nếu muốn log và `.app` ở chỗ cố
 apps/ios/
   project.yml              # nguồn duy nhất của project
   bootstrap.sh
-  scripts/                 # embed-content-pack.sh (build phase), extract-canvas-art.py
+  scripts/                 # embed-content-pack.sh (build phase), extract-canvas-art.py, import-topic-icons.sh
   Config/Base.xcconfig     # bundle id, version, team (để trống)
   Config/Local.xcconfig.example
   ScienceKids/             # app target mỏng
     App/                   # @main, RootView (LayoutMetrics, trần Dynamic Type), AppModel (hồ sơ, route), tham số khởi động
     Onboarding/            # Chào mừng, Hồ sơ của bé (SK-011)
-    Home/                  # Trang chủ, tab "sắp có", MainFlow (NavigationStack)
+    Home/                  # Trang chủ, MainFlow (NavigationStack)
+    Collection/            # tab Thẻ, Huy hiệu, Từ vựng và bộ từ của một bài (SK-035), từ đã nhớ trên máy
     Topic/                 # Chủ đề
     Content/               # nội dung nhúng (gói hoặc fixture), màn lỗi gói, danh sách bài
     Sync/                  # attempt → payload, sao và chuỗi ngày Trang chủ, theo dõi mạng (SK-022)
@@ -124,6 +141,17 @@ apps/ios/
 ```
 
 Phụ thuộc giữa module (technical-plan B7.1): `LessonPlayer` → `DesignSystem`, `ContentModel`, `LessonEngine`, `AudioKit`, `Profiles`; `ContentKit` → `ContentModel`; `Sync` → `Profiles` và supabase-swift (`Auth`, `PostgREST`); `LessonEngine` và `Profiles` không phụ thuộc gì (thuần Foundation). `supabase-swift` là thư viện bên ngoài duy nhất (ios-test-build mục 5).
+
+## Bản thử lên máy thật (tạm, trước SK-020)
+
+Build Release cho iPhone đã nối cáp, ký tự động bằng profile có sẵn trên máy. Không thêm `-allowProvisioningUpdates`, để không đăng ký bundle id hay thiết bị lên tài khoản Apple. Team ID truyền qua dòng lệnh, không ghi vào file trong git.
+
+```sh
+xcodebuild build -project ScienceKids.xcodeproj -scheme ScienceKids -configuration Release \
+  -destination 'generic/platform=iOS' DEVELOPMENT_TEAM=<team id>
+xcrun devicectl list devices                     # lấy Identifier của máy
+xcrun devicectl device install app --device <identifier> <DerivedData>/Build/Products/Release-iphoneos/ScienceKids.app
+```
 
 ## Đổi bundle id, version, team
 

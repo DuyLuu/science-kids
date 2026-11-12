@@ -1,0 +1,332 @@
+{
+  "note": "SK-039. Designer (agent, phần bài 1–7) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố b0N-), hình ghép ở content/images/composed/da-va-dat/; trang duyệt content/.build/images/da-va-dat/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-w1.jpg",
+        "method": "drawn"
+      },
+      "title": "A village kitchen",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); hình câu hỏi: góc bếp làng quê (bếp lò gạch, kệ bát, rổ treo), không có cốc, ghế, chậu."
+    },
+    "w1.w1_cup": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-w1.w1_cup.jpg",
+        "method": "drawn"
+      },
+      "title": "A clear cup",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét."
+    },
+    "w1.w1_chair": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-w1.w1_chair.jpg",
+        "method": "drawn"
+      },
+      "title": "A brown chair",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét."
+    },
+    "w1.w1_basin": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-w1.w1_basin.jpg",
+        "method": "drawn"
+      },
+      "title": "A blue basin",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét."
+    },
+    "w2": {
+      "same_as": "q4_slope",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_around": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dry_stone_wall_-_16_June_2025.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Dry_stone_wall_-_16_June_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An old dry stone wall",
+      "author": "Aethonatic",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Tường rào xếp đá tự nhiên không trát vữa, giữa bãi cỏ; không có ảnh Việt Nam hợp giấy phép."
+    },
+    "learn.explore.explore_ground": {
+      "same_as": "vocab.quarry"
+    },
+    "learn.explore.explore_materials": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-learn.explore.explore_materials.jpg",
+        "method": "drawn"
+      },
+      "title": "A wooden chair, a plastic basin and a stone mortar",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); vẽ ghế gỗ, chậu nhựa xanh, cối đá cạnh nhau (thay hình ghép ảnh, vì ghế và chậu là hình vẽ)."
+    },
+    "learn.explore.explore_made": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Simple_Brick_Kiln_@SongHau-Mekong_Vietnam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Simple_Brick_Kiln_%40SongHau-Mekong_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Brick kilns by a river in Vietnam",
+      "author": "BacLuong at Vietnamese Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Simple_Brick_Kiln_@SongHau-Mekong_Vietnam.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.05,
+        "width": 0.56,
+        "height": 0.8
+      },
+      "note": "Lò gạch thủ công bên sông Hậu (Việt Nam); cắt bỏ phần có bóng người ở xa."
+    },
+    "tray.tray_islands": {
+      "same_as": "ha_long",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "tray.tray_brick": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/49889874@N05/5270987711",
+      "file_url": "https://live.staticflickr.com/5124/5270987711_d18c4b98d0_b.jpg",
+      "title": "BRICKS",
+      "author": "marc falardeau",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "44e22d02-12ff-4533-8507-50ebc371a86b",
+      "crop": {
+        "left": 0.12,
+        "top": 0.0,
+        "width": 0.45,
+        "height": 0.6
+      },
+      "note": "Mấy viên gạch nung xếp chồng (Openverse/Flickr, đã kiểm trang gốc); không có ảnh một viên gạch đơn hợp lệ, cắt một chồng gạch (đề xuất đổi alt thành số nhiều)."
+    },
+    "tray.tray_steps": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Granite_stairs_in_St%C3%A5ngehuvud_reserve.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Granite_stairs_in_St%C3%A5ngehuvud_reserve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Granite stone steps",
+      "author": "W.carter",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Bậc thềm đá hoa cương hồng xám có tay vịn, ngoài trời; không có ảnh bậc thềm trước cửa hợp lệ (đề xuất đổi alt)."
+    },
+    "tray.tray_mortar": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shang_Stone_Mortar_%26_Pestle_(10325250986).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Shang_Stone_Mortar_%26_Pestle_%2810325250986%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A stone mortar and pestle",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.05,
+        "top": 0.12,
+        "width": 0.9,
+        "height": 0.8
+      },
+      "note": "Cối và chày đá (hiện vật bảo tàng); cắt bỏ mép tủ kính."
+    },
+    "tray.tray_concrete": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Concrete-block,japan.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Concrete-block%2Cjapan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Concrete-block,japan",
+      "author": "katorisi",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "note": "Khối bê tông xám đúc trên nền nhựa đường."
+    },
+    "tray.tray_stream": {
+      "same_as": "tray_stream",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "tray.tray_road": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grey_speckled_clean_asphalt_seamless_texture.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Grey_speckled_clean_asphalt_seamless_texture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asphalt road surface",
+      "author": "Sisters.seamless",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mặt đường nhựa xám lấm tấm đá dăm, chụp thẳng từ trên xuống."
+    },
+    "tray.tray_wall": {
+      "same_as": "learn.explore.explore_around"
+    },
+    "tray.tray_mill": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:IronAgeBee-HiveQuern.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/IronAgeBee-HiveQuern.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A round stone hand mill",
+      "author": "WikiEditor451",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Cối xay đá hai tầng tròn (cối xay tay cổ, hiện vật bảo tàng); không có tay quay gỗ."
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_around"
+    },
+    "q1.q1_sawmill": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Logs_at_Jensen_sawmill_(26883097976).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Logs_at_Jensen_sawmill_%2826883097976%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Logs piled up at a sawmill",
+      "author": "Intermountain Forest Service, USDA Region 4 Photography",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Logs_at_Jensen_sawmill_(26883097976).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.38,
+        "width": 0.62,
+        "height": 0.62
+      },
+      "note": "Gỗ tròn xếp chồng ở xưởng gỗ; cắt bỏ phần đầu gỗ có vết sơn đánh dấu."
+    },
+    "q1.q1_kiln": {
+      "same_as": "learn.explore.explore_made"
+    },
+    "q1.q1_quarry": {
+      "same_as": "vocab.quarry"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_materials"
+    },
+    "q2.q2_materials": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q2.q2_materials.jpg",
+        "method": "drawn"
+      },
+      "title": "Bits of wood, cloth, metal, plastic and rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba thẻ từ vẽ cùng nét."
+    },
+    "q2.q2_tools": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q2.q2_tools.jpg",
+        "method": "drawn"
+      },
+      "title": "Kitchen tools",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba thẻ từ vẽ cùng nét (muôi, xẻng gỗ, kéo; không dao)."
+    },
+    "q2.q2_plants": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q2.q2_plants.jpg",
+        "method": "drawn"
+      },
+      "title": "A young plant in a pot",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba thẻ từ vẽ cùng nét."
+    },
+    "q3": {
+      "same_as": "tray.tray_steps"
+    },
+    "q3.q3_mortar": {
+      "same_as": "tray.tray_mortar"
+    },
+    "q3.q3_board": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wooden_cutting_board_2017.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Wooden_cutting_board_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Wooden cutting board 2017",
+      "author": "Fructibus",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Thớt gỗ trên mặt bàn nâu; thớt chữ nhật có cán, không phải thớt tròn (đề xuất đổi alt)."
+    },
+    "q3.q3_brick": {
+      "same_as": "tray.tray_brick"
+    },
+    "q3.q3_mill": {
+      "same_as": "tray.tray_mill"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A corner of a garden",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); hình câu hỏi: góc vườn cỏ, vài lá rụng; không có cuội, ngói, bi."
+    },
+    "q4.q4_pebble": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q4.q4_pebble.jpg",
+        "method": "drawn"
+      },
+      "title": "A grey pebble",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét: Commons không có ảnh hòn cuội xám, viên ngói Việt Nam hợp lệ trên nền trơn (11/11)."
+    },
+    "q4.q4_tile": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q4.q4_tile.jpg",
+        "method": "drawn"
+      },
+      "title": "A red roof tile",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét: Commons không có ảnh hòn cuội xám, viên ngói Việt Nam hợp lệ trên nền trơn (11/11)."
+    },
+    "q4.q4_marble": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q4.q4_marble.jpg",
+        "method": "drawn"
+      },
+      "title": "A glass marble",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét: Commons không có ảnh hòn cuội xám, viên ngói Việt Nam hợp lệ trên nền trơn (11/11)."
+    },
+    "q5": {
+      "same_as": "tray_rain_roof",
+      "lesson": "nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao"
+    },
+    "q5.q5_rock": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q5.q5_rock.jpg",
+        "method": "drawn"
+      },
+      "title": "A flat grey slab",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét, cùng cỡ."
+    },
+    "q5.q5_wood": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q5.q5_wood.jpg",
+        "method": "drawn"
+      },
+      "title": "A brown plank",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét, cùng cỡ."
+    },
+    "q5.q5_bamboo": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q5.q5_bamboo.jpg",
+        "method": "drawn"
+      },
+      "title": "A bundle of bamboo poles",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét, cùng cỡ."
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b01-q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A red brick wall",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); hình câu hỏi: tường gạch đỏ chưa trát."
+    },
+    "vocab.rock": {
+      "same_as": "rock",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "vocab.material": {
+      "same_as": "learn.explore.explore_materials"
+    },
+    "vocab.natural": {
+      "same_as": "tray_stream",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "vocab.quarry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hammerstone_limestone_quarry_2016_(26357726064).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Hammerstone_limestone_quarry_2016_%2826357726064%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hammerstone limestone quarry 2016 (26357726064)",
+      "author": "Jason Woodhead",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Mỏ đá vôi lộ thiên nhìn từ trên cao, vách cắt thành nhiều bậc; không người, không máy có chữ."
+    },
+    "vocab.concrete": {
+      "same_as": "tray.tray_concrete"
+    },
+    "reward.pebble_card": {
+      "same_as": "w1_stone",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    }
+  }
+}

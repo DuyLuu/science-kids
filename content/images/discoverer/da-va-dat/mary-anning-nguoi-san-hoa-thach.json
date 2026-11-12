@@ -1,0 +1,309 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi, câu q3, q4 và ba thẻ câu q2 là hình vẽ (không có ảnh hợp lệ cho xấp ảnh cũ). Tranh Mary Anning là tranh công có, cắt ngang ngực để búa không lộ.",
+  "images": {
+    "w1": {
+      "same_as": "amber",
+      "lesson": "da-va-dat/nhieu-cach-tao-thanh-hoa-thach"
+    },
+    "w1.w1_honey": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Small_Honey_Jar_with_Honeycomb.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Small_Honey_Jar_with_Honeycomb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Small Honey Jar with Honeycomb",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Hũ mật ong không nhãn, có thìa gỗ."
+    },
+    "w1.w1_resin": {
+      "same_as": "resin",
+      "lesson": "da-va-dat/nhieu-cach-tao-thanh-hoa-thach"
+    },
+    "w1.w1_ice": {
+      "same_as": "q1_ice",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w2": {
+      "same_as": "tray_old_pot",
+      "lesson": "da-va-dat/nhieu-cach-tao-thanh-hoa-thach"
+    },
+    "w3": {
+      "same_as": "w1",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w3.w3_sea": {
+      "same_as": "tray_sea_reptile",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w3.w3_horns": {
+      "same_as": "tray_triceratops",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w3.w3_wings": {
+      "same_as": "tray_pterosaur",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "learn.explore.explore_mary": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mary_Anning_painting.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Mary_Anning_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mary Anning painting",
+      "author": "Credited to 'Mr. Grey' in Crispin Tickell's book 'Mary Anning of Lyme Regis' (1996)",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Mary_Anning_painting.jpg",
+      "crop": {
+        "left": 0.1,
+        "top": 0.06,
+        "width": 0.517,
+        "height": 0.4
+      },
+      "note": "Chân dung Mary Anning (khoảng 1842, public domain); cắt ngang ngực để chiếc búa và chú chó nằm ngoài khung (búa ở ngang hông, chó ở chân tranh, không giữ được chó mà bỏ búa)."
+    },
+    "learn.explore.explore_finds": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b10-explore_finds.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Ichthyosaur_Skeleton_(36329525712).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Ichthyosaur_Skeleton_%2836329525712%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Ichthyosaur Skeleton (36329525712)",
+            "author": "Gary Todd from Xinzheng, China",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "crop": {
+              "left": 0.08,
+              "top": 0.17,
+              "width": 0.8,
+              "height": 0.66
+            }
+          }
+        ]
+      },
+      "title": "An ichthyosaur skeleton in rock",
+      "note": "Designer (agent) 11/11: bộ xương thằn lằn cá Leptopterygius ở Bảo tàng Lịch sử Tự nhiên Luân Đôn (ảnh CC0), tìm ở Street, Somerset, cùng tầng đá kỷ Jura sớm với Lyme Regis; không có ảnh hợp lệ đúng mẫu vật của Mary Anning. Cắt khung tủ kính, xoá nhãn và số hiệu mẫu bằng cách chép vân đá bên cạnh."
+    },
+    "learn.explore.explore_unfair": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-explore_unfair.jpg",
+        "method": "drawn"
+      },
+      "title": "An old notebook with a blank page",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_today": {
+      "same_as": "tray.tray_pebbles"
+    },
+    "tray.tray_lens_rock": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_lens_rock.jpg",
+        "method": "drawn"
+      },
+      "title": "A child looking at a rock with a magnifying glass",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_climb": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_climb.jpg",
+        "method": "drawn"
+      },
+      "title": "A child climbing a cliff",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_notebook": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_notebook.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand writing in a notebook",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_museum": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_museum.jpg",
+        "method": "drawn"
+      },
+      "title": "A child showing a rock at a museum",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_pebbles": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_pebbles.jpg",
+        "method": "drawn"
+      },
+      "title": "A child and a grown-up searching a pebble beach",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_cliff_base": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_cliff_base.jpg",
+        "method": "drawn"
+      },
+      "title": "A child standing under a tall cliff",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_sketch": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_sketch.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand drawing a spiral shell",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_ask_scientist": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_ask_scientist.jpg",
+        "method": "drawn"
+      },
+      "title": "A child asking a scientist about a rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_hammer": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-tray_hammer.jpg",
+        "method": "drawn"
+      },
+      "title": "A child holding a hammer over a rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_finds"
+    },
+    "q1.q1_forest": {
+      "same_as": "q2_ferns",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q1.q1_field": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q1.q1_cliffs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Cap_from_Charmouth_beach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Golden_Cap_from_Charmouth_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Cap from Charmouth beach",
+      "author": "Kevin Walsh",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.08,
+        "width": 1.0,
+        "height": 0.5
+      },
+      "note": "Vách đá nhiều lớp Golden Cap nhìn từ bãi Charmouth, cạnh Lyme Regis (Bờ biển kỷ Jura); cắt bỏ bãi biển có người."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_mary"
+    },
+    "q2.q2_evidence": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q2_evidence.jpg",
+        "method": "drawn"
+      },
+      "title": "A spiral shell in rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Ba thẻ câu q2 vẽ cùng nét vì không có ảnh hợp lệ cho xấp ảnh cũ chụp phong cảnh."
+    },
+    "q2.q2_photos": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q2_photos.jpg",
+        "method": "drawn"
+      },
+      "title": "A pile of old photos",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh hợp lệ (ảnh xấp ảnh cũ trên Commons đều có người trong ảnh)."
+    },
+    "q2.q2_models": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q2_models.jpg",
+        "method": "drawn"
+      },
+      "title": "A long-necked dinosaur model",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Vẽ cùng câu q2."
+    },
+    "q3": {
+      "same_as": "tray_shore_rocks",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3.q3_tide": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q3_tide.jpg",
+        "method": "drawn"
+      },
+      "title": "A child walking out on rocks as water rises",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_pebbles": {
+      "same_as": "tray.tray_pebbles"
+    },
+    "q3.q3_alone": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q3_alone.jpg",
+        "method": "drawn"
+      },
+      "title": "A child walking to the cliffs alone",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_museum": {
+      "same_as": "tray.tray_museum"
+    },
+    "q4": {
+      "same_as": "tray.tray_lens_rock"
+    },
+    "q4.q4_hide": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b10-q4_hide.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand putting a rock into a school bag",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_hammer": {
+      "same_as": "tray.tray_hammer"
+    },
+    "q4.q4_ask": {
+      "same_as": "tray.tray_ask_scientist"
+    },
+    "q5": {
+      "same_as": "tray_sea_reptile",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q5.q5_museum": {
+      "same_as": "q5",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q5.q5_aquarium": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Georgia_Aquarium_-_Giant_Grouper.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Georgia_Aquarium_-_Giant_Grouper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Georgia Aquarium - Giant Grouper",
+      "author": "Diliff",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "note": "Bể lớn ở thuỷ cung Georgia, đàn cá nhỏ và cá mú, không khách."
+    },
+    "q5.q5_zoo": {
+      "same_as": "q2_zoo",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q6": {
+      "same_as": "q1.q1_cliffs"
+    },
+    "vocab.palaeontologist": {
+      "same_as": "palaeontologist",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "vocab.discover": {
+      "same_as": "learn.explore.explore_finds"
+    },
+    "vocab.evidence": {
+      "same_as": "tray_rock_print",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "vocab.cliff": {
+      "same_as": "q1.q1_cliffs"
+    },
+    "reward.mary_find_card": {
+      "same_as": "learn.explore.explore_finds"
+    }
+  }
+}

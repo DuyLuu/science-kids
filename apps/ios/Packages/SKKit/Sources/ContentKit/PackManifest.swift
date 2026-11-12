@@ -41,14 +41,193 @@ public struct PackManifest: Decodable, Sendable, Equatable {
     }
 
     /// One file of `assets/`, named by the sha256 of its bytes.
+    ///
+    /// SK-033 (image contract, 9/11): `kind: "image"` is a JPEG (`assets/<sha256>.jpg`) with its
+    /// pixel `width`, `height` and the `credit` the "Image credits" screen lists. The three keys
+    /// are optional: a pack built before images still opens, and a `credit` the app cannot read
+    /// (wrong type) leaves that asset without credit instead of closing the pack.
     public struct AssetEntry: Decodable, Sendable, Equatable {
         public let sha256: String
         public let size: Int
-        /// `audio` (m4a clips) for now; images later.
+        /// `audio` (m4a clips) or `image` (JPEG, SK-033).
         public let kind: String
         /// Language of an audio clip (`en`, `vi`).
         public let lang: String?
         public let path: String
+        /// Pixel size of an image.
+        public let width: Int?
+        public let height: Int?
+        /// Where an image comes from and under which licence.
+        public let credit: ImageCredit?
+
+        /// `kind` of a picture.
+        public static let imageKind = "image"
+
+        public var isImage: Bool { kind == Self.imageKind }
+
+        enum CodingKeys: String, CodingKey {
+            case sha256, size, kind, lang, path, width, height, credit
+        }
+
+        public init(
+            sha256: String, size: Int, kind: String, lang: String? = nil, path: String,
+            width: Int? = nil, height: Int? = nil, credit: ImageCredit? = nil
+        ) {
+            self.sha256 = sha256
+            self.size = size
+            self.kind = kind
+            self.lang = lang
+            self.path = path
+            self.width = width
+            self.height = height
+            self.credit = credit
+        }
+
+        public init(from decoder: any Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            sha256 = try c.decode(String.self, forKey: .sha256)
+            size = try c.decode(Int.self, forKey: .size)
+            kind = try c.decode(String.self, forKey: .kind)
+            lang = try c.decodeIfPresent(String.self, forKey: .lang)
+            path = try c.decode(String.self, forKey: .path)
+            // Image keys: read loosely, never a reason to refuse the manifest.
+            width = (try? c.decodeIfPresent(Int.self, forKey: .width)) ?? nil
+            height = (try? c.decodeIfPresent(Int.self, forKey: .height)) ?? nil
+            credit = (try? c.decodeIfPresent(ImageCredit.self, forKey: .credit)) ?? nil
+        }
+    }
+
+    /// `credit` of an image asset (SK-033): what a CC BY licence asks the app to show (title,
+    /// author, licence, source, what was changed) and the pages behind them. Every field may be
+    /// missing (a public domain picture may have no author); a field of the wrong type reads as
+    /// missing.
+    ///
+    /// A composed picture (SK-033, 10/11: one picture made by Science Kids from several source
+    /// pictures) has `source: "composed"`, `changes` with `"composed"`, and the credit of each
+    /// source picture in `parts`. `changes` and `parts` are optional: a pack built before them
+    /// still opens, with none.
+    public struct ImageCredit: Decodable, Sendable, Hashable {
+        public let title: String?
+        public let author: String?
+        /// `CC0 1.0`, `Public domain`, `PDM 1.0`, `CC BY 4.0`…
+        public let license: String?
+        public let licenseURL: String?
+        /// `Wikimedia Commons`, `Openverse/Flickr`, `NASA`… or `composed` (`composedSource`).
+        public let source: String?
+        /// The picture's own page at its source.
+        public let sourceURL: String?
+        /// What was done to the source picture, as the manifest writes it: `cropped`, `resized`,
+        /// `composed` (CC BY asks to say so). Blank or non-text entries are dropped; values the
+        /// app does not know are kept, the screen decides how to show them.
+        public let changes: [String]
+        /// The source pictures of a composed picture, in the manifest's order. A part that is not
+        /// an object, or has no field to show, is dropped.
+        public let parts: [Part]
+
+        /// `source` of a picture Science Kids composed from `parts`.
+        public static let composedSource = "composed"
+
+        /// Made by Science Kids from several source pictures: `source` is `composed`, or the credit
+        /// lists its parts.
+        public var isComposed: Bool {
+            source?.caseInsensitiveCompare(Self.composedSource) == .orderedSame || !parts.isEmpty
+        }
+
+        /// The credit of one source picture of a composed picture.
+        public struct Part: Decodable, Sendable, Hashable {
+            public let title: String?
+            public let author: String?
+            public let license: String?
+            public let licenseURL: String?
+            public let source: String?
+            public let sourceURL: String?
+
+            enum CodingKeys: String, CodingKey {
+                case title, author, license, source
+                case licenseURL = "license_url"
+                case sourceURL = "source_url"
+            }
+
+            public init(
+                title: String? = nil, author: String? = nil, license: String? = nil, licenseURL: String? = nil,
+                source: String? = nil, sourceURL: String? = nil
+            ) {
+                self.title = title
+                self.author = author
+                self.license = license
+                self.licenseURL = licenseURL
+                self.source = source
+                self.sourceURL = sourceURL
+            }
+
+            public init(from decoder: any Decoder) throws {
+                let c = try decoder.container(keyedBy: CodingKeys.self)
+                title = c.looseText(.title)
+                author = c.looseText(.author)
+                license = c.looseText(.license)
+                licenseURL = c.looseText(.licenseURL)
+                source = c.looseText(.source)
+                sourceURL = c.looseText(.sourceURL)
+            }
+
+            /// No field to show.
+            public var isEmpty: Bool {
+                [title, author, license, licenseURL, source, sourceURL].allSatisfy { $0 == nil }
+            }
+        }
+
+        enum CodingKeys: String, CodingKey {
+            case title, author, license, source, changes, parts
+            case licenseURL = "license_url"
+            case sourceURL = "source_url"
+        }
+
+        public init(
+            title: String? = nil, author: String? = nil, license: String? = nil, licenseURL: String? = nil,
+            source: String? = nil, sourceURL: String? = nil, changes: [String] = [], parts: [Part] = []
+        ) {
+            self.title = title
+            self.author = author
+            self.license = license
+            self.licenseURL = licenseURL
+            self.source = source
+            self.sourceURL = sourceURL
+            self.changes = changes
+            self.parts = parts
+        }
+
+        public init(from decoder: any Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            title = c.looseText(.title)
+            author = c.looseText(.author)
+            license = c.looseText(.license)
+            licenseURL = c.looseText(.licenseURL)
+            source = c.looseText(.source)
+            sourceURL = c.looseText(.sourceURL)
+            // Both lists read loosely: a wrong type is no list, a bad entry is dropped.
+            let changeEntries = (try? c.decodeIfPresent([Loose<String>].self, forKey: .changes)) ?? nil
+            changes = (changeEntries ?? []).compactMap { entry in
+                guard let value = entry.value?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty else { return nil }
+                return value
+            }
+            let partEntries = (try? c.decodeIfPresent([Loose<Part>].self, forKey: .parts)) ?? nil
+            parts = (partEntries ?? []).compactMap(\.value).filter { !$0.isEmpty }
+        }
+
+        /// No field to show.
+        public var isEmpty: Bool {
+            [title, author, license, licenseURL, source, sourceURL].allSatisfy { $0 == nil }
+                && changes.isEmpty && parts.isEmpty
+        }
+    }
+
+    /// One entry of a list read loosely: `nil` when it is not a `Value`, instead of failing the list.
+    private struct Loose<Value: Decodable>: Decodable {
+        let value: Value?
+
+        init(from decoder: any Decoder) throws {
+            value = try? Value(from: decoder)
+        }
     }
 
     enum CodingKeys: String, CodingKey {
@@ -70,6 +249,15 @@ struct TopicPackHeader: Decodable {
         case version
         case schemaVersion = "schema_version"
         case topicId = "topic_id"
+    }
+}
+
+private extension KeyedDecodingContainer {
+    /// A text field of a credit: trimmed; blank or of the wrong type reads as missing.
+    func looseText(_ key: Key) -> String? {
+        guard let value = (try? decodeIfPresent(String.self, forKey: key)) ?? nil else { return nil }
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 }
 

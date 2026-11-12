@@ -173,6 +173,41 @@ public struct ContentPack: Sendable {
         assets[hash.lowercased()] != nil
     }
 
+    // MARK: Images (SK-033)
+
+    /// Whether the manifest lists `hash` as an image (`kind: "image"`; no file read). A content
+    /// `Image` whose `asset` is not one draws its stand-in art.
+    public func hasImage(_ hash: AssetHash) -> Bool {
+        assets[hash.lowercased()]?.isImage == true
+    }
+
+    /// The bytes of an image, checked like a clip (size, then sha256). Reading and hashing run
+    /// off the caller's actor (a nonisolated async function), never on the main thread.
+    public func imageData(for hash: AssetHash) async throws(ContentPackError) -> Data {
+        guard hasImage(hash) else {
+            log.error("image refused: \(ContentPackError.unknownAsset(hash).description, privacy: .public)")
+            throw .unknownAsset(hash)
+        }
+        return try await assetData(for: hash)
+    }
+
+    /// Every image of the pack, for the "Image credits" screen: by title (then author, then
+    /// sha256), so the list reads the same on each launch. An image without credit is listed
+    /// too (its title missing): the screen must not hide that it is there.
+    public var images: [PackManifest.AssetEntry] {
+        assets.values
+            .filter(\.isImage)
+            .sorted { lhs, rhs in
+                let left = (lhs.credit?.title ?? "", lhs.credit?.author ?? "", lhs.sha256)
+                let right = (rhs.credit?.title ?? "", rhs.credit?.author ?? "", rhs.sha256)
+                let titles = left.0.localizedStandardCompare(right.0)
+                if titles != .orderedSame { return titles == .orderedAscending }
+                let authors = left.1.localizedStandardCompare(right.1)
+                if authors != .orderedSame { return authors == .orderedAscending }
+                return left.2 < right.2
+            }
+    }
+
     // MARK: Opening a topic
 
     private static func openTopic(

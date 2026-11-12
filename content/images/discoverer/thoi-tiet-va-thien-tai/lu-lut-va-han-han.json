@@ -1,0 +1,284 @@
+{
+  "note": "SK-038. Designer (agent) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/thoi-tiet-va-thien-tai/; trang duyệt content/.build/images/thoi-tiet-va-thien-tai/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "explore_forecast",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "w1.w1_sea": {
+      "same_as": "tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_mountain": {
+      "same_as": "tray_mountain",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_forest": {
+      "same_as": "tray_forest",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2": {
+      "same_as": "explore_cloudy",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may"
+    },
+    "w2.w2_lake": {
+      "same_as": "tray_lake",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2.w2_pond": {
+      "same_as": "tray_pond",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2.w2_river": {
+      "same_as": "tray_river",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w3": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_flood": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.learn.explore.explore_flood.jpg",
+        "method": "drawn"
+      },
+      "title": "A field and a road under brown water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh lũ hợp lệ: ảnh lũ Việt Nam trên Commons đều có biển chữ hoặc thuộc bão Ketsana 2009 (có người chết), trái quy ước mục bốn; vẽ cánh đồng, đường làng ngập nước đục, nhà xa nguyên vẹn."
+    },
+    "learn.explore.explore_drought": {
+      "same_as": "q2",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "learn.explore.explore_far_rain": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.learn.explore.explore_far_rain.jpg",
+        "method": "drawn"
+      },
+      "title": "Rain on the mountains runs into a river",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_seasons": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-thien-tai/lu-lut-va-han-han.learn.explore.explore_seasons.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_flood"
+          },
+          {
+            "same_as": "tray.tray_cracked"
+          }
+        ]
+      },
+      "title": "A flooded field next to a dry field",
+      "note": "Designer (agent) 11/11 ghép hai hình vẽ của bài: trái ô Lũ, phải ruộng khô nứt nẻ của kệ Chơi, mỗi nửa 509 px, khe giấy 6 px; không chữ, không mũi tên."
+    },
+    "tray.tray_fields": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_fields.jpg",
+        "method": "drawn"
+      },
+      "title": "Rice fields under brown water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_tap": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_tap.jpg",
+        "method": "drawn"
+      },
+      "title": "A tap running over a full bowl",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_cracked": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_cracked.jpg",
+        "method": "drawn"
+      },
+      "title": "A dry, cracked rice field",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_jar": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_jar.jpg",
+        "method": "drawn"
+      },
+      "title": "A clay jar catching rain from a roof",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_river_over": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_river_over.jpg",
+        "method": "drawn"
+      },
+      "title": "A brown river spilling over its banks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_leak": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_leak.jpg",
+        "method": "drawn"
+      },
+      "title": "A pipe dripping water on the floor",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_dry_pond": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_dry_pond.jpg",
+        "method": "drawn"
+      },
+      "title": "A pond with almost no water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_hose": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_hose.jpg",
+        "method": "drawn"
+      },
+      "title": "A hose spraying water on a road",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_tank": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.tray.tray_tank.jpg",
+        "method": "drawn"
+      },
+      "title": "A water tank on a roof",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1": {
+      "same_as": "tray_river",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q1.q1_cracked": {
+      "same_as": "tray.tray_cracked",
+      "note": "Câu q1 toàn hình vẽ vì ô Lũ là hình vẽ."
+    },
+    "q1.q1_flooded": {
+      "same_as": "learn.explore.explore_flood"
+    },
+    "q1.q1_green": {
+      "same_as": "tray.tray_rice",
+      "lesson": "ho-hap/giu-phoi-khoe",
+      "note": "Ruộng lúa xanh vẽ sẵn của Hô hấp; câu q1 toàn hình vẽ."
+    },
+    "q2": {
+      "same_as": "tray.tray_dry_pond"
+    },
+    "q2.q2_wind": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q2.q2_sun": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q2.q2_rain": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3.q3_streets": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q3.q3_streets.jpg",
+        "method": "drawn"
+      },
+      "title": "A street under water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_ponds": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q3.q3_ponds.jpg",
+        "method": "drawn"
+      },
+      "title": "A pond spilling over",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_wells": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q3.q3_wells.jpg",
+        "method": "drawn"
+      },
+      "title": "A well with almost no water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_fields": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q3.q3_fields.jpg",
+        "method": "drawn"
+      },
+      "title": "Brown, dry grassy fields",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "Hills, a river, a low field and a high road",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_low": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q4.q4_low.jpg",
+        "method": "drawn"
+      },
+      "title": "The landscape, with the low field marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_road": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q4.q4_road.jpg",
+        "method": "drawn"
+      },
+      "title": "The landscape, with the high road marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_hill": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q4.q4_hill.jpg",
+        "method": "drawn"
+      },
+      "title": "The landscape, with the hilltop marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "same_as": "tray_lake",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A brown river on a sunny day",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "vocab.flood": {
+      "same_as": "learn.explore.explore_flood"
+    },
+    "vocab.drought": {
+      "same_as": "q2",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "vocab.rise": {
+      "same_as": "tray.tray_river_over"
+    },
+    "vocab.crop": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "vocab.store": {
+      "same_as": "tray.tray_jar"
+    },
+    "reward.floating_season": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/lu-lut-va-han-han.reward.floating_season.jpg",
+        "method": "drawn"
+      },
+      "title": "Flooded fields in the Mekong Delta",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh mùa nước nổi hợp lệ (Commons, 11/11: chỉ ảnh vệ tinh thấy đất liền, ảnh Biển Hồ Campuchia có người); vẽ đồng ngập, hàng cây, xuồng nhỏ ở xa, không người."
+    }
+  }
+}

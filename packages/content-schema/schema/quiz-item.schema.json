@@ -457,6 +457,9 @@
         },
         "label": {
           "$ref": "common.schema.json#/$defs/Spoken"
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/Image"
         }
       },
       "required": [

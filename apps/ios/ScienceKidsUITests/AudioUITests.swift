@@ -99,11 +99,9 @@ final class AudioUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 10), "Home did not open")
     }
 
-    private func startLesson(_ app: XCUIApplication) {
-        let start = app.buttons["home.start_lesson"]
-        XCTAssertTrue(start.waitForExistence(timeout: 5))
-        start.tap()
-        XCTAssertTrue(element(app, "lesson.title").waitForExistence(timeout: 5), "lesson did not open")
+    /// The fixture lesson, through its topic (SK-035 tester #1).
+    private func startLesson(_ app: XCUIApplication, file: StaticString = #filePath, line: UInt = #line) {
+        fixture.open(in: app, file: file, line: line)
     }
 
     /// The pack must be in the build: the first question has its listen button.

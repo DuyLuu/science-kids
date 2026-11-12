@@ -8,6 +8,7 @@ import { checkMarkdown, type MdReport, type TopicResult } from "./check.ts";
 import { contentRootFor, discover, readParsed, scanRoot } from "./files.ts";
 import { fillIds } from "./ids.ts";
 import { formatMdIssue } from "./source.ts";
+import { checkSyllabus, formatSyllabusIssue, syllabusFilesOf, syllabusSummary, type SyllabusResult } from "./syllabus.ts";
 
 export const DEFAULT_JSON_DIR = path.join(REPO_ROOT, "content", ".build", "json");
 
@@ -56,30 +57,46 @@ function stepNote(topic: TopicResult): string | undefined {
     : `  ${slug}: dừng ở bước 2 (content-schema); sửa rồi chạy lại để kiểm luật theo tuổi`;
 }
 
-/** Prints the issues and the summary line; returns the number of errors. */
-function printReport(command: string, report: Extract<MdReport, { ok: true }>, options: MdOptions): number {
-  const errors = report.issues.filter((issue) => issue.severity === "error").length;
-  const warnings = report.issues.length - errors;
-  for (const issue of report.issues) console.log(formatMdIssue(issue));
+/**
+ * Prints the issues and the summary line; returns the number of errors. Order: markdown errors,
+ * syllabus errors, markdown warnings, syllabus warnings.
+ */
+function printReport(command: string, report: Extract<MdReport, { ok: true }>, options: MdOptions, syllabi: SyllabusResult[] = []): number {
+  const isError = (issue: { severity: string }) => issue.severity === "error";
+  const syllabusLines = (error: boolean) =>
+    syllabi.flatMap((result) => result.issues.filter((issue) => isError(issue) === error).map((issue) => formatSyllabusIssue(result.file, issue)));
+  const lines = [
+    ...report.issues.filter(isError).map(formatMdIssue),
+    ...syllabusLines(true),
+    ...report.issues.filter((issue) => !isError(issue)).map(formatMdIssue),
+    ...syllabusLines(false),
+  ];
+  const syllabusIssues = syllabi.flatMap((result) => result.issues);
+  const errors = report.issues.filter(isError).length + syllabusIssues.filter(isError).length;
+  const warnings = report.issues.length + syllabusIssues.length - errors;
+  for (const line of lines) console.log(line);
   const topics = report.topics.length;
   const lessons = report.topics.reduce((n, topic) => n + topic.lessons.length, 0);
   const groups = [...new Set(report.topics.map((topic) => topic.topic.data.age_group).filter((group) => typeof group === "string"))];
   const notes = report.topics.map(stepNote).filter((note): note is string => note !== undefined);
   console.log(
-    `${report.issues.length > 0 ? "\n" : ""}${command}: ${report.files} file markdown (${topics} topic, ${lessons} bài) · nhóm ${groups.join(", ") || "-"} · ` +
-      `${errors} lỗi · ${warnings} cảnh báo · gốc nội dung ${options.display(report.root)} · luật ${report.rulesDisplay} · app ${options.minAppVersion}`,
+    `${lines.length > 0 ? "\n" : ""}${command}: ${report.files} file markdown (${topics} topic, ${lessons} bài) · nhóm ${groups.join(", ") || "-"} · ` +
+      `${errors} lỗi · ${warnings} cảnh báo · gốc nội dung ${options.display(report.root)} · luật ${report.rulesDisplay} · app ${options.minAppVersion}` +
+      syllabi.map(syllabusSummary).join(""),
   );
   for (const note of notes) console.log(note);
   return errors;
 }
 
+/** validate also checks <folder>/syllabus.json of a folder input (content/), SK-030; import does not. */
 export function runMarkdownValidate(options: MdOptions): number {
   const report = check(options);
   if (!report.ok) {
     for (const message of report.messages) (report.exit === 2 ? console.error : console.log)(message);
     return report.exit;
   }
-  return printReport("validate", report, options) > 0 ? 1 : 0;
+  const syllabi = syllabusFilesOf(options.inputs).map((file) => checkSyllabus(file, options.display));
+  return printReport("validate", report, options, syllabi) > 0 ? 1 : 0;
 }
 
 /** Files a topic output folder may hold (anything else: refuse to replace it). */

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · human-body-parts · bàn tay. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#2E4A6E"><path d="M20 50 H44 V62 H20 Z"/></g>
+  <g fill="#D9A066"><rect x="19" y="12" width="7" height="24" rx="3.5"/><rect x="27.5" y="6" width="7" height="28" rx="3.5"/><rect x="36" y="9" width="7" height="26" rx="3.5"/><rect x="44.3" y="16" width="6.4" height="22" rx="3.2"/><rect x="9" y="25" width="7" height="22" rx="3.5" transform="rotate(-38 12.5 36)"/><path d="M18 30 H50 V40 C 50 48, 45 52, 38 52 H28 C 22 52, 18 48, 18 42 Z"/><path d="M14 40 L20 32 L24 40 L19 46 Z"/></g>
+  <g fill="#F0C873"><path d="M25 40 C 29 37, 37 37, 42 40 C 38 44, 30 45, 25 40 Z"/></g>
+</svg>

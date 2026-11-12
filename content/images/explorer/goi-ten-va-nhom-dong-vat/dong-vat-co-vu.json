@@ -1,0 +1,332 @@
+{
+  "note": "SK-041. Designer (agent) chọn 12/11/2026, chờ Duy duyệt. Toàn ảnh chụp (trừ hình câu dùng lại sân nhà vẽ của Hô hấp); ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Discoverer được chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi. Trang duyệt content/.build/images/goi-ten-va-nhom-dong-vat/<bài>/review.html. Chưa có: q6 (mái tóc bạn nhỏ từ phía sau).",
+  "images": {
+    "w1": {
+      "same_as": "tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/97708873@N00/51788664532",
+      "file_url": "https://live.staticflickr.com/65535/51788664532_4dd2ca1deb_b.jpg",
+      "title": "Hill Country Sunset",
+      "author": "Corey Leopold",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "c4b943fa-33d2-40f6-9b2c-3f61de720484",
+      "note": "Trời chiều cam trên rặng cây in bóng; không có ảnh hợp lệ rặng tre lúc chạng vạng."
+    },
+    "w2.w2_douc": {
+      "same_as": "explore_wild",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.75
+      },
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w2.w2_parakeet": {
+      "same_as": "tray_parakeet",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "learn.explore.explore_fur": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.42,
+        "top": 0.18,
+        "width": 0.5,
+        "height": 0.7
+      }
+    },
+    "learn.explore.explore_milk": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Domestic_cat_nursing_kittens_on_a_braided_rug_in_Shillong,_Meghalaya_-_22_June_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Domestic_cat_nursing_kittens_on_a_braided_rug_in_Shillong%2C_Meghalaya_-_22_June_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Domestic cat nursing kittens on a braided rug in Shillong, Meghalaya - 22 June 2026",
+      "author": "Aiban-03",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "learn.explore.explore_big_small": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants_with_calf_(7568633672).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Elephants_with_calf_%287568633672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Elephants with calf (7568633672)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.19,
+        "top": 0.14,
+        "width": 0.41,
+        "height": 0.62
+      },
+      "note": "Thay ảnh voi của Khủng long (có hàng rào cọc dây thép phía sau, lộ chuồng). Cắt lấy một con voi châu Á trưởng thành đứng dưới nước."
+    },
+    "learn.explore.explore_people": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adult-baby-bed-225744.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Adult-baby-bed-225744.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A baby's hand holding a finger",
+      "author": "Wayne Evans",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.41,
+        "width": 0.8,
+        "height": 0.59
+      },
+      "note": "Cắt bỏ mặt em bé, chỉ còn hai bàn tay."
+    },
+    "tray.tray_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.75
+      },
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_bat": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/64249609@N08/51939968430",
+      "file_url": "https://live.staticflickr.com/65535/51939968430_7f713c7427_b.jpg",
+      "title": "Grey-headed flying fox",
+      "author": "CazzJj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "99219638-2482-4119-b360-d81ffafa62a6"
+    },
+    "tray.tray_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      },
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_dolphin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A dolphin jumping out of the sea",
+      "author": "NOAA Photo Library",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "note": "Ảnh NOAA, không có logo."
+    },
+    "tray.tray_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_goldfish": {
+      "same_as": "tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q1.q1_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      },
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q1.q1_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q2": {
+      "same_as": "q4",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2011_Feb,_Puerto_Princesa_to_Nasiduan,_10.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2011_Feb%2C_Puerto_Princesa_to_Nasiduan%2C_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A baby buffalo in a field",
+      "author": "Alex S. Pronove (myself)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.28,
+        "width": 1,
+        "height": 0.72
+      },
+      "note": "Cắt bỏ đầu trâu mẹ; phía sau còn thấy chân, bụng trâu mẹ và một sợi dây thép rào bãi cỏ."
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WIND_SWEPT_PADDIES,SATYAVEDU_AP_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/WIND_SWEPT_PADDIES%2CSATYAVEDU_AP_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "WIND SWEPT PADDIES,SATYAVEDU AP - panoramio",
+      "author": "rajaraman sundaram",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w1` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4.q4_elephant": {
+      "same_as": "learn.explore.explore_big_small"
+    },
+    "q4.q4_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4.q4_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.75
+      },
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/ho-hap/village-yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A yard in a village",
+      "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5.q5_bat": {
+      "same_as": "tray.tray_bat"
+    },
+    "q5.q5_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5.q5_egret": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.mammal": {
+      "same_as": "learn.explore.explore_fur"
+    },
+    "vocab.milk": {
+      "same_as": "learn.explore.explore_milk"
+    },
+    "vocab.fur": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.bat": {
+      "same_as": "tray.tray_bat"
+    },
+    "reward.bat_card": {
+      "same_as": "tray.tray_bat"
+    },
+    "q6": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    }
+  }
+}

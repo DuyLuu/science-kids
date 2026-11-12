@@ -109,6 +109,1200 @@
         }
       }
     },
+    "badges.badge.done %lld" : {
+      "comment" : "Badges tab (SK-035): status of a strand badge with every topic done.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Done · %lld topic"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Done · %lld topics"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã xong · %lld chủ đề"
+          }
+        }
+      }
+    },
+    "badges.badge.done_a11y %lld" : {
+      "comment" : "Badges tab (SK-035): VoiceOver status of a strand badge with every topic done.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Done, %lld topic"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Done, %lld topics"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã xong, %lld chủ đề"
+          }
+        }
+      }
+    },
+    "badges.badge.not_started" : {
+      "comment" : "Badges tab (SK-035): status of a strand badge with no topic started.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not started"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa bắt đầu"
+          }
+        }
+      }
+    },
+    "badges.badge.started %lld %lld" : {
+      "comment" : "Badges tab (SK-035): status of a strand badge: topics done, topics of the strand in the age group.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learning · %1$lld/%2$lld topics"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang học · %1$lld/%2$lld chủ đề"
+          }
+        }
+      }
+    },
+    "badges.badge.started_a11y %lld %lld" : {
+      "comment" : "Badges tab (SK-035): VoiceOver status of a strand badge started (no \"·\", no \"1/2\"): topics done, topics of the strand in the age group.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learning, %1$lld of %2$lld topics done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang học, đã xong %1$lld trên %2$lld chủ đề"
+          }
+        }
+      }
+    },
+    "badges.empty" : {
+      "comment" : "Badges tab (SK-035): shown while no lesson is done.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish a lesson to get your first stars. Your streak starts that day."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học xong một bài để có sao đầu tiên. Chuỗi ngày của em bắt đầu từ hôm đó."
+          }
+        }
+      }
+    },
+    "badges.questions" : {
+      "comment" : "Badges tab (SK-035): title over the strand badges (canvas \"Câu hỏi lớn\").",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Big questions"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Câu hỏi lớn"
+          }
+        }
+      }
+    },
+    "badges.questions.hint" : {
+      "comment" : "Badges tab (SK-035): right of \"Big questions\".",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to see the topics"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để xem chủ đề"
+          }
+        }
+      }
+    },
+    "badges.stars_a11y %lld" : {
+      "comment" : "Badges tab (SK-035): VoiceOver label of the stars chip: best stars of every lesson, added up.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld star in all"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld stars in all"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng cộng %lld sao"
+          }
+        }
+      }
+    },
+    "badges.stars_unit" : {
+      "comment" : "Badges tab (SK-035): word after the number of stars on the chip (\"128 stars\").",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stars"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sao"
+          }
+        }
+      }
+    },
+    "badges.streak %lld" : {
+      "comment" : "Badges tab (SK-035): streak card title, days in the streak (Home's number).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-day streak"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-day streak"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuỗi %lld ngày"
+          }
+        }
+      }
+    },
+    "badges.streak_none" : {
+      "comment" : "Badges tab (SK-035): streak card title with no streak.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No streak yet"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có chuỗi ngày"
+          }
+        }
+      }
+    },
+    "badges.title" : {
+      "comment" : "Badges tab (SK-035): title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badges and streak"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huy hiệu và chuỗi ngày"
+          }
+        }
+      }
+    },
+    "badges.week" : {
+      "comment" : "Badges tab (SK-035): right of the streak card title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This week"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuần này"
+          }
+        }
+      }
+    },
+    "badges.week.day.1" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 1 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T2"
+          }
+        }
+      }
+    },
+    "badges.week.day.2" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 2 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T3"
+          }
+        }
+      }
+    },
+    "badges.week.day.3" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 3 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T4"
+          }
+        }
+      }
+    },
+    "badges.week.day.4" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 4 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thu"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T5"
+          }
+        }
+      }
+    },
+    "badges.week.day.5" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 5 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fri"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T6"
+          }
+        }
+      }
+    },
+    "badges.week.day.6" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 6 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sat"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T7"
+          }
+        }
+      }
+    },
+    "badges.week.day.7" : {
+      "comment" : "Badges tab (SK-035): short name of ISO weekday 7 (1 = Monday) under its square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sun"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CN"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.1" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 1 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Hai"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.2" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 2 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuesday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Ba"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.3" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 3 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wednesday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Tư"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.4" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 4 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thursday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Năm"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.5" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 5 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Friday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Sáu"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.6" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 6 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saturday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thứ Bảy"
+          }
+        }
+      }
+    },
+    "badges.week.day_long.7" : {
+      "comment" : "Badges tab (SK-035): VoiceOver name of ISO weekday 7 (1 = Monday).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chủ nhật"
+          }
+        }
+      }
+    },
+    "badges.week.missed_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, a day gone by without a lesson; the day's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, no lesson"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ không học"
+          }
+        }
+      }
+    },
+    "badges.week.not_yet_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, today before a lesson is finished; the day's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, no lesson yet"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ chưa học"
+          }
+        }
+      }
+    },
+    "badges.week.rest" : {
+      "comment" : "Badges tab (SK-035): under a rest day's square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "rest"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nghỉ"
+          }
+        }
+      }
+    },
+    "badges.week.rest_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, a rest day of the streak; the day's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, rest day"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ nghỉ"
+          }
+        }
+      }
+    },
+    "badges.week.rest_rule %lld" : {
+      "comment" : "Badges tab (SK-035): under the week strip: rest days per week of the streak rules.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "You can rest %lld day a week and keep your streak."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "You can rest %lld days a week and keep your streak."
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mỗi tuần, em được nghỉ %lld ngày mà không mất chuỗi."
+          }
+        }
+      }
+    },
+    "badges.week.studied_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, a day of the week strip with a lesson; the day's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, studied"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ đã học"
+          }
+        }
+      }
+    },
+    "badges.week.today" : {
+      "comment" : "Badges tab (SK-035): under today's square.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "today"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hôm nay"
+          }
+        }
+      }
+    },
+    "badges.week.today_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, before today's state in the week strip.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today, %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hôm nay, %@"
+          }
+        }
+      }
+    },
+    "badges.week.upcoming_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver, a day after today; the day's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, still to come"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ chưa tới"
+          }
+        }
+      }
+    },
+    "badges.week_a11y %@" : {
+      "comment" : "Badges tab (SK-035): VoiceOver label of the week strip; the days, separated by semicolons.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This week: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuần này: %@"
+          }
+        }
+      }
+    },
+    "cards.card_a11y %@" : {
+      "comment" : "Cards tab (SK-035): VoiceOver label of a card won (button); the card's name from the content.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ card, collected. Tap to open it"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ %@, đã có. Chạm để mở thẻ"
+          }
+        }
+      }
+    },
+    "cards.count_a11y %lld %lld" : {
+      "comment" : "Cards tab (SK-035): VoiceOver label of the count chip: cards won, cards of the written lessons.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld of %2$lld cards collected"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã có %1$lld trên %2$lld thẻ"
+          }
+        }
+      }
+    },
+    "cards.detail.back_a11y %@" : {
+      "comment" : "Cards tab (SK-035), open card: VoiceOver label of the card showing its back (button); its value is the fact.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back of the %@ card. Tap to turn it back"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mặt sau thẻ %@. Chạm để lật lại"
+          }
+        }
+      }
+    },
+    "cards.detail.close" : {
+      "comment" : "Cards tab (SK-035), open card: close button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close the card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng thẻ"
+          }
+        }
+      }
+    },
+    "cards.detail.front" : {
+      "comment" : "Cards tab (SK-035), open card: foot of the front, after the set's name (\"Dinosaur cards · front\").",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "front"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mặt trước"
+          }
+        }
+      }
+    },
+    "cards.detail.front_a11y %@" : {
+      "comment" : "Cards tab (SK-035), open card: VoiceOver label of the card showing its front (button); the card's name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ card. Tap to turn it over"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ %@. Chạm để lật thẻ"
+          }
+        }
+      }
+    },
+    "cards.detail.hint" : {
+      "comment" : "Cards tab (SK-035), open card: hint next to the listen button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to turn the card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để lật thẻ"
+          }
+        }
+      }
+    },
+    "cards.empty" : {
+      "comment" : "Cards tab (SK-035): shown while no card is won yet.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every lesson you finish gives you a card to collect. Finish your first lesson to win your first card!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mỗi bài học xong cho em một thẻ sưu tầm. Học xong bài đầu để nhận thẻ đầu tiên nhé!"
+          }
+        }
+      }
+    },
+    "cards.hidden %lld" : {
+      "comment" : "Cards tab (SK-035): under the \"?\" of a card not won yet: the lesson that gives it.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %lld"
+          }
+        }
+      }
+    },
+    "cards.hidden_a11y %lld" : {
+      "comment" : "Cards tab (SK-035): VoiceOver label of a card not won yet.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Card not won yet. Finish lesson %lld to win it"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ chưa có. Học xong bài %lld để nhận"
+          }
+        }
+      }
+    },
+    "cards.later_topics %lld" : {
+      "comment" : "Cards tab (SK-035): under the sets: topics of the child's age group with no card yet and lessons still to write (topics, not cards: a lesson may come without a card).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more topic is coming soon."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more topics are coming soon."
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Còn %lld chủ đề nữa sắp có."
+          }
+        }
+      }
+    },
+    "cards.more %lld" : {
+      "comment" : "Cards tab (SK-035): big line of the last tile of a set: the topic's lessons not written yet (lessons, not cards: a lesson may come without a card).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld lesson"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld lessons"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld bài"
+          }
+        }
+      }
+    },
+    "cards.more.caption" : {
+      "comment" : "Cards tab (SK-035): under \"+N lessons\" on the last tile of a set.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sắp có"
+          }
+        }
+      }
+    },
+    "cards.more_a11y %lld" : {
+      "comment" : "Cards tab (SK-035): VoiceOver label of the \"+N lessons\" tile.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more lesson coming soon"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more lessons coming soon"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Còn %lld bài nữa sắp có"
+          }
+        }
+      }
+    },
+    "cards.set.count %lld %lld" : {
+      "comment" : "Cards tab (SK-035): right of a set's name: cards won, cards of the set.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld collected"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã có %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "cards.subtitle" : {
+      "comment" : "Cards tab (SK-035): line under the title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap one of your cards to see its back"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm thẻ đã có để xem mặt sau"
+          }
+        }
+      }
+    },
+    "cards.title" : {
+      "comment" : "Cards tab (SK-035): title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bộ thẻ"
+          }
+        }
+      }
+    },
+    "cards.unit" : {
+      "comment" : "Cards tab (SK-035): word after the count on the chip (\"3/12 cards\").",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "thẻ"
+          }
+        }
+      }
+    },
+    "collectible.set.animals" : {
+      "comment" : "Name of the collectible set animals (Explorer #1 Gọi tên và nhóm động vật, SK-041).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animal cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ con vật"
+          }
+        }
+      }
+    },
+    "collectible.set.body" : {
+      "comment" : "Name of the collectible set body (Não bộ và giác quan).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Body cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ cơ thể"
+          }
+        }
+      }
+    },
+    "collectible.set.breathing" : {
+      "comment" : "Name of the collectible set breathing.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathing cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ hô hấp"
+          }
+        }
+      }
+    },
+    "collectible.set.dinosaurs" : {
+      "comment" : "Name of the collectible set dinosaurs.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinosaur cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ khủng long"
+          }
+        }
+      }
+    },
+    "collectible.set.earth" : {
+      "comment" : "Name of the collectible set earth.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Earth cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ Trái Đất"
+          }
+        }
+      }
+    },
     "collectible.set.food" : {
       "comment" : "Name of the collectible set food.",
       "extractionState" : "manual",
@@ -123,6 +1317,96 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thẻ thực phẩm"
+          }
+        }
+      }
+    },
+    "collectible.set.rocks" : {
+      "comment" : "Name of the collectible set rocks (đá và đất).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rock and soil cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ đá và đất"
+          }
+        }
+      }
+    },
+    "collectible.set.weather" : {
+      "comment" : "Name of the collectible set weather.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ thời tiết"
+          }
+        }
+      }
+    },
+    "collectible.set_generic" : {
+      "comment" : "Name of a collectible set the app has no collectible.set.<set> key for yet (fallback, never the raw key).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ"
+          }
+        }
+      }
+    },
+    "collection.empty.start" : {
+      "comment" : "Cards, Words and Badges tabs (SK-035): button of the empty tab; opens the first lesson not done of the child's journey.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the first lesson"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học bài đầu tiên"
+          }
+        }
+      }
+    },
+    "collection.empty.tag" : {
+      "comment" : "Cards, Words and Badges tabs (SK-035): tag of the card shown while the tab is empty.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's start"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu nào"
           }
         }
       }
@@ -177,6 +1461,348 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa mở được bài học"
+          }
+        }
+      }
+    },
+    "credits.author %@" : {
+      "comment" : "Image credits: author of a picture.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác giả: %@"
+          }
+        }
+      }
+    },
+    "credits.back" : {
+      "comment" : "Image credits screen: back button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to Home"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về trang chủ"
+          }
+        }
+      }
+    },
+    "credits.change.composed" : {
+      "comment" : "Image credits: change line of a picture Science Kids made from several source pictures (CC BY asks to say what was changed).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Composed from several images"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghép từ nhiều ảnh"
+          }
+        }
+      }
+    },
+    "credits.change.cropped" : {
+      "comment" : "Image credits: change line, the source picture was cropped. Several changes are joined by ' · '.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cropped"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã cắt"
+          }
+        }
+      }
+    },
+    "credits.change.drawn" : {
+      "comment" : "Image credits: change line of a picture drawn by Science Kids itself (manifest changes: drawn, SK-033 dev 10/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drawn by Science Kids"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hình vẽ của Science Kids"
+          }
+        }
+      }
+    },
+    "credits.change.edited" : {
+      "comment" : "Image credits: change line, a change the app does not name (shown so a change is never hidden).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edited"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã chỉnh sửa"
+          }
+        }
+      }
+    },
+    "credits.change.resized" : {
+      "comment" : "Image credits: change line, the source picture was made smaller. Several changes are joined by ' · '.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resized"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã thu nhỏ"
+          }
+        }
+      }
+    },
+    "credits.count %lld" : {
+      "comment" : "Image credits screen: caption under the title, number of pictures in the content.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pictures in this build: %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số hình trong bản này: %lld"
+          }
+        }
+      }
+    },
+    "credits.entry" : {
+      "comment" : "Home, under the journey (SK-033): opens the image credits screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image credits"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nguồn hình"
+          }
+        }
+      }
+    },
+    "credits.intro" : {
+      "comment" : "Image credits screen: note above the list.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The photos and drawings in the lessons come from free sources that allow use in this app. Here is who made each one, its licence and where it comes from."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh và hình vẽ trong bài học lấy từ các nguồn miễn phí cho phép dùng trong ứng dụng. Dưới đây là tác giả, giấy phép và nguồn của từng hình."
+          }
+        }
+      }
+    },
+    "credits.license %@" : {
+      "comment" : "Image credits: licence of a picture (CC0 1.0, CC BY 4.0…).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licence: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giấy phép: %@"
+          }
+        }
+      }
+    },
+    "credits.license_page %@" : {
+      "comment" : "Image credits: address of the licence text, shown as text (not a link).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licence text: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Văn bản giấy phép: %@"
+          }
+        }
+      }
+    },
+    "credits.page %@" : {
+      "comment" : "Image credits: address of the picture's own page, shown as text (not a link).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang gốc: %@"
+          }
+        }
+      }
+    },
+    "credits.parts" : {
+      "comment" : "Image credits: heading of the list of source pictures under a composed picture.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source images"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh nguồn"
+          }
+        }
+      }
+    },
+    "credits.source %@" : {
+      "comment" : "Image credits: where a picture comes from (Wikimedia Commons, NASA…).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nguồn: %@"
+          }
+        }
+      }
+    },
+    "credits.title" : {
+      "comment" : "Image credits screen (SK-033): title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image credits"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nguồn hình"
+          }
+        }
+      }
+    },
+    "credits.untitled" : {
+      "comment" : "Image credits: a picture whose credit has no title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untitled picture"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hình chưa có tên"
+          }
+        }
+      }
+    },
+    "home.all_done.body" : {
+      "comment" : "Home: text of the card shown when every written lesson of the journey is done (10/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have finished every lesson there is so far. New lessons are on their way!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em đã học xong mọi bài hiện có. Bài mới đang được soạn, sắp có nhé!"
+          }
+        }
+      }
+    },
+    "home.all_done.tag" : {
+      "comment" : "Home: tag of the card shown instead of Continue when every written lesson of the journey is done (10/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã học hết"
           }
         }
       }
@@ -236,7 +1862,7 @@
       }
     },
     "home.continue.progress %lld %lld %lld" : {
-      "comment" : "Home card: lessons done, lesson count, minutes of the next lesson.",
+      "comment" : "Home card: lessons of the topic done, lessons of the topic in the syllabus (written or not, SK-035), minutes of the next lesson.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -272,7 +1898,7 @@
       }
     },
     "home.continue_free" : {
-      "comment" : "Home: tag on the continue card of a free topic.",
+      "comment" : "Home: tag on the continue card of a free topic. Hidden while the paid plan is off (AppFeatures.paidPlanEnabled, SK-030).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -290,7 +1916,7 @@
       }
     },
     "home.empty" : {
-      "comment" : "Home: no topic in the content.",
+      "comment" : "Home: no topic in the syllabus or the content of the age group shown.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -325,8 +1951,26 @@
         }
       }
     },
+    "home.groups_a11y" : {
+      "comment" : "VoiceOver label of the three age group chips above the journey on Home (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Age groups"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhóm tuổi"
+          }
+        }
+      }
+    },
     "home.journey.count %lld" : {
-      "comment" : "Home: number of topics on the journey.",
+      "comment" : "Home: number of topics on the journey (10/11: no more \"easy → hard\", the syllabus follows Oak's order).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -335,13 +1979,13 @@
               "one" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "%lld topic · easy → hard"
+                  "value" : "%lld topic"
                 }
               },
               "other" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "%lld topics · easy → hard"
+                  "value" : "%lld topics"
                 }
               }
             }
@@ -350,61 +1994,307 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld chủ đề · dễ → khó"
+            "value" : "%lld chủ đề"
           }
         }
       }
     },
-    "home.journey.current %lld" : {
-      "comment" : "Home: status of the topic being learnt.",
+    "home.journey.count_started %lld" : {
+      "comment" : "Home: after the topic count (\"17 topics · 3 started\"): topics with a lesson done or under way (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Level %lld · Learning now"
+            "value" : "%lld started"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mức %lld · Đang học"
+            "value" : "%lld đã bắt đầu"
           }
         }
       }
     },
-    "home.journey.more" : {
-      "comment" : "Home: last stop of the journey while the pack has one topic.",
+    "home.journey.done %lld %lld" : {
+      "comment" : "Home: status of a topic whose lessons are all done, every lesson of the syllabus (SK-035): lessons done / lessons of the topic.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "More topics coming soon"
+            "value" : "Done · %1$lld/%2$lld lessons"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sắp có thêm chủ đề"
+            "value" : "Đã xong · %1$lld/%2$lld bài"
           }
         }
       }
     },
-    "home.journey.open %lld" : {
-      "comment" : "Home: status of another open topic.",
+    "home.journey.done_a11y %lld %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver status of a topic done: lessons done / lessons of the topic in the syllabus (SK-035).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Level %lld"
+            "value" : "Done, %1$lld of %2$lld lessons"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mức %lld"
+            "value" : "Đã xong, %1$lld trên %2$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.finish" : {
+      "comment" : "Home map (SK-034): the finish flag at the end of the journey.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về đích"
+          }
+        }
+      }
+    },
+    "home.journey.finish_done %lld" : {
+      "comment" : "Home map (SK-034): topics done, after \"17 topics · \" under the finish flag.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld đã xong"
+          }
+        }
+      }
+    },
+    "home.journey.learning %lld %lld" : {
+      "comment" : "Home: status of the topic of the continue card, or of a topic started: lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learning now · %1$lld/%2$lld lessons"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang học · %1$lld/%2$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.learning_a11y %lld %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver status of a topic being learnt: lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learning now, %1$lld of %2$lld lessons done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang học, đã xong %1$lld trên %2$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.level %lld %lld %lld" : {
+      "comment" : "Home: status of a topic not started: its level, lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld · %2$lld/%3$lld lessons"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức %1$lld · %2$lld/%3$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.level_a11y %lld %lld %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver status of a topic not started: level, lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld, %2$lld of %3$lld lessons done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mức %1$lld, đã xong %2$lld trên %3$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.new %lld %lld" : {
+      "comment" : "Home: status of a new topic of the syllabus (no level yet) not started: lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New topic · %1$lld/%2$lld lessons"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chủ đề mới · %1$lld/%2$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.new_a11y %lld %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver status of a new topic (no level yet) not started: lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New topic, %1$lld of %2$lld lessons done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chủ đề mới, đã xong %1$lld trên %2$lld bài"
+          }
+        }
+      }
+    },
+    "home.journey.segment %lld" : {
+      "comment" : "Home map (SK-034): name of a stage of the journey, on its post. Duy 10/11: no Year.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stage %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chặng %lld"
+          }
+        }
+      }
+    },
+    "home.journey.segment_a11y %lld %lld %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver label of a stage's post (a heading): stage number, topics done, topics.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stage %1$lld, %2$lld of %3$lld topics done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chặng %1$lld, đã xong %2$lld trên %3$lld chủ đề"
+          }
+        }
+      }
+    },
+    "home.journey.segment_done %lld %lld" : {
+      "comment" : "Home map (SK-034): topics done in a stage / topics in the stage, under its name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld xong"
+          }
+        }
+      }
+    },
+    "home.journey.soon" : {
+      "comment" : "Home: status of a topic with no written lesson yet (10/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sắp có"
+          }
+        }
+      }
+    },
+    "home.journey.stars_a11y %lld" : {
+      "comment" : "Home map (SK-034): VoiceOver, stars of a topic done (0–3, the mean of its lessons' best stars rounded down).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld star"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld stars"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sao"
           }
         }
       }
@@ -423,6 +2313,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hành trình Year %lld"
+          }
+        }
+      }
+    },
+    "home.journey.title_group %@" : {
+      "comment" : "Home: journey title of another age group than the profile's (SK-030), with the world name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hành trình %@"
           }
         }
       }
@@ -555,6 +2463,366 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kiểm tra"
+          }
+        }
+      }
+    },
+    "lesson.explorer.bubble_hint" : {
+      "comment" : "Explorer: VoiceOver hint of the mascot's speech bubble, which replays what the mascot said (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plays it again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe lại"
+          }
+        }
+      }
+    },
+    "lesson.explorer.card.chosen" : {
+      "comment" : "Explorer quiz: VoiceOver value of the picture card just tapped, while its name is read (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chosen"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã chọn"
+          }
+        }
+      }
+    },
+    "lesson.explorer.choices" : {
+      "comment" : "Explorer quiz: VoiceOver label of the group of picture cards (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pictures to choose from"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các hình để chọn"
+          }
+        }
+      }
+    },
+    "lesson.explorer.false" : {
+      "comment" : "Explorer quiz: VoiceOver label of the shake card (not true), which shows no word (SK-026 D2, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not true"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sai"
+          }
+        }
+      }
+    },
+    "lesson.explorer.learn.next" : {
+      "comment" : "Explorer Learn: VoiceOver label of the arrow button to the game (icon only, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to the game"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sang phần chơi"
+          }
+        }
+      }
+    },
+    "lesson.explorer.order.place_empty %lld" : {
+      "comment" : "Explorer order question: VoiceOver label of an empty place: place number (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place %lld, empty"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ô %lld, còn trống"
+          }
+        }
+      }
+    },
+    "lesson.explorer.order.place_filled %lld %@" : {
+      "comment" : "Explorer order question: VoiceOver label of a place with a picture in it: place number, picture name (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place %1$lld: %2$@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ô %1$lld: %2$@"
+          }
+        }
+      }
+    },
+    "lesson.explorer.order.places" : {
+      "comment" : "Explorer order question: VoiceOver label of the row of places (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places, in order"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các ô, theo thứ tự"
+          }
+        }
+      }
+    },
+    "lesson.explorer.order.put_hint" : {
+      "comment" : "Explorer order question: VoiceOver hint of a picture still to place (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puts it in the next empty place"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt vào ô trống tiếp theo"
+          }
+        }
+      }
+    },
+    "lesson.explorer.order.take_out" : {
+      "comment" : "Explorer order question: VoiceOver hint of a placed picture (tap takes it out again) (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Takes it out"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lấy ra"
+          }
+        }
+      }
+    },
+    "lesson.explorer.play.next" : {
+      "comment" : "Explorer Play: VoiceOver label of the arrow button to the quiz (icon only, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to the quiz"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sang phần câu hỏi"
+          }
+        }
+      }
+    },
+    "lesson.explorer.reward.hint_again" : {
+      "comment" : "Explorer reward: under the stars when fewer than two are won; never shows the score (SK-026 D1, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play again to win more stars."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi lại để được thêm sao nhé."
+          }
+        }
+      }
+    },
+    "lesson.explorer.reward.sticker_a11y %@" : {
+      "comment" : "Explorer reward: VoiceOver label of the new sticker: its name (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New sticker: %@. Tap to stick it in."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sticker mới: %@. Chạm để dán vào sổ."
+          }
+        }
+      }
+    },
+    "lesson.explorer.reward.stuck" : {
+      "comment" : "Explorer reward: VoiceOver value of the sticker once stuck in (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stuck in"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã dán vào sổ"
+          }
+        }
+      }
+    },
+    "lesson.explorer.reward.title" : {
+      "comment" : "Explorer reward: title (canvas Explorer-Reward \"Great job!\" / \"Giỏi quá!\") (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Great job!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giỏi quá!"
+          }
+        }
+      }
+    },
+    "lesson.explorer.tf_intro" : {
+      "comment" : "Explorer quiz: subtitle under the first true/false question of a lesson, how to answer with the nod and shake cards. No voice clip yet (interface voice open in SK-026). Wording from canvas Explorer-QuizTF, to be checked by content-editor (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "True? Tap the nod. Not true? Tap the shake."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng thì chạm bạn gật đầu, sai thì chạm bạn lắc đầu."
+          }
+        }
+      }
+    },
+    "lesson.explorer.to_reward" : {
+      "comment" : "Explorer quiz: VoiceOver label of the arrow button after the last question (icon only, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your reward"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem phần thưởng"
+          }
+        }
+      }
+    },
+    "lesson.explorer.true" : {
+      "comment" : "Explorer quiz: VoiceOver label of the nod card (true), which shows no word (SK-026 D2, SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "True"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng"
+          }
+        }
+      }
+    },
+    "lesson.explorer.true_false" : {
+      "comment" : "Explorer quiz: VoiceOver label of the nod and shake cards together (SK-040).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "True or not true"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng hay sai"
+          }
+        }
+      }
+    },
+    "lesson.explorer.unsure" : {
+      "comment" : "Explorer: VoiceOver label of the 'not sure' card (thinking face, no word) for a future 'What do you think?' question (SK-040; format not in the schema yet).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not sure"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em chưa chắc"
           }
         }
       }
@@ -956,25 +3224,25 @@
       }
     },
     "lesson.play.done" : {
-      "comment" : "Play: button once the tray succeeds.",
+      "comment" : "Play: button once the picks meet the lesson's rule (generic: every build_tray lesson, not only meals).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Balanced! Take the quiz"
+            "value" : "Done! Take the quiz"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mâm cân bằng! Làm quiz"
+            "value" : "Xong rồi! Làm quiz"
           }
         }
       }
     },
     "lesson.play.mascot" : {
-      "comment" : "VoiceOver label of the mascot beside the tray message.",
+      "comment" : "VoiceOver label of the mascot beside the Play message.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -992,7 +3260,7 @@
       }
     },
     "lesson.play.meter_missing" : {
-      "comment" : "VoiceOver value of a food-group chip.",
+      "comment" : "VoiceOver value of a group chip: this required group has no pick yet.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -1010,13 +3278,13 @@
       }
     },
     "lesson.play.meter_ok" : {
-      "comment" : "VoiceOver value of a food-group chip.",
+      "comment" : "VoiceOver value of a group chip: a pick of this required group is in place.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "on the tray"
+            "value" : "done"
           }
         },
         "vi" : {
@@ -1028,7 +3296,7 @@
       }
     },
     "lesson.play.need %@" : {
-      "comment" : "Play: what the tray needs; the group names come from the content.",
+      "comment" : "Play: what the picks need; the group names come from the content.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -1046,55 +3314,55 @@
       }
     },
     "lesson.play.remove %@" : {
-      "comment" : "VoiceOver label of a food on the tray (button).",
+      "comment" : "VoiceOver label of a pick in its place (button); the name comes from the content.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Take %@ off the tray"
+            "value" : "Remove %@"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bỏ %@ khỏi mâm"
+            "value" : "Bỏ chọn %@"
           }
         }
       }
     },
     "lesson.play.tray_a11y %lld %lld" : {
-      "comment" : "VoiceOver label of the tray.",
+      "comment" : "VoiceOver label of the places for the picks: filled / capacity.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your tray, %1$lld of %2$lld places filled"
+            "value" : "Your picks: %1$lld of %2$lld places filled"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mâm của em, có %1$lld trên %2$lld món"
+            "value" : "Em đã chọn: %1$lld trên %2$lld chỗ"
           }
         }
       }
     },
     "lesson.play.tray_label" : {
-      "comment" : "Play: line over the tray.",
+      "comment" : "Play: line over the places for the picks (generic: every build_tray lesson).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your tray · tap a food on it to take it off"
+            "value" : "Your picks · tap one to take it off"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mâm của em · chạm món trong mâm để bỏ ra"
+            "value" : "Em đã chọn · chạm vào để bỏ ra"
           }
         }
       }
@@ -2311,146 +4579,236 @@
         }
       }
     },
-    "soon.back" : {
-      "comment" : "Coming-soon page: button back to the Journey tab.",
+    "progress.lessons_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the lesson squares (Home card, Topic): lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Back to the journey"
+            "value" : "%1$lld of %2$lld lessons done"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Về hành trình"
+            "value" : "Đã xong %1$lld trên %2$lld bài"
           }
         }
       }
     },
-    "soon.badges.body" : {
-      "comment" : "Coming-soon page: Badges tab.",
+    "settings.back" : {
+      "comment" : "Settings screen: back button (icon only), back to Home (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stars, streaks and badges will show here soon."
+            "value" : "Back to Home"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sao, chuỗi ngày và huy hiệu sẽ sớm hiện ở đây."
+            "value" : "Về trang chủ"
           }
         }
       }
     },
-    "soon.badges.title" : {
-      "comment" : "Coming-soon page: Badges tab title.",
+    "settings.language.both" : {
+      "comment" : "Settings screen: choice both languages (bilingual) (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Badges"
+            "value" : "Both"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Huy hiệu"
+            "value" : "Cả hai"
           }
         }
       }
     },
-    "soon.cards.body" : {
-      "comment" : "Coming-soon page: Cards tab.",
+    "settings.language.both_detail" : {
+      "comment" : "Settings screen: what the Both choice does (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Finish a lesson to win your first card. This page is on its way."
+            "value" : "English with Vietnamese under it, both voices"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Học xong một bài để nhận thẻ đầu tiên. Trang này sắp có."
+            "value" : "Tiếng Anh kèm tiếng Việt bên dưới, đọc cả hai giọng"
           }
         }
       }
     },
-    "soon.cards.title" : {
-      "comment" : "Coming-soon page: Cards tab title.",
+    "settings.language.caption %@" : {
+      "comment" : "Settings screen: under the section title: the child's name; the choice applies at once (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Card deck"
+            "value" : "For %@'s lessons. It changes at once."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bộ thẻ"
+            "value" : "Cho bài học của %@. Đổi là áp dụng ngay."
           }
         }
       }
     },
-    "soon.tag" : {
-      "comment" : "Tag on a page that is not built yet.",
+    "settings.language.en" : {
+      "comment" : "Settings screen: choice English only (en_first). Kept as the language's own name in both interfaces (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Coming soon"
+            "value" : "English"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sắp có"
+            "value" : "English"
           }
         }
       }
     },
-    "soon.words.body" : {
-      "comment" : "Coming-soon page: Words tab.",
+    "settings.language.en_detail" : {
+      "comment" : "Settings screen: what the English choice does (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The new words of every lesson will be gathered here soon."
+            "value" : "English words and voice only"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Từ mới của từng bài sẽ sớm được gom về đây."
+            "value" : "Chỉ chữ và giọng tiếng Anh"
           }
         }
       }
     },
-    "soon.words.title" : {
-      "comment" : "Coming-soon page: Words tab title.",
+    "settings.language.title" : {
+      "comment" : "Settings screen: section title of the learning language (SK-042).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Words"
+            "value" : "Language"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Từ vựng"
+            "value" : "Ngôn ngữ"
+          }
+        }
+      }
+    },
+    "settings.language.vi" : {
+      "comment" : "Settings screen: choice Vietnamese only (vi_first). Kept as the language's own name in both interfaces (SK-042).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Việt"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Việt"
+          }
+        }
+      }
+    },
+    "settings.language.vi_detail" : {
+      "comment" : "Settings screen: what the Vietnamese choice does; new words keep the English word (SK-042).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vietnamese words and voice; new words keep the English word"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chữ và giọng tiếng Việt; từ mới vẫn có từ tiếng Anh"
+          }
+        }
+      }
+    },
+    "settings.open" : {
+      "comment" : "Home: VoiceOver label of the gear button that opens Settings (icon only, SK-042).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
+          }
+        }
+      }
+    },
+    "settings.save_failed" : {
+      "comment" : "Settings screen: the choice could not be saved on the device (SK-042).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not save. Please try again."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa lưu được. Em thử lại nhé."
+          }
+        }
+      }
+    },
+    "settings.title" : {
+      "comment" : "Settings screen: title (SK-042).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
           }
         }
       }
@@ -2469,6 +4827,258 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na"
+          }
+        }
+      }
+    },
+    "strand.earth_sky.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) earth_sky.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Earth and sky"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trái Đất và bầu trời"
+          }
+        }
+      }
+    },
+    "strand.earth_sky.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand earth_sky. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is above and below us?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có gì trên trời, dưới đất?"
+          }
+        }
+      }
+    },
+    "strand.energy_forces.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) energy_forces.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Energy and forces"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Năng lượng và lực"
+          }
+        }
+      }
+    },
+    "strand.energy_forces.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand energy_forces. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What do energy and forces do?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Năng lượng và lực làm gì?"
+          }
+        }
+      }
+    },
+    "strand.humans_health.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) humans_health.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Humans and health"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con người và sức khoẻ"
+          }
+        }
+      }
+    },
+    "strand.humans_health.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand humans_health. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does my body need?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cơ thể ta cần gì?"
+          }
+        }
+      }
+    },
+    "strand.living_environment.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) living_environment.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Living things and their environment"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinh vật và môi trường"
+          }
+        }
+      }
+    },
+    "strand.living_environment.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand living_environment. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Who lives where?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ai sống ở đâu?"
+          }
+        }
+      }
+    },
+    "strand.materials.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) materials.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Materials"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chất và vật liệu"
+          }
+        }
+      }
+    },
+    "strand.materials.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand materials. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What are things made of?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mọi thứ làm bằng gì?"
+          }
+        }
+      }
+    },
+    "strand.other.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) other (a strand the app does not know yet).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khoa học"
+          }
+        }
+      }
+    },
+    "strand.other.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand other (a strand the app does not know yet). Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A science question"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Câu hỏi khoa học"
+          }
+        }
+      }
+    },
+    "strand.plants_animals.name" : {
+      "comment" : "Badges tab (SK-035): name of the strand (syllabus-progression.md section 4) plants_animals.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plants and animals"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thực vật và động vật"
+          }
+        }
+      }
+    },
+    "strand.plants_animals.question" : {
+      "comment" : "Badges tab (SK-035): the big question of the strand plants_animals. Draft (AI), content-editor proposal waiting for Duy's or PM's review.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do animals and plants live?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cây và con vật sống thế nào?"
           }
         }
       }
@@ -2582,7 +5192,7 @@
       }
     },
     "topic.free" : {
-      "comment" : "Topic: tag of a free topic.",
+      "comment" : "Topic: tag of a free topic. Hidden while the paid plan is off (AppFeatures.paidPlanEnabled, SK-030).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -2600,7 +5210,7 @@
       }
     },
     "topic.lesson.current %lld" : {
-      "comment" : "Topic: status of the open lesson.",
+      "comment" : "Topic: status of a lesson with an attempt under way, none finished (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -2617,62 +5227,80 @@
         }
       }
     },
-    "topic.lesson.locked %lld" : {
-      "comment" : "Topic: locked lesson.",
+    "topic.lesson.done" : {
+      "comment" : "Topic: status of a lesson finished at least once, next to its best stars (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opens after lesson %lld"
+            "value" : "Done"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mở sau bài %lld"
+            "value" : "Đã xong"
           }
         }
       }
     },
-    "topic.lesson.locked_a11y %lld %lld" : {
-      "comment" : "VoiceOver label of a locked lesson.",
+    "topic.lesson.done_a11y %lld %@ %lld" : {
+      "comment" : "VoiceOver label of a lesson finished at least once (button): number, title, best stars (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lesson %1$lld, locked, opens after lesson %2$lld"
+            "value" : "Lesson %1$lld: %2$@. Done, best %3$lld of 3 stars"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bài %1$lld, khoá, mở sau bài %2$lld"
+            "value" : "Bài %1$lld: %2$@. Đã xong, tốt nhất %3$lld trên 3 sao"
           }
         }
       }
     },
-    "topic.lesson.number %lld" : {
-      "comment" : "Topic: locked lesson without content yet (no title is made up).",
+    "topic.lesson.next %lld" : {
+      "comment" : "Topic: status of the topic's next lesson (the first written one not done), not started yet (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lesson %lld"
+            "value" : "~%lld min · Up next"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bài %lld"
+            "value" : "~%lld phút · Học tiếp"
+          }
+        }
+      }
+    },
+    "topic.lesson.next_a11y %lld %@ %lld" : {
+      "comment" : "VoiceOver label of the topic's next lesson, not started yet (button): number, title, minutes (10/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld: %2$@. About %3$lld minutes, up next"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld: %2$@. Khoảng %3$lld phút, học tiếp"
           }
         }
       }
     },
     "topic.lesson.open_a11y %lld %@ %lld" : {
-      "comment" : "VoiceOver label of the open lesson (button).",
+      "comment" : "VoiceOver label of a lesson with an attempt under way (button): number, title, minutes (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -2685,6 +5313,96 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bài %1$lld: %2$@. Khoảng %3$lld phút, đang học"
+          }
+        }
+      }
+    },
+    "topic.lesson.ready %lld" : {
+      "comment" : "Topic: a written lesson other than the current one, with its minutes (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "~%lld min"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "~%lld phút"
+          }
+        }
+      }
+    },
+    "topic.lesson.ready_a11y %lld %@ %lld" : {
+      "comment" : "VoiceOver label of a written lesson other than the current one (button): number, title, minutes (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld: %2$@. About %3$lld minutes"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld: %2$@. Khoảng %3$lld phút"
+          }
+        }
+      }
+    },
+    "topic.lesson.soon" : {
+      "comment" : "Topic: a lesson of the syllabus not written yet (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có nội dung"
+          }
+        }
+      }
+    },
+    "topic.lesson.soon_a11y %lld %@" : {
+      "comment" : "VoiceOver label of a lesson not written yet (button): number, title (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson %1$lld: %2$@. Coming soon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài %1$lld: %2$@. Chưa có nội dung"
+          }
+        }
+      }
+    },
+    "topic.lesson.soon_note" : {
+      "comment" : "Topic: note shown (and read by VoiceOver) when a lesson not written yet is tapped (SK-030).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This lesson is on its way."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài này đang được soạn, sắp có nhé."
           }
         }
       }
@@ -2726,7 +5444,7 @@
       }
     },
     "topic.progress %lld %lld" : {
-      "comment" : "Topic: lessons done / lesson count.",
+      "comment" : "Topic: lessons done / lessons of the topic in the syllabus, written or not (SK-035).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -2743,20 +5461,20 @@
         }
       }
     },
-    "topic.progress_a11y %lld %lld" : {
-      "comment" : "VoiceOver label of the lesson squares.",
+    "topic.progress_soon" : {
+      "comment" : "Topic: in place of the lesson count when no lesson of the topic is written yet (10/11).",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lesson %1$lld of %2$lld, none finished yet"
+            "value" : "Coming soon"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bài %1$lld trên %2$lld, chưa xong bài nào"
+            "value" : "Sắp có"
           }
         }
       }
@@ -2805,6 +5523,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Từ vựng chủ đề · %lld từ"
+          }
+        }
+      }
+    },
+    "topic.words.note" : {
+      "comment" : "Topic: note under the words chip, tapped before any lesson of the topic is done (SK-035; also read by VoiceOver).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish a lesson in this topic to get word cards."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học xong một bài của chủ đề này để có thẻ từ nhé."
           }
         }
       }
@@ -3075,6 +5811,546 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Học khoa học bằng tiếng Anh, mỗi ngày một chút."
+          }
+        }
+      }
+    },
+    "words.again" : {
+      "comment" : "Words tab (SK-035), a deck: button, the word is not remembered yet; it comes first next time.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ôn lại"
+          }
+        }
+      }
+    },
+    "words.back" : {
+      "comment" : "Words tab (SK-035), a deck: back button (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to Words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về Từ vựng"
+          }
+        }
+      }
+    },
+    "words.card.back_a11y %@" : {
+      "comment" : "Words tab (SK-035), a deck: VoiceOver label of the card showing the meaning (button); its value is the example.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meaning: %@. Tap to turn it back"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghĩa: %@. Chạm để lật lại"
+          }
+        }
+      }
+    },
+    "words.card.front_a11y %@" : {
+      "comment" : "Words tab (SK-035), a deck: VoiceOver label of the card showing the English word (button).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Word card: %@. Tap to turn it and see the meaning"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ từ %@. Chạm để lật xem nghĩa"
+          }
+        }
+      }
+    },
+    "words.count_a11y %lld %lld" : {
+      "comment" : "Words tab (SK-035): VoiceOver label of the count chip: words remembered, words of every deck.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld of %2$lld words remembered"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhớ %1$lld trên %2$lld từ"
+          }
+        }
+      }
+    },
+    "words.deck.caption %@ %lld" : {
+      "comment" : "Words tab (SK-035), a deck: under the title: topic title (content), lesson number.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Lesson %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · Bài %2$lld"
+          }
+        }
+      }
+    },
+    "words.deck.known %lld %lld" : {
+      "comment" : "Words tab (SK-035): a deck on the list: words remembered, words of the deck.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld words remembered"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhớ %1$lld/%2$lld từ"
+          }
+        }
+      }
+    },
+    "words.deck.size_a11y %lld" : {
+      "comment" : "Words tab (SK-035), a deck: VoiceOver label of the chip with the number of words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld word in this set"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld words in this set"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bộ có %lld từ"
+          }
+        }
+      }
+    },
+    "words.deck_a11y %lld %@ %lld %lld" : {
+      "comment" : "Words tab (SK-035): VoiceOver label of a deck (button): lesson number, lesson title (content), words remembered, words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words of lesson %1$lld: %2$@. %3$lld of %4$lld remembered"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bộ từ bài %1$lld: %2$@. Đã nhớ %3$lld trên %4$lld từ"
+          }
+        }
+      }
+    },
+    "words.done.body %lld %lld" : {
+      "comment" : "Words tab (SK-035), a deck done: words remembered, words of the deck.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You remember %1$lld of %2$lld words."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em đã nhớ %1$lld trên %2$lld từ."
+          }
+        }
+      }
+    },
+    "words.done.home" : {
+      "comment" : "Words tab (SK-035), a deck done: main button, back to the journey.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to the journey"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Về hành trình"
+          }
+        }
+      }
+    },
+    "words.done.next %lld" : {
+      "comment" : "Words tab (SK-035), a deck done: the words marked \"Not yet\" come first next time (no spaced repetition).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Next time, the %lld word to practise comes first"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Next time, the %lld words to practise come first"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lần sau, %lld từ cần ôn sẽ lên trước"
+          }
+        }
+      }
+    },
+    "words.done.restart" : {
+      "comment" : "Words tab (SK-035), a deck done: button, go through the deck again.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ôn từ đầu"
+          }
+        }
+      }
+    },
+    "words.done.stamp" : {
+      "comment" : "Words tab (SK-035), a deck done: the seal's word (upper case, short).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DONE"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XONG"
+          }
+        }
+      }
+    },
+    "words.done.title %lld" : {
+      "comment" : "Words tab (SK-035), a deck done: title; the number of words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld word done!"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "All %lld words done!"
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong cả %lld từ!"
+          }
+        }
+      }
+    },
+    "words.empty" : {
+      "comment" : "Words tab (SK-035): shown while no lesson is done.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish a lesson. Its new words become cards to practise."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Học xong một bài, các từ mới của bài sẽ thành một bộ thẻ để em ôn."
+          }
+        }
+      }
+    },
+    "words.hint" : {
+      "comment" : "Words tab (SK-035), a deck: hint next to the listen button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to turn the card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để lật thẻ"
+          }
+        }
+      }
+    },
+    "words.known" : {
+      "comment" : "Words tab (SK-035), a deck: main button, the word is remembered.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I know it"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhớ"
+          }
+        }
+      }
+    },
+    "words.listen.example" : {
+      "comment" : "Words tab (SK-035), a deck: listen button on the back (icon only): the word and the example in the profile's voice.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the word and the example"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe từ và câu ví dụ"
+          }
+        }
+      }
+    },
+    "words.listen.word" : {
+      "comment" : "Words tab (SK-035), a deck: listen button on the front (icon only): the English word.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to the word"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe từ"
+          }
+        }
+      }
+    },
+    "words.meaning %@" : {
+      "comment" : "Words tab (SK-035), a deck: back of the card, over the meaning; the English word.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · means"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · nghĩa là"
+          }
+        }
+      }
+    },
+    "words.position %lld %lld" : {
+      "comment" : "Words tab (SK-035), a deck: place of the word shown in the pass.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Word %1$lld/%2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "words.progress.known" : {
+      "comment" : "Words tab (SK-035), a deck: before \"5/8\" over the segments.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remembered"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhớ"
+          }
+        }
+      }
+    },
+    "words.progress_a11y %lld %lld %lld" : {
+      "comment" : "Words tab (SK-035), a deck: VoiceOver label of the progress: words remembered, place of the word, words.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remembered: %1$lld. Word %2$lld of %3$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhớ %1$lld từ. Từ %2$lld trên %3$lld"
+          }
+        }
+      }
+    },
+    "words.save_failed" : {
+      "comment" : "Words tab (SK-035), a deck: under the buttons when a mark could not be saved on the device (the pass goes on).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This word was not saved. Try it again next time."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa lưu được từ này. Lần sau em ôn lại nhé."
+          }
+        }
+      }
+    },
+    "words.subtitle" : {
+      "comment" : "Words tab (SK-035): line under the title.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashcards from the lessons you have done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ ghi nhớ từ các bài em đã học"
+          }
+        }
+      }
+    },
+    "words.title" : {
+      "comment" : "Words tab (SK-035): title of the tab and of a deck's screen.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ vựng"
+          }
+        }
+      }
+    },
+    "words.unit" : {
+      "comment" : "Words tab (SK-035): word after a count of words on a chip (\"12/20 words\", \"8 words\").",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "từ"
           }
         }
       }

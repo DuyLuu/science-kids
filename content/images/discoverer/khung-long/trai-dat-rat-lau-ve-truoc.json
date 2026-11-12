@@ -1,0 +1,379 @@
+{
+  "note": "SK-033, chủ đề Khủng long bài 1. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chưa có ảnh: learn.explore.explore_long_ago (không có tranh Trái Đất thời xa xưa hợp giấy phép), explore_dinosaurs và explore_people (sơ đồ ghép, cần designer dựng), q4 và ba lựa chọn (sơ đồ ghép từ explore_people); kéo theo q2, vocab.million, vocab.timeline, vocab.long_ago. Ảnh khác ý brief có alt đề xuất trong note của từng mục. Xem content/.build/images/khung-long/trai-dat-rat-lau-ve-truoc/review.html. Designer 10/11: đã ghép explore_dinosaurs, explore_people, q4 và ba lựa chọn (vocab.million, vocab.timeline dùng lại); explore_long_ago vẫn chưa có (không có bản đồ Pangaea hợp quy tắc, xem review.html).",
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Archaeological_field_work.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Archaeological_field_work.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Archaeological field work",
+      "author": "MariyaShubina",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "w1.w1_elephant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rather_small_and_disproportionate_(11931992173).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Rather_small_and_disproportionate_%2811931992173%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rather small and disproportionate (11931992173)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "w1.w1_triceratops": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jurapark,_Solec_Kujawski,_Poland_(www.juraparksolec.pl)_-_panoramio_(46).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Jurapark%2C_Solec_Kujawski%2C_Poland_%28www.juraparksolec.pl%29_-_panoramio_%2846%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jurapark, Solec Kujawski, Poland (www.juraparksolec.pl) - panoramio (46)",
+      "author": "Almondox",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.14,
+        "width": 0.73,
+        "height": 0.52
+      }
+    },
+    "w1.w1_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.75
+      }
+    },
+    "w2": {
+      "same_as": "vocab.surface",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "learn.explore.explore_dinosaurs": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.learn.explore.explore_dinosaurs.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:1837_-_Plateosaurus.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/1837_-_Plateosaurus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Plateosaurus reconstruction",
+            "author": "Atlantis536",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "same_as": "tray.tray_stegosaurus",
+            "lesson": "khung-long/khung-long-la-gi"
+          },
+          {
+            "same_as": "tray.tray_t_rex",
+            "lesson": "khung-long/khung-long-la-gi"
+          }
+        ]
+      },
+      "title": "Dinosaur paintings from three different times",
+      "note": "Ba tranh, mỗi tranh một mảnh giấy riêng xếp hàng ngang theo thời gian (Plateosaurus kỷ Tam Điệp, Stegosaurus kỷ Jura, khủng long bạo chúa cuối kỷ Phấn Trắng), mũi tên giấy đỏ son bên dưới chạy từ trái sang phải; không có chữ (ba kỷ là món ví dụ của ô). Đã cắt bỏ dấu ký tên nhỏ ở góc tranh của Plegadis. Hình vuông 1024."
+    },
+    "learn.explore.explore_people": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.learn.explore.explore_people.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_longneck"
+          },
+          {
+            "same_as": "tray.tray_mammoth"
+          },
+          {
+            "source": "Openverse/WordPress Photo Directory",
+            "openverse_id": "24a24147-aa14-437d-b6a2-46e1fd4ac5c4",
+            "source_url": "https://wordpress.org/photos/photo/99561f0533/",
+            "file_url": "https://pd.w.org/2022/01/99561f053337f4839.26924680-2048x1122.jpg",
+            "title": "Rainbow kite in a cloudy sky",
+            "author": "Jennifer Bourn",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "Timeline from dinosaur times to today",
+      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khoảng 230 tới 66 triệu năm trước) có ảnh khủng long cổ dài tray_longneck, đoạn giấy lõm nhạt 29 % (66 triệu năm trước tới nay); sát cuối trục: voi ma mút (dưới trục) và cánh diều (trên trục). Designer (agent) 10/11 chiều: thay cánh diều cắt từ tray_kite (diều hình chim có cánh nhọn, ở cỡ ô Học trông như thằn lằn bay) bằng ảnh diều thoi bảy màu có đuôi ruy băng trên trời mây (WordPress Photo Directory, CC0, đã mở trang gốc 10/11). Không người, không chữ. Hình vuông 1024."
+    },
+    "learn.explore.explore_how_long": {
+      "same_as": "w1.w1_clock",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "Khác ý brief. Alt đề xuất: EN «A wall clock» · VI «Chiếc đồng hồ treo tường». Hình gợi ví dụ «mỗi giây em đếm một số»; brief gốc là hai cuốn lịch xé."
+    },
+    "tray.tray_fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_mammoth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Woolly_mammoth_model_Royal_BC_Museum_in_Victoria.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Woolly_mammoth_model_Royal_BC_Museum_in_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Woolly mammoth model Royal BC Museum in Victoria",
+      "author": "Thomas Quine",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Northern_Green_Frog_on_Decaying_Lotus_Leaf_-_Flickr_-_treegrow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Northern_Green_Frog_on_Decaying_Lotus_Leaf_-_Flickr_-_treegrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Northern Green Frog on Decaying Lotus Leaf - Flickr - treegrow",
+      "author": "Katja Schulz from Washington, D. C., USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_longneck": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ParkAnava2013Modiin_0022a.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/ParkAnava2013Modiin_0022a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "ParkAnava2013Modiin 0022a",
+      "author": "MathKnight",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "tray.tray_kite": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kite_flying_at_the_Lime_Kiln_playing_field,_Wincheap,_Canterbury.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kite_flying_at_the_Lime_Kiln_playing_field%2C_Wincheap%2C_Canterbury.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Child flying a kite in a field",
+      "author": "Digihum",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "tray.tray_cycad": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cycas_du_Japon_-_JARDIN_D%27ESSAI_OUIDAH_-_15.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cycas_du_Japon_-_JARDIN_D%27ESSAI_OUIDAH_-_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cycas du Japon - JARDIN D'ESSAI OUIDAH - 15",
+      "author": "Fawaz.tairou",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.22,
+        "width": 0.84,
+        "height": 0.7
+      }
+    },
+    "tray.tray_dragonfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Onychothemis_testacea_3_by_kadavoor.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Onychothemis_testacea_3_by_kadavoor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dragonfly perched on a stem",
+      "author": "Jeevan Jose, Kerala, India",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief. Alt đề xuất: EN «A dragonfly» · VI «Con chuồn chuồn». Cùng alt cho q3.q3_dragonfly và bài 2 q1.q1_insects."
+    },
+    "tray.tray_buffalo": {
+      "same_as": "w1.w1_buffalo"
+    },
+    "tray.tray_triceratops": {
+      "same_as": "w1.w1_triceratops"
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hourglass_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Hourglass_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hourglass on a wooden table",
+      "author": "Suohros",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.23,
+        "top": 0.27,
+        "width": 0.3,
+        "height": 0.5
+      }
+    },
+    "q1.q1_people": {
+      "same_as": "tray.tray_kite"
+    },
+    "q1.q1_dinosaur": {
+      "same_as": "tray.tray_longneck"
+    },
+    "q1.q1_buffalo": {
+      "same_as": "w1.w1_buffalo"
+    },
+    "q2.q2_ferns": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cyathea dregei - Common Tree Fern - Cape Town",
+      "author": "Abu Shawka",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.78
+      }
+    },
+    "q2.q2_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Field_in_Vietnam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rice_Field_in_Vietnam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Field in Vietnam - panoramio",
+      "author": "Gonzo Gooner",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "q2.q2_playground": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_empty_playground._(34262948212).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/The_empty_playground._%2834262948212%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Empty playground under trees",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q3": {
+      "same_as": "w1"
+    },
+    "q3.q3_mammoth": {
+      "same_as": "tray.tray_mammoth"
+    },
+    "q3.q3_dragonfly": {
+      "same_as": "tray.tray_dragonfly"
+    },
+    "q3.q3_buffalo": {
+      "same_as": "w1.w1_buffalo"
+    },
+    "q3.q3_cycad": {
+      "same_as": "tray.tray_cycad"
+    },
+    "q4": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.q4.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_longneck"
+          }
+        ]
+      },
+      "title": "Timeline with dinosaur times",
+      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Như ô explore_people, bỏ voi ma mút và cánh diều; không có chấm. Hình vuông 1024."
+    },
+    "q4.q4_before": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.q4.q4_before.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_longneck"
+          }
+        ]
+      },
+      "title": "A red dot before dinosaur times",
+      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, trên mẩu xám bên trái."
+    },
+    "q4.q4_with": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.q4.q4_with.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_longneck"
+          }
+        ]
+      },
+      "title": "A red dot in dinosaur times",
+      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, trên dải nâu, ngay cạnh ảnh khủng long cổ dài."
+    },
+    "q4.q4_after": {
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.q4.q4_after.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_longneck"
+          }
+        ]
+      },
+      "title": "A red dot at the far end",
+      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, ở tận cùng mép phải của đoạn nhạt."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hall_of_Saurischian_Dinosaurs.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hall_of_Saurischian_Dinosaurs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hall of Saurischian Dinosaurs",
+      "author": "Vicpeters",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0.04,
+        "width": 0.88,
+        "height": 0.92
+      }
+    },
+    "q5.q5_mammoth": {
+      "same_as": "tray.tray_mammoth"
+    },
+    "q5.q5_longneck": {
+      "same_as": "tray.tray_longneck"
+    },
+    "q5.q5_triceratops": {
+      "same_as": "w1.w1_triceratops"
+    },
+    "q6": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "de92c4a7-6181-4844-bebf-aa362d2ed49c",
+      "source_url": "https://www.flickr.com/photos/50192230@N07/32715292503",
+      "file_url": "https://live.staticflickr.com/2866/32715292503_72b3e3f2e8_b.jpg",
+      "title": "Spielzeugdino",
+      "author": "SebastianBartoschek",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi CC BY 2.0 (license id 4). Khác ý brief. Alt đề xuất: EN «A toy dinosaur on a table» · VI «Khủng long đồ chơi trên bàn»."
+    },
+    "vocab.dinosaur": {
+      "same_as": "w1.w1_triceratops"
+    },
+    "vocab.million": {
+      "same_as": "learn.explore.explore_dinosaurs"
+    },
+    "vocab.timeline": {
+      "same_as": "learn.explore.explore_people"
+    },
+    "vocab.fern": {
+      "same_as": "tray.tray_fern"
+    },
+    "reward.t_rex": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tristan_Museum_f%C3%BCr_Naturkunde.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tristan_Museum_f%C3%BCr_Naturkunde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tristan Museum für Naturkunde",
+      "author": "Shadowgate",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "learn.explore.explore_long_ago": {
+      "own": {
+        "file": "content/images/own/khung-long/trai-dat-rat-lau-ve-truoc.learn.explore.explore_long_ago.jpg",
+        "method": "drawn"
+      },
+      "title": "A painting of Earth long ago, with the land joined",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Quả cầu Trái Đất nhìn từ vũ trụ (phép chiếu trực giao, tâm 55° Tây, 10° Bắc theo toạ độ của bản đồ khuôn), đặt trên giấy kem với bóng mềm. Khuôn hình khối đất: ô đầu tiên (kỷ Permi, khoảng 225 triệu năm trước, gần lúc những con khủng long đầu tiên xuất hiện) của hình «Pangaea to present» trong sách This Dynamic Earth của USGS (Kious & Tilling), public domain, bản không chữ trên Commons: https://commons.wikimedia.org/wiki/File:Pangaea_to_present_Blank_multilingual.jpg. Tách vùng đất từ bản đồ đó, chiếu lại từ phép chiếu Hammer sang quả cầu; không vẽ lưới kinh vĩ, ranh giới hay đường bờ các châu lục ngày nay. Màu: đất nâu vàng ở giữa khối (sa mạc), xanh lá ven biển và gần cực, đại dương xanh rộng, mây trắng thưa. Không dùng bản đồ Blakey hay Scotese. Không chữ. Hình vuông 1024."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_long_ago"
+    },
+    "vocab.long_ago": {
+      "same_as": "learn.explore.explore_long_ago"
+    }
+  }
+}

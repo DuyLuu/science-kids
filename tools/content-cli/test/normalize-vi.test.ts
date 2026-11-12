@@ -171,6 +171,24 @@ describe("viết tắt, công thức, từ mượn", () => {
     assert.equal(read("Quả cam có vitamin."), "Quả cam có vi ta min.");
     assert.deepEqual(codes("Quả cam có vitamin."), []);
   });
+  test("bảng đọc ép: kỷ Jura đọc Giu-ra; Tam Điệp giữ nguyên (SK-033, khủng long)", () => {
+    const source = "Ba kỷ: kỷ Tam Điệp, kỷ Jura và kỷ Phấn Trắng.";
+    assert.equal(read(source), "Ba kỷ: kỷ Tam Điệp, kỷ Giu ra và kỷ Phấn Trắng.");
+    assert.deepEqual(codes(source), []);
+    assert.equal(read("jura"), "giu ra");
+    assert.equal(read("Tam Điệp"), "Tam Điệp");
+    assert.deepEqual(codes("Tam Điệp"), []);
+    // Whole words only: "Jurassic" is not "Jura".
+    assert.ok(codes("Jurassic").includes("loanword"));
+  });
+  test("bảng đọc ép: Mohs đọc Mốt, Mary Anning đọc Me-ri An-ninh (đá và đất)", () => {
+    const source = "Thang độ cứng Mohs do ông Mohs đặt ra.";
+    assert.equal(read(source), "Thang độ cứng Mốt do ông Mốt đặt ra.");
+    assert.deepEqual(codes(source), []);
+    assert.equal(read("Mary Anning, người săn hoá thạch"), "Me ri An ninh, người săn hoá thạch");
+    assert.deepEqual(codes("Mary Anning"), []);
+    assert.equal(read("Bà Mary tìm thấy hoá thạch."), "Bà Me ri tìm thấy hoá thạch.");
+  });
   test("từ không theo âm tiết tiếng Việt thì cảnh báo", () => {
     assert.ok(codes("Từ mới: nutrient").includes("loanword"));
     assert.equal(isVietnameseSyllable("nghiêng"), true);

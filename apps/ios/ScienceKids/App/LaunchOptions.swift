@@ -33,6 +33,20 @@ struct LaunchOptions: Equatable {
     /// every call fails like a device without network (SK-022 T2 on the simulator, which cannot
     /// cut its own network). The real Keychain session and queue are used.
     var syncUnreachable = false
+    /// `-SKContentFolder <absolute path>`: play the content files of a folder on the Mac (the
+    /// shape of `packages/content-schema/fixtures/valid`) instead of the bundle's pack or fixtures,
+    /// without audio. For trying content the bundle does not have (SK-033: word cards with
+    /// pictures) without touching `packages/`.
+    var contentFolder: String?
+    /// `-SKContentPack <absolute path>`: open a content pack built on the Mac (the folder that holds
+    /// `catalog/v1/manifest.json`) instead of the bundle's, with every check of the bundled pack.
+    /// For trying a pack with pictures (SK-033) before it is embedded. `-SKContentFolder` wins
+    /// when both are given.
+    var contentPack: String?
+    /// `-SKOpenLesson <lesson id>`: once the content is open (and a profile exists), open that
+    /// lesson as if picked on its topic. For screenshots and UI tests of a lesson the journey puts
+    /// far down the map (SK-040: the Explorer test lesson of `apps/ios/TestContent`).
+    var openLesson: UUID?
 
     init(arguments: [String], environment: [String: String] = [:]) {
         #if DEBUG
@@ -46,6 +60,9 @@ struct LaunchOptions: Equatable {
         resendLastAttempt = Self.value("-SKResendLastAttempt", in: arguments).flatMap(Int.init) ?? 0
         showsSyncProbe = Self.flag("-SKSyncProbe", in: arguments)
         syncUnreachable = Self.flag("-SKSyncUnreachable", in: arguments)
+        contentFolder = Self.value("-SKContentFolder", in: arguments)
+        contentPack = Self.value("-SKContentPack", in: arguments)
+        openLesson = Self.value("-SKOpenLesson", in: arguments).flatMap(UUID.init(uuidString:))
         #endif
     }
 

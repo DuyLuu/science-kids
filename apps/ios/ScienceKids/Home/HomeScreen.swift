@@ -5,14 +5,29 @@ import LessonPlayer
 import Profiles
 import SwiftUI
 
-/// Màn 4 · Trang chủ (canvas `Discoverer-Home`): greeting, "Học tiếp" card, the journey of the
-/// topics the content has (plus "Sắp có thêm chủ đề"), bottom strip. Cards, Badges and Words are
-/// not built yet: their tabs show a "sắp có" page.
+/// Màn 4 · Trang chủ (canvas `Discoverer-Home`): greeting, "Học tiếp" card, the journey, bottom
+/// strip. SK-035: the Thẻ, Huy hiệu and Từ vựng tabs (`CardsTab`, `BadgesTab`, `WordsTab`) show
+/// what the child has won and learnt, in the same phone page and iPad content column.
+///
+/// SK-030: the journey is every topic of the syllabus of one age group, by number, written or
+/// not, none locked; it opens on the profile's own group and three chips show the others.
+///
+/// 10/11 (Duy: a topic finished showed no sign of it): every stop reads the child's progress
+/// (`JourneyProgress`): "x/n bài" of the topic's lessons (SK-035: every lesson of the syllabus,
+/// written or not), "Đã xong" with a seal when all are done,
+/// "Sắp có" on dull paper when none is written. "Học tiếp" points at the first written lesson not
+/// done of the group shown; all done, the card says so; nothing written, no card.
+///
+/// SK-034 (Duy 10/11: "phải nhìn như road map", phương án A): the journey is a road map
+/// (`JourneyMap`): a winding road through the topics, a post per stage, the finish flag; every
+/// topic has its own icon (`TopicGlyph`), "Học tiếp" shows it on its plate.
 ///
 /// SK-013, regular width (canvas `Discoverer-Home-iPad`, layout A chosen by Duy 29/10): two
-/// columns. The paper sidebar (`layout.home_sidebar_a`, 340) holds the four tabs and the journey;
-/// the content column holds the greeting, chips and "Học tiếp", or the "sắp có" page of a tab.
-/// Compact (iPhone, Split View 1/3, Slide Over) keeps the phone Home with its bottom strip.
+/// columns. The paper sidebar (`layout.home_sidebar_a`, 340) holds the four tabs, the journey's
+/// title, the group chips and its stages; the content column holds the greeting, "Học tiếp" and
+/// the map (at most 600 wide, centred; SK-034 spec 11), or another tab's page (as wide). A stage on
+/// the sidebar scrolls the map to its post. Compact (iPhone, Split View 1/3, Slide Over) keeps the
+/// phone Home with its bottom strip.
 struct HomeScreen: View {
     @Bindable var app: AppModel
     let profile: ChildProfile
@@ -26,8 +41,12 @@ struct HomeScreen: View {
                 switch app.homeTab {
                 case .journey:
                     JourneyPage(app: app, profile: profile)
-                case .cards, .badges, .words:
-                    ComingSoonPage(tab: app.homeTab)
+                case .cards:
+                    CollectionPage { CardsTab(app: app, profile: profile) }.id(HomeTab.cards)
+                case .badges:
+                    CollectionPage { BadgesTab(app: app, profile: profile) }.id(HomeTab.badges)
+                case .words:
+                    CollectionPage { WordsTab(app: app, profile: profile) }.id(HomeTab.words)
                 }
             }
             .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -53,46 +72,72 @@ private struct RegularHome: View {
     let profile: ChildProfile
     let sidebarWidth: CGFloat
     @Environment(\.layoutMetrics) private var metrics
+    @ReducedMotion private var reducedMotion
 
     var body: some View {
-        HStack(spacing: 0) {
-            HomeSidebar(app: app, profile: profile)
+        let group = app.shownGroup(for: profile)
+        let progress = app.journeyProgress(for: group, profile: profile)
+        ScrollViewReader { reader in
+            HStack(spacing: 0) {
+                HomeSidebar(app: app, profile: profile, progress: progress) { segment in
+                    show(segment, reader: reader)
+                }
                 .frame(width: sidebarWidth)
                 .zIndex(1)
-            ScrollView(.vertical) {
-                VStack(alignment: .leading, spacing: ScreenMetrics.homeColumnGap) {
-                    switch app.homeTab {
-                    case .journey:
-                        HomeHeader(app: app, profile: profile)
-                            .reveal(order: 0)
-                        if let target = LessonList.continueTarget(in: app.journeyTopics) {
-                            ContinueCard(app: app, profile: profile, topic: target.topic, slot: target.slot, lesson: target.lesson)
+                ScrollView(.vertical) {
+                    VStack(alignment: .leading, spacing: ScreenMetrics.homeColumnGap) {
+                        switch app.homeTab {
+                        case .journey:
+                            HomeHeader(app: app, profile: profile)
+                                .reveal(order: 0)
+                            ContinueSlot(app: app, profile: profile, progress: progress)
                                 .reveal(order: 1)
+                            HomeJourneyMap(app: app, profile: profile, progress: progress)
+                                .id(group)
+                        case .cards:
+                            CardsTab(app: app, profile: profile).collectionColumn()
+                        case .badges:
+                            BadgesTab(app: app, profile: profile).collectionColumn()
+                        case .words:
+                            WordsTab(app: app, profile: profile).collectionColumn()
                         }
-                    case .cards, .badges, .words:
-                        ComingSoonContent(tab: app.homeTab)
                     }
+                    .padding(ScreenMetrics.homeColumnPadding)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(ScreenMetrics.homeColumnPadding)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .scrollIndicators(.hidden)
+                .environment(\.layoutMetrics, LayoutMetrics(widthClass: .compact, containerWidth: metrics.homeColumnWidth, ageGroup: metrics.ageGroup))
+                .id(app.homeTab)
             }
-            .scrollIndicators(.hidden)
-            .environment(\.layoutMetrics, LayoutMetrics(widthClass: .compact, containerWidth: metrics.homeColumnWidth, ageGroup: metrics.ageGroup))
-            .id(app.homeTab)
         }
         .foregroundStyle(Tokens.Role.textPrimary)
         .background(Tokens.Role.bgScreen.ignoresSafeArea())
     }
+
+    /// A stage on the sidebar: the journey tab, scrolled to the stage's post.
+    private func show(_ segment: JourneySegment, reader: ScrollViewProxy) {
+        let id = JourneyMapEntry.segmentID(segment.number)
+        let animation = MotionPolicy.animation(.default, reduced: reducedMotion)
+        if app.homeTab != .journey {
+            app.homeTab = .journey
+            Task { @MainActor in reader.scrollTo(id, anchor: .top) }
+        } else {
+            withAnimation(animation) { reader.scrollTo(id, anchor: .top) }
+        }
+    }
 }
 
-/// The paper sidebar of Trang chủ iPad (canvas layout A): the four tabs as rows, then the journey.
-/// Torn along its trailing edge, with the frame's side shadow.
+/// The paper sidebar of Trang chủ iPad (canvas layout A): the four tabs as rows, then the journey's
+/// title, the group chips and the stages (SK-034 spec 11). Torn along its trailing edge, with the
+/// frame's side shadow.
 private struct HomeSidebar: View {
     @Bindable var app: AppModel
     let profile: ChildProfile
+    let progress: JourneyProgress
+    let select: (JourneySegment) -> Void
 
     var body: some View {
-        let topics = app.journeyTopics
+        let group = app.shownGroup(for: profile)
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: ScreenMetrics.sidebarGap) {
                 VStack(alignment: .leading, spacing: ScreenMetrics.sidebarNavGap) {
@@ -105,28 +150,23 @@ private struct HomeSidebar: View {
                 .reveal(order: 0)
                 VStack(alignment: .leading, spacing: ScreenMetrics.sidebarJourneyGap) {
                     VStack(alignment: .leading, spacing: Tokens.Space.s2) {
-                        Text("home.journey.title \(Grade.ukYear(for: profile.grade))")
-                            .typography(Tokens.Typography.title)
-                            .accessibilityAddTraits(.isHeader)
-                        Text("home.journey.count \(topics.count)")
-                            .typography(Tokens.Typography.caption)
-                            .foregroundStyle(Tokens.Role.textSecondary)
+                        JourneyTitle(group: group, profile: profile)
+                        JourneyCount(progress: progress)
                     }
                     .reveal(order: 1)
-                    if topics.isEmpty {
+                    GroupPicker(app: app, shown: group)
+                        .reveal(order: 2)
+                    if progress.stops.isEmpty {
                         Text("home.empty")
                             .typography(Tokens.Typography.body)
                             .foregroundStyle(Tokens.Role.textSecondary)
                     }
-                    VStack(alignment: .leading, spacing: ScreenMetrics.sidebarJourneyGap) {
-                        ForEach(Array(topics.enumerated()), id: \.element.id) { index, topic in
-                            JourneyTopicRow(topic: topic, index: index, isCurrent: index == 0, mode: profile.languageMode) {
-                                app.openTopic(topic.id)
-                            }
-                            .reveal(order: 2 + index)
-                        }
-                        MoreTopicsRow(index: topics.count)
-                            .reveal(order: 2 + topics.count)
+                    JourneySegmentList(segments: progress.segments, select: select)
+                        .reveal(order: 3)
+                        .id(group)
+                    // SK-033: the credits of the pack's pictures, under the journey.
+                    if !app.imageCredits.isEmpty {
+                        ImageCreditsLink(action: app.openImageCredits)
                     }
                 }
             }
@@ -183,48 +223,139 @@ private struct SidebarNavRow: View {
 private struct JourneyPage: View {
     let app: AppModel
     let profile: ChildProfile
+    @Environment(\.layoutMetrics) private var metrics
 
     var body: some View {
-        let topics = app.journeyTopics
+        let group = app.shownGroup(for: profile)
+        let progress = app.journeyProgress(for: group, profile: profile)
         PaperFrame(scrolls: true) {
             VStack(alignment: .leading, spacing: ScreenMetrics.homeGap) {
                 HomeHeader(app: app, profile: profile)
                     .reveal(order: 0)
-                if let target = LessonList.continueTarget(in: topics) {
-                    ContinueCard(app: app, profile: profile, topic: target.topic, slot: target.slot, lesson: target.lesson)
-                        .reveal(order: 1)
-                }
+                ContinueSlot(app: app, profile: profile, progress: progress)
+                    .reveal(order: 1)
                 HStack(alignment: .firstTextBaseline) {
-                    Text("home.journey.title \(Grade.ukYear(for: profile.grade))")
-                        .typography(Tokens.Typography.title)
-                        .accessibilityAddTraits(.isHeader)
+                    JourneyTitle(group: group, profile: profile)
                     Spacer(minLength: Tokens.Space.s8)
-                    Text("home.journey.count \(topics.count)")
-                        .typography(Tokens.Typography.caption)
-                        .foregroundStyle(Tokens.Role.textSecondary)
+                    JourneyCount(progress: progress)
                 }
                 .reveal(order: 2)
-                if topics.isEmpty {
+                GroupPicker(app: app, shown: group)
+                    .reveal(order: 3)
+                if progress.stops.isEmpty {
                     Text("home.empty")
                         .typography(Tokens.Typography.body)
                         .foregroundStyle(Tokens.Role.textSecondary)
                 }
-                VStack(alignment: .leading, spacing: ScreenMetrics.journeyGap) {
-                    ForEach(Array(topics.enumerated()), id: \.element.id) { index, topic in
-                        JourneyTopicRow(
-                            topic: topic,
-                            index: index,
-                            isCurrent: index == 0,
-                            mode: profile.languageMode
-                        ) {
-                            app.openTopic(topic.id)
-                        }
-                        .reveal(order: 3 + index)
-                    }
-                    MoreTopicsRow(index: topics.count)
-                        .reveal(order: 3 + topics.count)
+                // SK-034: the map runs edge to edge (spec 6: W = the screen, not the frame).
+                HomeJourneyMap(app: app, profile: profile, progress: progress)
+                    .padding(.leading, -metrics.contentInsets.leading)
+                    .padding(.trailing, -metrics.contentInsets.trailing)
+                    .id(group)
+                // SK-033: the credits of the pack's pictures, under the journey.
+                if !app.imageCredits.isEmpty {
+                    ImageCreditsLink(action: app.openImageCredits)
                 }
             }
+        }
+    }
+}
+
+/// The journey map of the group shown (SK-034), at most 600 wide and centred. Seals of topics
+/// done since Home last showed them are stamped in; leaving the map marks them as shown.
+private struct HomeJourneyMap: View {
+    let app: AppModel
+    let profile: ChildProfile
+    let progress: JourneyProgress
+
+    var body: some View {
+        JourneyMap(
+            progress: progress,
+            mode: profile.languageMode,
+            avatar: .of(profile.avatar),
+            freshlyDone: app.freshlyDoneTopics(in: progress)
+        ) { key in
+            app.openTopic(key)
+        }
+        .frame(maxWidth: JourneyMapGeometry.maxWidth)
+        .frame(maxWidth: .infinity)
+        .onDisappear { app.markDoneShown(progress) }
+    }
+}
+
+/// "Hành trình Year 3" on the profile's own group; "Hành trình Explorer" on another one.
+private struct JourneyTitle: View {
+    let group: Topic.AgeGroup
+    let profile: ChildProfile
+
+    var body: some View {
+        Group {
+            if group.rawValue == profile.ageGroup.rawValue {
+                Text("home.journey.title \(Grade.ukYear(for: profile.grade))")
+            } else {
+                Text("home.journey.title_group \(Text(WorldName.key(group)))")
+            }
+        }
+        .typography(Tokens.Typography.title)
+        .accessibilityAddTraits(.isHeader)
+        .accessibilityIdentifier("home.journey.title")
+    }
+}
+
+/// "17 chủ đề" and, once a topic is started, "· 3 đã bắt đầu" (10/11: was "· dễ → khó", wrong
+/// since the syllabus follows Oak's order, SK-030).
+private struct JourneyCount: View {
+    let progress: JourneyProgress
+
+    var body: some View {
+        let topics = progress.stops.count
+        let started = progress.startedCount
+        Group {
+            if started > 0 {
+                Text("home.journey.count \(topics)") + Text(verbatim: " · ") + Text("home.journey.count_started \(started)")
+            } else {
+                Text("home.journey.count \(topics)")
+            }
+        }
+        .typography(Tokens.Typography.caption)
+        .foregroundStyle(Tokens.Role.textSecondary)
+        .accessibilityIdentifier("home.journey.count")
+    }
+}
+
+/// The three age groups as chips (the profile screen's grade chips), the one shown chosen
+/// (SK-030: Duy can look at every group's syllabus; the profile's own is the default).
+private struct GroupPicker: View {
+    let app: AppModel
+    let shown: Topic.AgeGroup
+
+    var body: some View {
+        HStack(spacing: ScreenMetrics.chipGap) {
+            ForEach(Topic.AgeGroup.known, id: \.self) { group in
+                Button {
+                    app.journeyGroup = group
+                } label: {
+                    Text(WorldName.key(group))
+                        .typography(Tokens.Typography.label, fixedBox: true)
+                        .lineLimit(1)
+                        .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                }
+                .buttonStyle(PaperChipStyle(isSelected: group == shown))
+                .accessibilityIdentifier("home.group.\(group.rawValue)")
+            }
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel(Text("home.groups_a11y"))
+    }
+}
+
+/// Name of a learning world ("Explorer"…), from the interface strings.
+enum WorldName {
+    static func key(_ group: Topic.AgeGroup) -> LocalizedStringKey {
+        switch group {
+        case .explorer: "world.explorer"
+        case .scientist: "world.scientist"
+        default: "world.discoverer"
         }
     }
 }
@@ -271,16 +402,15 @@ private struct HomeHeader: View {
             } action: {
                 app.showTab(.badges)
             }
+            // SK-042: Cài đặt (language of the profile).
+            PaperIconButton(.gear, accessibilityLabel: Text("settings.open"), action: app.openSettings)
+                .accessibilityIdentifier("home.settings")
         }
     }
 
-    /// The world the trial plays (Discoverer), not the profile's own age group (B18 #14).
+    /// The profile's own world (SK-030; was the Discoverer trial world).
     private var worldName: LocalizedStringKey {
-        switch BundledContent.world {
-        case .explorer: "world.explorer"
-        case .scientist: "world.scientist"
-        default: "world.discoverer"
-        }
+        WorldName.key(Topic.AgeGroup(rawValue: profile.ageGroup.rawValue))
     }
 }
 
@@ -314,50 +444,71 @@ private struct HeaderChip<Icon: View>: View {
     }
 }
 
+/// Under the header: the "Học tiếp" card, or the "all done" card when every written lesson of the
+/// group shown is done, or nothing when the group has nothing written.
+private struct ContinueSlot: View {
+    let app: AppModel
+    let profile: ChildProfile
+    let progress: JourneyProgress
+
+    var body: some View {
+        if let next = progress.next, let stop = progress.stops.first(where: { $0.topic.key == next.topic.key }) {
+            ContinueCard(app: app, profile: profile, stop: stop, lesson: next.lesson)
+        } else if progress.allDone {
+            AllDoneCard()
+        }
+    }
+}
+
 /// "Học tiếp" card: topic, lesson n/count with its title, squares, minutes, play button (the
-/// screen's one looping motion, `nudge`). Art: a plate with the topic glyph (no topic art yet).
+/// screen's one looping motion, `nudge`). Art: a plate with the topic's icon (SK-034).
+/// 10/11: the lesson is the first written one not done on the journey shown (`JourneyProgress`);
+/// the squares are the topic's written lessons, done ones ticked; "x/n bài" counts all its lessons.
 private struct ContinueCard: View {
     let app: AppModel
     let profile: ChildProfile
-    let topic: TopicContent
-    let slot: LessonSlot
-    let lesson: Lesson
+    let stop: JourneyStop
+    let lesson: JourneyLesson
     @Environment(\.ageGroup) private var ageGroup
+
+    private var topic: JourneyTopic { stop.topic }
 
     var body: some View {
         let mode = profile.languageMode
-        let count = BundledContent.lessonCount(of: topic)
+        let count = topic.lessons.count
         let shape = RoundedRectangle(cornerRadius: ageGroup.radius, style: .continuous)
+        let isFree = AppFeatures.paidPlanEnabled && (topic.content?.topic.isFree ?? false)
         VStack(alignment: .leading, spacing: ScreenMetrics.cardGap) {
-            PaperTag(Text(topic.topic.isFree ? "home.continue_free" : "home.continue"), style: .cut(eyebrow: true))
-            Text(verbatim: mode.name(topic.topic.title))
+            PaperTag(Text(isFree ? "home.continue_free" : "home.continue"), style: .cut(eyebrow: true))
+            Text(verbatim: mode.name(topic.title))
                 .typography(Tokens.Typography.titleL)
                 .padding(.trailing, ScreenMetrics.cardTitleTrailing)
                 .fixedSize(horizontal: false, vertical: true)
-            Text("home.continue.lesson \(slot.number) \(count) \(mode.name(lesson.title))")
+            Text("home.continue.lesson \(lesson.number) \(count) \(mode.name(lesson.title))")
                 .typography(Tokens.Typography.bodyStrong)
                 .foregroundStyle(Tokens.Role.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
             HStack(spacing: Tokens.Space.s12) {
                 VStack(alignment: .leading, spacing: Tokens.Space.s4) {
-                    ProgressSquares(
-                        count: count,
-                        current: slot.number - 1,
-                        squareSize: PaperMetrics.progressSquareSmall,
-                        accessibilityLabel: Text("topic.progress_a11y \(slot.number) \(count)")
+                    LessonSquares(
+                        states: stop.squareStates,
+                        sizes: [PaperMetrics.progressSquareSmall],
+                        accessibilityLabel: Text("progress.lessons_a11y \(stop.doneCount) \(stop.lessonCount)")
                     )
-                    Text("home.continue.progress \(0) \(count) \(lesson.estMinutes)")
+                    Text("home.continue.progress \(stop.doneCount) \(stop.lessonCount) \(lesson.lesson?.estMinutes ?? 0)")
                         .typography(Tokens.Typography.caption)
                         .foregroundStyle(Tokens.Role.textSecondary)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 Button {
-                    app.openLesson(topicID: topic.id, lessonID: lesson.id)
+                    if let topicID = topic.content?.id, let lessonID = lesson.lesson?.id {
+                        app.openLesson(topicID: topicID, lessonID: lessonID)
+                    }
                 } label: {
                     PaperPlayDisc(size: PaperMetrics.playDiscLarge)
                 }
                 .buttonStyle(.paperPress)
-                .accessibilityLabel(Text("home.continue.start \(slot.number)"))
+                .accessibilityLabel(Text("home.continue.start \(lesson.number)"))
                 .accessibilityIdentifier("home.start_lesson")
                 .motion(Tokens.Motion.Preset.nudge)
             }
@@ -366,7 +517,7 @@ private struct ContinueCard: View {
         .padding(ScreenMetrics.cardPadding)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(alignment: .topTrailing) {
-            TopicPlate(strand: topic.topic.strand, size: ScreenMetrics.cardArt)
+            TopicPlate(key: topic.key, strand: topic.strand, size: ScreenMetrics.cardArt)
                 .offset(x: ScreenMetrics.cardArtOffset.width, y: ScreenMetrics.cardArtOffset.height)
         }
         .clipShape(shape)
@@ -376,120 +527,23 @@ private struct ContinueCard: View {
     }
 }
 
-/// A topic on the journey: tilted stop with the glyph, title, level and state. The whole row is
-/// the button to the Topic screen.
-private struct JourneyTopicRow: View {
-    let topic: TopicContent
-    let index: Int
-    let isCurrent: Bool
-    let mode: LanguageMode
-    let action: () -> Void
-
+/// Every written lesson of the group shown is done (10/11): instead of "Học tiếp", a card that
+/// says so, with the lá tre seal stamped in.
+private struct AllDoneCard: View {
     var body: some View {
-        Button(action: action) {
-            HStack(spacing: ScreenMetrics.journeyRowGap) {
-                PaperDisc(isCurrent ? .current : .open, tilt: PaperDisc<EmptyView>.tilt(at: index)) {
-                    TopicGlyph(strand: topic.topic.strand, size: ScreenMetrics.journeyGlyphCurrent)
+        PaperCard {
+            HStack(alignment: .top, spacing: Tokens.Space.s12) {
+                VStack(alignment: .leading, spacing: Tokens.Space.s10) {
+                    PaperTag(Text("home.all_done.tag"), style: .cut(eyebrow: true))
+                    Text("home.all_done.body")
+                        .typography(Tokens.Typography.body)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(verbatim: mode.name(topic.topic.title))
-                        .typography(Tokens.Typography.itemTitle)
-                        .foregroundStyle(Tokens.Role.textPrimary)
-                    Group {
-                        if isCurrent {
-                            Text("home.journey.current \(topic.topic.level)")
-                                .foregroundStyle(Tokens.Role.textAccent)
-                        } else {
-                            Text("home.journey.open \(topic.topic.level)")
-                                .foregroundStyle(Tokens.Role.textSecondary)
-                        }
-                    }
-                    .typography(Tokens.Typography.captionS)
-                }
-                .multilineTextAlignment(.leading)
-                Spacer(minLength: 0)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Seal(icon: .check, size: .large, tone: .correct)
             }
-            .frame(minHeight: PaperMetrics.journeyDisc)
-            .padding(.leading, PaperDisc<EmptyView>.indent(at: index))
         }
-        .buttonStyle(.paperPress)
-        .accessibilityIdentifier("home.topic.\(topic.topic.slug)")
-    }
-}
-
-/// Last stop while the pack has only some topics: locked, not a button (SK-011 default:
-/// no made-up topic names).
-private struct MoreTopicsRow: View {
-    let index: Int
-
-    var body: some View {
-        HStack(spacing: ScreenMetrics.journeyRowGap) {
-            PaperDisc(.locked, tilt: PaperDisc<EmptyView>.tilt(at: index)) {
-                PaperIconView(.more, size: PaperMetrics.journeyGlyph, color: Tokens.Role.textSecondary)
-            }
-            Text("home.journey.more")
-                .typography(Tokens.Typography.itemTitle)
-                .foregroundStyle(Tokens.Role.textSecondary)
-            Spacer(minLength: 0)
-        }
-        .frame(minHeight: PaperMetrics.journeyDisc)
-        .padding(.leading, PaperDisc<EmptyView>.indent(at: index))
         .accessibilityElement(children: .combine)
-        .accessibilityIdentifier("home.more_topics")
-    }
-}
-
-// MARK: - Tabs not built yet
-
-/// Cards, Badges, Words: title and a "sắp có" note, nothing to break (SK-011 scope).
-private struct ComingSoonPage: View {
-    let tab: HomeTab
-
-    var body: some View {
-        PaperFrame(scrolls: true) {
-            ComingSoonContent(tab: tab)
-        }
-        .id(tab)
-    }
-}
-
-/// The title and note of a tab not built yet (phone page, iPad content column).
-private struct ComingSoonContent: View {
-    let tab: HomeTab
-
-    var body: some View {
-            VStack(alignment: .leading, spacing: ScreenMetrics.homeGap) {
-                Text(title)
-                    .typography(Tokens.Typography.title)
-                    .accessibilityAddTraits(.isHeader)
-                    .accessibilityIdentifier("soon.title")
-                    .reveal(order: 0)
-                PaperCard {
-                    VStack(alignment: .leading, spacing: Tokens.Space.s10) {
-                        PaperTag(Text("soon.tag"), style: .cut(eyebrow: true))
-                        Text(message)
-                            .typography(Tokens.Typography.body)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .reveal(order: 1)
-            }
-    }
-
-    private var title: LocalizedStringKey {
-        switch tab {
-        case .cards: "soon.cards.title"
-        case .badges: "soon.badges.title"
-        case .words, .journey: "soon.words.title"
-        }
-    }
-
-    private var message: LocalizedStringKey {
-        switch tab {
-        case .cards: "soon.cards.body"
-        case .badges: "soon.badges.body"
-        case .words, .journey: "soon.words.body"
-        }
+        .accessibilityIdentifier("home.all_done")
     }
 }

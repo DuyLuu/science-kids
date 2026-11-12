@@ -1,0 +1,267 @@
+{
+  "note": "SK-038. Designer (agent) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/thoi-tiet-va-thien-tai/; trang duyệt content/.build/images/thoi-tiet-va-thien-tai/<bài>/review.html. Kệ Chơi (chín món), câu q1, q2, q3 và hình câu q4 là hình vẽ: không có ảnh hợp giấy phép cho đèn bàn đang sáng, áo bay trên dây phơi, khói mái bếp, bông gòn, chum, chậu cây, áo ướt (Commons, Openverse 11/11), nên vẽ cả kệ, cả câu (Quy ước hình mục hai).",
+  "images": {
+    "w1": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w1.w1_hat": {
+      "same_as": "q1_hat",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "w1.w1_raincoat": {
+      "same_as": "q1_raincoat",
+      "lesson": "ho-hap/giu-phoi-khoe"
+    },
+    "w1.w1_scarf": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.w1.w1_scarf.jpg",
+        "method": "drawn"
+      },
+      "title": "A wool scarf on a table",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "w2": {
+      "same_as": "q5",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w2.w2_dusty": {
+      "same_as": "q5_dusty",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w2.w2_clear": {
+      "same_as": "q5_clear",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w2.w2_foggy": {
+      "same_as": "q5_foggy",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_sunny": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_rainy": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_windy": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_cloudy": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "e9b7cf8e-e9ae-4b4e-9cb8-604b8727f197",
+      "source_url": "https://www.flickr.com/photos/58411470@N00/54221197912",
+      "file_url": "https://live.staticflickr.com/65535/54221197912_94425a7332_b.jpg",
+      "title": "Cumulus cloud formation over rural landscape",
+      "author": "kewl",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Openverse/Flickr; đã kiểm tay giấy phép CC BY 2.0 trên trang Flickr 11/11. Mây trắng xen mây xám trên đồng cỏ, không người, không chữ."
+    },
+    "tray.tray_puddle": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_puddle.jpg",
+        "method": "drawn"
+      },
+      "title": "A puddle after rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_fan": {
+      "same_as": "tray.tray_fan",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet",
+      "note": "Kệ toàn hình vẽ nên dùng quạt bàn vẽ của bài hai thay ảnh quạt của Hô hấp."
+    },
+    "tray.tray_shadow": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_shadow.jpg",
+        "method": "drawn"
+      },
+      "title": "A tree's shadow on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_kite": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_kite.jpg",
+        "method": "drawn"
+      },
+      "title": "A bird-shaped kite in the sky",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Diều hình chim có hai dải ruy băng hồng, cùng ý ảnh diều của Hô hấp; vẽ lại vì kệ toàn hình vẽ."
+    },
+    "tray.tray_shower": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_shower.jpg",
+        "method": "drawn"
+      },
+      "title": "Water from a shower",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_wet_leaf": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_wet_leaf.jpg",
+        "method": "drawn"
+      },
+      "title": "Raindrops on a green leaf",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_lamp": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_lamp.jpg",
+        "method": "drawn"
+      },
+      "title": "A desk lamp that is on",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_rice": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_rice.jpg",
+        "method": "drawn"
+      },
+      "title": "Rice drying in a sunny yard",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_bending": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.tray.tray_bending.jpg",
+        "method": "drawn"
+      },
+      "title": "Trees leaning in the wind",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1": {
+      "same_as": "w1_sky",
+      "lesson": "be-mat-trai-dat/cac-chau-luc-va-dai-duong"
+    },
+    "q1.q1_shirt": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q1.q1_shirt.jpg",
+        "method": "drawn"
+      },
+      "title": "A shirt flapping on a line",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1.q1_road": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q1.q1_road.jpg",
+        "method": "drawn"
+      },
+      "title": "A wet road",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1.q1_pond": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q1.q1_pond.jpg",
+        "method": "drawn"
+      },
+      "title": "A still pond",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_cloudy"
+    },
+    "q2.q2_smoke": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q2.q2_smoke.jpg",
+        "method": "drawn"
+      },
+      "title": "Smoke rising from a roof",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2.q2_cotton": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q2.q2_cotton.jpg",
+        "method": "drawn"
+      },
+      "title": "White cotton balls",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2.q2_water": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q2.q2_water.jpg",
+        "method": "drawn"
+      },
+      "title": "Tiny drops of water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3": {
+      "same_as": "tray.tray_dark",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao",
+      "note": "Hình câu hỏi: mây đen kéo tới trên cánh đồng và làng (hình vẽ của bài ba); không có ảnh hợp lệ."
+    },
+    "q3.q3_rice": {
+      "same_as": "tray.tray_rice"
+    },
+    "q3.q3_jar": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q3.q3_jar.jpg",
+        "method": "drawn"
+      },
+      "title": "A big clay jar in a yard",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_chillies": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q3.q3_chillies.jpg",
+        "method": "drawn"
+      },
+      "title": "Red chillies drying on a tray",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_plants": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q3.q3_plants.jpg",
+        "method": "drawn"
+      },
+      "title": "Plants in pots",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A wet shirt on a hanger",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_sunny": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q4.q4_rainy": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q4.q4_cloudy": {
+      "same_as": "learn.explore.explore_cloudy"
+    },
+    "q5": {
+      "same_as": "tray.tray_kite",
+      "note": "Một vật một hình trong bài: dùng diều vẽ của kệ thay ảnh diều Hô hấp."
+    },
+    "q6": {
+      "same_as": "tray.tray_bending"
+    },
+    "vocab.weather": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "vocab.wind": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "vocab.cloud": {
+      "same_as": "learn.explore.explore_cloudy"
+    },
+    "vocab.puddle": {
+      "same_as": "tray.tray_puddle"
+    },
+    "vocab.shadow": {
+      "same_as": "tray.tray_shadow"
+    },
+    "reward.big_cloud": {
+      "same_as": "q2_cloud",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    }
+  }
+}

@@ -68,11 +68,52 @@ enum ScreenMetrics {
     static let cardArtOffset = CGSize(width: 14, height: -20)
     /// Room kept free of the card art on the right of the title.
     static let cardTitleTrailing: CGFloat = 64
-    /// Journey glyph of the current topic (`40 × 35`).
-    static let journeyGlyphCurrent = CGSize(width: 40, height: 35)
-    /// Journey row (`gap: 14px`), rows (`gap: 8px`).
-    static let journeyRowGap: CGFloat = Tokens.Space.s14
-    static let journeyGap: CGFloat = Tokens.Space.s8
+    /// Topic icon on the card's plate and the Topic hero: 0.53 of the plate (SK-034 spec 8).
+    static let plateIconShare: CGFloat = 0.53
+
+    // MARK: Journey map (SK-034, journey-roadmap-spec.md; geometry in `JourneyMapGeometry`)
+
+    /// Icon of a stop by state, map A (B in the second value): done and not started 44 (40), the
+    /// topic of "Học tiếp" 48 (41), another topic under way 40 (36), "Sắp có" 44 (40).
+    static let stopIcon: (open: CGFloat, current: CGFloat, started: CGFloat) = (44, 48, 40)
+    static let stopIconTrail: (open: CGFloat, current: CGFloat, started: CGFloat) = (40, 41, 36)
+    /// Icon of a topic with nothing written: grey at 42% (`grayscale(1) opacity(.42)`).
+    static let mutedIconOpacity: Double = 0.42
+    /// Lesson ring: 7 wide on the topic of "Học tiếp", 6 on another topic under way.
+    static let ringCurrent: CGFloat = 7
+    static let ringStarted: CGFloat = 6
+    /// Seal of a topic done: its corner past the disc's bottom right (`right: -9px; bottom: -8px`).
+    static let stopSealOffset = CGSize(width: 9, height: 8)
+    /// "Em đang ở đây": the child's avatar on a paper disc 40 (art 34), its corner (−14, −30) off
+    /// the disc's top corner on the screen edge side.
+    static let stopAvatarDisc: CGFloat = 40
+    static let stopAvatarArt: CGFloat = 34
+    static let stopAvatarOffset = CGSize(width: 14, height: 30)
+    /// The avatar pops at 420 ms (canvas `--d: 420ms`); a seal stamps 170 ms after its row is laid
+    /// (canvas: row 210 ms, seal 380 ms).
+    static let stopAvatarDelay: TimeInterval = 0.42
+    static let stopSealDelay: TimeInterval = 0.17
+    /// Stars of a topic done (13, gap 2) and the gap before "Đã xong" (`margin-left: 4px`).
+    static let stopStar: CGFloat = 13
+    static let stopStarGap: CGFloat = Tokens.Space.s2
+    static let stopStarTextGap: CGFloat = Tokens.Space.s4
+    /// Title to status line of a stop, lines of a post's text (`gap: 2px`, `gap: 1px`).
+    static let stopTextGap: CGFloat = Tokens.Space.s2
+    static let markLineGap: CGFloat = 1
+    /// A stop row is at least this tall (spec 6: 64 on A, 56 on B).
+    static let stopRowMinHeight: CGFloat = 64
+    static let stopRowMinHeightTrail: CGFloat = 56
+    /// The status line of a topic done or being learnt: `caption_s` at 700 (spec 3).
+    static let stopStatusStrong = Tokens.Typography(
+        family: Tokens.Typography.captionS.family,
+        size: Tokens.Typography.captionS.size,
+        weight: Tokens.FontWeight.textBold,
+        lineHeight: Tokens.Typography.captionS.lineHeight,
+        letterSpacing: Tokens.Typography.captionS.letterSpacing,
+        textCase: Tokens.Typography.captionS.textCase
+    )
+    /// Stage rows of the iPad sidebar (spec 11), gap between them.
+    static let sidebarSegmentGap: CGFloat = Tokens.Space.s4
 
     // MARK: Home iPad (Discoverer-Home-iPad, layout A, SK-013)
 
@@ -100,12 +141,16 @@ enum ScreenMetrics {
     static let questionPadding = EdgeInsets(top: Tokens.Space.s12, leading: 22, bottom: Tokens.Space.s8, trailing: Tokens.Space.s12)
     static let bulletDot: CGFloat = 7
     static let bulletOrigin = CGPoint(x: 9, y: 19)
-    /// Lesson rows (`gap: 9px`), open row padding `8px 8px 8px 12px`, locked `8px 14px 8px 12px`.
+    /// Lesson rows (`gap: 9px`), open row padding `8px 8px 8px 12px`; a lesson not written yet
+    /// takes the canvas's locked row, `8px 14px 8px 12px` (SK-030: nothing is locked any more).
     static let lessonGap: CGFloat = 9
     static let openRowPadding = EdgeInsets(top: Tokens.Space.s8, leading: Tokens.Space.s12, bottom: Tokens.Space.s8, trailing: Tokens.Space.s8)
-    static let lockedRowPadding = EdgeInsets(top: Tokens.Space.s8, leading: Tokens.Space.s12, bottom: Tokens.Space.s8, trailing: Tokens.Space.s14)
-    /// Lock on a locked lesson (`22 × 22`).
-    static let lessonLock: CGFloat = 22
+    static let soonRowPadding = EdgeInsets(top: Tokens.Space.s8, leading: Tokens.Space.s12, bottom: Tokens.Space.s8, trailing: Tokens.Space.s14)
+    /// Best stars of a lesson done (10/11, no canvas: the caption's 13pt line).
+    static let lessonStar: CGFloat = 14
+    /// "Done" seal on a lesson's number tile and on a journey stop (10/11, no canvas): its centre
+    /// on the tile's corner, as the lock badge of `PaperDisc` sat.
+    static let doneSealOffset = CGSize(width: Tokens.Space.s8, height: Tokens.Space.s8)
     /// Topic words chip: dot `7`, book `20`, arrow `16`, `padding: 0 14px 0 12px`.
     static let wordsIcon: CGFloat = 20
     static let wordsArrow: CGFloat = 16

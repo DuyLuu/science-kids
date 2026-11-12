@@ -1,9 +1,11 @@
 import Foundation
 import SwiftUI
 
-/// Stand-in for a content picture until the paper-cut art exists (SK-012, `Image.asset` empty):
+/// Stand-in for a content picture with no picture in the pack (SK-012; SK-033: screens draw
+/// `ContentPicture`, which shows the pack's picture when `Image.asset` is in it, else this):
 /// a tilted piece of paper in the group's colour with a small paper disc on it. With no colour
-/// (a quiz option, which has no group) the piece is giấy lõm. VoiceOver reads `accessibilityLabel`
+/// (a quiz option, which has no group; a Chơi shelf item, whose group must not show before the
+/// pick, SK-031) the piece is giấy lõm. VoiceOver reads `accessibilityLabel`
 /// (the picture's `alt`); without one the art is decorative.
 public struct PlaceholderArt: View {
     private let color: Color?

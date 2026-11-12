@@ -1,6 +1,6 @@
 import XCTest
 
-/// SK-012: lesson 1 played on the simulator, Home → Khởi động → Học → Chơi → Quiz → Thưởng.
+/// SK-012: lesson 1 played on the simulator, Home → Chủ đề → Khởi động → Học → Chơi → Quiz → Thưởng.
 /// Answers, tray foods and expected texts come from the bundled fixture and `content/rules.json`
 /// (`LessonFixture`), not from the test.
 ///
@@ -66,10 +66,11 @@ final class LessonUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 5), "Home did not open")
     }
 
-    /// Opens lesson 1 from the Home card; `landing` is an element of the screen it should open on.
-    private func startLesson(_ app: XCUIApplication, landing: String = "lesson.title") {
-        tap(app, "home.start_lesson")
-        XCTAssertTrue(element(app, landing).waitForExistence(timeout: 5), "lesson did not open on \(landing)")
+    /// Opens the fixture lesson through its topic (SK-035 tester #1: the Home card opens the
+    /// journey's first written lesson, another one); `landing` is an element of the screen it
+    /// should open on.
+    private func startLesson(_ app: XCUIApplication, landing: String = "lesson.title", file: StaticString = #filePath, line: UInt = #line) {
+        fixture.open(in: app, landing: landing, file: file, line: line)
     }
 
     /// Taps the answer `keys` of a question (choices, bank words, or "true"/"false"), then "Kiểm tra" if asked.
@@ -252,6 +253,9 @@ final class LessonUITests: XCTestCase {
         answer(q2, q2.wrongs[0], check: true, in: app)
         XCTAssertTrue(element(app, "lesson.hint").waitForExistence(timeout: 3))
         tap(app, "lesson.back")
+        // Back where it was opened from: the topic, then Home.
+        XCTAssertTrue(app.staticTexts["topic.title"].waitForExistence(timeout: 5))
+        tap(app, "header.back")
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 5))
         app.terminate()
 

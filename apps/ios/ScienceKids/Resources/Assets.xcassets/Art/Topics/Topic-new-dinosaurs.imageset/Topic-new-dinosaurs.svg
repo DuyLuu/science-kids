@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · new-dinosaurs · khủng long cổ dài. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#2F5B57"><rect x="22" y="40" width="6" height="15" rx="2.5"/><rect x="40" y="40" width="6" height="15" rx="2.5"/></g>
+  <g fill="#3B6E6A"><path d="M4 47 C 9 43, 13 37, 18 35 C 22 29, 34 27, 42 31 C 45 25, 47 17, 50 11 C 52 7, 58 7, 60 10 C 61 12.5, 58 14.5, 55 14 C 53 20, 51 30, 49 38 C 48 44, 44 47, 38 47 L36 56 H30 L31 47 H23 L22 56 H16 L17 45 C 12 46, 8 47.5, 4 47 Z"/></g>
+  <g fill="#E2A52A"><circle cx="25" cy="33" r="2.6"/><circle cx="32" cy="31.2" r="2.8"/><circle cx="39" cy="32.4" r="2.4"/></g>
+  <g fill="#1E1B18"><circle cx="56" cy="10.4" r="1.4"/></g>
+</svg>

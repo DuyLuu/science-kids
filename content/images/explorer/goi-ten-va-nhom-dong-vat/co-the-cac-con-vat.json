@@ -1,0 +1,372 @@
+{
+  "note": "SK-041. Designer (agent) chọn 12/11/2026, chờ Duy duyệt. Toàn ảnh chụp (trừ hình câu dùng lại sân nhà vẽ của Hô hấp); ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Discoverer được chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi. Trang duyệt content/.build/images/goi-ten-va-nhom-dong-vat/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w1.w1_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w1.w1_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w1.w1_goldfish": {
+      "same_as": "tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_legs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_wings": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_fins": {
+      "same_as": "explore_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "learn.explore.explore_special": {
+      "same_as": "learn.explore.explore_big_small",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "tray.tray_snake": {
+      "same_as": "q5",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_stool": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/127283891@N07/55457069064",
+      "file_url": "https://live.staticflickr.com/65535/55457069064_2cbcf96d0f_b.jpg",
+      "title": "Untitled",
+      "author": "The Man-Machine",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "c12d77e7-2161-4e59-907f-1478f392fa18",
+      "crop": {
+        "left": 0.5,
+        "top": 0,
+        "width": 0.5,
+        "height": 0.88
+      },
+      "note": "Ghế đẩu gỗ chân cao nhìn ngang (thấy ba chân); không có ảnh hợp lệ ghế đẩu gỗ thấp trên sàn gạch."
+    },
+    "tray.tray_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_carp": {
+      "same_as": "explore_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_rubber_duck": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yellow_rubber_duck.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Yellow_rubber_duck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yellow rubber duck",
+      "author": "terri_bateman",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_egret": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_duck": {
+      "same_as": "w1_duck",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      },
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q1.q1_dog": {
+      "same_as": "explore_pets",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q2": {
+      "same_as": "tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      },
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q3.q3_turtle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mauremys_caspica_119149878.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mauremys_caspica_119149878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mauremys caspica 119149878",
+      "author": "Kseniia Marianna Prondzynska",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `q3_turtle` ở discoverer/khung-long/vi-sao-khung-long-bien-mat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q3.q3_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WIND_SWEPT_PADDIES,SATYAVEDU_AP_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/WIND_SWEPT_PADDIES%2CSATYAVEDU_AP_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "WIND SWEPT PADDIES,SATYAVEDU AP - panoramio",
+      "author": "rajaraman sundaram",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w1` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4.q4_buffalo": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q4.q4_goldfish": {
+      "same_as": "tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_penguin": {
+      "same_as": "tray_penguin",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q5": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q5.q5_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5.q5_duck": {
+      "same_as": "w1_duck",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_carp": {
+      "same_as": "explore_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Baby_feet_3_-_Flickr_-_lou_%5E_magoo.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Baby_feet_3_-_Flickr_-_lou_%5E_magoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Baby feet 3 - Flickr - lou ^ magoo",
+      "author": "lou & magoo",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Ảnh đen trắng hai bàn chân trần em bé ngồi trên ghế; không thấy mặt."
+    },
+    "q6.q6_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.8
+      },
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q6.q6_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eurasian_tree_sparrow,_R%C5%BCuch%C3%B3w,_%C5%9Awi%C4%99tokrzyskie_Voivodeship,_20250421_1151_4165.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Eurasian_tree_sparrow%2C_R%C5%BCuch%C3%B3w%2C_%C5%9Awi%C4%99tokrzyskie_Voivodeship%2C_20250421_1151_4165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship, 20250421 1151 4165",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0.05,
+        "width": 0.76,
+        "height": 0.95
+      },
+      "note": "Ảnh chim sẻ riêng, đứng thấy rõ hai chân (ảnh Hô hấp đậu trên cành gần như không thấy chân)."
+    },
+    "q6.q6_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.body_part": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.wing": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.fin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Common_Carp_%28Cyprinus_carpio%29_%2851022534501%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common carp, tail fin",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "crop": {
+        "left": 0.775,
+        "top": 0.25,
+        "width": 0.21,
+        "height": 0.42
+      },
+      "note": "Chép mục gốc `q2_fins` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.shell": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mauremys_caspica_119149878.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mauremys_caspica_119149878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mauremys caspica 119149878",
+      "author": "Kseniia Marianna Prondzynska",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `q3_turtle` ở discoverer/khung-long/vi-sao-khung-long-bien-mat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.trunk": {
+      "same_as": "learn.explore.explore_big_small",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "reward.kingfisher_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Perched_blue_and_orange_bird_(Unsplash),_crop.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Perched_blue_and_orange_bird_%28Unsplash%29%2C_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A kingfisher on a branch",
+      "author": "Vincent van Zalinge vincentvanzalinge",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  }
+}

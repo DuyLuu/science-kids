@@ -1,0 +1,232 @@
+{
+  "note": "SK-038. Designer (agent) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/thoi-tiet-va-thien-tai/; trang duyệt content/.build/images/thoi-tiet-va-thien-tai/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w1.w1_windsock": {
+      "same_as": "explore_windsock",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "w1.w1_rain_gauge": {
+      "same_as": "explore_rain_gauge",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "w1.w1_clock": {
+      "same_as": "tray.tray_clock",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the",
+      "note": "Trỏ thẳng hình gốc đồng hồ của Não bộ (q3_clock bài hai cũng trỏ về đây)."
+    },
+    "w2": {
+      "same_as": "tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w3": {
+      "same_as": "tray_bending",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may"
+    },
+    "learn.explore.explore_storm": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.learn.explore.explore_storm.jpg",
+        "method": "drawn"
+      },
+      "title": "A seaside village in a storm",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_season": {
+      "same_as": "q1_storm",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "learn.explore.explore_eye": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.learn.explore.explore_eye.jpg",
+        "method": "drawn"
+      },
+      "title": "A storm from above, calm in the middle",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_forecast": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.learn.explore.explore_forecast.jpg",
+        "method": "drawn"
+      },
+      "title": "A weather forecast on TV",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_bend": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.tray.tray_bend.jpg",
+        "method": "drawn"
+      },
+      "title": "Trees bending low in strong wind",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_lava": {
+      "same_as": "q4_lava",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "tray.tray_pour": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "tray.tray_dark": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.tray.tray_dark.jpg",
+        "method": "drawn"
+      },
+      "title": "Dark clouds over the rice fields",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_sun": {
+      "same_as": "q2_sun",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "tray.tray_leaves": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.tray.tray_leaves.jpg",
+        "method": "drawn"
+      },
+      "title": "Leaves flying in the wind",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_shake": {
+      "same_as": "q1_shake",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "tray.tray_window": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.tray.tray_window.jpg",
+        "method": "drawn"
+      },
+      "title": "Rain running down a window",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_storm"
+    },
+    "q1.q1_dry": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q1.q1_dry.jpg",
+        "method": "drawn"
+      },
+      "title": "Dry fields under the hot sun",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1.q1_rainy": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q1.q1_rainy.jpg",
+        "method": "drawn"
+      },
+      "title": "Green fields in the rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1.q1_whole_year": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q1.q1_whole_year.jpg",
+        "method": "drawn"
+      },
+      "title": "The same field through the year",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2": {
+      "same_as": "q1_storm",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "q2.q2_rain": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "q2.q2_wind": {
+      "same_as": "tray.tray_leaves"
+    },
+    "q2.q2_clouds": {
+      "same_as": "tray.tray_dark"
+    },
+    "q3": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q3.jpg",
+        "method": "drawn"
+      },
+      "title": "A quiet yard in the afternoon",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_tv": {
+      "same_as": "learn.explore.explore_forecast"
+    },
+    "q3.q3_speaker": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q3.q3_speaker.jpg",
+        "method": "drawn"
+      },
+      "title": "Loudspeakers on a pole in a village",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_thermometer": {
+      "same_as": "explore_thermometer",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "q3.q3_umbrella": {
+      "same_as": "tray_umbrella",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "q4": {
+      "same_as": "q3"
+    },
+    "q4.q4_light": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q4.q4_light.jpg",
+        "method": "drawn"
+      },
+      "title": "The yard in light rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_breezy": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q4.q4_breezy.jpg",
+        "method": "drawn"
+      },
+      "title": "The yard on a windy, sunny day",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_storm": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q4.q4_storm.jpg",
+        "method": "drawn"
+      },
+      "title": "The yard in a storm",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "same_as": "w1_sky",
+      "lesson": "be-mat-trai-dat/cac-chau-luc-va-dai-duong"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A calm yard after strong wind",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "vocab.storm": {
+      "same_as": "learn.explore.explore_storm"
+    },
+    "vocab.season": {
+      "same_as": "q1.q1_rainy"
+    },
+    "vocab.forecast": {
+      "same_as": "learn.explore.explore_forecast"
+    },
+    "vocab.typhoon": {
+      "same_as": "q1_storm",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "vocab.calm": {
+      "same_as": "learn.explore.explore_eye"
+    },
+    "reward.numbered_storms": {
+      "same_as": "learn.explore.explore_eye"
+    }
+  }
+}

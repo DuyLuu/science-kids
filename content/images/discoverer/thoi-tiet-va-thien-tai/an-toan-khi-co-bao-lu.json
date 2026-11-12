@@ -1,0 +1,244 @@
+{
+  "note": "SK-038. Designer (agent) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/thoi-tiet-va-thien-tai/; trang duyệt content/.build/images/thoi-tiet-va-thien-tai/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w1.w1_thermometer": {
+      "same_as": "explore_thermometer",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "w1.w1_rain_gauge": {
+      "same_as": "explore_rain_gauge",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "w1.w1_windsock": {
+      "same_as": "explore_windsock",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "thoi-tiet-va-thien-tai/lu-lut-va-han-han"
+    },
+    "w3": {
+      "same_as": "q3",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "learn.explore.explore_listen": {
+      "same_as": "explore_forecast",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "learn.explore.explore_inside": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.learn.explore.explore_inside.jpg",
+        "method": "drawn"
+      },
+      "title": "A child playing in the middle of a room",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_flood_water": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.learn.explore.explore_flood_water.jpg",
+        "method": "drawn"
+      },
+      "title": "Brown flood water on a village road",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_power": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.learn.explore.explore_power.jpg",
+        "method": "drawn"
+      },
+      "title": "A fallen power line by the road",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_tree": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.tray.tray_tree.jpg",
+        "method": "drawn"
+      },
+      "title": "A child under a big tree in the rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_listen": {
+      "same_as": "explore_forecast",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "tray.tray_inside": {
+      "same_as": "learn.explore.explore_inside"
+    },
+    "tray.tray_window": {
+      "same_as": "tray_window",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "tray.tray_bring_in": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.tray.tray_bring_in.jpg",
+        "method": "drawn"
+      },
+      "title": "A child carrying a plant inside",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_play_water": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.tray.tray_play_water.jpg",
+        "method": "drawn"
+      },
+      "title": "A child about to step into flood water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_dry": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.tray.tray_dry.jpg",
+        "method": "drawn"
+      },
+      "title": "A child on a dry, high step",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_wire": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.tray.tray_wire.jpg",
+        "method": "drawn"
+      },
+      "title": "A child walking far from a fallen wire",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q1": {
+      "same_as": "explore_storm",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "q1.q1_inside": {
+      "same_as": "learn.explore.explore_inside"
+    },
+    "q1.q1_tree": {
+      "same_as": "tray.tray_tree"
+    },
+    "q1.q1_river": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q1.q1_river.jpg",
+        "method": "drawn"
+      },
+      "title": "A child by a river in the rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2": {
+      "same_as": "q1_storm",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "q2.q2_wind": {
+      "same_as": "tray_leaves",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "q2.q2_frogs": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q2.q2_frogs.jpg",
+        "method": "drawn"
+      },
+      "title": "A frog croaking by a rice field",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q2.q2_news": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q2.q2_news.jpg",
+        "method": "drawn"
+      },
+      "title": "A radio on a table",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3": {
+      "same_as": "q3",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "q3.q3_kite": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q3.q3_kite.jpg",
+        "method": "drawn"
+      },
+      "title": "A kite on the grass on a cloudy day",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_bring": {
+      "same_as": "tray.tray_bring_in"
+    },
+    "q3.q3_torch": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q3.q3_torch.jpg",
+        "method": "drawn"
+      },
+      "title": "A torch on a table",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q3.q3_beach": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q3.q3_beach.jpg",
+        "method": "drawn"
+      },
+      "title": "A beach with big waves and grey sky",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4": {
+      "same_as": "q4_storm",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "q4.q4_balcony": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q4.q4_balcony.jpg",
+        "method": "drawn"
+      },
+      "title": "A small balcony in the rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_middle": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q4.q4_middle.jpg",
+        "method": "drawn"
+      },
+      "title": "A small room with no windows",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_door": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q4.q4_door.jpg",
+        "method": "drawn"
+      },
+      "title": "A big glass door in the rain",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "same_as": "tray_bend",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A lane with shallow flood water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "vocab.warning": {
+      "same_as": "q2.q2_news"
+    },
+    "vocab.power_line": {
+      "same_as": "learn.explore.explore_power"
+    },
+    "vocab.torch": {
+      "same_as": "q3.q3_torch"
+    },
+    "vocab.safe": {
+      "same_as": "learn.explore.explore_inside"
+    },
+    "vocab.danger": {
+      "same_as": "learn.explore.explore_flood_water"
+    },
+    "reward.storm_kit": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu.reward.storm_kit.jpg",
+        "method": "drawn"
+      },
+      "title": "A bag with a torch, water and food",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    }
+  }
+}

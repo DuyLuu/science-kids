@@ -35,6 +35,19 @@ public enum QuestionStatus: Hashable, Sendable {
     }
 }
 
+/// How a lesson is shown, from the age group of its topic (SK-026: the content's `age_group`, not
+/// the profile's). Explorer (5–7) is the "no reading needed" quiz of SK-026 D1–D4: picture cards
+/// with no text, tap to answer, the mascot reads every line, stars and a sticker without the
+/// number right or XP. Scientist has no screens of its own yet and plays like Discoverer.
+public enum LessonPresentation: String, Hashable, Sendable {
+    case discoverer
+    case explorer
+
+    public init(ageGroup: String) {
+        self = ageGroup == "explorer" ? .explorer : .discoverer
+    }
+}
+
 /// What the Reward screen shows, all from the engine.
 public struct LessonSummary: Hashable, Sendable {
     public var score: LessonScore
@@ -58,12 +71,18 @@ public final class LessonSession {
         public var timeZone: TimeZone
         public var languageMode: LanguageMode
         public var voiceMode: VoiceMode
+        /// From the topic's `age_group` (SK-040).
+        public var presentation: LessonPresentation
 
-        public init(childId: UUID, timeZone: TimeZone, languageMode: LanguageMode, voiceMode: VoiceMode) {
+        public init(
+            childId: UUID, timeZone: TimeZone, languageMode: LanguageMode, voiceMode: VoiceMode,
+            presentation: LessonPresentation = .discoverer
+        ) {
             self.childId = childId
             self.timeZone = timeZone
             self.languageMode = languageMode
             self.voiceMode = voiceMode
+            self.presentation = presentation
         }
     }
 
@@ -78,6 +97,10 @@ public final class LessonSession {
     public let exploreBlock: ExploreGroups?
     public let wordList: WordList?
     public let tray: BuildTray?
+    /// The tray's items in the order the Chơi shelf shows them: shuffled once per attempt
+    /// (`ShelfOrder`, SK-031), so the content's order does not give the groups away; empty
+    /// without a tray.
+    public let shelfItems: [TrayItem]
     /// Every step of this lesson, in order.
     public let steps: [Step]
 
@@ -110,8 +133,9 @@ public final class LessonSession {
         self.context = context
         self.store = store
         self.now = now
-        warmupItems = lesson.warmup.filter { $0.answer.hasRenderer }
-        quizItems = lesson.quiz.filter { $0.answer.hasRenderer }
+        warmupItems = lesson.warmup.filter { $0.answer.hasRenderer(for: context.presentation) }
+        quizItems = lesson.quiz.filter { $0.answer.hasRenderer(for: context.presentation) }
+
         exploreBlock = lesson.learn.lazy.compactMap { block -> ExploreGroups? in
             if case .exploreGroups(let explore) = block { return explore }
             return nil
@@ -130,16 +154,26 @@ public final class LessonSession {
         self.steps = steps
 
         let date = now()
+        let attempt: AttemptProgress
         if var saved = store?.inProgress(lessonId: lesson.id, childId: context.childId, now: date),
            steps.contains(saved.step) {
             saved.isPaused = false
-            progress = saved
+            attempt = saved
         } else {
-            progress = AttemptProgress(childId: context.childId, lessonId: lesson.id, now: date, firstStep: steps[0])
+            attempt = AttemptProgress(childId: context.childId, lessonId: lesson.id, now: date, firstStep: steps[0])
+        }
+        progress = attempt
+        if case .buildTray(let block) = lesson.play {
+            shelfItems = ShelfOrder.shuffled(block.items, seed: attempt.attemptId)
+        } else {
+            shelfItems = []
         }
         showsSecondLanguage = !context.languageMode.hidesSentenceSecondLanguage
         if let tray {
             trayState = try? buildTray(block: tray.trayRules, tray: progress.tray, taps: []).get()
+        }
+        for item in (lesson.warmup + lesson.quiz) where !item.answer.hasRenderer(for: context.presentation) {
+            log.notice("question \(item.key, privacy: .public) (\(item.format, privacy: .public)) has no \(context.presentation.rawValue, privacy: .public) screen: left out")
         }
         prepareStep()
         if progress.step == .reward {
@@ -151,6 +185,8 @@ public final class LessonSession {
 
     public var step: Step { progress.step }
     public var languageMode: LanguageMode { context.languageMode }
+    public var presentation: LessonPresentation { context.presentation }
+    public var isExplorer: Bool { context.presentation == .explorer }
 
     // MARK: Steps
 
@@ -233,7 +269,7 @@ public final class LessonSession {
     /// XP a quiz question earned (`computeItemXP` on its `scoreItem` points), once it is done;
     /// `nil` in warmup and while the question is open.
     public func xpEarned(by item: QuizItem, in phase: QuestionPhase) -> Int? {
-        guard phase == .quiz, status(of: item, in: phase).isDone, let score = itemScore(of: item, in: phase) else { return nil }
+        guard phase == .quiz, !isExplorer, status(of: item, in: phase).isDone, let score = itemScore(of: item, in: phase) else { return nil }
         return computeItemXP(score: score, rules: rules.xp)
     }
 
@@ -331,7 +367,11 @@ public final class LessonSession {
         }
         let score = (try? scoreLesson(quizResults: quizResults, warmupResults: warmupResults).get())
             ?? LessonScore(correct: 0, max: quizLength, completed: false)
-        let xp = computeXP(score: score, gameCompleted: progress.playCompleted, rules: rules.xp)
+        // SK-026 D1, SK-040 (main session 12/11, hướng b): Explorer earns no XP. The attempt sends
+        // `xp = 0` and nothing is added locally; `rules.json` keeps its values for the other groups.
+        let xp = isExplorer
+            ? XPAward(correct: 0, gameComplete: 0, lessonComplete: 0)
+            : computeXP(score: score, gameCompleted: progress.playCompleted, rules: rules.xp)
         let localDate = Self.localDate(of: completedAt, in: context.timeZone)
 
         let history = store?.history().filter { $0.childId == context.childId && $0.lessonId == lesson.id && $0.id != progress.attemptId } ?? []

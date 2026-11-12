@@ -1,0 +1,438 @@
+{
+  "note": "SK-033, chủ đề Khủng long bài 4. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chỗ dùng lại hình bài 1–2 chỉ ghi same_as + lesson (designer khác chọn ảnh gốc). Chỗ dùng lại có cắt riêng trong bài ghi thành mục ảnh riêng cùng file_url, có crop. Ảnh khác ý brief có alt đề xuất trong note. Designer (agent) 10/11 chiều: thêm 7 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại), thay q4.q4_alone bằng hình ghép; chi tiết ở review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q4",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w1.w1_rock": {
+      "same_as": "tray_rock_print",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w1.w1_sand": {
+      "same_as": "tray_sand_prints",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w2": {
+      "same_as": "tray_rock_bone",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w3": {
+      "same_as": "tray_pterosaur",
+      "lesson": "khung-long/khung-long-la-gi",
+      "note": "Brief chỉ khung-long-la-gi/explore_not_dinosaurs (cắt nửa trên); bài hai chưa có ảnh ô đó nên dùng tray_pterosaur (tranh thằn lằn bay). Alt giữ được."
+    },
+    "learn.explore.explore_eggs": {
+      "same_as": "tray_rock_nest",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "learn.explore.explore_plants": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diplodocus_longus_Chicago.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Diplodocus_longus_Chicago.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Diplodocus longus Chicago",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Khác ý brief: chỉ có hộp sọ, chưa ghép dương xỉ và vạn tuế (một Image chỉ nhận một ảnh). Alt đề xuất: EN «A long-necked dinosaur skull with pencil-like teeth» · VI «Hộp sọ khủng long cổ dài có răng như bút chì». Hộp sọ là bản đúc có phần trám màu xám."
+    },
+    "learn.explore.explore_meat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_Wankelrex_(MOR_555)_skull.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Tyrannosaurus_Wankelrex_%28MOR_555%29_skull.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tyrannosaurus Wankelrex (MOR 555) skull",
+      "author": "Mark from Woking, United Kingdom",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.05,
+        "top": 0.15,
+        "width": 0.82,
+        "height": 0.72
+      }
+    },
+    "tray.tray_flat_teeth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Edmontosaurus_regalis_CMN_2289_teeth.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Edmontosaurus_regalis_CMN_2289_teeth.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Edmontosaurus regalis CMN 2289 teeth",
+      "author": "Hai Xing, Jordan C. Mallon & Margaret L. Currie",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.02,
+        "top": 0.07,
+        "width": 0.45,
+        "height": 0.25
+      },
+      "note": "Ảnh trong bài báo khoa học (Xing và cộng sự), cắt ô A. Dự phòng: «Trachodon-teeth» (public domain, đen trắng, rõ mặt nghiền hơn nhưng lệch kiểu màu với hai lựa chọn kia của q2)."
+    },
+    "tray.tray_fern": {
+      "same_as": "tray_fern",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "tray.tray_sharp_tooth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:B-rex_teeth.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/B-rex_teeth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "B-rex teeth",
+      "author": "John R. Horner, Mark B. Goodwin, Nathan Myhrvold",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0.07,
+        "width": 1,
+        "height": 0.62
+      },
+      "note": "Ảnh từ bài báo khoa học (răng của T. rex MOR 1125). Răng có cả phần chân răng, mép răng cưa khó thấy ở cỡ nhỏ."
+    },
+    "tray.tray_horns": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Smithsonian-Triceratops-skull-cast-0006aw.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Smithsonian-Triceratops-skull-cast-0006aw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Smithsonian-Triceratops-skull-cast-0006aw",
+      "author": "Source: sabreguy29 from Alexandria, VA, USA Derivative and graphic processing: User:MathKnight",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "tray.tray_fish": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "tray.tray_pencil_teeth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diplodocus_longus_(sauropod_dinosaur_teeth)_(Morrison_Formation,_Upper_Jurassic;_Dinosaur_National_Monument,_Utah,_USA)_(48695689217).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Diplodocus_longus_%28sauropod_dinosaur_teeth%29_%28Morrison_Formation%2C_Upper_Jurassic%3B_Dinosaur_National_Monument%2C_Utah%2C_USA%29_%2848695689217%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Diplodocus longus (sauropod dinosaur teeth) (Morrison Formation, Upper Jurassic; Dinosaur National Monument, Utah, USA) (48695689217)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1,
+        "height": 0.87
+      },
+      "note": "Khác brief: brief chỉ cắt từ ảnh hộp sọ explore_plants; ảnh này là hàng răng thật trong đá, rõ hình bút chì hơn. Alt giữ được: «Fossil teeth shaped like pencils»."
+    },
+    "tray.tray_tail_club": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Euoplocephalus_Tail_Club_(36353607921).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Euoplocephalus_Tail_Club_%2836353607921%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Euoplocephalus Tail Club (36353607921)",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.05,
+        "width": 0.8,
+        "height": 0.8
+      }
+    },
+    "tray.tray_lizard": {
+      "same_as": "w3_lizard",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "tray.tray_cycad": {
+      "same_as": "tray_cycad",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_Eggs_%26_Hatchlings_(36323090362).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Dinosaur_Eggs_%26_Hatchlings_%2836323090362%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dinosaur Eggs & Hatchlings (36323090362)",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.42,
+        "top": 0.1,
+        "width": 0.3,
+        "height": 0.45
+      },
+      "note": "Dùng lại ảnh của vocab.hatch, cắt riêng."
+    },
+    "q1.q1_pond": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "47e3c445-2836-45b4-b00c-8400989004a6",
+      "source_url": "https://www.flickr.com/photos/125008237@N07/53942205231",
+      "file_url": "https://live.staticflickr.com/65535/53942205231_80cf6267f3_b.jpg",
+      "title": "Frog and loads of frog spawn",
+      "author": "Musicaloris",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Openverse/Flickr: đã mở trang gốc Flickr 10/11, ghi CC BY 2.0. Có hai con ếch giữa đám trứng (giúp bé hiểu là trứng ếch)."
+    },
+    "q1.q1_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Egg_(45553422021).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Monarch_Butterfly_Egg_%2845553422021%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Monarch Butterfly Egg (45553422021)",
+      "author": "ShenandoahNPS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Egg_(45553422021).jpg",
+      "note": "Chỉ một quả trứng, nhỏ trong khung; cần xem trên máy xem có nhận ra không."
+    },
+    "q1.q1_nest": {
+      "same_as": "tray_rock_nest",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q2": {
+      "same_as": "q4",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q2.q2_sharp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_Wankelrex_(MOR_555)_skull.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Tyrannosaurus_Wankelrex_%28MOR_555%29_skull.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tyrannosaurus Wankelrex (MOR 555) skull",
+      "author": "Mark from Woking, United Kingdom",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1,
+        "top": 0.35,
+        "width": 0.38,
+        "height": 0.507
+      },
+      "note": "Dùng lại ảnh của learn.explore.explore_meat, cắt riêng."
+    },
+    "q2.q2_flat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Edmontosaurus_regalis_CMN_2289_teeth.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Edmontosaurus_regalis_CMN_2289_teeth.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Edmontosaurus regalis CMN 2289 teeth",
+      "author": "Hai Xing, Jordan C. Mallon & Margaret L. Currie",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0.07,
+        "width": 0.3,
+        "height": 0.25
+      },
+      "note": "Dùng lại ảnh của tray.tray_flat_teeth, cắt riêng."
+    },
+    "q2.q2_pencil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diplodocus_longus_(sauropod_dinosaur_teeth)_(Morrison_Formation,_Upper_Jurassic;_Dinosaur_National_Monument,_Utah,_USA)_(48695689217).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Diplodocus_longus_%28sauropod_dinosaur_teeth%29_%28Morrison_Formation%2C_Upper_Jurassic%3B_Dinosaur_National_Monument%2C_Utah%2C_USA%29_%2848695689217%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Diplodocus longus (sauropod dinosaur teeth) (Morrison Formation, Upper Jurassic; Dinosaur National Monument, Utah, USA) (48695689217)",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0.15,
+        "width": 0.496,
+        "height": 0.8
+      },
+      "note": "Dùng lại ảnh của tray.tray_pencil_teeth, cắt riêng."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Edmontosaurus_regalis_skull_and_jaws,_Near_Drumheller,_Alberta,_Canada,_Late_Cretaceous_-_Royal_Ontario_Museum_-_DSC00020.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Edmontosaurus_regalis_skull_and_jaws%2C_Near_Drumheller%2C_Alberta%2C_Canada%2C_Late_Cretaceous_-_Royal_Ontario_Museum_-_DSC00020.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Edmontosaurus regalis skull and jaws, Near Drumheller, Alberta, Canada, Late Cretaceous - Royal Ontario Museum - DSC00020",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.04,
+        "top": 0.04,
+        "width": 0.94,
+        "height": 0.86
+      },
+      "note": "Răng dẹt nằm phía trong hàm nên ở cỡ nhỏ chỉ thấy mỏ và hàm, chưa thấy rõ mặt răng."
+    },
+    "q3.q3_fern": {
+      "same_as": "tray_fern",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_fish": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q3.q3_lizard": {
+      "same_as": "w3_lizard",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q4.q4_alone": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-an-gi-song-ra-sao.q4.q4_alone.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Brontosaurus_TD.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Brontosaurus_TD.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Brontosaurus TD",
+            "author": "TotalDino",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "One long-necked dinosaur by a lake",
+      "note": "Ghép (designer 10/11): tranh CC0 «Brontosaurus TD» tách nền trắng, đặt lên nền bãi bùn ven hồ vẽ (trời, hồ, bãi bùn, bóng đổ). Thay bản nền trắng Duy duyệt 10/11 để ba lựa chọn của q4 cùng tranh, cùng bối cảnh (brief). Muốn giữ bản cũ thì trả về mục ảnh nguồn «Brontosaurus TD»."
+    },
+    "q5": {
+      "same_as": "tray_fern",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc",
+      "note": "Brief muốn nửa phải sơ đồ explore_plants (dương xỉ + vạn tuế). explore_plants chưa ghép được nên dùng ảnh dương xỉ của bài một. Alt đề xuất: EN «Green ferns» · VI «Những bụi dương xỉ xanh»."
+    },
+    "q5.q5_triceratops": {
+      "same_as": "w1_triceratops",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q5.q5_trex": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Milk_River,_Alberta,_Canada_(25420466716).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Milk_River%2C_Alberta%2C_Canada_%2825420466716%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Milk River, Alberta, Canada (25420466716)",
+      "author": "Rural Health Professions Action Plan from Edmonton, Alberta, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.22,
+        "top": 0.12,
+        "width": 0.74,
+        "height": 0.72
+      },
+      "note": "Nền sân đá, cây trụi lá, không phải cây cối xanh như ba mô hình kia. Miệng mở khá rộng nhưng quay sang bên. Alt giữ được: «A model of a T. rex»."
+    },
+    "q5.q5_long_neck": {
+      "same_as": "tray_longneck",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q5.q5_armoured": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Royal_Alberta_museum_Ankylosaurus.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Royal_Alberta_museum_Ankylosaurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal Alberta museum Ankylosaurus",
+      "author": "jasonwoodhead23",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.42,
+        "top": 0.47,
+        "width": 0.58,
+        "height": 0.5
+      },
+      "note": "Khác ý brief: mô hình trong diorama bảo tàng, không thấy đuôi chuỳ. Alt giữ được: «A model of an armoured dinosaur». Dự phòng: tranh «Zuul TD» (TotalDino, CC0) có đủ đuôi chuỳ nhưng là tranh trên nền trắng."
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_meat"
+    },
+    "vocab.herbivore": {
+      "same_as": "w1_triceratops",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "vocab.carnivore": {
+      "same_as": "learn.explore.explore_meat"
+    },
+    "vocab.nest": {
+      "same_as": "tray_rock_nest",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "vocab.hatch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_Eggs_%26_Hatchlings_(36323090362).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Dinosaur_Eggs_%26_Hatchlings_%2836323090362%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dinosaur Eggs & Hatchlings (36323090362)",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mô hình tổ trứng ở bảo tàng trứng khủng long Tây Hạp. Khủng long con nhỏ trong khung; q1 cắt sát."
+    },
+    "vocab.herd": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wild_water_buffalo_Lunugamvehera.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Wild_water_buffalo_Lunugamvehera.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Wild water buffalo Lunugamvehera",
+      "author": "Mammalwatcher",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.35,
+        "width": 1,
+        "height": 0.55
+      },
+      "note": "Khác ý brief: đàn trâu rừng ở Sri Lanka trên đồng cỏ, không phải bờ đê ruộng lúa. Alt giữ được: «A herd of buffaloes»."
+    },
+    "vocab.clue": {
+      "same_as": "tray.tray_sharp_tooth"
+    },
+    "w1.w1_toy": {
+      "same_as": "q6",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "learn.explore.explore_safe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2019-05-05_Picketwire_Canyon_-_136.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/2019-05-05_Picketwire_Canyon_-_136.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2019-05-05 Picketwire Canyon - 136",
+      "author": "mark byzewski",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Bãi dấu chân khủng long cổ dài Picketwire (Colorado): nhiều vết chân tròn thành mấy hàng song song chạy chéo cùng hướng. Chụp chéo từ mặt đất, không phải từ trên cao như brief; không người, không biển tên. Chưa thêm mũi tên (không chữ)."
+    },
+    "tray.tray_herd_tracks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2019-05-05_Picketwire_Canyon_-_136.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/2019-05-05_Picketwire_Canyon_-_136.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2019-05-05 Picketwire Canyon - 136",
+      "author": "mark byzewski",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0.1,
+        "width": 0.6,
+        "height": 0.8
+      },
+      "note": "Cắt từ ảnh explore_safe, giữ mấy hàng dấu chân song song."
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2019-05-05_Picketwire_Canyon_-_127.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/2019-05-05_Picketwire_Canyon_-_127.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2019-05-05 Picketwire Canyon - 127",
+      "author": "mark byzewski",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Bãi dấu chân thứ hai cùng nơi (Picketwire): hai hàng vết chân tròn song song cùng hướng, khóm cỏ ở mép trên; không người, không thước, không chữ."
+    },
+    "q4.q4_herd": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-an-gi-song-ra-sao.q4.q4_herd.jpg",
+        "parts": [
+          {
+            "same_as": "q4.q4_alone"
+          }
+        ]
+      },
+      "title": "Long-necked dinosaur herd by a lake",
+      "note": "Ghép (designer 10/11): tranh CC0 «Brontosaurus TD» tách nền trắng, đặt lên nền bãi bùn ven hồ vẽ (trời, hồ, bãi bùn, bóng đổ). Năm con cùng đi về một hướng, xa gần khác nhau."
+    },
+    "q4.q4_nest": {
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-an-gi-song-ra-sao.q4.q4_nest.jpg",
+        "parts": [
+          {
+            "same_as": "q4.q4_alone"
+          }
+        ]
+      },
+      "title": "Long-necked dinosaur by a nest of eggs",
+      "note": "Ghép (designer 10/11): tranh CC0 «Brontosaurus TD» tách nền trắng, đặt lên nền bãi bùn ven hồ vẽ (trời, hồ, bãi bùn, bóng đổ). Một con đứng yên, trước mặt là ổ trứng tròn vùi nửa trong cát (ổ trứng vẽ thêm). Không cúi được cổ như brief vì tranh gốc."
+    },
+    "reward.long_neck_egg": {
+      "same_as": "tray.tray_rock_egg",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    }
+  }
+}

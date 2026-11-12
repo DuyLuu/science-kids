@@ -1,0 +1,358 @@
+{
+  "note": "SK-039. Designer (agent, phần bài 1–7) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố b0N-), hình ghép ở content/images/composed/da-va-dat/; trang duyệt content/.build/images/da-va-dat/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w1.w1_granite": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w1.w1_basalt": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w1.w1_chalk": {
+      "same_as": "chalk",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "w2": {
+      "same_as": "explore_properties",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "learn.explore.explore_minerals": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "learn.explore.explore_scale": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-learn.explore.explore_scale.jpg",
+        "method": "drawn"
+      },
+      "title": "A staircase with minerals on some steps",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "learn.explore.explore_check": {
+      "same_as": "explore_scratch",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "learn.explore.explore_heavy": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-learn.explore.explore_heavy.jpg",
+        "method": "drawn"
+      },
+      "title": "A balance with a big rock and a small rock",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "tray.tray_ruby": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-tray.tray_ruby.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Ruby_crystal_1.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ruby_crystal_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Ruby crystal 1",
+            "author": "W.carter",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0"
+          }
+        ]
+      },
+      "title": "A red piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "tray.tray_glass_marble": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_marble_MET_DP165134.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Glass_marble_MET_DP165134.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A glass marble",
+      "author": "Unknown",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Viên bi thuỷ tinh (ảnh CC0); bi của bài một nay là hình vẽ nên kệ này dùng ảnh riêng."
+    },
+    "tray.tray_talc": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-tray.tray_talc.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Talc_(GeoDIL_number_-_2347).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Talc_%28GeoDIL_number_-_2347%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Talc - Talc",
+            "author": "Shannon Heinle",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "A pale cream piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "tray.tray_amethyst": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-tray.tray_amethyst.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Amethyst_Druse.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Amethyst_Druse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Amethyst Druse",
+            "author": "Ra'ike (see also: de:Benutzer:Ra'ike )",
+            "license": "CC BY 2.5",
+            "license_url": "https://creativecommons.org/licenses/by/2.5"
+          }
+        ]
+      },
+      "title": "A purple piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "tray.tray_gypsum": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-tray.tray_gypsum.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Selenite_(GeoDIL_number_-_944).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Selenite_%28GeoDIL_number_-_944%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Selenite - Selenite (gypsum) blade",
+            "author": "Twyla Baker",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "A clear piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "tray.tray_rock_sugar": {
+      "same_as": "tray_rock_sugar",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "tray.tray_diamond": {
+      "same_as": "vocab.diamond"
+    },
+    "tray.tray_candle": {
+      "same_as": "tray_candle",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "tray.tray_quartz": {
+      "same_as": "vocab.quartz"
+    },
+    "q1": {
+      "same_as": "tray_pink_granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q1.q1_diamond": {
+      "same_as": "vocab.diamond"
+    },
+    "q1.q1_ruby": {
+      "same_as": "tray.tray_ruby"
+    },
+    "q1.q1_quartz": {
+      "same_as": "vocab.quartz"
+    },
+    "q2": {
+      "same_as": "w1_stone",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q2.q2_sugar": {
+      "same_as": "tray_rock_sugar",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q2.q2_minerals": {
+      "same_as": "vocab.mineral"
+    },
+    "q2.q2_glass": {
+      "same_as": "tray.tray_glass_marble"
+    },
+    "q3": {
+      "same_as": "q2",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q3.q3_amethyst": {
+      "same_as": "tray.tray_amethyst"
+    },
+    "q3.q3_talc": {
+      "same_as": "tray.tray_talc"
+    },
+    "q3.q3_limestone": {
+      "same_as": "tray_limestone",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q3.q3_gypsum": {
+      "same_as": "tray.tray_gypsum"
+    },
+    "q4": {
+      "same_as": "vocab.geologist"
+    },
+    "q4.q4_soft_first": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-q4.q4_soft_first.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_talc"
+          },
+          {
+            "same_as": "vocab.quartz"
+          },
+          {
+            "same_as": "vocab.diamond"
+          }
+        ]
+      },
+      "title": "Talc, quartz and diamond in a row",
+      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Ba bản dùng cùng ba ảnh cắt, chỉ đổi thứ tự."
+    },
+    "q4.q4_mixed": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-q4.q4_mixed.jpg",
+        "parts": [
+          {
+            "same_as": "vocab.quartz"
+          },
+          {
+            "same_as": "tray.tray_talc"
+          },
+          {
+            "same_as": "vocab.diamond"
+          }
+        ]
+      },
+      "title": "Quartz, talc and diamond in a row",
+      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Ba bản dùng cùng ba ảnh cắt, chỉ đổi thứ tự."
+    },
+    "q4.q4_hard_first": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-q4.q4_hard_first.jpg",
+        "parts": [
+          {
+            "same_as": "vocab.diamond"
+          },
+          {
+            "same_as": "vocab.quartz"
+          },
+          {
+            "same_as": "tray.tray_talc"
+          }
+        ]
+      },
+      "title": "Diamond, quartz and talc in a row",
+      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Ba bản dùng cùng ba ảnh cắt, chỉ đổi thứ tự."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "q5.q5_pillow": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-q5.q5_pillow.jpg",
+        "method": "drawn"
+      },
+      "title": "A white pillow",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); bốn lựa chọn vẽ cùng nét."
+    },
+    "q5.q5_ball": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-q5.q5_ball.jpg",
+        "method": "drawn"
+      },
+      "title": "A rubber ball",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); bốn lựa chọn vẽ cùng nét."
+    },
+    "q5.q5_cup": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-q5.q5_cup.jpg",
+        "method": "drawn"
+      },
+      "title": "A plastic cup",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); bốn lựa chọn vẽ cùng nét."
+    },
+    "q5.q5_bowl": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-q5.q5_bowl.jpg",
+        "method": "drawn"
+      },
+      "title": "A white china bowl",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); bốn lựa chọn vẽ cùng nét."
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A big rock next to a child's hand",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "vocab.mineral": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-vocab.mineral.jpg",
+        "parts": [
+          {
+            "same_as": "vocab.quartz"
+          },
+          {
+            "same_as": "tray.tray_amethyst"
+          },
+          {
+            "same_as": "tray.tray_ruby"
+          }
+        ]
+      },
+      "title": "A few different minerals",
+      "note": "Designer (agent) 11/11 tách nền ba mẫu khoáng vật của bài (thạch anh trắng, thạch anh tím, hồng ngọc), đặt cạnh nhau trên nền kem; Commons không có ảnh nhóm khoáng vật không nhãn."
+    },
+    "vocab.scale": {
+      "same_as": "learn.explore.explore_scale"
+    },
+    "vocab.geologist": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b04-vocab.geologist.jpg",
+        "method": "drawn"
+      },
+      "title": "A geologist looking at rocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Không có ảnh hợp lệ: ảnh nhà địa chất USGS trên Commons có chữ trên áo hoặc thấy mặt (11/11); vẽ người lớn nhìn từ phía sau, đội mũ bảo hộ, giơ kính lúp soi vách đá, không có búa."
+    },
+    "vocab.diamond": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-vocab.diamond.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Octahedral_diamond_(South_Africa)_(17865751279).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Octahedral_diamond_%28South_Africa%29_%2817865751279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Octahedral diamond (South Africa) (17865751279)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A small clear piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "vocab.quartz": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b04-vocab.quartz.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Quartz_42_(from_James_St._John).jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Quartz_42_%28from_James_St._John%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Quartz 42 (from James St. John)",
+            "author": "James St. John",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "A white piece",
+      "note": "Designer (agent) 11/11 tách mẫu khỏi nền ảnh gốc, đặt giữa nền trắng ngà #F7F6F4 có bóng mềm, để mọi mẫu trong một câu, một kệ cùng nền (Quy ước hình mục ba); không chữ, không nhãn."
+    },
+    "reward.ruby_card": {
+      "same_as": "tray.tray_ruby"
+    }
+  }
+}

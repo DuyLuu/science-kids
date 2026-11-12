@@ -1,0 +1,272 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w1.w1_lungs": {
+      "same_as": "explore_lungs",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w1.w1_nose": {
+      "same_as": "explore_nose",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w1.w1_windpipe": {
+      "same_as": "explore_windpipe",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w2": {
+      "same_as": "w1_buffalo",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "learn.explore.explore_faster": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Children playing at sunset",
+      "author": "Charles O'Rear",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg",
+      "crop": {
+        "left": 0.03,
+        "top": 0.05,
+        "width": 0.94,
+        "height": 0.88
+      },
+      "note": "NARA Documerica, bóng trẻ chạy nhảy ngược sáng, cắt bỏ viền phim; đề xuất sửa alt (không phải đá bóng)"
+    },
+    "learn.explore.explore_rest": {
+      "own": {
+        "file": "content/images/own/ho-hap/bench.jpg",
+        "method": "drawn"
+      },
+      "title": "A bench in the shade of a tree",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_muscles": {
+      "own": {
+        "file": "content/images/own/ho-hap/legs-run.jpg",
+        "method": "drawn"
+      },
+      "title": "Legs running on a track",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ảnh ứng viên có giày ba sọc (nhãn hiệu)"
+    },
+    "learn.explore.explore_count": {
+      "same_as": "q1",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "tray.tray_rope": {
+      "own": {
+        "file": "content/images/own/ho-hap/rope.jpg",
+        "method": "drawn"
+      },
+      "title": "A skipping rope",
+      "note": "designer vẽ 10/11 (SVG, SK-036); kệ Chơi vẽ đủ chín món cho cùng kiểu"
+    },
+    "tray.tray_book": {
+      "own": {
+        "file": "content/images/own/ho-hap/book.jpg",
+        "method": "drawn"
+      },
+      "title": "A book on a table",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_shuttlecock": {
+      "own": {
+        "file": "content/images/own/ho-hap/jianzi.jpg",
+        "method": "drawn"
+      },
+      "title": "A shuttlecock for kicking",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_crayons": {
+      "own": {
+        "file": "content/images/own/ho-hap/crayons.jpg",
+        "method": "drawn"
+      },
+      "title": "Crayons and paper",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_hopscotch": {
+      "own": {
+        "file": "content/images/own/ho-hap/hopscotch.jpg",
+        "method": "drawn"
+      },
+      "title": "A hopscotch drawn on the ground",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_ball": {
+      "own": {
+        "file": "content/images/own/ho-hap/football.jpg",
+        "method": "drawn"
+      },
+      "title": "A football on the grass",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_fishing": {
+      "own": {
+        "file": "content/images/own/ho-hap/fishing.jpg",
+        "method": "drawn"
+      },
+      "title": "A fishing rod by a pond",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_track": {
+      "own": {
+        "file": "content/images/own/ho-hap/track.jpg",
+        "method": "drawn"
+      },
+      "title": "An empty running track",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_baton": {
+      "own": {
+        "file": "content/images/own/ho-hap/baton.jpg",
+        "method": "drawn"
+      },
+      "title": "A relay baton on a track",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/ho-hap/schoolyard.jpg",
+        "method": "drawn"
+      },
+      "title": "An empty schoolyard",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không cờ, không chữ"
+    },
+    "q1.q1_skipping": {
+      "same_as": "tray.tray_rope"
+    },
+    "q1.q1_sleeping": {
+      "own": {
+        "file": "content/images/own/ho-hap/pillow.jpg",
+        "method": "drawn"
+      },
+      "title": "A pillow and a blanket",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q1.q1_reading": {
+      "same_as": "tray.tray_book"
+    },
+    "q2": {
+      "same_as": "q1",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q2.q2_jumps": {
+      "same_as": "tray.tray_rope"
+    },
+    "q2.q2_steps": {
+      "own": {
+        "file": "content/images/own/ho-hap/footprints.jpg",
+        "method": "drawn"
+      },
+      "title": "Footprints in the sand",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ba thẻ cùng là hình vẽ"
+    },
+    "q2.q2_breaths": {
+      "same_as": "explore_in_out",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q3": {
+      "same_as": "q1"
+    },
+    "q3.q3_hammock": {
+      "own": {
+        "file": "content/images/own/ho-hap/hammock.jpg",
+        "method": "drawn"
+      },
+      "title": "A hammock between two trees",
+      "note": "designer vẽ 10/11 (SVG, SK-036); bốn lựa chọn cùng là hình vẽ"
+    },
+    "q3.q3_stairs": {
+      "own": {
+        "file": "content/images/own/ho-hap/stairs.jpg",
+        "method": "drawn"
+      },
+      "title": "A set of stairs",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q3.q3_bike": {
+      "own": {
+        "file": "content/images/own/ho-hap/bicycle.jpg",
+        "method": "drawn"
+      },
+      "title": "A bicycle",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q3.q3_chess": {
+      "own": {
+        "file": "content/images/own/ho-hap/chess.jpg",
+        "method": "drawn"
+      },
+      "title": "A chess board",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/ho-hap/bar-chart.jpg",
+        "method": "drawn"
+      },
+      "title": "A bar chart with three bars",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_left": {
+      "own": {
+        "file": "content/images/own/ho-hap/bar-chart-left.jpg",
+        "method": "drawn"
+      },
+      "title": "The chart with the left bar marked",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_middle": {
+      "own": {
+        "file": "content/images/own/ho-hap/bar-chart-middle.jpg",
+        "method": "drawn"
+      },
+      "title": "The chart with the middle bar marked",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_right": {
+      "own": {
+        "file": "content/images/own/ho-hap/bar-chart-right.jpg",
+        "method": "drawn"
+      },
+      "title": "The chart with the right bar marked",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q5": {
+      "same_as": "tray.tray_track"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_faster"
+    },
+    "vocab.exercise": {
+      "same_as": "learn.explore.explore_faster"
+    },
+    "vocab.muscle": {
+      "same_as": "learn.explore.explore_muscles"
+    },
+    "vocab.blood": {
+      "own": {
+        "file": "content/images/own/ho-hap/blood-vessels.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with blood paths to the arms and legs",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "vocab.heart": {
+      "same_as": "tray_heart",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "vocab.breath": {
+      "same_as": "q1",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "reward.busy_lungs": {
+      "same_as": "tray_lungs",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    }
+  }
+}

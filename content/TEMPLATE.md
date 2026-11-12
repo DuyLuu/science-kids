@@ -1,6 +1,6 @@
 # Khung một bài (TEMPLATE)
 
-Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug>.md` và mỗi chủ đề `content/<age_group>/<topic_slug>/_topic.md`. Bài mẫu: `content/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md`. Tên trường theo SK-001 "Hợp đồng trường v1".
+Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug>.md` và mỗi chủ đề `content/<age_group>/<topic_slug>/_topic.md`. Bài mẫu: `content/discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md` (chưa theo luật hình SK-033; mẫu phần hình là bài thử `content/discoverer/be-mat-trai-dat/01-dat-va-nuoc-tren-trai-dat.md`, chờ Duy duyệt). Tên trường theo SK-001 "Hợp đồng trường v1".
 
 ## A. Hướng dẫn cho biên tập
 
@@ -28,7 +28,7 @@ Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug
 **Cú pháp (máy đọc được)**
 - Mỗi dòng một trường `tên: giá trị`. Tên trường viết liền, không dấu cách. Giá trị nằm trên một dòng, không cần ngoặc kép.
 - Cặp song ngữ luôn là hai dòng: `<tên>.en:` rồi `<tên>.vi:`. Mục chỉ có một chuỗi (Tiêu đề, Mục tiêu, Câu hỏi lớn) thì viết `en:` và `vi:`.
-- Hình luôn là ba dòng: `<tên>.brief:` (gợi ý cho hoạ sĩ, tiếng Việt, một dòng: vật gì, bối cảnh Việt Nam), `<tên>.alt.en:`, `<tên>.alt.vi:`.
+- Hình luôn là ba dòng: `<tên>.brief:` (tả ảnh cần tìm, hay hình cần vẽ với nhãn `[hình vẽ]`; tiếng Việt, một dòng, cuối dòng là từ khoá tìm ảnh trừ hình vẽ; xem đoạn **Hình**), `<tên>.alt.en:`, `<tên>.alt.vi:`.
 - Danh sách key viết trên một dòng, cách nhau bằng dấu phẩy: `term_keys: nutrient, protein`.
 - Mỗi câu quiz, block, từ vựng, thẻ là một `### <key>`. Phần tử con là `#### <loại> <key>`, loại là `option`, `bank`, `item`, `bar` hoặc `group`.
 - Dòng bắt đầu bằng `>` là ghi chú cho người duyệt; máy bỏ qua.
@@ -53,6 +53,39 @@ Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug
 - Dùng ví dụ quen với trẻ Việt Nam: mâm cơm, rau muống, mùa mưa, ếch đồng.
 - Không chép câu chữ, hình hay ví dụ của Oak; không nhắc tên Oak trong chữ cho trẻ (`oak_unit_ref` là trường nội bộ).
 
+**Hình (SK-033)** *(nháp AI)*
+
+Duy chốt 9/11: trẻ học chủ yếu bằng hình. Hình là ảnh chụp thật hoặc hình vẽ gần thực tế, từ nguồn miễn phí cho phép dùng thương mại. Không lấy hình AI từ nguồn ngoài; không dùng hình hoạt hình, giấy cắt cho hình nội dung. Nguồn và giấy phép được nhận: SK-033 mục "Giấy phép". Biên tập viết `brief` và `alt`; người chọn ảnh tìm ảnh và kiểm giấy phép.
+
+Duy chốt 10/11: đồ vật, cảnh không có ảnh miễn phí hợp lệ thì designer vẽ minh hoạ gần thực tế (hình tự vẽ, credit "Science Kids", `changes: ["drawn"]`); cảnh khó thì designer ghép từ ảnh đã có (hình ghép). Hình không có chữ ở mọi nhóm tuổi, kể cả nhãn chữ song ngữ ở phần Học: tên gọi nằm ở câu, món ví dụ và từ vựng.
+- **Chỗ phải có `image`** (mọi nhóm tuổi):
+  - mọi câu Khởi động và Quiz, ở cấp câu (ba dòng `image.*` ngay sau `prompt.*`), kể cả câu đã có hình ở lựa chọn;
+  - mọi `#### option` của `single_choice`, `multi_choice`; mọi `#### bank` của `fill_blank_bank`; mọi `#### item` của `build_tray`;
+  - ô Học, từ vựng, thẻ thưởng vẫn có hình như trước; `#### item` của `order_sequence` và `#### bar` của `picture_bar_chart` cũng viết hình.
+  - Máy: `validate` cảnh báo chỗ thiếu; Duy duyệt xong bài thử thì thành lỗi.
+- **`brief`**: một dòng tiếng Việt tả ảnh cần tìm, đủ để người chọn ảnh loại ứng viên sai.
+  - Mở đầu bằng loại hình trong ngoặc vuông: `[ảnh]` (ảnh chụp thật), `[tranh]` (hình vẽ gần thực tế lấy từ nguồn ngoài), `[ảnh hoặc tranh]`, `[bản đồ]`, `[hình vẽ]`, `[sơ đồ ghép ảnh]` (hai nhãn sau xem ngay dưới). Chủ đề được thêm loại riêng, ví dụ Khủng long: `[ảnh mô hình]`, `[tranh phục dựng]`.
+  - **`[hình vẽ]`: hình tự vẽ** (Duy 10/11). Chỉ dùng khi không có ảnh miễn phí hợp lệ (đã tìm mà không có, hoặc ảnh có thì lộ mặt trẻ, có logo, sai giấy phép); không dùng để khỏi phải tìm ảnh. Designer vẽ minh hoạ gần thực tế, xuất JPEG; file chọn ảnh ghi mục `own` (`method: "drawn"`).
+    - Nhãn phải đứng đầu brief, đúng chữ `[hình vẽ]` (máy cũng nhận `[hình tự vẽ]`, `[tự vẽ]`): `images search` dựa vào nhãn này để không tìm ảnh mà đề xuất mục `own`; `validate` không đòi dòng từ khoá.
+    - Brief tả cần vẽ gì: vật, góc nhìn, nền, điều không được có. Ví dụ: "nền trơn, không có chữ, nhìn nghiêng". Không cần `Từ khoá tìm ảnh (EN)`; ô đã từng tìm ảnh thì giữ dòng từ khoá cũng được.
+    - Ví dụ: `image.brief: [hình vẽ] Một cốc nước thuỷ tinh trên bàn gỗ, mặt nước gợn vòng tròn, hai bên cốc có vài nét rung nhỏ; vẽ gần ngang mặt bàn, nền trơn; không có người, không có nhãn hiệu, không có chữ.`
+    - Có người trong hình: vẽ từ phía sau, chỉ thấy tay, hoặc mặt cúi, không vẽ nét mặt; như luật ảnh.
+    - Khủng long và con vật đã tuyệt chủng vẫn theo Quy ước hình của chủ đề Khủng long (ảnh bộ xương, ảnh mô hình, tranh phục dựng khoa học). Chốt 10/11 nói về đồ vật, nên muốn tự vẽ một con khủng long thì hỏi PM trước, và hình phải qua người chuyên môn như tranh phục dựng.
+  - **`[sơ đồ ghép ảnh]`: hình ghép.** Designer ghép từ nhiều ảnh đã có, hay dựng lại một sơ đồ có giấy phép rồi tô lại; file chọn ảnh ghi mục `composed`. Nhãn đứng đầu brief (máy nhận mọi nhãn có chữ "ghép"). Brief nêu từng phần: phần dùng lại ghi key trong backtick (`` `tray_eggshell` ``, `` `<slug bài>/<key>` `` hay "`<key>` ở bài `<slug chủ đề>/<slug bài>`"); phần cần tìm mới ghi ở `Từ khoá tìm ảnh (EN)` hoặc "Từ khoá cho <phần>: …". Chỉ đặt trong backtick những key thật sự là một phần của hình ghép, vì máy đề xuất mọi key trong backtick thành một phần.
+  - Một ô chỉ có một nhãn. Brief "Dùng lại hình `<key>`" (đoạn **Dùng lại hình** bên dưới) không cần nhãn, dù hình gốc là hình tự vẽ hay hình ghép.
+  - Rồi tới vật chính, cảnh, góc chụp (từ xa, từ trên cao, cận cảnh), nền; điều phải thấy và điều không được có, nhất là chỗ dễ lẫn sang lựa chọn khác ("không thấy sông hay hồ").
+  - Không có người nhận ra mặt, nhất là trẻ em; nhân vật trong câu (Mai) chỉ thấy tay hoặc dáng ở xa. Không logo, nhãn hiệu, bao bì có thương hiệu, biển số, tên tàu.
+  - Bối cảnh Việt Nam khi bài cần (ao làng, đồi chè, cánh đồng muối).
+  - Kết thúc bằng `Từ khoá tìm ảnh (EN): …` trên cùng dòng (trừ brief `[hình vẽ]`, và brief `[sơ đồ ghép ảnh]` có mọi phần là hình dùng lại): ba đến sáu từ tiếng Anh viết như một câu tìm kiếm, cách nhau bằng dấu cách, từ chung nhất trước. Cụm gọi tên một vật (polar bear, Ha Long Bay) tính là một từ.
+  - Ví dụ: `image.brief: [ảnh] Một cái ao nhỏ ở làng quê, mặt nước có lá sen, thấy bờ ao bao quanh; không có người, không có chữ. Từ khoá tìm ảnh (EN): pond village lotus leaves`
+- **Hình không lộ đáp án:**
+  - hình câu hỏi tả tình huống hoặc vật được hỏi, không tả sẵn đáp án hay bằng chứng của gợi ý: câu "Nước biển có vị ngọt" dùng ảnh biển, không dùng ảnh đống muối;
+  - các lựa chọn cùng kiểu ảnh, không ảnh nào nổi bật hơn; không để đáp án đúng là hình vẽ duy nhất giữa các ảnh chụp (hay ảnh chụp duy nhất giữa các hình vẽ); câu hỏi nói về Việt Nam thì lựa chọn đúng không được là ảnh duy nhất trông như quê mình;
+  - `alt` của câu hỏi không nói tên đáp án; ảnh không có chữ gọi tên đáp án.
+- **Dùng lại hình:** cùng một vật thì dùng một ảnh. `brief` mở đầu bằng "Dùng lại hình `<key>`." (bài khác thì "Dùng lại hình `<key>` ở bài `<slug chủ đề>/<slug bài>`.", viết bài như `recall_from.lesson`), rồi chép nguyên phần từ khoá của chỗ gốc. `alt` chép của chỗ gốc, trừ khi phải sửa để khỏi lộ đáp án.
+- **Bản đồ, quả địa cầu** (Duy chốt 9/11): hình thấy vùng Đông Nam Á chỉ dùng bản đồ chính thức của Việt Nam (nguồn nhà nước), có quần đảo Hoàng Sa, Trường Sa; không dùng bản đồ nước ngoài; thêm dòng `> [CẦN KIỂM]` để duyệt pháp lý. Mọi quả địa cầu, ảnh Trái Đất khác không thấy vùng Đông Nam Á, kể cả ở mép ảnh. Tên ảnh ở nguồn hiện ở màn "Nguồn hình", nên ảnh có Biển Đông, Hoàng Sa, Trường Sa thì người chọn ảnh kiểm tên gọi trước khi chọn.
+- **Khó tìm ảnh thật** (hai vật hiếm khi cùng khung, vật hay có logo): ghi phương án thay trong `brief` hoặc một dòng `>`. Không đổi chữ trẻ đọc chỉ để dễ tìm ảnh.
+
 **Quiz (syllabus-progression mục 7; luật theo nhóm tuổi: SK-026)**
 
 > Trạng thái phần sửa 1/11/2026: **nháp do AI soạn (content-editor), chưa duyệt** · Ticket: SK-026. Phần nháp gồm hai dòng gắn *(nháp AI)* ngay dưới đây, mục "Luật soạn câu Explorer", "Bảng luật theo nhóm tuổi" và dòng "Máy kiểm". Người duyệt xoá nhãn nháp sau khi duyệt.
@@ -62,6 +95,7 @@ Khung chuẩn cho mỗi bài `content/<age_group>/<topic_slug>/<nn>-<lesson_slug
 - Câu bắt misconception ghi `misconception: <key>`; key lấy từ `_topic.md`. Số câu như vậy theo nhóm tuổi ở bảng dưới. *(nháp AI)*
 - Format được dùng, số lựa chọn, chỗ bắt buộc có hình, phân bổ DOK, số format khác nhau và số từ mỗi câu: theo "Bảng luật theo nhóm tuổi" dưới đây. Nhóm tuổi lấy theo `age_group` trong `_topic.md` của chủ đề. *(nháp AI)*
 - Câu nào cũng đủ `prompt`, `hint`, `explanation_correct`, `explanation_wrong`, cả EN và VI. Gợi ý dẫn đường, không nói thẳng đáp án.
+- Câu 6 có lời Na (`speaker: na`): `instruction` là "Challenge: check Na's idea" · "Thử thách: kiểm tra ý của Na"; `labels` là "Yes" · "Na đúng" và "No" · "Na chưa đúng". Nhãn trung tính vì Na có lúc nói đúng; không dùng "spot the mistake", vì nhãn đó báo trước Na sai.
 - Khởi động 2–3 câu; câu nào cũng có `recall_from`.
 
 **Luật soạn câu Explorer** *(nháp AI)*
@@ -88,11 +122,11 @@ Bảy luật dưới đây áp cho mọi câu Explorer, ở cả Khởi động 
    - Không đạt: `prompt.en: Look at all these animals and tap the one that lives in water.` (13 từ, hai việc trong một câu).
 4. **Chữ chỉ ở câu hỏi và lời linh vật.** Thẻ lựa chọn, thẻ sắp thứ tự và hình không có chữ. Vẫn viết đủ `label.en` và `label.vi` cho mọi lựa chọn và mọi thẻ: đó là tên app đọc sau khi bé chọn, và là nhãn VoiceOver. `label` là tên ngắn của đúng vật trong hình, không phải lời dặn. `image.brief` ghi rõ "không có chữ".
    - Kiểm: người duyệt đọc `image.brief` và `label` (schema đã bắt buộc có `label`).
-   - Đạt: `label.en: duck` · `label.vi: con vịt` · `image.brief: Một con vịt cỏ đứng trên bờ ao, nền trơn, không có chữ`.
-   - Không đạt: `image.brief: Con vịt trên bờ ao, mũi tên chỉ vào cánh kèm chữ "wing · cánh"`. Bài Discoverer được ghi nhãn trong hình (bài 1, câu w2); bài Explorer thì không.
+   - Đạt: `label.en: duck` · `label.vi: con vịt` · `image.brief: [ảnh] Một con vịt cỏ đứng trên bờ ao, nền đơn giản, không có chữ. Từ khoá tìm ảnh (EN): duck standing pond bank`.
+   - Không đạt: `image.brief: Con vịt trên bờ ao, mũi tên chỉ vào cánh kèm chữ "wing · cánh"`. Từ 10/11 (Duy chốt) không nhóm tuổi nào ghi nhãn chữ trong hình; trước đây bài Discoverer được ghi (bài 1, câu w2).
 5. **Đúng/Sai bằng biểu tượng.** Ở Explorer, app hiện hai thẻ biểu tượng, không có chữ Đúng/Sai. Vì vậy câu `true_false` luôn có `image` của cả câu, vẽ đúng vật được nói tới. `prompt` là một câu khẳng định ngắn về vật đó. Không dùng câu phủ định ("not", "không"): bé phải nghe kịp thêm chữ "không", và khi đáp án là Sai thì thành phủ định hai lần. Để trống `labels.*` *(đề xuất, chờ PM chốt)*, vì Explorer không hiện nhãn chữ.
    - Kiểm: máy báo `age_image_required` khi câu thiếu `image`; người duyệt kiểm câu phủ định và `labels`.
-   - Đạt: `image.brief: Một con dơi đang bay lúc chập tối, nền trơn, không có chữ` · `prompt.en: A bat is a bird.` · `prompt.vi: Con dơi là một loài chim.` · `answer: false`. Câu này cũng hợp làm câu misconception ở câu 6.
+   - Đạt: `image.brief: [ảnh] Một con dơi đang bay lúc chập tối, nền trời đơn giản, không có chữ. Từ khoá tìm ảnh (EN): bat flying dusk sky` · `prompt.en: A bat is a bird.` · `prompt.vi: Con dơi là một loài chim.` · `answer: false`. Câu này cũng hợp làm câu misconception ở câu 6.
    - Không đạt: không có `image` · `prompt.en: A bat is not a bird.` · `answer: true`.
 6. **Gợi ý và giải thích viết để app tự đọc.** App tự đọc `hint` khi bé chọn sai, và đọc `explanation_correct` hoặc `explanation_wrong` khi xong câu. Mỗi câu tối đa 8 từ, như câu hỏi. `hint` chỉ vào một điều nhìn thấy trong hình, không nói thẳng đáp án. Không nhắc tới chữ trên màn hay vị trí thẻ ("the second card", "the top one"), vì iPhone xếp thẻ dọc còn iPad xếp một hàng. `explanation_wrong` nói tên đáp án, vì app làm sáng thẻ đúng cùng lúc. Bản tiếng Việt viết để nghe: số bằng chữ, không ký hiệu, không viết tắt.
    - Kiểm: máy cảnh báo `age_words_en`; người duyệt đọc to từng câu.
@@ -112,7 +146,7 @@ Số lấy từ SK-026, mục "Đặc tả theo nhóm tuổi", chỉ với 6 for
 | Format ở Khởi động | `warmup_formats` | `single_choice` (chọn hình), `true_false` (biểu tượng) | `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank` | `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank` |
 | Format ở Quiz | `quiz_formats` | `single_choice` (chọn hình), `true_false` (biểu tượng), `order_sequence` (sắp hình).<br>Không dùng `multi_choice`, `fill_blank_bank`, `picture_bar_chart` | Cả 6: `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank`, `order_sequence`, `picture_bar_chart` | Cả 6, như Discoverer |
 | Số lựa chọn hoặc số thẻ | `option_count` | `single_choice`: 2–3 lựa chọn<br>`order_sequence`: 3 thẻ | `single_choice`: 3–4 lựa chọn<br>`picture_bar_chart`: 3–4 lựa chọn<br>`multi_choice`: tối đa 6 lựa chọn<br>`order_sequence`: 3–5 thẻ | `single_choice`: 4 lựa chọn<br>`multi_choice`: tối đa 6 lựa chọn<br>`order_sequence`: 3–6 thẻ<br>`picture_bar_chart`: 4 lựa chọn |
-| Bắt buộc có hình | `image_required` | Mọi `#### option` của `single_choice`.<br>Mọi `#### item` của `order_sequence`.<br>Câu `true_false` có `image` của cả câu | Không bắt buộc | Không bắt buộc |
+| Bắt buộc có hình | `image_required` | Mọi `#### option` của `single_choice`.<br>Mọi `#### item` của `order_sequence`.<br>Câu `true_false` có `image` của cả câu.<br>Cộng luật hình SK-033 (đoạn **Hình**) | Theo đoạn **Hình** (SK-033); `rules.json` để trống, máy cảnh báo khi dev bật luật SK-033 | Như Discoverer |
 | DOK 1·2·3 trong 6 câu Quiz | `dok_mix` | 3·3·0 | 2·3·1 | 1·3·2 |
 | DOK của câu 1 | `first_item_dok` | 1 | 1 | 1 |
 | Số câu misconception | `misconception_items` | Đúng 1, đặt ở câu 6, bằng hình | Đúng 1 | 1–2 |
@@ -183,6 +217,9 @@ recall_from.note.en: …
 recall_from.note.vi: …
 prompt.en: …
 prompt.vi: …
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …
+image.alt.en: …
+image.alt.vi: …
 answer: false
 hint.en: …
 hint.vi: …
@@ -218,6 +255,9 @@ version: 1
 dok: 1
 prompt.en: …
 prompt.vi: …
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …
+image.alt.en: …
+image.alt.vi: …
 hint.en: …
 hint.vi: …
 explanation_correct.en: …
@@ -229,7 +269,7 @@ explanation_wrong.vi: …
 correct: true
 label.en: …
 label.vi: …
-image.brief: …
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …
 image.alt.en: …
 image.alt.vi: …
 
@@ -244,7 +284,7 @@ term.en: …
 term.vi: …
 example.en: …
 example.vi: …
-image.brief: …
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …
 image.alt.en: …
 image.alt.vi: …
 
@@ -260,13 +300,13 @@ tag.en: …
 tag.vi: …
 fact.en: …
 fact.vi: …
-image.brief: …
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …
 image.alt.en: …
 image.alt.vi: …
 
 ## Ghi chú cho hoạ sĩ
 
-Chữ tự do: phong cách, hình cần vẽ, đề xuất sửa màn.
+Chữ tự do: ảnh cần tìm, hình dùng lại, chỗ khó tìm ảnh thật và phương án thay, đề xuất sửa màn.
 
 ## Ghi chú cho dev
 
@@ -324,7 +364,7 @@ Giá trị cho phép: `age_group` = `explorer` · `discoverer` · `scientist`. `
 
 ## C. Mẫu theo `format` và block
 
-Chỉ ghi phần riêng; phần chung của câu quiz (`id`, `format`, `version`, `dok`, `prompt`, `hint`, `explanation_*`) như q1 ở mục B. Mỗi `####` con có đủ các dòng ghi dưới nó.
+Chỉ ghi phần riêng; phần chung của câu quiz (`id`, `format`, `version`, `dok`, `prompt`, `image` của câu, `hint`, `explanation_*`) như q1 ở mục B. Mỗi `####` con có đủ các dòng ghi dưới nó.
 
 ````markdown
 ### qx
@@ -333,13 +373,15 @@ format: single_choice            (multi_choice: y hệt, nhiều option có corr
 correct: true
 label.en: …
 label.vi: …
-image.brief: …                   (image.* không bắt buộc với option)
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …   (bắt buộc, đoạn Hình ở mục A)
 image.alt.en: …
 image.alt.vi: …
 
 ### qx
 format: true_false
 answer: false
+instruction.en: Challenge: check Na's idea   (câu 6 có lời Na, mọi chủ đề)
+instruction.vi: Thử thách: kiểm tra ý của Na
 statement.en: …                  (không bắt buộc: lời nhân vật)
 statement.vi: …
 speaker: na                      (không bắt buộc)
@@ -356,6 +398,9 @@ answers: qx_air                  (phần tử thứ nhất là đáp án ô {1},
 #### bank qx_air
 label.en: air
 label.vi: không khí
+image.brief: [ảnh] Bọt khí nổi trong cốc nước trong, chụp cận, nền trơn, không có chữ. Từ khoá tìm ảnh (EN): air bubbles water glass   (bắt buộc, mỗi thẻ từ một hình)
+image.alt.en: Air bubbles in a glass of water
+image.alt.vi: Bọt khí trong cốc nước
 
 ### qx
 format: order_sequence
@@ -363,7 +408,7 @@ answer: qx_seed, qx_sprout, qx_plant   (thứ tự đúng)
 #### item qx_seed
 label.en: …
 label.vi: …
-image.brief: …                   (image.* không bắt buộc với item)
+image.brief: …                   (viết hình cho mọi item; Explorer bắt buộc)
 image.alt.en: …
 image.alt.vi: …
 
@@ -419,7 +464,9 @@ prompt.en: …
 prompt.vi: …
 capacity: 4
 success_when: all_required_and_no_limit
-messages.start.en: …   messages.full.*   messages.balanced.*   messages.has_limited.*
+messages.start.en: …   messages.balanced.*   messages.has_limited.*
+messages.full.en: No more room! Tap one to take it off.   (chữ chung mọi bài, khớp nhãn "tap one to take it off · chạm vào để bỏ ra" của app; lời nhắn không gọi tên vật chứa: tray, mâm, khay)
+messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.missing.<key nhóm required>.en: …
 #### group tray_carb
 label.en: …
@@ -430,7 +477,7 @@ role: required                   (required · limit · neutral)
 label.en: …
 label.vi: …
 group: tray_carb
-image.brief: …                   (image.* không bắt buộc với item)
+image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …   (bắt buộc)
 image.alt.en: …
 image.alt.vi: …
 ````
@@ -519,7 +566,7 @@ image.alt.vi: …
 | `single_choice` | mỗi `#### option <key>`: `correct:` · `label.*` · `image.*` | `options[]`: `key` · `correct` · `label` · `image?` (đúng 1 `correct: true`) |
 | `multi_choice` | như `single_choice` | `options[]` (≥ 1 đúng, ≥ 1 sai) |
 | `true_false` | `answer:` · `statement.*` · `speaker:` · `labels.true.*` · `labels.false.*` | `answer` · `statement?` · `speaker?` · `labels?.true` · `labels?.false` |
-| `fill_blank_bank` | `sentence.*` (ô trống `{1}`, `{2}` trong `en`, và ở đúng chỗ đó trong `vi`) · `answers: k1, k2` · mỗi `#### bank <key>`: `label.*` | `sentence` · `answers[]` · `bank[]`: `key` · `label` |
+| `fill_blank_bank` | `sentence.*` (ô trống `{1}`, `{2}` trong `en`, và ở đúng chỗ đó trong `vi`) · `answers: k1, k2` · mỗi `#### bank <key>`: `label.*` · `image.*` | `sentence` · `answers[]` · `bank[]`: `key` · `label` · `image?` |
 | `order_sequence` | mỗi `#### item <key>`: `label.*` · `image.*` · `answer: k1, k2, k3` | `items[]`: `key` · `label` · `image?` · `answer[]` |
 | `picture_bar_chart` | `chart.title.*` · `chart.unit.*` · mỗi `#### bar <key>`: `label.*` · `image.*` · `value:` · và các `#### option` | `chart.title?` · `chart.unit?` · `chart.bars[]`: `key` · `label` · `image?` · `value` · `options[]` |
 

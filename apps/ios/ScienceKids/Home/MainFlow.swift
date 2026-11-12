@@ -5,7 +5,8 @@ import LessonPlayer
 import Profiles
 import SwiftUI
 
-/// The app once a profile exists (B7.6): Home → Topic → Lesson on one `NavigationStack`.
+/// The app once a profile exists (B7.6): Home → Topic → Lesson on one `NavigationStack`; Home's
+/// Từ vựng tab → a lesson's flashcards (SK-035).
 struct MainFlow: View {
     @Bindable var app: AppModel
     let profile: ChildProfile
@@ -24,8 +25,9 @@ struct MainFlow: View {
 
     @ViewBuilder private func destination(_ route: AppRoute) -> some View {
         switch route {
-        case .topic(let id):
-            if let topic = app.library.topic(id: id) {
+        case .topic(let key):
+            // SK-030: every topic of the syllabus opens, written or not.
+            if let topic = app.journeyTopic(key: key) {
                 TopicScreen(app: app, topic: topic, profile: profile)
             } else {
                 MissingContentScreen(onBack: app.goBack)
@@ -39,8 +41,20 @@ struct MainFlow: View {
                let rules = content.rules(for: topic.topic.ageGroup) {
                 LessonRoute(
                     app: app, topic: topic, lesson: lesson, rules: rules,
-                    contentVersion: content.contentVersion(of: topic.id), profile: profile
+                    contentVersion: content.contentVersion(of: topic.id),
+                    place: content.journeyPlace(topicID: topic.id, lessonID: lesson.id), profile: profile
                 )
+            } else {
+                MissingContentScreen(onBack: app.goBack)
+            }
+        case .settings:
+            SettingsScreen(app: app, profile: profile)
+        case .imageCredits:
+            ImageCreditsScreen(credits: app.imageCredits, onBack: app.goBack)
+        case .words(let lessonID):
+            // SK-035: the flashcards of one lesson's words, from the Từ vựng tab.
+            if let deck = app.wordDeck(lessonID: lessonID) {
+                WordDeckScreen(app: app, deck: deck, profile: profile)
             } else {
                 MissingContentScreen(onBack: app.goBack)
             }
@@ -57,6 +71,9 @@ private struct LessonRoute: View {
     let rules: LessonRules
     /// Version of the topic's pack (`nil` with the fixtures), written on the attempt (B4.3).
     let contentVersion: String?
+    /// The lesson's number and its topic's lesson count on the journey (SK-030: "Bài 2/10");
+    /// `nil` falls back to its place among the written lessons.
+    let place: (number: Int, count: Int)?
     let profile: ChildProfile
 
     @State private var session: LessonSession?
@@ -68,8 +85,8 @@ private struct LessonRoute: View {
                     session: session,
                     heading: LessonHeading(
                         topicTitle: topic.topic.title,
-                        lessonNumber: (topic.lessons.firstIndex(of: lesson) ?? 0) + 1,
-                        lessonCount: BundledContent.lessonCount(of: topic)
+                        lessonNumber: place?.number ?? (topic.lessons.firstIndex(of: lesson) ?? 0) + 1,
+                        lessonCount: place?.count ?? topic.lessons.count
                     ),
                     onExit: { exit(finished: session.summary != nil) },
                     onShowCards: { app.showTab(.cards) }
@@ -82,6 +99,10 @@ private struct LessonRoute: View {
             // SK-022: the attempt is in the history; queue it for the server now.
             if finished != nil, let record = session?.summary?.record { app.lessonFinished(record) }
         }
+        .onDisappear {
+            // Home and Topic show the lesson done or under way ("Đang học") when the child is back.
+            app.lessonClosed()
+        }
         .onAppear {
             guard session == nil else { return }
             session = LessonSession(
@@ -91,7 +112,9 @@ private struct LessonRoute: View {
                     childId: profile.id,
                     timeZone: TimeZone(identifier: profile.timezone) ?? .current,
                     languageMode: profile.languageMode,
-                    voiceMode: profile.voiceMode
+                    voiceMode: profile.voiceMode,
+                    // SK-026, SK-040: the screens follow the topic's age group, not the profile's.
+                    presentation: LessonPresentation(ageGroup: topic.topic.ageGroup.rawValue)
                 ),
                 store: app.attempts,
                 contentVersion: contentVersion

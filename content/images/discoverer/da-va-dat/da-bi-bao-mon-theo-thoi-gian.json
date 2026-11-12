@@ -1,0 +1,289 @@
+{
+  "note": "SK-039. Designer (agent, phần bài 1–7) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố b0N-), hình ghép ở content/images/composed/da-va-dat/; trang duyệt content/.build/images/da-va-dat/<bài>/review.html. Kệ Chơi (tám món), lựa chọn câu q1, q3, q5 và ô Học `explore_forces` là hình vẽ; Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ.",
+  "images": {
+    "w1": {
+      "same_as": "q2",
+      "lesson": "da-va-dat/da-dung-lam-gi"
+    },
+    "w1.w1_limestone": {
+      "same_as": "tray_limestone",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "w1.w1_laterite": {
+      "same_as": "laterite",
+      "lesson": "da-va-dat/da-dung-lam-gi"
+    },
+    "w1.w1_granite": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w2": {
+      "same_as": "explore_scratch",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "learn.explore.explore_forces": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-learn.explore.explore_forces.jpg",
+        "method": "drawn"
+      },
+      "title": "Rain falling on rocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Ô Học là hình vẽ vì câu q1 dùng lại làm lựa chọn cạnh gầu máy xúc, tay đục đá (hình vẽ)."
+    },
+    "learn.explore.explore_weathering": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_Roots_(33446766913).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Tree_Roots_%2833446766913%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tree Roots (33446766913)",
+      "author": "David Stanley from Nanaimo, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Rễ cây to trùm lên chân một bức tường đá cũ, đá nứt và bong; không người, không cảnh thờ."
+    },
+    "learn.explore.explore_erosion": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cowpasture_River_riverbanks_eroded.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Cowpasture_River_riverbanks_eroded.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A river with a worn bank",
+      "author": "David Byrd/USFWS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cowpasture_River_riverbanks_eroded.png",
+      "note": "Khúc sông có bờ đất bị lở ở phía xa (sông Cowpasture, Mỹ); nước xanh đục, không phải màu phù sa (đề xuất bỏ chữ \"đục\" trong alt)."
+    },
+    "learn.explore.explore_slow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lush,_green_hillside_covered_in_dense_forest_under_a_blue_sky_with_white_clouds.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lush%2C_green_hillside_covered_in_dense_forest_under_a_blue_sky_with_white_clouds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lush, green hillside covered in dense forest under a blue sky with white clouds",
+      "author": "Jothisettu",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Sườn đồi phủ kín cây xanh; không người, không nhà."
+    },
+    "tray.tray_rain_limestone": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_rain_limestone.jpg",
+        "method": "drawn"
+      },
+      "title": "Grey rock with deep grooves",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "tray.tray_dunes": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_dunes.jpg",
+        "method": "drawn"
+      },
+      "title": "Wind blowing sand over dunes",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "tray.tray_banyan": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_banyan.jpg",
+        "method": "drawn"
+      },
+      "title": "Tree roots over an old stone wall",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ. Ảnh ô Học `explore_weathering` vẫn là gốc của bảng Hình dùng chung."
+    },
+    "tray.tray_digger": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_digger.jpg",
+        "method": "drawn"
+      },
+      "title": "A digger scooping rocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "tray.tray_stream": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_stream.jpg",
+        "method": "drawn"
+      },
+      "title": "A small stream over rocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ. Vẽ con suối thay ảnh `tray_stream` của Đất và nước."
+    },
+    "tray.tray_wind_rock": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_wind_rock.jpg",
+        "method": "drawn"
+      },
+      "title": "A rock with a strange worn shape",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "tray.tray_roots_steps": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_roots_steps.jpg",
+        "method": "drawn"
+      },
+      "title": "Tree roots lifting stone steps",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "tray.tray_chisel": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-tray.tray_chisel.jpg",
+        "method": "drawn"
+      },
+      "title": "Hands chiselling a stone",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món: Commons 11/11 không có ảnh hợp lệ gầu máy xúc đang xúc đá (chỉ có gầu rỗng) và tay đục đá không thấy mặt; Ghi chú cho hoạ sĩ bài bảy dặn khi đó vẽ cả kệ."
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Begunjscica,_Born_Path_traversing_a_scree_03.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Begunjscica%2C_Born_Path_traversing_a_scree_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Broken rocks below a cliff",
+      "author": "Ajznponar",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Đá vụn sắc cạnh dưới chân vách đá vôi (Slovenia); lối mòn nhỏ, không người."
+    },
+    "q1.q1_digger": {
+      "same_as": "tray.tray_digger"
+    },
+    "q1.q1_chisel": {
+      "same_as": "tray.tray_chisel"
+    },
+    "q1.q1_rain": {
+      "same_as": "learn.explore.explore_forces"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_of_Banyan.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tree_of_Banyan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A big banyan tree",
+      "author": "Moniruj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Cây đa to tán rộng, chụp xa thấy cả thân và tán; không miếu, không người."
+    },
+    "q2.q2_layer": {
+      "same_as": "tray_sandstone",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q2.q2_fossil": {
+      "same_as": "tray_rock_print",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q2.q2_crack": {
+      "same_as": "vocab.crack"
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boulder_Park_glacial_erratic,_Chester_MA.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Boulder_Park_glacial_erratic%2C_Chester_MA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boulder Park glacial erratic, Chester MA",
+      "author": "John Phelan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Tảng đá lớn nằm trên bãi cỏ dưới hàng cây (Chester, Mỹ); không có cây mọc trên đá."
+    },
+    "q3.q3_roots": {
+      "same_as": "tray.tray_roots_steps"
+    },
+    "q3.q3_rain": {
+      "same_as": "tray.tray_rain_limestone"
+    },
+    "q3.q3_dunes": {
+      "same_as": "tray.tray_dunes"
+    },
+    "q3.q3_stream": {
+      "same_as": "tray.tray_stream",
+      "note": "Câu q3 toàn hình vẽ của kệ."
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elwha_river_mouth_coast_delta_restoration_project_science_aerial_NPS_photo_2005_(17325108891).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Elwha_river_mouth_coast_delta_restoration_project_science_aerial_NPS_photo_2005_%2817325108891%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A river flowing into the sea",
+      "author": "Olympic National Park",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Elwha_river_mouth_coast_delta_restoration_project_science_aerial_NPS_photo_2005_(17325108891).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 0.72,
+        "height": 0.8
+      },
+      "note": "Cửa sông Elwha nhìn từ máy bay: nước sông đục đổ ra biển, bãi bồi; cắt bỏ phần thị trấn ở góc trên phải."
+    },
+    "q4.q4_erupt": {
+      "same_as": "explore_erupt",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q4.q4_erosion": {
+      "same_as": "learn.explore.explore_erosion"
+    },
+    "q4.q4_weathering": {
+      "same_as": "learn.explore.explore_weathering"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Riverbank_Erosion_along_Nisqually_Road_(c937a3fa-155d-4519-3ebf-7b9d64979b93).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Riverbank_Erosion_along_Nisqually_Road_%28c937a3fa-155d-4519-3ebf-7b9d64979b93%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A riverbank falling in",
+      "author": "NPS Photo",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Riverbank_Erosion_along_Nisqually_Road_(c937a3fa-155d-4519-3ebf-7b9d64979b93).jpg",
+      "note": "Bờ sông bằng đất bị lở thành vách, rễ cây lộ ra (có tuyết); chụp gần vừa; không người."
+    },
+    "q5.q5_cut": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-q5.q5_cut.jpg",
+        "method": "drawn"
+      },
+      "title": "Tree stumps on a bare bank",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Ba lựa chọn vẽ cùng nét: ảnh tàu hút cát trên Commons đều có tên tàu, số hiệu; không có ảnh gốc cây chặt sát bờ, kè đá hợp lệ cùng kiểu."
+    },
+    "q5.q5_bank": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-q5.q5_bank.jpg",
+        "method": "drawn"
+      },
+      "title": "Stones lining a riverbank",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Ba lựa chọn vẽ cùng nét: ảnh tàu hút cát trên Commons đều có tên tàu, số hiệu; không có ảnh gốc cây chặt sát bờ, kè đá hợp lệ cùng kiểu."
+    },
+    "q5.q5_dig": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b07-q5.q5_dig.jpg",
+        "method": "drawn"
+      },
+      "title": "A boat digging sand from a river",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Ba lựa chọn vẽ cùng nét: ảnh tàu hút cát trên Commons đều có tên tàu, số hiệu; không có ảnh gốc cây chặt sát bờ, kè đá hợp lệ cùng kiểu."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lakes_to_Locks_Passage_-_Tree_Roots_Growing_Over_a_Boulder_-_NARA_-_7719937.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lakes_to_Locks_Passage_-_Tree_Roots_Growing_Over_a_Boulder_-_NARA_-_7719937.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tree roots over a big rock",
+      "author": "Unknown author or not provided",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Lakes_to_Locks_Passage_-_Tree_Roots_Growing_Over_a_Boulder_-_NARA_-_7719937.jpg",
+      "note": "Rễ cây trong rừng trùm và len vào tảng đá lớn (ảnh phạm vi công cộng); không thấy rõ mảnh đá tách đôi (đề xuất đổi alt)."
+    },
+    "vocab.weathering": {
+      "same_as": "learn.explore.explore_weathering"
+    },
+    "vocab.erosion": {
+      "same_as": "learn.explore.explore_erosion"
+    },
+    "vocab.crack": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Crack_in_the_rock_boulder_Oregon_Coast.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Crack_in_the_rock_boulder_Oregon_Coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Crack in the rock boulder Oregon Coast",
+      "author": "Bobjgalindo",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Vết nứt sâu chạy dọc tảng đá xám ở bờ biển Oregon; không cây, không người."
+    },
+    "vocab.cave": {
+      "same_as": "reward.phong_nha_card"
+    },
+    "reward.phong_nha_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dong_Hoi_Phong_Nha_grotten_(71606).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Dong_Hoi_Phong_Nha_grotten_%2871606%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dong Hoi Phong Nha grotten (71606)",
+      "author": "Andre Hospers",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Bên trong động Phong Nha: thạch nhũ, vòm đá vôi; không người, không biển chữ."
+    }
+  }
+}

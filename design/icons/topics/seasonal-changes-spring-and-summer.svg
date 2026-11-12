@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · seasonal-changes-spring-and-summer · ô che mưa, nắng sau mây. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="51" cy="12" r="9"/></g>
+  <g fill="#A93A27"><path d="M6 34 C 6 19, 18 9, 32 9 C 46 9, 58 19, 58 34 C 54.5 30.5, 50.5 30.5, 47 34 C 43.5 30.5, 39.5 30.5, 36 34 C 34.5 32.5, 33.5 32, 32 32 C 30.5 32, 29.5 32.5, 28 34 C 24.5 30.5, 20.5 30.5, 17 34 C 13.5 30.5, 9.5 30.5, 6 34 Z"/></g>
+  <g fill="#6E2216"><path d="M32 9 C 26 14, 22.5 23, 22.5 32 C 21 31, 19 30.8, 17 34 C 16.8 24, 22 14, 32 9 Z"/><path d="M32 9 C 38 14, 41.5 23, 41.5 32 C 43 31, 45 30.8, 47 34 C 47.2 24, 42 14, 32 9 Z"/></g>
+  <g fill="#8A5E3B"><path d="M30.6 32 H33.4 V52 C 33.4 57, 27 57, 26 53 L28.4 52.2 C 28.8 54, 30.6 54, 30.6 52 Z"/></g>
+  <g fill="#2E4A6E"><path d="M12 42 C 12 42, 15 46, 15 47.8 A3 3 0 0 1 9 47.8 C 9 46, 12 42, 12 42 Z"/><path d="M47 44 C 47 44, 50 48, 50 49.8 A3 3 0 0 1 44 49.8 C 44 48, 47 44, 47 44 Z"/><path d="M18 52 C 18 52, 21 56, 21 57.8 A3 3 0 0 1 15 57.8 C 15 56, 18 52, 18 52 Z"/><path d="M53 54 C 53 54, 56 58, 56 59.8 A3 3 0 0 1 50 59.8 C 50 58, 53 54, 53 54 Z"/></g>
+</svg>

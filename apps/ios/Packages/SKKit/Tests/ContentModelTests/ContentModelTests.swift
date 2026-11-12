@@ -114,7 +114,7 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
         #expect(topic.strand == .humansHealth)
         #expect(topic.difficulty.vocabulary == 3)
         #expect(topic.isFree)
-        #expect(topic.misconceptions.map(\.key) == ["all_fat_bad", "one_food_enough"])
+        #expect(topic.misconceptions.map(\.key) == ["all_fat_bad", "one_food_enough", "meal_needs_meat"])
         #expect(topic.question?.vi == "Ta cần ăn gì để khoẻ mạnh?")
     }
 
@@ -419,4 +419,63 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
     // vi may or may not have the blank (SK-017 adds it); never more blanks than answers.
     let viBlanks = q2.segmentsVI.filter { if case .blank = $0 { true } else { false } }
     #expect(viBlanks.count <= q2.answers.count)
+}
+
+/// SK-033 (Duy 9/11): a word card of `fill_blank_bank` may have an `image` (same `Image` as a
+/// `single_choice` option). Built in memory from the fixture's quiz q2, so the test does not hang
+/// on whether the fixture's cards have pictures.
+@Suite struct BankWordImage {
+    /// The lesson with quiz q2's bank words given `images` by key (no key: no `image` at all).
+    private static func lesson(images: [String: [String: Any]]) throws -> Lesson {
+        var object = try Fixtures.lessonObject()
+        var quiz = try #require(object["quiz"] as? [[String: Any]])
+        let index = try #require(quiz.firstIndex { $0["key"] as? String == "q2" })
+        var bank = try #require(quiz[index]["bank"] as? [[String: Any]])
+        for i in bank.indices {
+            let key = try #require(bank[i]["key"] as? String)
+            bank[i]["image"] = images[key]
+        }
+        quiz[index]["bank"] = bank
+        object["quiz"] = quiz
+        return try ContentDecoder().decodeLesson(from: Fixtures.data(object))
+    }
+
+    private static func q2(_ lesson: Lesson) throws -> QuizItem.FillBlankBank {
+        let item = try #require(lesson.quiz.first { $0.key == "q2" })
+        guard case .fillBlankBank(let fill) = item.answer else { throw FormatMismatch() }
+        return fill
+    }
+
+    private struct FormatMismatch: Error {}
+
+    @Test("Word cards without image: image is nil, the bank has no pictures")
+    func withoutImage() throws {
+        let fill = try Self.q2(Self.lesson(images: [:]))
+        #expect(fill.bank.map(\.key) == ["q2_energy", "q2_air", "q2_sunlight"])
+        #expect(fill.bank.allSatisfy { $0.image == nil })
+        #expect(!fill.hasPictures)
+    }
+
+    @Test("A word card with image decodes it; the others stay nil; the bank has pictures")
+    func withImage() throws {
+        let image: [String: Any] = [
+            "alt": ["en": "A child running in the park", "vi": "Bạn nhỏ chạy trong công viên"],
+            "brief": "Ảnh chụp thật, trẻ chạy trên cỏ (từ khoá: child running park)",
+        ]
+        let lesson = try Self.lesson(images: ["q2_energy": image])
+        let fill = try Self.q2(lesson)
+        let energy = try #require(fill.bank.first { $0.key == "q2_energy" })
+        #expect(energy.image == ContentImage(
+            alt: BilingualText(en: "A child running in the park", vi: "Bạn nhỏ chạy trong công viên"),
+            brief: "Ảnh chụp thật, trẻ chạy trên cỏ (từ khoá: child running park)"
+        ))
+        #expect(fill.bank.filter { $0.key != "q2_energy" }.allSatisfy { $0.image == nil })
+        #expect(fill.hasPictures)
+        // Scoring reads keys only: the answers do not change.
+        #expect(fill.answers == ["q2_energy"])
+
+        // Encodes back the same (no `image` key is written for the cards without one).
+        let again = try ContentDecoder().decodeLesson(from: JSONEncoder().encode(lesson))
+        #expect(again == lesson)
+    }
 }

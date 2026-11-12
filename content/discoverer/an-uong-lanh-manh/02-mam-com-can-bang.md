@@ -591,7 +591,7 @@ image.alt.vi: Quả thanh long và cây thanh long
 - **Không thêm nhóm chất béo `role: neutral`** (bài một đề xuất cho bài này):
   - Mâm năm chỗ không vừa iPhone: 5 × 70 + 4 × 8 = 382pt, mâm rộng 350pt (`layout.tray.slot_compact`, `layout.tray.width_compact`). Nhờ ios-dev xác nhận.
   - Với bốn chỗ và bốn nhóm bắt buộc, món neutral không bao giờ nằm được trong mâm đạt. Bé đặt lạc vào thì mâm không đạt, rồi dễ hiểu thành "chất béo là xấu" (`all_fat_bad`).
-  - Đề xuất đưa nhóm neutral sang bài ba "Đồ ngọt, đồ béo: ăn bao nhiêu?", nếu app hiện được mâm năm chỗ (xuống dòng hoặc chỗ nhỏ hơn).
+  - Đề xuất đưa nhóm neutral sang bài ba "Ăn uống bao nhiêu là vừa?", nếu app hiện được mâm năm chỗ (xuống dòng hoặc chỗ nhỏ hơn).
 - **Lựa chọn chỉ có chữ ở q1, q3, q5:**
   - App 0.1.0 vẽ hình giữ chỗ, nên câu so sánh mâm hay bát chỉ bằng hình thì bé không trả lời được.
   - Lưới hình ba cột cắt nhãn dài (`lineLimit(2)` ở `QuestionViews.swift`). Lựa chọn không có hình thì app xếp thành hàng chữ, đủ chỗ cho nhãn dài.

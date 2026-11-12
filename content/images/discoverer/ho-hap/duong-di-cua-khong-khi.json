@@ -1,0 +1,254 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "tray_pond",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_cat": {
+      "same_as": "w3_cat",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w1.w1_sparrow": {
+      "same_as": "tray_sparrow",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w1.w1_carp": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "w2": {
+      "same_as": "explore_in_out",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_nose": {
+      "own": {
+        "file": "content/images/own/ho-hap/airway-nose.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, nose coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_windpipe": {
+      "own": {
+        "file": "content/images/own/ho-hap/airway-windpipe.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, windpipe coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_lungs": {
+      "own": {
+        "file": "content/images/own/ho-hap/airway-lungs.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, lungs coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_food_air": {
+      "own": {
+        "file": "content/images/own/ho-hap/airway-food-air.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, food path and air path coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_nose": {
+      "own": {
+        "file": "content/images/own/ho-hap/nose-side.jpg",
+        "method": "drawn"
+      },
+      "title": "A nose, side view",
+      "note": "designer vẽ 10/11 (SVG, SK-036); hình gốc, Não bộ và giác quan dùng lại"
+    },
+    "tray.tray_stomach": {
+      "own": {
+        "file": "content/images/own/ho-hap/stomach.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "designer vẽ 10/11 (SVG, SK-036); hình gốc, Não bộ và giác quan dùng lại"
+    },
+    "tray.tray_windpipe": {
+      "own": {
+        "file": "content/images/own/ho-hap/windpipe.jpg",
+        "method": "drawn"
+      },
+      "title": "A windpipe",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_heart": {
+      "own": {
+        "file": "content/images/own/ho-hap/heart.jpg",
+        "method": "drawn"
+      },
+      "title": "A heart",
+      "note": "designer vẽ 10/11 (SVG, SK-036); hình gốc, Não bộ và giác quan dùng lại"
+    },
+    "tray.tray_mouth": {
+      "own": {
+        "file": "content/images/own/ho-hap/mouth-side.jpg",
+        "method": "drawn"
+      },
+      "title": "A mouth, side view",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_food_pipe": {
+      "own": {
+        "file": "content/images/own/ho-hap/food-pipe.jpg",
+        "method": "drawn"
+      },
+      "title": "A food pipe",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_lungs": {
+      "own": {
+        "file": "content/images/own/ho-hap/lungs.jpg",
+        "method": "drawn"
+      },
+      "title": "Two lungs",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_ribs": {
+      "own": {
+        "file": "content/images/own/ho-hap/ribs.jpg",
+        "method": "drawn"
+      },
+      "title": "A set of ribs",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stethoscope_No.120.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Stethoscope_No.120.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A stethoscope on a table",
+      "author": "Tama998",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "ống nghe cuộn trên bàn tối màu, không người"
+    },
+    "q1.q1_neck": {
+      "own": {
+        "file": "content/images/own/ho-hap/body-neck.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, neck area coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036); lớp vàng hoe trong suốt"
+    },
+    "q1.q1_chest": {
+      "own": {
+        "file": "content/images/own/ho-hap/body-chest.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, chest area coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036); lớp vàng hoe trong suốt"
+    },
+    "q1.q1_belly": {
+      "own": {
+        "file": "content/images/own/ho-hap/body-belly.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, belly area coloured",
+      "note": "designer vẽ 10/11 (SVG, SK-036); lớp vàng hoe trong suốt"
+    },
+    "q2": {
+      "same_as": "explore_breath_out",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q2.q2_food_pipe": {
+      "same_as": "tray.tray_food_pipe"
+    },
+    "q2.q2_nose": {
+      "same_as": "tray.tray_nose"
+    },
+    "q2.q2_stomach": {
+      "same_as": "tray.tray_stomach"
+    },
+    "q2.q2_windpipe": {
+      "same_as": "tray.tray_windpipe"
+    },
+    "q3": {
+      "own": {
+        "file": "content/images/own/ho-hap/lan-hanky.jpg",
+        "method": "drawn"
+      },
+      "title": "A child holding a hanky to her nose",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q3.q3_windpipe": {
+      "same_as": "learn.explore.explore_windpipe"
+    },
+    "q3.q3_lungs": {
+      "same_as": "learn.explore.explore_lungs"
+    },
+    "q3.q3_nose": {
+      "same_as": "learn.explore.explore_nose"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q4.q4_chest": {
+      "own": {
+        "file": "content/images/own/ho-hap/breath-chest-wider.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, chest getting wider",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_stomach": {
+      "own": {
+        "file": "content/images/own/ho-hap/breath-stomach-puffed.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, stomach puffed up",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_lungs_fill": {
+      "own": {
+        "file": "content/images/own/ho-hap/breath-lungs-fill.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, lungs puffed up",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_lungs_small": {
+      "own": {
+        "file": "content/images/own/ho-hap/breath-lungs-small.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, lungs getting smaller",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q5": {
+      "same_as": "q3_pinwheel",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/ho-hap/teddy-belly.jpg",
+        "method": "drawn"
+      },
+      "title": "A child lying down with a teddy on the belly",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "vocab.nostril": {
+      "same_as": "learn.explore.explore_nose"
+    },
+    "vocab.windpipe": {
+      "same_as": "tray.tray_windpipe"
+    },
+    "vocab.lungs": {
+      "same_as": "learn.explore.explore_lungs"
+    },
+    "vocab.ribs": {
+      "same_as": "tray.tray_ribs"
+    },
+    "vocab.stomach": {
+      "same_as": "tray.tray_stomach"
+    },
+    "reward.elephant": {
+      "same_as": "w1_elephant",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    }
+  }
+}

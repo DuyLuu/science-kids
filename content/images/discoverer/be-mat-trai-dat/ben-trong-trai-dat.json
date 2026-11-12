@@ -1,0 +1,464 @@
+{
+  "note": "SK-033. Designer (agent) chọn 10/11/2026, chờ Duy duyệt; chưa fetch. 7 ảnh riêng, 7 chỗ dùng lại, 34 chỗ chưa có ảnh (không ghi trong file, xem review.html). Mục có «CẦN MỞ TAY» là ảnh Openverse ngoài Commons chưa xác nhận được ở trang gốc. Designer 10/11: hình ghép sơ đồ mặt cắt (q2, q1_*, ô Học) và hình tự vẽ trứng, đào (Duy 10/11 cho vẽ).",
+  "images": {
+    "w1.w1_lake": {
+      "same_as": "tray.tray_lake",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_river": {
+      "same_as": "tray.tray_river",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_ocean": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "Alt đề xuất: EN «A huge blue ocean» · VI «Đại dương xanh mênh mông»."
+    },
+    "w2.w2_model": {
+      "same_as": "vocab.model",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "Alt đề xuất: EN «A small model plane in a hand» · VI «Mô hình máy bay nhỏ trong tay»."
+    },
+    "w2.w2_surface": {
+      "same_as": "vocab.surface",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "learn.explore.explore_crust": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.learn.explore.explore_crust.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "same_as": "tray.tray_eggshell"
+          }
+        ]
+      },
+      "title": "Earth's crust next to an eggshell",
+      "note": "Trái: sơ đồ mặt cắt (bản làm nổi của q1_crust, dựng lại từ SVG gốc, xem note của q2). Phải: hình tự vẽ nửa quả trứng luộc (tray.tray_eggshell). Giữ rõ vỏ Trái Đất và vỏ trứng, các phần khác nhạt đi. Không có chữ. Hình vuông 1024."
+    },
+    "learn.explore.explore_mantle": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.learn.explore.explore_mantle.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "same_as": "tray.tray_egg_white"
+          }
+        ]
+      },
+      "title": "Earth's mantle next to an egg white",
+      "note": "Trái: sơ đồ mặt cắt (bản làm nổi của q1_mantle, dựng lại từ SVG gốc, xem note của q2). Phải: hình tự vẽ nửa quả trứng luộc (tray.tray_egg_white). Giữ rõ lớp manti và lòng trắng, các phần khác nhạt đi. Không có chữ. Hình vuông 1024."
+    },
+    "learn.explore.explore_core": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.learn.explore.explore_core.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "same_as": "tray.tray_egg_yolk"
+          }
+        ]
+      },
+      "title": "Earth's core next to an egg yolk",
+      "note": "Trái: sơ đồ mặt cắt (bản làm nổi của q1_core, dựng lại từ SVG gốc, xem note của q2). Phải: hình tự vẽ nửa quả trứng luộc (tray.tray_egg_yolk). Giữ rõ nhân và lòng đỏ, các phần khác nhạt đi. Không có chữ. Hình vuông 1024."
+    },
+    "tray.tray_eggshell": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_eggshell.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a boiled egg, the shell",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả trứng gà luộc còn vỏ, bổ dọc, nhìn thẳng mặt cắt, thấy một mép vỏ ở dưới; màu chuyển nhẹ, bóng mềm, không viền; nền giấy #FBF6EA; 1024×768. Bản giữ rõ vỏ trứng. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "tray.tray_melted_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_summit_eruption_fissures_within_Halema%27uma%27u_crater_lava_lake_(96756).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/K%C4%ABlauea_summit_eruption_fissures_within_Halema%27uma%27u_crater_lava_lake_%2896756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Kīlauea summit eruption fissures within Halema'uma'u crater lava lake (96756)",
+      "author": "USGS Hawaiian Volcano Observatory",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_summit_eruption_fissures_within_Halema%27uma%27u_crater_lava_lake_(96756).jpg"
+    },
+    "tray.tray_egg_yolk": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_egg_yolk.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a boiled egg, the yolk",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả trứng gà luộc còn vỏ, bổ dọc, nhìn thẳng mặt cắt, thấy một mép vỏ ở dưới; màu chuyển nhẹ, bóng mềm, không viền; nền giấy #FBF6EA; 1024×768. Bản giữ rõ lòng đỏ. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "tray.tray_egg_white": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_egg_white.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a boiled egg, the egg white",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả trứng gà luộc còn vỏ, bổ dọc, nhìn thẳng mặt cắt, thấy một mép vỏ ở dưới; màu chuyển nhẹ, bóng mềm, không viền; nền giấy #FBF6EA; 1024×768. Bản giữ rõ lòng trắng. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "q1.q1_crust": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.q1.q1_crust.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "Earth cut open, the crust shown",
+      "note": "Dựng lại từ bản SVG gốc của phần này (cùng file Commons): chỉ giữ quả cầu bổ đôi bên phải; bỏ nêm tối, số, chữ cái, đường chỉ và hình nêm phóng to; gộp thượng manti và hạ manti thành một lớp manti, nhân trong và nhân ngoài thành một lớp nhân; tô lại ba lớp bằng màu style E (vỏ nâu, manti đỏ son, nhân vàng hoè, mặt ngoài chàm), lớp vỏ dày hơn bản gốc để thấy được ở cỡ nhỏ; mảnh giấy chồng lớp, bóng mềm; nền giấy #FBF6EA; 1024×768. Bản làm nổi lớp vỏ: lớp này giữ màu, các lớp khác và mặt ngoài nhạt đi (pha 60–68 % màu giấy)."
+    },
+    "q1.q1_core": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.q1.q1_core.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "Earth cut open, the core shown",
+      "note": "Dựng lại từ bản SVG gốc của phần này (cùng file Commons): chỉ giữ quả cầu bổ đôi bên phải; bỏ nêm tối, số, chữ cái, đường chỉ và hình nêm phóng to; gộp thượng manti và hạ manti thành một lớp manti, nhân trong và nhân ngoài thành một lớp nhân; tô lại ba lớp bằng màu style E (vỏ nâu, manti đỏ son, nhân vàng hoè, mặt ngoài chàm), lớp vỏ dày hơn bản gốc để thấy được ở cỡ nhỏ; mảnh giấy chồng lớp, bóng mềm; nền giấy #FBF6EA; 1024×768. Bản làm nổi lớp nhân: lớp này giữ màu, các lớp khác và mặt ngoài nhạt đi (pha 60–68 % màu giấy)."
+    },
+    "q1.q1_mantle": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.q1.q1_mantle.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "Earth cut open, the mantle shown",
+      "note": "Dựng lại từ bản SVG gốc của phần này (cùng file Commons): chỉ giữ quả cầu bổ đôi bên phải; bỏ nêm tối, số, chữ cái, đường chỉ và hình nêm phóng to; gộp thượng manti và hạ manti thành một lớp manti, nhân trong và nhân ngoài thành một lớp nhân; tô lại ba lớp bằng màu style E (vỏ nâu, manti đỏ son, nhân vàng hoè, mặt ngoài chàm), lớp vỏ dày hơn bản gốc để thấy được ở cỡ nhỏ; mảnh giấy chồng lớp, bóng mềm; nền giấy #FBF6EA; 1024×768. Bản làm nổi lớp manti: lớp này giữ màu, các lớp khác và mặt ngoài nhạt đi (pha 60–68 % màu giấy)."
+    },
+    "q2": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.q2.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Earth-crust-cutaway-numbered.svg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Earth-crust-cutaway-numbered.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Earth cutaway diagram (numbered)",
+            "author": "Gringer, Washiucho",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "Earth cut open to show its layers",
+      "note": "Dựng lại từ bản SVG gốc của phần này (cùng file Commons): chỉ giữ quả cầu bổ đôi bên phải; bỏ nêm tối, số, chữ cái, đường chỉ và hình nêm phóng to; gộp thượng manti và hạ manti thành một lớp manti, nhân trong và nhân ngoài thành một lớp nhân; tô lại ba lớp bằng màu style E (vỏ nâu, manti đỏ son, nhân vàng hoè, mặt ngoài chàm), lớp vỏ dày hơn bản gốc để thấy được ở cỡ nhỏ; mảnh giấy chồng lớp, bóng mềm; nền giấy #FBF6EA; 1024×768. Bản không làm nổi lớp nào."
+    },
+    "q2.q2_crust": {
+      "same_as": "q1.q1_crust"
+    },
+    "q2.q2_core": {
+      "same_as": "q1.q1_core"
+    },
+    "q2.q2_mantle": {
+      "same_as": "q1.q1_mantle"
+    },
+    "q3": {
+      "same_as": "q1.q1_crust"
+    },
+    "q3.q3_mantle": {
+      "same_as": "q1.q1_mantle"
+    },
+    "q3.q3_mountains": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q3.q3_ocean": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "Alt đề xuất: EN «A huge blue ocean» · VI «Đại dương xanh mênh mông»."
+    },
+    "q3.q3_core": {
+      "same_as": "q1.q1_core"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A peach cut in half",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả đào chín bổ đôi, nhìn thẳng mặt cắt, hạt đào nâu sần ở giữa, thịt đỏ dần quanh hạt, một mép vỏ ở dưới; nền giấy #FBF6EA, không có thớt gỗ như brief; 1024×768. Bản đủ màu, không làm nổi phần nào."
+    },
+    "q4.q4_flesh": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q4.q4_flesh.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a peach, the flesh",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả đào chín bổ đôi, nhìn thẳng mặt cắt, hạt đào nâu sần ở giữa, thịt đỏ dần quanh hạt, một mép vỏ ở dưới; nền giấy #FBF6EA, không có thớt gỗ như brief; 1024×768. Bản giữ rõ thịt đào. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "q4.q4_stone": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q4.q4_stone.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a peach, the seed",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả đào chín bổ đôi, nhìn thẳng mặt cắt, hạt đào nâu sần ở giữa, thịt đỏ dần quanh hạt, một mép vỏ ở dưới; nền giấy #FBF6EA, không có thớt gỗ như brief; 1024×768. Bản giữ rõ hạt đào. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "q4.q4_skin": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q4.q4_skin.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a peach, the thin skin",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả đào chín bổ đôi, nhìn thẳng mặt cắt, hạt đào nâu sần ở giữa, thịt đỏ dần quanh hạt, một mép vỏ ở dưới; nền giấy #FBF6EA, không có thớt gỗ như brief; 1024×768. Bản giữ rõ vỏ đào. Các phần khác nhạt đi (phủ giấy 74 %)."
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_core"
+    },
+    "q5.q5_middle": {
+      "same_as": "tray.tray_egg_yolk"
+    },
+    "q5.q5_under": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q5.q5_under.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a boiled egg, layers around the yolk",
+      "note": "Agent (designer) vẽ 10/11 bằng SVG theo brief (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ): nửa quả trứng gà luộc còn vỏ, bổ dọc, nhìn thẳng mặt cắt, thấy một mép vỏ ở dưới; màu chuyển nhẹ, bóng mềm, không viền; nền giấy #FBF6EA; 1024×768. Bản thứ tư: giữ rõ vỏ và lòng trắng, lòng đỏ nhạt đi."
+    },
+    "q5.q5_hot": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.q5.q5_hot.jpg",
+        "method": "drawn"
+      },
+      "title": "Red-hot glowing metal",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG; cùng nét các hình tự vẽ trước. Thanh kim loại nung đỏ rực trên đe tối, quầng sáng cam, không ngọn lửa, không tay người (cán thép đi ra mép phải). Thay ảnh chụp sắt nung (CC BY 3.0) vì câu q5 có hai lựa chọn sai là hình tự vẽ quả trứng (q5_middle, q5_under), đáp án đúng là ảnh chụp duy nhất nên bé đoán được theo kiểu hình. Alt «Red-hot glowing metal» · «Kim loại nung đỏ rực» giữ được. 1024×768."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_Adult_and_Child_Feet_in_Barefoot_Sandals_and_Shoes.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Close-up_of_Adult_and_Child_Feet_in_Barefoot_Sandals_and_Shoes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Close-up of Adult and Child Feet in Barefoot Sandals and Shoes",
+      "author": "Oceanic7777",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.52,
+        "width": 1,
+        "height": 0.48
+      },
+      "note": "Alt «Feet standing on the ground» vẫn đúng, giữ nguyên."
+    },
+    "vocab.mantle": {
+      "same_as": "learn.explore.explore_mantle"
+    },
+    "vocab.core": {
+      "same_as": "learn.explore.explore_core"
+    },
+    "vocab.layer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kue_lapis_-_driekleur_en_rozen.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Kue_lapis_-_driekleur_en_rozen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Kue lapis - driekleur en rozen",
+      "author": "Pudding4brains",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Kue_lapis_-_driekleur_en_rozen.jpg",
+      "note": "Khác ý brief. Alt đề xuất: EN «Layered cakes on a plate» · VI «Bánh nhiều lớp trên đĩa». Câu ví dụ đang gọi là bánh da lợn: đề xuất VI «Chiếc bánh này có nhiều lớp.» và EN tương ứng (content-editor quyết)."
+    },
+    "vocab.rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Van_Long_Nature_Reserve_Lowland_Wetland_Halong_Bay_Ninh_Binh_Limestone_Karst_Red_River_Delta_(36883).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Van_Long_Nature_Reserve_Lowland_Wetland_Halong_Bay_Ninh_Binh_Limestone_Karst_Red_River_Delta_%2836883%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Van Long Nature Reserve Lowland Wetland Halong Bay Ninh Binh Limestone Karst Red River Delta (36883)",
+      "author": "JakobHosp",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "vocab.centre": {
+      "same_as": "tray.tray_egg_yolk"
+    },
+    "vocab.melt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Candles_001_rebalanced.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Candles_001_rebalanced.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Candles 001 rebalanced",
+      "author": "user:95jb14",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Candles_001_rebalanced.jpg"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(84346).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Ta_Van_Muong_Ha_vallei_%2884346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ta Van Muong Ha vallei (84346)",
+      "author": "Andre Hospers",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.25,
+        "top": 0.12,
+        "width": 0.465,
+        "height": 0.62
+      },
+      "note": "Designer (agent) 10/11 chiều: làng Tả Van (Sa Pa, Lào Cai) chụp từ trên đồi: mái nhà, đường đất, hàng cây, ruộng bậc thang; một người rất nhỏ ở xa, không nhận ra mặt; không biển chữ. Cắt vuông giữa làng. Alt «A village seen from above» · «Làng quê nhìn từ trên cao» đúng."
+    },
+    "w2.w2_shape": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:What_More_Do_You_Need_to_Play_With_than_Wooden_Blocks%3F_(4881765204).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/What_More_Do_You_Need_to_Play_With_than_Wooden_Blocks%3F_%284881765204%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "What More Do You Need to Play With than Wooden Blocks? (4881765204)",
+      "author": "Alan Levine from Strawberry, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0.12,
+        "width": 0.88,
+        "height": 0.56
+      },
+      "note": "Designer (agent) 10/11 chiều: khối gỗ đồ chơi nhiều hình (vòm, cột, thanh cong, khối chữ nhật) trên bàn tròn; không có khối cầu, khối chóp như brief; không chữ, không người. Alt «Wooden blocks in different shapes» · «Khối gỗ nhiều hình dạng» đúng."
+    },
+    "q1": {
+      "same_as": "w2"
+    },
+    "tray.tray_avocado_seed": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_avocado_seed.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "openverse_id": "6c93bc5b-61fe-4802-82b5-d420b18b60ec",
+            "source_url": "https://www.flickr.com/photos/65647869@N05/7338661312",
+            "file_url": "https://live.staticflickr.com/7240/7338661312_63d3beb6dd_b.jpg",
+            "title": "Avocado",
+            "author": "realitysadream",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/"
+          }
+        ]
+      },
+      "title": "Half an avocado, the seed in the middle",
+      "note": "Designer (agent) 10/11 chiều: ảnh gốc nửa quả bơ còn hạt trên nền trắng (Flickr, CC BY 2.0, đã mở trang gốc 10/11: license id 4 = CC BY 2.0); cắt lấy nửa có hạt, đặt trên giấy kem như bộ quả đào q4; bản này giữ rõ hạt bơ, các phần khác nhạt đi (phủ giấy 74 %). Không dao, không tay, không chữ. 1024×768."
+    },
+    "tray.tray_avocado_flesh": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_avocado_flesh.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "openverse_id": "6c93bc5b-61fe-4802-82b5-d420b18b60ec",
+            "source_url": "https://www.flickr.com/photos/65647869@N05/7338661312",
+            "file_url": "https://live.staticflickr.com/7240/7338661312_63d3beb6dd_b.jpg",
+            "title": "Avocado",
+            "author": "realitysadream",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/"
+          }
+        ]
+      },
+      "title": "Half an avocado, the soft flesh",
+      "note": "Designer (agent) 10/11 chiều: ảnh gốc nửa quả bơ còn hạt trên nền trắng (Flickr, CC BY 2.0, đã mở trang gốc 10/11: license id 4 = CC BY 2.0); cắt lấy nửa có hạt, đặt trên giấy kem như bộ quả đào q4; bản này giữ rõ thịt bơ, các phần khác nhạt đi (phủ giấy 74 %). Không dao, không tay, không chữ. 1024×768."
+    },
+    "tray.tray_avocado_skin": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.tray.tray_avocado_skin.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "openverse_id": "6c93bc5b-61fe-4802-82b5-d420b18b60ec",
+            "source_url": "https://www.flickr.com/photos/65647869@N05/7338661312",
+            "file_url": "https://live.staticflickr.com/7240/7338661312_63d3beb6dd_b.jpg",
+            "title": "Avocado",
+            "author": "realitysadream",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/"
+          }
+        ]
+      },
+      "title": "Half an avocado, the thin skin",
+      "note": "Designer (agent) 10/11 chiều: ảnh gốc nửa quả bơ còn hạt trên nền trắng (Flickr, CC BY 2.0, đã mở trang gốc 10/11: license id 4 = CC BY 2.0); cắt lấy nửa có hạt, đặt trên giấy kem như bộ quả đào q4; bản này giữ rõ viền vỏ xanh thẫm, các phần khác nhạt đi (phủ giấy 74 %). Không dao, không tay, không chữ. 1024×768."
+    },
+    "vocab.crust": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ky_Co_-_Nhon_Ly_-_Quy_Nhon_-_Binh_Dinh_-_Viet_Nam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Ky_Co_-_Nhon_Ly_-_Quy_Nhon_-_Binh_Dinh_-_Viet_Nam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ky Co bay at Nhon Ly, Quy Nhon",
+      "author": "Boconganh Phan",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ky_Co_-_Nhon_Ly_-_Quy_Nhon_-_Binh_Dinh_-_Viet_Nam.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.25,
+        "width": 0.5,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 10/11 chiều: Kỳ Co, Nhơn Lý (Quy Nhơn, Bình Định) nhìn từ trên núi: làng mái ngói đỏ, bãi cát, vịnh biển xanh, đồi đá ở xa; không có ruộng lúa như brief; cắt bỏ chữ ký «Dandelion&Rose» ở góc phải dưới. Khác ý brief (không có núi cao phía sau, không có ruộng lúa). Alt đề xuất: EN «A village, a beach and the sea on the crust» · VI «Làng, bãi cát và biển nằm trên vỏ Trái Đất»."
+    },
+    "reward.deep_hole": {
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/ben-trong-trai-dat.reward.deep_hole.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "openverse_id": "e3de836b-8f53-4b47-8843-748f5519d271",
+            "source_url": "https://www.flickr.com/photos/123443813@N05/16035936412",
+            "file_url": "https://live.staticflickr.com/8664/16035936412_ebb5c41e03_b.jpg",
+            "title": "Drilling rig on Northstar Island in the Beaufort Sea, Alaska",
+            "author": "bseegov",
+            "license": "PDM 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+          }
+        ]
+      },
+      "title": "A drilling tower and a very deep hole",
+      "note": "Designer (agent) 10/11 chiều: nửa trên là ảnh tháp khoan trên đảo sỏi giữa biển băng phủ tuyết ở Alaska (BSEE, Flickr, PDM 1.0, đã mở trang gốc 10/11: license id 10 = PDM), chụp từ trên cao; nửa dưới là dải mặt cắt giấy: lớp đá nâu rất dày, một đường khoan mảnh đi thẳng xuống từ chân tháp và dừng khi còn xa đáy lớp đá; không ghi số, không chữ. Khác ý brief: chụp từ máy bay, đất phủ tuyết là biển băng; không có cờ, logo đọc được. Hình vuông 1024."
+    },
+    "w1": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/ben-trong-trai-dat.w1.jpg",
+        "method": "drawn"
+      },
+      "title": "Salt going into a glass of water",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Thìa muối nghiêng đổ hạt muối trắng vào cốc nước trong, hạt muối chìm dần và đọng ở đáy; cán thìa đi ra mép phải (không có tay); nền sáng trơn, mặt bàn kem. Commons và Openverse không có ảnh hợp giấy phép (tìm «salt dissolving water glass», «pouring salt into water», «salt spoon glass of water», «salt glass of water», «dissolving salt water»). 1024×768."
+    }
+  }
+}

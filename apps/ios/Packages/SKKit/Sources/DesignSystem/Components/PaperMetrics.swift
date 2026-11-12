@@ -40,6 +40,9 @@ public enum PaperMetrics {
     public static let sealSmall: CGFloat = 22
     /// Check on the small seal (Play: 14 × 14).
     public static let sealSmallGlyph: CGFloat = 14
+    /// Seal of a topic done on the journey map (SK-034 spec 3: `28 × 28`, check `17`).
+    public static let sealMedium: CGFloat = 28
+    public static let sealMediumGlyph: CGFloat = 17
 
     // MARK: Progress squares
 
@@ -158,6 +161,16 @@ extension PaperMetrics {
     public static let placeholderTilt: Angle = .degrees(-6)
     public static let placeholderDisc: CGFloat = 0.32
     public static let placeholderDiscOffset: CGFloat = 0.08
+    /// `ContentPicture` (SK-033): a real picture's corners (a Discoverer piece, like a card or a
+    /// choice cell), the coloured paper under it (share of the box, tilted like the stand-in
+    /// piece) and the photo on that paper (share of the box). Until the designer draws the photo
+    /// frame of style E (SK-033 point 6).
+    public static let pictureRadius: CGFloat = Tokens.Radius.discoverer
+    public static let pictureBacking: CGFloat = 0.92
+    public static let pictureOnBacking: CGFloat = 0.8
+    /// First guess of a grid cell picture's width, as a multiple of its height, before layout
+    /// measures it (only picks the decode size of the first frame).
+    public static let pictureWidthEstimate: CGFloat = 2
     /// Question sheet (`padding: 16px 14px 14px 16px`; the torn edge takes the first 6pt).
     public static let sheetPadding = EdgeInsets(top: Tokens.Space.s16 + Tokens.Space.s2, leading: Tokens.Space.s16, bottom: Tokens.Space.s14, trailing: Tokens.Space.s14)
     /// Result sheet at the bottom (`padding: 18px 20px 22px 20px`).

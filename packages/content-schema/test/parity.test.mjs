@@ -118,6 +118,29 @@ for (const [name, make, minimum] of [["topic", validTopic, 100], ["lesson", vali
   });
 }
 
+// The valid lesson has no image on a bank word (SK-033 added the field): sweep only the bank of
+// a copy that has one, so the new field gets the same Ajv = zod check as the rest.
+test("mutation sweep on a bank word with an image: Ajv verdict = zod verdict", () => {
+  const lesson = validLesson();
+  const w = lesson.warmup.findIndex((item) => item.format === "fill_blank_bank");
+  lesson.warmup[w].bank[0].image = { alt: { en: "Air bubbles in water", vi: "Bọt khí trong nước" }, brief: "Bọt khí, ảnh chụp" };
+  assert.deepEqual(validateDocuments([{ file: "t.json", data: validTopic() }, { file: "l.json", data: lesson }]).errors, []);
+  const prefix = `/warmup/${w}/bank`;
+  let total = 0;
+  const mismatches = [];
+  for (const { label, copy } of mutations(lesson)) {
+    if (!label.includes(` ${prefix}`)) continue; // labels end with " /<path>"
+    total++;
+    for (const requireAssets of [false, true]) {
+      const ajv = ajvValidate("lesson", copy, { requireAssets });
+      const zod = zodValidate("lesson", copy, { requireAssets });
+      if ((ajv.length === 0) !== (zod.length === 0)) mismatches.push(`${label}${requireAssets ? " [assets]" : ""}: Ajv ${JSON.stringify(ajv)} / zod ${JSON.stringify(zod)}`);
+    }
+  }
+  assert.deepEqual(mismatches.slice(0, 10), [], `${mismatches.length} mismatches of ${total}`);
+  assert.ok(total > 40, `sweep too small: ${total}`);
+});
+
 test("validate reports parity when the two engines disagree", () => {
   const lenient = () => [];
   const strict = () => [{ pointer: "/title", message: "boom" }];

@@ -1,6 +1,6 @@
 # Science Kids — Tóm tắt PRD và Technical plan
 
-> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Sửa 31/10: giọng tiếng Việt lên ưu tiên, Duy chọn thử VieNeu-TTS giọng Nam (B9, B16, B18 #3, B20). Sửa 1/11: Duy chốt giọng VI Kim Thanh (B9, B16, B18 #3, B20). Sửa 1/11: dạng quiz theo nhóm tuổi (SK-026) (A2, B4.1, B4.2, B4.3, B4.4, B5.3, B8.0, B16). Sửa 2/11: parse markdown kéo lên làm ngay, dev làm, Duy giao SK-027 (B4.2, B8.0, B16). Chưa publish artifact; khi chốt sẽ publish như PRD.
+> **Trạng thái:** bản nháp để review, 28/10/2026, đã qua một vòng review độc lập (các sửa đổi ghi ngày 28/10). Sửa 31/10: giọng tiếng Việt lên ưu tiên, Duy chọn thử VieNeu-TTS giọng Nam (B9, B16, B18 #3, B20). Sửa 1/11: Duy chốt giọng VI Kim Thanh (B9, B16, B18 #3, B20). Sửa 1/11: dạng quiz theo nhóm tuổi (SK-026) (A2, B4.1, B4.2, B4.3, B4.4, B5.3, B8.0, B16). Sửa 2/11: parse markdown kéo lên làm ngay, dev làm, Duy giao SK-027 (B4.2, B8.0, B16). Sửa 9/11: Duy duyệt syllabus mới (45 chủ đề, 384 bài; chủ đề mới đứng đầu rồi unit Oak theo thứ tự Oak; 1 bài = 1 lesson Oak), không khoá bài, gói trả phí tạm tắt, danh mục `content/syllabus.json` (SK-030); phạm vi pilot Duy chốt 9/11 là 6 chủ đề đầu Discoverer, 38 bài (A1, A3, A4, A5, A6, A7, A8, B4.1, B4.3, B4.4, B5.2, B5.5, B7.6, B8.0, B8.1, B8.2, B11, B15, B16, B18). Chưa publish artifact; khi chốt sẽ publish như PRD.
 > **Cách đọc nhãn:** *(PRD)* = đã chốt trong prd.md · *(canvas)* = Duy đã duyệt trên canvas thiết kế nhưng chưa ghi vào PRD · *(đề xuất)* = từ syllabus-progression hoặc plan này, chưa chốt.
 > Nguồn: [prd.md](prd.md) · [syllabus.md](syllabus.md) · [syllabus-progression.md](syllabus-progression.md) · thiết kế [design/play-ui/](design/play-ui/project/) (canvas https://claude.ai/artifact/MLvDKD33FWJ7aTMS7XX3Zk).
 > Quy ước kỹ thuật theo cách bạn đang làm ở ise_center: Supabase CLI migrations, Next.js + TanStack Query + zod, Vercel.
@@ -21,7 +21,8 @@
 | Thị trường | Phụ huynh VN đại trà và trường quốc tế / trung tâm tiếng Anh; chỉ khác chế độ ngôn ngữ mặc định |
 | Ngôn ngữ | Tiếng Anh là chính; tiếng Việt là phụ đề và giải thích. **Giọng đọc có cả EN và VI** (đổi 28/10, vì bé 5–7 chưa đọc được chữ tiếng Việt) |
 | Nội dung | Oak chỉ là sườn (chủ đề, thứ tự, mục tiêu, từ vựng, misconception). App chỉ là renderer của nội dung JSON đã duyệt |
-| Giá | Freemium: chủ đề đầu tiên của mỗi nhóm tuổi miễn phí; Premium theo tháng hoặc năm |
+| Syllabus *(Duy duyệt 9/11)* | 3 nhóm tuổi; trong mỗi nhóm, chủ đề mới đứng đầu rồi unit Oak đúng thứ tự Oak; 1 bài = 1 lesson Oak (gộp thí nghiệm plan/do/review); 45 chủ đề, 384 bài. **Không khoá bài**, app gợi ý bài tiếp theo (A5, [syllabus.md](syllabus.md)) |
+| Giá | Freemium, Premium theo tháng hoặc năm. **9/11: gói trả phí giữ trong sản phẩm nhưng tạm tắt; bản build test mở toàn bộ; chủ đề miễn phí chọn sau** (trước đó: chủ đề đầu mỗi nhóm miễn phí) |
 | Style hình ảnh *(canvas, 27/10)* | Style E "Giấy cắt Đông Hồ": giấy cắt nhiều lớp, không nét viền, màu khoáng Đông Hồ, chữ Phudu + Be Vietnam Pro. Cần ghi vào PRD mục 8 |
 
 ## A2. Người dùng
@@ -41,12 +42,13 @@ Trẻ dưới 13 tuổi: không quảng cáo hành vi, dữ liệu tối thiểu
 | Tính năng | Ghi chú |
 | --- | --- |
 | Onboarding | Bố mẹ chọn chế độ ngôn ngữ (Song ngữ · EN trước · VI trước) *(PRD)*, giọng đọc (chỉ EN · chỉ VI · cả hai, 28/10) và tạo hồ sơ con (tên gọi, hình đại diện, lớp → nhóm tuổi) *(canvas; PRD nói "chọn tuổi")* |
+| Hành trình học *(9/11)* | Mọi chủ đề, mọi bài mở. Trang chủ gợi ý bài tiếp theo theo thứ tự danh mục và đánh dấu bài đã học; bài chưa soạn hiện tên, bấm vào báo chưa có nội dung (SK-030) |
 | Vòng lặp bài học | Khởi động (2–3 câu ôn; giãn cách 1 ngày · 1 tuần · 1 tháng là *đề xuất*) → Học → Chơi (mini-game, *canvas*) → Quiz 6 câu → Thưởng → Ôn lại |
 | Quiz engine | Chọn một, chọn nhiều, đúng/sai, điền từ (ngân hàng từ), câu hình, gắn nhãn, sắp thứ tự; giải thích sau mỗi câu; 1 câu bắt quan niệm sai |
 | Từ vựng | Thẻ lật EN–VI sinh từ keywords của bài, nghe được cả EN lẫn VI |
 | Gamification | PRD: sao, streak, huy hiệu; không xếp hạng, không loot box. Mở rộng trên canvas: sao 3 mức *(đề xuất)*, XP, chuỗi ngày có ngày nghỉ, thẻ sưu tầm, thử thách tuần — Duy cần xác nhận phạm vi MVP (B18) |
 | Tài khoản | Chế độ khách cho gói free; tài khoản phụ huynh + nhiều hồ sơ con cho Premium |
-| Freemium | Mở khoá cần đăng ký phụ huynh rồi mới thanh toán qua App Store / Google Play |
+| Freemium | Mở khoá cần đăng ký phụ huynh rồi mới thanh toán qua App Store / Google Play. **Tạm tắt từ 9/11:** bản test không có cổng trả phí, mọi nội dung mở; thời điểm bật lại chờ Duy (A8) |
 | Góc phụ huynh | PIN, báo cáo tuần theo từng bé, giới hạn phút mỗi ngày, chế độ ngôn ngữ, quản lý hồ sơ và gói |
 | Media | Hình tĩnh + audio EN và VI ở MVP; animation đầy đủ ở GĐ 2 |
 
@@ -58,27 +60,40 @@ Trẻ dưới 13 tuổi: không quảng cáo hành vi, dữ liệu tối thiểu
 - Gói free chạy ở **chế độ khách**, không đăng ký, **1 hồ sơ con**. PRD ghi tiến độ khách "lưu theo thiết bị"; plan này đề xuất lưu cả trên server dưới user ẩn danh để nâng cấp không mất dữ liệu (xem B10, B12) — **đây là thay đổi so với PRD, cần Duy chốt**.
 - Hồ sơ con thứ 2 trở đi chỉ có ở Premium.
 - Mở khoá Premium bắt buộc **đăng ký tài khoản phụ huynh trước khi thanh toán**. Hồ sơ và tiến độ của chế độ khách chuyển sang nguyên vẹn.
+- *(9/11)* Gói trả phí tạm tắt: các quy tắc trên giữ để dùng khi bật lại. Trong lúc tắt chưa có đường tạo hồ sơ thứ 2 (`create_child_profile` ở SK-021 chặn hồ sơ thứ 2 khi chưa Premium). Giữ giới hạn này hay nới tạm: chờ Duy (A8).
 
 ## A5. Nội dung và sư phạm
 
-- Syllabus: Explorer ~56 bài, Discoverer ~67 bài, Scientist ~78 bài; mỗi chủ đề 4–8 bài; bài 5–12 phút; nhịp khuyến nghị 3 bài/tuần.
-- Pilot GĐ 0: Discoverer Year 3, chủ đề 1–6, khoảng 34 bài, theo thứ tự Ăn uống lành mạnh → Bộ xương và cơ bắp → Ánh sáng → Lực và nam châm → Cây → Đá và đất. Bài mẫu chuẩn chất lượng: "Ăn uống lành mạnh — bài 1".
-- Mỗi chủ đề có `strand` (6 mạch), `level` (Mức 1–5), điểm độ khó theo rubric 5 tiêu chí, chủ đề tiên quyết.
+- Syllabus *(Duy duyệt 9/11, thay bản 26/10)*: **45 chủ đề, 384 bài**, gồm Explorer 12 chủ đề / 73 bài, Discoverer 17 / 155, Scientist 16 / 156.
+  - Trong mỗi nhóm, chủ đề mới đứng đầu (8 chủ đề từ sách bách khoa thiếu nhi và CT GDPT 2018: Discoverer 5, Scientist 3, Explorer không có), rồi unit Oak đúng thứ tự trên trang Oak. Bỏ unit Oak *Materials* (Y6).
+  - 1 bài = 1 lesson Oak, riêng thí nghiệm plan/do/review gộp 1 bài; mỗi chủ đề 4–19 bài.
+  - Bài 5–12 phút; nhịp khuyến nghị 3 bài/tuần.
+  - Bản 26/10 (đã thay): khoảng 201 bài (Explorer ~56, Discoverer ~67, Scientist ~78), 4–8 bài mỗi chủ đề, xếp theo độ khó.
+- **Không khoá bài** *(9/11)*: mọi chủ đề, mọi bài mở; app gợi ý bài tiếp theo theo thứ tự danh mục. Bỏ luật "mở bài n + 1 khi đạt bài n". Danh mục mọi bài, kể cả bài chưa soạn, ở `content/syllabus.json` (B4.1).
+- Pilot GĐ 0: **6 chủ đề đầu Discoverer, 38 bài** (Duy chốt 9/11, [syllabus.md](syllabus.md) mục 8).
+  - Gồm 5 chủ đề mới (23 bài) và *Đá và đất* (15 bài); chưa bài nào soạn.
+  - Bản 26/10 (đã thay): Discoverer Year 3, 6 chủ đề, khoảng 34 bài, Ăn uống lành mạnh đứng đầu.
+  - *Ăn uống lành mạnh* (#9, đã soạn 2 bài) nằm ngoài pilot; 2 bài đó vẫn ở trong gói và chơi được.
+  - Mốc 16/1/2027 giữ hay không: chờ Duy.
+- Bài mẫu chuẩn chất lượng: "Thức ăn cho ta những gì?" (*Ăn uống lành mạnh*; file `01-…`, trong danh mục 9/11 là ô bài 2).
+- Mỗi chủ đề có `strand` (6 mạch), `level` (Mức 1–5), điểm độ khó theo rubric 5 tiêu chí, chủ đề tiên quyết. *(9/11)* `level` chỉ để tham khảo độ khó, không quyết định thứ tự; chủ đề mới chưa chấm (`level` null). Tiên quyết không khoá bài.
 - Quiz 6 câu xếp dễ → khó theo DOK; Discoverer phân bổ DOK 1·2·3 = 2·3·1, 3–4 lựa chọn, 1 câu misconception; câu 1 luôn DOK 1.
-- Khởi động: 1 câu từ bài trước (~1 ngày), 1 câu ~1 tuần, 1 câu ~1 tháng khi đã có.
+- Khởi động: 1 câu từ bài trước (~1 ngày), 1 câu ~1 tuần, 1 câu ~1 tháng khi đã có. *(9/11)* Trẻ học nhảy cóc thì khởi động lấy câu thế nào: chờ Duy (A8).
 - **Đề xuất chưa chốt:** ngưỡng đạt 5/6 với sao 3 mức (⭐ hoàn thành · ⭐⭐ đạt ≥ 5/6 · ⭐⭐⭐ đạt lại ≥ 5/6 sau ít nhất 1 ngày), huy hiệu theo 6 mạch thay cho 15 Big Questions.
 
 ## A6. Thiết kế đã có
 
 Canvas Claude Design (nguồn trong [design/play-ui/project/](design/play-ui/project/)): style E áp cho cả 3 nhóm tuổi. Discoverer có đủ **17 màn có tương tác và animation**: Chào mừng · Hồ sơ của bé · Chọn hồ sơ · Trang chủ · Chủ đề · Nhờ bố mẹ mở khoá · Đăng ký phụ huynh · Khởi động · Học · Chơi · Quiz câu 5 · Quiz câu 6 · Thưởng · Bộ thẻ · Huy hiệu · Từ vựng · Góc phụ huynh. Explorer và Scientist mỗi nhóm có 5 màn (Trang chủ, Học, Chơi, Quiz, Thưởng). Bộ animation chung: giấy đặt xuống, đóng triện, tờ giấy trượt lên, giấy vụn chỉ ở màn Thưởng, tắt khi máy bật giảm chuyển động.
 
+*(9/11)* Canvas còn vẽ bài khoá ở màn Chủ đề; màn Nhờ bố mẹ mở khoá và Đăng ký phụ huynh chưa dùng khi gói trả phí tạm tắt. Designer thêm trạng thái "chưa có nội dung" cho bài và chủ đề, và danh sách dài 15–19 bài ([syllabus.md](syllabus.md) mục 9).
+
 ## A7. Roadmap và chỉ số
 
 | Giai đoạn | Thời gian | Nội dung | Gate |
 | --- | --- | --- | --- |
-| GĐ 0 · Nội dung | T11/2026 – 16/1/2027 | Syllabus, nội dung pilot Year 3, schema + CLI publish (CMS lùi GĐ 2) | Nội dung Y3 sẵn sàng 16/1/2027 |
+| GĐ 0 · Nội dung | T11/2026 – 16/1/2027 | Syllabus (duyệt 9/11), nội dung pilot Discoverer (6 chủ đề đầu, 38 bài, A5), schema + CLI publish (CMS lùi GĐ 2) | Nội dung pilot sẵn sàng 16/1/2027 (giữ theo kế hoạch, chưa xác nhận lại) |
 | GĐ 1 · MVP | T1 – T4/2027 *(PRD)*; B16 tính lại là 19/1 – 29/5 + beta 4 tuần → gate cuối T6 | 2 app native: vòng lặp bài học, quiz, gamification, góc phụ huynh | Beta 50 gia đình đạt |
-| GĐ 2 · Mở rộng | T4 – T7/2027 *(PRD)*; theo B16 là T7 – T9 | Đủ Year 1–6, ôn thích ứng, offline, animation đầy đủ, CMS Next.js | Lên store |
+| GĐ 2 · Mở rộng | T4 – T7/2027 *(PRD)*; theo B16 là T7 – T9 | Đủ Year 1–6 (từ 9/11 là 384 bài, bản 26/10 khoảng 201), ôn thích ứng, offline, animation đầy đủ, CMS Next.js | Lên store |
 
 North star: số bài hoàn thành có exit quiz đạt ngưỡng mỗi tuần (PRD đang ghi ≥ 4/6, đề xuất đổi ≥ 5/6). Chỉ số khác: hoàn thành bài đầu trong 24h ≥ 60%, D7 ≥ 35%, điểm quiz TB ≥ 4,5/6, ≥ 40 từ "đã nhớ"/trẻ/tháng, ≥ 50% phụ huynh mở báo cáo tuần, chuyển đổi trả phí ≥ 8%. Gate beta: D7 ≥ 25%, quiz ≥ 4/6, ≥ 3 bài/tuần/trẻ.
 
@@ -88,6 +103,10 @@ North star: số bài hoàn thành có exit quiz đạt ngưỡng mỗi tuần (
 - Góc phụ huynh trên web: PRD mục 7 có "Góc phụ huynh (web)" trong kiến trúc; plan này đưa ra khỏi MVP (Góc phụ huynh nằm trong app) — cần xác nhận.
 - Phạm vi gamification MVP: PRD chỉ có sao, streak, huy hiệu; canvas thêm XP, thẻ sưu tầm, thử thách tuần.
 - Khi nào nhắc bố mẹ đăng ký để giữ tiến độ (PRD mục 6, câu hỏi mở).
+- *(9/11)* Mốc 16/1/2027 với pilot 38 bài chưa soạn: giữ hay lùi (A5). Phạm vi pilot đã chốt 9/11.
+- *(9/11)* Gói trả phí tạm tắt tới khi nào (bản test, beta 50 gia đình, lên store). Trong lúc tắt có giữ giới hạn 1 hồ sơ cho khách không (A4). Chỉ số chuyển đổi trả phí (A7) chỉ đo được khi bật lại.
+- *(9/11)* Khởi động khi trẻ học nhảy cóc: [syllabus.md](syllabus.md) mục 6 ghi vẫn ôn bài trước theo thứ tự danh mục, còn B4.4 chọn câu theo lịch giãn cách từ bài đã học và bài đầu của bé không có khởi động. Cần chốt cách ghép hai luật (B4.4).
+- *(9/11)* Khối lượng GĐ 2 "đủ Year 1–6" nay là 384 bài, thay khoảng 201; nhân lực nội dung (1 biên tập + 1 hoạ sĩ) chưa tính lại.
 
 - Tên app (bundle id, domain, tên trên store) và phong cách mascot.
 - Giá gói tháng/năm; có dùng thử miễn phí không (PRD đo "dùng thử → trả phí" nhưng thiết kế chưa có dùng thử).
@@ -178,7 +197,7 @@ science-kids/
 
 ```
 age_group (explorer | discoverer | scientist)
-└── topic            # chủ đề: strand, level, difficulty, prerequisites, is_free, oak_unit_ref
+└── topic            # chủ đề: strand, level (chỉ tham khảo, 9/11), difficulty, prerequisites, is_free, oak_unit_ref
     └── lesson       # bài: stage (opener | core | apply | review), objective "I can…", ~phút
         ├── warmup   # 2–3 quiz_item tham chiếu bài cũ (chọn lúc chạy theo lịch giãn cách)
         ├── learn    # danh sách block học
@@ -187,6 +206,13 @@ age_group (explorer | discoverer | scientist)
         ├── vocab    # 4–8 vocab_term
         └── reward   # thẻ sưu tầm, huy hiệu liên quan
 ```
+
+**Danh mục syllabus** *(9/11, SK-030)*: `content/syllabus.json` liệt kê 3 nhóm → mọi chủ đề → mọi bài theo thứ tự Duy duyệt, kể cả bài chưa soạn.
+- Chủ đề: `key` (slug unit Oak hoặc `new-…`), `number`, `title` song ngữ, `strand`, `level` (null với chủ đề mới), `source` (`oak` kèm unit slug, Year, số thứ tự; hoặc `new`), `topic_id` khi đã có nội dung.
+- Bài: `number`, `title` (`vi` có thể null, app dùng `en`), `oak_lessons` (mã lesson Oak; nhiều mã khi gộp thí nghiệm, rỗng với chủ đề mới), `statutory`, `sensitive` khi có, `lesson_id` khi đã soạn.
+- Schema `packages/content-schema/schema/syllabus.schema.json`; `content-cli validate` kiểm cả file này (B8.0).
+- GĐ 0 app đọc file từ bundle, cùng cách `content/rules.json`. Đưa danh mục vào manifest và gói nội dung khi có CMS (B4.3), ngoài phạm vi SK-030.
+- Thứ tự hành trình và "bài tiếp theo" lấy theo `number` trong danh mục, không theo `level`.
 
 Mọi chuỗi hiển thị là cặp song ngữ: `{"en": "...", "vi": "..."}`. Chuỗi đọc to có thêm `audio: {"en": <asset>, "vi": <asset>}`; cả hai thứ tiếng đều có giọng (đổi 28/10). Hình có `alt` song ngữ cho VoiceOver/TalkBack.
 
@@ -243,11 +269,13 @@ Trường chung của `quiz_item`: `id`, `format`, `dok` (1–3), `prompt`, `opt
 ### B4.3 Gói nội dung (content pack)
 
 - **Catalog** `catalog/v1/manifest.json`: danh sách nhóm tuổi, chủ đề, phiên bản hiện hành, `is_free`, đường dẫn gói, `sha256`, `size`, `min_app_version`, `schema_version`, và `rules` (ngưỡng đạt, khoảng ôn, số ngày nghỉ/tuần, số hồ sơ…). App tải manifest khi mở, có ETag để không tải lại.
+  - *(9/11)* Về sau manifest mang luôn danh mục syllabus (B4.1), gồm cả bài chưa soạn. Tới khi đó app đọc `content/syllabus.json` trong bundle.
+  - *(9/11)* `is_free` giữ trường cho lúc bật lại gói trả phí. Trong lúc tạm tắt, app không đọc trường này và không hiện nhãn Free.
 - **Gói chủ đề** `topics/<topic_id>/<version>/pack.json`: toàn bộ bài của chủ đề, tham chiếu asset bằng hash.
 - **Asset** `assets/<sha256>.<ext>`: đặt tên theo nội dung nên cache vĩnh viễn, chủ đề sau dùng lại không tải lại.
 - **Nơi đặt file (28/10, sau research free tier):** asset (hình, audio — phần lớn dung lượng) và gói free đặt trên **Cloudflare R2** (10 GB free, **egress 0 đồng**, có CDN); gói premium `pack.json` (nhỏ, vài trăm KB) đặt ở Supabase Storage bucket riêng tư `content-premium`, app tải bằng token của user qua Storage RLS kiểm `billing_entitlements` (B6). Lý do: gói free của Supabase chỉ có 5 GB egress/tháng, 50 gia đình tải vài chủ đề 15 MB là hết; R2 không tính egress. Asset dùng chung để public vì tách riêng không có giá trị bảo vệ đáng kể.
 - **Phiên bản:** một bản publish là bất biến. App giữ phiên bản đã tải cho tới khi bé học xong bài đang dở, rồi mới chuyển bản mới. Mỗi lần làm bài ghi `content_version` để báo cáo và hiệu chỉnh `p_correct` không bị lẫn phiên bản.
-- **Ước lượng dung lượng:** mỗi bài khoảng 15 hình WebP (≈ 60 KB) + 60 clip audio EN và VI (≈ 30 KB), tức khoảng 3 MB/bài, khoảng 15 MB/chủ đề. MVP tải theo chủ đề khi bé mở; GĐ 2 cho phụ huynh tải trước để học offline.
+- **Ước lượng dung lượng:** mỗi bài khoảng 15 hình WebP (≈ 60 KB) + 60 clip audio EN và VI (≈ 30 KB), tức khoảng 3 MB/bài, khoảng 15 MB/chủ đề 5 bài. MVP tải theo chủ đề khi bé mở; GĐ 2 cho phụ huynh tải trước để học offline. *(9/11)* Chủ đề nay có 4–19 bài, tức khoảng 12–57 MB; *(đề xuất)* chủ đề dài tải theo bài, dev xem lại khi ContentKit chuyển sang tải mạng.
 - **Schema:** `packages/content-schema` giữ JSON Schema (nguồn), zod (CLI/CMS validate), model Swift `Codable` và Kotlin `@Serializable` viết tay ở MVP, kiểm bằng cách decode toàn bộ fixtures trong CI (B3). Đổi schema kiểu phá vỡ thì tăng `schema_version`; manifest khai báo `min_app_version` để app cũ hiện "Cập nhật app để học chủ đề này".
   - *(1/11, Duy chốt SK-026)* App iOS hiện từ chối cả gói khi `schema_version` khác 1. Vì vậy mọi bổ sung (format mới, trường tuỳ chọn) giữ `schema_version` 1 ("v1.1"), chỉ thêm, không đổi, không bỏ.
   - App cũ gặp format lạ thì bỏ câu, và quiz còn dưới 6 câu. Nên `build` giữ bảng `format → bản app đầu tiên hiện được` và báo lỗi khi `min_app_version` của chủ đề chưa hiện được một format trong bài. Bản 0.1.0 chưa hiện được `order_sequence` và `picture_bar_chart`.
@@ -266,7 +294,7 @@ Phần này là cái mà engine, test vector và pgTAP cùng dựa vào; sprint 
 | Ôn nhanh / siêu sao *(đề xuất syllabus §10)* | `score ≤ 3/6` → `lesson_progress.needs_quick_review = true`, app gợi ý ôn trước bài sau; 6/6 ở 2 bài liên tiếp → `superstar_unlocked = true`, mở câu DOK 3 tuỳ chọn (nội dung GĐ 2) |
 | XP | `xp_per_correct` 10 · `xp_lesson_complete` 20 · `xp_game_complete` 10 · ôn lại đạt thành thạo 20; XP chỉ cộng, không trừ. **Explorer:** `xp_*` = 0; vẫn chấm điểm và sao như trên, nhưng màn của bé không hiện số câu đúng *(1/11, Duy chốt SK-026)*. Chưa đặt vào `rules.json`: chờ chốt luật lấy theo nhóm của hồ sơ hay của chủ đề (SK-026) |
 | Chuỗi ngày | Ngày tính theo `local_date` của bé (B5.1); một ngày "đã học" khi hoàn thành ≥ 1 bài; mỗi tuần ISO được `rest_days_per_week` (1) ngày không học mà không đứt chuỗi |
-| Khởi động | Cần 2–3 câu: 1 câu từ bài gần nhất, 1 câu từ bài cách ~7 ngày, 1 câu cách ~30 ngày; thiếu lịch sử thì lấy câu từ các bài đã học gần nhất; bài đầu tiên của bé không có khởi động (màn "Hôm nay bắt đầu") |
+| Khởi động | Cần 2–3 câu: 1 câu từ bài gần nhất, 1 câu từ bài cách ~7 ngày, 1 câu cách ~30 ngày; thiếu lịch sử thì lấy câu từ các bài đã học gần nhất; bài đầu tiên của bé không có khởi động (màn "Hôm nay bắt đầu"). *(9/11)* Không khoá bài nên trẻ học nhảy cóc được; [syllabus.md](syllabus.md) mục 6 ghi khởi động vẫn ôn bài trước theo thứ tự danh mục, kể cả khi trẻ chưa học bài đó. Cách ghép với luật trên chờ Duy (A8) |
 | Dừng giữa bài | Lưu `attempt_id`, bước và các câu đã trả lời trên máy; mở lại tiếp đúng chỗ; attempt bỏ dở quá 7 ngày thì huỷ |
 
 ## B5. Lớp dữ liệu — Database (Supabase Postgres)
@@ -287,7 +315,7 @@ Phần này là cái mà engine, test vector và pgTAP cùng dựa vào; sprint 
 | `cms_age_groups` | `id`, `name`, `years[]`, `rules jsonb` | Quy tắc theo nhóm: số lựa chọn, DOK, vùng chạm |
 | `cms_strands` | `id`, `name_en`, `name_vi` | 6 mạch kiến thức |
 | `cms_topics` | `id`, `age_group_id`, `order`, `title jsonb`, `strand_id`, `level`, `difficulty jsonb`, `prerequisite_topic_ids uuid[]`, `is_free`, `oak_unit_ref`, `status` | |
-| `cms_lessons` | `id`, `topic_id`, `order`, `stage`, `title jsonb`, `objective jsonb`, `key_points jsonb`, `est_minutes`, `status` | |
+| `cms_lessons` | `id`, `topic_id`, `order`, `stage`, `title jsonb`, `objective jsonb`, `key_points jsonb`, `est_minutes`, `oak_lesson_refs text[]` *(9/11)*, `status` | *(9/11, đề xuất)* nhập từ `content/syllabus.json`; bài có trong danh mục nhưng chưa soạn mang trạng thái `planned` |
 | `cms_blocks` | `id`, `lesson_id`, `section` (learn · play), `order`, `type`, `version`, `data jsonb` | `data` validate bằng zod theo `type` |
 | `cms_quiz_items` | `id`, `lesson_id`, `slot` (warmup · quiz), `order`, `format`, `dok`, `data jsonb`, `misconception_id`, `p_correct` | |
 | `cms_misconceptions` | `id`, `topic_id`, `statement jsonb`, `correction jsonb`, `source` | |
@@ -298,7 +326,7 @@ Phần này là cái mà engine, test vector và pgTAP cùng dựa vào; sprint 
 | `content_publishes` (MVP; tên cũ `cms_publishes`) | `id`, `topic_id`, `version`, `schema_version`, `pack_path`, `sha256`, `size`, `git_sha`, `published_by`, `published_at`, `notes` | Bất biến; bảng duy nhất của nhóm này có ở MVP |
 | `cms_staff` | `user_id`, `role` (admin · editor · reviewer · illustrator) | RLS cho CMS dựa vào bảng này |
 
-Trạng thái nội dung: `draft → in_review → approved → published` (và `archived`). Chỉ `reviewer`/`admin` chuyển sang `approved`; chỉ `admin` publish.
+Trạng thái nội dung: `draft → in_review → approved → published` (và `archived`; *(9/11, đề xuất)* thêm `planned` đứng trước `draft` cho bài chỉ có trong danh mục). Chỉ `reviewer`/`admin` chuyển sang `approved`; chỉ `admin` publish.
 
 ### B5.3 Bảng dữ liệu app
 
@@ -344,7 +372,7 @@ View tổng hợp (security invoker): `child_stats` (tổng sao, XP, chuỗi hi�
 | `update_child_profile(p_child_id, p_patch jsonb)` | Tên, avatar, lớp, chế độ ngôn ngữ, giọng đọc, giới hạn phút |
 | `archive_child_profile(p_child_id)` | Ẩn hồ sơ (giữ dữ liệu); xoá hẳn qua `delete-account` |
 | `submit_attempts(p_attempts jsonb)` | Nhận 1..n lần làm bài từ hàng đợi offline, idempotent theo `id`. Trong một transaction: ghi attempt + answers → tính lại `lesson_progress` (sao), `activity_days`, chuỗi ngày, XP, thẻ, huy hiệu, thử thách tuần → trả về phần thưởng chốt cho từng attempt |
-| `get_home(p_child_id)` | Hành trình (chủ đề, khoá/mở theo thứ tự và quyền, `locked_reason`), bài tiếp theo, chuỗi ngày, sao, thử thách tuần, **số phút đã học hôm nay** (để máy thứ hai áp đúng giới hạn), cờ ôn nhanh |
+| `get_home(p_child_id)` | Tiến độ cho hành trình (sao từng bài, bài học gần nhất), chuỗi ngày, sao, thử thách tuần, **số phút đã học hôm nay** (để máy thứ hai áp đúng giới hạn), cờ ôn nhanh, `locked_reason` của hồ sơ. *(9/11)* Không khoá bài theo tiến độ; trước đây ghi "khoá/mở theo thứ tự và quyền". Server chưa có danh mục, nên app ghép danh mục với tiến độ để chọn bài gợi ý tiếp theo (SK-021 đã trả `last_lesson_id` và `lessons[]`, không có `next_lesson_id`). Quyền Premium chỉ dùng khi gói trả phí bật lại |
 | `get_warmup_items(p_child_id, p_lesson_id)` | Chọn 2–3 câu khởi động theo lịch giãn cách (1 ngày · 1 tuần · 1 tháng) từ các bài đã học |
 | `set_vocab_status(p_child_id, p_term_id, p_status)` | "Đã nhớ" / "Ôn lại" |
 | `get_parent_report(p_child_id, p_week_start)` | Số bài, phút theo ngày, quiz đúng, từ mới, đang học, nên ôn (từ câu sai và misconception) |
@@ -443,6 +471,7 @@ Các luật phải cho cùng kết quả trên 2 nền tảng: chấm quiz từn
 `Launch` → (chưa có hồ sơ) `Welcome → ProfileSetup` · (≥ 2 hồ sơ) `ProfilePicker` · (1 hồ sơ) `Home`.
 `Home` → `Topic` → `Lesson(warmup → learn → play → quiz → reward)`; tab `Cards`, `Badges`, `Words`; `Unlock(child → gate) → Signup(account → otp → plans → done)`; avatar → `ProfilePicker`; `ParentArea(pin → report | family)`.
 Thoát giữa bài: lưu điểm dừng theo bước để mở lại đúng chỗ.
+*(9/11)* `Home` hiện mọi chủ đề của nhóm theo danh mục và cho xem 2 nhóm còn lại; `Topic` hiện mọi bài, bài chưa soạn bấm vào thì báo nhẹ "Chưa có nội dung", không vào `Lesson`. Không có khoá theo tiến độ. Nhánh `Unlock → Signup` chỉ dùng khi gói trả phí bật lại; bản test không có.
 
 ### B7.7 Đồng bộ và offline
 
@@ -492,10 +521,10 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 
 | Lệnh | Việc làm |
 | --- | --- |
-| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng. *(1/11, Duy chốt SK-026)* Luật theo tuổi đọc `rules.<age_group>.authoring`, gồm cả format được dùng và hình bắt buộc của Explorer; mã lỗi ở SK-026. Làm ngay ở GĐ 0 cho cả 3 nhóm với 6 format v1: chạy trên JSON trước, chạy cả trong `build`, rồi dùng lại khi có parser markdown. *(2/11, Duy giao SK-027)* Parser làm ngay: `validate` nhận thẳng file và thư mục markdown, báo `<file>:<dòng> <pointer> [<mã>]`; thêm `import` (ghi JSON vào `content/.build/json/` cho `tts` và `build`) và `ids` (điền id còn trống) |
+| `validate` | Parse `content/<age_group>/<topic>/<nn>-<lesson>.md` (frontmatter + các mục theo khung của biên tập) → JSON theo `packages/content-schema`; kiểm quy tắc quiz theo nhóm tuổi (DOK, số lựa chọn, câu 1 DOK 1, 1 câu misconception), đủ `en`/`vi`, đủ `alt`; báo lỗi theo file và dòng. *(1/11, Duy chốt SK-026)* Luật theo tuổi đọc `rules.<age_group>.authoring`, gồm cả format được dùng và hình bắt buộc của Explorer; mã lỗi ở SK-026. Làm ngay ở GĐ 0 cho cả 3 nhóm với 6 format v1: chạy trên JSON trước, chạy cả trong `build`, rồi dùng lại khi có parser markdown. *(2/11, Duy giao SK-027)* Parser làm ngay: `validate` nhận thẳng file và thư mục markdown, báo `<file>:<dòng> <pointer> [<mã>]`; thêm `import` (ghi JSON vào `content/.build/json/` cho `tts` và `build`) và `ids` (điền id còn trống). *(9/11, SK-030)* Kiểm cả `content/syllabus.json`: đúng schema; `key` và `number` duy nhất, liên tiếp; mọi `topic_id`, `lesson_id` trỏ tới nội dung có thật trong `content/` và `lesson_id` thuộc đúng chủ đề |
 | `tts` | Sinh clip còn thiếu: EN bằng **Kokoro** chạy local, VI bằng nhà cung cấp chọn ở B9; đặt tên theo hash nội dung + giọng; cache trong `content/.audio/` (gitignore) |
 | `assets` | Xuất SVG từ canvas Claude Design sang WebP, tính hash |
-| `build` | Gộp thành `pack.json` + manifest cho một chủ đề, kiểm `min_app_version` |
+| `build` | Gộp thành `pack.json` + manifest cho một chủ đề, kiểm `min_app_version`. *(9/11)* Đóng danh mục syllabus vào gói hoặc manifest: làm khi có CMS, ngoài phạm vi SK-030 |
 | `publish` | Upload gói và asset lên Storage (`content-public` hoặc `content-premium`), ghi `content_publishes`, chép `content/rules.json` sang `app_config`, cập nhật manifest; có `--rollback <version>` |
 | `draft` | Tuỳ chọn: gọi Claude API tạo nháp markdown có cờ `ai_draft: true` (B8.1) |
 
@@ -510,7 +539,7 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 
 | Màn CMS | Chức năng |
 | --- | --- |
-| Syllabus | Cây nhóm tuổi → chủ đề → bài; kéo thả thứ tự; mức, mạch, rubric độ khó, tiên quyết, cờ free |
+| Syllabus | Cây nhóm tuổi → chủ đề → bài; kéo thả thứ tự; mức, mạch, rubric độ khó, tiên quyết, cờ free. *(9/11)* Nhập từ `content/syllabus.json`, gồm bài chưa soạn và mã lesson Oak; thứ tự theo danh mục đã duyệt, mức chỉ để tham khảo |
 | Soạn bài | Mục tiêu "I can…", 3 ý chính, từ vựng, misconception; trình dựng block học và mini-game theo registry; nhập từ markdown |
 | Soạn quiz | 6 câu + câu khởi động; cảnh báo khi lệch quy tắc nhóm tuổi |
 | Thư viện media | Upload hình/audio, alt song ngữ, nguồn và giấy phép, xem asset dùng ở đâu |
@@ -523,7 +552,7 @@ Chữ của giao diện (nút, Góc phụ huynh, thông báo lỗi, email OTP, s
 - MVP: lệnh `content-cli draft` chạy trên máy Duy; GĐ 2: route handler của CMS. Dùng `@anthropic-ai/sdk`; key trong biến môi trường, không bao giờ ở client.
 - Model mặc định `claude-opus-5-5` với adaptive thinking, đặt `effort` tường minh (mặc định của model là `medium`; thử `high` cho câu DOK 3 và misconception). Streaming vì đầu ra dài.
 - Đầu ra có cấu trúc: dùng structured outputs (`messages.parse()` với schema zod của bài/quiz) để nhận JSON đúng schema; `validate` chạy lần nữa trước khi lưu.
-- Prompt caching: phần ổn định đặt trước và gắn `cache_control` — hướng dẫn soạn, template bài, quy tắc nhóm tuổi, bài mẫu "Ăn uống lành mạnh — bài 1"; phần thay đổi (chủ đề, mục tiêu, ghi chú của biên tập) đặt sau. Không đưa giờ hay id thay đổi vào phần đầu.
+- Prompt caching: phần ổn định đặt trước và gắn `cache_control` — hướng dẫn soạn, template bài, quy tắc nhóm tuổi, bài mẫu "Thức ăn cho ta những gì?" (*Ăn uống lành mạnh*); phần thay đổi (chủ đề, mục tiêu, ghi chú của biên tập) đặt sau. Không đưa giờ hay id thay đổi vào phần đầu.
 - Bật server-side fallback (`fallbacks: "default"` kèm beta header `server-side-fallback-2026-07-01`) và xử lý `stop_reason: "refusal"` để biên tập viên thấy lỗi rõ ràng thay vì JSON rỗng.
 - Soạn hàng loạt cả chủ đề: dùng Message Batches (rẻ hơn 50%, không cần chờ).
 - Mọi bản nháp gắn cờ `ai_draft = true` và chỉ qua được `in_review` khi có người sửa và duyệt (PRD: không dùng thẳng output cho trẻ). Lưu prompt + phiên bản template + model vào frontmatter của file nháp (GĐ 2: `cms_reviews`) để truy vết.
@@ -582,6 +611,7 @@ sequenceDiagram
 
 ## B11. Thanh toán
 
+- **Tạm tắt (9/11, Duy):** gói trả phí vẫn có trong sản phẩm nhưng tạm tắt; bản build test mở toàn bộ, không có cổng trả phí, không nhãn Free; chủ đề miễn phí chọn sau. Việc kỹ thuật bên dưới (RevenueCat, `billing-webhook`, Storage RLS cho gói premium) vẫn trong kế hoạch GĐ 1 để bật lại được. Thời điểm bật lại chờ Duy (A8). *(đề xuất)* Trong lúc tắt, mọi gói publish vào chỗ của gói free.
 - **Đề xuất:** RevenueCat bọc StoreKit 2 và Google Play Billing. Lý do: quyền Premium dùng chung iOS/Android theo user, webhook sẵn, khôi phục giao dịch, giảm nhiều việc xác minh biên lai. App user id của RevenueCat = `user_id` phụ huynh (chỉ có sau khi đăng ký, khớp với quy tắc "đăng ký trước khi trả tiền").
 - **Phương án tự làm:** StoreKit 2 + App Store Server API / Server Notifications v2, Play Billing + Play Developer API / RTDN, xác minh trong Edge Function. Không phụ thuộc bên thứ ba nhưng tốn khoảng 2–3 tuần làm và bảo trì.
 - **Sản phẩm:** `premium_monthly`, `premium_yearly` trong một subscription group; giá chưa chốt.
@@ -640,7 +670,7 @@ View `kpi_weekly` tính các chỉ số ở A7; dashboard nội bộ ở MVP là
 | Engine (Swift, Kotlin, SQL) | Test vector chung: chấm quiz, sao, chuỗi ngày có ngày nghỉ, mâm cơm, thí nghiệm công bằng, câu khởi động |
 | Database | pgTAP cho RPC (giới hạn hồ sơ, idempotent, tính sao) và RLS (user A không đọc được dữ liệu user B, khách không gọi được tính năng Premium). Giả lập user trong test bằng `set_config('request.jwt.claims', …)` với `sub` và `is_anonymous` |
 | Nội dung | CI validate mọi gói trước publish; test render từng `type` block bằng fixtures |
-| UI | Snapshot các thành phần DesignSystem theo nhóm tuổi; UI test luồng vàng: khách → bài 1 → thưởng; mở khoá → đăng ký → mua (sandbox); thêm hồ sơ thứ 2; offline rồi đồng bộ |
+| UI | Snapshot các thành phần DesignSystem theo nhóm tuổi; UI test luồng vàng: khách → bài 1 → thưởng; mở khoá → đăng ký → mua (sandbox, khi bật gói trả phí); thêm hồ sơ thứ 2; offline rồi đồng bộ. *(9/11)* Hành trình hiện đủ chủ đề và bài theo danh mục, bài chưa soạn báo chưa có nội dung, không còn khoá hay nhãn Free (SK-030) |
 | Thiết bị | Ma trận nhỏ: iPhone SE, iPhone đời mới, iPad; Android rẻ (RAM 3–4 GB), Android tầm trung, tablet |
 | Beta | 50 gia đình; theo dõi gate ở A7; khảo sát phụ huynh |
 
@@ -650,7 +680,7 @@ Sửa 28/10 sau review: tách rõ ai làm gì, thêm buffer và Tết, không l�
 
 ### GĐ 0 · song song với soạn nội dung (T11/2026 – 16/1/2027)
 
-Soạn nội dung bắt đầu 10/11 (syllabus mục 6) trước khi CMS sẵn sàng, nên **biên tập viết bằng markdown theo khung ở `content/`** (khung = schema v1 diễn đạt bằng chữ). **CMS lùi sang GĐ 2 (28/10):** MVP dùng markdown trong repo + CLI publish, review bằng pull request trên GitHub; khi có CMS thì nhập từ markdown.
+Soạn nội dung bắt đầu 10/11 ([syllabus.md](syllabus.md) mục 10; *(9/11)* pilot là 6 chủ đề đầu Discoverer, 38 bài, mục 8) trước khi CMS sẵn sàng, nên **biên tập viết bằng markdown theo khung ở `content/`** (khung = schema v1 diễn đạt bằng chữ). **CMS lùi sang GĐ 2 (28/10):** MVP dùng markdown trong repo + CLI publish, review bằng pull request trên GitHub; khi có CMS thì nhập từ markdown.
 
 | Việc | Ai | Thời gian | Kết quả |
 | --- | --- | --- | --- |
@@ -658,10 +688,11 @@ Soạn nội dung bắt đầu 10/11 (syllabus mục 6) trước khi CMS sẵn s
 | Dựng Kokoro EN trong CLI | dev | đã dựng 28/10 (SK-014, đang review) | Giọng EN `af_heart` |
 | Listening test TTS VI: VieNeu-TTS, giọng Nam (Duy chọn 31/10). **Duy ưu tiên 31/10: làm ngay, không chờ 17/11** | dev sinh mẫu, biên tập soạn bộ câu, Duy + biên tập chấm | từ 31/10, thay lịch 17/11 – 28/11 | Chốt giọng VI (B18 #3, SK-023): **xong 1/11, Kim Thanh** |
 | Sinh audio VI bài 1 và app phát VI | dev, ios-dev | ngay sau listening test (SK-024, SK-025) | Bản thử iOS có giọng VI |
-| Luật quiz theo nhóm tuổi trong `content-cli` cho cả 3 nhóm, 6 format v1: chạy trên JSON trong `validate` và `build`, chặn format app chưa hiện được *(1/11, Duy chốt SK-026)* | dev | trước khi biên tập soạn bài 2–5 của chủ đề 1 | Bài pilot lệch quy tắc bị báo lỗi ngay |
+| Luật quiz theo nhóm tuổi trong `content-cli` cho cả 3 nhóm, 6 format v1: chạy trên JSON trong `validate` và `build`, chặn format app chưa hiện được *(1/11, Duy chốt SK-026)* | dev | trước khi biên tập soạn bài 2–5 của chủ đề 1 (*Ăn uống lành mạnh*, từ 9/11 là Discoverer #9) | Bài pilot lệch quy tắc bị báo lỗi ngay |
 | `content-cli`: parse markdown → JSON, validate schema + quy tắc quiz, báo lỗi dễ đọc *(2/11, Duy giao SK-027: kéo lên làm ngay, thay lịch 1/12 – 12/12 của Duy)* | dev | từ 2/11, xong trước 10/11 (bắt đầu soạn bài 2) | Biên tập chạy `validate` trên markdown, lỗi chỉ về file và dòng; từ bài 2 nội dung đi markdown → `import` → `tts` → `build` |
 | Migration đầu: `content_publishes`, `app_config` + RLS (bảng `cms_*` là GĐ 2) | Duy | 24/11 – 30/11 | DB staging |
-| `content-cli`: sinh TTS EN (Kokoro) + VI, build gói, upload, ghi `content_publishes`, cập nhật manifest | Duy | 15/12 – 9/1 | Gói chủ đề 1 chạy được |
+| Danh mục syllabus và bỏ khoá *(9/11, SK-030)*: schema + test cho `content/syllabus.json` (dev); app hiện đủ 45 chủ đề, 384 bài từ bundle, bỏ khoá và nhãn Free (ios-dev); tên VI cho 347 bài (content-editor) | dev, ios-dev, content-editor | từ 9/11 | Bản test trên iPhone của Duy hiện đủ danh mục, 2 bài đã soạn chơi được |
+| `content-cli`: sinh TTS EN (Kokoro) + VI, build gói, upload, ghi `content_publishes`, cập nhật manifest | Duy | 15/12 – 9/1 | Gói chủ đề pilot đầu tiên chạy được |
 | Spike iOS: liên kết user ẩn danh với Apple/Google; RevenueCat sandbox | Mobile dev iOS (nếu đã có) hoặc Duy, ≤ 3 ngày | 15/12 – 19/12 | Chốt B18 #1 và B10 |
 | Spike Android: hiệu năng giấy trên máy rẻ | Mobile dev Android, khi có | T1/2027 | Số đo trên máy thật |
 | Script soạn nháp bằng Claude (`content-cli draft`) | Duy | sau 16/1, không chặn gate | Tuỳ chọn |
@@ -682,6 +713,8 @@ Bỏ CMS khỏi GĐ 0 giảm tải việc của Duy xuống khoảng 6 tuần tr
 | S5 · 30/3 | Thưởng, Bộ thẻ, Huy hiệu, Từ vựng | Thẻ/huy hiệu/thử thách tuần trong RPC, `get_parent_report` |
 | S6 · 13/4 | Hồ sơ con, chọn hồ sơ, Góc phụ huynh, giới hạn phút | `billing-webhook`, `billing_entitlements`, Storage RLS premium |
 | S7 · 27/4 | Đăng ký phụ huynh, mở khoá, RevenueCat, xoá tài khoản, i18n giao diện | `merge-guest`, `delete-account`, chính sách quyền riêng tư |
+
+*(9/11)* Phần trả phí ở S6–S7 giữ trong kế hoạch vì gói trả phí vẫn có trong sản phẩm, chỉ tạm tắt; beta có bật hay không chờ Duy (A8).
 | S8 · 11/5 | Trợ năng, iPad Split View, sửa lỗi, nộp TestFlight | Store listing, App Privacy |
 | Buffer · 25/5 – 29/5 | Sửa lỗi review nội bộ | — |
 
@@ -727,7 +760,7 @@ Explorer và Scientist (GĐ 2) chủ yếu là block/mini-game mới (`hotspot_i
 | 11 | Tiến độ chế độ khách: chỉ trên máy (PRD) hay cả server dưới user ẩn danh (plan)? | Server, vì nâng cấp không mất dữ liệu và hai máy; đổi lại phải rà pháp lý |
 | 12 | Góc phụ huynh web có trong MVP không? | Không; trong app đủ cho beta |
 | 13 | Phạm vi gamification MVP: có XP, thẻ sưu tầm, thử thách tuần như canvas không? | Có thẻ sưu tầm (động lực chính của pilot); XP và thử thách tuần có thể lùi GĐ 2 nếu thiếu thời gian |
-| 14 | Onboarding cho chọn Lớp 1–5 nhưng MVP chỉ có Year 3 | Cho chọn đủ lớp; nhóm chưa có nội dung hiện "sắp ra mắt" và cho học thử Discoverer |
+| 14 | Onboarding cho chọn Lớp 1–5 nhưng MVP chỉ có nội dung pilot Discoverer | Cho chọn đủ lớp. *(9/11)* App hiện đủ danh mục của cả 3 nhóm, xem được nhóm khác; bài chưa soạn hiện tên và "Chưa có nội dung" (SK-030). Thay đề xuất cũ "nhóm chưa có nội dung hiện sắp ra mắt" |
 | 15 | Roadmap PRD (gate GĐ 1 T4/2027) không khớp B16 (cuối T6/2027) | Sửa PRD theo B16 sau khi có mobile dev |
 
 ## B19. Chi phí vận hành ước tính (chưa gồm người)

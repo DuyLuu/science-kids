@@ -1,6 +1,8 @@
 # Syllabus theo độ khó tăng dần
 
-> **Trạng thái:** thứ tự chủ đề, cột Free, Mức và Mạch **đã áp dụng** vào [syllabus.md](syllabus.md) (26/10/2026). Các đề xuất còn lại (ngưỡng 5/6, từ vựng theo nhóm, PRD, schema) vẫn chờ duyệt — xem mục 12. Sửa 1/11/2026: mục 7 thêm cách hiện quiz theo nhóm tuổi (Duy chốt SK-026).
+> **Trạng thái:** thứ tự chủ đề, cột Free, Mức và Mạch **đã áp dụng** vào [syllabus.md](syllabus.md) (26/10/2026). Các đề xuất còn lại (ngưỡng 5/6, từ vựng theo nhóm, PRD, schema) vẫn chờ duyệt — xem mục 12. Sửa 1/11/2026: mục 7 thêm cách hiện quiz theo nhóm tuổi (Duy chốt SK-026). Sửa 8/11/2026: thêm mục 13, đối chiếu lại với trang Oak; ví dụ ở mục 6 thêm ý lực tiếp xúc và lực từ tác dụng từ xa. Sửa 9/11/2026: Duy chốt giữ *Giữ gìn sức khoẻ* ở #3 Scientist (13.3 mục 3).
+>
+> **9/11/2026, sau đó: Duy đổi thứ tự.** Chủ đề mới đứng đầu mỗi nhóm, rồi các unit Oak đúng thứ tự Oak; 1 bài = 1 lesson Oak (gộp thí nghiệm plan/do/review); thêm 8 chủ đề cơ bản hợp Việt Nam; không khoá bài. Xem [syllabus.md](syllabus.md) và [syllabus-lessons.md](syllabus-lessons.md). Thứ tự theo độ khó ở mục 5 và quyết định ở 13.3 mục 3 hết hiệu lực (theo Oak, *Giữ gìn sức khoẻ* đứng sau *Hệ tuần hoàn*). Rubric độ khó (mục 3), tiến trình trong bài (mục 6–10) và bản địa hoá (mục 11) vẫn dùng.
 > Liên quan: [prd.md](prd.md) · [syllabus.md](syllabus.md) · Nguồn research ở [cuối file](#nguồn-tham-khảo)
 > Cập nhật: 22/10/2026
 
@@ -204,10 +206,10 @@ Thay đổi so với bản cũ:
 Số bài theo nhóm: Explorer 4–5 (gộp các bài giữa), Discoverer 5–6, Scientist 6–8.
 
 **Ví dụ minh hoạ — Lực và nam châm (Discoverer, 6 bài):**
-1. Đẩy và kéo quanh em. Câu "Em nghĩ sao?": *Cái bàn đứng yên thì có lực tác dụng không?*
+1. Đẩy và kéo quanh em: lực đẩy, kéo phải chạm vào vật. Câu "Em nghĩ sao?": *Cái bàn đứng yên thì có lực tác dụng không?*
 2. Bề mặt nào làm xe chạy xa hơn? Ma sát qua so sánh.
 3. Thí nghiệm công bằng: đo quãng đường xe chạy, chọn điều phải giữ nguyên.
-4. Nam châm hút những gì? Misconception: *mọi kim loại đều bị hút*.
+4. Nam châm hút từ xa, không cần chạm. Nam châm hút những gì? Misconception: *mọi kim loại đều bị hút*.
 5. Hai cực: hút và đẩy.
 6. Tổng kết, kèm misconception: *nam châm to hơn luôn mạnh hơn?*
 
@@ -391,6 +393,81 @@ Phụ huynh luôn đổi được. GĐ 2 có thể thêm bài kiểm tra xếp l
 - [ ] Huy hiệu theo 6 mạch thay cho 15 Big Questions?
 - [ ] Gộp 2 chủ đề mùa của Explorer thành 1 chủ đề "Mùa và thời tiết" bản địa hoá VN?
 
+## 13. Đối chiếu với trang Oak (8/11/2026)
+
+Nguồn: trang [unit sequence](https://www.thenational.academy/teachers/programmes/science-primary/units) và trang của từng unit (phần "Why this, why now", "Prior knowledge requirements", danh sách lesson), đọc ngày 8/11/2026. "Bắt buộc" ở đây là lesson Oak không gắn nhãn non-statutory.
+
+### 13.1 Cấp chủ đề: khớp
+
+- 38/38 unit có trong [syllabus.md](syllabus.md), đúng tên EN, năm học và số lesson. Không thiếu, không thừa; Oak chưa đổi danh sách so với lần khảo sát 22/10.
+- Thứ tự khác Oak là cố ý (mục 1). Chính trang Oak mô tả chương trình là "sequenced, flexible, adaptable".
+- syllabus.md nay ghi thêm số lesson bắt buộc trong cột "Bài app", dạng `5 (12/5)` = 5 bài app, Oak 12 lesson, 5 bắt buộc.
+
+### 13.2 Thứ tự: không vi phạm kiến thức nền của Oak
+
+Đã kiểm cả 38 unit: unit nào Oak ghi là nền ("builds on…", "prior knowledge") đều đứng trước trong app, ở cùng nhóm hoặc nhóm trước. Những chỗ app đổi thứ tự nhiều nhất:
+
+| Chỗ đổi trong app | Oak ghi unit đó cần | Kết luận |
+| --- | --- | --- |
+| *Em khoẻ mạnh* lên #3 Explorer | Human body parts | Đúng, đứng ngay sau #2 |
+| *Sinh sản ở động vật* (#1) trước *thực vật* (#2), Scientist | Động vật cần New life; thực vật cần What plants do | Hai unit không phụ thuộc nhau |
+| *Âm thanh* (#7) trước *Các thể của vật chất* (#11) | Chỉ trải nghiệm âm thanh đời sống | Đúng |
+| *Hệ tiêu hoá* cuối Discoverer | Bộ xương và cơ, ăn uống, động vật ăn thịt/cỏ/tạp | Đúng, cả ba đã học trước |
+| *Tính chất và biến đổi vật liệu* (#11) | Đá, nam châm, các thể, vật dẫn điện | Đúng. Vật dẫn điện đã có từ *Mạch điện đơn giản* (Discoverer #10), nên lý do "đặt sau Mạch điện nâng cao" ở mục 5.3 không cần; thứ tự vẫn ổn |
+| *Biến đổi khí hậu* cuối Scientist | Hoá thạch, sinh vật đổi theo thời gian, đốt cháy là biến đổi không thuận nghịch, mạch điện | Đúng như mục 5.3 |
+| *Giữ gìn sức khoẻ* (#3) trước *Hệ tuần hoàn* (#9) | Healthy me, Healthy eating | Đúng theo dữ liệu Oak; Duy chốt giữ ở #3 (13.3 mục 3) |
+
+### 13.3 Chỗ lệch ở cấp bài
+
+**1. Ăn uống lành mạnh (đang soạn) thiếu một lesson bắt buộc — đã sửa kế hoạch 8/11.** Oak có 12 lesson, 5 bắt buộc. Kế hoạch cũ (1 Thức ăn cho ta những gì? · 2 Mâm cơm cân bằng · 3 Đồ ngọt, đồ béo: ăn bao nhiêu? · 4 Nước và chất xơ · 5 Động vật ăn gì?) không có lesson "Different diets for different people": mỗi người ăn một kiểu (ăn chay, dị ứng, kiêng theo niềm tin hay nếp nhà) và hỏi han tôn trọng.
+
+Duy chốt 8/11: gộp bài 4 cũ "Nước và chất xơ" vào bài 3, dành bài 4 cho lesson còn thiếu. Bài 1, 2 đã soạn nên giữ nguyên. Kế hoạch mới, tên bài 3–5 là nháp AI của content-editor:
+
+| Bài app | Lesson Oak | Bắt buộc |
+| --- | --- | --- |
+| 1 Thức ăn cho ta những gì? | Types of food · Nutrition from food | ✓ ✓ |
+| 2 Mâm cơm cân bằng | Amounts of food · Nutrient-rich meal (2 lesson) | ✓ — |
+| 3 Ăn uống bao nhiêu là vừa? (gộp "Nước và chất xơ") | Amounts of food · Nutrition from food (chất xơ, nước) · Fats in food (2 lesson) | ✓ ✓ — |
+| 4 Mỗi người ăn một kiểu (mới) | Different diets for different people | ✓ |
+| 5 Động vật ăn gì? (kiêm tổng kết) | Making or finding food | ✓ |
+| chưa có bài | Sustainable sources of food · Local food · Food miles | — |
+
+- Phủ đủ 5/5 lesson bắt buộc. Bảng map đầy đủ (mục tiêu "I can…", `stage`) và lưu ý khi soạn bài 3–5 (an toàn khi nói về dị ứng, tôn giáo nói trung tính, không nói chuyện ăn kiêng giảm cân) nằm ở [`_topic.md`](content/discoverer/an-uong-lanh-manh/_topic.md), mục Ghi chú.
+- Thêm misconception `meal_needs_meat` ("bữa ăn phải có thịt hoặc cá mới cân bằng") cho bài 4, còn dòng `[CẦN KIỂM]` chờ chuyên gia dinh dưỡng.
+- Oak mở unit bằng "động vật không tự làm ra thức ăn"; app để ở bài 5. Vẫn phủ đủ, chỉ khác thứ tự.
+- "Ăn đồ địa phương" (không bắt buộc) hợp VN; có thể thành một câu trong bài 5 thay vì cả bài.
+
+**2. Lực và nam châm: ví dụ ở mục 6 thiếu ý bắt buộc** "có lực cần chạm, lực từ tác dụng từ xa" (Oak: Contact forces, Magnetic force at a distance). Đã thêm vào bài 1 và bài 4 của ví dụ. Câu misconception "nam châm to hơn luôn mạnh hơn" thuộc lesson không bắt buộc (Strongest magnet), giữ được vì là misconception hay gặp. Khi soạn thật, kiểm thêm lesson "Blocking magnetic force".
+
+**3. Giữ gìn sức khoẻ đứng trước Hệ tuần hoàn — Duy chốt 9/11: giữ ở #3.** Oak không ghi hệ tuần hoàn là kiến thức nền, nhưng 3 lesson bắt buộc giữa unit xoay quanh nhịp tim (Healthy heart rate, Heart recovery time after exercise, Healthy hearts), và Oak dạy *Hệ tuần hoàn* ngay trước unit này ở Year 6. Đã cân hai cách:
+- (a) **Chọn.** Giữ ở #3; phần nhịp tim chỉ dùng ý "tim bơm máu đi khắp cơ thể", trẻ VN đã học ở lớp 3 (mục 11).
+- (b) Dời *Giữ gìn sức khoẻ* xuống ngay sau *Hệ tuần hoàn* (#9). Bỏ vì chủ đề 11 điểm đứng sau chủ đề 14 điểm, trái quy tắc 2 ở mục 3.
+
+Khi soạn *Giữ gìn sức khoẻ*: ba bài về nhịp tim chỉ dựa vào ý "tim bơm máu đi khắp cơ thể", không dùng thuật ngữ của *Hệ tuần hoàn* (động mạch, tĩnh mạch, mao mạch, oxy trong máu). *Hệ tuần hoàn* (#9) nhắc lại phần nhịp tim như kiến thức đã có.
+
+**4. Các chủ đề nén mạnh.** Số lesson bắt buộc gần gấp đôi số bài app trở lên:
+
+| Chủ đề | Nhóm, # | Bài app | Lesson bắt buộc |
+| --- | --- | --- | --- |
+| Cây làm gì và cần gì | Discoverer #5 (pilot) | 6 | 14 |
+| Các thể của vật chất | Discoverer #11 | 6 | 14 |
+| Sinh vật và môi trường | Discoverer #8 | 6 | 13 |
+| Lực và máy đơn giản | Scientist #5 | 6 | 13 |
+| Ánh sáng và bóng tối | Discoverer #3 (pilot) | 6 | 11 |
+| Âm thanh | Discoverer #7 | 6 | 11 |
+| Tiến hoá và di truyền | Scientist #13 | 6 | 11 |
+| Sự phát triển của con người | Scientist #4 | 5 | 9 |
+
+Phần lớn chênh lệch là do Oak tách một thí nghiệm thành 2–4 lesson (plan, do, review); app gộp thành một bài thí nghiệm ảo nên vẫn phủ được ý. Ví dụ *Cây làm gì và cần gì* có 4 lesson cho cùng một thí nghiệm "What plants need". Dù vậy, khi soạn các chủ đề này cần bảng map bài app → lesson Oak để không rơi ý bắt buộc.
+
+**5. Lesson bền vững nằm rải trong nhiều unit.** Oak gắn nhãn "Climate Change & Sustainability" cho lesson trong nhiều unit (Ăn uống, Ánh sáng, Đá và đất, Tính chất vật liệu…). Phần lớn không bắt buộc, trừ *Sinh vật và môi trường*: 7 lesson loại này là bắt buộc (môi trường thay đổi có thể gây nguy hiểm cho sinh vật, câu bắt buộc Year 4). App gom bền vững vào chủ đề cuối Scientist, nên khi soạn *Sinh vật và môi trường* (Discoverer #8) phải giữ phần này.
+
+### 13.4 Việc kéo theo
+
+- [x] Duy chọn (8/11): thêm bài "Mỗi người ăn một kiểu" vào *Ăn uống lành mạnh*, gộp bài 4 cũ "Nước và chất xơ" vào bài 3. Đã sửa `_topic.md` và tên hai thẻ bài trên canvas Discoverer-Topic.
+- [x] Duy chọn (9/11): *Giữ gìn sức khoẻ* giữ ở #3 (cách a). Thứ tự chủ đề ở mục 5.3 và syllabus.md không đổi.
+- [ ] content-editor: mỗi `_topic.md` có bảng map bài app → lesson Oak (bắt buộc hay không); `oak_unit_ref` ghi slug của Oak. *Ăn uống lành mạnh* đã làm (8/11, `oak_unit_ref: healthy-eating`); còn thêm hai mục này vào `content/TEMPLATE.md`.
+
 ---
 
 ## Nguồn tham khảo
@@ -398,7 +475,7 @@ Phụ huynh luôn đổi được. GĐ 2 có thể thêm bài kiểm tra xếp l
 Khảo sát ngày 22/10/2026. Nội dung đều diễn giải lại, không trích nguyên văn.
 
 **Oak và chương trình Anh**
-- Oak — danh sách unit, thread (BQ01–BQ15), thứ tự và kiến thức nền của từng unit: https://www.thenational.academy/teachers/curriculum/science-primary/units
+- Oak — danh sách unit, thread (BQ01–BQ15), thứ tự và kiến thức nền của từng unit: https://www.thenational.academy/teachers/programmes/science-primary/units (link cũ `/teachers/curriculum/science-primary/units` nay chuyển hướng về đây). Trang từng unit có "Why this, why now", "Prior knowledge requirements" và danh sách lesson, ví dụ https://www.thenational.academy/teachers/programmes/science-primary-ks2/units/healthy-eating/lessons
 - Oak — nguyên tắc thiết kế chương trình: https://www.thenational.academy/teachers/curriculum/science-primary/overview
 - National Curriculum in England, science programmes of study (working scientifically; được linh hoạt thứ tự trong cấp học): https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study/national-curriculum-in-england-science-programmes-of-study
 - EEF, *Improving Primary Science* (2023): https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/primary-science-ks1-ks2 (trang gốc chặn truy cập; đã đọc bản PDF: https://www.sciencecentres.org.uk/documents/744/improving-primary-science-guidance-report-ks1-ks2.pdf)

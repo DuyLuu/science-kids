@@ -10,21 +10,24 @@ import { validateDocuments } from "@science-kids/content-schema/validate";
 import { loadRules } from "../src/build/rules.ts";
 import { DEFAULT_RULES_FILE } from "../src/paths.ts";
 import { checkAgeRules, countWords, formatIssue, ISSUE_LEVELS, sentencesOf, type AgeDoc, type Issue } from "../src/validate/age-rules.ts";
-import { FORMAT_FIRST_APP_VERSION, QUIZ_FORMATS } from "../src/validate/format-renderers.ts";
-import { CLI_ROOT, LESSON_FILE, TOPIC_FILE, withOrderSequence } from "./helpers.ts";
+import { firstAppVersion, FORMAT_FIRST_APP_VERSION, FORMAT_FIRST_APP_VERSION_BY_GROUP, QUIZ_FORMATS } from "../src/validate/format-renderers.ts";
+import { CLI_ROOT, LESSON_FILE, rulesFileWithoutImageChecks, TOPIC_FILE, withOrderSequence, withoutImageChecks } from "./helpers.ts";
 
 const cli = path.join(CLI_ROOT, "src", "cli.ts");
 const FIXTURES = path.join(CLI_ROOT, "test", "fixtures", "age-rules");
 type Row = { file: string; description: string; group: string; context: string[]; errors: { pointer: string; code: string }[] };
 const EXPECTED: { valid: { group: string; files: string[] }[]; invalid: Row[] } = JSON.parse(readFileSync(path.join(FIXTURES, "expected.json"), "utf8"));
 const { rules } = loadRules(DEFAULT_RULES_FILE);
+/** SK-026 tests count every warning: rules without the SK-033 image warnings (those are tested in images.test.ts). */
+const RULES_026 = withoutImageChecks(rules!);
+const NO_IMAGE_RULES = ["--rules", rulesFileWithoutImageChecks()];
 
 const doc = (file: string): AgeDoc & { text: string } => {
   const text = readFileSync(path.resolve(CLI_ROOT, file), "utf8");
   return { display: file, text, data: JSON.parse(text) };
 };
-const check = (files: string[], mode: "build" | "validate" = "validate", minAppVersion = "0.1.0") =>
-  checkAgeRules(files.map(doc), rules!, { minAppVersion, mode, rulesDisplay: "content/rules.json" });
+const check = (files: string[], mode: "build" | "validate" = "validate", minAppVersion = "0.1.0", withRules = RULES_026) =>
+  checkAgeRules(files.map(doc), withRules, { minAppVersion, mode, rulesDisplay: "content/rules.json" });
 const only = (issues: Issue[], severity: Issue["severity"]) => issues.filter((issue) => issue.severity === severity).map(({ pointer, code }) => ({ pointer, code }));
 /** Runs the CLI from tools/content-cli (paths in output are relative to it). */
 const run = (...args: string[]) => {
@@ -34,7 +37,7 @@ const run = (...args: string[]) => {
 const LESSON1 = [path.relative(CLI_ROOT, TOPIC_FILE), path.relative(CLI_ROOT, LESSON_FILE)];
 
 describe("bảng mã và bảng format → bản app", () => {
-  test("11 mã của SK-026, đúng mức", () => {
+  test("11 mã của SK-026 và 2 mã cảnh báo hình của SK-033, đúng mức", () => {
     assert.deepEqual(ISSUE_LEVELS, {
       age_rules_missing: "error",
       age_format_not_allowed: "error",
@@ -47,6 +50,8 @@ describe("bảng mã và bảng format → bản app", () => {
       age_dok_order: "warning",
       age_words_en: "warning",
       format_not_rendered: "build: error, validate: warning",
+      image_missing: "warning",
+      image_brief_keywords: "warning",
     });
   });
 
@@ -58,6 +63,21 @@ describe("bảng mã và bảng format → bản app", () => {
     );
     assert.equal(FORMAT_FIRST_APP_VERSION.order_sequence, null);
     assert.equal(FORMAT_FIRST_APP_VERSION.picture_bar_chart, null);
+  });
+
+  test("cột Explorer (SK-040): đủ mọi format; 0.1.0 hiện đúng 3 format như hasRenderer(for: .explorer); Scientist dùng cột Discoverer", () => {
+    assert.deepEqual(Object.keys(FORMAT_FIRST_APP_VERSION_BY_GROUP), ["explorer"]);
+    const explorer = FORMAT_FIRST_APP_VERSION_BY_GROUP.explorer!;
+    assert.deepEqual(Object.keys(explorer).sort(), [...QUIZ_FORMATS].sort());
+    assert.deepEqual(
+      Object.entries(explorer).filter(([, version]) => version === "0.1.0").map(([format]) => format).sort(),
+      ["order_sequence", "single_choice", "true_false"],
+    );
+    assert.equal(firstAppVersion("order_sequence", "explorer"), "0.1.0");
+    assert.equal(firstAppVersion("multi_choice", "explorer"), null);
+    assert.equal(firstAppVersion("order_sequence", "discoverer"), null);
+    assert.equal(firstAppVersion("order_sequence", "scientist"), null);
+    assert.equal(firstAppVersion("multi_choice", "scientist"), "0.1.0");
   });
 });
 
@@ -79,9 +99,10 @@ describe("fixture hợp lệ", () => {
     });
   }
 
-  test("cảnh báo: Explorer chỉ có format_not_rendered (order_sequence ở q4); bài 1 Discoverer và Scientist không có", () => {
+  test("cảnh báo: không nhóm nào có (Explorer order_sequence ở q4 hiện được từ 0.1.0, SK-040)", () => {
     const warnings = (group: string) => only(check(EXPECTED.valid.find((row) => row.group === group)!.files), "warning");
-    assert.deepEqual(warnings("explorer"), [{ pointer: "/quiz/3/format", code: "format_not_rendered" }]);
+    assert.deepEqual(warnings("explorer"), []);
+    assert.deepEqual(only(check(EXPECTED.valid.find((row) => row.group === "explorer")!.files, "build"), "error"), []);
     assert.deepEqual(warnings("discoverer"), []);
     assert.deepEqual(warnings("scientist"), []);
   });
@@ -142,7 +163,7 @@ describe("content-cli validate", () => {
   };
 
   test("bài 1: exit 0, không lỗi, không cảnh báo", () => {
-    const result = run("validate", ...LESSON1);
+    const result = run("validate", ...LESSON1, ...NO_IMAGE_RULES);
     assert.equal(result.status, 0, result.out);
     assert.match(result.out, /nhóm discoverer · 0 lỗi · 0 cảnh báo/);
     assert.equal(result.lines.filter((line) => line.includes("[")).length, 0, result.out);
@@ -150,7 +171,7 @@ describe("content-cli validate", () => {
 
   test("bài 1 đổi sang Explorer: exit 1, có đủ các dòng của tiêu chí", () => {
     const files = lesson1Copy("explorer", { topic: (t) => (t.age_group = "explorer") });
-    const result = run("validate", ...files);
+    const result = run("validate", ...files, ...NO_IMAGE_RULES);
     assert.equal(result.status, 1, result.out);
     // Files outside the cwd print with their absolute path (same rule as content-schema validate.mjs).
     const lesson = files[1]!;
@@ -188,7 +209,7 @@ describe("content-cli validate", () => {
 
   test("q2 thành order_sequence: validate chỉ cảnh báo format_not_rendered, exit 0", () => {
     const files = lesson1Copy("sequence", { lesson: withOrderSequence });
-    const result = run("validate", ...files, "--min-app-version", "0.1.0");
+    const result = run("validate", ...files, "--min-app-version", "0.1.0", ...NO_IMAGE_RULES);
     assert.equal(result.status, 0, result.out);
     const lines = result.lines.filter((line) => line.includes(" ["));
     assert.equal(lines.length, 1, result.out);
@@ -199,7 +220,7 @@ describe("content-cli validate", () => {
     const files = lesson1Copy("sequence-build", { lesson: withOrderSequence });
     const docs = files.map((file) => ({ display: file, data: JSON.parse(readFileSync(file, "utf8")) }));
     for (const minAppVersion of ["0.1.0", "9.9.9"]) {
-      const issues = checkAgeRules(docs, rules!, { minAppVersion, mode: "build", rulesDisplay: "rules" });
+      const issues = checkAgeRules(docs, RULES_026, { minAppVersion, mode: "build", rulesDisplay: "rules" });
       assert.deepEqual(only(issues, "error"), [{ pointer: "/quiz/1/format", code: "format_not_rendered" }], minAppVersion);
     }
     // 4 formats of lesson 1 render from 0.1.0: nothing at 0.1.0.

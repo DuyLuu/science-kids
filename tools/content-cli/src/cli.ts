@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // content-cli: Science Kids content pipeline (MVP). Commands: validate, import, ids (markdown),
-// tts, build, fetch-model. Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
+// tts, build, images (search, fetch: SK-033), fetch-model. Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
 // validate, import and ids never load a module of src/tts (no model, no Python, no network).
 
 // .ts runs through Node's type stripping (no build step): needs ^22.18 or >= 23.6.
@@ -34,12 +34,41 @@ const MD_USAGE = `Cách dùng (markdown, SK-027):
 
 validate: đọc bài markdown (thư mục: mọi thư mục chủ đề có _topic.md bên trong; bài lẻ: tự lấy _topic.md cùng thư mục),
      kiểm cú pháp, content-schema rồi luật theo nhóm tuổi. Mỗi dòng: <file .md>:<dòng> <JSON pointer> [<mã>] <thông báo>.
+     Thư mục có syllabus.json ngay bên trong (content/) thì kiểm luôn danh mục đó (SK-030), id đối chiếu với
+     markdown trong thư mục ấy; dòng: <syllabus.json> <JSON pointer> [<mã>] <thông báo>.
      Không ghi gì. Không trộn .md với .json trong một lần gọi (exit 2); file .json thì kiểm như cũ.
 import: như validate; không có lỗi thì ghi JSON schema v1 vào --out (mặc định content/.build/json),
      <age_group>/<topic_slug>/topic.json và <nn>-<slug>.json; thư mục của mỗi chủ đề bị thay cả. Có lỗi thì không ghi gì.
 ids: điền UUID vào các dòng "id:" còn trống (frontmatter và ngay dưới ###); không đụng id đã có.
   --content-root <dir>  gốc nội dung để kiểm id trùng và tìm prerequisites, recall_from.lesson; mặc định content/
                         (bản chép ngoài content/: thư mục trên <age_group>/ của chủ đề)`;
+
+const IMAGES_USAGE = `Cách dùng (ảnh, SK-033):
+  node src/cli.ts images search <file bài .md hoặc thư mục chủ đề>... [--key <khoá hình>]... [--per-image <n>] [--refresh]
+                                [--sources commons,openverse] [--out <thư mục>] [--images <thư mục>] [--content-root <thư mục>]
+  node src/cli.ts images fetch <file chọn ảnh .json hoặc thư mục>... [--force] [--cache <thư mục>]
+  Từ gốc repo: npm --prefix tools/content-cli run images -- search content/discoverer/be-mat-trai-dat/01-dat-va-nuoc-tren-trai-dat.md
+
+search: với mỗi Image của bài, tìm ảnh trên Wikimedia Commons và Openverse theo "Từ khoá tìm ảnh (EN): …" trong brief
+     (thiếu thì theo alt.en); chỉ giữ CC0, public domain, PDM, CC BY. Ghi <out>/<topic_slug>/<lesson_slug>/candidates.json
+     + candidates.html (mặc định out = content/.build/images). Không tải file ảnh. Kết quả tìm được cache trong <out>/.cache/.
+     Brief ghép ([sơ đồ ghép ảnh]): tìm riêng từng ảnh cần tìm, liệt kê hình dùng lại, trang ra mục "composed".
+     Brief hình tự vẽ ([hình vẽ]): không tìm, trang đề xuất mục "own" (file content/images/own/<chủ đề>/…jpg).
+  --key <khoá>         chỉ tìm hình này (lặp lại cờ cho nhiều hình), vd q3.q3_river
+  --per-image <n>      số ứng viên mỗi hình, mặc định 6 (1–12)
+  --refresh            hỏi lại nguồn, bỏ qua cache tìm kiếm
+  --cache-only         chỉ dùng kết quả đã có trong cache, không gọi mạng (dựng lại trang ứng viên)
+  --sources <danh sách> commons, openverse hoặc cả hai (mặc định)
+  --images <thư mục>   gốc các file chọn ảnh, mặc định content/images (để trang ứng viên hiện lựa chọn cũ)
+fetch: tải mọi ảnh trong file chọn ảnh (content/images/<age_group>/<topic_slug>/<lesson_slug>.json), kiểm lại giấy phép
+     ở nguồn (lệch hoặc không hợp quy tắc thì lỗi, không dùng), xoay theo EXIF, cắt, thu về cạnh dài ≤ 1024 px, sRGB,
+     JPEG q82, bỏ metadata; ghi content/.images/<sha256>.jpg + index.json. Exit 1 nếu có ảnh lỗi.
+     Hình ghép ("composed"): kiểm và tải từng ảnh thành phần trước; chưa có file ghép thì in "chờ ghép" và đường dẫn
+     các ảnh thành phần để designer ghép (không lỗi); có file thì xử lý như ảnh tải về, credit ghi từng phần.
+     Hình tự vẽ ("own", content/images/own/…): không gọi mạng; file phải có (thiếu là lỗi), xử lý như ảnh tải về,
+     credit "Science Kids".
+  --force              tải và kiểm lại cả ảnh đã có trong cache
+  --cache <thư mục>    cache ảnh, mặc định content/.images`;
 
 function usage(defaults: { DEFAULT_DTYPE: string; DEFAULT_VOICE: string; DEFAULT_VI_VOICE: string }) {
   const { DEFAULT_DTYPE, DEFAULT_VOICE, DEFAULT_VI_VOICE } = defaults;
@@ -50,9 +79,12 @@ function usage(defaults: { DEFAULT_DTYPE: string; DEFAULT_VOICE: string; DEFAULT
   node src/cli.ts tts <file.json>... --out <thư mục> [tuỳ chọn]
   node src/cli.ts build <topic.json> <lesson.json>... [--out <thư mục>] [tuỳ chọn]
   node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] [--min-app-version <x.y.z>]
+  node src/cli.ts images search|fetch …                             (ảnh, xem dưới)
   node src/cli.ts fetch-model [--dtype fp32|fp16|q8]
 
 ${MD_USAGE}
+
+${IMAGES_USAGE}
 
 tts: sinh clip cho mọi chuỗi Spoken (en hoặc vi) của các file topic/lesson, ghi bản sao có
      audio.<lang> (sha256 của file m4a) vào --out. Bài lẻ thì đưa kèm topic.json của chủ đề.
@@ -74,8 +106,8 @@ tts: sinh clip cho mọi chuỗi Spoken (en hoặc vi) của các file topic/les
   --pin-variant <chữ=n[:lý do]>  vi: chọn tay biến thể seed n cho chuỗi này (sau khi nghe), ghi vào variants.json
   --check-all          vi: tự kiểm mọi clip của lần chạy, kể cả clip đã có trong cache (kết quả lưu vào index.json)
 
-build: gói topic + bài (JSON đầu ra của tts, có audio.en, audio.vi) + clip trong cache thành thư mục
-     catalog/v1/manifest.json, topics/<topic_id>/<version>/pack.json, assets/<sha256>.m4a.
+build: gói topic + bài (JSON đầu ra của tts, có audio.en, audio.vi) + clip trong cache + ảnh đã fetch thành thư mục
+     catalog/v1/manifest.json, topics/<topic_id>/<version>/pack.json, assets/<sha256>.m4a, assets/<sha256>.jpg.
      Thay toàn bộ --out (chỉ khi --out trống hoặc là gói build trước đó).
   --out <thư mục>      nơi ghi gói, mặc định content/.build/pack
   --cache <thư mục>    cache clip, mặc định content/.audio (chỉ đọc)
@@ -83,6 +115,9 @@ build: gói topic + bài (JSON đầu ra của tts, có audio.en, audio.vi) + cl
   --min-app-version <x.y.z>  bản app thấp nhất cho mọi chủ đề, mặc định ${DEFAULT_MIN_APP_VERSION}
   --require-lang <en,vi>     thứ tiếng mọi chuỗi Spoken bắt buộc có clip, mặc định en
                              (audio.vi có mặt thì luôn được kiểm và chép vào gói)
+  --images <thư mục>   file chọn ảnh, mặc định content/images (SK-033)
+  --image-cache <dir>  ảnh đã fetch, mặc định content/.images (chỉ đọc)
+  --require-assets     mọi Image bắt buộc có ảnh (thiếu thì lỗi)
      build cũng chạy luật soạn theo nhóm tuổi như validate; có lỗi thì exit 1, không ghi gói.
 
 validate: kiểm file topic/lesson JSON bằng content-schema, rồi luật soạn theo nhóm tuổi
@@ -215,6 +250,9 @@ async function main(): Promise<number> {
           rules: { type: "string" },
           "min-app-version": { type: "string", default: DEFAULT_MIN_APP_VERSION },
           "require-lang": { type: "string", default: "en" },
+          images: { type: "string" },
+          "image-cache": { type: "string" },
+          "require-assets": { type: "boolean", default: false },
           help: { type: "boolean", short: "h", default: false },
         },
       });
@@ -248,6 +286,109 @@ async function main(): Promise<number> {
       cacheDir: values.cache ? fromUser(values.cache) : DEFAULT_AUDIO_DIR,
       rulesFile: values.rules ? fromUser(values.rules) : DEFAULT_RULES_FILE,
       minAppVersion: values["min-app-version"],
+      selectionDir: values.images ? fromUser(values.images) : undefined,
+      imageCacheDir: values["image-cache"] ? fromUser(values["image-cache"]) : undefined,
+      requireAssets: values["require-assets"],
+      display: shown,
+    });
+  }
+  if (command === "images") {
+    const [sub, ...args] = rest;
+    if (!sub || sub === "-h" || sub === "--help" || sub === "help") {
+      console.log(IMAGES_USAGE);
+      return sub ? 0 : 2;
+    }
+    if (sub !== "search" && sub !== "fetch") {
+      console.error(`images ${sub}: lệnh lạ (search hoặc fetch).\n\n${IMAGES_USAGE}`);
+      return 2;
+    }
+    let parsed;
+    try {
+      parsed = parseArgs({
+        args,
+        allowPositionals: true,
+        options:
+          sub === "search"
+            ? {
+                key: { type: "string", multiple: true, default: [] },
+                "per-image": { type: "string", default: "6" },
+                refresh: { type: "boolean", default: false },
+                "cache-only": { type: "boolean", default: false },
+                sources: { type: "string", default: "commons,openverse" },
+                out: { type: "string" },
+                images: { type: "string" },
+                "content-root": { type: "string" },
+                rules: { type: "string" },
+                help: { type: "boolean", short: "h", default: false },
+              }
+            : {
+                force: { type: "boolean", default: false },
+                cache: { type: "string" },
+                help: { type: "boolean", short: "h", default: false },
+              },
+      });
+    } catch (error) {
+      console.error(`${(error as Error).message}\n\n${IMAGES_USAGE}`);
+      return 2;
+    }
+    const { values, positionals } = parsed as { values: Record<string, string | string[] | boolean | undefined>; positionals: string[] };
+    if (values.help) {
+      console.log(IMAGES_USAGE);
+      return 0;
+    }
+    if (positionals.length === 0) {
+      console.error(`Thiếu ${sub === "search" ? "file bài .md hoặc thư mục chủ đề" : "file chọn ảnh .json hoặc thư mục"}.\n\n${IMAGES_USAGE}`);
+      return 2;
+    }
+    const { nodeHttp, DEFAULT_SEARCH_DIR, searchCacheDir } = await import("./images/net.ts");
+    const quotaFile = path.join(searchCacheDir(DEFAULT_SEARCH_DIR), "openverse-usage.json");
+    if (sub === "fetch") {
+      const { runImagesFetch } = await import("./images/fetch.ts");
+      const { DEFAULT_IMAGE_CACHE_DIR } = await import("./images/cache.ts");
+      return runImagesFetch({
+        inputs: positionals.map(fromUser),
+        cacheDir: typeof values.cache === "string" ? fromUser(values.cache) : DEFAULT_IMAGE_CACHE_DIR,
+        force: values.force === true,
+        http: nodeHttp,
+        quotaFile,
+        display: shown,
+      });
+    }
+    const perImage = Number(values["per-image"]);
+    if (!Number.isInteger(perImage) || perImage < 1 || perImage > 12) {
+      console.error(`--per-image ${values["per-image"]} không hợp lệ (1–12).`);
+      return 2;
+    }
+    const sources = String(values.sources).split(",").map((name) => name.trim()).filter(Boolean);
+    if (sources.length === 0 || sources.some((name) => name !== "commons" && name !== "openverse")) {
+      console.error(`--sources ${values.sources} không hợp lệ (commons, openverse hoặc commons,openverse).`);
+      return 2;
+    }
+    if (values.refresh === true && values["cache-only"] === true) {
+      console.error("--refresh và --cache-only không đi cùng nhau.");
+      return 2;
+    }
+    if (positionals.some((target) => target.toLowerCase().endsWith(".json"))) {
+      console.error("images search đọc bài markdown (.md) hoặc thư mục chủ đề, không đọc .json.");
+      return 2;
+    }
+    const { runImagesSearch } = await import("./images/search.ts");
+    const { DEFAULT_SELECTION_DIR } = await import("./images/selection.ts");
+    const out = typeof values.out === "string" ? fromUser(values.out) : DEFAULT_SEARCH_DIR;
+    return runImagesSearch({
+      inputs: positionals.map(fromUser),
+      contentRoot: typeof values["content-root"] === "string" ? fromUser(values["content-root"]) : undefined,
+      rulesFile: typeof values.rules === "string" ? fromUser(values.rules) : DEFAULT_RULES_FILE,
+      minAppVersion: DEFAULT_MIN_APP_VERSION,
+      out,
+      selectionDir: typeof values.images === "string" ? fromUser(values.images) : DEFAULT_SELECTION_DIR,
+      perImage,
+      keys: values.key as string[],
+      refresh: values.refresh === true,
+      cacheOnly: values["cache-only"] === true,
+      sources: { commons: sources.includes("commons"), openverse: sources.includes("openverse") },
+      http: nodeHttp,
+      quotaFile: path.join(searchCacheDir(out), "openverse-usage.json"),
       display: shown,
     });
   }
@@ -301,6 +442,11 @@ async function main(): Promise<number> {
       }
       if (values["content-root"]) {
         console.error("--content-root chỉ dùng với markdown.");
+        return 2;
+      }
+      const syllabus = json.filter((target) => path.basename(target) === "syllabus.json");
+      if (syllabus.length > 0) {
+        console.error(`${syllabus.join(", ")}: syllabus.json được kiểm khi validate thư mục chứa nó, để đối chiếu id với markdown (vd: validate content).`);
         return 2;
       }
       const { runValidate } = await import("./validate/command.ts");

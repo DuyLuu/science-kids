@@ -4,10 +4,11 @@
 // Pure: no I/O, the caller prints. One line per issue:
 //   <file> <JSON pointer> [<code>] <message>      (warnings: message starts with "cảnh báo: ")
 import { compareAppVersions, maxAppVersion } from "../app-version.ts";
-import { authoringOf, type Authoring, type Range, type Rules } from "../build/rules.ts";
+import { authoringOf, type Authoring, type ImageSlot, type Range, type Rules } from "../build/rules.ts";
+import { briefKeywords, composedPartSearches, composedReuses, crossReuse, imageRefs, isComposedBrief, isOwnBrief, isReuseBrief, KEYWORDS_LABEL, reuseTarget, type Here } from "../images/slots.ts";
 import { displayPointer, getAt } from "../json-pointer.ts";
 import { collectSpoken, locateCommon, type ContentKind } from "../spoken.ts";
-import { FORMAT_FIRST_APP_VERSION } from "./format-renderers.ts";
+import { firstAppVersion } from "./format-renderers.ts";
 
 export type Severity = "error" | "warning";
 export type IssueCode =
@@ -21,7 +22,9 @@ export type IssueCode =
   | "age_format_variety"
   | "age_dok_order"
   | "age_words_en"
-  | "format_not_rendered";
+  | "format_not_rendered"
+  | "image_missing"
+  | "image_brief_keywords";
 
 /** Level of each code. format_not_rendered: error in build, warning in validate. */
 export const ISSUE_LEVELS: Readonly<Record<IssueCode, Severity | "build: error, validate: warning">> = {
@@ -36,7 +39,12 @@ export const ISSUE_LEVELS: Readonly<Record<IssueCode, Severity | "build: error, 
   age_dok_order: "warning",
   age_words_en: "warning",
   format_not_rendered: "build: error, validate: warning",
+  image_missing: "warning",
+  image_brief_keywords: "warning",
 };
+
+/** SK-033 codes: build folds them into one count line per file instead of one line each. */
+export const IMAGE_WARNING_CODES: ReadonlySet<IssueCode> = new Set(["image_missing", "image_brief_keywords"]);
 
 export type Issue = { file: string; pointer: string; code: IssueCode; severity: Severity; message: string };
 export type AgeDoc = { display: string; data: Record<string, unknown> & { kind: ContentKind } };
@@ -124,15 +132,21 @@ export function checkAgeRules(docs: AgeDoc[], rules: Rules, options: AgeRulesOpt
         list.forEach((item, i) => {
           const pointer = `/${section.field}/${i}`;
           if (authoring) checkItem(lesson, item, pointer, section.name, section.formats(authoring), authoring, group, push);
-          const first = FORMAT_FIRST_APP_VERSION[item.format] ?? null;
-          if (first === null || compareAppVersions(first, appVersion) > 0) {
-            const since = first === null ? "chưa bản app nào hiện được format này" : `app hiện được từ ${first}, cần --min-app-version ${first} trở lên`;
+          const first = firstAppVersion(item.format, group);
+          // A format the group's rules do not allow already has age_format_not_allowed: one line per problem.
+          const notAllowed = authoring !== undefined && !section.formats(authoring).includes(item.format);
+          if (!notAllowed && (first === null || compareAppVersions(first, appVersion) > 0)) {
+            const since = first === null ? `chưa bản app nào hiện được format này ở nhóm ${group}` : `app hiện được từ ${first}, cần --min-app-version ${first} trở lên`;
             const effect = options.mode === "build" ? "app cũ sẽ bỏ câu này" : "build sẽ báo lỗi";
             push(lesson, `${pointer}/format`, "format_not_rendered", `format ${item.format} chưa hiện được ở app ${appVersion}: ${since}; ${effect}`, options.mode === "build" ? "error" : "warning");
           }
         });
       }
       if (authoring) checkQuiz(lesson, (lesson.data.quiz ?? []) as QuizItem[], authoring, group, push);
+      if (authoring) checkTray(lesson, lesson.data.play as Tray | undefined, authoring, group, push);
+    }
+    if (authoring?.image_search_keywords === true) {
+      for (const doc of [topic, ...own]) checkBriefs(doc, { topic: String(topic.data.slug), slug: doc.data.kind === "lesson" ? String(doc.data.slug) : undefined, order: doc.data.kind === "lesson" ? Number(doc.data.order) : undefined }, push);
     }
     if (authoring?.max_words_en !== undefined) {
       for (const doc of [topic, ...own]) checkWords(doc, authoring.max_words_en, group, push);
@@ -154,19 +168,91 @@ function checkItem(doc: AgeDoc, item: QuizItem, pointer: string, sectionName: st
     const n = item[counted.field]?.length ?? 0;
     if (outside(n, limits)) push(doc, `${pointer}/${counted.field}`, "age_option_count", `${item.format} có ${n} ${counted.noun}; nhóm ${group} cần ${range(limits)}`);
   }
+  const missing: Missing[] = [];
+  if (item.image === undefined) {
+    if (item.format === "true_false") missing.push({ pointer, slot: "true_false", key: item.key });
+    missing.push({ pointer, slot: "question", key: item.key });
+  }
+  if (CHOICE_FORMATS.has(item.format)) item.options?.forEach((option, j) => option.image === undefined && missing.push({ pointer: `${pointer}/options/${j}`, slot: "choice_option", key: option.key }));
+  if (item.format === "order_sequence") item.items?.forEach((card, j) => card.image === undefined && missing.push({ pointer: `${pointer}/items/${j}`, slot: "sequence_item", key: card.key }));
+  if (item.format === "fill_blank_bank") item.bank?.forEach((word, j) => word.image === undefined && missing.push({ pointer: `${pointer}/bank/${j}`, slot: "bank_word", key: word.key }));
+  reportMissing(doc, missing, authoring, group, push);
+}
+
+type Missing = { pointer: string; slot: ImageSlot; key: string };
+type Tray = { type?: string; items?: Entry[] };
+
+/** What each slot is called: [noun for the message, "mọi …" for the rule]. */
+const SLOT_WORDS: Readonly<Record<ImageSlot, [string, string]>> = {
+  question: ["câu", "mọi câu Khởi động và Quiz có hình minh hoạ"],
+  choice_option: ["lựa chọn", "mọi lựa chọn có hình"],
+  sequence_item: ["thẻ", "mọi thẻ sắp thứ tự có hình"],
+  true_false: ["câu true_false", "câu đúng/sai có hình"],
+  bank_word: ["thẻ từ", "mọi thẻ từ trong ngân hàng có hình"],
+  tray_item: ["món", "mọi món ở phần Chơi có hình"],
+};
+
+/**
+ * One line per place (pointer): age_image_required (error) when a slot of the place is in
+ * image_required, else image_missing (warning) when one is in image_expected, else nothing.
+ * The first slot listed for a place names it (true_false before question).
+ */
+function reportMissing(doc: AgeDoc, missing: Missing[], authoring: Authoring, group: string, push: Push) {
   const required = new Set(authoring.image_required);
-  if (required.has("choice_option") && CHOICE_FORMATS.has(item.format)) {
-    item.options?.forEach((option, j) => {
-      if (option.image === undefined) push(doc, `${pointer}/options/${j}`, "age_image_required", `lựa chọn ${option.key} thiếu image; nhóm ${group} bắt buộc mọi lựa chọn có hình`);
-    });
+  const expected = new Set(authoring.image_expected ?? []);
+  const places = new Map<string, Missing[]>();
+  for (const entry of missing) places.set(entry.pointer, [...(places.get(entry.pointer) ?? []), entry]);
+  for (const [pointer, slots] of places) {
+    const hard = slots.find((entry) => required.has(entry.slot));
+    if (hard) {
+      const [noun, rule] = SLOT_WORDS[hard.slot];
+      const what = hard.slot === "true_false" ? " (hình vật được nói tới)" : hard.slot === "question" ? " (hình minh hoạ câu hỏi)" : "";
+      push(doc, pointer, "age_image_required", `${noun} ${hard.key} thiếu image${what}; nhóm ${group} bắt buộc ${rule}`);
+      continue;
+    }
+    const soft = slots.find((entry) => expected.has(entry.slot));
+    if (soft) {
+      const [noun, rule] = SLOT_WORDS[soft.slot];
+      push(doc, pointer, "image_missing", `${noun} ${soft.key} thiếu image${soft.slot === "question" ? " (hình minh hoạ câu hỏi)" : ""}; nhóm ${group} cần ${rule} (SK-033)`);
+    }
   }
-  if (required.has("sequence_item") && item.format === "order_sequence") {
-    item.items?.forEach((card, j) => {
-      if (card.image === undefined) push(doc, `${pointer}/items/${j}`, "age_image_required", `thẻ ${card.key} thiếu image; nhóm ${group} bắt buộc mọi thẻ sắp thứ tự có hình`);
-    });
-  }
-  if (required.has("true_false") && item.format === "true_false" && item.image === undefined) {
-    push(doc, pointer, "age_image_required", `câu true_false ${item.key} thiếu image (hình vật được nói tới); nhóm ${group} bắt buộc câu đúng/sai có hình`);
+}
+
+/** build_tray of ## Chơi: every item is a tray_item slot. */
+function checkTray(doc: AgeDoc, play: Tray | undefined, authoring: Authoring, group: string, push: Push) {
+  if (play?.type !== "build_tray") return;
+  const missing: Missing[] = [];
+  play.items?.forEach((item, j) => item.image === undefined && missing.push({ pointer: `/play/items/${j}`, slot: "tray_item", key: item.key }));
+  reportMissing(doc, missing, authoring, group, push);
+}
+
+/**
+ * Every Image brief carries "Từ khoá tìm ảnh (EN): …", or reuses another picture ("Dùng lại hình
+ * `<key>`…", no keywords needed). A reuse of this document must name one of its keys; a reuse of
+ * another lesson is not checked here (that lesson may not be in the call). A composed brief
+ * ("[sơ đồ ghép ảnh]", dev 10/11) needs keywords only for the parts still to find: it is fine
+ * with keywords, "Từ khoá cho <phần>: …", or at least one reused picture in backticks. A brief
+ * for a picture Science Kids draws ("[hình vẽ]", dev 10/11) needs no keywords: nothing is searched.
+ */
+function checkBriefs(doc: AgeDoc, here: Here, push: Push) {
+  const refs = imageRefs(doc.data.kind, doc.data);
+  for (const ref of refs) {
+    const brief = ref.image.brief;
+    if (brief === undefined) {
+      push(doc, ref.pointer, "image_brief_keywords", `hình ${ref.key} chưa có brief nên chưa có "${KEYWORDS_LABEL} …" (từ khoá tiếng Anh cho content-cli images search)`);
+    } else if (isComposedBrief(brief)) {
+      if (composedPartSearches(brief).length === 0 && composedReuses(brief, refs, ref.key, here).length === 0) {
+        push(doc, `${ref.pointer}/brief`, "image_brief_keywords", `brief ghép của hình ${ref.key} không có "${KEYWORDS_LABEL} …" cho ảnh cần tìm và không nêu hình dùng lại nào (vd "dùng lại hình \`tray_sea\`"; bài khác thì "\`<bài>/<key>\`")`);
+      }
+    } else if (isReuseBrief(brief)) {
+      if (!crossReuse(brief, here) && reuseTarget(brief, refs, ref.key, here) === undefined) {
+        push(doc, `${ref.pointer}/brief`, "image_brief_keywords", `brief "Dùng lại …" của hình ${ref.key} không nêu key của hình nào trong bài (vd "Dùng lại hình \`tray_sea\`."; bài khác thì thêm "ở bài \`<chủ đề>/<bài>\`")`);
+      }
+    } else if (isOwnBrief(brief)) {
+      // Drawn by Science Kids: the brief says what to draw, no search.
+    } else if (briefKeywords(brief) === undefined) {
+      push(doc, `${ref.pointer}/brief`, "image_brief_keywords", `brief của hình ${ref.key} thiếu "${KEYWORDS_LABEL} …" ở cuối dòng (từ khoá cho images search); hình dùng lại thì mở đầu bằng "Dùng lại hình \`<key>\`."`);
+    }
   }
 }
 

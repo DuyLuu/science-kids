@@ -150,7 +150,7 @@ struct ProfileSetupScreen: View {
                 }
             }
             if let group = model.ageGroup {
-                WorldCard(group: group)
+                WorldCard(group: group, hasLessons: model.worldsWithLessons.contains(group.rawValue))
                     .id(group)
                     .motion(Tokens.Motion.Preset.pop)
             }
@@ -211,9 +211,11 @@ struct ProfileSetupScreen: View {
 }
 
 /// The learning world of the chosen grade (canvas: tag + ages + "Thế giới học của bé"). A world
-/// without content says the child tries Discoverer (B18 #14).
+/// without content says the child tries Discoverer (B18 #14); once the world has a written
+/// lesson (SK-040: Explorer #1) the note goes.
 private struct WorldCard: View {
     let group: AgeGroup
+    let hasLessons: Bool
     @Environment(\.ageGroup) private var ageGroup
 
     var body: some View {
@@ -225,7 +227,7 @@ private struct WorldCard: View {
                 Text("profile.world.caption")
                     .typography(Tokens.Typography.captionS)
                     .foregroundStyle(Tokens.Role.textSecondary)
-                if group.rawValue != BundledContent.world.rawValue {
+                if group.rawValue != AppFeatures.trialWorld.rawValue, !hasLessons {
                     Text("profile.world.trial")
                         .typography(Tokens.Typography.captionS)
                         .foregroundStyle(Tokens.Role.textAccent)

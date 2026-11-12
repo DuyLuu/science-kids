@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · earth-sun-and-moon · Mặt Trời, Trái Đất, Mặt Trăng. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="13" cy="13" r="9"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(0 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(45 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(90 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(135 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(180 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(225 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(270 13 13)"/><rect x="12" y="-1" width="2" height="4.4" rx="1" transform="rotate(315 13 13)"/></g>
+  <g fill="#2E4A6E"><circle cx="33" cy="39" r="20"/></g>
+  <g fill="#3B6E6A"><path d="M19 31 C 23 25, 31 23, 35 27 C 37 31, 31 33, 31 37 C 31 41, 27 43, 23 41 C 19 39, 17 35, 19 31 Z"/><path d="M39 41 C 43 37, 49 39, 51 43 C 51 49, 47 55, 41 55 C 39 51, 41 47, 39 41 Z"/></g>
+  <g fill="#E2D4B4"><path d="M54 6 C 49 9, 48 17, 53 21 C 57 24, 62 22, 63 19 C 58 20, 54 17, 54 12 C 54 10, 54 8, 54 6 Z"/></g>
+</svg>

@@ -22,12 +22,16 @@ const WARMUP_FORMATS = ["single_choice", "multi_choice", "true_false", "fill_bla
  * 12–15, as Explorer 8 and Discoverer 10), Scientist picture_bar_chart 4 (TEMPLATE before 1/11).
  * "multi_choice ≤ 6" is [2, 6]: 2 is the content schema minimum.
  */
+/** SK-033 (Duy 9/11): every question, option, bank word and tray item should have a picture; a warning until Duy approves the pilot lesson. */
+const IMAGE_EXPECTED = ["question", "choice_option", "sequence_item", "bank_word", "tray_item"];
 const AUTHORING = {
   explorer: {
     quiz_formats: ["single_choice", "true_false", "order_sequence"],
     warmup_formats: ["single_choice", "true_false"],
     option_count: { single_choice: [2, 3], order_sequence: [3, 3] },
     image_required: ["choice_option", "sequence_item", "true_false"],
+    image_expected: IMAGE_EXPECTED,
+    image_search_keywords: true,
     dok_mix: [3, 3, 0],
     first_item_dok: 1,
     misconception_items: [1, 1],
@@ -39,6 +43,8 @@ const AUTHORING = {
     warmup_formats: WARMUP_FORMATS,
     option_count: { single_choice: [3, 4], multi_choice: [2, 6], order_sequence: [3, 5], picture_bar_chart: [3, 4] },
     image_required: [],
+    image_expected: IMAGE_EXPECTED,
+    image_search_keywords: true,
     dok_mix: [2, 3, 1],
     first_item_dok: 1,
     misconception_items: [1, 1],
@@ -50,6 +56,8 @@ const AUTHORING = {
     warmup_formats: WARMUP_FORMATS,
     option_count: { single_choice: [4, 4], multi_choice: [2, 6], order_sequence: [3, 6], picture_bar_chart: [4, 4] },
     image_required: [],
+    image_expected: IMAGE_EXPECTED,
+    image_search_keywords: true,
     dok_mix: [1, 3, 2],
     first_item_dok: 1,
     misconception_items: [1, 2],

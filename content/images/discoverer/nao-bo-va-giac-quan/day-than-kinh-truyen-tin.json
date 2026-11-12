@@ -1,0 +1,282 @@
+{
+  "note": "SK-037. Designer (agent) chọn 10/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/nao-bo-va-giac-quan/; chi tiết và chỗ còn trống ở content/.build/images/nao-bo-va-giac-quan/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w1.w1_heart": {
+      "same_as": "tray.tray_pulse",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w1.w1_ride": {
+      "same_as": "tray.tray_bike",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w1.w1_read": {
+      "same_as": "tray.tray_book",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w2": {
+      "same_as": "q1",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w2.w2_reading": {
+      "same_as": "tray.tray_book",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w2.w2_skipping": {
+      "same_as": "tray.tray_rope",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w2.w2_sleeping": {
+      "same_as": "q1.q1_sleeping",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "learn.explore.explore_nerves": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.learn.explore.explore_nerves.jpg",
+        "method": "drawn"
+      },
+      "title": "A child with nerves drawn all over the body",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "learn.explore.explore_to_brain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ochlerotatus_canadensis_CDC15992.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Ochlerotatus_canadensis_CDC15992.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ochlerotatus canadensis CDC15992",
+      "author": "Unknown",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ochlerotatus_canadensis_CDC15992.jpg",
+      "note": "Ảnh CDC (public domain): muỗi đậu trên da, bụng chưa hút máu."
+    },
+    "learn.explore.explore_from_brain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.learn.explore.explore_from_brain.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand scratching an arm",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để bốn lựa chọn câu q3 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh tay gãi cánh tay hợp giấy phép."
+    },
+    "learn.explore.explore_fast": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.learn.explore.explore_fast.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand catching a falling ruler",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh tay bắt thước rơi hợp giấy phép (Commons, lượt tìm 10/11), nên vẽ theo phương án trong brief; thước trơn, không vạch số."
+    },
+    "tray.tray_arm": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_arm.jpg",
+        "method": "drawn"
+      },
+      "title": "A mosquito on the skin of an arm",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_wire": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_wire.jpg",
+        "method": "drawn"
+      },
+      "title": "A piece of electric wire",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_nerves": {
+      "same_as": "q4.q4_nerve"
+    },
+    "tray.tray_veins": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_veins.jpg",
+        "method": "drawn"
+      },
+      "title": "Blue lines under the skin of a wrist",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_spinal": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_spinal.jpg",
+        "method": "drawn"
+      },
+      "title": "The spinal cord inside the backbone",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_fingertip": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_fingertip.jpg",
+        "method": "drawn"
+      },
+      "title": "A fingertip touching a table",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_can_phone": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_can_phone.jpg",
+        "method": "drawn"
+      },
+      "title": "Two tin cans joined by a string",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "tray.tray_brain": {
+      "same_as": "q2.q2_brain",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_nerves"
+    },
+    "q1.q1_food": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_bowl_of_rice.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/A_bowl_of_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bowl of rice",
+      "author": "Douglas Perkins",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q1.q1_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q1.q1_messages": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Letter_pro.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Letter_pro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Letter pro",
+      "author": "Jotahin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Phong bì giấy trắng, không tem, không chữ."
+    },
+    "q2": {
+      "same_as": "q1",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q2.q2_back": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q2.q2_back.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the back shaded yellow",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q2.q2_chest": {
+      "same_as": "q1.q1_chest",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q2.q2_tummy": {
+      "same_as": "q1.q1_tummy",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_nerves"
+    },
+    "q3.q3_bite": {
+      "same_as": "tray.tray_arm",
+      "note": "Dùng lại hình vẽ con muỗi trên cánh tay của kệ Chơi (thay ảnh explore_to_brain) để bốn lựa chọn câu q3 cùng là hình vẽ."
+    },
+    "q3.q3_scratch": {
+      "same_as": "learn.explore.explore_from_brain"
+    },
+    "q3.q3_rain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q3.q3_rain.jpg",
+        "method": "drawn"
+      },
+      "title": "Raindrops on an arm",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để bốn lựa chọn câu q3 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh tay gãi cánh tay hợp giấy phép."
+    },
+    "q3.q3_run": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q3.q3_run.jpg",
+        "method": "drawn"
+      },
+      "title": "Legs running",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để bốn lựa chọn câu q3 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh tay gãi cánh tay hợp giấy phép."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A foot kicking a shuttlecock",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Hình câu hỏi: không có ảnh bàn chân tâng cầu hợp giấy phép mà không lộ mặt; vẽ đôi chân bạn nhỏ đá cầu lông gà trên sân gạch. Ba lựa chọn của câu cũng là hình vẽ."
+    },
+    "q4.q4_heart": {
+      "same_as": "tray.tray_heart",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q4.q4_stomach": {
+      "same_as": "tray.tray_stomach",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q4.q4_nerve": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q4.q4_nerve.jpg",
+        "method": "drawn"
+      },
+      "title": "A nerve with thin branches",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q5": {
+      "same_as": "q1",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q5.q5_ear": {
+      "same_as": "w1.w1_ear",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q5.q5_toe": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_toe.jpg",
+        "method": "drawn"
+      },
+      "title": "A foot with toes",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q5.q5_hand": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_hand.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Street_Children_-_Strand_Road_-_Kolkata_2016-10-11_0437.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Street_Children_-_Strand_Road_-_Kolkata_2016-10-11_0437.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Street Children - Strand Road - Kolkata 2016-10-11 0437",
+      "author": "Biswarup Ganguly",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.3,
+        "top": 0.3,
+        "width": 0.42,
+        "height": 0.55
+      },
+      "note": "Ba bạn nhỏ đi chân trần nhìn từ sau, không thấy mặt (không có ảnh chân trần trên lối sỏi hợp giấy phép)."
+    },
+    "vocab.nerve": {
+      "same_as": "q4.q4_nerve"
+    },
+    "vocab.message": {
+      "same_as": "q1.q1_messages"
+    },
+    "vocab.spinal_cord": {
+      "same_as": "tray.tray_spinal"
+    },
+    "vocab.backbone": {
+      "same_as": "q2.q2_back"
+    },
+    "reward.nerves_card": {
+      "same_as": "learn.explore.explore_nerves"
+    }
+  }
+}

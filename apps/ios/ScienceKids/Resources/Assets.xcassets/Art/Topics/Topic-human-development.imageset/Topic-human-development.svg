@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · human-development · bé, thiếu niên, người lớn. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="11" cy="39" r="4.6"/><path d="M5 50 C 5 46, 7.5 45, 11 45 C 14.5 45, 17 46, 17 50 V60 H5 Z"/></g>
+  <g fill="#A93A27"><circle cx="28" cy="26" r="5.6"/><path d="M20.5 40 C 20.5 35, 23.5 33.5, 28 33.5 C 32.5 33.5, 35.5 35, 35.5 40 V60 H20.5 Z"/></g>
+  <g fill="#2E4A6E"><circle cx="49" cy="11" r="6.6"/><path d="M40 27 C 40 21, 44 19.5, 49 19.5 C 54 19.5, 58 21, 58 27 V60 H40 Z"/></g>
+</svg>

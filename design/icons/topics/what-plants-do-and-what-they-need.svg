@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · what-plants-do-and-what-they-need · cây trong chậu + nắng. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="49" cy="14" r="8.5"/></g>
+  <g fill="#3B6E6A"><rect x="30.6" y="18" width="2.8" height="24" rx="1.4"/><path d="M32 30 C 26 30, 17 27, 14 18 C 22 17, 30 21, 32 30 Z"/><path d="M32 24 C 36 20, 43 19, 48 23 C 44 29, 37 29, 32 24 Z"/><path d="M32 18 C 29 14, 29 9, 32 6 C 35 9, 35 14, 32 18 Z"/></g>
+  <g fill="#A93A27"><path d="M18 44 H46 L42.5 60 H21.5 Z"/></g>
+  <g fill="#6E2216"><rect x="15" y="40" width="34" height="6.5" rx="1.5"/></g>
+</svg>

@@ -55,6 +55,11 @@ targets:
       # pack is embedded; this file serves the fixtures fallback.
       - path: ../../content/rules.json
         buildPhase: resources
+      # SK-030: the approved syllabus (every topic and lesson of the three age groups), read in
+      # place from content/syllabus.json. In the bundle as `syllabus.json`; Home and Topic lay the
+      # content over it (BundledContent.bundledSyllabus). Goes into the pack later, with the CMS.
+      - path: ../../content/syllabus.json
+        buildPhase: resources
     # SK-016: the content pack of content-cli (SK-015) goes into the bundle as `pack/` by a script,
     # not a folder reference, because the pack is not in git: a missing folder would break the
     # build. Without the pack the script prints a build warning and the app runs on the fixtures.

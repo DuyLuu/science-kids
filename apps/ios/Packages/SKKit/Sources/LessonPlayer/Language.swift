@@ -24,6 +24,13 @@ extension BilingualText {
     }
 }
 
+extension Syllabus.Title {
+    /// `vi` while it is not translated yet (`null`) falls back to `en` (SK-030).
+    public func text(in language: ContentLanguage) -> String {
+        language == .en ? en : (vi ?? en)
+    }
+}
+
 extension LanguageMode {
     /// A title or name (topic, lesson, tray item, example food): Vietnamese in Song ngữ and Tiếng
     /// Việt trước, as the canvas; English in Tiếng Anh trước.
@@ -34,6 +41,18 @@ extension LanguageMode {
     /// The other language of a name, for a caption; `nil` in Tiếng Anh trước.
     public func secondName(_ spoken: Spoken) -> String? {
         nameSecondLanguage.map { spoken.text(in: $0) }
+    }
+
+    /// A syllabus title (Home, Topic), English while the Vietnamese one is missing.
+    public func name(_ title: Syllabus.Title) -> String {
+        title.text(in: nameLanguage)
+    }
+
+    /// The other language of a syllabus title; `nil` in Tiếng Anh trước, and while `vi` is
+    /// missing (both languages would show the same English words).
+    public func secondName(_ title: Syllabus.Title) -> String? {
+        guard title.vi != nil else { return nil }
+        return nameSecondLanguage.map { title.text(in: $0) }
     }
 
     /// First line of a sentence or an answer label the child reads (English, except in Tiếng

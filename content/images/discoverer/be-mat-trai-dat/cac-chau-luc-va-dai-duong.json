@@ -1,0 +1,305 @@
+{
+  "note": "SK-033. Designer (agent) chọn 10/11/2026, chờ Duy duyệt; chưa fetch. 20 ảnh riêng, 28 chỗ dùng lại, 1 chỗ chưa có ảnh (không ghi trong file, xem review.html). Mục có «CẦN MỞ TAY» là ảnh Openverse ngoài Commons chưa xác nhận được ở trang gốc.",
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_globe",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_land": {
+      "same_as": "learn.explore.explore_land",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_sky": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bright_blue_sky_with_scenic_white_cloud_patterns.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Bright_blue_sky_with_scenic_white_cloud_patterns.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bright blue sky with scenic white cloud patterns",
+      "author": "Trixia Lao",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.5
+      }
+    },
+    "w1.w1_water": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2": {
+      "same_as": "tray.tray_island",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "learn.explore.explore_continents": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Africa_and_Europe_from_a_Million_Miles_Away_Colour-Corrected.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Africa_and_Europe_from_a_Million_Miles_Away_Colour-Corrected.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Africa and Europe from a Million Miles Away Colour-Corrected",
+      "author": "NASA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Africa_and_Europe_from_a_Million_Miles_Away_Colour-Corrected.png"
+    },
+    "learn.explore.explore_more_continents": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DSCOVR_western_hemisphere_2020-12-21.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/DSCOVR_western_hemisphere_2020-12-21.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "DSCOVR western hemisphere 2020-12-21",
+      "author": "NASA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:DSCOVR_western_hemisphere_2020-12-21.png"
+    },
+    "learn.explore.explore_oceans": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "Alt đề xuất: EN «A huge blue ocean» · VI «Đại dương xanh mênh mông»."
+    },
+    "learn.explore.explore_more_oceans": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Danmark_O,_Fohn_Fjord,_Renodde.70%C2%B0N_26%C2%B0W_(76566707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Danmark_O%2C_Fohn_Fjord%2C_Renodde.70%C2%B0N_26%C2%B0W_%2876566707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Danmark O, Fohn Fjord, Renodde.70°N 26°W (76566707)",
+      "author": "Rita Willaert from 9890 Gavere, Belgium",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.28,
+        "top": 0.05,
+        "width": 0.72,
+        "height": 0.95
+      }
+    },
+    "tray.tray_vietnam": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnamese_flag_in_Hue.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Vietnamese_flag_in_Hue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnamese flag in Hue",
+      "author": "pululante",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_atlantic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Waves_(54369360806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Atlantic_Ocean_Waves_%2854369360806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic Ocean Waves (54369360806)",
+      "author": "Michael Gaylard from Horsham, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Khác ý brief. Alt đề xuất: EN «Big waves on a wide ocean» · VI «Sóng lớn giữa đại dương rộng»."
+    },
+    "tray.tray_africa": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lascar_Giraffes_-_Nairobi_National_Park_(4540802988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lascar_Giraffes_-_Nairobi_National_Park_%284540802988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lascar Giraffes - Nairobi National Park (4540802988)",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Khác ý brief. Alt đề xuất: EN «A giraffe on wide grassland» · VI «Hươu cao cổ trên đồng cỏ rộng». Brief đã dặn: sửa alt ở cả ba chỗ tray_africa, q2_africa, q3_africa."
+    },
+    "tray.tray_asia": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_terrace.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Rice_terrace.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice terrace",
+      "author": "Hoang Giang Hai",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_pacific": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/HIHWNMS_-_Humpback_Whale_Breach_%2833154058312%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "HIHWNMS - Humpback Whale Breach (33154058312)",
+      "author": "National Marine Sanctuaries",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg"
+    },
+    "tray.tray_japan": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Japanese_flag_in_the_blue_sky.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Japanese_flag_in_the_blue_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Japanese flag in the blue sky",
+      "author": "Vera Kratochvil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.62
+      }
+    },
+    "tray.tray_antarctica": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gentoo_Penguins_of_Danco_Island.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gentoo_Penguins_of_Danco_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Gentoo Penguins of Danco Island",
+      "author": "owamux",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_arctic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Polar_Bears_Across_the_Arctic_Face_Shorter_Sea_Ice_Season_(29664357826)_(2).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Polar_Bears_Across_the_Arctic_Face_Shorter_Sea_Ice_Season_%2829664357826%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Polar Bears Across the Arctic Face Shorter Sea Ice Season (29664357826) (2)",
+      "author": "NASA Goddard Space Flight Center from Greenbelt, MD, USA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Polar_Bears_Across_the_Arctic_Face_Shorter_Sea_Ice_Season_(29664357826)_(2).jpg"
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_continents"
+    },
+    "q1.q1_water": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q1.q1_sky": {
+      "same_as": "w1.w1_sky"
+    },
+    "q1.q1_land": {
+      "same_as": "learn.explore.explore_land",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q2": {
+      "same_as": "tray.tray_vietnam"
+    },
+    "q2.q2_asia": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Himalayas,_Ama_Dablam,_Nepal.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Himalayas%2C_Ama_Dablam%2C_Nepal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Himalayas, Ama Dablam, Nepal",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q2.q2_africa": {
+      "same_as": "tray.tray_africa"
+    },
+    "q2.q2_europe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kinderdijk_windmills_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Kinderdijk_windmills_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Kinderdijk windmills - panoramio",
+      "author": "Attila N",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Khác ý brief. Alt đề xuất: EN «Windmills in the Netherlands, in Europe» · VI «Cối xay gió ở Hà Lan, châu Âu»."
+    },
+    "q3": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q3.q3_africa": {
+      "same_as": "tray.tray_africa"
+    },
+    "q3.q3_arctic": {
+      "same_as": "tray.tray_arctic"
+    },
+    "q3.q3_antarctica": {
+      "same_as": "tray.tray_antarctica"
+    },
+    "q3.q3_pacific": {
+      "same_as": "tray.tray_pacific"
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lisbon_beaches_(8968694767).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Lisbon_beaches_%288968694767%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lisbon beaches (8968694767)",
+      "author": "Jessica Spengler from Brighton, United Kingdom",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "q4.q4_vietnam": {
+      "same_as": "tray.tray_vietnam"
+    },
+    "q4.q4_asia": {
+      "same_as": "tray.tray_asia"
+    },
+    "q4.q4_cat_ba": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_on_the_southeast_coast_of_Cat_Ba_Island_in_Vietnam,_20240131_1332_4629.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Sea_on_the_southeast_coast_of_Cat_Ba_Island_in_Vietnam%2C_20240131_1332_4629.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea on the southeast coast of Cat Ba Island in Vietnam, 20240131 1332 4629",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Da_Nang_beach_(44810989724).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Da_Nang_beach_%2844810989724%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Da Nang beach (44810989724)",
+      "author": "Raita Futo from Tokyo, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "q5.q5_arctic": {
+      "same_as": "tray.tray_arctic"
+    },
+    "q5.q5_atlantic": {
+      "same_as": "tray.tray_atlantic"
+    },
+    "q5.q5_east_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ly_Son_Island_07_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Ly_Son_Island_07_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ly Son Island 07 - panoramio",
+      "author": "Kim Yong Soo/Doosan …",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "q6": {
+      "same_as": "tray.tray_asia"
+    },
+    "vocab.continent": {
+      "same_as": "learn.explore.explore_continents"
+    },
+    "vocab.ocean": {
+      "same_as": "tray.tray_pacific"
+    },
+    "vocab.asia": {
+      "same_as": "tray.tray_asia"
+    },
+    "vocab.pacific_ocean": {
+      "same_as": "tray.tray_pacific"
+    },
+    "vocab.antarctica": {
+      "same_as": "tray.tray_antarctica"
+    },
+    "vocab.east_sea": {
+      "same_as": "q5"
+    },
+    "vocab.salty": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phu_Yen_salt_field_27-01-2018.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Phu_Yen_salt_field_27-01-2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Phu Yen salt field 27-01-2018",
+      "author": "Vinnie Cartabiano",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "vocab.country": {
+      "same_as": "tray.tray_vietnam"
+    },
+    "reward.thai_binh_duong": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pacific_Ocean_as_viewed_from_GOES-18_on_September_23,_2023.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Ocean_as_viewed_from_GOES-18_on_September_23%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pacific Ocean as viewed from GOES-18 on September 23, 2023",
+      "author": "ABI imagery from NOAA's GOES-18 satellite",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pacific_Ocean_as_viewed_from_GOES-18_on_September_23,_2023.jpg"
+    }
+  }
+}

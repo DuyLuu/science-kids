@@ -46,6 +46,7 @@ public struct LessonPlayerView: View {
     public var body: some View {
         stepView
             .id(session.step)
+            .modifier(PresentationLook(presentation: session.presentation))
             .onChange(of: session.step, initial: true) { _, step in
                 speech?.preload(session.clipsToPreload(at: step))
                 if let opening = session.autoplayUtterance(for: step) {
@@ -60,6 +61,40 @@ public struct LessonPlayerView: View {
     private var mode: LanguageMode { session.languageMode }
 
     @ViewBuilder private var stepView: some View {
+        if session.isExplorer {
+            explorerStepView
+        } else {
+            discovererStepView
+        }
+    }
+
+    /// Explorer (SK-040): its own question and reward screens; Học and Chơi are the Discoverer
+    /// blocks (schema v1 has no Explorer block yet: `hotspot_image`, `sort_into_groups` are GĐ 2),
+    /// without XP.
+    @ViewBuilder private var explorerStepView: some View {
+        switch session.step {
+        case .warmup(let index):
+            if let item = session.item(at: index, in: .warmup) {
+                ExplorerQuestionStep(session: session, phase: .warmup, index: index, item: item,
+                                     isLast: index == session.warmupItems.count - 1, onClose: exit)
+                    .id(item.id)
+            }
+        case .quiz(let index):
+            if let item = session.item(at: index, in: .quiz) {
+                ExplorerQuestionStep(session: session, phase: .quiz, index: index, item: item,
+                                     isLast: index == session.quizItems.count - 1, onClose: exit)
+                    .id(item.id)
+            }
+        case .reward:
+            if let summary = session.summary {
+                ExplorerRewardStep(session: session, summary: summary, onClose: onExit)
+            }
+        case .learn, .play:
+            discovererStepView
+        }
+    }
+
+    @ViewBuilder private var discovererStepView: some View {
         switch session.step {
         case .warmup(let index):
             if let item = session.item(at: index, in: .warmup) {
@@ -88,7 +123,8 @@ public struct LessonPlayerView: View {
                             backIcon: .arrowBack, backLabel: Text("lesson.play.back"),
                             title: mode.name(tray.prompt), caption: mode.secondName(tray.prompt),
                             session: session, onBack: session.backToLearn,
-                            trailing: AnyView(xpChip)
+                            // Explorer has no XP (SK-026 D1).
+                            trailing: session.isExplorer ? nil : AnyView(xpChip)
                         )
                         StepSquares(current: session.phaseIndex)
                     }
@@ -136,5 +172,24 @@ public struct LessonPlayerView: View {
     private func exit() {
         session.pause()
         onExit()
+    }
+}
+
+/// Explorer screens take the Explorer look of the design system (radius 20, touch targets 72pt,
+/// never smaller on iPad), whatever world the rest of the app shows (SK-040).
+private struct PresentationLook: ViewModifier {
+    let presentation: LessonPresentation
+
+    func body(content: Content) -> some View {
+        switch presentation {
+        case .discoverer:
+            content
+        case .explorer:
+            content
+                .environment(\.ageGroup, .explorer)
+                .transformEnvironment(\.layoutMetrics) { metrics in
+                    metrics = LayoutMetrics(widthClass: metrics.widthClass, containerWidth: metrics.containerWidth, ageGroup: .explorer)
+                }
+        }
     }
 }

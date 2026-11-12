@@ -14,6 +14,8 @@ apps/ios/Config/Local.xcconfig
 # content-cli (SK-014): clip, gói build, model TTS
 content/.audio/
 content/.build/
+# SK-033: ảnh đã tải và xử lý (images fetch dựng lại từ content/images/)
+content/.images/
 tools/content-cli/node_modules/
 tools/content-cli/.models/
 tools/content-cli/.venv/

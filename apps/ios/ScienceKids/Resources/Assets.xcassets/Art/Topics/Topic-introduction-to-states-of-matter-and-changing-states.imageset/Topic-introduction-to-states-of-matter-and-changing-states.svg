@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · introduction-to-states-of-matter-and-changing-states · đá lạnh, giọt nước, hơi nước. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#CFDCD8"><path d="M5 40 L19 33 L33 40 L19 47 Z"/></g>
+  <g fill="#9FBDB8"><path d="M5 40 L19 47 V60 L5 53 Z"/></g>
+  <g fill="#7EA39E"><path d="M19 47 L33 40 V53 L19 60 Z"/></g>
+  <g fill="#FBF6EA"><path d="M11 39.6 L19 35.8 L22 37.2 L14 41 Z"/></g>
+  <g fill="#2E4A6E"><path d="M45 26 C 45 26, 55 38, 55 44.5 A10 10 0 0 1 35 44.5 C 35 38, 45 26, 45 26 Z"/></g>
+  <g fill="#FBF6EA"><path d="M40 44 C 40 41, 41.4 38.4, 43 36.4 C 42.4 39, 42.2 41.6, 42.6 44 Z"/></g>
+  <g fill="#C9B993"><path d="M30 20 C 25 20, 24 14, 28.5 13 C 29 8, 35 7, 37.5 10.5 C 40 7, 46 8, 46 12.5 C 50 13, 50.5 19, 46 20 Z"/><path d="M14 13 C 11 13, 10.5 9, 13.5 8.5 C 14 5.5, 18 5.5, 19 7.5 C 21 6, 24.5 7.5, 23.5 10.5 C 25 12, 24 13, 22.5 13 Z"/></g>
+</svg>

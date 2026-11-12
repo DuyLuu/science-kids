@@ -1,0 +1,5066 @@
+{
+  "schema_version": 1,
+  "syllabus_version": "2026-11-09",
+  "ai_draft": true,
+  "source": "syllabus.md, syllabus-lessons.md (Duy duyệt 9/11/2026); Oak unit pages read 2026-11-09",
+  "groups": [
+    {
+      "age_group": "explorer",
+      "oak_years": [
+        1,
+        2
+      ],
+      "topics": [
+        {
+          "key": "naming-and-grouping-animals",
+          "number": 1,
+          "title": {
+            "en": "Naming and grouping animals",
+            "vi": "Gọi tên và nhóm động vật"
+          },
+          "strand": "plants_animals",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "naming-and-grouping-animals",
+            "year": 1,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Naming and grouping familiar animals",
+                "vi": "Con vật nuôi trong nhà"
+              },
+              "oak_lessons": [
+                "naming-and-grouping-familiar-animals"
+              ],
+              "statutory": true,
+              "lesson_id": "f8d6eae8-494f-4f54-938f-2f02a7e54b36"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Naming mammals",
+                "vi": "Động vật có vú"
+              },
+              "oak_lessons": [
+                "naming-mammals"
+              ],
+              "statutory": true,
+              "lesson_id": "59d9d765-e3f1-4349-be51-58423e32bc46"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Naming birds and reptiles",
+                "vi": "Chim và bò sát"
+              },
+              "oak_lessons": [
+                "naming-birds-and-reptiles"
+              ],
+              "statutory": true,
+              "lesson_id": "8a682955-d1ef-4b79-9a3e-b23ccbe81568"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Naming fish and amphibians",
+                "vi": "Cá và lưỡng cư"
+              },
+              "oak_lessons": [
+                "naming-fish-and-amphibians"
+              ],
+              "statutory": true,
+              "lesson_id": "c5d3b2e2-013a-4d54-8511-1d76b92957dd"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Animal structure",
+                "vi": "Cơ thể các con vật"
+              },
+              "oak_lessons": [
+                "animal-structure"
+              ],
+              "statutory": true,
+              "lesson_id": "c49fbb02-e526-4423-9e05-37b094d4f6b9"
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "What animals eat",
+                "vi": "Con vật ăn gì?"
+              },
+              "oak_lessons": [
+                "what-animals-eat"
+              ],
+              "statutory": true,
+              "lesson_id": "c22d1f3e-8279-48fa-9d2c-f9afaec9339c"
+            }
+          ],
+          "topic_id": "f41bf481-4f09-4be4-a185-38a809f7ce4d"
+        },
+        {
+          "key": "seasonal-changes-autumn-and-winter",
+          "number": 2,
+          "title": {
+            "en": "Autumn, winter and the dry season",
+            "vi": "Thu, đông và mùa khô"
+          },
+          "strand": "earth_sky",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "seasonal-changes-autumn-and-winter",
+            "year": 1,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Signs of autumn",
+                "vi": "Dấu hiệu mùa thu và cuối mùa mưa"
+              },
+              "oak_lessons": [
+                "signs-of-autumn"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Weather in autumn",
+                "vi": "Thời tiết mùa thu và cuối mùa mưa"
+              },
+              "oak_lessons": [
+                "weather-in-autumn"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Signs of winter",
+                "vi": "Dấu hiệu mùa đông và mùa khô"
+              },
+              "oak_lessons": [
+                "signs-of-winter"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Weather in winter",
+                "vi": "Thời tiết mùa đông và mùa khô"
+              },
+              "oak_lessons": [
+                "weather-in-winter"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Day length in winter",
+                "vi": "Ngày mùa đông ngắn hơn"
+              },
+              "oak_lessons": [
+                "day-length-in-winter"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "human-body-parts",
+          "number": 3,
+          "title": {
+            "en": "Human body parts",
+            "vi": "Cơ thể của em"
+          },
+          "strand": "humans_health",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "human-body-parts",
+            "year": 1,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Humans are animals",
+                "vi": "Con người cũng là động vật"
+              },
+              "oak_lessons": [
+                "humans-are-animals"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Body parts on the outside",
+                "vi": "Bộ phận bên ngoài cơ thể"
+              },
+              "oak_lessons": [
+                "body-parts-on-the-outside"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Body parts on the inside",
+                "vi": "Bộ phận bên trong cơ thể"
+              },
+              "oak_lessons": [
+                "body-parts-on-the-inside"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Body parts for our senses",
+                "vi": "Năm giác quan của em"
+              },
+              "oak_lessons": [
+                "body-parts-for-our-senses"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "More about sight, smell and sound",
+                "vi": "Nhìn, ngửi và nghe"
+              },
+              "oak_lessons": [
+                "more-about-sight-smell-and-sound"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "More about taste and touch",
+                "vi": "Nếm và sờ"
+              },
+              "oak_lessons": [
+                "more-about-taste-and-touch"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "identifying-plants-and-their-basic-parts",
+          "number": 4,
+          "title": {
+            "en": "Identifying plants and their basic parts",
+            "vi": "Cây quanh em"
+          },
+          "strand": "plants_animals",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "identifying-plants-and-their-basic-parts",
+            "year": 1,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Plants around our school or home",
+                "vi": "Cây ở nhà và ở trường"
+              },
+              "oak_lessons": [
+                "plants-around-our-school-or-home"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Structure of a tree",
+                "vi": "Các bộ phận của cây to"
+              },
+              "oak_lessons": [
+                "structure-of-a-tree"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Naming trees",
+                "vi": "Gọi tên các loài cây"
+              },
+              "oak_lessons": [
+                "naming-trees"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Deciduous and evergreen trees",
+                "vi": "Cây rụng lá và cây thường xanh"
+              },
+              "oak_lessons": [
+                "deciduous-and-evergreen-trees"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Structure of a flowering plant",
+                "vi": "Các bộ phận của cây có hoa"
+              },
+              "oak_lessons": [
+                "structure-of-a-flowering-plant"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Common flowering plants",
+                "vi": "Những loài hoa quen thuộc"
+              },
+              "oak_lessons": [
+                "common-flowering-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Wildflowers",
+                "vi": "Hoa dại ven đường"
+              },
+              "oak_lessons": [
+                "wildflowers"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "seasonal-changes-spring-and-summer",
+          "number": 5,
+          "title": {
+            "en": "Spring, summer and the rainy season",
+            "vi": "Xuân, hè và mùa mưa"
+          },
+          "strand": "earth_sky",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "seasonal-changes-spring-and-summer",
+            "year": 1,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Signs of spring",
+                "vi": "Dấu hiệu mùa xuân và cuối mùa khô"
+              },
+              "oak_lessons": [
+                "signs-of-spring"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Weather in spring",
+                "vi": "Thời tiết mùa xuân và cuối mùa khô"
+              },
+              "oak_lessons": [
+                "weather-in-spring"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Signs of summer",
+                "vi": "Dấu hiệu mùa hè và mùa mưa"
+              },
+              "oak_lessons": [
+                "signs-of-summer"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Weather in summer",
+                "vi": "Thời tiết mùa hè và mùa mưa"
+              },
+              "oak_lessons": [
+                "weather-in-summer"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Day length in summer",
+                "vi": "Ngày mùa hè dài hơn"
+              },
+              "oak_lessons": [
+                "day-length-in-summer"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "everyday-materials",
+          "number": 6,
+          "title": {
+            "en": "Everyday materials",
+            "vi": "Vật liệu quanh em"
+          },
+          "strand": "materials",
+          "level": 2,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "everyday-materials",
+            "year": 1,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Everyday objects and materials",
+                "vi": "Đồ vật làm bằng gì?"
+              },
+              "oak_lessons": [
+                "everyday-objects-and-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Materials for recycling",
+                "vi": "Vật liệu nào tái chế được?"
+              },
+              "oak_lessons": [
+                "materials-for-recycling"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "The 3 Rs",
+                "vi": "Dùng ít, dùng lại, tái chế"
+              },
+              "oak_lessons": [
+                "the-3-rs-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Material properties",
+                "vi": "Cứng hay mềm, nhẵn hay ráp?"
+              },
+              "oak_lessons": [
+                "material-properties"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Development of new materials",
+                "vi": "Nhà khoa học làm ra vật liệu mới"
+              },
+              "oak_lessons": [
+                "development-of-new-materials-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Waterproof materials",
+                "vi": "Vật liệu nào không thấm nước?"
+              },
+              "oak_lessons": [
+                "waterproof-materials-plan-and-do",
+                "waterproof-materials-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Transparent and opaque materials",
+                "vi": "Vật liệu nào nhìn xuyên qua được?"
+              },
+              "oak_lessons": [
+                "transparent-and-opaque-materials-plan-and-do",
+                "transparent-and-opaque-materials-review"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "uses-of-everyday-materials",
+          "number": 7,
+          "title": {
+            "en": "Uses of everyday materials",
+            "vi": "Vật liệu dùng làm gì?"
+          },
+          "strand": "materials",
+          "level": 2,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "uses-of-everyday-materials",
+            "year": 2,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Materials and their uses",
+                "vi": "Chọn vật liệu cho từng đồ vật"
+              },
+              "oak_lessons": [
+                "materials-and-their-uses"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Suitable and unsuitable materials",
+                "vi": "Vật liệu nào hợp, nào không?"
+              },
+              "oak_lessons": [
+                "suitable-and-unsuitable-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Where materials come from",
+                "vi": "Vật liệu từ đâu mà có?"
+              },
+              "oak_lessons": [
+                "where-materials-come-from"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Absorbent materials",
+                "vi": "Vật liệu nào hút nước tốt?"
+              },
+              "oak_lessons": [
+                "absorbent-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Stretchy materials",
+                "vi": "Vật liệu nào co giãn được?"
+              },
+              "oak_lessons": [
+                "stretchy-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Changing shape",
+                "vi": "Làm đồ vật đổi hình dạng"
+              },
+              "oak_lessons": [
+                "changing-shape-plan-and-do",
+                "changing-shape-review"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "growing-plants",
+          "number": 8,
+          "title": {
+            "en": "Growing plants",
+            "vi": "Trồng cây"
+          },
+          "strand": "plants_animals",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "growing-plants",
+            "year": 2,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Plants from seeds",
+                "vi": "Cây mọc lên từ hạt"
+              },
+              "oak_lessons": [
+                "plants-from-seeds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Plants from bulbs",
+                "vi": "Củ hành, củ tỏi mọc thành cây"
+              },
+              "oak_lessons": [
+                "plants-from-bulbs"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "What plants need to grow and stay healthy",
+                "vi": "Cây cần gì để lớn khoẻ?"
+              },
+              "oak_lessons": [
+                "what-plants-need-to-grow-and-stay-healthy"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Plant health and growth",
+                "vi": "Theo dõi cây lớn lên"
+              },
+              "oak_lessons": [
+                "plant-health-and-growth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Plants without water",
+                "vi": "Cây thiếu nước thì sao?"
+              },
+              "oak_lessons": [
+                "plants-without-water"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Plants without warmth",
+                "vi": "Cây thiếu hơi ấm thì sao?"
+              },
+              "oak_lessons": [
+                "plants-without-warmth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Plants without light",
+                "vi": "Cây thiếu ánh sáng thì sao?"
+              },
+              "oak_lessons": [
+                "plants-without-light"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Grow your own food",
+                "vi": "Tự trồng rau quả để ăn"
+              },
+              "oak_lessons": [
+                "grow-your-own-food-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "new-life",
+          "number": 9,
+          "title": {
+            "en": "New life",
+            "vi": "Sự sống mới"
+          },
+          "strand": "plants_animals",
+          "level": 2,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "new-life",
+            "year": 2,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Young animals",
+                "vi": "Con nào của mẹ nào?"
+              },
+              "oak_lessons": [
+                "young-animals"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Growing up",
+                "vi": "Con vật lớn lên thế nào?"
+              },
+              "oak_lessons": [
+                "growing-up"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Animal life cycles",
+                "vi": "Vòng đời của con vật"
+              },
+              "oak_lessons": [
+                "animal-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Changes in animal life cycles",
+                "vi": "Những thay đổi trong vòng đời"
+              },
+              "oak_lessons": [
+                "changes-in-animal-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "The basic needs of animals",
+                "vi": "Con vật cần gì để sống?"
+              },
+              "oak_lessons": [
+                "the-basic-needs-of-animals"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "introduction-to-food-chains",
+          "number": 10,
+          "title": {
+            "en": "Introduction to food chains",
+            "vi": "Chuỗi thức ăn"
+          },
+          "strand": "living_environment",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-food-chains",
+            "year": 2,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "How animals get food",
+                "vi": "Con vật kiếm ăn thế nào?"
+              },
+              "oak_lessons": [
+                "how-animals-get-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Introduction to food chains",
+                "vi": "Chuỗi thức ăn là gì?"
+              },
+              "oak_lessons": [
+                "introduction-to-food-chains"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Roles within food chains",
+                "vi": "Ai ăn ai trong chuỗi thức ăn?"
+              },
+              "oak_lessons": [
+                "roles-within-food-chains"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Comparing food chains",
+                "vi": "So sánh các chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "comparing-food-chains"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "living-things-and-where-they-live",
+          "number": 11,
+          "title": {
+            "en": "Living things and where they live",
+            "vi": "Sinh vật sống ở đâu?"
+          },
+          "strand": "living_environment",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "living-things-and-where-they-live",
+            "year": 2,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Living or non-living",
+                "vi": "Vật sống hay không sống?"
+              },
+              "oak_lessons": [
+                "living-or-non-living"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Living things and movement",
+                "vi": "Vật sống nào cũng cử động"
+              },
+              "oak_lessons": [
+                "living-things-and-movement"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Alive, dead and never alive",
+                "vi": "Đang sống, đã chết, chưa từng sống"
+              },
+              "oak_lessons": [
+                "alive-dead-and-never-alive"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Animal habitats",
+                "vi": "Nơi sống của con vật"
+              },
+              "oak_lessons": [
+                "animal-habitats"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Plant habitats",
+                "vi": "Nơi sống của cây"
+              },
+              "oak_lessons": [
+                "plant-habitats"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Plants and animals in microhabitats",
+                "vi": "Những nơi sống nhỏ xíu"
+              },
+              "oak_lessons": [
+                "plants-and-animals-in-microhabitats"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Protecting microhabitats",
+                "vi": "Bảo vệ những nơi sống nhỏ"
+              },
+              "oak_lessons": [
+                "protecting-microhabitats"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "healthy-me",
+          "number": 12,
+          "title": {
+            "en": "Healthy me",
+            "vi": "Em khoẻ mạnh"
+          },
+          "strand": "humans_health",
+          "level": 1,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "healthy-me",
+            "year": 2,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Washing hands",
+                "vi": "Vì sao phải rửa tay?"
+              },
+              "oak_lessons": [
+                "washing-hands"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Brushing teeth",
+                "vi": "Vì sao phải đánh răng?"
+              },
+              "oak_lessons": [
+                "brushing-teeth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "The importance of exercise",
+                "vi": "Vận động giúp em khoẻ"
+              },
+              "oak_lessons": [
+                "the-importance-of-exercise"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Different types of food",
+                "vi": "Ăn nhiều loại thức ăn"
+              },
+              "oak_lessons": [
+                "different-types-of-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Different amounts of food",
+                "vi": "Món nào ăn nhiều, món nào ăn ít?"
+              },
+              "oak_lessons": [
+                "different-amounts-of-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Food scientists",
+                "vi": "Chuyên gia dinh dưỡng làm gì?"
+              },
+              "oak_lessons": [
+                "food-scientists"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Staying healthy",
+                "vi": "Sống khoẻ mỗi ngày"
+              },
+              "oak_lessons": [
+                "staying-healthy"
+              ],
+              "statutory": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "age_group": "discoverer",
+      "oak_years": [
+        3,
+        4
+      ],
+      "topics": [
+        {
+          "key": "new-earth-surface",
+          "number": 1,
+          "title": {
+            "en": "Earth's surface: volcanoes, earthquakes and oceans",
+            "vi": "Bề mặt Trái Đất: núi lửa, động đất, đại dương"
+          },
+          "strand": "earth_sky",
+          "level": 3,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Land and water on Earth",
+                "vi": "Đất và nước trên Trái Đất"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "87429abc-33e3-403c-a228-4d4510da6e53"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Continents and oceans",
+                "vi": "Các châu lục và đại dương"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "547449b6-09ca-4800-82fd-3c943a13c8ba"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Inside the Earth",
+                "vi": "Bên trong Trái Đất"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "b162b1ad-cdb3-4b9d-a3c6-71ea703552a8"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Volcanoes",
+                "vi": "Núi lửa"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "6f34422b-c0fb-4ce7-8a6e-7114ac0d3cf3"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Earthquakes and tsunamis",
+                "vi": "Động đất và sóng thần"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "f7209297-0675-48d0-a0c1-dddc3b172312"
+            }
+          ],
+          "topic_id": "505bb78f-0480-4213-9fe2-9d1604859e60"
+        },
+        {
+          "key": "new-dinosaurs",
+          "number": 2,
+          "title": {
+            "en": "Dinosaurs and Earth long ago",
+            "vi": "Khủng long và Trái Đất thời xa xưa"
+          },
+          "strand": "plants_animals",
+          "level": 4,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Earth long, long ago",
+                "vi": "Trái Đất rất lâu về trước"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "9a489ced-a28a-42dd-adb4-ad3eaf43d638"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "What were dinosaurs?",
+                "vi": "Khủng long là gì?"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "47f244b8-f6bb-4f9e-9522-2a7b61902aa0"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "What fossils tell us about dinosaurs",
+                "vi": "Hoá thạch kể chuyện khủng long"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "02609387-ad90-4c33-a39e-4928ea7fde5c"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "How dinosaurs lived",
+                "vi": "Khủng long ăn gì, sống ra sao?"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "db1ae2e8-cfcf-442e-a7bc-b433141c43d0"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Why dinosaurs died out",
+                "vi": "Vì sao khủng long biến mất?"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "b18f28ed-e459-4905-bf21-5901faec8cd5"
+            }
+          ],
+          "topic_id": "a223d27f-7bb6-41ff-a81c-eb3053477502"
+        },
+        {
+          "key": "new-breathing",
+          "number": 3,
+          "title": {
+            "en": "Breathing",
+            "vi": "Hô hấp"
+          },
+          "strand": "humans_health",
+          "level": 3,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Why we breathe",
+                "vi": "Vì sao ta phải thở?"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "41512052-e9f3-4050-9660-f5b3e2c09f4c"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The journey of air",
+                "vi": "Đường đi của không khí: mũi, khí quản, phổi"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "80c089ce-d23b-4d50-b146-7845a80d735e"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Breathing and exercise",
+                "vi": "Thở khi chạy nhảy"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "98212602-8b80-408e-83cd-1a87c8124e0a"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Keeping lungs healthy",
+                "vi": "Giữ phổi khoẻ: khói bụi, khói thuốc, khẩu trang"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "27d6d67a-1662-4c49-a55b-af5a44d1eff8"
+            }
+          ],
+          "topic_id": "adeb6980-3951-4c20-badb-e7b1875a3fa0"
+        },
+        {
+          "key": "new-brain",
+          "number": 4,
+          "title": {
+            "en": "The brain and senses",
+            "vi": "Não bộ và giác quan"
+          },
+          "strand": "humans_health",
+          "level": 3,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The brain is in charge",
+                "vi": "Não điều khiển cơ thể"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "8ced6f2c-eef9-43cf-b438-93c3140e23ab"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Nerves carry messages",
+                "vi": "Dây thần kinh truyền tin"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "b0670c67-af33-41f5-a065-50acb79f9add"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Senses send messages to the brain",
+                "vi": "Giác quan gửi tin về não"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "17a5e04d-f2d7-4c66-a627-91db2d3cdd44"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Sleep and protecting your head",
+                "vi": "Ngủ đủ giấc và đội mũ bảo hiểm"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "b5315c80-a987-4849-9db5-163c6abebeac"
+            }
+          ],
+          "topic_id": "f46376ec-37f5-41fa-95bf-595573031847"
+        },
+        {
+          "key": "new-weather",
+          "number": 5,
+          "title": {
+            "en": "Weather and natural hazards in Vietnam",
+            "vi": "Thời tiết và thiên tai ở Việt Nam"
+          },
+          "strand": "earth_sky",
+          "level": 2,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Kinds of weather",
+                "vi": "Nắng, mưa, gió, mây"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "3d33c7af-b287-4dea-8174-3a0f8e2bf879"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Measuring the weather",
+                "vi": "Đo thời tiết: nhiệt kế, đo mưa, hướng gió"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "62d1b0cf-7e67-4807-83f4-be42ff08b77c"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Storm season in Vietnam",
+                "vi": "Mùa mưa bão ở Việt Nam"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "e2aea6b5-f2a7-4d04-b96d-e47a9df8efae"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Floods and droughts",
+                "vi": "Lũ lụt và hạn hán"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "abdeac8f-12c5-46bd-8df6-5677cb5541e8"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Staying safe in storms and floods",
+                "vi": "An toàn khi có bão lũ"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "31565651-aff5-40b9-b9a3-146c2520a91d"
+            }
+          ],
+          "topic_id": "05ef3db3-3ff7-4637-9c4c-3a5f0331cb33"
+        },
+        {
+          "key": "rocks-and-soils",
+          "number": 6,
+          "title": {
+            "en": "Rocks and soils",
+            "vi": "Đá và đất"
+          },
+          "strand": "earth_sky",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "rocks-and-soils",
+            "year": 3,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Introduction to rocks",
+                "vi": "Làm quen với đá"
+              },
+              "oak_lessons": [
+                "introduction-to-rocks"
+              ],
+              "statutory": true,
+              "lesson_id": "868995c8-879a-4598-b470-de86b4cf4b34"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The appearance of rocks",
+                "vi": "Nhìn kỹ các loại đá"
+              },
+              "oak_lessons": [
+                "the-appearance-of-rocks"
+              ],
+              "statutory": true,
+              "lesson_id": "d2bd55a8-bb56-44ff-b642-5dc3f2f3158c"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Physical properties of rocks: hardness",
+                "vi": "Đá nào cứng hơn?"
+              },
+              "oak_lessons": [
+                "physical-properties-of-rocks-hardness"
+              ],
+              "statutory": true,
+              "lesson_id": "cc0fb575-ea1a-42d3-98a8-e53f184415c4"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Mohs' scale of hardness",
+                "vi": "Thang độ cứng Mohs"
+              },
+              "oak_lessons": [
+                "mohs-scale-of-hardness-non-statutory"
+              ],
+              "statutory": false,
+              "lesson_id": "e234909f-12d0-4785-bb60-079668484160"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Physical properties of rocks: permeability",
+                "vi": "Đá nào thấm nước?"
+              },
+              "oak_lessons": [
+                "physical-properties-of-rocks-permeability"
+              ],
+              "statutory": true,
+              "lesson_id": "9f99a248-732c-41e2-bdb7-0dd41a16b707"
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Everyday uses of rocks",
+                "vi": "Đá dùng làm gì?"
+              },
+              "oak_lessons": [
+                "everyday-uses-of-rocks"
+              ],
+              "statutory": true,
+              "lesson_id": "bdaf000d-f9ff-4701-8fca-d10794579eb8"
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Weathering and erosion of rocks",
+                "vi": "Đá bị bào mòn theo thời gian"
+              },
+              "oak_lessons": [
+                "weathering-and-erosion-of-rocks"
+              ],
+              "statutory": true,
+              "lesson_id": "aa984cc1-6e8a-4450-92ac-be22dc208043"
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "How fossils are formed",
+                "vi": "Hoá thạch hình thành thế nào?"
+              },
+              "oak_lessons": [
+                "how-fossils-are-formed"
+              ],
+              "statutory": true,
+              "lesson_id": "89838997-a0a7-4e75-a862-a4f2136700df"
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "More about fossil formation",
+                "vi": "Nhiều cách tạo thành hoá thạch"
+              },
+              "oak_lessons": [
+                "more-about-fossil-formation"
+              ],
+              "statutory": true,
+              "lesson_id": "4ed9bcfd-ae35-4e9f-a05d-63c2e9bb4452"
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Mary Anning",
+                "vi": "Mary Anning, người săn hoá thạch"
+              },
+              "oak_lessons": [
+                "mary-anning-non-statutory"
+              ],
+              "statutory": false,
+              "lesson_id": "84f73031-5225-4c61-95eb-159eb4633509"
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "What soils are made from",
+                "vi": "Đất gồm những gì?"
+              },
+              "oak_lessons": [
+                "what-soils-are-made-from"
+              ],
+              "statutory": true,
+              "lesson_id": "0130d86c-0c2f-4219-b3f8-d8de4fb7a044"
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "Different types of soils",
+                "vi": "Các loại đất ở Việt Nam"
+              },
+              "oak_lessons": [
+                "different-types-of-soils-non-statutory"
+              ],
+              "statutory": false,
+              "lesson_id": "2b319744-2a0f-41e8-9c00-97af95098a9e"
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Healthy soil",
+                "vi": "Thế nào là đất tốt?"
+              },
+              "oak_lessons": [
+                "healthy-soil-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false,
+              "lesson_id": "09e29d9b-d674-4bd6-bdf5-931a49fd24f2"
+            },
+            {
+              "number": 14,
+              "title": {
+                "en": "Soil permeability",
+                "vi": "Nước thấm qua đất nào nhanh hơn?"
+              },
+              "oak_lessons": [
+                "soil-permeability-plan-non-statutory",
+                "soil-permeability-do-and-review-non-statutory"
+              ],
+              "statutory": false,
+              "lesson_id": "fb8425d6-7d8b-4c48-9111-464cda4a7b39"
+            },
+            {
+              "number": 15,
+              "title": {
+                "en": "How geologists work",
+                "vi": "Nhà địa chất làm gì?"
+              },
+              "oak_lessons": [
+                "how-geologists-work"
+              ],
+              "statutory": true,
+              "lesson_id": "c60a410e-389c-4381-b9db-b4ca9a933487"
+            }
+          ],
+          "topic_id": "bbfa4616-d17e-46ae-a035-5043ae608bf7"
+        },
+        {
+          "key": "introduction-to-the-human-skeleton-and-muscles",
+          "number": 7,
+          "title": {
+            "en": "Introduction to the human skeleton and muscles",
+            "vi": "Bộ xương và cơ bắp"
+          },
+          "strand": "humans_health",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-the-human-skeleton-and-muscles",
+            "year": 3,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The human skeleton: support",
+                "vi": "Bộ xương nâng đỡ cơ thể"
+              },
+              "oak_lessons": [
+                "the-human-skeleton-support"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The human skeleton: protection",
+                "vi": "Xương bảo vệ não, tim và phổi"
+              },
+              "oak_lessons": [
+                "the-human-skeleton-protection"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Bone length",
+                "vi": "Xương có dài ra khi ta lớn?"
+              },
+              "oak_lessons": [
+                "bone-length-plan-and-do",
+                "bone-length-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Animal skeletons",
+                "vi": "Động vật có xương sống"
+              },
+              "oak_lessons": [
+                "animal-skeletons"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Animals without bones",
+                "vi": "Động vật không xương sống"
+              },
+              "oak_lessons": [
+                "animals-without-bones"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Muscles for movement",
+                "vi": "Cơ bắp giúp ta cử động"
+              },
+              "oak_lessons": [
+                "muscles-for-movement"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Muscle strength",
+                "vi": "Thử đo sức mạnh cơ bắp"
+              },
+              "oak_lessons": [
+                "muscle-strength-plan-non-statutory",
+                "muscle-strength-do-and-review-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Improving muscle strength",
+                "vi": "Bài tập cho cơ bắp khoẻ"
+              },
+              "oak_lessons": [
+                "improving-muscle-strength-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "simple-forces-including-magnets",
+          "number": 8,
+          "title": {
+            "en": "Simple forces including magnets",
+            "vi": "Lực và nam châm"
+          },
+          "strand": "energy_forces",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "simple-forces-including-magnets",
+            "year": 3,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Different surfaces",
+                "vi": "Mặt nào làm vật chậm lại?"
+              },
+              "oak_lessons": [
+                "different-surfaces-plan",
+                "different-surfaces-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Different surfaces in real life",
+                "vi": "Mặt trơn và mặt ráp quanh ta"
+              },
+              "oak_lessons": [
+                "different-surfaces-in-real-life-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Contact forces",
+                "vi": "Những lực cần chạm vào vật"
+              },
+              "oak_lessons": [
+                "contact-forces"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Magnetic force",
+                "vi": "Chuyện tìm ra nam châm"
+              },
+              "oak_lessons": [
+                "magnetic-force-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Magnetic force at a distance",
+                "vi": "Nam châm hút cả khi chưa chạm"
+              },
+              "oak_lessons": [
+                "magnetic-force-at-a-distance"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Different magnets and their parts",
+                "vi": "Các loại nam châm và hai cực"
+              },
+              "oak_lessons": [
+                "different-magnets-and-their-parts"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Strongest magnet",
+                "vi": "Nam châm nào mạnh nhất?"
+              },
+              "oak_lessons": [
+                "strongest-magnet-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Magnetic and non-magnetic materials",
+                "vi": "Vật nào bị nam châm hút?"
+              },
+              "oak_lessons": [
+                "magnetic-and-non-magnetic-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Putting magnets together: attract or repel",
+                "vi": "Hút nhau hay đẩy nhau?"
+              },
+              "oak_lessons": [
+                "putting-magnets-together-attract-or-repel"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Blocking magnetic force",
+                "vi": "Có chặn được lực nam châm không?"
+              },
+              "oak_lessons": [
+                "blocking-magnetic-force"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Using magnets to solve problems",
+                "vi": "Kỹ sư dùng nam châm làm gì?"
+              },
+              "oak_lessons": [
+                "using-magnets-to-solve-problems-non-statutory-scientists-and-engineers"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "healthy-eating",
+          "number": 9,
+          "title": {
+            "en": "Healthy eating",
+            "vi": "Ăn uống lành mạnh"
+          },
+          "strand": "humans_health",
+          "level": 2,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "healthy-eating",
+            "year": 3,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Making or finding food",
+                "vi": "Ai tự làm ra thức ăn?"
+              },
+              "oak_lessons": [
+                "making-or-finding-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Types of food",
+                "vi": "Thức ăn cho ta những gì?"
+              },
+              "oak_lessons": [
+                "types-of-food"
+              ],
+              "statutory": true,
+              "lesson_id": "4b11eb40-9a47-4e5e-b4b5-bea60264ded3"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Amounts of food",
+                "vi": "Ăn uống bao nhiêu là vừa?"
+              },
+              "oak_lessons": [
+                "amounts-of-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Nutrition from food",
+                "vi": "Chất dinh dưỡng giúp gì cho cơ thể?"
+              },
+              "oak_lessons": [
+                "nutrition-from-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Fats in food",
+                "vi": "Món nào nhiều chất béo hơn?"
+              },
+              "oak_lessons": [
+                "fats-in-food-plan-and-do-non-statutory",
+                "fats-in-food-review-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Nutrient-rich meal",
+                "vi": "Mâm cơm cân bằng"
+              },
+              "oak_lessons": [
+                "nutrient-rich-meal-planning-non-statutory",
+                "nutrient-rich-meal-doing-and-reviewing-non-statutory"
+              ],
+              "statutory": false,
+              "lesson_id": "23603940-87a2-435b-bf7d-c6c18f79e349"
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Different diets for different people",
+                "vi": "Mỗi người ăn một kiểu"
+              },
+              "oak_lessons": [
+                "different-diets-for-different-people"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Sustainable sources of food",
+                "vi": "Nuôi trồng và đánh bắt bền vững"
+              },
+              "oak_lessons": [
+                "sustainable-sources-of-food-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Local food",
+                "vi": "Ăn thức ăn nơi mình sống"
+              },
+              "oak_lessons": [
+                "local-food-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Food miles",
+                "vi": "Thức ăn đi bao xa tới mâm cơm?"
+              },
+              "oak_lessons": [
+                "food-miles-non-statutory"
+              ],
+              "statutory": false
+            }
+          ],
+          "topic_id": "d3a514ef-02cd-4386-a358-f01e425a10f8"
+        },
+        {
+          "key": "what-plants-do-and-what-they-need",
+          "number": 10,
+          "title": {
+            "en": "What plants do and what they need",
+            "vi": "Cây làm gì và cần gì"
+          },
+          "strand": "plants_animals",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "what-plants-do-and-what-they-need",
+            "year": 3,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "What plants need",
+                "vi": "Trồng thử để biết cây cần gì"
+              },
+              "oak_lessons": [
+                "what-plants-need-plan",
+                "what-plants-need-do"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Nutrients and fertilisers for plants",
+                "vi": "Phân bón giúp gì cho cây?"
+              },
+              "oak_lessons": [
+                "nutrients-and-fertilisers-for-plants-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "The function of leaves",
+                "vi": "Lá cây để làm gì?"
+              },
+              "oak_lessons": [
+                "the-function-of-leaves"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "The function of roots",
+                "vi": "Rễ cây để làm gì?"
+              },
+              "oak_lessons": [
+                "the-function-of-roots"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Plants without roots",
+                "vi": "Cây mất rễ thì sao?"
+              },
+              "oak_lessons": [
+                "plants-without-roots"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "How water is transported in plants",
+                "vi": "Nước đi trong cây thế nào?"
+              },
+              "oak_lessons": [
+                "how-water-is-transported-in-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "What plants need: results",
+                "vi": "Cây trồng thử cho ta biết gì?"
+              },
+              "oak_lessons": [
+                "what-plants-need-review",
+                "what-plants-need-final-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "The function of flowers",
+                "vi": "Hoa để làm gì?"
+              },
+              "oak_lessons": [
+                "the-function-of-flowers"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "The parts of a flower",
+                "vi": "Các bộ phận của hoa"
+              },
+              "oak_lessons": [
+                "the-parts-of-a-flower"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Pollination",
+                "vi": "Hoa thụ phấn thế nào?"
+              },
+              "oak_lessons": [
+                "pollination"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Seed formation and seed dispersal",
+                "vi": "Hạt từ đâu ra, đi đâu?"
+              },
+              "oak_lessons": [
+                "seed-formation-and-seed-dispersal"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "Life cycle of a flowering plant",
+                "vi": "Vòng đời của cây có hoa"
+              },
+              "oak_lessons": [
+                "life-cycle-of-a-flowering-plant"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Comparing what plants need in different habitats",
+                "vi": "Cây đước và cây lúa cần gì?"
+              },
+              "oak_lessons": [
+                "comparing-what-plants-need-in-different-habitats"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "introduction-to-light-and-shadows",
+          "number": 11,
+          "title": {
+            "en": "Introduction to light and shadows",
+            "vi": "Ánh sáng và bóng tối"
+          },
+          "strand": "energy_forces",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-light-and-shadows",
+            "year": 3,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Light and seeing",
+                "vi": "Cần ánh sáng để nhìn thấy"
+              },
+              "oak_lessons": [
+                "light-and-seeing"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Light sources",
+                "vi": "Các nguồn sáng quanh ta"
+              },
+              "oak_lessons": [
+                "light-sources"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Protecting our eyes from the Sun",
+                "vi": "Thử vật liệu che nắng cho mắt"
+              },
+              "oak_lessons": [
+                "protecting-our-eyes-from-the-sun-plan",
+                "protecting-our-eyes-from-the-sun-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Opaque, transparent and translucent",
+                "vi": "Vật nào cho ánh sáng đi qua?"
+              },
+              "oak_lessons": [
+                "opaque-transparent-and-translucent"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Making shadows",
+                "vi": "Bóng của vật từ đâu ra?"
+              },
+              "oak_lessons": [
+                "making-shadows"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Shadow size",
+                "vi": "Khi nào bóng to, khi nào bóng nhỏ?"
+              },
+              "oak_lessons": [
+                "shadow-size-plan",
+                "shadow-size-do",
+                "shadow-size-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Reflected light",
+                "vi": "Vật liệu nào phản chiếu ánh sáng tốt?"
+              },
+              "oak_lessons": [
+                "reflected-light-plan",
+                "reflected-light-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Light pollution",
+                "vi": "Ô nhiễm ánh sáng"
+              },
+              "oak_lessons": [
+                "light-pollution-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "introduction-to-the-human-digestive-system",
+          "number": 12,
+          "title": {
+            "en": "Introduction to the human digestive system",
+            "vi": "Hệ tiêu hoá"
+          },
+          "strand": "humans_health",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-the-human-digestive-system",
+            "year": 4,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Types of teeth",
+                "vi": "Các loại răng của em"
+              },
+              "oak_lessons": [
+                "types-of-teeth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The functions of teeth",
+                "vi": "Mỗi loại răng làm gì?"
+              },
+              "oak_lessons": [
+                "the-functions-of-teeth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Different teeth for different food",
+                "vi": "Ăn món nào dùng răng nào?"
+              },
+              "oak_lessons": [
+                "different-teeth-for-different-food"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Carnivore, herbivore and omnivore teeth",
+                "vi": "Răng con vật ăn thịt, ăn cỏ, ăn tạp"
+              },
+              "oak_lessons": [
+                "carnivore-herbivore-and-omnivore-teeth-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Looking after our teeth",
+                "vi": "Đồ uống nào làm hại răng?"
+              },
+              "oak_lessons": [
+                "looking-after-our-teeth-plan-and-do-non-statutory",
+                "looking-after-our-teeth-review-non-statutory",
+                "comparing-toothpaste-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "The human digestive system",
+                "vi": "Thức ăn đi từ miệng xuống dạ dày"
+              },
+              "oak_lessons": [
+                "the-human-digestive-system"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "More about the journey of food",
+                "vi": "Thức ăn đi tiếp qua ruột"
+              },
+              "oak_lessons": [
+                "more-about-the-journey-of-food",
+                "presenting-the-human-digestive-system"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "introduction-to-states-of-matter-and-changing-states",
+          "number": 13,
+          "title": {
+            "en": "Introduction to states of matter and changing states",
+            "vi": "Các thể của vật chất"
+          },
+          "strand": "materials",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-states-of-matter-and-changing-states",
+            "year": 4,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Properties of solids, liquids and gases",
+                "vi": "Thể rắn, lỏng và khí"
+              },
+              "oak_lessons": [
+                "properties-of-solids-liquids-and-gases"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Comparing and grouping solids, liquids and gases",
+                "vi": "Xếp nhóm chất rắn, lỏng, khí"
+              },
+              "oak_lessons": [
+                "comparing-and-grouping-solids-liquids-and-gases"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Changing state: solid to liquid",
+                "vi": "Từ rắn thành lỏng khi nóng lên"
+              },
+              "oak_lessons": [
+                "changing-state-solid-to-liquid"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Changing state: liquid to solid",
+                "vi": "Từ lỏng thành rắn khi lạnh đi"
+              },
+              "oak_lessons": [
+                "changing-state-liquid-to-solid"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Melting ice caps and glaciers",
+                "vi": "Băng tan làm nước biển dâng"
+              },
+              "oak_lessons": [
+                "melting-ice-caps-and-glaciers-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Everyday examples of changing state: solids and liquids",
+                "vi": "Kem tan, nến chảy, nước đóng đá"
+              },
+              "oak_lessons": [
+                "everyday-examples-of-changing-state-solids-and-liquids-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Thermometers and data loggers",
+                "vi": "Đo nhiệt độ thế nào?"
+              },
+              "oak_lessons": [
+                "thermometers-and-data-loggers"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Melting temperatures",
+                "vi": "Chất nào nóng chảy trước?"
+              },
+              "oak_lessons": [
+                "melting-temperatures-plan",
+                "melting-temperatures-do-and-review",
+                "melting-temperatures-research"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Changing state: liquid to gas",
+                "vi": "Nước thành hơi nước"
+              },
+              "oak_lessons": [
+                "changing-state-liquid-to-gas"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Changing state: gas to liquid",
+                "vi": "Hơi nước thành giọt nước"
+              },
+              "oak_lessons": [
+                "changing-state-gas-to-liquid"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Everyday examples of evaporation and condensation",
+                "vi": "Bay hơi và ngưng tụ quanh ta"
+              },
+              "oak_lessons": [
+                "everyday-examples-of-evaporation-and-condensation-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "Evaporation and condensation in the water cycle",
+                "vi": "Vòng tuần hoàn của nước"
+              },
+              "oak_lessons": [
+                "evaporation-and-condensation-in-the-water-cycle"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Temperature and evaporation",
+                "vi": "Nước bay hơi nhanh hơn khi nóng?"
+              },
+              "oak_lessons": [
+                "temperature-and-evaporation-plan",
+                "temperature-and-evaporation-do-and-review"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "simple-electrical-circuits",
+          "number": 14,
+          "title": {
+            "en": "Simple electrical circuits",
+            "vi": "Mạch điện đơn giản"
+          },
+          "strand": "energy_forces",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "simple-electrical-circuits",
+            "year": 4,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Electrical appliances",
+                "vi": "Đồ dùng chạy bằng điện"
+              },
+              "oak_lessons": [
+                "electrical-appliances"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Electrical appliances of the future",
+                "vi": "Sáng chế đồ dùng điện tương lai"
+              },
+              "oak_lessons": [
+                "electrical-appliances-of-the-future-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Components in a simple circuit",
+                "vi": "Các bộ phận của mạch điện"
+              },
+              "oak_lessons": [
+                "components-in-a-simple-circuit"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Building simple circuits",
+                "vi": "Lắp một mạch điện đơn giản"
+              },
+              "oak_lessons": [
+                "building-simple-circuits"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Troubleshooting problems with circuits",
+                "vi": "Vì sao đèn không sáng?"
+              },
+              "oak_lessons": [
+                "troubleshooting-problems-with-circuits"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Switches",
+                "vi": "Công tắc đóng, mở mạch điện"
+              },
+              "oak_lessons": [
+                "switches"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Electrical conductors and insulators",
+                "vi": "Vật dẫn điện và vật cách điện"
+              },
+              "oak_lessons": [
+                "electrical-conductors-and-insulators"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Electrical conductors: testing",
+                "vi": "Kim loại có dẫn điện không?"
+              },
+              "oak_lessons": [
+                "electrical-conductors-testing"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Generating and transporting electricity",
+                "vi": "Điện từ đâu về nhà em?"
+              },
+              "oak_lessons": [
+                "generating-and-transporting-electricity-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Working with electricity",
+                "vi": "Những nghề làm với điện"
+              },
+              "oak_lessons": [
+                "working-with-electricity"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "introduction-to-sound",
+          "number": 15,
+          "title": {
+            "en": "Introduction to sound",
+            "vi": "Âm thanh"
+          },
+          "strand": "energy_forces",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-sound",
+            "year": 4,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "How sounds are made",
+                "vi": "Âm thanh sinh ra thế nào?"
+              },
+              "oak_lessons": [
+                "how-sounds-are-made"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "How vibrations travel",
+                "vi": "Âm thanh truyền tới tai thế nào?"
+              },
+              "oak_lessons": [
+                "how-vibrations-travel"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Vibrations and solid materials",
+                "vi": "Âm thanh truyền qua vật rắn"
+              },
+              "oak_lessons": [
+                "vibrations-and-solid-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Louder and quieter sounds",
+                "vi": "Tiếng to và tiếng nhỏ"
+              },
+              "oak_lessons": [
+                "louder-and-quieter-sounds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Measuring the volume of sounds",
+                "vi": "Đo độ to của âm thanh"
+              },
+              "oak_lessons": [
+                "measuring-the-volume-of-sounds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Sound insulation",
+                "vi": "Vật liệu nào cách âm tốt?"
+              },
+              "oak_lessons": [
+                "sound-insulation"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Noise pollution",
+                "vi": "Ô nhiễm tiếng ồn"
+              },
+              "oak_lessons": [
+                "noise-pollution-acceptable-decibel-levels-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Distance from sounds",
+                "vi": "Càng xa nguồn âm, tiếng càng nhỏ?"
+              },
+              "oak_lessons": [
+                "distance-from-sounds-plan",
+                "distance-from-sounds-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Higher and lower sounds",
+                "vi": "Âm cao và âm thấp"
+              },
+              "oak_lessons": [
+                "higher-and-lower-sounds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Changing the pitch of sounds",
+                "vi": "Làm âm thanh cao hơn, thấp hơn"
+              },
+              "oak_lessons": [
+                "changing-the-pitch-of-sounds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Musical instruments and pitch",
+                "vi": "Nhạc cụ đổi âm cao thấp thế nào?"
+              },
+              "oak_lessons": [
+                "musical-instruments-and-pitch"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "living-things-and-the-environment",
+          "number": 16,
+          "title": {
+            "en": "Living things and the environment",
+            "vi": "Sinh vật và môi trường"
+          },
+          "strand": "living_environment",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "living-things-and-the-environment",
+            "year": 4,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Introducing observable characteristics",
+                "vi": "Quan sát và xếp nhóm đồ vật"
+              },
+              "oak_lessons": [
+                "introducing-observable-characteristics"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Grouping animals",
+                "vi": "Xếp nhóm động vật"
+              },
+              "oak_lessons": [
+                "grouping-animals"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Grouping plants",
+                "vi": "Xếp nhóm thực vật"
+              },
+              "oak_lessons": [
+                "grouping-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Identifying living things",
+                "vi": "Hỏi có hay không để đoán tên"
+              },
+              "oak_lessons": [
+                "identifying-living-things-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Classification keys",
+                "vi": "Khoá phân loại là gì?"
+              },
+              "oak_lessons": [
+                "classification-keys"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Classification keys to identify animals",
+                "vi": "Khoá phân loại động vật"
+              },
+              "oak_lessons": [
+                "classification-keys-to-identify-animals"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Classification keys to identify plants",
+                "vi": "Khoá phân loại thực vật"
+              },
+              "oak_lessons": [
+                "classification-keys-to-identify-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Environments and seasonal changes",
+                "vi": "Môi trường thay đổi theo mùa"
+              },
+              "oak_lessons": [
+                "environments-and-seasonal-changes"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Extreme weather: flooding",
+                "vi": "Lũ lụt và ngập úng"
+              },
+              "oak_lessons": [
+                "extreme-weather-flooding-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Extreme weather: heatwaves and wild fires",
+                "vi": "Nắng nóng và cháy rừng"
+              },
+              "oak_lessons": [
+                "extreme-weather-heatwaves-and-wild-fires-non-statutory-cc-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Land development and deforestation",
+                "vi": "Xây dựng và phá rừng"
+              },
+              "oak_lessons": [
+                "changing-environments-land-development-and-deforestation"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "Waste creation and pollution",
+                "vi": "Rác thải và ô nhiễm"
+              },
+              "oak_lessons": [
+                "changing-environments-waste-creation-and-pollution"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Animals in danger",
+                "vi": "Động vật đang gặp nguy hiểm"
+              },
+              "oak_lessons": [
+                "animals-in-danger"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 14,
+              "title": {
+                "en": "Protecting animals in decline",
+                "vi": "Bảo vệ động vật đang ít dần"
+              },
+              "oak_lessons": [
+                "protecting-animals-in-decline-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 15,
+              "title": {
+                "en": "Plants in danger",
+                "vi": "Thực vật đang gặp nguy hiểm"
+              },
+              "oak_lessons": [
+                "changing-environments-plants-in-danger"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 16,
+              "title": {
+                "en": "Nature reserves",
+                "vi": "Khu bảo tồn và vườn quốc gia"
+              },
+              "oak_lessons": [
+                "changing-environments-nature-reserves"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 17,
+              "title": {
+                "en": "Reforestation and recycling",
+                "vi": "Trồng lại rừng và tái chế"
+              },
+              "oak_lessons": [
+                "changing-environments-reforestation-and-recycling"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "more-about-food-chains",
+          "number": 17,
+          "title": {
+            "en": "More about food chains",
+            "vi": "Chuỗi thức ăn nâng cao"
+          },
+          "strand": "living_environment",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "more-about-food-chains",
+            "year": 4,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Simple food chains",
+                "vi": "Chuỗi thức ăn đơn giản"
+              },
+              "oak_lessons": [
+                "simple-food-chains"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Producers in a food chain",
+                "vi": "Sinh vật sản xuất"
+              },
+              "oak_lessons": [
+                "producers-in-a-food-chain"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Consumers in a food chain",
+                "vi": "Sinh vật tiêu thụ"
+              },
+              "oak_lessons": [
+                "consumers-in-a-food-chain"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Predators and prey in a food chain",
+                "vi": "Kẻ săn mồi và con mồi"
+              },
+              "oak_lessons": [
+                "predators-and-prey-in-a-food-chain"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Creating food chains",
+                "vi": "Tự lập chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "creating-food-chains"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Comparing different food chains",
+                "vi": "So sánh và trình bày chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "comparing-different-food-chains",
+                "presenting-food-chains"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Changes in food chains",
+                "vi": "Khi một loài tăng hay giảm"
+              },
+              "oak_lessons": [
+                "changes-in-food-chains-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Dangers to food chains",
+                "vi": "Mối nguy cho chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "dangers-to-food-chains-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Protecting food chains",
+                "vi": "Bảo vệ chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "protecting-food-chains"
+              ],
+              "statutory": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "age_group": "scientist",
+      "oak_years": [
+        5,
+        6
+      ],
+      "topics": [
+        {
+          "key": "new-water-air",
+          "number": 1,
+          "title": {
+            "en": "Water and air",
+            "vi": "Nước và không khí"
+          },
+          "strand": "materials",
+          "level": null,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Properties of water",
+                "vi": "Tính chất của nước"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Clean water and saving water",
+                "vi": "Nước sạch, nước bẩn và tiết kiệm nước"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "What is in air?",
+                "vi": "Không khí có gì?"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Air for living and burning",
+                "vi": "Không khí cần cho sự sống và sự cháy"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Air pollution and how to reduce it",
+                "vi": "Ô nhiễm không khí và cách bảo vệ"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "new-space",
+          "number": 2,
+          "title": {
+            "en": "Stars and space travel",
+            "vi": "Các vì sao và du hành vũ trụ"
+          },
+          "strand": "earth_sky",
+          "level": null,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The Sun is a star",
+                "vi": "Mặt Trời là một ngôi sao"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Stars and constellations",
+                "vi": "Các chòm sao"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Galaxies and the universe",
+                "vi": "Thiên hà và vũ trụ"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Humans in space",
+                "vi": "Con người bay vào vũ trụ"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Living on a space station",
+                "vi": "Sống trên trạm vũ trụ"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "new-fungi",
+          "number": 3,
+          "title": {
+            "en": "Fungi",
+            "vi": "Nấm"
+          },
+          "strand": "plants_animals",
+          "level": null,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Fungi are not plants",
+                "vi": "Nấm không phải là cây"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Edible and poisonous mushrooms",
+                "vi": "Nấm ăn được và nấm độc"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Fungi as decomposers",
+                "vi": "Nấm phân huỷ lá rụng"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Useful fungi",
+                "vi": "Nấm có ích: nấm men, nấm làm thuốc"
+              },
+              "oak_lessons": [],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "properties-changes-and-separating-materials",
+          "number": 4,
+          "title": {
+            "en": "Properties, changes and separating materials",
+            "vi": "Tính chất và biến đổi vật liệu"
+          },
+          "strand": "materials",
+          "level": 5,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "properties-changes-and-separating-materials",
+            "year": 5,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Properties of materials",
+                "vi": "Tính chất của vật liệu"
+              },
+              "oak_lessons": [
+                "properties-of-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Uses of everyday materials",
+                "vi": "Chọn vật liệu theo tính chất"
+              },
+              "oak_lessons": [
+                "uses-of-everyday-materials"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Thermal insulators",
+                "vi": "Cốc nào giữ nước nóng lâu nhất?"
+              },
+              "oak_lessons": [
+                "thermal-insulators-plan",
+                "thermal-insulators-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Everyday uses of thermal insulators",
+                "vi": "Vật cách nhiệt quanh ta"
+              },
+              "oak_lessons": [
+                "everyday-uses-of-thermal-insulators"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Insulating our homes and schools",
+                "vi": "Chống nóng cho nhà và trường"
+              },
+              "oak_lessons": [
+                "insulating-our-homes-and-schools-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Soluble and insoluble",
+                "vi": "Chất tan và chất không tan"
+              },
+              "oak_lessons": [
+                "soluble-and-insoluble"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Recovering insoluble solids",
+                "vi": "Tách chất rắn không tan khỏi chất lỏng"
+              },
+              "oak_lessons": [
+                "recovering-insoluble-solids"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Providing safe drinking water",
+                "vi": "Lọc nước bẩn bằng cát và sỏi"
+              },
+              "oak_lessons": [
+                "providing-safe-drinking-water-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Separating soluble solids from solutions",
+                "vi": "Tách chất tan khỏi dung dịch"
+              },
+              "oak_lessons": [
+                "separating-soluble-solids-from-solutions"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Removing salt from seawater",
+                "vi": "Làm muối từ nước biển"
+              },
+              "oak_lessons": [
+                "removing-salt-from-seawater-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Reversible changes of state",
+                "vi": "Đổi thể rồi đổi lại được"
+              },
+              "oak_lessons": [
+                "reversible-changes-of-state"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "More reversible changes",
+                "vi": "Trộn, hoà tan rồi tách lại được"
+              },
+              "oak_lessons": [
+                "more-reversible-changes"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Burning: an irreversible change",
+                "vi": "Đốt cháy tạo ra chất mới"
+              },
+              "oak_lessons": [
+                "burning-an-irreversible-change"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 14,
+              "title": {
+                "en": "Burning plants as fuel",
+                "vi": "Nhiên liệu từ thực vật"
+              },
+              "oak_lessons": [
+                "burning-plants-as-fuel-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 15,
+              "title": {
+                "en": "Greenhouse gases",
+                "vi": "Khí nhà kính giữ nhiệt thế nào?"
+              },
+              "oak_lessons": [
+                "greenhouse-gases-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 16,
+              "title": {
+                "en": "Bioplastics",
+                "vi": "Tự làm nhựa sinh học"
+              },
+              "oak_lessons": [
+                "bioplastics-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 17,
+              "title": {
+                "en": "Rusting: an irreversible change",
+                "vi": "Sắt gỉ tạo ra chất mới"
+              },
+              "oak_lessons": [
+                "rusting-an-irreversible-change"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 18,
+              "title": {
+                "en": "More irreversible changes",
+                "vi": "Giấm gặp muối nở tạo chất mới"
+              },
+              "oak_lessons": [
+                "more-irreversible-changes"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 19,
+              "title": {
+                "en": "How scientists work",
+                "vi": "Nhà khoa học làm việc thế nào?"
+              },
+              "oak_lessons": [
+                "how-scientists-work"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "forces-including-simple-machines",
+          "number": 5,
+          "title": {
+            "en": "Forces including simple machines",
+            "vi": "Lực và máy đơn giản"
+          },
+          "strand": "energy_forces",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "forces-including-simple-machines",
+            "year": 5,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Introduction to gravity",
+                "vi": "Vì sao vật rơi xuống đất?"
+              },
+              "oak_lessons": [
+                "introduction-to-gravity"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Pushes and pulls",
+                "vi": "Đo lực đẩy và lực kéo"
+              },
+              "oak_lessons": [
+                "pushes-and-pulls"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Friction",
+                "vi": "Đo lực ma sát trên các mặt"
+              },
+              "oak_lessons": [
+                "friction-plan",
+                "friction-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Air resistance",
+                "vi": "Thử lực cản của không khí"
+              },
+              "oak_lessons": [
+                "air-resistance-plan",
+                "air-resistance-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Water resistance",
+                "vi": "Thử lực cản của nước"
+              },
+              "oak_lessons": [
+                "water-resistance-plan",
+                "water-resistance-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "How levers can help us",
+                "vi": "Đòn bẩy giúp ta thế nào?"
+              },
+              "oak_lessons": [
+                "how-levers-can-help-us"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "How pulleys can help us",
+                "vi": "Ròng rọc giúp ta thế nào?"
+              },
+              "oak_lessons": [
+                "how-pulleys-can-help-us"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "How gears can help us",
+                "vi": "Bánh răng giúp ta thế nào?"
+              },
+              "oak_lessons": [
+                "how-gears-can-help-us"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Simple machines",
+                "vi": "Sáng chế máy đơn giản"
+              },
+              "oak_lessons": [
+                "simple-machines"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Design and development of machines",
+                "vi": "Cùng nhau thiết kế máy móc"
+              },
+              "oak_lessons": [
+                "design-and-development-of-machines"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "earth-sun-and-moon",
+          "number": 6,
+          "title": {
+            "en": "Earth, Sun and Moon",
+            "vi": "Trái Đất, Mặt Trời, Mặt Trăng"
+          },
+          "strand": "earth_sky",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "earth-sun-and-moon",
+            "year": 5,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The shape of Earth",
+                "vi": "Trái Đất có hình gì?"
+              },
+              "oak_lessons": [
+                "the-shape-of-earth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The shape of objects in space",
+                "vi": "Các thiên thể có hình gì?"
+              },
+              "oak_lessons": [
+                "the-shape-of-objects-in-space"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Observing the Moon",
+                "vi": "Theo dõi Mặt Trăng qua nhiều ngày"
+              },
+              "oak_lessons": [
+                "observing-the-moon"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "The relative sizes of the Earth, Sun and Moon",
+                "vi": "Kích thước Trái Đất, Mặt Trời, Mặt Trăng"
+              },
+              "oak_lessons": [
+                "the-relative-sizes-of-the-earth-sun-and-moon-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "More about the Sun",
+                "vi": "Tìm hiểu thêm về Mặt Trời"
+              },
+              "oak_lessons": [
+                "more-about-the-sun-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Why we have day and night",
+                "vi": "Vì sao có ngày và đêm?"
+              },
+              "oak_lessons": [
+                "why-we-have-day-and-night"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Why the Sun appears to move across the sky",
+                "vi": "Vì sao Mặt Trời mọc rồi lặn?"
+              },
+              "oak_lessons": [
+                "why-the-sun-appears-to-move-across-the-sky"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "The planets in our solar system",
+                "vi": "Các hành tinh trong hệ Mặt Trời"
+              },
+              "oak_lessons": [
+                "the-planets-in-our-solar-system-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "The movement of the planets around the Sun",
+                "vi": "Các hành tinh quay quanh Mặt Trời"
+              },
+              "oak_lessons": [
+                "the-movement-of-the-planets-around-the-sun"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Scientific theories from the past",
+                "vi": "Người xưa hiểu hệ Mặt Trời thế nào?"
+              },
+              "oak_lessons": [
+                "scientific-theories-from-the-past-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "How we see the Moon from Earth",
+                "vi": "Vì sao ta thấy Mặt Trăng sáng?"
+              },
+              "oak_lessons": [
+                "how-we-see-the-moon-from-earth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "The movement of the Moon",
+                "vi": "Vì sao có trăng tròn, trăng khuyết?"
+              },
+              "oak_lessons": [
+                "the-movement-of-the-moon"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "reproduction-and-life-cycles-plants",
+          "number": 7,
+          "title": {
+            "en": "Reproduction and life cycles: plants",
+            "vi": "Sinh sản ở thực vật"
+          },
+          "strand": "plants_animals",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "reproduction-and-life-cycles-plants",
+            "year": 5,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Asexual reproduction in plants",
+                "vi": "Sinh sản vô tính ở thực vật"
+              },
+              "oak_lessons": [
+                "asexual-reproduction-in-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Plants from cuttings",
+                "vi": "Giâm cành để có cây mới"
+              },
+              "oak_lessons": [
+                "plants-from-cuttings"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Parts of a flowering plant and what they do",
+                "vi": "Sinh sản hữu tính ở cây có hoa"
+              },
+              "oak_lessons": [
+                "parts-of-a-flowering-plant-and-what-they-do"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Pollinators",
+                "vi": "Động vật giúp hoa thụ phấn"
+              },
+              "oak_lessons": [
+                "pollinators-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Dangers to pollinators",
+                "vi": "Vì sao ong bướm ít dần?"
+              },
+              "oak_lessons": [
+                "dangers-to-pollinators-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Selective breeding of plants",
+                "vi": "Tạo ra giống lúa tốt hơn"
+              },
+              "oak_lessons": [
+                "selective-breeding-of-plants-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Conservation using seed banks",
+                "vi": "Ngân hàng hạt giống"
+              },
+              "oak_lessons": [
+                "conservation-of-plants-using-seed-banks-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Plant life cycles",
+                "vi": "Vòng đời của các loài cây"
+              },
+              "oak_lessons": [
+                "plant-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Plant reproduction from cuttings",
+                "vi": "Theo dõi cành giâm ra rễ"
+              },
+              "oak_lessons": [
+                "plant-reproduction-from-cuttings"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "reproduction-and-life-cycles-animals",
+          "number": 8,
+          "title": {
+            "en": "Reproduction and life cycles: animals",
+            "vi": "Sinh sản ở động vật"
+          },
+          "strand": "plants_animals",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "reproduction-and-life-cycles-animals",
+            "year": 5,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Animal groups",
+                "vi": "Các nhóm động vật"
+              },
+              "oak_lessons": [
+                "animal-groups"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Insects",
+                "vi": "Côn trùng có đặc điểm gì?"
+              },
+              "oak_lessons": [
+                "insects-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Mammal life cycles",
+                "vi": "Vòng đời của động vật có vú"
+              },
+              "oak_lessons": [
+                "mammal-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Bird life cycles",
+                "vi": "Vòng đời của chim"
+              },
+              "oak_lessons": [
+                "bird-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Comparing the life cycles of mammals and birds",
+                "vi": "So sánh vòng đời động vật có vú và chim"
+              },
+              "oak_lessons": [
+                "comparing-the-life-cycles-of-mammals-and-birds"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Amphibian life cycles",
+                "vi": "Vòng đời của lưỡng cư"
+              },
+              "oak_lessons": [
+                "amphibian-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Insect life cycles",
+                "vi": "Vòng đời của côn trùng"
+              },
+              "oak_lessons": [
+                "insect-life-cycles"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Comparing the life cycles of amphibians and insects",
+                "vi": "So sánh vòng đời lưỡng cư và côn trùng"
+              },
+              "oak_lessons": [
+                "comparing-the-life-cycles-of-amphibians-and-insects"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Endangered animals & life cycles",
+                "vi": "Động vật quý hiếm và vòng đời"
+              },
+              "oak_lessons": [
+                "endangered-animals-and-life-cycles-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "More about endangered animals",
+                "vi": "Cứu động vật khỏi tuyệt chủng"
+              },
+              "oak_lessons": [
+                "more-about-endangered-animals-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Animal gestation periods",
+                "vi": "Con vật mang thai bao lâu?"
+              },
+              "oak_lessons": [
+                "animal-gestation-periods"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "human-development",
+          "number": 9,
+          "title": {
+            "en": "Human development",
+            "vi": "Sự phát triển của con người"
+          },
+          "strand": "humans_health",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "human-development",
+            "year": 5,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Changes in humans before and after birth",
+                "vi": "Thay đổi trước và sau khi chào đời"
+              },
+              "oak_lessons": [
+                "changes-in-humans-before-and-after-birth"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Changes in childhood",
+                "vi": "Thay đổi ở tuổi thơ"
+              },
+              "oak_lessons": [
+                "changes-in-childhood"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Changes during puberty",
+                "vi": "Thay đổi ở tuổi dậy thì"
+              },
+              "oak_lessons": [
+                "changes-during-puberty"
+              ],
+              "statutory": true,
+              "sensitive": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Changes in adulthood",
+                "vi": "Thay đổi khi trưởng thành"
+              },
+              "oak_lessons": [
+                "changes-in-adulthood"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Changes in old age",
+                "vi": "Thay đổi khi về già"
+              },
+              "oak_lessons": [
+                "changes-in-old-age"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "More about human development",
+                "vi": "Phỏng vấn người thân về sự lớn lên"
+              },
+              "oak_lessons": [
+                "more-about-human-development"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Finding out about human height",
+                "vi": "Đo chiều cao và vẽ biểu đồ"
+              },
+              "oak_lessons": [
+                "finding-out-about-human-height",
+                "representing-data-about-human-height",
+                "analysing-data-about-human-height"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Life expectancy",
+                "vi": "Tuổi thọ con người"
+              },
+              "oak_lessons": [
+                "life-expectancy-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "The impact of population growth ( non-statutory Climate Change & Sustainability)",
+                "vi": "Dân số tăng và Trái Đất"
+              },
+              "oak_lessons": [
+                "the-impact-of-population-growth-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "the-human-circulatory-system",
+          "number": 10,
+          "title": {
+            "en": "The human circulatory system",
+            "vi": "Hệ tuần hoàn"
+          },
+          "strand": "humans_health",
+          "level": 5,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "the-human-circulatory-system",
+            "year": 6,
+            "unit_index": 1
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Function of the heart",
+                "vi": "Tim làm việc gì?"
+              },
+              "oak_lessons": [
+                "function-of-the-heart"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Function of blood",
+                "vi": "Máu làm việc gì?"
+              },
+              "oak_lessons": [
+                "function-of-blood"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Function of blood vessels",
+                "vi": "Mạch máu làm việc gì?"
+              },
+              "oak_lessons": [
+                "function-of-blood-vessels"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "How nutrients and water are transported within humans",
+                "vi": "Máu chở nước và chất dinh dưỡng"
+              },
+              "oak_lessons": [
+                "how-nutrients-and-water-are-transported-within-humans"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "The circulatory system in humans",
+                "vi": "Trình bày về hệ tuần hoàn"
+              },
+              "oak_lessons": [
+                "the-circulatory-system-in-humans-plan",
+                "circulatory-system-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "The use of animal hearts in humans",
+                "vi": "Có nên dùng tim động vật cho người?"
+              },
+              "oak_lessons": [
+                "the-use-of-animal-hearts-in-humans-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "changing-circuits",
+          "number": 11,
+          "title": {
+            "en": "Changing circuits",
+            "vi": "Mạch điện nâng cao"
+          },
+          "strand": "energy_forces",
+          "level": 5,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "changing-circuits",
+            "year": 6,
+            "unit_index": 2
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Components and simple circuits",
+                "vi": "Lắp và thử các mạch điện"
+              },
+              "oak_lessons": [
+                "components-and-simple-circuits"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Circuit symbols and diagrams",
+                "vi": "Ký hiệu và sơ đồ mạch điện"
+              },
+              "oak_lessons": [
+                "circuit-symbols-and-diagrams"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Electrical discoveries and inventions",
+                "vi": "Những phát minh về điện"
+              },
+              "oak_lessons": [
+                "electrical-discoveries-and-inventions-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Investigating voltage",
+                "vi": "Thêm pin thì đèn sáng hơn?"
+              },
+              "oak_lessons": [
+                "investigating-voltage-plan",
+                "investigating-voltage-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Variables in electric circuits",
+                "vi": "Yếu tố nào đổi độ sáng của đèn?"
+              },
+              "oak_lessons": [
+                "variables-in-electric-circuits-plan",
+                "variables-in-electric-circuits-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Changing the volume of buzzers",
+                "vi": "Làm còi điện kêu to hơn"
+              },
+              "oak_lessons": [
+                "changing-the-volume-of-buzzers"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "The position of switches: open and closed",
+                "vi": "Công tắc đóng và mở"
+              },
+              "oak_lessons": [
+                "the-position-of-switches-open-and-closed"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Choosing and using conductors and insulators",
+                "vi": "Chọn vật dẫn điện, vật cách điện"
+              },
+              "oak_lessons": [
+                "choosing-and-using-conductors-and-insulators-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "How electrical insulators keep us safe",
+                "vi": "Vật cách điện giữ ta an toàn"
+              },
+              "oak_lessons": [
+                "how-electrical-insulators-keep-us-safe-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Electrical careers",
+                "vi": "Các nghề trong ngành điện"
+              },
+              "oak_lessons": [
+                "electrical-careers"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Electrical sensors",
+                "vi": "Làm cảm biến báo mực nước"
+              },
+              "oak_lessons": [
+                "electrical-sensors-design-non-statutory",
+                "electrical-sensors-make-and-review-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "Debating the use of electric cars",
+                "vi": "Có nên đi xe điện không?"
+              },
+              "oak_lessons": [
+                "debating-the-use-of-electric-cars-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Sustainable sources of electricity",
+                "vi": "Nguồn điện bền vững"
+              },
+              "oak_lessons": [
+                "sustainable-sources-of-electricity-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "keeping-healthy",
+          "number": 12,
+          "title": {
+            "en": "Keeping healthy",
+            "vi": "Giữ gìn sức khoẻ"
+          },
+          "strand": "humans_health",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "keeping-healthy",
+            "year": 6,
+            "unit_index": 3
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The impact of a balanced diet",
+                "vi": "Ăn cân bằng giúp gì cho cơ thể?"
+              },
+              "oak_lessons": [
+                "the-impact-of-a-balanced-diet"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Healthy and sustainable proteins",
+                "vi": "Chất đạm lành mạnh và bền vững"
+              },
+              "oak_lessons": [
+                "healthy-and-sustainable-proteins-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Mushrooms and mycoprotein",
+                "vi": "Nấm và đạm từ nấm"
+              },
+              "oak_lessons": [
+                "mushrooms-and-mycoprotein-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Healthy heart rate",
+                "vi": "Nhịp tim khi vận động"
+              },
+              "oak_lessons": [
+                "healthy-heart-rate"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Heart recovery time after exercise",
+                "vi": "Đo thời gian tim hồi phục"
+              },
+              "oak_lessons": [
+                "heart-recovery-time-after-exercise"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Healthy hearts",
+                "vi": "Bài tập cho trái tim khoẻ"
+              },
+              "oak_lessons": [
+                "healthy-hearts"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Legal and illegal drugs",
+                "vi": "Thuốc, chất kích thích và chất cấm"
+              },
+              "oak_lessons": [
+                "legal-and-illegal-drugs"
+              ],
+              "statutory": true,
+              "sensitive": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "The impact of smoking",
+                "vi": "Thuốc lá và thuốc lá điện tử hại gì?"
+              },
+              "oak_lessons": [
+                "the-impact-of-smoking"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "The impact of alcohol",
+                "vi": "Tác hại của rượu bia"
+              },
+              "oak_lessons": [
+                "the-impact-of-alcohol"
+              ],
+              "statutory": true,
+              "sensitive": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Monitoring and improving lifestyle choices",
+                "vi": "Theo dõi thói quen sống của em"
+              },
+              "oak_lessons": [
+                "monitoring-and-improving-lifestyle-choices"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Evidence about healthy lifestyle",
+                "vi": "Bằng chứng về lối sống khoẻ"
+              },
+              "oak_lessons": [
+                "evidence-about-healthy-lifestyle-do-and-review-non-statutory",
+                "evidence-about-healthy-lifestyle-presentation-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        },
+        {
+          "key": "why-we-group-and-classify-living-things",
+          "number": 13,
+          "title": {
+            "en": "Why we group and classify living things",
+            "vi": "Phân loại sinh vật"
+          },
+          "strand": "plants_animals",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "why-we-group-and-classify-living-things",
+            "year": 6,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Comparing characteristics of living things",
+                "vi": "So sánh đặc điểm của sinh vật"
+              },
+              "oak_lessons": [
+                "comparing-characteristics-of-living-things"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "How and why we group animals",
+                "vi": "Phân nhóm động vật thế nào?"
+              },
+              "oak_lessons": [
+                "how-and-why-we-group-animals"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "How and why we group plants",
+                "vi": "Phân nhóm thực vật thế nào?"
+              },
+              "oak_lessons": [
+                "how-and-why-we-group-plants"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Micro-organisms are living things",
+                "vi": "Vi sinh vật cũng là sinh vật"
+              },
+              "oak_lessons": [
+                "micro-organisms-are-living-things"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Grouping micro-organisms",
+                "vi": "Phân nhóm vi sinh vật"
+              },
+              "oak_lessons": [
+                "grouping-micro-organisms"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Micro-organisms living on food",
+                "vi": "Thức ăn để lâu sẽ ra sao?"
+              },
+              "oak_lessons": [
+                "micro-organisms-living-on-food-plan-and-do-non-statutory",
+                "micro-organisms-living-on-food-review-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "The 5 Rs",
+                "vi": "Năm cách giảm rác và ủ phân"
+              },
+              "oak_lessons": [
+                "the-5-rs-non-statutory-climate-change-and-sustainability"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Microorganisms that help us",
+                "vi": "Vi sinh vật có ích"
+              },
+              "oak_lessons": [
+                "microorganisms-that-help-us-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Growing yeast",
+                "vi": "Nấm men cần thức ăn gì?"
+              },
+              "oak_lessons": [
+                "growing-yeast-plan-non-statutory",
+                "growing-yeast-do-and-review-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Carl Linnaeus and classification",
+                "vi": "Carl Linnaeus và việc phân loại"
+              },
+              "oak_lessons": [
+                "carl-linnaeus-and-classification"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "Discovering and naming new species",
+                "vi": "Tìm và đặt tên loài mới"
+              },
+              "oak_lessons": [
+                "discovering-and-naming-new-species"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "evolution-and-inheritance",
+          "number": 14,
+          "title": {
+            "en": "Evolution and inheritance",
+            "vi": "Tiến hoá và di truyền"
+          },
+          "strand": "plants_animals",
+          "level": 5,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "evolution-and-inheritance",
+            "year": 6,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Where fossils are found",
+                "vi": "Tìm hoá thạch ở đâu?"
+              },
+              "oak_lessons": [
+                "where-fossils-are-found-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "What fossils can tell us about the past",
+                "vi": "Hoá thạch kể gì về quá khứ?"
+              },
+              "oak_lessons": [
+                "what-fossils-can-tell-us-about-the-past"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "How living things have changed over time",
+                "vi": "Sinh vật thay đổi qua thời gian"
+              },
+              "oak_lessons": [
+                "how-living-things-have-changed-over-time"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Human skulls: using evidence from the past",
+                "vi": "Hộp sọ người qua các thời kỳ"
+              },
+              "oak_lessons": [
+                "human-skulls-using-evidence-from-the-past-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Offspring: similar but not identical",
+                "vi": "Con giống bố mẹ nhưng không y hệt"
+              },
+              "oak_lessons": [
+                "offspring-similar-but-not-identical"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Family trees",
+                "vi": "Nét giống nhau trong gia đình"
+              },
+              "oak_lessons": [
+                "family-trees-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Inherited characteristics",
+                "vi": "Đặc điểm do di truyền hay môi trường?"
+              },
+              "oak_lessons": [
+                "inherited-characteristics"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Animal adaptations",
+                "vi": "Động vật thích nghi thế nào?"
+              },
+              "oak_lessons": [
+                "animal-adaptations"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "Charles Darwin and finches",
+                "vi": "Charles Darwin và mỏ chim sẻ"
+              },
+              "oak_lessons": [
+                "charles-darwin-and-finches"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Plant adaptations",
+                "vi": "Thực vật thích nghi thế nào?"
+              },
+              "oak_lessons": [
+                "plant-adaptations"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 11,
+              "title": {
+                "en": "More about plant adaptations",
+                "vi": "Mỗi nơi sống, cây thích nghi một kiểu"
+              },
+              "oak_lessons": [
+                "more-about-plant-adaptations"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 12,
+              "title": {
+                "en": "The survival of the fittest",
+                "vi": "Thích nghi tốt thì dễ sống sót"
+              },
+              "oak_lessons": [
+                "the-survival-of-the-fittest"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 13,
+              "title": {
+                "en": "Evolution: evidence",
+                "vi": "Bằng chứng về tiến hoá"
+              },
+              "oak_lessons": [
+                "evolution-evidence",
+                "evolution-presentation"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "light-and-how-it-travels",
+          "number": 15,
+          "title": {
+            "en": "Light and how it travels",
+            "vi": "Ánh sáng truyền đi thế nào"
+          },
+          "strand": "energy_forces",
+          "level": 4,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "light-and-how-it-travels",
+            "year": 6,
+            "unit_index": 6
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "How light travels",
+                "vi": "Ánh sáng truyền theo đường thẳng"
+              },
+              "oak_lessons": [
+                "how-light-travels"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Light sources and light reflectors",
+                "vi": "Nguồn sáng và vật phản xạ ánh sáng"
+              },
+              "oak_lessons": [
+                "light-sources-and-light-reflectors-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Light enters our eyes",
+                "vi": "Ánh sáng đi vào mắt ta"
+              },
+              "oak_lessons": [
+                "light-enters-our-eyes"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Reflected light",
+                "vi": "Ta thấy vật nhờ ánh sáng phản xạ"
+              },
+              "oak_lessons": [
+                "reflected-light"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Changing the direction of light",
+                "vi": "Gương đổi hướng ánh sáng"
+              },
+              "oak_lessons": [
+                "changing-the-direction-of-light"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Measuring reflected light",
+                "vi": "Xoay gương, đo góc tia sáng"
+              },
+              "oak_lessons": [
+                "measuring-reflected-light-plan",
+                "measuring-reflected-light-do-and-review"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "How shadows form",
+                "vi": "Bóng tối hình thành thế nào?"
+              },
+              "oak_lessons": [
+                "how-shadows-form"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Shadow shapes investigation",
+                "vi": "Vì sao bóng có hình giống vật?"
+              },
+              "oak_lessons": [
+                "shadow-shapes-investigation"
+              ],
+              "statutory": true
+            },
+            {
+              "number": 9,
+              "title": {
+                "en": "The position of shadows",
+                "vi": "Bóng đổ về phía nào?"
+              },
+              "oak_lessons": [
+                "the-position-of-shadows-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 10,
+              "title": {
+                "en": "Multiple shadows",
+                "vi": "Một vật có mấy cái bóng?"
+              },
+              "oak_lessons": [
+                "multiple-shadows"
+              ],
+              "statutory": true
+            }
+          ]
+        },
+        {
+          "key": "climate-change-and-sustainability-non-statutory",
+          "number": 16,
+          "title": {
+            "en": "Energy and climate change",
+            "vi": "Năng lượng và biến đổi khí hậu"
+          },
+          "strand": "living_environment",
+          "level": 5,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "climate-change-and-sustainability-non-statutory",
+            "year": 6,
+            "unit_index": 8
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Fossil fuels",
+                "vi": "Nhiên liệu hoá thạch"
+              },
+              "oak_lessons": [
+                "fossil-fuels-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Reducing air pollution",
+                "vi": "Giảm ô nhiễm không khí"
+              },
+              "oak_lessons": [
+                "reducing-air-pollution-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "What carbon is",
+                "vi": "Carbon là gì?"
+              },
+              "oak_lessons": [
+                "what-carbon-is-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Reducing our carbon footprint",
+                "vi": "Giảm dấu chân carbon"
+              },
+              "oak_lessons": [
+                "reducing-our-carbon-footprint-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Carbon capture",
+                "vi": "Thu giữ carbon dưới lòng đất"
+              },
+              "oak_lessons": [
+                "carbon-capture-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "The Sun as an energy source",
+                "vi": "Điện từ ánh nắng Mặt Trời"
+              },
+              "oak_lessons": [
+                "the-sun-as-an-energy-source-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "The wind as an energy source",
+                "vi": "Điện từ sức gió"
+              },
+              "oak_lessons": [
+                "the-wind-as-an-energy-source-non-statutory"
+              ],
+              "statutory": false
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Water as an energy source",
+                "vi": "Điện từ dòng nước chảy"
+              },
+              "oak_lessons": [
+                "water-as-an-energy-source-non-statutory"
+              ],
+              "statutory": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

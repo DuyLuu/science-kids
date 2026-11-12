@@ -63,6 +63,14 @@ export const READINGS: Record<string, string> = {
   "galápagos": "Ga la pa gốt",
   isaac: "Ai dắc",
   newton: "Niu tơn",
+  // khung-long/_topic.md (SK-033, Duy 9/11): "kỷ Jura" reads "Giu-ra". "Tam Điệp" is plain
+  // Vietnamese and stays as written (no entry).
+  jura: "giu ra",
+  // da-va-dat (Discoverer, Oak "Rocks and soils"; dev 12/11): "thang độ cứng Mohs" reads "Mốt",
+  // "Mary Anning" reads "Me-ri An-ninh".
+  mohs: "Mốt",
+  mary: "Me ri",
+  anning: "An ninh",
 };
 
 const TONE_MARKS = "̣̀́̃̉"; // huyền sắc ngã hỏi nặng

@@ -1,0 +1,276 @@
+{
+  "note": "SK-037. Designer (agent) chọn 10/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/nao-bo-va-giac-quan/; chi tiết và chỗ còn trống ở content/.build/images/nao-bo-va-giac-quan/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "tray.tray_rain_roof",
+      "lesson": "nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao"
+    },
+    "w1.w1_nose": {
+      "same_as": "tray.tray_nose",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w1.w1_tongue": {
+      "same_as": "q1.q1_tongue",
+      "lesson": "nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao"
+    },
+    "w1.w1_ear": {
+      "same_as": "w1.w1_ear",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w2": {
+      "same_as": "q3",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    },
+    "w3": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_helmet": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.learn.explore.explore_helmet.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up and a child on a motorbike, both in helmets",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh người lớn chở trẻ đội mũ trong ngõ, nhìn từ sau, không biển số, hợp giấy phép; vẽ theo phương án trong brief. Hai người đều đội mũ (bạn nhỏ mũ vàng, người lớn mũ trắng), xe không có biển số, ngõ không có biển chữ. Theo phiên chính 10/11: vẽ cả tray_handlebar, tray_open_strap cho cùng kiểu."
+    },
+    "learn.explore.explore_strap": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.learn.explore.explore_strap.jpg",
+        "method": "drawn"
+      },
+      "title": "Hands clicking a helmet strap",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh tay cài khoá quai mũ hợp giấy phép; kệ Chơi (tray_strap) và từ strap dùng lại."
+    },
+    "learn.explore.explore_sleep": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.learn.explore.explore_sleep.jpg",
+        "method": "drawn"
+      },
+      "title": "A bed with a mosquito net",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để kệ Chơi bài 4 (tray_bed) và câu q3 (q3_bed) cùng là hình vẽ; giường có màn vén, đèn ngủ dịu, không người."
+    },
+    "learn.explore.explore_dream": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "tray.tray_strap": {
+      "same_as": "learn.explore.explore_strap"
+    },
+    "tray.tray_handlebar": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.tray.tray_handlebar.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet hanging on handlebars",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng kiểu explore_helmet (phiên chính 10/11): mũ vàng treo bằng quai trên tay lái xe máy đỗ; xe không logo, không biển số."
+    },
+    "tray.tray_bed": {
+      "same_as": "learn.explore.explore_sleep"
+    },
+    "tray.tray_book": {
+      "same_as": "tray.tray_book",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "tray.tray_open_strap": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.tray.tray_open_strap.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet with its strap hanging open",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng kiểu explore_helmet (phiên chính 10/11): mũ đặt trên yên xe, hai đầu quai buông, khoá chưa cài."
+    },
+    "tray.tray_short_ride": {
+      "same_as": "learn.explore.explore_helmet"
+    },
+    "tray.tray_nap": {
+      "same_as": "q3.q3_hammock",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "tray.tray_late_games": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.tray.tray_late_games.jpg",
+        "method": "drawn"
+      },
+      "title": "A phone glowing in a dark room",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh điện thoại sáng trong phòng tối hợp giấy phép; cả kệ Chơi bài 4 và câu q3 nay là hình vẽ."
+    },
+    "tray.tray_puzzle": {
+      "same_as": "learn.explore.explore_think",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q1.jpg",
+        "method": "drawn"
+      },
+      "title": "A parked motorbike",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Hình câu hỏi: không có ảnh xe máy đỗ không biển số, không logo hợp giấy phép; vẽ xe tay ga đỗ bên lề phố, không người, không mũ, không biển số."
+    },
+    "q1.q1_helmet": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q1.q1_helmet.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Câu q1: không có ảnh mũ nửa đầu cỡ trẻ em; vẽ cả ba lựa chọn (mũ bảo hiểm hồng, nón lá, mũ lưỡi trai) cho cùng kiểu."
+    },
+    "q1.q1_conical": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q1.q1_conical.jpg",
+        "method": "drawn"
+      },
+      "title": "A conical hat",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q1 cho cùng kiểu."
+    },
+    "q1.q1_cap": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q1.q1_cap.jpg",
+        "method": "drawn"
+      },
+      "title": "A cap",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q1 cho cùng kiểu."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_helmet"
+    },
+    "q2.q2_bell": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q2.q2_bell.jpg",
+        "method": "drawn"
+      },
+      "title": "A bicycle bell",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q2 cho cùng kiểu."
+    },
+    "q2.q2_seat": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q2.q2_seat.jpg",
+        "method": "drawn"
+      },
+      "title": "A bicycle seat",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q2 cho cùng kiểu."
+    },
+    "q2.q2_strap": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q2.q2_strap.jpg",
+        "method": "drawn"
+      },
+      "title": "A clicked helmet strap",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Câu q2: không có ảnh khoá quai đã cài hợp giấy phép; vẽ cả ba lựa chọn (chuông, yên, khoá quai) cho cùng kiểu."
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_head",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q3.q3_games": {
+      "same_as": "tray.tray_late_games"
+    },
+    "q3.q3_book": {
+      "same_as": "tray.tray_book",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q3.q3_handlebar": {
+      "same_as": "tray.tray_handlebar"
+    },
+    "q3.q3_bed": {
+      "same_as": "learn.explore.explore_sleep"
+    },
+    "q4": {
+      "same_as": "q5.q5_helmet",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q4.q4_back": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q4.q4_back.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet tipped back, strap clicked",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q4.q4_open": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q4.q4_open.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet sitting flat, strap hanging open",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q4.q4_right": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q4.q4_right.jpg",
+        "method": "drawn"
+      },
+      "title": "A helmet sitting flat, strap clicked",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_send",
+      "lesson": "nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao"
+    },
+    "q5.q5_study_night": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q5.q5_study_night.jpg",
+        "method": "drawn"
+      },
+      "title": "A desk lamp on at night",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q5 cho cùng kiểu."
+    },
+    "q5.q5_sleep": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q5.q5_sleep.jpg",
+        "method": "drawn"
+      },
+      "title": "A dark bedroom at night",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ cùng câu q5 cho cùng kiểu."
+    },
+    "q5.q5_tv": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.q5.q5_tv.jpg",
+        "method": "drawn"
+      },
+      "title": "A TV glowing in a dark room",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Câu q5: không có ảnh ti vi sáng trong phòng tối hợp giấy phép; vẽ cả ba lựa chọn (đèn bàn, phòng ngủ tối, ti vi) cùng cảnh đêm."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alley_near_the_Red_River_in_Hanoi_12.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Alley_near_the_Red_River_in_Hanoi_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Alley near the Red River in Hanoi 12",
+      "author": "Amenoc",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.78,
+        "height": 1
+      },
+      "note": "Ngõ nhỏ gần sông Hồng, Hà Nội, không người; cắt bỏ tấm biển nhỏ trên cổng bên phải."
+    },
+    "vocab.helmet": {
+      "same_as": "q5.q5_helmet",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "vocab.strap": {
+      "same_as": "learn.explore.explore_strap"
+    },
+    "vocab.bedtime": {
+      "same_as": "learn.explore.explore_sleep"
+    },
+    "vocab.nap": {
+      "same_as": "q3.q3_hammock",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "vocab.dream": {
+      "same_as": "q1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "reward.helmet_card": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/ngu-du-giac-va-doi-mu-bao-hiem.reward.helmet_card.jpg",
+        "method": "drawn"
+      },
+      "title": "The foam inside a helmet",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh mặt trong mũ có lớp xốp, không chữ, hợp giấy phép; vẽ mũ úp ngửa thấy lớp xốp trắng và đệm lót."
+    }
+  }
+}

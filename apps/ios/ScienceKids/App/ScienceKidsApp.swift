@@ -16,19 +16,23 @@ struct ScienceKidsApp: App {
 
 /// Picks the first screen (B7.6) and sets what every screen reads: `LayoutMetrics` for the
 /// window's width and size class (B7.10), the age group of the world being played, the Dynamic
-/// Type cap (B7.8), and the voice player (SK-016). Opens the content once; the voice stops when
-/// the app leaves the foreground.
+/// Type cap (B7.8), the voice player (SK-016) and the pack's pictures (SK-033). Opens the content
+/// once; the voice stops when the app leaves the foreground.
 struct RootView: View {
     let options: LaunchOptions
     let app: AppModel
     @Environment(\.scenePhase) private var scenePhase
+    /// The text size the child set, before the cap below (SK-034: the journey map's layout B).
+    @Environment(\.dynamicTypeSize) private var systemTypeSize
 
     var body: some View {
         firstScreen
             .layoutMetricsFromContainer()
-            .environment(\.ageGroup, Tokens.AgeGroup(rawValue: BundledContent.world.rawValue) ?? .discoverer)
+            .environment(\.prefersAccessibilityTextLayout, systemTypeSize.isAccessibilitySize)
+            .environment(\.ageGroup, Tokens.AgeGroup(rawValue: AppFeatures.trialWorld.rawValue) ?? .discoverer)
             .environment(\.reduceMotionOverride, options.reducesMotion)
             .environment(\.speechPlayer, app.speech)
+            .environment(\.pictureStore, app.content.ready?.pictures)
             .dynamicTypeSize(...Tokens.Typography.DynamicType.maxCategory)
             .overlay(alignment: .topLeading) { probe }
             .task {

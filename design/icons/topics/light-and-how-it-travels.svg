@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · light-and-how-it-travels · đèn pin chiếu tia sáng thẳng. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#F0C873"><path d="M24 34 L56 4 C 60 8, 62 14, 62 20 L30 40 Z"/></g>
+  <g fill="#E2A52A"><path d="M27 37 L58 9 L59.4 11 L29 39 Z"/><path d="M29 39.4 L61 17 L61.6 19.4 L30.4 40.6 Z"/></g>
+  <g fill="#2E4A6E"><rect x="8" y="34" width="12" height="28" rx="3" transform="rotate(45 14 48)"/></g>
+  <g fill="#C9B993"><path d="M16 34 L26 24 C 30 26, 34 30, 36 34 L26 44 Z" /></g>
+  <g fill="#B97F16"><rect x="9" y="47" width="6" height="3" rx="1.5" transform="rotate(45 12 48.5)"/></g>
+</svg>

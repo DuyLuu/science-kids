@@ -117,7 +117,8 @@ final class SyncUITests: XCTestCase {
 
     /// Lesson 1 all right on the first try; returns the stars label of Thưởng.
     private func playLesson(_ app: XCUIApplication) -> String {
-        tap(app, "home.start_lesson")
+        // SK-035 tester #1: the fixture lesson through its topic, not the Home card.
+        fixture.open(in: app)
         for question in fixture.warmup { answer(question, check: false, in: app) }
         XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5))
         for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }

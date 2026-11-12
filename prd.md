@@ -2,8 +2,8 @@
 
 > Bản copy để review từ artifact (https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe).
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
-> Syllabus chi tiết: [syllabus.md](syllabus.md) · Wireframes: [design/wireframes/](design/wireframes/) và https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ
-> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con); 1/11/2026 (mục 3: quiz của bé 5–7 làm được bằng nghe và nhìn, không hiện điểm; Duy chốt SK-026)
+> Syllabus chi tiết: [syllabus.md](syllabus.md), danh sách từng bài [syllabus-lessons.md](syllabus-lessons.md), danh mục app đọc `content/syllabus.json` · Wireframes: [design/wireframes/](design/wireframes/) và https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ
+> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con); 1/11/2026 (mục 3: quiz của bé 5–7 làm được bằng nghe và nhìn, không hiện điểm; Duy chốt SK-026); 9/11/2026 (Duy duyệt syllabus mới: 45 chủ đề, 384 bài, chủ đề mới đứng đầu rồi unit Oak theo thứ tự Oak, không khoá bài, gói trả phí tạm tắt; sửa mục 1, 4, 5, 6, 7, 8, 9, 11. Phạm vi pilot GĐ 0: Duy chốt 6 chủ đề đầu Discoverer, 38 bài)
 
 ## 1. Tổng quan & quyết định đã chốt
 
@@ -13,9 +13,10 @@ Quyết định đã chốt (21/10/2026):
 - Nền tảng: **iOS native (Swift/SwiftUI) + Android native (Kotlin/Jetpack Compose)** — không React Native.
 - Thứ tự (28/10/2026): **iOS làm trước, universal iPhone + iPad ngay từ đầu**; Android bắt đầu khi iOS vào beta. Backend chốt Supabase.
 - Thị trường: **cả hai** — phụ huynh VN đại trà + trường quốc tế/song ngữ/trung tâm tiếng Anh (chỉ khác chế độ ngôn ngữ mặc định).
-- Giá: **freemium unlock** — chủ đề đầu mỗi nhóm tuổi free, mở khoá bằng subscription tháng hoặc năm.
+- Giá: **freemium unlock**, mở khoá bằng subscription tháng hoặc năm. **Đổi 9/11/2026:** gói trả phí vẫn có trong sản phẩm nhưng **tạm tắt**; bản build để test mở toàn bộ; chủ đề miễn phí của mỗi nhóm chọn sau, khi bật lại (trước đó: chủ đề đầu mỗi nhóm tuổi free).
+- Syllabus (Duy duyệt 9/11/2026, thay bản 26/10 xếp theo độ khó): giữ 3 nhóm tuổi; trong mỗi nhóm, chủ đề mới (từ sách bách khoa thiếu nhi và CT GDPT 2018) đứng đầu, rồi các unit Oak đúng thứ tự trên trang Oak. 1 bài app = 1 lesson Oak, riêng thí nghiệm plan/do/review gộp thành 1 bài. **45 chủ đề, 384 bài**: Explorer 12 chủ đề / 73 bài, Discoverer 17 / 155, Scientist 16 / 156; bỏ unit Oak *Materials* (Year 6). **Không khoá bài:** mọi chủ đề, mọi bài mở; app gợi ý bài tiếp theo. Chi tiết ở [syllabus.md](syllabus.md) mục 0–6.
 - Ngôn ngữ: EN là chính; VI là phụ đề và giải thích. **Giọng đọc có cả tiếng Anh và tiếng Việt** (đổi 28/10/2026, trước đó chỉ TTS tiếng Anh): bé 5–7 chưa đọc được chữ tiếng Việt nên phụ đề VI cũng phải nghe được. Giọng đọc là lựa chọn lúc bắt đầu: chỉ EN, chỉ VI, hoặc cả hai.
-- Oak: **chỉ tham khảo sườn** (chủ đề, thứ tự, mục tiêu, từ vựng, misconception). Ví dụ phần animals: lấy sườn cách nhóm động vật; hình ảnh, thiết kế, nội dung làm riêng.
+- Oak: **chỉ tham khảo sườn** (chủ đề, thứ tự, mục tiêu, từ vựng, misconception). Ví dụ phần animals: lấy sườn cách nhóm động vật; hình ảnh, thiết kế, nội dung làm riêng. Từ 9/11/2026 có thêm 8 chủ đề ngoài Oak (Discoverer 5, Scientist 3), tự dựng sườn.
 
 ## 2. Phân tích Oak National Academy (tóm tắt)
 
@@ -44,8 +45,8 @@ Nguyên tắc: Oak cho **cái sườn** — chủ đề, thứ tự, mục tiêu
 
 | Cấp | Tham khảo từ Oak | Tự làm riêng trong app |
 | --- | --- | --- |
-| Chương trình | Khung Year 1–6, 15 Big Questions, thứ tự unit | Gom thành 3 nhóm tuổi: 5–7, 7–9, 9–11 |
-| Chủ đề (unit) | Tên chủ đề, prior knowledge, "why this why now" | Tên VI, mô tả, icon, số bài rút gọn (4–8 bài/chủ đề) |
+| Chương trình | Khung Year 1–6, 15 Big Questions, thứ tự unit | Gom thành 3 nhóm tuổi: 5–7, 7–9, 9–11; chủ đề mới đứng đầu mỗi nhóm, rồi unit Oak theo thứ tự Oak (9/11/2026) |
+| Chủ đề (unit) | Tên chủ đề, thứ tự lesson, prior knowledge, "why this why now" | Tên VI, mô tả, icon. Từ 9/11/2026: 1 bài app = 1 lesson Oak, riêng thí nghiệm plan/do/review gộp 1 bài, nên mỗi chủ đề có 4–19 bài (thay mức rút gọn 4–8 bài/chủ đề, ~201 bài, của bản 26/10) |
 | Bài học | Mục tiêu "I can…", 5 key points, 5 keywords, 1 misconception | Kịch bản, lời thoại EN + phụ đề VI, hình/animation |
 | Quiz | Cấu trúc 6 câu + các dạng câu hỏi | Toàn bộ câu chữ và hình đáp án |
 | Media | Cách giảng trong video mẫu (tham khảo) | Hình minh hoạ, animation, audio EN và VI tự sản xuất |
@@ -59,12 +60,13 @@ Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude A
 | Tính năng | Mô tả | Giai đoạn |
 | --- | --- | --- |
 | Onboarding chọn tuổi + ngôn ngữ | Map Year 1–6 sang độ tuổi/lớp VN; 3 chế độ ngôn ngữ | MVP |
+| Hành trình học (9/11/2026) | Trang chủ hiện đủ chủ đề của nhóm theo thứ tự syllabus, màn chủ đề hiện đủ bài. Không khoá bài: app gợi ý bài tiếp theo và đánh dấu bài đã học; bài chưa soạn hiện tên và báo chưa có nội dung | MVP |
 | Vòng lặp bài học | Khởi động (ôn bài cũ) → nội dung → exit quiz 6 câu | MVP |
 | Quiz engine | MCQ, true/false, multi-select, điền từ, câu hình; giải thích sau mỗi câu | MVP |
 | Media bài học | MVP: hình minh hoạ tĩnh + audio EN và VI; animation đầy đủ ở GĐ 2 | MVP |
 | Flashcards từ vựng EN–VI | Sinh từ keywords mỗi bài; nghe được cả từ EN lẫn nghĩa VI | MVP |
 | Tài khoản phụ huynh + hồ sơ con | Free dùng chế độ khách, 1 hồ sơ con; Premium cần tài khoản phụ huynh, nhiều hồ sơ con (mục 6) | MVP |
-| Freemium unlock | Chủ đề đầu mỗi nhóm free; mở khoá bằng subs tháng/năm, cần đăng ký tài khoản phụ huynh trước khi trả tiền | MVP |
+| Freemium unlock | Mở khoá bằng subs tháng/năm, cần đăng ký tài khoản phụ huynh trước khi trả tiền. **Tạm tắt từ 9/11/2026:** bản test mở toàn bộ, không có cổng trả phí; chủ đề miễn phí chọn sau (trước đó: chủ đề đầu mỗi nhóm free) | MVP; thời điểm bật lại chờ Duy |
 | Gamification | Sao, streak, huy hiệu theo Big Questions | MVP |
 | Góc phụ huynh | PIN, báo cáo tuần, giới hạn thời gian, quản lý hồ sơ con và subscription | MVP |
 | Ôn tập ngắt quãng | Spaced repetition từ dữ liệu quiz | GĐ 2 |
@@ -83,17 +85,19 @@ Ghi chú 28/10/2026 để implement. Bốn quy tắc đã chốt:
 - **Hồ sơ con thứ 2 trở đi chỉ dành cho Premium.**
 - **Muốn mở khoá nội dung Premium thì phải đăng ký tài khoản phụ huynh** trước khi thanh toán.
 
+**9/11/2026:** gói trả phí tạm tắt (mục 1). Bốn quy tắc trên giữ nguyên để dùng khi bật lại. Trong lúc tắt, mọi nội dung mở cho mọi hồ sơ, không có cổng trả phí. Có giữ giới hạn 1 hồ sơ cho khách trong lúc tắt hay không: còn mở (cuối mục).
+
 | | Khách (free) | Premium |
 | --- | --- | --- |
 | Tài khoản phụ huynh | Chưa có | Bắt buộc |
 | Số hồ sơ con | 1 | Nhiều (số tối đa còn mở) |
-| Nội dung | Chủ đề free đầu mỗi nhóm tuổi | Toàn bộ |
+| Nội dung | Chủ đề miễn phí: chọn sau (9/11/2026; trước đó là chủ đề đầu mỗi nhóm). Trong lúc gói trả phí tạm tắt: toàn bộ | Toàn bộ |
 | Tiến độ | Lưu theo thiết bị | Theo tài khoản, đồng bộ nhiều máy |
 
 Luồng chính:
 
 1. Cài app → bố mẹ chọn chế độ ngôn ngữ và tạo hồ sơ con đầu tiên → bé học ngay ở chế độ khách.
-2. Bé chạm nội dung Premium, hoặc bố mẹ chạm "Thêm hồ sơ con" → cổng phụ huynh → đăng ký tài khoản phụ huynh → chọn gói → thanh toán qua App Store / Google Play.
+2. Bé chạm nội dung Premium, hoặc bố mẹ chạm "Thêm hồ sơ con" → cổng phụ huynh → đăng ký tài khoản phụ huynh → chọn gói → thanh toán qua App Store / Google Play. (Chỉ khi gói trả phí bật; từ 9/11/2026 đang tạm tắt.)
 3. Hồ sơ con và toàn bộ tiến độ đã có ở chế độ khách chuyển nguyên sang tài khoản vừa đăng ký, không mất gì.
 4. Có Premium thì thêm hồ sơ con thứ 2, thứ 3… trong Góc phụ huynh. Mỗi hồ sơ có nhóm tuổi, chế độ ngôn ngữ và tiến độ riêng.
 
@@ -114,6 +118,7 @@ Còn phải quyết:
 - [ ] Cách đăng nhập của phụ huynh: email + mã OTP, Apple, Google. Theo quy định App Store (mục 4.8), nếu có đăng nhập Google thì phải có thêm một lựa chọn bảo vệ quyền riêng tư tương đương, thường là Sign in with Apple.
 - [ ] PIN Góc phụ huynh ở chế độ khách: đặt PIN lưu trên máy ngay lúc thiết lập, hay chỉ dùng câu đố cho người lớn đến khi đăng ký?
 - [ ] Lúc nào nhắc bố mẹ đăng ký để giữ tiến độ ở chế độ khách (đổi máy hoặc xoá app là mất).
+- [ ] (9/11/2026) Gói trả phí tạm tắt tới khi nào: chỉ bản test, hết beta, hay tới khi lên store? Trong lúc tắt có giữ giới hạn 1 hồ sơ cho khách không? Giữ thì gia đình nhiều con chưa có cách tạo hồ sơ thứ 2, vì đường duy nhất là mua Premium.
 
 ## 7. Kiến trúc kỹ thuật
 
@@ -121,6 +126,7 @@ Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết k
 
 - Stack: iOS native (Swift/SwiftUI) + Android native (Kotlin/Jetpack Compose); backend Supabase (Postgres, Auth, Storage); CMS Next.js ở GĐ 2 (28/10/2026: MVP dùng markdown + CLI).
 - Nội dung đóng gói JSON theo schema thống nhất để iOS và Android render giống nhau, không hard-code bài học trong app.
+- Danh mục syllabus (9/11/2026): `content/syllabus.json` liệt kê mọi chủ đề, mọi bài của 3 nhóm theo đúng thứ tự đã duyệt, kể cả bài chưa soạn, kèm mã lesson Oak. App đọc danh mục để hiện đủ hành trình; chỉ bài đã soạn mới có nội dung để tải. Bản test đọc file này từ bundle; về sau danh mục đi cùng gói nội dung (technical-plan B4.1, B4.3).
 - Claude API hỗ trợ biên tập viên draft kịch bản + câu quiz nháp (không dùng output thẳng cho trẻ).
 - TTS cho cả tiếng Anh và tiếng Việt (câu hỏi, câu học, từ vựng, lời mascot); sinh lúc publish, không sinh trên máy bé.
 
@@ -132,7 +138,7 @@ Luồng nội dung một chiều: **Oak API (tham khảo syllabus) → Thiết k
 | --- | --- |
 | 1 · Onboarding | Chọn chế độ ngôn ngữ + độ tuổi |
 | 2 · Trang chủ | Thẻ "Học tiếp", chủ đề theo nhóm, Big Questions, streak |
-| 3 · Chủ đề | Danh sách bài: xong / đang học / khoá |
+| 3 · Chủ đề | Danh sách bài: xong / đang học / chưa học / chưa có nội dung. 9/11/2026 bỏ trạng thái khoá; wireframe và canvas chưa sửa |
 | 4 · Bài học | Stepper 4 bước, media, mục tiêu "I can…", key points, keywords EN–VI |
 | 5 · Quiz | 6 câu, đáp án bằng hình, nút đọc to, gợi ý từ misconception |
 | 6 · Huy hiệu & tiến độ | Sao, streak, tiến độ Big Questions, ôn tập tuần |
@@ -144,11 +150,13 @@ Visual: nền sáng, font Nunito, bo góc lớn, 1 accent xanh, nút chạm ≥ 
 
 | Giai đoạn | Thời gian | Nội dung | Gate |
 | --- | --- | --- | --- |
-| **GĐ 0 · Thiết kế nội dung** | T11/2026–T1/2027 (~8 tuần) | Syllabus 3 nhóm; soạn nội dung pilot Year 3 (chủ đề 1–6, ~34 bài); schema + CLI publish (CMS lùi GĐ 2) | Nội dung Y3 sẵn sàng (16/1/2027) |
+| **GĐ 0 · Thiết kế nội dung** | T11/2026–T1/2027 (~8 tuần) | Syllabus 3 nhóm (Duy duyệt 9/11/2026: 45 chủ đề, 384 bài); soạn nội dung pilot Discoverer (6 chủ đề đầu, 38 bài; Duy chốt 9/11, xem dưới); schema + CLI publish (CMS lùi GĐ 2) | Nội dung pilot sẵn sàng (16/1/2027, giữ theo kế hoạch, chưa xác nhận lại) |
 | **GĐ 1 · MVP 2 app native** | T1–T4/2027 | Vòng lặp bài học + quiz, gamification, góc phụ huynh | Beta 50 gia đình đạt |
-| **GĐ 2 · Mở rộng** | T4–T7/2027 | Đủ Year 1–6, ôn ngắt quãng, offline, animation đầy đủ, CMS Next.js | Lên App Store / CH Play |
+| **GĐ 2 · Mở rộng** | T4–T7/2027 | Đủ 3 nhóm tuổi, Year 1–6 (từ 9/11/2026 là 384 bài, bản 26/10 khoảng 201 bài), ôn ngắt quãng, offline, animation đầy đủ, CMS Next.js | Lên App Store / CH Play |
 
-MVP chỉ làm 1 nhóm tuổi (pilot Year 3 / 7–9 tuổi) nhưng chạy song song 2 app native — phần tốn nhất là sản xuất nội dung, nên GĐ 0 dồn toàn lực vào syllabus + nội dung trước khi code app. Timeline chi tiết GĐ 0: xem [syllabus.md](syllabus.md).
+MVP chỉ soạn nội dung cho 1 nhóm tuổi (pilot Discoverer, 7–9 tuổi) nhưng chạy song song 2 app native — phần tốn nhất là sản xuất nội dung, nên GĐ 0 dồn toàn lực vào syllabus + nội dung trước khi code app. Từ 9/11/2026 app hiện đủ danh mục của cả 3 nhóm; bài chưa soạn báo chưa có nội dung. Timeline chi tiết GĐ 0: [syllabus.md](syllabus.md) mục 10, đang chờ tính lại theo phạm vi pilot.
+
+**Phạm vi pilot GĐ 0 (Duy chốt 9/11, [syllabus.md](syllabus.md) mục 8): 6 chủ đề đầu Discoverer, 38 bài.** Gồm 5 chủ đề mới (Bề mặt Trái Đất, Khủng long, Hô hấp, Não bộ và giác quan, Thời tiết và thiên tai: 23 bài) và *Đá và đất* (15 bài); chưa bài nào soạn. Bản 26/10 là 6 chủ đề Year 3, khoảng 34 bài. *Ăn uống lành mạnh* (#9, đã soạn 2 bài) nằm ngoài pilot; 2 bài đó vẫn chơi được trong app.
 
 ## 10. Chỉ số thành công
 
@@ -170,15 +178,21 @@ Beta (50 gia đình) cần đạt: D7 ≥ 25%, quiz ≥ 4/6, ≥ 3 bài/tuần/t
 | Rủi ro | Mức | Giảm thiểu |
 | --- | --- | --- |
 | Tốc độ/chất lượng sản xuất nội dung tự làm | Cao | Template chuẩn + bài mẫu làm thước đo; Claude API draft, người duyệt |
+| Khối lượng nội dung tăng (9/11/2026): 384 bài thay khoảng 201; 8 chủ đề mới không có sườn Oak | Cao | Pilot đã chốt 38 bài (9/11); mốc 16/1/2027 và phạm vi GĐ 2 cần Duy chốt lại theo con số mới. Không khoá bài nên ra nội dung được theo đợt; bài chưa soạn hiện "Chưa có nội dung" |
+| Không khoá bài: trẻ học nhảy cóc, gặp bài cần kiến thức nền chưa học | Thấp–trung bình | App gợi ý bài tiếp theo theo thứ tự; khởi động ôn bài trước theo thứ tự; chủ đề mới tự giới thiệu ý nền ([syllabus.md](syllabus.md) mục 2, 6) |
 | Chi phí duy trì 2 app native song song | Trung bình | Schema nội dung chung, app chỉ là renderer |
 | Nội dung dậy thì (Human development) | Trung bình | Cờ "nội dung nhạy cảm", phụ huynh bật/tắt |
 | Dữ liệu trẻ em (COPPA/GDPR-K, quy định VN) | Trung bình | Đăng ký qua phụ huynh, data tối thiểu; chế độ khách chỉ lưu tên gọi, hình đại diện, lớp và tiến độ — cần rà lại với luật trước khi launch |
 | Mất tiến độ ở chế độ khách khi đổi máy hoặc xoá app | Trung bình | Nhắc bố mẹ đăng ký để giữ tiến độ (nhắc ở Góc phụ huynh, không chặn trẻ đang học) |
 | Thương hiệu: không dùng tên/logo Oak | Thấp | Chỉ ghi "tham khảo khung chương trình" ở about |
 
-**Đã chốt (21/10/2026):** native iOS + Android · cả 2 thị trường · freemium unlock + subs tháng/năm · Oak chỉ làm sườn syllabus. **Đổi 28/10/2026:** giọng đọc có cả tiếng Việt (trước đó chốt không TTS tiếng Việt).
+**Đã chốt (21/10/2026):** native iOS + Android · cả 2 thị trường · freemium unlock + subs tháng/năm · Oak chỉ làm sườn syllabus. **Đổi 28/10/2026:** giọng đọc có cả tiếng Việt (trước đó chốt không TTS tiếng Việt). **Đổi 9/11/2026:** syllabus 45 chủ đề, 384 bài, chủ đề mới đứng đầu rồi unit Oak theo thứ tự Oak; không khoá bài; gói trả phí tạm tắt, chủ đề miễn phí chọn sau (mục 1).
 
 **Còn mở:**
+- [x] Phạm vi pilot GĐ 0: 6 chủ đề đầu Discoverer, 38 bài (Duy chốt 9/11; mục 9)
+- [ ] Mốc 16/1/2027 với 38 bài chưa soạn: giữ hay lùi (mục 9)
+- [ ] Tên VI hai chủ đề mùa của Explorer ([syllabus.md](syllabus.md) mục 8)
+- [ ] Gói trả phí: bật lại khi nào, chủ đề nào miễn phí (mục 1, 6)
 - [ ] Chốt tên app — shortlist: **ToMo Science** ("tò mò", đọc dễ cả EN/VI), **SciBee**, **AtomKids** (khớp logo atom), **WonderLab Kids**, **Khám Phá Kids**; check trùng App Store/Google Play + nhãn hiệu VN trước khi chốt
 - [ ] Mức giá cụ thể gói tháng/năm cho từng thị trường
 - [ ] Các câu hỏi còn mở về tài khoản và hồ sơ con (mục 6)

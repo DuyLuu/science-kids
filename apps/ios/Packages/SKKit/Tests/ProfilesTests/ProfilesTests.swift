@@ -64,7 +64,7 @@ import Testing
         #expect(LanguageMode.bilingual.nameLanguage == .vi)
         #expect(LanguageMode.bilingual.nameSecondLanguage == .en)
         #expect(LanguageMode.viFirst.nameLanguage == .vi)
-        #expect(LanguageMode.viFirst.nameSecondLanguage == .en)
+        #expect(LanguageMode.viFirst.nameSecondLanguage == nil, "SK-042: Tiếng Việt shows one language")
         #expect(LanguageMode.enFirst.nameLanguage == .en)
         #expect(LanguageMode.enFirst.nameSecondLanguage == nil)
     }
@@ -77,7 +77,14 @@ import Testing
         #expect(LanguageMode.enFirst.hidesSentenceSecondLanguage)
         #expect(LanguageMode.viFirst.sentenceLanguage == .vi)
         #expect(LanguageMode.viFirst.sentenceSecondLanguage == .en)
-        #expect(!LanguageMode.viFirst.hidesSentenceSecondLanguage)
+        #expect(LanguageMode.viFirst.hidesSentenceSecondLanguage, "SK-042: Tiếng Việt shows one language")
+    }
+
+    /// SK-042: the voice that goes with each language of the Settings screen.
+    @Test func settingsVoice() {
+        #expect(VoiceMode.matching(.enFirst) == .en)
+        #expect(VoiceMode.matching(.viFirst) == .vi)
+        #expect(VoiceMode.matching(.bilingual) == .both)
     }
 
     @Test func rawValuesAreDatabaseValues() {

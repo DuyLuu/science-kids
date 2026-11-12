@@ -1,0 +1,268 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w1.w1_walking": {
+      "own": {
+        "file": "content/images/own/ho-hap/park-path.jpg",
+        "method": "drawn"
+      },
+      "title": "A path in a park",
+      "note": "designer vẽ 10/11 (SVG, SK-036); bốn lựa chọn cùng là hình vẽ"
+    },
+    "w1.w1_chess": {
+      "same_as": "q3_chess",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w1.w1_hammock": {
+      "same_as": "q3_hammock",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w1.w1_skipping": {
+      "same_as": "tray_rope",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w3": {
+      "same_as": "q1",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "learn.explore.explore_dust": {
+      "own": {
+        "file": "content/images/own/ho-hap/dusty-road.jpg",
+        "method": "drawn"
+      },
+      "title": "A dusty road",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_smoke": {
+      "own": {
+        "file": "content/images/own/ho-hap/straw-smoke.jpg",
+        "method": "drawn"
+      },
+      "title": "Smoke from burning straw in a field",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_mask": {
+      "own": {
+        "file": "content/images/own/ho-hap/mask.jpg",
+        "method": "drawn"
+      },
+      "title": "A cloth mask on a table",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "learn.explore.explore_tiny_dust": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BIRMINGHAM_SKYLINE_IN_SMOG._DENSELY_INDUSTRIALIZED_BIRMINGHAM_IS_HEADQUARTERS_FOR_THE_UNITED_STATES_STEEL..._-_NARA_-_545429.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/BIRMINGHAM_SKYLINE_IN_SMOG._DENSELY_INDUSTRIALIZED_BIRMINGHAM_IS_HEADQUARTERS_FOR_THE_UNITED_STATES_STEEL..._-_NARA_-_545429.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A city in smog",
+      "author": "LeRoy Woodson",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:BIRMINGHAM_SKYLINE_IN_SMOG._DENSELY_INDUSTRIALIZED_BIRMINGHAM_IS_HEADQUARTERS_FOR_THE_UNITED_STATES_STEEL..._-_NARA_-_545429.jpg",
+      "crop": {
+        "left": 0.02,
+        "top": 0.03,
+        "width": 0.96,
+        "height": 0.94
+      },
+      "note": "EPA Documerica (NARA), thành phố mù khói bụi nhìn từ trên đồi; cắt bỏ viền phim"
+    },
+    "tray.tray_mask": {
+      "same_as": "learn.explore.explore_mask"
+    },
+    "tray.tray_straw": {
+      "same_as": "learn.explore.explore_smoke"
+    },
+    "tray.tray_park": {
+      "own": {
+        "file": "content/images/own/ho-hap/park.jpg",
+        "method": "drawn"
+      },
+      "title": "A green park with big trees",
+      "note": "designer vẽ 10/11 (SVG, SK-036); kệ Chơi vẽ đủ chín món cho cùng kiểu"
+    },
+    "tray.tray_rope": {
+      "same_as": "tray_rope",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "tray.tray_cigarette": {
+      "own": {
+        "file": "content/images/own/ho-hap/cigarette.jpg",
+        "method": "drawn"
+      },
+      "title": "A cigarette smoking in an ashtray",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không người, không tay, không nhãn hiệu"
+    },
+    "tray.tray_cloth": {
+      "own": {
+        "file": "content/images/own/ho-hap/wipe-table.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand wiping a table with a wet cloth",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_rice": {
+      "own": {
+        "file": "content/images/own/ho-hap/rice-field.jpg",
+        "method": "drawn"
+      },
+      "title": "A green rice field",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_ball": {
+      "same_as": "tray_ball",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "tray.tray_coal": {
+      "own": {
+        "file": "content/images/own/ho-hap/coal-stove.jpg",
+        "method": "drawn"
+      },
+      "title": "A coal stove with smoke",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_dust"
+    },
+    "q1.q1_hat": {
+      "own": {
+        "file": "content/images/own/ho-hap/hat.jpg",
+        "method": "drawn"
+      },
+      "title": "A sun hat on a table",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ba lựa chọn cùng mặt bàn gỗ"
+    },
+    "q1.q1_raincoat": {
+      "own": {
+        "file": "content/images/own/ho-hap/raincoat.jpg",
+        "method": "drawn"
+      },
+      "title": "A raincoat on a table",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q1.q1_mask": {
+      "same_as": "learn.explore.explore_mask"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fall_Colors_and_Beautiful_Clouds_(50569643158).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Fall_Colors_and_Beautiful_Clouds_%2850569643158%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Blue sky and clouds over the trees",
+      "author": "ShenandoahNPS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Fall_Colors_and_Beautiful_Clouds_(50569643158).jpg",
+      "note": "chụp từ dưới lên ngọn cây"
+    },
+    "q2.q2_dust": {
+      "same_as": "learn.explore.explore_dust"
+    },
+    "q2.q2_smoke": {
+      "same_as": "learn.explore.explore_smoke"
+    },
+    "q2.q2_oxygen": {
+      "same_as": "vocab.oxygen",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q3": {
+      "same_as": "q2"
+    },
+    "q3.q3_steam": {
+      "own": {
+        "file": "content/images/own/ho-hap/kitchen-steam.jpg",
+        "method": "drawn"
+      },
+      "title": "Steam rising from a pot of rice",
+      "note": "designer vẽ 10/11 (SVG, SK-036); góc bếp rộng, cùng cỡ cảnh"
+    },
+    "q3.q3_road": {
+      "own": {
+        "file": "content/images/own/ho-hap/busy-road.jpg",
+        "method": "drawn"
+      },
+      "title": "A busy road seen from above",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không biển số, không chữ"
+    },
+    "q3.q3_park": {
+      "same_as": "tray.tray_park"
+    },
+    "q3.q3_building": {
+      "own": {
+        "file": "content/images/own/ho-hap/building-site.jpg",
+        "method": "drawn"
+      },
+      "title": "A building site with dust",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4": {
+      "same_as": "learn.explore.explore_tiny_dust"
+    },
+    "q4.q4_inside": {
+      "own": {
+        "file": "content/images/own/ho-hap/toy-blocks.jpg",
+        "method": "drawn"
+      },
+      "title": "Toy blocks inside, by a closed window",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q4.q4_park": {
+      "same_as": "tray.tray_park"
+    },
+    "q4.q4_road": {
+      "same_as": "q3.q3_road"
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_dust"
+    },
+    "q5.q5_food_pipe": {
+      "same_as": "tray_food_pipe",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q5.q5_windpipe": {
+      "same_as": "tray_windpipe",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q5.q5_stomach": {
+      "same_as": "tray_stomach",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/ho-hap/rooftops.jpg",
+        "method": "drawn"
+      },
+      "title": "A clear sky over the roofs",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "vocab.dust": {
+      "same_as": "learn.explore.explore_dust"
+    },
+    "vocab.smoke": {
+      "same_as": "learn.explore.explore_smoke"
+    },
+    "vocab.mask": {
+      "same_as": "learn.explore.explore_mask"
+    },
+    "vocab.fresh_air": {
+      "same_as": "tray.tray_park"
+    },
+    "vocab.healthy": {
+      "same_as": "tray_ball",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "reward.banyan": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_great_banyan_tree_in_Akbarpur,_Sangrur_district,_Punjab,_India_02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/A_great_banyan_tree_in_Akbarpur%2C_Sangrur_district%2C_Punjab%2C_India_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A great banyan tree in Akbarpur, Sangrur district, Punjab, India 02",
+      "author": "Satdeep Gill",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "cây đa cổ thụ giữa bãi đất, không người, không đình chùa"
+    }
+  }
+}

@@ -3,8 +3,9 @@ import SwiftUI
 
 /// Seal (triện) stamped on a correct answer or a marked item: paper tilted `shape.tilt_stamp`
 /// (−8°), `shadow.stamp`, shown with the `stamp` preset. Its tone says what it means (Duy 29/10,
-/// SK-006): `.correct` (lá tre, `role.feedback_correct`) only for "ĐÚNG"; `.mark` (đỏ son,
-/// `role.stamp_mark`) for every seal that only marks something (seen, on the tray, chosen).
+/// SK-006): `.correct` (lá tre, `role.feedback_correct`) for "ĐÚNG" and, since Duy 10/11 (SK-034),
+/// for a lesson or topic done; `.mark` (đỏ son, `role.stamp_mark`) for every seal that only marks
+/// something (seen, on the tray, chosen).
 ///
 /// ```swift
 /// Seal("ĐÚNG", tone: .correct)                        // large; VoiceOver reads its word
@@ -32,11 +33,22 @@ public struct Seal: View {
         case large
         /// 22 × 22, check icon ("Đã xem", item in the tray).
         case small
+        /// 28 × 28, check icon 17: a topic done on the journey map (SK-034).
+        case medium
 
         var side: CGFloat {
             switch self {
             case .large: PaperMetrics.sealLarge
             case .small: PaperMetrics.sealSmall
+            case .medium: PaperMetrics.sealMedium
+            }
+        }
+
+        var glyph: CGFloat {
+            switch self {
+            case .large: PaperMetrics.iconSize
+            case .small: PaperMetrics.sealSmallGlyph
+            case .medium: PaperMetrics.sealMediumGlyph
             }
         }
     }
@@ -124,11 +136,7 @@ public struct Seal: View {
                 .lineLimit(1)
                 .minimumScaleFactor(PaperMetrics.sealMinimumScale)
         case .icon(let icon):
-            PaperIconView(
-                icon,
-                size: size == .small ? PaperMetrics.sealSmallGlyph : PaperMetrics.iconSize,
-                color: Tokens.Role.textOnAccent
-            )
+            PaperIconView(icon, size: size.glyph, color: Tokens.Role.textOnAccent)
         }
     }
 }

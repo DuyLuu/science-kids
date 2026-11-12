@@ -69,7 +69,9 @@ final class IPadLayoutUITests: XCTestCase {
     }
 
     private func toLearn(_ app: XCUIApplication, shots: Bool = false) throws {
-        tap(app, "home.start_lesson")
+        // SK-035 tester #1: the fixture lesson through its topic ("Học tiếp" opens the journey's
+        // first written lesson, another one).
+        fixture.open(in: app)
         if shots {
             // Khởi động 1 answered right: the word on its paper chip and "Đúng rồi!" in lá tre (Duy 29/10).
             let w1 = fixture.warmup[0]
@@ -149,19 +151,21 @@ final class IPadLayoutUITests: XCTestCase {
             XCTAssertLessThan(journeyTab.frame.minY, window.height / 2, "regular: the tabs are on the sidebar, at the top")
             XCTAssertLessThan(journeyTab.frame.maxX, 341, "regular: in the 340pt sidebar")
             XCTAssertGreaterThan(element(app, "home.greeting").frame.minX, 340, "regular: the greeting in the content column")
-            XCTAssertTrue(app.buttons["home.topic.an-uong-lanh-manh"].frame.maxX < 341, "regular: the journey on the sidebar")
+            // SK-034 spec 11: the map in the content column, the stages on the sidebar.
+            XCTAssertGreaterThan(app.buttons["home.topic.healthy-eating"].frame.minX, 340, "regular: the journey map in the content column")
+            XCTAssertLessThan(app.buttons["home.sidebar.segment.1"].frame.maxX, 341, "regular: the stages on the sidebar")
         } else {
             XCTAssertGreaterThan(journeyTab.frame.minY, window.height / 2, "compact: the bottom strip")
         }
         XCTAssertGreaterThanOrEqual(app.buttons["home.streak"].frame.height, 55.5, "chips raised to 56")
         try shotBothWays("04-home")
-        // Tabs not built yet stay in the content column.
+        // SK-035: the Thẻ tab stays in the content column.
         tap(app, "tab.cards")
-        XCTAssertTrue(element(app, "soon.title").waitForExistence(timeout: 5))
-        if isPad { XCTAssertGreaterThan(element(app, "soon.title").frame.minX, 340) }
+        XCTAssertTrue(element(app, "cards.title").waitForExistence(timeout: 5))
+        if isPad { XCTAssertGreaterThan(element(app, "cards.title").frame.minX, 340) }
         tap(app, "tab.journey")
         // Chủ đề: the phone layout in the paper frame.
-        tap(app, "home.topic.an-uong-lanh-manh")
+        tap(app, "home.topic.healthy-eating")
         checkPaperFrame(app, anchor: "topic.title", "Chủ đề")
         try shot("05-topic")
         tap(app, "header.back")

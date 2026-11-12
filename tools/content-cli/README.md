@@ -131,7 +131,7 @@ npm run build -- ../../content/.build/tts/discoverer/an-uong-lanh-manh/topic.jso
                  --out ../../content/.build/pack
 ```
 
-Hoặc `node src/cli.ts build <topic.json> <lesson.json>... [--out <thư mục>]`. Input là **JSON đầu ra của `tts`** (có `audio.en`), không phải fixture gốc. Chạy mất dưới 1 giây, không dùng mạng, không cần model.
+Hoặc `node src/cli.ts build <topic.json> <lesson.json>... [--out <thư mục>]`. Input là **JSON đầu ra của `tts`** (có `audio.en`), không phải fixture gốc. Chạy mất dưới 1 giây, không dùng mạng, không cần model. Ảnh (SK-033) lấy từ file chọn ảnh `content/images/…` và cache `content/.images/` do `images fetch` ghi (mục "Ảnh: images search, chọn, images fetch"); hình ghép và hình tự vẽ là file trong repo (`content/images/composed/…`, `content/images/own/…`), cũng đi qua `images fetch`.
 
 Lệnh làm theo thứ tự, và chỉ ghi khi mọi bước kiểm đều qua:
 
@@ -140,12 +140,13 @@ Lệnh làm theo thứ tự, và chỉ ghi khi mọi bước kiểm đều qua:
 3. Tìm mọi `AssetHash` theo JSON Schema (như cách `tts` tìm `Spoken`):
    - mọi `Spoken` phải có `audio.en`;
    - mỗi `audio.<lang>` phải có clip trong cache: có dòng trong `index.json` với `sha256` đó, file còn, và sha256 thật của bytes file đúng bằng hash (không có hash trùng mà khác nội dung);
-   - `Image.asset` chưa được nhận: gói bản thử không có hình (chưa có `content-cli assets`), app vẽ hình giữ chỗ;
+   - `Image.asset` viết sẵn trong nội dung là lỗi: `asset` do build điền (bước 3b);
    - `AssetHash` ở chỗ khác thì báo lỗi.
-4. Tạo `pack.json` cho từng chủ đề: topic và các bài của nó (theo `order`), **bỏ `brief` của mọi `Image`** (SK-001). Kiểm lại nội dung gói bằng content-schema.
+3b. Ảnh (SK-033): với mỗi `Image`, tìm khoá hình của nó trong file chọn ảnh của bài (`--images`, mặc định `content/images/<age_group>/<topic_slug>/<lesson_slug>.json`), theo `same_as` (cả sang bài khác), rồi lấy ảnh trong cache (`--image-cache`, mặc định `content/.images`). Lỗi khi: ảnh đã chọn chưa có trong cache (chưa `images fetch`), file chọn ảnh ghi nguồn/giấy phép/tác giả/tên khác lúc fetch, bytes trong cache không khớp sha256, `same_as` trỏ sai, file chọn ảnh sai định dạng. Hình chưa chọn thì để trống (app vẽ hình giữ chỗ); `--require-assets` biến mỗi hình chưa có ảnh thành một lỗi. Hình tự vẽ (mục "Hình tự vẽ") chưa có file, chưa fetch, file sửa sau lần fetch, hoặc `title`/`method` đổi: lỗi (mục `own` nghĩa là hình đã vẽ xong). Khoá trong file chọn ảnh không còn hình nào trong bài: cảnh báo. Một ảnh dùng ở nhiều chỗ chỉ thành một file.
+4. Tạo `pack.json` cho từng chủ đề: topic và các bài của nó (theo `order`), **bỏ `brief` của mọi `Image`** (SK-001) và điền `image.asset` của hình đã có ảnh. Kiểm lại nội dung gói bằng content-schema.
 5. Ghi gói vào một thư mục tạm cạnh `--out`, kiểm lại sha256 và size của từng file, rồi thay cả `--out` bằng thư mục đó.
 
-Lỗi in mỗi dòng `<file> <JSON pointer> <thông báo>`, ví dụ `…/01-thuc-an-cho-ta-nhung-gi.json /quiz/1/hint/audio/en thiếu clip en: …`. Bài hoặc topic có `ai_draft: true` thì in cảnh báo, vẫn build.
+Lỗi in mỗi dòng `<file> <JSON pointer> <thông báo>`, ví dụ `…/01-thuc-an-cho-ta-nhung-gi.json /quiz/1/hint/audio/en thiếu clip en: …`. Bài hoặc topic có `ai_draft: true` thì in cảnh báo, vẫn build. Cảnh báo hình của validate (`image_missing`, `image_brief_keywords`) gộp thành một dòng đếm mỗi file; xem từng dòng bằng `validate`.
 
 | Cờ | Ý nghĩa |
 | --- | --- |
@@ -153,12 +154,15 @@ Lỗi in mỗi dòng `<file> <JSON pointer> <thông báo>`, ví dụ `…/01-thu
 | `--cache <thư mục>` | Cache clip, mặc định `content/.audio`. Build chỉ đọc, không ghi |
 | `--rules <file>` | Luật chấm, mặc định `content/rules.json` |
 | `--min-app-version <x.y.z>` | Bản app thấp nhất của mọi chủ đề, mặc định `0.1.0` (bản thử iOS đầu tiên) |
+| `--images <thư mục>` | Gốc các file chọn ảnh, mặc định `content/images` |
+| `--image-cache <thư mục>` | Cache ảnh của `images fetch`, mặc định `content/.images`. Build chỉ đọc |
+| `--require-assets` | Mọi `Image` phải có ảnh; thiếu thì lỗi (dùng khi bài đã chọn đủ ảnh) |
 
 Exit `0` = xong, `1` = lỗi nội dung (chưa ghi gì), `2` = sai cách gọi hoặc `--out` không an toàn.
 
 **Chạy lại** với cùng input và cùng cache cho ra đúng từng byte, trừ `generated_at` của manifest. Clip chỉ chép từ cache, không sinh lại; sinh lại clip (`tts --force`, xoá cache) thì hash đổi vì `afconvert` ghi ngày giờ vào m4a, và gói đổi theo.
 
-Kiểm một gói độc lập với code build (dùng `shasum`, `stat`, `jq`, `grep`):
+Kiểm một gói độc lập với code build (dùng `shasum`, `stat`, `jq`, `grep`; ảnh thêm `sips` của macOS): sha256 và size, tên file = sha256, không còn `brief`, mọi `audio.*` và `image.asset` có file, số file = số hash audio + số hash ảnh; mỗi ảnh là JPEG, không EXIF/ICC, cạnh dài ≤ 1024, `width`/`height` đúng file; ảnh nguồn ngoài: `credit` đủ 6 trường, giấy phép hợp quy tắc, URL https; hình ghép và hình tự vẽ kiểm theo mục của chúng:
 
 ```sh
 sh tools/content-cli/scripts/check-pack.sh content/.build/pack   # từ gốc repo
@@ -170,7 +174,8 @@ sh tools/content-cli/scripts/check-pack.sh content/.build/pack   # từ gốc re
 <out>/
 ├── catalog/v1/manifest.json                  danh mục: chủ đề, rules, asset
 ├── topics/<topic_id>/<version>/pack.json     một chủ đề: topic + mọi bài có trong input
-└── assets/<sha256>.m4a                       clip, tên là sha256 của bytes
+├── assets/<sha256>.m4a                       clip, tên là sha256 của bytes
+└── assets/<sha256>.jpg                       ảnh (SK-033), tên là sha256 của bytes
 ```
 
 Mọi đường dẫn trong manifest tính từ gốc gói, dùng `/`. Gói này là bản app nhúng ở mốc 1 (SK-016) và cũng là bố cục sẽ tải về ở GĐ 1, nên ContentKit chỉ đổi nguồn đọc.
@@ -192,8 +197,12 @@ Mọi đường dẫn trong manifest tính từ gốc gói, dùng `/`. Gói này
 | `rules` | object | Chép nguyên `content/rules.json`: `rules.<age_group>` |
 | `assets[]` | mảng | Mọi file trong `assets/`, theo `sha256` |
 | `assets[].sha256`, `size` | hex, số byte | Của bytes file |
-| `assets[].kind`, `lang` | `audio`, `en` · `vi` | Loại asset. Hình (`image`) chưa có |
-| `assets[].path` | chuỗi | `assets/<sha256>.m4a` |
+| `assets[].kind`, `lang` | `audio`, `en` · `vi` | Clip. `lang` chỉ có ở `audio` |
+| `assets[].kind`, `width`, `height` | `image`, px | Ảnh (SK-033): JPEG sRGB, cạnh dài ≤ 1024, không metadata |
+| `assets[].credit` | object | Chỉ ở `image`: `title`, `author`, `license` (`CC0 1.0` · `Public domain` · `PDM 1.0` · `CC BY <phiên bản>`), `license_url`, `source` (`Wikimedia Commons` · `Openverse/<nhà cung cấp>`), `source_url` (trang gốc), `changes` (`cropped`, `resized`: CC BY 4.0 yêu cầu ghi đã sửa gì). App hiện ở màn "Nguồn hình" |
+| `assets[].credit` của hình ghép | object | `title`, `author` = `Science Kids`, `license` (chặt nhất trong các phần: CC BY nếu có phần CC BY), `license_url`, `source` = `composed`, `changes` (luôn có `composed`, thêm `resized` nếu file ghép lớn hơn 1024 px), `parts` (mỗi ảnh nguồn: `title`, `author`, `license`, `license_url`, `source`, `source_url`). Không có `source_url` riêng. Mục "Hình ghép" |
+| `assets[].credit` của hình tự vẽ | object | `title`, `author` = `Science Kids`, `license` = `Science Kids`, `license_url` = `""`, `source` = `Science Kids`, `changes` = `["drawn"]` (cách làm, không phải sửa ảnh của ai). Không có `source_url`, không có `parts`. App hiện title, author, license, source; `license_url` trống coi như thiếu. Mục "Hình tự vẽ" |
+| `assets[].path` | chuỗi | `assets/<sha256>.m4a` hoặc `assets/<sha256>.jpg` |
 
 Ví dụ rút gọn:
 
@@ -219,7 +228,21 @@ Ví dụ rút gọn:
   ],
   "rules": { "explorer": { … }, "discoverer": { "max_tries": 2, "pass_threshold": { "num": 5, "den": 6 }, … }, "scientist": { … } },
   "assets": [
-    { "sha256": "02742903…", "size": 14976, "kind": "audio", "lang": "en", "path": "assets/02742903….m4a" }
+    { "sha256": "02742903…", "size": 14976, "kind": "audio", "lang": "en", "path": "assets/02742903….m4a" },
+    { "sha256": "5c1e77a0…", "size": 98213, "kind": "image", "path": "assets/5c1e77a0….jpg", "width": 1024, "height": 683,
+      "credit": { "title": "Blue sea horizon", "author": "Example Author", "license": "CC0 1.0",
+                  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "Wikimedia Commons",
+                  "source_url": "https://commons.wikimedia.org/wiki/File:Blue_sea_horizon.jpg", "changes": ["resized"] } },
+    { "sha256": "9b04c2e1…", "size": 87120, "kind": "image", "path": "assets/9b04c2e1….jpg", "width": 1024, "height": 512,
+      "credit": { "title": "Sea and river", "author": "Science Kids", "license": "CC BY 2.0",
+                  "license_url": "https://creativecommons.org/licenses/by/2.0/", "source": "composed", "changes": ["composed"],
+                  "parts": [ { "title": "Blue sea horizon", "author": "Example Author", "license": "CC0 1.0", "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                               "source": "Wikimedia Commons", "source_url": "https://commons.wikimedia.org/wiki/File:Blue_sea_horizon.jpg" },
+                             { "title": "River & boat", "author": "Example Photographer", "license": "CC BY 2.0", "license_url": "https://creativecommons.org/licenses/by/2.0/",
+                               "source": "Openverse/Flickr", "source_url": "https://www.flickr.com/photos/example/9002" } ] } },
+    { "sha256": "c4d8e0f1…", "size": 64210, "kind": "image", "path": "assets/c4d8e0f1….jpg", "width": 800, "height": 800,
+      "credit": { "title": "Plastic globe on a desk", "author": "Science Kids", "license": "Science Kids", "license_url": "",
+                  "source": "Science Kids", "changes": ["drawn"] } }
   ]
 }
 ```
@@ -236,6 +259,8 @@ Ví dụ rút gọn:
 `topic` và từng phần tử `lessons` vẫn hợp lệ với `packages/content-schema` (build kiểm lại). Mỗi `audio.<lang>` là sha256 của một file `assets/<sha256>.m4a` có trong gói và trong `manifest.assets`.
 
 **Cách app tra clip:** đọc `audio.en` của chuỗi → mở `assets/<audio.en>.m4a` → trước khi dùng, so sha256 và `size` với dòng có cùng `sha256` trong `manifest.assets`. `pack.json` kiểm bằng `topics[].sha256` và `size`.
+
+**Cách app tra ảnh:** `image.asset` → dòng `kind: image` cùng `sha256` trong `manifest.assets` → `path` (`assets/<sha256>.jpg`), kiểm sha256 như clip; không có `asset` thì vẽ hình giữ chỗ. Màn "Nguồn hình" liệt kê `credit` của mọi dòng `kind: image`.
 
 ### `content/rules.json`
 
@@ -319,6 +344,24 @@ Thứ tự in: lỗi trước, cảnh báo sau; mỗi nhóm theo file (topic tr�
 | `md_id_duplicate` | lỗi | `id` trùng một id khác trong gốc nội dung; báo `file:dòng` của chỗ kia. Nhiều id trùng cùng một file khác (chép bài cũ quên xoá id) gộp một dòng |
 | `md_needs_check` | cảnh báo | File còn dòng `[CẦN KIỂM]`. Một dòng cho mỗi file, liệt kê số dòng |
 
+**Danh mục `syllabus.json`** ([SK-030](../../docs/backlog/SK-030-full-syllabus-no-lock.md)). Thư mục đưa cho `validate` có `syllabus.json` ngay bên trong (`content/`) thì máy kiểm luôn file đó; thư mục chủ đề thì không. Luật nằm ở `packages/content-schema` (`syllabus.schema.json`, `scripts/lib/syllabus.mjs`, xem README ở đó); content-cli đọc file và đưa danh sách id của mọi `_topic.md` và bài `<nn>-*.md` dưới chính thư mục đó (`contentIndex` trong `src/markdown/files.ts`, chỉ đọc frontmatter bằng cùng parser). Bài thuộc chủ đề của thư mục chứa nó. Mỗi dòng: `<syllabus.json> <JSON pointer> [<mã>] <thông báo>`, thông báo mở đầu bằng nhóm, chủ đề (số, key) và bài (số, tên en). Thứ tự in: lỗi markdown, lỗi syllabus, cảnh báo markdown, cảnh báo syllabus. Dòng tổng thêm `· syllabus content/syllabus.json (3 nhóm, 45 chủ đề, 384 bài; 2 bài có lesson_id, 347 bài chưa có tên vi)`; phần "chưa có tên vi" mất khi mọi bài đã có `title.vi`. `import` không kiểm syllabus. Gọi `validate content/syllabus.json` (file lẻ) thì exit 2, nhắc đưa thư mục.
+
+```
+content/syllabus.json /groups/1/topics/8/lessons/5/lesson_id [syllabus_lesson_ref] discoverer, chủ đề 9 "healthy-eating", bài 6 "Nutrient-rich meal": lesson_id 2360…e340 không có trong content: không bài markdown nào có id này
+```
+
+| Mã | Mức | Khi nào |
+| --- | --- | --- |
+| `syllabus_json` | lỗi | File không đọc được thành JSON |
+| `schema` | lỗi | Sai `syllabus.schema.json` (kiểu, trường thiếu hoặc lạ, enum). Có lỗi này thì chưa chạy các luật dưới |
+| `syllabus_duplicate` | lỗi | `age_group`, `key` chủ đề, `topic_id`, `lesson_id` hoặc một slug lesson Oak xuất hiện hai lần trong file |
+| `syllabus_number` | lỗi | `number` của chủ đề (trong nhóm) hoặc của bài (trong chủ đề) không đi 1, 2, 3… theo thứ tự trong file |
+| `syllabus_key` | lỗi | Chủ đề Oak có `key` khác `source.unit_slug`; chủ đề mới có `key` không bắt đầu bằng `new-` |
+| `syllabus_oak` | lỗi | Bài của chủ đề Oak có `oak_lessons` rỗng; bài của chủ đề mới có `oak_lessons` không rỗng; `source.year` ngoài `oak_years` của nhóm |
+| `syllabus_topic_ref` | lỗi | `topic_id` không là id của `_topic.md` nào, hoặc là chủ đề của nhóm tuổi khác |
+| `syllabus_lesson_ref` | lỗi | `lesson_id` không là id của bài nào, là bài của chủ đề khác, hoặc chủ đề chứa nó chưa có `topic_id` |
+| `syllabus_unlisted` | cảnh báo | Chủ đề hoặc bài có trong thư mục mà chưa ô nào trỏ tới (app sẽ không hiện) |
+
 **Đọc markdown** (TEMPLATE mục A "Cú pháp", bảng ánh xạ mục D)
 - Parser tự viết, đọc theo dòng (không thư viện markdown hay YAML). Frontmatter là YAML tối giản: `tên: giá trị` ở cột 0, `difficulty:` với các dòng thụt lề bên dưới, `prerequisites: []` hoặc `[slug-a, slug-b]`, dòng `#` là chú thích. Giá trị đọc theo kiểu của schema, không đoán như YAML 1.1 (`no` không thành `false`), không bỏ ngoặc kép.
 - Bỏ qua: dòng `>`, dòng trống, cả mục `## Ghi chú cho hoạ sĩ` (hoặc "họa sĩ"), `## Ghi chú cho dev`, `## Ghi chú` (topic). Đọc được file có BOM và CRLF.
@@ -380,7 +423,8 @@ Hoặc `node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] 
 Mỗi dòng: `<file> <JSON pointer> [<mã>] <thông báo>`. Cảnh báo có `cảnh báo:` ở đầu thông báo và không làm exit 1. Lỗi in trước, cảnh báo sau, rồi một dòng tổng. Exit `0` = không lỗi (có thể có cảnh báo), `1` = có lỗi, `2` = sai cách gọi.
 
 **Phạm vi:**
-- Format được dùng, số lựa chọn và hình bắt buộc: áp cho từng câu ở **cả Khởi động** (`/warmup/<i>`) **và Quiz** (`/quiz/<i>`). Câu dùng format không được phép thì chỉ báo `age_format_not_allowed`, không kiểm tiếp số lựa chọn hay hình của câu đó.
+- Format được dùng, số lựa chọn và hình bắt buộc: áp cho từng câu ở **cả Khởi động** (`/warmup/<i>`) **và Quiz** (`/quiz/<i>`); món `build_tray` ở Chơi (`/play/items/<j>`) theo chỗ `tray_item`. Câu dùng format không được phép thì chỉ báo `age_format_not_allowed`, không kiểm tiếp số lựa chọn hay hình của câu đó.
+- Hình (SK-033): mỗi chỗ thiếu `image` một dòng: `age_image_required` (lỗi) nếu chỗ đó có trong `image_required`, không thì `image_missing` (cảnh báo) nếu có trong `image_expected`. `image_brief_keywords`: mọi `Image` của topic và bài (cả ô Học, từ vựng, thẻ thưởng) phải có `brief` kết thúc bằng "Từ khoá tìm ảnh (EN): …", trừ brief dùng lại ("Dùng lại hình \`<key>\`."); brief dùng lại hình trong cùng bài mà không nêu key nào của bài thì cũng cảnh báo. Brief ghép (nhãn có chữ "ghép" như \`[sơ đồ ghép ảnh]\`, hoặc mở đầu "Ghép …", mục "Hình ghép") không cần từ khoá khi đã nêu hình dùng lại trong backtick hoặc có "Từ khoá cho <phần>: …"; không có gì thì cảnh báo "brief ghép … không có …". Brief hình tự vẽ (nhãn \`[hình vẽ]\`, \`[hình tự vẽ]\` hoặc \`[tự vẽ]\`, mục "Hình tự vẽ") không cần từ khoá: không tìm ảnh, brief tả cần vẽ gì.
 - DOK, câu 1, số câu misconception, số format khác nhau, thứ tự DOK: chỉ tính 6 câu Quiz. Số format đếm mọi format có mặt, kể cả format không được phép.
 - Số từ: mọi chuỗi `Spoken` (`en`) của topic và bài (câu hỏi, gợi ý, giải thích, lời nhắn, ý chính, ví dụ từ vựng…), tách câu sau `.` `!` `?` `…`, đếm từ theo khoảng trắng (từ có chữ hoặc số; ô trống `{1}` tính một từ, `—` không tính).
 - `format_not_rendered`: mọi câu Khởi động và Quiz, so với bản app của chủ đề = lớn nhất của `--min-app-version` và mọi `min_app_version` của block (như `build`).
@@ -400,6 +444,8 @@ Mỗi dòng: `<file> <JSON pointer> [<mã>] <thông báo>`. Cảnh báo có `c�
 | `age_dok_order` | cảnh báo | DOK giảm giữa hai câu quiz liên tiếp | `/quiz/<i>/dok` (câu sau) |
 | `age_words_en` | cảnh báo | Một câu EN dài hơn `max_words_en` từ | chuỗi, vd `/quiz/2/prompt/en` |
 | `format_not_rendered` | lỗi ở `build`, cảnh báo ở `validate` | Format chưa hiện được ở bản app của chủ đề | `/quiz/<i>/format` |
+| `image_missing` | cảnh báo | Thiếu `image` ở chỗ `image_expected` ghi (SK-033); Duy duyệt bài thử thì chuyển chỗ đó sang `image_required` | câu `/quiz/1`, lựa chọn `/quiz/0/options/2`, thẻ từ `/quiz/1/bank/0`, món `/play/items/3` |
+| `image_brief_keywords` | cảnh báo | `brief` thiếu "Từ khoá tìm ảnh (EN): …" (khi `image_search_keywords: true`), brief dùng lại không nêu key, hoặc brief ghép không có từ khoá lẫn hình dùng lại | `…/image/brief`, hoặc `…/image` khi không có brief |
 
 **`authoring`** (`content/rules.json`, khoá của `<nhóm>.authoring`; định dạng ở `schema/rules.schema.json#/$defs/Authoring`):
 
@@ -409,6 +455,8 @@ Mỗi dòng: `<file> <JSON pointer> [<mã>] <thông báo>`. Cảnh báo có `c�
 | `warmup_formats` | `single_choice`, `true_false` | `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank` | như Discoverer |
 | `option_count` | `single_choice` [2, 3], `order_sequence` [3, 3] | `single_choice` [3, 4], `multi_choice` [2, 6], `order_sequence` [3, 5], `picture_bar_chart` [3, 4] | `single_choice` [4, 4], `multi_choice` [2, 6], `order_sequence` [3, 6], `picture_bar_chart` [4, 4] |
 | `image_required` | `choice_option`, `sequence_item`, `true_false` | không | không |
+| `image_expected` (SK-033) | `question`, `choice_option`, `sequence_item`, `bank_word`, `tray_item` | như Explorer | như Explorer |
+| `image_search_keywords` (SK-033) | `true` | `true` | `true` |
 | `dok_mix` | [3, 3, 0] | [2, 3, 1] | [1, 3, 2] |
 | `first_item_dok` | 1 | 1 | 1 |
 | `misconception_items` | [1, 1] | [1, 1] | [1, 2] |
@@ -416,30 +464,193 @@ Mỗi dòng: `<file> <JSON pointer> [<mã>] <thông báo>`. Cảnh báo có `c�
 | `max_words_en` | 8 | 10 | 15 |
 
 - `[min, max]` tính cả hai đầu; `rules.ts` kiểm `min <= max` và tổng `dok_mix` = 6. "`multi_choice` ≤ 6" ghi [2, 6]: 2 là mức tối thiểu của schema. Format không có trong `option_count` chỉ theo giới hạn của schema (vd `fill_blank_bank` chưa có luật số từ trong ngân hàng). `max_words_en` thiếu thì không kiểm.
-- `image_required`: `choice_option` = mọi lựa chọn của `single_choice`, `multi_choice`, `picture_bar_chart`; `sequence_item` = mọi thẻ `order_sequence`; `true_false` = trường `image` của chính câu `true_false`.
+- `image_required`, `image_expected` (cùng tập chỗ, `schema/rules.schema.json#/$defs/ImageSlot`): `question` = trường `image` của chính câu, mọi format; `choice_option` = mọi lựa chọn của `single_choice`, `multi_choice`, `picture_bar_chart`; `sequence_item` = mọi thẻ `order_sequence`; `true_false` = trường `image` của chính câu `true_false`; `bank_word` = mọi thẻ từ của `fill_blank_bank`; `tray_item` = mọi món `build_tray`. Một chỗ có trong cả hai danh sách thì là lỗi. `image_expected`, `image_search_keywords` là khoá tuỳ chọn (thiếu thì không kiểm); app và server bỏ qua cả `authoring`.
 - Chưa kiểm bằng máy: câu misconception của Explorer đặt ở câu 6; số từ EN trên một màn; tỉ lệ đúng kỳ vọng; vùng chạm (việc của app).
 
-**Bảng format → bản app** (`src/validate/format-renderers.ts`, một chỗ cho `build` và `validate`; nguồn: `hasRenderer` của iOS, `LessonPlayer/ContentScoring.swift`):
+**Bảng format → bản app** (`src/validate/format-renderers.ts`, một chỗ cho `build` và `validate`; nguồn: `hasRenderer(for:)` của iOS, `LessonPlayer/ContentScoring.swift`). App chọn màn theo `age_group` của chủ đề (SK-040: Explorer có màn riêng; Scientist chạy như Discoverer), nên bảng có một cột mỗi kiểu màn:
 
-| Format | Bản app iOS đầu tiên hiện được |
-| --- | --- |
-| `single_choice`, `multi_choice`, `true_false`, `fill_blank_bank` | 0.1.0 |
-| `order_sequence`, `picture_bar_chart` | chưa có (GĐ 1 S4) |
+| Format | Discoverer, Scientist | Explorer |
+| --- | --- | --- |
+| `single_choice`, `true_false` | 0.1.0 | 0.1.0 |
+| `multi_choice`, `fill_blank_bank` | 0.1.0 | chưa có (luật Explorer cũng không cho dùng) |
+| `order_sequence` | chưa có (GĐ 1 S4) | 0.1.0 (SK-040) |
+| `picture_bar_chart` | chưa có (GĐ 1 S4) | chưa có |
 
-App cũ gặp format chưa có renderer thì bỏ câu, quiz còn dưới 6 câu và sao lệch. Vì vậy `build` báo lỗi khi bài dùng format mà bản app của chủ đề chưa hiện được: khi có renderer, build với `--min-app-version` ≥ bản đó, app cũ thấy chủ đề "cần cập nhật". ios-dev đề xuất sửa bảng mỗi khi thêm renderer; `test/age-rules.test.ts` kiểm bảng có đủ mọi format của content-schema.
+App cũ gặp format chưa có renderer thì bỏ câu, quiz còn dưới 6 câu và sao lệch. Vì vậy `build` báo lỗi khi bài dùng format mà bản app của chủ đề chưa hiện được: khi có renderer, build với `--min-app-version` ≥ bản đó, app cũ thấy chủ đề "cần cập nhật". Câu dùng format mà luật nhóm không cho thì chỉ báo `age_format_not_allowed`, không báo thêm `format_not_rendered`. ios-dev đề xuất sửa bảng mỗi khi thêm renderer; `test/age-rules.test.ts` kiểm mỗi cột có đủ mọi format của content-schema.
+
+Quy ước bản app (dev 12/11): `MARKETING_VERSION` của iOS là 0.1.0 (`apps/ios/Config/Base.xcconfig`) và chưa bản nào phát hành (SK-020 chưa làm: chưa TestFlight, chưa store). Renderer vào trước bản phát hành đầu tiên thì ghi 0.1.0, bằng mặc định `--min-app-version`, nên `validate`/`build` không cần cờ (Explorer `order_sequence`). Từ khi một bản đã phát hành, renderer mới ghi bản `MARKETING_VERSION` kế tiếp (ios-dev tăng số), và nội dung dùng nó phải build với `--min-app-version` (hoặc `min_app_version` của block) bằng bản đó.
 
 **Fixture** (`test/fixtures/age-rules/`, dữ liệu test, không phải nội dung cho trẻ; sinh bằng `npm run make-age-fixtures`, đừng sửa tay):
 - `valid/explorer/fixture-explorer/`, `valid/scientist/fixture-scientist/`: một bài tối thiểu hợp lệ mỗi nhóm. Discoverer dùng bài 1 của `packages/content-schema/fixtures/valid`.
 - `invalid/*.json`: mỗi file là một bài hợp lệ với đúng **một** lỗi luật tuổi; `expected.json` ghi tay pointer và mã mong đợi. Cảnh báo không tính.
 
+## Ảnh: images search, chọn, images fetch (SK-033)
+
+Ảnh chụp thật hoặc hình vẽ gần thực tế từ nguồn miễn phí cho phép dùng thương mại; không lấy hình AI từ nguồn ngoài. Đồ vật không có ảnh miễn phí hợp lệ thì Science Kids tự vẽ (Duy 10/11; designer hoặc agent vẽ, kể cả vẽ bằng AI): mục "Hình tự vẽ". Quy trình cho một bài:
+
+```sh
+# 1. Tìm ứng viên (không tải ảnh): content/.build/images/<topic_slug>/<lesson_slug>/candidates.html + candidates.json
+npm --prefix tools/content-cli run images -- search content/discoverer/be-mat-trai-dat/01-dat-va-nuoc-tren-trai-dat.md
+# 2. Mở candidates.html, xem trang gốc từng ảnh, chọn; chép JSON ở cuối trang vào file chọn ảnh:
+#    content/images/discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat.json   (trong git)
+# 3. Tải, kiểm lại giấy phép ở nguồn, xử lý vào cache content/.images/ (ngoài git)
+npm --prefix tools/content-cli run images -- fetch content/images/discoverer/be-mat-trai-dat
+# 4. build như cũ: điền image.asset, chép assets/<sha256>.jpg, credit vào manifest
+```
+
+**Quy tắc giấy phép** (SK-033 "Đề xuất" 2; `src/images/license.ts`, cả `search` lẫn `fetch` dùng):
+- Nhận: CC0 1.0; public domain có nhãn trên trang gốc (Commons `Public domain`); PDM 1.0; CC BY mọi phiên bản (kể cả bản port) khi nguồn ghi tác giả.
+- Loại: BY-SA, NC, ND, GFDL và giấy phép copyleft khác; nhãn không rõ ("Attribution", "No restrictions", "Copyrighted free use", không ghi); file Commons có `Restrictions` (personality = người nhận ra được, trademarked, insignia = huy hiệu cơ quan) hoặc `NonFree`; kết quả Openverse đánh dấu `mature`; ảnh nhỏ hơn 600 px cạnh dài; GIF.
+- Ảnh CC0, public domain, PDM được sửa `title` cho trung tính (tên hiện ở màn "Nguồn hình"); ảnh CC BY phải giữ `title` như nguồn ghi (CC BY 2.0, 3.0 yêu cầu), `fetch` báo lỗi nếu khác.
+- Người chọn vẫn phải mở trang gốc: không mặt người nhận ra được (nhất là trẻ em), không logo, nhãn hiệu, huy hiệu NASA/USGS/NOAA, tên gọi Biển Đông, Hoàng Sa, Trường Sa đúng.
+
+**`images search <bài .md | thư mục chủ đề>...`**
+- Mỗi `Image` của bài: lấy từ khoá ở cuối dòng `brief` ("Từ khoá tìm ảnh (EN): …"; tách theo `;` thành nhiều truy vấn, cụm hơn 6 từ có dấu phẩy thì tách cả dấu phẩy; thiếu thì dùng `alt.en`). Commons: tối đa 3 truy vấn, truy vấn hơn 3 từ không ra ảnh nào thì thử lại với 3 từ đầu. Openverse: tối đa 2 truy vấn, lọc `category` theo nhãn đầu brief (`[ảnh]`, `[ảnh mô hình]` → ảnh chụp; `[tranh]`, `[tranh phục dựng]` → hình vẽ; nhãn khác không lọc).
+- Brief ghép (mục "Hình ghép"): mỗi truy vấn của "Từ khoá tìm ảnh (EN)" là **một ảnh cần tìm** (không phải truy vấn thay thế), "Từ khoá cho <phần>: <a>; <b>." thêm một ảnh có tên; mỗi ảnh tìm riêng, tối đa `--per-image` ứng viên. Key trong backtick của brief (\`tray_eggshell\`, \`<bài>/<key>\`, \`<key>\` ở bài \`<chủ đề>/<bài>\`) là ảnh dùng lại; hình của bài này mà chính nó dùng lại hình ghép thì bỏ qua. Trang ứng viên có lựa chọn "Hình ghép từ các ảnh đánh dấu" và ra mục `composed` (file đề xuất `content/images/composed/<chủ đề>/<bài>.<khoá>.jpg`, `title` = `alt.en`).
+- Brief hình tự vẽ (\`[hình vẽ]\`, \`[hình tự vẽ]\`, \`[tự vẽ]\`): không tìm, không gọi mạng; `candidates.json` có `own` (mục đề xuất, file `content/images/own/<chủ đề>/<bài>.<khoá>.jpg`, `title` = `alt.en`), trang có lựa chọn "Hình tự vẽ (đã có file)". Brief dùng lại hay brief ghép có nhãn vẽ vẫn đọc như dùng lại, ghép.
+- Brief "Dùng lại hình \`<key>\`." (hoặc kiểu cũ "Dùng lại hình … của món tray_rice"): không tìm, trang ứng viên đề xuất `{ "same_as": "<khoá>" }`. "… ở bài \`<chủ đề>/<bài>\`", "\`<bài>/<key>\`" hoặc "ở bài một": đề xuất `{ "same_as": "<key>", "lesson": "<chủ đề>/<slug bài>" }`.
+- Lấy xen kẽ Commons và Openverse, bỏ trùng trang gốc, tối đa `--per-image` (mặc định 6). `candidates.json` ghi mỗi hình: khoá, pointer, alt, brief, truy vấn, ứng viên (nguồn, trang gốc, URL file, thumbnail, tên, tác giả, giấy phép, kích thước, `selection` chép được vào file chọn ảnh), số ứng viên bị loại theo lý do, ghi chú. `candidates.html`: mỗi hình một hàng, thumbnail hiện thẳng từ nguồn; chọn nút tròn thì khung cuối trang ra JSON của cả file chọn ảnh (gộp với lựa chọn đã có trong file).
+- Trả lời API lưu ở `content/.build/images/.cache/` (`--refresh` để hỏi lại). Openverse không khoá: 20 lượt/phút (chờ 3,1 s giữa hai lượt), 200 lượt/ngày; lệnh dừng gọi Openverse ở lượt thứ 190 trong ngày (`.cache/openverse-usage.json`, dùng chung với `fetch`) hoặc khi nhận 429. Commons cách nhau 0,3 s. Mọi request gửi User-Agent riêng (`ScienceKidsContentCLI/0.1 …`), không có dữ liệu cá nhân.
+- Trả lời 5xx (Openverse hay trả 504 khi tìm lâu) thì chờ 5 giây, thử lại một lần.
+- Cờ: `--key <khoá>` (lặp được) chỉ tìm hình đó · `--per-image <n>` · `--refresh` · `--cache-only` (không gọi mạng, chỉ dựng lại trang từ cache; vd sau khi sửa file chọn ảnh) · `--sources commons|openverse|commons,openverse` · `--out <thư mục>` · `--images <thư mục>` (file chọn ảnh, để hiện lựa chọn cũ) · `--content-root`, `--rules` như validate. Exit 1 khi bài còn lỗi markdown hoặc content-schema (chưa tìm được).
+
+**Khoá hình** (`src/images/slots.ts`): các `key` từ gốc bài tới hình, nối bằng dấu chấm; Khởi động, Quiz, Chơi không có tiền tố (key của câu, của block chơi đã đủ rõ), Học, Từ vựng, Thưởng thì có. Content-schema bắt mọi key trong bài là duy nhất, nên khoá hình cũng duy nhất.
+
+| Hình | Khoá |
+| --- | --- |
+| câu `/quiz/2/image` | `q3` |
+| lựa chọn `/quiz/2/options/1/image` | `q3.q3_river` |
+| thẻ từ `/quiz/1/bank/0/image` | `q2.q2_piece` |
+| món Chơi `/play/items/4/image` | `tray.tray_sea` (key của block chơi là `tray`) |
+| nhóm ô Học `/learn/0/groups/1/image` | `learn.explore.explore_water` |
+| từ vựng `/vocab/3/image` | `vocab.model` |
+| thẻ thưởng `/reward/collectible/image` | `reward.ha_long` |
+
+**File chọn ảnh** `content/images/<age_group>/<topic_slug>/<lesson_slug>.json` (`_topic.json` cho hình của topic; định dạng `schema/image-selection.schema.json`):
+
+```json
+{
+  "images": {
+    "tray.tray_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:….jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/…/….jpg",
+      "title": "…", "author": "…", "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": { "left": 0, "top": 0.1, "width": 1, "height": 0.8 }
+    },
+    "q1.q1_sea": { "same_as": "tray.tray_sea" },
+    "tray.tray_river": {
+      "source": "Openverse/Flickr", "openverse_id": "…uuid…",
+      "source_url": "https://www.flickr.com/photos/…", "file_url": "https://live.staticflickr.com/….jpg",
+      "title": "…", "author": "…", "license": "CC BY 2.0", "license_url": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    "vocab.island": { "same_as": "tray_island", "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat" }
+  }
+}
+```
+
+- Mục ảnh: `source` (`Wikimedia Commons` hoặc `Openverse/<nhà cung cấp>`, khi đó bắt buộc `openverse_id`), `source_url`, `file_url`, `title`, `author` (`Unknown` khi nguồn không ghi, chỉ với CC0/PD/PDM), `license`, `license_url`, `crop` tuỳ chọn (tỉ lệ 0–1 của ảnh đã xoay theo EXIF), `note` tuỳ chọn. Sáu trường credit vào gói đúng như ghi.
+- `same_as`: khoá hình, hoặc key như brief viết (`tray_island`, `q3`): khớp đúng khoá, không có thì khớp phần cuối khoá. Có `lesson` (`<slug chủ đề>/<slug bài>`, cùng nhóm tuổi; `nn-` ở đầu tên bài được bỏ qua) thì lấy ảnh đã chọn trong file chọn ảnh của bài đó. Một bước sang bài khác, rồi tối đa một `same_as` trong file đó.
+- Hình không có trong file: chưa chọn (app vẽ hình giữ chỗ).
+- `composed`: hình ghép, mục "Hình ghép" bên dưới.
+- `own`: hình tự vẽ, mục "Hình tự vẽ" bên dưới.
+
+**`images fetch <file chọn ảnh | thư mục>...`**
+- Mỗi ảnh khác nhau (theo `file_url` + `crop`) xử lý một lần. `same_as` có `lesson` kéo theo ảnh gốc của bài kia, nên fetch một file là đủ cho build.
+- Kiểm lại ở nguồn trước khi tải: Commons (imageinfo + extmetadata của trang `File:`): `file_url` vẫn là URL file, giấy phép hợp quy tắc và đúng `license`, `license_url`, có tác giả nếu CC BY, CC BY thì `title` như nguồn. Openverse (bản ghi chi tiết của `openverse_id`): giấy phép, `url`, trang gốc, nhà cung cấp, `title` (CC BY) khớp; trang gốc trên Commons thì kiểm cả ở Commons; nhà cung cấp khác (Flickr…) chỉ kiểm được qua Openverse nên lệnh in dòng "Kiểm tay: …" để người chọn xác nhận trên trang gốc. Lệch hoặc không hợp quy tắc: báo `KHÔNG DÙNG`, không tải, exit 1. Tác giả khác nguồn: cảnh báo, vẫn dùng.
+- Tải (User-Agent riêng; tối đa 40 MB). Ảnh Commons (cả ảnh Openverse có trang gốc trên Commons, khi URL file trùng) **không tải file gốc**: lấy `thumburl` 1280 px trong cùng lượt imageinfo đã kiểm giấy phép (`iiurlwidth=1280`, một cỡ chuẩn của Wikimedia); ảnh rộng ≤ 1280 px dạng JPEG/PNG/WebP thì tải URL gốc (đã nhỏ), TIFF… luôn lấy bản Commons vẽ lại. `crop` là tỉ lệ nên áp như nhau trên bản thu nhỏ.
+- Nhịp gọi: Commons API cách nhau 1 s, tải từ `upload.wikimedia.org` cách nhau 3 s, nguồn khác 0,3 s, Openverse 3,1 s (như search). Trả lời 429 hoặc 503 (Commons API và mọi lượt tải): chờ theo `Retry-After` (số giây hoặc ngày giờ), ít nhất 5 / 15 / 45 s cho lượt thử lại 1 / 2 / 3, nhiều nhất 120 s, in một dòng mỗi lần chờ; sau 3 lượt thử lại vẫn lỗi thì ảnh đó `KHÔNG DÙNG` như cũ. Openverse API không thử lại (mỗi lượt tính vào hạn mức ngày).
+- Xử lý bằng `sharp`: xoay theo EXIF, cắt, cạnh dài ≤ 1024 px (không phóng to), sRGB, phần trong suốt thành nền trắng, JPEG q82 (mozjpeg), bỏ mọi metadata (EXIF, GPS, ICC). Cùng file nguồn ra cùng bytes.
+- Ghi `content/.images/<sha256>.jpg` và `content/.images/index.json`: khoá cache → sha256, kích thước, `credit`, `changes`, URL đã tải, kích thước gốc, các bước kiểm giấy phép (`verified.via`, giấy phép và tác giả ở nguồn, thời điểm), ngày tải. Ảnh đã có (cùng khoá, cùng credit) thì bỏ qua; `--force` tải và kiểm lại; `--cache <thư mục>` đổi chỗ cache.
+- Hình ghép: mục "Hình ghép". Hình tự vẽ: mục "Hình tự vẽ" (không gọi mạng).
+
+### Hình ghép (SK-033, dev 10/11)
+
+Một `Image` chỉ có một `asset`. Hình cần nhiều ảnh (trục thời gian, khủng long cạnh xe buýt, hai con vật chung một cảnh, sơ đồ mặt cắt đã xoá nhãn, ảnh tô nổi một phần) do designer ghép thành **một file** từ các ảnh nguồn hợp quy tắc giấy phép, rồi khai trong file chọn ảnh:
+
+```json
+"learn.explore.explore_people": {
+  "composed": {
+    "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.learn.explore.explore_people.jpg",
+    "parts": [
+      { "same_as": "tray_longneck" },
+      { "same_as": "tray_stegosaurus", "lesson": "khung-long/khung-long-la-gi" },
+      { "source": "Wikimedia Commons", "source_url": "https://commons.wikimedia.org/wiki/File:….jpg",
+        "file_url": "https://upload.wikimedia.org/…/….jpg", "title": "…", "author": "…",
+        "license": "CC0 1.0", "license_url": "https://creativecommons.org/publicdomain/zero/1.0/" }
+    ]
+  },
+  "title": "Timeline from the dinosaurs to a kite",
+  "note": "đã xoá nhãn gốc, thêm dải nâu"
+},
+"q4": { "same_as": "explore_people" }
+```
+
+- `file`: `content/images/composed/<slug chủ đề>/<tên>.jpg` (hoặc `.jpeg`), trong git. Nên là JPEG sRGB, cạnh dài ≤ 1024 px, không metadata; khác thì `fetch` vẫn xử lý lại theo hợp đồng và in "lưu ý" để designer lưu đè cho repo nhẹ.
+- `parts` (1–12): mỗi phần là `{ "same_as": "<khoá>"[, "lesson": "<chủ đề>/<bài>"] }` trỏ tới ảnh đã có trong file chọn ảnh (cùng file hoặc bài khác, như `same_as` thường), hoặc một mục ảnh nguồn đầy đủ như ảnh thường (`source`, `source_url`, `file_url`, `title`, `author`, `license`, `license_url`, `openverse_id`, `crop` tuỳ chọn), hoặc một hình tự vẽ (`{ "own": …, "title": … }` viết ngay trong `parts`, hoặc `same_as` tới mục `own`). Phần trỏ tới một hình ghép khác thì lấy các ảnh nguồn của hình đó (chỉ một lớp; lồng hai lớp là lỗi). Cùng một ảnh nguồn hai lần thì tính một.
+- `title` (bắt buộc): tên ở màn "Nguồn hình"; tự đặt, trung tính. `note` tuỳ chọn.
+- `same_as` tới hình ghép (cả từ bài khác) dùng lại nguyên hình đó.
+- Giấy phép của hình ghép là **giấy phép chặt nhất** trong các phần: CC BY (lấy phần CC BY đầu tiên trong `parts`) > Science Kids (có phần tự vẽ; `license_url` trống) > Public domain > PDM 1.0 > CC0 1.0. Credit trong gói: `author` = `Science Kids`, `source` = `composed`, `changes` luôn có `composed`, `parts` = credit đủ 6 trường của từng ảnh nguồn; phần tự vẽ là `{ title, author, license, license_url: "", source }` với ba trường "Science Kids", không có `source_url` (mục `catalog/v1/manifest.json`). App tự thêm dòng "Ghép từ nhiều ảnh" theo ngôn ngữ giao diện.
+
+**Quy trình (designer):**
+
+```sh
+# 1. Ghi mục composed với parts (file ghép chưa cần có), rồi fetch: mọi ảnh thành phần được kiểm giấy phép ở nguồn
+#    và tải, xử lý vào content/.images/; hình ghép in "chờ ghép" kèm đường dẫn từng ảnh thành phần (exit 0).
+npm --prefix tools/content-cli run images -- fetch content/images/discoverer/khung-long/trai-dat-rat-lau-ve-truoc.json
+# 2. Ghép từ các file content/.images/<sha256>.jpg vừa in ra (chỉ dùng ảnh trong danh sách parts),
+#    lưu vào composed.file: content/images/composed/khung-long/….jpg (JPEG ≤ 1024 px, sRGB, không metadata)
+# 3. fetch lại: ảnh thành phần "đã có" (không gọi mạng), file ghép được xử lý vào cache với credit từng phần
+npm --prefix tools/content-cli run images -- fetch content/images/discoverer/khung-long/trai-dat-rat-lau-ve-truoc.json
+# 4. build như cũ
+```
+
+- `fetch`: phần nào `KHÔNG DÙNG` (giấy phép lệch, hạn chế…) thì hình ghép cũng `KHÔNG DÙNG`, exit 1, không vào cache. Hai mục cùng `file` mà khác `title` hay `parts`: lỗi (dùng `same_as`). Khoá cache của hình ghép là sha256 của file ghép (cộng cách xử lý); `index.json` ghi `credit` (có `parts`), `changes`, `composed.file`, `composed.file_sha256`, kích thước gốc, sha256 của từng ảnh thành phần trong cache, các "lưu ý".
+- `build`: chưa có file ghép thì hình đó vẽ hình giữ chỗ và có một cảnh báo "hình ghép chưa có file" (`--require-assets`: lỗi). Có file mà chưa fetch, file sửa sau lần fetch trước, hay `title`/`parts` đổi: lỗi, nhắc chạy lại `images fetch`.
+- `check-pack.sh`: hình ghép phải có `title`, `author`, `license`, `changes` có `composed`, `parts` không rỗng; mỗi phần đủ 6 trường, giấy phép hợp quy tắc, URL https, không phải hình ghép (phần tự vẽ: `title`, `author`/`license` "Science Kids", không URL); có phần CC BY thì giấy phép hình ghép phải là CC BY; có phần tự vẽ mà không phần CC BY thì giấy phép là "Science Kids", `license_url` trống; còn lại giấy phép hợp quy tắc, `license_url` https.
+
+### Hình tự vẽ (SK-033, dev 10/11)
+
+Duy 10/11: đồ vật không có ảnh miễn phí hợp lệ thì "nhờ AI vẽ ảnh minh hoạ". Designer (hoặc agent) vẽ, xuất **JPEG**; hình do Science Kids làm, không có nguồn ngoài, nên không có giấy phép bên thứ ba để kiểm. Khai trong file chọn ảnh:
+
+```json
+"tray.tray_globe": {
+  "own": { "file": "content/images/own/be-mat-trai-dat/globe.jpg", "method": "drawn" },
+  "title": "Plastic globe on a desk",
+  "note": "designer vẽ 10/11 theo brief"
+},
+"q2.q2_globe": { "same_as": "tray_globe" }
+```
+
+- `file`: `content/images/own/<slug chủ đề>/<tên>.jpg` (hoặc `.jpeg`), một cấp thư mục, trong git. Đọc từ `<gốc file chọn ảnh>/own/…`. Nên là JPEG sRGB, cạnh dài ≤ 1024 px, không metadata; khác thì `fetch` vẫn xử lý lại theo hợp đồng và in "lưu ý" để designer lưu đè.
+- `method`: `drawn` (designer hoặc agent vẽ, kể cả vẽ bằng AI). Sau có thể thêm `photo` (tự chụp) mà không đổi cú pháp.
+- `title` (bắt buộc): tên ở màn "Nguồn hình", tiếng Anh như `alt.en`, trung tính. `note` tuỳ chọn.
+- `same_as` tới hình tự vẽ (cả từ bài khác) dùng như ảnh thường. Hình tự vẽ làm được phần của hình ghép (mục "Hình ghép").
+- Brief của hình cần vẽ mở đầu bằng nhãn `[hình vẽ]` (hoặc `[hình tự vẽ]`, `[tự vẽ]`): `validate` không đòi "Từ khoá tìm ảnh (EN)", `images search` không tìm mà đề xuất mục `own` (file `content/images/own/<chủ đề>/<bài>.<khoá>.jpg`).
+
+**Quy trình (designer):**
+
+```sh
+# 1. Vẽ theo brief, xuất JPEG vào content/images/own/<chủ đề>/<tên>.jpg; ghi mục own vào file chọn ảnh
+# 2. fetch: kiểm file có thật, xử lý theo hợp đồng ảnh vào content/.images/ (không gọi mạng)
+npm --prefix tools/content-cli run images -- fetch content/images/discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat.json
+# 3. build như cũ
+```
+
+- `fetch`: chưa có file: `KHÔNG DÙNG hình tự vẽ, chưa có file …`, exit 1 (khác hình ghép "chờ ghép": mục `own` nghĩa là đã vẽ xong; gõ sai đường dẫn cũng ra lỗi này). Có file: xoay EXIF, cạnh dài ≤ 1024 px, sRGB, nền trong suốt thành trắng, JPEG q82, bỏ metadata, như ảnh tải về. Khoá cache = `own.file` + sha256 bytes file + cách xử lý; `index.json` ghi `credit`, `changes` (`["drawn"]`), `own.file`, `own.file_sha256`, `own.method`, kích thước gốc, các lưu ý. Hai mục cùng `file` mà khác `title` hay `method`: lỗi (dùng `same_as`). Hình tự vẽ được xử lý trước hình ghép, nên hình ghép có phần tự vẽ chỉ cần một lượt fetch.
+- `build`: credit trong gói `{ title, author: "Science Kids", license: "Science Kids", license_url: "", source: "Science Kids", changes: ["drawn"] }`, đúng thứ tự khoá này; không `source_url`, không `parts`. `changes` chỉ có cách làm: hình của mình thu nhỏ không cần ghi. Chưa có file, chưa fetch, file sửa sau lần fetch, hay `title`/`method` đổi: lỗi, nhắc chạy lại `images fetch`. Dòng báo cáo: "Hình: N file ảnh (k hình ghép, m hình tự vẽ) cho … Image".
+- `check-pack.sh`, với `credit.source = "Science Kids"`: có `title`; `author`, `license` là "Science Kids"; `license_url` và `source_url` trống hoặc không có; không `parts`; `changes` có `drawn`.
+- App (ios-dev): hiện như ảnh có credit; `changes: ["drawn"]` là giá trị app chưa biết nên hiện nhãn "Edited" · "Đã chỉnh sửa" tới khi ios-dev thêm nhãn riêng.
+
 ## Kiểm thử
 
 ```sh
-npm test            # node --test: chuẩn hoá, lấy Spoken theo schema, khoá cache, WAV, chọn câu nghe thử, build (cache giả), rules.json so với vector và bảng SK-026, luật theo tuổi + fixture, validate, lỗi gọi CLI, markdown (khớp fixture bài 1, mỗi ca một lỗi một dòng, ids, không nạp tts)
+npm test            # node --test: chuẩn hoá, lấy Spoken theo schema, khoá cache, WAV, chọn câu nghe thử, build (cache giả, cả ảnh + check-pack.sh), rules.json so với vector và bảng SK-026, luật theo tuổi + fixture, validate, lỗi gọi CLI, markdown (khớp fixture bài 1, mỗi ca một lỗi một dòng, ids, không nạp tts), syllabus.json khi validate thư mục, ảnh (khoá hình, từ khoá, luật hình, giấy phép, file chọn ảnh, search và fetch với API giả từ test/fixtures/images, sharp; hình ghép: brief ghép, parts, giấy phép chặt nhất, fetch chờ ghép rồi xử lý, build + check-pack; hình tự vẽ: nhãn [hình vẽ], file chọn ảnh, search không tìm, fetch không gọi mạng, phần của hình ghép, build + check-pack)
 npm run typecheck   # tsc
 ```
 
-Unit test không cần model; test của `build` dùng cache giả trong thư mục tạm. Kiểm đầu ra của `tts` bằng `packages/content-schema`:
+Unit test không cần model và không gọi mạng; test của `build` dùng cache giả trong thư mục tạm, test ảnh giả lập Commons và Openverse bằng fixture JSON và ảnh sinh bằng `sharp`. Test viết trước SK-033 đếm mọi cảnh báo nên chạy với `content/rules.json` bỏ hai khoá ảnh (`test/helpers.ts` › `rulesFileWithoutImageChecks`). Kiểm đầu ra của `tts` bằng `packages/content-schema`:
 
 ```sh
 cd packages/content-schema
@@ -515,7 +726,7 @@ Mỗi `Spoken` có thêm `audio.vi`, `audio.en` giữ nguyên.
 | Phân số đọc "phần", vì sea-g2p đọc "/" thành "trên". Phân số trông như ngày tháng thì cảnh báo `maybe_date` | `3/4` → `ba phần tư`, `1/2` → `một phần hai` |
 | Phần trăm, khoảng số, số âm, đơn vị (chỉ sau số): kg, g, mg, m, cm, mm, km, l, ml, °C, % | `71%` → `bảy mươi mốt phần trăm`, `5–7` → `năm đến bảy`, `12 cm` → `mười hai xăng ti mét`, `100 °C` → `một trăm độ xê` |
 | Viết tắt, công thức. Chữ in hoa không có trong bảng thì cảnh báo `acronym` | `TP.HCM` → `Thành phố Hồ Chí Minh`, `CO₂` → `xê ô hai`, `H₂O` → `hát hai ô` |
-| Bảng đọc ép `READINGS` cho từ mượn, tên riêng. "vitamin" có trong bảng vì sea-g2p đọc theo âm Anh ("vai-tơ-min") | `Vitamin` → `Vi ta min`, `oxy` → `ô xi`, `Darwin` → `Đác uyn` |
+| Bảng đọc ép `READINGS` cho từ mượn, tên riêng. "vitamin" có trong bảng vì sea-g2p đọc theo âm Anh ("vai-tơ-min") | `Vitamin` → `Vi ta min`, `oxy` → `ô xi`, `Darwin` → `Đác uyn`, `kỷ Jura` → `kỷ Giu ra`, `Mohs` → `Mốt`, `Mary Anning` → `Me ri An ninh` |
 | Từ không phải âm tiết tiếng Việt thì cảnh báo `loanword`, để biên tập viết phiên âm kèm hoặc thêm vào bảng | `nutrient` |
 | Dấu thanh kiểu mới, như bài 1. sea-g2p cho cùng âm vị với cả hai kiểu; quy về một kiểu để hai cách viết dùng chung clip | `khỏe` → `khoẻ`, `hòa` → `hoà`, `thủy` → `thuỷ` |
 | Gạch ngang giữa hai chữ thành dấu phẩy. Ngoặc đơn thành hai dấu phẩy. Dấu `:` giữ nguyên (VieNeu tự ngắt) | `rồi — chạm` → `rồi, chạm` |
@@ -529,7 +740,7 @@ Chữ hiển thị không đổi; chỉ chữ đưa vào engine được chuẩn
 ## Thư mục
 
 ```
-src/cli.ts                 điểm vào, đọc cờ (validate, import, ids, tts, build, fetch-model)
+src/cli.ts                 điểm vào, đọc cờ (validate, import, ids, tts, build, images, fetch-model)
 src/tts/command.ts         lệnh tts
 src/tts/kokoro-en.ts       Kokoro qua kokoro-js; kokoro-model.ts: ghim commit, sha256, tải model
 src/tts/vieneu-vi.ts       VieNeu qua tts-vi/vieneu_vi.py serve (JSON-lines, seed theo chữ)
@@ -540,8 +751,13 @@ src/tts/review.ts          file nghe thử
 src/build/command.ts       lệnh build (gói nội dung); rules.ts: đọc và kiểm content/rules.json
 src/validate/command.ts    lệnh validate (JSON); age-rules.ts: luật theo nhóm tuổi (dùng chung với build)
 src/markdown/              validate, import, ids trên markdown (SK-027): syntax.ts đọc dòng, convert.ts ra JSON + số dòng,
-                           check.ts ba bước, files.ts tìm file và gốc nội dung, ids.ts, command.ts
+                           check.ts ba bước, files.ts tìm file và gốc nội dung, ids.ts, command.ts,
+                           syllabus.ts kiểm <thư mục>/syllabus.json khi validate thư mục (SK-030)
 src/validate/format-renderers.ts  bảng format → bản app đầu tiên hiện được (format_not_rendered)
+src/images/                ảnh (SK-033): slots.ts khoá hình, từ khoá, brief dùng lại; license.ts quy tắc giấy phép;
+                           selection.ts file chọn ảnh + same_as; sources.ts Commons/Openverse; net.ts HTTP, throttle, hạn mức;
+                           search.ts + candidates-html.ts lệnh search; fetch.ts, process.ts (sharp), cache.ts content/.images
+schema/image-selection.schema.json  định dạng file chọn ảnh
 src/app-version.ts         so sánh MAJOR.MINOR.PATCH
 scripts/make-age-fixtures.ts  sinh test/fixtures/age-rules/
 schema/rules.schema.json   định dạng content/rules.json

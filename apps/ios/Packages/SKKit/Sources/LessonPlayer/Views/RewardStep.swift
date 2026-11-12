@@ -195,8 +195,7 @@ struct RewardStep: View {
 
     private func cardFront(_ collectible: Collectible, showsContent: Bool) -> some View {
         HStack(spacing: Tokens.Space.s14) {
-            PlaceholderArt(color: Tokens.Palette.giDong, size: metrics.illustration(LessonMetrics.cardArt) * 0.8,
-                           accessibilityLabel: Text(verbatim: collectible.image.alt.en))
+            ContentPicture(image: collectible.image, color: Tokens.Palette.giDong, size: metrics.illustration(LessonMetrics.cardArt) * 0.8)
                 .frame(width: metrics.illustration(LessonMetrics.cardArt), height: metrics.illustration(LessonMetrics.cardArt))
                 .paperSurface(Tokens.Role.bgScreen, shadow: Tokens.Shadow.sunken, cornerRadius: Tokens.Radius.discoverer)
             VStack(alignment: .leading, spacing: Tokens.Space.s4) {
@@ -213,7 +212,7 @@ struct RewardStep: View {
                 if let tag = collectible.tag {
                     PaperTag(Text(verbatim: mode.name(tag)), style: .chip(dot: Tokens.Palette.giDong))
                 }
-                Text(LocalizedStringKey("collectible.set." + collectible.set))
+                Text(LocalizedStringKey(CollectibleSetName.key(for: collectible.set)))
                     .typography(Tokens.Typography.captionS)
                     .foregroundStyle(Tokens.Role.textSecondary)
             }
@@ -244,7 +243,7 @@ struct RewardStep: View {
 }
 
 /// Paper confetti falling once at the top of Thưởng (canvas positions, `fall` with a growing delay).
-private struct Confetti: View {
+struct Confetti: View {
     private struct Piece {
         let x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, angle: Double, color: Color, triangle: Bool
     }
@@ -294,5 +293,19 @@ private struct Confetti: View {
             path.closeSubpath()
             return path
         }
+    }
+}
+
+/// The interface name of a collectible set: the app's `collectible.set.<set>` string, or the
+/// generic "Cards" · "Thẻ" (`collectible.set_generic`) when the app has no name for that set
+/// yet, so a new `set` in the content never shows a raw key on the card (SK-031).
+public enum CollectibleSetName {
+    public static let genericKey = "collectible.set_generic"
+
+    /// The string key to show for `set`, looked up in `bundle` (the app's string catalog).
+    public static func key(for set: String, in bundle: Bundle = .main) -> String {
+        let key = "collectible.set." + set
+        let absent = "\u{1}collectible.set.absent"
+        return bundle.localizedString(forKey: key, value: absent, table: nil) == absent ? genericKey : key
     }
 }

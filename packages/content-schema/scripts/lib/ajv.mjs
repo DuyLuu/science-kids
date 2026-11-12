@@ -23,21 +23,23 @@ function requireAssets(schemas) {
   return copy;
 }
 
+// Strict except strictRequired: WarmupItem adds `required: ["recall_from"]` to a $ref'd
+// QuizItem, which is valid 2020-12 but trips that one check. Shared with syllabus.mjs.
+export const AJV_OPTIONS = Object.freeze({
+  allErrors: true,
+  verbose: true,
+  strictSchema: true,
+  strictNumbers: true,
+  strictTypes: true,
+  strictTuples: true,
+  strictRequired: false,
+});
+
 const cache = new Map();
 
 function validators(assets) {
   if (!cache.has(assets)) {
-    // Strict except strictRequired: WarmupItem adds `required: ["recall_from"]` to a $ref'd
-    // QuizItem, which is valid 2020-12 but trips that one check.
-    const ajv = new Ajv2020({
-      allErrors: true,
-      verbose: true,
-      strictSchema: true,
-      strictNumbers: true,
-      strictTypes: true,
-      strictTuples: true,
-      strictRequired: false,
-    });
+    const ajv = new Ajv2020(AJV_OPTIONS);
     const schemas = loadSchemas();
     for (const schema of assets ? requireAssets(schemas) : schemas) ajv.addSchema(schema);
     cache.set(assets, {
@@ -91,6 +93,7 @@ const TYPE_VI = {
   boolean: "true hoặc false",
   object: "object {…}",
   array: "mảng […]",
+  null: "null",
 };
 
 const show = (value) => {
@@ -117,7 +120,8 @@ function messageOf(error) {
     case "unevaluatedProperties":
       return `trường lạ "${params.unevaluatedProperty}", không có trong schema v1 cho loại này`;
     case "type":
-      return `phải là ${TYPE_VI[params.type] ?? params.type}, đang là ${show(data)}`;
+      // A union type (syllabus: ["string", "null"]) arrives as an array.
+      return `phải là ${[params.type].flat().map((type) => TYPE_VI[type] ?? type).join(" hoặc ")}, đang là ${show(data)}`;
     case "enum":
       return `giá trị ${show(data)} không hợp lệ; được phép: ${params.allowedValues.join(", ")}`;
     case "const":

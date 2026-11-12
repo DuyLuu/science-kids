@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · changing-circuits · bóng sáng + công tắc. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><path d="M32 2 L34 9 H30 Z"/><path d="M12 11 L18 15.5 L15.5 18 Z"/><path d="M52 11 L48.5 18 L46 15.5 Z"/><path d="M5 30 L12 29 V32 Z"/><path d="M59 30 L52 32 V29 Z"/></g>
+  <g fill="#F0C873"><path d="M32 12 C 41 12, 46 18, 46 25 C 46 30, 42 33, 40 36 H24 C 22 33, 18 30, 18 25 C 18 18, 23 12, 32 12 Z"/></g>
+  <g fill="#E2A52A"><path d="M28 34 V26 L32 30 L36 26 V34 H34.2 V30.6 L32 32.8 L29.8 30.6 V34 Z"/></g>
+  <g fill="#4E4336"><rect x="25" y="35" width="14" height="9" rx="2"/><rect x="10" y="49" width="44" height="11" rx="3"/></g>
+  <g fill="#A93A27"><rect x="26" y="40" width="5" height="14" rx="2.5" transform="rotate(-30 28.5 52)"/><circle cx="24" cy="44" r="3.6"/></g>
+</svg>

@@ -1,6 +1,7 @@
 import ContentKit
 import ContentModel
 import Foundation
+import LessonPlayer
 import Profiles
 import Testing
 import UIKit
@@ -99,6 +100,32 @@ import UIKit
         #expect(relaunched.profile == profile)
     }
 
+    /// SK-042: Cài đặt changes the language (and its voice) of the profile in use, saved at once,
+    /// so a relaunch keeps it; the other fields stay.
+    @Test func settingsLanguageIsSavedAndSurvivesARelaunch() throws {
+        let (store, dir) = Self.tempStore()
+        defer { try? FileManager.default.removeItem(at: dir) }
+        let model = AppModel(store: store, library: .empty)
+        let profile = try Self.minh()
+        try model.createProfile(profile)
+        #expect(model.setLanguage(.viFirst))
+        #expect(model.profile?.languageMode == .viFirst)
+        #expect(model.profile?.voiceMode == .vi)
+        let relaunched = AppModel(store: store, library: .empty)
+        #expect(relaunched.profile?.languageMode == .viFirst)
+        #expect(relaunched.profile?.voiceMode == .vi)
+        #expect(relaunched.profile?.id == profile.id)
+        #expect(relaunched.profile?.displayName == profile.displayName)
+        #expect(model.setLanguage(.bilingual))
+        #expect(AppModel(store: store, library: .empty).profile?.voiceMode == .both)
+    }
+
+    @Test func settingsLanguageWithoutAFileChangesNothing() throws {
+        let model = AppModel(store: nil, library: .empty)
+        #expect(!model.setLanguage(.enFirst))
+        #expect(model.profile == nil)
+    }
+
     @Test func unreadableFileMeansWelcome() throws {
         let (store, dir) = Self.tempStore()
         defer { try? FileManager.default.removeItem(at: dir) }
@@ -129,19 +156,55 @@ import UIKit
         let model = AppModel(store: nil, library: .empty)
         let topic = UUID()
         let lesson = UUID()
-        model.openTopic(topic)
+        model.openTopic("healthy-eating")
         model.openLesson(topicID: topic, lessonID: lesson)
-        #expect(model.path == [.topic(topic), .lesson(topicID: topic, lessonID: lesson)])
+        #expect(model.path == [.topic("healthy-eating"), .lesson(topicID: topic, lessonID: lesson)])
         model.goBack()
-        #expect(model.path == [.topic(topic)])
+        #expect(model.path == [.topic("healthy-eating")])
         model.showTab(.words)
         #expect(model.path.isEmpty)
         #expect(model.homeTab == .words)
+    }
+
+    /// SK-030: Home opens on the profile's own group; the chips show another one, kept while the
+    /// child goes into a topic and back; a new profile starts on its own group again.
+    @Test func journeyGroupDefaultsToTheProfile() throws {
+        let (store, dir) = Self.tempStore()
+        defer { try? FileManager.default.removeItem(at: dir) }
+        let model = AppModel(store: store, library: BundledContent.loadFixtures(), syllabus: BundledContent.bundledSyllabus())
+        let minh = try Self.minh() // Lớp 3: Discoverer
+        try model.createProfile(minh)
+        #expect(model.shownGroup(for: minh) == .discoverer)
+        #expect(model.journey(for: .discoverer).count == 17)
+        model.journeyGroup = .scientist
+        #expect(model.shownGroup(for: minh) == .scientist)
+        model.openTopic("new-water-air")
+        #expect(model.journeyTopic(key: "new-water-air")?.ageGroup == .scientist)
+        model.goBack()
+        #expect(model.shownGroup(for: minh) == .scientist)
+        let an = try ChildProfile.create(displayName: "An", avatar: "ca", grade: 1, languageMode: .bilingual, voiceMode: .both)
+        try model.createProfile(an)
+        #expect(model.shownGroup(for: an) == .explorer)
+        #expect(model.journey(for: .explorer).count == 12)
+    }
+
+    /// Every topic opens, written or not (SK-030); an unknown key finds nothing.
+    @Test func everyTopicKeyOpens() {
+        let model = AppModel(store: nil, library: BundledContent.loadFixtures(), syllabus: BundledContent.bundledSyllabus())
+        for group in Topic.AgeGroup.known {
+            for topic in model.journey(for: group) {
+                #expect(model.journeyTopic(key: topic.key) == topic, "\(topic.key)")
+            }
+        }
+        #expect(model.journeyTopic(key: "no-such-topic") == nil)
+        #expect(AppModel(store: nil, content: .loading).journey(for: .discoverer).isEmpty)
     }
 }
 
 @Suite struct BundledContentTests {
     static let topicID = UUID(uuidString: "d3a514ef-02cd-4386-a358-f01e425a10f8")!
+    static let lessonOne = UUID(uuidString: "4b11eb40-9a47-4e5e-b4b5-bea60264ded3")!
+    static let mealLesson = UUID(uuidString: "23603940-87a2-435b-bf7d-c6c18f79e349")!
     static let hasPack = Bundle.main.url(forResource: BundledContent.packFolderName, withExtension: nil) != nil
 
     /// What the app opens at launch: the pack when the build has one, else the fixtures.
@@ -155,7 +218,7 @@ import UIKit
         let root = try #require(Bundle.main.url(forResource: BundledContent.folderName, withExtension: nil))
         #expect(FileManager.default.fileExists(atPath: root.appendingPathComponent("discoverer/an-uong-lanh-manh/topic.json").path))
         let fixtures = BundledContent.fixtures()
-        let topics = fixtures.library.topics(for: BundledContent.world)
+        let topics = fixtures.library.topics(for: .discoverer)
         #expect(topics.map(\.id) == [Self.topicID])
         #expect(topics.first?.lessons.count == 1)
         #expect(fixtures.source == .fixtures)
@@ -175,13 +238,13 @@ import UIKit
         }
         #expect(!version.isEmpty)
         let topic = try #require(content.library.topic(id: Self.topicID))
-        #expect(topic.lessons.count == 1)
+        #expect(topic.lessons.map(\.id).contains(Self.lessonOne))
         #expect(topic.topic.title.audio?.en != nil, "the pack's strings have audio")
         #expect(content.clips != nil)
         #expect(content.rules(for: .discoverer) != nil, "manifest rules")
         let pack = try #require(content.pack)
-        #expect(content.contentVersion(of: Self.topicID) == pack.manifest.topics.first?.version)
-        let hash = try #require(topic.lessons.first?.title.audio?.en)
+        #expect(content.contentVersion(of: Self.topicID) == pack.manifest.topics.first { $0.id == Self.topicID }?.version)
+        let hash = try #require(topic.lessons.first { $0.id == Self.lessonOne }?.title.audio?.en)
         let clip = try await pack.assetData(for: hash)
         #expect(ContentPack.sha256Hex(clip) == hash)
     }
@@ -189,7 +252,7 @@ import UIKit
     /// Pack and fixtures carry the same lesson: what the UI tests read from the fixture
     /// (`LessonFixture`) is what the app shows.
     @Test(.enabled(if: hasPack)) func packMatchesTheFixtures() async throws {
-        let packLesson = try #require(await Self.library().topic(id: Self.topicID)?.lessons.first)
+        let packLesson = try #require(await Self.library().lesson(id: Self.lessonOne)?.lesson)
         let fixtureLesson = try #require(BundledContent.loadFixtures().topic(id: Self.topicID)?.lessons.first)
         #expect(packLesson.id == fixtureLesson.id)
         #expect(packLesson.title.en == fixtureLesson.title.en)
@@ -197,38 +260,122 @@ import UIKit
         #expect(packLesson.quiz.map(\.prompt.en) == fixtureLesson.quiz.map(\.prompt.en))
     }
 
-    /// Topic screen: 5 lessons, lesson 1 open with its content, 2–5 locked behind the one before,
-    /// with no lesson (so no title is made up).
-    @Test func lessonSlots() async throws {
-        let topic = try #require(await Self.library().topic(id: Self.topicID))
-        let count = BundledContent.lessonCount(of: topic)
-        #expect(count == 5)
-        let slots = LessonList.slots(for: topic, count: count)
-        #expect(slots.map(\.number) == [1, 2, 3, 4, 5])
-        #expect(slots.map(\.isOpen) == [true, false, false, false, false])
-        #expect(slots.map(\.unlocksAfter) == [nil, 1, 2, 3, 4])
-        #expect(slots[0].lesson?.title.vi == "Thức ăn cho ta những gì?")
-        #expect(slots.dropFirst().allSatisfy { $0.lesson == nil })
+    /// SK-030: `content/syllabus.json` is in the bundle and decodes.
+    @Test func syllabusIsBundled() throws {
+        #expect(Bundle.main.url(forResource: BundledContent.syllabusName, withExtension: "json") != nil)
+        let syllabus = try #require(BundledContent.bundledSyllabus())
+        #expect(syllabus.groups.map(\.topics.count) == [12, 17, 16])
+        #expect(BundledContent.fixtures().syllabus == syllabus, "the fixtures get it too")
     }
 
-    @Test func continueCardPointsAtLessonOne() async throws {
-        let target = try #require(LessonList.continueTarget(in: await Self.library().topics(for: .discoverer)))
-        #expect(target.topic.id == Self.topicID)
-        #expect(target.slot.number == 1)
-        #expect(target.lesson.estMinutes == 8)
-        #expect(LessonList.continueTarget(in: []) == nil)
+    /// What the app opens at launch, laid over the syllabus: every topic of each group, none
+    /// locked, numbered on in order. Topics get written over time (SK-031 Bề mặt Trái Đất is
+    /// Discoverer #1, SK-032 Khủng long #2 next), so nothing here counts the written ones: every
+    /// written topic of a group is on its journey with its content, a topic plays when it has a
+    /// written lesson (an unwritten topic opens with nothing to play), and each written lesson
+    /// sits in the topic that has it. Ăn uống lành mạnh (Discoverer #9, 10 lessons) keeps lesson 1
+    /// in slot 2 (pack and fixtures) and, with the pack, "Mâm cơm cân bằng" in slot 6.
+    @Test func journeyOfTheBundle() async throws {
+        let content = try #require(await BundledContent.load().ready)
+        let syllabus = try #require(content.syllabus)
+        for group in Topic.AgeGroup.known {
+            let topics = content.journey(for: group)
+            let listed = syllabus.topics(for: group)
+            #expect(topics.prefix(listed.count).map(\.key) == listed.map(\.key), "\(group): the syllabus topics first, in order")
+            #expect(topics.map(\.number) == Array(1..<topics.count + 1), "\(group)")
+            let written = Set(content.library.topics(for: group).map(\.id))
+            #expect(Set(topics.compactMap { $0.content?.id }) == written, "\(group): every written topic is on the journey")
+            for topic in topics {
+                let playable = topic.lessons.contains { $0.lesson != nil }
+                #expect((topic.firstPlayable != nil) == playable, "\(topic.key)")
+                if topic.content == nil {
+                    #expect(!playable, "\(topic.key): an unwritten topic opens, with nothing to play")
+                }
+                for lesson in topic.lessons.compactMap(\.lesson) {
+                    #expect(topic.content?.lessons.contains { $0.id == lesson.id } == true, "\(topic.key): \(lesson.slug)")
+                }
+            }
+        }
+        let healthy = try #require(content.journey(for: .discoverer).first { $0.key == "healthy-eating" })
+        #expect(healthy.number == 9)
+        try #require(healthy.lessons.count == 10)
+        #expect(healthy.lessons[1].lesson?.id == Self.lessonOne)
+        #expect(healthy.lessons[1].title.vi == "Thức ăn cho ta những gì?")
+        #expect(healthy.lessons[5].lesson?.id == (Self.hasPack ? Self.mealLesson : nil))
     }
 
+    /// Both written lessons of the pack are in their slots with their Vietnamese titles and voice
+    /// (SK-030 criterion: lesson 2 and lesson 6 play through with sound).
+    @Test(.enabled(if: hasPack)) func packLessonsTakeTheirSlots() async throws {
+        let content = try #require(await BundledContent.load().ready)
+        let healthy = try #require(content.journeyTopic(key: "healthy-eating"))
+        let two = try #require(healthy.lessons[1].lesson)
+        let six = try #require(healthy.lessons[5].lesson)
+        #expect(two.id == Self.lessonOne)
+        #expect(six.id == Self.mealLesson)
+        #expect(healthy.lessons[5].title.vi == "Mâm cơm cân bằng")
+        #expect(two.title.audio?.vi != nil && six.title.audio?.vi != nil, "VI voice in the pack")
+        #expect(content.rules(for: .discoverer) != nil)
+    }
+
+    /// The lesson header says "Bài 2/10" and "Bài 6/10": the journey's numbers, not the pack's order.
+    @Test func lessonPlaceOnTheJourney() async throws {
+        let content = try #require(await BundledContent.load().ready)
+        let two = content.journeyPlace(topicID: Self.topicID, lessonID: Self.lessonOne)
+        #expect(two?.number == 2)
+        #expect(two?.count == 10)
+        if Self.hasPack {
+            let six = content.journeyPlace(topicID: Self.topicID, lessonID: Self.mealLesson)
+            #expect(six?.number == 6)
+            #expect(six?.count == 10)
+        }
+        #expect(content.journeyPlace(topicID: Self.topicID, lessonID: UUID()) == nil)
+    }
+
+    /// "Học tiếp" points at the first written lesson in journey order, whatever is written: no
+    /// topic before its topic has a lesson to play, nor any lesson before it in its topic. A
+    /// group with nothing written has no card. Discoverer always has one (Ăn uống lành mạnh
+    /// lesson 2 is in the pack and the fixtures), at or before that topic.
+    @Test func continueCardPointsAtTheFirstWrittenLesson() async throws {
+        let content = try #require(await BundledContent.load().ready)
+        for group in Topic.AgeGroup.known {
+            let topics = content.journey(for: group)
+            guard let target = Journey.continueTarget(in: topics) else {
+                #expect(topics.allSatisfy { $0.firstPlayable == nil }, "\(group): lessons to play but no card")
+                continue
+            }
+            let lesson = try #require(target.lesson.lesson, "\(group): the card points at an unwritten lesson")
+            #expect(lesson.estMinutes > 0, "\(group)")
+            let index = try #require(topics.firstIndex { $0.key == target.topic.key })
+            #expect(topics[..<index].allSatisfy { $0.firstPlayable == nil }, "\(group): a topic before \(target.topic.key) has a lesson")
+            #expect(
+                target.topic.lessons.filter { $0.number < target.lesson.number }.allSatisfy { $0.lesson == nil },
+                "\(group): a lesson before \(target.lesson.number) in \(target.topic.key) is written"
+            )
+        }
+        let discoverer = try #require(Journey.continueTarget(in: content.journey(for: .discoverer)))
+        let healthy = try #require(content.journeyTopic(key: "healthy-eating"))
+        #expect(discoverer.topic.number <= healthy.number)
+    }
+
+    /// "Từ vựng chủ đề · n từ": the distinct vocabulary terms of a topic's written lessons; a
+    /// written topic has some, an unwritten one 0. Checked on every topic of the bundle.
     @Test func topicWords() async throws {
-        let topic = try #require(await Self.library().topic(id: Self.topicID))
-        #expect(LessonList.wordCount(of: topic) == 8)
+        let content = try #require(await BundledContent.load().ready)
+        for group in Topic.AgeGroup.known {
+            for topic in content.journey(for: group) {
+                let written = topic.lessons.compactMap(\.lesson)
+                #expect(topic.wordCount == Set(written.flatMap { $0.vocab.map(\.key) }).count, "\(topic.key)")
+                #expect((topic.wordCount > 0) == !written.isEmpty, "\(topic.key): \(topic.wordCount) words, \(written.count) lessons")
+            }
+        }
+        let words = try #require(content.journeyTopic(key: "healthy-eating")).wordCount
+        #expect(Self.hasPack ? words >= 8 : words == 8, "\(words)")
     }
 
-    /// A count below the lessons the topic has never hides a lesson; no lesson, nothing open.
-    @Test func neverFewerSlotsThanLessons() async throws {
-        let topic = try #require(await Self.library().topic(id: Self.topicID))
-        #expect(LessonList.slots(for: topic, count: 0).count == 1)
-        #expect(LessonList.slots(for: TopicContent(topic: topic.topic, lessons: []), count: 5).allSatisfy { !$0.isOpen })
+    /// SK-030: the paid plan is off in the trial: no "Miễn phí" tag, every lesson open.
+    @Test func paidPlanIsOff() {
+        #expect(!AppFeatures.paidPlanEnabled)
     }
 }
 
@@ -257,6 +404,25 @@ import UIKit
         #expect(mode.name(Self.title) == "Ăn uống lành mạnh")
         #expect(mode.sentence(Self.question) == "Ta cần ăn gì để khoẻ mạnh?")
         #expect(mode.secondSentence(Self.question) == "What should we eat to stay healthy?")
+        // SK-042: Tiếng Việt shows one language: no English caption, no English line.
+        #expect(mode.secondName(Self.title) == nil)
+        #expect(mode.hidesSentenceSecondLanguage)
+    }
+
+    /// SK-030: a syllabus title whose `vi` is not translated yet shows `en`, with no second name
+    /// (it would repeat the English).
+    @Test func syllabusTitleFallsBackToEnglish() {
+        let untranslated = Syllabus.Title(en: "Types of food", vi: nil)
+        let translated = Syllabus.Title(en: "Healthy eating", vi: "Ăn uống lành mạnh")
+        for mode in LanguageMode.allCases {
+            #expect(mode.name(untranslated) == "Types of food")
+            #expect(mode.secondName(untranslated) == nil)
+        }
+        #expect(LanguageMode.bilingual.name(translated) == "Ăn uống lành mạnh")
+        #expect(LanguageMode.bilingual.secondName(translated) == "Healthy eating")
+        #expect(LanguageMode.enFirst.name(translated) == "Healthy eating")
+        #expect(LanguageMode.enFirst.secondName(translated) == nil)
+        #expect(LanguageMode.viFirst.name(translated) == "Ăn uống lành mạnh")
     }
 
     /// Clips follow `voice_mode`; none until the pack has audio (the speaker stays hidden).

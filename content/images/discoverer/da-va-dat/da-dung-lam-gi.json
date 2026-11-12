@@ -1,0 +1,308 @@
+{
+  "note": "SK-039. Designer (agent, phần bài 1–7) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố b0N-), hình ghép ở content/images/composed/da-va-dat/; trang duyệt content/.build/images/da-va-dat/<bài>/review.html. Kệ Chơi (tám món), lựa chọn câu q1, q3 và hình câu q2, q4, q5, q6 là hình vẽ; Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre.",
+  "images": {
+    "w1": {
+      "same_as": "q4",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_marble": {
+      "same_as": "marble",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "w1.w1_slate": {
+      "same_as": "tray_slate",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w1.w1_sandstone": {
+      "same_as": "tray_sandstone",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "w2": {
+      "same_as": "chalk",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "w3": {
+      "same_as": "quarry",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "w3.w3_brick": {
+      "same_as": "tray_brick",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "w3.w3_pebble": {
+      "same_as": "w1_stone",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "w3.w3_hill": {
+      "same_as": "ha_long",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "learn.explore.explore_limestone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trang_An_Landscape_Complex,_Ninh_Binh_Province,_Vietnam,_20240202_1447_5310.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Trang_An_Landscape_Complex%2C_Ninh_Binh_Province%2C_Vietnam%2C_20240202_1447_5310.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Trang An Landscape Complex, Ninh Binh Province, Vietnam, 20240202 1447 5310",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Núi đá vôi và sông ở Tràng An (Ninh Bình); thuyền ở rất xa, không nhận ra người."
+    },
+    "learn.explore.explore_laterite": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A house with laterite walls",
+      "author": "Phương Huy ( thảo luận )",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.04,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "Nhà có tường khối đá ong và mái ngói, ảnh khu Đường Lâm (Sơn Tây); cắt bớt phần bụi hoa phía dưới."
+    },
+    "learn.explore.explore_granite": {
+      "same_as": "tray_steps",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "learn.explore.explore_long_ago": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_East_gate.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Tay_Do_castle_East_gate.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "East gate of the Ho Citadel",
+      "author": "vi:Thành viên:Silviculture",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_East_gate.JPG",
+      "note": "Cổng Đông thành nhà Hồ (Tây Đô, Thanh Hoá): cổng vòm xây bằng những khối đá vôi rất to; không người, không biển chữ."
+    },
+    "tray.tray_white_wall": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_white_wall.jpg",
+        "method": "drawn"
+      },
+      "title": "A white lime-washed wall",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "tray.tray_laterite_wall": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_laterite_wall.jpg",
+        "method": "drawn"
+      },
+      "title": "Red-brown stone blocks with holes",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ toàn hình vẽ nên vẽ riêng mặt tường đá ong (ảnh `laterite` vẫn là gốc ở từ vựng, câu q5)."
+    },
+    "tray.tray_steps": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_steps.jpg",
+        "method": "drawn"
+      },
+      "title": "Grey stone front steps",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ toàn hình vẽ nên vẽ bậc thềm đá hoa cương xám lốm đốm trước cửa (ảnh `tray_steps` của bài một vẫn dùng ở ô Học, câu q2, từ `suitable`)."
+    },
+    "tray.tray_wood_table": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_wood_table.jpg",
+        "method": "drawn"
+      },
+      "title": "A wooden table",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "tray.tray_cement_yard": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_cement_yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A grey cement yard",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "tray.tray_laterite_well": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_laterite_well.jpg",
+        "method": "drawn"
+      },
+      "title": "An old well of red-brown blocks",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "tray.tray_worktop": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_worktop.jpg",
+        "method": "drawn"
+      },
+      "title": "A shiny speckled kitchen worktop",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "tray.tray_bamboo_fence": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-tray.tray_bamboo_fence.jpg",
+        "method": "drawn"
+      },
+      "title": "A bamboo fence",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Kệ Chơi vẽ cả tám món (Quy ước hình mục hai, \"một kệ một loại hình\"): Commons, Openverse 11/11 không có ảnh hợp giấy phép, không người, không nhãn hiệu cho tường quét vôi, sân xi măng, bàn gỗ, mặt bàn bếp đá hoa cương, hàng rào tre."
+    },
+    "q1": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q1.q1_worktop": {
+      "same_as": "tray.tray_worktop"
+    },
+    "q1.q1_white_wall": {
+      "same_as": "tray.tray_white_wall"
+    },
+    "q1.q1_well": {
+      "same_as": "tray.tray_laterite_well"
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q2.jpg",
+        "method": "drawn"
+      },
+      "title": "A pile of grey cement powder",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Không có ảnh bột xi măng không bao, không nhãn hợp lệ; vẽ đống bột xám và cái bay."
+    },
+    "q2.q2_limestone": {
+      "same_as": "learn.explore.explore_limestone"
+    },
+    "q2.q2_laterite": {
+      "same_as": "learn.explore.explore_laterite"
+    },
+    "q2.q2_granite": {
+      "same_as": "tray_steps",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gravel_Pile.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Gravel_Pile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of crushed stone",
+      "author": "Al-muhaqqiqi",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.45,
+        "width": 1,
+        "height": 0.55
+      },
+      "note": "Đống đá dăm; cắt bỏ nửa trên (người, nhà ở xa)."
+    },
+    "q3.q3_table": {
+      "same_as": "tray.tray_wood_table"
+    },
+    "q3.q3_basket": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q3.q3_basket.jpg",
+        "method": "drawn"
+      },
+      "title": "A plastic basket",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Ba lựa chọn kia của câu là hình vẽ của kệ, nên vẽ cùng nét."
+    },
+    "q3.q3_cement": {
+      "same_as": "tray.tray_cement_yard"
+    },
+    "q3.q3_concrete": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q3.q3_concrete.jpg",
+        "method": "drawn"
+      },
+      "title": "A grey concrete block",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Câu q3 toàn hình vẽ (bàn gỗ, sân xi măng của kệ), nên vẽ khối bê tông cùng nét thay vì dùng ảnh `tray_concrete` bài một."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A bucket full of water",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Hình câu hỏi; vẽ gàu nhôm đầy nước tràn mép, không giếng, không người."
+    },
+    "q4.q4_talc": {
+      "same_as": "tray_talc",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q4.q4_granite": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q4.q4_pumice": {
+      "same_as": "pumice",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q4.q4_gypsum": {
+      "same_as": "tray_gypsum",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q5.jpg",
+        "method": "drawn"
+      },
+      "title": "A small garden with no wall",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Hình câu hỏi; không có ảnh vườn rau làng quê Việt Nam hợp lệ; vẽ vườn rau, phía sau là bãi đất trống, không tường rào."
+    },
+    "q5.q5_chalk": {
+      "same_as": "chalk",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q5.q5_laterite": {
+      "same_as": "vocab.laterite"
+    },
+    "q5.q5_basalt": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b06-q6.jpg",
+        "method": "drawn"
+      },
+      "title": "A small house with no roof yet",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người."
+    },
+    "vocab.suitable": {
+      "same_as": "tray_steps",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "vocab.limestone": {
+      "same_as": "tray_limestone",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "vocab.laterite": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Laterite blocks in a wall",
+      "author": "Phương Huy ( thảo luận )",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "crop": {
+        "left": 0.44,
+        "top": 0.33,
+        "width": 0.44,
+        "height": 0.33
+      },
+      "note": "Cận cảnh mảng tường đá ong của ảnh ô Học (cắt sát, chỉ thấy mặt đá) để đứng cạnh ảnh mẫu đá ở câu q5 và bài bảy w1."
+    },
+    "vocab.cement": {
+      "same_as": "q2"
+    },
+    "reward.duong_lam_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Đường Lâm",
+      "author": "Bem photography:",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.18,
+        "top": 0.1,
+        "width": 0.82,
+        "height": 0.76
+      },
+      "note": "Cổng làng Mông Phụ (Đường Lâm) nhìn từ đường làng; cắt bỏ dấu nước chữ ở góc trái dưới."
+    }
+  }
+}

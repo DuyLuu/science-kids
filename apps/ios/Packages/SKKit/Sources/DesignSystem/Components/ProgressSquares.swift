@@ -21,8 +21,7 @@ public struct ProgressSquares: View {
         }
     }
 
-    private let count: Int
-    private let current: Int
+    private let states: [StepState]
     private let labels: [Text]
     private let label: Text
     private let squareSize: CGFloat
@@ -36,9 +35,17 @@ public struct ProgressSquares: View {
         squareSize: CGFloat = PaperMetrics.progressSquare,
         accessibilityLabel: Text
     ) {
-        self.count = max(count, 0)
-        self.current = current
+        self.states = (0..<max(count, 0)).map { Self.state(of: $0, current: current) }
         self.labels = labels
+        self.squareSize = squareSize
+        self.label = accessibilityLabel
+    }
+
+    /// Squares in given states, in order: for lessons done out of order (Home, Topic: a lesson
+    /// played before the ones above it is done while they are not).
+    public init(states: [StepState], squareSize: CGFloat = PaperMetrics.progressSquare, accessibilityLabel: Text) {
+        self.states = states
+        self.labels = []
         self.squareSize = squareSize
         self.label = accessibilityLabel
     }
@@ -54,18 +61,18 @@ public struct ProgressSquares: View {
         Group {
             if labels.isEmpty {
                 HStack(spacing: PaperMetrics.progressGap) {
-                    ForEach(0..<count, id: \.self) { index in square(index) }
+                    ForEach(states.indices, id: \.self) { index in square(index) }
                 }
             } else {
                 HStack(spacing: 0) {
-                    ForEach(0..<count, id: \.self) { index in
+                    ForEach(states.indices, id: \.self) { index in
                         VStack(spacing: PaperMetrics.progressLabelGap) {
                             square(index)
                             if index < labels.count {
                                 labels[index]
                                     .typography(Tokens.Typography.captionS, fixedBox: true)
                                     .foregroundStyle(
-                                        index == current ? Tokens.Role.textPrimary : Tokens.Role.textSecondary
+                                        states[index] == .current ? Tokens.Role.textPrimary : Tokens.Role.textSecondary
                                     )
                                     .lineLimit(1)
                                     .minimumScaleFactor(PaperMetrics.labelMinimumScale)
@@ -81,7 +88,7 @@ public struct ProgressSquares: View {
     }
 
     private func square(_ index: Int) -> some View {
-        let state = Self.state(of: index, current: current)
+        let state = states[index]
         let shape = RoundedRectangle(cornerRadius: Tokens.Radius.bar, style: .continuous)
         return ZStack {
             if state == .done {

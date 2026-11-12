@@ -1,6 +1,7 @@
 import AudioKit
 import ContentKit
 import ContentModel
+import DesignSystem
 import Foundation
 import LessonPlayer
 import os
@@ -20,6 +21,50 @@ struct AppContent: Sendable {
     let rulesData: Data?
     /// The pack, for its clips and topic versions; `nil` with the fixtures.
     let pack: ContentPack?
+    /// `syllabus.json` of the bundle (SK-030); `nil` if missing or unreadable (logged): the
+    /// journeys then show the content's topics alone.
+    let syllabus: Syllabus?
+    /// Every topic of each age group, the content laid over the syllabus (`Journey`), made once.
+    let journeys: [Topic.AgeGroup: [JourneyTopic]]
+    /// The pack's pictures, read, checked and decoded on demand (SK-033); `nil` with the fixtures
+    /// (every picture draws its stand-in art).
+    let pictures: PictureStore?
+
+    init(library: ContentLibrary, source: Source, rulesData: Data?, pack: ContentPack?, syllabus: Syllabus?) {
+        self.library = library
+        self.source = source
+        self.rulesData = rulesData
+        self.pack = pack
+        self.syllabus = syllabus
+        self.journeys = Journey.all(syllabus: syllabus, library: library)
+        self.pictures = pack.map { PictureStore(loader: PackPictures(pack: $0)) }
+    }
+
+    /// The journey of an age group, by topic number.
+    func journey(for ageGroup: Topic.AgeGroup) -> [JourneyTopic] {
+        journeys[ageGroup] ?? []
+    }
+
+    /// A journey topic by its key, in any group (the Topic route).
+    func journeyTopic(key: String) -> JourneyTopic? {
+        for group in Topic.AgeGroup.known {
+            if let topic = journey(for: group).first(where: { $0.key == key }) { return topic }
+        }
+        return nil
+    }
+
+    /// Where a written lesson sits on the journey: its number and its topic's lesson count
+    /// ("Bài 2/10" in the lesson header).
+    func journeyPlace(topicID: UUID, lessonID: UUID) -> (number: Int, count: Int)? {
+        for group in Topic.AgeGroup.known {
+            for topic in journey(for: group) where topic.content?.id == topicID {
+                if let lesson = topic.lessons.first(where: { $0.lesson?.id == lessonID }) {
+                    return (lesson.number, topic.lessons.count)
+                }
+            }
+        }
+        return nil
+    }
 
     /// Scoring and XP rules of an age group (B4.4: never in code).
     func rules(for ageGroup: Topic.AgeGroup) -> LessonRules? {
@@ -43,6 +88,12 @@ struct AppContent: Sendable {
     /// The pack's clips for `SpeechPlayer`, checked asset by asset; `nil` with the fixtures.
     var clips: (any ClipLoader)? {
         pack.map(PackClips.init)
+    }
+
+    /// Every picture of the pack with its credit, for the "Image credits" screen (SK-033); empty
+    /// with the fixtures or a pack without pictures.
+    var imageCredits: [PackManifest.AssetEntry] {
+        pack?.images ?? []
     }
 }
 
@@ -69,12 +120,28 @@ struct PackClips: ClipLoader {
     }
 }
 
+/// The pack's images for `PictureStore` (SK-033): only assets of `kind: "image"`, each checked
+/// first (size, sha256), like the clips.
+struct PackPictures: PictureLoader {
+    let pack: ContentPack
+
+    func hasPicture(_ hash: String) -> Bool {
+        pack.hasImage(hash)
+    }
+
+    func pictureData(for hash: String) async throws -> Data {
+        try await pack.imageData(for: hash)
+    }
+}
+
 /// What the trial build bundles (SK-016):
 /// - `pack/`: the content pack of content-cli (SK-015), copied by the "Embed content pack" build
 ///   phase when `content/.build/pack` exists. The app reads it through `ContentPack`, which checks
 ///   `pack.json` and each clip against the manifest.
 /// - `valid/`: the schema fixtures (folder reference, SK-011), read only when the build has no
 ///   pack: the lesson plays, without audio. The build log then has a warning.
+/// - `syllabus.json`: every topic and lesson of the approved syllabus (SK-030), read in place from
+///   `content/syllabus.json`; the journeys lay the pack (or the fixtures) over it.
 enum BundledContent {
     /// Name of the pack folder in the bundle (`scripts/embed-content-pack.sh`).
     static let packFolderName = "pack"
@@ -83,19 +150,8 @@ enum BundledContent {
 
     static let log = Logger(subsystem: Bundle.main.bundleIdentifier ?? "ScienceKids", category: "content")
 
-    /// The trial plays the Discoverer world whatever the grade (B18 #14: other worlds show
-    /// "sắp ra mắt" and the child tries Discoverer). The profile still stores its own age group.
-    static let world: Topic.AgeGroup = .discoverer
-
-    /// Lessons a topic is planned to have, by topic id, while the content has no such field.
-    /// Only the count: lesson titles are never made up (SK-011, open question 2 → default).
-    ///
-    /// TODO(SK-015/SK-016): proposal to dev/PM: the manifest's topic entry gets `lesson_count`
-    /// (or the schema gets `topic.lesson_count`); then this table goes.
-    static let plannedLessonCounts: [UUID: Int] = [
-        // an-uong-lanh-manh: five lessons (content/discoverer/an-uong-lanh-manh/_topic.md, "Ghi chú").
-        UUID(uuidString: "d3a514ef-02cd-4386-a358-f01e425a10f8")!: 5,
-    ]
+    /// Name of the syllabus in the bundle (`content/syllabus.json`, `project.yml`).
+    static let syllabusName = "syllabus"
 
     /// The pack if the bundle has one, else the fixtures.
     ///
@@ -107,6 +163,12 @@ enum BundledContent {
             log.warning("no content pack in the app: playing the schema fixtures, without audio")
             return .ready(fixtures(bundle: bundle))
         }
+        return await load(packAt: root, bundle: bundle)
+    }
+
+    /// The pack in the folder `root` (the bundle's `pack/`, or with `-SKContentPack` a pack built
+    /// on the Mac), checked the same way, with the bundle's syllabus.
+    static func load(packAt root: URL, bundle: Bundle = .main) async -> ContentState {
         let appVersion = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         do {
             let pack = try await ContentPack.load(from: DirectoryPackSource(root: root), appVersion: appVersion)
@@ -117,7 +179,7 @@ enum BundledContent {
             }
             return .ready(AppContent(
                 library: pack.library, source: .pack(contentVersion: pack.manifest.contentVersion),
-                rulesData: pack.rulesData, pack: pack
+                rulesData: pack.rulesData, pack: pack, syllabus: bundledSyllabus(bundle: bundle)
             ))
         } catch {
             log.error("content pack not opened: \(error.description, privacy: .public)")
@@ -127,7 +189,20 @@ enum BundledContent {
 
     /// The fixtures folder of the bundle, with `rules.json`.
     static func fixtures(bundle: Bundle = .main) -> AppContent {
-        AppContent(library: loadFixtures(bundle: bundle), source: .fixtures, rulesData: bundledRules(bundle: bundle), pack: nil)
+        AppContent(
+            library: loadFixtures(bundle: bundle), source: .fixtures, rulesData: bundledRules(bundle: bundle),
+            pack: nil, syllabus: bundledSyllabus(bundle: bundle)
+        )
+    }
+
+    /// Debug (`-SKContentFolder`): the content files of a folder, read like the fixtures (no
+    /// pack, no audio), with the bundle's rules and syllabus.
+    static func folder(_ root: URL, bundle: Bundle = .main) -> AppContent {
+        log.notice("playing the content folder \(root.path, privacy: .public) (launch argument)")
+        return AppContent(
+            library: LocalContentLibrary.load(from: root).library, source: .fixtures,
+            rulesData: bundledRules(bundle: bundle), pack: nil, syllabus: bundledSyllabus(bundle: bundle)
+        )
     }
 
     static func loadFixtures(bundle: Bundle = .main) -> ContentLibrary {
@@ -147,8 +222,20 @@ enum BundledContent {
         return try? Data(contentsOf: url)
     }
 
-    /// Number of lessons the topic shows: the planned count, never fewer than the lessons it has.
-    static func lessonCount(of topic: TopicContent) -> Int {
-        max(topic.lessons.count, plannedLessonCounts[topic.topic.id] ?? topic.lessons.count)
+    /// `content/syllabus.json` in the bundle (`project.yml`, SK-030). Missing or unreadable: `nil`
+    /// with a log line, and the journeys show the content's topics alone (no crash).
+    static func bundledSyllabus(bundle: Bundle = .main) -> Syllabus? {
+        guard let url = bundle.url(forResource: syllabusName, withExtension: "json") else {
+            log.error("syllabus.json missing from the bundle: the journey shows the content's topics only")
+            return nil
+        }
+        do {
+            return try Syllabus.decode(from: Data(contentsOf: url))
+        } catch let error as ContentDecodingError {
+            log.error("syllabus.json does not decode: \(error.description, privacy: .public)")
+        } catch {
+            log.error("syllabus.json unreadable: \(error.localizedDescription, privacy: .public)")
+        }
+        return nil
     }
 }

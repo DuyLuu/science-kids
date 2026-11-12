@@ -17,13 +17,19 @@ export type RulesError = { pointer: string; message: string };
 export const QUIZ_LENGTH = 6;
 
 export type Range = [number, number];
-export type ImageSlot = "choice_option" | "sequence_item" | "true_false";
+/** schema/rules.schema.json#/$defs/ImageSlot. */
+export const IMAGE_SLOTS = ["question", "choice_option", "sequence_item", "true_false", "bank_word", "tray_item"] as const;
+export type ImageSlot = (typeof IMAGE_SLOTS)[number];
 /** rules.<age_group>.authoring, shape of schema/rules.schema.json#/$defs/Authoring. */
 export type Authoring = {
   quiz_formats: string[];
   warmup_formats: string[];
   option_count: Partial<Record<string, Range>>;
   image_required: ImageSlot[];
+  /** SK-033: missing image here is a warning (image_missing) unless image_required also lists the slot. */
+  image_expected?: ImageSlot[];
+  /** SK-033: every Image brief carries "Từ khoá tìm ảnh (EN): …" (warning image_brief_keywords). */
+  image_search_keywords?: boolean;
   dok_mix: [number, number, number];
   first_item_dok: number;
   misconception_items: Range;

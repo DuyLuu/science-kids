@@ -33,9 +33,10 @@ import Testing
         #expect(pack.rejected.isEmpty, "\(pack.rejected)")
         let topic = try #require(pack.library.topic(id: topicID))
         #expect(topic.topic.title.vi == "Ăn uống lành mạnh")
-        #expect(topic.lessons.map(\.id) == [lessonID])
+        // Lesson 1 first; the built pack may hold more (9/11: also "Mâm cơm cân bằng", SK-030).
+        #expect(topic.lessons.first?.id == lessonID)
         #expect(pack.library.lesson(id: lessonID)?.lesson.title.en == "What does food give us?")
-        #expect(pack.topicVersion(for: topicID) == pack.manifest.topics.first?.version)
+        #expect(pack.topicVersion(for: topicID) == pack.manifest.topics.first { $0.id == topicID }?.version)
         // Rules of the manifest, the shape of content/rules.json.
         let rules = try #require(pack.rulesData)
         let object = try #require(try JSONSerialization.jsonObject(with: rules) as? [String: Any])
@@ -112,11 +113,13 @@ import Testing
 
     static func expectChangedPackJSONRefused(_ root: URL) async throws {
         let source = DirectoryPackSource(root: root)
-        let entry = try #require(try await ContentPack.load(from: source, appVersion: nil).manifest.topics.first)
+        // Ăn uống lành mạnh by id: the built pack holds more topics, in any order.
+        let entry = try #require(try await ContentPack.load(from: source, appVersion: nil).manifest.topics.first { $0.id == topicID })
         try TestPack.flipOneByte(of: root.appendingPathComponent(entry.path))
 
         let pack = try await ContentPack.load(from: source, appVersion: nil)
-        #expect(pack.library.topics.isEmpty, "no lesson of a changed pack.json opens")
+        // The built pack has more than one topic: only the changed one is left out.
+        #expect(pack.library.topic(id: entry.id) == nil, "no lesson of a changed pack.json opens")
         #expect(pack.library.lesson(id: lessonID) == nil)
         let rejected = try #require(pack.rejected.first)
         #expect(pack.rejected.count == 1)
@@ -265,12 +268,26 @@ struct TestPack {
         try data.write(to: url)
     }
 
+    /// A picture to put in a made pack (SK-033): its bytes and the manifest's `credit` (`nil`: no
+    /// `credit` key, as an old pack).
+    struct Image {
+        let data: Data
+        let width: Int
+        let height: Int
+        let credit: [String: Any]?
+
+        var sha256: String { ContentPack.sha256Hex(data) }
+    }
+
     /// A pack written the way content-cli writes one (SK-015 format), from the schema fixtures:
     /// every string of the topic title, lesson title and objective gets a fake "clip" (some
-    /// bytes) named by its sha256.
+    /// bytes) named by its sha256. SK-033: `images` go in as `assets/<sha256>.jpg`, `kind:
+    /// "image"`, with `width`, `height` and `credit`; `lessonEdit` points the lesson's pictures at them.
     static func made(
+        images: [Image] = [],
         manifestEdit: (inout [String: Any]) -> Void = { _ in },
-        topicEdit: (inout [String: Any]) -> Void = { _ in }
+        topicEdit: (inout [String: Any]) -> Void = { _ in },
+        lessonEdit: (inout [String: Any]) throws -> Void = { _ in }
     ) throws -> TestPack {
         let fixtures = try #require(repo("packages/content-schema/fixtures/valid/discoverer/an-uong-lanh-manh"))
         var topic = try object(fixtures.appendingPathComponent("topic.json"))
@@ -300,6 +317,17 @@ struct TestPack {
         topic["title"] = try voiced(topic["title"])
         lesson["title"] = try voiced(lesson["title"])
         lesson["objective"] = try voiced(lesson["objective"])
+        for image in images {
+            let path = "assets/\(image.sha256).jpg"
+            try image.data.write(to: root.appendingPathComponent(path))
+            var entry: [String: Any] = [
+                "sha256": image.sha256, "size": image.data.count, "kind": "image", "path": path,
+                "width": image.width, "height": image.height,
+            ]
+            entry["credit"] = image.credit
+            assets.append(entry)
+        }
+        try lessonEdit(&lesson)
 
         let topicID = try #require(topic["id"] as? String)
         let version = "test0001"

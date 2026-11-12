@@ -6,11 +6,12 @@ import Foundation
 /// Raw values are the keys of `default_voice_mode` in `content/rules.json` (SK-015 decision 5),
 /// written `snake_case` like the database.
 public enum LanguageMode: String, Codable, CaseIterable, Sendable {
-    /// "Song ngữ": English with Vietnamese subtitles (recommended).
+    /// "Cả hai" (Song ngữ): English with Vietnamese subtitles (recommended).
     case bilingual
-    /// "Tiếng Anh trước": Vietnamese hidden, tap to see (international schools, centres).
+    /// "English" on the Settings screen (SK-042): English text and voice only.
     case enFirst = "en_first"
-    /// "Tiếng Việt trước": for children who are just starting.
+    /// "Tiếng Việt" on the Settings screen (SK-042): Vietnamese text and voice only; new words
+    /// still show the English word with its Vietnamese meaning.
     case viFirst = "vi_first"
 }
 
@@ -53,6 +54,19 @@ extension VoiceMode {
     }
 }
 
+extension VoiceMode {
+    /// The voice that goes with a language picked on the Settings screen (SK-042): English → en,
+    /// Tiếng Việt → vi, Cả hai → both. The profile screen keeps `suggested(for:ageGroup:)`, which
+    /// follows `default_voice_mode` of `content/rules.json`.
+    public static func matching(_ mode: LanguageMode) -> VoiceMode {
+        switch mode {
+        case .bilingual: .both
+        case .enFirst: .en
+        case .viFirst: .vi
+        }
+    }
+}
+
 extension LanguageMode {
     /// Language of a name (topic title, lesson title) on Home and Topic. The canvas, drawn in
     /// Song ngữ, names the topic and its lessons in Vietnamese (Home, Topic).
@@ -64,11 +78,12 @@ extension LanguageMode {
     }
 
     /// Second language shown next to a name where the layout has a caption
-    /// (the English title before "· Mức 2" under the topic title); `nil` hides it (Tiếng Anh trước).
+    /// (the English title before "· Mức 2" under the topic title); `nil` hides it. SK-042: only
+    /// "Cả hai" shows both languages; English and Tiếng Việt show one.
     public var nameSecondLanguage: ContentLanguage? {
         switch self {
-        case .bilingual, .viFirst: .en
-        case .enFirst: nil
+        case .bilingual: .en
+        case .enFirst, .viFirst: nil
         }
     }
 
@@ -81,8 +96,9 @@ extension LanguageMode {
     /// Line under the sentence, in the other language.
     public var sentenceSecondLanguage: ContentLanguage { sentenceLanguage.other }
 
-    /// Tiếng Anh trước: the Vietnamese line stays hidden until the child taps to see it.
-    public var hidesSentenceSecondLanguage: Bool { self == .enFirst }
+    /// The line in the other language is not shown (SK-042: English and Tiếng Việt show one
+    /// language only, with no switch to show the other; only "Cả hai" shows both).
+    public var hidesSentenceSecondLanguage: Bool { self != .bilingual }
 }
 
 /// Grades of the Vietnamese school (Lớp 1–5) and their age group (canvas Discoverer 2).

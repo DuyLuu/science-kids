@@ -1,0 +1,355 @@
+{
+  "note": "SK-033. Designer (agent) chọn 10/11/2026, chờ Duy duyệt; chưa fetch. 10 ảnh riêng, 11 chỗ dùng lại, 31 chỗ chưa có ảnh (không ghi trong file, xem review.html). Mục có «CẦN MỞ TAY» là ảnh Openverse ngoài Commons chưa xác nhận được ở trang gốc. Designer 10/11: thêm q2.q2_core, q2.q2_mantle, q2.q2_crust dùng lại hình ghép sơ đồ mặt cắt của bài ben-trong-trai-dat. Designer (agent) 10/11 chiều: thêm 30 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại); chi tiết ở review.html.",
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w1.w1_lava": {
+      "same_as": "q4.q4_slope",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Balance_scale_MET_DP318014.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Balance_scale_MET_DP318014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Balance scale",
+      "author": "Creator:Henry N. Hooper and Company Creator:O.P. Drake",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "w2.w2_land": {
+      "same_as": "learn.explore.explore_land",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2.w2_water": {
+      "same_as": "tray.tray_sea",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2.w2_same": {
+      "same_as": "q5.q5_same",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w3": {
+      "same_as": "tray.tray_asia",
+      "lesson": "be-mat-trai-dat/cac-chau-luc-va-dai-duong"
+    },
+    "learn.explore.explore_quake": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Oblique_slip_fault.PNG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Oblique_slip_fault.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Oblique slip fault",
+      "author": "Codking",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Oblique_slip_fault.PNG",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.86
+      }
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial-SanAndreas-CarrizoPlain.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Aerial-SanAndreas-CarrizoPlain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aerial-SanAndreas-CarrizoPlain",
+      "author": "John Wiley User:Jw4nvc - Santa Barbara, California",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0"
+    },
+    "q1.q1_rain": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q1.q1_rain.jpg",
+        "method": "drawn"
+      },
+      "title": "Heavy rain",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ thêm để ba lựa chọn của câu q1 cùng kiểu với q1_shake (cốc nước gợn, hình tự vẽ): mưa to trắng xoá trút xuống căn nhà mái ngói giữa vườn cây, vũng nước gợn; không người. Thay ảnh dùng lại của bài Núi lửa ở câu này. 1024×768."
+    },
+    "q1.q1_lava": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q1.q1_lava.jpg",
+        "method": "drawn"
+      },
+      "title": "A volcano erupting",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ thêm để ba lựa chọn của câu q1 cùng kiểu với q1_shake: núi lửa phun trào lúc chạng vạng, cột dung nham ở miệng, hai dòng dung nham chảy xuống sườn, cột tro mờ; không người, không nhà. 1024×768."
+    },
+    "q2": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "814472bf-3e1a-4fa2-902c-67d7eaf36744",
+      "source_url": "https://www.flickr.com/photos/193316968@N06/53101932555",
+      "file_url": "https://live.staticflickr.com/65535/53101932555_11fc963284_b.jpg",
+      "title": "Cracked mud on the Ka'ena Point Trail",
+      "author": "chris.rycroft",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 4 = CC BY 2.0."
+    },
+    "q2.q2_core": {
+      "same_as": "q1.q1_core",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "q2.q2_mantle": {
+      "same_as": "q1.q1_mantle",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "q2.q2_crust": {
+      "same_as": "q1.q1_crust",
+      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    },
+    "q3": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "5fee8498-0dbe-42af-915d-0eb550b358f0",
+      "source_url": "https://www.flickr.com/photos/96241457@N07/49847286071",
+      "file_url": "https://live.staticflickr.com/65535/49847286071_b2133a0da9_b.jpg",
+      "title": "2020_05_1_Corona_Photo_Gallery-42",
+      "author": "UNSomalia",
+      "license": "PDM 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "note": "Openverse/Flickr (UNSomalia): đã mở trang gốc 10/11, Flickr ghi license 10 = Public Domain Mark."
+    },
+    "q4": {
+      "same_as": "q1"
+    },
+    "q4.q4_lava": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q4.q4_lava.jpg",
+        "method": "drawn"
+      },
+      "title": "Red-hot lava on a volcano",
+      "note": "Designer (agent) 10/11 chiều vẽ bằng SVG, xuất JPEG (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ thêm để bốn thẻ từ của câu q4 cùng kiểu: dòng dung nham đỏ rực chảy xuống sườn núi lửa tối, vỏ nguội sẫm màu nứt thành mảng, khe nứt sáng cam; không người. 1024×768."
+    },
+    "q4.q4_erupts": {
+      "same_as": "q1.q1_lava",
+      "note": "Hình tự vẽ núi lửa phun trào (10/11 chiều), để bốn thẻ từ của câu q4 cùng kiểu: hai đáp án đúng (q4_shakes, q4_tsunami) là hình tự vẽ, trước đây hai thẻ sai là ảnh chụp."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wet_Sand_(4027636655).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Wet_Sand_%284027636655%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Wet Sand (4027636655)",
+      "author": "Damian Gadal",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 0.6,
+        "height": 0.88
+      },
+      "note": "Khác ý brief. Alt đề xuất: EN «A wide beach of wet sand, the sea far away» · VI «Bãi cát ướt rộng, biển ở xa»."
+    },
+    "q5.q5_shells": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "0c6f2c0d-f2d7-41e1-ac8c-dcf252d42924",
+      "source_url": "https://www.flickr.com/photos/47121680@N00/51852034388",
+      "file_url": "https://live.staticflickr.com/65535/51852034388_e775f6616b_b.jpg",
+      "title": "Seashells found on the beach",
+      "author": "joncutrer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief. Alt đề xuất: EN «A hand holding seashells at the beach» · VI «Bàn tay cầm vỏ sò ở bãi biển». Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 9 = CC0."
+    },
+    "vocab.wave": {
+      "source": "Openverse/StockSnap",
+      "openverse_id": "86cef367-374d-4c8f-991f-f23639ec477a",
+      "source_url": "https://stocksnap.io/photo/sunset-dusk-40BD003D1B",
+      "file_url": "https://cdn.stocksnap.io/img-thumbs/960w/40BD003D1B.jpg",
+      "title": "Sunset Dusk",
+      "author": "Dana Cristea",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Khác ý brief. Alt đề xuất: EN «Children playing at the edge of the waves» · VI «Các bạn nhỏ chơi ở mép sóng». Câu ví dụ «Mình nhảy qua những con sóng nhỏ ở bãi biển.» vẫn hợp; nếu muốn khớp ảnh hơn: «Mình chơi ở mép sóng trên bãi biển.» (content-editor quyết). Openverse/StockSnap CC0: trang gốc chặn bot, CẦN MỞ TAY xác nhận trước khi fetch."
+    },
+    "w1.w1_magma": {
+      "same_as": "q4.q4_underground",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w1.w1_sand": {
+      "same_as": "q1.q1_sand",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "learn.explore.explore_plates": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.learn.explore.explore_plates.jpg",
+        "method": "drawn"
+      },
+      "title": "A cracked boiled egg on a table",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; quả trứng luộc nằm trên mặt bàn gỗ, vỏ nứt thành sáu mảng chưa bóc. Chỉ có quả trứng (brief: chưa có hình Trái Đất có ranh giới mảng được duyệt)."
+    },
+    "learn.explore.explore_tsunami": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.learn.explore.explore_tsunami.jpg",
+        "method": "drawn"
+      },
+      "title": "A big wave starts from the sea floor",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; sơ đồ mặt cắt tự vẽ theo ý sơ đồ USGS «Eq-gen» (bản Commons là SVG 210 px/JPEG 580 px, đường ảnh không nhận): mảng đại dương trượt dưới mảng lục địa, chỗ vỡ phát sáng, mũi tên đẩy nước lên, sóng lan ra hai phía về bờ. Không người, nhà, thuyền, không chữ."
+    },
+    "learn.explore.explore_safe": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.learn.explore.explore_safe.jpg",
+        "method": "drawn"
+      },
+      "title": "A child under a desk holds on",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; lớp học có bảng xanh trống: bạn nhỏ quỳ dưới gầm bàn, một tay vòng che đầu và gáy, tay kia nắm chân bàn; vẽ nhìn ngang, mặt cúi, không có nét mặt. Không tìm được tranh FEMA/USGS/ready.gov public domain trên Commons/Openverse (Duy 10/11 cho tự vẽ khi thiếu)."
+    },
+    "tray.tray_kneel": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_kneel.jpg",
+        "method": "drawn"
+      },
+      "title": "A child kneels down low",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ quỳ thấp, hai tay chống sàn, cạnh bàn gỗ, chưa chui vào gầm; cùng bạn nhỏ, cùng phòng với tray_table, tray_arms, tray_leg."
+    },
+    "tray.tray_window": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_window.jpg",
+        "method": "drawn"
+      },
+      "title": "A child stands by a glass window",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ đứng sát cửa sổ kính lớn nhìn ra cây xanh, vẽ từ phía sau; kính nguyên, không chữ."
+    },
+    "tray.tray_table": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_table.jpg",
+        "method": "drawn"
+      },
+      "title": "A child gets under a strong table",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ đã chui xuống gầm bàn gỗ to, cúi đầu, một tay vòng lên che đầu; nhìn ngang tầm sàn."
+    },
+    "tray.tray_outside": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_outside.jpg",
+        "method": "drawn"
+      },
+      "title": "A child runs out of the door",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ chạy qua cửa ra sân sáng, vẽ từ phía sau trong nhà; không đổ vỡ."
+    },
+    "tray.tray_leg": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_leg.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand holds a table leg",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cận cảnh bàn tay trẻ nắm chặt chân bàn gỗ dưới gầm bàn; chỉ thấy bàn tay, cổ tay, tay áo."
+    },
+    "tray.tray_shelf": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_shelf.jpg",
+        "method": "drawn"
+      },
+      "title": "A child stands by a tall shelf",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ đứng cạnh tủ sách cao đầy sách và đồ vật, vẽ từ phía sau; gáy sách không có chữ."
+    },
+    "tray.tray_arms": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_arms.jpg",
+        "method": "drawn"
+      },
+      "title": "A child covers their head with one arm",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cận phần đầu và vai bạn nhỏ dưới gầm bàn (thấy mép bàn ở trên), một tay vòng che đầu và gáy, mặt cúi."
+    },
+    "tray.tray_lift": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.tray.tray_lift.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand presses the lift button",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bàn tay trẻ bấm nút gọi thang máy cạnh cửa inox; nút chỉ có hình tam giác, không số tầng, không tên hãng, không chữ."
+    },
+    "q1.q1_shake": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q1.q1_shake.jpg",
+        "method": "drawn"
+      },
+      "title": "Water shaking in a glass",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cốc nước thuỷ tinh trên bàn gỗ, mặt nước gợn vòng tròn, hai bên có nét rung nhỏ; không người, không nhãn hiệu."
+    },
+    "q3.q3_desk": {
+      "same_as": "tray.tray_table"
+    },
+    "q3.q3_window": {
+      "same_as": "tray.tray_window"
+    },
+    "q3.q3_stairs": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q3.q3_stairs.jpg",
+        "method": "drawn"
+      },
+      "title": "A child runs down the stairs",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ đang chạy xuống cầu thang có tay vịn, vẽ nhìn ngang, đầu quay đi chỉ thấy tóc; không biển chỉ dẫn."
+    },
+    "q3.q3_arms": {
+      "same_as": "tray.tray_arms"
+    },
+    "q4.q4_shakes": {
+      "same_as": "q1.q1_shake"
+    },
+    "q4.q4_tsunami": {
+      "same_as": "learn.explore.explore_tsunami"
+    },
+    "q5.q5_watch": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q5.q5_watch.jpg",
+        "method": "drawn"
+      },
+      "title": "A child looks at the sea",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; bạn nhỏ đứng một mình trên bãi cát nhìn ra biển êm, vẽ từ phía sau; không người lớn, không thấy dải cát nước rút, không chữ."
+    },
+    "q5.q5_hill": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.q5.q5_hill.jpg",
+        "method": "drawn"
+      },
+      "title": "A child goes up steps on a hill",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; lối bậc đá lên đồi xanh cây cạnh biển, bạn nhỏ đang bước lên, vẽ từ phía sau; không chữ, không biển chỉ dẫn."
+    },
+    "q6": {
+      "same_as": "q1.q1_shake"
+    },
+    "vocab.earthquake": {
+      "same_as": "q1.q1_shake"
+    },
+    "vocab.tsunami": {
+      "same_as": "learn.explore.explore_tsunami"
+    },
+    "vocab.plate": {
+      "same_as": "learn.explore.explore_plates"
+    },
+    "vocab.shake": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.vocab.shake.jpg",
+        "method": "drawn"
+      },
+      "title": "A window shakes as a truck goes by",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; cửa sổ nhìn từ trong nhà, ngoài đường xe tải chạy qua (không chữ, không biển số), khung cửa hơi nhoè và có nét rung nhỏ."
+    },
+    "vocab.safe": {
+      "same_as": "tray.tray_table"
+    },
+    "vocab.high_ground": {
+      "own": {
+        "file": "content/images/own/be-mat-trai-dat/dong-dat-va-song-than.vocab.high_ground.jpg",
+        "method": "drawn"
+      },
+      "title": "A high hill next to the sea",
+      "note": "designer (agent) vẽ 10/11 bằng SVG, xuất JPEG; ngọn đồi cao xanh cây ngay sau làng ven biển (nhà mái ngói đỏ), bãi cát, hai thuyền nhỏ; không người, không chữ."
+    },
+    "reward.seismograph": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seismograph_recording.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Seismograph_recording.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seismograph recording",
+      "author": "Atomicdragon136",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 0.58,
+        "height": 0.75
+      },
+      "note": "Trống giấy của máy đo động đất trong bảo tàng, thấy rõ đường nhấp nhô. Cắt bỏ biển «Do not touch · Seismograph» bên phải và nhãn nhỏ ở dưới; không người."
+    }
+  }
+}

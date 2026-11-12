@@ -42,6 +42,29 @@ for (const [format, fields] of Object.entries(FORMATS)) {
   });
 }
 
+// SK-033 (Duy 9/11): a bank word may carry an image, same Image as a choice option; old content
+// without it stays valid (FORMATS.fill_blank_bank above has none).
+test("fill_blank_bank: bank word image is optional, same Image type as an option", () => {
+  const image = { alt: s("A glass of water", "Một cốc nước"), brief: "Cốc nước trong, ảnh chụp" };
+  const bank = [{ key: "air", label: s("air") }, { key: "water", label: s("water"), image }];
+  const item = { ...base("fill_blank_bank"), ...FORMATS.fill_blank_bank, bank };
+  assert.deepEqual(check([withQuiz0(item)]).errors, []);
+  const strict = check([withQuiz0(item)], { requireAssets: true }).errors.map((e) => e.pointer);
+  assert.ok(strict.includes("/quiz/0/bank/1/image/asset"), "--require-assets asks for the bank word's asset");
+  assert.ok(!strict.some((pointer) => pointer.startsWith("/quiz/0/bank/1/image/alt")), "alt is Text: no audio asked");
+  const withAsset = { ...item, bank: [bank[0], { ...bank[1], image: { ...image, asset: "c".repeat(64) } }] };
+  assert.ok(!check([withQuiz0(withAsset)], { requireAssets: true }).errors.some((e) => e.pointer.startsWith("/quiz/0/bank/1/image")));
+
+  const cases = [
+    [{ ...bank[1], image: { brief: "Cốc nước" } }, "/quiz/0/bank/1/image/alt"],
+    [{ ...bank[1], image: { ...image, url: "https://x" } }, "/quiz/0/bank/1/image/url"],
+    [{ ...bank[1], image: { ...image, asset: "abc" } }, "/quiz/0/bank/1/image/asset"],
+    [{ ...bank[1], image: "water.png" }, "/quiz/0/bank/1/image"],
+    [{ ...bank[1], images: [image] }, "/quiz/0/bank/1/images"],
+  ];
+  for (const [word, pointer] of cases) expectRejected(withQuiz0({ ...item, bank: [bank[0], word] }), pointer);
+});
+
 test("quiz shape mistakes are rejected by both engines", () => {
   const cases = [
     [{ ...base("single_choice"), options: Array.from({ length: 7 }, (_, i) => option(`o${i}`, i === 0)) }, "/quiz/0/options"],

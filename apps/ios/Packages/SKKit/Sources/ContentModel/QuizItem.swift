@@ -204,10 +204,16 @@ extension QuizItem {
         public let bank: [BankWord]
         public let answers: [Key]
 
+        /// A word card of the bank. `image` is optional (SK-033, Duy 9/11): with it the card is a
+        /// picture card, like a `single_choice` option with a picture.
         public struct BankWord: Codable, Hashable, Sendable {
             public let key: Key
             public let label: Spoken
+            public let image: ContentImage?
         }
+
+        /// Some word card has a picture: the bank is drawn as picture cards.
+        public var hasPictures: Bool { bank.contains { $0.image != nil } }
 
         /// `sentence.en` split into text and blanks.
         public var segmentsEN: [SentenceSegment] { SentenceSegment.split(sentence.en) }

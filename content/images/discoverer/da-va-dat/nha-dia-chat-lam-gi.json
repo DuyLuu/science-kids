@@ -1,0 +1,294 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi toàn ảnh chụp. Câu w1 dùng ba hình vẽ nắm đất của bài 12 để cùng kiểu.",
+  "images": {
+    "w1": {
+      "same_as": "explore_setup",
+      "lesson": "da-va-dat/nuoc-tham-qua-dat-nao-nhanh-hon"
+    },
+    "w1.w1_clay": {
+      "same_as": "q4.q4_grey",
+      "lesson": "da-va-dat/cac-loai-dat-o-viet-nam",
+      "note": "Ba lựa chọn cùng là hình vẽ nắm đất trong tay đeo găng của bài 12 (đất sét chỉ có hình vẽ)."
+    },
+    "w1.w1_sandy": {
+      "same_as": "q4.q4_pale",
+      "lesson": "da-va-dat/cac-loai-dat-o-viet-nam"
+    },
+    "w1.w1_garden": {
+      "same_as": "q4.q4_dark",
+      "lesson": "da-va-dat/cac-loai-dat-o-viet-nam"
+    },
+    "w2": {
+      "same_as": "ha_long",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w2.w2_erosion": {
+      "same_as": "explore_erosion",
+      "lesson": "da-va-dat/da-bi-bao-mon-theo-thoi-gian"
+    },
+    "w2.w2_weathering": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Karren_weathering_(Wirrapowie_Limestone,_Lower_Cambrian;_Mernmerna_railroad_bridge_dry_creek_cut,_South_Australia)_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Karren_weathering_%28Wirrapowie_Limestone%2C_Lower_Cambrian%3B_Mernmerna_railroad_bridge_dry_creek_cut%2C_South_Australia%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Karren weathering (Wirrapowie Limestone, Lower Cambrian; Mernmerna railroad bridge dry creek cut, South Australia) 3",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Mặt đá vôi xám có rãnh sâu do nước mưa (rillenkarren); ảnh riêng vì tray_rain_limestone của bài 7 là hình vẽ, còn hai lựa chọn kia là ảnh."
+    },
+    "w2.w2_eruption": {
+      "same_as": "explore_erupt",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "w3": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "learn.explore.explore_fieldwork": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "learn.explore.explore_samples": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b15-explore_samples.jpg",
+        "method": "drawn"
+      },
+      "title": "A tray of rock samples",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh khay mẫu đá không nhãn hợp lệ."
+    },
+    "learn.explore.explore_safe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sisters07_TheHusband_gps_station_05-10-07.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Sisters07_TheHusband_gps_station_05-10-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A monitoring station on a volcano",
+      "author": "Dave Sherrod, en:United States Geological Survey",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sisters07_TheHusband_gps_station_05-10-07.jpg",
+      "note": "Trạm GPS và tấm pin mặt trời trên sườn núi lửa Three Sisters (USGS, public domain)."
+    },
+    "learn.explore.explore_space": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Curiosity_rover_selfie_at_Namib_Dune_Sol_1128_(53678107023).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Curiosity_rover_selfie_at_Namib_Dune_Sol_1128_%2853678107023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Curiosity rover on Mars",
+      "author": "semeion.photo",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Curiosity_rover_selfie_at_Namib_Dune_Sol_1128_(53678107023).jpg",
+      "note": "Xe tự hành Curiosity tự chụp trên cồn cát Sao Hoả (NASA/JPL, public domain); không đọc được chữ trên xe."
+    },
+    "tray.tray_rock_layers": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Layered_sandstone_strata_in_a_sea_cliff,_Torrey_Pines_State_Beach,_California.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Layered_sandstone_strata_in_a_sea_cliff%2C_Torrey_Pines_State_Beach%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Layered rock in a sea cliff",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Vách đá nhiều lớp sa thạch ở Torrey Pines (CC0); ảnh riêng vì hình nhà địa chất của bài 4 là hình vẽ, còn kệ bài 15 toàn ảnh chụp."
+    },
+    "tray.tray_slope": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Landslide_Scar_(8304420059).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Landslide_Scar_%288304420059%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Landslide Scar (8304420059)",
+      "author": "Chris M Morris",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Sườn đồi xanh có vệt sạt lở cũ, chụp xa."
+    },
+    "tray.tray_moon_rock": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lunar_sample_76015_S-73-15013.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lunar_sample_76015_S-73-15013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A grey rock from the Moon",
+      "author": "NASA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Lunar_sample_76015_S-73-15013.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.62,
+        "height": 0.9
+      },
+      "note": "Mẫu đá Mặt Trăng 76015 (NASA, public domain); cắt bỏ bộ đếm có số và khối chữ T."
+    },
+    "tray.tray_forecast": {
+      "same_as": "reward.weather_box",
+      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet",
+      "note": "Lều khí tượng trên bãi cỏ (CC0) của Thời tiết, cùng nội dung brief."
+    },
+    "tray.tray_soil_core": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Core_Samples_(7896582158).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Core_Samples_%287896582158%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Core Samples (7896582158)",
+      "author": "Oregon Department of Transportation",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.44,
+        "top": 0.72,
+        "width": 0.56,
+        "height": 0.28
+      },
+      "note": "Các ống mẫu đất trong khay; cắt bỏ người và giấy bản đồ (CC BY 2.0: giữ tên gốc)."
+    },
+    "tray.tray_volcano_watch": {
+      "same_as": "learn.explore.explore_safe"
+    },
+    "tray.tray_telescope": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Telescope_and_Venus._Amateur_astronomers_(Astrofili_Frentani_group)_in_Lanciano,_Italy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Telescope_and_Venus._Amateur_astronomers_%28Astrofili_Frentani_group%29_in_Lanciano%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Telescope and Venus. Amateur astronomers (Astrofili Frentani group) in Lanciano, Italy",
+      "author": "Cats' photos",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Kính thiên văn trên chân đỡ ngoài trời lúc chạng vạng, không người trong khung."
+    },
+    "tray.tray_rover": {
+      "same_as": "learn.explore.explore_space"
+    },
+    "tray.tray_garden": {
+      "same_as": "q6",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q1": {
+      "same_as": "geologist",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q1.q1_telescope": {
+      "same_as": "tray.tray_telescope"
+    },
+    "q1.q1_watering": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Watering_can_(14811313052).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Watering_can_%2814811313052%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A watering can",
+      "author": "Benjamin Balázs from Hungary",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Bình tưới kim loại trên cỏ (không rót nước); dùng ảnh vì hai lựa chọn kia là ảnh, hình vẽ bình tưới của bài 11 thuộc kệ vẽ."
+    },
+    "q1.q1_hammer": {
+      "same_as": "vocab.rock_hammer"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_samples"
+    },
+    "q2.q2_diamond": {
+      "same_as": "diamond",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q2.q2_quartz": {
+      "same_as": "quartz",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q2.q2_talc": {
+      "same_as": "tray_talc",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "q3": {
+      "same_as": "tray_dark_rock",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3.q3_scratch": {
+      "same_as": "explore_scratch",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q3.q3_water": {
+      "same_as": "explore_water",
+      "lesson": "da-va-dat/da-nao-tham-nuoc"
+    },
+    "q3.q3_jar": {
+      "same_as": "explore_jar",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q3.q3_weigh": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b15-q3_weigh.jpg",
+        "method": "drawn"
+      },
+      "title": "A rock on a kitchen scale",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q4.q4_hillside": {
+      "same_as": "tray.tray_slope"
+    },
+    "q4.q4_pond": {
+      "same_as": "tray_pond",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "q4.q4_rice": {
+      "same_as": "q2_rice",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q4.q4_garden": {
+      "same_as": "q6",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q5": {
+      "same_as": "soil",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q5.q5_rock": {
+      "same_as": "tray_limestone",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q5.q5_stones": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:PEA_GRAVEL.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/PEA_GRAVEL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Small stones",
+      "author": "Ranjithkumar Murugesan",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Sỏi nhỏ chụp gần (CC0); ảnh vì hai lựa chọn kia là ảnh, sỏi của bài 11 là hình vẽ."
+    },
+    "q5.q5_topsoil": {
+      "same_as": "explore_organic",
+      "lesson": "da-va-dat/dat-gom-nhung-gi"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_third_biggest_piece_of_the_Sikhote-Alin_meteorite.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/The_third_biggest_piece_of_the_Sikhote-Alin_meteorite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The third biggest piece of the Sikhote-Alin meteorite",
+      "author": "Christine und Hagen Graf",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Mảnh thiên thạch sắt Sikhote-Alin, mặt có nhiều vết lõm; nền sáng."
+    },
+    "vocab.fieldwork": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "vocab.sample": {
+      "same_as": "learn.explore.explore_samples"
+    },
+    "vocab.geology": {
+      "same_as": "tray.tray_soil_core"
+    },
+    "vocab.geologist": {
+      "same_as": "geologist",
+      "lesson": "da-va-dat/thang-do-cung-mohs"
+    },
+    "vocab.rock_hammer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Maastrichtian_Ripley_Formation_rockground_near_Greenville,_Alabama.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Maastrichtian_Ripley_Formation_rockground_near_Greenville%2C_Alabama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A rock hammer on a rock",
+      "author": "Wilson44691",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Búa địa chất đặt trên đá (CC0); đổi tên trung tính."
+    },
+    "reward.moon_rock_card": {
+      "same_as": "tray.tray_moon_rock"
+    }
+  }
+}

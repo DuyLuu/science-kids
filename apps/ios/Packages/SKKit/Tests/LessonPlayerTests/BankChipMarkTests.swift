@@ -1,4 +1,5 @@
 import DesignSystem
+import SwiftUI
 import Testing
 @testable import LessonPlayer
 
@@ -56,5 +57,40 @@ struct BankChipMarkTests {
         #expect(markKey(for: .missed, multi: true) == "lesson.mark.missed")
         #expect(markKey(for: .selected, multi: false) == nil)
         #expect(markKey(for: .idle, multi: false) == nil)
+    }
+}
+
+/// SK-033 (Duy 9/11): a word card with a picture is a picture cell of `layout.grid.quiz`, on the
+/// phone (every width the phone layout takes, Split View 1/3 included) and in the iPad frame. It
+/// is never under the Discoverer touch target and holds its art and its word without growing.
+@MainActor
+struct BankCardSizeTests {
+    /// (regular width, container width): phones and Split View 1/3, then iPad portrait / landscape.
+    nonisolated static let widths: [(Bool, CGFloat)] = [
+        (false, 320), (false, 375), (false, 393), (false, 440),
+        (true, 834), (true, 1194),
+    ]
+
+    @Test("Picture card: quiz cell height, ≥ touch target, art and word fit", arguments: widths)
+    func pictureCard(regular: Bool, width: CGFloat) {
+        let metrics = LayoutMetrics(horizontalSizeClass: regular ? .regular : .compact, containerWidth: width)
+        let touch = Tokens.AgeGroup.discoverer.touchTarget
+        let height = BankChips.cardHeight(pictures: true, metrics: metrics, touchTarget: touch)
+        #expect(height == metrics.quizGrid.cellHeight)
+        #expect(height >= touch)
+        #expect(metrics.cellWidth(for: metrics.quizGrid) >= touch, "card width at \(width)")
+        // Top 6 + art + gap 2 + one line of `sentence` + bottom 10 (the card's padding).
+        let sentence = Tokens.Typography.sentence
+        let needed = Tokens.Space.s6 + metrics.illustration(LessonMetrics.cellArt) + Tokens.Space.s2
+            + sentence.size * sentence.lineHeight + Tokens.Space.s10
+        #expect(needed <= height, "\(needed)pt of content in a \(height)pt card at \(width)")
+    }
+
+    @Test("Chip without pictures: the touch target, as before")
+    func chip() {
+        let metrics = LayoutMetrics(horizontalSizeClass: .compact, containerWidth: 393)
+        let touch = Tokens.AgeGroup.discoverer.touchTarget
+        #expect(touch >= 56)
+        #expect(BankChips.cardHeight(pictures: false, metrics: metrics, touchTarget: touch) == touch)
     }
 }

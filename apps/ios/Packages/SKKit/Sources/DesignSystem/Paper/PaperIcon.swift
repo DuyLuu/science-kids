@@ -38,6 +38,11 @@ public enum PaperIcon: String, CaseIterable, Sendable {
     case book
     /// Three dots: more to come. 24 box.
     case more
+    /// Leaf with its vein cut out: a rest day of the streak (Huy hiệu, SK-035). 24 box.
+    case leaf
+    /// Gear with its hub cut out: Cài đặt on Home (SK-042; no canvas yet, drawn like the others:
+    /// one filled shape). 24 box.
+    case gear
 
     /// Side of the SVG view box the path is written in.
     var viewBox: CGFloat {
@@ -165,6 +170,29 @@ public enum PaperIcon: String, CaseIterable, Sendable {
             p = cover.union(page).subtracting(bar)
         case .more:
             p = Self.circle(6, 12, 2.2).union(Self.circle(12, 12, 2.2)).union(Self.circle(18, 12, 2.2))
+        case .leaf:
+            // M5.5 18.5C5.5 10 10 5.5 18.5 5.5c0 8.5-4.5 13-13 13z, the vein M6.5 17.5l6.5-6.5
+            // (stroke 1.8, round) cut out (the canvas paints it in paper).
+            var leaf = Path()
+            leaf.move(to: pt(5.5, 18.5))
+            leaf.addCurve(to: pt(18.5, 5.5), control1: pt(5.5, 10), control2: pt(10, 5.5))
+            leaf.addCurve(to: pt(5.5, 18.5), control1: pt(18.5, 14), control2: pt(14, 18.5))
+            leaf.closeSubpath()
+            var vein = Path()
+            vein.move(to: pt(6.5, 17.5))
+            vein.addLine(to: pt(13, 11))
+            p = leaf.subtracting(vein.strokedPath(StrokeStyle(lineWidth: 1.8, lineCap: .round)))
+        case .gear:
+            // Eight square teeth around a disc of radius 7, hub of radius 3 cut out.
+            var gear = Self.circle(12, 12, 7)
+            for index in 0..<8 {
+                let tooth = Path(roundedRect: CGRect(x: 10.2, y: 1.6, width: 3.6, height: 5), cornerSize: CGSize(width: 0.9, height: 0.9))
+                let turn = CGAffineTransform(translationX: 12, y: 12)
+                    .rotated(by: CGFloat(index) * .pi / 4)
+                    .translatedBy(x: -12, y: -12)
+                gear = gear.union(tooth.applying(turn))
+            }
+            p = gear.subtracting(Self.circle(12, 12, 3))
         case .tick, .close:
             break
         }
@@ -199,7 +227,7 @@ public enum PaperIcon: String, CaseIterable, Sendable {
             p.addRelativeArc(center: pt(12, 12.856), radius: 7, startAngle: .degrees(-140.5), delta: .degrees(319.3))
             return (p, 2.8)
         case .check, .arrowForward, .arrowBack, .lock, .shield, .star, .flame, .flameCore, .journey, .cards,
-             .badge, .book, .more:
+             .badge, .book, .more, .leaf, .gear:
             return nil
         }
     }

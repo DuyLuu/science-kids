@@ -7,7 +7,8 @@ import SwiftUI
 /// - `.current`: bright paper with the vàng hoè piece offset behind it (`shadow.offset_accent`),
 ///   the topic being learnt;
 /// - `.open`: bright paper with `shadow.paper_3`;
-/// - `.locked`: dull paper (`surface_inactive`, `shadow.paper_2`) with a lock badge on its corner.
+/// - `.locked`: dull paper (`surface_inactive`, `shadow.paper_2`) with a lock badge on its corner;
+/// - `.soon`: the same dull paper without the badge, a topic with nothing written yet (10/11).
 ///
 /// Decorative: the row that holds it carries the label.
 public struct PaperDisc<Content: View>: View {
@@ -15,6 +16,7 @@ public struct PaperDisc<Content: View>: View {
         case current
         case open
         case locked
+        case soon
     }
 
     private let style: Style
@@ -44,14 +46,14 @@ public struct PaperDisc<Content: View>: View {
     }
 
     private var fill: Color {
-        style == .locked ? Tokens.Role.surfaceInactive : Tokens.Role.surfacePaper
+        style == .locked || style == .soon ? Tokens.Role.surfaceInactive : Tokens.Role.surfacePaper
     }
 
     private var shadow: Tokens.Shadow {
         switch style {
         case .current: Tokens.Shadow.offsetAccent
         case .open: Tokens.Shadow.paper3
-        case .locked: Tokens.Shadow.paper2
+        case .locked, .soon: Tokens.Shadow.paper2
         }
     }
 

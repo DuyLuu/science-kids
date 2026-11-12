@@ -4,7 +4,8 @@
 //     digit are reported (md_filename), everything else is ignored;
 //   - a single lesson file: that lesson plus the _topic.md next to it.
 // The content root is scanned for every id (md_id_duplicate) and for the targets of
-// `prerequisites` and `recall_from.lesson`.
+// `prerequisites` and `recall_from.lesson`; contentIndex lists its topics and lessons by id for
+// the checks of syllabus.json (SK-030).
 import { existsSync, readdirSync, readFileSync, realpathSync, statSync } from "node:fs";
 import path from "node:path";
 import { AGE_GROUPS } from "../build/rules.ts";
@@ -143,6 +144,36 @@ function idsOf(doc: ParsedMd): { value: string; line: number }[] {
 }
 
 const frontValue = (doc: ParsedMd, name: string) => doc.frontmatter?.fields.find((field) => field.name === name && field.value !== "")?.value;
+
+export type IndexedTopic = { id: string; slug: string; age_group?: string; file: string };
+export type IndexedLesson = { id: string; slug: string; topic_id?: string; topic_slug: string; file: string };
+/** Shape of ContentIndex in @science-kids/content-schema/syllabus. */
+export type ContentIndex = { root: string; topics: IndexedTopic[]; lessons: IndexedLesson[] };
+
+/**
+ * Every topic (_topic.md) and lesson (<nn>-*.md) under the root that has an id, read from the
+ * frontmatter only (syntax.ts, same parser as validate; never fails). A lesson belongs to the topic
+ * of its folder (validate checks that its `topic:` names that folder). `root` is printed as is.
+ */
+export function contentIndex(root: string, display: (file: string) => string): ContentIndex {
+  const topics: IndexedTopic[] = [];
+  const lessons: IndexedLesson[] = [];
+  const dirs = existsSync(root) && statSync(root).isDirectory() ? topicDirsUnder(root) : [];
+  for (const dir of dirs) {
+    const topicDoc = readParsed(path.join(dir, TOPIC_FILE), display);
+    const topicId = frontValue(topicDoc, "id");
+    const topicSlug = frontValue(topicDoc, "slug") ?? path.basename(dir);
+    if (topicId) topics.push({ id: topicId, slug: topicSlug, age_group: frontValue(topicDoc, "age_group"), file: topicDoc.display });
+    for (const file of lessonFilesOf(dir).lessons) {
+      const doc = readParsed(file, display);
+      const id = frontValue(doc, "id");
+      if (!id) continue;
+      const slug = frontValue(doc, "slug") ?? LESSON_NAME.exec(path.basename(file))![2]!;
+      lessons.push({ id, slug, topic_id: topicId, topic_slug: topicSlug, file: doc.display });
+    }
+  }
+  return { root: display(root), topics, lessons };
+}
 
 /**
  * `exclude`: real paths of the files of this call; their ids come from the full conversion (with

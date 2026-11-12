@@ -487,6 +487,51 @@
       "h": 1900,
       "title": "Thương hiệu · Icon B và khởi động · bản hoàn thiện (SK-029)",
       "radius": 16
+    },
+    "Discoverer-Home-Roadmap.dc.html": {
+      "x": 0,
+      "y": 13550,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 4 · Trang chủ · Bản đồ A · Đường quanh co (đề xuất)",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Home-Roadmap-B.dc.html": {
+      "x": 470,
+      "y": 13550,
+      "w": 390,
+      "h": 844,
+      "title": "Discoverer 4 · Trang chủ · Bản đồ B · Đường mòn bên trái",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Home-Roadmap-Full.dc.html": {
+      "x": 940,
+      "y": 13550,
+      "w": 390,
+      "h": 3000,
+      "title": "Bản đồ A · cả trang cuộn (17 chủ đề)",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Discoverer-Home-Roadmap-B-Full.dc.html": {
+      "x": 1410,
+      "y": 13550,
+      "w": 390,
+      "h": 2286,
+      "title": "Bản đồ B · cả trang cuộn (17 chủ đề)",
+      "radius": 24,
+      "is_interactive": true
+    },
+    "Topic-Icons.dc.html": {
+      "x": 1880,
+      "y": 13550,
+      "w": 1440,
+      "h": 2050,
+      "title": "Icon chủ đề (45) và trạng thái chặng",
+      "radius": 24,
+      "is_interactive": true
     }
   },
   "order": [
@@ -505,6 +550,11 @@
     "Discoverer-Profile.dc.html",
     "Discoverer-Profiles.dc.html",
     "Discoverer-Home.dc.html",
+    "Discoverer-Home-Roadmap.dc.html",
+    "Discoverer-Home-Roadmap-B.dc.html",
+    "Discoverer-Home-Roadmap-Full.dc.html",
+    "Discoverer-Home-Roadmap-B-Full.dc.html",
+    "Topic-Icons.dc.html",
     "Discoverer-Topic.dc.html",
     "Discoverer-Unlock.dc.html",
     "Discoverer-Signup.dc.html",
@@ -751,6 +801,23 @@
       "fill": "orange",
       "size": "m",
       "text": "App icon và màn khởi động (SK-029)\n• Duy chọn 3/11: icon B · Linh vật ló mép giấy; màn khởi động PA2 (nền LaunchBackground cộng hình giữa); không làm màn chào động\n• A và C giữ trên board Brand-Icons để lưu lại\n• Bản hoàn thiện ở board Brand-Final: icon B ba bản Any, Dark, Tinted và LaunchMark. SVG nguồn ở design/brand/, PNG ở design/brand/export/\n• Bản tối: nền đỏ son sẫm tự vẽ, không trong suốt (style E không dùng nền gradient của hệ thống). Bản tinted: ảnh xám trên nền trong suốt, vẽ riêng theo độ sáng để mặt linh vật tách khỏi nền\n• LaunchMark: iPhone 128 pt, iPad 160 pt, nền trong suốt, bóng nướng sẵn; đặt giữa nền #F0E6CF\n• Icon không chữ, không vùng trong suốt ở bản sáng, không nét viền; hình chính trong ô giữa 683 (66%) để sau làm adaptive icon Android\n• PNG xuất bằng Chrome (cùng renderer với canvas). Không dựng lại từ SVG bằng công cụ khác vì filter paperE sẽ mất bóng và vân giấy"
+    },
+    "discovererRoadmapTitle": {
+      "x": 0,
+      "y": 13300,
+      "text": "Discoverer · 5 Bản đồ hành trình (designer 10/11, chờ Duy chọn A hoặc B; màn 4 cũ giữ nguyên tới khi chốt)",
+      "kind": "title1",
+      "maxW": 3320
+    },
+    "discovererRoadmapRules": {
+      "x": 3400,
+      "y": 13550,
+      "text": "Bản đồ hành trình (Duy góp ý 10/11: \"phải nhìn như road map\", \"không có dấu hiệu gì là đã xong\")\n• Một dải giấy sáng uốn lượn nối các chặng, đọc từ trên xuống; mỗi chủ đề là một chặng có icon riêng (bảng icon bên cạnh)\n• Không khoá: chặng nào cũng bấm được, kể cả \"Sắp có\" (mở màn Chủ đề với các bài \"Chưa có nội dung\")\n• Đã xong: mảnh lót và triện lá tre có dấu tích, 3 sao, \"Đã xong · 5/5 bài\" chữ than tre. Phương án: triện đỏ son (xem chú giải)\n• Đang học (thẻ Học tiếp): đĩa to 80, mảnh lót vàng hoè, vòng bài (lá tre đã xong, vàng hoè bài kế, giấy lõm còn lại), avatar của bé đứng cạnh\n• Chưa học: giấy sáng, icon đủ màu, \"Mức 2 · 0/2 bài\". Sắp có: giấy lõm, icon xám nhạt, tên chữ phụ, \"Sắp có\"\n• Cột cây số chia chặng theo năm Oak trong syllabus.json (chủ đề mới · Year 3 · Year 4), mỗi chặng ghi x/n xong; cuối đường có cờ đích\n• A: đường quanh co trái–phải, đĩa 64, nhìn ra bản đồ nhất, khoảng 124pt một chặng. B: đường mòn sát trái, đĩa 56, gọn (86pt một chặng), tên dài dễ đọc hơn\n• Màu đường đi không đổi theo tiến độ: không khoá nên bé có thể xong chặng 9 trước chặng 1\n• Motion: một lượt hiện cho phần trên màn; triện đóng chỉ khi chủ đề vừa xong; chuyển động lặp duy nhất vẫn là nút chơi của thẻ Học tiếp; giảm chuyển động tắt hết\n• Spec cho ios-dev: design/play-ui/journey-roadmap-spec.md"
+    },
+    "discovererRoadmapIpad": {
+      "x": 3400,
+      "y": 14450,
+      "text": "Bản đồ trên iPad (regular width, chưa dựng artboard)\n• Bố cục A của Trang chủ iPad giữ nguyên khung: thanh bên 340 bên trái, cột nội dung bên phải\n• Nếu chọn A: bản đồ chuyển sang cột nội dung, dưới thẻ Học tiếp (cột này đang trống phần dưới), rộng tối đa 600 canh giữa; chặng trái ở x = 70, chặng phải ở x = rộng − 70, chữ rộng tối đa 300\n• Thanh bên giữ 4 tab, thêm danh sách 3 chặng (\"Chặng 1 · 1/5 xong\"…); chạm một chặng thì cuộn bản đồ tới cột cây số đó\n• Nếu chọn B: đường mòn vừa đúng thanh bên 340, giữ hành trình trong thanh bên như hiện nay, chỉ đổi cách vẽ\n• Vùng chạm không co: đĩa 64 (A) hoặc 56 (B), cả hàng là một nút"
     }
   },
   "designSystems": []

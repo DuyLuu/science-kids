@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · introduction-to-sound · trống trường + sóng âm. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#8A5E3B"><rect x="20" y="4" width="3.4" height="30" rx="1.7" transform="rotate(-30 21.7 19)"/><rect x="30" y="4" width="3.4" height="30" rx="1.7" transform="rotate(26 31.7 19)"/><circle cx="14" cy="7.5" r="3"/><circle cx="39" cy="7.2" r="3"/></g>
+  <g fill="#A93A27"><path d="M6 33 V53 A19 6.5 0 0 0 44 53 V33 Z"/></g>
+  <g fill="#E2D4B4"><ellipse cx="25" cy="33" rx="19" ry="6.5"/></g>
+  <g fill="#E2A52A"><rect x="6" y="42" width="38" height="3" /><path d="M50 26 A16 16 0 0 1 50 52 L47.6 49.6 A12.6 12.6 0 0 0 47.6 28.4 Z"/><path d="M55 20 A23 23 0 0 1 55 58 L52.6 55.6 A19.6 19.6 0 0 0 52.6 22.4 Z"/></g>
+</svg>

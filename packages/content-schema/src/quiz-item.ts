@@ -89,6 +89,7 @@ export const TrueFalse = QuizBase.extend({
 export const BankWord = z.strictObject({
   key: Key,
   label: Spoken,
+  image: Image.optional(),
 });
 
 export const FillBlankBank = QuizBase.extend({

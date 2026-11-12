@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · more-about-food-chains · cá lớn đuổi cá nhỏ. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#A93A27"><path d="M4 38 C 7 34, 12 34, 14 38 L18 35 V41 L14 38 C 12 42, 7 42, 4 38 Z"/></g>
+  <g fill="#E2A52A"><path d="M17 28 C 21 21, 30 21, 34 28 L41 23 V33 L34 28 C 30 35, 21 35, 17 28 Z"/></g>
+  <g fill="#2E4A6E"><path d="M30 40 C 32 33, 38 28, 46 28 C 52 28, 55 32, 57 36 L63 29 V51 L57 44 C 55 48, 52 52, 46 52 C 38 52, 32 47, 30 40 Z M30 40 L39 42 L31 46 Z"/></g>
+  <g fill="#FBF6EA"><circle cx="39" cy="35.5" r="3"/><circle cx="21.5" cy="26.6" r="1.8"/></g>
+  <g fill="#1E1B18"><circle cx="38.6" cy="35.6" r="1.5"/><circle cx="21.3" cy="26.7" r="0.9"/></g>
+</svg>

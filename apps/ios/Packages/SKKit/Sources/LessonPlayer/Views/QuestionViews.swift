@@ -132,7 +132,7 @@ struct QuestionPrompt: View {
                 }
                 HStack(alignment: .center, spacing: Tokens.Space.s12) {
                     if let image = item.image {
-                        PlaceholderArt(color: nil, size: metrics.illustration(LessonMetrics.sheetArt), accessibilityLabel: Text(verbatim: image.alt.en))
+                        ContentPicture(image: image, color: nil, size: metrics.illustration(LessonMetrics.sheetArt))
                     }
                     if case .fillBlankBank(let fill) = item.answer {
                         FillBlankSentence(fill: fill, filled: filled, mode: mode, showsSecond: showsSecond, state: blankState)
@@ -373,7 +373,7 @@ struct ChoiceCells: View {
         } label: {
             VStack(spacing: Tokens.Space.s2) {
                 if let image = option.image {
-                    PlaceholderArt(color: nil, size: metrics.illustration(LessonMetrics.cellArt), accessibilityLabel: Text(verbatim: image.alt.en))
+                    ContentPicture(image: image, color: nil, size: metrics.illustration(LessonMetrics.cellArt), box: .fillWidth)
                         .frame(maxHeight: .infinity)
                 }
                 Text(verbatim: mode.sentence(option.label))
@@ -457,6 +457,12 @@ struct TrueFalseCards: View {
 }
 
 /// The word bank of `fill_blank_bank`: one chip per word (3 columns), a dot and the word.
+///
+/// When some word has an `image` (SK-033, Duy 9/11) every word is a picture card instead, the
+/// same cell as a `single_choice` option with a picture: the art (`ContentPicture`: the pack's
+/// picture, or `PlaceholderArt` without one), then the dot and the word, `layout.grid.quiz` high
+/// (104pt on the phone, 150pt in the iPad frame). A word without a picture in such a bank shows its word alone, in a
+/// card of the same height. A bank with no picture keeps its chips as before.
 struct BankChips: View {
     let fill: QuizItem.FillBlankBank
     let display: AnswerDisplay
@@ -466,9 +472,13 @@ struct BankChips: View {
     @Environment(\.ageGroup) private var ageGroup
 
     var body: some View {
-        LazyVGrid(columns: metrics.gridColumns(for: metrics.quizGrid), spacing: Tokens.Space.s10) {
+        let pictures = fill.hasPictures
+        LazyVGrid(
+            columns: metrics.gridColumns(for: metrics.quizGrid),
+            spacing: pictures ? metrics.quizGrid.rowGap : Tokens.Space.s10
+        ) {
             ForEach(Array(fill.bank.enumerated()), id: \.element.key) { index, word in
-                chip(word).reveal(order: index, step: Tokens.Motion.Stagger.stepDense)
+                chip(word, pictures: pictures).reveal(order: index, step: Tokens.Motion.Stagger.stepDense)
             }
         }
         // Room for the marks astride the top edge (SK-013, Duy 31/10).
@@ -492,26 +502,37 @@ struct BankChips: View {
         return markKey(for: display.state(forKey: key, correct: correct), multi: false)
     }
 
-    private func chip(_ word: QuizItem.FillBlankBank.BankWord) -> some View {
+    /// Least height of a word card: the age group's touch target for a chip; for a picture card
+    /// the picture cell of `layout.grid.quiz`, never under the touch target.
+    static func cardHeight(pictures: Bool, metrics: LayoutMetrics, touchTarget: CGFloat) -> CGFloat {
+        pictures ? max(metrics.quizGrid.cellHeight, touchTarget) : touchTarget
+    }
+
+    private func chip(_ word: QuizItem.FillBlankBank.BankWord, pictures: Bool) -> some View {
         let correct = fill.answers.contains(word.key)
         let state = display.state(forKey: word.key, correct: correct)
         let mark = Self.wordMarkKey(display: display, key: word.key, correct: correct).map { Text(LocalizedStringKey($0)) }
         let inactive = !display.canTap(key: word.key) && display.isEditing
+        let height = Self.cardHeight(pictures: pictures, metrics: metrics, touchTarget: ageGroup.touchTarget)
         return Button {
             onTap(word.key)
         } label: {
-            HStack(spacing: Tokens.Space.s8) {
-                Circle()
-                    .fill(inactive ? Tokens.Role.textSecondary : Tokens.Role.textAccent)
-                    .frame(width: LessonMetrics.bankDot, height: LessonMetrics.bankDot)
-                    .accessibilityHidden(true)
-                Text(verbatim: mode.sentence(word.label))
-                    .typography(Tokens.Typography.sentence, fixedBox: true)
-                    .lineLimit(1)
-                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+            Group {
+                if pictures {
+                    VStack(spacing: Tokens.Space.s2) {
+                        if let image = word.image {
+                            ContentPicture(image: image, color: nil, size: metrics.illustration(LessonMetrics.cellArt), box: .fillWidth)
+                                .frame(maxHeight: .infinity)
+                        }
+                        wordLine(word, inactive: inactive)
+                    }
+                    .padding(EdgeInsets(top: Tokens.Space.s6, leading: Tokens.Space.s6, bottom: Tokens.Space.s10, trailing: Tokens.Space.s6))
+                } else {
+                    wordLine(word, inactive: inactive)
+                        .padding(.horizontal, Tokens.Space.s8)
+                }
             }
-            .padding(.horizontal, Tokens.Space.s8)
-            .frame(maxWidth: .infinity, minHeight: ageGroup.touchTarget)
+            .frame(maxWidth: .infinity, minHeight: height)
         }
         .buttonStyle(PaperChoiceStyle(state: state, mark: mark))
         .disabled(!display.canTap(key: word.key))
@@ -519,5 +540,19 @@ struct BankChips: View {
         // VoiceOver: "energy, Đúng", "air, Chưa đúng".
         .accessibilityValue(mark ?? Text(verbatim: ""))
         .accessibilityIdentifier("lesson.word.\(word.key)")
+    }
+
+    /// The dot and the word of a card (greyed dot: a word the child cannot tap now).
+    private func wordLine(_ word: QuizItem.FillBlankBank.BankWord, inactive: Bool) -> some View {
+        HStack(spacing: Tokens.Space.s8) {
+            Circle()
+                .fill(inactive ? Tokens.Role.textSecondary : Tokens.Role.textAccent)
+                .frame(width: LessonMetrics.bankDot, height: LessonMetrics.bankDot)
+                .accessibilityHidden(true)
+            Text(verbatim: mode.sentence(word.label))
+                .typography(Tokens.Typography.sentence, fixedBox: true)
+                .lineLimit(1)
+                .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+        }
     }
 }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · simple-electrical-circuits · pin nối bóng đèn. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#4E4336"><path d="M24 31 H27.5 V36 H11 V48 H14 V39.5 H24 Z"/><path d="M40 31 H36.5 V36 H53 V48 H50 V39.5 H40 Z"/><rect x="24.5" y="26" width="15" height="9" rx="2"/></g>
+  <g fill="#E2A52A"><path d="M32 4 C 41 4, 46 10, 46 17 C 46 22, 42 25, 40 28 H24 C 22 25, 18 22, 18 17 C 18 10, 23 4, 32 4 Z"/></g>
+  <g fill="#2E4A6E"><rect x="8" y="46" width="44" height="14" rx="3"/></g>
+  <g fill="#A93A27"><path d="M38 46 H49 C 50.6 46, 52 47.4, 52 49 V57 C 52 58.6, 50.6 60, 49 60 H38 Z"/><rect x="52" y="50" width="4" height="6" rx="1"/></g>
+</svg>

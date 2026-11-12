@@ -24,12 +24,24 @@ extension QuizItem.Answer {
         }
     }
 
-    /// Formats with a renderer in this build (SK-012 scope). `order_sequence` and
-    /// `picture_bar_chart` have none yet: such a question is left out like an unknown format.
+    /// Formats with a renderer in this build (SK-012 scope) for the Discoverer screens.
+    /// `order_sequence` and `picture_bar_chart` have none there yet: such a question is left out
+    /// like an unknown format.
     public var hasRenderer: Bool {
-        switch self {
-        case .singleChoice, .multiChoice, .trueFalse, .fillBlankBank: true
-        case .orderSequence, .pictureBarChart, .unknown: false
+        hasRenderer(for: .discoverer)
+    }
+
+    /// Formats each presentation can show (SK-040). Explorer shows the three formats of
+    /// `rules.explorer.authoring.quiz_formats` (`single_choice`, `true_false`, `order_sequence`);
+    /// any other format in an Explorer lesson is left out like an unknown one.
+    public func hasRenderer(for presentation: LessonPresentation) -> Bool {
+        switch (presentation, self) {
+        case (.discoverer, .singleChoice), (.discoverer, .multiChoice), (.discoverer, .trueFalse), (.discoverer, .fillBlankBank):
+            true
+        case (.explorer, .singleChoice), (.explorer, .trueFalse), (.explorer, .orderSequence):
+            true
+        default:
+            false
         }
     }
 }

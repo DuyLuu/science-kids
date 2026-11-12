@@ -1,0 +1,338 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi, câu q1, q3 và thẻ q2 là hình vẽ (không có ảnh hợp lệ cho cành mục, vỏ lon, chai không nhãn, đất sét). Ảnh chụp giữ cho từ vựng đất, bùn mịn, chất hữu cơ, góc vườn.",
+  "images": {
+    "w1": {
+      "same_as": "q1_cliffs",
+      "lesson": "da-va-dat/mary-anning-nguoi-san-hoa-thach"
+    },
+    "w1.w1_toy": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b11-w1_toy.jpg",
+        "parts": [
+          {
+            "same_as": "q6",
+            "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+          }
+        ]
+      },
+      "title": "A toy dinosaur",
+      "note": "Designer (agent) 11/11 tách nền ảnh khủng long đồ chơi (Khủng long, CC BY 2.0) theo màu, đặt lên nền kem cho cùng khung với hai lựa chọn kia (tester, Còn chưa chắc 2)."
+    },
+    "w1.w1_coin": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b11-w1_coin.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_old_coin",
+            "lesson": "da-va-dat/nhieu-cach-tao-thanh-hoa-thach"
+          }
+        ]
+      },
+      "title": "An old coin",
+      "note": "Designer (agent) 11/11 tách nền trắng của ảnh đồng xu cổ (bài 9), đặt lên nền kem cho cùng khung."
+    },
+    "w1.w1_skeleton": {
+      "same_as": "explore_finds",
+      "lesson": "da-va-dat/mary-anning-nguoi-san-hoa-thach"
+    },
+    "w2": {
+      "same_as": "ha_long",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "learn.explore.explore_jar": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-explore_jar.jpg",
+        "method": "drawn"
+      },
+      "title": "A jar of water with layers of soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_rock_bits": {
+      "composed": {
+        "file": "content/images/composed/da-va-dat/b11-explore_rock_bits.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_stones"
+          },
+          {
+            "same_as": "tray.tray_sand"
+          },
+          {
+            "same_as": "q2.q2_silt"
+          },
+          {
+            "same_as": "vocab.clay"
+          }
+        ]
+      },
+      "title": "Small stones, sand, silt and clay",
+      "note": "Designer (agent) 11/11 ghép bốn hình vẽ của bài (sỏi, cát, bùn mịn, đất sét) thành một hàng trên nền kem, hạt nhỏ dần từ trái sang phải; không chữ."
+    },
+    "learn.explore.explore_organic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NRCSIA99344_-_Iowa_(3381)(NRCS_Photo_Gallery).tif",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/NRCSIA99344_-_Iowa_%283381%29%28NRCS_Photo_Gallery%29.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dark topsoil with roots",
+      "author": "Photo by Lynn Betts, USDA Natural Resources Conservation Service.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:NRCSIA99344_-_Iowa_(3381)(NRCS_Photo_Gallery).tif",
+      "note": "Mặt cắt đất mặt sẫm màu có rễ, gốc ngô ở trên (USDA NRCS, public domain)."
+    },
+    "learn.explore.explore_spaces": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-explore_spaces.jpg",
+        "method": "drawn"
+      },
+      "title": "Bits of soil with tiny spaces between them",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_sand": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_sand.jpg",
+        "method": "drawn"
+      },
+      "title": "A small pile of sand",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_rotting_leaves": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_rotting_leaves.jpg",
+        "method": "drawn"
+      },
+      "title": "A pile of rotting leaves",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_rain": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_rain.jpg",
+        "method": "drawn"
+      },
+      "title": "Raindrops falling on soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_plastic_bag": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_plastic_bag.jpg",
+        "method": "drawn"
+      },
+      "title": "A plastic bag on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_stones": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_stones.jpg",
+        "method": "drawn"
+      },
+      "title": "A small pile of little stones",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_rotting_twig": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_rotting_twig.jpg",
+        "method": "drawn"
+      },
+      "title": "A rotting twig on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_watering": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_watering.jpg",
+        "method": "drawn"
+      },
+      "title": "Water pouring from a watering can",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_bottle": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_bottle.jpg",
+        "method": "drawn"
+      },
+      "title": "A plastic bottle on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "tray.tray_can": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-tray_can.jpg",
+        "method": "drawn"
+      },
+      "title": "A crushed can on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q1": {
+      "same_as": "vocab.prediction"
+    },
+    "q1.q1_stones": {
+      "same_as": "tray.tray_stones"
+    },
+    "q1.q1_leaves": {
+      "same_as": "tray.tray_rotting_leaves"
+    },
+    "q1.q1_sand": {
+      "same_as": "tray.tray_sand"
+    },
+    "q2": {
+      "same_as": "vocab.soil"
+    },
+    "q2.q2_silt": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q2_silt.jpg",
+        "method": "drawn"
+      },
+      "title": "Smooth silt",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Thẻ q2 vẽ cùng kiểu vì đất sét chỉ vẽ được; ảnh bùn mịn vẫn dùng cho từ silt."
+    },
+    "q2.q2_organic": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q2_organic.jpg",
+        "method": "drawn"
+      },
+      "title": "Dark topsoil with roots and bits of leaf",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Thẻ q2 vẽ cùng kiểu; ảnh đất mặt vẫn dùng ở ô Học."
+    },
+    "q2.q2_clay": {
+      "same_as": "vocab.clay"
+    },
+    "q3": {
+      "same_as": "tray.tray_rotting_twig"
+    },
+    "q3.q3_leaf": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q3_leaf.jpg",
+        "method": "drawn"
+      },
+      "title": "A dry fallen leaf",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Câu q3 vẽ cả bộ vì túi nhựa, cành mục là hình vẽ."
+    },
+    "q3.q3_peel": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q3_peel.jpg",
+        "method": "drawn"
+      },
+      "title": "A banana peel on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q3.q3_root": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q3_root.jpg",
+        "method": "drawn"
+      },
+      "title": "An old root on the ground",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cả câu (hoặc cả kệ) vẽ cùng nét vì có món không có ảnh miễn phí hợp lệ (Commons 11/11)."
+    },
+    "q3.q3_bag": {
+      "same_as": "tray.tray_plastic_bag"
+    },
+    "q4": {
+      "same_as": "vocab.prediction"
+    },
+    "q4.q4_clay_bottom": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q4_clay_bottom.jpg",
+        "method": "drawn"
+      },
+      "title": "A jar with clay at the bottom",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_sand_bottom": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q4_sand_bottom.jpg",
+        "method": "drawn"
+      },
+      "title": "A jar with sand at the bottom",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_stones_bottom": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q4_stones_bottom.jpg",
+        "method": "drawn"
+      },
+      "title": "A jar with stones at the bottom",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q5.jpg",
+        "method": "drawn"
+      },
+      "title": "Water poured on dry soil, with bubbles",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5.q5_air": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q5_air.jpg",
+        "method": "drawn"
+      },
+      "title": "A red balloon",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Cốc nước của bài 3 (q1_water) là hình vẽ nên ba lựa chọn câu q5 cùng vẽ trên nền kem; ảnh bóng bay của Hô hấp không dùng ở đây."
+    },
+    "q5.q5_water": {
+      "same_as": "q1_water",
+      "lesson": "da-va-dat/da-nao-cung-hon"
+    },
+    "q5.q5_soap": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-q5_soap.jpg",
+        "method": "drawn"
+      },
+      "title": "A bar of soap",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Vẽ cùng nét cốc nước bài 3 (brief: hai hình kia là hình vẽ thì vẽ cùng nét)."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kale_and_Cabbage_in_Raised_Garden_Beds_(49200262267).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Kale_and_Cabbage_in_Raised_Garden_Beds_%2849200262267%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A vegetable garden",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Luống cải xanh trên đất nâu (Alabama Extension, CC0); không phải vườn Việt Nam."
+    },
+    "vocab.soil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Soil_Health_NR_07_(39041186902).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Soil_Health_NR_07_%2839041186902%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Garden soil in a hand",
+      "author": "USDA NRCS Montana",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Soil_Health_NR_07_(39041186902).jpg",
+      "note": "Nắm đất vườn sẫm màu trong lòng bàn tay (không găng) (USDA NRCS, public domain); không có ảnh hợp lệ tay đeo găng."
+    },
+    "vocab.silt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Silt_where_the_old_reservoir_was_(29712823066).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Silt_where_the_old_reservoir_was_%2829712823066%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Silt where the old reservoir was (29712823066)",
+      "author": "Robert Ashworth from Bellingham, WA., USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Lớp bùn mịn xám nơi hồ chứa cũ rút nước."
+    },
+    "vocab.organic_matter": {
+      "same_as": "learn.explore.explore_organic"
+    },
+    "vocab.clay": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-clay.jpg",
+        "method": "drawn"
+      },
+      "title": "A lump of soft clay",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh khối đất sét hợp lệ (Commons 11/11)."
+    },
+    "vocab.prediction": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-prediction.jpg",
+        "method": "drawn"
+      },
+      "title": "A jar of muddy water, just shaken",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "reward.spoon_soil_card": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b11-spoon_soil_card.jpg",
+        "method": "drawn"
+      },
+      "title": "A spoon full of soil",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. Không có ảnh thìa đất hợp lệ."
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "note": "SK-039. Designer (agent, bài 8–15) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), kiểm ở trang gốc; hình tự vẽ ở content/images/own/da-va-dat/ (tiền tố bNN-); trang duyệt content/.build/images/da-va-dat/b8-15/<bài>.html. Kệ Chơi toàn ảnh chụp. Hổ phách lấy nguồn vùng biển Baltic hoặc không rõ xuất xứ Myanmar (xem note từng ảnh).",
+  "images": {
+    "w1": {
+      "same_as": "q4",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "w1.w1_dry_leaf": {
+      "same_as": "tray_dry_leaf",
+      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+    },
+    "w1.w1_pressed_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Acer_saccharinum_leaf.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Acer_saccharinum_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pressed leaf",
+      "author": "Editor115138",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Lá phong ép phẳng trên nền giấy trắng, chụp từ trên xuống (không có sách: ảnh lá trong sách mở đều có chữ)."
+    },
+    "w1.w1_leaf_rock": {
+      "same_as": "tray_leaf_fossil",
+      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+    },
+    "w2": {
+      "same_as": "w1_stone",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "learn.explore.explore_amber": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b09-explore_amber.jpg",
+        "method": "drawn"
+      },
+      "title": "Resin traps an ant, then becomes amber",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_minerals": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b09-explore_minerals.jpg",
+        "method": "drawn"
+      },
+      "title": "Water seeping into a buried log",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_soft": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Monterey_Aquarium._Jellyfish._(8113900798).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Monterey_Aquarium._Jellyfish._%288113900798%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jellyfish in blue water",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Sứa trong suốt trên nền nước xanh (thuỷ cung Monterey)."
+    },
+    "learn.explore.explore_palaeo": {
+      "same_as": "palaeontologist",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "tray.tray_amber_insect": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Neotype_male_of_Electrostephanus_petiolatus_Brues_in_Baltic_amber_(AMNH_B-JWJ-260).png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Neotype_male_of_Electrostephanus_petiolatus_Brues_in_Baltic_amber_%28AMNH_B-JWJ-260%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Neotype male of Electrostephanus petiolatus Brues in Baltic amber (AMNH B-JWJ-260)",
+      "author": "Engel M, Ortega-Blanco J (2008)",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Côn trùng (ong nhỏ) trong hổ phách Baltic."
+    },
+    "tray.tray_old_pot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Miaoshang,_pottery_jar,_Warring_States_period,_Tomb_M971.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Miaoshang%2C_pottery_jar%2C_Warring_States_period%2C_Tomb_M971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An old clay pot",
+      "author": "Furius",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Bình gốm thời Chiến Quốc, nền trắng, không nhãn; màu xám thay cho nâu đất."
+    },
+    "tray.tray_stone_wood": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Petrified_wood_log_with_geode_(ee0f475f-d37c-400b-b1a7-b2d5451a06b1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Petrified_wood_log_with_geode_%28ee0f475f-d37c-400b-b1a7-b2d5451a06b1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A log turned to rock",
+      "author": "Jacob W. Frank",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Petrified_wood_log_with_geode_(ee0f475f-d37c-400b-b1a7-b2d5451a06b1).jpg",
+      "note": "Khúc gỗ hoá đá ngoài trời (Petrified Forest, public domain)."
+    },
+    "tray.tray_leaf_fossil": {
+      "same_as": "tray_leaf_fossil",
+      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+    },
+    "tray.tray_old_coin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2017T928._Corroded_coin_clump,_as_received._Remains_of_legend_visible._(FindID_870181).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2017T928._Corroded_coin_clump%2C_as_received._Remains_of_legend_visible._%28FindID_870181%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2017T928. Corroded coin clump, as received. Remains of legend visible.",
+      "author": "The British Museum, Pippa Pearce, 2017-12-27 14:20:12",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Hai đồng xu đồng cổ gỉ dính nhau, không đọc được chữ (British Museum PAS, CC BY 2.0)."
+    },
+    "tray.tray_amber_spider": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jumping_spider_in_amber.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Jumping_spider_in_amber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A jumping spider in Baltic amber",
+      "author": "Kaldari",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Nhện nhảy trong hổ phách Baltic: trang gốc Commons ghi \"Jumping spider in Baltic amber\" (CC0); thay ảnh cũ không ghi xuất xứ (phiên chính chốt 11/11)."
+    },
+    "tray.tray_stone_shell": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fossil_Snail_(50677138301).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Fossil_Snail_%2850677138301%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A fossil snail",
+      "author": "GlacierNPS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Fossil_Snail_(50677138301).jpg",
+      "note": "Vỏ ốc hoá đá xám trên lòng bàn tay người lớn (Glacier NPS, public domain); không có ảnh mẫu vật nền trơn hợp lệ."
+    },
+    "tray.tray_rock_print": {
+      "same_as": "tray_rock_print",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "tray.tray_old_lamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kerosene_Lamp_and_glass_03.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kerosene_Lamp_and_glass_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Kerosene Lamp and glass 03",
+      "author": "Geossegawa",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Đèn dầu hoả cũ có bầu thuỷ tinh, gỉ, không chữ."
+    },
+    "q1": {
+      "same_as": "vocab.resin"
+    },
+    "q1.q1_amber": {
+      "same_as": "vocab.amber"
+    },
+    "q1.q1_ice": {
+      "same_as": "q1_ice",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q1.q1_glass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_and_green_sea_glass.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/White_and_green_sea_glass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White and green sea glass",
+      "author": "Paul VanDerWerf",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Thuỷ tinh biển xanh lá và trắng (không có ảnh thuỷ tinh nâu hợp lệ); đề xuất đổi alt."
+    },
+    "q2": {
+      "same_as": "q2_museum",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "q2.q2_rocks": {
+      "same_as": "granite",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q2.q2_fossils": {
+      "same_as": "tray_ammonite",
+      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+    },
+    "q2.q2_stars": {
+      "same_as": "q5",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
+    },
+    "q3": {
+      "same_as": "magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
+    },
+    "q3.q3_amber": {
+      "same_as": "tray.tray_amber_insect"
+    },
+    "q3.q3_mortar": {
+      "same_as": "tray_mortar",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "q3.q3_shell": {
+      "same_as": "tray.tray_stone_shell"
+    },
+    "q3.q3_brick": {
+      "same_as": "tray_brick",
+      "lesson": "da-va-dat/lam-quen-voi-da"
+    },
+    "q4": {
+      "same_as": "tray.tray_stone_wood"
+    },
+    "q4.q4_fire": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_Fire.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Close-up_of_a_Fire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Close-up of a Fire",
+      "author": "Thomas Kirchel",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Khúc gỗ đang cháy, không người."
+    },
+    "q4.q4_sun": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_fallen_log_of_a_tree.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/A_fallen_log_of_a_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A fallen log of a tree",
+      "author": "Awinsongyababa",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Khúc gỗ khô nằm dưới nắng trên đất đỏ; cột điện rất xa."
+    },
+    "q4.q4_minerals": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mammoth_Hot_Springs_Terraces_(41171346502).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mammoth_Hot_Springs_Terraces_%2841171346502%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water over white mineral terraces",
+      "author": "Yellowstone National Park",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Mammoth_Hot_Springs_Terraces_(41171346502).jpg",
+      "note": "Nước chảy qua bậc thềm khoáng trắng ở Mammoth Hot Springs (Yellowstone NPS, public domain)."
+    },
+    "q4.q4_resin": {
+      "same_as": "vocab.resin"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:El_Nido_Bay,_Coral_in_shallow_sea_water,_Palawan,_Philippines.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/El_Nido_Bay%2C_Coral_in_shallow_sea_water%2C_Palawan%2C_Philippines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "El Nido Bay, Coral in shallow sea water, Palawan, Philippines",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Nước biển nông trong, thấy đáy cát và san hô."
+    },
+    "q5.q5_jellyfish": {
+      "same_as": "learn.explore.explore_soft"
+    },
+    "q5.q5_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lithodes_maja_underwater_inner_cheliped_spines.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lithodes_maja_underwater_inner_cheliped_spines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lithodes maja underwater inner cheliped spines",
+      "author": "Vsevolod Rudyi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Cua hoàng đế dưới nước, thấy càng và mai."
+    },
+    "q5.q5_octopus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_octopus_eating_a_piece_of_mussel_on_a_rock.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Young_octopus_eating_a_piece_of_mussel_on_a_rock.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young octopus eating a piece of mussel on a rock",
+      "author": "Toto-720",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Bạch tuộc con trên đá dưới nước."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tambour-song-da2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Tambour-song-da2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A Dong Son bronze drum",
+      "author": "Unknown",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Tambour-song-da2.jpg",
+      "note": "Trống đồng Sông Đà (Đông Sơn), nhìn chéo thấy mặt trống, không biển tên."
+    },
+    "vocab.resin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cedar_Fire-California_(20160824-FS-LSC-1116).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Cedar_Fire-California_%2820160824-FS-LSC-1116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Resin on a tree trunk",
+      "author": "USDAgov",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cedar_Fire-California_(20160824-FS-LSC-1116).jpg",
+      "note": "Nhựa cây vàng cam trên vỏ cây (USDA, public domain); đổi tên trung tính."
+    },
+    "vocab.amber": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Baltic-amber-colours.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Baltic-amber-colours.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Baltic-amber-colours",
+      "author": "PrinWest Handelsagentur J. Kossowski",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Nhiều mẩu hổ phách Baltic nhiều màu trên nền đen."
+    },
+    "vocab.palaeontology": {
+      "same_as": "palaeontologist",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+    },
+    "vocab.soft_body": {
+      "same_as": "learn.explore.explore_soft"
+    },
+    "reward.amber_insect_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yantaromyrmex_geinitzi_MBI2290_02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Yantaromyrmex_geinitzi_MBI2290_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yantaromyrmex geinitzi MBI2290 02",
+      "author": "Vincent Perrichot",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.86,
+        "height": 0.86
+      },
+      "note": "Kiến Yantaromyrmex trong hổ phách Baltic (Perrichot, CC BY 4.0); cắt bỏ thước tỉ lệ có chữ."
+    }
+  }
+}

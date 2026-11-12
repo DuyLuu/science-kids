@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · reproduction-and-life-cycles-plants · ong và hoa (thụ phấn). Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#A93A27"><circle cx="22" cy="31" r="8"/><circle cx="33" cy="38" r="8"/><circle cx="29" cy="51" r="8"/><circle cx="15" cy="51" r="8"/><circle cx="11" cy="38" r="8"/></g>
+  <g fill="#B97F16"><circle cx="22" cy="42" r="6.5"/></g>
+  <g fill="#E2D4B4"><ellipse cx="43" cy="10" rx="6" ry="8" transform="rotate(-30 43 10)"/><ellipse cx="53" cy="11" rx="5" ry="7" transform="rotate(30 53 11)"/></g>
+  <g fill="#E2A52A"><ellipse cx="48" cy="22" rx="11" ry="8" transform="rotate(-15 48 22)"/></g>
+  <g fill="#1E1B18"><path d="M45 14.6 C 47.6 16, 48.6 22, 47.4 29.6 L44 30 C 45.4 23, 45 18, 42.4 15.6 Z"/><path d="M52 13.6 C 54.6 15.6, 55.6 21, 54.4 27.4 L51.4 28.4 C 52.4 22, 52 17, 49.4 14.4 Z"/><circle cx="38.6" cy="25" r="1.3"/></g>
+</svg>

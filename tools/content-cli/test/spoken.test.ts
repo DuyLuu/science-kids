@@ -43,6 +43,16 @@ describe("chuỗi Spoken lấy theo schema", () => {
     }
   });
 
+  test("hình của thẻ từ fill_blank_bank (SK-033): alt là Text, không đọc; nhãn vẫn đọc", () => {
+    const doc = readJson(LESSON_FILE) as any;
+    const w = doc.warmup.findIndex((item: { format: string }) => item.format === "fill_blank_bank");
+    doc.warmup[w].bank[0].image = { alt: { en: "Air bubbles in water", vi: "Bọt khí trong nước" }, brief: "Bọt khí" };
+    const pointers = collectSpoken("lesson", doc).map(({ pointer }) => pointer);
+    assert.equal(pointers.length, lesson.length);
+    assert.ok(pointers.includes(`/warmup/${w}/bank/0/label`));
+    assert.deepEqual(pointers.filter((pointer) => pointer.includes("/image")), []);
+  });
+
   test("thứ tự theo tài liệu", () => {
     assert.equal(lesson[0]!.pointer, "/title");
     assert.equal(lesson.at(-1)!.pointer, "/reward/collectible/fact");

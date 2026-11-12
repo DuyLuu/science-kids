@@ -16,7 +16,7 @@ import { runImport, runIds, runMarkdownValidate } from "../src/markdown/command.
 import { DIFFICULTY_KEYS, LEARN_TYPES, PLAY_TYPES, QUIZ_FORMATS_MD } from "../src/markdown/convert.ts";
 import { formatMdIssue, MD_CODES, type MdIssue } from "../src/markdown/source.ts";
 import { QUIZ_FORMATS } from "../src/validate/format-renderers.ts";
-import { CLI_ROOT, LESSON_FILE, TOPIC_FILE } from "./helpers.ts";
+import { CLI_ROOT, LESSON_FILE, rulesFileWithoutImageChecks, TOPIC_FILE } from "./helpers.ts";
 
 const cli = path.join(CLI_ROOT, "src", "cli.ts");
 const REPO = path.resolve(CLI_ROOT, "..", "..");
@@ -76,7 +76,7 @@ function check(root: string, inputs: string[] = [TOPIC_REL]): Extract<MdReport, 
   const report = checkMarkdown({
     inputs: inputs.map((input) => path.join(root, input)),
     contentRoot: root,
-    rulesFile: DEFAULT_RULES_FILE,
+    rulesFile: rulesFileWithoutImageChecks(),
     minAppVersion: "0.1.0",
     display: relativeTo(root),
     idsCommand: (file) => `ids ${file}`,
@@ -102,7 +102,7 @@ function quiet(run: () => number): { status: number; out: string } {
 const mdOptions = (root: string, inputs: string[]) => ({
   inputs: inputs.map((input) => path.join(root, input)),
   contentRoot: root,
-  rulesFile: DEFAULT_RULES_FILE,
+  rulesFile: rulesFileWithoutImageChecks(),
   minAppVersion: "0.1.0",
   cwd: root,
   display: relativeTo(root),
@@ -154,7 +154,7 @@ describe("bài 1: markdown -> JSON khớp fixture (A1, A2)", () => {
       { file: `${TOPIC_REL}/_topic.md`, line: 46, pointer: "/", code: "md_needs_check" },
       { file: LESSON_REL, line: 41, pointer: "/", code: "md_needs_check" },
     ]);
-    assert.match(warningsOf(report)[0]!.message, /2 dòng \[CẦN KIỂM\] \(dòng 46, 52\)/);
+    assert.match(warningsOf(report)[0]!.message, /2 dòng \[CẦN KIỂM\] \(dòng 46, 55\)/);
     assert.match(warningsOf(report)[1]!.message, /5 dòng \[CẦN KIỂM\] \(dòng 41, 74, 162, 447, 625\)/);
   });
 
@@ -370,7 +370,7 @@ describe("gọi lệnh (D2) và không nạp tts (D1)", () => {
   });
 
   test("validate JSON giữ nguyên hành vi (exit 0, không có dòng nào có [)", () => {
-    const result = run(["validate", TOPIC_FILE, LESSON_FILE]);
+    const result = run(["validate", TOPIC_FILE, LESSON_FILE, "--rules", rulesFileWithoutImageChecks()]);
     assert.equal(result.status, 0);
     assert.match(result.out, /nhóm discoverer · 0 lỗi · 0 cảnh báo/);
   });
@@ -426,7 +426,7 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     assert.deepEqual([...DIFFICULTY_KEYS], props("topic.schema.json", "Difficulty"));
   });
 
-  test("bài có order_sequence, picture_bar_chart và sentence_card: khoá theo properties (option: key, label, correct, image như fixture)", () => {
+  test("bài có order_sequence, picture_bar_chart, sentence_card và hình thẻ từ: khoá theo properties (option: key, label, correct, image như fixture)", () => {
     const q2 = /### q2\n[\s\S]*?(?=### q3\n)/;
     const q4 = /### q4\n[\s\S]*?(?=### q5\n)/;
     const root = materialize("orders");
@@ -434,6 +434,7 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     let text = readFileSync(file, "utf8");
     text = text.replace(q2, `### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: order_sequence\nversion: 1\ndok: 1\nprompt.en: Put them in order\nprompt.vi: Xếp theo thứ tự\nhint.en: Start small.\nhint.vi: Bắt đầu từ nhỏ.\nexplanation_correct.en: Yes.\nexplanation_correct.vi: Đúng.\nexplanation_wrong.en: No.\nexplanation_wrong.vi: Chưa đúng.\nanswer: q2_seed, q2_sprout, q2_plant\n\n#### item q2_seed\nlabel.en: seed\nlabel.vi: hạt\nimage.brief: Hạt\nimage.alt.en: A seed\nimage.alt.vi: Hạt\n\n#### item q2_sprout\nlabel.en: sprout\nlabel.vi: mầm\n\n#### item q2_plant\nlabel.en: plant\nlabel.vi: cây\n\n`);
     text = text.replace(q4, `### q4\nid: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\nformat: picture_bar_chart\nversion: 1\ndok: 2\nprompt.en: Which fruit do most children like?\nprompt.vi: Quả nào nhiều bạn thích nhất?\nhint.en: Find the tallest bar.\nhint.vi: Tìm cột cao nhất.\nexplanation_correct.en: Mango.\nexplanation_correct.vi: Xoài.\nexplanation_wrong.en: It is mango.\nexplanation_wrong.vi: Là xoài.\nchart.title.en: Fruit we like\nchart.title.vi: Quả chúng mình thích\nchart.unit.en: children\nchart.unit.vi: bạn\n\n#### bar q4_bar_mango\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\nvalue: 7\n\n#### bar q4_bar_banana\nlabel.en: banana\nlabel.vi: chuối\nvalue: 3\n\n#### option q4_mango\ncorrect: true\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\n\n#### option q4_banana\ncorrect: false\nlabel.en: banana\nlabel.vi: chuối\n\n#### option q4_lime\ncorrect: false\nlabel.en: lime\nlabel.vi: chanh\n\n`);
+    text = text.replace("#### bank w1_air\nlabel.en: air\nlabel.vi: không khí\n", "#### bank w1_air\nlabel.en: air\nlabel.vi: không khí\nimage.brief: Bọt khí trong cốc nước\nimage.alt.en: Air bubbles in water\nimage.alt.vi: Bọt khí trong nước\n");
     text = text.replace("\n## Chơi\n", "\n### bridge\nid: 0d6a1c55-8a7e-4c1f-9b55-1f2e3d4c5b6a\ntype: sentence_card\nversion: 1\nmin_app_version: 0.1.0\ntext.en: Vegetables give us vitamins.\ntext.vi: Rau cho ta vitamin.\nimage.brief: Rổ rau\nimage.alt.en: A basket of vegetables\nimage.alt.vi: Rổ rau\n\n## Chơi\n");
     writeFileSync(file, text);
     const report = check(root);
@@ -452,6 +453,11 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     ordered(keysIn(lesson.quiz[5].labels), props("quiz-item.schema.json", "TrueFalseLabels"));
     ordered(keysIn(lesson.warmup[0]), quizItem("FillBlankBank"));
     ordered(keysIn(lesson.warmup[0].recall_from), props("quiz-item.schema.json", "RecallFromPriorKnowledge"));
+    // SK-033: a bank word may carry an image, read like an option's image.
+    ordered(keysIn(lesson.warmup[0].bank[0]), props("quiz-item.schema.json", "BankWord"));
+    assert.deepEqual(lesson.warmup[0].bank[0].image, { alt: { en: "Air bubbles in water", vi: "Bọt khí trong nước" }, brief: "Bọt khí trong cốc nước" });
+    assert.deepEqual(keysIn(lesson.warmup[0].bank[0]), ["key", "label", "image"]);
+    assert.equal(lesson.warmup[0].bank[1].image, undefined);
     ordered(keysIn(lesson.play), merged("block.schema.json", "BlockBase", "BuildTray"));
     ordered(keysIn(lesson.play.messages), props("block.schema.json", "TrayMessages"));
     ordered(keysIn(lesson.play.items[0]), props("block.schema.json", "TrayItem"));

@@ -1,0 +1,234 @@
+{
+  "note": "SK-038. Designer (agent) chọn và vẽ 11/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/thoi-tiet-va-thien-tai/; trang duyệt content/.build/images/thoi-tiet-va-thien-tai/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "explore_cloudy",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may"
+    },
+    "w1.w1_shadow": {
+      "same_as": "tray_shadow",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may"
+    },
+    "w1.w1_kite": {
+      "same_as": "tray.tray_kite",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may",
+      "note": "Ba lựa chọn cùng là hình vẽ (bóng cây, vũng nước của bài một nay là hình vẽ)."
+    },
+    "w1.w1_puddle": {
+      "same_as": "tray_puddle",
+      "lesson": "thoi-tiet-va-thien-tai/nang-mua-gio-may"
+    },
+    "w2": {
+      "same_as": "q3_rain",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "learn.explore.explore_thermometer": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.learn.explore.explore_thermometer.jpg",
+        "method": "drawn"
+      },
+      "title": "A thermometer in the shade",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_rain_gauge": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.learn.explore.explore_rain_gauge.jpg",
+        "method": "drawn"
+      },
+      "title": "A rain gauge in an open garden",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_windsock": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.learn.explore.explore_windsock.jpg",
+        "method": "drawn"
+      },
+      "title": "A windsock full of wind",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "learn.explore.explore_feelings": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.learn.explore.explore_feelings.jpg",
+        "method": "drawn"
+      },
+      "title": "Two children, one in a jacket",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_fan": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.tray.tray_fan.jpg",
+        "method": "drawn"
+      },
+      "title": "A desk fan",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_thermometer": {
+      "same_as": "learn.explore.explore_thermometer"
+    },
+    "tray.tray_umbrella": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.tray.tray_umbrella.jpg",
+        "method": "drawn"
+      },
+      "title": "An open umbrella",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_windsock": {
+      "same_as": "learn.explore.explore_windsock"
+    },
+    "tray.tray_bottle": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.tray.tray_bottle.jpg",
+        "method": "drawn"
+      },
+      "title": "A rain gauge made from a bottle",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_flask": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.tray.tray_flask.jpg",
+        "method": "drawn"
+      },
+      "title": "A hot water flask",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_ribbon": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.tray.tray_ribbon.jpg",
+        "method": "drawn"
+      },
+      "title": "A red ribbon blowing on a stick",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "tray.tray_rain_gauge": {
+      "same_as": "learn.explore.explore_rain_gauge"
+    },
+    "q1": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q1.q1_flask": {
+      "same_as": "tray.tray_flask"
+    },
+    "q1.q1_thermometer": {
+      "same_as": "learn.explore.explore_thermometer"
+    },
+    "q1.q1_fan": {
+      "same_as": "tray.tray_fan"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_windsock"
+    },
+    "q2.q2_wind": {
+      "same_as": "w1",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
+    },
+    "q2.q2_rain": {
+      "same_as": "q1_rain",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q2.q2_sun": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q3": {
+      "same_as": "w1_sky",
+      "lesson": "be-mat-trai-dat/cac-chau-luc-va-dai-duong"
+    },
+    "q3.q3_umbrella": {
+      "same_as": "tray.tray_umbrella"
+    },
+    "q3.q3_windsock": {
+      "same_as": "learn.explore.explore_windsock"
+    },
+    "q3.q3_clock": {
+      "same_as": "tray.tray_clock",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the",
+      "note": "Đồng hồ treo tường vẽ sẵn của Não bộ (mặt chỉ có vạch, không số), đúng brief."
+    },
+    "q3.q3_flag": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q3.q3_flag.jpg",
+        "method": "drawn"
+      },
+      "title": "A red flag on a small boat",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "Three rain gauges in a row",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_left": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q4.q4_left.jpg",
+        "method": "drawn"
+      },
+      "title": "The gauges, with the left one marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_middle": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q4.q4_middle.jpg",
+        "method": "drawn"
+      },
+      "title": "The gauges, with the middle one marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q4.q4_right": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q4.q4_right.jpg",
+        "method": "drawn"
+      },
+      "title": "The gauges, with the right one marked",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q5.jpg",
+        "method": "drawn"
+      },
+      "title": "Mai puts a gauge under a big tree",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    },
+    "q6": {
+      "same_as": "explore_faster",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "vocab.thermometer": {
+      "same_as": "learn.explore.explore_thermometer"
+    },
+    "vocab.temperature": {
+      "same_as": "q3_sun",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "vocab.rain_gauge": {
+      "same_as": "learn.explore.explore_rain_gauge"
+    },
+    "vocab.windsock": {
+      "same_as": "learn.explore.explore_windsock"
+    },
+    "vocab.measure": {
+      "same_as": "q4"
+    },
+    "reward.weather_box": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tomasz%C3%B3w_Mazowiecki,_wojew%C3%B3dztwo_%C5%82%C3%B3dzkie._Stacja_meteo_przy_Universytecie_%C5%81%C3%B3dzkim_w_Tomaszowie_Mazowieckim._PL,_EU,_CC0.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Tomasz%C3%B3w_Mazowiecki%2C_wojew%C3%B3dztwo_%C5%82%C3%B3dzkie._Stacja_meteo_przy_Universytecie_%C5%81%C3%B3dzkim_w_Tomaszowie_Mazowieckim._PL%2C_EU%2C_CC0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A white weather box on legs",
+      "author": "Warszawska róg Szerokiej w Tomaszowie Mazowieckim, w województwie łódzkim PL,EU, CC0",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.04,
+        "width": 0.47,
+        "height": 0.96
+      },
+      "note": "Lều khí tượng gỗ trắng có khe chớp trên chân cao, bãi cỏ trạm khí tượng (Ba Lan); cắt bỏ phần toà nhà bên phải; không chữ, không người. Tên gốc trên Commons: trạm khí tượng ở Tomaszów Mazowiecki (CC0, đổi tên trung tính)."
+    }
+  }
+}

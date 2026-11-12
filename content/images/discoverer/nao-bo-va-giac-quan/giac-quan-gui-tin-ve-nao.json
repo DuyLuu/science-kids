@@ -1,0 +1,325 @@
+{
+  "note": "SK-037. Designer (agent) chọn 10/11/2026, chờ Duy duyệt. Ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công); hình tự vẽ ở content/images/own/nao-bo-va-giac-quan/; chi tiết và chỗ còn trống ở content/.build/images/nao-bo-va-giac-quan/<bài>/review.html.",
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_move",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w1.w1_heart": {
+      "same_as": "tray.tray_heart",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w1.w1_brain": {
+      "same_as": "q2.q2_brain",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "w1.w1_stomach": {
+      "same_as": "tray.tray_stomach",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "w2": {
+      "same_as": "tray.tray_veins",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "learn.explore.explore_five": {
+      "composed": {
+        "file": "content/images/composed/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.learn.explore.explore_five.jpg",
+        "parts": [
+          {
+            "same_as": "w1.w1_eye",
+            "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+          },
+          {
+            "same_as": "w1.w1_ear",
+            "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+          },
+          {
+            "same_as": "tray.tray_nose",
+            "lesson": "ho-hap/duong-di-cua-khong-khi"
+          },
+          {
+            "same_as": "q1.q1_tongue"
+          },
+          {
+            "same_as": "q5.q5_hand",
+            "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+          }
+        ]
+      },
+      "title": "An eye, an ear, a nose, a tongue and a hand",
+      "note": "Designer (agent) 10/11 ghép năm hình vẽ của bộ giác quan thành năm ô giấy trên nền kem, ảnh vuông 1024×1024 (ô Học, thẻ từ là ô vuông), xếp ba trên hai dưới để mỗi hình đủ lớn; mũi là hình của Hô hấp. Không nhãn, không chữ."
+    },
+    "learn.explore.explore_send": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.learn.explore.explore_send.jpg",
+        "method": "drawn"
+      },
+      "title": "A school drum",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh trống trường Việt Nam hợp giấy phép (Commons chỉ có trống đồng, ảnh người); vẽ trống gỗ sơn đỏ mặt da trên giá chữ X, có dùi; không băng rôn, không chữ."
+    },
+    "learn.explore.explore_join": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Sweetness_By_Raju_C_Reddy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Golden_Sweetness_By_Raju_C_Reddy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Sweetness By Raju C Reddy",
+      "author": "rajucreddy",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "learn.explore.explore_taste": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Big_Bowl_-_The_Big_Bowl_2024-12-18.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/The_Big_Bowl_-_The_Big_Bowl_2024-12-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Big Bowl - The Big Bowl 2024-12-18",
+      "author": "Andy Li",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.22,
+        "width": 0.66,
+        "height": 0.72
+      },
+      "note": "Bát phở bò viên và đĩa rau trên bàn gỗ, không người; cắt bỏ giấy gói đũa có chữ ở bên phải."
+    },
+    "tray.tray_rooster": {
+      "same_as": "w1",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "tray.tray_rainbow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Rainbow_over_Hanalei_National_Wildlife_Refuge_%2854108999762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rainbow over Hanalei National Wildlife Refuge (54108999762)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "note": "Cầu vồng trên ruộng khoai môn xanh (Hawaii), gần cảnh ruộng lúa nhất trong ảnh hợp giấy phép."
+    },
+    "tray.tray_jasmine": {
+      "same_as": "w2",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "tray.tray_kitten": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fluffies_f_sh_dilute_calico_0226_(4117879169).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Fluffies_f_sh_dilute_calico_0226_%284117879169%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fluffies f sh dilute calico 0226 (4117879169)",
+      "author": "Rocky Mountain Feline Rescue (formerly known as Animal Rescue and Adpotion Society)",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_rain_roof": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hard_rain_on_a_roof_-_bw.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hard_rain_on_a_roof_-_bw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hard rain on a roof - bw",
+      "author": "W.carter",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mưa rơi trên mái nhà, hạt nước bắn lên (không có ảnh mái tôn lượn sóng hợp giấy phép)."
+    },
+    "tray.tray_corn": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Charcoal_20230810_184556.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Charcoal_20230810_184556.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Charcoal 20230810 184556",
+      "author": "Ka23 13",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1,
+        "top": 0,
+        "width": 0.9,
+        "height": 1
+      },
+      "note": "Ngô nướng trên than hồng; cắt bỏ bàn tay đeo găng ở mép trái."
+    },
+    "tray.tray_butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Butterfly_on_a_flower_-_Bergen,_Norway.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Butterfly_on_a_flower_-_Bergen%2C_Norway.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Butterfly on a flower - Bergen, Norway",
+      "author": "TimOve",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Child_washing_hands_closeup.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Child_washing_hands_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Child washing hands closeup",
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Đôi tay nhỏ hứng vòi nước, không thấy mặt."
+    },
+    "q1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lime-Whole-Split.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lime-Whole-Split.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lime-Whole-Split",
+      "author": "Evan-Amos",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.5,
+        "top": 0,
+        "width": 0.5,
+        "height": 1
+      },
+      "note": "Cắt lấy nửa quả chanh cắt đôi (ảnh gốc có cả quả nguyên)."
+    },
+    "q1.q1_tongue": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q1.q1_tongue.jpg",
+        "method": "drawn"
+      },
+      "title": "A tongue",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người."
+    },
+    "q1.q1_ear": {
+      "same_as": "w1.w1_ear",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q1.q1_eye": {
+      "same_as": "w1.w1_eye",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_send"
+    },
+    "q2.q2_veins": {
+      "same_as": "tray.tray_veins",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "q2.q2_nerves": {
+      "same_as": "q4.q4_nerve",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "q2.q2_wires": {
+      "same_as": "tray.tray_wire",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BIRD_RESTS_IN_TRAFFIC_LIGHT_AT_ROOSEVELT_AND_23RD_STREET_-_NARA_-_544065.tif",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/BIRD_RESTS_IN_TRAFFIC_LIGHT_AT_ROOSEVELT_AND_23RD_STREET_-_NARA_-_544065.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "BIRD RESTS IN TRAFFIC LIGHT AT ROOSEVELT AND 23RD STREET",
+      "author": "Cornelius M. Keyes",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:BIRD_RESTS_IN_TRAFFIC_LIGHT_AT_ROOSEVELT_AND_23RD_STREET_-_NARA_-_544065.tif",
+      "note": "Đèn đỏ đang sáng, nền trời, không số đếm ngược, không chữ."
+    },
+    "q3.q3_tongue": {
+      "same_as": "q1.q1_tongue"
+    },
+    "q3.q3_eye": {
+      "same_as": "w1.w1_eye",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "q3.q3_nerve": {
+      "same_as": "q4.q4_nerve",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "q3.q3_veins": {
+      "same_as": "tray.tray_veins",
+      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q4.jpg",
+        "method": "drawn"
+      },
+      "title": "A child with a blindfold, seen from behind",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Không có ảnh bạn nhỏ bịt mắt nhìn từ sau hợp giấy phép, nên vẽ theo phương án trong brief: khăn đỏ buộc sau đầu, hai tay đưa ra trước, không nét mặt."
+    },
+    "q4.q4_pillow": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q4.q4_pillow.jpg",
+        "method": "drawn"
+      },
+      "title": "A pillow",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ riêng cho câu q4 để ba lựa chọn cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh hòn cuội nền trơn hợp giấy phép."
+    },
+    "q4.q4_kitten": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q4.q4_kitten.jpg",
+        "method": "drawn"
+      },
+      "title": "A kitten curled up",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ riêng cho câu q4 để ba lựa chọn cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh hòn cuội nền trơn hợp giấy phép."
+    },
+    "q4.q4_stone": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q4.q4_stone.jpg",
+        "method": "drawn"
+      },
+      "title": "A smooth stone",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ riêng cho câu q4 để ba lựa chọn cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh hòn cuội nền trơn hợp giấy phép."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chi_Linh_Park_Hanoi_market_(62066).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Chi_Linh_Park_Hanoi_market_%2862066%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chi Linh Park Hanoi market (62066)",
+      "author": "JakobHosp",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0.12,
+        "width": 0.52,
+        "height": 0.5
+      },
+      "note": "Sạp hoa quả ở chợ Hà Nội; cắt lấy phần trên (đu đủ, chuối, cam, xoài), bỏ hai người bán, thẻ mã QR và nhãn có chữ."
+    },
+    "q5.q5_apple": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q5.q5_apple.jpg",
+        "method": "drawn"
+      },
+      "title": "A red apple",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để ba quả của câu q5 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh một quả chuối nền trơn, không chữ, hợp giấy phép."
+    },
+    "q5.q5_banana": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q5.q5_banana.jpg",
+        "method": "drawn"
+      },
+      "title": "A ripe banana",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để ba quả của câu q5 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh một quả chuối nền trơn, không chữ, hợp giấy phép."
+    },
+    "q5.q5_strawberry": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q5.q5_strawberry.jpg",
+        "method": "drawn"
+      },
+      "title": "A strawberry",
+      "note": "Designer (agent) 10/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét các hình tự vẽ của Bề mặt Trái Đất, Khủng long, Hô hấp: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không nét mặt người. Vẽ để ba quả của câu q5 cùng là hình vẽ (phiên chính 10/11 tối): không có ảnh một quả chuối nền trơn, không chữ, hợp giấy phép."
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_taste"
+    },
+    "vocab.sense": {
+      "same_as": "learn.explore.explore_five"
+    },
+    "vocab.smell": {
+      "same_as": "w2",
+      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
+    },
+    "vocab.taste": {
+      "same_as": "learn.explore.explore_taste"
+    },
+    "vocab.tongue": {
+      "same_as": "q1.q1_tongue"
+    },
+    "vocab.blocked_nose": {
+      "same_as": "tray.tray_nose",
+      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    },
+    "reward.tongue_card": {
+      "same_as": "q1.q1_tongue"
+    }
+  }
+}

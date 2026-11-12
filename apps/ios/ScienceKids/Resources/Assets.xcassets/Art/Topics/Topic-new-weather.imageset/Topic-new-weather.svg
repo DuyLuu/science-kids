@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · new-weather · mây giông, sét, mưa. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#2E4A6E"><path d="M14 34 C 8 34, 6 26, 12 23 C 12 15, 21 11, 27 15 C 31 8, 43 8, 46 16 C 54 15, 59 22, 56 28 C 60 32, 57 38, 51 37 H16 Z"/></g>
+  <g fill="#E2D4B4"><path d="M8 40 C 3 39, 3 32, 9 31 C 9 26, 16 24, 20 27 C 23 22, 31 22, 33 28 C 38 27, 42 31, 40 36 C 42 39, 40 42, 36 42 H11 Z"/></g>
+  <g fill="#E2A52A"><path d="M38 30 H48 L43 40 H49 L36 58 L39 44 H33 Z"/></g>
+  <g fill="#24395A"><path d="M14 46 C 14 46, 17.5 50.5, 17.5 52.5 A3.5 3.5 0 0 1 10.5 52.5 C 10.5 50.5, 14 46, 14 46 Z"/><path d="M26 47 C 26 47, 29.5 51.5, 29.5 53.5 A3.5 3.5 0 0 1 22.5 53.5 C 22.5 51.5, 26 47, 26 47 Z"/><path d="M53 44 C 53 44, 56.5 48.5, 56.5 50.5 A3.5 3.5 0 0 1 49.5 50.5 C 49.5 48.5, 53 44, 53 44 Z"/></g>
+</svg>

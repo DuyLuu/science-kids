@@ -1,0 +1,347 @@
+{
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WIND_SWEPT_PADDIES,SATYAVEDU_AP_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/WIND_SWEPT_PADDIES%2CSATYAVEDU_AP_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "WIND SWEPT PADDIES,SATYAVEDU AP - panoramio",
+      "author": "rajaraman sundaram",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "lúa nghiêng theo gió, không người"
+    },
+    "w1.w1_balloon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loneliness_(16590654240).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Loneliness_%2816590654240%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Loneliness (16590654240)",
+      "author": "Jevgenijs Slihto",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.5,
+        "top": 0.22,
+        "width": 0.36,
+        "height": 0.5
+      },
+      "note": "cắt quanh quả bóng và dây, nền trời trơn"
+    },
+    "w1.w1_water": {
+      "same_as": "q4",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    },
+    "w1.w1_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "hòn đá cuội màu vàng nâu trên cát (không có ảnh đá xám đơn lẻ hợp lệ); đề xuất sửa alt"
+    },
+    "w2": {
+      "same_as": "t_rex",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "learn.explore.explore_in_out": {
+      "own": {
+        "file": "content/images/own/ho-hap/hand-chest.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand resting on a chest",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không có ảnh hợp lệ không lộ mặt"
+    },
+    "learn.explore.explore_animals": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "learn.explore.explore_oxygen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NOAA_diver_photoquadrat_Howland_Island_2023.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/NOAA_diver_photoquadrat_Howland_Island_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A diver under the sea with an air tank",
+      "author": "NOAA Fisheries",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:NOAA_diver_photoquadrat_Howland_Island_2023.png",
+      "note": "NOAA, thợ lặn nhìn từ trên xuống sau lưng, thấy bình khí và bọt khí"
+    },
+    "learn.explore.explore_breath_out": {
+      "own": {
+        "file": "content/images/own/ho-hap/buffalo-breath.jpg",
+        "method": "drawn"
+      },
+      "title": "A water buffalo breathing out mist on a cold morning",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "tray.tray_cat": {
+      "same_as": "w3_cat",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "tray.tray_balloon": {
+      "same_as": "w1.w1_balloon"
+    },
+    "tray.tray_carp": {
+      "same_as": "q1_fish",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "tray.tray_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "chim sẻ đậu trên cành"
+    },
+    "tray.tray_buffalo": {
+      "same_as": "w1_buffalo",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "tray.tray_kite": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kite_flying_at_the_Lime_Kiln_playing_field,_Wincheap,_Canterbury.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kite_flying_at_the_Lime_Kiln_playing_field%2C_Wincheap%2C_Canterbury.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A kite in the sky",
+      "author": "Digihum",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.26,
+        "top": 0.0,
+        "width": 0.56,
+        "height": 0.46
+      },
+      "note": "cắt phần diều và trời từ ảnh CC0 đã dùng ở khung-long/trai-dat-rat-lau-ve-truoc, bỏ người thả diều"
+    },
+    "tray.tray_shrimp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Macrobrachium_Lanchesteri_(19306434602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Macrobrachium_Lanchesteri_%2819306434602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Macrobrachium Lanchesteri (19306434602)",
+      "author": "Weimar Meneses",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "tôm sống trong bể"
+    },
+    "tray.tray_egret": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "cò bay sát trên bãi cỏ (không có ảnh cò bay trên ruộng lúa hợp lệ); đề xuất sửa alt"
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/ho-hap/sleeping-net.jpg",
+        "method": "drawn"
+      },
+      "title": "A child asleep under a mosquito net",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Koi_(7978277400).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Koi_%287978277400%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Koi (7978277400)",
+      "author": "Michael from Calgary, AB, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "một con cá koi nhìn từ trên, không thấy rõ mang"
+    },
+    "q2.q2_gills": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Common_Carp_%28Cyprinus_carpio%29_%2851022534501%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common carp, head and gill cover",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "crop": {
+        "left": 0.107,
+        "top": 0.31,
+        "width": 0.21,
+        "height": 0.42
+      },
+      "note": "cắt từ ảnh cá chép đã chọn ở khung-long/khung-long-la-gi (q1_fish), ba thẻ cùng cỡ"
+    },
+    "q2.q2_fins": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Common_Carp_%28Cyprinus_carpio%29_%2851022534501%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common carp, tail fin",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "crop": {
+        "left": 0.775,
+        "top": 0.25,
+        "width": 0.21,
+        "height": 0.42
+      },
+      "note": "cắt từ ảnh cá chép đã chọn ở khung-long/khung-long-la-gi (q1_fish), ba thẻ cùng cỡ"
+    },
+    "q2.q2_scales": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Common_Carp_%28Cyprinus_carpio%29_%2851022534501%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common carp, scales",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_Carp_(Cyprinus_carpio)_(51022534501).jpg",
+      "crop": {
+        "left": 0.45,
+        "top": 0.3,
+        "width": 0.21,
+        "height": 0.42
+      },
+      "note": "cắt từ ảnh cá chép đã chọn ở khung-long/khung-long-la-gi (q1_fish), ba thẻ cùng cỡ"
+    },
+    "q3": {
+      "own": {
+        "file": "content/images/own/ho-hap/village-yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A yard in a village",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không có ảnh sân nhà làng quê Việt Nam hợp lệ"
+    },
+    "q3.q3_frog": {
+      "same_as": "tray_frog",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+    },
+    "q3.q3_fan": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Electric_Fan_240x355.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Electric_Fan_240x355.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An electric desk fan",
+      "author": "Rfc1394 ( talk )",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Electric_Fan_240x355.jpg",
+      "note": "quạt bàn trên kệ gỗ, nền thật"
+    },
+    "q3.q3_pinwheel": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Recome%C3%A7ando_-_Flickr_-_Ana_Patr%C3%ADcia_Almeida.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Recome%C3%A7ando_-_Flickr_-_Ana_Patr%C3%ADcia_Almeida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Recomeçando - Flickr - Ana Patrícia Almeida",
+      "author": "Ana Patícia Almeida from João Pessoa, Brasil",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "chong chóng nhiều màu trên nền trời"
+    },
+    "q3.q3_hen": {
+      "same_as": "w3_hen",
+      "lesson": "khung-long/khung-long-la-gi"
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "NOAA, không có thợ lặn"
+    },
+    "q4.q4_bottle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_of_Water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bottle_of_Water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bottle of water",
+      "author": "Jiafei Slay Queen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "chai không nhãn, nền tối"
+    },
+    "q4.q4_lunch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Lunch_Box_in_Taipei,_Taiwan.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Rice_Lunch_Box_in_Taipei%2C_Taiwan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A lunch box with rice",
+      "author": "Battlesnake1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "hộp cơm mở nắp, nền tối"
+    },
+    "q4.q4_tank": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diving_cylinder_twin_7s.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Diving_cylinder_twin_7s.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Two diving air tanks",
+      "author": "Mark.murphy at English Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Diving_cylinder_twin_7s.JPG",
+      "note": "hai bình khí lặn trên sàn gỗ, không thấy chữ"
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/ho-hap/mai-window.jpg",
+        "method": "drawn"
+      },
+      "title": "A child by a cold window",
+      "note": "designer vẽ 10/11 (SVG, SK-036)"
+    },
+    "q5.q5_clear": {
+      "own": {
+        "file": "content/images/own/ho-hap/window-clear.jpg",
+        "method": "drawn"
+      },
+      "title": "A window with clear glass",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ba ô cùng khung"
+    },
+    "q5.q5_foggy": {
+      "own": {
+        "file": "content/images/own/ho-hap/window-foggy.jpg",
+        "method": "drawn"
+      },
+      "title": "A window with foggy glass",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ba ô cùng khung"
+    },
+    "q5.q5_dusty": {
+      "own": {
+        "file": "content/images/own/ho-hap/window-dusty.jpg",
+        "method": "drawn"
+      },
+      "title": "A window with dusty glass",
+      "note": "designer vẽ 10/11 (SVG, SK-036); ba ô cùng khung"
+    },
+    "q6": {
+      "same_as": "q3.q3_pinwheel"
+    },
+    "vocab.breathe": {
+      "same_as": "learn.explore.explore_breath_out"
+    },
+    "vocab.oxygen": {
+      "own": {
+        "file": "content/images/own/ho-hap/aquarium.jpg",
+        "method": "drawn"
+      },
+      "title": "Bubbles from an air pump in a fish tank",
+      "note": "designer vẽ 10/11 (SVG, SK-036); không có ảnh bể cá sục khí hợp lệ"
+    },
+    "vocab.chest": {
+      "same_as": "learn.explore.explore_in_out"
+    },
+    "vocab.gills": {
+      "same_as": "q2.q2_gills"
+    },
+    "reward.whale": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Blue_Whale_002_noaa_blow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Blue_Whale_002_noaa_blow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A blue whale breathing out at the surface",
+      "author": "NOAA Fisheries ( TBjornstad 11:19, 18 April 2007 (UTC))",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Blue_Whale_002_noaa_blow.jpg",
+      "note": "NOAA, không kèm logo"
+    },
+    "tray.tray_shell": {
+      "same_as": "tray_shell",
+      "lesson": "be-mat-trai-dat/nui-lua"
+    }
+  }
+}

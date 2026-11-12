@@ -1,0 +1,322 @@
+{
+  "note": "SK-033 bài thử. Designer (agent) chọn 10/11/2026: 18 ảnh Duy đã duyệt (đã fetch), 4 ảnh mới 10/11 cho learn.explore.explore_globe, vocab.model, q4, q5 (chưa fetch; q4, q5, vocab.model khác ý brief, alt đề xuất ghi trong note của từng mục).",
+  "images": {
+    "w1": {
+      "same_as": "vocab.surface"
+    },
+    "w1.w1_clock": {
+      "source": "Openverse/WordPress Photo Directory",
+      "openverse_id": "ea3ca817-7586-475d-9de5-a8c9c1b68978",
+      "source_url": "https://wordpress.org/photos/photo/75561fd429/",
+      "file_url": "https://pd.w.org/2022/02/75561fd429aa8da18.08808244-2048x2048.jpg",
+      "title": "Wall clock",
+      "author": "Michael Burridge",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.08,
+        "top": 0.07,
+        "width": 0.5,
+        "height": 0.5
+      },
+      "note": "Openverse/WordPress Photo Directory: đã mở trang gốc 10/11, ghi CC0. Cắt sát đồng hồ."
+    },
+    "w1.w1_ball": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.12,
+        "width": 0.3,
+        "height": 0.52
+      },
+      "note": "Cắt bỏ xe đạp phía sau; trên bóng có vết chữ nhỏ, không đọc được ở cỡ ô."
+    },
+    "w1.w1_box": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Large_Cardboard_Moving_Box_Taped_Closed_(32067345357).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Large_Cardboard_Moving_Box_Taped_Closed_%2832067345357%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Large Cardboard Moving Box Taped Closed (32067345357)",
+      "author": "HireAHelper",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "w2": {
+      "same_as": "tray.tray_sea"
+    },
+    "learn.explore.explore_land": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moc-chau-tea-doi-2094890_960_720.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Moc-chau-tea-doi-2094890_960_720.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moc-chau-tea-doi-2094890 960 720",
+      "author": "ToanNguyen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Ảnh Pixabay 2017, Commons ghi {{Pixabay|status=confirmed}} (CC0 trước khi Pixabay đổi giấy phép)."
+    },
+    "learn.explore.explore_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Klamath_River_mouth_aerial_view.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Klamath_River_mouth_aerial_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Klamath River mouth aerial view",
+      "author": "U.S. Army Corps of Engineers, photographer not specified or unknown",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Klamath_River_mouth_aerial_view.jpg"
+    },
+    "learn.explore.explore_globe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alter_Globus_etwa_19xx_-_Gesamtansicht.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Alter_Globus_etwa_19xx_-_Gesamtansicht.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Alter Globus etwa 19xx - Gesamtansicht",
+      "author": "Markus Bärlocher",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Mới 10/11. Quả địa cầu cũ (biên giới khoảng 1950) quay về châu Mỹ và Đại Tây Dương, không thấy châu Á; biển xanh nhạt chiếm phần lớn. Chữ in nhỏ trên quả địa cầu. Alt giữ nguyên."
+    },
+    "tray.tray_island": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Hinitsa_islet_in_Greece_(48760168286).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Aerial_view_of_Hinitsa_islet_in_Greece_%2848760168286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aerial view of Hinitsa islet in Greece (48760168286)",
+      "author": "dronepicr",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_river": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:River_and_tourists_boats,_northern_Vietnam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/River_and_tourists_boats%2C_northern_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "River and tourists boats, northern Vietnam",
+      "author": "Quangpraha",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Ảnh Pixabay, Commons ghi {{Pixabay|status=confirmed}} (CC0)."
+    },
+    "tray.tray_mountain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Three_Peak_Green_(53092131793).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Three_Peak_Green_%2853092131793%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Three Peak Green (53092131793)",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Three_Peak_Green_(53092131793).jpg"
+    },
+    "tray.tray_pond": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ao_Sen,_khu_du_lich_Binh_quoi_-ph%C6%B0%E1%BB%9Dng_28,_B%C3%ACnh_Th%E1%BA%A1nh,_TPHCM,_Vi%E1%BB%87t_Nam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ao_Sen%2C_khu_du_lich_Binh_quoi_-ph%C6%B0%E1%BB%9Dng_28%2C_B%C3%ACnh_Th%E1%BA%A1nh%2C_TPHCM%2C_Vi%E1%BB%87t_Nam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ao Sen, khu du lich Binh quoi -phường 28, Bình Thạnh, TPHCM, Việt Nam - panoramio",
+      "author": "trungydang",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.33,
+        "width": 0.85,
+        "height": 0.67
+      },
+      "note": "Cắt bỏ trời, giữ ao và lá súng nia."
+    },
+    "tray.tray_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Open_Ocean_(3212977602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Open_Ocean_%283212977602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Open Ocean (3212977602)",
+      "author": "Anderson Mancini from Sao Paulo, Brazil",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "tray.tray_forest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_on_Barro_Colorado.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forest_on_Barro_Colorado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Forest on Barro Colorado",
+      "author": "Photos courtesy of Christian Ziegler.",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5"
+    },
+    "tray.tray_lake": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Calm_Waters_(34595165103).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Calm_Waters_%2834595165103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Calm Waters (34595165103)",
+      "author": "U.S. Fish and Wildlife Service - Midwest Region",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Calm_Waters_(34595165103).jpg"
+    },
+    "tray.tray_stream": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coal_Creek_04109.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Coal_Creek_04109.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Coal Creek 04109",
+      "author": "Walter Siegmund",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0.35,
+        "width": 1,
+        "height": 0.5
+      },
+      "note": "Ảnh dọc, cắt dải giữa cho ô ngang."
+    },
+    "q1": {
+      "same_as": "learn.explore.explore_water"
+    },
+    "q1.q1_sea": {
+      "same_as": "tray.tray_sea"
+    },
+    "q1.q1_lake": {
+      "same_as": "tray.tray_lake"
+    },
+    "q1.q1_mountain": {
+      "same_as": "tray.tray_mountain"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_globe"
+    },
+    "q2.q2_piece": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_jigsaw_puzzle_piece_on_green_pieces.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Red_jigsaw_puzzle_piece_on_green_pieces.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red jigsaw puzzle piece on green pieces",
+      "author": "Profpcde",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q2.q2_model": {
+      "same_as": "vocab.model"
+    },
+    "q2.q2_cloud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cumulus_congestus_clouds_(27075262952).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Cumulus_congestus_clouds_%2827075262952%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cumulus congestus clouds (27075262952)",
+      "author": "HO JJ from Taipei, Taiwan",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "q3": {
+      "same_as": "vocab.surface"
+    },
+    "q3.q3_island": {
+      "same_as": "tray.tray_island"
+    },
+    "q3.q3_river": {
+      "same_as": "tray.tray_river"
+    },
+    "q3.q3_forest": {
+      "same_as": "tray.tray_forest"
+    },
+    "q3.q3_pond": {
+      "same_as": "tray.tray_pond"
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Mới 10/11, khác ý brief: cốc thuỷ tinh đầy nước thay cho bình. Alt đề xuất: EN «A glass full of water» · VI «Cốc đầy nước»."
+    },
+    "q4.q4_lake": {
+      "same_as": "tray.tray_lake"
+    },
+    "q4.q4_sea": {
+      "same_as": "tray.tray_sea"
+    },
+    "q4.q4_pond": {
+      "same_as": "tray.tray_pond"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Person_holding_world_globe.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Person_holding_world_globe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Person holding world globe",
+      "author": "Porapak Apichodilok",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0.25,
+        "width": 0.4,
+        "height": 0.6
+      },
+      "note": "Mới 10/11, khác ý brief: bàn tay cầm quả địa cầu nhỏ (thấy Nam Mỹ, châu Phi), không quay, không thấy mặt. Ảnh Pexels 2017, Commons ghi {{Pexels}} + LicenseReview (CC0 trước khi Pexels đổi giấy phép). Alt đề xuất: EN «A hand holds a small globe» · VI «Bàn tay cầm quả địa cầu nhỏ»."
+    },
+    "q5.q5_water": {
+      "same_as": "tray.tray_sea"
+    },
+    "q5.q5_land": {
+      "same_as": "learn.explore.explore_land"
+    },
+    "q5.q5_same": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_coastline_of_Kastro,_Greece_(51224119860).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Aerial_view_of_the_coastline_of_Kastro%2C_Greece_%2851224119860%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aerial view of the coastline of Kastro, Greece (51224119860)",
+      "author": "dronepicr",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_land"
+    },
+    "vocab.land": {
+      "same_as": "learn.explore.explore_land"
+    },
+    "vocab.surface": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Blue Marble",
+      "author": "NASA/Apollo 17 crew; taken by either Harrison Schmitt or Ron Evans",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+    },
+    "vocab.globe": {
+      "same_as": "learn.explore.explore_globe"
+    },
+    "vocab.model": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hand_with_small_airplane_model_against_blue_sky_(52136482825).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Hand_with_small_airplane_model_against_blue_sky_%2852136482825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hand with small airplane model against blue sky (52136482825)",
+      "author": "Jernej Furman from Slovenia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.66,
+        "height": 1
+      },
+      "note": "Mới 10/11, khác ý brief: mô hình máy bay nhỏ trong tay, không có xe thật. Alt đề xuất: EN «A small model plane in a hand» · VI «Mô hình máy bay nhỏ trong tay». Câu ví dụ của từ model và gợi ý q2 vẫn nói xe máy đồ chơi; content-editor quyết có sửa không."
+    },
+    "vocab.sea": {
+      "same_as": "tray.tray_sea"
+    },
+    "vocab.island": {
+      "same_as": "tray.tray_island"
+    },
+    "vocab.lake": {
+      "same_as": "tray.tray_lake"
+    },
+    "reward.ha_long": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ha_Long_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ha Long Bay",
+      "author": "Ondřej Žváček",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5"
+    }
+  }
+}
