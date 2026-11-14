@@ -258,13 +258,15 @@ struct ResultSheet: View {
 /// listen button beside it.
 struct HintNote: View {
     let hint: Spoken
+    /// SK-044: why the option just tried is not right, above the hint; `nil` without one.
+    var feedback: Spoken?
     let mode: LanguageMode
     let listen: Utterance
 
     var body: some View {
         HStack(alignment: .center, spacing: Tokens.Space.s10) {
             // Hints are mostly Vietnamese on the canvas (B4.1): one line in the name language.
-            FoldNote(title: Text("lesson.retry.title"), message: Text(verbatim: mode.name(hint)))
+            FoldNote(title: Text("lesson.retry.title"), message: Text(verbatim: [feedback, hint].compactMap { $0 }.map { mode.name($0) }.joined(separator: "\n")))
                 .accessibilityIdentifier("lesson.hint")
             ListenButton(listen, label: "lesson.listen.hint", disc: .paper)
         }

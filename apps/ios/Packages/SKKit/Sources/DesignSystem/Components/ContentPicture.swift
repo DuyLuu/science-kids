@@ -136,11 +136,20 @@ private struct PhotoPiece: View {
             .fill(Tokens.Role.surfaceSunken)
             .overlay {
                 if let shown {
-                    // Decorative: the label is on the whole piece.
-                    Image(decorative: shown.cgImage, scale: scale)
-                        .resizable()
-                        .scaledToFill()
-                        .allowsHitTesting(false)
+                    // Decorative: the label is on the whole piece. SK-043 (Duy 13/11): a photo
+                    // much taller or wider than its box is shown whole on the box's paper
+                    // instead of being cropped to a strip of it (`PictureFit`).
+                    let image = Image(decorative: shown.cgImage, scale: scale).resizable()
+                    switch PictureFit.mode(
+                        image: CGSize(width: shown.pixelWidth, height: shown.pixelHeight), box: boxSize
+                    ) {
+                    case .fill:
+                        image.scaledToFill().allowsHitTesting(false)
+                    case .fit:
+                        image.scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: PaperMetrics.pictureRadius, style: .continuous))
+                            .allowsHitTesting(false)
+                    }
                 }
             }
             .frame(width: width, height: width ?? size)
@@ -169,5 +178,29 @@ private struct PhotoPiece: View {
         } else {
             failed = true
         }
+    }
+}
+
+/// How a content photo fills its box (SK-043, Duy 13/11: a portrait parrot in a landscape card
+/// showed only its body). Close shapes are cropped to fill the box (aspect fill, as before); when
+/// the photo's shape differs from the box's by more than `maxCropRatio` (a tall photo in a wide
+/// card, or the reverse), the whole photo is shown, centred, on the box's own paper.
+public enum PictureFit: Sendable, Equatable {
+    case fill
+    case fit
+
+    /// Above this ratio between the two aspect ratios the photo is shown whole. Main session
+    /// 13/11: 2.2, so an ordinary landscape photo still fills a wide quiz card (4:3 in 2.5:1 ≈ 1.9)
+    /// and only a photo turned the other way (portrait in a wide card) is shown whole.
+    public static let maxCropRatio: CGFloat = 2.2
+
+    /// `image` and `box` in any unit (pixels, points): only their shapes count. An empty size
+    /// (not measured yet) fills, as before.
+    public static func mode(image: CGSize, box: CGSize) -> PictureFit {
+        guard image.width > 0, image.height > 0, box.width > 0, box.height > 0 else { return .fill }
+        let imageAspect = image.width / image.height
+        let boxAspect = box.width / box.height
+        let ratio = max(imageAspect / boxAspect, boxAspect / imageAspect)
+        return ratio > maxCropRatio ? .fit : .fill
     }
 }

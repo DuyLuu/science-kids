@@ -49,13 +49,15 @@ image.alt.en: A bamboo fence in a garden
 image.alt.vi: Hàng rào tre trước khu vườn
 hint.en: Which one is a bird?
 hint.vi: Em nghĩ xem con nào là chim?
-explanation_correct.en: Yes! A hen lays eggs.
-explanation_correct.vi: Đúng rồi! Gà mái đẻ trứng.
+explanation_correct.en: Yes! Hens and other birds lay eggs.
+explanation_correct.vi: Đúng rồi! Gà mái và các loài chim đều đẻ trứng.
 explanation_wrong.en: The answer is the hen. Birds lay eggs.
 explanation_wrong.vi: Đáp án là con gà mái. Chim đẻ trứng.
 
 #### option w1_cat
 correct: false
+feedback.en: A mother cat has kittens, not eggs.
+feedback.vi: Mèo mẹ đẻ ra mèo con, không đẻ trứng.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -89,6 +91,8 @@ explanation_correct.en: Penguins are birds, but they swim.
 explanation_correct.vi: Chim cánh cụt là chim, nhưng chúng bơi, không bay.
 explanation_wrong.en: This is false. Penguins cannot fly.
 explanation_wrong.vi: Câu này sai. Chim cánh cụt không biết bay.
+feedback_true.en: A penguin is a bird that cannot fly.
+feedback_true.vi: Chim cánh cụt là chim nhưng không biết bay.
 > Ôn `all_birds_fly` (bài ba q6), không gắn key. Rà chữ tester 12/11 (N5): hình đổi từ con cò đang bay (đẩy bé chạm gật đầu) sang chim sẻ đang đậu, trung tính về chuyện bay. Không dùng chim cánh cụt (bằng chứng của đáp án), cũng không dùng gà hay vịt (gợi sẵn "chim không bay").
 
 ### w3
@@ -110,6 +114,8 @@ explanation_correct.en: Yes! Buffaloes are mammals.
 explanation_correct.vi: Đúng rồi! Trâu là động vật có vú.
 explanation_wrong.en: This is true. Baby buffaloes drink milk.
 explanation_wrong.vi: Câu này đúng. Nghé con bú sữa mẹ.
+feedback_false.en: Baby buffaloes drink their mother's milk.
+feedback_false.vi: Nghé con bú sữa của trâu mẹ.
 > Chuẩn bị câu q6 (cá heo là động vật có vú, con non bú sữa).
 
 ## Học
@@ -348,6 +354,8 @@ image.alt.vi: Cá rô đồng dưới nước
 
 #### option q1_duck
 correct: false
+feedback.en: A duck has feathers and a beak.
+feedback.vi: Con vịt có lông vũ và có mỏ.
 label.en: duck
 label.vi: con vịt
 image.brief: Dùng lại hình `w1_duck` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): duck standing pond bank
@@ -356,6 +364,8 @@ image.alt.vi: Con vịt đứng trên bãi cỏ
 
 #### option q1_frog
 correct: false
+feedback.en: A frog has legs, not fins.
+feedback.vi: Ếch có chân, không có vây.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -379,6 +389,8 @@ explanation_correct.en: Yes! Gills help fish breathe in water.
 explanation_correct.vi: Đúng rồi! Mang giúp cá thở dưới nước.
 explanation_wrong.en: This is true. Fish breathe with gills.
 explanation_wrong.vi: Câu này đúng. Cá thở bằng mang.
+feedback_false.en: Fish breathe in water with gills.
+feedback_false.vi: Cá thở dưới nước bằng mang.
 > Hình là cá vàng cả con (không phải ảnh cận mang của ô Học). Gợi ý chỉ chỗ nhìn trong hình.
 
 ### q3
@@ -401,6 +413,8 @@ explanation_wrong.vi: Đáp án là nòng nọc. Nòng nọc lớn lên thành �
 
 #### option q3_chick
 correct: false
+feedback.en: A chick is a baby hen.
+feedback.vi: Gà con là con non của gà.
 label.en: chick
 label.vi: gà con
 image.brief: Dùng lại hình `w1_chick` ở bài `goi-ten-va-nhom-dong-vat/chim-va-bo-sat`. Từ khoá tìm ảnh (EN): yellow chick standing ground side view
@@ -409,6 +423,8 @@ image.alt.vi: Gà con lông vàng
 
 #### option q3_kitten
 correct: false
+feedback.en: A kitten is a baby cat.
+feedback.vi: Mèo con là con non của mèo.
 label.en: kitten
 label.vi: mèo con
 image.brief: Dùng lại hình `q4` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): kitten sitting floor looking up
@@ -486,6 +502,8 @@ explanation_wrong.vi: Đáp án là con cóc. Da cóc không có vảy.
 
 #### option q5_lizard
 correct: false
+feedback.en: A lizard has dry skin with scales.
+feedback.vi: Thằn lằn có da khô phủ vảy.
 label.en: lizard
 label.vi: thằn lằn
 image.brief: Dùng lại hình `w3_lizard` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
@@ -502,6 +520,8 @@ image.alt.vi: Con cóc trên mặt đất
 
 #### option q5_goldfish
 correct: false
+feedback.en: A goldfish has fins and scales.
+feedback.vi: Cá vàng có vây và có vảy.
 label.en: goldfish
 label.vi: cá vàng
 image.brief: Dùng lại hình `tray_goldfish` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): goldfish aquarium plants side view
@@ -526,6 +546,8 @@ explanation_correct.en: A dolphin is a mammal. Its babies drink milk.
 explanation_correct.vi: Cá heo là động vật có vú. Cá heo con bú sữa mẹ.
 explanation_wrong.en: This is false. A dolphin is a mammal.
 explanation_wrong.vi: Câu này sai. Cá heo là động vật có vú.
+feedback_true.en: A dolphin breathes air and drinks milk.
+feedback_true.vi: Cá heo thở bằng không khí và bú sữa mẹ.
 > Câu misconception (`water_animals_are_fish`), bằng hình: cá heo sống dưới biển, có vây, tên tiếng Việt có chữ "cá". Bé còn nghĩ "sống dưới nước là cá" sẽ chạm gật đầu.
 > DOK 2: áp đặc điểm của nhóm (bài hai) vào một con vật trông giống cá. Bé đã đặt cá heo vào nhóm "Dưới nước" ở phần Chơi bài hai và gặp nó là món bẫy ở phần Chơi bài này. Câu w3 vừa nhắc "con non bú sữa".
 > Đáp án Sai: giải thích khi đúng không mở đầu bằng "Yes!".

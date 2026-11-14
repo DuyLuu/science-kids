@@ -1,0 +1,341 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_cactus": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/47445767@N05/52492203851",
+      "file_url": "https://live.staticflickr.com/65535/52492203851_cb2642779f_b.jpg",
+      "title": "Opuntia sp. (prickly pear cactus) (north of Bootlegger Canyon, Utah, USA) 12",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fbf35cae-0d15-4eb2-8b82-421198148215",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1078,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-046 (designer 14/11): Bụi xương rồng tai thỏ mọc trên đất cát sỏi (Mỹ). Crop cho khung c2."
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "w3": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "learn.explore.explore_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Rough_Woodlice_(Porcellio_scaber)_(22890622110).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Common_Rough_Woodlice_%28Porcellio_scaber%29_%2822890622110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common Rough Woodlice (Porcellio scaber) (22890622110)",
+      "author": "Martin Cooper from Ipswich, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.088,
+        "top": 0.0,
+        "width": 0.824,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Mọt ẩm (bọ ba đuôi đất) trên đất ẩm, nơi thường thấy khi nhấc hòn đá; không thấy mép đá. Crop cho khung learn."
+    },
+    "learn.explore.explore_leaves": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pile_of_leaves_-_11_October_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pile_of_leaves_-_11_October_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pile of leaves - 11 October 2026",
+      "author": "Aethonatic",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.055,
+        "top": 0.0,
+        "width": 0.8899,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đống lá khô nâu trên lối lát đá trong vườn. Crop cho khung learn."
+    },
+    "learn.explore.explore_trunk": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/73840284@N04/51488082536",
+      "file_url": "https://live.staticflickr.com/65535/51488082536_6bf58e5d2e_b.jpg",
+      "title": "Crematogaster species DC5",
+      "author": "Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "4186afe5-0423-44b8-92d8-5305c9d87670",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Đàn kiến bò trên vỏ cây. Crop cho khung learn."
+    },
+    "learn.explore.explore_wall": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moss-covered_wall_fragment,_Emerald_View_Park_off_Greenleaf_Street,_2020-12-04.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Moss-covered_wall_fragment%2C_Emerald_View_Park_off_Greenleaf_Street%2C_2020-12-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moss-covered wall fragment, Emerald View Park off Greenleaf Street, 2020-12-04",
+      "author": "Cbaile19",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Mảng tường gạch cũ phủ rêu xanh. Crop cho khung learn."
+    },
+    "tray.tray_ant": {
+      "same_as": "q4.q4_ant",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "tray.tray_buffalo": {
+      "same_as": "q4.q4_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "tray.tray_earthworm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aporrectodea_rosea_258682963.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aporrectodea_rosea_258682963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aporrectodea rosea 258682963",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `vocab.earthworm` ở discoverer/da-va-dat/the-nao-la-dat-tot (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_spider": {
+      "same_as": "q4.q4_spider",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "tray.tray_cricket": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zweifleckgrille_Gryllus_bimaculatus_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Zweifleckgrille_Gryllus_bimaculatus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zweifleckgrille Gryllus bimaculatus 1",
+      "author": "Holger Krisp",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.2467,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Dế đen trên mặt đất, nhìn ngang. Crop cho khung sq."
+    },
+    "tray.tray_elephant": {
+      "same_as": "q4.q4_elephant",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "tray.tray_douc": {
+      "same_as": "learn.explore.explore_wild",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "Chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q1.q1_forest": {
+      "same_as": "q3.q3_forest",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "q1.q1_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Rough_Woodlice_(Porcellio_scaber)_(22890622110).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Common_Rough_Woodlice_%28Porcellio_scaber%29_%2822890622110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common Rough Woodlice (Porcellio scaber) (22890622110)",
+      "author": "Martin Cooper from Ipswich, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1764,
+        "width": 1,
+        "height": 0.6472
+      },
+      "note": "SK-046 (designer 14/11): Mọt ẩm (bọ ba đuôi đất) trên đất ẩm, nơi thường thấy khi nhấc hòn đá; không thấy mép đá. Crop cho khung c3."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_wall"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_buffalo": {
+      "same_as": "vocab.herbivore",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q3.q3_earthworm": {
+      "same_as": "q1.q1_worm",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q3.q3_carp": {
+      "same_as": "q5.q5_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_cricket": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zweifleckgrille_Gryllus_bimaculatus_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Zweifleckgrille_Gryllus_bimaculatus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zweifleckgrille Gryllus bimaculatus 1",
+      "author": "Holger Krisp",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.22,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-046 (designer 14/11): Dế đen trên mặt đất, nhìn ngang. Crop cho khung c3."
+    },
+    "q4.q4_perch": {
+      "same_as": "q1.q1_perch",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_egret": {
+      "same_as": "q5.q5_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "Chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5.q5_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Rough_Woodlice_(Porcellio_scaber)_(22890622110).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Common_Rough_Woodlice_%28Porcellio_scaber%29_%2822890622110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common Rough Woodlice (Porcellio scaber) (22890622110)",
+      "author": "Martin Cooper from Ipswich, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.191,
+        "top": 0.0,
+        "width": 0.618,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Mọt ẩm (bọ ba đuôi đất) trên đất ẩm, nơi thường thấy khi nhấc hòn đá; không thấy mép đá. Crop cho khung sq."
+    },
+    "q5.q5_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aporrectodea_rosea_258682963.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aporrectodea_rosea_258682963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aporrectodea rosea 258682963",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `vocab.earthworm` ở discoverer/da-va-dat/the-nao-la-dat-tot (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.microhabitat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Rough_Woodlice_(Porcellio_scaber)_(22890622110).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Common_Rough_Woodlice_%28Porcellio_scaber%29_%2822890622110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common Rough Woodlice (Porcellio scaber) (22890622110)",
+      "author": "Martin Cooper from Ipswich, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0955,
+        "width": 1,
+        "height": 0.8091
+      },
+      "note": "SK-046 (designer 14/11): Mọt ẩm (bọ ba đuôi đất) trên đất ẩm, nơi thường thấy khi nhấc hòn đá; không thấy mép đá. Crop cho khung vocab."
+    },
+    "vocab.earthworm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aporrectodea_rosea_258682963.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aporrectodea_rosea_258682963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aporrectodea rosea 258682963",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của da-va-dat/the-nao-la-dat-tot `earthworm`, crop riêng. Thẻ từ 2:1, cả con giun."
+    },
+    "vocab.moss": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moss-covered_wall_fragment,_Emerald_View_Park_off_Greenleaf_Street,_2020-12-04.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Moss-covered_wall_fragment%2C_Emerald_View_Park_off_Greenleaf_Street%2C_2020-12-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moss-covered wall fragment, Emerald View Park off Greenleaf Street, 2020-12-04",
+      "author": "Cbaile19",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1867,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Mảng tường gạch cũ phủ rêu xanh. Crop cho khung vocab."
+    },
+    "vocab.cricket": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zweifleckgrille_Gryllus_bimaculatus_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Zweifleckgrille_Gryllus_bimaculatus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zweifleckgrille Gryllus bimaculatus 1",
+      "author": "Holger Krisp",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.145,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-046 (designer 14/11): Dế đen trên mặt đất, nhìn ngang. Crop cho khung vocab."
+    },
+    "reward.cricket_card": {
+      "same_as": "tray.tray_cricket"
+    }
+  }
+}

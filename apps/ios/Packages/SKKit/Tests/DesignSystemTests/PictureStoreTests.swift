@@ -197,3 +197,22 @@ enum PictureJPEG {
         return data as Data
     }
 }
+
+/// SK-043 (Duy 13/11, ngưỡng 2,2 main session 13/11): crop to fill unless the photo is turned
+/// the other way from its box.
+@Test func pictureFitCropsCloseShapesAndFitsFarOnes() {
+    // A portrait parrot (3:4) in a landscape quiz card (330 × 120): 2.75 / 0.75 ≈ 3.7 → whole photo.
+    #expect(PictureFit.mode(image: CGSize(width: 900, height: 1200), box: CGSize(width: 330, height: 120)) == .fit)
+    // A landscape photo (4:3) in the same card: 2.75 / 1.33 ≈ 2.06 → fill (ordinary photos keep filling).
+    #expect(PictureFit.mode(image: CGSize(width: 1200, height: 900), box: CGSize(width: 330, height: 120)) == .fill)
+    // The same photo in the tall Explorer page picture (322 × 380): ≈ 1.57 → fill.
+    #expect(PictureFit.mode(image: CGSize(width: 1200, height: 900), box: CGSize(width: 322, height: 380)) == .fill)
+    // At the limit (2.2) fill; just over it, whole.
+    #expect(PictureFit.mode(image: CGSize(width: 220, height: 100), box: CGSize(width: 100, height: 100)) == .fill)
+    #expect(PictureFit.mode(image: CGSize(width: 230, height: 100), box: CGSize(width: 100, height: 100)) == .fit)
+    // A wide strip (3:1) in a near-square shelf cell (110 × 116): ≈ 3.2 → whole.
+    #expect(PictureFit.mode(image: CGSize(width: 1500, height: 500), box: CGSize(width: 110, height: 116)) == .fit)
+    // Square in square, and not measured yet: fill.
+    #expect(PictureFit.mode(image: CGSize(width: 500, height: 500), box: CGSize(width: 96, height: 96)) == .fill)
+    #expect(PictureFit.mode(image: CGSize(width: 900, height: 1200), box: .zero) == .fill)
+}

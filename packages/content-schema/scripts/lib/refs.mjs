@@ -94,6 +94,7 @@ function checkLesson({ file, data }, topics, report) {
     }
     if (item.format === "fill_blank_bank") checkFillBlank(item, pointer, file, report);
     if (item.format === "order_sequence") checkOrderSequence(item, pointer, file, report);
+    checkFeedback(item, pointer, file, report);
   }
 
   data.learn.forEach((block, index) => {
@@ -131,6 +132,33 @@ function checkFillBlank(item, pointer, file, report) {
   item.answers.forEach((key, i) => {
     if (!bank.has(key)) report(file, `${pointer}/answers/${i}`, `không có từ nào trong bank có key "${key}"`);
   });
+}
+
+// SK-044: `feedback` says why a WRONG choice is not right (the app reads it, then `hint`, when
+// the child still has a try). A right choice is answered by explanation_correct instead.
+function checkFeedback(item, pointer, file, report) {
+  if (Array.isArray(item.options)) {
+    item.options.forEach((option, j) => {
+      if (option.correct && option.feedback !== undefined) {
+        report(file, `${pointer}/options/${j}/feedback`, `lựa chọn đúng "${option.key}" không có feedback (chỉ lựa chọn sai có; chọn đúng thì app đọc explanation_correct)`);
+      }
+    });
+  }
+  if (item.format === "fill_blank_bank") {
+    const answers = new Set(item.answers);
+    item.bank.forEach((word, j) => {
+      if (answers.has(word.key) && word.feedback !== undefined) {
+        report(file, `${pointer}/bank/${j}/feedback`, `thẻ từ "${word.key}" là đáp án (có trong answers) nên không có feedback (chỉ thẻ sai có)`);
+      }
+    });
+  }
+  if (item.format === "true_false") {
+    const right = item.answer ? "feedback_true" : "feedback_false";
+    if (item[right] !== undefined) {
+      const other = item.answer ? "feedback_false" : "feedback_true";
+      report(file, `${pointer}/${right}`, `answer là ${item.answer} nên bé chạm ${item.answer ? "Đúng" : "Sai"} là chọn đúng, không có ${right}; lời cho phía bé chọn nhầm viết ở ${other}`);
+    }
+  }
 }
 
 function checkOrderSequence(item, pointer, file, report) {

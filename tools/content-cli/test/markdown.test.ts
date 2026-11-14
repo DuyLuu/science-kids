@@ -447,7 +447,7 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     ordered(keysIn(lesson.quiz[3].chart), props("quiz-item.schema.json", "BarChart"));
     ordered(keysIn(lesson.quiz[3].chart.bars[0]), props("quiz-item.schema.json", "Bar"));
     ordered(keysIn(lesson.quiz[3].chart.bars[0].image), props("common.schema.json", "Image"));
-    ordered(keysIn(lesson.quiz[3].options[0]), ["key", "label", "correct", "image"]);
+    ordered(keysIn(lesson.quiz[3].options[0]), ["key", "label", "correct", "image", "feedback"]);
     ordered(keysIn(lesson.learn[2]), merged("block.schema.json", "BlockBase", "SentenceCard"));
     ordered(keysIn(lesson.quiz[5]), quizItem("TrueFalse"));
     ordered(keysIn(lesson.quiz[5].labels), props("quiz-item.schema.json", "TrueFalseLabels"));
@@ -471,7 +471,7 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     ordered(keysIn(topic), props("topic.schema.json", "Topic"));
     ordered(keysIn(topic.misconceptions[0]), props("topic.schema.json", "Misconception"));
     // The one exception: the schema lists image before correct.
-    assert.deepEqual(props("quiz-item.schema.json", "ChoiceOption"), ["key", "label", "image", "correct"]);
+    assert.deepEqual(props("quiz-item.schema.json", "ChoiceOption"), ["key", "label", "image", "correct", "feedback"]);
   });
 
   test("validate (CLI) trên markdown in đúng dòng của runMarkdownValidate", () => {
@@ -479,5 +479,46 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     const result = quiet(() => runMarkdownValidate(mdOptions(root, [TOPIC_REL])));
     assert.equal(result.status, 0, result.out);
     assert.match(result.out, /validate: 2 file markdown \(1 topic, 1 bài\) · nhóm discoverer · 0 lỗi · 2 cảnh báo/);
+  });
+});
+
+// SK-044: `feedback.en/.vi` under a wrong #### option / #### bank, `feedback_true` / `feedback_false`
+// on a true_false question (only the side the child can get wrong). Error cases: expected.json 36–39.
+describe("SK-044 feedback cho lựa chọn sai", () => {
+  const LESSON = LESSON_REL;
+  const edits: Edit[] = [
+    { file: LESSON, replace: ["#### option q1_rice\ncorrect: false\n", "#### option q1_rice\ncorrect: false\nfeedback.en: Rice gives us energy.\nfeedback.vi: Cơm cho ta năng lượng.\n"] },
+    { file: LESSON, replace: ["#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\n", "#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\nfeedback.en: We breathe air.\nfeedback.vi: Ta hít thở không khí.\n"] },
+    { file: LESSON, replace: ["answer: false\nhint.en: Remember: fats", "answer: false\nfeedback_true.en: A little fat keeps us warm.\nfeedback_true.vi: Một ít chất béo giữ ấm cơ thể.\nhint.en: Remember: fats"] },
+  ];
+
+  test("đọc thành Spoken ở đúng chỗ, khoá theo schema, không lỗi; câu không có feedback giữ nguyên", () => {
+    const report = check(materialize("feedback-ok", edits));
+    assert.deepEqual(errorsOf(report).map(brief), []);
+    const lesson = report.topics[0]!.lessons[0]!.data as any;
+    assert.deepEqual(lesson.quiz[0].options[1].feedback, { en: "Rice gives us energy.", vi: "Cơm cho ta năng lượng." });
+    assert.deepEqual(Object.keys(lesson.quiz[0].options[1]), ["key", "label", "correct", "image", "feedback"]);
+    assert.equal(lesson.quiz[0].options[0].feedback, undefined);
+    assert.equal(lesson.quiz[0].options[2].feedback, undefined);
+    assert.deepEqual(lesson.quiz[1].bank[1].feedback, { en: "We breathe air.", vi: "Ta hít thở không khí." });
+    assert.deepEqual(Object.keys(lesson.quiz[1].bank[1]), ["key", "label", "feedback"]);
+    assert.deepEqual(lesson.quiz[5].feedback_true, { en: "A little fat keeps us warm.", vi: "Một ít chất béo giữ ấm cơ thể." });
+    assert.equal(lesson.quiz[5].feedback_false, undefined);
+    const order = Object.keys(lesson.quiz[5]);
+    assert.ok(order.indexOf("feedback_true") === order.indexOf("labels") + 1, order.join(","));
+  });
+
+  test("feedback dài hơn luật tuổi: cảnh báo age_words_en ở dòng feedback.en (Discoverer tối đa 10 từ mỗi câu)", () => {
+    const long = { file: LESSON, replace: ["#### option q1_sweets\ncorrect: false\n", "#### option q1_sweets\ncorrect: false\nfeedback.en: Sweets have lots of sugar and only a few vitamins inside.\nfeedback.vi: Kẹo có nhiều đường và rất ít vitamin.\n"] } as Edit;
+    const report = check(materialize("feedback-long", [...edits, long]));
+    assert.deepEqual(errorsOf(report).map(brief), []);
+    const words = warningsOf(report).filter((issue) => issue.code === "age_words_en");
+    assert.deepEqual(words.map((issue) => issue.pointer), ["/quiz/0/options/2/feedback/en"]);
+  });
+
+  test("feedback ở cấp câu single_choice (không dưới #### option): trường không dùng được", () => {
+    const report = check(materialize("feedback-misplaced", [{ file: LESSON, replace: ["explanation_wrong.vi: Đáp án là quả cam. Hoa quả cho ta vitamin.\n", "explanation_wrong.vi: Đáp án là quả cam. Hoa quả cho ta vitamin.\nfeedback.en: Look again.\nfeedback.vi: Em xem lại nhé.\n"] }]));
+    const codes = errorsOf(report).map((issue) => [issue.pointer, issue.code]);
+    assert.ok(codes.some(([pointer, code]) => pointer === "/quiz/0" && code === "md_unknown_field"), JSON.stringify(codes));
   });
 });

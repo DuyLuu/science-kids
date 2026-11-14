@@ -65,6 +65,8 @@ image.alt.vi: Mèo con ngẩng đầu nhìn lên
 
 #### option w1_chick
 correct: false
+feedback.en: A chick eats seeds, not milk.
+feedback.vi: Gà con ăn thóc, không bú sữa.
 label.en: chick
 label.vi: gà con
 image.brief: [ảnh] Một con gà con lông tơ vàng đứng trên nền đất hoặc nền cỏ, nhìn ngang, thấy cả con; không có gà mẹ, không có vỏ trứng trong hình, không có người, không có chữ. Cùng cỡ trong khung như ảnh mèo con. Từ khoá tìm ảnh (EN): yellow chick standing ground side view
@@ -91,6 +93,8 @@ explanation_correct.en: A douc is wild. It lives free.
 explanation_correct.vi: Voọc là động vật hoang dã. Voọc sống tự do.
 explanation_wrong.en: This is false. A douc is a wild animal.
 explanation_wrong.vi: Câu này sai. Voọc là động vật hoang dã.
+feedback_true.en: A douc lives free, far from homes.
+feedback_true.vi: Voọc sống tự do, xa nhà của người.
 > Đáp án Sai, nên giải thích khi đúng không mở đầu bằng "Yes!". Hình là chính con vật được nói tới (luật Explorer số 5).
 
 ## Học
@@ -319,13 +323,15 @@ image.alt.en: A bamboo fence in a garden
 image.alt.vi: Hàng rào tre trước khu vườn
 hint.en: Look for wings and a beak.
 hint.vi: Em tìm con có cánh và có mỏ nhé.
-explanation_correct.en: Yes! A sparrow has feathers.
-explanation_correct.vi: Đúng rồi! Chim sẻ có lông vũ.
+explanation_correct.en: Yes! A sparrow has feathers and a beak.
+explanation_correct.vi: Đúng rồi! Chim sẻ có lông vũ và có mỏ.
 explanation_wrong.en: The answer is the sparrow. It is a bird.
 explanation_wrong.vi: Đáp án là chim sẻ. Chim sẻ là chim.
 
 #### option q1_cat
 correct: false
+feedback.en: A cat has soft fur, not feathers.
+feedback.vi: Mèo có lông mềm, không có lông vũ.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -342,6 +348,8 @@ image.alt.vi: Chim sẻ đậu trên cành
 
 #### option q1_frog
 correct: false
+feedback.en: A frog has smooth skin, no feathers.
+feedback.vi: Ếch có da trơn, không có lông vũ.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -365,6 +373,8 @@ explanation_correct.en: Yes! Crocodiles lay eggs, like birds.
 explanation_correct.vi: Đúng rồi! Cá sấu đẻ trứng, giống loài chim.
 explanation_wrong.en: This is true. Crocodiles lay eggs.
 explanation_wrong.vi: Câu này đúng. Cá sấu đẻ trứng.
+feedback_false.en: A mother crocodile lays eggs on land.
+feedback_false.vi: Cá sấu mẹ đẻ trứng trên bờ.
 > [CẦN KIỂM] Mọi loài cá sấu đều đẻ trứng (biên tập nhớ). Câu hỏi chọn cá sấu để khỏi vướng "phần lớn bò sát".
 > Hình là cá sấu không có trứng (không đưa bằng chứng).
 
@@ -380,8 +390,8 @@ image.alt.en: The evening sky over the trees
 image.alt.vi: Trời chiều trên rặng cây
 hint.en: Look for dry skin with scales.
 hint.vi: Em tìm con có da khô phủ vảy nhé.
-explanation_correct.en: Yes! A gecko is a reptile.
-explanation_correct.vi: Đúng rồi! Thạch sùng là bò sát.
+explanation_correct.en: Yes! A gecko has dry, scaly skin.
+explanation_correct.vi: Đúng rồi! Thạch sùng có da khô phủ vảy nhỏ.
 explanation_wrong.en: The answer is the gecko. It has scales.
 explanation_wrong.vi: Đáp án là thạch sùng. Thạch sùng có vảy.
 > Rà chữ tester 12/11 (N4): đáp án đổi từ con rắn (ảnh mới duy nhất của câu, hút mắt) sang thạch sùng, món Chơi bé vừa chạm. Cả ba ảnh bé đã gặp: thạch sùng (phần Chơi), gà mái (bài một), thỏ (bài hai). Ba con khác hẳn nhau bằng mắt. Ảnh rắn chuyển sang làm hình gốc ở câu q5.
@@ -397,6 +407,8 @@ image.alt.vi: Con thạch sùng trên tường
 
 #### option q3_hen
 correct: false
+feedback.en: A hen has feathers, not scales.
+feedback.vi: Gà mái có lông vũ, không có vảy.
 label.en: hen
 label.vi: con gà mái
 image.brief: Dùng lại hình `w3_hen` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): brown hen standing farmyard side view
@@ -405,6 +417,8 @@ image.alt.vi: Con gà mái trong sân
 
 #### option q3_rabbit
 correct: false
+feedback.en: A rabbit has soft fur, not scales.
+feedback.vi: Thỏ có lông mềm, không có vảy.
 label.en: rabbit
 label.vi: con thỏ
 image.brief: Dùng lại hình `explore_fur` ở bài `goi-ten-va-nhom-dong-vat/dong-vat-co-vu`. Từ khoá tìm ảnh (EN): white rabbit sitting grass
@@ -476,6 +490,8 @@ explanation_wrong.vi: Đáp án là con rùa. Rùa cũng là bò sát.
 
 #### option q5_frog
 correct: false
+feedback.en: A frog has smooth, wet skin.
+feedback.vi: Ếch có da trơn và ẩm.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -492,6 +508,8 @@ image.alt.vi: Con rùa đang bò
 
 #### option q5_cat
 correct: false
+feedback.en: A cat has fur, not scales.
+feedback.vi: Mèo có lông, không có vảy.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -521,6 +539,8 @@ explanation_wrong.vi: Đáp án là chim cánh cụt. Chim cánh cụt có lông
 
 #### option q6_bat
 correct: false
+feedback.en: A bat has fur, not feathers.
+feedback.vi: Con dơi có lông, không có lông vũ.
 label.en: bat
 label.vi: con dơi
 image.brief: Dùng lại hình `tray_bat` ở bài `goi-ten-va-nhom-dong-vat/dong-vat-co-vu`. Từ khoá tìm ảnh (EN): fruit bat hanging tree branch
@@ -529,6 +549,8 @@ image.alt.vi: Con dơi treo trên cành
 
 #### option q6_dragonfly
 correct: false
+feedback.en: A dragonfly has thin wings, no feathers.
+feedback.vi: Chuồn chuồn có cánh mỏng, không có lông vũ.
 label.en: dragonfly
 label.vi: chuồn chuồn
 image.brief: [ảnh] Một con chuồn chuồn đậu trên ngọn cỏ, nhìn ngang, thấy rõ bốn cánh trong và thân dài; nền xanh mờ; không có người, không có chữ. Chụp cận để chuồn chuồn chiếm phần lớn khung như hai hình kia. Từ khoá tìm ảnh (EN): dragonfly perched grass side view

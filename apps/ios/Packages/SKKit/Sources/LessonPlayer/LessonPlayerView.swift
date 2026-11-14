@@ -89,8 +89,16 @@ public struct LessonPlayerView: View {
             if let summary = session.summary {
                 ExplorerRewardStep(session: session, summary: summary, onClose: onExit)
             }
-        case .learn, .play:
-            discovererStepView
+        case .learn:
+            // SK-043 hướng A: Học as a picture book.
+            ExplorerLearnStep(session: session, onBack: exit)
+        case .play:
+            if let tray = session.tray {
+                PlayStep(session: session, tray: tray) {
+                    // SK-043 Explorer-A: back and the step squares.
+                    ExplorerStepHeader(session: session, backLabel: Text("lesson.play.back"), onBack: session.backToLearn)
+                }
+            }
         }
     }
 

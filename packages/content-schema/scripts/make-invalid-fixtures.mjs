@@ -199,6 +199,28 @@ const MUTATIONS = [
       return "/play/items/0/group";
     },
   },
+  {
+    name: "feedback-on-correct-option",
+    description: "lựa chọn đúng có feedback (SK-044: chỉ lựa chọn sai có)",
+    stage: "refs",
+    mutate: (lesson) => {
+      const q = quizIndex(lesson, "single_choice");
+      const j = indexOf(lesson.quiz[q].options, (option) => option.correct, "correct option");
+      lesson.quiz[q].options[j].feedback = { en: "Rice gives us energy.", vi: "Cơm cho ta năng lượng." };
+      return `/quiz/${q}/options/${j}/feedback`;
+    },
+  },
+  {
+    name: "true-false-feedback-right-side",
+    description: "true_false có feedback cho phía chọn đúng (SK-044: chỉ phía chọn nhầm)",
+    stage: "refs",
+    mutate: (lesson) => {
+      const q = quizIndex(lesson, "true_false");
+      const side = lesson.quiz[q].answer ? "feedback_true" : "feedback_false";
+      lesson.quiz[q][side] = { en: "Look again.", vi: "Em xem lại nhé." };
+      return `/quiz/${q}/${side}`;
+    },
+  },
 ];
 
 const OUT = new URL("fixtures/invalid/", root);

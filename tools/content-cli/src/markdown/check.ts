@@ -253,7 +253,7 @@ export function mdPath(tokens: string[]): string {
   return out.join(".");
 }
 
-const PAIRS = new Set(["title", "question", "objective", "prompt", "instruction", "hint", "explanation_correct", "explanation_wrong", "sentence", "statement", "correction", "label", "text", "term", "example", "name", "tag", "fact", "alt", "true", "false", "start", "full", "balanced", "has_limited", "unit"]);
+const PAIRS = new Set(["title", "question", "objective", "prompt", "instruction", "hint", "explanation_correct", "explanation_wrong", "sentence", "statement", "correction", "label", "text", "term", "example", "name", "tag", "fact", "alt", "true", "false", "start", "full", "balanced", "has_limited", "unit", "feedback", "feedback_true", "feedback_false"]);
 
 /** "label" -> "label.en và label.vi", "image" -> "image.alt.en và image.alt.vi". */
 function missingWhat(name: string, inNote: boolean): string {

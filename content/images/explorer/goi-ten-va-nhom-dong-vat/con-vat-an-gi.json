@@ -2,16 +2,40 @@
   "note": "SK-041. Designer (agent) chọn 12/11/2026, chờ Duy duyệt. Toàn ảnh chụp (trừ hình câu dùng lại sân nhà vẽ của Hô hấp); ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Discoverer được chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi. Trang duyệt content/.build/images/goi-ten-va-nhom-dong-vat/<bài>/review.html.",
   "images": {
     "w1": {
-      "same_as": "q5",
-      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Philippines_Bronzeback_imported_from_iNaturalist_photo_286087609_on_18_February_2024.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Philippines_Bronzeback_imported_from_iNaturalist_photo_286087609_on_18_February_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Philippines Bronzeback imported from iNaturalist photo 286087609 on 18 February 2024",
+      "author": "(c) Kai Squires, some rights reserved (CC BY)",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1255,
+        "top": 0.1264,
+        "width": 0.8745,
+        "height": 0.8736
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung. Tách khỏi same_as q5 (bài goi-ten-va-nhom-dong-vat/chim-va-bo-sat) vì khung khác tỉ lệ."
     },
     "w2": {
       "same_as": "w1",
       "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
     },
     "w2.w2_croc": {
-      "same_as": "tray_croc",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0136,
+        "top": 0.1692,
+        "width": 0.9328,
+        "height": 0.7316
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung. Tách khỏi same_as tray_croc (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "w2.w2_frog": {
       "source": "Wikimedia Commons",
@@ -21,7 +45,13 @@
       "author": "Thomas Brown",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0103,
+        "top": 0.0,
+        "width": 0.9794,
+        "height": 0.8625
+      }
     },
     "w3": {
       "same_as": "explore_people",
@@ -38,7 +68,14 @@
       "title": "BUFFALO159",
       "author": "Da",
       "license": "CC BY 2.5",
-      "license_url": "https://creativecommons.org/licenses/by/2.5"
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.0157,
+        "top": 0.0,
+        "width": 0.8885,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_meat": {
       "source": "Openverse/Flickr",
@@ -48,7 +85,14 @@
       "author": "watts_photos",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
-      "openverse_id": "2200073a-561b-4e99-90e9-d65027690a86"
+      "openverse_id": "2200073a-561b-4e99-90e9-d65027690a86",
+      "crop": {
+        "left": 0.0319,
+        "top": 0.0,
+        "width": 0.9561,
+        "height": 0.9225
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_both": {
       "source": "Openverse/Flickr",
@@ -59,7 +103,13 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "openverse_id": "131dafa3-a823-4894-97b0-e1bcad9f5ee3",
-      "note": "Một đĩa cơm, đậu xanh và cá; không có ảnh hợp lệ mâm cơm Việt Nam không người, không chữ."
+      "note": "Một đĩa cơm, đậu xanh và cá; không có ảnh hợp lệ mâm cơm Việt Nam không người, không chữ. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0805,
+        "top": 0.0,
+        "width": 0.8789,
+        "height": 0.9897
+      }
     },
     "tray.tray_buffalo": {
       "source": "Wikimedia Commons",
@@ -70,12 +120,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.2268,
+        "top": 0.0654,
+        "width": 0.4664,
+        "height": 0.6693
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_stone_lion": {
       "source": "Openverse/Flickr",
@@ -87,12 +137,12 @@
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openverse_id": "674bae62-57ec-467c-8903-7cff07dbe08f",
       "crop": {
-        "left": 0.24,
-        "top": 0.12,
-        "width": 0.5,
-        "height": 0.88
+        "left": 0.1311,
+        "top": 0.0439,
+        "width": 0.6377,
+        "height": 0.9561
       },
-      "note": "Tượng sư tử đá kiểu Trung Hoa; cắt bỏ cửa sổ toà nhà."
+      "note": "Tượng sư tử đá kiểu Trung Hoa; cắt bỏ cửa sổ toà nhà. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_croc": {
       "same_as": "tray_croc",
@@ -106,11 +156,29 @@
       "author": "Aleksei Belta",
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1158,
+        "top": 0.0555,
+        "width": 0.7083,
+        "height": 0.9445
+      }
     },
     "tray.tray_rabbit": {
-      "same_as": "explore_fur",
-      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.5343,
+        "top": 0.2388,
+        "width": 0.3615,
+        "height": 0.5424
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung. Tách khỏi same_as explore_fur (bài goi-ten-va-nhom-dong-vat/dong-vat-co-vu) vì khung khác tỉ lệ."
     },
     "tray.tray_kite": {
       "source": "Wikimedia Commons",
@@ -121,12 +189,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.26,
-        "top": 0,
-        "width": 0.56,
-        "height": 0.46
+        "left": 0.175,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
       },
-      "note": "Chép mục gốc `tray_kite` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_kite` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_egret": {
       "source": "Wikimedia Commons",
@@ -136,11 +204,29 @@
       "author": "Hobbyfotowiki",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1176,
+        "top": 0.0,
+        "width": 0.6648,
+        "height": 1.0
+      }
     },
     "tray.tray_duck": {
-      "same_as": "w1_duck",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tierpark_Walldorf_Laufente_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Tierpark_Walldorf_Laufente_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tierpark Walldorf Laufente 1",
+      "author": "R. J. Mathar",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1555,
+        "top": 0.0,
+        "width": 0.599,
+        "height": 0.8978
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung. Tách khỏi same_as w1_duck (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "q1": {
       "source": "Wikimedia Commons",
@@ -169,15 +255,34 @@
       "title": "Aporrectodea rosea 258682963",
       "author": "Поляков Александр",
       "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0"
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1999,
+        "width": 1.0,
+        "height": 0.6002
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "q1.q1_fish": {
       "same_as": "q4_fish",
       "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
     },
     "q2": {
-      "same_as": "explore_fur",
-      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2969,
+        "top": 0.1143,
+        "width": 0.7031,
+        "height": 0.7913
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung. Tách khỏi same_as explore_fur (bài goi-ten-va-nhom-dong-vat/dong-vat-co-vu) vì khung khác tỉ lệ."
     },
     "q3": {
       "same_as": "q1",
@@ -192,41 +297,95 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.0,
+        "top": 0.1318,
+        "width": 0.9344,
+        "height": 0.5364
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "q3.q3_elephant": {
-      "same_as": "learn.explore.explore_big_small",
-      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants_with_calf_(7568633672).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Elephants_with_calf_%287568633672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Elephants with calf (7568633672)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1815,
+        "top": 0.2368,
+        "width": 0.777,
+        "height": 0.4664
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_big_small (bài goi-ten-va-nhom-dong-vat/dong-vat-co-vu) vì khung khác tỉ lệ."
     },
     "q3.q3_croc": {
-      "same_as": "tray_croc",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0136,
+        "top": 0.2863,
+        "width": 0.9328,
+        "height": 0.4975
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray_croc (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "q4": {
       "same_as": "learn.explore.explore_both"
     },
     "q4.q4_rabbit": {
-      "same_as": "explore_fur",
-      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1841,
+        "top": 0.2651,
+        "width": 0.8159,
+        "height": 0.4897
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as explore_fur (bài goi-ten-va-nhom-dong-vat/dong-vat-co-vu) vì khung khác tỉ lệ."
     },
     "q4.q4_hen": {
       "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Chicken Posing",
-      "author": "Aleksei Belta",
-      "license": "CC BY 3.0",
-      "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hen_0001.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Hen_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hen 0001",
+      "author": "Lilly M",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1659,
+        "width": 1.0,
+        "height": 0.6282
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Đổi ảnh: ảnh cũ sai hướng với khung."
     },
     "q4.q4_croc": {
-      "same_as": "tray_croc",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0136,
+        "top": 0.2863,
+        "width": 0.9328,
+        "height": 0.4975
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray_croc (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "q5": {
       "source": "Wikimedia Commons",
@@ -236,7 +395,13 @@
       "author": "Hobbyfotowiki",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0186,
+        "top": 0.0,
+        "width": 0.8628,
+        "height": 0.9734
+      }
     },
     "q6": {
       "source": "Wikimedia Commons",
@@ -261,17 +426,70 @@
       "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
     },
     "vocab.herbivore": {
-      "same_as": "learn.explore.explore_plants"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BUFFALO159.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/BUFFALO159.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "BUFFALO159",
+      "author": "Da",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1249,
+        "width": 1.0,
+        "height": 0.7503
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_plants vì khung khác tỉ lệ."
     },
     "vocab.carnivore": {
-      "same_as": "learn.explore.explore_meat"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/126288307@N05/52537526396",
+      "file_url": "https://live.staticflickr.com/65535/52537526396_091366889d_b.jpg",
+      "title": "egret with fish - Merritt Island National Wildlife Refuge - Cape Canaveral Florida",
+      "author": "watts_photos",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "2200073a-561b-4e99-90e9-d65027690a86",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1034,
+        "width": 1.0,
+        "height": 0.6432
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_meat vì khung khác tỉ lệ."
     },
     "vocab.omnivore": {
-      "same_as": "learn.explore.explore_both"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/7891030@N08/16352504634",
+      "file_url": "https://live.staticflickr.com/8688/16352504634_232660aa5c_b.jpg",
+      "title": "Fish - Rice - Peas",
+      "author": "}{enry",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "131dafa3-a823-4894-97b0-e1bcad9f5ee3",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0846,
+        "width": 1.0,
+        "height": 0.7507
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_both vì khung khác tỉ lệ."
     },
     "vocab.plant": {
-      "same_as": "q4_grass",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fresh_cut_grass_in_a_glass_container_as_a_decoration_at_a_party.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Fresh_cut_grass_in_a_glass_container_as_a_decoration_at_a_party.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fresh green grass",
+      "author": "Tomwsulcer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2167,
+        "width": 1.0,
+        "height": 0.6667
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as q4_grass (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "vocab.meat": {
       "source": "Wikimedia Commons",
@@ -281,10 +499,29 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1199,
+        "width": 1.0,
+        "height": 0.7503
+      }
     },
     "reward.buffalo_card": {
-      "same_as": "learn.explore.explore_plants"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BUFFALO159.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/BUFFALO159.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "BUFFALO159",
+      "author": "Da",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.1268,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung sticker Thưởng 1:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_plants vì khung khác tỉ lệ."
     }
   }
 }

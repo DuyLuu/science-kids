@@ -238,6 +238,7 @@ extension LearnStep {
             .accessibilityLabel(Text(verbatim: term.term.en))
             .accessibilityAddTraits([.isButton, .startsMediaSession])
             .accessibilityIdentifier("lesson.word_list.\(term.key)")
+            .overlay(alignment: .trailing) { SecondVoiceButton(say) }
         }
     }
 }

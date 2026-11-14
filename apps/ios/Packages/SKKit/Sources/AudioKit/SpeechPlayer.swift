@@ -36,6 +36,11 @@ public struct Utterance: Hashable, Sendable, Identifiable {
 
     /// Nothing to play: no clip in the voice of the profile. Screens hide its listen button.
     public var isEmpty: Bool { clips.isEmpty }
+
+    /// The clips in one language only (`en`, `vi`), same id with the language after it.
+    public func only(_ language: String) -> Utterance {
+        Utterance(id: "\(id).\(language)", clips: clips.filter { $0.language == language })
+    }
 }
 
 /// Where the bytes of a clip come from: the content pack, which checks them first (SK-016).
@@ -80,6 +85,10 @@ public final class SpeechPlayer {
     /// Id of the utterance playing (or loading its next clip).
     public private(set) var speaking: String?
     public private(set) var stats = SpeechStats()
+    /// SK-042 (Duy 13/11): in "Cả hai" only this language plays by itself and on the main listen
+    /// buttons and taps (`play`, `autoplay`); the other language plays on its own small button
+    /// (`secondVoice(of:)`, `playSecond`). `nil`: every clip plays, as before (English, Tiếng Việt).
+    public var firstLanguageOnly: String?
 
     /// The content pack's clips; `nil` while there is no pack (fixtures: no audio).
     @ObservationIgnored public var loader: (any ClipLoader)?
@@ -109,8 +118,35 @@ public final class SpeechPlayer {
 
     // MARK: Playing
 
-    /// Plays `utterance` from its start, stopping whatever was playing.
+    /// Plays `utterance` from its start, stopping whatever was playing; with `firstLanguageOnly`,
+    /// only its clips in that language (all of them when it has none in that language).
     public func play(_ utterance: Utterance) {
+        start(firstVoice(of: utterance))
+    }
+
+    /// The part of `utterance` that `play` sounds.
+    public func firstVoice(of utterance: Utterance) -> Utterance {
+        guard let language = firstLanguageOnly else { return utterance }
+        let first = Utterance(id: utterance.id, clips: utterance.clips.filter { $0.language == language })
+        return first.isEmpty ? utterance : first
+    }
+
+    /// With `firstLanguageOnly`: the clips of `utterance` in the other language(s), for the small
+    /// second-language button; `nil` without `firstLanguageOnly`, or when there are none.
+    public func secondVoice(of utterance: Utterance) -> Utterance? {
+        guard let language = firstLanguageOnly else { return nil }
+        let second = Utterance(id: "\(utterance.id).second", clips: utterance.clips.filter { $0.language != language })
+        guard !second.isEmpty, second.clips.count < utterance.clips.count else { return nil }
+        return second
+    }
+
+    /// Plays the second-language part of `utterance` (the small button), stopping what was playing.
+    public func playSecond(_ utterance: Utterance) {
+        guard let second = secondVoice(of: utterance) else { return }
+        start(second)
+    }
+
+    private func start(_ utterance: Utterance) {
         interrupt()
         guard !utterance.isEmpty else { return }
         stats.requested += 1

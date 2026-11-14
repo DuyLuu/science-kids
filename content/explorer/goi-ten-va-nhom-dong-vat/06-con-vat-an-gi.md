@@ -3,7 +3,7 @@ id: c22d1f3e-8279-48fa-9d2c-f9afaec9339c
 topic: goi-ten-va-nhom-dong-vat
 slug: con-vat-an-gi
 order: 6
-stage: review
+stage: core
 est_minutes: 6
 sensitive: false
 archived: false
@@ -19,7 +19,7 @@ vi: Con vật ăn gì?
 en: I can sort animals by what they eat.
 vi: Em xếp nhóm được các con vật theo thức ăn của chúng.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-041, ngày 12/11/2026. Mọi dòng `id:` để trống; chạy `ids` sau bài một đến năm.
-> Bài cuối (`review`): Khởi động ôn trộn bài năm, ba, hai và hỏi lại câu "Em nghĩ sao?" của bài một (w3). Bài vẫn có ý mới của sườn (ăn thực vật, ăn thịt, ăn tạp). Sửa `all_animals_eat_same` ở ý chính một, bốn ô Học, phần Chơi và câu q6 (gắn key).
+> 13/11: chủ đề thêm bài bảy, tám (động vật không xương sống, Duy yêu cầu), nên bài này đổi `stage` từ `review` sang `core`; bài tám là bài tổng kết. Nội dung không đổi. Khởi động ôn trộn bài năm, ba, hai và hỏi lại câu "Em nghĩ sao?" của bài một (w3). Bài vẫn có ý mới của sườn (ăn thực vật, ăn thịt, ăn tạp). Sửa `all_animals_eat_same` ở ý chính một, bốn ô Học, phần Chơi và câu q6 (gắn key).
 
 ## Ý chính
 1.en: Animals eat different foods.
@@ -53,6 +53,8 @@ explanation_correct.en: A snake has no legs. It slides.
 explanation_correct.vi: Rắn không có chân. Rắn trườn đi.
 explanation_wrong.en: This is false. A snake has no legs.
 explanation_wrong.vi: Câu này sai. Rắn không có chân.
+feedback_true.en: A snake slides along with no legs.
+feedback_true.vi: Rắn trườn đi, không có chân.
 > Ôn `all_animals_four_legs` (bài năm q6), không gắn key.
 
 ### w2
@@ -69,8 +71,8 @@ image.alt.en: A bamboo fence in a garden
 image.alt.vi: Hàng rào tre trước khu vườn
 hint.en: Look for dry skin with scales.
 hint.vi: Em tìm con có da khô phủ vảy nhé.
-explanation_correct.en: Yes! A crocodile is a reptile.
-explanation_correct.vi: Đúng rồi! Cá sấu là bò sát.
+explanation_correct.en: Yes! A crocodile has dry, scaly skin.
+explanation_correct.vi: Đúng rồi! Cá sấu có da khô phủ vảy.
 explanation_wrong.en: The answer is the crocodile. It has scales.
 explanation_wrong.vi: Đáp án là cá sấu. Cá sấu có vảy.
 > Ếch và cá sấu cùng sống ở bờ nước, cùng bốn chân; bé phải nhìn da (ý "lưỡng cư và bò sát là một" của sườn, gặp lại lần ba).
@@ -85,6 +87,8 @@ image.alt.vi: Con cá sấu trên bờ sông
 
 #### option w2_frog
 correct: false
+feedback.en: A frog has smooth skin, no scales.
+feedback.vi: Ếch có da trơn, không có vảy.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -110,6 +114,8 @@ explanation_correct.en: Yes! People are animals and mammals.
 explanation_correct.vi: Đúng rồi! Con người là động vật, là động vật có vú.
 explanation_wrong.en: This is true. People are animals, too.
 explanation_wrong.vi: Câu này đúng. Con người cũng là động vật.
+feedback_false.en: People move and eat, like animals do.
+feedback_false.vi: Con người tự đi lại và ăn uống, như các con vật.
 > Hỏi lại ý của câu "Em nghĩ sao?" đề xuất cho bài một (`people_not_animals`, không gắn key). Câu "Em nghĩ sao?" chưa có trong schema (`think_first` là đề xuất), nên chữ cho bé ở đây không nhắc tới câu trả lời lúc đầu (rà chữ tester 12/11 n16). Câu này cũng mở đường cho ô "Eat both" (con người ăn tạp).
 
 ## Học
@@ -344,8 +350,8 @@ image.alt.en: A water buffalo
 image.alt.vi: Con trâu
 hint.en: Think of a buffalo in the field.
 hint.vi: Em nhớ lại con trâu ngoài đồng nhé.
-explanation_correct.en: Yes! A buffalo eats grass.
-explanation_correct.vi: Đúng rồi! Trâu ăn cỏ.
+explanation_correct.en: Yes! A buffalo eats only plants.
+explanation_correct.vi: Đúng rồi! Trâu chỉ ăn thực vật.
 explanation_wrong.en: The answer is grass. Buffaloes eat plants.
 explanation_wrong.vi: Đáp án là bó cỏ. Trâu ăn thực vật.
 > Hình câu hỏi là trâu đang uống nước bên suối, không phải ảnh trâu gặm cỏ của ô Học (bằng chứng của đáp án). Khớp ví dụ Đạt ở luật Explorer số 2 của TEMPLATE.
@@ -360,6 +366,8 @@ image.alt.vi: Cỏ tươi
 
 #### option q1_worm
 correct: false
+feedback.en: A worm is food for hens and birds.
+feedback.vi: Giun là thức ăn của gà và chim.
 label.en: worm
 label.vi: con giun
 image.brief: [ảnh] Một con giun đất hồng nằm trên mặt đất ẩm, chụp cận, thấy cả con; không có tay người, không có chữ. Nếu ảnh giun đất của chủ đề *Đá và đất* (bài *Thế nào là đất tốt*) hợp khung thì dùng lại. Từ khoá tìm ảnh (EN): earthworm on moist soil
@@ -368,6 +376,8 @@ image.alt.vi: Con giun trên đất
 
 #### option q1_fish
 correct: false
+feedback.en: Fish is food for egrets.
+feedback.vi: Cá là thức ăn của con cò.
 label.en: small fish
 label.vi: cá nhỏ
 image.brief: Dùng lại hình `q4_fish` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): small fish swimming shallow water
@@ -392,6 +402,8 @@ explanation_correct.en: A rabbit eats plants, like leaves.
 explanation_correct.vi: Thỏ ăn thực vật, như lá rau.
 explanation_wrong.en: This is false. A rabbit eats plants.
 explanation_wrong.vi: Câu này sai. Thỏ ăn thực vật.
+feedback_true.en: A rabbit nibbles leaves and carrots.
+feedback_true.vi: Thỏ gặm lá rau và củ cà rốt.
 
 ### q3
 id: 5c372132-265e-4694-af00-46442479157e
@@ -413,6 +425,8 @@ explanation_wrong.vi: Đáp án là cá sấu. Cá sấu ăn thịt.
 
 #### option q3_buffalo
 correct: false
+feedback.en: A buffalo eats grass.
+feedback.vi: Trâu ăn cỏ.
 label.en: buffalo
 label.vi: con trâu
 image.brief: Dùng lại hình `w1_buffalo` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): water buffalo drinking stream horns
@@ -421,6 +435,8 @@ image.alt.vi: Con trâu
 
 #### option q3_elephant
 correct: false
+feedback.en: An elephant eats leaves and sugar cane.
+feedback.vi: Voi ăn lá cây và mía.
 label.en: elephant
 label.vi: con voi
 image.brief: Dùng lại hình `explore_big_small` ở bài `goi-ten-va-nhom-dong-vat/dong-vat-co-vu`. Từ khoá tìm ảnh (EN): Asian elephant standing in water
@@ -456,6 +472,8 @@ explanation_wrong.vi: Đáp án là con gà mái. Gà ăn tạp.
 
 #### option q4_rabbit
 correct: false
+feedback.en: A rabbit eats only plants.
+feedback.vi: Thỏ chỉ ăn thực vật.
 label.en: rabbit
 label.vi: con thỏ
 image.brief: Dùng lại hình `explore_fur` ở bài `goi-ten-va-nhom-dong-vat/dong-vat-co-vu`. Từ khoá tìm ảnh (EN): white rabbit sitting grass
@@ -472,6 +490,8 @@ image.alt.vi: Con gà mái trong sân
 
 #### option q4_croc
 correct: false
+feedback.en: A crocodile eats only meat.
+feedback.vi: Cá sấu chỉ ăn thịt.
 label.en: crocodile
 label.vi: cá sấu
 image.brief: Dùng lại hình `q1_reptiles` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): Siamese crocodile basking riverbank side view
@@ -491,10 +511,12 @@ image.alt.vi: Con cò bay trên bãi cỏ
 answer: true
 hint.en: Is a fish an animal?
 hint.vi: Em nghĩ xem con cá có phải con vật không?
-explanation_correct.en: Yes! Fish is meat, too.
-explanation_correct.vi: Đúng rồi! Cá cũng là thịt.
+explanation_correct.en: Yes! An egret is a meat-eater.
+explanation_correct.vi: Đúng rồi! Cò là con vật ăn thịt.
 explanation_wrong.en: This is true. Fish is meat, too.
 explanation_wrong.vi: Câu này đúng. Cá cũng là thịt.
+feedback_false.en: Fish is meat, because fish are animals.
+feedback_false.vi: Cá cũng là thịt, vì cá là con vật.
 > DOK 2: suy ra một điều từ một điều đã biết. Bé hay nghĩ "thịt" chỉ là thịt lợn, thịt gà, nên có thể chạm lắc đầu. Ví dụ bốn của ô "Meat-eaters" đã nói ý này.
 > Hình là cò đang bay, không phải ảnh cò ngậm cá của ô Học (bằng chứng).
 
@@ -521,6 +543,8 @@ explanation_wrong.vi: Đáp án là con cá. Mỗi con vật ăn thức ăn khá
 
 #### option q6_grass
 correct: false
+feedback.en: Grass is food for the buffalo.
+feedback.vi: Cỏ là thức ăn của con trâu.
 label.en: grass
 label.vi: bó cỏ
 image.brief: Dùng lại hình `q4_grass` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): bundle fresh green grass
@@ -529,6 +553,8 @@ image.alt.vi: Cỏ tươi
 
 #### option q6_banana
 correct: false
+feedback.en: Bananas are fruit for people.
+feedback.vi: Chuối là quả cho người ăn.
 label.en: bananas
 label.vi: nải chuối
 image.brief: Dùng lại hình `q4_banana` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): bunch ripe bananas wooden table

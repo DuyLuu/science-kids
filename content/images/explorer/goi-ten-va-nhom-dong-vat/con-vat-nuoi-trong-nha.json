@@ -26,11 +26,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.18,
-        "top": 0.05,
-        "width": 0.64,
-        "height": 0.95
-      }
+        "left": 0.0,
+        "top": 0.2149,
+        "width": 1.0,
+        "height": 0.6002
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "w1.w1_duck": {
       "source": "Wikimedia Commons",
@@ -41,22 +42,28 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.18,
-        "top": 0.05,
-        "width": 0.56,
-        "height": 0.9
+        "left": 0.0,
+        "top": 0.0852,
+        "width": 1.0,
+        "height": 0.5995
       },
-      "note": "Vịt nhà đứng trên bờ đá có cỏ, thấy hai chân."
+      "note": "Vịt nhà đứng trên bờ đá có cỏ, thấy hai chân. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "w1.w1_hat": {
       "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Conical_hat,_Viet,_Thanh_Oai,_Hanoi,_1999,_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi,_Vietnam_-_DSC03996.JPG",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "A conical hat",
-      "author": "Daderot",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Nón lá Thanh Oai (Hà Nội) nhìn từ trên; không có ảnh hợp lệ nón đặt trên ghế tre."
+      "source_url": "https://commons.wikimedia.org/wiki/File:N%C3%B3n_l%C3%A1_%C4%91%E1%BB%93_ch%C6%A1i.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/N%C3%B3n_l%C3%A1_%C4%91%E1%BB%93_ch%C6%A1i.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nón lá đồ chơi",
+      "author": "terence from Singapore",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0154,
+        "top": 0.3385,
+        "width": 0.9693,
+        "height": 0.583
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Đổi ảnh: ảnh cũ sai hướng với khung."
     },
     "w2": {
       "source": "Wikimedia Commons",
@@ -67,12 +74,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.1084,
+        "top": 0.0216,
+        "width": 0.7031,
+        "height": 0.7567
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_animals": {
       "source": "Wikimedia Commons",
@@ -83,12 +90,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.15,
-        "top": 0.12,
-        "width": 0.7,
-        "height": 0.6
+        "left": 0.0684,
+        "top": 0.1364,
+        "width": 0.7031,
+        "height": 0.5272
       },
-      "note": "Gà mẹ và ba gà con trên sườn đất đỏ."
+      "note": "Gà mẹ và ba gà con trên sườn đất đỏ. · SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_pets": {
       "source": "Wikimedia Commons",
@@ -98,7 +105,13 @@
       "author": "JazTan",
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chó trắng đốm nâu nằm trên sàn gạch trong nhà (không có ảnh hợp lệ chó vàng trên hiên)."
+      "note": "Chó trắng đốm nâu nằm trên sàn gạch trong nhà (không có ảnh hợp lệ chó vàng trên hiên). · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 1.0,
+        "height": 1.0
+      }
     },
     "learn.explore.explore_farm": {
       "source": "Wikimedia Commons",
@@ -109,12 +122,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.1084,
+        "top": 0.0216,
+        "width": 0.7031,
+        "height": 0.7567
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_wild": {
       "source": "Wikimedia Commons",
@@ -125,18 +138,44 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "crop": {
-        "left": 0.36,
-        "top": 0.05,
-        "width": 0.6,
-        "height": 0.62
+        "left": 0.1634,
+        "top": 0.1278,
+        "width": 0.7031,
+        "height": 0.8145
       },
-      "note": "Cắt lấy một con voọc, bỏ con thứ hai phía dưới."
+      "note": "Cắt lấy một con voọc, bỏ con thứ hai phía dưới. · SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_dog": {
-      "same_as": "learn.explore.explore_pets"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_pets vì khung khác tỉ lệ."
     },
     "tray.tray_douc": {
-      "same_as": "learn.explore.explore_wild"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2281,
+        "top": 0.2027,
+        "width": 0.5738,
+        "height": 0.6646
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_wild vì khung khác tỉ lệ."
     },
     "tray.tray_parakeet": {
       "source": "Openverse/Flickr",
@@ -148,12 +187,12 @@
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openverse_id": "b4d6e777-c0fb-47ec-9db8-4832beb89861",
       "crop": {
-        "left": 0.28,
-        "top": 0.1,
-        "width": 0.45,
-        "height": 0.9
+        "left": 0.2587,
+        "top": 0.0785,
+        "width": 0.4827,
+        "height": 0.7229
       },
-      "note": "Cắt bỏ góc trên trái có đồ vật trong nhà."
+      "note": "Cắt bỏ góc trên trái có đồ vật trong nhà. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_croc": {
       "source": "Wikimedia Commons",
@@ -164,12 +203,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0,
-        "top": 0.38,
-        "width": 1,
-        "height": 0.5
+        "left": 0.105,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
       },
-      "note": "Chép mục gốc `q1_reptiles` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Brief cho phép: một con cá sấu Xiêm hoang dã, miệng khép."
+      "note": "Chép mục gốc `q1_reptiles` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Brief cho phép: một con cá sấu Xiêm hoang dã, miệng khép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_cat": {
       "source": "Wikimedia Commons",
@@ -179,7 +218,13 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1318,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      }
     },
     "tray.tray_goldfish": {
       "source": "Wikimedia Commons",
@@ -190,11 +235,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.1,
-        "top": 0.05,
-        "width": 0.8,
-        "height": 0.95
-      }
+        "left": 0.121,
+        "top": 0.0366,
+        "width": 0.6879,
+        "height": 0.9634
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_egret": {
       "source": "Wikimedia Commons",
@@ -204,7 +250,13 @@
       "author": "Hobbyfotowiki",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1176,
+        "top": 0.0,
+        "width": 0.6648,
+        "height": 1.0
+      }
     },
     "q1": {
       "source": "Wikimedia Commons",
@@ -214,7 +266,13 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0207,
+        "top": 0.0,
+        "width": 0.8885,
+        "height": 1.0
+      }
     },
     "q2": {
       "source": "Wikimedia Commons",
@@ -234,20 +292,45 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1949,
+        "width": 1.0,
+        "height": 0.6002
+      }
     },
     "q2.q2_hen": {
       "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Chicken Posing",
-      "author": "Aleksei Belta",
-      "license": "CC BY 3.0",
-      "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chép mục gốc `w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hen_0001.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Hen_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Hen 0001",
+      "author": "Lilly M",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1659,
+        "width": 1.0,
+        "height": 0.6282
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Đổi ảnh: ảnh cũ sai hướng với khung."
     },
     "q2.q2_douc": {
-      "same_as": "learn.explore.explore_wild"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2533,
+        "width": 1.0,
+        "height": 0.4633
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_wild vì khung khác tỉ lệ."
     },
     "q3": {
       "same_as": "learn.explore.explore_pets"
@@ -277,7 +360,13 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "openverse_id": "8f30d227-6912-4a67-b2f0-8441d58220cd",
-      "note": "Mấy con cá nhỏ còn sống trong nước nông trên nền cát, chụp từ trên xuống."
+      "note": "Mấy con cá nhỏ còn sống trong nước nông trên nền cát, chụp từ trên xuống. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0894,
+        "top": 0.2537,
+        "width": 0.8211,
+        "height": 0.4927
+      }
     },
     "q4.q4_grass": {
       "source": "Wikimedia Commons",
@@ -288,12 +377,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.08,
-        "top": 0.15,
-        "width": 0.86,
-        "height": 0.75
+        "left": 0.0,
+        "top": 0.2033,
+        "width": 1.0,
+        "height": 0.5333
       },
-      "note": "Không có ảnh hợp lệ bó cỏ buộc lạt; đây là khay cỏ tươi."
+      "note": "Không có ảnh hợp lệ bó cỏ buộc lạt; đây là khay cỏ tươi. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "q4.q4_banana": {
       "source": "Wikimedia Commons",
@@ -302,7 +391,14 @@
       "title": "Lakatan banana bunch (Philippines) 01",
       "author": "Obsidian Soul",
       "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1444,
+        "width": 1.0,
+        "height": 0.7111
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "q5": {
       "own": {
@@ -313,7 +409,21 @@
       "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
     },
     "q5.q5_parakeet": {
-      "same_as": "tray.tray_parakeet"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/197474085@N03/52653656559",
+      "file_url": "https://live.staticflickr.com/65535/52653656559_193021a2c8_b.jpg",
+      "title": "Curious Budgerigar",
+      "author": "hancongyang495949598",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "b4d6e777-c0fb-47ec-9db8-4832beb89861",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1404,
+        "width": 1.0,
+        "height": 0.5991
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray.tray_parakeet vì khung khác tỉ lệ."
     },
     "q5.q5_egret": {
       "source": "Wikimedia Commons",
@@ -323,10 +433,29 @@
       "author": "Hobbyfotowiki",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0186,
+        "top": 0.0404,
+        "width": 0.8628,
+        "height": 0.5191
+      }
     },
     "q5.q5_dog": {
-      "same_as": "learn.explore.explore_pets"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2333,
+        "width": 1.0,
+        "height": 0.5333
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_pets vì khung khác tỉ lệ."
     },
     "q6": {
       "source": "Wikimedia Commons",
@@ -339,22 +468,100 @@
       "note": "Phòng khách có tủ gỗ, cửa sổ (Canada); không có ảnh hợp lệ phòng khách Việt Nam không người, không chữ."
     },
     "q6.q6_goldfish": {
-      "same_as": "tray.tray_goldfish"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aquarium tropical de Pierrefitte-Nestalas 03082018 Carassius auratus Lionhead goldfish 2",
+      "author": "Vassil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2299,
+        "width": 1.0,
+        "height": 0.5602
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray.tray_goldfish vì khung khác tỉ lệ."
     },
     "q6.q6_croc": {
-      "same_as": "tray.tray_croc"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0136,
+        "top": 0.2863,
+        "width": 0.9328,
+        "height": 0.4975
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray.tray_croc vì khung khác tỉ lệ."
     },
     "q6.q6_douc": {
-      "same_as": "learn.explore.explore_wild"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2533,
+        "width": 1.0,
+        "height": 0.4633
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_wild vì khung khác tỉ lệ."
     },
     "vocab.animal": {
-      "same_as": "learn.explore.explore_animals"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hen_with_chicks_on_red_soil.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hen_with_chicks_on_red_soil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A hen and chicks looking for food",
+      "author": "Johnnybam",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2134,
+        "width": 0.9952,
+        "height": 0.3731
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_animals vì khung khác tỉ lệ."
     },
     "vocab.pet": {
-      "same_as": "learn.explore.explore_pets"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1717,
+        "width": 1.0,
+        "height": 0.6667
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_pets vì khung khác tỉ lệ."
     },
     "vocab.wild_animal": {
-      "same_as": "learn.explore.explore_wild"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2454,
+        "width": 1.0,
+        "height": 0.5792
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_wild vì khung khác tỉ lệ."
     },
     "vocab.farm_animal": {
       "source": "Wikimedia Commons",
@@ -365,15 +572,28 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.0862,
+        "top": 0.1318,
+        "width": 0.7476,
+        "height": 0.5364
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
     },
     "reward.douc_card": {
-      "same_as": "learn.explore.explore_wild"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2098,
+        "top": 0.1815,
+        "width": 0.6104,
+        "height": 0.707
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung sticker Thưởng 1:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_wild vì khung khác tỉ lệ."
     }
   }
 }

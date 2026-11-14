@@ -1,0 +1,441 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_Rough_Woodlice_(Porcellio_scaber)_(22890622110).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Common_Rough_Woodlice_%28Porcellio_scaber%29_%2822890622110%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Common Rough Woodlice (Porcellio scaber) (22890622110)",
+      "author": "Martin Cooper from Ipswich, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0241,
+        "width": 1,
+        "height": 0.9518
+      },
+      "note": "SK-046 (designer 14/11): Mọt ẩm (bọ ba đuôi đất) trên đất ẩm, nơi thường thấy khi nhấc hòn đá; không thấy mép đá. Crop cho khung c2."
+    },
+    "w1.w1_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "Chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_of_Water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bottle_of_Water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bottle of water",
+      "author": "Jiafei Slay Queen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `q4.q4_bottle` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w3": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "learn.explore.explore_rubbish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_bottle,_plastic_jug,_plastic_bag_of_garbage_(34081668035).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Water_bottle%2C_plastic_jug%2C_plastic_bag_of_garbage_%2834081668035%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water bottle, plastic jug, plastic bag of garbage (34081668035)",
+      "author": "Laurel L. Russwurm from Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Chai và can nhựa trơn bỏ lại trong cỏ khô (không thấy nhãn). Crop cho khung learn."
+    },
+    "learn.explore.explore_look": {
+      "same_as": "learn.explore.explore_stone",
+      "lesson": "sinh-vat-song-o-dau/nhung-noi-song-nho-xiu"
+    },
+    "learn.explore.explore_wild_corner": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen;_North-Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen%3B_North-Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches in the moorlands of Fochterloerveen; North-Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Đống cành khô trên nền cây xanh ở bìa rừng; không có người, không rác. Crop cho khung learn."
+    },
+    "learn.explore.explore_flowers": {
+      "same_as": "tray.tray_butterfly",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "tray.tray_sticks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen;_North-Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen%3B_North-Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches in the moorlands of Fochterloerveen; North-Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.245,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đống cành khô trên nền cây xanh ở bìa rừng; không có người, không rác. Crop cho khung sq."
+    },
+    "tray.tray_rubbish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_bottle,_plastic_jug,_plastic_bag_of_garbage_(34081668035).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Water_bottle%2C_plastic_jug%2C_plastic_bag_of_garbage_%2834081668035%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water bottle, plastic jug, plastic bag of garbage (34081668035)",
+      "author": "Laurel L. Russwurm from Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.155,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Chai và can nhựa trơn bỏ lại trong cỏ khô (không thấy nhãn). Crop cho khung sq."
+    },
+    "tray.tray_water_dish": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/50834253@N06/49960694328",
+      "file_url": "https://live.staticflickr.com/65535/49960694328_9a97dbd8ef_b.jpg",
+      "title": "pied wagtail and juvenile on my makeshift bird bath",
+      "author": "Nick Goodrum Photography",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "36792c57-9d4a-4e81-ac5c-0d56a050f432",
+      "crop": {
+        "left": 0.5469,
+        "top": 0.0,
+        "width": 0.4062,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đĩa nước nông đặt trên bãi cỏ, hai con chim chìa vôi đến uống. Crop cho khung sq."
+    },
+    "tray.tray_fire": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leaves_Burning_-_Padmapukur_Water_Treatment_Plant_Road_-_Howrah_20170506083246.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Leaves_Burning_-_Padmapukur_Water_Treatment_Plant_Road_-_Howrah_20170506083246.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leaves Burning - Padmapukur Water Treatment Plant Road - Howrah 20170506083246",
+      "author": "Biswarup Ganguly",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.0,
+        "width": 0.5637,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đống lá đang cháy bốc khói trong vườn (Kolkata); cắt bỏ góc nhà bên phải. Crop cho khung sq."
+    },
+    "tray.tray_flower_bed": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20110830_Vannes_(21).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/20110830_Vannes_%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20110830 Vannes (21)",
+      "author": "Donar Reiskoffer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.3265,
+        "width": 0.5003,
+        "height": 0.667
+      },
+      "note": "SK-046 (designer 14/11): Luống hoa nhiều màu dưới nắng (Vannes). Crop cho khung sq."
+    },
+    "tray.tray_spray": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:M%C3%A1quina_manual_para_sulfatar,_machina_construida_en_cobre,_marca_Cisnes,_Barcelona.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/M%C3%A1quina_manual_para_sulfatar%2C_machina_construida_en_cobre%2C_marca_Cisnes%2C_Barcelona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Máquina manual para sulfatar, machina construida en cobre, marca Cisnes, Barcelona",
+      "author": "Juan Emilio Prades Bel",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.095,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Bình phun thuốc đeo vai kiểu cũ bằng đồng, không nhãn. Crop cho khung sq."
+    },
+    "tray.tray_tubes": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/22711505@N05/54294706707",
+      "file_url": "https://live.staticflickr.com/65535/54294706707_a6fc6cfd2b_b.jpg",
+      "title": "'Native Bee House' -- Meadowlark Botanical Gardens Vienna (VA) December 2024",
+      "author": "Ron Cogswell",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "862913f0-dae7-41c7-b82a-d100a070ac10",
+      "crop": {
+        "left": 0.1699,
+        "top": 0.3965,
+        "width": 0.3802,
+        "height": 0.447
+      },
+      "note": "SK-046 (designer 14/11): Bó ống tre trong hộp gỗ cho ong; cắt bỏ biển chữ, chỉ còn đầu ống tre. Crop cho khung sq."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_flowers": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20110830_Vannes_(21).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/20110830_Vannes_%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20110830 Vannes (21)",
+      "author": "Donar Reiskoffer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.4667,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Luống hoa nhiều màu dưới nắng (Vannes). Crop cho khung c3."
+    },
+    "q1.q1_rubbish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_bottle,_plastic_jug,_plastic_bag_of_garbage_(34081668035).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Water_bottle%2C_plastic_jug%2C_plastic_bag_of_garbage_%2834081668035%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water bottle, plastic jug, plastic bag of garbage (34081668035)",
+      "author": "Laurel L. Russwurm from Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3333,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Chai và can nhựa trơn bỏ lại trong cỏ khô (không thấy nhãn). Crop cho khung c3."
+    },
+    "q1.q1_water_dish": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/50834253@N06/49960694328",
+      "file_url": "https://live.staticflickr.com/65535/49960694328_9a97dbd8ef_b.jpg",
+      "title": "pied wagtail and juvenile on my makeshift bird bath",
+      "author": "Nick Goodrum Photography",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "36792c57-9d4a-4e81-ac5c-0d56a050f432",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0077,
+        "width": 1,
+        "height": 0.9846
+      },
+      "note": "SK-046 (designer 14/11): Đĩa nước nông đặt trên bãi cỏ, hai con chim chìa vôi đến uống. Crop cho khung c3."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_stone",
+      "lesson": "sinh-vat-song-o-dau/nhung-noi-song-nho-xiu"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_tubes": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/22711505@N05/54294706707",
+      "file_url": "https://live.staticflickr.com/65535/54294706707_a6fc6cfd2b_b.jpg",
+      "title": "'Native Bee House' -- Meadowlark Botanical Gardens Vienna (VA) December 2024",
+      "author": "Ron Cogswell",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "862913f0-dae7-41c7-b82a-d100a070ac10",
+      "crop": {
+        "left": 0.1701,
+        "top": 0.456,
+        "width": 0.3998,
+        "height": 0.188
+      },
+      "note": "SK-046 (designer 14/11): Bó ống tre trong hộp gỗ cho ong; cắt bỏ biển chữ, chỉ còn đầu ống tre. Crop cho khung c3."
+    },
+    "q3.q3_sticks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen;_North-Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen%3B_North-Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches in the moorlands of Fochterloerveen; North-Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3333,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Đống cành khô trên nền cây xanh ở bìa rừng; không có người, không rác. Crop cho khung c3."
+    },
+    "q3.q3_flowers": {
+      "same_as": "q1.q1_flowers"
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pile_of_leaves_-_11_October_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pile_of_leaves_-_11_October_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pile of leaves - 11 October 2026",
+      "author": "Aethonatic",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.055,
+        "top": 0.0,
+        "width": 0.8899,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đống lá khô nâu trên lối lát đá trong vườn. Crop cho khung q."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Butterfly_Feeding_on_Nectar_(44575670234).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Butterfly_Feeding_on_Nectar_%2844575670234%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Butterfly Feeding on Nectar (44575670234)",
+      "author": "John Brighenti from Rockville, MD, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.17,
+        "width": 0.9,
+        "height": 0.54
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan `tray_butterfly`, crop riêng. Thẻ 5:2, cả con bướm."
+    },
+    "q5.q5_earthworm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aporrectodea_rosea_258682963.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aporrectodea_rosea_258682963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aporrectodea rosea 258682963",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.09,
+        "top": 0.22,
+        "width": 0.8,
+        "height": 0.48
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của da-va-dat/the-nao-la-dat-tot `earthworm`, crop riêng. Rà chữ N5: cắt sát con giun, nền đất chỉ còn dải mỏng."
+    },
+    "q5.q5_sparrow": {
+      "same_as": "q1.q1_sparrow",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q6": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q6.q6_lizard": {
+      "same_as": "q5.q5_lizard",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q6.q6_earthworm": {
+      "same_as": "q1.q1_worm",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q6.q6_millipede": {
+      "same_as": "learn.explore.explore_millipedes",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "vocab.protect": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen;_North-Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/A_pile_of_dead_branches_in_the_moorlands_of_Fochterloerveen%3B_North-Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches in the moorlands of Fochterloerveen; North-Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2467,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Đống cành khô trên nền cây xanh ở bìa rừng; không có người, không rác. Crop cho khung vocab."
+    },
+    "vocab.rubbish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_bottle,_plastic_jug,_plastic_bag_of_garbage_(34081668035).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Water_bottle%2C_plastic_jug%2C_plastic_bag_of_garbage_%2834081668035%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water bottle, plastic jug, plastic bag of garbage (34081668035)",
+      "author": "Laurel L. Russwurm from Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2667,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Chai và can nhựa trơn bỏ lại trong cỏ khô (không thấy nhãn). Crop cho khung vocab."
+    },
+    "vocab.garden": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "vocab.harm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leaves_Burning_-_Padmapukur_Water_Treatment_Plant_Road_-_Howrah_20170506083246.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Leaves_Burning_-_Padmapukur_Water_Treatment_Plant_Road_-_Howrah_20170506083246.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leaves Burning - Padmapukur Water Treatment Plant Road - Howrah 20170506083246",
+      "author": "Biswarup Ganguly",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.285,
+        "width": 0.8005,
+        "height": 0.71
+      },
+      "note": "SK-046 (designer 14/11): Đống lá đang cháy bốc khói trong vườn (Kolkata); cắt bỏ góc nhà bên phải. Crop cho khung vocab."
+    },
+    "reward.firefly_card": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/43322816@N08/51307978270",
+      "file_url": "https://live.staticflickr.com/65535/51307978270_922f896c90_b.jpg",
+      "title": "Firefly",
+      "author": "U. S. Fish and Wildlife Service - Northeast Region",
+      "license": "PDM 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "openverse_id": "b5c28915-e8e9-4b48-a60d-09a033655fa8",
+      "crop": {
+        "left": 0.0894,
+        "top": 0.0,
+        "width": 0.8211,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đom đóm đậu trên lá, chụp ban ngày. Crop cho khung sq."
+    }
+  }
+}

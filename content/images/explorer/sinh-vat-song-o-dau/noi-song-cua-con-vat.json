@@ -1,0 +1,310 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_green": {
+      "same_as": "q1.q1_green",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "w1.w1_dry_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loneliness_(16590654240).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Loneliness_%2816590654240%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Loneliness (16590654240)",
+      "author": "Jevgenijs Slihto",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.5,
+        "top": 0.22,
+        "width": 0.36,
+        "height": 0.5
+      },
+      "note": "Chép mục gốc `w1.w1_balloon` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w3.w3_dragonfly": {
+      "same_as": "q6.q6_dragonfly",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "w3.w3_spider": {
+      "same_as": "w1.w1_spider",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "learn.explore.explore_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "learn.explore.explore_forest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_on_Barro_Colorado.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forest_on_Barro_Colorado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Forest on Barro Colorado",
+      "author": "Photos courtesy of Christian Ziegler.",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "note": "Chép mục gốc `tray.tray_forest` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "Chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_mangrove": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tangled_Mangrove_Roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tangled_Mangrove_Roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tangled Mangrove Roots",
+      "author": "Vinno Christopan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0556,
+        "top": 0.0,
+        "width": 0.8889,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Rễ đước chằng chịt trên nền bùn (Indonesia). Crop cho khung learn."
+    },
+    "tray.tray_perch": {
+      "same_as": "tray.tray_perch",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_starfish": {
+      "same_as": "tray.tray_starfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "tray.tray_frog": {
+      "same_as": "tray.tray_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_douc": {
+      "same_as": "learn.explore.explore_wild",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_dragonfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dragonfly_on_green_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Dragonfly_on_green_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A dragonfly on a stem",
+      "author": "Andre Mouton andremouton",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của goi-ten-va-nhom-dong-vat/chim-va-bo-sat `q6_dragonfly`, crop riêng. Ô vuông, cả con chuồn chuồn."
+    },
+    "tray.tray_carp": {
+      "same_as": "tray.tray_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_dolphin": {
+      "same_as": "tray.tray_dolphin",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_douc": {
+      "same_as": "q2.q2_douc",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_starfish": {
+      "same_as": "q3.q3_starfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q1.q1_frog": {
+      "same_as": "q1.q1_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q2": {
+      "same_as": "w2",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q3": {
+      "same_as": "explore_spiny",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q3.q3_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q3.q3_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "note": "Chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q3.q3_forest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_on_Barro_Colorado.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forest_on_Barro_Colorado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Forest on Barro Colorado",
+      "author": "Photos courtesy of Christian Ziegler.",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0.3,
+        "width": 1,
+        "height": 0.344
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của be-mat-trai-dat/dat-va-nuoc-tren-trai-dat `tray_forest`, crop riêng. Thẻ 5:2, dải tán rừng."
+    },
+    "q4": {
+      "same_as": "explore_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_forest": {
+      "same_as": "q3.q3_forest"
+    },
+    "q4.q4_dunes": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dune.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Vietnam%2C_Mui_Ne_sand_dune.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam, Mui Ne sand dune",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-046 (designer 14/11): Đồi cát Mũi Né gợn sóng, không người. Crop cho khung c3."
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pelophylax_ridibundus_JdP_2013-06-16.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Pelophylax_ridibundus_JdP_2013-06-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pelophylax ridibundus JdP 2013-06-16",
+      "author": "Marie-Lan Nguyen",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Ếch ngồi trên lá súng giữa ao. Crop cho khung q."
+    },
+    "vocab.habitat": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "vocab.pond": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pelophylax_ridibundus_JdP_2013-06-16.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Pelophylax_ridibundus_JdP_2013-06-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pelophylax ridibundus JdP 2013-06-16",
+      "author": "Marie-Lan Nguyen",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2267,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Ếch ngồi trên lá súng giữa ao. Crop cho khung vocab."
+    },
+    "vocab.forest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_on_Barro_Colorado.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forest_on_Barro_Colorado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Forest on Barro Colorado",
+      "author": "Photos courtesy of Christian Ziegler.",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "note": "Chép mục gốc `tray.tray_forest` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.mangrove": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tangled_Mangrove_Roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tangled_Mangrove_Roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tangled Mangrove Roots",
+      "author": "Vinno Christopan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.205,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-046 (designer 14/11): Rễ đước chằng chịt trên nền bùn (Indonesia). Crop cho khung vocab."
+    },
+    "vocab.mudskipper": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Periophthalmus_cantonensis_new.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Periophthalmus_cantonensis_new.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Periophthalmus cantonensis new",
+      "author": "Periophthalmus_cantonensis.jpg : Webridge derivative work: Webridge ( talk )",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.06,
+        "width": 1,
+        "height": 0.78
+      },
+      "note": "SK-046 (designer 14/11): Cá thòi lòi trên mỏm đá bùn ven nước. Crop cho khung vocab."
+    },
+    "reward.mudskipper_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Periophthalmus_cantonensis_new.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Periophthalmus_cantonensis_new.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Periophthalmus cantonensis new",
+      "author": "Periophthalmus_cantonensis.jpg : Webridge derivative work: Webridge ( talk )",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.1995,
+        "top": 0.0,
+        "width": 0.641,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cá thòi lòi trên mỏm đá bùn ven nước. Crop cho khung sq."
+    }
+  }
+}

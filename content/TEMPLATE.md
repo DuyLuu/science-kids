@@ -98,6 +98,38 @@ Duy chốt 10/11: đồ vật, cảnh không có ảnh miễn phí hợp lệ th
 - Câu 6 có lời Na (`speaker: na`): `instruction` là "Challenge: check Na's idea" · "Thử thách: kiểm tra ý của Na"; `labels` là "Yes" · "Na đúng" và "No" · "Na chưa đúng". Nhãn trung tính vì Na có lúc nói đúng; không dùng "spot the mistake", vì nhãn đó báo trước Na sai.
 - Khởi động 2–3 câu; câu nào cũng có `recall_from`.
 
+**Phản hồi sau mỗi lần chọn (SK-044)** *(nháp AI, 13/11)*
+
+Duy 13/11: chọn sai thì bé được giải thích để chọn lại; chọn đúng thì bé nghe thêm một ý để hiểu rõ. Cách app dùng bốn loại chữ (SK-044, mục Quyết định):
+- **Chọn sai, còn lượt:** app đọc `feedback` của lựa chọn vừa chọn, rồi đọc `hint`. Lựa chọn không có `feedback` thì chỉ đọc `hint`.
+- **Chọn sai, hết lượt:** app đọc `explanation_wrong`.
+- **Chọn đúng:** app luôn đọc `explanation_correct`.
+
+Bốn trường:
+- **`feedback`** (mới, tuỳ chọn nhưng nên có): một câu cho **mỗi lựa chọn sai**, nói vì sao lựa chọn đó chưa đúng. Viết dưới khối `#### option` (cả `#### bank` của `fill_blank_bank`), hai dòng `feedback.en:` / `feedback.vi:`. Lựa chọn đúng không có `feedback`.
+  - Câu `true_false`: viết ở cấp câu, cho phía bé chọn nhầm: câu đáp án Đúng viết `feedback_false.en/.vi` (bé chạm "Sai"); câu đáp án Sai viết `feedback_true.en/.vi` (bé chạm "Đúng"). Tên trường tạm, dev chốt ở SK-044.
+  - `order_sequence`: chưa có `feedback` (chấm cả chuỗi); dùng `hint`.
+  - Nói về **lựa chọn bé vừa chọn**, không nói đáp án đúng là gì, không gọi tên đáp án, không tả dấu hiệu chỉ đáp án mới có theo cách thay cho việc nghĩ.
+  - Không chê, không nói "sai", "không đúng", "nhầm rồi"; không "Oops". Mở đầu bằng chính vật đó: "A bat has fur, not feathers." · "Con dơi có lông, không có lông vũ."
+- **`hint`**: cách nghĩ để chọn lại (nhìn vào đâu, nhớ ô Học nào, so cái gì). Không nói đáp án, không đọc lại các lựa chọn. Vì app đọc `hint` ngay sau `feedback`, hai câu không lặp ý.
+- **`explanation_correct`**: không chỉ "Yes!" · "Đúng rồi!"; luôn thêm **một ý** giải thích vì sao đúng hoặc một điều bé chưa biết. Câu `true_false` đáp án Sai: không mở đầu bằng "Yes!".
+- **`explanation_wrong`**: nói tên đáp án và một lý do ngắn ("The answer is the hen. It has feathers.").
+
+Theo nhóm tuổi:
+
+| | Explorer 5–7 | Discoverer 7–9 | Scientist 9–11 |
+| --- | --- | --- | --- |
+| `feedback` | Một câu, tối đa 8 từ EN. Nói điều **nhìn thấy được** trong hình hoặc điều bé đã học bằng hình ("A crab has a hard shell." · "Con cua có vỏ cứng."). Giọng ấm. | Một đến hai câu, mỗi câu tối đa 10 từ. Nêu lý do. Không lộ đáp án. | Một đến hai câu, mỗi câu tối đa 15 từ (soạn nhắm 12). Được dùng thuật ngữ đã học. |
+| `hint` | Một câu, tối đa 8 từ; chỉ vào điều nhìn thấy, hoặc nhắc tên ô Học khi điều cần biết không nhìn thấy được (main session chốt 12/11). | Một câu, tối đa 10 từ; chỉ chỗ cần nhớ hoặc cách nghĩ. | Một câu; có thể hỏi ngược để bé tự suy. |
+| `explanation_correct` | "Yes!" cộng một câu ý thêm, mỗi câu tối đa 8 từ. | Một đến hai câu, tối đa 10 từ mỗi câu. | Một đến hai câu. |
+| `explanation_wrong` | "The answer is …" cộng một câu lý do, mỗi câu tối đa 8 từ. | Như Explorer, tối đa 10 từ mỗi câu. | Như Discoverer, tối đa 15 từ. |
+
+Ví dụ Explorer, câu "Which one is a bird?" (dơi, chuồn chuồn, chim cánh cụt; đáp án chim cánh cụt):
+- `feedback` của dơi: "A bat has fur, not feathers." · "Con dơi có lông, không có lông vũ."
+- `feedback` của chuồn chuồn: "A dragonfly has thin wings, no feathers." · "Chuồn chuồn có cánh mỏng, không có lông vũ."
+- `hint`: "Look for feathers and a beak." · "Em tìm con có lông vũ và có mỏ nhé."
+- `explanation_correct`: "Yes! A penguin is a bird. It swims." · "Đúng rồi! Chim cánh cụt là chim. Nó bơi, không bay."
+
 **Luật soạn câu Explorer** *(nháp AI)*
 
 Bé 5–7 tuổi phần lớn chưa đọc được, nên phải làm trọn Khởi động và Quiz chỉ bằng nghe và nhìn (SK-026, quyết định D2 và D4). Ở Explorer:
@@ -376,6 +408,15 @@ label.vi: …
 image.brief: [ảnh] … Từ khoá tìm ảnh (EN): …   (bắt buộc, đoạn Hình ở mục A)
 image.alt.en: …
 image.alt.vi: …
+#### option qx_b
+correct: false
+feedback.en: …                   (SK-044: vì sao lựa chọn này chưa đúng; chỉ lựa chọn sai)
+feedback.vi: …
+label.en: …
+label.vi: …
+image.brief: …
+image.alt.en: …
+image.alt.vi: …
 
 ### qx
 format: true_false
@@ -389,6 +430,10 @@ labels.true.en: …                (không bắt buộc: thay nhãn Đúng/Sai m
 labels.true.vi: …
 labels.false.en: …
 labels.false.vi: …
+feedback_true.en: …              (SK-044, tên tạm: khi bé chạm Đúng mà đáp án là Sai)
+feedback_true.vi: …
+feedback_false.en: …             (khi bé chạm Sai mà đáp án là Đúng; chỉ viết phía bé có thể chọn nhầm)
+feedback_false.vi: …
 
 ### qx
 format: fill_blank_bank

@@ -40,6 +40,7 @@ import {
   type Selection,
 } from "../images/selection.ts";
 import { duplicateKeys, imageRefs } from "../images/slots.ts";
+import { aspectWarnings, aspectWarningText, loadSlotTable, type AspectSource, type SizedRef, type SlotTable } from "../images/aspect.ts";
 import { AGE_GROUPS, loadRules, type Rules } from "./rules.ts";
 
 export const CATALOG_PATH = "catalog/v1/manifest.json";
@@ -67,6 +68,8 @@ export type BuildOptions = {
   requireAssets?: boolean;
   /** Paths are printed relative to this. */
   display: (target: string) => string;
+  /** Slot ratios for the picture-shape warning (Duy 13/11, SK-043), default tools/content-cli/image-slots.json. */
+  slotTable?: SlotTable;
 };
 
 type Doc = Record<string, unknown> & { kind: ContentKind; id: string };
@@ -289,6 +292,10 @@ export async function runBuild(options: BuildOptions): Promise<number> {
   let imagesWithoutAsset = 0;
   const selectionsUsed = new Set<string>();
   const notComposedYet = new Set<string>();
+  // Picture shape vs slot (Duy 13/11, SK-043): warnings only, counted per topic.
+  const slotTable = options.slotTable ?? loadSlotTable();
+  const shapeWarnings: string[] = [];
+  const shapeByTopic = new Map<string, number>();
   for (const input of inputs) {
     const refs = imageRefs(input.data.kind, input.data);
     const chosen = new Map<string, string>();
@@ -304,6 +311,8 @@ export async function runBuild(options: BuildOptions): Promise<number> {
       selection = loaded.selection;
       if (selection) selectionsUsed.add(selectionDisplay);
     }
+    const sized: SizedRef[] = [];
+    const sourceOf = new Map<string, AspectSource>();
     for (const key of duplicateKeys(refs)) problems.push({ file: input.display, pointer: "", message: `hai hình cùng khoá ${key}: lỗi của content-cli, báo dev` });
     for (const ref of refs) {
       if (ref.image.asset !== undefined) continue; // reported in step 3
@@ -334,6 +343,7 @@ export async function runBuild(options: BuildOptions): Promise<number> {
           continue;
         }
         entry = found;
+        sourceOf.set(ref.key, { kind: "composed", selection: selectionDisplay, entryKey: resolved.via ?? resolved.key, file: resolved.composed.composed.file });
       } else if (resolved && "own" in resolved) {
         // Own picture: the file must be there (an own entry says the picture is made) and fetched
         // (cache key = its path + bytes); title and method as at fetch.
@@ -352,6 +362,7 @@ export async function runBuild(options: BuildOptions): Promise<number> {
           continue;
         }
         entry = found;
+        sourceOf.set(ref.key, { kind: "own", selection: selectionDisplay, entryKey: resolved.via ?? resolved.key, file: resolved.own.own.file });
       } else if (resolved) {
         const found = imageCache.usable(imageCacheKey(resolved.picked));
         if (!found || !isSourceEntry(found)) {
@@ -363,6 +374,7 @@ export async function runBuild(options: BuildOptions): Promise<number> {
           continue;
         }
         entry = found;
+        sourceOf.set(ref.key, { kind: "picked", selection: selectionDisplay, entryKey: resolved.via ?? ref.key, ...(resolved.picked.crop ? { crop: resolved.picked.crop } : {}) });
       } else {
         imagesWithoutAsset++;
         if (options.requireAssets) problems.push({ ...at, message: `hình ${ref.key} chưa có ảnh (--require-assets): chọn ảnh vào ${selectionDisplay} rồi chạy content-cli images fetch` });
@@ -375,6 +387,7 @@ export async function runBuild(options: BuildOptions): Promise<number> {
         continue;
       }
       chosen.set(ref.pointer, entry.sha256);
+      sized.push({ key: ref.key, pointer: ref.pointer, size: { width: entry.width, height: entry.height } });
       imagesWithAsset++;
       if (!assets.has(entry.sha256)) {
         const credit: ImageCredit | ComposedImageCredit | OwnImageCredit = isComposedEntry(entry)
@@ -393,6 +406,14 @@ export async function runBuild(options: BuildOptions): Promise<number> {
         assets.set(entry.sha256, { sha256: entry.sha256, size: bytes.length, kind: "image", path: `assets/${entry.sha256}.jpg`, width: entry.width, height: entry.height, credit, bytes });
       }
     }
+    if (input.data.kind === "lesson") {
+      const lessonName = path.basename(input.path, ".json");
+      for (const warning of aspectWarnings(input.data, String(topic.data.age_group), sized, slotTable)) {
+        shapeWarnings.push(`${input.display} ${aspectWarningText(lessonName, warning, sourceOf.get(warning.key))}`);
+        const topicSlug = String(topic.data.slug);
+        shapeByTopic.set(topicSlug, (shapeByTopic.get(topicSlug) ?? 0) + 1);
+      }
+    }
     if (selection) {
       for (const key of Object.keys(selection.images)) {
         if (!refs.some((ref) => ref.key === key)) warnings.push(`${selectionDisplay} /images/${key}: ${input.display} không có hình nào mang khoá này (bài đổi key?); bỏ qua`);
@@ -400,6 +421,10 @@ export async function runBuild(options: BuildOptions): Promise<number> {
     }
   }
 
+  if (shapeWarnings.length > 0) {
+    warnings.push(`ảnh lệch khung (tỉ lệ ảnh khác chỗ dùng, tools/content-cli/image-slots.json): ${shapeWarnings.length} hình · ${[...shapeByTopic].map(([slug, n]) => `${slug} ${n}`).join(", ")}`);
+    warnings.push(...shapeWarnings);
+  }
   for (const file of notComposedYet) warnings.push(`hình ghép chưa có file: ${file}; app vẽ hình giữ chỗ (designer ghép rồi chạy images fetch)`);
 
   if (problems.length > 0) {

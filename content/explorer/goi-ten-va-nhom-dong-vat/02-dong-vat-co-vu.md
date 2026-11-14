@@ -54,6 +54,8 @@ explanation_correct.en: Yes! Goldfish live in tanks at home.
 explanation_correct.vi: Đúng rồi! Cá vàng sống trong bể ở nhà.
 explanation_wrong.en: This is true. Pets can swim.
 explanation_wrong.vi: Câu này đúng. Thú cưng có con biết bơi.
+feedback_false.en: A goldfish lives in a tank at home.
+feedback_false.vi: Cá vàng sống được trong bể ở nhà.
 > Ôn `pets_have_four_legs` (câu q6 bài một), không gắn key.
 
 ### w2
@@ -70,8 +72,8 @@ image.alt.en: The evening sky over the trees
 image.alt.vi: Trời chiều trên rặng cây
 hint.en: Which one lives in a shed or yard?
 hint.vi: Con nào sống ở chuồng hay ngoài sân?
-explanation_correct.en: Yes! A buffalo is a farm animal.
-explanation_correct.vi: Đúng rồi! Trâu là vật nuôi trong chuồng.
+explanation_correct.en: Yes! A buffalo helps on the farm.
+explanation_correct.vi: Đúng rồi! Trâu là vật nuôi, giúp nhà nông cày ruộng.
 explanation_wrong.en: The answer is the buffalo. It lives in a shed.
 explanation_wrong.vi: Đáp án là con trâu. Trâu sống ở chuồng.
 > Ôn ô Học "Farm animals" bài một (nhóm bài một không hỏi ở quiz). Ba lựa chọn đúng ba nhóm của bài một: động vật hoang dã, vật nuôi trong chuồng, thú cưng. Ba ảnh đều đã có ở bài một.
@@ -80,6 +82,8 @@ explanation_wrong.vi: Đáp án là con trâu. Trâu sống ở chuồng.
 
 #### option w2_douc
 correct: false
+feedback.en: A douc lives free in the forest.
+feedback.vi: Voọc sống tự do trong rừng.
 label.en: douc
 label.vi: con voọc
 image.brief: Dùng lại hình `explore_wild` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): red-shanked douc langur tree
@@ -96,6 +100,8 @@ image.alt.vi: Con trâu
 
 #### option w2_parakeet
 correct: false
+feedback.en: A parakeet is a pet in our home.
+feedback.vi: Vẹt yến phụng là thú cưng trong nhà.
 label.en: parakeet
 label.vi: vẹt yến phụng
 image.brief: Dùng lại hình `tray_parakeet` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): budgerigar perch cage green
@@ -326,14 +332,16 @@ image.alt.en: A bamboo fence in a garden
 image.alt.vi: Hàng rào tre trước khu vườn
 hint.en: Look for soft hair on its body.
 hint.vi: Em tìm con có lông mềm trên mình nhé.
-explanation_correct.en: Yes! A cat has soft fur.
-explanation_correct.vi: Đúng rồi! Mèo có bộ lông mềm.
+explanation_correct.en: Yes! A cat has fur. It is a mammal.
+explanation_correct.vi: Đúng rồi! Mèo có bộ lông mềm. Mèo là động vật có vú.
 explanation_wrong.en: The answer is the cat. It has fur.
 explanation_wrong.vi: Đáp án là con mèo. Mèo có lông.
 > Không đặt con gà trong câu này: tiếng Việt gọi lông gà cũng là "lông", bé nghe VI dễ chọn gà. Ba lựa chọn: ếch (da trơn), thằn lằn (vảy), mèo (lông). VI câu hỏi viết "bộ lông mềm" để rõ nghĩa "fur".
 
 #### option q1_frog
 correct: false
+feedback.en: A frog has smooth skin, no fur.
+feedback.vi: Ếch có da trơn, không có lông.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -342,6 +350,8 @@ image.alt.vi: Con ếch nhìn từ phía trước
 
 #### option q1_lizard
 correct: false
+feedback.en: A lizard has scales, not fur.
+feedback.vi: Thằn lằn có vảy, không có lông.
 label.en: lizard
 label.vi: thằn lằn
 image.brief: Dùng lại hình `w3_lizard` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
@@ -373,6 +383,8 @@ explanation_correct.en: Yes! Kittens drink their mother's milk.
 explanation_correct.vi: Đúng rồi! Mèo con bú sữa của mèo mẹ.
 explanation_wrong.en: This is true. Kittens drink milk.
 explanation_wrong.vi: Câu này đúng. Mèo con bú sữa mẹ.
+feedback_false.en: A mother cat feeds her kittens milk.
+feedback_false.vi: Mèo mẹ cho mèo con bú sữa.
 > Hình câu hỏi là mèo con một mình, không phải ảnh mèo mẹ cho con bú của ô Học (bằng chứng của đáp án).
 
 ### q3
@@ -392,6 +404,8 @@ explanation_correct.en: A mother buffalo has a baby. No egg!
 explanation_correct.vi: Trâu mẹ đẻ ra nghé con, không đẻ trứng.
 explanation_wrong.en: This is false. Buffaloes have babies.
 explanation_wrong.vi: Câu này sai. Trâu đẻ con, không đẻ trứng.
+feedback_true.en: A mother buffalo has a baby calf.
+feedback_true.vi: Trâu mẹ đẻ ra một chú nghé con.
 > Câu nhớ lại ví dụ ba của ô "Milk". Đáp án Sai nên giải thích khi đúng không mở đầu bằng "Yes!". Gợi ý cho bé một mắt xích (trâu là động vật có vú), bé phải tự nối với "đẻ con".
 > Hình gốc, dùng lại ở câu w3 bài bốn.
 
@@ -465,6 +479,8 @@ image.alt.vi: Con dơi treo trên cành
 
 #### option q5_sparrow
 correct: false
+feedback.en: A sparrow is a bird with feathers.
+feedback.vi: Chim sẻ là chim, có lông vũ.
 label.en: sparrow
 label.vi: chim sẻ
 image.brief: Dùng lại hình `tray_sparrow` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): Eurasian tree sparrow perched branch
@@ -473,6 +489,8 @@ image.alt.vi: Chim sẻ đậu trên cành
 
 #### option q5_egret
 correct: false
+feedback.en: An egret is a bird with feathers.
+feedback.vi: Con cò là chim, có lông vũ.
 label.en: egret
 label.vi: con cò
 image.brief: Dùng lại hình `tray_egret` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): white egret flying over grass
@@ -497,6 +515,8 @@ explanation_correct.en: Yes! You are a mammal, like a cat.
 explanation_correct.vi: Đúng rồi! Em là động vật có vú, giống con mèo.
 explanation_wrong.en: This is true. People are mammals, too.
 explanation_wrong.vi: Câu này đúng. Con người cũng là động vật có vú.
+feedback_false.en: People have hair and drink milk as babies.
+feedback_false.vi: Người có tóc, hồi bé cũng bú sữa mẹ.
 > Câu misconception (`people_not_animals`): bé nghe câu nói về chính mình và áp ý "có lông hoặc tóc". Bé nghĩ "người không phải động vật" sẽ chạm lắc đầu.
 > Hình câu hỏi (designer 12/11, main session chốt): không có ảnh hợp lệ mái tóc bạn nhỏ từ phía sau (chỉ có ảnh người lớn, lộ mặt, hoặc nguồn ngoài danh sách), nên dùng lại cảnh trung tính góc vườn của bài một. Không dùng ảnh lông thỏ (`explore_fur`): bé nhìn con thỏ có thể chạm gật đầu vì "thỏ là động vật có vú" mà không áp vào chính mình, thành lối tắt. Không dùng ảnh bàn tay em bé (`explore_people`): đó là ô Học "People are mammals, too", bằng chứng của đáp án.
 > DOK 2: áp một đặc điểm vào chính mình (tình huống mới: ô Học nói về em bé, câu này nói về chính bé). Câu EN tám từ, có "so" nối hai vế, vẫn là một câu khẳng định.

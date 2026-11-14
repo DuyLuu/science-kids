@@ -277,6 +277,10 @@
         },
         "correct": {
           "type": "boolean"
+        },
+        "feedback": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "SK-044: vì sao lựa chọn này chưa đúng; app đọc khi bé chọn nó mà còn lượt, rồi đọc hint. Chỉ lựa chọn sai (correct: false) được có (refs.mjs)"
         }
       },
       "required": [
@@ -392,6 +396,14 @@
         },
         "labels": {
           "$ref": "#/$defs/TrueFalseLabels"
+        },
+        "feedback_true": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "SK-044: app đọc khi bé chạm Đúng mà answer là false. Chỉ có khi answer: false (refs.mjs)"
+        },
+        "feedback_false": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "SK-044: app đọc khi bé chạm Sai mà answer là true. Chỉ có khi answer: true (refs.mjs)"
         }
       },
       "required": [
@@ -460,6 +472,10 @@
         },
         "image": {
           "$ref": "common.schema.json#/$defs/Image"
+        },
+        "feedback": {
+          "$ref": "common.schema.json#/$defs/Spoken",
+          "description": "SK-044: vì sao thẻ từ này chưa đúng; chỉ thẻ không nằm trong answers được có (refs.mjs)"
         }
       },
       "required": [

@@ -2557,6 +2557,24 @@
         }
       }
     },
+    "lesson.explorer.learn.words_intro" : {
+      "comment" : "Explorer Học, last page (new words): the mascot's line. No voice clip yet: subtitle only (SK-043, main session 13/11; designer wording 'Từ mới! Em chạm từng hình để nghe nhé.').",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New words! Tap to listen."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ mới! Em chạm để nghe nhé."
+          }
+        }
+      }
+    },
     "lesson.explorer.order.place_empty %lld" : {
       "comment" : "Explorer order question: VoiceOver label of an empty place: place number (SK-040).",
       "extractionState" : "manual",
@@ -2863,6 +2881,60 @@
         }
       }
     },
+    "lesson.learn.next_page" : {
+      "comment" : "Học (picture book): VoiceOver label of the arrow to the next page (icon only, SK-043).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next page"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang tiếp"
+          }
+        }
+      }
+    },
+    "lesson.learn.page_a11y %lld %lld" : {
+      "comment" : "Học (picture book): VoiceOver label of the page dots: page, pages (SK-043).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page %1$lld of %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang %1$lld trên %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.learn.prev_page" : {
+      "comment" : "Học (picture book): VoiceOver label of the small back arrow to the page before (icon only, SK-043).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous page"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang trước"
+          }
+        }
+      }
+    },
     "lesson.learn.seen %lld %lld" : {
       "comment" : "Learn: groups seen / groups.",
       "extractionState" : "manual",
@@ -2931,6 +3003,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Làm quiz"
+          }
+        }
+      }
+    },
+    "lesson.learn.words_title" : {
+      "comment" : "Học (picture book): tag of the last page, the lesson's new words (SK-043).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ mới"
           }
         }
       }
@@ -3111,6 +3201,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nghe câu này"
+          }
+        }
+      }
+    },
+    "lesson.listen.vi" : {
+      "comment" : "VoiceOver label of the small VI speaker next to a listen button in 'Cả hai' mode: plays the Vietnamese voice of the same words (SK-042, Duy 13/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen in Vietnamese"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe tiếng Việt"
           }
         }
       }

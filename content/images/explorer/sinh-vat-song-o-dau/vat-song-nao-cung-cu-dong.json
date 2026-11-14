@@ -1,0 +1,332 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_seedlings": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/36561624@N00/493869598",
+      "file_url": "https://live.staticflickr.com/229/493869598_73929c7c9c_b.jpg",
+      "title": "Squash Seedling",
+      "author": "Daniel Morrison",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "38d2efcc-d274-430c-b55b-ee7e328abf2b",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0578,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-046 (designer 14/11): Cây non mới nhú trên đất vườn. Crop cho khung c2."
+    },
+    "w1.w1_ball": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.12,
+        "width": 0.3,
+        "height": 0.52
+      },
+      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_carp": {
+      "same_as": "vocab.fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w2.w2_frog": {
+      "same_as": "w2.w2_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "learn.explore.explore_animals_move": {
+      "same_as": "learn.explore.explore_wings",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "learn.explore.explore_slow_plants": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passiflora_edulis_(Passion_fruit)_tendril.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Passiflora_edulis_%28Passion_fruit%29_tendril.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Passiflora edulis (Passion fruit) tendril",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1047,
+        "top": 0.0,
+        "width": 0.7507,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Tua cuốn của dây chanh leo quấn quanh sợi dây giàn. Crop cho khung learn."
+    },
+    "learn.explore.explore_sensitive": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_L._(Touch_me_not_plant)_-_Flickr_-_lalithamba.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mimosa_pudica_L._%28Touch_me_not_plant%29_-_Flickr_-_lalithamba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica L. (Touch me not plant) - Flickr - lalithamba",
+      "author": "Lalithamba from India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Cây trinh nữ lá xoè, hoa hồng. Crop cho khung learn."
+    },
+    "learn.explore.explore_not_alive": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toy_car_(AM_1996.165.94).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Toy_car_%28AM_1996.165.94%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "toy car",
+      "author": "Fun Ho! Toy Company",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0373,
+        "top": 0.0,
+        "width": 0.8855,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Ô tô đồ chơi màu đỏ trên nền trơn. Crop cho khung learn."
+    },
+    "tray.tray_cat": {
+      "same_as": "tray.tray_cat",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "tray.tray_car": {
+      "same_as": "tray.tray_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_carp": {
+      "same_as": "tray.tray_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_balloon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loneliness_(16590654240).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Loneliness_%2816590654240%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Loneliness (16590654240)",
+      "author": "Jevgenijs Slihto",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.5,
+        "top": 0.22,
+        "width": 0.36,
+        "height": 0.5
+      },
+      "note": "Chép mục gốc `w1.w1_balloon` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_dog": {
+      "same_as": "tray.tray_dog",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_sparrow": {
+      "same_as": "tray.tray_sparrow",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_dinosaur": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "de92c4a7-6181-4844-bebf-aa362d2ed49c",
+      "source_url": "https://www.flickr.com/photos/50192230@N07/32715292503",
+      "file_url": "https://live.staticflickr.com/2866/32715292503_72b3e3f2e8_b.jpg",
+      "title": "Spielzeugdino",
+      "author": "SebastianBartoschek",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Chép mục gốc `q6` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_egret": {
+      "same_as": "tray.tray_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_cat": {
+      "same_as": "q1.q1_cat",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1.q1_sparrow": {
+      "same_as": "q1.q1_sparrow",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1.q1_carp": {
+      "same_as": "q5.q5_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_L._(Touch_me_not_plant)_-_Flickr_-_lalithamba.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mimosa_pudica_L._%28Touch_me_not_plant%29_-_Flickr_-_lalithamba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica L. (Touch me not plant) - Flickr - lalithamba",
+      "author": "Lalithamba from India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Cây trinh nữ lá xoè, hoa hồng. Crop cho khung q."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_vine": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passiflora_edulis_(Passion_fruit)_tendril.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Passiflora_edulis_%28Passion_fruit%29_tendril.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Passiflora edulis (Passion fruit) tendril",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1248,
+        "width": 1,
+        "height": 0.7105
+      },
+      "note": "SK-046 (designer 14/11): Tua cuốn của dây chanh leo quấn quanh sợi dây giàn. Crop cho khung c3."
+    },
+    "q3.q3_seedlings": {
+      "same_as": "q5.q5_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_snail": {
+      "same_as": "tray.tray_snail",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q4.q4_egret": {
+      "same_as": "tray.tray_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q4.q4_vine": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passiflora_edulis_(Passion_fruit)_tendril.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Passiflora_edulis_%28Passion_fruit%29_tendril.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Passiflora edulis (Passion fruit) tendril",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1985,
+        "top": 0.0,
+        "width": 0.563,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Tua cuốn của dây chanh leo quấn quanh sợi dây giàn. Crop cho khung sq."
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_slow_plants"
+    },
+    "q6": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q6.q6_sensitive": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_L._(Touch_me_not_plant)_-_Flickr_-_lalithamba.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mimosa_pudica_L._%28Touch_me_not_plant%29_-_Flickr_-_lalithamba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica L. (Touch me not plant) - Flickr - lalithamba",
+      "author": "Lalithamba from India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2827,
+        "width": 1,
+        "height": 0.5346
+      },
+      "note": "SK-046 (designer 14/11): Cây trinh nữ lá xoè, hoa hồng. Crop cho khung c3."
+    },
+    "q6.q6_balloon": {
+      "same_as": "q6.q6_balloon",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q6.q6_car": {
+      "same_as": "q5.q5_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "vocab.move": {
+      "same_as": "vocab.fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "vocab.alive": {
+      "same_as": "vocab.mollusc",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "vocab.sensitive_plant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_L._(Touch_me_not_plant)_-_Flickr_-_lalithamba.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mimosa_pudica_L._%28Touch_me_not_plant%29_-_Flickr_-_lalithamba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica L. (Touch me not plant) - Flickr - lalithamba",
+      "author": "Lalithamba from India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2159,
+        "width": 1,
+        "height": 0.6682
+      },
+      "note": "SK-046 (designer 14/11): Cây trinh nữ lá xoè, hoa hồng. Crop cho khung vocab."
+    },
+    "vocab.vine": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passiflora_edulis_(Passion_fruit)_tendril.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Passiflora_edulis_%28Passion_fruit%29_tendril.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Passiflora edulis (Passion fruit) tendril",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.056,
+        "width": 1,
+        "height": 0.8881
+      },
+      "note": "SK-046 (designer 14/11): Tua cuốn của dây chanh leo quấn quanh sợi dây giàn. Crop cho khung vocab."
+    },
+    "reward.sensitive_plant_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_L._(Touch_me_not_plant)_-_Flickr_-_lalithamba.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mimosa_pudica_L._%28Touch_me_not_plant%29_-_Flickr_-_lalithamba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica L. (Touch me not plant) - Flickr - lalithamba",
+      "author": "Lalithamba from India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0959,
+        "top": 0.0,
+        "width": 0.7483,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cây trinh nữ lá xoè, hoa hồng. Crop cho khung sq."
+    }
+  }
+}

@@ -67,6 +67,7 @@ fetch: tải mọi ảnh trong file chọn ảnh (content/images/<age_group>/<to
      các ảnh thành phần để designer ghép (không lỗi); có file thì xử lý như ảnh tải về, credit ghi từng phần.
      Hình tự vẽ ("own", content/images/own/…): không gọi mạng; file phải có (thiếu là lỗi), xử lý như ảnh tải về,
      credit "Science Kids".
+     Cuối lượt: cảnh báo ảnh lệch tỉ lệ khung của chỗ dùng (image-slots.json, SK-043), đọc bài markdown bên cạnh.
   --force              tải và kiểm lại cả ảnh đã có trong cache
   --cache <thư mục>    cache ảnh, mặc định content/.images`;
 
@@ -119,6 +120,7 @@ build: gói topic + bài (JSON đầu ra của tts, có audio.en, audio.vi) + cl
   --image-cache <dir>  ảnh đã fetch, mặc định content/.images (chỉ đọc)
   --require-assets     mọi Image bắt buộc có ảnh (thiếu thì lỗi)
      build cũng chạy luật soạn theo nhóm tuổi như validate; có lỗi thì exit 1, không ghi gói.
+     Ảnh lệch tỉ lệ khung của chỗ dùng (tools/content-cli/image-slots.json, SK-043): chỉ cảnh báo, gợi ý crop.
 
 validate: kiểm file topic/lesson JSON bằng content-schema, rồi luật soạn theo nhóm tuổi
      (rules.<age_group>.authoring của --rules, SK-026). Mỗi dòng: <file> <JSON pointer> [<mã>] <thông báo>.

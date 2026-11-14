@@ -92,13 +92,13 @@ function validate(root: string, inputs: string[] = ["."]): { status: number; lin
 const syllabusLines = (lines: string[]) => lines.filter((line) => line.startsWith("syllabus.json ") || line.includes("/syllabus.json "));
 
 describe("validate <thư mục> kiểm luôn syllabus.json (SK-030)", () => {
-  test("validate content từ gốc repo (lệnh README): không có lỗi syllabus; dòng tổng nêu 3 nhóm, 45 chủ đề, 384 bài", () => {
+  test("validate content từ gốc repo (lệnh README): không có lỗi syllabus; dòng tổng nêu 3 nhóm, 45 chủ đề, 386 bài", () => {
     const result = cliRun(["validate", "content"], REPO);
     // A lesson being written may still have markdown errors (exit 1); the syllabus must not.
     assert.ok(result.status === 0 || result.status === 1, result.out + result.err);
     const errors = result.lines.filter((line) => line.startsWith("content/syllabus.json ") && !line.includes("] cảnh báo: "));
     assert.deepEqual(errors, []);
-    assert.match(result.out, /^validate: .* · syllabus content\/syllabus\.json \(3 nhóm, 45 chủ đề, 384 bài; \d+ bài có lesson_id(, \d+ bài chưa có tên vi)?\)$/m);
+    assert.match(result.out, /^validate: .* · syllabus content\/syllabus\.json \(3 nhóm, 45 chủ đề, 386 bài; \d+ bài có lesson_id(, \d+ bài chưa có tên vi)?\)$/m);
   });
 
   test("bản chép đúng: exit 0, không có dòng syllabus", () => {
@@ -106,7 +106,7 @@ describe("validate <thư mục> kiểm luôn syllabus.json (SK-030)", () => {
     const result = validate(root);
     assert.equal(result.status, 0, result.lines.join("\n"));
     assert.deepEqual(syllabusLines(result.lines), []);
-    assert.match(result.lines.at(-1)!, / · 0 lỗi · 2 cảnh báo · .* · syllabus syllabus\.json \(3 nhóm, 45 chủ đề, 384 bài; 1 bài có lesson_id(, \d+ bài chưa có tên vi)?\)$/);
+    assert.match(result.lines.at(-1)!, / · 0 lỗi · 2 cảnh báo · .* · syllabus syllabus\.json \(3 nhóm, 45 chủ đề, 386 bài; 1 bài có lesson_id(, \d+ bài chưa có tên vi)?\)$/);
   });
 
   test("bản chép có lesson_id sai (CLI): exit 1, một dòng <file> <pointer> [syllabus_lesson_ref] nêu đúng chủ đề và bài", () => {

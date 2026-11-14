@@ -1,0 +1,35 @@
+{
+  "note": "Tỉ lệ khung (rộng:cao) app đặt ảnh vào, theo chỗ dùng (Duy 13/11, SK-043). build và images fetch cảnh báo (không chặn) khi ảnh lệch khung quá max_factor (lệch 2 = lấp khung mất nửa ảnh). max_factor 2,2 khớp PictureFit.maxCropRatio của app iOS (phiên chính chốt 13/11): quá mức đó app không cắt nữa mà hiện cả ảnh thu nhỏ giữa giấy, tức ảnh sai hướng so với khung. Hạ xuống (vd 1,5) để thấy cả ảnh bị cắt nhiều. default là số dev đặt tạm theo đề xuất của phiên chính; age_groups ghi đè theo kích thước đang có trong code iOS (iPhone 390). Designer ghi bảng tỉ lệ khung vào docs/backlog/SK-043-lesson-screens-picture-book.md thì sửa ở đây. Giá trị: \"rộng:cao\" hoặc số (rộng/cao).",
+  "max_factor": 2.2,
+  "default": {
+    "question": "4:3",
+    "choice_2": "2:1",
+    "choice_3": "3:1",
+    "choice_4": "1:1",
+    "order_item": "1:1",
+    "bank_item": "1:1",
+    "learn_group": "1:1",
+    "tray_item": "1:1",
+    "vocab": "1:1",
+    "reward": "1:1"
+  },
+  "age_groups": {
+    "explorer": {
+      "note": "Explorer A (SK-043, ios-dev 13/11), iPhone: thẻ lựa chọn lấp đầy, rộng ~342, cao 136 (3 lựa chọn) hoặc 200 (2 lựa chọn); hình câu hỏi ẩn khi mọi lựa chọn hoặc thẻ xếp đều có hình. iPad xếp 3 thẻ một hàng cao 300 (gần 2:3 dọc): chưa kiểm.",
+      "hide_question_image_with_picture_choices": true,
+      "ratios": {
+        "choice_3": "5:2",
+        "choice_2": "17:10"
+      }
+    },
+    "discoverer": {
+      "note": "Discoverer (D2, layout.grid.quiz 3 cột, ô cao 104): hình trong ô rộng ~98, cao ~55 phía trên chữ, nên thẻ lựa chọn (mọi số lựa chọn) và thẻ từ có hình dùng chung khung ~16:9. Ước từ code, designer xác nhận.",
+      "ratios": {
+        "choice_2": "16:9",
+        "choice_3": "16:9",
+        "choice_4": "16:9",
+        "bank_item": "16:9"
+      }
+    }
+  }
+}

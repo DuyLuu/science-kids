@@ -85,6 +85,25 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.269Z"
         },
+        "Biển là một nơi sống rất rộng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "biển là một nơi sống rất rộng",
+            "biển là một nơi sống rất rộng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.036Z"
+        },
         "Biển Đông là một phần của Thái Bình Dương.": {
           "variant": 1,
           "flags_before": [
@@ -103,6 +122,27 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.281Z"
+        },
+        "Bèo tây": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "bèo tay",
+            "bèo tay"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.020Z"
         },
         "Bình gốm cổ": {
           "variant": 1,
@@ -183,6 +223,63 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.183Z"
+        },
+        "Bùn nước mặn": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "bùn nước mặn",
+            "bùn nước mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.020Z"
+        },
+        "Bướm thích hoa đầy nắng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "bướm thích hoa đầy nắng",
+            "bướm thích hoa đầy nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.047Z"
+        },
+        "Bướm thích đậu ở đâu?": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "bướm thích đậu ở đâu",
+            "bướm thích đậu ở đâu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.045Z"
         },
         "Bạn của đất": {
           "variant": 0,
@@ -299,6 +396,82 @@
             4
           ],
           "chosen_at": "2026-11-10T16:09:30.452Z"
+        },
+        "Chim sẻ bay bằng đôi cánh.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chim sẽ bay bằng đôi cánh",
+            "chim sẽ bay bằng đôi cánh"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.997Z"
+        },
+        "Chim sẻ bay trên bầu trời sáng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chim sẽ bay trên bầu trời sáng",
+            "chim sẽ bay trên bầu trời sáng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.048Z"
+        },
+        "Chim sẻ ăn hạt và sâu bọ.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chim sẽ ăn hạt và sâu bọ",
+            "chim sẽ ăn hạt và sâu bọ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.638Z"
+        },
+        "Chiếc lá nào đã chết?": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chiếc lá nào đã chết",
+            "chiếc lá nào đã chết"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.009Z"
         },
         "Chiếc lá ướt mưa": {
           "variant": 0,
@@ -435,6 +608,63 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.279Z"
         },
+        "Châu chấu cần cỏ, ếch cần châu chấu.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "châu chấu cần cỏ ếch cần châu chấu",
+            "châu chấu cần cỏ ếch cần châu chấu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.633Z"
+        },
+        "Châu chấu là côn trùng. Châu chấu có sáu chân.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "châu chấu là côn trùng châu chấu có sáu chân",
+            "châu chấu là công trùng châu chấu có sáu chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.598Z"
+        },
+        "Chạm nhẹ vào, lá trinh nữ cụp lại.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chạm nhẹ vào lá trinh nữ cụp lại",
+            "chạm nhẹ vào lá trinh nữ cụp lại"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.992Z"
+        },
         "Chạm từng hình": {
           "variant": 1,
           "flags_before": [
@@ -512,6 +742,25 @@
             4
           ],
           "chosen_at": "2026-10-31T18:00:31.792Z"
+        },
+        "Chỉ dế đực mới kêu. Dế đực cọ hai cánh vào nhau.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chỉ dế đực mới kêu dế đực cọ hai cánh vào nhau",
+            "chỉ dế đực mới kêu dế đực cọ hai cánh vào nhau"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.039Z"
         },
         "Chỉ khủng long bạo chúa ăn thịt. Ba loài còn lại ăn thực vật.": {
           "variant": 0,
@@ -593,6 +842,63 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.012Z"
         },
+        "Con châu chấu": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con châu chấu",
+            "con châu chấu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.619Z"
+        },
+        "Con châu chấu có tám chân.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con châu chấu có tám chân",
+            "con châu chấu có tám chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.590Z"
+        },
+        "Con cua có vỏ cứng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con cua có vỏ cứng",
+            "con cua có vỏ cứng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.655Z"
+        },
         "Con cóc": {
           "variant": 3,
           "flags_before": [
@@ -613,6 +919,67 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.821Z"
+        },
+        "Con cú": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con cú",
+            "con cú"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.606Z"
+        },
+        "Con dế có sáu chân.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "còn dế có sáu chân",
+            "con dế có sáu chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.038Z"
+        },
+        "Con kiến có sáu chân.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "còn kiến có sáu chân",
+            "con kiến có sáu chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.654Z"
         },
         "Con muỗi đậu trên tay em. Em dựng đường đi của tin nhé.": {
           "variant": 0,
@@ -827,6 +1194,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.844Z"
         },
+        "Con sâu ăn lá cải.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con sâu ăn lá cải",
+            "con sâu ăn lá cải"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.617Z"
+        },
         "Con thỏ ăn thịt.": {
           "variant": 1,
           "flags_before": [
@@ -886,6 +1272,27 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.770Z"
         },
+        "Con voọc là thú cưng hay động vật hoang dã?": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "con vọc là thú cưng hay động vật hoang dã",
+            "con vọc là thú cưng hay động vật hoang dã"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.612Z"
+        },
         "Con voọc là động vật hoang dã.": {
           "variant": 0,
           "flags_before": [
@@ -906,6 +1313,27 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.778Z"
+        },
+        "Con voọc sống trong rừng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "con vọc sống trong rừng",
+            "con vọc sống trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.012Z"
         },
         "Con voọc trong rừng là thú cưng.": {
           "variant": 1,
@@ -1004,6 +1432,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.273Z"
         },
+        "Con vật và cây sống mà không cần dép.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con vật và cây sống mà không cần dép",
+            "con vật và cây sống mà không cần dép"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.985Z"
+        },
         "Con vật đã tuyệt chủng thì hôm nay còn bơi được không?": {
           "variant": 1,
           "flags_before": [
@@ -1063,6 +1510,101 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.806Z"
         },
+        "Con ếch là một vật sống.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con ếch là một vật sống",
+            "con ếch là một vật sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.987Z"
+        },
+        "Cuối chuỗi": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cuối chuỗi",
+            "cuối chuỗi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.626Z"
+        },
+        "Cuốn chiếu và ốc sên trốn trong lá khô.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cuốn chiếu và ốc sên trốn trong lá khô",
+            "cuốn chiếu và ốc sên trốn trong lá khô"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.047Z"
+        },
+        "Cành khô": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cành khô",
+            "cành khô"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.005Z"
+        },
+        "Cá chép có vây, không có chân.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá chép có vây không có chân",
+            "cá chép có vây không có chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.989Z"
+        },
         "Cá giàu chất đạm.": {
           "variant": 2,
           "flags_before": [
@@ -1083,6 +1625,82 @@
             4
           ],
           "chosen_at": "2026-10-31T18:00:31.792Z"
+        },
+        "Cá là thức ăn của con cò.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá là thức ăn của con cò",
+            "cá là thức ăn của con cò"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.650Z"
+        },
+        "Cá thòi lòi": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá thòi lòi",
+            "cá thòi lòi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
+        "Cá thòi lòi dùng vây để nhảy trên bùn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá thòi lòi dùng vây để nhảy trên bùn",
+            "cá thòi lòi dùng vây để nhảy trên bùn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
+        "Cá thòi lòi nhảy trên bùn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá thòi lòi nhảy trên bùn",
+            "cá thòi lòi nhảy trên bùn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
         },
         "Cá thở dưới nước bằng mang.": {
           "variant": 1,
@@ -1140,6 +1758,27 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.782Z"
+        },
+        "Cá vàng có vây và có vảy.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cá vàng có vây và có vẫy",
+            "cá vàng có vây và có vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.641Z"
         },
         "Cá, trứng và đậu phụ đều giàu chất đạm.": {
           "variant": 3,
@@ -1296,6 +1935,25 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.122Z"
         },
+        "Cái nào có thể làm con vật nhỏ mắc kẹt?": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cái nào có thể làm con vật nhỏ mắc kẹt",
+            "cái nào có thể làm con vật nhỏ mắc kẹt"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.044Z"
+        },
         "Cái ô": {
           "variant": 1,
           "flags_before": [
@@ -1437,6 +2095,25 @@
           ],
           "chosen_at": "2026-11-10T16:09:30.440Z"
         },
+        "Câu này sai. Ao quá nhỏ cho cá heo.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "câu này sai ao quá nhỏ cho cá heo",
+            "câu này sai ao quá nhỏ cho cá heo"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.013Z"
+        },
         "Câu này sai. Cá heo là động vật có vú.": {
           "variant": 1,
           "flags_before": [
@@ -1474,6 +2151,25 @@
             4
           ],
           "chosen_at": "2026-11-01T07:03:39.833Z"
+        },
+        "Câu này sai. Giun đất không phải côn trùng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "câu này sai dung đất không phải côn trùng",
+            "câu này sai dung đất không phải côn trùng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.037Z"
         },
         "Câu này sai. Gió làm cây lay động.": {
           "variant": 2,
@@ -1654,6 +2350,27 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.165Z"
         },
+        "Câu này đúng. Voọc sống trên cây trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "câu này đúng vọc sống trên cây trong rừng",
+            "câu này đúng vọc sống trên cây trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.012Z"
+        },
         "Câu này đúng. Đá thấm nước cho nước thấm vào bên trong.": {
           "variant": 1,
           "flags_before": [
@@ -1672,6 +2389,44 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.275Z"
+        },
+        "Câu này đúng. Ếch ăn châu chấu, mà châu chấu ăn cỏ.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "câu này đúng ếch ăn châu chấu mà châu chấu ăn cỏ",
+            "câu này đúng ếch ăn châu chấu mà châu chấu ăn cỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.633Z"
+        },
+        "Cây bàng": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cây bàn",
+            "cây bàn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.008Z"
         },
         "Cây cối đã ra sao trước tiên?": {
           "variant": 1,
@@ -1710,6 +2465,44 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.424Z"
+        },
+        "Cây rừng ngập mặn mọc trong bùn nước mặn.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cây rừng ngập mặn mọc trong bùn nước mặn",
+            "cây rừng ngập mặn mọc trong bùn nước mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
+        "Cây trinh nữ cụp lá lại.": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cây trinh nữ cụp lá lại",
+            "cây trinh nữ cụp lá lại"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.001Z"
         },
         "Cây trụi lá": {
           "variant": 0,
@@ -1751,6 +2544,48 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.455Z"
         },
+        "Cây đước": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cây đứt",
+            "cây đứt"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.020Z"
+        },
+        "Cây đước mọc trong bùn nước mặn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cây đứt mọc trong bùng nước mặn",
+            "cây đứt mọc trong bùn nước mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.019Z"
+        },
         "Cò là con vật ăn thịt.": {
           "variant": 0,
           "flags_before": [
@@ -1769,6 +2604,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.855Z"
+        },
+        "Cò ăn cá và ếch nhái.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cò ăn cá và ếch nhái",
+            "cò ăn cá và ếch nhái"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.640Z"
         },
         "Có loại đá giữ nước sâu dưới lòng đất. Giếng khoan đưa nước đó lên.": {
           "variant": 0,
@@ -1828,6 +2682,44 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.187Z"
+        },
+        "Cú săn chuột ngoài cánh đồng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cú săn chuột ngoài cánh đồng",
+            "cú săn chuột ngoài cánh đồng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.634Z"
+        },
+        "Cú săn mồi. Cú lắng nghe tiếng chuột.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cú săn mồi cú lắng nghe tiếng chuột",
+            "cú săn mồi cú lắng nghe tiếng chuột"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.600Z"
         },
         "Cúc đá sống ở biển cùng thời khủng long. Vỏ xoắn của chúng đã thành hoá thạch.": {
           "variant": 0,
@@ -1923,6 +2815,25 @@
             4
           ],
           "chosen_at": "2026-11-10T16:09:30.458Z"
+        },
+        "Cả chuỗi": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cả chuỗi",
+            "cả chuỗi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.629Z"
         },
         "Da thằn lằn có những chiếc vảy khô.": {
           "variant": 2,
@@ -2065,6 +2976,27 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.301Z"
         },
+        "Dây mướp mất nhiều giờ mới quấn xong.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "dây mướp mất nhiều giờ mới cuốn xong",
+            "dây mướp mất nhiều giờ mới quấn xong"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.998Z"
+        },
         "Dây thần kinh": {
           "variant": 1,
           "flags_before": [
@@ -2123,6 +3055,25 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.003Z"
         },
+        "Dơi có lông, không có lông vũ.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dơi có lông không có lông vũ",
+            "dơi có lông không có lông vũ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.652Z"
+        },
         "Dơi là động vật có vú biết bay.": {
           "variant": 0,
           "flags_before": [
@@ -2141,6 +3092,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.789Z"
+        },
+        "Dương xỉ mọc trong bóng râm.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dương sỉ mọc trong bóng râm",
+            "dương sỉ mọc trong bóng râm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.029Z"
         },
         "Dưới biển, thợ lặn lúc nào cũng cần thứ gì?": {
           "variant": 1,
@@ -2414,6 +3384,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.168Z"
         },
+        "Em còn thiếu một luống hoa.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em còn thiếu một luống hoa",
+            "em còn thiếu một luống hoa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.043Z"
+        },
         "Em còn thiếu một nơi có đất phù sa.": {
           "variant": 0,
           "flags_before": [
@@ -2534,6 +3523,25 @@
           ],
           "chosen_at": "2026-11-02T07:27:17.370Z"
         },
+        "Em nghĩ tới cái cây trong ngày nắng nóng nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới cái cây trong ngày nắng nóng nhé",
+            "em nghĩ tới cái cây trong ngày nắng nóng nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.002Z"
+        },
         "Em nghĩ tới miệng núi lửa và đất đỏ em vừa tìm thấy nhé.": {
           "variant": 1,
           "flags_before": [
@@ -2552,6 +3560,25 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.307Z"
+        },
+        "Em nghĩ tới nền rừng mát rượi nhé.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới nền rừng mát rượi nhé",
+            "em nghĩ tới nền rừng mát rượi nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.023Z"
         },
         "Em nghĩ tới đảo Lý Sơn. Đảo ấy được tạo ra thế nào?": {
           "variant": 3,
@@ -3017,6 +4044,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.251Z"
         },
+        "Em nhớ lại ô Chuỗi thức ăn nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại ô chuỗi thức ăn nhé",
+            "em nhớ lại ô chuỗi thức ăn nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.625Z"
+        },
         "Em nhớ lại ô Giữ an toàn ở bài Động đất và sóng thần nhé.": {
           "variant": 0,
           "flags_before": [
@@ -3077,6 +4123,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.207Z"
+        },
+        "Em nhớ lại ô Săn mồi nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại ô săn mồi nhé",
+            "em nhớ lại ô săn mồi nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.610Z"
         },
         "Em nhớ lại ô Thang Mohs nhé.": {
           "variant": 1,
@@ -3200,6 +4265,27 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.801Z"
         },
+        "Em tìm con có da khô, có vảy nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "em tìm con có da khô có vậy nhé",
+            "em tìm con có da khô có vẫy nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.048Z"
+        },
         "Em tìm con có da không có vảy nhé.": {
           "variant": 0,
           "flags_before": [
@@ -3242,6 +4328,25 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.132Z"
         },
+        "Em tìm cái từng lớn lên, nay thì không nữa.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em tìm cái từng lớn lên nay thì không nữa",
+            "em tìm cái từng lớn lên nay thì không nữa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.007Z"
+        },
         "Em tìm manh mối: răng, sừng và giáp.": {
           "variant": 0,
           "flags_before": [
@@ -3279,6 +4384,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.281Z"
+        },
+        "Em tìm một chỗ trốn, một chỗ có nước và một luống hoa nhé.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em tìm một chỗ trốn một chỗ có nước và một luống hoa nhé",
+            "em tìm một chỗ trốn một chỗ có nước và một luống hoa nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.042Z"
         },
         "Em tìm một cảnh lũ lụt và một cảnh hạn hán. Rồi tìm một cách trữ nước nhé.": {
           "variant": 1,
@@ -3318,6 +4442,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.181Z"
         },
+        "Em tìm thức ăn cho con ếch, con sâu và con trâu nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em tìm thức ăn cho con ếch con sâu và con châu nhé",
+            "em tìm thức ăn cho con ếch con sâu và con châu nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.621Z"
+        },
         "Em xếp nhóm được các con vật theo thức ăn của chúng.": {
           "variant": 1,
           "flags_before": [
@@ -3336,6 +4479,44 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.849Z"
+        },
+        "Em xếp được vật sống và vật không sống.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em xếp được vật sống và vật không sống",
+            "em xếp được vật sống và vật không sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.976Z"
+        },
+        "Em đếm chân con châu chấu nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em đếm chân con châu chấu nhé",
+            "em đếm chân con châu chấu nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.592Z"
         },
         "Ghép lại": {
           "variant": 1,
@@ -3377,6 +4558,44 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.294Z"
         },
+        "Giun là thức ăn của gà và chim.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dung là thức ăn của gà và chim",
+            "dung là thức ăn của gà và chim"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.647Z"
+        },
+        "Giun và kiến trốn dưới hòn đá.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dung và kiến trốn dưới hòn đá",
+            "dung và kiến trốn dưới hòn đá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.030Z"
+        },
         "Giun đất": {
           "variant": 2,
           "flags_before": [
@@ -3397,6 +4616,67 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.246Z"
+        },
+        "Giun đất cần có đất để sống.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "dung đất cần có đất để sống",
+            "dùng đất cần có đất để sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.039Z"
+        },
+        "Giun đất trốn nắng.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dung đất trốn nắng",
+            "dung đất trốn nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.049Z"
+        },
+        "Giun đất trốn ở đâu?": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "dung đất trốn ở đâu",
+            "dùng đất trốn ở đâu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.039Z"
         },
         "Giun đất xới trộn đất và giúp lá rụng mau mục.": {
           "variant": 2,
@@ -3521,6 +4801,65 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.140Z"
+        },
+        "Gà bới đất tìm giun.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "gà bới đất tìm dung",
+            "gà bới đất tìm dung"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.612Z"
+        },
+        "Gà mái có lông vũ, không có vảy.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "gà mái có lông vũ không có vẫy",
+            "gà mái có lông vũ không có vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.636Z"
+        },
+        "Gà mái sống ở sân, ở chuồng nhà mình.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "gà mái sống ở sân ở chuồng nhà mình",
+            "gà mái sống ở sân ở chuồng nhà mình"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.621Z"
         },
         "Gân xanh ở cổ tay": {
           "variant": 1,
@@ -5349,6 +6688,65 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.460Z"
         },
+        "Mèo có bốn chân.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "mèo có bốn chân",
+            "mèo có bốn chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.647Z"
+        },
+        "Mèo có lông, không có vảy.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "mèo có lông không có vẫy",
+            "mèo có lông không có vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.639Z"
+        },
+        "Mèo đi bằng bốn chân.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "mèo đi bằng bốn chân",
+            "mèo đi bằng bốn chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.997Z"
+        },
         "Mình chỉ thấy núi lửa trên ti vi. Vậy Việt Nam không có núi lửa.": {
           "variant": 0,
           "flags_before": [
@@ -6337,6 +7735,27 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.304Z"
         },
+        "Nghé con bú sữa của trâu mẹ.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "nghé con bú sữa của châu mẹ",
+            "nhé con bú sữa của châu mẹ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.640Z"
+        },
         "Nghé con bú sữa mẹ.": {
           "variant": 2,
           "flags_before": [
@@ -6397,6 +7816,27 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.420Z"
+        },
+        "Người cho con voọc trong rừng ăn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "người cho con vọc trong rừng ăn",
+            "người cho con vọc trong rừng ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.612Z"
         },
         "Người ta đã khoan một cái hố sâu khoảng mười hai ki-lô-mét. Hố sâu như vậy mà vẫn chưa xuyên qua hết vỏ Trái Đất.": {
           "variant": 0,
@@ -6595,6 +8035,27 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.289Z"
+        },
+        "Nhím biển cứng và đầy gai.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "nhiếm biển cứng và đầy gai",
+            "nhiếm biển cứng và đầy gai"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.655Z"
         },
         "Nhảy lò cò": {
           "variant": 2,
@@ -7332,6 +8793,25 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.172Z"
         },
+        "Răng cửa của chuột dài ra suốt đời.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "răng cửa của chuột dài ra suốt đời",
+            "răng cửa của chuột dài ra suốt đời"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.635Z"
+        },
         "Răng dẹt": {
           "variant": 2,
           "flags_before": [
@@ -7467,6 +8947,44 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.173Z"
         },
+        "Sao biển có da gai, không có xương sống.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "sao biển có da gai không có xương sống",
+            "sao biển có da gai không có xương sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.657Z"
+        },
+        "Sao biển và rùa biển sống ở biển.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "sao biển và rùa biển sống ở biển",
+            "sao biển và rùa biển sống ở biển"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.011Z"
+        },
         "Sau cơn mưa, trên đường có những vũng nước.": {
           "variant": 0,
           "flags_before": [
@@ -7525,6 +9043,44 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.287Z"
+        },
+        "Sen mọc ở ao. Xương rồng mọc trên cát.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "xen mọc ở ao xương rồng mọc trên cát",
+            "xen mọc ở ao xương rồng mọc trên cát"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
+        "So sánh con cú với con mèo.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "so sánh con cú với con mèo",
+            "so sánh con cú với con mèo"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.640Z"
         },
         "Soi kính lúp lên hòn đá": {
           "variant": 0,
@@ -7920,6 +9476,109 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.131Z"
         },
+        "Thằn lằn có bốn chân, không có cánh.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thằng lằn có bốn chân không có cánh",
+            "thằng lằn có bốn chân không có cánh"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.644Z"
+        },
+        "Thằn lằn có bốn chân.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "cut_end"
+          ],
+          "heard": [
+            "thằng lằn có bốn chân",
+            "thằng lằn có bốn chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.646Z"
+        },
+        "Thằn lằn có da khô phủ vảy.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thằng lằn có da khô phủ vẫy",
+            "thằng lằn có da khô phủ vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.641Z"
+        },
+        "Thằn lằn có da vảy, không có mai.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thằng lằn có da vẫy không có mai",
+            "thằng lằn có da vẫy không có mai"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.645Z"
+        },
+        "Thằn lằn có vảy, không có lông.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thằng lằn có vẫy không có lông",
+            "thằng lằn có vẫy không có lông"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.630Z"
+        },
         "Thằn lằn là bò sát.": {
           "variant": 1,
           "flags_before": [
@@ -7938,6 +9597,65 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.810Z"
+        },
+        "Thỏ có lông mềm, không có vảy.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thỏ có lông mềm không có vẫy",
+            "thỏ có lông mềm không có vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.637Z"
+        },
+        "Thỏ gặm cỏ và lá rau.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thỏ gặm cỏ và lá rau",
+            "thỏ gặm cỏ và lá rau"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.610Z"
+        },
+        "Thợ săn ban đêm": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thợ săn ban đêm",
+            "thợ săn ban đêm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.613Z"
         },
         "Thứ nào giúp ngăn bụi bay vào mũi em?": {
           "variant": 2,
@@ -8091,6 +9809,44 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.005Z"
         },
+        "Tre mọc trên đất liền khô ráo.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "che mọc trên đất liền khô ráo",
+            "che mọc trên đất liền khô ráo"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.022Z"
+        },
+        "Trong bùn nước mặn": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "trong bùn nước mặn",
+            "trong bùn nước mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.019Z"
+        },
         "Trong hổ phách": {
           "variant": 0,
           "flags_before": [
@@ -8167,6 +9923,27 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.261Z"
         },
+        "Trâu mẹ đẻ ra một chú nghé con.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "châu mẹ đẻ ra một chú ngé con",
+            "châu mẹ đẻ ra một chú nghé con"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.631Z"
+        },
         "Trâu mẹ đẻ ra nghé con, không đẻ trứng.": {
           "variant": 0,
           "flags_before": [
@@ -8188,6 +9965,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.789Z"
         },
+        "Trâu nhai cỏ ngoài đồng.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "trâu nhai cỏ ngoài đồng",
+            "châu nhai cỏ ngoài đồng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.626Z"
+        },
         "Trèo lên vách đá": {
           "variant": 1,
           "flags_before": [
@@ -8206,6 +10002,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.198Z"
+        },
+        "Trên đồi cát": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "trên đồi cát",
+            "trên đồi cát"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
         },
         "Trú dưới gốc cây to": {
           "variant": 3,
@@ -8543,6 +10358,25 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.151Z"
         },
+        "Voi ăn lá cây và mía.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "voi ăn lá cây và mía",
+            "voi ăn lá cây và mía"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.651Z"
+        },
         "Voọc chà vá chân nâu": {
           "variant": 0,
           "flags_before": [
@@ -8585,6 +10419,48 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.778Z"
         },
+        "Voọc hoang dã tự tìm lá cây để ăn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc hoang dã tự tìm lá cây để ăn",
+            "vọc hoang giả tự tìm lá cây để ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.612Z"
+        },
+        "Voọc leo trèo và kiếm ăn trên cây rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc leo trèo và kiếm ăn trên cây rừng",
+            "vọc leo trèo và kiếm ăn trên cây rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.012Z"
+        },
         "Voọc là động vật hoang dã. Voọc sống tự do.": {
           "variant": 0,
           "flags_before": [
@@ -8605,6 +10481,132 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.795Z"
+        },
+        "Voọc sống trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc sống trong rừng",
+            "vọt sống trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.013Z"
+        },
+        "Voọc sống trên cây cao trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc sống trên cây cao trong rừng",
+            "vọc sống trên cây cao trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.011Z"
+        },
+        "Voọc sống tự do trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọt sống tự do trong rừng",
+            "vọt sống tự do trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.623Z"
+        },
+        "Voọc sống tự do, xa nhà của người.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc sống tự do xa nhà của người",
+            "vọc sống tự do xa nhà của người"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.632Z"
+        },
+        "Voọc tự tìm lá cây để ăn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc tự tìm lá cây để ăn",
+            "vọc tự tìm lá cây để ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.978Z"
+        },
+        "Voọc và chim sống trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "vọc và chim sống trong rừng",
+            "vọc và chim sống trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.009Z"
         },
         "Vách đá phấn": {
           "variant": 1,
@@ -8740,6 +10742,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.160Z"
+        },
+        "Xương rồng thích nắng gắt.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "sương rồng thích nắng gắt",
+            "sương rồng thích nắng gắt"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.027Z"
         },
         "Xương sống che chở cho tuỷ sống.": {
           "variant": 1,
@@ -8878,6 +10899,25 @@
           ],
           "chosen_at": "2026-11-10T17:03:48.993Z"
         },
+        "bóng râm": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "bóng râm",
+            "bóng râm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.028Z"
+        },
         "bùn cát phủ kín chiếc vỏ": {
           "variant": 1,
           "flags_before": [
@@ -8974,6 +11014,27 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.147Z"
+        },
+        "bọ cánh cứng dưới lớp vỏ": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "bỏ cánh cứng dưới lớp vỏ",
+            "bỏ cánh cứng dưới lớp vỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.032Z"
         },
         "bọt khí": {
           "variant": 1,
@@ -9152,6 +11213,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.806Z"
         },
+        "chuột cần lúa": {
+          "variant": 2,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chuột cần lúa",
+            "chuột cần lúa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.630Z"
+        },
         "chân sau dài giúp ếch nhảy xa": {
           "variant": 0,
           "flags_before": [
@@ -9208,6 +11288,44 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.278Z"
+        },
+        "châu chấu ăn cỏ": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "châu chấu ăn cỏ",
+            "châu chấu ăn cỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.617Z"
+        },
+        "chúng dùng mắt, tai và mũi để tìm mồi": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chúng dùng mắt tai và mũi để tìm mồi",
+            "chúng dùng mắt tai và mũi để tìm mồi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.601Z"
         },
         "chảy xuống biển": {
           "variant": 0,
@@ -9304,6 +11422,27 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.193Z"
         },
+        "con cuốn chiếu": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "con cuốn chiếu",
+            "còn cuốn chiếu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.030Z"
+        },
         "con cò": {
           "variant": 0,
           "flags_before": [
@@ -9363,6 +11502,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.184Z"
         },
+        "con cú": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con cú",
+            "con cú"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.608Z"
+        },
         "con dơi bay ban đêm": {
           "variant": 1,
           "flags_before": [
@@ -9381,6 +11539,27 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.788Z"
+        },
+        "con giun đất": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "còn dung đất",
+            "còn dung đất"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.030Z"
         },
         "con gà trong sân": {
           "variant": 1,
@@ -9442,6 +11621,25 @@
             4
           ],
           "chosen_at": "2026-11-10T17:03:48.994Z"
+        },
+        "con nhện trong khe tường": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con nhện trong khe tường",
+            "con nhện trong khe tường"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.035Z"
         },
         "con rắn trong bụi cỏ": {
           "variant": 0,
@@ -9559,6 +11757,65 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.801Z"
         },
+        "con ốc sên sau cơn mưa": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "con ốc sen sau cơn mưa",
+            "con ốc sên sau cơn mưa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.032Z"
+        },
+        "con ốc sên trên lá": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "con ốc sên trên lá",
+            "con ốc sên trên lá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.003Z"
+        },
+        "cá thòi lòi": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cá thòi lòi",
+            "cá thòi lòi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
         "các vì sao": {
           "variant": 0,
           "flags_before": [
@@ -9637,6 +11894,25 @@
           ],
           "chosen_at": "2026-11-10T16:09:30.414Z"
         },
+        "cái thìa kim loại": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cái thìa kim loại",
+            "cái thìa kim loại"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.004Z"
+        },
         "cái đồng hồ": {
           "variant": 1,
           "flags_before": [
@@ -9677,6 +11953,25 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.432Z"
         },
+        "cây non nghiêng về phía ánh sáng": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cây non nghiêng về phía ánh sáng",
+            "cây non nghiêng về phía ánh sáng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.990Z"
+        },
         "cây vạn tuế": {
           "variant": 1,
           "flags_before": [
@@ -9696,6 +11991,27 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.117Z"
         },
+        "cây đước": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cây đứt",
+            "cây đứt"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.021Z"
+        },
         "cò ngoài đồng lúa": {
           "variant": 1,
           "flags_before": [
@@ -9714,6 +12030,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.770Z"
+        },
+        "cò ăn ếch": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cò ăn ếch",
+            "cò ăn ếch"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.619Z"
         },
         "có mào dài trên đầu": {
           "variant": 0,
@@ -10008,6 +12343,25 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.022Z"
         },
+        "dây mướp leo lên thanh tre": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dây mướp leo lên thanh tre",
+            "dây mướp leo lên thanh tre"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.990Z"
+        },
         "dòng nước chảy có thể làm em ngã": {
           "variant": 0,
           "flags_before": [
@@ -10026,6 +12380,25 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.477Z"
+        },
+        "dùng ít túi ni lông hơn": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "dùng ít túi ni lông hơn",
+            "dùng ít túi ni lông hơn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.040Z"
         },
         "dưa hấu mọc tốt trên đất này": {
           "variant": 2,
@@ -10064,6 +12437,27 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.481Z"
+        },
+        "giun cần chỗ tối và ẩm": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "dung cần chỗ tối và ấm",
+            "dùng cần chỗ tối và ẩm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.040Z"
         },
         "giun đất": {
           "variant": 1,
@@ -10209,6 +12603,25 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.283Z"
         },
+        "giống nhau: lúa và con chuột": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "giống nhau lúa và con chuột",
+            "giống nhau lúa và con chuột"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.637Z"
+        },
         "giữ cỏ phủ mặt đất": {
           "variant": 2,
           "flags_before": [
@@ -10228,6 +12641,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.165Z"
         },
+        "gà ăn thóc mình rải cho": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "gà ăn thóc mình rải cho",
+            "gà ăn thóc mình rải cho"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.604Z"
+        },
         "gà ăn thóc và giun": {
           "variant": 0,
           "flags_before": [
@@ -10246,6 +12678,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.850Z"
+        },
+        "gặm cỏ": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "gặm cỏ",
+            "gặm cỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.613Z"
         },
         "hoạt thạch": {
           "variant": 0,
@@ -10517,6 +12968,25 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.478Z"
         },
+        "không phun thuốc sâu trong vườn": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "không phun thuốc sâu trong vườn",
+            "không phun thuốc sâu trong vườn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.041Z"
+        },
         "khủng long ba sừng": {
           "variant": 0,
           "flags_before": [
@@ -10672,6 +13142,25 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.133Z"
+        },
+        "lá cụp lại rất nhanh": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "lá cụp lại rất nhanh",
+            "lá cụp lại rất nhanh"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.992Z"
         },
         "lá rụng cũng mục dần": {
           "variant": 2,
@@ -11028,6 +13517,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.841Z"
+        },
+        "một lúc sau lá xoè ra": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "một lúc sau lá xòe ra",
+            "một lúc sau lá xòe ra"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.996Z"
         },
         "ngay ngắn, quai buông thõng": {
           "variant": 1,
@@ -11788,6 +14296,82 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.241Z"
         },
+        "rêu": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rêu",
+            "rêu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.037Z"
+        },
+        "rêu cũng mọc ở đây": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rêu cũng mọc ở đây",
+            "rêu cũng mọc ở đây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.019Z"
+        },
+        "rêu thích chỗ ẩm": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rêu thích chỗ ẩm",
+            "rêu thích chỗ ẩm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.034Z"
+        },
+        "rêu trên vỏ cây": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rêu trên vỏ cây",
+            "rêu trên vỏ cây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.032Z"
+        },
         "răng dẹt để nghiền lá": {
           "variant": 2,
           "flags_before": [
@@ -11825,6 +14409,25 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.177Z"
+        },
+        "rừng ngập mặn": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rừng ngập mặn",
+            "rừng ngập mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.014Z"
         },
         "rừng phi lao trên cát": {
           "variant": 0,
@@ -12022,6 +14625,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.140Z"
         },
+        "thân cây giữ nước bên trong": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thân cây giữ nước bên trong",
+            "thân cây giữ nước bên trong"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.018Z"
+        },
         "thêm nhiều lớp chồng lên trên": {
           "variant": 1,
           "flags_before": [
@@ -12139,6 +14761,25 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.136Z"
+        },
+        "thằn lằn phơi nắng": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thằng lằn phơi nắng",
+            "thằng lằn phơi nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.034Z"
         },
         "thỏ ăn lá rau": {
           "variant": 0,
@@ -12530,6 +15171,27 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.435Z"
         },
+        "tằm ăn lá dâu do người hái": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "tâm ăn lá dâu do người hái",
+            "tâm ăn lá dâu do người hái"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.604Z"
+        },
         "tổ": {
           "variant": 1,
           "flags_before": [
@@ -12728,6 +15390,26 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.149Z"
         },
+        "vật sống": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end",
+            "engine_retry"
+          ],
+          "flags_after": [],
+          "heard": [
+            "vật sống",
+            "vật sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.986Z"
+        },
         "vịt ăn thóc và ốc": {
           "variant": 0,
           "flags_before": [
@@ -12883,6 +15565,44 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.431Z"
+        },
+        "Đom đóm": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đom đóm",
+            "đom đóm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.050Z"
+        },
+        "Đom đóm tự phát ra ánh sáng vào ban đêm.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đom đóm tự phát ra ánh sáng vào ban đêm",
+            "đom đóm tự phát ra ánh sáng vào ban đêm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.050Z"
         },
         "Đá cứng không bị xước, kể cả khi cào bằng cán thìa.": {
           "variant": 2,
@@ -13162,6 +15882,44 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.124Z"
         },
+        "Đáp án là con chuột. Cú ăn chuột.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là con chuột cú ăn chuột",
+            "đáp án là con chuột cú ăn chuột"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.633Z"
+        },
+        "Đáp án là con cò. Cò săn cá.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là con cò cò săn cá",
+            "đáp án là con cò cò săn cá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.616Z"
+        },
         "Đáp án là con có mào. Hai con kia thì bơi dưới biển, hoặc có lông dày.": {
           "variant": 1,
           "flags_before": [
@@ -13267,6 +16025,27 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.145Z"
         },
+        "Đáp án là con voọc. Voọc sống trên cây.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đáp án là con vọc vọc sống trên cây",
+            "đáp án là con vọc vọc sống trên cây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
+        },
         "Đáp án là con voọc. Voọc sống tự do trong rừng.": {
           "variant": 1,
           "flags_before": [
@@ -13288,6 +16067,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.776Z"
+        },
+        "Đáp án là con ếch. Ếch sống ở ao.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là con ếch ếch sống ở ao",
+            "đáp án là con ếch ếch sống ở ao"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.011Z"
         },
         "Đáp án là cá chép. Vịt và ếch bơi bằng chân.": {
           "variant": 0,
@@ -13366,6 +16164,65 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.183Z"
+        },
+        "Đáp án là cây dương xỉ. Dương xỉ thích chỗ râm.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là cây dương sỉ dương sỉ thích chỗ râm",
+            "đáp án là cây dương sỉ dương sỉ thích chỗ râm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.027Z"
+        },
+        "Đáp án là cây đước. Cây đước mọc trong bùn mặn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đáp án là cây đứt cây đứt mọc trong bùn mặn",
+            "đáp án là cây đứt cây đứt mọc trong bùn mặn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.021Z"
+        },
+        "Đáp án là dây mướp. Cây là vật sống.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là dây mướp cây là vật sống",
+            "đáp án là dây mướp cây là vật sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.001Z"
         },
         "Đáp án là dương xỉ. Khủng long cổ dài ăn thực vật.": {
           "variant": 1,
@@ -13505,6 +16362,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.127Z"
+        },
+        "Đáp án là lá cải. Sâu ăn lá cây.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là lá cải sâu ăn lá cây",
+            "đáp án là lá cải sâu ăn lá cây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.625Z"
         },
         "Đáp án là lớp manti và nhân Trái Đất. Núi và đại dương nằm trên vỏ Trái Đất.": {
           "variant": 1,
@@ -13822,6 +16698,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.801Z"
         },
+        "Đáp án là thằn lằn. Thằn lằn thích nắng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đáp án là thằng lằn thằng lằn thích nắng",
+            "đáp án là thằng lằn thằng lằn thích nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.048Z"
+        },
         "Đáp án là tin tức. Tin tức báo trước cho mình.": {
           "variant": 2,
           "flags_before": [
@@ -14037,6 +16932,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.218Z"
         },
+        "Đâu là thứ đứng đầu chuỗi thức ăn?": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đâu là thứ đứng đầu chuỗi thức ăn",
+            "đâu là thứ đứng đầu chuỗi thức ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.631Z"
+        },
         "Đã cài quai mũ": {
           "variant": 1,
           "flags_before": [
@@ -14136,6 +17050,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.138Z"
         },
+        "Đúng rồi! Bướm hút mật ngọt từ hoa.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi bướm hút mật ngọt từ hoa",
+            "đúng rồi bướm hút mật ngọt từ hoa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.046Z"
+        },
         "Đúng rồi! Bảo tàng trưng bày bộ xương của chúng.": {
           "variant": 1,
           "flags_before": [
@@ -14175,6 +17108,25 @@
             4
           ],
           "chosen_at": "2026-11-10T17:03:49.022Z"
+        },
+        "Đúng rồi! Chim sẻ mổ thóc ngoài đồng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi chim sẽ mổ thóc ngoài đồng",
+            "đúng rồi chim sẽ mổ thóc ngoài đồng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.640Z"
         },
         "Đúng rồi! Chân trâu thẳng ngay dưới thân, giống chân khủng long.": {
           "variant": 1,
@@ -14256,6 +17208,27 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.228Z"
         },
+        "Đúng rồi! Cá sấu có da khô phủ vảy.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi cá sấu có da khô phủ vẫy",
+            "đúng rồi cá sấu có da khô phủ vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.647Z"
+        },
         "Đúng rồi! Cán thìa cào xước được cả đá mềm và đá vừa.": {
           "variant": 0,
           "flags_before": [
@@ -14277,6 +17250,84 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.116Z"
         },
+        "Đúng rồi! Cây rừng cao giữ cho voọc an toàn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi cây rừng cao giữ cho vọc an toàn",
+            "đúng rồi cây rừng cao giữ cho vọc an toàn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.012Z"
+        },
+        "Đúng rồi! Cò bắt cá và ếch nhái để ăn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi cò bắt cá và ếch nhái để ăn",
+            "đúng rồi cò bắt cá và ếch nhái để ăn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.651Z"
+        },
+        "Đúng rồi! Cò là con vật ăn thịt.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi cò là con vật ăn thịt",
+            "đúng rồi cò là con vật ăn thịt"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.651Z"
+        },
+        "Đúng rồi! Cò săn mồi ngoài ruộng lúa.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi cò săn mồi ngoài ruộng lúa",
+            "đúng rồi cò săn mồi ngoài ruộng lúa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.615Z"
+        },
         "Đúng rồi! Cóc là lưỡng cư, giống con ếch.": {
           "variant": 1,
           "flags_before": [
@@ -14295,6 +17346,44 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.823Z"
+        },
+        "Đúng rồi! Cú bắt chuột, giúp nhà nông giữ lúa.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi cú bắt chuột giúp nhà nông giữ lúa",
+            "đúng rồi cú bắt chuột giúp nhà nông giữ lúa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.625Z"
+        },
+        "Đúng rồi! Cú ăn con vật, không ăn cây.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi cú ăn con vật không ăn cây",
+            "đúng rồi cú ăn con vật không ăn cây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.632Z"
         },
         "Đúng rồi! Da Lan cảm thấy lông mềm. Bộ não nhận ra: mèo con!": {
           "variant": 4,
@@ -14354,6 +17443,46 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.304Z"
+        },
+        "Đúng rồi! Dây mướp lớn lên và leo chầm chậm.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi dây mướp lớn lên và leo chậm chậm",
+            "đúng rồi dây mướp lớn lên và leo chậm chậm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.001Z"
+        },
+        "Đúng rồi! Dương xỉ mọc tốt ở chỗ râm, mát và ẩm.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi dương sĩ mọc tốt ở chỗ râm mát và ẩm",
+            "đúng rồi dương sỉ mọc tốt ở chỗ râm mát và ẩm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.026Z"
         },
         "Đúng rồi! Em cào lên hòn đá bằng cán thìa.": {
           "variant": 1,
@@ -14415,6 +17544,25 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.470Z"
+        },
+        "Đúng rồi! Gà ăn cả thóc lẫn châu chấu.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi gà ăn cả thóc lẫn châu chấu",
+            "đúng rồi gà ăn cả thóc lẫn châu chấu"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.640Z"
         },
         "Đúng rồi! Hoạt thạch mềm nhất. Thạch anh cứng hơn. Kim cương cứng nhất.": {
           "variant": 1,
@@ -14713,6 +17861,25 @@
           ],
           "chosen_at": "2026-11-09T09:10:02.297Z"
         },
+        "Đúng rồi! Mèo có bộ lông mềm. Mèo là động vật có vú.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi mèo có bộ lông mềm mèo là động vật có vú",
+            "đúng rồi mèo có bộ lông mềm mèo là động vật có vú"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.623Z"
+        },
         "Đúng rồi! Mũ bảo hiểm cứng và che chở bộ não.": {
           "variant": 3,
           "flags_before": [
@@ -14812,6 +17979,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.150Z"
         },
+        "Đúng rồi! Nhện và bọ cạp đều có tám chân.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi nhện và bọ cạp đều có tám chân",
+            "đúng rồi nhện và bọ cạp đều có tám chân"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.654Z"
+        },
         "Đúng rồi! Những giọt nước li ti làm mặt kính bị mờ.": {
           "variant": 0,
           "flags_before": [
@@ -14853,6 +18039,25 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.821Z"
+        },
+        "Đúng rồi! Nước chảy qua những lỗ nhỏ trên thân bọt biển.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi nước chảy qua những lỗ nhỏ trên thân bọc biển",
+            "đúng rồi nước chảy qua những lỗ nhỏ trên thân bọc biển"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.656Z"
         },
         "Đúng rồi! Nước chảy xuống và làm ngập chỗ trũng trước.": {
           "variant": 2,
@@ -14932,6 +18137,46 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.031Z"
         },
+        "Đúng rồi! Rễ đước giữ chặt lớp bùn.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi rễ đứt giữ chặt lớp bùn",
+            "đúng rồi rễ đứt giữ chặt lớp bùn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.021Z"
+        },
+        "Đúng rồi! Sâu ăn lá cải thủng lỗ chỗ.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi sâu ăn lá cải thủng lỗ chỗ",
+            "đúng rồi sâu ăn lá cải thủng lỗ chỗ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.622Z"
+        },
         "Đúng rồi! Sông mang bùn mịn về bồi cho ruộng lúa đồng bằng.": {
           "variant": 3,
           "flags_before": [
@@ -15010,6 +18255,46 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.025Z"
         },
+        "Đúng rồi! Thân bạch tuộc mềm, chui lọt cả khe nhỏ.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi thân bạch tuột mềm chui lọt cả khe nhỏ",
+            "đúng rồi thân bạch tuột mềm chui lọt cả khe nhỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.655Z"
+        },
+        "Đúng rồi! Thạch sùng có da khô phủ vảy nhỏ.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi thạch sùng có da khô phủ vẫy nhỏ",
+            "đúng rồi thạch sùng có da khô phủ vẫy nhỏ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.635Z"
+        },
         "Đúng rồi! Thằn lằn bay sống cùng thời khủng long, nhưng không phải khủng long.": {
           "variant": 2,
           "flags_before": [
@@ -15049,6 +18334,25 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.132Z"
+        },
+        "Đúng rồi! Thằn lằn phơi nắng cho ấm người.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đúng rồi thằng lằn phơi nắng cho ấm người",
+            "đúng rồi thằng lằn phơi nắng cho ấm người"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.048Z"
         },
         "Đúng rồi! Thợ lặn lúc nào cũng cần không khí, cả khi ở dưới nước.": {
           "variant": 0,
@@ -15111,6 +18415,27 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.000Z"
         },
+        "Đúng rồi! Trong rừng, không ai cho voọc ăn cả.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi trong rừng không ai cho vọc ăn cả",
+            "đúng rồi trong rừng không ai cho vọc ăn cả"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.978Z"
+        },
         "Đúng rồi! Trứng ếch, rồi nòng nọc, rồi con ếch.": {
           "variant": 0,
           "flags_before": [
@@ -15129,6 +18454,27 @@
             4
           ],
           "chosen_at": "2026-11-12T09:13:38.821Z"
+        },
+        "Đúng rồi! Voọc leo trên cây rừng cao.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "đúng rồi vọc leo trên cây rừng cao",
+            "đúng rồi vọc leo trên cây rừng cao"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.016Z"
         },
         "Đúng rồi! Xói mòn mang mảnh đá vụn đi tới nơi khác.": {
           "variant": 0,
@@ -15403,6 +18749,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.125Z"
+        },
+        "Đống cành khô là chỗ trốn của cuốn chiếu, ốc sên.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đống cành khô là chỗ trốn của cuốn chiếu ốc sên",
+            "đống cành khô là chỗ trốn của cuốn chiếu ốc sên"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.047Z"
         },
         "Đồng xu cổ": {
           "variant": 1,
@@ -15904,6 +19269,339 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.778Z"
         },
+        "Ếch bơi bằng đôi chân sau dài.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ếch bơi bằng đôi chân sao dài",
+            "ếch bơi bằng đôi chân sao dài"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.645Z"
+        },
+        "Ếch còn ăn cả ruồi và giun.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ếch còn ăn cả rùi và dung",
+            "ếch còn ăn cả rùi và dung"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.640Z"
+        },
+        "Ếch có chân, không có vây.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch có chân không có vây",
+            "ếch có chân không có vây"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.641Z"
+        },
+        "Ếch có da trơn và ẩm.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch có da trơn và ẩm",
+            "ếch có da trơn và ẩm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.638Z"
+        },
+        "Ếch có da trơn, không có lông vũ.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch có da trơn không có lông vũ",
+            "ếch có da trơn không có lông vũ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.633Z"
+        },
+        "Ếch có da trơn, không có lông.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch có da trơn không có lông",
+            "ếch có da trơn không có lông"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.630Z"
+        },
+        "Ếch có da trơn, không có vảy.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ếch có da trơn không có vẫy",
+            "ếch có da trơn không có vẫy"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-13T15:14:12.647Z"
+        },
+        "Ếch cần ăn côn trùng trước đã.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch cần ăn côn trùng trước đã",
+            "ếch cần ăn côn trùng trước đã"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.637Z"
+        },
+        "Ếch là thức ăn của cò.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch là thức ăn của cò",
+            "ếch là thức ăn của cò"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.638Z"
+        },
+        "Ếch sống ở ao. Voọc sống trong rừng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ếch sống ở ao vọc sống trong rừng",
+            "ếch sống ở ao vọc sống trong rừng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.008Z"
+        },
+        "Ếch và cá sống ở ao.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch và cá sống ở ao",
+            "ếch và cá sống ở ao"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.009Z"
+        },
+        "ếch cũng có thể đứng cuối chuỗi": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch cũng có thể đứng cuối chuỗi",
+            "ếch cũng có thể đứng cuối chuỗi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.628Z"
+        },
+        "ếch hít thở không khí": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch hít thở không khí",
+            "ếch hít thở không khí"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:41.983Z"
+        },
+        "ếch ăn cả giun": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ếch ăn cả dung",
+            "ếch ăn cả dung"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.635Z"
+        },
+        "ếch ăn ruồi": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ếch ăn rùi",
+            "ếch ăn rùi"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T06:36:14.635Z"
+        },
+        "Ốc sên đang sống, biết ăn lá.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ốc sên đang sống biết ăn lá",
+            "ốc sênh đang sống biết ăn lá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.005Z"
+        },
+        "Ốc sên đi chậm, nhưng vẫn đang sống.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ốc sên đi chậm nhưng vẫn đang sống",
+            "ốc sên đi chậm nhưng vẫn đang sống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.000Z"
+        },
         "Ống gió cho mình biết về …": {
           "variant": 1,
           "flags_before": [
@@ -15979,6 +19677,25 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.434Z"
+        },
+        "ống tre cho ong nhỏ làm tổ": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ống che cho ong nhỏ làm tổ",
+            "ống che cho ong nhỏ làm tổ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-14T05:58:42.041Z"
         },
         "ớt phơi trên nia": {
           "variant": 1,

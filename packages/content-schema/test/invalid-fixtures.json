@@ -167,5 +167,23 @@
     "context": [
       "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
     ]
+  },
+  {
+    "file": "fixtures/invalid/feedback-on-correct-option.json",
+    "description": "lựa chọn đúng có feedback (SK-044: chỉ lựa chọn sai có)",
+    "stage": "refs",
+    "pointer": "/quiz/0/options/0/feedback",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
+  },
+  {
+    "file": "fixtures/invalid/true-false-feedback-right-side.json",
+    "description": "true_false có feedback cho phía chọn đúng (SK-044: chỉ phía chọn nhầm)",
+    "stage": "refs",
+    "pointer": "/quiz/5/feedback_false",
+    "context": [
+      "fixtures/valid/discoverer/an-uong-lanh-manh/topic.json"
+    ]
   }
 ]

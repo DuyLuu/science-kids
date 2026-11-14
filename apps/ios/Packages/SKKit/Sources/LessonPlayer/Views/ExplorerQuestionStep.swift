@@ -35,6 +35,20 @@ struct ExplorerQuestionStep: View {
     private var status: QuestionStatus { session.status(of: item, in: phase) }
     private var tried: [String] { triedKeys(session.tries(for: item, in: phase)) }
     private var count: Int { phase == .warmup ? session.warmupItems.count : session.quizItems.count }
+    /// Card height of `count` picture choices (phone: taller when there are two).
+    private func cardHeight(_ count: Int) -> CGFloat {
+        if metrics.isRegular { return ExplorerMetrics.choiceHeightRegular }
+        return count <= 2 ? ExplorerMetrics.choiceHeightTwo : ExplorerMetrics.choiceHeight
+    }
+
+    private var showsQuestionPicture: Bool {
+        switch item.answer {
+        case .singleChoice(let choice): choice.options.contains { $0.image == nil }
+        case .orderSequence(let order): order.items.contains { $0.image == nil }
+        default: true
+        }
+    }
+
     private var isTrueFalse: Bool {
         if case .trueFalse = item.answer { return true }
         return false
@@ -65,10 +79,16 @@ struct ExplorerQuestionStep: View {
                     sways: !status.isDone && !showsTrueFalseIntro
                 )
                 .reveal(order: 1)
-                if let image = item.image {
-                    ContentPicture(image: image, color: nil, size: metrics.illustration(isTrueFalse ? ExplorerMetrics.questionArt : ExplorerMetrics.questionArtWithCards))
+                // SK-043 hướng A: the question's picture only where the answers have none (true /
+                // false); picture choices and orders carry the pictures themselves.
+                if let image = item.image, showsQuestionPicture {
+                    // Explorer-A: the photo fills its paper (true / false: 336 × 250), cropped.
+                    let height = metrics.illustration(isTrueFalse ? ExplorerMetrics.questionPhotoHeight : ExplorerMetrics.questionSheetHeightWithCards)
+                    ContentPicture(image: image, color: nil, size: height - 2 * Tokens.Space.s8, box: .fillWidth)
+                        .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s8, style: .continuous))
+                        .padding(Tokens.Space.s8)
                         .frame(maxWidth: .infinity)
-                        .frame(height: metrics.illustration(isTrueFalse ? ExplorerMetrics.questionSheetHeight : ExplorerMetrics.questionSheetHeightWithCards))
+                        .frame(height: height)
                         .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.explorer)
                         .reveal(order: 2)
                 }
@@ -135,12 +155,15 @@ struct ExplorerQuestionStep: View {
                 Button {
                     answer(.selected(option.key), pick: option.key, name: option.label)
                 } label: {
-                    ExplorerCardFace(look: look, showsRetry: status.isRetry, height: metrics.illustration(ExplorerMetrics.choiceHeight)) {
+                    ExplorerCardFace(look: look, showsRetry: status.isRetry, height: cardHeight(options.count)) {
+                        // SK-043 hướng A: the photo fills the card, cropped.
                         ContentPicture(
                             asset: option.image?.asset, color: nil,
-                            size: metrics.illustration(ExplorerMetrics.choiceArt),
-                            accessibilityLabel: nil
+                            size: cardHeight(options.count) - 2 * Tokens.Space.s8,
+                            box: .fillWidth, accessibilityLabel: nil
                         )
+                        .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s8, style: .continuous))
+                        .padding(Tokens.Space.s8)
                     }
                 }
                 .buttonStyle(.paperPress)

@@ -1,0 +1,499 @@
+{
+  "note": "SK-041 bài 8. Designer (agent) chọn 13/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, CC BY (ghi công), kiểm ở trang gốc. Mỗi chỗ dùng có crop đúng tỉ lệ khung hướng A (bảng tỉ lệ khung trong SK-043); same_as chỉ khi cùng ảnh, cùng crop. Ảnh dùng lại của Discoverer (Hô hấp, Khủng long) chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_spider": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2366,
+        "top": 0.3555,
+        "width": 0.5469,
+        "height": 0.4289
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung."
+    },
+    "w1.w1_ant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Weaver_ant_(Oecophylla_smaragdina)%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_(15280824806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Weaver_ant_%28Oecophylla_smaragdina%29%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_%2815280824806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Weaver ant (Oecophylla smaragdina)പുളിയുറുമ്പ് (15280824806)",
+      "author": "Rison Thumboor from Thrissur, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2025,
+        "top": 0.2685,
+        "width": 0.5649,
+        "height": 0.4431
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aquarium tropical de Pierrefitte-Nestalas 03082018 Carassius auratus Lionhead goldfish 2",
+      "author": "Vassil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0987,
+        "top": 0.1452,
+        "width": 0.7327,
+        "height": 0.7696
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1084,
+        "top": 0.0216,
+        "width": 0.7031,
+        "height": 0.7567
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "q1": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q1.q1_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Freshwater_crab_-_Potamonautidae.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Freshwater_crab_-_Potamonautidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Freshwater crab - Potamonautidae",
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2499,
+        "width": 1.0,
+        "height": 0.6002
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q1.q1_urchin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diadema_antillarum_Flower_Garden_Banks.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Diadema_antillarum_Flower_Garden_Banks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Diadema antillarum Flower Garden Banks",
+      "author": "NOAA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Diadema_antillarum_Flower_Garden_Banks.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2338,
+        "width": 1.0,
+        "height": 0.6024
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q1.q1_octopus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Octopus_cyanea_251606691.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Octopus_cyanea_251606691.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Octopus cyanea 251606691",
+      "author": "Pauline Walsh Jacobson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2333,
+        "width": 1.0,
+        "height": 0.5333
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Snail_(139998665).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Snail_%28139998665%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snail",
+      "author": "Lauren",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.1484,
+        "top": 0.0893,
+        "width": 0.7031,
+        "height": 0.7913
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_empty_beach_(4374002596).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Big_empty_beach_%284374002596%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Big empty beach (4374002596)",
+      "author": "Damian Gadal",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Mặt biển và bãi cát vắng, không người, không thuyền (hình câu hỏi; app ẩn khi lựa chọn có hình)."
+    },
+    "q3.q3_sponge": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aplysina_archeri_351482131.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aplysina_archeri_351482131.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aplysina archeri 351482131",
+      "author": "Jay Brasher",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2584,
+        "width": 1.0,
+        "height": 0.5334
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q3.q3_starfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Orange_sea_star_on_a_rock_beside_a_driftwood_log,_Agate_Beach,_Sue-meg_State_Park,_California.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Orange_sea_star_on_a_rock_beside_a_driftwood_log%2C_Agate_Beach%2C_Sue-meg_State_Park%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Orange sea star on a rock beside a driftwood log, Agate Beach, Sue-meg State Park, California",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1269,
+        "top": 0.273,
+        "width": 0.6562,
+        "height": 0.3939
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q3.q3_crab": {
+      "same_as": "q1.q1_crab"
+    },
+    "q4": {
+      "same_as": "q3"
+    },
+    "q4.q4_dolphin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A dolphin jumping out of the sea",
+      "author": "NOAA Photo Library",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0963,
+        "width": 1.0,
+        "height": 0.5974
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q4.q4_urchin": {
+      "same_as": "q1.q1_urchin"
+    },
+    "q4.q4_seahorse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seahorse_-_Hippocampus_guttulatus.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Seahorse_-_Hippocampus_guttulatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seahorse - Hippocampus guttulatus",
+      "author": "prilfish",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1999,
+        "width": 1.0,
+        "height": 0.6002
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q5": {
+      "same_as": "q5",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_octopus": {
+      "same_as": "q1.q1_octopus"
+    },
+    "q5.q5_starfish": {
+      "same_as": "q3.q3_starfish"
+    },
+    "q5.q5_seahorse": {
+      "same_as": "q4.q4_seahorse"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Orange_sea_star_on_a_rock_beside_a_driftwood_log,_Agate_Beach,_Sue-meg_State_Park,_California.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Orange_sea_star_on_a_rock_beside_a_driftwood_log%2C_Agate_Beach%2C_Sue-meg_State_Park%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Orange sea star on a rock beside a driftwood log, Agate Beach, Sue-meg State Park, California",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1034,
+        "top": 0.0743,
+        "width": 0.7031,
+        "height": 0.7913
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_soft": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Octopus_cyanea_251606691.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Octopus_cyanea_251606691.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Octopus cyanea 251606691",
+      "author": "Pauline Walsh Jacobson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.92,
+        "height": 0.92
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_spiny": {
+      "same_as": "q6"
+    },
+    "learn.explore.explore_sponge": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aplysina_archeri_351482131.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aplysina_archeri_351482131.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aplysina archeri 351482131",
+      "author": "Jay Brasher",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1327,
+        "top": 0.1228,
+        "width": 0.8045,
+        "height": 0.8045
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_jelly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lion's mane jellyfish in Gullmarn fjord at Sämstad 3",
+      "author": "W.carter",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1084,
+        "top": 0.152,
+        "width": 0.7031,
+        "height": 0.796
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "tray.tray_octopus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Octopus_cyanea_251606691.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Octopus_cyanea_251606691.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Octopus cyanea 251606691",
+      "author": "Pauline Walsh Jacobson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.22,
+        "top": 0.0,
+        "width": 0.69,
+        "height": 0.92
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_seahorse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seahorse_-_Hippocampus_guttulatus.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Seahorse_-_Hippocampus_guttulatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seahorse - Hippocampus guttulatus",
+      "author": "prilfish",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1518,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_starfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Orange_sea_star_on_a_rock_beside_a_driftwood_log,_Agate_Beach,_Sue-meg_State_Park,_California.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Orange_sea_star_on_a_rock_beside_a_driftwood_log%2C_Agate_Beach%2C_Sue-meg_State_Park%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Orange sea star on a rock beside a driftwood log, Agate Beach, Sue-meg State Park, California",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3093,
+        "top": 0.2513,
+        "width": 0.2915,
+        "height": 0.4374
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_snail": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Snail_(139998665).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Snail_%28139998665%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snail",
+      "author": "Lauren",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.2397,
+        "top": 0.0944,
+        "width": 0.5206,
+        "height": 0.7812
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_dolphin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A dolphin jumping out of the sea",
+      "author": "NOAA Photo Library",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.6413,
+        "height": 0.9578
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_sponge": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aplysina_archeri_351482131.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aplysina_archeri_351482131.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aplysina archeri 351482131",
+      "author": "Jay Brasher",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1863,
+        "top": 0.0,
+        "width": 0.6975,
+        "height": 0.93
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_urchin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diadema_antillarum_Flower_Garden_Banks.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Diadema_antillarum_Flower_Garden_Banks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Diadema antillarum Flower Garden Banks",
+      "author": "NOAA",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Diadema_antillarum_Flower_Garden_Banks.jpg",
+      "crop": {
+        "left": 0.1459,
+        "top": 0.0089,
+        "width": 0.6582,
+        "height": 0.9911
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "vocab.octopus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Octopus_cyanea_251606691.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Octopus_cyanea_251606691.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Octopus cyanea 251606691",
+      "author": "Pauline Walsh Jacobson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1766,
+        "width": 1.0,
+        "height": 0.6666
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.starfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Orange_sea_star_on_a_rock_beside_a_driftwood_log,_Agate_Beach,_Sue-meg_State_Park,_California.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Orange_sea_star_on_a_rock_beside_a_driftwood_log%2C_Agate_Beach%2C_Sue-meg_State_Park%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Orange sea star on a rock beside a driftwood log, Agate Beach, Sue-meg State Park, California",
+      "author": "Z3lvs",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2206,
+        "top": 0.2942,
+        "width": 0.4688,
+        "height": 0.3517
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.sponge": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aplysina_archeri_351482131.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aplysina_archeri_351482131.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aplysina archeri 351482131",
+      "author": "Jay Brasher",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.038,
+        "top": 0.2043,
+        "width": 0.962,
+        "height": 0.6413
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.jellyfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lion's mane jellyfish in Gullmarn fjord at Sämstad 3",
+      "author": "W.carter",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0738,
+        "top": 0.2585,
+        "width": 0.7725,
+        "height": 0.583
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.mollusc": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Snail_(139998665).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Snail_%28139998665%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snail",
+      "author": "Lauren",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1099,
+        "width": 1.0,
+        "height": 0.7503
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "reward.octopus_card": {
+      "same_as": "tray.tray_octopus"
+    }
+  }
+}

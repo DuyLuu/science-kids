@@ -80,7 +80,23 @@ struct PlayStep<Header: View>: View {
     /// The mascot says the tray's message (`messages`, chosen by the engine); its listen button at
     /// the end of the row. The message plays by itself when Chơi opens (`autoplayUtterance`), not
     /// after each tap: a tap says the food's name.
-    private var message: some View {
+    @ViewBuilder private var message: some View {
+        if session.isExplorer {
+            // SK-043 Explorer-A: the mascot's bubble with the 72 speaker, as in the quiz.
+            if let text = session.trayMessage {
+                ExplorerSpeechRow(
+                    mood: state?.success == true ? .happy : .talk, lines: [text], mode: mode, showsSecond: showsSecond,
+                    listen: session.utterance("play.message", text), sways: false
+                )
+                .id(state?.message.code)
+                .accessibilityIdentifier("lesson.play.message")
+            }
+        } else {
+            discovererMessage
+        }
+    }
+
+    private var discovererMessage: some View {
         HStack(alignment: .bottom, spacing: Tokens.Space.s8) {
             Image("ArtMascot", bundle: .main)
                 .resizable()
@@ -109,9 +125,12 @@ struct PlayStep<Header: View>: View {
     /// "Em đã chọn": the tray (gỉ đồng oval), the picks on it (tap to take off), the empty places.
     private var trayPlate: some View {
         VStack(alignment: .leading, spacing: Tokens.Space.s6) {
-            Text("lesson.play.tray_label")
-                .typography(Tokens.Typography.caption)
-                .foregroundStyle(Tokens.Role.textSecondary)
+            // SK-043 hướng A: no "Your picks · tap one to take it off" (the voice says it).
+            if !session.isExplorer {
+                Text("lesson.play.tray_label")
+                    .typography(Tokens.Typography.caption)
+                    .foregroundStyle(Tokens.Role.textSecondary)
+            }
             ZStack {
                 TrayOval()
                     .frame(width: metrics.trayWidth, height: metrics.trayHeight)
@@ -135,10 +154,61 @@ struct PlayStep<Header: View>: View {
             .frame(maxWidth: .infinity)
             .accessibilityElement(children: .contain)
             .accessibilityLabel(Text("lesson.play.tray_a11y \(state?.tray.count ?? 0) \(tray.capacity)"))
+            if false, let picks = state?.tray, !picks.isEmpty {
+                // SK-043 hướng A: the names show only here, under the tray, with the group's dot.
+                WrapLayout(spacing: Tokens.Space.s6) {
+                    ForEach(picks, id: \.self) { key in
+                        if let item = tray.items.first(where: { $0.key == key }) {
+                            let group = tray.groups.first { $0.key == item.group }
+                            PaperTag(Text(verbatim: mode.name(item.label)), style: .chip(dot: group?.color.color ?? Tokens.Role.surfaceInactive))
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .accessibilityHidden(true)
+            }
         }
     }
 
-    private func trayItem(_ item: TrayItem) -> some View {
+    @ViewBuilder private func trayItem(_ item: TrayItem) -> some View {
+        if session.isExplorer {
+            explorerTrayItem(item)
+        } else {
+            labelledTrayItem(item)
+        }
+    }
+
+    /// SK-043 Explorer-A: the photo fills the round place (96); a `limit` pick is faded with a
+    /// folded corner, no word.
+    private func explorerTrayItem(_ item: TrayItem) -> some View {
+        let group = tray.groups.first { $0.key == item.group }
+        let limited = group?.role == .limit
+        let side = metrics.traySlot - 2 * LessonMetrics.trayDiscRing
+        return Button {
+            tap(item)
+        } label: {
+            ContentPicture(image: item.image, color: nil, size: side)
+                .frame(width: side, height: side)
+                .clipShape(Circle())
+                .opacity(limited ? ExplorerMetrics.triedOpacity : 1)
+                .padding(LessonMetrics.trayDiscRing)
+                .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.onDark, in: Circle())
+                .overlay(alignment: .topTrailing) {
+                    if limited {
+                        FoldFlapShape(fold: Tokens.Shape.foldCornerS * 2)
+                            .fill(Tokens.Role.feedbackWrong)
+                            .frame(width: Tokens.Shape.foldCornerS * 2, height: Tokens.Shape.foldCornerS * 2)
+                            .paperDropShadow(Tokens.Shadow.dropFold)
+                            .accessibilityHidden(true)
+                    }
+                }
+        }
+        .buttonStyle(.paperPress)
+        .accessibilityLabel(Text("lesson.play.remove \(spokenLabel(item.label))"))
+        .accessibilityIdentifier("lesson.tray.\(item.key)")
+    }
+
+    private func labelledTrayItem(_ item: TrayItem) -> some View {
         let group = tray.groups.first { $0.key == item.group }
         let name = mode.name(item.label)
         return Button {
@@ -151,6 +221,7 @@ struct PlayStep<Header: View>: View {
                 if session.isExplorer {
                     // Explorer: the picture, not the name (the child does not read yet).
                     ContentPicture(image: item.image, color: nil, size: metrics.traySlot * 0.5)
+                        .opacity(group?.role == .limit ? ExplorerMetrics.triedOpacity : 1)
                 } else {
                     Text(verbatim: name)
                         .typography(Tokens.Typography.captionS, fixedBox: true)
@@ -219,7 +290,8 @@ struct PlayStep<Header: View>: View {
                 .accessibilityIdentifier("lesson.meter.\(group.key)")
                 }
             }
-            if state?.hasLimited == true {
+            // SK-043 Explorer-A: the limit pick shows by its faded photo and folded corner, no word.
+            if state?.hasLimited == true, !session.isExplorer {
                 ForEach(tray.groups.filter { $0.role == .limit }, id: \.key) { group in
                     Text(verbatim: mode.name(group.label))
                         .typography(Tokens.Typography.caption, fixedBox: true)
@@ -246,7 +318,50 @@ struct PlayStep<Header: View>: View {
     /// and a real picture (SK-033) lies on the cell's own paper with no coloured piece under it,
     /// the order is the session's shuffle (`shelfItems`), and VoiceOver reads the item's name only.
     /// The group shows after the pick: the dot on the tray, the chips, the mascot's message.
-    private var shelf: some View {
+    @ViewBuilder private var shelf: some View {
+        if session.isExplorer {
+            pictureShelf
+        } else {
+            labelledShelf
+        }
+    }
+
+    /// SK-043 hướng A, Explorer: three columns of big pictures (`110 × 116`), no word; the tap
+    /// says the name and puts it on the tray.
+    private var pictureShelf: some View {
+        let columns = Array(repeating: GridItem(.flexible(), spacing: Tokens.Space.s10),
+                            count: metrics.isRegular ? PictureBookMetrics.shelfColumnsRegular : PictureBookMetrics.shelfColumns)
+        let cell = metrics.isRegular ? PictureBookMetrics.shelfPictureRegular : PictureBookMetrics.shelfPicture
+        return LazyVGrid(columns: columns, spacing: Tokens.Space.s10) {
+            ForEach(Array(session.shelfItems.enumerated()), id: \.element.key) { index, item in
+                let onTray = state?.tray.contains(item.key) ?? false
+                Button {
+                    tap(item)
+                } label: {
+                    ContentPicture(image: item.image, color: nil, size: cell - 2 * Tokens.Space.s6, box: .fillWidth)
+                        .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s6, style: .continuous))
+                        .padding(Tokens.Space.s6)
+                        .frame(maxWidth: .infinity, minHeight: cell)
+                }
+                .buttonStyle(PaperChoiceStyle(state: onTray ? .selected : .idle))
+                .accessibilityLabel(Text(verbatim: spokenLabel(item.label)))
+                .accessibilityAddTraits(onTray ? .isSelected : [])
+                .accessibilityIdentifier("lesson.shelf.\(item.key)")
+                .overlay(alignment: .topTrailing) {
+                    if onTray {
+                        Seal(icon: .check)
+                            .padding(LessonMetrics.shelfSealInset)
+                            .allowsHitTesting(false)
+                    }
+                }
+                .reveal(order: index, step: Tokens.Motion.Stagger.stepDense)
+            }
+        }
+        .padding(.trailing, metrics.gridTrailingInset)
+        .padding(.bottom, metrics.gridTrailingInset)
+    }
+
+    private var labelledShelf: some View {
         LazyVGrid(columns: metrics.gridColumns(for: metrics.playGrid), spacing: metrics.playGrid.rowGap) {
             ForEach(Array(session.shelfItems.enumerated()), id: \.element.key) { index, item in
                 let onTray = state?.tray.contains(item.key) ?? false
@@ -294,26 +409,24 @@ extension PlayStep {
         Button {
             speech?.play(session.utterance("play.group.\(group.key)", group.label))
         } label: {
-            HStack(spacing: Tokens.Space.s8) {
+            HStack(spacing: Tokens.Space.s6) {
                 ZStack {
                     Circle().fill(group.color.color)
                     if ok {
                         PaperIconView(.check, size: LessonMetrics.meterCheck, color: Tokens.Role.textOnAccent)
                     }
                 }
-                .frame(width: PaperMetrics.groupDisc, height: PaperMetrics.groupDisc)
-                .paperDropShadow(Tokens.Shadow.stamp)
+                .frame(width: PictureBookMetrics.chipDot, height: PictureBookMetrics.chipDot)
                 Text(verbatim: mode.name(group.label))
                     .typography(Tokens.Typography.bodyStrong, fixedBox: true)
+                    .lineLimit(1)
+                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
                     .foregroundStyle(ok ? Tokens.Role.textOnAccent : Tokens.Role.textPrimary)
             }
-            .padding(.horizontal, Tokens.Space.s14)
+            .padding(.horizontal, Tokens.Space.s10)
             .frame(minHeight: Tokens.AgeGroup.explorer.touchTarget)
-            .paperSurface(
-                ok ? Tokens.Role.feedbackCorrect : Tokens.Role.surfacePaper,
-                shadow: ok ? Tokens.Shadow.paper2 : Tokens.Shadow.paper2,
-                cornerRadius: Tokens.Radius.explorer
-            )
+            // SK-043 Explorer-A: "chip nhóm 72 giữ như SK-040".
+            .paperSurface(ok ? Tokens.Role.feedbackCorrect : Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.explorer)
         }
         .buttonStyle(.paperPress)
         .accessibilityLabel(Text(verbatim: spokenLabel(group.label)))

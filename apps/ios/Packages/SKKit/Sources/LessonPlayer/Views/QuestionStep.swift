@@ -67,7 +67,7 @@ struct QuestionStep<Header: View>: View {
                     hint.reveal(order: 4)
                 }
                 if answersByTapping, case .retry = status {
-                    HintNote(hint: item.hint, mode: mode, listen: hintUtterance)
+                    HintNote(hint: item.hint, feedback: retryFeedback, mode: mode, listen: retryUtterance)
                 }
             }
         }
@@ -78,11 +78,11 @@ struct QuestionStep<Header: View>: View {
 
     /// A tapped answer word says itself (SK-016), then does what the tap does.
     private func tap(key: String) {
-        speech?.play(session.utterance("word.\(key)", answerLabel(forKey: key)))
+        let word = answerLabel(forKey: key)
         switch item.answer {
         case .singleChoice:
             draft.keys = [key]
-            if answersByTapping { submit() }
+            if answersByTapping { return submit(saying: word) }
         case .multiChoice:
             if let at = draft.keys.firstIndex(of: key) { draft.keys.remove(at: at) } else { draft.keys.append(key) }
         case .fillBlankBank(let fill):
@@ -91,23 +91,31 @@ struct QuestionStep<Header: View>: View {
             } else if draft.keys.count < fill.answers.count {
                 draft.keys.append(key)
             }
-            if answersByTapping, draft.keys.count == fill.answers.count { submit() }
+            if answersByTapping, draft.keys.count == fill.answers.count { return submit(saying: word) }
         case .trueFalse, .orderSequence, .pictureBarChart, .unknown:
             break
         }
+        speech?.play(session.utterance("word.\(key)", word))
     }
 
     private func tap(value: Bool) {
-        if case .trueFalse(let tf) = item.answer, let labels = tf.labels {
-            speech?.play(session.utterance("word.\(item.key).\(value)", value ? labels.trueLabel : labels.falseLabel))
-        }
+        let word = LessonSession.answerName(item, value: value)
         draft.bool = value
-        if answersByTapping { submit() }
+        if answersByTapping { return submit(saying: word) }
+        if let word { speech?.play(session.utterance("word.\(item.key).\(value)", word)) }
     }
 
-    private func submit() {
+    /// Scores the draft. SK-044: says why at once (the tapped word first, when a tap answered):
+    /// the option's feedback and the hint after a wrong try with a try left, the explanation once
+    /// done (right or out of tries).
+    private func submit(saying word: Spoken? = nil) {
         guard let attempt = draft.attempt(for: item.answer) else { return }
-        session.submit(attempt, for: item, in: phase)
+        let after = session.submit(attempt, for: item, in: phase)
+        if let result = session.resultUtterance(item, status: after, name: word) {
+            speech?.play(result)
+        } else if let word {
+            speech?.play(session.utterance("word.\(item.key)", word))
+        }
         draft = AnswerDraft()
         editingRetry = false
     }
@@ -120,6 +128,17 @@ struct QuestionStep<Header: View>: View {
         case .fillBlankBank(let fill): fill.bank.first { $0.key == key }?.label
         case .trueFalse, .orderSequence, .pictureBarChart, .unknown: nil
         }
+    }
+
+    /// SK-044: the feedback of the option just tried, shown above the hint.
+    private var retryFeedback: Spoken? {
+        guard case .retry(let last) = status else { return nil }
+        return LessonSession.feedback(item, for: last)
+    }
+
+    private var retryUtterance: Utterance {
+        guard case .retry = status, let utterance = session.resultUtterance(item, status: status) else { return hintUtterance }
+        return utterance
     }
 
     private var hintUtterance: Utterance {
@@ -187,7 +206,7 @@ struct QuestionStep<Header: View>: View {
             if !answersByTapping {
                 BottomBar {
                     VStack(spacing: Tokens.Space.s10) {
-                        HintNote(hint: item.hint, mode: mode, listen: hintUtterance)
+                        HintNote(hint: item.hint, feedback: retryFeedback, mode: mode, listen: retryUtterance)
                         if editingRetry {
                             checkButton
                         } else {
@@ -208,7 +227,7 @@ struct QuestionStep<Header: View>: View {
     }
 
     private var checkButton: some View {
-        TwoLayerButton("lesson.check", action: submit)
+        TwoLayerButton("lesson.check", action: { submit() })
             .disabled(draft.attempt(for: item.answer) == nil)
             .accessibilityIdentifier("lesson.check")
     }

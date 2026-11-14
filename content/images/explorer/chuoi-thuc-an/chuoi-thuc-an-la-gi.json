@@ -1,0 +1,342 @@
+{
+  "note": "SK-045. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình câu sân nhà là hình vẽ dùng lại của Hô hấp. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc. Sáu hình chuỗi ghép là ảnh tròn trên nền giấy, mũi tên giấy cắt.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_rabbit": {
+      "same_as": "w1.w1_rabbit",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "w1.w1_egret": {
+      "same_as": "w1.w1_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Striped_field_mouse_(51554361125).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Striped_field_mouse_%2851554361125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Striped field mouse (51554361125)",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2244,
+        "top": 0.14,
+        "width": 0.5511,
+        "height": 0.62
+      },
+      "note": "SK-045 (designer 14/11): Chuột đồng sọc (Apodemus agrarius) sống, ngoài bãi lá khô; không bẫy, không lồng, không tay người. Crop cho khung q."
+    },
+    "learn.explore.explore_plant_food": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pieris_rapae_(Klein_koolwitje)_rups.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Pieris_rapae_%28Klein_koolwitje%29_rups.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pieris rapae (Klein koolwitje) rups",
+      "author": "Rasbak",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0291,
+        "top": 0.015,
+        "width": 0.9418,
+        "height": 0.97
+      },
+      "note": "SK-045 (designer 14/11): Sâu bướm cải trắng (Pieris rapae) trên lá cây họ cải, lá có chỗ bị ăn khuyết. Crop cho khung learn."
+    },
+    "learn.explore.explore_animal_food": {
+      "same_as": "learn.explore.explore_amphibians",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "learn.explore.explore_arrow": {
+      "composed": {
+        "file": "content/images/composed/chuoi-thuc-an/chuoi-thuc-an-la-gi.learn.explore.explore_arrow.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_grass"
+          },
+          {
+            "same_as": "learn.explore.explore_insects",
+            "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+          }
+        ]
+      },
+      "title": "Grass, an arrow, then a grasshopper",
+      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ."
+    },
+    "learn.explore.explore_chain": {
+      "composed": {
+        "file": "content/images/composed/chuoi-thuc-an/chuoi-thuc-an-la-gi.learn.explore.explore_chain.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_grass"
+          },
+          {
+            "same_as": "learn.explore.explore_insects",
+            "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+          },
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+            "author": "Thomas Brown",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0"
+          }
+        ]
+      },
+      "title": "Grass, a grasshopper, then a frog",
+      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ."
+    },
+    "tray.tray_grasshopper": {
+      "same_as": "learn.explore.explore_insects",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "tray.tray_hat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:N%C3%B3n_l%C3%A1_%C4%91%E1%BB%93_ch%C6%A1i.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/N%C3%B3n_l%C3%A1_%C4%91%E1%BB%93_ch%C6%A1i.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nón lá đồ chơi",
+      "author": "terence from Singapore",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.33,
+        "width": 0.4,
+        "height": 0.6
+      },
+      "note": "SK-045 (designer 14/11): cùng ảnh w1_hat của bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha, crop vuông lấy một chiếc nón cho ô kệ."
+    },
+    "tray.tray_cabbage": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_plant_picture_and_images.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Cabbage_plant_picture_and_images.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cabbage plant picture and images",
+      "author": "Bharmitha Selvaraj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.25,
+        "top": 0.15,
+        "width": 0.636,
+        "height": 0.85
+      },
+      "note": "SK-045 (designer 14/11): Cây cải bắp non trong vườn, không có sâu; cắt bỏ vật màu hồng ở góc trên trái. Crop cho khung sq."
+    },
+    "tray.tray_worm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aporrectodea_rosea_258682963.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Aporrectodea_rosea_258682963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aporrectodea rosea 258682963",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `vocab.earthworm` ở discoverer/da-va-dat/the-nao-la-dat-tot (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_toy_grasshopper": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/8952189@N05/4412000584",
+      "file_url": "https://live.staticflickr.com/4038/4412000584_957256e02e_b.jpg",
+      "title": "Akaka Falls State Park--Palm Frond Grasshopper",
+      "author": "Makuahine Pa'i Ki'i",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "65791d09-96ff-4605-8d70-3aa0418512d7",
+      "crop": {
+        "left": 0.28,
+        "top": 0.05,
+        "width": 0.6,
+        "height": 0.84
+      },
+      "note": "SK-045 (designer 14/11): Châu chấu đan bằng lá cọ (Hawaii), cắt bỏ chân người mặc quần jean ở mép trái. Không có ảnh hợp lệ châu chấu lá dừa Việt Nam. Crop cho khung sq."
+    },
+    "tray.tray_grass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eleusine_indica_plant1_(7120802953).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Eleusine_indica_plant1_%287120802953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eleusine indica plant1 (7120802953)",
+      "author": "Harry Rose from South West Rocks, Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.13,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-045 (designer 14/11): Thay khay cỏ trong hộp kính (q4_grass của chủ đề Gọi tên và nhóm động vật) bằng khóm cỏ mần trầu (Eleusine indica) mọc ngoài bãi, theo _topic.md \"nếu trông lạ trong hình chuỗi\". Crop cho khung sq."
+    },
+    "tray.tray_straw": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_stack_of_straw_after_harvest_in_Zimovnikovskiy_district.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_stack_of_straw_after_harvest_in_Zimovnikovskiy_district.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A stack of straw after harvest in Zimovnikovskiy district",
+      "author": "s.lavr",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.55,
+        "top": 0.32,
+        "width": 0.3,
+        "height": 0.4517
+      },
+      "note": "SK-045 (designer 14/11): Đống rơm trên ruộng sau mùa gặt (Nga); cắt lấy một đống. Crop cho khung sq."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_cabbage": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_plant_picture_and_images.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Cabbage_plant_picture_and_images.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cabbage plant picture and images",
+      "author": "Bharmitha Selvaraj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0527,
+        "top": 0.35,
+        "width": 0.9346,
+        "height": 0.5
+      },
+      "note": "SK-045 (designer 14/11): Cây cải bắp non trong vườn, không có sâu; cắt bỏ vật màu hồng ở góc trên trái. Crop cho khung c3."
+    },
+    "q1.q1_fish": {
+      "same_as": "q4.q4_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_worm": {
+      "same_as": "q1.q1_worm",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q2": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q3": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q3.q3_grass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eleusine_indica_plant1_(7120802953).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Eleusine_indica_plant1_%287120802953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eleusine indica plant1 (7120802953)",
+      "author": "Harry Rose from South West Rocks, Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0003,
+        "top": 0.4135,
+        "width": 0.9994,
+        "height": 0.533
+      },
+      "note": "SK-045 (designer 14/11): Thay khay cỏ trong hộp kính (q4_grass của chủ đề Gọi tên và nhóm động vật) bằng khóm cỏ mần trầu (Eleusine indica) mọc ngoài bãi, theo _topic.md \"nếu trông lạ trong hình chuỗi\". Crop cho khung c3."
+    },
+    "q3.q3_cabbage": {
+      "same_as": "q1.q1_cabbage"
+    },
+    "q3.q3_grasshopper": {
+      "same_as": "vocab.insect",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_sparrow": {
+      "same_as": "tray.tray_sparrow",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q4.q4_cabbage": {
+      "same_as": "tray.tray_cabbage"
+    },
+    "q4.q4_caterpillar": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pieris_rapae_(Klein_koolwitje)_rups.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Pieris_rapae_%28Klein_koolwitje%29_rups.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pieris rapae (Klein koolwitje) rups",
+      "author": "Rasbak",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.1969,
+        "top": 0.04,
+        "width": 0.6262,
+        "height": 0.86
+      },
+      "note": "SK-045 (designer 14/11): Sâu bướm cải trắng (Pieris rapae) trên lá cây họ cải, lá có chỗ bị ăn khuyết. Crop cho khung sq."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WIND_SWEPT_PADDIES,SATYAVEDU_AP_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/WIND_SWEPT_PADDIES%2CSATYAVEDU_AP_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "WIND SWEPT PADDIES,SATYAVEDU AP - panoramio",
+      "author": "rajaraman sundaram",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w1` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác)."
+    },
+    "q5.q5_owl": {
+      "same_as": "q1.q1_owl",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "q5.q5_buffalo": {
+      "same_as": "q3.q3_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q5.q5_grasshopper": {
+      "same_as": "vocab.insect",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "q6": {
+      "composed": {
+        "file": "content/images/composed/chuoi-thuc-an/chuoi-thuc-an-la-gi.q6.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_insects",
+            "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+          },
+          {
+            "same_as": "tray.tray_grass"
+          }
+        ]
+      },
+      "title": "A grasshopper, an arrow, then grass",
+      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ. Chuỗi đặt ngược để bé kiểm; không dấu báo đúng sai."
+    },
+    "vocab.food_chain": {
+      "same_as": "learn.explore.explore_chain"
+    },
+    "vocab.arrow": {
+      "same_as": "learn.explore.explore_arrow"
+    },
+    "vocab.caterpillar": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pieris_rapae_(Klein_koolwitje)_rups.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Pieris_rapae_%28Klein_koolwitje%29_rups.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pieris rapae (Klein koolwitje) rups",
+      "author": "Rasbak",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0048,
+        "top": 0.12,
+        "width": 0.9903,
+        "height": 0.68
+      },
+      "note": "SK-045 (designer 14/11): Sâu bướm cải trắng (Pieris rapae) trên lá cây họ cải, lá có chỗ bị ăn khuyết. Crop cho khung vocab."
+    },
+    "vocab.grasshopper": {
+      "same_as": "vocab.insect",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "reward.caterpillar_card": {
+      "same_as": "q4.q4_caterpillar"
+    }
+  }
+}

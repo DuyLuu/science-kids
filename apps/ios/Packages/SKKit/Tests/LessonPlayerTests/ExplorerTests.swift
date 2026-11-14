@@ -1,3 +1,4 @@
+import AudioKit
 import ContentModel
 import Foundation
 import LessonEngine
@@ -186,6 +187,97 @@ struct ExplorerTests {
         let tray = try #require(session.tray)
         session.tapTrayItem(tray.items[0].key)
         #expect(session.explorerTrayTapUtterance(tray.items[0]).id == "play.tap.\(tray.items[0].key).1")
+    }
+
+    /// SK-043 hướng A: one page per group, then "Từ mới"; the page shown reads itself (name,
+    /// sentence, examples).
+    @Test func learnIsAPictureBook() throws {
+        let session = try session()
+        let groups = try #require(session.exploreBlock?.groups)
+        let pages = ExplorerLearnStep.pages(of: session)
+        #expect(pages.count == groups.count + (session.wordList.map { $0.termKeys.isEmpty ? 0 : 1 } ?? 0))
+        #expect(pages.first == .group(groups[0]))
+        while session.step != .learn { session.advance() }
+        let opening = try #require(session.autoplayUtterance(for: .learn))
+        #expect(opening.id == "learn.explore.\(groups[0].key)")
+        #expect(session.explorerGroupUtterance(groups[0]) == session.utterance("learn.explore.\(groups[0].key)", list: [groups[0].label, groups[0].sentence] + groups[0].examples))
+    }
+
+    /// SK-044: a wrong pick with a try left says that option's `feedback`, then the hint; an
+    /// option without one says only the hint; right says `explanation_correct`, out of tries
+    /// `explanation_wrong`. The field is optional (old content decodes as before).
+    @Test func wrongPickSaysItsFeedbackThenTheHint() throws {
+        var object = try #require(try JSONSerialization.jsonObject(with: Data(contentsOf: Self.lessonURL)) as? [String: Any])
+        var quiz = try #require(object["quiz"] as? [[String: Any]])
+        var options = try #require(quiz[0]["options"] as? [[String: Any]])
+        options[0]["feedback"] = ["en": "A fish has fins, not feathers.", "vi": "Con cá có vây, không có lông vũ."]
+        quiz[0]["options"] = options
+        object["quiz"] = quiz
+        let lesson = try ContentDecoder().decodeLesson(from: JSONSerialization.data(withJSONObject: object))
+        let item = try #require(lesson.quiz.first)
+        guard case .singleChoice(let choice) = item.answer else { Issue.record("not a choice"); return }
+        let withFeedback = choice.options[0]
+        let without = choice.options[2]
+        #expect(withFeedback.feedback?.en == "A fish has fins, not feathers.")
+        #expect(without.feedback == nil)
+        #expect(LessonSession.explorerLine(item, status: .retry(last: .selected(withFeedback.key))) == [withFeedback.feedback!, item.hint])
+        #expect(LessonSession.explorerLine(item, status: .retry(last: .selected(without.key))) == [item.hint])
+        #expect(LessonSession.explorerLine(item, status: .done(correct: true, firstTry: true, last: .selected("x"))) == [item.explanationCorrect])
+        #expect(LessonSession.explorerLine(item, status: .done(correct: false, firstTry: false, last: .selected("x"))) == [item.explanationWrong])
+        // Read ahead with the step.
+        #expect(LessonSession.questionStrings(item).contains(withFeedback.feedback!))
+        let session = LessonSession(
+            lesson: lesson, rules: try Self.rules(),
+            context: .init(childId: UUID(), timeZone: .current, languageMode: .bilingual, voiceMode: .both, presentation: .discoverer),
+            store: AttemptStore(directory: directory)
+        )
+        #expect(session.resultUtterance(item, status: .retry(last: .selected(withFeedback.key)))?.id == "retry.\(item.key)")
+        #expect(session.resultUtterance(item, status: .open) == nil)
+    }
+
+    /// SK-044 (dev 13/11): `true_false` has `feedback_true` (said when the child taps True on a
+    /// false statement) and `feedback_false`; the side that is the answer never says one.
+    @Test func trueFalseFeedbackFollowsTheSideTapped() throws {
+        var object = try #require(try JSONSerialization.jsonObject(with: Data(contentsOf: Self.lessonURL)) as? [String: Any])
+        var quiz = try #require(object["quiz"] as? [[String: Any]])
+        let index = try #require(quiz.firstIndex { $0["format"] as? String == "true_false" && $0["answer"] as? Bool == false })
+        quiz[index]["feedback_true"] = ["en": "A bat has fur, not feathers.", "vi": "Con dơi có lông mao, không có lông vũ."]
+        object["quiz"] = quiz
+        let lesson = try ContentDecoder().decodeLesson(from: JSONSerialization.data(withJSONObject: object))
+        let item = lesson.quiz[index]
+        guard case .trueFalse(let tf) = item.answer else { Issue.record("not true/false"); return }
+        let feedback = try #require(tf.feedbackTrue)
+        #expect(tf.feedbackFalse == nil)
+        #expect(tf.feedback(for: true) == feedback)
+        #expect(tf.feedback(for: false) == nil, "False is the answer: no feedback")
+        #expect(LessonSession.explorerLine(item, status: .retry(last: .value(true))) == [feedback, item.hint])
+        #expect(LessonSession.feedbackSpoken(item) == [feedback])
+        #expect(LessonSession.questionStrings(item).contains(feedback))
+        // Old content (no feedback_*) still decodes, and a retry says only the hint.
+        let old = try #require(try Self.lesson().quiz.first { if case .trueFalse = $0.answer { true } else { false } })
+        guard case .trueFalse(let oldTF) = old.answer else { return }
+        #expect(oldTF.feedbackTrue == nil && oldTF.feedbackFalse == nil)
+        #expect(LessonSession.explorerLine(old, status: .retry(last: .value(!oldTF.answer))) == [old.hint])
+    }
+
+    /// SK-044: Khởi động of Discoverer answers on a tap; the tapped word and the result play as one
+    /// utterance (word first), so the result does not cut the word off.
+    @Test func tappedWordLeadsTheResultUtterance() throws {
+        let lesson = try Self.lesson()
+        let item = try #require(lesson.quiz.first)
+        let session = LessonSession(
+            lesson: lesson, rules: try Self.rules(),
+            context: .init(childId: UUID(), timeZone: .current, languageMode: .bilingual, voiceMode: .both, presentation: .discoverer),
+            store: AttemptStore(directory: directory)
+        )
+        guard case .singleChoice(let choice) = item.answer else { Issue.record("not a choice"); return }
+        let wrong = try #require(choice.options.first { !$0.correct })
+        let plain = try #require(session.resultUtterance(item, status: .retry(last: .selected(wrong.key))))
+        let named = try #require(session.resultUtterance(item, status: .retry(last: .selected(wrong.key)), name: wrong.label))
+        #expect(named.id == plain.id)
+        #expect(named.clips == wrong.label.voiceClips(for: .both) + plain.clips)
+        let done = try #require(session.resultUtterance(item, status: .done(correct: true, firstTry: true, last: .selected("x"))))
+        #expect(done.clips == item.explanationCorrect.voiceClips(for: .both))
     }
 
     /// Bài 4 of Explorer #1: `capacity: 2`, two required groups; the tray succeeds with one of each.

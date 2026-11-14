@@ -34,7 +34,7 @@ import Testing
         #expect(journeys[.explorer]?.count == 12)
         #expect(journeys[.discoverer]?.count == 17)
         #expect(journeys[.scientist]?.count == 16)
-        #expect(journeys.values.flatMap { $0 }.reduce(0) { $0 + $1.lessons.count } == 384)
+        #expect(journeys.values.flatMap { $0 }.reduce(0) { $0 + $1.lessons.count } == 386, "content/syllabus.json 13/11")
         for (group, topics) in journeys {
             #expect(topics.map(\.number) == Array(1..<topics.count + 1), "\(group.rawValue)")
             #expect(topics.allSatisfy { $0.ageGroup == group })

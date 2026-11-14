@@ -39,6 +39,7 @@ import {
   type Sleep,
 } from "./net.ts";
 import { processImage } from "./process.ts";
+import { selectionShapeWarnings } from "./aspect-report.ts";
 import {
   composedCacheKey,
   composedCredit,
@@ -444,6 +445,13 @@ export async function runImagesFetch(options: FetchOptions): Promise<number> {
   }
 
   for (const reminder of reminders) console.log(`Kiểm tay: ${reminder}`);
+  // Picture shape vs slot (Duy 13/11, SK-043): same warning as build, on the lesson markdown.
+  const shape = selectionShapeWarnings(files, cache, options.display);
+  if (shape.lines.length > 0) {
+    console.log(`\nẢnh lệch khung (tỉ lệ ảnh khác chỗ dùng, tools/content-cli/image-slots.json): ${shape.lines.length} hình · ${[...shape.byTopic].map(([slug, n]) => `${slug} ${n}`).join(", ")}`);
+    for (const line of shape.lines) console.log(`  ${line}`);
+  }
+  if (shape.skipped.length > 0) console.log(`Chưa kiểm tỉ lệ ảnh (markdown bài chưa hợp lệ hoặc không tìm thấy): ${shape.skipped.join(", ")}`);
   console.log(
     `\nimages fetch: ${files.length} file chọn ảnh · ${jobs.size} ảnh khác nhau · ${fresh} tải mới · ${kept} đã có · ${errors} lỗi · cache ${options.display(path.resolve(options.cacheDir))}` +
       (ownJobs.size > 0 ? `\nHình tự vẽ: ${ownJobs.size} · ${ownCount.fresh} xử lý mới · ${ownCount.kept} đã có` : "") +

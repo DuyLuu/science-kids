@@ -48,13 +48,15 @@ image.alt.en: A pond in a village
 image.alt.vi: Cái ao ở làng quê
 hint.en: Which one lives in water?
 hint.vi: Em nghĩ xem con nào sống dưới nước?
-explanation_correct.en: Yes! Fish breathe with gills.
-explanation_correct.vi: Đúng rồi! Cá thở bằng mang.
+explanation_correct.en: Yes! A goldfish breathes in water with gills.
+explanation_correct.vi: Đúng rồi! Cá vàng thở dưới nước bằng mang.
 explanation_wrong.en: The answer is the goldfish. It is a fish.
 explanation_wrong.vi: Đáp án là cá vàng. Cá thở bằng mang.
 
 #### option w1_cat
 correct: false
+feedback.en: A cat breathes air with its nose.
+feedback.vi: Mèo thở không khí bằng mũi.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -63,6 +65,8 @@ image.alt.vi: Con mèo trên bậc thềm
 
 #### option w1_sparrow
 correct: false
+feedback.en: A sparrow lives in the air, not water.
+feedback.vi: Chim sẻ sống trên cạn, không sống dưới nước.
 label.en: sparrow
 label.vi: chim sẻ
 image.brief: Dùng lại hình `tray_sparrow` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): Eurasian tree sparrow perched branch
@@ -96,6 +100,8 @@ explanation_correct.en: Yes! Cats are mammals.
 explanation_correct.vi: Đúng rồi! Mèo là động vật có vú.
 explanation_wrong.en: This is true. Kittens drink milk.
 explanation_wrong.vi: Câu này đúng. Mèo con bú sữa mẹ.
+feedback_false.en: Kittens drink milk from their mother cat.
+feedback_false.vi: Mèo con bú sữa của mèo mẹ.
 > Hình là mèo một mình, không phải ảnh mèo mẹ cho con bú của bài hai (bằng chứng của đáp án).
 
 ## Học
@@ -327,8 +333,8 @@ image.alt.en: A bamboo fence in a garden
 image.alt.vi: Hàng rào tre trước khu vườn
 hint.en: Look for a beak and feathers.
 hint.vi: Em tìm con có mỏ và lông vũ nhé.
-explanation_correct.en: Yes! A duck has two wings.
-explanation_correct.vi: Đúng rồi! Con vịt có hai cánh.
+explanation_correct.en: Yes! A duck flaps its wings to fly.
+explanation_correct.vi: Đúng rồi! Vịt vỗ hai cánh để bay.
 explanation_wrong.en: The answer is the duck. It has wings.
 explanation_wrong.vi: Đáp án là con vịt. Vịt có cánh.
 
@@ -342,6 +348,8 @@ image.alt.vi: Con vịt đứng trên bãi cỏ
 
 #### option q1_lizard
 correct: false
+feedback.en: A lizard has four legs, no wings.
+feedback.vi: Thằn lằn có bốn chân, không có cánh.
 label.en: lizard
 label.vi: thằn lằn
 image.brief: Dùng lại hình `w3_lizard` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
@@ -350,6 +358,8 @@ image.alt.vi: Con thằn lằn trên hòn đá
 
 #### option q1_dog
 correct: false
+feedback.en: A dog has four legs, no wings.
+feedback.vi: Con chó có bốn chân, không có cánh.
 label.en: dog
 label.vi: con chó
 image.brief: Dùng lại hình `explore_pets` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): yellow dog lying porch Vietnam
@@ -373,6 +383,8 @@ explanation_correct.en: A fish has no legs. It swims with fins.
 explanation_correct.vi: Cá không có chân. Cá bơi bằng vây và đuôi.
 explanation_wrong.en: This is false. Fish swim with fins.
 explanation_wrong.vi: Câu này sai. Cá bơi bằng vây.
+feedback_true.en: A fish swims with fins, not legs.
+feedback_true.vi: Cá bơi bằng vây, không bằng chân.
 
 ### q3
 id: cd7d9540-f6b6-4d0b-8d35-71ae6a88facb
@@ -394,6 +406,8 @@ explanation_wrong.vi: Đáp án là con rùa. Rùa có mai cứng.
 
 #### option q3_lizard
 correct: false
+feedback.en: A lizard has scaly skin, no shell.
+feedback.vi: Thằn lằn có da vảy, không có mai.
 label.en: lizard
 label.vi: thằn lằn
 image.brief: Dùng lại hình `w3_lizard` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
@@ -410,6 +424,8 @@ image.alt.vi: Con rùa đang bò
 
 #### option q3_hen
 correct: false
+feedback.en: A hen has soft feathers, no shell.
+feedback.vi: Gà mái có lông vũ, không có mai.
 label.en: hen
 label.vi: con gà mái
 image.brief: Dùng lại hình `w3_hen` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): brown hen standing farmyard side view
@@ -477,6 +493,8 @@ explanation_wrong.vi: Đáp án là cá chép. Vịt và ếch bơi bằng chân
 
 #### option q5_frog
 correct: false
+feedback.en: A frog swims with its long legs.
+feedback.vi: Ếch bơi bằng đôi chân sau dài.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `q4_frog` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -485,6 +503,8 @@ image.alt.vi: Con ếch nhìn từ phía trước
 
 #### option q5_duck
 correct: false
+feedback.en: A duck swims with its flat feet.
+feedback.vi: Vịt bơi bằng đôi chân có màng.
 label.en: duck
 label.vi: con vịt
 image.brief: Dùng lại hình `w1_duck` ở bài `goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`. Từ khoá tìm ảnh (EN): duck standing pond bank
@@ -523,6 +543,8 @@ explanation_wrong.vi: Đáp án là chim sẻ. Chim sẻ có hai chân.
 
 #### option q6_lizard
 correct: false
+feedback.en: A lizard has four legs.
+feedback.vi: Thằn lằn có bốn chân.
 label.en: lizard
 label.vi: thằn lằn
 image.brief: Dùng lại hình `w3_lizard` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
@@ -540,6 +562,8 @@ image.alt.vi: Chim sẻ đứng trên gờ tường
 
 #### option q6_cat
 correct: false
+feedback.en: A cat has four legs.
+feedback.vi: Mèo có bốn chân.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view

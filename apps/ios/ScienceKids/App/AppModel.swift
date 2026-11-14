@@ -121,6 +121,14 @@ final class AppModel {
         }
         sync?.onSettled = { [weak self] settled in self?.serverSettled(settled) }
         if let ready = content.ready { use(ready, now: now) }
+        applyVoiceSplit()
+    }
+
+    /// SK-042 (Duy 13/11): "Cả hai" (`bilingual`) says English by itself and on the main listen
+    /// buttons; Vietnamese plays on the small VI button next to each. English and Tiếng Việt play
+    /// their one voice as before.
+    func applyVoiceSplit() {
+        speech.firstLanguageOnly = profile?.languageMode == .bilingual ? "en" : nil
     }
 
     /// Content already in hand (tests): the fixtures' shape, no pack, no audio.
@@ -261,6 +269,7 @@ final class AppModel {
         journeyGroup = nil
         doneShown = nil
         profile = made
+        applyVoiceSplit()
         Task { await syncNow() }
     }
 
@@ -522,6 +531,7 @@ final class AppModel {
             return false
         }
         profile = updated
+        applyVoiceSplit()
         speech.stop()
         return true
     }

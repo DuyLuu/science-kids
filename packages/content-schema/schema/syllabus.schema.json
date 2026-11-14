@@ -230,7 +230,7 @@
           "$ref": "#/$defs/SyllabusLessonTitle"
         },
         "oak_lessons": {
-          "description": "Slug lesson của Oak; [] với chủ đề mới; nhiều slug khi gộp thí nghiệm",
+          "description": "Slug lesson của Oak; [] với chủ đề mới và bài mở rộng (extension); nhiều slug khi gộp thí nghiệm",
           "type": "array",
           "items": {
             "$ref": "common.schema.json#/$defs/Slug"
@@ -243,6 +243,11 @@
         },
         "sensitive": {
           "description": "Nội dung nhạy cảm; chỉ ghi khi true",
+          "type": "boolean",
+          "default": false
+        },
+        "extension": {
+          "description": "Bài mở rộng trong chủ đề Oak (không có lesson Oak tương ứng): oak_lessons [], statutory false, đứng sau mọi bài Oak của chủ đề; chỉ ghi khi true",
           "type": "boolean",
           "default": false
         },

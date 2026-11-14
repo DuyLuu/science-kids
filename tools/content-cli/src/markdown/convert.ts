@@ -3,8 +3,8 @@
 //
 // Key order is the order of the JSON Schema `properties`, as in the hand-made fixtures of
 // packages/content-schema, because build hashes pack.json byte for byte (SK-027 decision 6).
-// One exception follows the fixtures: a choice option is key, label, correct, image (the schema
-// lists image before correct). test/markdown.test.ts pins every order against the schema.
+// One exception follows the fixtures: a choice option is key, label, correct, image, feedback (the
+// schema lists image before correct). test/markdown.test.ts pins every order against the schema.
 //
 // The machine only adds `kind` and `schema_version`; nothing the markdown leaves out gets a
 // default. A field with an empty value counts as absent.
@@ -375,21 +375,27 @@ const choiceOption: ChildBuilder = (_ctx, child, reader) => {
   const label = reader.pair("label", `${p}/label`);
   const correct = reader.bool("correct", `${p}/correct`);
   const image = reader.image("image", `${p}/image`);
+  // SK-044: why this wrong option is not right (content-schema refs: wrong options only).
+  const feedback = reader.pair("feedback", `${p}/feedback`);
   return assemble([
     ["key", child.key],
     ["label", label],
     ["correct", correct],
     ["image", image],
+    ["feedback", feedback],
   ]);
 };
 
 const bankWord: ChildBuilder = (_ctx, child, reader) => {
   const label = reader.pair("label", `${child.pointer}/label`);
   const image = reader.image("image", `${child.pointer}/image`);
+  // SK-044: only on a word that is not in answers (content-schema refs).
+  const feedback = reader.pair("feedback", `${child.pointer}/feedback`);
   return assemble([
     ["key", child.key],
     ["label", label],
     ["image", image],
+    ["feedback", feedback],
   ]);
 };
 
@@ -571,12 +577,17 @@ function quizItem(ctx: Ctx, block: Block, topic: TopicRef, lookup: Lookup): Json
       const lines = [labelTrue && ctx.loc.line(`${p}/labels/true`), labelFalse && ctx.loc.line(`${p}/labels/false`)].filter((line): line is number => typeof line === "number");
       ctx.loc.mark(`${p}/labels`, Math.min(...lines), "labels");
     }
+    // SK-044: what the app says when the child taps the wrong side (only that side; content-schema refs).
+    const feedbackTrue = reader.pair("feedback_true", `${p}/feedback_true`);
+    const feedbackFalse = reader.pair("feedback_false", `${p}/feedback_false`);
     readChildren(ctx, block, owner, {}, reader.suspectMerged);
     extra = [
       ["answer", answer],
       ["statement", statement],
       ["speaker", speaker],
       ["labels", labels],
+      ["feedback_true", feedbackTrue],
+      ["feedback_false", feedbackFalse],
     ];
   } else if (format === "fill_blank_bank") {
     const sentence = reader.pair("sentence", `${p}/sentence`);

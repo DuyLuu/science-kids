@@ -1,0 +1,383 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_car": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toy_car_(AM_1996.165.94).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Toy_car_%28AM_1996.165.94%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "toy car",
+      "author": "Fun Ho! Toy Company",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0571,
+        "width": 1,
+        "height": 0.8858
+      },
+      "note": "SK-046 (designer 14/11): Ô tô đồ chơi màu đỏ trên nền trơn. Crop cho khung c2."
+    },
+    "w1.w1_vine": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passiflora_edulis_(Passion_fruit)_tendril.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Passiflora_edulis_%28Passion_fruit%29_tendril.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Passiflora edulis (Passion fruit) tendril",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0214,
+        "top": 0.0,
+        "width": 0.9571,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Tua cuốn của dây chanh leo quấn quanh sợi dây giàn. Crop cho khung c2."
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "learn.explore.explore_alive": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Calibishie_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Terminalia_catappa_near_Calibishie_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Calibishie (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0972,
+        "top": 0.0,
+        "width": 0.7657,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cành bàng lá xanh to. Crop cho khung learn."
+    },
+    "learn.explore.explore_dead": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "learn.explore.explore_never": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `w1.w1_stone` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_snail": {
+      "same_as": "tray.tray_snail",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "tray.tray_bottle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_of_Water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bottle_of_Water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bottle of water",
+      "author": "Jiafei Slay Queen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `q4.q4_bottle` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_dry_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `w1.w1_stone` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_seedlings": {
+      "same_as": "tray.tray_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_stick": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_if_birches,_in_the_moorlands_of_Focherloerveen;_The_Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/A_pile_of_dead_branches_if_birches%2C_in_the_moorlands_of_Focherloerveen%3B_The_Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches if birches, in the moorlands of Focherloerveen; The Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.25,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cành bạch dương khô gãy nằm trên đất (cùng đợt chụp với ảnh đống cành của bài 7, khác khung). Crop cho khung sq."
+    },
+    "tray.tray_marble": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Several_marbles.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Several_marbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Several marbles",
+      "author": "Conrad 7",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0168,
+        "width": 1,
+        "height": 0.9663
+      },
+      "note": "SK-046 (designer 14/11): Bi thuỷ tinh có vân màu trên nền trắng. Crop cho khung sq."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_green": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Calibishie_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Terminalia_catappa_near_Calibishie_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Calibishie (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.0,
+        "width": 0.9763,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cành bàng lá xanh to. Crop cho khung c2."
+    },
+    "q1.q1_dry_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_bottle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_of_Water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bottle_of_Water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bottle of water",
+      "author": "Jiafei Slay Queen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.658
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của ho-hap/vi-sao-ta-phai-tho `q4_bottle`, crop riêng. Ảnh gốc dọc: crop ngang nhất còn giữ nắp và gần hết thân chai (lệch khung 5:2 dưới 2,2 lần)."
+    },
+    "q3.q3_snail": {
+      "same_as": "vocab.mollusc",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q3.q3_dry_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_yellow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SNF_Tofte_FC102213_green_and_yellow_snowy_leaf_(10427142884).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/SNF_Tofte_FC102213_green_and_yellow_snowy_leaf_%2810427142884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "SNF Tofte FC102213 green and yellow snowy leaf (10427142884)",
+      "author": "usfs_Eastern_Region",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:SNF_Tofte_FC102213_green_and_yellow_snowy_leaf_(10427142884).jpg",
+      "crop": {
+        "left": 0.0202,
+        "top": 0.2987,
+        "width": 0.4495,
+        "height": 0.5625
+      },
+      "note": "SK-046 (designer 14/11): Lá ngả vàng còn trên cành (Na Uy); cắt bỏ phần có tuyết. Crop cho khung sq."
+    },
+    "q4.q4_dry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4.q4_green": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Calibishie_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Terminalia_catappa_near_Calibishie_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Calibishie (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1929,
+        "top": 0.0,
+        "width": 0.5743,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cành bàng lá xanh to. Crop cho khung sq."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_snail": {
+      "same_as": "vocab.mollusc",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q5.q5_stick": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_if_birches,_in_the_moorlands_of_Focherloerveen;_The_Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/A_pile_of_dead_branches_if_birches%2C_in_the_moorlands_of_Focherloerveen%3B_The_Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches if birches, in the moorlands of Focherloerveen; The Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3533,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Cành bạch dương khô gãy nằm trên đất (cùng đợt chụp với ảnh đống cành của bài 7, khác khung). Crop cho khung c3."
+    },
+    "q5.q5_marble": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Several_marbles.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Several_marbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Several marbles",
+      "author": "Conrad 7",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3067,
+        "width": 1,
+        "height": 0.3865
+      },
+      "note": "SK-046 (designer 14/11): Bi thuỷ tinh có vân màu trên nền trắng. Crop cho khung c3."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `w1.w1_stone` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.dead": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "note": "Chép mục gốc `tray.tray_dry_leaf` ở discoverer/da-va-dat/hoa-thach-hinh-thanh-the-nao (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.never_alive": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `w1.w1_stone` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Calibishie_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Terminalia_catappa_near_Calibishie_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Calibishie (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.0647,
+        "width": 1,
+        "height": 0.8707
+      },
+      "note": "SK-046 (designer 14/11): Cành bàng lá xanh to. Crop cho khung vocab."
+    },
+    "vocab.plastic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_of_Water.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bottle_of_Water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bottle of water",
+      "author": "Jiafei Slay Queen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Chép mục gốc `q4.q4_bottle` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "reward.almond_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Pointe_d%27Antigue_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Terminalia_catappa_near_Pointe_d%27Antigue_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Pointe d'Antigue (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1986,
+        "top": 0.0,
+        "width": 0.6429,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cành bàng có lá to chuyển đỏ. Crop cho khung sq."
+    }
+  }
+}

@@ -70,8 +70,10 @@ struct ExplorerRewardStep: View {
                 stuck = true
                 speech?.play(session.utterance("reward.card", collectible.name))
             } label: {
-                ContentPicture(image: collectible.image, color: nil, size: metrics.illustration(ExplorerMetrics.stickerArt))
-                    .frame(width: metrics.illustration(ExplorerMetrics.sticker), height: metrics.illustration(ExplorerMetrics.sticker))
+                ContentPicture(image: collectible.image, color: nil, size: ExplorerMetrics.stickerArt)
+                    .frame(width: ExplorerMetrics.stickerArt, height: ExplorerMetrics.stickerArt)
+                    .clipShape(Circle())
+                    .frame(width: ExplorerMetrics.sticker, height: ExplorerMetrics.sticker)
                     .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.offsetAccent, in: Circle())
                     .overlay(alignment: .topTrailing) {
                         if stuck {

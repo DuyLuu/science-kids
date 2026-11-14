@@ -48,6 +48,7 @@ import { validateSyllabus } from "@science-kids/content-schema/syllabus";   // c
    - `key` duy nhất trong cả bài, kể cả key con (`options`, `groups`, `items`, `bank`, `bars`), theo quy ước `q5_egg`, `tray_egg` của `content/TEMPLATE.md`. Trong topic: key của `misconceptions`.
    - `lesson.topic_id` trỏ tới một topic trong các file được đưa vào. `misconception_id` có trong `misconceptions` của topic đó.
    - `word_list.term_keys` có trong `vocab`. `fill_blank_bank.answers` có trong `bank`. `order_sequence.answer` là hoán vị của `items`. `build_tray.items[].group` có trong `groups`.
+   - `feedback` (SK-044) chỉ ở lựa chọn sai: không ở option `correct: true`, không ở thẻ `bank` có trong `answers`; `true_false` chỉ có `feedback_true` khi `answer: false` và `feedback_false` khi `answer: true`.
    - `fill_blank_bank`: ô trống trong `sentence.en` đánh số `{1}…{n}`, mỗi số một lần, và `answers` có đúng `n` phần tử. Ô trống trong `vi` là tuỳ chọn, nhưng không được vượt quá `n`.
    - `build_tray`: có ít nhất 1 nhóm `required`. Mỗi nhóm `required` có một lời nhắc trong `messages.missing`, và `missing` chỉ chứa nhóm `required`. `capacity` không nhỏ hơn số nhóm `required`.
    - File tên `topic.json` có `slug` trùng tên thư mục. Topic không là điều kiện của chính nó. `recall_from.lesson_id` không trỏ vào chính bài đó.
@@ -126,12 +127,14 @@ Luật theo nhóm tuổi (format được dùng, số lựa chọn, hình bắt 
 
 | `format` | Trường đáp án |
 | --- | --- |
-| `single_choice` | `options[2..6]: { key, label, image?, correct }`, đúng 1 `correct: true` |
+| `single_choice` | `options[2..6]: { key, label, image?, correct, feedback? }`, đúng 1 `correct: true` |
 | `multi_choice` | `options[2..8]`, ít nhất 1 đúng và 1 sai |
-| `true_false` | `answer: boolean`, `statement?`, `speaker?: Key`, `labels?: { true, false }` |
-| `fill_blank_bank` | `sentence` (ô `{1}`, `{2}`… trong `en`), `bank[2..]: { key, label, image? }`, `answers: Key[1..]` |
+| `true_false` | `answer: boolean`, `statement?`, `speaker?: Key`, `labels?: { true, false }`, `feedback_true?`, `feedback_false?` |
+| `fill_blank_bank` | `sentence` (ô `{1}`, `{2}`… trong `en`), `bank[2..]: { key, label, image?, feedback? }`, `answers: Key[1..]` |
 | `order_sequence` | `items[3..6]: { key, label, image? }`, `answer: Key[]` (hoán vị của `items`) |
 | `picture_bar_chart` | `chart: { title?, unit?, bars[2..6]: { key, label, image?, value ≥ 0 } }` + `options` như `single_choice` |
+
+`feedback` (SK-044, tuỳ chọn, Spoken nên có audio EN/VI như mọi chữ trẻ nghe): một câu nói vì sao **lựa chọn sai** đó chưa đúng; app đọc khi bé chọn nó mà còn lượt, rồi đọc `hint`. Chỉ lựa chọn `correct: false` (cả `picture_bar_chart`) và thẻ `bank` không nằm trong `answers` được có. `true_false` không có lựa chọn nên dùng `feedback_true` (bé chạm Đúng, chỉ khi `answer: false`) và `feedback_false` (bé chạm Sai, chỉ khi `answer: true`). `order_sequence` không có `feedback`. Ràng buộc "chỉ lựa chọn sai" kiểm ở bước kiểm chéo (`refs.mjs`).
 
 **VocabTerm**: `id`, `key`, `term` (`en` = từ, `vi` = nghĩa), `example`, `image?`, `tier?` (`core` · `extra`, `= core`).
 **Collectible**: `id`, `key`, `set: Key`, `name`, `tag?`, `image`, `fact`, `rarity?` (`common` · `rare`, `= common`).
@@ -148,11 +151,11 @@ Mọi object đều đóng: trường không có trong bảng là lỗi.
 | `SyllabusGroup` | `age_group` (enum của Topic), `oak_years: int[1..]` (1–6, không trùng), `topics: SyllabusTopic[1..]` |
 | `SyllabusTopic` | `key` (Slug), `number` (≥ 1), `title: Text` (luôn đủ en, vi), `strand` (enum của Topic), `level` (1–5 hoặc `null`), `source`, `topic_id?` (Uuid), `lessons: SyllabusLesson[1..]` |
 | `source` | `{ kind: "oak", unit_slug, year (1–6), unit_index (≥ 1) }` hoặc `{ kind: "new" }` |
-| `SyllabusLesson` | `number` (≥ 1), `title: { en, vi }` (`vi` là chuỗi hoặc `null` khi chưa dịch, phải có mặt), `oak_lessons: Slug[]` (không trùng), `statutory`, `sensitive?`, `lesson_id?` (Uuid) |
+| `SyllabusLesson` | `number` (≥ 1), `title: { en, vi }` (`vi` là chuỗi hoặc `null` khi chưa dịch, phải có mặt), `oak_lessons: Slug[]` (không trùng), `statutory`, `sensitive?`, `extension?` (bài mở rộng của chủ đề Oak, chỉ ghi khi true, Duy 13/11), `lesson_id?` (Uuid) |
 
 `age_group` và `strand` là `$ref` vào `topic.schema.json`, nên đổi enum ở Topic là syllabus theo. Kiểu `null` chỉ có ở syllabus, nên Ajv của syllabus bật `allowUnionTypes` riêng.
 
-Luật ngoài JSON Schema (`scripts/lib/syllabus.mjs`, chỉ chạy khi schema đã qua): `age_group` không trùng; `key` chủ đề duy nhất cả file; `number` chủ đề trong nhóm và bài trong chủ đề đi 1..n theo thứ tự trong file; chủ đề Oak có `key` = `source.unit_slug`, `source.year` thuộc `oak_years`, mỗi bài có ít nhất 1 slug Oak; chủ đề mới có `key` bắt đầu bằng `new-` và mọi `oak_lessons` rỗng; `topic_id`, `lesson_id`, slug lesson Oak không gắn hai lần; bài có `lesson_id` thì chủ đề phải có `topic_id`. Có danh sách nội dung (tuỳ chọn `content`) thì kiểm thêm: `topic_id` là id của một chủ đề cùng nhóm tuổi, `lesson_id` là id của một bài thuộc đúng chủ đề đó; nội dung chưa ô nào trỏ tới thì cảnh báo. Mã lỗi và cách chạy: [`tools/content-cli/README.md`, "Danh mục `syllabus.json`"](../../tools/content-cli/README.md#markdown-validate-import-ids).
+Luật ngoài JSON Schema (`scripts/lib/syllabus.mjs`, chỉ chạy khi schema đã qua): `age_group` không trùng; `key` chủ đề duy nhất cả file; `number` chủ đề trong nhóm và bài trong chủ đề đi 1..n theo thứ tự trong file; chủ đề Oak có `key` = `source.unit_slug`, `source.year` thuộc `oak_years`, mỗi bài có ít nhất 1 slug Oak, trừ bài `extension: true` (bài mở rộng: `oak_lessons` rỗng, `statutory` false, đứng sau mọi bài Oak, chủ đề vẫn phải còn ít nhất 1 bài Oak); chủ đề mới có `key` bắt đầu bằng `new-` và mọi `oak_lessons` rỗng; `topic_id`, `lesson_id`, slug lesson Oak không gắn hai lần; bài có `lesson_id` thì chủ đề phải có `topic_id`. Có danh sách nội dung (tuỳ chọn `content`) thì kiểm thêm: `topic_id` là id của một chủ đề cùng nhóm tuổi, `lesson_id` là id của một bài thuộc đúng chủ đề đó; nội dung chưa ô nào trỏ tới thì cảnh báo. Mã lỗi và cách chạy: [`tools/content-cli/README.md`, "Danh mục `syllabus.json`"](../../tools/content-cli/README.md#markdown-validate-import-ids).
 
 ```ts
 import { validateSyllabus } from "@science-kids/content-schema/syllabus";

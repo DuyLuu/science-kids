@@ -1,0 +1,419 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_douc": {
+      "same_as": "vocab.wild_animal",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_perch": {
+      "same_as": "q1.q1_perch",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_pile_of_dead_branches_if_birches,_in_the_moorlands_of_Focherloerveen;_The_Netherlands,_spring_of_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/A_pile_of_dead_branches_if_birches%2C_in_the_moorlands_of_Focherloerveen%3B_The_Netherlands%2C_spring_of_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pile of dead branches if birches, in the moorlands of Focherloerveen; The Netherlands, spring of 2012",
+      "author": "Fons Heijnsbroek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.2,
+        "width": 0.8,
+        "height": 0.8
+      },
+      "note": "SK-046 (designer 14/11): Cành bạch dương khô gãy nằm trên đất (cùng đợt chụp với ảnh đống cành của bài 7, khác khung). Crop cho khung q."
+    },
+    "learn.explore.explore_pond_plants": {
+      "same_as": "tray.tray_lotus",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "learn.explore.explore_dry_plants": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/47445767@N05/52492203851",
+      "file_url": "https://live.staticflickr.com/65535/52492203851_cb2642779f_b.jpg",
+      "title": "Opuntia sp. (prickly pear cactus) (north of Bootlegger Canyon, Utah, USA) 12",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fbf35cae-0d15-4eb2-8b82-421198148215",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Bụi xương rồng tai thỏ mọc trên đất cát sỏi (Mỹ). Crop cho khung learn."
+    },
+    "learn.explore.explore_salty_plants": {
+      "same_as": "learn.explore.explore_mangrove",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "learn.explore.explore_shade_plants": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cyathea dregei - Common Tree Fern - Cape Town",
+      "author": "Abu Shawka",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.78
+      },
+      "note": "Chép mục gốc `q2.q2_ferns` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_lotus": {
+      "same_as": "tray.tray_lotus",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_cactus": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/47445767@N05/52492203851",
+      "file_url": "https://live.staticflickr.com/65535/52492203851_cb2642779f_b.jpg",
+      "title": "Opuntia sp. (prickly pear cactus) (north of Bootlegger Canyon, Utah, USA) 12",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fbf35cae-0d15-4eb2-8b82-421198148215",
+      "crop": {
+        "left": 0.125,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Bụi xương rồng tai thỏ mọc trên đất cát sỏi (Mỹ). Crop cho khung sq."
+    },
+    "tray.tray_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_paddy_in_promise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Young_paddy_in_promise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young paddy in promise",
+      "author": "Aerospectra",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.175,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-046 (designer 14/11): Khóm lúa non trên ruộng còn nước. Crop cho khung sq."
+    },
+    "tray.tray_fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `tray.tray_fern` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_mangrove": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tangled_Mangrove_Roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tangled_Mangrove_Roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tangled Mangrove Roots",
+      "author": "Vinno Christopan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1667,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Rễ đước chằng chịt trên nền bùn (Indonesia). Crop cho khung sq."
+    },
+    "tray.tray_hyacinth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eichhornia_crassipes_201510.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Eichhornia_crassipes_201510.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eichhornia crassipes 201510",
+      "author": "Wing1990hk",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0951,
+        "top": 0.0,
+        "width": 0.7498,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Bèo tây nở hoa tím. Crop cho khung sq."
+    },
+    "tray.tray_bamboo": {
+      "same_as": "reward.bamboo_card",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_cactus": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/47445767@N05/52492203851",
+      "file_url": "https://live.staticflickr.com/65535/52492203851_cb2642779f_b.jpg",
+      "title": "Opuntia sp. (prickly pear cactus) (north of Bootlegger Canyon, Utah, USA) 12",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fbf35cae-0d15-4eb2-8b82-421198148215",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2333,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Bụi xương rồng tai thỏ mọc trên đất cát sỏi (Mỹ). Crop cho khung c3."
+    },
+    "q1.q1_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `tray.tray_fern` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q2": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/16176711@N02/51866356386",
+      "file_url": "https://live.staticflickr.com/65535/51866356386_195078e222_b.jpg",
+      "title": "the pup in the sun",
+      "author": "conall..",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "ca704662-6e30-4761-9f79-5976902e2114",
+      "crop": {
+        "left": 0.106,
+        "top": 0.0,
+        "width": 0.888,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cây xương rồng nhỏ trong chậu. Crop cho khung q."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_mangrove": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tangled_Mangrove_Roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tangled_Mangrove_Roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tangled Mangrove Roots",
+      "author": "Vinno Christopan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.32,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-046 (designer 14/11): Rễ đước chằng chịt trên nền bùn (Indonesia). Crop cho khung c3."
+    },
+    "q3.q3_bamboo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bamboos_bambusa_vulgaris_sao_paulo_botanical_garden_brazil.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Bamboos_bambusa_vulgaris_sao_paulo_botanical_garden_brazil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bamboos bambusa vulgaris sao paulo botanical garden brazil",
+      "author": "Yuri Ribeiro Sucupira",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1452,
+        "width": 1,
+        "height": 0.7096
+      },
+      "note": "SK-046 (designer 14/11): Bụi tre gai (Bambusa vulgaris) trong công viên. Crop cho khung c3."
+    },
+    "q3.q3_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_dunes": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dune.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Vietnam%2C_Mui_Ne_sand_dune.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam, Mui Ne sand dune",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1667,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đồi cát Mũi Né gợn sóng, không người. Crop cho khung sq."
+    },
+    "q4.q4_ferns": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cyathea dregei - Common Tree Fern - Cape Town",
+      "author": "Abu Shawka",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.78
+      },
+      "note": "Chép mục gốc `q2.q2_ferns` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_paddy_in_promise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Young_paddy_in_promise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young paddy in promise",
+      "author": "Aerospectra",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.45,
+        "width": 1,
+        "height": 0.3
+      },
+      "note": "SK-046 (designer 14/11): Khóm lúa non trên ruộng còn nước. Crop cho khung c3."
+    },
+    "q5.q5_cactus": {
+      "same_as": "q1.q1_cactus"
+    },
+    "q5.q5_fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Chép mục gốc `tray.tray_fern` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dune.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Vietnam%2C_Mui_Ne_sand_dune.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam, Mui Ne sand dune",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0556,
+        "top": 0.0,
+        "width": 0.8889,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Đồi cát Mũi Né gợn sóng, không người. Crop cho khung q."
+    },
+    "vocab.dry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dune.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Vietnam%2C_Mui_Ne_sand_dune.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam, Mui Ne sand dune",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-046 (designer 14/11): Đồi cát Mũi Né gợn sóng, không người. Crop cho khung vocab."
+    },
+    "vocab.wet": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_paddy_in_promise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Young_paddy_in_promise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young paddy in promise",
+      "author": "Aerospectra",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3925,
+        "width": 1,
+        "height": 0.375
+      },
+      "note": "SK-046 (designer 14/11): Khóm lúa non trên ruộng còn nước. Crop cho khung vocab."
+    },
+    "vocab.shade": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cyathea dregei - Common Tree Fern - Cape Town",
+      "author": "Abu Shawka",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cyathea_dregei_-_Common_Tree_Fern_-_Cape_Town.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.78
+      },
+      "note": "Chép mục gốc `q2.q2_ferns` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.cactus": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/47445767@N05/52492203851",
+      "file_url": "https://live.staticflickr.com/65535/52492203851_cb2642779f_b.jpg",
+      "title": "Opuntia sp. (prickly pear cactus) (north of Bootlegger Canyon, Utah, USA) 12",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fbf35cae-0d15-4eb2-8b82-421198148215",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1667,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Bụi xương rồng tai thỏ mọc trên đất cát sỏi (Mỹ). Crop cho khung vocab."
+    },
+    "reward.lotus_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lotus_Drop.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Lotus_Drop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus Drop",
+      "author": "Daichungus",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Giọt nước tròn trên lá sen. Crop cho khung sq."
+    }
+  }
+}

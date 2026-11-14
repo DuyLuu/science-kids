@@ -116,8 +116,12 @@ import UIKit
         #expect(relaunched.profile?.voiceMode == .vi)
         #expect(relaunched.profile?.id == profile.id)
         #expect(relaunched.profile?.displayName == profile.displayName)
+        #expect(model.speech.firstLanguageOnly == nil, "Tiếng Việt: one voice, nothing split")
         #expect(model.setLanguage(.bilingual))
         #expect(AppModel(store: store, library: .empty).profile?.voiceMode == .both)
+        // Duy 13/11: Cả hai says English by itself, Vietnamese on the VI button.
+        #expect(model.speech.firstLanguageOnly == "en")
+        #expect(AppModel(store: store, library: .empty).speech.firstLanguageOnly == "en")
     }
 
     @Test func settingsLanguageWithoutAFileChangesNothing() throws {

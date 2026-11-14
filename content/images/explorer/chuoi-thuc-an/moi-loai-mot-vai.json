@@ -1,0 +1,297 @@
+{
+  "note": "SK-045. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình câu sân nhà là hình vẽ dùng lại của Hô hấp. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc. Sáu hình chuỗi ghép là ảnh tròn trên nền giấy, mũi tên giấy cắt.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_grass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eleusine_indica_plant1_(7120802953).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Eleusine_indica_plant1_%287120802953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eleusine indica plant1 (7120802953)",
+      "author": "Harry Rose from South West Rocks, Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0027,
+        "top": 0.2,
+        "width": 0.9945,
+        "height": 0.78
+      },
+      "note": "SK-045 (designer 14/11): Thay khay cỏ trong hộp kính (q4_grass của chủ đề Gọi tên và nhóm động vật) bằng khóm cỏ mần trầu (Eleusine indica) mọc ngoài bãi, theo _topic.md \"nếu trông lạ trong hình chuỗi\". Crop cho khung c2."
+    },
+    "w1.w1_fish": {
+      "same_as": "q4.q4_fish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2": {
+      "same_as": "w2",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w3": {
+      "same_as": "q2",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "learn.explore.explore_start": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Plants_(IRRI).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_%28IRRI%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Plants (IRRI)",
+      "author": "IRRI Images",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-045 (designer 14/11): Bông lúa chín vàng trên ruộng thí nghiệm IRRI. Crop cho khung learn."
+    },
+    "learn.explore.explore_middle": {
+      "same_as": "w2",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "learn.explore.explore_end": {
+      "same_as": "learn.explore.explore_hunt",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "learn.explore.explore_whole": {
+      "composed": {
+        "file": "content/images/composed/chuoi-thuc-an/moi-loai-mot-vai.learn.explore.explore_whole.jpg",
+        "parts": [
+          {
+            "same_as": "tray.tray_rice"
+          },
+          {
+            "same_as": "tray.tray_mouse"
+          },
+          {
+            "same_as": "tray.tray_owl",
+            "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+          }
+        ]
+      },
+      "title": "Rice, a mouse, then an owl",
+      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ."
+    },
+    "tray.tray_mouse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Striped_field_mouse_(51554361125).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Striped_field_mouse_%2851554361125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Striped field mouse (51554361125)",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.28,
+        "top": 0.12,
+        "width": 0.44,
+        "height": 0.66
+      },
+      "note": "SK-045 (designer 14/11): Chuột đồng sọc (Apodemus agrarius) sống, ngoài bãi lá khô; không bẫy, không lồng, không tay người. Crop cho khung sq."
+    },
+    "tray.tray_wood_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Owl_Decoy-saam-1986.65.59_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Owl_Decoy-saam-1986.65.59_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Owl Decoy",
+      "author": "Anonymous",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.03,
+        "width": 1,
+        "height": 0.93
+      },
+      "note": "SK-045 (designer 14/11): Cú gỗ (mồi nhử cú, gỗ đánh bóng, mắt thuỷ tinh) trên cọc đỡ. Crop cho khung sq."
+    },
+    "tray.tray_owl": {
+      "same_as": "tray.tray_owl",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "tray.tray_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Plants_(IRRI).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_%28IRRI%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Plants (IRRI)",
+      "author": "IRRI Images",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-045 (designer 14/11): Bông lúa chín vàng trên ruộng thí nghiệm IRRI. Crop cho khung sq."
+    },
+    "tray.tray_toy_mouse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Spielzeugmaus_-_Toy_mouse_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Spielzeugmaus_-_Toy_mouse_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Spielzeugmaus - Toy mouse 1",
+      "author": "Sciencia58",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0,
+        "width": 0.729,
+        "height": 1
+      },
+      "note": "SK-045 (designer 14/11): Chuột đồ chơi lên dây cót bằng nhựa đen trên nền trắng, không nhãn hiệu. Crop cho khung sq."
+    },
+    "tray.tray_grasshopper": {
+      "same_as": "learn.explore.explore_insects",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "tray.tray_grass": {
+      "same_as": "tray.tray_grass",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q1": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q1.q1_owl": {
+      "same_as": "q1.q1_owl",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "q1.q1_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Plants_(IRRI).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_%28IRRI%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Plants (IRRI)",
+      "author": "IRRI Images",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0031,
+        "top": 0.335,
+        "width": 0.9938,
+        "height": 0.53
+      },
+      "note": "SK-045 (designer 14/11): Bông lúa chín vàng trên ruộng thí nghiệm IRRI. Crop cho khung c3."
+    },
+    "q1.q1_mouse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Striped_field_mouse_(51554361125).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Striped_field_mouse_%2851554361125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Striped field mouse (51554361125)",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1267,
+        "top": 0.22,
+        "width": 0.7667,
+        "height": 0.46
+      },
+      "note": "SK-045 (designer 14/11): Chuột đồng sọc (Apodemus agrarius) sống, ngoài bãi lá khô; không bẫy, không lồng, không tay người. Crop cho khung c3."
+    },
+    "q2": {
+      "same_as": "w2",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q3": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q3.q3_mouse": {
+      "same_as": "q1.q1_mouse"
+    },
+    "q3.q3_rice": {
+      "same_as": "q1.q1_rice"
+    },
+    "q3.q3_grass": {
+      "same_as": "q3.q3_grass",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q4": {
+      "own": {
+        "file": "content/images/own/ho-hap/village-yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A yard in a village",
+      "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác)."
+    },
+    "q4.q4_owl": {
+      "same_as": "q1.q1_owl",
+      "lesson": "chuoi-thuc-an/con-vat-kiem-an-the-nao"
+    },
+    "q4.q4_rice": {
+      "same_as": "q1.q1_rice"
+    },
+    "q4.q4_mouse": {
+      "same_as": "q1.q1_mouse"
+    },
+    "q5": {
+      "own": {
+        "file": "content/images/own/ho-hap/village-yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A yard in a village",
+      "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác)."
+    },
+    "q5.q5_frog": {
+      "same_as": "tray.tray_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q5.q5_rice": {
+      "same_as": "tray.tray_rice"
+    },
+    "q5.q5_grasshopper": {
+      "same_as": "learn.explore.explore_insects",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_chain",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "vocab.role": {
+      "same_as": "learn.explore.explore_whole"
+    },
+    "vocab.mouse": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Striped_field_mouse_(51554361125).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Striped_field_mouse_%2851554361125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Striped field mouse (51554361125)",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1667,
+        "top": 0.2,
+        "width": 0.6667,
+        "height": 0.5
+      },
+      "note": "SK-045 (designer 14/11): Chuột đồng sọc (Apodemus agrarius) sống, ngoài bãi lá khô; không bẫy, không lồng, không tay người. Crop cho khung vocab."
+    },
+    "vocab.rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Plants_(IRRI).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_%28IRRI%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Plants (IRRI)",
+      "author": "IRRI Images",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2867,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-045 (designer 14/11): Bông lúa chín vàng trên ruộng thí nghiệm IRRI. Crop cho khung vocab."
+    },
+    "vocab.field": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "reward.mouse_card": {
+      "same_as": "tray.tray_mouse"
+    }
+  }
+}

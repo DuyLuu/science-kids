@@ -25,7 +25,7 @@ import Testing
         #expect(!syllabus.syllabusVersion.isEmpty)
         #expect(syllabus.groups.map(\.ageGroup) == [.explorer, .discoverer, .scientist])
         #expect(syllabus.groups.map(\.topics.count) == [12, 17, 16])
-        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [73, 155, 156])
+        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [75, 155, 156], "content/syllabus.json 13/11: Explorer has 75 lessons")
         #expect(syllabus.groups.flatMap(\.topics).allSatisfy { $0.strand.isKnown })
     }
 

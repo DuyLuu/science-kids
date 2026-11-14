@@ -1,0 +1,516 @@
+{
+  "note": "SK-041 bài 7. Designer (agent) chọn 13/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, CC BY (ghi công), kiểm ở trang gốc. Mỗi chỗ dùng có crop đúng tỉ lệ khung hướng A (bảng tỉ lệ khung trong SK-043); same_as chỉ khi cùng ảnh, cùng crop. Ảnh dùng lại của Discoverer (Hô hấp, Khủng long) chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_rabbit": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.4376,
+        "top": 0.2651,
+        "width": 0.5548,
+        "height": 0.4897
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung."
+    },
+    "w1.w1_egret": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Little_egret_%28Egretta_garzetta%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A little egret in flight",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0186,
+        "top": 0.0,
+        "width": 0.8628,
+        "height": 0.7634
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 2 lựa chọn 17:10, con vật nằm trọn trong khung."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Seychelles_flying_fox_(Pteropus_seychellensis).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/The_Seychelles_flying_fox_%28Pteropus_seychellensis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Seychelles flying fox (Pteropus seychellensis)",
+      "author": "Yulia Kolosova",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1444,
+        "top": 0.0,
+        "width": 0.7812,
+        "height": 0.9829
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0547,
+        "top": 0.0,
+        "width": 0.8906,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_spider": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1819,
+        "top": 0.395,
+        "width": 0.6562,
+        "height": 0.35
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q1.q1_ant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Weaver_ant_(Oecophylla_smaragdina)%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_(15280824806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Weaver_ant_%28Oecophylla_smaragdina%29%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_%2815280824806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Weaver ant (Oecophylla smaragdina)പുളിയുറുമ്പ് (15280824806)",
+      "author": "Rison Thumboor from Thrissur, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0696,
+        "top": 0.2685,
+        "width": 0.8308,
+        "height": 0.4431
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q1.q1_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.2327,
+        "top": 0.2505,
+        "width": 0.6646,
+        "height": 0.3989
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D1%80%D0%BF.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/%D0%9A%D0%B0%D1%80%D0%BF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A carp swimming",
+      "author": "Роман АлексеевичЕ",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.08,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1584,
+        "top": 0.2184,
+        "width": 0.7031,
+        "height": 0.7031
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "q4": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_millipede": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4002_Portuguese_Millipede.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/CSIRO_ScienceImage_4002_Portuguese_Millipede.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "CSIRO ScienceImage 4002 Portuguese Millipede",
+      "author": "division, CSIRO",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.452,
+        "top": 0.1083,
+        "width": 0.548,
+        "height": 0.8233
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung."
+    },
+    "q4.q4_ant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Weaver_ant_(Oecophylla_smaragdina)%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_(15280824806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Weaver_ant_%28Oecophylla_smaragdina%29%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_%2815280824806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Weaver ant (Oecophylla smaragdina)പുളിയുറുമ്പ് (15280824806)",
+      "author": "Rison Thumboor from Thrissur, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.211,
+        "top": 0.1247,
+        "width": 0.548,
+        "height": 0.7307
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung."
+    },
+    "q4.q4_spider": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.3788,
+        "top": 0.3951,
+        "width": 0.2623,
+        "height": 0.3498
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung."
+    },
+    "q5": {
+      "same_as": "q5",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0006,
+        "width": 1.0,
+        "height": 0.5988
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q5.q5_sparrow": {
+      "same_as": "q1.q1_sparrow"
+    },
+    "q5.q5_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Freshwater_crab_-_Potamonautidae.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Freshwater_crab_-_Potamonautidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Freshwater crab - Potamonautidae",
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2499,
+        "width": 1.0,
+        "height": 0.6002
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Weaver_ant_(Oecophylla_smaragdina)%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_(15280824806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Weaver_ant_%28Oecophylla_smaragdina%29%E0%B4%AA%E0%B5%81%E0%B4%B3%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B1%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%8D_%2815280824806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Weaver ant (Oecophylla smaragdina)പുളിയുറുമ്പ് (15280824806)",
+      "author": "Rison Thumboor from Thrissur, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1334,
+        "top": 0.1385,
+        "width": 0.7031,
+        "height": 0.7032
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_backbone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tristan_Museum_f%C3%BCr_Naturkunde.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tristan_Museum_f%C3%BCr_Naturkunde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tristan Museum für Naturkunde",
+      "author": "Shadowgate",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0377,
+        "top": 0.0158,
+        "width": 0.8745,
+        "height": 0.9842
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_insects": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Differential_grasshopper_(25673035101).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Differential_grasshopper_%2825673035101%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Differential grasshopper (25673035101)",
+      "author": "Melissa McMasters from Memphis, TN, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0269,
+        "top": 0.1602,
+        "width": 0.7462,
+        "height": 0.8398
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_spiders": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1584,
+        "top": 0.0625,
+        "width": 0.7031,
+        "height": 0.9375
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_crabs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Freshwater_crab_-_Potamonautidae.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Freshwater_crab_-_Potamonautidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Freshwater crab - Potamonautidae",
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1269,
+        "top": 0.1301,
+        "width": 0.7462,
+        "height": 0.8398
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_millipedes": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4002_Portuguese_Millipede.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/CSIRO_ScienceImage_4002_Portuguese_Millipede.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "CSIRO ScienceImage 4002 Portuguese Millipede",
+      "author": "division, CSIRO",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0512,
+        "top": 0.0,
+        "width": 0.8875,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "tray.tray_ant": {
+      "same_as": "q4.q4_ant"
+    },
+    "tray.tray_sparrow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.2327,
+        "top": 0.0,
+        "width": 0.6646,
+        "height": 0.9973
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_spider": {
+      "same_as": "q4.q4_spider"
+    },
+    "tray.tray_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Freshwater_crab_-_Potamonautidae.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Freshwater_crab_-_Potamonautidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Freshwater crab - Potamonautidae",
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1668,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Butterfly_Feeding_on_Nectar_(44575670234).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Butterfly_Feeding_on_Nectar_%2844575670234%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Butterfly Feeding on Nectar (44575670234)",
+      "author": "John Brighenti from Rockville, MD, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1002,
+        "top": 0.0656,
+        "width": 0.5597,
+        "height": 0.8389
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.4843,
+        "top": 0.1338,
+        "width": 0.5014,
+        "height": 0.7524
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "tray.tray_millipede": {
+      "same_as": "q4.q4_millipede"
+    },
+    "tray.tray_shrimp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Macrobrachium_Lanchesteri_(19306434602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Macrobrachium_Lanchesteri_%2819306434602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Macrobrachium Lanchesteri (19306434602)",
+      "author": "Weimar Meneses",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2072,
+        "top": 0.0,
+        "width": 0.6656,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "vocab.backbone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tristan_Museum_f%C3%BCr_Naturkunde.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tristan_Museum_f%C3%BCr_Naturkunde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tristan Museum für Naturkunde",
+      "author": "Shadowgate",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1849,
+        "width": 1.0,
+        "height": 0.7503
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.insect": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Differential_grasshopper_(25673035101).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Differential_grasshopper_%2825673035101%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Differential grasshopper (25673035101)",
+      "author": "Melissa McMasters from Memphis, TN, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2485,
+        "width": 0.9635,
+        "height": 0.7229
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.spider": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_orb_weaver_-_late_summer_in_Georgia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Red_orb_weaver_-_late_summer_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red orb weaver - late summer in Georgia",
+      "author": "Mayaluk",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2476,
+        "top": 0.3951,
+        "width": 0.5247,
+        "height": 0.3498
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Freshwater_crab_-_Potamonautidae.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Freshwater_crab_-_Potamonautidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Freshwater crab - Potamonautidae",
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1749,
+        "width": 1.0,
+        "height": 0.7503
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung."
+    },
+    "vocab.arthropod": {
+      "same_as": "vocab.insect"
+    },
+    "reward.weaver_ant_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B4%A8%E0%B5%80%E0%B4%B1%E0%B5%8D_Asian_Weaver_Ant,_imported_from_iNaturalist_photo_657960028.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/%E0%B4%A8%E0%B5%80%E0%B4%B1%E0%B5%8D_Asian_Weaver_Ant%2C_imported_from_iNaturalist_photo_657960028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "നീറ് Asian Weaver Ant, imported from iNaturalist photo 657960028",
+      "author": "Dr. Chinchu C.",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1523,
+        "top": 0.0,
+        "width": 0.7453,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung sticker Thưởng 1:1, con vật nằm trọn trong khung."
+    }
+  }
+}

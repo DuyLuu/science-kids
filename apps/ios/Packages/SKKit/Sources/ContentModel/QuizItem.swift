@@ -167,6 +167,9 @@ extension QuizItem {
         public let label: Spoken
         public let image: ContentImage?
         public let correct: Bool
+        /// SK-044: why this (wrong) option is not right, one short sentence, read after the child
+        /// picks it and before the hint. Optional; only on wrong options (checked by the CLI).
+        public let feedback: Spoken?
     }
 
     /// `single_choice`: exactly one option has `correct: true` (checked by the CLI).
@@ -186,6 +189,22 @@ extension QuizItem {
         public let speaker: Key?
         /// Without labels the app uses its own True/False strings (Localizable.xcstrings).
         public let labels: Labels?
+        /// SK-044: said when the child taps True on a false statement (only when `answer` is false).
+        public let feedbackTrue: Spoken?
+        /// SK-044: said when the child taps False on a true statement (only when `answer` is true).
+        public let feedbackFalse: Spoken?
+
+        enum CodingKeys: String, CodingKey {
+            case answer, statement, speaker, labels
+            case feedbackTrue = "feedback_true"
+            case feedbackFalse = "feedback_false"
+        }
+
+        /// The `feedback` for tapping `value` (`nil` when `value` is the answer or none is written).
+        public func feedback(for value: Bool) -> Spoken? {
+            guard value != answer else { return nil }
+            return value ? feedbackTrue : feedbackFalse
+        }
 
         public struct Labels: Codable, Hashable, Sendable {
             public let trueLabel: Spoken
@@ -210,6 +229,8 @@ extension QuizItem {
             public let key: Key
             public let label: Spoken
             public let image: ContentImage?
+            /// SK-044: why this word does not fit (wrong words only), as `ChoiceOption.feedback`.
+            public let feedback: Spoken?
         }
 
         /// Some word card has a picture: the bank is drawn as picture cards.

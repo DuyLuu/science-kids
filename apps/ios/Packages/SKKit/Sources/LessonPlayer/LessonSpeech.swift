@@ -1,6 +1,7 @@
 import AudioKit
 import ContentModel
 import DesignSystem
+import LessonEngine
 import Profiles
 import SwiftUI
 
@@ -93,6 +94,11 @@ extension LessonSession {
         case .quiz(let index):
             return item(at: index, in: .quiz).map(questionUtterance)
         case .learn:
+            // Explorer (SK-043): the page that opens reads itself (the group shown).
+            if isExplorer, let explore = exploreBlock,
+               let group = explore.groups.first(where: { $0.key == progress.exploreSelected }) ?? explore.groups.first {
+                return explorerGroupUtterance(group)
+            }
             return exploreBlock.map { utterance("learn.prompt", $0.prompt) }
         case .play:
             // Explorer (SK-040 lượt 2): the game's instruction too, then the message.
@@ -136,7 +142,19 @@ extension LessonSession {
     }
 
     static func questionStrings(_ item: QuizItem) -> [Spoken] {
-        questionSpoken(item) + answerSpoken(item) + [item.hint, item.explanationCorrect, item.explanationWrong]
+        questionSpoken(item) + answerSpoken(item) + feedbackSpoken(item) + [item.hint, item.explanationCorrect, item.explanationWrong]
+    }
+
+    /// Every `feedback` of a question's options or bank words (SK-044), read ahead with the step.
+    static func feedbackSpoken(_ item: QuizItem) -> [Spoken] {
+        switch item.answer {
+        case .singleChoice(let choice): choice.options.compactMap(\.feedback)
+        case .multiChoice(let choice): choice.options.compactMap(\.feedback)
+        case .pictureBarChart(let chart): chart.options.compactMap(\.feedback)
+        case .fillBlankBank(let fill): fill.bank.compactMap(\.feedback)
+        case .trueFalse(let tf): [tf.feedbackTrue, tf.feedbackFalse].compactMap { $0 }
+        case .orderSequence, .unknown: []
+        }
     }
 
     /// The step after `step`, if any.
@@ -180,8 +198,51 @@ extension LessonSession {
     public static func explorerLine(_ item: QuizItem, status: QuestionStatus) -> [Spoken] {
         switch status {
         case .open: questionSpoken(item)
-        case .retry: [item.hint]
+        case .retry(let last): retryLines(item, last: last)
         case .done(let correct, _, _): [correct ? item.explanationCorrect : item.explanationWrong]
+        }
+    }
+
+    /// SK-044: after a wrong try with a try left, what is said and shown: the `feedback` of the
+    /// option (or bank word) just picked, when the content has one, then the `hint`.
+    public static func retryLines(_ item: QuizItem, last: Try) -> [Spoken] {
+        [feedback(item, for: last), item.hint].compactMap { $0 }
+    }
+
+    /// The `feedback` of what a try picked (single choice: its option; multi choice: the first
+    /// wrong option picked; fill blank: the first wrong word placed; true/false: `feedback_true`
+    /// or `feedback_false` by the side tapped). `nil` without one.
+    public static func feedback(_ item: QuizItem, for attempt: Try) -> Spoken? {
+        switch (item.answer, attempt) {
+        case (.singleChoice(let choice), .selected(let key)):
+            return choice.options.first { $0.key == key && !$0.correct }?.feedback
+        case (.multiChoice(let choice), .selectedSet(let keys)):
+            return choice.options.first { keys.contains($0.key) && !$0.correct && $0.feedback != nil }?.feedback
+        case (.pictureBarChart(let chart), .selected(let key)):
+            return chart.options.first { $0.key == key && !$0.correct }?.feedback
+        case (.fillBlankBank(let fill), .filled(let keys)):
+            for (index, key) in keys.enumerated() where fill.answers.indices.contains(index) && fill.answers[index] != key {
+                if let feedback = fill.bank.first(where: { $0.key == key })?.feedback { return feedback }
+            }
+            return nil
+        case (.trueFalse(let tf), .value(let value)):
+            return tf.feedback(for: value)
+        default:
+            // order_sequence is checked as a whole chain: no feedback (SK-044, dev 13/11).
+            return nil
+        }
+    }
+
+    /// Discoverer (SK-044): what plays by itself after a check. A wrong try with a try left: the
+    /// feedback then the hint; done: the explanation (right or wrong). Explorer says the same lines
+    /// through `explorerAnswerUtterance`. `name`: the word just tapped, said first in the same
+    /// utterance (Khởi động answers on a tap), so the word is not cut off by the result.
+    public func resultUtterance(_ item: QuizItem, status: QuestionStatus, name: Spoken? = nil) -> Utterance? {
+        switch status {
+        case .open: return nil
+        case .retry(let last): return utterance("retry.\(item.key)", list: [name] + Self.retryLines(item, last: last))
+        case .done(let correct, _, _):
+            return utterance("explanation.\(item.key).\(correct ? "correct" : "wrong")", list: [name, correct ? item.explanationCorrect : item.explanationWrong])
         }
     }
 
@@ -210,11 +271,10 @@ extension LessonSession {
         (warmupItems + quizItems).first { if case .trueFalse = $0.answer { true } else { false } }?.id == item.id
     }
 
-    /// Học, Explorer: a tapped group says its name, then its sentence (SK-040 lượt 2). The
-    /// examples are not read by themselves (each is a short name under a picture the child can
-    /// see; the sheet's listen button still reads them).
+    /// Học, Explorer: a page says the group's name, its sentence, then its examples (SK-043, A-final
+    /// "Explorer · Học": the examples are not printed, the voice reads them after the sentence).
     public func explorerGroupUtterance(_ group: ExploreGroup) -> Utterance {
-        utterance("learn.explore.\(group.key)", group.label, group.sentence)
+        utterance("learn.explore.\(group.key)", list: [group.label, group.sentence] + group.examples)
     }
 
     /// Chơi, Explorer: a tapped item says its name, then the mascot's new message (the engine's,
@@ -261,11 +321,55 @@ public struct ListenButton: View {
 
     public var body: some View {
         if !utterance.isEmpty {
-            PaperIconButton(.speaker, accessibilityLabel: Text(label, bundle: .main), disc: disc) {
-                speech?.play(utterance)
+            // The VI button goes under the speaker, not beside it, so the sentence beside them
+            // keeps its width (Chơi's bubble, the question sheet).
+            VStack(spacing: Tokens.Space.s4) {
+                PaperIconButton(.speaker, accessibilityLabel: Text(label, bundle: .main), disc: disc) {
+                    speech?.play(utterance)
+                }
+                .accessibilityAddTraits(.startsMediaSession)
+                .accessibilityIdentifier("listen.\(utterance.id)")
+                // SK-042 (Duy 13/11): "Cả hai" plays English by itself; Vietnamese on request.
+                SecondVoiceButton(utterance)
             }
+        }
+    }
+}
+
+/// SK-042 (Duy 13/11): in "Cả hai" the voice says only English by itself; this small button
+/// next to it plays the Vietnamese clips of the same words. Hidden outside "Cả hai"
+/// (`SpeechPlayer.firstLanguageOnly` is `nil`) and when there is no Vietnamese clip, so it never
+/// does nothing. A small "VI" mark with the speaker, in the age group's touch target.
+public struct SecondVoiceButton: View {
+    private let utterance: Utterance
+    @Environment(\.speechPlayer) private var speech
+    @Environment(\.ageGroup) private var ageGroup
+
+    public init(_ utterance: Utterance) {
+        self.utterance = utterance
+    }
+
+    public var body: some View {
+        if let speech, speech.secondVoice(of: utterance) != nil {
+            Button {
+                speech.playSecond(utterance)
+            } label: {
+                HStack(spacing: Tokens.Space.s2) {
+                    PaperIconView(.speaker, size: PaperMetrics.headerChipIcon, color: Tokens.Palette.cham)
+                    Text(verbatim: "VI")
+                        .typography(Tokens.Typography.label, fixedBox: true)
+                        .foregroundStyle(Tokens.Palette.cham)
+                }
+                .padding(.horizontal, Tokens.Space.s8)
+                .frame(minHeight: PaperMetrics.chipHeight + Tokens.Space.s10)
+                .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.tag)
+                .frame(minWidth: ageGroup.touchTarget, minHeight: ageGroup.touchTarget)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.paperPress)
+            .accessibilityLabel(Text("lesson.listen.vi", bundle: .main))
             .accessibilityAddTraits(.startsMediaSession)
-            .accessibilityIdentifier("listen.\(utterance.id)")
+            .accessibilityIdentifier("listen.vi.\(utterance.id)")
         }
     }
 }

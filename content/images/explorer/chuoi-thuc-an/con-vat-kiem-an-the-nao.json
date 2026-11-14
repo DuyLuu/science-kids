@@ -1,0 +1,257 @@
+{
+  "note": "SK-045. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc; hình câu sân nhà là hình vẽ dùng lại của Hô hấp. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc. Sáu hình chuỗi ghép là ảnh tròn trên nền giấy, mũi tên giấy cắt.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_croc": {
+      "same_as": "w2.w2_croc",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "w1.w1_rabbit": {
+      "same_as": "w1.w1_rabbit",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "w2": {
+      "same_as": "q2",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w3": {
+      "same_as": "learn.explore.explore_insects",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-trung-va-con-vat-nhieu-chan"
+    },
+    "learn.explore.explore_need": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_(194224349).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Tree_Sparrow_%28194224349%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tree Sparrow",
+      "author": "Jongsun Lee",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0076,
+        "top": 0.05,
+        "width": 0.8449,
+        "height": 0.95
+      },
+      "note": "SK-045 (designer 14/11): Chim sẻ nhà (Passer montanus) đứng trên nền đất, ngậm một hạt; không có ảnh hợp lệ chim sẻ mổ thóc trên sân. Crop cho khung learn."
+    },
+    "learn.explore.explore_graze": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "learn.explore.explore_hunt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Barred_Owlet_(29595655707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Asian_Barred_Owlet_%2829595655707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asian Barred Owlet (29595655707)",
+      "author": "Mike Prince from Bangalore, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.4175,
+        "top": 0.25,
+        "width": 0.525,
+        "height": 0.7
+      },
+      "note": "SK-045 (designer 14/11): Cú vọ mặt trắng (Asian barred owlet, Glaucidium cuculoides), loài cú nhỏ phổ biến ở Việt Nam, ăn côn trùng lớn và chuột; đậu cành ngang, nhìn thẳng, ban ngày. Không có ảnh hợp lệ cú mèo dáng ngang đủ rõ. Crop cho khung learn."
+    },
+    "learn.explore.explore_fed": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Man_feeds_his_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Man_feeds_his_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Man feeds his chickens",
+      "author": "Matt Seppings from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.53,
+        "top": 0.02,
+        "width": 0.45,
+        "height": 0.63
+      },
+      "note": "SK-045 (designer 14/11): Hai bàn tay đưa thức ăn cho hai con gà mái trên bậc đá; cắt bỏ người, không thấy mặt. Thay ảnh StockSnap (không kiểm được giấy phép ở trang gốc). Crop cho khung learn."
+    },
+    "tray.tray_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Barred_Owlet_(29595655707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Asian_Barred_Owlet_%2829595655707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asian Barred Owlet (29595655707)",
+      "author": "Mike Prince from Bangalore, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.4175,
+        "top": 0.25,
+        "width": 0.525,
+        "height": 0.7
+      },
+      "note": "SK-045 (designer 14/11): Cú vọ mặt trắng (Asian barred owlet, Glaucidium cuculoides), loài cú nhỏ phổ biến ở Việt Nam, ăn côn trùng lớn và chuột; đậu cành ngang, nhìn thẳng, ban ngày. Không có ảnh hợp lệ cú mèo dáng ngang đủ rõ. Crop cho khung sq."
+    },
+    "tray.tray_goldfish": {
+      "same_as": "tray.tray_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_kite": {
+      "same_as": "tray.tray_kite",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_buffalo": {
+      "same_as": "tray.tray_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_egret": {
+      "same_as": "tray.tray_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_rubber_duck": {
+      "same_as": "tray.tray_rubber_duck",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "tray.tray_dog": {
+      "same_as": "tray.tray_dog",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1": {
+      "own": {
+        "file": "content/images/own/ho-hap/village-yard.jpg",
+        "method": "drawn"
+      },
+      "title": "A yard in a village",
+      "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác)."
+    },
+    "q1.q1_buffalo": {
+      "same_as": "q3.q3_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q1.q1_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Barred_Owlet_(29595655707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Asian_Barred_Owlet_%2829595655707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asian Barred Owlet (29595655707)",
+      "author": "Mike Prince from Bangalore, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0006,
+        "top": 0.3335,
+        "width": 0.9994,
+        "height": 0.533
+      },
+      "note": "SK-045 (designer 14/11): Cú vọ mặt trắng (Asian barred owlet, Glaucidium cuculoides), loài cú nhỏ phổ biến ở Việt Nam, ăn côn trùng lớn và chuột; đậu cành ngang, nhìn thẳng, ban ngày. Không có ảnh hợp lệ cú mèo dáng ngang đủ rõ. Crop cho khung c3."
+    },
+    "q1.q1_goldfish": {
+      "same_as": "q5.q5_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Barred_Owlet_(29595655707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Asian_Barred_Owlet_%2829595655707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asian Barred Owlet (29595655707)",
+      "author": "Mike Prince from Bangalore, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.37,
+        "top": 0.29,
+        "width": 0.62,
+        "height": 0.62
+      },
+      "note": "SK-045 (designer 14/11): Cú vọ mặt trắng (Asian barred owlet, Glaucidium cuculoides), loài cú nhỏ phổ biến ở Việt Nam, ăn côn trùng lớn và chuột; đậu cành ngang, nhìn thẳng, ban ngày. Không có ảnh hợp lệ cú mèo dáng ngang đủ rõ. Crop cho khung q."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WIND_SWEPT_PADDIES,SATYAVEDU_AP_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/WIND_SWEPT_PADDIES%2CSATYAVEDU_AP_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "WIND SWEPT PADDIES,SATYAVEDU AP - panoramio",
+      "author": "rajaraman sundaram",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w1` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác)."
+    },
+    "q3.q3_egret": {
+      "same_as": "q5.q5_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_owl": {
+      "same_as": "q1.q1_owl"
+    },
+    "q3.q3_goldfish": {
+      "same_as": "q5.q5_goldfish",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4": {
+      "same_as": "q2"
+    },
+    "q4.q4_rabbit": {
+      "same_as": "q3.q3_rabbit",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q4.q4_egret": {
+      "same_as": "q5.q5_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_dog": {
+      "same_as": "q1.q1_dog",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc `w3.w3_hen` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q6": {
+      "same_as": "w2",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "vocab.food": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_(194224349).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Tree_Sparrow_%28194224349%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tree Sparrow",
+      "author": "Jongsun Lee",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1752,
+        "width": 1,
+        "height": 0.7496
+      },
+      "note": "SK-045 (designer 14/11): Chim sẻ nhà (Passer montanus) đứng trên nền đất, ngậm một hạt; không có ảnh hợp lệ chim sẻ mổ thóc trên sân. Crop cho khung vocab."
+    },
+    "vocab.hunt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Barred_Owlet_(29595655707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Asian_Barred_Owlet_%2829595655707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Asian Barred Owlet (29595655707)",
+      "author": "Mike Prince from Bangalore, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1,
+        "top": 0.3,
+        "width": 0.9,
+        "height": 0.6
+      },
+      "note": "SK-045 (designer 14/11): Cú vọ mặt trắng (Asian barred owlet, Glaucidium cuculoides), loài cú nhỏ phổ biến ở Việt Nam, ăn côn trùng lớn và chuột; đậu cành ngang, nhìn thẳng, ban ngày. Không có ảnh hợp lệ cú mèo dáng ngang đủ rõ. Crop cho khung vocab."
+    },
+    "vocab.graze": {
+      "same_as": "vocab.herbivore",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "vocab.feed": {
+      "same_as": "learn.explore.explore_fed"
+    },
+    "reward.owl_card": {
+      "same_as": "tray.tray_owl"
+    }
+  }
+}

@@ -98,13 +98,205 @@
               ],
               "statutory": true,
               "lesson_id": "c22d1f3e-8279-48fa-9d2c-f9afaec9339c"
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Insects and other many-legged animals",
+                "vi": "Côn trùng và con vật nhiều chân"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "extension": true,
+              "lesson_id": "e5553e44-a083-4cbd-9dd9-bdf52895bc7f"
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Snails, octopuses and sea animals",
+                "vi": "Ốc, bạch tuộc và những con vật ở biển"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "extension": true,
+              "lesson_id": "9f50dd1d-663c-4592-8c0a-e35f1641f7a2"
             }
           ],
           "topic_id": "f41bf481-4f09-4be4-a185-38a809f7ce4d"
         },
         {
-          "key": "seasonal-changes-autumn-and-winter",
+          "key": "living-things-and-where-they-live",
           "number": 2,
+          "title": {
+            "en": "Living things and where they live",
+            "vi": "Sinh vật sống ở đâu?"
+          },
+          "strand": "living_environment",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "living-things-and-where-they-live",
+            "year": 2,
+            "unit_index": 5
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "Living or non-living",
+                "vi": "Vật sống hay không sống?"
+              },
+              "oak_lessons": [
+                "living-or-non-living"
+              ],
+              "statutory": true,
+              "lesson_id": "d1a3fdbe-ae0a-488b-82de-849b421980da"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Living things and movement",
+                "vi": "Vật sống nào cũng cử động"
+              },
+              "oak_lessons": [
+                "living-things-and-movement"
+              ],
+              "statutory": true,
+              "lesson_id": "4d463c1c-bd1c-45c1-b852-d08fa6023610"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Alive, dead and never alive",
+                "vi": "Đang sống, đã chết, chưa từng sống"
+              },
+              "oak_lessons": [
+                "alive-dead-and-never-alive"
+              ],
+              "statutory": true,
+              "lesson_id": "fb0322fc-35e0-4e21-a340-6936cd9e20a2"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Animal habitats",
+                "vi": "Nơi sống của con vật"
+              },
+              "oak_lessons": [
+                "animal-habitats"
+              ],
+              "statutory": true,
+              "lesson_id": "b0846a73-7931-43ed-8b10-ad31db03219d"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Plant habitats",
+                "vi": "Nơi sống của cây"
+              },
+              "oak_lessons": [
+                "plant-habitats"
+              ],
+              "statutory": true,
+              "lesson_id": "275ec848-b466-4731-b084-49a035146626"
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Plants and animals in microhabitats",
+                "vi": "Những nơi sống nhỏ xíu"
+              },
+              "oak_lessons": [
+                "plants-and-animals-in-microhabitats"
+              ],
+              "statutory": true,
+              "lesson_id": "bd2867fe-1a4c-450a-b5ab-7d28a5d6679b"
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Protecting microhabitats",
+                "vi": "Bảo vệ những nơi sống nhỏ"
+              },
+              "oak_lessons": [
+                "protecting-microhabitats"
+              ],
+              "statutory": true,
+              "lesson_id": "535ec412-0491-4c8f-bce8-02549e5d9b37"
+            }
+          ],
+          "topic_id": "dbaa1e11-1ca9-4c91-837c-3d79f78cfaca"
+        },
+        {
+          "key": "introduction-to-food-chains",
+          "number": 3,
+          "title": {
+            "en": "Introduction to food chains",
+            "vi": "Chuỗi thức ăn"
+          },
+          "strand": "living_environment",
+          "level": 3,
+          "source": {
+            "kind": "oak",
+            "unit_slug": "introduction-to-food-chains",
+            "year": 2,
+            "unit_index": 4
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "How animals get food",
+                "vi": "Con vật kiếm ăn thế nào?"
+              },
+              "oak_lessons": [
+                "how-animals-get-food"
+              ],
+              "statutory": true,
+              "lesson_id": "5baed54e-4d19-4d7a-b7c2-307dbd8e0887"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "Introduction to food chains",
+                "vi": "Chuỗi thức ăn là gì?"
+              },
+              "oak_lessons": [
+                "introduction-to-food-chains"
+              ],
+              "statutory": true,
+              "lesson_id": "b29fc80d-ca47-4d18-81be-62187220d4d9"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Roles in a food chain",
+                "vi": "Mỗi loài một vai trong chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "roles-within-food-chains"
+              ],
+              "statutory": true,
+              "lesson_id": "8db91ce2-91ce-42c8-8a9f-cabcae66317d"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Comparing food chains",
+                "vi": "So sánh các chuỗi thức ăn"
+              },
+              "oak_lessons": [
+                "comparing-food-chains"
+              ],
+              "statutory": true,
+              "lesson_id": "686a74bf-bdc9-4cb0-91f4-162c462ebedf"
+            }
+          ],
+          "topic_id": "79585c90-8456-4217-929b-20cccc22f6df"
+        },
+        {
+          "key": "seasonal-changes-autumn-and-winter",
+          "number": 4,
           "title": {
             "en": "Autumn, winter and the dry season",
             "vi": "Thu, đông và mùa khô"
@@ -177,7 +369,7 @@
         },
         {
           "key": "human-body-parts",
-          "number": 3,
+          "number": 5,
           "title": {
             "en": "Human body parts",
             "vi": "Cơ thể của em"
@@ -261,7 +453,7 @@
         },
         {
           "key": "identifying-plants-and-their-basic-parts",
-          "number": 4,
+          "number": 6,
           "title": {
             "en": "Identifying plants and their basic parts",
             "vi": "Cây quanh em"
@@ -356,7 +548,7 @@
         },
         {
           "key": "seasonal-changes-spring-and-summer",
-          "number": 5,
+          "number": 7,
           "title": {
             "en": "Spring, summer and the rainy season",
             "vi": "Xuân, hè và mùa mưa"
@@ -429,7 +621,7 @@
         },
         {
           "key": "everyday-materials",
-          "number": 6,
+          "number": 8,
           "title": {
             "en": "Everyday materials",
             "vi": "Vật liệu quanh em"
@@ -526,7 +718,7 @@
         },
         {
           "key": "uses-of-everyday-materials",
-          "number": 7,
+          "number": 9,
           "title": {
             "en": "Uses of everyday materials",
             "vi": "Vật liệu dùng làm gì?"
@@ -611,7 +803,7 @@
         },
         {
           "key": "growing-plants",
-          "number": 8,
+          "number": 10,
           "title": {
             "en": "Growing plants",
             "vi": "Trồng cây"
@@ -717,7 +909,7 @@
         },
         {
           "key": "new-life",
-          "number": 9,
+          "number": 11,
           "title": {
             "en": "New life",
             "vi": "Sự sống mới"
@@ -783,163 +975,6 @@
               },
               "oak_lessons": [
                 "the-basic-needs-of-animals"
-              ],
-              "statutory": true
-            }
-          ]
-        },
-        {
-          "key": "introduction-to-food-chains",
-          "number": 10,
-          "title": {
-            "en": "Introduction to food chains",
-            "vi": "Chuỗi thức ăn"
-          },
-          "strand": "living_environment",
-          "level": 3,
-          "source": {
-            "kind": "oak",
-            "unit_slug": "introduction-to-food-chains",
-            "year": 2,
-            "unit_index": 4
-          },
-          "lessons": [
-            {
-              "number": 1,
-              "title": {
-                "en": "How animals get food",
-                "vi": "Con vật kiếm ăn thế nào?"
-              },
-              "oak_lessons": [
-                "how-animals-get-food"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 2,
-              "title": {
-                "en": "Introduction to food chains",
-                "vi": "Chuỗi thức ăn là gì?"
-              },
-              "oak_lessons": [
-                "introduction-to-food-chains"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 3,
-              "title": {
-                "en": "Roles within food chains",
-                "vi": "Ai ăn ai trong chuỗi thức ăn?"
-              },
-              "oak_lessons": [
-                "roles-within-food-chains"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 4,
-              "title": {
-                "en": "Comparing food chains",
-                "vi": "So sánh các chuỗi thức ăn"
-              },
-              "oak_lessons": [
-                "comparing-food-chains"
-              ],
-              "statutory": true
-            }
-          ]
-        },
-        {
-          "key": "living-things-and-where-they-live",
-          "number": 11,
-          "title": {
-            "en": "Living things and where they live",
-            "vi": "Sinh vật sống ở đâu?"
-          },
-          "strand": "living_environment",
-          "level": 3,
-          "source": {
-            "kind": "oak",
-            "unit_slug": "living-things-and-where-they-live",
-            "year": 2,
-            "unit_index": 5
-          },
-          "lessons": [
-            {
-              "number": 1,
-              "title": {
-                "en": "Living or non-living",
-                "vi": "Vật sống hay không sống?"
-              },
-              "oak_lessons": [
-                "living-or-non-living"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 2,
-              "title": {
-                "en": "Living things and movement",
-                "vi": "Vật sống nào cũng cử động"
-              },
-              "oak_lessons": [
-                "living-things-and-movement"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 3,
-              "title": {
-                "en": "Alive, dead and never alive",
-                "vi": "Đang sống, đã chết, chưa từng sống"
-              },
-              "oak_lessons": [
-                "alive-dead-and-never-alive"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 4,
-              "title": {
-                "en": "Animal habitats",
-                "vi": "Nơi sống của con vật"
-              },
-              "oak_lessons": [
-                "animal-habitats"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 5,
-              "title": {
-                "en": "Plant habitats",
-                "vi": "Nơi sống của cây"
-              },
-              "oak_lessons": [
-                "plant-habitats"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 6,
-              "title": {
-                "en": "Plants and animals in microhabitats",
-                "vi": "Những nơi sống nhỏ xíu"
-              },
-              "oak_lessons": [
-                "plants-and-animals-in-microhabitats"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 7,
-              "title": {
-                "en": "Protecting microhabitats",
-                "vi": "Bảo vệ những nơi sống nhỏ"
-              },
-              "oak_lessons": [
-                "protecting-microhabitats"
               ],
               "statutory": true
             }

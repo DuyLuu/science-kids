@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng C · Bảng tranh</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+/* Motion style E: chép nguyên từ helmet các màn Discoverer (design/play-ui/project/Discoverer-Learn.dc.html). */
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+
+/* Trang trình bày (ngoài khung máy). */
+* { box-sizing: border-box; }
+body { margin: 0; background: #E2D4B4; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18; }
+.doc { padding: 36px 44px 72px; }
+.doc > h1 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 36px; line-height: 1.05; margin: 0 0 8px; }
+.doc > h2 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 24px; margin: 48px 0 4px; }
+.doc > p, .notes { max-width: 980px; font-size: 15px; line-height: 1.55; color: #4E4336; margin: 6px 0; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px 28px; max-width: 1280px; margin-top: 18px; }
+.notes section { background: #FBF6EA; border-radius: 6px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 14px 18px; }
+.notes h3 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; margin: 0 0 6px; color: #1E1B18; }
+.notes ul { margin: 0; padding-left: 18px; } .notes li { margin: 3px 0; }
+.row { display: flex; flex-wrap: wrap; gap: 40px 36px; align-items: flex-start; margin-top: 22px; }
+figure { margin: 0; width: 390px; display: flex; flex-direction: column; gap: 12px; }
+figcaption { font-size: 13px; line-height: 1.5; color: #4E4336; }
+figcaption b { display: block; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 17px; color: #1E1B18; margin-bottom: 2px; }
+figcaption .need { display: inline-block; margin-top: 4px; padding: 1px 7px; border-radius: 3px; background: #A93A27; color: #FBF6EA; font-weight: 700; font-size: 12px; }
+figcaption .ok { display: inline-block; margin-top: 4px; padding: 1px 7px; border-radius: 3px; background: #3F7A33; color: #FBF6EA; font-weight: 700; font-size: 12px; }
+
+/* Khung máy 390×844: không vẽ thanh trạng thái; lề trên 54 và lề dưới 30 là vùng an toàn của iPhone. */
+.phone { width: 390px; height: 844px; position: relative; overflow: hidden; background: #F0E6CF; border-radius: 30px; box-shadow: 0 10px 28px rgba(91, 59, 23, 0.35); }
+.tex { position: absolute; left: 0; top: 0; z-index: 0; pointer-events: none; }
+.scr { position: relative; z-index: 1; height: 844px; padding: 54px 20px 30px; display: flex; flex-direction: column; gap: 12px; }
+.grow { flex: 1; }
+button { font-family: inherit; color: inherit; }
+.ph { font-family: 'Phudu', sans-serif; }
+.ib { width: 56px; height: 56px; flex-shrink: 0; padding: 0; border: 0; background: transparent; cursor: pointer; display: block; }
+.ib.x72 { width: 72px; height: 72px; }
+.hdr { display: flex; align-items: center; gap: 12px; min-height: 56px; }
+.hdr .tt { flex: 1; display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.hdr .t { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 20px; line-height: 1.08; }
+.steps { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #4E4336; }
+.sq { width: 16px; height: 16px; border-radius: 2px; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.28); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.qnum { font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 17px; color: #4E4336; white-space: nowrap; }
+
+.paper { background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); }
+.stack { position: relative; }
+.stack > .under { position: absolute; inset: 0; border-radius: 12px; background: var(--u); transform: translate(5px, 7px) rotate(var(--t, 1.4deg)); box-shadow: 0 2px 3px rgba(91, 59, 23, 0.25); }
+.mount { position: relative; background: #FBF6EA; border-radius: 12px; padding: 6px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); }
+.pic { display: block; width: 100%; object-fit: cover; border-radius: 8px; background: #E6D9BC; }
+.tagw { filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32)); display: inline-block; }
+.tag { display: inline-flex; align-items: center; height: 32px; padding: 0 13px; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; letter-spacing: 0.4px; text-transform: uppercase; background: var(--bg, #FBF6EA); color: var(--fg, #1E1B18); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px); white-space: nowrap; }
+.tag.s { height: 24px; font-size: 13px; padding: 0 9px; letter-spacing: 0.3px; }
+.name { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); font-size: 14px; font-weight: 700; white-space: nowrap; }
+.name i { width: 8px; height: 8px; border-radius: 50%; display: block; flex-shrink: 0; }
+.seal { position: absolute; width: 28px; height: 28px; border-radius: 3px; background: #A93A27; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; z-index: 2; }
+.seal.ok { background: #3F7A33; }
+.cap { display: flex; align-items: center; gap: 10px; }
+.cap p { flex: 1; margin: 0; font-size: 18px; font-weight: 600; line-height: 1.38; }
+.bubble { background: #FBF6EA; border-radius: 16px 16px 16px 4px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 10px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+.msg { display: flex; align-items: flex-end; gap: 8px; }
+.msg img.m { width: 52px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.3)); }
+.msg .bubble { flex: 1; }
+
+/* Ô hình chọn được */
+.tile { position: relative; border: 0; border-radius: 10px; background: #FBF6EA; padding: 5px; cursor: pointer; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; flex-direction: column; align-items: stretch; gap: 5px; text-align: center; }
+.tile .pic { flex: 1; min-height: 0; border-radius: 7px; width: 100%; }
+.tile .nm { font-size: 15px; font-weight: 700; line-height: 1.2; padding: 0 4px 3px; }
+.tile.sel { box-shadow: 5px 6px 0 0 #E2A52A, 0 3px 6px rgba(91, 59, 23, 0.25); }
+.tile.right { box-shadow: 5px 6px 0 0 #3F7A33, 0 3px 6px rgba(91, 59, 23, 0.25); }
+.tile.used { background: #E6D9BC; box-shadow: inset 0 2px 3px rgba(91, 59, 23, 0.25); }
+.tile .seal { top: -8px; right: -7px; }
+/* Sai: góc bong (mẩu giấy gấp góc), không dấu X, không rung */
+.tile.wrong { clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%); box-shadow: none; filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.22)); }
+.tile.wrong .pic { filter: saturate(0.55); opacity: 0.8; }
+.flapw { position: absolute; top: 0; right: 0; width: 30px; height: 30px; z-index: 2; filter: drop-shadow(-1px 2px 1.5px rgba(91, 59, 23, 0.35)); pointer-events: none; }
+.flapw span { position: absolute; inset: 0; background: #E2D4B4; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.wtag { position: absolute; z-index: 2; height: 24px; padding: 0 9px; display: flex; align-items: center; border-radius: 3px; background: #E2D4B4; color: #1E1B18; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 13px; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.25); white-space: nowrap; }
+
+/* Nút hai lớp */
+.btn2 { position: relative; display: block; width: 100%; height: 64px; border: 0; padding: 0; background: transparent; cursor: pointer; flex-shrink: 0; }
+.btn2::before { content: ''; position: absolute; left: 0; right: 0; top: 8px; bottom: 0; border-radius: 10px; background: #6E2216; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3); }
+.btn2 .face { position: absolute; left: 0; right: 0; top: 0; bottom: 7px; border-radius: 10px; background: #A93A27; color: #FBF6EA; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 23px; letter-spacing: 0.4px; }
+.btn2[disabled] { cursor: default; }
+.btn2[disabled]::before { background: #C9B993; }
+.btn2[disabled] .face { background: #E2D4B4; color: #4E4336; }
+.btn2.x72 { height: 76px; }
+.bar { display: flex; align-items: center; gap: 12px; }
+
+/* Tấm giấy kết quả trượt lên */
+.sheetw { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.28)); }
+.sheet { background: #FBF6EA; padding: 26px 20px 30px; clip-path: polygon(0 8px, 6% 2px, 12% 7px, 19% 0, 27% 6px, 35% 1px, 43% 8px, 52% 2px, 60% 7px, 68% 0, 77% 6px, 85% 1px, 93% 7px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 12px; }
+.sheet .top { display: flex; align-items: center; gap: 12px; }
+.stamp { width: 62px; height: 62px; border-radius: 4px; background: #3F7A33; color: #FBF6EA; display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 17px; transform: rotate(-8deg); box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); flex-shrink: 0; }
+.xp { margin-left: auto; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 4px; }
+.slip { position: relative; background: #FBF6EA; padding: 10px 40px 10px 14px; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%); }
+.slipw { position: relative; filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.25)); }
+.slipw .flap { position: absolute; top: 0; right: 0; width: 22px; height: 22px; background: #E2D4B4; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+
+/* Chế độ chụp: ?shot=<id> chỉ hiện một khung máy ở góc trên trái, không bo, không bóng. */
+body.shot { background: #F0E6CF; }
+body.shot .doc { padding: 0; }
+body.shot .doc > *:not(.row), body.shot figcaption { display: none !important; }
+body.shot .row { margin: 0; display: block; }
+body.shot figure { display: none; }
+body.shot figure.on { display: block; }
+body.shot .phone { border-radius: 0; box-shadow: none; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+  <defs>
+    <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+      <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+    </filter>
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+  </defs>
+</svg>
+<div class="doc">
+<h1>C · Bảng tranh: thấy hết, chạm để nghe</h1>
+<p><a href="index.html" style="color:#A93A27;font-weight:700">← Về trang so sánh ba hướng</a></p>
+<p><b>Ý chính.</b> Màn hình là một bảng tranh lớn, không có chữ trên tranh. Chạm tranh thì nghe tên, tên hiện chốc lát. Câu và ví dụ nằm trên tờ giấy trượt lên ở đáy; khay Chơi cũng cố định ở đáy, ngay dưới ngón cái.</p>
+<p>Nội dung và ảnh thật: <code>content/discoverer/da-va-dat/02-nhin-ky-cac-loai-da.md</code> (Học, Chơi, Quiz q2–q6, Khởi động w2); biểu đồ cột lấy câu q4 bài <code>14-nuoc-tham-qua-dat-nao-nhanh-hon</code>; thứ tự và quiz Explorer lấy bài <code>explorer/goi-ten-va-nhom-dong-vat/04-ca-va-luong-cu</code>. Ảnh lấy từ cache <code>content/.images</code> theo file chọn ảnh, thu nhỏ vào <code>img/</code> (CC BY 2.0 James St. John, Old Photo Profile, François Nguyen; CC0; hình tự vẽ Science Kids). Chế độ chữ: Tiếng Việt. Khung 390×844 chừa vùng an toàn trên 54, dưới 30, không vẽ thanh trạng thái. Mỗi khung chụp riêng được bằng <code>?shot=&lt;id&gt;</code>.</p>
+<p>Hướng phụ: chỉ dựng ba màn đại diện (Học, Chơi, Quiz).</p><div class="row"><figure id="c-learn"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Về chủ đề" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><g transform="translate(24 0) scale(-1 1)"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#1E1B18"></path></g></g></svg></button><div class="tt"><span class="t">Nhìn kỹ các loại đá</span><span class="steps" role="img" aria-label="Bước 2 trên 4: Học"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span class="sq" style="background:#E2D4B4"></span><span style="margin-left:4px">Học</span></span></div></div>
+<div class="e-lay" style="--d:100ms;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-right:5px">
+  <button class="tile e-press" style="height:166px;padding:5px" aria-label="Nhìn kỹ" aria-pressed="false"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/look.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.2)"></span><span style="position:absolute;left:10px;bottom:10px"><span class="tagw" style=""><span class="tag s" style="--bg:#3B6E6A;--fg:#FBF6EA">Nhìn kỹ</span></span></span><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></button><button class="tile e-press" style="height:166px;padding:5px" aria-label="Hạt" aria-pressed="false"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/granite.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span><span style="position:absolute;left:10px;bottom:10px"><span class="tagw" style=""><span class="tag s" style="--bg:#E2A52A;--fg:#1E1B18">Hạt</span></span></span><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></button>
+  <button class="tile e-press sel" style="height:166px;padding:5px" aria-label="Lỗ" aria-pressed="true"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/pumice.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.25)"></span><span style="position:absolute;left:10px;bottom:10px"><span class="tagw" style=""><span class="tag s" style="--bg:#A93A27;--fg:#FBF6EA">Lỗ</span></span></span><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></button><button class="tile e-press" style="height:166px;padding:5px" aria-label="Lớp" aria-pressed="false"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/sandstone.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span><span style="position:absolute;left:10px;bottom:10px"><span class="tagw" style=""><span class="tag s" style="--bg:#2E4A6E;--fg:#FBF6EA">Lớp</span></span></span></button>
+</div>
+<div class="sheetw e-rise" style="position:relative;--d:200ms;margin:4px -20px 0;filter:drop-shadow(0 -2px 3px rgba(91,59,23,.22))"><div class="sheet" style="padding:22px 20px 14px;gap:10px">
+  <div class="cap"><p style="font-size:17px">Có loại đá có lỗ nhỏ li ti. Những hòn đá này từng là dung nham nóng.</p><button class="ib e-press" aria-label="Nghe câu này"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+  <div style="display:flex;justify-content:space-around"><button class="e-press" aria-label="đá bọt" style="border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;width:96px"><span style="width:62px;height:62px;border-radius:50%;display:block;overflow:hidden;box-shadow:0 2px 3px rgba(91,59,23,.3)"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;width:100%;height:100%;border-radius:50%"><img src="img/pumice.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.25)"></span></span><span style="font-size:13px;font-weight:700;line-height:1.2;text-align:center">đá bọt</span></button><button class="e-press" aria-label="đá ba-dan" style="border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;width:96px"><span style="width:62px;height:62px;border-radius:50%;display:block;overflow:hidden;box-shadow:0 2px 3px rgba(91,59,23,.3)"><img class="pic" src="img/basalt.jpg" alt="" style="width:100%;height:100%;border-radius:50%"></span><span style="font-size:13px;font-weight:700;line-height:1.2;text-align:center">đá ba-dan</span></button><button class="e-press" aria-label="lỗ do bọt khí" style="border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;width:96px"><span style="width:62px;height:62px;border-radius:50%;display:block;background:url(img/basalt.jpg) no-repeat;background-size:380%;background-position:74% 56%;box-shadow:0 2px 3px rgba(91,59,23,.3)"></span><span style="font-size:13px;font-weight:700;line-height:1.2;text-align:center">lỗ do bọt khí</span></button></div>
+</div></div>
+<div class="grow"></div>
+<button class="btn2 e-press e-lay" disabled><span class="face">Chơi<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg></span></button>
+</div></div><figcaption><b>C · Học · đã xem 3/4, đang mở “Lỗ”</b>
+Cả bốn nhóm là bốn tranh 165×156 thấy cùng lúc, nhãn chỉ một chữ. Chạm tranh: đọc câu, tờ giấy dưới trượt lên với câu và ví dụ hình tròn. Từ mới hiện thành tranh thứ năm sau khi xem đủ.
+<br><span class="need">Ví dụ có hình: cần schema</span></figcaption></figure><figure id="c-play"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Quay lại phần Học" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><g transform="translate(24 0) scale(-1 1)"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#1E1B18"></path></g></g></svg></button><div class="tt"><span class="t">Tìm ba hòn đá trông khác nhau</span><span class="steps" role="img" aria-label="Bước 3 trên 4: Chơi"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span style="margin-left:4px">Chơi</span></span></div></div>
+<div class="msg e-lay" style="--d:80ms"><img class="m" src="img/mascot-think.svg" alt="Bạn đồng hành giấy cắt đang nghĩ"><div class="bubble">Thứ đó không phải đá. Nó chỉ trông giống đá thôi.</div><button class="ib e-press" aria-label="Nghe lại lời nhắn"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+<div class="e-lay" style="--d:140ms;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 11px;padding-right:5px">
+  <button class="tile e-press" style="height:110px" aria-label="Đá hoa cương xám"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/granite.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span></button><button class="tile e-press sel" style="height:110px" aria-label="Miếng bọt biển"><img class="pic" src="img/sponge.jpg" alt="" style=""><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="name e-pop" style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);z-index:3;height:32px;font-size:14px;padding:0 8px 0 10px">Miếng bọt biển<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></svg></span></button><button class="tile e-press sel" style="height:110px" aria-label="Đá phiến"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/slate.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18)"></span><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></button>
+  <button class="tile e-press" style="height:110px" aria-label="Khúc gỗ"><img class="pic" src="img/log.jpg" alt="" style=""></button><button class="tile e-press" style="height:110px" aria-label="Đá bọt"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/pumice.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.25)"></span></button><button class="tile e-press" style="height:110px" aria-label="Đá hoa cương hồng"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/pink-granite.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span></button>
+  <button class="tile e-press" style="height:110px" aria-label="Cục đường phèn"><img class="pic" src="img/rock-sugar.jpg" alt="" style=""></button><button class="tile e-press" style="height:110px" aria-label="Đá ba-dan"><img class="pic" src="img/basalt.jpg" alt="" style=""></button><button class="tile e-press" style="height:110px" aria-label="Sa thạch"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/sandstone.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span></button>
+</div>
+</div><div class="sheetw e-rise" style="--d:260ms"><div class="sheet" style="padding:22px 20px 30px;gap:10px">
+<div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center"><span style="height:36px;padding:0 9px;border-radius:3px;background:#E2D4B4;color:#4E4336;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;box-shadow:inset 0 1px 2px rgba(91,59,23,.25)"><i style="width:9px;height:9px;border-radius:50%;background:#E2A52A;display:block"></i>Hạt lấp lánh</span><span style="height:36px;padding:0 9px;border-radius:3px;background:#E2D4B4;color:#4E4336;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;box-shadow:inset 0 1px 2px rgba(91,59,23,.25)"><i style="width:9px;height:9px;border-radius:50%;background:#A93A27;display:block"></i>Có lỗ nhỏ</span><span style="height:36px;padding:0 9px 0 7px;border-radius:3px;background:#3F7A33;color:#FBF6EA;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;box-shadow:0 2px 3px rgba(91,59,23,.28)"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg>Có từng lớp</span>
+<span class="slipw" style="display:inline-block"><span class="slip" style="display:flex;align-items:center;height:36px;padding:0 30px 0 10px;background:#FBF6EA;font-size:13px;font-weight:700;box-shadow:none">Không phải đá</span><span class="flap" style="width:16px;height:16px"></span></span></div>
+<div style="display:flex;align-items:center;gap:12px">
+ <div style="flex:1;height:84px;border-radius:42px;background:#3B6E6A;box-shadow:0 3px 4px rgba(91,59,23,.3);display:flex;align-items:center;justify-content:space-around;padding:0 10px" aria-label="Khay: 2 trên 3 chỗ">
+  <button class="ib e-press" aria-label="Bỏ đá phiến ra" style="width:64px;height:64px;border-radius:50%;background:#FBF6EA;padding:4px;box-shadow:0 3px 4px rgba(30,27,24,.35)"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;width:100%;height:100%;border-radius:50%"><img src="img/slate.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18)"></span></button><button class="ib e-press" aria-label="Bỏ miếng bọt biển ra" style="width:64px;height:64px;border-radius:50%;background:#FBF6EA;padding:4px;box-shadow:0 3px 4px rgba(30,27,24,.35)"><img class="pic" src="img/sponge.jpg" alt="" style="width:100%;height:100%;border-radius:50%"></button>
+  <span style="width:58px;height:58px;border-radius:50%;background:#E6D9BC;box-shadow:inset 0 3px 4px rgba(91,59,23,.35);display:block"></span>
+ </div>
+ <button class="e-press" disabled aria-label="Làm quiz (chưa mở)" style="width:72px;height:84px;border:0;border-radius:10px;background:#E2D4B4;box-shadow:0 5px 0 #C9B993;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg></button>
+</div>
+</div></div></div><figcaption><b>C · Chơi (build_tray) · vừa chạm “miếng bọt biển”</b>
+Kệ chiếm giữa màn (110×110), không chữ; chạm là đọc tên, tên hiện 2 giây rồi tắt (giảm chuyển động: hiện tới lần chạm sau). Khay và ba nhóm nằm trên tấm giấy cố định ở đáy, nút sang Quiz là mũi tên bên khay.
+<br><span class="ok">Không cần schema</span></figcaption></figure><figure id="c-quiz-multi"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Thoát bài" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><path d="M6 6l12 12M18 6L6 18" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path></g></svg></button><div style="flex:1;display:flex;gap:6px;align-items:center;justify-content:center" role="img" aria-label="Câu 3 trên 6"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span class="sq" style="background:#E2D4B4"></span><span class="sq" style="background:#E2D4B4"></span></div><span class="qnum">Câu 3/6</span></div>
+<div class="e-lay" style="--d:80ms;display:flex;flex-direction:column;gap:6px">
+  <span class="tagw" style=""><span class="tag s" style="--bg:#A93A27;--fg:#FBF6EA">Chọn tất cả</span></span>
+  <div class="cap"><p style="font-size:19px;font-weight:700">Những hòn đá nào có lỗ nhỏ li ti?</p><button class="ib e-press" aria-label="Nghe câu hỏi"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+</div>
+<div class="e-lay" style="--d:140ms;display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;padding-right:5px">
+  <button class="tile e-press" style="height:214px" aria-label="đá hoa cương"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/granite.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span></button><button class="tile e-press sel" style="height:214px" aria-label="đá bọt"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/pumice.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.25)"></span><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></button>
+  <button class="tile e-press sel" style="height:214px" aria-label="đá ba-dan"><img class="pic" src="img/basalt.jpg" alt="" style=""><span class="seal e-stamp" style="top:-8px;right:-7px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="name e-pop" style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);z-index:3;height:32px;font-size:14px;padding:0 8px 0 10px">đá ba-dan<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></svg></span></button><button class="tile e-press" style="height:214px" aria-label="sa thạch"><span class="pic" role="img" aria-label="" style="overflow:hidden;position:relative;"><img src="img/sandstone.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.3)"></span></button>
+</div>
+<div class="grow"></div>
+<button class="btn2 e-press e-lay"><span class="face">Kiểm tra</span></button>
+</div></div><figcaption><b>C · Quiz multi_choice (q3) · đã chọn hai</b>
+Bốn tranh 165×200 không chữ; tên chỉ hiện khi chạm (kèm giọng). Ít chữ nhất trong ba hướng, nhưng em không đọc được tên lựa chọn nếu tắt tiếng.
+<br><span class="ok">Không cần schema</span></figcaption></figure></div><div class="notes">
+<section><h3>Ưu</h3><ul>
+<li>Ít chữ nhất: kệ và lựa chọn quiz không có chữ nào. Mọi lựa chọn là tranh lớn, thấy cùng lúc.</li>
+<li>Khay và nút đi tiếp nằm gần ngón cái; kệ 110×110 không chữ.</li></ul></section>
+<section><h3>Nhược</h3><ul>
+<li>Phụ thuộc âm thanh: tắt tiếng thì không biết tên lựa chọn, mất cơ hội luyện đọc tên đá (Discoverer đã đọc được). Tên chỉ hiện 2 giây.</li>
+<li>Học: tranh nhóm 165×156 nhỏ hơn A; tờ giấy đáy chứa ba câu dài thì chật.</li>
+<li>Tấm đáy cố định mất khoảng 200pt mỗi màn Chơi.</li></ul></section>
+<section><h3>iPad</h3><ul>
+<li>Khung 600: lưới 2×2 ô 260; ngang thì xếp 4×1 ô 250, tờ giấy và khay rộng bằng khung.</li></ul></section>
+<section><h3>ios-dev · content</h3><ul>
+<li>ios-dev: lưới tranh, nhãn tên chớp (giảm chuyển động: hiện đến lần chạm sau), tấm đáy cố định.</li>
+<li>content: ví dụ có hình cần schema như A; còn lại không đổi.</li></ul></section>
+</div>
+</div>
+<script>
+// ?shot=<id>: chỉ hiện một khung máy để chụp PNG 390×844.
+(function () {
+  var id = new URLSearchParams(location.search).get('shot');
+  if (!id) return;
+  document.body.classList.add('shot');
+  var f = document.getElementById(id);
+  if (f) f.classList.add('on');
+})();
+</script>
+</body>
+</html>

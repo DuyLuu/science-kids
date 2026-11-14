@@ -49,3 +49,24 @@ Phụ huynh hoặc bé đổi được ngôn ngữ học của hồ sơ đang d�
 - Trên simulator: đổi sang Tiếng Việt, file hồ sơ ghi `vi_first`/`vi`; đổi sang English, ghi `en_first`/`en`; màn bài học chỉ còn chữ EN. Ảnh: `settings-language.png`, `settings-lesson-english.png`. Đã tắt simulator.
 
 **Chưa kiểm:** bố cục trên iPad (trang dùng `PaperFrame` nên khung 600 canh giữa như các trang khác); VoiceOver trên máy thật.
+
+## Duy 13/11 · "Cả hai": tự đọc tiếng Anh, nút loa VI để nghe tiếng Việt
+
+**Quyết định của Duy:** ở chế độ Cả hai, app chỉ tự đọc tiếng Anh. Cạnh mỗi chỗ có giọng đọc có thêm một nút loa VI nhỏ; bé cần thì bấm để nghe bản tiếng Việt. Phụ đề VI vẫn hiện như cũ. Chế độ English và Tiếng Việt không đổi so với lượt trước.
+
+**ios-dev đã làm:**
+- `SpeechPlayer.firstLanguageOnly = "en"` khi hồ sơ ở chế độ Cả hai (`AppModel.applyVoiceSplit`, chạy khi mở app, khi tạo hồ sơ và khi đổi trong Cài đặt). Từ đó mọi lần phát tự động (`autoplay`) và mọi lần phát do chạm (`play`) chỉ phát clip EN: câu hỏi khi mở màn, tên hình khi chạm, lời linh vật, gợi ý và giải thích của Explorer. Nếu chuỗi chỉ có clip VI thì vẫn phát VI, để nút không bao giờ im.
+- `SecondVoiceButton` là nút loa có chữ "VI", nhãn VoiceOver `lesson.listen.vi` ("Nghe tiếng Việt"), vùng chạm theo nhóm tuổi (56 / 72pt). Nút chỉ hiện ở chế độ Cả hai và khi chuỗi có clip VI.
+- Nút VI có ở các chỗ sau:
+  - mọi `ListenButton`, nằm ngay dưới nút loa chính để câu bên cạnh giữ đủ bề rộng: câu hỏi, gợi ý, giải thích, mục tiêu và lệnh ở màn Học, câu của ô Học, lời nhắn ở Chơi, thẻ thưởng, màn Chủ đề, tab Thẻ, tab Từ vựng;
+  - ô từ mới ở màn Học;
+  - bong bóng lời linh vật Explorer, ở góc dưới bên phải.
+- Chưa thêm nút VI cho tên từng lựa chọn khi bé chạm: chạm vẫn đọc tên EN, còn phụ đề VI của câu vẫn hiện.
+
+**Test:**
+- `AudioKitTests.bothModePlaysEnglishThenVietnameseOnRequest`.
+- `AppModelTests.settingsLanguageIsSavedAndSurvivesARelaunch`: thêm kiểm tách giọng ở chế độ Cả hai.
+- Unit test (bỏ UI test) chạy 1 lần trên iPhone 16 Pro: TEST EXECUTE SUCCEEDED, mọi bộ qua. Đã tắt simulator.
+- Ảnh chụp với gói thật có clip VI: `bilingual-explorer-quiz.png`, `bilingual-discoverer-warmup.png`, `bilingual-discoverer-result.png`. Hai ảnh Discoverer là câu Khởi động; màn này dùng chung khung câu hỏi và tờ kết quả với Quiz.
+
+**Còn lại:** chưa nghe thử bằng loa thật; chưa kiểm trên iPad.

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A · Để sau beta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;900&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap">
+<style>
+/* Motion style E: chép nguyên từ helmet các màn Discoverer (design/play-ui/project/Discoverer-Learn.dc.html). */
+@keyframes eLay { from { opacity: 0; translate: 0 -12px; scale: 1.03; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes eRise { from { translate: 0 105%; } to { translate: 0 0; } }
+@keyframes eStamp { 0% { opacity: 0; scale: 1.7; } 55% { opacity: 1; scale: 0.9; } 78% { scale: 1.06; } 100% { opacity: 1; scale: 1; } }
+@keyframes ePop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes eFall { 0% { opacity: 0; translate: 0 -70px; rotate: -50deg; } 15% { opacity: 1; } 100% { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@keyframes eSlide { from { opacity: 0; translate: 28px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes eGrow { from { scale: 1 0; } to { scale: 1 1; } }
+@keyframes eSway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes eNudge { 0%, 100% { translate: 0 0; } 20% { translate: 0 -5px; } 40% { translate: 0 0; } }
+.e-lay { animation: eLay 460ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-rise { animation: eRise 440ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-stamp { animation: eStamp 520ms cubic-bezier(.3, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-pop { animation: ePop 380ms cubic-bezier(.3, .7, .3, 1.2) backwards; animation-delay: var(--d, 0ms); }
+.e-fall { animation: eFall 950ms cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-slide { animation: eSlide 360ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+.e-grow { animation: eGrow 620ms cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: var(--d, 0ms); transform-origin: 50% 100%; }
+.e-sway { animation: eSway 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.e-nudge { animation: eNudge 2.8s ease-in-out 1.2s infinite; }
+.e-svg { transform-box: fill-box; transform-origin: 50% 50%; }
+.e-press { transition: translate 120ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.e-press:active { translate: 0 3px; }
+.e-flip { transition: rotate 560ms cubic-bezier(.3, .7, .3, 1), translate 120ms ease; transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce) {
+  .e-lay, .e-rise, .e-stamp, .e-pop, .e-fall, .e-slide, .e-grow, .e-sway, .e-nudge { animation: none !important; }
+  .e-press, .e-flip { transition: none !important; }
+}
+
+/* Trang trình bày (ngoài khung máy). */
+* { box-sizing: border-box; }
+body { margin: 0; background: #E2D4B4; font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif; color: #1E1B18; }
+.doc { padding: 36px 44px 72px; }
+.doc > h1 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 36px; line-height: 1.05; margin: 0 0 8px; }
+.doc > h2 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 24px; margin: 48px 0 4px; }
+.doc > p, .notes { max-width: 980px; font-size: 15px; line-height: 1.55; color: #4E4336; margin: 6px 0; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px 28px; max-width: 1280px; margin-top: 18px; }
+.notes section { background: #FBF6EA; border-radius: 6px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 14px 18px; }
+.notes h3 { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; margin: 0 0 6px; color: #1E1B18; }
+.notes ul { margin: 0; padding-left: 18px; } .notes li { margin: 3px 0; }
+.row { display: flex; flex-wrap: wrap; gap: 40px 36px; align-items: flex-start; margin-top: 22px; }
+figure { margin: 0; width: 390px; display: flex; flex-direction: column; gap: 12px; }
+figcaption { font-size: 13px; line-height: 1.5; color: #4E4336; }
+figcaption b { display: block; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 17px; color: #1E1B18; margin-bottom: 2px; }
+figcaption .need { display: inline-block; margin-top: 4px; padding: 1px 7px; border-radius: 3px; background: #A93A27; color: #FBF6EA; font-weight: 700; font-size: 12px; }
+figcaption .ok { display: inline-block; margin-top: 4px; padding: 1px 7px; border-radius: 3px; background: #3F7A33; color: #FBF6EA; font-weight: 700; font-size: 12px; }
+
+/* Khung máy 390×844: không vẽ thanh trạng thái; lề trên 54 và lề dưới 30 là vùng an toàn của iPhone. */
+.phone { width: 390px; height: 844px; position: relative; overflow: hidden; background: #F0E6CF; border-radius: 30px; box-shadow: 0 10px 28px rgba(91, 59, 23, 0.35); }
+.tex { position: absolute; left: 0; top: 0; z-index: 0; pointer-events: none; }
+.scr { position: relative; z-index: 1; height: 844px; padding: 54px 20px 30px; display: flex; flex-direction: column; gap: 12px; }
+.grow { flex: 1; }
+button { font-family: inherit; color: inherit; }
+.ph { font-family: 'Phudu', sans-serif; }
+.ib { width: 56px; height: 56px; flex-shrink: 0; padding: 0; border: 0; background: transparent; cursor: pointer; display: block; }
+.ib.x72 { width: 72px; height: 72px; }
+.hdr { display: flex; align-items: center; gap: 12px; min-height: 56px; }
+.hdr .tt { flex: 1; display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.hdr .t { font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 20px; line-height: 1.08; }
+.steps { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #4E4336; }
+.sq { width: 16px; height: 16px; border-radius: 2px; box-shadow: 0 1px 2px rgba(91, 59, 23, 0.28); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.qnum { font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 17px; color: #4E4336; white-space: nowrap; }
+
+.paper { background: #FBF6EA; border-radius: 10px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); }
+.stack { position: relative; }
+.stack > .under { position: absolute; inset: 0; border-radius: 12px; background: var(--u); transform: translate(5px, 7px) rotate(var(--t, 1.4deg)); box-shadow: 0 2px 3px rgba(91, 59, 23, 0.25); }
+.mount { position: relative; background: #FBF6EA; border-radius: 12px; padding: 6px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); }
+.pic { display: block; width: 100%; object-fit: cover; border-radius: 8px; background: #E6D9BC; }
+.tagw { filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.32)); display: inline-block; }
+.tag { display: inline-flex; align-items: center; height: 32px; padding: 0 13px; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 18px; letter-spacing: 0.4px; text-transform: uppercase; background: var(--bg, #FBF6EA); color: var(--fg, #1E1B18); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px); white-space: nowrap; }
+.tag.s { height: 24px; font-size: 13px; padding: 0 9px; letter-spacing: 0.3px; }
+.name { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); font-size: 14px; font-weight: 700; white-space: nowrap; }
+.name i { width: 8px; height: 8px; border-radius: 50%; display: block; flex-shrink: 0; }
+.seal { position: absolute; width: 28px; height: 28px; border-radius: 3px; background: #A93A27; transform: rotate(-8deg); box-shadow: 0 2px 2px rgba(91, 59, 23, 0.3); display: flex; align-items: center; justify-content: center; z-index: 2; }
+.seal.ok { background: #3F7A33; }
+.cap { display: flex; align-items: center; gap: 10px; }
+.cap p { flex: 1; margin: 0; font-size: 18px; font-weight: 600; line-height: 1.38; }
+.bubble { background: #FBF6EA; border-radius: 16px 16px 16px 4px; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); padding: 10px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+.msg { display: flex; align-items: flex-end; gap: 8px; }
+.msg img.m { width: 52px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 2px 2px rgba(91, 59, 23, 0.3)); }
+.msg .bubble { flex: 1; }
+
+/* Ô hình chọn được */
+.tile { position: relative; border: 0; border-radius: 10px; background: #FBF6EA; padding: 5px; cursor: pointer; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); display: flex; flex-direction: column; align-items: stretch; gap: 5px; text-align: center; }
+.tile .pic { flex: 1; min-height: 0; border-radius: 7px; width: 100%; }
+.tile .nm { font-size: 15px; font-weight: 700; line-height: 1.2; padding: 0 4px 3px; }
+.tile.sel { box-shadow: 5px 6px 0 0 #E2A52A, 0 3px 6px rgba(91, 59, 23, 0.25); }
+.tile.right { box-shadow: 5px 6px 0 0 #3F7A33, 0 3px 6px rgba(91, 59, 23, 0.25); }
+.tile.used { background: #E6D9BC; box-shadow: inset 0 2px 3px rgba(91, 59, 23, 0.25); }
+.tile .seal { top: -8px; right: -7px; }
+/* Sai: góc bong (mẩu giấy gấp góc), không dấu X, không rung */
+.tile.wrong { clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%); box-shadow: none; filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.22)); }
+.tile.wrong .pic { filter: saturate(0.55); opacity: 0.8; }
+.flapw { position: absolute; top: 0; right: 0; width: 30px; height: 30px; z-index: 2; filter: drop-shadow(-1px 2px 1.5px rgba(91, 59, 23, 0.35)); pointer-events: none; }
+.flapw span { position: absolute; inset: 0; background: #E2D4B4; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.wtag { position: absolute; z-index: 2; height: 24px; padding: 0 9px; display: flex; align-items: center; border-radius: 3px; background: #E2D4B4; color: #1E1B18; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 13px; box-shadow: 0 2px 2px rgba(91, 59, 23, 0.25); white-space: nowrap; }
+
+/* Nút hai lớp */
+.btn2 { position: relative; display: block; width: 100%; height: 64px; border: 0; padding: 0; background: transparent; cursor: pointer; flex-shrink: 0; }
+.btn2::before { content: ''; position: absolute; left: 0; right: 0; top: 8px; bottom: 0; border-radius: 10px; background: #6E2216; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.3); }
+.btn2 .face { position: absolute; left: 0; right: 0; top: 0; bottom: 7px; border-radius: 10px; background: #A93A27; color: #FBF6EA; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 23px; letter-spacing: 0.4px; }
+.btn2[disabled] { cursor: default; }
+.btn2[disabled]::before { background: #C9B993; }
+.btn2[disabled] .face { background: #E2D4B4; color: #4E4336; }
+.btn2.x72 { height: 76px; }
+.bar { display: flex; align-items: center; gap: 12px; }
+
+/* Tấm giấy kết quả trượt lên */
+.sheetw { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; filter: drop-shadow(0 -3px 4px rgba(91, 59, 23, 0.28)); }
+.sheet { background: #FBF6EA; padding: 26px 20px 30px; clip-path: polygon(0 8px, 6% 2px, 12% 7px, 19% 0, 27% 6px, 35% 1px, 43% 8px, 52% 2px, 60% 7px, 68% 0, 77% 6px, 85% 1px, 93% 7px, 100% 2px, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 12px; }
+.sheet .top { display: flex; align-items: center; gap: 12px; }
+.stamp { width: 62px; height: 62px; border-radius: 4px; background: #3F7A33; color: #FBF6EA; display: flex; align-items: center; justify-content: center; font-family: 'Phudu', sans-serif; font-weight: 900; font-size: 17px; transform: rotate(-8deg); box-shadow: 0 2px 3px rgba(91, 59, 23, 0.3); flex-shrink: 0; }
+.xp { margin-left: auto; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 4px; }
+.slip { position: relative; background: #FBF6EA; padding: 10px 40px 10px 14px; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%); }
+.slipw { position: relative; filter: drop-shadow(0 3px 3px rgba(91, 59, 23, 0.25)); }
+.slipw .flap { position: absolute; top: 0; right: 0; width: 22px; height: 22px; background: #E2D4B4; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+
+/* Chế độ chụp: ?shot=<id> chỉ hiện một khung máy ở góc trên trái, không bo, không bóng. */
+body.shot { background: #F0E6CF; }
+body.shot .doc { padding: 0; }
+body.shot .doc > *:not(.row), body.shot figcaption { display: none !important; }
+body.shot .row { margin: 0; display: block; }
+body.shot figure { display: none; }
+body.shot figure.on { display: block; }
+body.shot .phone { border-radius: 0; box-shadow: none; }
+</style>
+<style>
+.tile.ans { background: #F0C873; box-shadow: 0 3px 4px rgba(91, 59, 23, 0.22); }
+.tile.ans .nm { color: #1E1B18; }
+.atag { position: absolute; z-index: 2; top: 8px; left: 8px; height: 24px; padding: 0 9px; display: flex; align-items: center; border-radius: 3px; background: #1E1B18; color: #FBF6EA; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 13px; transform: rotate(-4deg); }
+.ipad { width: 834px; height: 1194px; position: relative; overflow: hidden; background: #F0E6CF; border-radius: 26px; box-shadow: 0 10px 28px rgba(91, 59, 23, 0.35); }
+.ipad .f600 { position: relative; z-index: 1; width: 600px; height: 1194px; margin: 0 auto; padding: 56px 28px 40px; display: flex; flex-direction: column; gap: 16px; }
+.ipad .f600::before { content: ''; position: absolute; inset: 0; background: rgba(251, 246, 234, 0.35); z-index: -1; }
+figure.wide { width: 834px; }
+.vi { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
+.vib { width: 56px; height: 34px; border: 0; border-radius: 3px; background: #FBF6EA; box-shadow: 0 2px 3px rgba(91, 59, 23, 0.28); display: flex; align-items: center; justify-content: center; gap: 2px; color: #2E4A6E; font-family: 'Phudu', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; }
+.sub { display: block; font-size: 15px; font-weight: 400; color: #4E4336; line-height: 1.4; margin-top: 3px; }
+.bubbtn { flex: 1; border: 0; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+.confetti { position: absolute; z-index: 0; width: 12px; height: 8px; border-radius: 1px; }
+body.shot figure.wide.on { display: block; }
+body.shot .ipad { border-radius: 0; box-shadow: none; }
+</style></head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+  <defs>
+    <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+      <feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"></feDropShadow>
+    </filter>
+    <filter id="fiberE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.2  0 0 0 0.9 -0.35"></feColorMatrix></filter>
+    <filter id="diepE" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="21"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 11 -7.2"></feColorMatrix></filter>
+  </defs>
+</svg>
+<div class="doc">
+<h1>A · Để sau beta</h1>
+<p><a href="A-final.html" style="color:#A93A27;font-weight:700">← Về bản duyệt cuối</a></p>
+<p>Ba màn này cần schema mới hoặc renderer mới; SK-043 để sau beta. Giữ lại để Duy biết hướng A sẽ mở rộng ra sao:</p>
+<ul style="max-width:980px;font-size:15px;line-height:1.55;color:#4E4336">
+<li><code>sort_into_groups</code>: phân nhóm, dùng lại nhóm và vật của build_tray;</li>
+<li><code>hotspot_image</code>: chạm điểm trên ảnh, cần công cụ đặt điểm;</li>
+<li><code>picture_bar_chart</code>: app tự vẽ biểu đồ, cần nối cột với lựa chọn.</li>
+</ul><div class="row"><figure id="a-sort"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Quay lại phần Học" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><g transform="translate(24 0) scale(-1 1)"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#1E1B18"></path></g></g></svg></button><div class="tt"><span class="t">Xếp đá vào đúng rổ</span><span class="steps" role="img" aria-label="Bước 3 trên 4: Chơi"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span style="margin-left:4px">Chơi</span></span></div></div>
+<div class="msg e-lay" style="--d:80ms"><img class="m" src="img/mascot.svg" alt="Bạn đồng hành giấy cắt"><div class="bubble">Hòn đá này vào rổ nào?</div><button class="ib e-press" aria-label="Nghe lại"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+<div class="e-lay" style="--d:140ms;position:relative">
+  <div class="stack"><div class="under" style="--u:#E2D4B4;--t:-1.2deg"></div><div class="mount" style="padding:6px;"><span class="pic" role="img" aria-label="Hòn đá phiến xám sẫm, mép có nhiều tấm mỏng" style="overflow:hidden;position:relative;height:286px;"><img src="img/slate.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18)"></span></div></div>
+  <span class="name" style="position:absolute;left:14px;bottom:14px;font-size:15px;height:32px">Đá phiến</span>
+  <span class="tagw" style="position:absolute;right:12px;top:12px"><span class="tag s" style="--bg:#1E1B18;--fg:#FBF6EA">3/6</span></span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px">
+  <button class="e-press e-lay" aria-label="Rổ Hạt lấp lánh, có 1 hòn" style="--d:200ms;position:relative;border:0;padding:0;background:transparent;cursor:pointer;height:220px;display:flex;flex-direction:column;align-items:center"><span style="position:absolute;left:4px;right:4px;top:44px;bottom:0;border-radius:12px 12px 18px 18px;background:#E2A52A;filter:brightness(.82);box-shadow:0 3px 4px rgba(91,59,23,.3)"></span><span style="position:relative;margin-top:62px;display:flex;flex-direction:column;align-items:center;padding-top:14px;min-height:70px"><img src="img/granite.jpg" alt="Đá hoa cương xám" class="e-pop" style="width:54px;height:54px;border-radius:50%;object-fit:cover;border:0;box-shadow:0 2px 3px rgba(30,27,24,.35);margin-top:-14px;background:#FBF6EA;padding:3px"></span><span style="position:absolute;left:0;right:0;bottom:0;height:92px;border-radius:8px 8px 18px 18px;background:#E2A52A;box-shadow:0 -2px 3px rgba(30,27,24,.25);display:flex;align-items:center;justify-content:center;padding:0 8px;text-align:center;color:#1E1B18;font-family:Phudu,sans-serif;font-weight:900;font-size:19px;line-height:1.05;text-transform:uppercase">Hạt lấp lánh</span></button>
+  <button class="e-press e-lay" aria-label="Rổ Có lỗ nhỏ, có 1 hòn" style="--d:240ms;position:relative;border:0;padding:0;background:transparent;cursor:pointer;height:220px;display:flex;flex-direction:column;align-items:center"><span style="position:absolute;left:4px;right:4px;top:44px;bottom:0;border-radius:12px 12px 18px 18px;background:#A93A27;filter:brightness(.82);box-shadow:0 3px 4px rgba(91,59,23,.3)"></span><span style="position:relative;margin-top:62px;display:flex;flex-direction:column;align-items:center;padding-top:14px;min-height:70px"><img src="img/basalt.jpg" alt="Đá ba-dan" class="e-pop" style="width:54px;height:54px;border-radius:50%;object-fit:cover;border:0;box-shadow:0 2px 3px rgba(30,27,24,.35);margin-top:-14px;background:#FBF6EA;padding:3px"></span><span style="position:absolute;left:0;right:0;bottom:0;height:92px;border-radius:8px 8px 18px 18px;background:#A93A27;box-shadow:0 -2px 3px rgba(30,27,24,.25);display:flex;align-items:center;justify-content:center;padding:0 8px;text-align:center;color:#FBF6EA;font-family:Phudu,sans-serif;font-weight:900;font-size:19px;line-height:1.05;text-transform:uppercase">Có lỗ nhỏ</span></button>
+  <button class="e-press e-lay" aria-label="Rổ Có từng lớp, có 0 hòn" style="--d:280ms;position:relative;border:0;padding:0;background:transparent;cursor:pointer;height:220px;display:flex;flex-direction:column;align-items:center"><span style="position:absolute;left:4px;right:4px;top:44px;bottom:0;border-radius:12px 12px 18px 18px;background:#2E4A6E;filter:brightness(.82);box-shadow:0 3px 4px rgba(91,59,23,.3)"></span><span style="position:relative;margin-top:62px;display:flex;flex-direction:column;align-items:center;padding-top:14px;min-height:70px"></span><span style="position:absolute;left:0;right:0;bottom:0;height:92px;border-radius:8px 8px 18px 18px;background:#2E4A6E;box-shadow:0 -2px 3px rgba(30,27,24,.25);display:flex;align-items:center;justify-content:center;padding:0 8px;text-align:center;color:#FBF6EA;font-family:Phudu,sans-serif;font-weight:900;font-size:19px;line-height:1.05;text-transform:uppercase">Có từng lớp</span></button>
+</div>
+<div class="grow"></div>
+<button class="btn2 e-press e-lay" disabled style="--d:320ms"><span class="face">Làm quiz<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg></span></button>
+</div></div><figcaption><b>A · Trò mới “Phân nhóm” (sort_into_groups) · hòn 3/6</b>
+Một vật một lượt, ảnh to; chạm rổ (hoặc kéo) để thả. Đúng thì vật rơi vào rổ; sai thì vật bật về, góc giấy bong, bạn đồng hành nói lý do (lấy từ <code>messages</code>).
+Dùng lại nguyên nhóm và vật của <code>build_tray</code> bài 2, nên biên tập gần như không phải viết thêm.
+<br><span class="need">Cần schema + engine mới</span></figcaption></figure><figure id="a-hotspot"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Quay lại phần Học" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><g transform="translate(24 0) scale(-1 1)"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#1E1B18"></path></g></g></svg></button><div class="tt"><span class="t">Soi đá ba-dan</span><span class="steps" role="img" aria-label="Bước 3 trên 4: Chơi"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span style="margin-left:4px">Chơi</span></span></div></div>
+<div class="msg e-lay" style="--d:80ms"><img class="m" src="img/mascot.svg" alt="Bạn đồng hành giấy cắt"><div class="bubble">Chạm vào ba cái lỗ trên hòn đá.</div><button class="ib e-press" aria-label="Nghe lại"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+<div class="e-lay" style="--d:140ms;position:relative;margin-top:4px">
+  <div class="stack"><div class="under" style="--u:#A93A27;--t:-1.2deg"></div>
+  <div class="mount" style="position:relative"><button aria-label="Hòn đá ba-dan; chạm vào chỗ có lỗ" style="display:block;border:0;padding:0;background:none;width:338px;height:320px;cursor:pointer">
+    <img class="pic" src="img/basalt.jpg" alt="" style="height:320px"></button><span class="e-stamp" style="position:absolute;left:54px;top:47px;width:44px;height:44px;border-radius:50%;background:#F0C873;opacity:.55"></span><span class="seal e-stamp" style="left:84px;top:39px;width:24px;height:24px"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="e-stamp" style="position:absolute;left:272px;top:165px;width:44px;height:44px;border-radius:50%;background:#F0C873;opacity:.55"></span><span class="seal e-stamp" style="left:302px;top:157px;width:24px;height:24px"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span></div></div>
+  <div aria-hidden="true" class="e-pop" style="--d:300ms;position:absolute;right:30px;bottom:-58px;width:172px;height:172px"><span style="position:absolute;right:4px;bottom:6px;width:20px;height:64px;border-radius:8px;background:#8A5E3B;transform:rotate(-45deg);transform-origin:50% 0;box-shadow:0 3px 3px rgba(91,59,23,.35)"></span><span style="position:absolute;left:0;top:0;width:130px;height:130px;border-radius:50%;background:#FBF6EA;box-shadow:0 4px 6px rgba(91,59,23,.38)"></span><span style="position:absolute;left:7px;top:7px;width:116px;height:116px;border-radius:50%;background:url(img/basalt.jpg) no-repeat;background-size:1233px auto;background-position:-866px -413px"></span></div>
+</div>
+<div class="e-lay" style="--d:240ms;display:flex;align-items:center;gap:8px;margin-top:20px" role="img" aria-label="Đã tìm 2 trên 3 lỗ">
+  <span class="sq" style="width:30px;height:30px;background:#A93A27"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="width:30px;height:30px;background:#A93A27"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="width:30px;height:30px;background:#E2D4B4;box-shadow:inset 0 2px 3px rgba(91,59,23,.3)"></span>
+  <span class="qnum" style="margin-left:6px">2/3</span>
+</div>
+<div class="grow"></div>
+<button class="btn2 e-press e-lay" disabled style="--d:320ms"><span class="face">Làm quiz<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5h10.2l-4.1-4.1 2.1-2.1L20 12l-7.8 7.7-2.1-2.1 4.1-4.1H4z" fill="#4E4336"></path></svg></span></button>
+</div></div><figcaption><b>A · Trò mới “Chạm điểm trên ảnh” (hotspot_image) · đã tìm 2/3</b>
+Ảnh thật chiếm gần nửa màn; chạm đúng chỗ thì đóng triện và kính lúp phóng to chỗ vừa tìm (nối với ý “nhìn kỹ” của bài). Chạm chỗ khác: không phạt, bạn đồng hành nhắc “Lỗ tối và tròn hơn”.
+<br><span class="need">Cần schema + công cụ đặt điểm</span></figcaption></figure><figure id="a-quiz-chart"><div class="phone"><svg class="tex" width="390" height="844" aria-hidden="true"><rect width="390" height="844" filter="url(#fiberE)" opacity="0.25"></rect><rect width="390" height="844" filter="url(#diepE)" opacity="0.8"></rect></svg><div class="scr">
+<div class="hdr e-lay"><button class="ib e-press" aria-label="Thoát bài" ><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#FBF6EA"></circle></g><g transform="translate(14.200000000000001 13.05) scale(1.15)"><path d="M6 6l12 12M18 6L6 18" stroke="#1E1B18" stroke-width="2.8" stroke-linecap="round"></path></g></svg></button><div style="flex:1;display:flex;gap:6px;align-items:center;justify-content:center" role="img" aria-label="Câu 4 trên 6"><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#3F7A33"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5l2.4-2.4 3.9 3.9 8.3-8.3 2.4 2.4L9.8 18.8z" fill="#FBF6EA"></path></svg></span><span class="sq" style="background:#E2A52A"></span><span class="sq" style="background:#E2D4B4"></span><span class="sq" style="background:#E2D4B4"></span></div><span class="qnum">Câu 4/6</span></div>
+<div class="e-lay" style="--d:60ms;display:flex;gap:10px;align-items:center">
+  <img src="img/results.jpg" alt="Một cốc hứng nhiều nước, cốc kia ít nước" style="width:64px;height:64px;border-radius:7px;object-fit:cover;box-shadow:0 2px 3px rgba(91,59,23,.25)">
+  <p style="margin:0;font-size:15px;line-height:1.4;color:#4E4336;flex:1">Mai hứng nước chảy qua ba loại đất trong một phút.</p>
+</div>
+<div class="cap e-lay" style="--d:100ms"><p style="font-size:21px;font-weight:700">Cột nào là đất cát?</p><button class="ib e-press" aria-label="Nghe câu hỏi"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><g filter="url(#paperE)"><circle cx="28.0" cy="27.0" r="25.0" fill="#F0E6CF"></circle></g><g transform="translate(16.0 15.0) scale(1.0)"><path d="M3 9.5h4.2L13 4.8v14.4l-5.8-4.7H3z" fill="#1E1B18"></path><path d="M16.2 8.6a4.6 4.6 0 0 1 0 6.8M18.8 6a8.4 8.4 0 0 1 0 12" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"></path></g></svg></button></div>
+<div class="e-lay paper" style="--d:160ms;padding:12px 12px 10px;position:relative">
+  <span style="font-size:13px;font-weight:700;color:#4E4336">Lượng nước hứng được</span>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end;margin-top:6px;position:relative">
+    <button class="e-press" aria-label="cột trái, 4 giọt" aria-pressed="false" style="position:relative;border:0;border-radius:10px;cursor:pointer;padding:10px 6px 8px;background-color:transparent;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;min-height:316px;gap:0"><span style="font-size:15px;font-weight:700;margin-top:10px">cột trái</span><span style="display:flex;flex-direction:column-reverse;align-items:center"><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:200ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:235ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:270ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:305ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg></span></button><button class="e-press" aria-label="cột giữa, 7 giọt" aria-pressed="true" style="position:relative;border:0;border-radius:10px;background:#F0C873;cursor:pointer;padding:10px 6px 8px;background-color:#F0C873;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;min-height:316px;gap:0"><span style="font-size:15px;font-weight:700;margin-top:10px">cột giữa</span><span style="display:flex;flex-direction:column-reverse;align-items:center"><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:260ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:295ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:330ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:365ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:400ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:435ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:470ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg></span></button><button class="e-press" aria-label="cột phải, 2 giọt" aria-pressed="false" style="position:relative;border:0;border-radius:10px;cursor:pointer;padding:10px 6px 8px;background-color:transparent;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;min-height:316px;gap:0"><span style="font-size:15px;font-weight:700;margin-top:10px">cột phải</span><span style="display:flex;flex-direction:column-reverse;align-items:center"><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:320ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg><svg width="30" height="30" viewBox="0 0 28 30" aria-hidden="true" class="e-pop" style="--d:355ms;margin-top:-3px"><g filter="url(#paperE)"><path d="M14 2 C 14 2, 4 13, 4 18.5 A 10 10 0 0 0 24 18.5 C 24 13, 14 2, 14 2 Z" fill="#2E4A6E"></path></g></svg></span></button>
+    <span aria-hidden="true" style="position:absolute;left:-4px;right:-4px;bottom:34px;height:5px;border-radius:2px;background:#8A5E3B"></span>
+  </div>
+</div>
+<div class="grow"></div>
+<button class="btn2 e-press e-lay"><span class="face">Kiểm tra</span></button>
+</div></div><figcaption><b>A · Biểu đồ cột (picture_bar_chart) · đã chọn cột giữa</b>
+Biểu đồ vẽ bằng giọt nước giấy cắt (đếm được), ba cột cùng màu; chính cột là nút chọn, nền vàng nhạt khi chọn. Bỏ ba hình biểu đồ trùng nhau của q4 bài 14.
+Số giọt 4·7·2 là minh hoạ (nội dung ghi [CẦN KIỂM] tỉ lệ).
+<br><span class="need">Cần app vẽ picture_bar_chart + nối cột với lựa chọn</span></figcaption></figure></div>
+</div>
+<script>
+// ?shot=<id>: chỉ hiện một khung máy để chụp PNG 390×844.
+(function () {
+  var id = new URLSearchParams(location.search).get('shot');
+  if (!id) return;
+  document.body.classList.add('shot');
+  var f = document.getElementById(id);
+  if (f) f.classList.add('on');
+})();
+</script>
+</body>
+</html>

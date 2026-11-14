@@ -19,6 +19,8 @@ export const ChoiceOption = z.strictObject({
   label: Spoken,
   image: Image.optional(),
   correct: z.boolean(),
+  /** SK-044: only on a wrong option (refs.mjs). */
+  feedback: Spoken.optional(),
 });
 
 /** Common fields. Never used alone: always through QuizItem. */
@@ -84,12 +86,18 @@ export const TrueFalse = QuizBase.extend({
   statement: Spoken.optional(),
   speaker: Key.optional(),
   labels: TrueFalseLabels.optional(),
+  /** SK-044: said when the child taps true on an answer: false item (refs.mjs). */
+  feedback_true: Spoken.optional(),
+  /** SK-044: said when the child taps false on an answer: true item (refs.mjs). */
+  feedback_false: Spoken.optional(),
 });
 
 export const BankWord = z.strictObject({
   key: Key,
   label: Spoken,
   image: Image.optional(),
+  /** SK-044: only on a word that is not in answers (refs.mjs). */
+  feedback: Spoken.optional(),
 });
 
 export const FillBlankBank = QuizBase.extend({

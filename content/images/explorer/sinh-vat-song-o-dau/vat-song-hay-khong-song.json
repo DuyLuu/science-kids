@@ -1,0 +1,375 @@
+{
+  "note": "SK-046. Designer (agent) chọn 14/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Gọi tên và nhóm động vật trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng lại sai hướng khung có mục riêng với crop riêng.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_goldfish": {
+      "same_as": "q2",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w1.w1_frog": {
+      "same_as": "w2.w2_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "w2": {
+      "same_as": "w2",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "learn.explore.explore_people": {
+      "same_as": "learn.explore.explore_people",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "learn.explore.explore_animals": {
+      "same_as": "learn.explore.explore_animals",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "learn.explore.explore_plants": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/36561624@N00/493869598",
+      "file_url": "https://live.staticflickr.com/229/493869598_73929c7c9c_b.jpg",
+      "title": "Squash Seedling",
+      "author": "Daniel Morrison",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "38d2efcc-d274-430c-b55b-ee7e328abf2b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): Cây non mới nhú trên đất vườn. Crop cho khung learn."
+    },
+    "learn.explore.explore_things": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.12,
+        "width": 0.3,
+        "height": 0.52
+      },
+      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_hen": {
+      "same_as": "q4.q4_hen",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_dinosaur": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "de92c4a7-6181-4844-bebf-aa362d2ed49c",
+      "source_url": "https://www.flickr.com/photos/50192230@N07/32715292503",
+      "file_url": "https://live.staticflickr.com/2866/32715292503_72b3e3f2e8_b.jpg",
+      "title": "Spielzeugdino",
+      "author": "SebastianBartoschek",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Chép mục gốc `q6` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "tray.tray_seedlings": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/36561624@N00/493869598",
+      "file_url": "https://live.staticflickr.com/229/493869598_73929c7c9c_b.jpg",
+      "title": "Squash Seedling",
+      "author": "Daniel Morrison",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "38d2efcc-d274-430c-b55b-ee7e328abf2b",
+      "crop": {
+        "left": 0.105,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Cây non mới nhú trên đất vườn. Crop cho khung sq."
+    },
+    "tray.tray_car": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toy_car_(AM_1996.165.94).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Toy_car_%28AM_1996.165.94%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "toy car",
+      "author": "Fun Ho! Toy Company",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1279,
+        "top": 0.0,
+        "width": 0.6641,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Ô tô đồ chơi màu đỏ trên nền trơn. Crop cho khung sq."
+    },
+    "tray.tray_frog": {
+      "same_as": "tray.tray_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_can": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Watering_Can_Garden_Gardening_Water_Edited_2020_(49905865953).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Watering_Can_Garden_Gardening_Water_Edited_2020_%2849905865953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Watering Can Garden Gardening Water Edited 2020 (49905865953)",
+      "author": "Tool Dude8mm",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0864,
+        "top": 0.0,
+        "width": 0.6672,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Bình tưới nhựa xanh lá đặt trên đất. Crop cho khung sq."
+    },
+    "tray.tray_lotus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lotus_flower_(978659).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lotus_flower_%28978659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus flower (978659)",
+      "author": "Hong Zhang ( jennyzhh2008 )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.16,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha `w1_lotus`, crop riêng. Ô vuông, cả bông sen."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_ball": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 0.75,
+        "height": 0.45
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của be-mat-trai-dat/dat-va-nuoc-tren-trai-dat `w1_ball`, crop riêng. Thẻ 5:2, quả bóng nằm trọn."
+    },
+    "q1.q1_cat": {
+      "same_as": "q1.q1_cat",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1.q1_sandals": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:My_Flip_Flops_-_6160956610.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/My_Flip_Flops_-_6160956610.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "My Flip Flops - 6160956610",
+      "author": "Robert Stinnett",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1733,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Đôi dép tông đặt trên mặt bàn. Crop cho khung c3."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.12,
+        "width": 0.3,
+        "height": 0.52
+      },
+      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_ball": {
+      "same_as": "q1.q1_ball"
+    },
+    "q3.q3_sandals": {
+      "same_as": "q1.q1_sandals"
+    },
+    "q3.q3_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.755
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của be-mat-trai-dat/dat-va-nuoc-tren-trai-dat `q4`, crop riêng. Ảnh gốc dọc: crop ngang nhất còn giữ gần trọn cốc nước (lệch khung 5:2 dưới 2,2 lần)."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_dinosaur": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "de92c4a7-6181-4844-bebf-aa362d2ed49c",
+      "source_url": "https://www.flickr.com/photos/50192230@N07/32715292503",
+      "file_url": "https://live.staticflickr.com/2866/32715292503_72b3e3f2e8_b.jpg",
+      "title": "Spielzeugdino",
+      "author": "SebastianBartoschek",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Chép mục gốc `q6` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "q4.q4_frog": {
+      "same_as": "q1.q1_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q4.q4_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_car": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toy_car_(AM_1996.165.94).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Toy_car_%28AM_1996.165.94%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "toy car",
+      "author": "Fun Ho! Toy Company",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1988,
+        "width": 1,
+        "height": 0.6023
+      },
+      "note": "SK-046 (designer 14/11): Ô tô đồ chơi màu đỏ trên nền trơn. Crop cho khung c3."
+    },
+    "q5.q5_seedlings": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/36561624@N00/493869598",
+      "file_url": "https://live.staticflickr.com/229/493869598_73929c7c9c_b.jpg",
+      "title": "Squash Seedling",
+      "author": "Daniel Morrison",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "38d2efcc-d274-430c-b55b-ee7e328abf2b",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1633,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-046 (designer 14/11): Cây non mới nhú trên đất vườn. Crop cho khung c3."
+    },
+    "q5.q5_ball": {
+      "same_as": "q1.q1_ball"
+    },
+    "q6": {
+      "same_as": "explore_people",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q6.q6_balloon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loneliness_(16590654240).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Loneliness_%2816590654240%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Loneliness (16590654240)",
+      "author": "Jevgenijs Slihto",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.4,
+        "top": 0.24,
+        "width": 0.55,
+        "height": 0.306
+      },
+      "note": "SK-046 (designer 14/11): cùng ảnh của ho-hap/vi-sao-ta-phai-tho `w1_balloon`, crop riêng. Thẻ 5:2, quả bóng nằm trọn giữa trời xanh."
+    },
+    "q6.q6_car": {
+      "same_as": "q5.q5_car"
+    },
+    "q6.q6_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "vocab.living_thing": {
+      "same_as": "vocab.amphibian",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "vocab.non_living": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red Inflatable Ball",
+      "author": "Miscellaneous contributor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.12,
+        "width": 0.3,
+        "height": 0.52
+      },
+      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+    },
+    "vocab.air": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "vocab.grow": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/36561624@N00/493869598",
+      "file_url": "https://live.staticflickr.com/229/493869598_73929c7c9c_b.jpg",
+      "title": "Squash Seedling",
+      "author": "Daniel Morrison",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "38d2efcc-d274-430c-b55b-ee7e328abf2b",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1067,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-046 (designer 14/11): Cây non mới nhú trên đất vườn. Crop cho khung vocab."
+    },
+    "reward.bamboo_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bamboos_bambusa_vulgaris_sao_paulo_botanical_garden_brazil.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Bamboos_bambusa_vulgaris_sao_paulo_botanical_garden_brazil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bamboos bambusa vulgaris sao paulo botanical garden brazil",
+      "author": "Yuri Ribeiro Sucupira",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1981,
+        "top": 0.0,
+        "width": 0.5637,
+        "height": 1.0
+      },
+      "note": "SK-046 (designer 14/11): Bụi tre gai (Bambusa vulgaris) trong công viên. Crop cho khung sq."
+    }
+  }
+}

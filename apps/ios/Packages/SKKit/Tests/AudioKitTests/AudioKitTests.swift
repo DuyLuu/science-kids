@@ -79,6 +79,32 @@ struct FakeLoader: ClipLoader {
         }
     }
 
+    /// SK-042 (Duy 13/11), "Cả hai": only the English clip plays (taps, autoplay); the VI clip
+    /// plays on its own button. Without `firstLanguageOnly`, both play as before.
+    @Test func bothModePlaysEnglishThenVietnameseOnRequest() async {
+        let backend = FakeBackend()
+        let player = SpeechPlayer(loader: FakeLoader(clips: ["en1", "vi1"]), backend: backend, isVoiceOverRunning: { false })
+        player.firstLanguageOnly = "en"
+        let both = Self.utterance("q1", "en1", "vi1")
+        #expect(player.firstVoice(of: both).clips.map(\.hash) == ["en1"])
+        #expect(player.secondVoice(of: both)?.clips.map(\.hash) == ["vi1"])
+        player.autoplay(both)
+        await Self.settle { backend.played == ["en1"] }
+        backend.endClip()
+        await Self.settle { player.speaking == nil }
+        #expect(backend.played == ["en1"])
+        player.playSecond(both)
+        await Self.settle { backend.played == ["en1", "vi1"] }
+        #expect(backend.played == ["en1", "vi1"])
+        // No VI clip: no second button. Only a VI clip: the main button still plays it.
+        #expect(player.secondVoice(of: Self.utterance("w", "en2")) == nil)
+        #expect(player.firstVoice(of: Self.utterance("v", "vi2")).clips.map(\.hash) == ["vi2"])
+        #expect(player.secondVoice(of: Self.utterance("v", "vi2")) == nil)
+        player.firstLanguageOnly = nil
+        #expect(player.firstVoice(of: both) == both)
+        #expect(player.secondVoice(of: both) == nil)
+    }
+
     /// `both`: the EN clip, then the VI clip, then the utterance is finished.
     @Test func playsClipsInOrder() async {
         let backend = FakeBackend()

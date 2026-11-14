@@ -50,8 +50,8 @@ image.alt.vi: Hàng rào tre trước khu vườn
 > Theo hình designer chọn (SK-041, designer 12/11): hàng rào tre trước vườn thực vật; brief và `alt` sửa theo, mọi chỗ dùng lại sửa `alt` theo.
 hint.en: Look for legs and eyes.
 hint.vi: Em tìm thứ có chân và có mắt nhé.
-explanation_correct.en: Yes! A duck is an animal.
-explanation_correct.vi: Đúng rồi! Con vịt là một con vật.
+explanation_correct.en: Yes! A duck walks, swims and eats.
+explanation_correct.vi: Đúng rồi! Vịt biết đi, biết bơi và tự kiếm ăn.
 explanation_wrong.en: The answer is the duck. It can walk.
 explanation_wrong.vi: Đáp án là con vịt. Vịt tự đi được.
 > Hình câu hỏi là hình gốc của chủ đề (vườn trung tính), dùng lại ở nhiều câu bài sau (bảng Hình dùng chung ở `_topic.md`).
@@ -59,6 +59,8 @@ explanation_wrong.vi: Đáp án là con vịt. Vịt tự đi được.
 
 #### option w1_lotus
 correct: false
+feedback.en: A lotus is a flower, not an animal.
+feedback.vi: Hoa sen là một bông hoa, không phải con vật.
 label.en: lotus flower
 label.vi: bông hoa sen
 image.brief: [ảnh] Một bông sen hồng nở trên mặt ao, lá sen xanh xung quanh, chụp ngang; bông hoa chiếm phần lớn khung; không có người, không có chữ. Từ khoá tìm ảnh (EN): pink lotus flower pond
@@ -76,6 +78,8 @@ image.alt.vi: Con vịt đứng trên bãi cỏ
 
 #### option w1_hat
 correct: false
+feedback.en: A hat cannot walk or eat.
+feedback.vi: Chiếc nón không tự đi, không tự ăn được.
 label.en: conical hat
 label.vi: chiếc nón lá
 image.brief: [ảnh] Một chiếc nón lá nhìn từ trên xuống, nền sáng; không có người, không có chữ, không có hình vẽ trên nón. Từ khoá tìm ảnh (EN): Vietnamese conical hat non la
@@ -102,6 +106,8 @@ explanation_correct.en: A buffalo has no wings. It walks.
 explanation_correct.vi: Trâu không có cánh. Trâu đi bằng bốn chân.
 explanation_wrong.en: This is false. A buffalo cannot fly.
 explanation_wrong.vi: Câu này sai. Trâu không biết bay.
+feedback_true.en: A buffalo has no wings to fly.
+feedback_true.vi: Con trâu không có cánh để bay.
 > Câu dễ có chủ ý, để bé làm quen hai biểu tượng gật đầu, lắc đầu ngay ở bài đầu. Đáp án Sai, nên giải thích khi đúng không mở đầu bằng "Yes!". `alt` dùng bản "A water buffalo" · "Con trâu" như các chỗ dùng lại khác của hình này.
 > Không có `labels`: Explorer hiện hai biểu tượng, không có chữ (luật Explorer số 5).
 
@@ -336,10 +342,12 @@ image.alt.vi: Con mèo trên bậc thềm
 answer: true
 hint.en: Look where this cat is resting.
 hint.vi: Em nhìn xem con mèo đang nằm ở đâu nhé.
-explanation_correct.en: Yes! Many cats live with people.
-explanation_correct.vi: Đúng rồi! Nhiều chú mèo sống cùng nhà với người.
+explanation_correct.en: Yes! People feed and care for pet cats.
+explanation_correct.vi: Đúng rồi! Người cho mèo ăn và chăm sóc mèo.
 explanation_wrong.en: This is true. A cat can be a pet.
 explanation_wrong.vi: Câu này đúng. Mèo có thể là thú cưng.
+feedback_false.en: Many cats live in homes with people.
+feedback_false.vi: Nhiều chú mèo sống trong nhà cùng người.
 > Câu nhớ lại ý chính một. Gợi ý chỉ vào điều thấy trong hình (bậc thềm nhà).
 
 ### q2
@@ -363,6 +371,8 @@ explanation_wrong.vi: Đáp án là con voọc. Voọc sống tự do trong rừ
 
 #### option q2_cat
 correct: false
+feedback.en: A cat often lives in our home.
+feedback.vi: Mèo thường sống trong nhà cùng người.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -371,6 +381,8 @@ image.alt.vi: Con mèo trên bậc thềm
 
 #### option q2_hen
 correct: false
+feedback.en: A hen lives in our yard.
+feedback.vi: Gà mái sống ở sân, ở chuồng nhà mình.
 label.en: hen
 label.vi: con gà mái
 image.brief: Dùng lại hình `w3_hen` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): brown hen standing farmyard side view
@@ -402,6 +414,8 @@ explanation_correct.en: We feed our pets every day.
 explanation_correct.vi: Mình cho thú cưng ăn mỗi ngày.
 explanation_wrong.en: This is false. People feed their pets.
 explanation_wrong.vi: Câu này sai. Người cho thú cưng ăn.
+feedback_true.en: People put food in a pet's bowl.
+feedback_true.vi: Người đổ thức ăn vào bát cho thú cưng.
 > Câu khẳng định, đáp án Sai (không viết câu phủ định, luật Explorer số 5). Nối ví dụ bốn của ô "Pets" và ý chính hai (động vật hoang dã thì tự tìm thức ăn).
 
 ### q4
@@ -436,6 +450,8 @@ image.alt.vi: Cá nhỏ dưới nước
 
 #### option q4_grass
 correct: false
+feedback.en: Grass is food for a buffalo.
+feedback.vi: Cỏ là thức ăn của con trâu.
 label.en: grass
 label.vi: bó cỏ
 image.brief: [ảnh] Một khay cỏ tươi xanh mọc dày trong hộp kính, chụp chéo từ trên xuống; không có con vật, không có người, không có chữ. Từ khoá tìm ảnh (EN): bundle fresh green grass
@@ -446,6 +462,8 @@ image.alt.vi: Cỏ tươi
 
 #### option q4_banana
 correct: false
+feedback.en: Bananas are fruit for people and monkeys.
+feedback.vi: Chuối là quả cho người và cho khỉ ăn.
 label.en: bananas
 label.vi: nải chuối
 image.brief: [ảnh] Một nải chuối chín vàng đặt trên nền gỗ, chụp chéo từ trên xuống; không có nhãn dán, không có người, không có chữ. Từ khoá tìm ảnh (EN): bunch ripe bananas wooden table
@@ -474,6 +492,8 @@ explanation_wrong.vi: Đáp án là con cò. Cò là động vật hoang dã.
 
 #### option q5_parakeet
 correct: false
+feedback.en: A pet parakeet gets food from people.
+feedback.vi: Vẹt nuôi được người cho ăn.
 label.en: parakeet
 label.vi: vẹt yến phụng
 image.brief: Dùng lại hình `tray_parakeet`. Từ khoá tìm ảnh (EN): budgerigar perch cage green
@@ -490,6 +510,8 @@ image.alt.vi: Con cò bay trên bãi cỏ
 
 #### option q5_dog
 correct: false
+feedback.en: A pet dog eats from its bowl.
+feedback.vi: Chó nuôi ăn trong bát người đổ cho.
 label.en: dog
 label.vi: con chó
 image.brief: Dùng lại hình `explore_pets`. Từ khoá tìm ảnh (EN): yellow dog lying porch Vietnam
@@ -527,6 +549,8 @@ image.alt.vi: Cá vàng trong bể
 
 #### option q6_croc
 correct: false
+feedback.en: A crocodile is wild and lives by rivers.
+feedback.vi: Cá sấu là động vật hoang dã, sống bên sông.
 label.en: crocodile
 label.vi: cá sấu
 image.brief: Dùng lại hình `q1_reptiles` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): Siamese crocodile basking riverbank side view
@@ -535,6 +559,8 @@ image.alt.vi: Con cá sấu trên bờ sông
 
 #### option q6_douc
 correct: false
+feedback.en: A douc lives free in the forest.
+feedback.vi: Voọc sống tự do trong rừng.
 label.en: douc
 label.vi: con voọc
 image.brief: Dùng lại hình `explore_wild`. Từ khoá tìm ảnh (EN): red-shanked douc langur tree

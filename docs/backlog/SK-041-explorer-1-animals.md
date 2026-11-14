@@ -296,3 +296,159 @@ Theo SK-033 ("Hợp đồng ảnh"), cách làm SK-038, SK-039, Quy ước hình
 - Ảnh nhỏ: vẹt 460×615, sư tử đá 512×601, voi khoảng 525 px ngang sau cắt; hơi mềm trên iPad.
 - Nghé bài 2 `q3`: còn thấy chân, bụng trâu mẹ phía sau; nếu Duy muốn nghé hoàn toàn một mình thì cần tìm tiếp.
 - Bài 1 `q4`: mèo ăn cả cỏ đôi khi; câu do biên tập chốt, chỉ ghi để tester xem.
+
+## dev 13/11 · bài mở rộng
+
+Duy 13/11 thêm 2 bài mở rộng (động vật không xương sống) vào cuối chủ đề Oak `naming-and-grouping-animals`; Oak không có lesson tương ứng. Trước khi sửa, `validate content` báo `syllabus_oak` cho hai bài này vì `oak_lessons` rỗng. Chưa commit.
+
+**Đã làm**
+- `packages/content-schema/schema/syllabus.schema.json`: `SyllabusLesson` thêm trường `extension` (boolean, mặc định false, chỉ ghi khi true), giống `sensitive`. Trường mới là tuỳ chọn nên `syllabus.json` cũ vẫn hợp lệ.
+- `packages/content-schema/scripts/lib/syllabus.mjs`, luật `syllabus_oak` mở rộng. Bài `extension: true`:
+  - chỉ nằm trong chủ đề Oak;
+  - có `oak_lessons` rỗng;
+  - có `statutory: false` (bài mở rộng không thuộc chương trình bắt buộc của Anh);
+  - đứng sau mọi bài Oak: bài Oak đứng sau bài mở rộng là lỗi, chỉ vào bài Oak đó;
+  - chủ đề Oak phải còn ít nhất 1 bài Oak; toàn bài mở rộng thì đó là chủ đề mới (`source.kind = new`).
+  - Bài Oak thiếu `oak_lessons` vẫn lỗi như cũ; thông báo giờ nhắc ghi `"extension": true` nếu là bài riêng.
+- `content/syllabus.json`: bài 7 *Insects and other many-legged animals* và bài 8 *Snails, octopuses and sea animals* có `"extension": true`.
+- Số bài trong test đổi theo danh mục: explorer 73 thành 75, tổng 384 thành 386. Sửa ở `packages/content-schema/test/syllabus.test.mjs` và `tools/content-cli/test/syllabus.test.ts`.
+- Thêm 8 ca test trong `syllabus.test.mjs`. Hợp lệ: một bài mở rộng; hai bài mở rộng, có `sensitive`. Lỗi: có `oak_lessons`, `statutory: true`, bài Oak đứng sau, nằm trong chủ đề mới, chủ đề Oak toàn bài mở rộng, `extension` không phải boolean.
+- README `packages/content-schema` (bảng `SyllabusLesson`, luật) và README content-cli (bảng mã `syllabus_oak`, dòng tổng 386 bài).
+- `tools/content-cli`: không cần đổi type. `src/types/content-schema.d.ts` chỉ khai báo mã lỗi, mã không đổi.
+
+**iOS (chỉ đọc, không sửa):** `Syllabus.LessonEntry` (`apps/ios/Packages/SKKit/Sources/ContentModel/Syllabus.swift`) tự viết `init(from:)` với `CodingKeys` number, title, statutory, sensitive, lesson_id. Container có khoá bỏ qua khoá lạ, nên `extension` không làm vỡ việc đọc `syllabus.json`. Gợi ý cho ios-dev, không bắt buộc: nếu muốn hiện nhãn "Mở rộng" ở danh sách bài thì thêm `extension` (`decodeIfPresent`, mặc định false).
+
+**Kiểm (13/11, chạy 1 lần):**
+- `packages/content-schema` `npm test`: 152/152 qua; `typecheck` và `validate` fixture đều OK.
+- `tools/content-cli` `npm test`: 376/376 qua (gồm cả test cảnh báo tỉ lệ ảnh của SK-043); `typecheck` OK.
+- `node tools/content-cli/src/cli.ts validate content`: 0 lỗi, 127 cảnh báo, exit 0. Syllabus 3 nhóm, 45 chủ đề, 386 bài, 48 bài có `lesson_id`. Cảnh báo là của nội dung: bài 7 và 8 còn dòng `[CẦN KIỂM]`, không có cảnh báo syllabus nào.
+
+**Tester kiểm:** xoá `"extension": true` của bài 7 rồi validate thì ra 1 lỗi `syllabus_oak` ở `.../lessons/6/oak_lessons`. Chuyển bài 7 lên trước bài 6 (đánh số lại) thì ra lỗi "bài Oak đứng sau bài mở rộng".
+
+## Rà chữ bài 7–8 (tester 13/11)
+
+Phạm vi: `content/explorer/goi-ten-va-nhom-dong-vat/07-con-trung-va-con-vat-nhieu-chan.md`, `08-oc-bach-tuoc-va-con-vat-bien.md` và `_topic.md` đã cập nhật; đọc đối chiếu sáu bài trước, `content/rules.json` (`explorer.authoring`), `content/TEMPLATE.md` (bảy luật Explorer), `content/syllabus.json`, `syllabus.md`, yêu cầu Duy 13/11 (chân khớp · thân mềm · da gai · thân lỗ · sứa để riêng). Không sửa file nội dung, không chạy lệnh nội dung, không dùng simulator. `validate` do dev chạy 13/11 (0 lỗi, 127 cảnh báo `[CẦN KIỂM]`), tester không chạy lại.
+
+Chạy lại năm script scratchpad của 12/11 (`check_struct.py`, `check_text.py`, `check_img.py`, `check_tf.py`, `check_hint.py` ở `/private/tmp/claude-501/-Users-buiduyluu-Documents-personal-science-kids/77c8c8c2-11a9-41ce-a20a-5e3cd0c8d4de/scratchpad/sk041/`), cộng ba đoạn đếm mới: số từ EN **theo câu** của bài 7–8, màu và `role` của mọi nhóm Chơi tám bài, vị trí đáp án `single_choice` tám bài.
+
+**Tổng kết: chặn 0 · nên sửa 6 · nhỏ 18.**
+
+### Đạt (đã kiểm bằng máy, không có lỗi)
+
+- Quiz sáu câu mỗi bài, DOK 1·1·1·2·2·2 (Explorer 3·3·0), câu một DOK 1, đúng một câu misconception ở q6; hai key mới `bugs_not_animals`, `starfish_is_fish` có thật trong `_topic.md`, mỗi key dùng một lần, không gắn ở Khởi động. Bài 7 ba format (`single_choice`, `true_false`, `order_sequence`), bài 8 hai format — đều ≥ `min_formats` 2. `single_choice` hai hoặc ba lựa chọn, `order_sequence` đúng ba thẻ. Khởi động ba câu mỗi bài, DOK 1, đủ `recall_from`, trỏ đúng bài trong chủ đề và bài được trỏ đã có `id`.
+- **Số từ EN ≤ 8 theo từng câu** ở mọi chuỗi trẻ nghe (`prompt`, `hint`, `explanation`, `sentence`, `examples`, `messages`, `fact`): đếm máy bài 7–8 không câu nào quá tám từ. Chuỗi `.en` không có dấu tiếng Việt; chuỗi `.vi` không có chữ số, ký hiệu; `messages.full` đúng chữ chung; không nhãn nhóm nào có dấu phẩy; `has_limited` nói lý do, không nhắc chạm.
+- **Không chỗ nào thiếu hình:** mọi lựa chọn, thẻ `order_sequence`, món kệ, câu Khởi động và Quiz đều đủ `image.brief` + `alt.en` + `alt.vi`. 258 chỗ "Dùng lại hình" cả chủ đề: mọi key có thật (gồm key của *Khủng long*, *Hô hấp*), không chỗ nào trỏ qua một hình dùng lại khác, từ khoá và `alt` chép đúng gốc (trừ dòng trâu đã ghi chủ ý từ 12/11).
+- **Bảng Hình dùng chung cho bài 7, 8 đúng hết** (`_topic.md:252-265` và đoạn thêm `:267-270`): đối chiếu máy từng chỗ dùng lại, không dòng nào sai, không chỗ dùng nào thiếu. Mười sáu ảnh mới (tám mỗi bài) khớp mục "Ảnh cần tìm" của hai bài.
+- `true_false`: chín câu (bài 7 năm, bài 8 bốn), **không câu nào phủ định**, không câu nào có `labels`, câu nào cũng có `image` cấp câu; đáp án Sai không có `explanation_correct` mở đầu "Yes!" · "Đúng rồi!"; mọi `explanation_wrong` đúng khuôn. Khớp đúng bảng Đúng/Sai `_topic.md:298-306`; tổng tám bài mười lăm Đúng · mười ba Sai như bảng ghi.
+- **Vị trí đáp án khớp bảng `_topic.md:322-323`** từng ô, gồm thứ tự thẻ `order_sequence` bài 7 (trong file: cuốn chiếu, kiến, nhện → đúng: kiến, nhện, cuốn chiếu; thẻ trong file không nằm sẵn đúng thứ tự).
+- Kệ Chơi khớp bảng `_topic.md:354-355`; cả hai bài ba chỗ, ba nhóm `required` + một nhóm `limit`; mọi món bẫy giống một nhóm bắt buộc (chim sẻ ~ con bay, thằn lằn ~ con bò; cá ngựa, cá heo ~ con biển). Ba ví dụ kiểm ở Ghi chú cho dev của mỗi bài cho ra đúng `balanced` · `has_limited` · `missing.*` khi tính tay theo `success_when`.
+- Từ vựng: năm từ mỗi bài, đúng ba từ `core`, `term_keys` khớp ba từ `core`. Màu: bốn màu khác nhau trong mỗi khối (xem N1 về màu nhóm `limit`).
+- `content/syllabus.json`: bài 7, 8 có `number`, `title` EN/VI khớp tên bài, `oak_lessons: []`, `statutory: false`, `extension: true`, `lesson_id` khớp đúng `id` ở frontmatter hai file. Không `id` trùng trong chủ đề.
+- **Đúng khoa học ở mức 5–7 tuổi** (đọc hết các dòng `[CẦN KIỂM]`): côn trùng trưởng thành sáu chân; nhện và bọ cạp tám chân, càng bọ cạp không tính là chân; cua, tôm mười chân, đôi trước của cua là càng; cuốn chiếu, rết nhiều đôi chân (không nói một nghìn, một trăm); vỏ cua nói là "vỏ cứng bên ngoài", không nói "bộ xương ngoài"; cá, chim, thú, ếch, rắn có xương sống; ốc, bạch tuộc, mực là thân mềm và "con mực", không "cá mực"; sao biển, nhím biển, hải sâm da gai, phần lớn sao biển năm cánh; bọt biển là động vật, bám một chỗ, lọc thức ăn; **sứa để một ô riêng, ghi đúng là ruột khoang trong ghi chú, không xếp vào thân mềm**; cá ngựa là cá, có xương sống; bạch tuộc đổi màu da; kiến vàng được nhà vườn dùng bắt sâu hại. Không chỗ nào sai.
+- An toàn, không gây sợ: không có ảnh rết, ảnh bọ cạp (chỉ có trong ví dụ chữ); nhện chụp vừa, không cận răng nanh, không nhện lông to; sứa trôi trong nước, không cảnh dạt bờ; ba lời dặn "đừng chạm" viết nhẹ, không doạ; không con vật chết (xem N2 về ảnh bộ xương), không người lộ mặt, không logo, biển, chữ.
+- Luật Explorer: đọc hết mười ba câu có lựa chọn của hai bài — không câu nào hỏi tên hay chữ (luật 1), mọi lựa chọn là một vật cụ thể (luật 2), mọi `brief` ghi "không có chữ" (luật 4), không câu nào có hai hình dễ lẫn (luật 7). Một câu, một kệ một loại hình: toàn ảnh chụp, trừ hai hình **câu hỏi** dùng lại hình vẽ sân nhà của *Hô hấp* (07 q5, 08 q5) đúng ngoại lệ ở Quy ước hình mục 1.
+- Nhãn `limit` "Has a backbone" · "Có xương sống" (không theo dạng "Not …"): **tester đồng ý giữ**. "Not without a backbone" là phủ định hai lần, khó nghe hơn; `prompt` và `messages.start` đã nói rõ việc cần làm, `messages.has_limited` nói đúng lý do. Nhưng phải đổi màu, xem N1.
+
+### Lỗi chặn (0)
+
+Không có chỗ nào sai kiến thức hay sai chữ trẻ nghe tới mức phải chặn `tts`. Sáu mục dưới nên sửa trước khi designer đi tìm mười sáu ảnh mới và trước khi chạy `tts`.
+
+### Nên sửa (6)
+
+**N1. Nhóm bẫy ở phần Chơi đổi màu: sáu bài trước `do_son`, bài 7 và 8 thành `nau_dat`.**
+- `07:286` và `08:267`: `tray_backbone` `color: nau_dat`, `role: limit`. Trong khi `do_son` lại rơi vào một nhóm **bắt buộc**: `07:271-275` `tray_eight` "Tám chân", `08:252-256` `tray_spiny` "Da có gai".
+- Đếm máy sáu bài trước: nhóm `limit` **luôn** là `do_son` (`01:259`, `02:251`, `03:245`, `04:257`, `05:244`, `06:263`). Bé Explorer chưa đọc được chữ trên chip nhóm; sau sáu bài, màu đỏ là tín hiệu "đừng lấy món này". Bài 7, 8 vừa bỏ tín hiệu đó, vừa đem màu đỏ gắn cho một nhóm cần lấy — bé dễ bỏ qua con nhện (bài 7) và con sao biển (bài 8) vì tưởng là món bẫy, và dễ nhặt chim sẻ, cá ngựa vì chip màu nâu trông như nhóm thường. Nhãn `limit` lại là câu khẳng định ("Có xương sống"), nên không còn gì báo cho bé biết đây là nhóm cần tránh.
+- Màu ô Học của sáu bài trước **không** đi theo màu kệ Chơi (ví dụ bài 1: ô "Thú cưng" `vang_hoe`, kệ "Biết bay" `vang_hoe`), nên không có ràng buộc nào buộc bài 7 phải lấy `nau_dat` cho nhóm xương sống.
+- **Sửa:** bài 7 `tray_backbone` → `do_son`, `tray_eight` → `nau_dat`; bài 8 `tray_backbone` → `do_son`, `tray_spiny` → `nau_dat`. Muốn giữ màu kệ khớp màu ô Học thì đổi luôn ô Học: bài 7 `explore_backbone` (`07:135`) → `do_son` và `explore_spiders` (`07:172`) → `nau_dat`; bài 8 `explore_spiny` (`08:153`) → `nau_dat`. Sửa kèm mục **Màu** ở Ghi chú cho hoạ sĩ (`07:624`, `08:621`).
+
+**N2. Ô Học "Xương sống" dùng ảnh bộ xương con mèo — con mèo là thú cưng sống mà bé đã gặp ở cả sáu bài trước.**
+- `07:132-147`, `brief` ở `07:138`: "Bộ xương một con mèo dựng trong tủ kính bảo tàng… thấy rõ cột sống chạy dọc lưng tới đuôi". Biên tập đã tự ghi dòng lo ngại ở `07:147` và đề nghị phương án thay là "xương cá trên đĩa sau bữa ăn".
+- Ảnh `khung-long-la-gi/w3_cat` (mèo mướp trên bậc thềm) xuất hiện ở sáu bài, kể cả chính bài 7 (`07:380` lựa chọn `q1_cat`) và bài 8 (`08:105` w3). Bé năm tuổi nhìn bộ xương mèo ngay sau khi vừa thấy con mèo sống trong cùng bài rất dễ hiểu thành "con mèo chết rồi". Trái mục An toàn `_topic.md:195` ("Con vật sống, khoẻ mạnh… Không xác con vật") và `_topic.md:380` ("không nói chuyện thú cưng ốm, chết"). Phương án thay "xương cá trên đĩa" còn nặng hơn (con vật đã bị ăn).
+- **Sửa (chọn một, PM hoặc Duy chốt vì là chuyện cảm xúc, không phải kiến thức):**
+  - (a) Dùng lại bộ xương khủng long trong bảo tàng đã có ảnh ở repo: `trai-dat-rat-lau-ve-truoc/t_rex` (dùng ở `khung-long/03-hoa-thach-ke-chuyen-khung-long:172`, `alt` "A T. rex skeleton in a museum" · "Bộ xương khủng long bạo chúa trong bảo tàng"). Bé Explorer chưa học chủ đề *Khủng long* nên không lộ gì; bộ xương khủng long ở bảo tàng là thứ trẻ thấy vui chứ không thấy buồn. Phải sửa `sentence` cho khớp hình, ví dụ `sentence.en: Lots of animals have a backbone.` · `sentence.vi: Rất nhiều con vật có xương sống.` và đẩy "cá, chim, động vật có vú" xuống `examples`.
+  - (b) Giữ ảnh bộ xương nhưng chọn con **không** xuất hiện ở chủ đề này dưới dạng con vật sống (ví dụ bộ xương cá voi treo ở bảo tàng), `alt` "An animal skeleton in a museum" · "Bộ xương con vật trong bảo tàng"; giữ nguyên `sentence`.
+  - Không chọn: ảnh X-quang (brief đã loại), xương cá trên đĩa.
+
+**N3. Kệ Chơi bài 7 xếp con cua, con tôm vào nhóm "Rất nhiều chân", trong khi ô Học vừa dạy "Cua có mười chân" là một nhóm riêng.**
+- Ô Học `07:189-205`: `explore_crabs` nhãn "Crabs and shrimps" · "Cua và tôm", `sentence` "Crabs have ten legs and hard shells." · "Cua có mười chân và lớp vỏ cứng.". Ô kế `07:207-215`: `explore_millipedes` nhãn **"Lots of legs" · "Rất nhiều chân"**, chỉ gồm cuốn chiếu và rết.
+- Kệ Chơi `07:277-281`: nhóm `tray_lots` lấy **đúng nhãn đó** "Lots of legs" · "Rất nhiều chân" nhưng gồm cua (`07:314-320`), tôm (`07:346-352`) và cuốn chiếu (`07:338-344`). Bảng `_topic.md:354` ghi đúng như file.
+- Cùng một cụm chữ bé vừa nghe ở màn Học chỉ một nhóm, sang màn Chơi lại chỉ một nhóm khác. Nặng hơn: `brief` của ảnh cua (`07:195`) yêu cầu "thấy rõ hai càng và **tám chân bò**", nên bé đếm chân trên ảnh ra tám và có thể coi cua là món của nhóm "Tám chân"; nếu bé lấy kiến + cua + cuốn chiếu thì app đọc "Em còn thiếu một con tám chân" (`07:260`) trong khi trong khay đã có một con bé vừa đếm được tám chân.
+- **Sửa (chọn một):**
+  - (a) Đổi nhãn nhóm Chơi cho khác nhãn ô Học và đúng với cả cua lẫn cuốn chiếu: `07:278-279` → `label.en: More than eight legs` · `label.vi: Nhiều hơn tám chân`; `07:249-250` → `messages.start.en: Find six legs, eight legs and more.` · `messages.start.vi: Em tìm một con sáu chân, một con tám chân, một con nhiều chân hơn nữa nhé.`; `07:261-262` → `messages.missing.tray_lots.en: You still need one with more legs.` · `.vi: Em còn thiếu một con nhiều chân hơn nữa.`. Sửa kèm `_topic.md:354`.
+  - (b) Bỏ cua và tôm khỏi kệ (còn sáu món: kiến, bướm, nhện, cuốn chiếu, chim sẻ, thằn lằn), nhóm "Rất nhiều chân" chỉ còn cuốn chiếu — giống cách đã nhận cho bài 3 ở rà chữ 12/11 (N6). Kệ sáu món ít hơn khuôn "bảy đến tám món" (`_topic.md:149`) nên cần PM đồng ý; cua vẫn vào bài ở ô Học, câu q5 và từ `crab`.
+  - Tester nghiêng về (a): giữ đủ món, và "nhiều hơn tám chân" là điều bé đếm được.
+
+**N4. Bài 7 w1: hình câu hỏi là trời chiều, mà đáp án đúng là con cò — đúng kiểu lỗi N1 của rà chữ 12/11, nay đã thành luật.**
+- `07:40-74`. Hình câu hỏi (`07:49`) dùng lại `dong-vat-co-vu/w2` "Trời chiều trên rặng cây"; hai lựa chọn là con thỏ (`07:60`) và con cò (`07:68`, đáp án đúng). Câu hỏi là "Which one is a meat-eater?" · "Con nào ăn thịt?".
+- `_topic.md:198` (luật viết ra sau rà chữ 12/11) ghi thẳng: "cảnh trời chiều không dùng cho câu có con dơi hay **con biết bay**". Nền trời đẩy bé chọn con chim mà không cần nhớ ý "cò ăn cá" của bài 6. Ghi chú của chính câu (`07:58`) chỉ tránh ao và ruộng, quên nền trời.
+- **Sửa:** `07:49-51` → dùng lại `con-vat-nuoi-trong-nha/w1` (hàng rào tre trước khu vườn), `alt` "A bamboo fence in a garden" · "Hàng rào tre trước khu vườn" — cảnh trung tính cho cả thỏ lẫn cò, chủ đề đã dùng ở bảy chỗ. Sửa kèm dòng `_topic.md:270` (bỏ "7 (w1)" ở `dong-vat-co-vu/w2`, thêm w1 vào dòng `con-vat-nuoi-trong-nha/w1`) và mục **Dùng lại** ở `07:622`.
+
+**N5. Bốn câu có đáp án đúng là con vật mới của hôm nay, hai lựa chọn sai là con quen — bé chọn "con lạ" là xong.**
+- `07:358-398` q1 "Which one is an insect?": mèo (gặp sáu bài), **kiến (mới hôm nay)**, chim sẻ (gặp bốn bài).
+- `08:333-373` q1 "Which one has a soft body?": cua (bài 7), rùa (gặp hai bài), **bạch tuộc (mới hôm nay)**.
+- `08:435-475` q4 "Which animal has no backbone?": cá heo (gặp ba bài), **nhím biển (mới hôm nay)**, ếch (gặp sáu bài).
+- `07:478-519` q5 "Which one has no backbone?": ếch, chim sẻ (quen), **cua (mới hôm nay)**.
+- Đây là mặt ngược của luật `_topic.md:200` (đáp án không là ảnh mới duy nhất). Bốn con đó bé đã gặp ở màn Học hoặc màn Chơi cùng bài nên chưa phạm luật từng chữ, nhưng vẫn là một lối tắt chạy được cho cả bốn câu mà không cần ý của bài, và lối tắt này mạnh hơn ở Explorer vì bé chỉ nhìn hình.
+- **Sửa:** đổi một lựa chọn sai thành một con khác cũng mới hôm nay, để lối tắt hỏng mà hình vẫn phân biệt rõ.
+  - `07:376-382` q1: thay `q1_cat` bằng con nhện (dùng lại `explore_spiders`, `label.en: spider` · `label.vi: con nhện`, `alt` "A spider in its web" · "Con nhện trên mạng tơ"). Gợi ý "Count the legs. Look for six." thành việc thật: tám, sáu, hai chân. Sửa `07:374` và `_topic.md:252`.
+  - `08:359-365` q1: thay `q1_turtle` bằng con nhím biển (dùng lại `tray_urchin`, `label.en: sea urchin` · `label.vi: nhím biển`). Gợi ý "Look for one with no hard shell." vẫn đúng (cua, nhím biển đều cứng). Sửa `08:349` và `_topic.md:263`.
+  - `08:469-475` q4: thay `q4_frog` bằng con cá ngựa (dùng lại `tray_seahorse`, `label.en: seahorse` · `label.vi: cá ngựa`) — con này có xương sống thật, lại dọn đường cho q5. Sửa `08:451` và `_topic.md:264`.
+  - `07` q5: không đổi được (ba lựa chọn "có xương sống" đều là con quen); ghi lại là chỗ chấp nhận.
+
+**N6. Ô Học bài 7 tên là "Spiders and scorpions" · "Nhện và bọ cạp" nhưng cả chủ đề không có một ảnh bọ cạp nào.**
+- `07:169-177`: nhãn nhóm nói hai con, `sentence` chỉ nói con nhện, `image` chỉ có con nhện. Ghi chú `07:122` nói rõ là cố ý không có ảnh bọ cạp cho đỡ sợ — quyết định đúng, nhưng cái nhãn thì chưa theo.
+- Bé Explorer nghe tên ô rồi nhìn một tấm ảnh: dễ hiểu "con này tên là bọ cạp". Trái luật Explorer số 5 và mục 2 Quy ước hình ("mỗi hình một con vật… hình vẽ đúng vật được nói tới").
+- **Sửa:** `07:170-171` → `label.en: Spiders` · `label.vi: Nhện`. Bọ cạp giữ nguyên ở ví dụ hai (`07:180-181` "a scorpion has eight legs, too" · "bọ cạp cũng có tám chân") — ví dụ là chữ app đọc, không có hình, nên vẫn vào bài được. Sửa kèm mục **Màu** `07:624` và ghi chú `07:120`.
+
+### Nhỏ (18)
+
+- **n1. Bảng "Hình dùng chung" bị chèn vỡ:** `_topic.md:267-270` là một đoạn gạch đầu dòng nằm **giữa bảng**, làm ba dòng cuối (`:271-273`: `con-vat-an-gi/explore_meat`, `explore_both`, `ho-hap tray_kite`) rơi ra thành một bảng riêng không có dòng tiêu đề. Designer đọc bảng này để dựng khoá ảnh. Chuyển đoạn `:267-270` xuống dưới dòng `:273`, hoặc tốt hơn là nhập mười lăm chỗ dùng ở đoạn đó vào đúng cột "Dùng lại ở" của từng dòng bảng.
+- **n2. `syllabus.md:104` vẫn ghi chủ đề 1 có "6 (6)" bài** trong khi `content/syllabus.json` đã có tám bài. `_topic.md:138` giao việc này cho PM, phiên chính mới làm phần `syllabus.json`.
+- **n3. `_topic.md:325` sai số sau khi thêm hai bài:** ghi "ba mươi tư câu, chỗ thứ nhất mười một, thứ hai mười ba, thứ ba mười". Đếm máy tám bài: **ba mươi lăm** câu `single_choice`, mười một · mười ba · **mười một**, năm câu hai lựa chọn (đúng như ghi).
+- **n4. `_topic.md` tự mâu thuẫn về `stage` bài 6:** `:130` ghi `core` (đổi từ `review` 13/11, khớp frontmatter `06:6`), nhưng `:141` vẫn viết "bài 6 là `review`". Sửa `:141` và nói luôn bài 8 là `review`.
+- **n5. `stage: review` của bài 8 (`08:6`) đáng xem lại:** bài 8 mang nhiều ý mới nhất chủ đề (bốn ô Học mới, ba từ `core` mới), trong khi bài 6 vừa bị đổi khỏi `review` vì cùng lý do. Đề xuất `core` hoặc `apply`; PM chốt.
+- **n6. "Khuôn chung mỗi bài" chưa tính bài 7, 8:** `_topic.md:148` "Học: một `explore_groups` **bốn ô**" (bài 7 có năm ô), `:150` "bài 1 và 6 hai format; bài 2 đến 5 ba format" (bài 7 ba, bài 8 hai), `:149` "kệ bảy đến tám món" (bài 8 bảy, bài 7 tám — đạt, chỉ cần ghi).
+- **n7. Quy ước hình mục 1 (`_topic.md:192`) ghi "ba hình câu hỏi dùng lại hình vẽ sân nhà"** rồi liệt kê bốn chỗ; nay là sáu chỗ (thêm `07:485` q5, `08:484` q5). Đổi thành "sáu hình câu hỏi" và thêm hai chỗ.
+- **n8. Số ảnh mới cho designer chưa cộng bài 7, 8:** `_topic.md:408` còn "bốn mươi sáu ảnh mới (bài 1 đến 6…)". Thực tế thêm mười sáu ảnh (bài 7 tám: bộ xương, châu chấu, nhện, cua, cuốn chiếu, kiến, bướm, tổ kiến vàng; bài 8 tám: bạch tuộc, sao biển, bọt biển, sứa, ốc sên, nhím biển, cá ngựa, bãi biển) → **sáu mươi hai**. Ảnh khó cần ghi thêm: bọt biển thấy rõ lỗ, cá ngựa hoang dã không phải bể thuỷ cung, bạch tuộc không có thợ lặn.
+- **n9. Ghi chú giãn cách `_topic.md:342` (n15 của 12/11) đã cũ:** bài 7 w2 ôn bài 2 (cách năm bài), bài 8 w2 ôn bài 5 — chủ đề nay có mốc gần một tuần. Cập nhật câu đó, vẫn giữ kiến nghị cho chủ đề Explorer số 2 về mốc một tháng.
+- **n10. Gợi ý bài 7 q5 không phân biệt được ba lựa chọn** (`07:488-489`): "Look for legs that bend at joints." · "Em tìm con có chân gập ở nhiều khớp nhỏ nhé." — chân ếch và chân chim sẻ cũng gập ở khớp, mà gợi ý chỉ bật sau khi bé đã sai một lần, tức là lần thử cuối. Đề xuất: "Look for a hard shell outside." · "Em tìm con có vỏ cứng bên ngoài nhé." (khớp `explanation_correct` ở `07:490-491`, không gọi tên con cua).
+- **n11. Giải thích bài 8 q5 chỉ khẳng định, không cho bé dấu hiệu nhìn được** (`08:489-492`): "Yes! A seahorse is a fish. It has a backbone." Bé vừa học ở bài 4 rằng cá heo **không** phải cá dù tên có chữ "cá", nên "cá ngựa là cá" nghe như chuyện tên gọi. Đề xuất `explanation_correct.en: Yes! A seahorse has fins. It is a fish.` · `.vi: Đúng rồi! Cá ngựa có vây nên là một loài cá.` (bảy và chín tiếng, EN sáu rồi bốn từ).
+- **n12. Chữ "cánh" của sao biển trùng với "cánh" của chim trong cùng bài 8:** `08:29-30` và `08:154-155` "Sao biển có da gai và có nhiều cánh"; `08:82-83` w2 "Cánh giúp chim bay". Bé nghe (không đọc) dễ hình dung sao biển có cánh để bay. Hai hướng: đổi w2 sang một câu khác ôn bài 5 (ví dụ "A fish uses legs to swim." Sai — khi đó sửa bảng `_topic.md:303` và bảng Khởi động `:338`), hoặc bản VI nói "năm cánh sao". Bản EN "arms" không vướng.
+- **n13. Hai câu hỏi liền nhau chỉ khác chữ "không"** (`08:440` q4 "Con nào không có xương sống?" rồi `08:482` q5 "Con nào có xương sống?"). Luật Explorer số 5 cấm câu phủ định ở `true_false`, không cấm ở `single_choice`, nhưng lý do của luật ("bé phải nghe kịp thêm chữ không") vẫn đúng ở đây. Không có cách viết khẳng định nào giữ được ý bài, nên đề xuất: ghi vào Ghi chú cho dev để ios-dev cho đọc chậm, nhấn chữ "không" · "no", và giữ thứ tự q4 trước q5 như hiện nay (q4 có phản hồi trước, đỡ cho q5).
+- **n14. Bài 8 w3 "A cat eats grass." (Sai)** (`08:103-115`): mèo có gặm cỏ thật, biên tập đã ghi `[CẦN KIỂM]` và có sẵn phương án thay "A buffalo eats meat." (Sai, hình `w1_buffalo`). Nhận phương án thay thì khỏi phải nhờ chuyên môn, và không còn chỗ nào trong chủ đề nói chuyện mèo và cỏ. Nếu giữ nguyên thì nên nhận phương án "Mèo ăn cỏ **thay cơm**"… không viết được trong năm từ, nên tester nghiêng về phương án thay.
+- **n15. Bài 7 q3 có thể trả lời bằng cách đếm chân trên chính tấm ảnh** (`07:419-436`): hình là con nhện, câu là "A spider has six legs.", gợi ý bảo đếm. Biên tập đã ghi là cố ý (`07:436`) và đây là DOK 1 quan sát, nên không bắt sửa; ghi lại vì trái một nửa tinh thần N5 của 12/11 (hình không làm bằng chứng cho đáp án).
+- **n16. Khoá `q3` trong một bài có hai nghĩa:** `08:442` "Dùng lại hình `q3`" là bãi biển của chính bài 8, còn `08:484` "Dùng lại hình `q3` ở bài `ho-hap/vi-sao-ta-phai-tho`" là sân nhà vẽ; bài 7 cũng có khoá `q3` riêng (`07:426`, nhện) bên cạnh `07:485` trỏ `ho-hap` `q3`. Hiện không sai vì chỗ nào cũng ghi rõ `ở bài`, nhưng designer dựng `same_as` dễ lấy nhầm. Đề xuất đổi tên hình gốc bài 8 thành `q3_beach` (sửa kèm `08:400`, `08:409`, `08:442`, `_topic.md:265`).
+- **n17. EN "arms" · VI "xúc tu"** cho bạch tuộc (`08:141-142`, từ `octopus` `08:547-548`): hai bản không cùng nghĩa đen (xúc tu = tentacle, bạch tuộc chỉ có tay). "Xúc tu" là chữ trẻ Việt quen, nên tester không bắt sửa; ghi để biên tập biết khi làm chủ đề biển sau này.
+- **n18. `_topic.md:108` ghi "các ví dụ Oak dùng trong quiz (thỏ, …) không có trong chủ đề này"** nhưng con thỏ có ở bài 3 q3, bài 6 (ba chỗ) và nay là lựa chọn w1 bài 7 (`07:60-66`). Câu trong `_topic.md` cần viết lại cho đúng (ví dụ "không dùng lại **câu hỏi** của Oak; con thỏ có ở chủ đề này nhưng trong câu khác").
+
+### Chưa kiểm
+
+- Không chạy `validate`, `tts`, `build`, `import`, `ids`; dev đã chạy `validate` 13/11 (0 lỗi) và tester không chạy lại.
+- Không kiểm ảnh: bài 7, 8 chưa có file chọn ảnh (`content/images/explorer/goi-ten-va-nhom-dong-vat/` mới có sáu bài), nên chưa kiểm được giấy phép, kích thước, có thấy đủ chân hay không, bọt biển có nhận ra là bọt biển không.
+- Không dùng simulator: màn Explorer thật (chip nhóm có chữ, `order_sequence` chưa có renderer, số từ trên một màn Chơi) vẫn thuộc SK-040 lượt 2.
+- Không nghe thử giọng đọc các từ mới khó: "millipede", "centipede", "scorpion", "arthropod", "mollusc", "urchin", "seahorse", "sponge".
+- Không đối chiếu sách CT GDPT 2018 (động vật không xương sống không có ở lớp 1; nếu Duy muốn bám sách thì PM xem lại chỗ đặt hai bài này).
+
+## content-editor 13/11 · sửa bài 7–8 theo tester
+
+Không chạy lệnh, không đổi dòng `id:`, không thêm khối mới cần id (khối đổi đều là `#### option`/`#### group`).
+
+- **Đã sửa cả sáu mục nên sửa:** N1 (nhóm `limit` bài 7, 8 về `do_son`; "Tám chân", "Da có gai" và ô Học tương ứng sang `nau_dat`); N2 (phương án a: ô "Backbone" dùng lại `t_rex`, `sentence` "Lots of animals have a backbone." · "Rất nhiều con vật có xương sống."); N3 (phương án a: nhóm "More than eight legs" · "Nhiều hơn tám chân", giữ cua và tôm để kệ đủ tám món; "nhiều hơn tám" bé đếm được cả khi đếm cua ra tám chân bò); N4 (bài 7 w1 hình câu hỏi sang hàng rào tre); N5 (bài 7 q1 mèo → nhện; bài 8 q1 rùa → nhím biển; bài 8 q4 ếch → cá ngựa; bài 7 q5 không đổi được, ghi chấp nhận); N6 (ô Học "Spiders" · "Nhện").
+- **Nhỏ đã sửa:** n1 (bảng Hình dùng chung liền lại, chỗ dùng bài 7, 8 nhập vào từng dòng), n3, n4, n6, n7, n8 (số ảnh nay sáu mươi mốt vì bỏ ảnh bộ xương mèo), n9, n10 (gợi ý bài 7 q5 "Look for a hard shell outside."), n11 (bài 8 q5 "Yes! A seahorse has fins. It is a fish."), n12 (bài 8 w2 đổi sang "A fish uses legs to swim.", Sai), n13 (ghi đề xuất ios-dev ở Ghi chú cho dev bài 8), n14 (bài 8 w3 đổi sang "A buffalo eats meat.", Sai), n18.
+- **Nhỏ không sửa:** n2 (`syllabus.md` là vùng PM); n5 (giữ bài 8 `review` vì chủ đề cần bài tổng kết, ghi để PM chốt); n15 (tester không bắt sửa); n16 (khoá `q3` là khoá câu hỏi, không đổi tên được; đã ghi lưu ý cho designer ở Ghi chú cho dev bài 8); n17 (tester không bắt sửa).
+- **Chữ trẻ nghe đổi:** bài 7 ô "Backbone" (`sentence`, bốn ví dụ), tên ô "Spiders" · "Nhện", tên nhóm Chơi "More than eight legs" · "Nhiều hơn tám chân", `messages.start` "Find six legs, eight legs and more." · "Em tìm một con sáu chân, một con tám chân, một con nhiều chân hơn nữa nhé.", `messages.missing.tray_lots` "You still need one with more legs." · "Em còn thiếu một con nhiều chân hơn nữa.", q1 lựa chọn "spider" · "con nhện", q5 gợi ý, từ `backbone` ví dụ "You have a backbone, too." · "Em cũng có xương sống."; bài 8 w2, w3 (cả câu), q1 lựa chọn "sea urchin" · "nhím biển", q4 lựa chọn "seahorse" · "cá ngựa", q5 giải thích khi đúng.
+- Đúng/Sai tám bài nay mười bốn Đúng, mười bốn Sai.
+
+## Hình đổi bài 7–8
+
+| Bài · chỗ | Trước | Sau | Ghi chú cho designer |
+| --- | --- | --- | --- |
+| 7 `explore_backbone` | `[ảnh]` bộ xương mèo trong bảo tàng | Dùng lại hình `t_rex` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`; `alt` "A T. rex skeleton in a museum" · "Bộ xương khủng long bạo chúa trong bảo tàng" | Chép mục gốc Discoverer như các ảnh *Khủng long* khác. Bỏ việc tìm ảnh bộ xương mèo |
+| 7 từ `backbone` | Dùng lại `explore_backbone` | Dùng lại hình `t_rex` ở bài `khung-long/trai-dat-rat-lau-ve-truoc` (cùng `alt` như trên) | Trỏ thẳng về gốc |
+| 7 w1 (hình câu hỏi) | Dùng lại `dong-vat-co-vu/w2` (trời chiều) | Dùng lại `con-vat-nuoi-trong-nha/w1`; `alt` "A bamboo fence in a garden" · "Hàng rào tre trước khu vườn" | |
+| 7 q1 lựa chọn | `q1_cat` (dùng lại `w3_cat`) | `q1_spider`, dùng lại `explore_spiders`; `alt` "A spider in its web" · "Con nhện trên mạng tơ" | Ba thẻ q1: nhện, kiến, chim sẻ |
+| 8 w2 (hình câu hỏi) | Dùng lại `ho-hap` `tray_sparrow` | Dùng lại `con-vat-nuoi-trong-nha/tray_goldfish`; `alt` "A goldfish in a tank" · "Cá vàng trong bể" | |
+| 8 w3 (hình câu hỏi) | Dùng lại `khung-long-la-gi/w3_cat` | Dùng lại `w1_buffalo` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`; `alt` "A water buffalo" · "Con trâu" | |
+| 8 q1 lựa chọn | `q1_turtle` (dùng lại `q3_turtle`) | `q1_urchin`, dùng lại `tray_urchin`; `alt` "A sea urchin on a rock" · "Con nhím biển trên đá" | |
+| 8 q4 lựa chọn | `q4_frog` (dùng lại `q4_frog` *Khủng long*) | `q4_seahorse`, dùng lại `tray_seahorse`; `alt` "A seahorse under the sea" · "Con cá ngựa dưới biển" | |
+| 7, 8 màu nhóm | `limit` `nau_dat` | `limit` `do_son`; bài 7 "Tám chân", ô "Nhện" `nau_dat`; bài 8 "Da có gai" (kệ và ô Học) `nau_dat` | Chỉ màu chip, không đổi ảnh |

@@ -74,7 +74,8 @@ struct ExplorerOrderSequence: View {
 
     private var cellWidth: CGFloat {
         let count = CGFloat(max(order.items.count, 1))
-        return max((metrics.contentWidth - metrics.gridTrailingInset - (count - 1) * Tokens.Space.s12) / count, 0)
+        // The places sit on a strip with `s8` padding on each side (Explorer-A).
+        return max((metrics.contentWidth - metrics.gridTrailingInset - (count - 1) * Tokens.Space.s12 - 2 * Tokens.Space.s8) / count, 0)
     }
 
     private var art: CGFloat {
@@ -84,15 +85,38 @@ struct ExplorerOrderSequence: View {
     // MARK: Places
 
     private var places: some View {
-        HStack(alignment: .top, spacing: Tokens.Space.s12) {
+        HStack(alignment: .center, spacing: Tokens.Space.s12) {
             ForEach(Array(shown.enumerated()), id: \.offset) { index, key in
-                VStack(spacing: Tokens.Space.s8) {
-                    place(index: index, key: key)
-                    PositionDots(count: index + 1)
-                }
-                .frame(width: cellWidth)
+                // Explorer-A: each place numbered on a dark tag at its corner (an empty one shows
+                // its number faintly), arrows between them, on a sunken strip.
+                place(index: index, key: key)
+                    .overlay {
+                        if key == nil {
+                            Text(verbatim: "\(index + 1)")
+                                .typography(Tokens.Typography.titleXl, fixedBox: true)
+                                .foregroundStyle(Tokens.Palette.giayLomDeep)
+                                .allowsHitTesting(false)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .overlay(alignment: .topLeading) {
+                        if key != nil {
+                            Text(verbatim: "\(index + 1)")
+                                .typography(Tokens.Typography.label, fixedBox: true)
+                                .foregroundStyle(Tokens.Role.textOnAccent)
+                                .frame(width: PictureBookMetrics.orderTag, height: PictureBookMetrics.orderTag)
+                                .background(RoundedRectangle(cornerRadius: Tokens.Radius.tag, style: .continuous).fill(Tokens.Role.textPrimary))
+                                .rotationEffect(Tokens.Shape.tiltStamp)
+                                .offset(x: -Tokens.Space.s6, y: -Tokens.Space.s6)
+                                .allowsHitTesting(false)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .frame(width: cellWidth)
             }
         }
+        .padding(Tokens.Space.s8)
+        .background(RoundedRectangle(cornerRadius: Tokens.Radius.explorer, style: .continuous).fill(Tokens.Role.surfaceSunken))
         .accessibilityElement(children: .contain)
         .accessibilityLabel(Text("lesson.explorer.order.places"))
     }
@@ -106,7 +130,9 @@ struct ExplorerOrderSequence: View {
             } label: {
                 ExplorerCardFace(look: isEditing ? .idle : look, showsRetry: false, height: height,
                                  showsSeal: index == shown.count - 1) {
-                    ContentPicture(asset: item.image?.asset, color: nil, size: art, accessibilityLabel: nil)
+                    ContentPicture(asset: item.image?.asset, color: nil, size: height - 2 * Tokens.Space.s6, box: .fillWidth, accessibilityLabel: nil)
+                        .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s6, style: .continuous))
+                        .padding(Tokens.Space.s6)
                 }
             }
             .buttonStyle(.paperPress)
@@ -146,7 +172,9 @@ struct ExplorerOrderSequence: View {
                             placeNext(item.key)
                         } label: {
                             ExplorerCardFace(look: .idle, showsRetry: false, height: metrics.illustration(ExplorerMetrics.choiceHeight)) {
-                                ContentPicture(asset: item.image?.asset, color: nil, size: art, accessibilityLabel: nil)
+                                ContentPicture(asset: item.image?.asset, color: nil, size: metrics.illustration(ExplorerMetrics.choiceHeight) - 2 * Tokens.Space.s6, box: .fillWidth, accessibilityLabel: nil)
+                                    .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s6, style: .continuous))
+                                    .padding(Tokens.Space.s6)
                             }
                         }
                         .buttonStyle(.paperPress)

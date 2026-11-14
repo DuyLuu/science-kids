@@ -13,14 +13,17 @@ import SwiftUI
 /// Canvas sizes of the Explorer screens with no token (file and element on each line).
 enum ExplorerMetrics {
     /// Mascot beside the bubble (Quiz-A: `96 × 96`), bubble `min-height: 96px`.
-    static let mascot: CGFloat = 96
-    static let bubbleMinHeight: CGFloat = 96
+    /// SK-043 Explorer-A: a smaller mascot (`52`), the bubble at least `72` high.
+    static let mascot: CGFloat = 52
+    static let bubbleMinHeight: CGFloat = 72
     /// Speaker badge on the bubble's corner (`48 × 48`, `right: -10px; top: -14px`), its glyph.
     static let speakerBadge: CGFloat = 48
     static let speakerGlyph: CGFloat = 26
     static let speakerBadgeOffset = CGSize(width: 10, height: -14)
     /// Picture of the question (QuizTF: sheet `height: 214px`, art `196 × 196`).
     static let questionSheetHeight: CGFloat = 214
+    /// SK-043 Explorer-A: the true / false photo (`336 × 250`).
+    static let questionPhotoHeight: CGFloat = 250
     static let questionArt: CGFloat = 196
     /// With picture cards under it (choices, order) the question's picture is smaller, so the
     /// cards stay on a 390 × 844 screen without scrolling (no canvas: Quiz-A has no question
@@ -28,7 +31,12 @@ enum ExplorerMetrics {
     static let questionSheetHeightWithCards: CGFloat = 112
     static let questionArtWithCards: CGFloat = 96
     /// Picture card of a choice (Quiz-A: `height: 128px`), its art.
-    static let choiceHeight: CGFloat = 128
+    static let choiceHeight: CGFloat = 136
+    /// SK-043 hướng A: with two picture choices each card is taller, so the cropped photo keeps
+    /// the animal whole (the question picture is gone, the room is there).
+    static let choiceHeightTwo: CGFloat = 200
+    /// iPad (regular): the picture cards stand in one row, `170 × 300` (Explorer-A `ipad-q1`).
+    static let choiceHeightRegular: CGFloat = 300
     static let choiceArt: CGFloat = 108
     /// True / false card (QuizTF: `height: 168px`), its icon (`132 × 132`).
     static let trueFalseHeight: CGFloat = 168
@@ -53,8 +61,9 @@ enum ExplorerMetrics {
     static let slotHeight: CGFloat = 128
     static let slotDot: CGFloat = 7
     /// Reward: sticker disc (`172 × 172`, tilted −6°), its art; star (`56`).
-    static let sticker: CGFloat = 172
-    static let stickerArt: CGFloat = 120
+    /// SK-043 Explorer-A: the reward's photo as a round sticker `250`.
+    static let sticker: CGFloat = 250
+    static let stickerArt: CGFloat = 232
     static let stickerTilt: Angle = .degrees(-6)
     static let star: CGFloat = 56
 }
@@ -276,8 +285,10 @@ struct ExplorerSpeechRow: View {
 
     private var speaking: Bool { speech?.speaking != nil }
 
+    // SK-043 Explorer-A: a small mascot, the bubble, and the speaker as its own 72 disc on the right
+    // (gỉ đồng, vàng hoè while it speaks), the VI speaker of "Cả hai" under it.
     var body: some View {
-        HStack(alignment: .bottom, spacing: Tokens.Space.s6) {
+        HStack(alignment: .center, spacing: Tokens.Space.s8) {
             Image(mood.imageName, bundle: .main)
                 .resizable()
                 .scaledToFit()
@@ -309,13 +320,12 @@ struct ExplorerSpeechRow: View {
                     }
                 }
                 .multilineTextAlignment(.leading)
-                .padding(EdgeInsets(top: Tokens.Space.s12, leading: Tokens.Space.s16, bottom: Tokens.Space.s12, trailing: Tokens.Space.s20 + Tokens.Space.s14))
+                .padding(EdgeInsets(top: Tokens.Space.s12, leading: Tokens.Space.s14, bottom: Tokens.Space.s12, trailing: Tokens.Space.s14))
                 .frame(maxWidth: .infinity, minHeight: ExplorerMetrics.bubbleMinHeight, alignment: .leading)
                 .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, in: UnevenRoundedRectangle(
                     topLeadingRadius: Tokens.Radius.explorer, bottomLeadingRadius: Tokens.Radius.bubbleTail,
                     bottomTrailingRadius: Tokens.Radius.explorer, topTrailingRadius: Tokens.Radius.explorer, style: .continuous
                 ))
-                .overlay(alignment: .topTrailing) { badge }
             }
             .buttonStyle(.paperPress)
             .disabled(listen.isEmpty)
@@ -323,20 +333,27 @@ struct ExplorerSpeechRow: View {
             .accessibilityHint(listen.isEmpty ? Text(verbatim: "") : Text("lesson.explorer.bubble_hint"))
             .accessibilityAddTraits(.startsMediaSession)
             .accessibilityIdentifier("lesson.explorer.bubble")
+            if !listen.isEmpty {
+                VStack(spacing: Tokens.Space.s4) {
+                    Button {
+                        speech?.play(listen)
+                    } label: {
+                        ZStack {
+                            Circle()
+                                .fill(speaking ? Tokens.Role.stateCurrent : Tokens.Palette.giDong)
+                                .paperDropShadow(Tokens.Shadow.paper2)
+                            PaperIconView(.speaker, size: ExplorerMetrics.speakerGlyph, color: speaking ? Tokens.Role.textPrimary : Tokens.Role.textOnAccent)
+                        }
+                        .frame(width: Tokens.AgeGroup.explorer.touchTarget, height: Tokens.AgeGroup.explorer.touchTarget)
+                    }
+                    .buttonStyle(.paperPress)
+                    .accessibilityLabel(Text("lesson.listen"))
+                    .accessibilityAddTraits(.startsMediaSession)
+                    .accessibilityIdentifier("lesson.explorer.listen")
+                    SecondVoiceButton(listen)
+                }
+            }
         }
-    }
-
-    private var badge: some View {
-        ZStack {
-            Circle()
-                .fill(speaking ? Tokens.Role.stateCurrent : Tokens.Palette.giDong)
-                .paperDropShadow(Tokens.Shadow.dropTag)
-            PaperIconView(.speaker, size: ExplorerMetrics.speakerGlyph, color: speaking ? Tokens.Role.textPrimary : Tokens.Role.textOnAccent)
-        }
-        .frame(width: ExplorerMetrics.speakerBadge, height: ExplorerMetrics.speakerBadge)
-        .offset(ExplorerMetrics.speakerBadgeOffset)
-        .opacity(listen.isEmpty ? 0 : 1)
-        .accessibilityHidden(true)
     }
 }
 

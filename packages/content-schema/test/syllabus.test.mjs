@@ -112,6 +112,10 @@ function index() {
   };
 }
 
+/** Extension lesson number n of an Oak topic (Duy 13/11). */
+const extension = (number) => ({ number, title: { en: `Extension ${number}`, vi: null }, oak_lessons: [], statutory: false, extension: true });
+const renumber = (topic) => topic.lessons.forEach((lesson, i) => (lesson.number = i + 1)) ?? true;
+
 const HE = "/groups/1/topics/1"; // healthy-eating
 const NEW = "/groups/1/topics/0"; // new-weather
 const at = (issues, severity = "error") => issues.filter((issue) => issue.severity === severity).map((issue) => `${issue.pointer} ${issue.code}`);
@@ -150,6 +154,15 @@ const CASES = [
   ["Oak topic, lesson without oak_lessons", (d) => (d.groups[1].topics[1].lessons[0].oak_lessons = []), [`${HE}/lessons/0/oak_lessons syllabus_oak`]],
   ["new topic, lesson with oak_lessons", (d) => (d.groups[1].topics[0].lessons[1].oak_lessons = ["rain"]), [`${NEW}/lessons/1/oak_lessons syllabus_oak`]],
   ["source.year outside oak_years", (d) => (d.groups[1].topics[1].source.year = 5), [`${HE}/source/year syllabus_oak`]],
+  // extension (Duy 13/11): a lesson of our own at the end of an Oak topic
+  ["extension lesson after the Oak lessons", (d) => d.groups[1].topics[1].lessons.push(extension(4)), []],
+  ["two extension lessons, sensitive", (d) => d.groups[1].topics[1].lessons.push(extension(4), { ...extension(5), sensitive: true }), []],
+  ["extension with oak_lessons", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), oak_lessons: ["insects"] }), [`${HE}/lessons/3/oak_lessons syllabus_oak`]],
+  ["extension statutory true", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), statutory: true }), [`${HE}/lessons/3/statutory syllabus_oak`]],
+  ["Oak lesson after an extension lesson", (d) => d.groups[1].topics[1].lessons.splice(2, 0, extension(3)) && renumber(d.groups[1].topics[1]), [`${HE}/lessons/3 syllabus_oak`]],
+  ["extension in a new topic", (d) => d.groups[1].topics[0].lessons.push(extension(3)), [`${NEW}/lessons/2/extension syllabus_oak`]],
+  ["Oak topic with only extension lessons", (d) => (d.groups[1].topics[1].lessons = [extension(1)]), [`${HE}/lessons syllabus_oak`], { refs: false }],
+  ["extension not boolean", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), extension: "yes" }), [`${HE}/lessons/3/extension schema`]],
   // syllabus_topic_ref
   ["topic_id not in the content (its lessons are not blamed again)", (d) => (d.groups[1].topics[1].topic_id = UNKNOWN), [`${HE}/topic_id syllabus_topic_ref`]],
   ["topic_id of another age group", (_, i) => (i.topics[0].age_group = "scientist"), [`${HE}/topic_id syllabus_topic_ref`]],
@@ -283,17 +296,17 @@ describe("content/syllabus.json (file thật)", () => {
     for (const warning of report.issues) t.diagnostic(`${warning.pointer || "/"} [${warning.code}] ${warning.message}`);
   });
 
-  test("nghiệm thu SK-030: 3 nhóm explorer, discoverer, scientist; 12, 17, 16 chủ đề; 73, 155, 156 bài, tổng 384", () => {
+  test("nghiệm thu SK-030: 3 nhóm explorer, discoverer, scientist; 12, 17, 16 chủ đề; 75, 155, 156 bài, tổng 386 (75 có 2 bài mở rộng của naming-and-grouping-animals, Duy 13/11)", () => {
     const { counts } = validateSyllabus(data);
     assert.deepEqual(
       counts.byGroup.map((group) => [group.age_group, group.topics, group.lessons]),
       [
-        ["explorer", 12, 73],
+        ["explorer", 12, 75],
         ["discoverer", 17, 155],
         ["scientist", 16, 156],
       ],
     );
-    assert.equal(counts.lessons, 384);
+    assert.equal(counts.lessons, 386);
   });
 
   test("tên: chủ đề luôn có vi (schema); bài còn vi null thì đếm được (nghiệm thu: 0 sau khi gộp tên của content-editor)", (t) => {

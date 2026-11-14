@@ -879,6 +879,104 @@
         "#### bank q2_air",
         "image.alt.en và image.alt.vi"
       ]
+    },
+    {
+      "name": "36-feedback-on-correct-option",
+      "description": "(SK-044) feedback dưới lựa chọn đúng q1_orange: chỉ vào dòng feedback.en, nói chỉ lựa chọn sai có",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_orange\ncorrect: true\n",
+            "#### option q1_orange\ncorrect: true\nfeedback.en: Oranges are fruit.\nfeedback.vi: Cam là hoa quả.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 307,
+          "pointer": "/quiz/0/options/0/feedback",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "feedback",
+        "chỉ lựa chọn sai"
+      ]
+    },
+    {
+      "name": "37-feedback-no-vi",
+      "description": "(SK-044) feedback của lựa chọn sai q1_rice thiếu feedback.vi: chỉ vào dòng feedback.en",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### option q1_rice\ncorrect: false\n",
+            "#### option q1_rice\ncorrect: false\nfeedback.en: Rice gives us energy.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 315,
+          "pointer": "/quiz/0/options/1/feedback/vi",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "feedback.vi"
+      ]
+    },
+    {
+      "name": "38-feedback-on-answer-bank-word",
+      "description": "(SK-044) feedback dưới thẻ đáp án q2_energy (có trong answers): chỉ vào dòng feedback.en",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "#### bank q2_energy\nlabel.en: energy\nlabel.vi: năng lượng\n",
+            "#### bank q2_energy\nlabel.en: energy\nlabel.vi: năng lượng\nfeedback.en: Energy helps us run.\nfeedback.vi: Năng lượng giúp ta chạy.\n"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 349,
+          "pointer": "/quiz/1/bank/0/feedback",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "q2_energy",
+        "answers"
+      ]
+    },
+    {
+      "name": "39-true-false-feedback-right-side",
+      "description": "(SK-044) câu true_false answer: false mà viết feedback_false (phía chọn đúng): chỉ vào dòng đó, nhắc dùng feedback_true",
+      "edits": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "replace": [
+            "answer: false\nhint.en: Remember: fats",
+            "answer: false\nfeedback_false.en: Na is not right.\nfeedback_false.vi: Na chưa đúng.\nhint.en: Remember: fats"
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
+          "line": 515,
+          "pointer": "/quiz/5/feedback_false",
+          "code": "schema"
+        }
+      ],
+      "message_includes": [
+        "feedback_true"
+      ]
     }
   ],
   "warning_cases": [

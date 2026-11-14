@@ -208,6 +208,32 @@ describe("build (cache giả, không cần model)", () => {
     assert.deepEqual(JSON.parse(packText).lessons[0].warmup[w].bank[0].image, { alt });
   });
 
+  test("feedback của lựa chọn sai (SK-044): là Spoken, vào gói với audio như mọi câu; thiếu audio thì exit 1 ở pointer feedback", () => {
+    const dir = path.join(root, "feedback", "an-uong-lanh-manh");
+    mkdirSync(dir, { recursive: true });
+    const lesson = readJsonFile(ws.files[1]!);
+    const q = lesson.quiz.findIndex((item: { format: string }) => item.format === "single_choice");
+    const j = lesson.quiz[q].options.findIndex((option: { correct: boolean }) => !option.correct);
+    // Reuse a text that is already in the fake cache (its hint): build only needs the clip to exist.
+    lesson.quiz[q].options[j].feedback = structuredClone(lesson.quiz[q].hint);
+    assert.ok(collectSpoken("lesson", lesson).some((ref) => ref.pointer === `/quiz/${q}/options/${j}/feedback`), "tts and build see feedback as Spoken");
+    cpSync(ws.files[0]!, path.join(dir, "topic.json"));
+    writeFileSync(path.join(dir, "lesson.json"), JSON.stringify(lesson));
+    const out = path.join(root, "pack-feedback");
+    const run = runCli(path.join(dir, "topic.json"), path.join(dir, "lesson.json"), "--out", out, "--cache", ws.cacheDir);
+    assert.equal(run.status, 0, run.stderr);
+    const [topic] = readJsonFile(path.join(out, "catalog/v1/manifest.json")).topics;
+    const pack = readJsonFile(path.join(out, topic.path));
+    assert.deepEqual(pack.lessons[0].quiz[q].options[j].feedback, lesson.quiz[q].hint);
+    assert.ok(existsSync(path.join(out, "assets", `${lesson.quiz[q].hint.audio.en}.m4a`)));
+
+    delete lesson.quiz[q].options[j].feedback.audio;
+    writeFileSync(path.join(dir, "lesson.json"), JSON.stringify(lesson));
+    const missing = runCli(path.join(dir, "topic.json"), path.join(dir, "lesson.json"), "--out", path.join(root, "pack-feedback-missing"), "--cache", ws.cacheDir);
+    assert.equal(missing.status, 1, missing.stdout);
+    assert.match(missing.stdout + missing.stderr, new RegExp(`/quiz/${q}/options/${j}/feedback thiếu audio\\.en`));
+  });
+
   test("Image có asset viết sẵn trong nội dung: exit 1 (asset do build điền từ file chọn ảnh)", () => {
     const dir = path.join(root, "with-image", "an-uong-lanh-manh");
     mkdirSync(dir, { recursive: true });
@@ -441,6 +467,20 @@ describe("build với ảnh (SK-033: file chọn ảnh + cache ảnh giả)", ()
     assert.equal(bad.status, 1, bad.stdout);
     assert.match(bad.stdout, /manifest ghi 999x/);
     assert.match(bad.stdout, /giấy phép "CC BY-SA 4\.0" không hợp quy tắc/);
+  });
+
+  test("ảnh lệch khung (Duy 13/11, SK-043): cảnh báo tên bài, khoá, tỉ lệ ảnh, tỉ lệ khung, gợi ý crop; vẫn build", () => {
+    // B (683×1024, dọc 2:3) ở thẻ lựa chọn q1 (Discoverer, khung 16:9): lệch ×2,67 > max_factor 2,2.
+    // B làm hình câu hỏi w2 (khung 4:3): lệch ×2, không báo. A (1024×768) ở kệ Chơi và nhóm Học (1:1): lệch ×1,33, không báo.
+    writeSelection({ "tray.tray_rice": PICK_A, "learn.explore.explore_carb": PICK_A, w2: PICK_B, "q1.q1_rice": PICK_B });
+    const run = build(path.join(root, "pack-shape"));
+    assert.equal(run.status, 0, run.stderr);
+    assert.match(run.stdout, /ảnh lệch khung \(tỉ lệ ảnh khác chỗ dùng, tools\/content-cli\/image-slots\.json\): 1 hình · an-uong-lanh-manh 1/);
+    const lines = run.stdout.split("\n").filter((line) => line.includes("lệch ×"));
+    assert.equal(lines.length, 1, lines.join("\n"));
+    assert.match(lines[0]!, /bài 01-thuc-an-cho-ta-nhung-gi · hình q1\.q1_rice \(thẻ lựa chọn \(\d lựa chọn\)\): ảnh 683×1024 dọc 2:3, khung 16:9 ngang; lệch ×2,67/);
+    // Centred 16:9 band of the picture, inside B's own crop (left half of the source).
+    assert.match(lines[0]!, /Đặt "crop" trong .*thuc-an-cho-ta-nhung-gi\.json mục q1\.q1_rice \(gợi ý cắt giữa \{"left":0,"top":0\.31[23],"width":0\.5,"height":0\.375\}/);
   });
 
   test("--require-assets: mỗi Image chưa có ảnh là một lỗi, không ghi gói", () => {

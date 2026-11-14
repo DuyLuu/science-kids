@@ -2,8 +2,20 @@
   "note": "SK-041. Designer (agent) chọn 12/11/2026, chờ Duy duyệt. Toàn ảnh chụp (trừ hình câu dùng lại sân nhà vẽ của Hô hấp); ảnh nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã kiểm ở trang gốc. Ảnh dùng lại từ chủ đề Discoverer được chép nguyên mục gốc vì same_as + lesson chỉ trỏ trong cùng nhóm tuổi. Trang duyệt content/.build/images/goi-ten-va-nhom-dong-vat/<bài>/review.html. Chưa có: q6 (mái tóc bạn nhỏ từ phía sau).",
   "images": {
     "w1": {
-      "same_as": "tray_goldfish",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aquarium tropical de Pierrefitte-Nestalas 03082018 Carassius auratus Lionhead goldfish 2",
+      "author": "Vassil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0987,
+        "top": 0.1452,
+        "width": 0.7327,
+        "height": 0.7696
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung. Tách khỏi same_as tray_goldfish (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "w2": {
       "source": "Openverse/Flickr",
@@ -17,8 +29,20 @@
       "note": "Trời chiều cam trên rặng cây in bóng; không có ảnh hợp lệ rặng tre lúc chạng vạng."
     },
     "w2.w2_douc": {
-      "same_as": "explore_wild",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2533,
+        "width": 1.0,
+        "height": 0.4633
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as explore_wild (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "w2.w2_buffalo": {
       "source": "Wikimedia Commons",
@@ -29,16 +53,29 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.0,
+        "top": 0.1318,
+        "width": 0.9344,
+        "height": 0.5364
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "w2.w2_parakeet": {
-      "same_as": "tray_parakeet",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/197474085@N03/52653656559",
+      "file_url": "https://live.staticflickr.com/65535/52653656559_193021a2c8_b.jpg",
+      "title": "Curious Budgerigar",
+      "author": "hancongyang495949598",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "b4d6e777-c0fb-47ec-9db8-4832beb89861",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1404,
+        "width": 1.0,
+        "height": 0.5991
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Tách khỏi same_as tray_parakeet (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "learn.explore.explore_fur": {
       "source": "Wikimedia Commons",
@@ -49,11 +86,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.42,
-        "top": 0.18,
-        "width": 0.5,
-        "height": 0.7
-      }
+        "left": 0.3336,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_milk": {
       "source": "Wikimedia Commons",
@@ -62,7 +100,14 @@
       "title": "Domestic cat nursing kittens on a braided rug in Shillong, Meghalaya - 22 June 2026",
       "author": "Aiban-03",
       "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1294,
+        "top": 0.0135,
+        "width": 0.8706,
+        "height": 0.653
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_big_small": {
       "source": "Wikimedia Commons",
@@ -73,12 +118,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.19,
-        "top": 0.14,
-        "width": 0.41,
-        "height": 0.62
+        "left": 0.2184,
+        "top": 0.0743,
+        "width": 0.7031,
+        "height": 0.7913
       },
-      "note": "Thay ảnh voi của Khủng long (có hàng rào cọc dây thép phía sau, lộ chuồng). Cắt lấy một con voi châu Á trưởng thành đứng dưới nước."
+      "note": "Thay ảnh voi của Khủng long (có hàng rào cọc dây thép phía sau, lộ chuồng). Cắt lấy một con voi châu Á trưởng thành đứng dưới nước. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
     },
     "learn.explore.explore_people": {
       "source": "Wikimedia Commons",
@@ -89,12 +134,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.0,
-        "top": 0.41,
-        "width": 0.8,
-        "height": 0.59
+        "left": 0.2382,
+        "top": 0.0,
+        "width": 0.7235,
+        "height": 0.8162
       },
-      "note": "Cắt bỏ mặt em bé, chỉ còn hai bàn tay."
+      "note": "Cắt bỏ mặt em bé, chỉ còn hai bàn tay. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
     },
     "tray.tray_buffalo": {
       "source": "Wikimedia Commons",
@@ -105,12 +150,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.2268,
+        "top": 0.0654,
+        "width": 0.4664,
+        "height": 0.6693
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_sparrow": {
       "source": "Wikimedia Commons",
@@ -120,7 +165,13 @@
       "author": "Vitalii Shmorgun",
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.2327,
+        "top": 0.0,
+        "width": 0.6646,
+        "height": 0.9973
+      }
     },
     "tray.tray_bat": {
       "source": "Openverse/Flickr",
@@ -130,7 +181,14 @@
       "author": "CazzJj",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "openverse_id": "99219638-2482-4119-b360-d81ffafa62a6"
+      "openverse_id": "99219638-2482-4119-b360-d81ffafa62a6",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2396,
+        "width": 1.0,
+        "height": 0.6709
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_lizard": {
       "source": "Wikimedia Commons",
@@ -141,12 +199,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.35,
-        "top": 0.15,
-        "width": 0.65,
-        "height": 0.8
+        "left": 0.4843,
+        "top": 0.1338,
+        "width": 0.5014,
+        "height": 0.7524
       },
-      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
     },
     "tray.tray_dolphin": {
       "source": "Wikimedia Commons",
@@ -156,7 +214,13 @@
       "author": "NOAA Photo Library",
       "license": "Public domain",
       "license_url": "https://commons.wikimedia.org/wiki/File:Anim1069_-_Flickr_-_NOAA_Photo_Library.jpg",
-      "note": "Ảnh NOAA, không có logo."
+      "note": "Ảnh NOAA, không có logo. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 0.6413,
+        "height": 0.9578
+      }
     },
     "tray.tray_cat": {
       "source": "Wikimedia Commons",
@@ -166,7 +230,13 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1318,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      }
     },
     "tray.tray_goldfish": {
       "same_as": "tray_goldfish",
@@ -184,7 +254,13 @@
       "author": "Thomas Brown",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `q4_frog` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0006,
+        "width": 1.0,
+        "height": 0.5988
+      }
     },
     "q1.q1_lizard": {
       "source": "Wikimedia Commons",
@@ -195,12 +271,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.35,
-        "top": 0.15,
-        "width": 0.65,
-        "height": 0.8
+        "left": 0.0,
+        "top": 0.2099,
+        "width": 1.0,
+        "height": 0.6002
       },
-      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_lizard` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
     },
     "q1.q1_cat": {
       "source": "Wikimedia Commons",
@@ -210,11 +286,29 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1949,
+        "width": 1.0,
+        "height": 0.6002
+      }
     },
     "q2": {
-      "same_as": "q4",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chat_regardant_le_ciel.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Chat_regardant_le_ciel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A kitten looking up",
+      "author": "Susann (susannp4)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0429,
+        "width": 0.7031,
+        "height": 0.8643
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung. Tách khỏi same_as q4 (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     },
     "q3": {
       "source": "Wikimedia Commons",
@@ -225,12 +319,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0,
-        "top": 0.28,
-        "width": 1,
-        "height": 0.72
+        "left": 0.0,
+        "top": 0.0,
+        "width": 1.0,
+        "height": 0.7008
       },
-      "note": "Cắt bỏ đầu trâu mẹ; phía sau còn thấy chân, bụng trâu mẹ và một sợi dây thép rào bãi cỏ."
+      "note": "Cắt bỏ đầu trâu mẹ; phía sau còn thấy chân, bụng trâu mẹ và một sợi dây thép rào bãi cỏ. · SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung."
     },
     "q4": {
       "source": "Wikimedia Commons",
@@ -243,7 +337,20 @@
       "note": "Chép mục gốc `w1` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
     },
     "q4.q4_elephant": {
-      "same_as": "learn.explore.explore_big_small"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants_with_calf_(7568633672).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Elephants_with_calf_%287568633672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Elephants with calf (7568633672)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2368,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_big_small vì khung khác tỉ lệ."
     },
     "q4.q4_cat": {
       "source": "Wikimedia Commons",
@@ -253,7 +360,13 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.1318,
+        "top": 0.0,
+        "width": 0.6664,
+        "height": 1.0
+      }
     },
     "q4.q4_buffalo": {
       "source": "Wikimedia Commons",
@@ -264,12 +377,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.14,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.75
+        "left": 0.2268,
+        "top": 0.0654,
+        "width": 0.4664,
+        "height": 0.6693
       },
-      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1_buffalo` ở discoverer/khung-long/trai-dat-rat-lau-ve-truoc (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ thứ tự 1:1, con vật nằm trọn trong khung."
     },
     "q5": {
       "own": {
@@ -280,7 +393,20 @@
       "note": "Chép mục gốc `q3` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
     },
     "q5.q5_bat": {
-      "same_as": "tray.tray_bat"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Seychelles_flying_fox_(Pteropus_seychellensis).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/The_Seychelles_flying_fox_%28Pteropus_seychellensis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Seychelles flying fox (Pteropus seychellensis)",
+      "author": "Yulia Kolosova",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1444,
+        "top": 0.2029,
+        "width": 0.7812,
+        "height": 0.5242
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung. Đổi ảnh: ảnh cũ sai hướng với khung."
     },
     "q5.q5_sparrow": {
       "source": "Wikimedia Commons",
@@ -290,7 +416,13 @@
       "author": "Vitalii Shmorgun",
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
-      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_sparrow` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.2327,
+        "top": 0.2505,
+        "width": 0.6646,
+        "height": 0.3989
+      }
     },
     "q5.q5_egret": {
       "source": "Wikimedia Commons",
@@ -300,13 +432,45 @@
       "author": "Hobbyfotowiki",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `tray_egret` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0186,
+        "top": 0.0404,
+        "width": 0.8628,
+        "height": 0.5191
+      }
     },
     "vocab.mammal": {
-      "same_as": "learn.explore.explore_fur"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3473,
+        "top": 0.2651,
+        "width": 0.6527,
+        "height": 0.4897
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_fur vì khung khác tỉ lệ."
     },
     "vocab.milk": {
-      "same_as": "learn.explore.explore_milk"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Domestic_cat_nursing_kittens_on_a_braided_rug_in_Shillong,_Meghalaya_-_22_June_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Domestic_cat_nursing_kittens_on_a_braided_rug_in_Shillong%2C_Meghalaya_-_22_June_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Domestic cat nursing kittens on a braided rug in Shillong, Meghalaya - 22 June 2026",
+      "author": "Aiban-03",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1125,
+        "width": 1.0,
+        "height": 0.375
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Tách khỏi same_as learn.explore.explore_milk vì khung khác tỉ lệ."
     },
     "vocab.fur": {
       "source": "Wikimedia Commons",
@@ -316,17 +480,62 @@
       "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
-      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w3_cat` ở discoverer/khung-long/khung-long-la-gi (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. · SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung.",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1199,
+        "width": 1.0,
+        "height": 0.7503
+      }
     },
     "vocab.bat": {
-      "same_as": "tray.tray_bat"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Seychelles_flying_fox_(Pteropus_seychellensis).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/The_Seychelles_flying_fox_%28Pteropus_seychellensis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Seychelles flying fox (Pteropus seychellensis)",
+      "author": "Yulia Kolosova",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1444,
+        "top": 0.1374,
+        "width": 0.7812,
+        "height": 0.6553
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung thẻ Từ mới 2:1, con vật nằm trọn trong khung. Đổi ảnh: ảnh cũ sai hướng với khung."
     },
     "reward.bat_card": {
-      "same_as": "tray.tray_bat"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/64249609@N08/51939968430",
+      "file_url": "https://live.staticflickr.com/65535/51939968430_7f713c7427_b.jpg",
+      "title": "Grey-headed flying fox",
+      "author": "CazzJj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "99219638-2482-4119-b360-d81ffafa62a6",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2546,
+        "width": 1.0,
+        "height": 0.6709
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung sticker Thưởng 1:1, con vật nằm trọn trong khung. Tách khỏi same_as tray.tray_bat vì khung khác tỉ lệ."
     },
     "q6": {
-      "same_as": "w1",
-      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bamboo_Fence_-_Agri-Horticultural_Society_of_India_-_Alipore_-_Kolkata_2013-01-05_2371.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bamboo_Fence_-_Agri-Horticultural_Society_of_India_-_Alipore_-_Kolkata_2013-01-05_2371.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bamboo Fence - Agri-Horticultural Society of India - Alipore - Kolkata 2013-01-05 2371",
+      "author": "Biswarup Ganguly",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0568,
+        "top": 0.0,
+        "width": 0.8865,
+        "height": 1.0
+      },
+      "note": "SK-043 (designer 13/11): crop cho khung ảnh câu Đúng/Sai 4:3, con vật nằm trọn trong khung. Tách khỏi same_as w1 (bài goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha) vì khung khác tỉ lệ."
     }
   }
 }
