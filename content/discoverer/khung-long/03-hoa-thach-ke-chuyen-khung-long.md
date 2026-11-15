@@ -51,10 +51,10 @@ image.alt.en: Land, sea and sky
 image.alt.vi: Đất liền, biển và bầu trời
 hint.en: Look at each one. How did it move around?
 hint.vi: Em nhìn từng con nhé. Con đó di chuyển bằng cách nào?
-explanation_correct.en: Yes! Triceratops walked on land. It was a dinosaur.
-explanation_correct.vi: Đúng rồi! Khủng long ba sừng đi trên mặt đất. Nó là một loài khủng long.
-explanation_wrong.en: The answer is Triceratops. Flying and sea reptiles were not dinosaurs.
-explanation_wrong.vi: Đáp án là khủng long ba sừng. Thằn lằn bay và bò sát biển không phải khủng long.
+explanation_correct.en: Triceratops walked on strong legs straight under its body.
+explanation_correct.vi: Khủng long ba sừng đi bằng chân thẳng dưới thân.
+explanation_wrong.en: Flying and sea reptiles were not dinosaurs.
+explanation_wrong.vi: Thằn lằn bay và bò sát biển không phải khủng long.
 > Câu phân loại (luật rà chéo 9/11, `_topic.md` mục "Khi soạn năm bài"): nhãn và `alt` của ba lựa chọn tả cách di chuyển, không ghi tên. Bản trước để nhãn "khủng long ba sừng", nên phụ đề tiếng Việt tự nói đáp án. Nhãn "walked on strong legs" lấy từ giải thích của câu q2 bài hai ("Dinosaurs walked on strong legs."). Giải thích sau khi bé chọn vẫn gọi tên ba con vật.
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Khủng long là bò sát sống trên cạn. Em nhìn chân của từng con nhé." nhắc đúng tiêu chí của nhãn đáp án ("đi bằng những đôi chân khoẻ"). Gợi ý mới chỉ cách nghĩ: nhìn từng con, tự hỏi con đó di chuyển ra sao; bé phải tự nhớ khủng long sống ở đâu (bài hai). Giải thích không nói "thằn lằn bay không đi trên mặt đất", vì thằn lằn bay cũng đi được trên mặt đất; nhãn "flew with big wings" chỉ nói cách nó di chuyển chủ yếu.
 > Ba hình dùng lại ba tranh nền kem ở kệ Chơi bài hai: cùng kiểu, cùng cỡ, bé nhận ra ba con vật đã gặp.
@@ -62,6 +62,8 @@ explanation_wrong.vi: Đáp án là khủng long ba sừng. Thằn lằn bay và
 
 #### option w1_flying
 correct: false
+feedback.en: This one flew, so it was a flying reptile.
+feedback.vi: Con này bay, nên là thằn lằn bay.
 label.en: flew with big wings
 label.vi: bay bằng đôi cánh lớn
 image.brief: Dùng lại hình `khung-long-la-gi/tray_pterosaur`
@@ -78,6 +80,8 @@ image.alt.vi: Tranh vẽ một con vật có ba sừng
 
 #### option w1_sea
 correct: false
+feedback.en: This one swam, so it was a sea reptile.
+feedback.vi: Con này bơi, nên là bò sát biển.
 label.en: swam with flippers
 label.vi: bơi bằng chân chèo
 image.brief: Dùng lại hình `khung-long-la-gi/tray_sea_reptile`
@@ -99,10 +103,12 @@ image.alt.vi: Con gà mái
 answer: true
 hint.en: Remember the three dinosaurs you found last lesson.
 hint.vi: Em nhớ lại ba con khủng long em đã tìm ở bài trước nhé.
-explanation_correct.en: Yes! Some dinosaurs were as small as a chicken.
-explanation_correct.vi: Đúng rồi! Có loài khủng long chỉ nhỏ cỡ con gà.
-explanation_wrong.en: This is true. Some dinosaurs were small, like a chicken.
-explanation_wrong.vi: Câu này đúng. Có loài khủng long chỉ nhỏ cỡ con gà.
+explanation_correct.en: Some small dinosaurs even had feathers.
+explanation_correct.vi: Có loài khủng long nhỏ còn có lông vũ.
+explanation_wrong.en: Some dinosaurs were small, like a chicken.
+explanation_wrong.vi: Có loài khủng long chỉ nhỏ cỡ con gà.
+feedback_false.en: Dinosaurs came in many sizes, big and small.
+feedback_false.vi: Khủng long có đủ cỡ, to có, nhỏ có.
 > [CẦN KIỂM] Như `dinosaurs_all_alike` ở `_topic.md`: một số loài khủng long ăn thịt nhỏ dài khoảng một mét tính cả đuôi, nặng vài ki-lô-gam, cỡ con gà (biên tập nhớ ví dụ Compsognathus).
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Khủng long nào cũng khổng lồ sao?" đã nói ý trả lời. Gợi ý mới chỉ chỗ cần nhớ: phần Chơi "Tìm ba con khủng long khác nhau" của bài hai (có nhóm khủng long nhỏ), không nêu đáp án. Hình là con gà mái, vật để so, không lộ đáp án.
 
@@ -120,10 +126,10 @@ image.alt.en: A cycad tree
 image.alt.vi: Cây vạn tuế
 hint.en: Think of the timeline. Which animals came much later?
 hint.vi: Em nhớ lại trục thời gian. Con nào có muộn hơn nhiều?
-explanation_correct.en: Yes! Frogs lived in dinosaur times, too.
-explanation_correct.vi: Đúng rồi! Ếch đã có từ thời khủng long.
-explanation_wrong.en: The answer is the frog. Mammoths and buffaloes came much later.
-explanation_wrong.vi: Đáp án là con ếch. Voi ma mút và con trâu có muộn hơn nhiều.
+explanation_correct.en: Frogs lived then, and frogs still live today.
+explanation_correct.vi: Ếch có từ thời đó, ngày nay vẫn còn.
+explanation_wrong.en: Frogs were there long before mammoths and buffaloes.
+explanation_wrong.vi: Ếch có từ lâu, trước voi ma mút và trâu.
 > [CẦN KIỂM] Như bảng Tên gọi ở `_topic.md`: ếch đã có từ thời khủng long; họ hàng của cây vạn tuế đã có từ thời khủng long. Voi ma mút và trâu có muộn hơn rất nhiều.
 
 #### option w3_frog
@@ -136,6 +142,8 @@ image.alt.vi: Con ếch
 
 #### option w3_mammoth
 correct: false
+feedback.en: Mammoths came long after the dinosaurs.
+feedback.vi: Voi ma mút có rất lâu sau khủng long.
 label.en: mammoth
 label.vi: voi ma mút
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_mammoth`
@@ -144,6 +152,8 @@ image.alt.vi: Mô hình voi ma mút
 
 #### option w3_buffalo
 correct: false
+feedback.en: Buffaloes came much later, close to our time.
+feedback.vi: Trâu có muộn hơn nhiều, gần thời của mình.
 label.en: buffalo
 label.vi: con trâu
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_buffalo`
@@ -211,7 +221,8 @@ label.en: How fossils form
 label.vi: Hoá thạch hình thành ra sao
 color: vang_hoe
 sentence.en: Over millions of years, buried bones slowly turn to rock.
-sentence.vi: Qua hàng triệu năm, xương bị vùi trong bùn cát dần hoá thành đá.
+sentence.vi: Qua hàng triệu năm, xương bị vùi dần hoá thành đá.
+> SK-044 (14/11, A2): câu VI cũ mười lăm tiếng, nay mười một, khớp câu EN ("buried bones"); "bùn cát" có trong ba khung hình.
 image.brief: [hình vẽ] Hình vuông designer tự vẽ gần thực tế (Duy 10/11), ba khung nối bằng mũi tên đơn giản trên nền trơn. Khung một: vài khúc xương lớn nằm nửa chìm trong bùn nâu ven một con sông thời xa xưa, bờ có dương xỉ; chỉ có xương sạch, không có thịt, không có xác con vật. Khung hai: cùng chỗ đó nhìn cắt ngang lòng đất, nhiều lớp bùn và cát màu khác nhau phủ dày lên trên xương. Khung ba: rất lâu sau, vách đá nhiều lớp, bàn tay nhà cổ sinh vật học (chỉ thấy tay) cầm chổi nhỏ chải lộ ra khúc xương nâu sẫm trong đá. Không có chữ, không ghi nhãn dưới khung. Khung một và khung hai có file vẽ riêng cho câu q3 và câu q1. Từ khoá tìm ảnh (EN): fossil formation stages illustration, bones buried sediment layers cross section, palaeontologist brushing fossil bone in rock
 image.alt.en: How a bone becomes a fossil, in three steps
 image.alt.vi: Ba bước một khúc xương thành hoá thạch
@@ -231,7 +242,8 @@ label.en: Where pictures come from
 label.vi: Hình khủng long từ đâu mà có
 color: do_son
 sentence.en: Scientists study fossils to learn what dinosaurs looked like.
-sentence.vi: Các nhà khoa học nghiên cứu hoá thạch để biết khủng long trông ra sao.
+sentence.vi: Nhờ hoá thạch, nhà khoa học biết khủng long trông ra sao.
+> SK-044 (14/11, A2): câu VI cũ mười lăm tiếng, nay mười hai; câu EN giữ nguyên.
 image.brief: [ảnh] Một ảnh trong bảo tàng ở London: bộ xương khủng long ba sừng trên nền trắng và một mô hình nhỏ khủng long ba sừng đứng cạnh, cùng hướng nhìn ngang; không có người; tấm biển nhỏ cạnh đế mô hình có chữ, không đọc được ở cỡ ô; không thêm nhãn chữ (Duy 10/11: hình không có chữ; "model", "skeleton" có ở món ví dụ và `alt`). Một ảnh có đủ ý của ô, không ghép hai ảnh như brief đầu, không dùng lại mô hình ở công viên của bài một. Từ khoá tìm ảnh (EN): Triceratops skeleton and model museum
 image.alt.en: A Triceratops skeleton next to a model
 image.alt.vi: Bộ xương khủng long ba sừng bên cạnh mô hình
@@ -270,8 +282,9 @@ prompt.en: Find three kinds of fossils
 prompt.vi: Tìm ba loại hoá thạch
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: Fossils have turned to rock. Find a bone or tooth, a footprint and an egg.
-messages.start.vi: Hoá thạch đã hoá thành đá. Em tìm xương hoặc răng, dấu chân và trứng nhé.
+messages.start.en: Find a bone or tooth, a footprint and an egg. Fossils have turned to rock.
+messages.start.vi: Em tìm xương hoặc răng, dấu chân và trứng nhé. Hoá thạch đã hoá thành đá.
+> SK-044 (14/11, A2): đảo thứ tự, câu in trong bong bóng là việc cần làm; câu "đã hoá thành đá" thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Lời nhắn không gọi tên vật chứa ("tray", "mâm", "khay"), theo rút kinh nghiệm SK-031.
@@ -402,10 +415,10 @@ image.alt.en: Bones buried under mud and sand
 image.alt.vi: Xương bị vùi dưới bùn và cát
 hint.en: Fossil bones feel hard and heavy. What else feels like that?
 hint.vi: Xương hoá thạch sờ vào thấy cứng và nặng. Còn thứ gì cũng như vậy?
-explanation_correct.en: Yes! Over millions of years, buried bones turn to rock.
-explanation_correct.vi: Đúng rồi! Qua hàng triệu năm, xương bị vùi dần hoá thành đá.
-explanation_wrong.en: The answer is rock. Buried bones slowly turn to rock.
-explanation_wrong.vi: Đáp án là đá. Xương bị vùi dần hoá thành đá.
+explanation_correct.en: That is why fossil bones feel hard and heavy.
+explanation_correct.vi: Vì vậy xương hoá thạch cứng và nặng.
+explanation_wrong.en: Over millions of years, buried bones slowly turn to rock.
+explanation_wrong.vi: Qua hàng triệu năm, xương bị vùi dần hoá thành đá.
 > DOK 1: nhớ lại ý hai. Hai lựa chọn sai là bùn và cát, chính là hai thứ phủ lên xương ở ô Học thứ ba; bé nhớ nhầm bước thì chọn hai thứ này. Gợi ý trỏ về món "hard and heavy like rock" ở ô Xương và răng, không nói thẳng đáp án.
 > Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
 
@@ -419,6 +432,8 @@ image.alt.vi: Hòn đá xám
 
 #### option q1_sand
 correct: false
+feedback.en: Sand only covers the bones at first.
+feedback.vi: Cát chỉ phủ lên xương lúc đầu thôi.
 label.en: sand
 label.vi: cát
 image.brief: [ảnh] Một đống cát mịn màu vàng nhạt, chụp gần; không có chữ. Từ khoá tìm ảnh (EN): heap of fine sand close up
@@ -427,6 +442,8 @@ image.alt.vi: Một đống cát
 
 #### option q1_mud
 correct: false
+feedback.en: Mud covers the bones first, like a blanket.
+feedback.vi: Bùn phủ lên xương trước, như tấm chăn.
 label.en: mud
 label.vi: bùn
 image.brief: [ảnh] Bùn nâu ướt, bóng nước, có gợn sóng, chụp gần, bùn lấp đầy khung (cắt dải giữa của một ảnh dọc); không có chữ. Từ khoá tìm ảnh (EN): wet brown mud texture close up
@@ -439,7 +456,8 @@ format: single_choice
 version: 1
 dok: 1
 prompt.en: Where can you see a dinosaur skeleton today?
-prompt.vi: Ngày nay, em có thể xem bộ xương khủng long ở đâu?
+prompt.vi: Ngày nay em xem xương khủng long ở đâu?
+> SK-044 (14/11, A2): câu VI cũ mười hai tiếng, nay chín.
 image.brief: [ảnh] Hộp sọ hoá thạch khủng long bạo chúa (của cùng bộ xương ở Bảo tàng Naturkunde, Berlin, như thẻ thưởng `t_rex` bài một, nhưng là một ảnh khác), chụp gần, thấy rõ hàm và hàng răng; designer cắt sát hộp sọ, làm tối hết phần ngoài (đèn phản chiếu, mép tủ kính, bảng chữ) và đặt trên nền tối trơn hình vuông; không thấy phòng trưng bày, không có người, không có chữ. Từ khoá tìm ảnh (EN): Tyrannosaurus rex skull museum dark background
 image.alt.en: A T. rex skull
 image.alt.vi: Hộp sọ khủng long bạo chúa
@@ -447,16 +465,18 @@ image.alt.vi: Hộp sọ khủng long bạo chúa
 > Câu hỏi "Where can you see a dinosaur skeleton today?" vẫn hợp: hộp sọ là một phần của bộ xương, hình cho thấy vật được hỏi mà không cho thấy nơi trưng bày, nên không lộ đáp án; giải thích nói "skeletons and fossils". Nếu PM muốn hình khớp từng chữ với câu hỏi (từ `skeleton` dạy "tất cả các khúc xương"), đổi câu hỏi thành "Where can you see dinosaur fossils today?" · "Ngày nay, em có thể xem hoá thạch khủng long ở đâu?" (cần sinh lại hai clip); biên tập đề xuất giữ.
 hint.en: Where do people keep very old things to show?
 hint.vi: Người ta giữ và trưng bày những đồ vật rất xưa ở đâu?
-explanation_correct.en: Yes! You can see skeletons and fossils in a museum.
-explanation_correct.vi: Đúng rồi! Em có thể xem bộ xương và hoá thạch ở bảo tàng.
-explanation_wrong.en: The answer is a museum. Fossils are kept there.
-explanation_wrong.vi: Đáp án là bảo tàng. Hoá thạch được giữ ở đó.
+explanation_correct.en: Museums keep fossils safe and show them to everyone.
+explanation_correct.vi: Bảo tàng giữ gìn hoá thạch và trưng bày cho mọi người.
+explanation_wrong.en: Fossils and skeletons are kept in museums.
+explanation_wrong.vi: Hoá thạch và bộ xương được giữ ở bảo tàng.
 > DOK 1: nhớ lại ô Xương và răng và từ `museum`. Câu hỏi nói "skeleton" nhưng không lựa chọn nào có chữ "skeleton" hay "bộ xương", để bé không đọc nhãn mà đoán. Hình câu hỏi là vật được hỏi (hộp sọ của một bộ xương), không thấy phòng trưng bày để không lộ đáp án; hình lựa chọn bảo tàng không có bộ xương khủng long.
 > Lựa chọn sở thú bắt ý ngây thơ "khủng long còn sống ở đâu đó". Câu này cũng nối mục An toàn ở `_topic.md`: khuyến khích bé xem hoá thạch ở bảo tàng cùng gia đình.
 > Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ nhất).
 
 #### option q2_zoo
 correct: false
+feedback.en: A zoo keeps living animals, like zebras.
+feedback.vi: Sở thú nuôi con vật còn sống, như ngựa vằn.
 label.en: zoo
 label.vi: sở thú
 image.brief: [ảnh] Ba con ngựa vằn trong khu nuôi của sở thú, có tường đá và chuồng; không có người, không có biển chữ. Từ khoá tìm ảnh (EN): zebras zoo enclosure
@@ -465,6 +485,8 @@ image.alt.vi: Ngựa vằn ở sở thú
 
 #### option q2_field
 correct: false
+feedback.en: Farmers grow rice in a field.
+feedback.vi: Ở ruộng, nhà nông trồng lúa.
 label.en: rice field
 label.vi: cánh đồng lúa
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/q2_rice`
@@ -485,22 +507,25 @@ id: d8d5f596-9863-43ce-baec-4e489cbcc704
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Some bones were in mud by a river. What happened next?
-prompt.vi: Mấy khúc xương nằm trong bùn ven sông. Chuyện gì xảy ra tiếp theo?
+prompt.en: What happened next to these bones in the mud?
+prompt.vi: Xương nằm trong bùn, chuyện gì xảy ra tiếp?
+> SK-044 (14/11, A2): câu cũ hai câu, mười một từ, mười lăm tiếng; nay một câu chín từ, mười tiếng. Ảnh xương trong bùn ven sông giữ ngữ cảnh "ven sông".
 image.brief: [hình vẽ] Khung một của hình vẽ `explore_forms`, designer vẽ thành file riêng (10/11): vài khúc xương sạch nằm nửa chìm trong bùn nâu ven sông, bờ có dương xỉ; không có thịt, không có xác con vật, không có chữ
 image.alt.en: Bones in mud by a river
 image.alt.vi: Xương nằm trong bùn ven sông
 hint.en: What must happen before bones can turn to rock?
 hint.vi: Muốn hoá thành đá, trước hết xương phải ra sao?
-explanation_correct.en: Yes! First, mud and sand covered the bones.
-explanation_correct.vi: Đúng rồi! Trước hết, bùn và cát phủ kín xương.
-explanation_wrong.en: The answer is mud and sand. Digging came millions of years later.
-explanation_wrong.vi: Đáp án là bùn và cát phủ lên. Hàng triệu năm sau mới có người đào lên.
+explanation_correct.en: Mud and sand covered the bones and kept them safe.
+explanation_correct.vi: Bùn cát phủ kín xương và giữ cho xương an toàn.
+explanation_wrong.en: Bones must be covered before they can turn to rock.
+explanation_wrong.vi: Xương phải được phủ kín trước rồi mới hoá đá.
 > DOK 2: xếp thứ tự các bước, thay cho câu `order_sequence` mà app 0.1.0 chưa hiện được. Ba lựa chọn đều là bước thật của câu chuyện hoá thạch; bé phải chọn bước ngay sau, không chọn bước muộn hơn.
 > Lựa chọn đúng dùng cùng khung tranh với hình câu q1. Đây là chủ ý cho nhất quán, không phải lộ đáp án: câu q1 hỏi xương hoá thành gì, câu này hỏi thứ tự.
 
 #### option q3_dig
 correct: false
+feedback.en: Digging came millions of years later.
+feedback.vi: Hàng triệu năm sau mới có người đào lên.
 label.en: dug out of rock
 label.vi: được đào lên từ đá
 image.brief: [hình vẽ] Khung ba của hình vẽ `explore_forms`, designer xuất thành file riêng (10/11 tối): vách đá nhiều lớp, khúc xương hoá thạch nâu sẫm lộ ra trong đá, bàn tay nhà cổ sinh vật học cầm chổi nhỏ chải đá (chỉ thấy bàn tay và tay áo, không thấy mặt); không có chữ
@@ -518,6 +543,8 @@ image.alt.vi: Xương bị vùi dưới bùn và cát
 
 #### option q3_museum
 correct: false
+feedback.en: The museum is the very last step.
+feedback.vi: Vào bảo tàng là bước sau cùng.
 label.en: in a museum
 label.vi: trong bảo tàng
 image.brief: [hình vẽ] Khung thứ tư cùng nét với ba khung của hình `explore_forms`: khúc xương hoá thạch nâu sẫm của khung ba đặt trên hai giá đỡ trong tủ kính, trên bệ trắng, đèn chiếu từ trên xuống, tường xanh xám; không có bảng chữ, không có người, không có chữ
@@ -540,10 +567,10 @@ image.alt.vi: Dụng cụ tìm hoá thạch
 > Hình gốc, dùng lại ở bài bốn (hình câu w1 và q2: dụng cụ tìm hoá thạch, không có hoá thạch).
 hint.en: Which ones came from long ago and turned to rock?
 hint.vi: Thứ nào có từ thời xa xưa và đã hoá thành đá?
-explanation_correct.en: Yes! The skull and the eggs in rock are fossils.
-explanation_correct.vi: Đúng rồi! Hộp sọ và trứng trong đá là hoá thạch.
-explanation_wrong.en: The skull and the eggs in rock are fossils. The model and hen's eggs are new.
-explanation_wrong.vi: Hộp sọ và trứng trong đá là hoá thạch. Mô hình và trứng gà thì mới có gần đây.
+explanation_correct.en: Fossils are very old things that turned to rock.
+explanation_correct.vi: Hoá thạch là thứ rất xưa đã hoá thành đá.
+explanation_wrong.en: Only the skull and eggs in rock are very old.
+explanation_wrong.vi: Chỉ hộp sọ và trứng trong đá là rất xưa.
 > DOK 2: phân loại bốn vật mới, không trùng hình phần Chơi. Mỗi món sai giống một món đúng: trứng gà giống trứng trong đá; mô hình khủng long trông giống khủng long hơn cả hộp sọ. Món mô hình là lựa chọn sai nối với `dinosaur_pictures_are_photos` (mô hình do người làm, không phải hoá thạch); không gắn key, vì Discoverer chỉ có một câu gắn misconception.
 > Hình câu hỏi là bộ dụng cụ tìm hoá thạch, không có hoá thạch, theo Quy ước hình mục bốn.
 > Câu phân loại (luật rà chéo 9/11): nhãn và `alt` của bốn lựa chọn tả đặc điểm, không có chữ "fossil" · "hoá thạch" hay "dinosaur" · "khủng long", vì câu hỏi chính là "những thứ nào là hoá thạch khủng long". Nhãn tả đặc điểm ("in rock", "in a park").
@@ -560,6 +587,8 @@ image.alt.vi: Hộp sọ có sừng, một phần còn trong đá
 
 #### option q4_model
 correct: false
+feedback.en: A model is new, made by people.
+feedback.vi: Mô hình là đồ mới, do người làm ra.
 label.en: model in a park
 label.vi: mô hình ở công viên
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`
@@ -568,6 +597,8 @@ image.alt.vi: Mô hình một con vật cổ dài
 
 #### option q4_hen_eggs
 correct: false
+feedback.en: Hen's eggs are new, not turned to rock.
+feedback.vi: Trứng gà là trứng mới, chưa hoá đá.
 label.en: hen's eggs
 label.vi: trứng gà
 image.brief: [ảnh] Mấy quả trứng gà màu trắng ngà và nâu xếp trong rổ mây lót vải đỏ, chụp gần, cắt sát đám trứng; không có tay người, không có chữ. Từ khoá tìm ảnh (EN): chicken eggs in basket
@@ -594,10 +625,10 @@ image.alt.en: A big bone
 image.alt.vi: Một khúc xương to
 hint.en: Think of the first steps of how a fossil forms.
 hint.vi: Em nhớ lại những bước đầu tiên khi hoá thạch hình thành nhé.
-explanation_correct.en: Yes! Mud covers this bone quickly and keeps it safe.
-explanation_correct.vi: Đúng rồi! Bùn sớm phủ kín khúc xương này và che chở cho nó.
-explanation_wrong.en: The answer is the bone in river mud. Mud covers it quickly.
-explanation_wrong.vi: Đáp án là khúc xương trong bùn ở lòng sông. Bùn sớm phủ kín nó.
+explanation_correct.en: Mud covers this bone quickly and keeps it safe.
+explanation_correct.vi: Bùn sớm phủ kín khúc xương này, che chở cho nó.
+explanation_wrong.en: Only the bone in river mud gets covered quickly.
+explanation_wrong.vi: Chỉ khúc xương trong bùn sông được phủ kín sớm.
 > DOK 2: áp dụng ý hai vào tình huống mới, ở thời nay. Ba lựa chọn là cùng một khúc xương ở ba chỗ; chỉ một chỗ có bùn phủ lên. Câu này cũng cho bé thấy chuyện hoá thạch không chỉ xảy ra thời khủng long, mà không nói tới tiến hoá hay loài nào khác.
 > Rà chữ tester 9/11 (N1): câu cũ hỏi "could become a fossil" · "có thể thành hoá thạch", nên "trên bãi cỏ khô" cũng hợp lý (xương trên cỏ bị lũ hay đất phủ lên vẫn có thể thành hoá thạch). Câu mới hỏi "most likely" · "dễ thành hoá thạch nhất", chỉ còn một đáp án; hai giải thích nhấn ý "bùn phủ kín sớm".
 > [CẦN KIỂM] Cách nói giản lược: xương được bùn cát phủ kín sớm thì dễ thành hoá thạch hơn; xương nằm phơi nắng trên mặt đất thường nứt vỡ, mục dần; xương bị con vật gặm thì vỡ vụn. Chuyên môn xác nhận nói với trẻ "một khúc xương ngày nay vùi trong bùn, sau hàng triệu năm có thể thành hoá thạch" là đúng.
@@ -605,6 +636,8 @@ explanation_wrong.vi: Đáp án là khúc xương trong bùn ở lòng sông. B�
 
 #### option q5_grass
 correct: false
+feedback.en: In sun and wind, this bone cracks and breaks.
+feedback.vi: Nắng gió làm khúc xương này nứt vỡ dần.
 label.en: on dry grass
 label.vi: trên bãi cỏ khô
 image.brief: [hình vẽ] Cùng khúc xương to màu trắng ngà của hình câu q5, nằm trên bãi cỏ khô vàng dưới nắng, cỏ che một phần chân xương; vẽ nhìn ngang, gần như thật; không có con vật, không có người, không có chữ. Từ khoá tìm ảnh (EN): old bone lying on dry grass sunlight
@@ -614,6 +647,8 @@ image.alt.vi: Khúc xương trên bãi cỏ khô
 
 #### option q5_dog
 correct: false
+feedback.en: The dog will chew this bone to bits.
+feedback.vi: Con chó sẽ gặm khúc xương này vụn ra.
 label.en: in a dog's mouth
 label.vi: trong miệng con chó
 image.brief: [hình vẽ] Một con chó lông vàng nằm trên sàn, hai chân trước giữ khúc xương trắng ngà, đầu cúi gặm một đầu xương; vẽ gần như thật, cùng nét với hai lựa chọn kia; không có vòng cổ, không có người, không có chữ. Từ khoá tìm ảnh (EN): dog chewing big bone
@@ -639,8 +674,9 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: A fossil bone is just an old bone. It is not rock.
-statement.vi: Xương hoá thạch chỉ là xương cũ thôi. Nó không phải là đá.
+statement.en: A fossil bone is just an old bone, not rock.
+statement.vi: Xương hoá thạch chỉ là xương cũ, không phải đá.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười một tiếng).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -652,10 +688,12 @@ image.alt.vi: Khúc xương hoá thạch trong đá
 answer: false
 hint.en: What happened to the bone over millions of years?
 hint.vi: Qua hàng triệu năm, khúc xương đã thay đổi ra sao?
-explanation_correct.en: Over millions of years, the bone slowly turned to rock. It is hard and heavy like rock.
-explanation_correct.vi: Qua hàng triệu năm, khúc xương đã dần hoá thành đá. Nó cứng và nặng như đá.
-explanation_wrong.en: Na is not right. The bone slowly turned to rock.
-explanation_wrong.vi: Na chưa đúng. Khúc xương đã dần hoá thành đá.
+explanation_correct.en: Over millions of years, the bone slowly turned to rock.
+explanation_correct.vi: Qua hàng triệu năm, khúc xương đã dần hoá thành đá.
+explanation_wrong.en: This bone was buried and slowly turned to rock.
+explanation_wrong.vi: Khúc xương bị vùi kín rồi dần hoá thành đá.
+feedback_true.en: A fossil bone feels hard and heavy, like rock.
+feedback_true.vi: Xương hoá thạch sờ thấy cứng và nặng như đá.
 > DOK 3: bắt lỗi một lời nói bằng bằng chứng trong bài (ô Hoá thạch hình thành ra sao, phần Chơi). Lời Na đúng theo `_topic.md` mục "Câu sáu, lời Na". Đáp án Sai theo bảng Đáp án Đúng/Sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!" · "Đúng rồi!", vì đáp án là "No". Gợi ý hỏi về quá trình, không nói thẳng "hoá thành đá".
 > [CẦN KIỂM] Như `fossil_is_old_bone`: có hoá thạch vẫn còn một phần chất của xương; với trẻ bảy đến chín tuổi, câu "Xương hoá thạch chỉ là xương cũ, không phải đá" được coi là sai. "Cứng và nặng như đá" cần chuyên môn xác nhận.

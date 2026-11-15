@@ -227,14 +227,6 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
         #expect(computeItemXP(score: ItemScore(points: -1, tryResults: [false], finalCorrect: false, triesUsed: 1), rules: rules) == 0)
     }
 
-    /// SK-013 (SK-012 tester L8): a group name never breaks across lines in the requirement bar;
-    /// the words are the same.
-    @Test func groupNamesStayOnOneLine() {
-        let kept = PlayStep<EmptyView>.keptTogether("Đồ ngọt: nên ăn ít")
-        #expect(!kept.contains(" "))
-        #expect(kept.replacingOccurrences(of: "\u{00A0}", with: " ") == "Đồ ngọt: nên ăn ít")
-    }
-
     private func expectMatchesEngine(_ summary: LessonSummary, session: LessonSession, harness: SessionHarness) throws {
         let quiz = session.quizItems.map { item in
             ItemResult(itemId: item.id.uuidString.lowercased(),
@@ -455,10 +447,8 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
     @Test func questionWithoutRendererIsLeftOut() throws {
         let lesson = try Repo.lesson { object in
             var quiz = object["quiz"] as! [[String: Any]]
-            quiz[2]["format"] = "order_sequence"
-            quiz[2]["items"] = [["key": "a", "label": ["en": "a", "vi": "a"]], ["key": "b", "label": ["en": "b", "vi": "b"]]]
-            quiz[2]["answer"] = ["a", "b"]
-            quiz[2].removeValue(forKey: "options")
+            // SK-043 A2: Discoverer now shows every v1 format; a format of a later schema is left out.
+            quiz[2]["format"] = "label_diagram"
             object["quiz"] = quiz
         }
         let harness = try SessionHarness(lesson: lesson)

@@ -157,3 +157,202 @@ Phần app xong (tiếp phiên trước bị dừng). Gói cũ không có `feedb
 3. Chọn đúng → luôn nghe `explanation_correct`; hết lượt → `explanation_wrong`.
 4. Discoverer Quiz: sau "Kiểm tra" sai, `HintNote` có hai dòng (feedback, hint) và loa của nó đọc cả hai.
 5. Gói cũ (6 chủ đề Discoverer, chưa có feedback) chơi y như trước.
+
+## content-editor 14/11 · Bề mặt Trái Đất, Khủng long
+
+Theo luật Discoverer ở TEMPLATE (SK-044) và ngân sách A2 (SK-043 "Duy 14/11 · duyệt Discoverer A2", bảng trong `design/play-ui/options/lesson-less-text/Discoverer-A2.html`). Mười bài: `content/discoverer/be-mat-trai-dat/01`…`05`, `content/discoverer/khung-long/01`…`05`. Không chạy lệnh, không đổi `id:`, key, đáp án, format hay `version`. Mọi chữ mới là nháp AI. Mỗi chỗ rút có ghi chú `> SK-044 (14/11, A2): …` ngay dưới dòng đã đổi.
+
+**Feedback: 148 dòng mới** (cặp `.en/.vi`).
+- 113 lựa chọn sai (`#### option`, `correct: false`) và 13 thẻ sai của `fill_blank_bank` (`#### bank` không nằm trong `answers`): mỗi cái một câu, tối đa mười từ EN và mười tiếng VI (vừa mẩu giấy A2). Nói về chính lựa chọn bé vừa chạm, nêu lý do, không gọi tên đáp án, không "sai".
+- 22 câu `true_false` (cả câu Na): một dòng cho phía bé chọn nhầm (`feedback_true` khi đáp án Sai, `feedback_false` khi đáp án Đúng); đã soát cả 22 câu đúng phía.
+- Theo bài (Bề mặt Trái Đất 1–5 · Khủng long 1–5): 14, 14, 15, 14, 16 · 14, 16, 16, 14, 15.
+- `hint` giữ nguyên; feedback viết để không lặp ý với hint đọc ngay sau.
+
+**Giải thích: 86 câu viết lại** (mọi câu Khởi động và Quiz của mười bài). `explanation_correct` một câu, bỏ "Yes!"/"Đúng rồi!", thêm một ý (ví dụ "Asia is the biggest continent, and Vietnam is in it."). `explanation_wrong` một câu lý do, bỏ "The answer is…"/"Đáp án là…", "This is true/false."/"Câu này đúng/sai", "Na is (not) right."/"Na nói đúng/Na chưa đúng". Mỗi câu tối đa mười từ EN, mười hai tiếng VI. Giữ chữ cũ (chỉ bỏ "Yes!" hoặc không đổi): Bề mặt Trái Đất 4 q6 `explanation_correct`; Khủng long 4 w2 `explanation_correct`; Khủng long 5 w2 `explanation_correct` (EN không đổi), q5 và q6 `explanation_correct` (chỉ bỏ "Yes!").
+
+**Rút chữ: 48 chỗ** (chữ trẻ nghe đổi, ngoài feedback và giải thích):
+| Bài | Đã rút |
+| --- | --- |
+| Bề mặt 1 | q5 câu hỏi (ngữ cảnh "Mai lấy ngón tay chặn quả địa cầu" chuyển sang `instruction`, xem câu hỏi 2 dưới); q6 lời Na một câu; Chơi `messages.start` đảo thứ tự hai câu |
+| Bề mặt 2 | q5 câu hỏi một câu; q6 lời Na một câu |
+| Bề mặt 3 | q4 câu hỏi (bỏ "Lan bổ đôi một quả đào"); q6 lời Na; Chơi `start` đảo thứ tự |
+| Bề mặt 4 | Học ô Mác-ma và dung nham, ô Ở Việt Nam (VI); q2 câu điền thành một câu; q5 câu hỏi; q6 lời Na; Chơi `start` đảo thứ tự |
+| Bề mặt 5 | w1 câu hỏi VI; Học ô Giữ an toàn (VI); q3, q5 câu hỏi; q6 lời Na; Chơi `start` |
+| Khủng long 1 | Học ô Thời xa xưa, Con người (VI), ô Lâu cỡ nào (EN và VI, bỏ "Scientists found"); Chơi `start` VI; q6 lời Na |
+| Khủng long 2 | Học ô Bò sát trên cạn (VI); Chơi `start` đảo thứ tự, `missing.tray_giant` VI; q6 lời Na |
+| Khủng long 3 | Học ô Hoá thạch hình thành ra sao, ô Hình khủng long từ đâu (VI); Chơi `start` đảo thứ tự; q2 câu hỏi VI; q3 câu hỏi; q6 lời Na |
+| Khủng long 4 | Học ô Khủng long ăn thực vật, ô Cách tự vệ (VI); Chơi `start` VI; q3, q4 câu hỏi; q6 lời Na |
+| Khủng long 5 | Học ô Khối đá (EN và VI, bỏ "Scientists found"); Chơi `start`; q1 câu hỏi VI; q3, q4, q5 câu hỏi; q6 lời Na |
+
+Cách rút: câu hỏi một câu, tối đa mười từ, mười tiếng; ngữ cảnh chuyển vào ảnh câu hỏi (ảnh đã có sẵn cảnh đó) hoặc vào câu chỉ đọc. Câu ô Học một câu, tối đa mười hai tiếng. Lời Na một câu, tối đa mười hai tiếng, giữ đủ hai vế và đáp án. `messages.start` của Chơi: câu đầu (in trong bong bóng) là việc bé cần làm và tự đứng được; câu thứ hai chỉ đọc. `khung-long/_topic.md` mục "Câu sáu, lời Na" thêm một dòng ghi bản lời Na mới.
+
+**Sinh lại giọng:** toàn bộ dòng `feedback*` (mới), `explanation_correct/wrong` của 86 câu, và 48 chỗ ở bảng trên (gồm `instruction` mới ở Bề mặt Trái Đất 1 q5).
+
+**Còn vượt ngân sách**
+- Bề mặt Trái Đất 2, ô `explore_more_oceans`: câu Học hai câu, hai mươi mốt tiếng. Câu thứ hai ("Sách ở trường em có thể chia… theo cách khác") là câu Duy yêu cầu 9/11, nên chưa tự rút. Cần Duy chọn: gộp thành một câu khoảng mười ba tiếng, chuyển câu này sang ghi chú cho bố mẹ, hoặc giữ.
+- Bề mặt Trái Đất 5 q4 (`fill_blank_bank` hai chỗ trống): câu điền hai câu, mười bốn từ ("Plates slip, and the ground {1}. Under the sea, this can make a {2}."). Gộp một câu thì mất ý "dưới đáy biển" hoặc thành câu khó đọc; giữ, chờ designer xem màn câu điền hai chỗ trống có chứa được không.
+- Nhãn ô Học dài hơn một đến hai chữ (A2), chưa sửa vì không thuộc việc được giao: "Quả địa cầu", "Các châu lục khác", "Các đại dương khác", "Vỏ Trái Đất", "Nhân Trái Đất", "Mác-ma và dung nham", "Ở Việt Nam", "Giữ an toàn", "Thời xa xưa", "Lâu cỡ nào?", "Bò sát trên cạn", "Không phải khủng long", "Xương và răng", "Dấu chân và trứng", "Hoá thạch hình thành ra sao", "Hình khủng long từ đâu mà có", "Trứng và tổ", "Khủng long ăn thực vật", "Khủng long ăn thịt", "Cách tự vệ", "Khối đá từ vũ trụ", "Thiếu thức ăn". Rút được nếu PM/designer cho đổi nhãn.
+- Bề mặt Trái Đất 4 ô Mác-ma: mười hai chữ nếu đếm "mác-ma" là một (theo dấu cách), mười ba nếu đếm theo tiếng.
+
+**Cần ios-dev / dev / PM**
+1. **`true_false` một lượt** (Duy duyệt A2 điểm 6) và feedback: ios-dev 13/11 ghi "hết lượt thì chỉ đọc `explanation_wrong`, không đọc lại `feedback`". Nếu `true_false` chỉ còn một lượt, 22 dòng `feedback_true/false` sẽ không bao giờ được đọc. Đề xuất: bé chọn nhầm `true_false` thì đọc `feedback_*` rồi `explanation_wrong` (hai câu đã viết để không lặp ý), hoặc PM bỏ hẳn trường này cho Discoverer.
+2. **`instruction` làm câu ngữ cảnh chỉ đọc:** Bề mặt Trái Đất 1 q5 (`single_choice`) nay có `instruction` "Mai stops a spinning globe with her finger." (schema cho phép ở mọi format; app đọc `instruction` trước `prompt`). A2 coi `instruction` là chỉ đọc, không in. ios-dev xác nhận Discoverer A2 không in `instruction` ở `single_choice`; nếu có in thì báo để chuyển câu này vào ảnh.
+3. **Đổi format theo A2** (khung-long/03 q3 và be-mat-trai-dat/04 q3 sang `order_sequence`): chưa làm, vì việc này đổi đáp án và `version`, ngoài phạm vi lần này. Làm khi PM giao.
+4. **[CẦN KIỂM] mới** (biên tập khá chắc, nhờ chuyên môn đọc lướt): Biển Đông là một phần của Thái Bình Dương (Bề mặt 2 q5); châu Á là châu lục lớn nhất (Bề mặt 2 q2); Châu Phi "bên kia Ấn Độ Dương", Đại Tây Dương "phía bên kia Trái Đất" so với Việt Nam (Bề mặt 2 q2, q5); "trong tối, cây không tự làm ra thức ăn" (Khủng long 5 q4); cổ dài giúp với tới lá cây cao (Khủng long 5 w1); răng như bút chì tuốt lá khỏi cành (Khủng long 4 q2); răng trâu dẹt nghiền lá (Khủng long 4 q3); chân thẳng dưới thân đỡ thân nặng (Khủng long 2 q4); chuồn chuồn và cây vạn tuế ngày nay vẫn còn, nói theo nhóm (Khủng long 1 q3).
+5. **Lộ nhẹ (chấp nhận):** feedback `true_false` gần như nói lý do của đáp án (chỉ có hai phía), như đã ghi ở phần Explorer.
+
+## content-editor 14/11 · Hô hấp, Não bộ, Thời tiết
+
+Theo luật Discoverer ở TEMPLATE (SK-044) và ngân sách A2 (SK-043 "Duy 14/11 · duyệt Discoverer A2"). Mười ba bài: `content/discoverer/ho-hap/01`…`04`, `nao-bo-va-giac-quan/01`…`04`, `thoi-tiet-va-thien-tai/01`…`05`. Không chạy lệnh, không đổi `id:`, key, đáp án, format hay `version`. Mọi chữ mới là nháp AI; mỗi bài có một dòng `> 14/11 (SK-044, …)` dưới Mục tiêu, chỗ rút lớn có ghi chú riêng.
+
+**Feedback: 185 dòng mới** (cặp `.en/.vi`).
+- 119 lựa chọn sai (`#### option`, `correct: false`) và 30 thẻ sai `fill_blank_bank`: mỗi cái một câu, tối đa mười từ EN, mười tiếng VI (vừa mẩu giấy A2). Nói về chính thứ bé vừa chạm, nêu lý do, không gọi tên đáp án, không "sai". Đã soát: không còn lựa chọn sai hay thẻ sai nào thiếu `feedback`, không lựa chọn đúng nào có.
+- 36 câu `true_false` (cả 13 câu Na): một dòng cho phía bé chọn nhầm, đúng phía theo `answer`.
+- Theo bài (option + thẻ · true_false): Hô hấp 10·3, 10·3, 10·3, 13·3; Não bộ 14·2, 14·1, 12·2, 12·3; Thời tiết 12·2, 10·3, 10·4, 12·3, 10·4.
+
+**Giải thích: 104 câu, cả hai lời viết lại** (mọi câu Khởi động và Quiz). `explanation_correct` một câu, bỏ "Yes!"/"Đúng rồi!", thêm một ý (ví dụ "Gills take oxygen from the water for the fish."). `explanation_wrong` một câu lý do, bỏ "The answer is…", "This is true/false.", "Na is (not) right." và bản VI. Tối đa mười từ EN, mười hai tiếng VI. Một ít câu `explanation_correct` vốn đã là lý do thì chỉ bỏ "Yes!".
+
+**Hint sửa: 8 câu** (hai câu thành một, hoặc để không lặp ý với feedback đọc ngay trước): Hô hấp 1 q4, Hô hấp 2 q1; Não bộ 2 q2, q5, q6; Thời tiết 1 q1, q3, q6.
+
+**Rút chữ: 65 chỗ** (chữ trẻ nghe đổi, ngoài feedback, giải thích, hint):
+| Bài | Câu hỏi (prompt hoặc câu điền) | Câu ô Học | Lời Na |
+| --- | --- | --- | --- |
+| Hô hấp 1 | w2 (VI), q5 | Con vật, Khí ô-xi | |
+| Hô hấp 2 | q3 (bỏ "Lan bị nghẹt mũi", ý nằm ở hình), q4 | Thức ăn và không khí | |
+| Hô hấp 3 | q2 câu điền (VI), q4 (bỏ "sau ba việc") | Nghỉ ngơi (EN), Cơ bắp | q6 |
+| Hô hấp 4 | w3 (VI), q3 (VI), q4 | Khói (VI) | q6 |
+| Não bộ 1 | q3, q4 | | q6 (bỏ "trên võng", ý ở hình) |
+| Não bộ 2 | w1, q1 câu điền, q4 (bỏ "đá quả cầu", ý ở hình) | Dây thần kinh, Rất nhanh (VI) | q6 |
+| Não bộ 3 | w2 (VI), q3, q4 (bỏ "Lan nhắm mắt", ý ở hình), q5 | | q6 |
+| Não bộ 4 | w1 (VI), q5 | Mũ bảo hiểm, Giấc ngủ, Khi em ngủ (VI) | q6 |
+| Thời tiết 1 | w1, w2, q3 (bỏ "mây đen kéo tới", ý ở hình), q4 | | q6 |
+| Thời tiết 2 | q4, q5 (VI) | Ống đo mưa, Cảm giác của mình (VI) | q6 |
+| Thời tiết 3 | w2 (VI), q3, q5 (VI) | Dự báo (VI) | q6 |
+| Thời tiết 4 | q2 câu điền (VI), q3, q4 | Lũ lụt, Hạn hán (VI), Hai mùa | q6 |
+| Thời tiết 5 | w2 (VI), q2 câu điền (VI), q3, q4 | Lắng nghe (VI) | q6 |
+
+Cách rút: câu hỏi một câu, tối đa mười từ EN, mười tiếng VI; ngữ cảnh chuyển vào ảnh câu hỏi (ảnh đã có sẵn cảnh đó), không dùng `instruction`. Câu ô Học một câu, tối đa mười hai tiếng. Lời Na một câu, tối đa mười hai tiếng, giữ hai vế và đáp án. Ba `_topic.md` sửa theo: mục "Câu sáu, lời Na" và các `note` có trích lời Na; luật "This is …/Na is …" ở mục Đúng/Sai ghi **hết hiệu lực 14/11**.
+
+**Chữ trẻ nghe đổi nghĩa, cần người duyệt đọc**
+- Hô hấp 1 w2: câu VI không còn đúng chữ ô Sống sót của *Khủng long* bài năm (EN giữ nguyên chữ).
+- Hô hấp 1 q4: hint mới "Remember the diver on the Oxygen card." trỏ ô có ảnh thợ lặn mang bình khí; gần lộ đáp án hơn hint cũ. Ý "thức ăn, nước chờ được" của hint cũ nay ở feedback của chai nước, hộp cơm. Nếu thấy lộ, đổi lại hint thành "Think what your body needs every single minute."
+- Não bộ 2 q1: câu điền EN đổi "to and from your brain" thành "between your brain and your body" (cho VI vừa mười tiếng).
+- Não bộ 3 q5: câu hỏi nay hỏi "Quả nào…", không còn "Bộ não của em nhận ra đó là gì?"; ý "não ghép ba tin" chuyển vào `explanation_correct`.
+- Thời tiết 1 w2 `explanation_correct`: so giọt nước trên kính với "một đám mây nhỏ" (nối ô Trời nhiều mây).
+- Thời tiết 3 q1 `explanation_correct`: **[CẦN KIỂM]** "Bão thường tới từ tháng sáu đến tháng mười một" (biên tập nhớ). Phương án thay đã ghi trong bài nếu không xác nhận được.
+- Thời tiết 4 q2: câu điền VI đổi "quá ít" thành "thiếu".
+
+**Sinh lại giọng:** mọi dòng `feedback*` (mới), `explanation_correct/wrong` của 104 câu, 8 hint, và 65 chỗ ở bảng trên.
+
+**Còn vượt ngân sách** (ngoài phạm vi lần này, chưa sửa)
+- Thưởng `fact`: 11 thẻ còn hai câu hoặc hơn mười hai tiếng (Hô hấp 1–4; Não bộ 2, 4; Thời tiết 1–5). A2: tên thẻ + một câu tối đa mười hai tiếng.
+- Chơi `messages.*`: khoảng 17 lời nhắn hơn mười hai tiếng, phần lớn là `start` một câu dài (ví dụ Não bộ 1 "Em tìm một việc cần suy nghĩ, một việc cử động, và một việc không cần nghĩ nhé."). Lời hai câu có câu đầu tự đứng được thì đạt A2 (câu hai chỉ đọc).
+- Nhãn ô Học dài hơn một đến hai chữ (ví dụ "Thức ăn và không khí", "Suy nghĩ và ghi nhớ", "Cảm giác của mình"): chưa sửa, như ghi chú của phần Bề mặt Trái Đất, Khủng long.
+- Sáu lời giải thích và mười một câu ô Học hoặc lời Na đang chạm đúng trần mười hai tiếng (đếm theo dấu cách; câu có "ô-xi" vẫn không quá mười hai nếu đếm "ô-xi" là hai tiếng).
+
+**Cần ios-dev / dev / PM**
+1. **`true_false` một lượt và feedback** (cùng câu hỏi với phần Bề mặt Trái Đất, Khủng long): 36 dòng `feedback_true/false` ở ba chủ đề này chỉ được đọc nếu app đọc `feedback_*` trước `explanation_wrong` khi bé chọn nhầm. Hai lời đã viết để không lặp ý.
+2. **[CẦN KIỂM] mới** (biên tập khá chắc): mang lấy ô-xi từ nước (Hô hấp 1 q2); tôm thở bằng mang (Hô hấp 3 w2, đã có ở ô Chơi); tro núi lửa là mảnh đá rất nhỏ (Hô hấp 4 w3); đóng cửa sổ ngăn bớt khói bụi (Hô hấp 4 q4); tim bơm máu tới chân (Não bộ 1 q4); não giữ nhịp thở khi nghỉ (Não bộ 1 q6); dự báo báo bão trước vài ngày (Thời tiết 3 q3); hạn hán kéo dài nhiều tuần, nhiều tháng (Thời tiết 4 q2); ngoài biển không cây vẫn có gió (Thời tiết 1 q6, 3 w3).
+3. **Lộ nhẹ giữa các câu (chấp nhận):** Hô hấp 4 q1 và Não bộ 1 w3 dùng cùng feedback cho mũ vải, áo mưa (cùng câu hỏi, khác bài); Não bộ 3 q3 feedback "Veins carry blood, not messages." nhắc lại thẻ q2 ngay trước.
+
+## content-editor 14/11 · Đá và đất
+
+Theo luật Discoverer ở TEMPLATE (SK-044) và ngân sách A2 (SK-043 "Duy 14/11 · duyệt Discoverer A2", bảng và ghi chú content trong `design/play-ui/options/lesson-less-text/Discoverer-A2.html`). Mười lăm bài `content/discoverer/da-va-dat/01`…`15`. Không chạy lệnh, không đổi `id:`, key, đáp án, format hay `version`. Mọi chữ mới là nháp AI. Chỗ rút câu hỏi có dòng `> A2 (SK-043, 14/11): …` ngay dưới khối giải thích.
+
+**Feedback: 220 dòng mới** (cặp `.en/.vi`; 222 trước khi bài 8 q4 đổi sang `order_sequence`).
+- 160 lựa chọn sai (`correct: false`) và 30 thẻ sai `fill_blank_bank`: mỗi cái một câu, tối đa mười từ EN, mười tiếng VI (vừa mẩu giấy A2). Nói về chính thứ bé vừa chạm, nêu lý do, không gọi tên đáp án, không "sai". Không lựa chọn đúng hay thẻ đúng nào có.
+- 30 câu `true_false` (15 câu Na): một dòng cho phía bé chọn nhầm; đã soát cả 30 câu đúng phía theo `answer`.
+- Theo bài 1 → 15 (option + thẻ · true_false): 12·2, 12·2, 11·2, 13·2, 12·2, 15·2, 12·2, 9·2, 13·2, 14·2, 11·2, 14·2, 15·2, 12·2, 15·2.
+- `hint` giữ nguyên (chỉ đọc theo A2); feedback viết để không lặp ý với hint.
+
+**Giải thích: 125 câu** (mọi câu Khởi động và Quiz). `explanation_correct` một câu, bỏ "Yes!"/"Đúng rồi!", thêm một ý (ví dụ "Gas bubbles in the lava left these tiny holes.", "River mud built the Mekong Delta this way."). `explanation_wrong` một câu lý do, bỏ "The answer is…", "This is true/false.", "Na is (not) right." và bản VI. Tối đa mười từ EN, mười hai tiếng VI. Giữ chữ cũ hoặc chỉ bỏ "Yes!": bài 1 q6, bài 12 w2 (`explanation_correct` không đổi); bài 8 q2, bài 10 q3 và q6, bài 13 q4 (chỉ bỏ "Yes!", bài 13 q4 rút VI).
+
+**Theo đề xuất A2 cho bài 02** (designer dùng bài này làm mẫu):
+- Trang Học "Lỗ": một câu, theo bản rút của designer: "Pumice has tiny holes and was once hot lava." · "Đá bọt có lỗ nhỏ li ti, từng là dung nham nóng." (câu cũ nói chung "có loại đá có lỗ", nay nói đá bọt, đúng ảnh của ô; đá ba-dan vẫn là ví dụ).
+- Lời Na: "Both are grey, but they are different kinds of rock." · "Cùng màu xám, nhưng đây là hai loại đá khác nhau."
+- `messages.has_limited` không đổi: câu đầu "Thứ đó không phải đá." tự đứng được, câu sau chỉ đọc.
+- q4: "Which rock is made of thin, flat sheets?" · "Hòn đá nào gồm nhiều tấm mỏng xếp chồng?" (bỏ nhân vật Nam). q5: "Which one is a real rock?" · "Thứ nào là đá thật?" (bỏ câu ngữ cảnh; ba ảnh tự cho thấy).
+- q2 câu điền bỏ "nhiều màu": "Granite has lots of shiny {1}." · "Đá hoa cương có nhiều {1} lấp lánh."
+- Chữ nháp của designer trên các màn: giữ feedback đèn pin, thẻ "lỗ", đá hoa cương (q3), `feedback_true` bê tông, cột thấp (bài 14). Đổi: `explanation_correct` q1 (thêm ý "thấy hạt rất nhỏ trên đá"), `feedback_false` câu Na ("Một hòn có lỗ nhỏ, hòn kia thì không có.", bỏ "Nhìn kỹ đi"), giải thích câu Na và biểu đồ theo chữ trong bài. Designer cập nhật trang A2 nếu cần.
+
+**Hình đổi (cho designer)**
+| Bài · chỗ | Trước | Sau |
+| --- | --- | --- |
+| 02 q1 `q1_mirror` | `[hình vẽ]` gương cầm tay tròn có cán (trông giống kính lúp, A2 phải dán nhãn ngoại lệ) | `[hình vẽ]` gương soi để bàn hình chữ nhật, khung gỗ mỏng, chân đỡ phía sau, không tròn, không cán; `alt` "A mirror on a stand" · "Chiếc gương soi để bàn". Nhãn giữ "mirror" · "cái gương". Bỏ ngoại lệ nhãn ở màn d-q1-ask. |
+| 14 q4 (đã đổi sang `picture_bar_chart`) | ba hình biểu đồ có vầng sáng (`q4_left`, `q4_middle`, `q4_right`); hình câu hỏi là biểu đồ không đánh dấu | **bỏ** ba hình vầng sáng (app vẽ cột từ `chart.bars`); hình câu hỏi đổi sang dùng lại `sandy_soil` của bài 12; hình biểu đồ không đánh dấu chuyển làm hình gốc của từ vựng `data`. |
+| 08 q4 (đã đổi sang `order_sequence`) | khung không là hình câu hỏi; ba khung (một, hai, bốn) là hình lựa chọn | khung không thành thẻ `q4_snail`; hình câu hỏi dùng lại `explore_not_dino`; không cần hình mới. |
+
+**Rút chữ: 79 chỗ** (chữ trẻ nghe đổi, ngoài feedback và giải thích):
+| Bài | Câu hỏi (prompt hoặc câu điền) | Câu ô Học | Lời Na | Chơi |
+| --- | --- | --- | --- | --- |
+| 1 | q4 (bỏ "Lan"), q5 | Đá quanh em (VI), Từ lòng đất (EN một câu), Do con người làm ra (EN, VI) | q6 | `balanced` (VI) |
+| 2 | q2 câu điền, q4, q5 | Lỗ | q6 | |
+| 3 | w1 (VI), q4 (bỏ "Mai"), q5 | Tính chất (VI) | q6 | |
+| 4 | | Khoáng vật, Thang Mohs, Đối chiếu (VI), Nặng hay cứng (EN, VI) | q6 | `balanced` (VI) |
+| 5 | q4 (bỏ "Mai"), q5 (bỏ "Nam") | Bọt khí (EN, VI) | q6 | |
+| 6 | q4, q5 (bỏ "nhà Nam") | | q6 | |
+| 7 | q4, q5 | Lực tự nhiên, Phong hoá (VI) | q6 | `has_limited` (VI) |
+| 8 | w1, q2 câu điền (VI), q4 | Không chỉ khủng long (VI), Phân huỷ (EN, VI) | q6 | `balanced` (VI) |
+| 9 | q4 | Hổ phách, Chất khoáng lấp đầy, Cổ sinh vật học (VI) | q6 | `balanced` (VI) |
+| 10 | q2 câu điền (VI), q4 (bỏ "Lan"), q5 | Bà tìm thấy gì (VI) | q6 | |
+| 11 | q1, q4 (bỏ "Mai"), q5 (bỏ "Lan") | Mảnh đá (VI) | | |
+| 12 | q4 (bỏ "Lan"), q5 (bỏ "Mai") | | q6 | |
+| 13 | q2 câu điền (VI), q4 | Quá ướt hay quá khô (VI) | q6 | |
+| 14 | q1 (VI), q3 (bỏ "Lan"), q4 (bỏ "Mai"), q5 | Giữ công bằng, Kết quả (EN, VI) | | `has_limited` (EN, VI) |
+| 15 | w2, q3, q4, q5 | Giữ an toàn (VI) | q6 | `balanced` (VI) |
+
+Cách rút: câu hỏi một câu, tối đa mười từ EN, mười tiếng VI; ngữ cảnh dài vào ảnh câu hỏi (ảnh đã có cảnh đó) hoặc chuyển sang giải thích; không dùng `instruction`. Câu ô Học một câu, tối đa mười hai tiếng (EN cũng gộp một câu). Lời Na một câu, tối đa mười hai tiếng. `_topic.md`: mục "Câu sáu, lời Na" thêm dòng ghi bản lời Na mới; luật "This is …/Na is …" và "The answer is …" ghi **hết hiệu lực 14/11**.
+
+**Chữ trẻ nghe đổi nghĩa, cần người duyệt đọc**
+- Bài 2 Học "Lỗ": từ "có loại đá có lỗ… từng là dung nham" (nói chung) thành "đá bọt… từng là dung nham" (nói một loại).
+- Bài 2 q1: hình gương đổi (bảng trên).
+- Bài 3 q5, bài 5 q4: câu hỏi dùng "after the scratch test" / "after the water test" thay cho kể việc Mai làm.
+- Bài 14 q4: câu hỏi "Which bar shows water through sandy soil?" (cột là lượng nước); ý "trong một phút" chuyển sang `explanation_correct`.
+- Bài 15 q6 `explanation_correct`: "Rocks from space tell us about faraway worlds." (không dùng chữ "thiên thạch", theo bảng Tên gọi của chủ đề).
+
+**Sinh lại giọng:** mọi dòng `feedback*` (mới), `explanation_correct/wrong` của 125 câu, và 79 chỗ ở bảng trên.
+
+**Order_sequence / picture_bar_chart: đã đổi** (sau khi dev chốt ở SK-043 "## dev 14/11", main session báo 14/11):
+- Bài 08 q4 → `order_sequence`, `version` 2: bốn thẻ bộ "Mặt cắt lòng đất" `q4_snail` (mới), `q4_decay`, `q4_layers`, `q4_found` (giữ key), `answer` theo thứ tự đó. Câu hỏi "How does a shell become a fossil?" · "Vỏ ốc thành hoá thạch ra sao?", gợi ý và hai lời giải thích mới. Bỏ hai dòng feedback của `q4_layers`, `q4_found` (dạng này không có `feedback`).
+- Bài 14 q4 → `picture_bar_chart`, `version` 2: ba `#### bar` trái sang phải đất vườn (sáu), đất cát (chín), đất sét (hai), `value` [CẦN KIỂM]; ba `#### option` giữ key `q4_left`, `q4_middle`, `q4_right` và hai feedback, nhãn trùng nhãn cột (tên đất), không có hình; `chart.unit` "water caught in one minute". Đáp án vẫn ở chỗ thứ hai.
+- `_topic.md` mục Luật soạn chung ghi ngoại lệ này. `FORMAT_FIRST_APP_VERSION.picture_bar_chart` còn `null` nên `build` có thể báo `format_not_rendered` cho bài 14 tới khi ios-dev có renderer.
+
+**Còn vượt ngân sách** (ngoài phạm vi lần này, chưa sửa)
+- Thưởng `fact`: 14 thẻ hai câu hoặc hơn mười hai tiếng (mọi bài trừ bài 2). A2: tên thẻ + một câu tối đa mười hai tiếng.
+- Chơi `messages.start`: tám lời một câu dài mười ba đến mười bảy tiếng (bài 1, 2, 3, 4, 7, 13, 14, 15). A2 dùng `prompt` của khay làm lời mở đầu, nên `start` chỉ đọc; nếu app vẫn in `start` thì cần rút.
+- Nhãn ô Học dài hơn hai chữ (ví dụ "Do con người làm ra", "Người săn hoá thạch hôm nay", "Một ngày hay nhiều năm", "Chất khoáng lấp đầy") và chip nhóm Chơi hơn ba chữ (ví dụ "Móng tay cào xước được", "Chỉ thìa mới cào xước được", "Không phải khoáng vật", "Không phải thành phần của đất"). Rút được nếu PM, designer cho đổi nhãn.
+- `hint` hai câu (bài 6 q3, q5; bài 8 w1, q3): chỉ đọc theo A2, chưa sửa.
+- Ghi chú "Số từ EN trên một màn" ở Ghi chú cho dev của các bài là số cũ.
+
+**Cần ios-dev / dev / PM**
+1. **`true_false` một lượt và feedback:** đã giải quyết. Main session báo 14/11: app đọc `feedback_*` trước `explanation_wrong` khi bé chọn nhầm, giữ trường. 30 dòng của chủ đề này viết để không lặp ý với `explanation_wrong`.
+2. **TEMPLATE** (PM): bảng "Phản hồi sau mỗi lần chọn" cột Discoverer còn ghi `explanation_wrong` "Như Explorer" ("The answer is …" + lý do) và Discoverer `feedback` "một đến hai câu". A2 Duy duyệt đã đổi: giải thích một câu, không "Đáp án là …"; mẩu giấy in một câu feedback. Ba chủ đề đã soạn theo A2; đề xuất sửa TEMPLATE cho khớp.
+3. **[CẦN KIỂM] mới** (biên tập khá chắc, nhờ chuyên môn đọc lướt): chỉ kim cương cào xước được kim cương (bài 4 q1); kim cương cắt được kính (bài 5 w1); mỗi hạt đá hoa cương là một khoáng vật (bài 4 q2, bài 9 w2); khoáng vật lấp đầy xương thành đá (bài 8 w2); phù sa bồi nên đồng bằng sông Cửu Long (bài 7 q4); hút cát làm bờ sông lở nhanh hơn (bài 7 q5); bò sát biển thời khủng long thở bằng phổi (bài 10 w3); đá ong mới đào để ngoài trời thì cứng dần (bài 6 q5); Đà Lạt mát vì nằm trên cao (bài 13 q6); Việt Nam trồng nhiều lúa trên đất phù sa (bài 13 w1); đất ngấm nước nặng hơn, dễ trượt ở sườn dốc (bài 15 q4).
+4. **Lộ nhẹ (chấp nhận):** bài 12 feedback cà phê, hồ tiêu chỉ nói "trồng trên đồi", không nói "đất đỏ", để không lộ câu q4 ngay sau; bài 4 q4 feedback "thạch anh trước hoạt thạch mềm hơn" nói thứ tự của hai trong ba thẻ (là lý do, không gọi tên hàng đúng).
+
+## designer 14/11 · hình theo bảng "Hình đổi" (chủ đề Đá và đất)
+Đã đọc lại `.md` mới nhất của bài 02, 08, 14 trước khi làm. Không sửa `.md`.
+- **02 q1 `q1_mirror`:** vẽ lại `content/images/own/da-va-dat/b02-q1.q1_mirror.jpg` (1024×768) theo brief mới.
+  - Gương soi để bàn hình chữ nhật, khung gỗ mỏng, chân đỡ phía sau, vẽ chéo, mặt gương chỉ phản chiếu nền. Không tròn, không cán.
+  - Cùng nét và cùng cỡ với đèn pin, kính lúp. Nằm trọn trong dải giữa 5:2 của thẻ A2.
+  - `title` trong file chọn ảnh đổi thành "A mirror on a stand". Màn `d-q1-ask` không cần nhãn ngoại lệ nữa.
+- **08 q4 (order_sequence):**
+  - Hình khung không (`b08-q4.jpg`) đổi tên thành `b08-q4.q4_snail.jpg`, làm thẻ `q4_snail`.
+  - Hình câu hỏi `q4` là `same_as learn.explore.explore_not_dino`. App A2 ẩn hình này vì mọi thẻ xếp đều có hình.
+  - Bốn thẻ đều là hình vẽ 1024×768, cùng bộ "Mặt cắt lòng đất".
+- **14 q4 (picture_bar_chart):**
+  - Bỏ `q4.q4_left`, `q4.q4_middle`, `q4.q4_right` khỏi file chọn ảnh và xoá ba file vẽ.
+  - Hình câu hỏi `q4` là `same_as sandy_soil` (bài `cac-loai-dat-o-viet-nam`).
+  - Biểu đồ không đánh dấu (`b14-q4.jpg`) đổi tên thành `b14-vocab.data.jpg`, làm hình gốc của `vocab.data`.
+- `images fetch` chạy không gọi mạng (Commons đã trả 429 quá ba lần): ba hình tự vẽ mới đã vào cache, không lỗi.
+
+**Đề xuất alt (content-editor quyết, designer không sửa `.md`):**
+| Bài · chỗ | Alt hiện tại | Đề xuất | Lý do |
+| --- | --- | --- | --- |
+| da-va-dat 01 q1 `q1_kiln` | "Brick kilns by a river" · "Những lò gạch bên sông" | "Brick kilns" · "Những lò nung gạch" | Thẻ 5:2 cắt ngang hàng lò, không còn thấy sông (người đứng ở bờ sông bị cắt ra ngoài). |
+
+**Đề xuất brief cho các bài sau (Discoverer A2):**
+- Thẻ lựa chọn 2–3 đáp án là dải ngang 5:2. Brief của vật đứng riêng (quả bóng, chai, đồng hồ, lá) nên ghi: "ảnh ngang, vật ở giữa, hai bên còn khoảng trống cùng nền" hoặc "vật nằm ngang".
+- Ảnh vật dọc (chai nước, cốc đá, hộp cơm) hiện chỉ cắt được một dải giữa. Ví dụ: chai nước chỉ còn nắp và vai chai.
+- Lưới 4 đáp án là 4:5 dọc. Kệ Chơi và thẻ từ là 1:1.
+- Bảng khung chính thức: `tools/content-cli/image-slots.json` và SK-043 mục "designer 14/11".

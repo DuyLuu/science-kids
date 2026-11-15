@@ -39,7 +39,7 @@ const LESSON = {
     { key: "q1", format: "single_choice", image: img, options: [{ key: "a", image: img }, { key: "b" }, { key: "c", image: img }] },
     { key: "q2", format: "true_false", image: img },
     { key: "q3", format: "order_sequence", image: img, items: [{ key: "x", image: img }, { key: "y", image: img }, { key: "z", image: img }] },
-    { key: "q4", format: "fill_blank_bank", bank: [{ key: "m", image: img }] },
+    { key: "q4", format: "fill_blank_bank", image: img, bank: [{ key: "m", image: img }] },
     { key: "q5", format: "multi_choice", options: [{ key: "a" }, { key: "b" }, { key: "c" }, { key: "d" }] },
     { key: "q6", format: "single_choice", options: [{ key: "a" }, { key: "b" }] },
   ],
@@ -113,6 +113,21 @@ describe("tỉ lệ khung (aspect.ts)", () => {
     assert.equal(slotOf(LESSON, "/quiz/0/image", "explorer", TABLE)?.kind, "question");
     assert.equal(slotOf(LESSON, "/quiz/1/image", "explorer", TABLE)?.kind, "question");
     assert.equal(slotOf(LESSON, "/warmup/0/image", "discoverer", TABLE)?.kind, "question");
+    // Discoverer A2 (SK-043, 14/11): fill_blank_bank whose every bank word has a picture hides the question picture too.
+    assert.equal(slotOf(LESSON, "/quiz/3/image", "explorer", TABLE), undefined);
+    assert.equal(slotOf(LESSON, "/quiz/3/image", "discoverer", TABLE)?.kind, "question");
+  });
+
+  test("image-slots.json thật: Discoverer theo A2 (Duy 14/11), Explorer giữ bảng designer 13/11", () => {
+    const table = loadSlotTable();
+    const ratio = (group: string, kind: Parameters<typeof slotRatio>[2]) => slotRatio(table, group, kind).ratio;
+    assert.deepEqual(
+      { choice_2: ratio("discoverer", "choice_2"), choice_3: ratio("discoverer", "choice_3"), choice_4: ratio("discoverer", "choice_4"), bank_item: ratio("discoverer", "bank_item"), learn_group: ratio("discoverer", "learn_group"), tray_item: ratio("discoverer", "tray_item"), vocab: ratio("discoverer", "vocab") },
+      { choice_2: 2.5, choice_3: 2.5, choice_4: 0.8, bank_item: 0.6, learn_group: 1, tray_item: 1, vocab: 4 / 3 },
+    );
+    assert.equal(table.age_groups?.discoverer?.hide_question_image_with_picture_choices, true);
+    assert.deepEqual({ choice_2: ratio("explorer", "choice_2"), choice_3: ratio("explorer", "choice_3") }, { choice_2: 1.7, choice_3: 2.5 });
+    assert.equal(formatRatio(0.6), "3:5");
   });
 
   test("aspectWarnings: ảnh dọc trong thẻ ngang thì cảnh báo; gần khung thì không; chưa có ảnh thì bỏ qua", () => {

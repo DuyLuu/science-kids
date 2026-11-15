@@ -20,6 +20,7 @@ en: I can say how sleep and helmets help my brain.
 vi: Em kể được giấc ngủ và mũ bảo hiểm giúp bộ não ra sao.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-037, ngày 10/11/2026. Đã chạy `ids`. Sửa theo rà chữ tester 10/11 (ticket SK-037, mục "content-editor 10/11 · sửa theo tester").
 > Bài cuối (`review`): ôn trộn cả chủ đề (Khởi động ôn bài ba, bài một và *Bề mặt Trái Đất*; câu q3 ôn bài một), quay lại câu "Em nghĩ sao?" của bài một ở w3. Sửa `helmet_only_long_rides` ở ý chính một, ô "Helmet", phần Chơi, câu q1 và câu q6 (gắn key, Na nói đúng).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na và câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 > Luật riêng của bài (ticket SK-037): mũ bảo hiểm gắn với đi xe máy, xe đạp ở Việt Nam; không cảnh tai nạn, không máu; giấc ngủ không doạ; số giờ ngủ có [CẦN KIỂM].
 
 ## Ý chính
@@ -47,21 +48,23 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao
 prompt.en: Which sense tells you it is raining on the roof?
-prompt.vi: Giác quan nào cho em biết trời đang mưa trên mái nhà?
+prompt.vi: Giác quan nào báo mưa đang rơi trên mái nhà?
 image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/tray_rain_roof`
 image.alt.en: Rain on a roof
 image.alt.vi: Mưa rơi trên mái nhà
 hint.en: Remember Mai's eyes-closed game.
 hint.vi: Em nhớ lại trò Mai nhắm mắt ở bài trước nhé.
-explanation_correct.en: Yes! Your ears hear the rain on the roof.
-explanation_correct.vi: Đúng rồi! Tai em nghe thấy tiếng mưa trên mái nhà.
+explanation_correct.en: Your ears hear the pitter-patter, even with eyes shut.
+explanation_correct.vi: Tai nghe tiếng lộp độp, cả khi em nhắm mắt.
 > Theo hình designer 10/11: ảnh gốc là mái nhà chung, không phải mái tôn, nên chữ tiếng Việt đổi "mái tôn" thành "mái nhà" (chữ EN vốn đã là "roof").
-explanation_wrong.en: The answer is the ear. You hear the rain.
-explanation_wrong.vi: Đáp án là tai. Em nghe thấy tiếng mưa.
+explanation_wrong.en: Your ears hear the rain on the roof.
+explanation_wrong.vi: Tai em nghe thấy tiếng mưa trên mái nhà.
 > Ba lựa chọn là bộ giác quan, không có mắt, để câu chỉ có một đáp án (nhìn qua cửa sổ cũng thấy mưa).
 
 #### option w1_nose
 correct: false
+feedback.en: Your nose smells things, not the drumming on the roof.
+feedback.vi: Mũi để ngửi mùi, không nghe tiếng lộp độp.
 label.en: nose
 label.vi: mũi
 image.brief: Dùng lại hình `tray_nose` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -70,6 +73,8 @@ image.alt.vi: Cái mũi
 
 #### option w1_tongue
 correct: false
+feedback.en: Your tongue tastes food in your mouth.
+feedback.vi: Lưỡi nếm đồ ăn trong miệng em.
 label.en: tongue
 label.vi: lưỡi
 image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/q1_tongue`
@@ -99,10 +104,12 @@ image.alt.vi: Lớp học bắt đầu rung
 answer: true
 hint.en: Remember the three earthquake steps.
 hint.vi: Em nhớ lại ba bước khi có động đất nhé.
-explanation_correct.en: Yes! Your arm helps keep your head safe.
-explanation_correct.vi: Đúng rồi! Cánh tay giúp che chở cho đầu em.
-explanation_wrong.en: This is true. Cover your head to keep your brain safe.
-explanation_wrong.vi: Câu này đúng. Em che đầu để giữ an toàn cho bộ não.
+explanation_correct.en: Arms over your head protect your skull and brain.
+explanation_correct.vi: Cánh tay che đầu, bảo vệ hộp sọ và bộ não.
+explanation_wrong.en: Cover your head to keep your brain safe.
+explanation_wrong.vi: Em che đầu để giữ an toàn cho bộ não.
+feedback_false.en: In an earthquake, things can fall from above.
+feedback_false.vi: Động đất làm đồ vật có thể rơi xuống.
 > Câu khẳng định khớp món `tray_arms` "Arm over head" · "Tay che đầu" và lựa chọn đúng `q3_arms` của bài đó. Hình câu hỏi là lớp học trống đang rung (câu q3 bài đó), không có ai đang che đầu, nên không lộ đáp án.
 > Đáp án Đúng, theo bảng Đáp án Đúng/Sai ở `_topic.md`.
 
@@ -121,10 +128,12 @@ image.alt.vi: Bạn nhỏ ngủ trong màn
 answer: false
 hint.en: Remember the All the time picture in the first lesson.
 hint.vi: Em nhớ lại ô Suốt ngày đêm ở bài đầu tiên nhé.
-explanation_correct.en: Your brain works all night. It keeps your heart beating.
-explanation_correct.vi: Bộ não làm việc suốt đêm. Bộ não giữ cho tim em đập.
-explanation_wrong.en: This is false. Your brain keeps working while you sleep.
-explanation_wrong.vi: Câu này sai. Bộ não vẫn làm việc khi em ngủ.
+explanation_correct.en: Your brain works all night, keeping your heart beating.
+explanation_correct.vi: Bộ não làm việc suốt đêm, giữ cho tim em đập.
+explanation_wrong.en: Your brain keeps working while you sleep.
+explanation_wrong.vi: Bộ não vẫn làm việc khi em ngủ.
+feedback_true.en: Even asleep, you still breathe and your heart beats.
+feedback_true.vi: Lúc ngủ, em vẫn thở và tim vẫn đập.
 > Đúng câu khẳng định của câu "Em nghĩ sao?" ở bài một (Ghi chú cho dev bài một). Đáp án Sai. Giải thích khi đúng không mở đầu bằng "Yes!".
 
 ## Học
@@ -145,7 +154,7 @@ label.en: Helmet
 label.vi: Mũ bảo hiểm
 color: do_son
 sentence.en: A helmet is a hard shell, like a second skull.
-sentence.vi: Mũ bảo hiểm là một lớp vỏ cứng, giống như hộp sọ thứ hai.
+sentence.vi: Mũ bảo hiểm là vỏ cứng, như hộp sọ thứ hai.
 image.brief: [hình vẽ] Một người lớn chở một bạn nhỏ ngồi sau trên xe máy, đi chậm trong một con ngõ nhỏ ở Việt Nam, vẽ từ phía sau; cả hai đội mũ bảo hiểm; không vẽ nét mặt, không có biển số xe, không có logo hãng xe hay logo trên mũ, không có biển chữ trong ngõ. Bạn nhỏ ngồi sau người lớn, không đứng hay ngồi phía trước. Món Chơi `tray_short_ride` và hình câu q2 dùng lại hình này. Từ khoá tìm ảnh (EN): Vietnam motorbike parent child helmets alley back view
 image.alt.en: A grown-up and a child on a motorbike, both in helmets
 image.alt.vi: Người lớn và bạn nhỏ đi xe máy, cả hai đội mũ bảo hiểm
@@ -181,7 +190,7 @@ label.en: Sleep
 label.vi: Giấc ngủ
 color: gi_dong
 sentence.en: Children your age need nine to twelve hours of sleep.
-sentence.vi: Trẻ bằng tuổi em cần ngủ từ chín đến mười hai tiếng mỗi ngày.
+sentence.vi: Trẻ tuổi em cần ngủ chín đến mười hai tiếng.
 > [CẦN KIỂM] Số giờ ngủ: biên tập nhớ khuyến nghị của Viện Hàn lâm Y học Giấc ngủ Hoa Kỳ cho trẻ sáu tới mười hai tuổi là chín tới mười hai giờ trong hai mươi bốn giờ, tính cả ngủ trưa. Cần chuyên gia nhi khoa hoặc khuyến nghị của Bộ Y tế. Câu thay nếu bỏ con số: "Children need more sleep than grown-ups." · "Trẻ em cần ngủ nhiều hơn người lớn." Quiz không hỏi con số này.
 image.brief: [hình vẽ] Một chiếc giường gọn gàng có màn vén lên, đèn ngủ dịu bên cạnh, gối và chăn đã xếp, vẽ chéo; không có người, không có chữ, không có đồ chơi có nhãn hiệu, không có điện thoại. Món Chơi `tray_bed`, câu q3 và từ `bedtime` dùng lại hình này. Từ khoá tìm ảnh (EN): bed mosquito net bedroom
 image.alt.en: A bed with a mosquito net
@@ -201,7 +210,7 @@ label.en: While you sleep
 label.vi: Khi em ngủ
 color: vang_hoe
 sentence.en: While you sleep, your brain sorts what you learned.
-sentence.vi: Khi em ngủ, bộ não sắp xếp lại những điều em đã học.
+sentence.vi: Khi em ngủ, bộ não sắp xếp lại điều em đã học.
 image.brief: Dùng lại hình `q1` ở bài `ho-hap/vi-sao-ta-phai-tho`
 image.alt.en: A child asleep under a mosquito net
 image.alt.vi: Bạn nhỏ ngủ trong màn
@@ -365,10 +374,10 @@ image.alt.en: A parked motorbike
 image.alt.vi: Chiếc xe máy đang đỗ
 hint.en: Remember the Helmet picture in the lesson.
 hint.vi: Em nhớ lại ô Mũ bảo hiểm trong bài học nhé.
-explanation_correct.en: Yes! A helmet is hard and keeps your brain safe.
-explanation_correct.vi: Đúng rồi! Mũ bảo hiểm cứng và che chở bộ não.
-explanation_wrong.en: The answer is the helmet. A conical hat and a cap are for sun.
-explanation_wrong.vi: Đáp án là mũ bảo hiểm. Nón lá và mũ lưỡi trai chỉ để che nắng.
+explanation_correct.en: The hard shell takes a bump instead of your head.
+explanation_correct.vi: Lớp vỏ cứng đỡ cú va thay cho đầu em.
+explanation_wrong.en: A hard helmet keeps your head and brain safe.
+explanation_wrong.vi: Mũ bảo hiểm cứng che chở đầu và bộ não.
 > Nón lá và mũ lưỡi trai là bẫy quen: người lớn, trẻ em hay đội khi đi xe đạp, xe máy gần nhà (`helmet_only_long_rides`). Không chê nón lá; giải thích chỉ nói nón lá để che nắng. Ba hình vẽ cùng kiểu (theo hình designer 10/11): một chiếc mũ trên nền trơn, vẽ chéo, cùng cỡ.
 > Rà chữ tester 10/11: gợi ý cũ "Thứ nào cứng, giống như hộp sọ?" nói thẳng tiêu chí đáp án (n5). Lựa chọn mũ vải (cùng ảnh câu q5 bài một) đổi thành mũ lưỡi trai, để câu không còn là tập con của câu q5 bài một; mũ bảo hiểm dùng một ảnh mới (mũ cỡ trẻ em), để cả ba ảnh đều mới và đáp án không phải ảnh duy nhất bé đã gặp (n6, cùng ý N2). Giải thích EN và VI nay cùng gọi tên hai thứ kia.
 
@@ -382,6 +391,8 @@ image.alt.vi: Chiếc mũ bảo hiểm
 
 #### option q1_conical
 correct: false
+feedback.en: A conical hat shades you from sun and rain.
+feedback.vi: Nón lá che nắng, che mưa cho em.
 label.en: conical hat
 label.vi: nón lá
 image.brief: [hình vẽ] Một chiếc nón lá Việt Nam đặt trên nền trơn, vẽ chéo, cùng cỡ với chiếc mũ bảo hiểm và mũ lưỡi trai; không có chữ, không có hình in trên nón, không có người đội. Từ khoá tìm ảnh (EN): Vietnamese conical hat non la plain background
@@ -390,6 +401,8 @@ image.alt.vi: Chiếc nón lá
 
 #### option q1_cap
 correct: false
+feedback.en: A cap is soft and only shades your eyes.
+feedback.vi: Mũ lưỡi trai mềm, chỉ che nắng cho mắt.
 label.en: cap
 label.vi: mũ lưỡi trai
 image.brief: [hình vẽ] Một chiếc mũ lưỡi trai vải màu trơn đặt trên nền trơn, vẽ chéo, cùng cỡ với hai chiếc kia; không có logo, không có chữ, không có hình thêu; không có người đội. Từ khoá tìm ảnh (EN): plain baseball cap plain background
@@ -411,16 +424,18 @@ sentence.vi: Em cài {1} để mũ không bị rơi.
 answers: q2_strap
 hint.en: Remember the Wear it right picture.
 hint.vi: Em nhớ lại ô Đội cho đúng nhé.
-explanation_correct.en: Yes! A clicked strap keeps your helmet on.
-explanation_correct.vi: Đúng rồi! Quai đã cài giữ cho mũ không bị rơi.
-explanation_wrong.en: The answer is strap. Click it under your chin.
-explanation_wrong.vi: Đáp án là quai mũ. Em cài quai dưới cằm.
+explanation_correct.en: A snug strap keeps the helmet on, even on bumps.
+explanation_correct.vi: Quai cài vừa khít giữ mũ chặt, cả khi xe xóc.
+explanation_wrong.en: Click the strap under your chin.
+explanation_wrong.vi: Em cài quai mũ dưới cằm.
 > Hình câu hỏi vẽ từ phía sau, không thấy khoá quai, nên không lộ đáp án. Ba thẻ từ là ba bộ phận quen của chuyến đi xe, cùng là hình vẽ cận (theo hình designer 10/11), không có tay người.
 > Rà chữ tester 10/11: thẻ đúng chuyển xuống thứ ba (N1). Thẻ `q2_strap` dùng một hình mới (khoá quai đã cài, không có tay), không dùng lại hình ô `explore_strap`, để đáp án không phải hình duy nhất bé đã gặp ở phần Học (N2).
 
 #### bank q2_bell
 label.en: bell
 label.vi: chuông xe
+feedback.en: A bell rings to warn people on the road.
+feedback.vi: Chuông xe kêu để báo người trên đường.
 image.brief: [hình vẽ] Một chiếc chuông xe đạp gắn trên tay lái, vẽ cận; không có logo, không có chữ. Từ khoá tìm ảnh (EN): bicycle bell handlebar close up
 image.alt.en: A bicycle bell
 image.alt.vi: Chiếc chuông xe đạp
@@ -428,6 +443,8 @@ image.alt.vi: Chiếc chuông xe đạp
 #### bank q2_seat
 label.en: seat
 label.vi: yên xe
+feedback.en: A seat is where you sit on a bike.
+feedback.vi: Yên xe là chỗ để em ngồi.
 image.brief: [hình vẽ] Một chiếc yên xe đạp màu đen, vẽ cận; không có logo, không có chữ. Từ khoá tìm ảnh (EN): bicycle saddle close up
 image.alt.en: A bicycle seat
 image.alt.vi: Chiếc yên xe đạp
@@ -453,14 +470,16 @@ image.alt.en: A head with the brain inside the skull
 image.alt.vi: Đầu một bạn nhỏ, bộ não nằm trong hộp sọ
 hint.en: Think of the three groups in today's game.
 hint.vi: Em nhớ lại ba nhóm ở trò chơi hôm nay nhé.
-explanation_correct.en: Yes! Reading and an early bedtime help your brain.
-explanation_correct.vi: Đúng rồi! Đọc sách và đi ngủ sớm đều tốt cho bộ não.
-explanation_wrong.en: The answers are reading and an early bedtime.
-explanation_wrong.vi: Đáp án là đọc sách và đi ngủ sớm.
+explanation_correct.en: Reading teaches your brain, and sleep helps it remember.
+explanation_correct.vi: Đọc sách giúp não học, giấc ngủ giúp não nhớ.
+explanation_wrong.en: Reading and an early bedtime are good for your brain.
+explanation_wrong.vi: Đọc sách và đi ngủ sớm đều tốt cho bộ não.
 > DOK 2: phân loại, ôn bài một (đọc sách) và bài này (giấc ngủ, mũ bảo hiểm). Bốn ảnh dùng lại kệ Chơi, cùng là ảnh chụp.
 
 #### option q3_games
 correct: false
+feedback.en: Late games keep your brain awake when it needs sleep.
+feedback.vi: Chơi khuya làm bộ não không được ngủ đủ.
 label.en: games late at night
 label.vi: chơi điện tử tới khuya
 image.brief: Dùng lại hình `ngu-du-giac-va-doi-mu-bao-hiem/tray_late_games`
@@ -477,6 +496,8 @@ image.alt.vi: Bạn nhỏ đang đọc sách
 
 #### option q3_handlebar
 correct: false
+feedback.en: A helmet on the handlebars cannot guard your head.
+feedback.vi: Mũ treo trên tay lái thì không che được đầu.
 label.en: helmet on the handlebars
 label.vi: mũ treo trên tay lái
 image.brief: Dùng lại hình `ngu-du-giac-va-doi-mu-bao-hiem/tray_handlebar`
@@ -503,15 +524,17 @@ image.alt.en: A helmet
 image.alt.vi: Chiếc mũ bảo hiểm
 hint.en: Look at the strap and the front of each helmet.
 hint.vi: Em nhìn quai mũ và phía trước của từng chiếc mũ nhé.
-explanation_correct.en: Yes! It sits flat, and the strap is clicked.
-explanation_correct.vi: Đúng rồi! Mũ đội ngay ngắn, quai đã cài chặt.
-explanation_wrong.en: The answer is flat, with the strap clicked.
-explanation_wrong.vi: Đáp án là mũ đội ngay ngắn, đã cài quai.
+explanation_correct.en: Sitting flat, it covers your forehead and stays put.
+explanation_correct.vi: Mũ ngay ngắn che kín trán và không bị xô lệch.
+explanation_wrong.en: Wear it flat, with the strap clicked.
+explanation_wrong.vi: Đội mũ ngay ngắn và cài quai chặt.
 > DOK 2: áp ô "Wear it right" vào ba cách đội. Ba lựa chọn là ba hình vẽ cùng một khuôn đầu và vai nhìn nghiêng (bộ khuôn người của bài một), chỉ khác cách đội mũ; người đội mũ thì vẽ, không dùng ảnh trẻ thật (Quy ước hình, mục hai).
 > Rà chữ tester 10/11 (N4): ba nhãn và ba `alt` cùng một khuôn hai vế (vị trí mũ, quai), nên không nhãn nào nổi bật; bé phải xét cả hai vế, và gợi ý (nhìn quai và phía trước mũ) mới đúng là gợi ý. Trước đây nhãn đúng là nhãn duy nhất có hai vế.
 
 #### option q4_back
 correct: false
+feedback.en: Tipped back, the helmet leaves your forehead bare.
+feedback.vi: Mũ ngả ra sau thì trán em bị hở.
 label.en: tipped back, strap clicked
 label.vi: ngả ra sau gáy, đã cài quai
 image.brief: [hình vẽ] Khuôn đầu và vai một bạn nhỏ nhìn nghiêng, cùng nét bộ khuôn người của câu q1 bài `nao-dieu-khien-co-the`, không vẽ nét mặt; đội mũ bảo hiểm nửa đầu bị ngả ra sau, lộ cả vầng trán, quai đã cài; nền kem trơn; không có logo, không có chữ.
@@ -520,6 +543,8 @@ image.alt.vi: Mũ bảo hiểm ngả ra sau, đã cài quai
 
 #### option q4_open
 correct: false
+feedback.en: With the strap open, the helmet can fall off.
+feedback.vi: Quai để hở thì mũ dễ bị rơi.
 label.en: flat, strap hanging open
 label.vi: ngay ngắn, quai buông thõng
 image.brief: [hình vẽ] Cùng khuôn đầu và vai nhìn nghiêng như lựa chọn `q4_back`; đội mũ bảo hiểm ngay ngắn nhưng hai đầu quai buông thõng hai bên má, chưa cài; nền kem trơn; không có logo, không có chữ.
@@ -539,23 +564,25 @@ id: b3668af8-fb70-4879-9cd3-cf9a273ebbef
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam learns new words today. What helps him remember them?
-prompt.vi: Hôm nay Nam học từ mới. Điều gì giúp Nam nhớ lâu?
+prompt.en: What helps Nam remember today's new words?
+prompt.vi: Điều gì giúp Nam nhớ lâu từ mới hôm nay?
 image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/explore_send`
 image.alt.en: A school drum
 image.alt.vi: Chiếc trống trường
 hint.en: Remember the While you sleep picture.
 hint.vi: Em nhớ lại ô Khi em ngủ nhé.
-explanation_correct.en: Yes! While he sleeps, his brain sorts the new words.
-explanation_correct.vi: Đúng rồi! Khi Nam ngủ, bộ não sắp xếp lại các từ mới.
-explanation_wrong.en: The answer is a good night's sleep. Sleep helps him remember.
-explanation_wrong.vi: Đáp án là ngủ đủ giấc. Giấc ngủ giúp Nam nhớ bài.
+explanation_correct.en: While he sleeps, his brain sorts the new words.
+explanation_correct.vi: Khi Nam ngủ, bộ não sắp xếp lại các từ mới.
+explanation_wrong.en: A good night's sleep helps him remember.
+explanation_wrong.vi: Ngủ đủ giấc giúp Nam nhớ bài.
 > DOK 2: áp ý chính ba và ô "Sleep" vào tình huống quen (học từ mới ở trường). Bẫy mạnh là "thức cả đêm để học": bé dễ nghĩ học nhiều hơn thì nhớ hơn. Bẫy thứ hai "ngủ mà vẫn bật ti vi" là việc khác loại: có ngủ, nhưng phòng sáng và ồn, trái ví dụ "a dark, quiet room" của ô Sleep. [CẦN KIỂM] ngủ đủ giúp nhớ bài; ngủ khi ti vi còn bật làm giấc ngủ kém đi.
 > Rà chữ tester 10/11 (N2, N3, n10): bỏ lựa chọn "chơi điện tử tới khuya" (trùng vai và trùng ảnh với câu q3, và trùng ý "thức khuya" với bẫy kia); đáp án đúng dùng một ảnh mới (phòng ngủ đã tắt đèn), không dùng lại ảnh ô `explore_sleep` (cũng là đáp án đúng của câu q3). Giải thích khi sai bỏ vế "khó nhớ bài" mà chỉ bản tiếng Việt có, EN và VI nay cùng một ý.
 > Hình câu hỏi là trống trường (dùng lại bài ba), gợi "ở trường", không gợi đáp án. Ba lựa chọn đều là hình vẽ mới (theo hình designer 10/11), cùng là cảnh trong phòng ban đêm, không có người.
 
 #### option q5_study_night
 correct: false
+feedback.en: Staying up all night leaves no time for sleep.
+feedback.vi: Thức cả đêm thì não không được ngủ.
 label.en: study all night
 label.vi: thức cả đêm để học
 image.brief: [hình vẽ] Một chiếc đèn bàn đang sáng cạnh quyển vở mở trên bàn học, ngoài cửa sổ trời tối đen; không có người, không có chữ trong vở, không có logo. Từ khoá tìm ảnh (EN): desk lamp notebook night window dark
@@ -573,6 +600,8 @@ image.alt.vi: Phòng ngủ tối lúc đêm
 
 #### option q5_tv
 correct: false
+feedback.en: A bright, noisy TV makes sleep worse.
+feedback.vi: Ti vi sáng và ồn làm giấc ngủ kém đi.
 label.en: sleep with the TV on
 label.vi: ngủ mà vẫn bật ti vi
 image.brief: [hình vẽ] Một phòng tối, chiếc ti vi trên kệ đang sáng, màn hình chỉ là vệt sáng xanh nhạt, không có hình hay chữ trên màn hình; phía trước có góc giường; không có người, không có logo ti vi, không có chữ. Từ khoá tìm ảnh (EN): television glowing dark bedroom night
@@ -589,8 +618,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: School is very close. I still wear my helmet.
-statement.vi: Trường ở rất gần. Mình vẫn đội mũ bảo hiểm.
+statement.en: School is very close, but I still wear my helmet.
+statement.vi: Trường ở rất gần, nhưng mình vẫn đội mũ bảo hiểm.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -602,10 +631,12 @@ image.alt.en: A quiet little alley
 image.alt.vi: Con ngõ nhỏ vắng người
 hint.en: Is a short ride always safe?
 hint.vi: Đi gần thì có chắc chắn an toàn không em?
-explanation_correct.en: Yes! Wear a helmet on every ride, short or long.
-explanation_correct.vi: Đúng rồi! Đi gần hay đi xa, em đều đội mũ bảo hiểm.
-explanation_wrong.en: Na is right. Short rides need a helmet, too.
-explanation_wrong.vi: Na nói đúng. Đi gần cũng cần đội mũ bảo hiểm.
+explanation_correct.en: Wear a helmet on every ride, short or long.
+explanation_correct.vi: Đi gần hay đi xa, em đều đội mũ bảo hiểm.
+explanation_wrong.en: Short rides need a helmet, too.
+explanation_wrong.vi: Đi gần cũng cần đội mũ bảo hiểm.
+feedback_false.en: A short ride is still a ride on the road.
+feedback_false.vi: Đi gần thì vẫn là đi trên đường.
 > DOK 3: bé đánh giá việc Na làm. Bé còn tin "đi gần thì không cần mũ" sẽ cho là Na làm thừa và chọn "Na chưa đúng". Đáp án Đúng, theo bảng Đáp án Đúng/Sai ở `_topic.md`.
 > Gợi ý hỏi đúng chỗ cần nghĩ, không doạ, không nhắc tai nạn. Giải thích không nói "nếu không đội thì…".
 

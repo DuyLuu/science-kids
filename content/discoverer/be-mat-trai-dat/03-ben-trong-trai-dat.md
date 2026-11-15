@@ -50,13 +50,15 @@ image.alt.vi: Muối đổ vào cốc nước
 > SK-033 (10/11 tối): hình tự vẽ, vì Commons và Openverse không có ảnh muối đổ vào cốc nước hợp giấy phép (designer đã thử năm cụm từ khoá). Ba lựa chọn vẫn là ảnh chụp; luật "cùng kiểu hình" chỉ áp cho các lựa chọn với nhau, nên hình câu hỏi là hình vẽ không lộ đáp án. Alt giữ.
 hint.en: Think of the big blue parts of a globe.
 hint.vi: Em nghĩ tới những vùng xanh dương rộng lớn trên quả địa cầu nhé.
-explanation_correct.en: Yes! An ocean is a very big area of salty water.
-explanation_correct.vi: Đúng rồi! Đại dương là vùng nước mặn rất rộng lớn.
-explanation_wrong.en: The answer is the ocean. Lakes and rivers are much smaller.
-explanation_wrong.vi: Đáp án là đại dương. Hồ và sông nhỏ hơn nhiều.
+explanation_correct.en: Oceans cover most of Earth's surface.
+explanation_correct.vi: Đại dương phủ phần lớn bề mặt Trái Đất.
+explanation_wrong.en: An ocean is far bigger than a lake or river.
+explanation_wrong.vi: Đại dương rộng hơn hồ và sông rất nhiều.
 
 #### option w1_lake
 correct: false
+feedback.en: Most lakes have fresh water, not salty water.
+feedback.vi: Phần lớn hồ có nước ngọt, không mặn.
 label.en: lake
 label.vi: hồ
 image.brief: Dùng lại hình `tray_lake` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Ảnh đó thấy bờ bên kia, nên bé thấy hồ nhỏ hơn đại dương. Từ khoá tìm ảnh (EN): lake calm trees shore
@@ -65,6 +67,8 @@ image.alt.vi: Hồ nước có hàng cây
 
 #### option w1_river
 correct: false
+feedback.en: A river is long and narrow, with fresh water.
+feedback.vi: Sông dài và hẹp, nước sông là nước ngọt.
 label.en: river
 label.vi: sông
 image.brief: Dùng lại hình `tray_river` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): river boat countryside Vietnam
@@ -97,15 +101,17 @@ sentence.vi: Mình sống trên {1} Trái Đất.
 answers: w2_surface
 hint.en: It is the outside part of Earth.
 hint.vi: Đó là phần bên ngoài cùng của Trái Đất.
-explanation_correct.en: Yes! We live on Earth's surface.
-explanation_correct.vi: Đúng rồi! Mình sống trên bề mặt Trái Đất.
-explanation_wrong.en: The answer is surface. We live on Earth's surface.
-explanation_wrong.vi: Đáp án là bề mặt. Mình sống trên bề mặt Trái Đất.
+explanation_correct.en: The surface is the outside, where we build homes.
+explanation_correct.vi: Bề mặt là phần bên ngoài, nơi mình xây nhà.
+explanation_wrong.en: We live on Earth's surface, its outside part.
+explanation_wrong.vi: Mình sống trên bề mặt, phần ngoài cùng của Trái Đất.
 > Câu khớp câu ví dụ của từ `surface` ở bài một. Hai từ gây nhiễu lấy từ bài một ("model", "shape" ở câu w1). Không dùng "globe" (tiếng Anh nói "the globe" để chỉ cả thế giới), "sea" hay "island" (có người sống trên biển, trên đảo).
 
 #### bank w2_model
 label.en: model
 label.vi: mô hình
+feedback.en: A model is a small copy of a real thing.
+feedback.vi: Mô hình là bản thu nhỏ của vật thật.
 image.brief: Dùng lại hình `model` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): model airplane hand sky
 image.alt.en: A small model plane in a hand
 image.alt.vi: Mô hình máy bay nhỏ trong tay
@@ -121,6 +127,8 @@ image.alt.vi: Trái Đất nhìn từ vũ trụ
 #### bank w2_shape
 label.en: shape
 label.vi: hình dạng
+feedback.en: Shape tells us if a thing is round or square.
+feedback.vi: Hình dạng cho biết vật tròn hay vuông.
 image.brief: [ảnh] Mấy khối gỗ đồ chơi khác hình dạng (khối vòm, khối cột, thanh cong, khối chữ nhật) xếp trên một chiếc bàn tròn; không có khối cầu hay khối chóp như brief đầu; không có chữ, không có nhãn hiệu, không có người. Từ khoá tìm ảnh (EN): wooden blocks geometric shapes toy
 image.alt.en: Wooden blocks in different shapes
 image.alt.vi: Khối gỗ nhiều hình dạng
@@ -218,8 +226,9 @@ prompt.en: Make a model of Earth's three layers
 prompt.vi: Làm mô hình ba lớp của Trái Đất
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: Eggs and avocados have three layers, like Earth. Pick one part for each layer.
-messages.start.vi: Quả trứng và quả bơ cũng có ba lớp, giống Trái Đất. Em chọn một phần cho mỗi lớp nhé.
+messages.start.en: Pick one part for each layer of Earth. Eggs and avocados have three layers too.
+messages.start.vi: Em chọn một phần cho mỗi lớp của Trái Đất. Quả trứng và quả bơ cũng có ba lớp.
+> SK-044 (14/11, A2): đảo thứ tự. Câu đầu (in trong bong bóng) là việc cần làm, tự đứng được; câu về trứng và bơ thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Lời nhắn không gọi tên vật chứa ("tray", "mâm", "khay"), như bài một. Rà chữ 9/11: "tap one", "chạm vào để bỏ ra" như nhãn của app (ios-dev 9/11).
@@ -333,10 +342,10 @@ image.alt.en: A village seen from above
 image.alt.vi: Làng quê nhìn từ trên cao
 hint.en: It is the outside layer, like an eggshell.
 hint.vi: Đó là lớp ngoài cùng, giống vỏ trứng.
-explanation_correct.en: Yes! We live on the crust.
-explanation_correct.vi: Đúng rồi! Mình sống trên vỏ Trái Đất.
-explanation_wrong.en: The answer is the crust. It is Earth's outside layer.
-explanation_wrong.vi: Đáp án là vỏ Trái Đất. Đó là lớp ngoài cùng của Trái Đất.
+explanation_correct.en: The crust is thin, like an eggshell.
+explanation_correct.vi: Vỏ Trái Đất mỏng, giống vỏ trứng.
+explanation_wrong.en: The crust is Earth's outside layer, under our feet.
+explanation_wrong.vi: Vỏ Trái Đất là lớp ngoài cùng, dưới chân mình.
 
 #### option q1_crust
 correct: true
@@ -348,6 +357,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp vỏ
 
 #### option q1_core
 correct: false
+feedback.en: The core is deep in the middle, very hot.
+feedback.vi: Nhân nằm sâu tận giữa, rất nóng.
 label.en: core
 label.vi: nhân Trái Đất
 image.brief: [sơ đồ ghép ảnh] Cùng sơ đồ gốc như ô explore_crust, không có quả trứng; bản này designer giữ rõ nhân ở giữa, làm nhạt lớp vỏ và lớp manti; nhân không có ngọn lửa; không có chữ. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
@@ -356,6 +367,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ nhân
 
 #### option q1_mantle
 correct: false
+feedback.en: The mantle is very hot rock, deep below.
+feedback.vi: Lớp manti là đá rất nóng, nằm sâu bên dưới.
 label.en: mantle
 label.vi: lớp manti
 image.brief: [sơ đồ ghép ảnh] Cùng sơ đồ gốc như ô explore_crust, không có quả trứng; bản này designer giữ rõ lớp manti, làm nhạt lớp vỏ và nhân; lớp manti trông như đá nóng, không chảy như dung nham; không có chữ. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
@@ -377,15 +390,17 @@ sentence.vi: Ở chính giữa Trái Đất là {1}.
 answers: q2_core
 hint.en: Think of an egg. What is in its middle?
 hint.vi: Em nghĩ tới quả trứng. Ở giữa quả trứng là gì?
-explanation_correct.en: Yes! The core is in the middle of Earth.
-explanation_correct.vi: Đúng rồi! Nhân nằm ở chính giữa Trái Đất.
-explanation_wrong.en: The answer is core. It is in the middle, like a yolk.
-explanation_wrong.vi: Đáp án là nhân Trái Đất. Nhân nằm ở giữa, giống lòng đỏ trứng.
+explanation_correct.en: The core is the hottest part of Earth.
+explanation_correct.vi: Nhân là phần nóng nhất của Trái Đất.
+explanation_wrong.en: The core sits in the middle, like a yolk.
+explanation_wrong.vi: Nhân nằm ở giữa, giống lòng đỏ trứng.
 > Gợi ý dùng mô hình quả trứng (lòng đỏ ở giữa), không nói thẳng đáp án.
 
 #### bank q2_crust
 label.en: crust
 label.vi: vỏ Trái Đất
+feedback.en: The crust is the outside layer we live on.
+feedback.vi: Vỏ là lớp ngoài cùng, nơi mình sống.
 image.brief: Dùng lại hình `q1_crust`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
 image.alt.en: Earth cut open, the crust shown
 image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp vỏ
@@ -400,6 +415,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ nhân
 #### bank q2_mantle
 label.en: mantle
 label.vi: lớp manti
+feedback.en: The mantle is the layer just under the crust.
+feedback.vi: Lớp manti nằm ngay dưới vỏ Trái Đất.
 image.brief: Dùng lại hình `q1_mantle`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
 image.alt.en: Earth cut open, the mantle shown
 image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp manti
@@ -418,10 +435,10 @@ instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Think of an egg. What is under the shell?
 hint.vi: Em nghĩ tới quả trứng. Dưới lớp vỏ trứng có gì?
-explanation_correct.en: Yes! The mantle and the core are under the crust.
-explanation_correct.vi: Đúng rồi! Lớp manti và nhân nằm dưới vỏ Trái Đất.
-explanation_wrong.en: The answers are the mantle and the core. Mountains and oceans are on the crust.
-explanation_wrong.vi: Đáp án là lớp manti và nhân Trái Đất. Núi và đại dương nằm trên vỏ Trái Đất.
+explanation_correct.en: The mantle comes next, and the core is deepest.
+explanation_correct.vi: Dưới vỏ là lớp manti, sâu nhất là nhân.
+explanation_wrong.en: Mountains and oceans are on the crust, not under it.
+explanation_wrong.vi: Núi và đại dương nằm trên vỏ, không ở dưới.
 > Câu phân loại "ở dưới" và "ở trên" vỏ Trái Đất. Hai lựa chọn sai là thứ bé thấy trên bề mặt: núi (bé dễ nghĩ núi to là một lớp) và đại dương (bé dễ nghĩ biển sâu nằm dưới đất). Nối với món "đáy đại dương" ở ô vỏ Trái Đất.
 > SK-033 (9/11): bốn lựa chọn có hình (trước đây chỉ có chữ). Lớp manti và nhân chỉ vẽ được bằng sơ đồ, còn núi và đại dương là ảnh chụp, nên bé có thể đoán theo kiểu hình ("sơ đồ là ở bên trong"). Nhờ tester xem trên máy; nếu thấy bé chọn theo kiểu hình thì đổi ảnh núi và đại dương sang sơ đồ khối mặt cắt vùng ven biển (USGS), làm nổi núi hoặc biển nằm trên lớp vỏ.
 
@@ -435,6 +452,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp manti
 
 #### option q3_mountains
 correct: false
+feedback.en: Mountains sit on top of the crust.
+feedback.vi: Núi nằm trên vỏ Trái Đất.
 label.en: mountains
 label.vi: núi
 image.brief: Dùng lại hình `tray_mountain` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): mountain green clouds peak
@@ -443,6 +462,8 @@ image.alt.vi: Ngọn núi xanh
 
 #### option q3_ocean
 correct: false
+feedback.en: Oceans lie on top of the crust.
+feedback.vi: Đại dương nằm trên vỏ Trái Đất.
 label.en: ocean
 label.vi: đại dương
 image.brief: Dùng lại hình `tray_sea` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`, cùng ảnh với ô explore_oceans của bài hai và lựa chọn w1_ocean. Từ khoá tìm ảnh (EN): sea horizon fishing boat
@@ -462,23 +483,26 @@ id: f6ffb24e-7b0b-421a-be41-6a58db2a146d
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan cuts a peach in half. Which part is like the core?
-prompt.vi: Lan bổ đôi một quả đào. Phần nào giống nhân Trái Đất?
+prompt.en: Which part of the peach is like the core?
+prompt.vi: Phần nào của quả đào giống nhân Trái Đất?
+> SK-044 (14/11, A2): câu cũ hai câu, mười một từ ("Lan cuts a peach in half."). Ảnh quả đào bổ đôi đã cho thấy ngữ cảnh, nên bỏ câu kể; câu hỏi còn chín từ, chín tiếng.
 image.brief: [hình vẽ] Nửa quả đào chín bổ đôi trên nền trơn, nhìn thẳng mặt cắt, màu và bóng gần như thật: vỏ mỏng màu hồng, thịt quả vàng cam đỏ dần quanh hạt, hạt đào nâu sần ở chính giữa, thấy một mép vỏ ở dưới; không có dao, thớt, tay người, không có chữ hay nhãn dán trên quả. Ba lựa chọn là ba bản chỉnh của hình vẽ gốc này. Từ khoá tìm ảnh (EN): peach halved pit
 image.alt.en: A peach cut in half
 image.alt.vi: Quả đào bổ đôi
 hint.en: Look at the middle of the peach.
 hint.vi: Em nhìn vào chính giữa quả đào nhé.
-explanation_correct.en: Yes! The seed is in the middle, like the core.
-explanation_correct.vi: Đúng rồi! Hạt đào nằm ở giữa, giống như nhân Trái Đất.
-explanation_wrong.en: The answer is the seed. It is in the middle.
-explanation_wrong.vi: Đáp án là hạt đào. Hạt đào nằm ở giữa.
+explanation_correct.en: Skin, flesh, seed: three layers, just like Earth.
+explanation_correct.vi: Vỏ, thịt, hạt: quả đào có ba lớp như Trái Đất.
+explanation_wrong.en: The seed sits in the middle, like the core.
+explanation_wrong.vi: Hạt đào nằm ở giữa, giống nhân Trái Đất.
 > Dùng mô hình với một vật mới, chưa gặp ở Học và Chơi (DOK 2). SK-033 (9/11): ba lựa chọn nay có hình, là ba bản của chính ảnh quả đào ở câu hỏi, mỗi bản giữ rõ một phần, như các món trứng và bơ ở phần Chơi.
 > Rà chữ 9/11 (tester, lỗi nhỏ 7): đổi "the stone" thành "the seed". Bé học tiếng Anh như ngoại ngữ dễ đọc "stone" thành hòn đá, mà bài này đang nói về đá; "seed" là từ quen và khớp "Avocado seed" ở phần Chơi. Key `q4_stone` giữ nguyên. Về thực vật, phần cứng ở giữa quả đào ("stone", "pit") là vỏ cứng bọc lấy hạt; tiếng Việt cũng gọi chung là "hạt đào". Gọi "seed" là cách nói giản lược cho trẻ.
-> Giải thích sai không nhắc lại "like the core" để màn không quá ba mươi từ; giải thích đúng đã có ý này.
+> SK-044 (14/11, A2): giải thích sai nay là một câu có "like the core" (màn đã chỉ đáp án, không cần "The answer is"); giải thích đúng thêm ý quả đào có ba lớp như Trái Đất.
 
 #### option q4_flesh
 correct: false
+feedback.en: The flesh wraps around the middle, like the mantle.
+feedback.vi: Thịt đào bọc quanh phần giữa, giống lớp manti.
 label.en: the flesh
 label.vi: thịt đào
 image.brief: [hình vẽ] Cùng hình vẽ gốc quả đào bổ đôi của câu `q4`; bản này designer giữ rõ phần thịt đào vàng cam, làm nhạt vỏ và hạt; không có chữ. Từ khoá tìm ảnh (EN): peach halved pit
@@ -495,6 +519,8 @@ image.alt.vi: Nửa quả đào, phần hạt đào
 
 #### option q4_skin
 correct: false
+feedback.en: The thin skin is outside, like the crust.
+feedback.vi: Vỏ đào mỏng ở ngoài cùng, giống vỏ Trái Đất.
 label.en: the skin
 label.vi: vỏ đào
 image.brief: [hình vẽ] Cùng hình vẽ gốc quả đào bổ đôi của câu `q4`; bản này designer giữ rõ viền vỏ hồng mỏng, làm nhạt thịt và hạt; không có chữ. Từ khoá tìm ảnh (EN): peach halved pit
@@ -513,10 +539,10 @@ image.alt.en: Earth's core next to an egg yolk
 image.alt.vi: Nhân Trái Đất bên cạnh lòng đỏ trứng
 hint.en: Two answers are true for both. Which is true only for the core?
 hint.vi: Có hai ý đúng với cả hai. Ý nào chỉ đúng với nhân Trái Đất?
-explanation_correct.en: Yes! The core is much hotter than any egg.
-explanation_correct.vi: Đúng rồi! Nhân Trái Đất nóng hơn quả trứng rất, rất nhiều.
-explanation_wrong.en: The core is much hotter than a yolk. Both are in the middle.
-explanation_wrong.vi: Nhân Trái Đất nóng hơn lòng đỏ trứng rất nhiều. Cả hai đều nằm ở giữa.
+explanation_correct.en: The core is much hotter than any egg.
+explanation_correct.vi: Nhân Trái Đất nóng hơn mọi quả trứng rất nhiều.
+explanation_wrong.en: Both are in the middle, but the core is hotter.
+explanation_wrong.vi: Cả hai đều ở giữa, nhưng nhân nóng hơn nhiều.
 > So sánh mô hình với vật thật: mô hình giống ở vài điểm, khác ở vài điểm (kỹ năng đọc mô hình, mục E của rubric). Hai lựa chọn sai đều là điểm giống nhau (ở giữa; nằm dưới các lớp khác), nên bé phải tìm điểm khác.
 > Giải thích nói "much hotter than any egg", không nói "a yolk is not hot", vì trứng vừa luộc xong vẫn nóng.
 > Rà chữ 9/11 (tester N5): lựa chọn đúng đổi từ "very hot · rất nóng" thành "much hotter · nóng hơn nhiều". Lòng đỏ vừa luộc cũng rất nóng, nên "very hot" chưa phải điểm khác; "much hotter" nói rõ là so sánh. Gợi ý cũ "lớp nào nóng nhất?" lộ đáp án; gợi ý mới chỉ cách làm (loại hai điểm giống nhau), không nói tới độ nóng.
@@ -526,6 +552,8 @@ explanation_wrong.vi: Nhân Trái Đất nóng hơn lòng đỏ trứng rất nh
 
 #### option q5_middle
 correct: false
+feedback.en: A yolk is in the middle too, so they match.
+feedback.vi: Lòng đỏ cũng nằm ở giữa, nên điểm này giống.
 label.en: in the middle
 label.vi: nằm ở giữa
 image.brief: Dùng lại hình `tray_egg_yolk`. Lòng đỏ nằm ở giữa, đúng với cả nhân Trái Đất. Từ khoá tìm ảnh (EN): boiled egg halved shell
@@ -534,6 +562,8 @@ image.alt.vi: Nửa quả trứng luộc, phần lòng đỏ
 
 #### option q5_under
 correct: false
+feedback.en: A yolk is under other layers too, so they match.
+feedback.vi: Lòng đỏ cũng nằm dưới lớp khác, nên giống nhau.
 label.en: under other layers
 label.vi: nằm dưới các lớp khác
 image.brief: [hình vẽ] Cùng hình vẽ gốc nửa quả trứng luộc còn vỏ của món `tray_eggshell`, bản thứ tư: designer giữ rõ vỏ và lòng trắng bọc quanh, làm nhạt lòng đỏ, để thấy lòng đỏ nằm dưới hai lớp kia; không có chữ. Từ khoá tìm ảnh (EN): boiled egg halved shell
@@ -563,8 +593,9 @@ image.alt.vi: Bàn chân đứng trên mặt đất
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
 > Rà chữ 9/11 (tester N1): nhãn trung tính chung cho cả năm câu sáu, xem ghi chú ở câu q6 bài một.
-statement.en: Deep inside, Earth is hot. But the crust under us is solid.
-statement.vi: Sâu bên trong, Trái Đất rất nóng. Nhưng vỏ Trái Đất dưới chân mình là đất đá rắn chắc.
+statement.en: Earth is hot deep inside, but the crust is solid.
+statement.vi: Trái Đất nóng ở sâu bên trong, nhưng vỏ thì rắn chắc.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười hai tiếng). Vẫn hai vế: vế đầu đúng, vế sau sửa misconception; ảnh bàn chân trên mặt đất giữ ý "dưới chân mình".
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -573,10 +604,12 @@ labels.false.vi: Na chưa đúng
 answer: true
 hint.en: When people dig deep, do they find melted rock?
 hint.vi: Khi người ta đào thật sâu, có gặp đá nóng chảy không?
-explanation_correct.en: Yes! Even the mantle below it is mostly solid.
-explanation_correct.vi: Đúng rồi! Ngay cả lớp manti bên dưới cũng phần lớn vẫn rắn.
-explanation_wrong.en: Na is right. Under us is solid crust.
-explanation_wrong.vi: Na nói đúng. Dưới chân mình là vỏ Trái Đất, đất đá rắn chắc.
+explanation_correct.en: Even the mantle below the crust is mostly solid.
+explanation_correct.vi: Ngay cả lớp manti bên dưới cũng phần lớn vẫn rắn.
+explanation_wrong.en: Melted rock is deep down, not just under our feet.
+explanation_wrong.vi: Đá nóng chảy ở rất sâu, không ở ngay dưới chân.
+feedback_false.en: We walk, build and dig on solid ground.
+feedback_false.vi: Mình đi lại, xây nhà, đào giếng trên đất rắn.
 > Rà chữ 9/11 (tester N1): câu này đổi sang đáp án "Na đúng", vẫn gắn `inside_is_lava`. Bản cũ: Na nói "Bên trong Trái Đất rất nóng. Vậy ngay dưới chân mình là đá nóng chảy." (đáp án Sai). Năm câu sáu cũ đều có đáp án "Na chưa đúng", bé sẽ học bấm "No" theo thói quen.
 > DOK 3: đánh giá một lập luận có hai vế, vế đầu đúng ("sâu bên trong rất nóng"), vế sau sửa đúng misconception ("vỏ Trái Đất dưới chân mình là đất đá rắn"). Bé còn tin "ngay dưới đất là dung nham" sẽ cho là Na sai. Gợi ý chỉ vào bằng chứng đời thường (đào sâu chỉ gặp đất, đá, nước), không nói thẳng đáp án.
 > Lời Na nói "solid", không nói "solid rock": ngay dưới chân có lớp đất trước khi tới đá, bé biết vậy có thể cho là Na sai vì "dưới chân là đất chứ không phải đá".

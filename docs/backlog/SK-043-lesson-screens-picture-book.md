@@ -222,3 +222,279 @@ Sau khi Duy test trên iPhone (13/11): thẻ 3 lựa chọn cắt con vẹt ch�
   - Hình câu hỏi (vườn rào tre, ao, sân nhà vẽ) dùng `same_as`.
 - **Cuốn chiếu ở khung vuông** (ô kệ, ô thứ tự) chỉ thấy nửa thân phía đầu, vẫn rõ hàng chân: con vật quá dài so với khung vuông.
 - **Kiểm tay:** chưa có giấy phép nào cần kiểm tay (không ảnh Openverse/Flickr mới).
+
+## Duy 14/11 · duyệt Discoverer A2, cho code
+- Bộ thiết kế: design/play-ui/options/lesson-less-text/Discoverer-A2.html (41 màn, ngân sách chữ ghi trong trang).
+- Duy duyệt cả 6 điểm: (1) chạm là trả lời (trừ multi_choice có nút "Xong", order_sequence tự chấm khi đủ); (2) lựa chọn không nhãn, tên hiện sau khi chấm, trừ khi ảnh không đủ; (3) true_false dùng thẻ gật/lắc + chữ "Đúng"/"Sai"; (4) sai còn lượt: mẩu giấy in một câu `feedback`, `hint` chỉ đọc; (5) "Cả hai" chỉ in EN, VI qua nút loa; (6) true_false và câu Na chỉ một lượt (áp cả Explorer).
+- Việc: ios-dev code Discoverer theo A2; content-editor viết `feedback` (SK-044) cho 6 chủ đề Discoverer pilot và rút chữ về ngân sách A2; dev cập nhật `image-slots.json` (thẻ Discoverer ≈ 2,5:1, lưới 2×2 ≈ 0,8:1), chốt nối lựa chọn ↔ cột cho `picture_bar_chart`, và số lượt theo format.
+
+## dev 14/11
+Ba việc từ mục "Duy 14/11 · duyệt Discoverer A2". Không cần migration, không đổi RPC. Chưa commit.
+
+### 1. Khung ảnh Discoverer theo A2 (`tools/content-cli/image-slots.json`)
+Đo trên `Discoverer-A2.html` (iPhone 390; iPad khi có màn). Explorer giữ nguyên (bảng designer 13/11).
+
+| Khung | Cũ (ước từ code) | Mới | Đo trên A2 |
+| --- | --- | --- | --- |
+| `choice_2`, `choice_3` | 16:9 | **5:2** | thẻ ngang, ảnh 333×128 (q1) đến 333×158 (w1) |
+| `choice_4` (từ 4 lựa chọn) | 16:9 | **4:5** | lưới 2×2, ảnh 159×206; iPad 258×328 |
+| `bank_item` (thẻ từ có hình) | 16:9 | **3:5** | ảnh 96×160 trên chữ (q2) |
+| `learn_group` | 1:1 (mặc định) | 1:1 (ghi rõ) | trang Học 338×350; iPad 548×618 |
+| `tray_item` | 1:1 (mặc định) | 1:1 (ghi rõ) | kệ 3×3, ô 101×91; iPad 120×144 |
+| `vocab` | 1:1 (mặc định) | **4:3** | trang Từ mới, ảnh 150×116 |
+| `question`, `order_item`, `reward` | 4:3, 1:1, 1:1 | không đổi | true_false 348×237, câu Na 348×196, thẻ xếp 99×142, thẻ thưởng 338×300: đều dưới ngưỡng 2,2 |
+
+- Discoverer bật `hide_question_image_with_picture_choices`: A2 ẩn hình câu hỏi khi mọi lựa chọn đều có hình (chú thích màn q1). Luật ẩn giờ tính cả `fill_blank_bank` khi mọi thẻ từ có hình (màn q2 không có hình câu hỏi). Explorer không dùng `fill_blank_bank` nên không đổi gì.
+- Thêm 3:5 và 5:3 vào bảng tỉ lệ quen thuộc trong dòng cảnh báo.
+
+**Số cảnh báo lệch khung** (`max_factor` 2,2, mọi file chọn ảnh, ảnh trong `content/.images`; script tạm trong scratchpad gọi `selectionShapeWarnings`, cùng hàm `images fetch` dùng):
+
+| Chủ đề | Trước | Sau | choice 3 | choice 4 | thẻ từ | món Chơi | từ vựng | hình câu hỏi | sticker |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| be-mat-trai-dat | 7 | **29** | 7 | 2 | 19 | 1 | 0 | 0 | 0 |
+| da-va-dat | 13 | **60** | 13 | 2 | 40 | 2 | 2 | 1 | 0 |
+| ho-hap | 4 | **18** | 5 | 0 | 13 | 0 | 0 | 0 | 0 |
+| khung-long | 11 | **25** | 12 | 6 | 0 | 5 | 1 | 0 | 1 |
+| nao-bo-va-giac-quan | 0 | **10** | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
+| thoi-tiet-va-thien-tai | 0 | **17** | 0 | 0 | 17 | 0 | 0 | 0 | 0 |
+| an-uong-lanh-manh | 0 | 0 | | | | | | | |
+| **Tổng Discoverer** | **35** | **159** | 37 | 10 | 99 | 8 | 3 | 1 | 1 |
+| Explorer (3 chủ đề) | 0 | 0 | | | | | | | |
+
+- an-uong-lanh-manh chưa có file chọn ảnh nên không có số. Ở ngưỡng 1,5, Discoverer có 811 cảnh báo (trước: 208).
+- Phần lớn số tăng là **thẻ từ 3:5** (99). 80 trong số đó là ảnh 4:3, lệch ×2,22, vừa qua ngưỡng 2,2 (lấp khung mất khoảng 55%); còn lại là ảnh 3:2, 5:3. Thẻ 5:2 thêm 22 ảnh: ảnh gần vuông hoặc dọc, khung 16:9 cũ chưa báo.
+- **Cần designer quyết** trước khi đặt lại crop: thẻ từ A2 có thật cao 160 không, khi bank có 4 thẻ hay khi chữ dài. Nếu khung ảnh thẻ từ là 2:3 thay vì 3:5, 80 ảnh 4:3 kia hết báo (lệch ×2); nếu là 1:1 thì gần như không còn dòng nào. Sửa một dòng `bank_item` trong `image-slots.json` là xong.
+- iPad: câu multi_choice 3 lựa chọn xếp một hàng 3 cột (thẻ dọc) lệch với 5:2. PictureFit sẽ hiện cả ảnh, ảnh nhỏ, giống chỗ còn mở của Explorer iPad.
+
+### 2. `picture_bar_chart`: nối lựa chọn ↔ cột theo vị trí
+**Quyết định (dev, đơn giản nhất cho MVP, không đổi hình dạng schema):** `options[i]` là đáp án của `chart.bars[i]`.
+- Giữ `options` vì engine chấm đã coi `picture_bar_chart` như `single_choice` theo `options[].key` (vector `item-scoring`, `ContentScoring`). Cột chỉ là phần vẽ.
+- Nối bằng key thì không được: luật "key duy nhất trong bài" đã cấm option và bar cùng key.
+
+**content-schema kiểm chéo** (`scripts/lib/refs.mjs` › `checkBarChart`, lỗi `schema` ở đúng dòng markdown):
+- `options.length == chart.bars.length`;
+- `options[i].label.en/.vi` trùng `chart.bars[i].label.en/.vi`, để bắt lỗi viết `#### option` khác thứ tự `#### bar`;
+- lựa chọn không có `image` (hình đặt ở `chart.bars[i].image`);
+- ít nhất một cột `value > 0`.
+
+`content-cli` (age-rules): luật hình `choice_option` không còn tính `picture_bar_chart`, nên Discoverer không báo thiếu hình lựa chọn ở dạng này.
+
+**JSON cho ios-dev** (trong gói, sau build; `brief` đã bỏ):
+```json
+{
+  "id": "…", "key": "q4", "format": "picture_bar_chart", "version": 2, "dok": 2,
+  "prompt": { "en": "Which bar is sand?", "vi": "Cột nào là đất cát?", "audio": { "en": "…", "vi": "…" } },
+  "image": { "alt": { "en": "A handful of sand", "vi": "Một nắm đất cát" }, "asset": "…" },
+  "hint": { … }, "explanation_correct": { … }, "explanation_wrong": { … },
+  "chart": {
+    "title": { … },
+    "unit": { … },
+    "bars": [
+      { "key": "q4_bar_clay",   "label": { "en": "clay soil",   "vi": "đất sét",  "audio": { … } }, "value": 5 },
+      { "key": "q4_bar_garden", "label": { "en": "garden soil", "vi": "đất vườn", "audio": { … } }, "value": 8 },
+      { "key": "q4_bar_sand",   "label": { "en": "sand",        "vi": "đất cát",  "audio": { … } }, "value": 3, "image": { "alt": { … }, "asset": "…" } }
+    ]
+  },
+  "options": [
+    { "key": "q4_clay",   "label": { "en": "clay soil",   "vi": "đất sét"  }, "correct": false, "feedback": { … } },
+    { "key": "q4_garden", "label": { "en": "garden soil", "vi": "đất vườn" }, "correct": false },
+    { "key": "q4_sand",   "label": { "en": "sand",        "vi": "đất cát"  }, "correct": true }
+  ]
+}
+```
+- `title`, `unit`, `image` của câu và của cột, `feedback` đều tuỳ chọn. Số trong ví dụ chỉ để minh hoạ.
+- **Cách vẽ:**
+  - Vẽ `bars` theo thứ tự mảng, từ trái sang phải. Cao cột ∝ `value / max(value)`.
+  - Mỗi cột là một nút. Chạm cột i = chọn `options[i]`: lưu `selected: options[i].key` và chấm như `single_choice`.
+  - Tên hiện sau khi chấm (`.ntag`) là `bars[i].label`, bằng `options[i].label`.
+  - Sai còn lượt: mẩu giấy in `options[i].feedback`.
+  - `bars[i].image` (nếu có) vẽ dưới chân cột.
+  - Hình câu hỏi là ô 64 cạnh câu hỏi (màn `chart-ask`). Lựa chọn không có hình nên app không ẩn hình câu hỏi.
+- Số cột: schema 2–6. Luật Discoverer `option_count.picture_bar_chart` [3, 4] nay cũng là số cột.
+- `FORMAT_FIRST_APP_VERSION.picture_bar_chart` vẫn `null`. Khi ios-dev có renderer, dev sửa bảng này (`src/validate/format-renderers.ts`) cùng bản app.
+
+**Đề xuất cho content-editor** (`content/TEMPLATE.md` dòng ~461, vùng của content-editor nên dev không sửa): ví dụ `picture_bar_chart` ghi rõ "`#### option` thứ i là đáp án của `#### bar` thứ i: cùng số, cùng thứ tự, cùng `label.en`/`label.vi`; hình viết ở `#### bar`, `#### option` không có `image.*`". Hiện chưa bài nào dùng format này nên validate vẫn 0 lỗi.
+
+### 3. Số lượt theo format: `max_tries_by_format`
+- **Khoá:** `rules.<nhóm>.max_tries_by_format`, kiểu `{ "<format>": số ≥ 1 }`, tuỳ chọn.
+  - Số lượt của một câu = `max_tries_by_format[format]` nếu có, không thì `max_tries`. Áp cả Khởi động lẫn Quiz.
+  - Câu Na luôn là `true_false` (`speaker` chỉ có ở TrueFalse), nên khoá theo format đã gồm câu Na.
+- **`content/rules.json`:** `"max_tries_by_format": { "true_false": 1 }` ở cả ba nhóm.
+  - Duy duyệt cho Explorer và Discoverer. Scientist dev thêm luôn vì cùng lý do (hai phía, lời sai gần như nói đáp án), và app iOS đã mặc định `true_false: 1` khi thiếu khoá; để Scientist trống thì app và luật lệch nhau. Duy muốn Scientist 2 lượt thì xoá dòng đó và ios-dev bỏ mặc định.
+- **Đã làm:**
+  - `schema/rules.schema.json`: khoá format phải có thật, giá trị ≥ 1, không rỗng.
+  - `test/rules.test.ts`: khoá này nằm ngoài `default_rules` của vector, kiểm giá trị riêng.
+  - README content-cli.
+  - `build` chép nguyên `rules.json` vào `manifest.rules`, nên gói build lại là có khoá.
+- **ios-dev:** đọc `max_tries_by_format` của nhóm. `LessonRules.swift` (bản chưa commit) đã đọc đúng tên và kiểu này, và có `scoring(forFormat:)`.
+  - Gói mới có khoá ở mọi nhóm, nên `defaultMaxTriesByFormat` chỉ còn dùng cho gói cũ.
+  - App cũ (0.1.0) bỏ qua khoá và vẫn cho 2 lượt: đúng thứ tự phát hành.
+- **Server:** không cần migration, không đổi RPC.
+  - Server không chấm số lượt. `submit_attempts` giữ `points`/`correct` của app; `quiz_answers.tries` chỉ kiểm 1–10.
+  - `rules_for` chỉ dùng cho sao và chuỗi ngày. Hàng `app_config.rules.*` trên staging chưa có khoá; `publish` (chưa có) sẽ chép, và không hàm nào đọc khoá này.
+- **Đề xuất cho tester** (vector là vùng của tester, dev không sửa):
+  1. `test-vectors/vector.schema.json`: thêm vào `Rules.properties` và `RulesOverride.properties`:
+     `"max_tries_by_format": { "type": "object", "minProperties": 1, "propertyNames": { "enum": ["single_choice","multi_choice","true_false","fill_blank_bank","order_sequence","picture_bar_chart"] }, "additionalProperties": { "$ref": "#/$defs/RuleMaxTries" } }`.
+     Không thêm vào `default_rules` (khoá tuỳ chọn). Nếu tester muốn `default_rules` giống `rules.json` thì thêm `{ "true_false": 1 }` vào cả 7 file, rồi bỏ `max_tries_by_format` khỏi ngoại lệ trong `content-cli/test/rules.test.ts` (báo dev).
+  2. `tools/reference-engine.mjs` › `scoreItem`: `const maxTries = rules.max_tries_by_format?.[item.format] ?? rules.max_tries; if (tries.length > maxTries) return { error: 'too_many_tries' };`.
+  3. Case mới cho `item-scoring.json`, mỗi case có `"rules": { "max_tries_by_format": { "true_false": 1 } }`, `"decision": "SK-043/6"`:
+     - 034 · true_false `answer: false`, tries `[{value: true}]` → `{ points: 0, try_results: [false], final_correct: false, tries_used: 1 }`.
+     - 035 · true_false `answer: false`, tries `[{value: true}, {value: false}]` → `{ error: "too_many_tries" }`.
+     - 036 · true_false `answer: true`, tries `[{value: true}]` → `{ points: 1, try_results: [true], final_correct: true, tries_used: 1 }`.
+     - 037 · single_choice (fish đúng), tries `[{selected: "rice"}, {selected: "fish"}]` → `{ points: 0, try_results: [false, true], final_correct: true, tries_used: 2 }`: format không có trong bảng thì theo `max_tries` 2.
+     - 038 · `"rules": { "max_tries": 1, "max_tries_by_format": { "single_choice": 3 } }`, single_choice tries rice, banana, fish → `{ points: 0, try_results: [false, false, true], final_correct: true, tries_used: 3 }`: bảng theo format thắng `max_tries`, kể cả khi lớn hơn.
+  4. Engine Swift (ios-dev) chạy cùng vector: `scoreItem` cần nhận `rules.scoring(forFormat:)`, không phải `rules.scoring`.
+
+### File đã đổi
+- `tools/content-cli/image-slots.json`, `src/images/aspect.ts`, `src/validate/age-rules.ts`, `schema/rules.schema.json`, `README.md`
+- `tools/content-cli/test/aspect.test.ts`, `test/build.test.ts` (khung 16:9 → 5:2 trong một kỳ vọng), `test/markdown.test.ts` (fixture biểu đồ đủ 3 cột, bỏ hình lựa chọn; thêm ca sai thứ tự), `test/rules.test.ts`
+- `packages/content-schema/scripts/lib/refs.mjs`, `src/quiz-item.ts` (chú thích), `README.md`, `test/refs.test.mjs`
+- `content/rules.json`
+
+### Kiểm
+- `packages/content-schema`: `npm test` 160/160 qua.
+- `tools/content-cli`:
+  - `npm test` lần 1: 387 qua, 1 hỏng. `build.test.ts` còn kỳ vọng khung 16:9 cũ; đã sửa kỳ vọng.
+  - Lần 2: 388/388 qua. `npm run typecheck` qua.
+- `validate -- content`: 69 file, **0 lỗi**, 143 cảnh báo.
+
+### Tester kiểm
+- Một bài Discoverer có câu `fill_blank_bank` ảnh ngang: `build` báo "thẻ từ có hình … khung 3:5 dọc".
+- Câu Discoverer mà mọi lựa chọn có hình: không còn dòng "hình câu hỏi".
+- Viết một câu `picture_bar_chart` với `#### option` khác thứ tự `#### bar`: `validate` báo `[schema]` ở dòng `label.en`/`label.vi` của lựa chọn.
+  - Thêm `image.*` dưới `#### option`: báo ở dòng hình đó.
+  - Bớt một `#### option`: báo ở `/options`.
+- Trong bản sao `content/rules.json`, đặt `max_tries_by_format: { "true_flase": 1 }`: `build` dừng, lỗi chỉ `/explorer/max_tries_by_format`.
+- Gói build lại: `manifest.rules.<nhóm>.max_tries_by_format` có ở cả ba nhóm.
+
+## ios-dev 14/11 · Discoverer A2
+
+Đã code bài Discoverer theo `Discoverer-A2.html` và 6 điểm Duy duyệt. Explorer A giữ nguyên, trừ hai thay đổi chung (true_false một lượt; hết lượt thì đọc feedback trước). Chưa commit.
+
+**Đã làm**
+- **Điều hướng** (`LessonPlayerView`): Discoverer dùng màn sách tranh (Học, Chơi chung với Explorer), cỡ 56 / bo 12 / có XP, và hai màn mới `DiscovererQuestionStep`, `RewardStep` A2. Màn Discoverer cũ (`QuestionStep`, `LearnStep`) không còn được gọi; để lại vì còn test cũ dùng, dọn sau.
+- **Header không chữ:** nút lùi/thoát và ô bước/ô câu (ô xong lá tre có dấu tích). Discoverer bỏ công tắc "VI".
+- **"Cả hai":** chỉ in chữ tiếng Anh (`mode.sentence`, kể cả nhãn nhóm, chip, tên thẻ); tiếng Việt qua nút "VI" cạnh loa.
+- **Khởi động và Quiz** (`Views/DiscovererQuestionStep.swift`, mới):
+  - Câu hỏi một dòng chữ, loa tự đọc khi mở; `instruction` chỉ đọc, không in. Khởi động có nhãn "Nhớ lại".
+  - Chạm là trả lời: single_choice, true_false, câu Na, fill_blank_bank. App đọc tên thẻ rồi chấm, nhịp 0,9 s như Explorer.
+  - Thẻ ảnh không nhãn; sau khi chấm, tên đáp án dán lên thẻ. Lựa chọn không có ảnh thì in tên.
+  - iPhone: tối đa 3 thẻ một cột; 4 thẻ trở lên hoặc multi_choice dùng lưới 2×2. iPad: 3 thẻ một hàng (cao 200), lưới 2×2 cao 330.
+  - multi_choice: ô vuông ở góc thẻ, nút "Xong" chỉ có mũi tên (VoiceOver đọc "Xong, kiểm tra"). Sai còn lượt: chỉ thẻ sai bong góc, thẻ đúng giữ dấu chọn.
+  - true_false: thẻ gật/lắc kèm một chữ (nhãn `labels` của nội dung, không có thì "Đúng"/"Sai" theo ngôn ngữ câu). Câu Na: ảnh, mặt Na, bong bóng, loa.
+  - fill_blank_bank: câu có ô trống trên giấy; thẻ từ gồm ảnh và chữ to. Một ô trống thì chạm là chấm; nhiều ô thì điền đủ rồi chấm.
+  - order_sequence: dùng `ExplorerOrderSequence`; Discoverer nay có trình hiển thị cho dạng này.
+  - Sai còn lượt: thẻ lõm, góc bong có mũi tên vòng. Mẩu giấy gấp góc (mascot) in `feedback`, không có thì in `hint`; loa đọc feedback rồi hint.
+  - Đúng hoặc hết lượt: tấm giấy có triện ĐÚNG (hết lượt thì mascot), câu giải thích, loa, "+10" khi có XP, nút mũi tên.
+- **Học:** trang lật như Explorer, câu nằm dưới ảnh trên giấy riêng kèm loa; ví dụ chỉ đọc (schema v1 chưa có ảnh cho ví dụ). Trang "Từ mới": từ EN chữ to, nghĩa VI ở dưới (chế độ English chỉ in EN), ảnh, loa.
+- **Chơi:** kệ ảnh không chữ, khay ảnh tròn, món `limit` mờ có góc gấp, chip nhóm cao 56, mũi tên chỉ hiện khi khay đạt. Bong bóng lúc mở in `prompt` của khay; giọng đọc prompt rồi `messages.start`.
+- **Thưởng:** "Giỏi lắm!", sao, hai ô số (biểu tượng + số; nhãn chỉ cho VoiceOver), thẻ mới (ảnh, tên, một câu fact, loa), nút bộ thẻ (hình) và mũi tên.
+- **Luật lượt:** `LessonRules` đọc `max_tries_by_format` (dev đã thêm vào `content/rules.json`, `true_false: 1`); thiếu khoá thì app mặc định `true_false: 1`. Áp cho cả Explorer.
+- **Hết lượt** (SK-044, main session 14/11): đọc và in `feedback` của lựa chọn vừa chạm rồi `explanation_wrong` (`LessonSession.resultLines`), ở Explorer lẫn Discoverer.
+- **Chuỗi mới** (EN + VI): `lesson.warmup.tag`, `lesson.multi.done`, `lesson.learn.words_tag`, `lesson.reward.praise`, `lesson.reward.score_a11y`, `lesson.reward.new_card`.
+
+**Chưa làm**
+- `picture_bar_chart`: chưa vẽ, chờ dev chốt cách nối lựa chọn với cột; câu dạng này vẫn bị bỏ qua.
+- Ô "ngày liền" ở Thưởng: màn bài chưa biết chuỗi ngày.
+- Ngoại lệ "ảnh không đủ thì dán nhãn từ đầu" (`q1-ask`): nội dung chưa có cờ đánh dấu, nên chỉ in tên khi lựa chọn không có ảnh.
+
+**Kết quả chạy (iPhone 16 Pro)**
+- `build-for-testing`: thành công.
+- Toàn bộ unit test (bỏ UI test): 3 test fail, đều không liên quan: `JourneyMapAppTests.mapItemsOfEachGroup`, `SyllabusTests.oakYearOfEachTopic`, `JourneySegmentTests.stagesOfTheSyllabus`. Ba test này đọc thứ tự chủ đề Explorer trong `content/syllabus.json` đã đổi, cần cập nhật theo syllabus mới.
+- Sau lần sửa cuối, chạy riêng `LessonPlayerTests`: 75/75 pass. Có test mới: `trueFalseHasOneTry` (Explorer + Discoverer); test feedback được mở rộng cho ca hết lượt.
+- UI test chưa chạy và chắc chắn hỏng vì luồng đổi (không còn "Kiểm tra", "Thử lại", "lesson.learn.next"…); tester cần viết lại.
+
+**Ảnh** (gói nhúng có ảnh và giọng thật, bài *Nhìn kỹ các loại đá*, chế độ "Cả hai"), trong scratchpad `shots/D-app-*.png`: `w1-ask`, `w1-retry`, `w1-right`, `w2-ask`, `w2-out` (true_false một lượt), `learn-1`, `learn-2-bilingual`, `play-trap`, `play-done`, `q1-ask`, `q1-retry`, `q1-right`, `q2-fill-ask`, `q2-fill-retry`, `q2-fill-right`, `q3-multi-select`, `q3-multi-retry`, `q3-multi-right`, `q4-right-xp`, `q6-na-ask`, `q6-na-right`, `reward`, `ipad-w1` (iPad Pro 11 M4).
+- Các ảnh iPhone chụp trước ba sửa cuối: nhãn tên trên thẻ đổi sang mẩu giấy, chip nhóm in EN ở "Cả hai", feedback trước `explanation_wrong`.
+- Chưa chụp trang "Từ mới" và order_sequence (bài 02 không có). Chưa kiểm iPhone 16e, iPad ngang, Split View.
+
+**Việc còn mở (cho designer/PM)**
+- Trên iPhone, câu hỏi kèm loa và nút "VI" xếp dọc cao khoảng 120 pt. Với 3 thẻ, tấm kết quả che thẻ cuối, bé phải cuộn mới thấy tên đáp án. Hướng xử lý: thẻ thấp hơn, hoặc đặt nút "VI" ngang hàng với loa.
+- Ảnh vuông hoặc dọc trong thẻ ngang vẫn hiện nguyên ảnh, không cắt (giới hạn cắt 2,2 đặt ngày 13/11), nên thẻ có viền trống. Phụ thuộc bảng tỉ lệ `image-slots.json` của dev.
+
+**Tester cần kiểm**
+1. Bài Discoverer có `feedback`: sai còn lượt → mẩu giấy in feedback, loa đọc feedback rồi hint.
+2. true_false chọn nhầm → hết lượt ngay; nghe và thấy `feedback_true` hoặc `feedback_false` rồi `explanation_wrong`.
+3. multi_choice: "Xong" mờ khi chưa chọn; sai thì chỉ thẻ sai bong góc.
+4. "Cả hai" không in câu tiếng Việt; nút "VI" phát bản VI.
+5. Explorer *Gọi tên và nhóm động vật* vẫn chơi như cũ, true_false một lượt.
+6. Viết lại UI test cho luồng A2.
+
+### ios-dev 14/11 · lượt 2
+
+Chưa commit.
+
+**Đã làm**
+- **3 test syllabus:** sửa cho khớp thứ tự Explorer mới (Duy 14/11: chủ đề #2 và #3 là Year 2, xếp lên đầu): `SyllabusTests.oakYearOfEachTopic`, `JourneySegmentTests.stagesOfTheSyllabus`, `JourneyMapAppTests.mapItemsOfEachGroup`. Hệ quả: hành trình Explorer giờ có 4 chặng xen kẽ năm (1, 2, 1, 2). PM xem có muốn như vậy không.
+- **`picture_bar_chart` (Discoverer):**
+  - Cột giấy chàm, cao theo `value / max`, xếp theo thứ tự `bars`. Chạm cột i là chọn `options[i]` và chấm như `single_choice`.
+  - Sau khi chấm, tên `bars[i].label` hiện dưới cột đúng. Cột chọn sai lõm, có góc bong. Hết lượt thì nền vàng hoè nhạt nằm sau cột đáp án.
+  - Ảnh câu hỏi nhỏ (cao 120) hiện phía trên. VoiceOver đọc từng cột: tên, giá trị, đơn vị.
+- **Tấm kết quả không còn che thẻ cuối:** sau mỗi lần thử, màn tự cuộn. Sai còn lượt thì cuộn tới mẩu giấy; xong thì cuộn tới đáy hàng thẻ, nên thẻ có tên đáp án luôn nằm trên tấm kết quả. Dòng câu hỏi giữ nguyên.
+- **Hai lỗi layout thấy khi chụp:**
+  - Thẻ xếp thứ tự tràn ô khi ảnh là hình giữ chỗ: ảnh giờ không rộng hơn ô.
+  - Trang "Từ mới": "MAGNIFYING GLASS" bị ngắt giữa chữ. Đã đổi sang ảnh 4:3 và chữ `titleS`, tối đa 2 dòng, tự thu nhỏ. Bản sửa này chưa chụp lại.
+
+**Kết quả chạy (iPhone 16 Pro, một lần)**
+- `LessonPlayerTests`: 75 pass.
+- `ScienceKidsTests`: 89 pass.
+- `SyllabusTests`: 6 pass. `JourneySegmentTests`: 4 pass.
+
+**Ảnh** (scratchpad `shots/D-app2-*.png`)
+- Chụp bằng một bản sao bài 02 trong scratchpad, mở qua `-SKContentFolder`, nên chỉ có hình giữ chỗ. Bản sao này có thêm `feedback`, q4 đổi thành biểu đồ, q5 đổi thành xếp thứ tự, và tắt Chơi.
+- Danh sách: `w1-right-name-label`, `w2-feedback-then-explanation`, `q1-right-last-card-visible`, `chart-ask`, `chart-retry`, `chart-right`, `order-ask`, `order-place`, `order-retry` (đã sửa tràn ô), `order-right`, `learn-words-before-wrap-fix` (chụp trước khi sửa ngắt chữ).
+
+### dev 14/11 · bảng format → bản app (sau ios-dev lượt 2)
+- `tools/content-cli/src/validate/format-renderers.ts`: ở cột Discoverer (Scientist dùng chung), `order_sequence` và `picture_bar_chart` đổi từ `null` sang `0.1.0`, vì chưa có bản nào phát hành. Cột Explorer không đổi. Đã sửa README content-cli.
+- **Test:**
+  - `test/age-rules.test.ts`, `test/build.test.ts`: ca `format_not_rendered` giờ dùng `--min-app-version 0.0.9`.
+  - Nhánh "chưa bản app nào" (null) kiểm bằng cột Explorer, với luật cho phép `multi_choice` và `fill_blank_bank`.
+- **Kết quả:**
+  - `npm test` content-cli: lần 1 hỏng 3 ca (cách kiểm cũ), đã sửa; lần 2 qua 388/388. Typecheck qua.
+  - `validate -- content`: 0 lỗi, 140 cảnh báo (trước 143), không còn `format_not_rendered` (da-va-dat/08, 14).
+
+## designer 14/11 · khung thẻ từ chốt 1:1, cắt lại ảnh 6 chủ đề Discoverer
+
+### Khung thẻ từ (`bank_item`): **1:1**, không phải 3:5
+- A2 vẽ thẻ từ cao 210 (ảnh 104×172, gần 3:5). ios-dev code thẻ thấp hơn: `DiscovererMetrics.bankPicture` cao 96, rộng bằng cột. Trên iPhone 390, 3 thẻ một hàng thì ảnh khoảng 86×96 (≈ 0,9:1); 2 thẻ thì khoảng 142×96 (≈ 1,5:1); iPad 4 cột cũng gần vuông. Bản code là bản chạy, nên designer chốt theo code.
+- Lý do giữ thẻ thấp: màn câu hỏi Discoverer đã chật (ios-dev ghi: câu, loa và nút VI cao khoảng 120 pt, tấm kết quả che thẻ cuối). Thẻ 3:5 cao 160 sẽ đẩy bàn phím từ xuống thêm khoảng 64 pt. Ảnh Discoverer phần lớn là 4:3: vào khung 3:5 thì mất 55% ảnh, vào khung 1:1 chỉ mất 25%.
+- **Cho dev:** sửa một dòng trong `tools/content-cli/image-slots.json`, `age_groups.discoverer.ratios.bank_item`, từ `"3:5"` thành `"1:1"`. Sửa luôn câu "Thẻ từ có hình … ≈ 3:5" trong `note` của discoverer: ảnh khoảng 86×96 khi 3 thẻ, 142×96 khi 2 thẻ, tức ≈ 1:1. Đổi xong thì 98 cảnh báo thẻ từ còn lại hết (đã kiểm bằng bảng tạm, xem dưới).
+- **Cho ios-dev (tuỳ chọn):** chú thích `bankPicture` đang ghi "picture `4 : 3`". Muốn khung ổn định ở mọi số thẻ thì cho ô ảnh vuông (`aspectRatio(1, contentMode: .fill)`, rộng bằng cột), không cố định cao 96. Không bắt buộc, vì lệch hiện tại ≤ ×1,5.
+
+### Cắt lại ảnh (file chọn ảnh `content/images/discoverer/<chủ đề>/*.json`)
+Nếu `bank_item` đổi sang 1:1, còn 61 cảnh báo không phải thẻ từ, rơi vào 48 ảnh nguồn. Cách xử lý:
+- **`crop` mới** cho ảnh không dùng ở chỗ khác. Khung đặt vào vật chính, không cắt giữa máy móc.
+- **Mục ảnh riêng, cùng `file_url`, có `crop` riêng** cho ảnh dùng chung mà các chỗ dùng cần khung khác nhau. Đây là quy ước sẵn có: "chỗ dùng lại có cắt riêng ghi thành mục ảnh riêng". Các chỗ dùng khác giữ nguyên crop cũ.
+- **Hình ghép một phần** (`composed`, `content/images/composed/<chủ đề>/<bài>.<khoá>.jpg`) cho vật đứng riêng mà cắt thì mất hình dạng: tranh khủng long trên nền trắng, cá, răng, lá ép, hòn đá vũ trụ, quả bóng. Ảnh gốc được đặt giữa khung đúng tỉ lệ, phần đệm cùng màu nền ảnh. Quả bóng thì phần đệm kéo dài nền tối của chính ảnh. Không vẽ thêm vật, không đổi vật chính. Quả bóng (CC0) xoá chữ in trên bóng và chữ trên khung xe phía sau, theo brief "không chữ". Hai tranh CC0 xoá ký hiệu tác giả ở góc.
+- Mọi mục đổi có `note` "A2 14/11 (designer, SK-043): …" ghi crop cũ hoặc mục cũ.
+
+| Chủ đề | Crop mới | Mục ảnh riêng (cắt riêng) | Hình ghép | Trỏ lại `same_as` |
+| --- | --- | --- | --- | --- |
+| be-mat-trai-dat | 7 | 1 | 1 | 0 |
+| da-va-dat | 4 | 8 | 2 | 3 |
+| ho-hap | 4 | 1 | 0 | 2 |
+| khung-long | 9 | 6 | 7 | 5 |
+| nao-bo-va-giac-quan, thoi-tiet-va-thien-tai | 0 | 0 | 0 | 0 |
+
+nao-bo-va-giac-quan (10) và thoi-tiet-va-thien-tai (17) chỉ có cảnh báo thẻ từ, nên hết khi `bank_item` thành 1:1.
+
+### Kết quả kiểm
+- **Commons trả 429 bốn lần lúc tải ảnh gốc để xem khung.** Mức chặn là quá 3 lần, nên designer **dừng gọi mạng**.
+- `images fetch` đã chạy từng chủ đề, lần lượt, qua một wrapper chặn mọi lời gọi mạng. Kết quả:
+  - Hình tự vẽ và hình ghép mới đã vào cache: 3 hình tự vẽ, 10 hình ghép.
+  - 0 lỗi nào khác.
+  - Còn **42 ảnh tải về (60 chỗ dùng)** có `crop` mới, chưa tải được vì không gọi mạng: be-mat-trai-dat 9, da-va-dat 15, ho-hap 5, khung-long 13.
+- **Cảnh báo tỉ lệ, cùng hàm `selectionShapeWarnings` mà `images fetch` dùng:**
+  - Ảnh đã có trong cache, bảng hiện tại (`bank_item` 3:5): **98**, đều là thẻ từ.
+  - Ảnh đã có trong cache, `bank_item` 1:1: **0**.
+  - Thêm cả 60 chỗ chờ tải, kích thước dự đoán từ cỡ ảnh nguồn nhân `crop` (cách `process.ts` cắt), `bank_item` 1:1: **0**.
+- **Việc còn lại (phiên chính hoặc dev, khi Commons hết chặn):** sửa dòng `bank_item`, rồi chạy `images fetch` cho từng chủ đề. Giãn nhịp như cũ, mỗi lúc một tiến trình. Kỳ vọng: 0 lỗi, 0 cảnh báo tỉ lệ.
+- **Cần nhìn lại sau khi tải**, vì khung đặt mà chưa thấy vùng mới của ảnh gốc:
+  - `khung-long/vi-sao-khung-long-bien-mat` `q3.q3_croc`: khung mở lên trên vùng crop cũ.
+  - `khung-long/trai-dat-rat-lau-ve-truoc` `w1.w1_buffalo`: tính từ ảnh đã cắt, nên chắc đúng.
+  - `khung-long/khung-long-la-gi` `w1.w1_mammoths`: chỉ thấy một con, ảnh nhỏ (rộng 449 px).
+- **Nên thay ảnh khi có mạng**, đã đạt khung nhưng còn yếu:
+  - `tray_flat_teeth`: ảnh hàm răng phẳng nhỏ (346 px), là ô của một hình khoa học.
+  - `q3_croc`: cá sấu lẫn vào nền, ảnh nhỏ sau khi cắt.
+  - `w1_ball`: bóng đỏ một màu, brief muốn bóng nhiều màu, không chữ. Chữ đã xoá trong hình ghép.
+- Main session 14/11: đặt `discoverer.ratios.bank_item` = "1:1" trong tools/content-cli/image-slots.json theo chốt của designer (thẻ từ vuông theo code ios-dev).

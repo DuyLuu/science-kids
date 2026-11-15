@@ -3007,6 +3007,24 @@
         }
       }
     },
+    "lesson.learn.words_tag" : {
+      "comment" : "Discoverer A2 (SK-043): tag of the new words page in Học.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New words"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ mới"
+          }
+        }
+      }
+    },
     "lesson.learn.words_title" : {
       "comment" : "Học (picture book): tag of the last page, the lesson's new words (SK-043).",
       "extractionState" : "manual",
@@ -3291,6 +3309,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa đúng"
+          }
+        }
+      }
+    },
+    "lesson.multi.done" : {
+      "comment" : "VoiceOver label of the arrow-only button that checks a multi choice (Discoverer A2).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done, check"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong, kiểm tra"
           }
         }
       }
@@ -3835,6 +3871,42 @@
         }
       }
     },
+    "lesson.reward.new_card" : {
+      "comment" : "Discoverer A2 (SK-043): tag on the new card of Thưởng.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New card"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ mới"
+          }
+        }
+      }
+    },
+    "lesson.reward.praise" : {
+      "comment" : "Discoverer A2 (SK-043): two-word praise at the top of Thưởng.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Well done!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giỏi lắm!"
+          }
+        }
+      }
+    },
     "lesson.reward.score %lld %lld" : {
       "comment" : "Reward: quiz points / quiz length.",
       "extractionState" : "manual",
@@ -3849,6 +3921,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "lesson.reward.score_a11y %lld %lld" : {
+      "comment" : "VoiceOver label of the right-answers tile on Thưởng (icon + number on screen).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld of %2$lld right"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng %1$lld trên %2$lld câu"
           }
         }
       }
@@ -4269,6 +4359,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhớ lại · điều em đã biết"
+          }
+        }
+      }
+    },
+    "lesson.warmup.tag" : {
+      "comment" : "Discoverer A2 (SK-043): tag above a warm-up question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remember"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhớ lại"
           }
         }
       }

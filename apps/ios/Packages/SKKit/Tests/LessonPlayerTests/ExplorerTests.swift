@@ -47,8 +47,8 @@ struct ExplorerTests {
         #expect(try #require(answer("true_false")).hasRenderer(for: .explorer))
         #expect(try #require(answer("order_sequence")).hasRenderer(for: .explorer))
         #expect(QuizItem.Answer.unknown(format: "sort_into_groups").hasRenderer(for: .explorer) == false)
-        // Discoverer is unchanged: no order renderer there yet.
-        #expect(try #require(answer("order_sequence")).hasRenderer == false)
+        // Discoverer A2 (SK-043, Duy 14/11) shows orders too; picture_bar_chart waits for dev.
+        #expect(try #require(answer("order_sequence")).hasRenderer)
     }
 
     @Test func explorerSessionKeepsTheOrderQuestion() throws {
@@ -61,7 +61,7 @@ struct ExplorerTests {
         #expect(explorer.steps.contains(.play))
         #expect(explorer.steps.last == .reward)
         let discoverer = try session(.discoverer)
-        #expect(discoverer.quizItems.count == 5)
+        #expect(discoverer.quizItems.count == 6, "A2: Discoverer keeps the order question too")
     }
 
     // MARK: Order sequence scoring (engine, B4.4)
@@ -235,6 +235,23 @@ struct ExplorerTests {
         #expect(session.resultUtterance(item, status: .open) == nil)
     }
 
+    /// SK-043 (Duy 14/11, point 6): true / false, Na's included, has one try in every age group;
+    /// the other formats keep `max_tries`. Read from `max_tries_by_format` when the rules have it.
+    @Test(arguments: [LessonPresentation.explorer, .discoverer])
+    func trueFalseHasOneTry(_ presentation: LessonPresentation) throws {
+        let rules = try Self.rules()
+        #expect(rules.scoring(forFormat: "true_false").maxTries == 1)
+        #expect(rules.scoring(forFormat: "single_choice").maxTries == rules.scoring.maxTries)
+        let custom = try LessonRules.load(from: Data(#"{"explorer":{"max_tries":3,"max_tries_by_format":{"single_choice":2},"partial_order_min":null,"pass_threshold":{"num":5,"den":6},"mastery_gap_days":1,"rest_days_per_week":1,"xp_per_correct":10,"xp_lesson_complete":20,"xp_game_complete":10}}"#.utf8), ageGroup: "explorer")
+        #expect(custom.scoring(forFormat: "single_choice").maxTries == 2)
+        #expect(custom.scoring(forFormat: "true_false").maxTries == 3, "a rules file with the key decides alone")
+        let session = try session(presentation)
+        let item = try #require(session.quizItems.first { if case .trueFalse = $0.answer { true } else { false } })
+        guard case .trueFalse(let tf) = item.answer else { return }
+        let after = session.submit(.value(!tf.answer), for: item, in: .quiz)
+        #expect(after == .done(correct: false, firstTry: false, last: .value(!tf.answer)))
+    }
+
     /// SK-044 (dev 13/11): `true_false` has `feedback_true` (said when the child taps True on a
     /// false statement) and `feedback_false`; the side that is the answer never says one.
     @Test func trueFalseFeedbackFollowsTheSideTapped() throws {
@@ -251,6 +268,9 @@ struct ExplorerTests {
         #expect(tf.feedback(for: true) == feedback)
         #expect(tf.feedback(for: false) == nil, "False is the answer: no feedback")
         #expect(LessonSession.explorerLine(item, status: .retry(last: .value(true))) == [feedback, item.hint])
+        // One try (Duy 14/11): out of tries the feedback of the side tapped still comes first.
+        #expect(LessonSession.explorerLine(item, status: .done(correct: false, firstTry: false, last: .value(true))) == [feedback, item.explanationWrong])
+        #expect(LessonSession.resultLines(item, correct: true, last: .value(false)) == [item.explanationCorrect])
         #expect(LessonSession.feedbackSpoken(item) == [feedback])
         #expect(LessonSession.questionStrings(item).contains(feedback))
         // Old content (no feedback_*) still decodes, and a retry says only the hint.

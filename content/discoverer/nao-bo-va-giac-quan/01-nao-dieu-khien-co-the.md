@@ -20,6 +20,7 @@ en: I can say what my brain does for my body.
 vi: Em kể được bộ não làm những việc gì cho cơ thể.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-037, ngày 10/11/2026. Đã chạy `ids`. Sửa theo rà chữ tester 10/11 (ticket SK-037, mục "content-editor 10/11 · sửa theo tester"); khối mới w3 để `id:` trống.
 > Bài mở màn (`opener`). Mục tiêu, ý chính, Học, Chơi theo hàng bài một trong bảng kế hoạch ở `_topic.md`. Bài sửa `brain_stops_when_resting` ở ý chính ba, ô "All the time", nhóm "Without thinking" ở phần Chơi, câu q3, và câu q6 (gắn key).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Your brain is inside your head, under your skull.
@@ -51,14 +52,16 @@ image.alt.en: A rooster crowing
 image.alt.vi: Con gà trống đang gáy
 hint.en: Which part could you cover to hear less?
 hint.vi: Em thử nghĩ xem, che chỗ nào lại thì em nghe nhỏ đi?
-explanation_correct.en: Yes! Your ears pick up sounds, like a rooster's crow.
-explanation_correct.vi: Đúng rồi! Tai giúp em nghe tiếng động, như tiếng gà gáy.
-explanation_wrong.en: The answer is the ear. Eyes see, and noses smell.
-explanation_wrong.vi: Đáp án là tai. Mắt để nhìn, mũi để ngửi.
+explanation_correct.en: Your ears pick up sounds, like a rooster's crow.
+explanation_correct.vi: Tai giúp em nghe tiếng động, như tiếng gà gáy.
+explanation_wrong.en: Ears hear, eyes see, and noses smell.
+explanation_wrong.vi: Tai để nghe, mắt để nhìn, mũi để ngửi.
 > Hình câu hỏi là nguồn của tiếng động, không phải cái tai, nên không lộ đáp án. Ba lựa chọn là ba hình vẽ của bộ giác quan (Quy ước hình, mục hai ở `_topic.md`), cùng nét, cùng nền, cùng số ít.
 
 #### option w1_eye
 correct: false
+feedback.en: Your eyes see colours and shapes.
+feedback.vi: Mắt giúp em nhìn màu sắc, hình dạng.
 label.en: eye
 label.vi: mắt
 image.brief: [hình vẽ] Một con mắt mở của bạn nhỏ, vẽ cận cảnh gần thực tế, thấy lông mày, mi mắt và tròng mắt nâu đen; chỉ vẽ vùng quanh mắt, không thấy mũi, miệng hay cả khuôn mặt; nền kem trơn; không có chữ. Gốc của bộ giác quan; cùng nét, cùng cỡ với `w1_ear` và với hình mũi của *Hô hấp* mà lựa chọn `w1_nose` dùng lại.
@@ -67,6 +70,8 @@ image.alt.vi: Một con mắt
 
 #### option w1_nose
 correct: false
+feedback.en: Your nose smells things, like cooking rice.
+feedback.vi: Mũi giúp em ngửi, như mùi cơm chín.
 label.en: nose
 label.vi: mũi
 image.brief: Dùng lại hình `tray_nose` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -98,10 +103,12 @@ image.alt.vi: Những bông hoa nhài trắng
 answer: true
 hint.en: Think of the parts on your face, and your skin.
 hint.vi: Em nghĩ tới các bộ phận trên khuôn mặt, và cả làn da nhé.
-explanation_correct.en: Yes! We see, hear, smell, taste and touch.
-explanation_correct.vi: Đúng rồi! Chúng mình nhìn, nghe, ngửi, nếm và chạm.
-explanation_wrong.en: This is true. We have five senses.
-explanation_wrong.vi: Câu này đúng. Chúng mình có năm giác quan.
+explanation_correct.en: Your skin gives you the sense of touch.
+explanation_correct.vi: Làn da giúp em cảm nhận khi chạm.
+explanation_wrong.en: Seeing, hearing, smelling, tasting and touching make five.
+explanation_wrong.vi: Nhìn, nghe, ngửi, nếm và chạm là năm giác quan.
+feedback_false.en: Eyes, ears, nose, tongue and skin each give a sense.
+feedback_false.vi: Mắt, tai, mũi, lưỡi, da, mỗi thứ một giác quan.
 > [CẦN KIỂM] "Năm giác quan" là cách dạy ở trường tiểu học; các nhà khoa học còn kể thêm cảm giác thăng bằng, nóng lạnh, đau, vị trí cơ thể. Giữ "năm" cho khớp điều trẻ đã học; không nói "chỉ có năm".
 > Câu Đúng, theo bảng Đáp án Đúng/Sai ở `_topic.md`.
 
@@ -119,10 +126,10 @@ image.alt.en: A dusty road
 image.alt.vi: Con đường bụi mù
 hint.en: Remember the lesson about healthy lungs.
 hint.vi: Em nhớ lại bài giữ cho phổi khoẻ nhé.
-explanation_correct.en: Yes! A mask helps stop dust going into your nose.
-explanation_correct.vi: Đúng rồi! Khẩu trang giúp ngăn bụi bay vào mũi.
-explanation_wrong.en: The answer is the mask. It covers your nose.
-explanation_wrong.vi: Đáp án là khẩu trang. Khẩu trang che mũi của em.
+explanation_correct.en: A mask covers both your nose and your mouth.
+explanation_correct.vi: Khẩu trang che kín cả mũi lẫn miệng.
+explanation_wrong.en: A mask helps stop dust going into your nose.
+explanation_wrong.vi: Khẩu trang giúp ngăn bụi bay vào mũi.
 > Thêm theo rà chữ tester 10/11: *Hô hấp* đã có id, nên bài một có câu ôn bài trước (bài bốn *Hô hấp*, ý chính hai của bài đó). Câu ôn lại, không dạy lại ý của *Hô hấp*. Mũi nối sang giác quan của chủ đề này.
 > Ba lựa chọn dùng lại ba ảnh của câu q1 bài `ho-hap/giu-phoi-khoe`, trỏ về hình gốc, cùng kiểu: một vật trên mặt bàn gỗ. Thứ tự khác câu q1 của *Hô hấp* (ở đó khẩu trang đứng thứ ba), để bé không chọn theo chỗ đã nhớ.
 
@@ -136,6 +143,8 @@ image.alt.vi: Chiếc khẩu trang vải trên bàn
 
 #### option w3_hat
 correct: false
+feedback.en: A sun hat shades your head from the sun.
+feedback.vi: Mũ vải che nắng cho đầu em.
 label.en: sun hat
 label.vi: mũ vải
 image.brief: Dùng lại hình `q1_hat` ở bài `ho-hap/giu-phoi-khoe`
@@ -144,6 +153,8 @@ image.alt.vi: Chiếc mũ vải trên bàn
 
 #### option w3_raincoat
 correct: false
+feedback.en: A raincoat keeps rain off your body.
+feedback.vi: Áo mưa che mưa cho người em.
 label.en: raincoat
 label.vi: áo mưa
 image.brief: Dùng lại hình `q1_raincoat` ở bài `ho-hap/giu-phoi-khoe`
@@ -389,14 +400,16 @@ image.alt.en: A child seen from the side
 image.alt.vi: Một bạn nhỏ nhìn nghiêng
 hint.en: Remember the In your head picture.
 hint.vi: Em nhớ lại ô Trong đầu em trong bài học nhé.
-explanation_correct.en: Yes! Your brain is in your head, under your skull.
-explanation_correct.vi: Đúng rồi! Bộ não nằm trong đầu em, dưới hộp sọ.
-explanation_wrong.en: The answer is the head. Your brain is under your skull.
-explanation_wrong.vi: Đáp án là trong đầu. Bộ não nằm dưới hộp sọ.
+explanation_correct.en: Your brain sits close to your eyes and ears.
+explanation_correct.vi: Bộ não nằm gần mắt và tai của em.
+explanation_wrong.en: Your brain is in your head, under your skull.
+explanation_wrong.vi: Bộ não nằm trong đầu em, dưới hộp sọ.
 > Ba lựa chọn là cùng một khuôn, chỉ khác vùng tô vàng, như sơ đồ trục thời gian của *Khủng long* bài một. Hình câu hỏi không tô vùng nào.
 
 #### option q1_chest
 correct: false
+feedback.en: Your chest holds your heart and lungs.
+feedback.vi: Trong ngực là tim và phổi.
 label.en: in the chest
 label.vi: trong ngực
 image.brief: [hình vẽ] Đúng khuôn người nhìn nghiêng của hình câu q1, tô một vùng tròn màu vàng nghệ ở ngực; không tô chỗ khác, không có chữ.
@@ -413,6 +426,8 @@ image.alt.vi: Bạn nhỏ, phần đầu tô màu vàng
 
 #### option q1_tummy
 correct: false
+feedback.en: Your tummy holds your stomach, for food.
+feedback.vi: Trong bụng là dạ dày, nơi chứa thức ăn.
 label.en: in the tummy
 label.vi: trong bụng
 image.brief: [hình vẽ] Đúng khuôn người nhìn nghiêng của hình câu q1, tô một vùng tròn màu vàng nghệ ở bụng; không tô chỗ khác, không có chữ.
@@ -435,10 +450,10 @@ sentence.vi: Hộp sọ che chở cho {1} của em.
 answers: q2_brain
 hint.en: Remember where your skull is.
 hint.vi: Em nhớ lại hộp sọ nằm ở đâu nhé.
-explanation_correct.en: Yes! Your hard skull keeps your soft brain safe.
-explanation_correct.vi: Đúng rồi! Hộp sọ cứng che chở cho bộ não mềm.
-explanation_wrong.en: The answer is brain. Your skull is around your brain.
-explanation_wrong.vi: Đáp án là bộ não. Hộp sọ bao quanh bộ não.
+explanation_correct.en: Your hard skull keeps your soft brain safe.
+explanation_correct.vi: Hộp sọ cứng che chở cho bộ não mềm.
+explanation_wrong.en: Your skull wraps all around your brain.
+explanation_wrong.vi: Hộp sọ bao quanh bộ não của em.
 > Ba thẻ từ là bộ cơ quan (Quy ước hình, mục hai): bộ não là hình gốc của bài này; trái tim, dạ dày dùng lại hình vẽ của *Hô hấp* (rà chữ tester 10/11, chéo với *Hô hấp*). Bộ não vẽ cùng nét hai hình đó.
 > Rà chữ tester 10/11 (N1): thẻ đúng chuyển lên thứ nhất (trước ở thứ hai, như cả bốn câu điền từ của chủ đề).
 
@@ -452,6 +467,8 @@ image.alt.vi: Bộ não
 #### bank q2_heart
 label.en: heart
 label.vi: trái tim
+feedback.en: Your ribs keep your heart safe, in your chest.
+feedback.vi: Tim nằm trong ngực, có xương sườn che chở.
 image.brief: Dùng lại hình `tray_heart` ở bài `ho-hap/duong-di-cua-khong-khi`
 image.alt.en: A heart
 image.alt.vi: Trái tim
@@ -459,6 +476,8 @@ image.alt.vi: Trái tim
 #### bank q2_stomach
 label.en: stomach
 label.vi: dạ dày
+feedback.en: Your stomach is in your tummy, far from your skull.
+feedback.vi: Dạ dày nằm trong bụng, xa hộp sọ.
 image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`
 image.alt.en: A stomach
 image.alt.vi: Dạ dày
@@ -468,8 +487,8 @@ id: d34a445b-da81-4395-b073-4c7663125aa2
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Mai is asleep. What is her brain still doing?
-prompt.vi: Mai đang ngủ. Bộ não của Mai vẫn đang làm gì?
+prompt.en: What does Mai's brain still do while she sleeps?
+prompt.vi: Khi Mai ngủ, bộ não vẫn làm gì?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: Dùng lại hình `q1` ở bài `ho-hap/vi-sao-ta-phai-tho`
@@ -477,10 +496,10 @@ image.alt.en: A child asleep under a mosquito net
 image.alt.vi: Bạn nhỏ ngủ trong màn
 hint.en: Remember the Without thinking group in the game.
 hint.vi: Em nhớ lại nhóm Không cần nghĩ ở trò chơi nhé.
-explanation_correct.en: Yes! Her heart beats, and she sweats on hot nights.
-explanation_correct.vi: Đúng rồi! Tim Mai vẫn đập, và đêm nóng thì Mai vẫn đổ mồ hôi.
-explanation_wrong.en: The answers are her heartbeat and sweating on hot nights.
-explanation_wrong.vi: Đáp án là giữ cho tim đập và đổ mồ hôi khi đêm nóng.
+explanation_correct.en: These jobs happen without Mai thinking about them.
+explanation_correct.vi: Những việc này diễn ra mà Mai không cần nghĩ.
+explanation_wrong.en: Her brain keeps her heart beating and makes her sweat.
+explanation_wrong.vi: Não giữ cho tim đập, và làm Mai đổ mồ hôi.
 > DOK 2: áp ý chính ba vào tình huống mới (bạn đang ngủ), không chỉ nhận lại món đã xếp. Hai lựa chọn sai là việc cần thức và cần nghĩ. Bốn ảnh dùng lại kệ Chơi, cùng là ảnh chụp.
 
 #### option q3_heart
@@ -493,6 +512,8 @@ image.alt.vi: Ngón tay bắt nhịp tim ở cổ tay
 
 #### option q3_read
 correct: false
+feedback.en: Reading needs Mai to be awake and looking.
+feedback.vi: Muốn đọc sách, Mai phải thức và nhìn.
 label.en: read a book
 label.vi: đọc sách
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_book`
@@ -501,6 +522,8 @@ image.alt.vi: Bạn nhỏ đang đọc sách
 
 #### option q3_ride
 correct: false
+feedback.en: Riding a bike needs Mai to be awake.
+feedback.vi: Muốn đạp xe, Mai phải thức dậy đã.
 label.en: ride a bike
 label.vi: đạp xe
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_bike`
@@ -520,17 +543,17 @@ id: 151de614-4db8-40b8-9f3f-5b1fc8e4b8f2
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam rides to school. What tells his legs to pedal?
-prompt.vi: Nam đạp xe tới trường. Cái gì bảo chân Nam đạp?
+prompt.en: What tells Nam's legs to pedal his bike?
+prompt.vi: Cái gì bảo chân Nam đạp xe?
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_bike`
 image.alt.en: A child riding a bike
 image.alt.vi: Bạn nhỏ đang đạp xe
 hint.en: Remember the Move picture in the lesson.
 hint.vi: Em nhớ lại ô Cử động trong bài học nhé.
-explanation_correct.en: Yes! His brain sends a message to his legs.
-explanation_correct.vi: Đúng rồi! Bộ não gửi tin tới đôi chân của Nam.
-explanation_wrong.en: The answer is his brain. The brain is in charge.
-explanation_wrong.vi: Đáp án là bộ não. Bộ não chỉ huy cơ thể.
+explanation_correct.en: His brain sends a message to his legs.
+explanation_correct.vi: Bộ não gửi tin tới đôi chân của Nam.
+explanation_wrong.en: His brain is in charge of how he moves.
+explanation_wrong.vi: Bộ não chỉ huy cách Nam cử động.
 > DOK 2: áp ý chính hai vào một việc quen (đạp xe đi học). Trái tim là lựa chọn sai có sức hút: trẻ hay nói "trái tim mách bảo". Giải thích khi đúng gieo chữ "message" của bài hai.
 
 #### option q4_brain
@@ -543,6 +566,8 @@ image.alt.vi: Bộ não
 
 #### option q4_heart
 correct: false
+feedback.en: His heart pumps blood to his legs.
+feedback.vi: Tim bơm máu tới đôi chân của Nam.
 label.en: his heart
 label.vi: trái tim
 image.brief: Dùng lại hình `tray_heart` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -551,6 +576,8 @@ image.alt.vi: Trái tim
 
 #### option q4_stomach
 correct: false
+feedback.en: His stomach breaks down his breakfast.
+feedback.vi: Dạ dày lo tiêu hoá bữa sáng của Nam.
 label.en: his stomach
 label.vi: dạ dày
 image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -570,14 +597,16 @@ image.alt.vi: Hộp sọ
 hint.en: Think what your skull does for your brain.
 hint.vi: Em nghĩ xem hộp sọ làm gì cho bộ não nhé.
 > Rà chữ tester 10/11 (n5): gợi ý cũ nói sẵn tiêu chí "cứng"; gợi ý mới chỉ cách nghĩ (việc hộp sọ làm).
-explanation_correct.en: Yes! A helmet is hard, like a skull. It keeps your head safe.
-explanation_correct.vi: Đúng rồi! Mũ bảo hiểm cứng như hộp sọ. Mũ che chở cho đầu em.
-explanation_wrong.en: The answer is the helmet. A pillow and a cloth hat are soft.
-explanation_wrong.vi: Đáp án là mũ bảo hiểm. Gối và mũ vải đều mềm.
+explanation_correct.en: A helmet is a hard shell, just like your skull.
+explanation_correct.vi: Mũ bảo hiểm là lớp vỏ cứng, giống hộp sọ.
+explanation_wrong.en: A hard helmet guards your head, like your skull.
+explanation_wrong.vi: Mũ bảo hiểm cứng, che chở đầu như hộp sọ.
 > DOK 2: so sánh theo đặc điểm (cứng, che chở). Gối là bẫy "đỡ đầu", mũ vải là bẫy "đội trên đầu". Câu chuẩn bị cho bài bốn. Ba ảnh cùng kiểu: một vật đặt trên nền trơn, chụp chéo, cùng cỡ.
 
 #### option q5_pillow
 correct: false
+feedback.en: A pillow is soft and squashes easily.
+feedback.vi: Gối mềm, ấn vào là lún xuống.
 label.en: pillow
 label.vi: cái gối
 image.brief: [ảnh] Một cái gối trắng đặt trên nền trơn, chụp chéo, cả cái gối trong khung; không có hoa văn chữ, không có nhãn hiệu. Từ khoá tìm ảnh (EN): white pillow plain background
@@ -586,6 +615,8 @@ image.alt.vi: Cái gối
 
 #### option q5_hat
 correct: false
+feedback.en: A cloth hat is soft and thin.
+feedback.vi: Mũ vải mềm và mỏng.
 label.en: cloth hat
 label.vi: mũ vải
 image.brief: [ảnh] Một chiếc mũ vải tai bèo màu xanh hay be đặt trên nền trơn, chụp chéo; không có logo, không có chữ, không có người đội. Từ khoá tìm ảnh (EN): cloth bucket hat plain background
@@ -610,8 +641,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: I am resting in the hammock. My brain is not working.
-statement.vi: Mình đang nằm nghỉ trên võng. Bộ não của mình không làm việc.
+statement.en: I am resting, so my brain is not working.
+statement.vi: Mình đang nằm nghỉ, nên não mình không làm việc.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -624,10 +655,13 @@ image.alt.vi: Cái võng mắc giữa hai cây
 > Rà chữ tester 10/11 (chéo với *Hô hấp*): dùng chung ảnh võng trống của *Hô hấp* (cùng dòng từ khoá với brief cũ); `alt` chép của hình gốc. Món `tray_nap` và từ `nap` bài bốn trỏ thẳng về hình gốc đó.
 hint.en: Remember the All the time picture in the lesson.
 hint.vi: Em nhớ lại ô Suốt ngày đêm trong bài học nhé.
-explanation_correct.en: Your brain works all the time. It keeps your heart beating.
-explanation_correct.vi: Bộ não làm việc suốt ngày đêm. Bộ não giữ cho tim em đập.
-explanation_wrong.en: Na is not right. Her brain is still working.
-explanation_wrong.vi: Na chưa đúng. Bộ não của Na vẫn đang làm việc.
+explanation_correct.en: Even at rest, your brain keeps your heart beating.
+explanation_correct.vi: Cả khi nghỉ, bộ não vẫn giữ cho tim đập.
+explanation_wrong.en: Na's brain is still working while she rests.
+explanation_wrong.vi: Khi Na nghỉ, bộ não của Na vẫn làm việc.
+feedback_true.en: Her brain keeps Na breathing, even in the hammock.
+feedback_true.vi: Não vẫn giữ cho Na thở, cả khi nằm võng.
+> 14/11 (ngân sách A2): lời Na cũ hai câu, mười một từ EN, mười lăm chữ VI; nay một câu chín từ EN, mười một chữ VI. Ý "trên võng" nằm ở hình (võng trống).
 > DOK 3: bé đánh giá lời Na bằng điều vừa học (ô "All the time", câu q3). Đáp án Sai, theo bảng Đáp án Đúng/Sai ở `_topic.md`. Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn "Na chưa đúng".
 > Gợi ý chỉ chỗ cần nhớ, không nói Na đúng hay sai. Hình là võng trống, không có Na, không có người.
 

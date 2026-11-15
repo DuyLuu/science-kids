@@ -14,28 +14,36 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.08,
-        "top": 0.07,
-        "width": 0.5,
-        "height": 0.5
+        "left": 0,
+        "top": 0.16,
+        "width": 0.825,
+        "height": 0.33
       },
-      "note": "Openverse/WordPress Photo Directory: đã mở trang gốc 10/11, ghi CC0. Cắt sát đồng hồ."
+      "note": "Openverse/WordPress Photo Directory: đã mở trang gốc 10/11, ghi CC0. Cắt sát đồng hồ. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.08, \"top\": 0.07, \"width\": 0.5, \"height\": 0.5})."
     },
     "w1.w1_ball": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Red Inflatable Ball",
-      "author": "Miscellaneous contributor",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "crop": {
-        "left": 0.17,
-        "top": 0.12,
-        "width": 0.3,
-        "height": 0.52
+      "composed": {
+        "file": "content/images/composed/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat.w1.w1_ball.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Red_Inflatable_Ball.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Red_Inflatable_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Red Inflatable Ball",
+            "author": "Miscellaneous contributor",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "crop": {
+              "left": 0.17,
+              "top": 0.12,
+              "width": 0.3,
+              "height": 0.52
+            }
+          }
+        ]
       },
-      "note": "Cắt bỏ xe đạp phía sau; trên bóng có vết chữ nhỏ, không đọc được ở cỡ ô."
+      "title": "A red ball",
+      "note": "Cắt bỏ xe đạp phía sau; trên bóng có vết chữ nhỏ, không đọc được ở cỡ ô. A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Ảnh gốc (đã cắt) đặt giữa khung 5:2; hai bên kéo dài nền tối của chính ảnh (mờ, hoà mép) để thấy trọn quả bóng. Xoá chữ in và miếng dán trên bóng, chữ trên khung xe phía sau (brief: không chữ, không logo)."
     },
     "w1.w1_box": {
       "source": "Wikimedia Commons",
@@ -214,7 +222,20 @@
       "same_as": "tray.tray_forest"
     },
     "q3.q3_pond": {
-      "same_as": "tray.tray_pond"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ao_Sen,_khu_du_lich_Binh_quoi_-ph%C6%B0%E1%BB%9Dng_28,_B%C3%ACnh_Th%E1%BA%A1nh,_TPHCM,_Vi%E1%BB%87t_Nam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ao_Sen%2C_khu_du_lich_Binh_quoi_-ph%C6%B0%E1%BB%9Dng_28%2C_B%C3%ACnh_Th%E1%BA%A1nh%2C_TPHCM%2C_Vi%E1%BB%87t_Nam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ao Sen, khu du lich Binh quoi -phường 28, Bình Thạnh, TPHCM, Việt Nam - panoramio",
+      "author": "trungydang",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.297,
+        "top": 0.33,
+        "width": 0.313,
+        "height": 0.67
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với be-mat-trai-dat/dat-va-nuoc-tren-trai-dat tray.tray_pond, cắt riêng cho khung 4:5 (trước: same_as tray.tray_pond)."
     },
     "q4": {
       "source": "Wikimedia Commons",

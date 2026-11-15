@@ -53,14 +53,16 @@ image.alt.en: Many different rocks on a table
 image.alt.vi: Nhiều hòn đá khác nhau trên bàn
 hint.en: Remember the Soft rocks picture in lesson three.
 hint.vi: Em nhớ lại ô Đá mềm ở bài ba nhé.
-explanation_correct.en: Yes! Chalk is soft. Your fingernail can scratch it.
-explanation_correct.vi: Đúng rồi! Đá phấn mềm. Móng tay em cào xước được.
-explanation_wrong.en: The answer is chalk. It is a soft rock.
-explanation_wrong.vi: Đáp án là đá phấn. Đó là loại đá mềm.
+explanation_correct.en: Chalk is soft and leaves white powder on your nail.
+explanation_correct.vi: Đá phấn mềm, cào xong móng tay dính bột trắng.
+explanation_wrong.en: Chalk is soft enough for a fingernail to scratch.
+explanation_wrong.vi: Đá phấn đủ mềm để móng tay cào xước.
 > Ba mẫu đá cùng nền kem của Bộ mẫu đá; `alt` chỉ tả màu (đá ba-dan giữ `alt` gốc vì câu không hỏi lỗ). Đá hoa cương và đá ba-dan là hai đá cứng của bài ba, nên bé phải nhớ đá phấn mềm.
 
 #### option w1_granite
 correct: false
+feedback.en: Granite is much harder than your fingernail.
+feedback.vi: Đá hoa cương cứng hơn móng tay nhiều.
 label.en: granite
 label.vi: đá hoa cương
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
@@ -69,6 +71,8 @@ image.alt.vi: Hòn đá màu xám
 
 #### option w1_basalt
 correct: false
+feedback.en: Basalt is a hard rock from cooled lava.
+feedback.vi: Đá ba-dan là đá cứng, từ dung nham nguội.
 label.en: basalt
 label.vi: đá ba-dan
 image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): basalt vesicular rock sample
@@ -99,9 +103,11 @@ answer: false
 hint.en: Remember the game in lesson three.
 hint.vi: Em nhớ lại trò chơi ở bài ba nhé.
 explanation_correct.en: Most rocks are hard, but chalk and soapstone are soft.
-explanation_correct.vi: Phần lớn đá đều cứng, nhưng đá phấn và đá xà phòng thì mềm.
-explanation_wrong.en: This is false. Some rocks are soft.
-explanation_wrong.vi: Câu này sai. Có loại đá mềm.
+explanation_correct.vi: Phần lớn đá cứng, nhưng đá phấn, đá xà phòng mềm.
+explanation_wrong.en: Some rocks, like chalk, are soft.
+explanation_wrong.vi: Có loại đá mềm, như đá phấn.
+feedback_true.en: A fingernail can scratch some kinds of rock.
+feedback_true.vi: Móng tay cào xước được vài loại đá.
 > Chữ EN đúng bảng Khởi động và bảng Đáp án Đúng/Sai (đáp án Sai). Giải thích khi đúng không mở đầu bằng "Yes!". Hình câu hỏi là ba mẫu đá xếp hàng, không cho thấy hòn nào mềm.
 > Rà chữ tester 11/11 (N6): giải thích khi đúng đổi "chalk and gypsum" thành "chalk and soapstone", theo hai đá mềm bài ba nay dạy.
 
@@ -123,7 +129,7 @@ label.en: Minerals
 label.vi: Khoáng vật
 color: vang_hoe
 sentence.en: Rocks are made of minerals, like the grains in granite.
-sentence.vi: Đá được tạo nên từ các khoáng vật, như những hạt trong đá hoa cương.
+sentence.vi: Đá tạo nên từ khoáng vật, như hạt trong đá hoa cương.
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
 image.alt.en: A grey rock
 image.alt.vi: Hòn đá màu xám
@@ -144,7 +150,7 @@ label.en: Mohs' scale
 label.vi: Thang Mohs
 color: do_son
 sentence.en: A geologist named Mohs put minerals in order of hardness.
-sentence.vi: Một nhà địa chất tên là Mohs đã xếp các khoáng vật theo độ cứng.
+sentence.vi: Nhà địa chất Mohs xếp các khoáng vật theo độ cứng.
 image.brief: [hình vẽ] Gốc bộ hình "Thang Mohs": một chiếc cầu thang mười bậc nhìn nghiêng, từ thấp bên trái lên cao bên phải; trên sáu bậc đặt hình vẽ nhỏ của sáu khoáng vật, vẽ theo sáu ảnh khoáng vật của bài này: hoạt thạch ở bậc một, thạch cao ở bậc hai, thạch anh và thạch anh tím cạnh nhau ở bậc bảy, hồng ngọc ở bậc chín, kim cương ở bậc mười; các bậc khác để trống; không có chữ số, không có chữ, không có mũi tên, không có người; màu chuyển nhẹ, bóng mềm, không viền đen, nền kem trơn. Từ `scale` dùng lại hình này.
 image.alt.en: A staircase with minerals on some steps
 image.alt.vi: Cầu thang có khoáng vật đặt trên vài bậc
@@ -164,7 +170,7 @@ label.en: Check your test
 label.vi: Đối chiếu
 color: cham
 sentence.en: You can check your own tests with Mohs' scale.
-sentence.vi: Em có thể đối chiếu kết quả thử của mình với thang Mohs.
+sentence.vi: Em đối chiếu kết quả thử của mình với thang Mohs.
 image.brief: Dùng lại hình `explore_scratch` ở bài `da-va-dat/da-nao-cung-hon`.
 image.alt.en: A fingernail scratching a white rock
 image.alt.vi: Móng tay cào lên hòn đá trắng
@@ -180,8 +186,8 @@ examples.3.vi: thang Mohs cũng cho kết quả như vậy
 label.en: Heavy or hard?
 label.vi: Nặng hay cứng?
 color: gi_dong
-sentence.en: Weight does not tell you hardness. A scratch test does.
-sentence.vi: Cân nặng không cho biết độ cứng. Em phải thử cào mới biết.
+sentence.en: Weight does not tell you hardness, but scratching does.
+sentence.vi: Cân nặng không cho biết độ cứng, thử cào mới biết.
 image.brief: [hình vẽ] Cùng nét bộ "Bàn tay thử đá": một cái cân đĩa cũ, đĩa bên trái có một tảng đá to màu trắng ngà, đĩa bên phải có một hòn đá nhỏ màu xám sẫm, cân lệch hẳn về phía tảng đá to; nền kem trơn; không có số, không có chữ, không có quả cân, không có tay người.
 image.alt.en: A balance with a big rock and a small rock
 image.alt.vi: Cái cân với một tảng đá to và một hòn đá nhỏ
@@ -223,7 +229,7 @@ messages.start.vi: Em chọn một khoáng vật mềm, một khoáng vật cứ
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! You put minerals in order, just like Mohs.
-messages.balanced.vi: Tuyệt! Em đã xếp khoáng vật theo thứ tự, giống như ông Mohs.
+messages.balanced.vi: Tuyệt! Em xếp khoáng vật theo thứ tự, như ông Mohs.
 messages.has_limited.en: People make that. It is not a mineral.
 messages.has_limited.vi: Thứ đó do con người làm ra, không phải khoáng vật.
 messages.missing.tray_soft.en: You still need a soft mineral.
@@ -352,10 +358,10 @@ image.alt.en: A pink rock
 image.alt.vi: Hòn đá màu hồng
 hint.en: Remember the Mohs' scale picture.
 hint.vi: Em nhớ lại ô Thang Mohs nhé.
-explanation_correct.en: Yes! Diamond is the hardest mineral of all.
-explanation_correct.vi: Đúng rồi! Kim cương là khoáng vật cứng nhất.
-explanation_wrong.en: The answer is diamond. It is at the top of Mohs' scale.
-explanation_wrong.vi: Đáp án là kim cương. Kim cương ở bậc cao nhất của thang Mohs.
+explanation_correct.en: Only another diamond can scratch a diamond.
+explanation_correct.vi: Chỉ kim cương mới cào xước được kim cương.
+explanation_wrong.en: Diamond is at the top of Mohs' scale.
+explanation_wrong.vi: Kim cương ở bậc cao nhất của thang Mohs.
 > Hồng ngọc (rất cứng, đỏ đẹp) và thạch anh (cứng, trong) đều trông cứng, nên có sức hút. Ba ảnh là ảnh khoáng vật của phần Chơi, cùng nền kem; `alt` chỉ tả màu. Bài năm câu w1 hỏi lại ý này với lựa chọn khác.
 
 #### option q1_diamond
@@ -368,6 +374,8 @@ image.alt.vi: Mẩu nhỏ trong suốt
 
 #### option q1_ruby
 correct: false
+feedback.en: A ruby is very hard, but not the hardest.
+feedback.vi: Hồng ngọc rất cứng, nhưng chưa cứng nhất.
 label.en: ruby
 label.vi: hồng ngọc
 image.brief: Dùng lại hình `tray_ruby`. Từ khoá tìm ảnh (EN): rough ruby crystal
@@ -376,6 +384,8 @@ image.alt.vi: Mẩu màu đỏ
 
 #### option q1_quartz
 correct: false
+feedback.en: Quartz is hard, but harder minerals can scratch it.
+feedback.vi: Thạch anh cứng, nhưng có thứ cào xước được nó.
 label.en: quartz
 label.vi: thạch anh
 image.brief: Dùng lại hình `quartz`. Từ khoá tìm ảnh (EN): white quartz crystal
@@ -397,16 +407,18 @@ sentence.vi: Đá được tạo nên từ {1}.
 answers: q2_minerals
 hint.en: Remember the grains in granite.
 hint.vi: Em nhớ lại những hạt trong đá hoa cương nhé.
-explanation_correct.en: Yes! Rocks are made of minerals.
-explanation_correct.vi: Đúng rồi! Đá được tạo nên từ khoáng vật.
-explanation_wrong.en: The answer is minerals. Rocks are made of them.
-explanation_wrong.vi: Đáp án là khoáng vật. Đá được tạo nên từ khoáng vật.
+explanation_correct.en: Each grain in granite is a mineral.
+explanation_correct.vi: Mỗi hạt trong đá hoa cương là một khoáng vật.
+explanation_wrong.en: Rocks are made of minerals, like granite's grains.
+explanation_wrong.vi: Đá tạo nên từ khoáng vật, như hạt trong đá hoa cương.
 > Gợi ý không gọi tên ô "Minerals" (trùng nhãn đáp án), chỉ nhắc ví dụ của ô đó. Hình câu hỏi là một hòn cuội bất kỳ, không phải ảnh khoáng vật.
 > Thẻ sai có sức hút: đường (đường phèn lấp lánh như tinh thể), thuỷ tinh (viên bi bóng như đá quý); cả hai là món bẫy bé vừa gặp ở phần Chơi. Thẻ đúng là hình ghép từ `mineral` (ba mẫu khoáng vật của kệ). Ba thẻ đều là hình bé đã thấy, cùng là ảnh.
 
 #### bank q2_sugar
 label.en: sugar
 label.vi: đường
+feedback.en: Sugar is a food made from sugar cane.
+feedback.vi: Đường là thức ăn làm từ cây mía.
 image.brief: Dùng lại hình `tray_rock_sugar` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): rock sugar crystal lump
 image.alt.en: Lumps of sugar
 image.alt.vi: Mấy cục đường phèn
@@ -422,6 +434,8 @@ image.alt.vi: Vài khoáng vật khác nhau
 #### bank q2_glass
 label.en: glass
 label.vi: thuỷ tinh
+feedback.en: People make glass by melting sand.
+feedback.vi: Thuỷ tinh do người nấu chảy cát mà thành.
 image.brief: Dùng lại hình `tray_glass_marble`. Từ khoá tìm ảnh (EN): glass marble toy plain background
 image.alt.en: A glass marble
 image.alt.vi: Viên bi thuỷ tinh
@@ -441,15 +455,17 @@ image.alt.en: A child's hand on a table
 image.alt.vi: Bàn tay bạn nhỏ trên bàn
 hint.en: Remember the Check your test picture.
 hint.vi: Em nhớ lại ô Đối chiếu nhé.
-explanation_correct.en: Yes! Talc and gypsum are soft. A fingernail scratches them.
-explanation_correct.vi: Đúng rồi! Hoạt thạch và thạch cao mềm. Móng tay cào xước được.
-explanation_wrong.en: The answers are talc and gypsum.
-explanation_wrong.vi: Đáp án là hoạt thạch và thạch cao.
+explanation_correct.en: Talc and gypsum sit lowest on Mohs' scale.
+explanation_correct.vi: Hoạt thạch và thạch cao ở hai bậc thấp nhất thang Mohs.
+explanation_wrong.en: Talc and gypsum are soft enough to scratch.
+explanation_wrong.vi: Hoạt thạch và thạch cao đủ mềm để móng tay cào.
 > DOK 2: dùng thang để dự đoán kết quả cào. Ô "Check your test" chỉ nói thạch cao; bé phải suy ra hoạt thạch (mềm hơn thạch cao) cũng bị cào xước. Đá vôi là bẫy: bài ba đã thử, chỉ thìa mới cào xước được; thạch anh tím trông đẹp, trong như thạch cao.
 > Hỏi "Which ones" · "những thứ nào", không hỏi "Which minerals", vì đá vôi là đá. Ba ảnh của bài này và bài ba, cùng nền kem; `alt` chỉ tả màu.
 
 #### option q3_amethyst
 correct: false
+feedback.en: Amethyst is a kind of quartz, so it is hard.
+feedback.vi: Thạch anh tím là thạch anh, nên rất cứng.
 label.en: amethyst
 label.vi: thạch anh tím
 image.brief: Dùng lại hình `tray_amethyst`. Từ khoá tìm ảnh (EN): amethyst crystal cluster
@@ -466,6 +482,8 @@ image.alt.vi: Mẩu màu trắng ngà
 
 #### option q3_limestone
 correct: false
+feedback.en: Limestone is a bit harder than your fingernail.
+feedback.vi: Đá vôi cứng hơn móng tay em một chút.
 label.en: limestone
 label.vi: đá vôi
 image.brief: Dùng lại hình `tray_limestone` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): limestone rock sample
@@ -492,10 +510,10 @@ image.alt.en: A geologist looking at rocks
 image.alt.vi: Nhà địa chất đang xem đá
 hint.en: Find the softest one first.
 hint.vi: Em tìm khoáng vật mềm nhất trước nhé.
-explanation_correct.en: Yes! Talc is softest. Quartz is harder. Diamond is hardest.
-explanation_correct.vi: Đúng rồi! Hoạt thạch mềm nhất. Thạch anh cứng hơn. Kim cương cứng nhất.
-explanation_wrong.en: The answer is talc, then quartz, then diamond.
-explanation_wrong.vi: Đáp án là hoạt thạch, rồi thạch anh, rồi kim cương.
+explanation_correct.en: Diamond can scratch both quartz and talc.
+explanation_correct.vi: Kim cương cào xước được cả thạch anh và hoạt thạch.
+explanation_wrong.en: Soft to hard: talc, then quartz, then diamond.
+explanation_wrong.vi: Từ mềm tới cứng: hoạt thạch, thạch anh, kim cương.
 > DOK 2: xếp thứ tự theo thang (thay câu `order_sequence`, app 0.1.0 chưa hiện). Hàng ngược (kim cương tới hoạt thạch) bẫy bé đọc nhầm chiều; hàng trộn bẫy bé chỉ nhìn khoáng vật cuối. Gợi ý là cách làm, không gọi tên lựa chọn.
 > Ba lựa chọn là ba hình ghép cùng ba ảnh, chỉ khác thứ tự; nhãn cùng một dạng (ba tên, hai dấu phẩy). [Nghe thử] ba nhãn VI có dấu phẩy.
 > [CẦN KIỂM] Thứ tự: hoạt thạch bậc một, thạch anh bậc bảy, kim cương bậc mười.
@@ -510,6 +528,8 @@ image.alt.vi: Hoạt thạch, thạch anh và kim cương xếp thành hàng
 
 #### option q4_mixed
 correct: false
+feedback.en: This row puts quartz before the softer talc.
+feedback.vi: Hàng này để thạch anh trước hoạt thạch mềm hơn.
 label.en: quartz, talc, diamond
 label.vi: thạch anh, hoạt thạch, kim cương
 image.brief: [sơ đồ ghép ảnh] Ghép ba ảnh thành một hàng ngang từ trái sang phải trên nền kem, cùng cỡ, theo thứ tự `quartz`, `tray_talc`, `diamond`; không có chữ, không có số, không có mũi tên.
@@ -518,6 +538,8 @@ image.alt.vi: Thạch anh, hoạt thạch và kim cương xếp thành hàng
 
 #### option q4_hard_first
 correct: false
+feedback.en: This row starts with the hardest one.
+feedback.vi: Hàng này bắt đầu bằng thứ cứng nhất.
 label.en: diamond, quartz, talc
 label.vi: kim cương, thạch anh, hoạt thạch
 image.brief: [sơ đồ ghép ảnh] Ghép ba ảnh thành một hàng ngang từ trái sang phải trên nền kem, cùng cỡ, theo thứ tự `diamond`, `quartz`, `tray_talc`; không có chữ, không có số, không có mũi tên.
@@ -536,16 +558,18 @@ image.alt.en: A village kitchen
 image.alt.vi: Gian bếp ở làng quê
 hint.en: Remember the Heavy or hard picture.
 hint.vi: Em nhớ lại ô Nặng hay cứng nhé.
-explanation_correct.en: Yes! A china bowl is hard, but it can break.
-explanation_correct.vi: Đúng rồi! Bát sứ cứng, nhưng rơi vẫn vỡ.
-explanation_wrong.en: The answer is the china bowl. Hard things can break, too.
-explanation_wrong.vi: Đáp án là bát sứ. Đồ cứng cũng có thể vỡ.
+explanation_correct.en: China is hard to scratch, but it can break.
+explanation_correct.vi: Bát sứ khó cào xước, nhưng rơi thì vỡ.
+explanation_wrong.en: Hard things, like a china bowl, can still break.
+explanation_wrong.vi: Đồ cứng như bát sứ vẫn có thể vỡ.
 > DOK 2, bốn lựa chọn (bảng vị trí: đáp án thứ tư). Câu chạm `breaks_means_soft` (không gắn key; bài này gắn key ở câu q6). Bé còn nghĩ "vỡ là mềm" sẽ thấy câu hỏi vô lý và dễ chọn cái gối (mềm). Cốc nhựa cứng mà không vỡ, quả bóng cao su nảy lên.
 > Bốn ảnh đều mới, cùng là đồ dùng trong nhà trên nền trơn. Hình câu hỏi là gian bếp của bài một, không thấy rõ bát.
 > [CẦN KIỂM] Sứ cứng nhưng giòn; cốc nhựa thường không vỡ khi rơi (kinh nghiệm phổ thông).
 
 #### option q5_pillow
 correct: false
+feedback.en: A pillow is soft, not hard.
+feedback.vi: Cái gối mềm, không cứng.
 label.en: pillow
 label.vi: cái gối
 image.brief: [hình vẽ] Một cái gối trắng trơn đặt trên nền trơn, vẽ chéo; cùng cỡ trong khung như ba đồ kia; không có hoa văn chữ, không có nhãn. Từ khoá tìm ảnh (EN): white pillow plain background
@@ -554,6 +578,8 @@ image.alt.vi: Cái gối trắng
 
 #### option q5_ball
 correct: false
+feedback.en: A rubber ball bounces when it falls.
+feedback.vi: Quả bóng cao su rơi xuống thì nảy lên.
 label.en: rubber ball
 label.vi: quả bóng cao su
 image.brief: [hình vẽ] Một quả bóng cao su nhỏ một màu, không in hình, đặt trên nền trơn, vẽ ngang; cùng cỡ trong khung như ba đồ kia; không có logo, không có chữ. Từ khoá tìm ảnh (EN): small rubber ball plain background
@@ -562,6 +588,8 @@ image.alt.vi: Quả bóng cao su
 
 #### option q5_cup
 correct: false
+feedback.en: A plastic cup bends a little and rarely breaks.
+feedback.vi: Cốc nhựa hơi dẻo, rơi thường không vỡ.
 label.en: plastic cup
 label.vi: cái cốc nhựa
 image.brief: [hình vẽ] Một cái cốc nhựa cứng một màu (kiểu cốc uống nước của trẻ), đặt trên nền trơn, vẽ ngang; cùng cỡ trong khung như ba đồ kia; không có hình in, không có chữ. Từ khoá tìm ảnh (EN): plastic cup plain background
@@ -586,8 +614,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: This rock is heavy. My fingernail scratches it. It is soft.
-statement.vi: Hòn đá này nặng. Móng tay mình cào xước được nó. Vậy nó mềm.
+statement.en: My nail scratches this heavy rock, so it is soft.
+statement.vi: Móng tay cào xước hòn đá nặng này, nên nó mềm.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -599,10 +627,12 @@ image.alt.en: A big rock next to a child's hand
 image.alt.vi: Tảng đá to bên bàn tay bạn nhỏ
 hint.en: Think about which test Na used.
 hint.vi: Em nghĩ xem Na đã thử bằng cách nào nhé.
-explanation_correct.en: Yes! The scratch test shows it is soft, even if heavy.
-explanation_correct.vi: Đúng rồi! Thử cào cho thấy hòn đá mềm, dù nó nặng.
-explanation_wrong.en: Na is right. Weight does not tell you hardness.
-explanation_wrong.vi: Na nói đúng. Cân nặng không cho biết độ cứng.
+explanation_correct.en: A heavy rock can still be soft, as scratching shows.
+explanation_correct.vi: Đá nặng vẫn có thể mềm, thử cào là biết.
+explanation_wrong.en: Weight does not tell you hardness, but scratching does.
+explanation_wrong.vi: Cân nặng không cho biết độ cứng, thử cào mới biết.
+feedback_false.en: Na used a scratch test, not the weight.
+feedback_false.vi: Na đã thử cào, không dựa vào cân nặng.
 > DOK 3: Na dựa vào phép thử cào, không dựa vào cân nặng. Bé còn tin "nặng thì cứng" sẽ chọn "Na chưa đúng". Lời Na đúng chữ bảng "Câu sáu, lời Na" ở `_topic.md`. Đáp án Đúng.
 > Hình là tình huống (tảng đá to bên tay), không cho thấy vết xước; `alt` không nói "mềm". Cả màn mười tám từ EN (prompt ba, instruction bốn, lời Na mười một).
 > Rà chữ tester 11/11 (N6): tảng đá trong hình đổi từ thạch cao sang đá xà phòng (Na nói "This rock", và bài này giữ thạch cao ở vai khoáng vật). Chữ trẻ đọc không đổi.

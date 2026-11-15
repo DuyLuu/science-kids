@@ -48,13 +48,15 @@ image.alt.en: A globe on a stand
 image.alt.vi: Quả địa cầu trên giá
 hint.en: Remember the globe from the last lesson.
 hint.vi: Em nhớ lại quả địa cầu ở bài trước nhé.
-explanation_correct.en: Yes! Blue shows water on a globe.
-explanation_correct.vi: Đúng rồi! Trên quả địa cầu, màu xanh dương là nước.
-explanation_wrong.en: The answer is water. Blue shows water, like the sea.
-explanation_wrong.vi: Đáp án là nước. Màu xanh dương là nước, như biển.
+explanation_correct.en: Seas are blue, so a globe is mostly blue.
+explanation_correct.vi: Biển tô xanh dương, nên quả địa cầu xanh nhiều nhất.
+explanation_wrong.en: Blue on a globe shows water, like the sea.
+explanation_wrong.vi: Màu xanh dương trên quả địa cầu là nước, như biển.
 
 #### option w1_land
 correct: false
+feedback.en: Land is shown in green and brown.
+feedback.vi: Đất được tô màu xanh lá và nâu.
 label.en: land
 label.vi: đất
 image.brief: Dùng lại hình `explore_land` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): hills tea plantation Vietnam village
@@ -63,6 +65,8 @@ image.alt.vi: Đồi, núi và làng quê
 
 #### option w1_sky
 correct: false
+feedback.en: A globe does not show the sky.
+feedback.vi: Quả địa cầu không vẽ bầu trời.
 label.en: sky
 label.vi: bầu trời
 image.brief: [ảnh] Bầu trời xanh trong, vài đám mây trắng mỏng, chụp ngửa lên; không thấy đất, cây, nhà hay biển; không có chữ. Từ khoá tìm ảnh (EN): sky blue clear clouds
@@ -93,10 +97,12 @@ image.alt.vi: Hòn đảo nhỏ giữa biển
 answer: true
 hint.en: Can you walk on an island?
 hint.vi: Em có đi bộ trên đảo được không?
-explanation_correct.en: Yes! An island is land with water all around it.
-explanation_correct.vi: Đúng rồi! Hòn đảo là đất, có nước bao quanh.
-explanation_wrong.en: This is true. An island is land with water all around it.
-explanation_wrong.vi: Câu này đúng. Hòn đảo là đất, có nước bao quanh.
+explanation_correct.en: An island is land with water all around it.
+explanation_correct.vi: Đảo là đất, có nước bao quanh.
+explanation_wrong.en: An island is dry land, even in the sea.
+explanation_wrong.vi: Đảo là đất khô, dù nằm giữa biển.
+feedback_false.en: People build houses and grow trees on islands.
+feedback_false.vi: Người ta xây nhà, trồng cây trên đảo.
 
 ## Học
 
@@ -361,15 +367,17 @@ sentence.vi: Châu lục là những vùng {1} rất rộng lớn.
 answers: q1_land
 hint.en: Can you walk on a continent?
 hint.vi: Em có đi bộ trên châu lục được không?
-explanation_correct.en: Yes! Continents are very big areas of land.
-explanation_correct.vi: Đúng rồi! Châu lục là những vùng đất rất rộng lớn.
-explanation_wrong.en: The answer is land. Asia and Africa are land.
-explanation_wrong.vi: Đáp án là đất. Châu Á và châu Phi đều là đất.
+explanation_correct.en: Asia and Africa are two of these big lands.
+explanation_correct.vi: Châu Á và châu Phi là hai vùng đất lớn như thế.
+explanation_wrong.en: Continents are land, like Asia and Africa.
+explanation_wrong.vi: Châu lục là đất, như châu Á và châu Phi.
 > Gợi ý giống cách của bài một (đất thì đi bộ được), không nói thẳng đáp án.
 
 #### bank q1_water
 label.en: water
 label.vi: nước
+feedback.en: Very big areas of water are oceans.
+feedback.vi: Vùng nước rất rộng lớn là đại dương.
 image.brief: Dùng lại hình `tray_sea` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): sea horizon fishing boat
 image.alt.en: The wide blue sea
 image.alt.vi: Biển xanh rộng
@@ -377,6 +385,8 @@ image.alt.vi: Biển xanh rộng
 #### bank q1_sky
 label.en: sky
 label.vi: bầu trời
+feedback.en: The sky is above Earth's surface.
+feedback.vi: Bầu trời ở phía trên bề mặt Trái Đất.
 image.brief: Dùng lại hình `w1_sky`. Từ khoá tìm ảnh (EN): sky blue clear clouds
 image.alt.en: A blue sky
 image.alt.vi: Bầu trời xanh
@@ -401,10 +411,10 @@ image.alt.en: The flag of Vietnam
 image.alt.vi: Lá cờ Việt Nam
 hint.en: Remember the Vietnam picture in the lesson.
 hint.vi: Em nhớ lại hình Việt Nam ở phần Học nhé.
-explanation_correct.en: Yes! Vietnam is in Asia.
-explanation_correct.vi: Đúng rồi! Việt Nam ở châu Á.
-explanation_wrong.en: The answer is Asia. Vietnam is in Asia.
-explanation_wrong.vi: Đáp án là châu Á. Việt Nam nằm ở châu Á.
+explanation_correct.en: Asia is the biggest continent, and Vietnam is in it.
+explanation_correct.vi: Châu Á là châu lục lớn nhất, có cả Việt Nam.
+explanation_wrong.en: Vietnam is in Asia, next to the East Sea.
+explanation_wrong.vi: Việt Nam ở châu Á, bên bờ Biển Đông.
 
 #### option q2_asia
 correct: true
@@ -417,6 +427,8 @@ image.alt.vi: Dãy núi tuyết ở châu Á
 
 #### option q2_africa
 correct: false
+feedback.en: Africa is far away, across the Indian Ocean.
+feedback.vi: Châu Phi ở rất xa, bên kia Ấn Độ Dương.
 label.en: Africa
 label.vi: châu Phi
 image.brief: Dùng lại hình `tray_africa`. Từ khoá tìm ảnh (EN): savanna giraffe acacia
@@ -425,6 +437,8 @@ image.alt.vi: Hươu cao cổ trên đồng cỏ rộng
 
 #### option q2_europe
 correct: false
+feedback.en: Europe is far to the west of Vietnam.
+feedback.vi: Châu Âu ở rất xa về phía tây.
 label.en: Europe
 label.vi: châu Âu
 image.brief: [ảnh] Những cối xay gió cổ bên cánh đồng ở Kinderdijk, Hà Lan (châu Âu), chụp từ xa, trời xanh; không có hoa tulip; không có người nhận ra mặt, biển hiệu hay chữ. Từ khoá tìm ảnh (EN): windmills Kinderdijk Netherlands
@@ -447,15 +461,17 @@ instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Oceans are water. Continents are land.
 hint.vi: Đại dương là nước. Châu lục là đất.
-explanation_correct.en: Yes! You found the Pacific Ocean and the Arctic Ocean.
-explanation_correct.vi: Đúng rồi! Em đã tìm ra Thái Bình Dương và Bắc Băng Dương.
-explanation_wrong.en: The answers are the Arctic and Pacific Oceans. Antarctica is land under ice.
-explanation_wrong.vi: Đáp án là Bắc Băng Dương và Thái Bình Dương. Châu Nam Cực là đất, có băng phủ bên trên.
+explanation_correct.en: The Arctic Ocean is water with floating ice.
+explanation_correct.vi: Bắc Băng Dương là nước, có băng trôi bên trên.
+explanation_wrong.en: Antarctica is land, but the Arctic Ocean is water.
+explanation_wrong.vi: Châu Nam Cực là đất, Bắc Băng Dương là nước.
 > Câu phân loại có một chỗ khó có chủ ý: châu Nam Cực và Bắc Băng Dương đều lạnh, đều có băng, tên tiếng Anh lại gần giống nhau (Antarctica, Arctic). Hình giúp bé phân biệt: chim cánh cụt đứng trên đất phủ băng, gấu trắng đứng trên băng trôi giữa nước.
 > Bắc Băng Dương có băng trôi phủ một phần mặt nước, nhưng vẫn là đại dương. Câu không nói "phủ kín" để khỏi sai theo mùa.
 
 #### option q3_africa
 correct: false
+feedback.en: Africa is land where giraffes walk.
+feedback.vi: Châu Phi là đất, nơi hươu cao cổ đi lại.
 label.en: Africa
 label.vi: châu Phi
 image.brief: Dùng lại hình `tray_africa`. Từ khoá tìm ảnh (EN): savanna giraffe acacia
@@ -472,6 +488,8 @@ image.alt.vi: Gấu trắng trên tảng băng trôi
 
 #### option q3_antarctica
 correct: false
+feedback.en: Antarctica is land under thick ice.
+feedback.vi: Châu Nam Cực là đất, có băng dày phủ lên.
 label.en: Antarctica
 label.vi: châu Nam Cực
 image.brief: Dùng lại hình `tray_antarctica`. Từ khoá tìm ảnh (EN): penguins Antarctica rocks glacier
@@ -499,10 +517,10 @@ image.alt.vi: Đất và biển nhìn từ máy bay
 > Hình câu hỏi gợi ý "nhìn những nơi rộng lớn từ trên cao" mà không nghiêng về lựa chọn nào. Không dùng ảnh Trái Đất của ô `explore_continents`, vì ảnh đó gợi ngay "châu lục rất rộng".
 hint.en: Which one has the other two inside it?
 hint.vi: Nơi nào chứa cả hai nơi kia ở bên trong?
-explanation_correct.en: Yes! Cat Ba is in Vietnam. Vietnam is in Asia.
-explanation_correct.vi: Đúng rồi! Đảo Cát Bà thuộc Việt Nam. Việt Nam nằm ở châu Á.
-explanation_wrong.en: The answer is Asia. Vietnam and Cat Ba are inside Asia.
-explanation_wrong.vi: Đáp án là châu Á. Việt Nam và đảo Cát Bà đều nằm trong châu Á.
+explanation_correct.en: Asia holds Vietnam, and Vietnam holds Cat Ba.
+explanation_correct.vi: Châu Á có Việt Nam, Việt Nam có đảo Cát Bà.
+explanation_wrong.en: Vietnam and Cat Ba are both inside Asia.
+explanation_wrong.vi: Việt Nam và đảo Cát Bà đều nằm trong châu Á.
 > Câu so sánh lồng nhau: đảo nằm trong một quốc gia, quốc gia nằm trong một châu lục. Nối với w2 (đảo là đất) và chuẩn bị cho câu q6 (châu lục không phải một quốc gia). Bé quen nghĩ "Việt Nam rất rộng" nên có thể chọn Việt Nam: đó là chỗ câu này kiểm.
 > Chọn đảo Cát Bà: đảo lớn, quen với trẻ, chủ quyền rõ ràng. Nghe thử giọng EN đọc "Cat Ba".
 > SK-033 (9/11): lựa chọn trước chỉ có chữ ("ba nơi này không vẽ thành một vật cùng tỉ lệ được"), nay có hình. Ảnh không cho thấy độ rộng: Việt Nam là lá cờ, châu Á là ruộng bậc thang (như phần Chơi), đảo Cát Bà là ảnh bờ đảo chụp từ mặt biển. Bé vẫn phải so bằng ý "nơi nào chứa hai nơi kia".
@@ -510,6 +528,8 @@ explanation_wrong.vi: Đáp án là châu Á. Việt Nam và đảo Cát Bà đ�
 
 #### option q4_vietnam
 correct: false
+feedback.en: Vietnam is one country inside a continent.
+feedback.vi: Việt Nam là quốc gia nằm trong một châu lục.
 label.en: Vietnam
 label.vi: Việt Nam
 image.brief: Dùng lại hình `tray_vietnam`. Từ khoá tìm ảnh (EN): flag Vietnam flagpole sky
@@ -526,6 +546,8 @@ image.alt.vi: Ruộng bậc thang trên núi
 
 #### option q4_cat_ba
 correct: false
+feedback.en: Cat Ba is a small island in Vietnam.
+feedback.vi: Cát Bà là một hòn đảo nhỏ của Việt Nam.
 label.en: Cat Ba Island
 label.vi: đảo Cát Bà
 image.brief: [ảnh] Bờ đảo Cát Bà chụp từ mặt biển, ngang tầm mắt: núi đá vôi phủ rừng xanh, nước xanh ngọc; không chụp từ trên cao (để ảnh không trông rộng hơn hai lựa chọn kia); không có người nhận ra mặt, biển hiệu hay chữ; khác ảnh vịnh Hạ Long của thẻ thưởng bài một. Từ khoá tìm ảnh (EN): Cat Ba Island coast limestone
@@ -537,23 +559,26 @@ id: 78ffa4a1-ef97-4879-b632-3ebd8ec0d4dd
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai swims at a beach in Da Nang. Where is she swimming?
-prompt.vi: Mai bơi ở bãi biển Đà Nẵng. Mai đang bơi ở đâu?
+prompt.en: At a Da Nang beach, where is Mai swimming?
+prompt.vi: Ở bãi biển Đà Nẵng, Mai đang bơi ở đâu?
+> SK-044 (14/11, A2): gộp hai câu thành một (tám từ, mười tiếng), giữ "Where".
 image.brief: [ảnh] Bãi biển Đà Nẵng (hoặc một bãi biển miền Trung) buổi sáng: cát vàng, sóng nhỏ, nước xanh; vài người tắm biển ở chỗ nông, nhỏ và ở xa, không nhận ra mặt, không có cảnh trẻ em một mình; không có toà nhà cao tầng nổi bật, biển hiệu, logo hay chữ gọi tên biển. Từ khoá tìm ảnh (EN): beach Da Nang Vietnam
 > SK-033 (9/11): ảnh thật không có mặt bạn Mai; alt giữ "Mai swims near the beach" theo câu chuyện của câu hỏi. Alt không nói tên biển, để khỏi lộ đáp án.
 image.alt.en: Mai swims near the beach
 image.alt.vi: Mai bơi gần bờ biển
 hint.en: Da Nang is in Vietnam. What is next to Vietnam?
 hint.vi: Đà Nẵng ở Việt Nam. Bên bờ Việt Nam là gì?
-explanation_correct.en: Yes! Da Nang is next to the East Sea.
-explanation_correct.vi: Đúng rồi! Đà Nẵng nằm bên bờ Biển Đông.
-explanation_wrong.en: The answer is the East Sea. It is next to Vietnam.
-explanation_wrong.vi: Đáp án là Biển Đông. Biển Đông ở ngay bên bờ Việt Nam.
+explanation_correct.en: The East Sea is part of the Pacific Ocean.
+explanation_correct.vi: Biển Đông là một phần của Thái Bình Dương.
+explanation_wrong.en: Da Nang is right next to the East Sea.
+explanation_wrong.vi: Đà Nẵng nằm ngay bên bờ Biển Đông.
 > Câu vận dụng ý ba vào một chuyến đi biển quen thuộc. Câu hỏi nói "Where", không nói "Which sea", để chữ "Sea" trong câu không lộ đáp án.
 > [CẦN KIỂM] Tên "Đà Nẵng" vẫn dùng sau khi sáp nhập tỉnh từ ngày một tháng bảy năm hai nghìn không trăm hai mươi lăm (biên tập nhớ Quảng Nam nhập vào thành phố Đà Nẵng). Hình có cảnh trẻ bơi: có người lớn đi cùng, bơi chỗ nông.
 
 #### option q5_arctic
 correct: false
+feedback.en: The Arctic Ocean is very cold and far north.
+feedback.vi: Bắc Băng Dương rất lạnh, ở tận phía bắc xa.
 label.en: Arctic Ocean
 label.vi: Bắc Băng Dương
 image.brief: Dùng lại hình `tray_arctic`. Từ khoá tìm ảnh (EN): polar bear sea ice
@@ -562,6 +587,8 @@ image.alt.vi: Gấu trắng trên tảng băng trôi
 
 #### option q5_atlantic
 correct: false
+feedback.en: The Atlantic Ocean is on the other side of Earth.
+feedback.vi: Đại Tây Dương ở phía bên kia Trái Đất.
 label.en: Atlantic Ocean
 label.vi: Đại Tây Dương
 image.brief: Dùng lại hình `tray_atlantic`. Từ khoá tìm ảnh (EN): Atlantic Ocean waves
@@ -593,8 +620,9 @@ image.alt.vi: Ruộng bậc thang trên núi
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
 > Rà chữ 9/11 (tester N1): nhãn trung tính chung cho cả năm câu sáu, xem ghi chú ở câu q6 bài một.
-statement.en: Japan and Vietnam are both in Asia. So Asia is one country.
-statement.vi: Nhật Bản và Việt Nam đều ở châu Á. Vậy châu Á là một quốc gia.
+statement.en: Asia is one country, with Japan and Vietnam in it.
+statement.vi: Châu Á là một quốc gia, có Nhật Bản và Việt Nam.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười hai tiếng); câu vẫn chứa bằng chứng phản bác (hai quốc gia cùng ở châu Á).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -603,10 +631,12 @@ labels.false.vi: Na chưa đúng
 answer: false
 hint.en: Are Japan and Vietnam the same country?
 hint.vi: Nhật Bản và Việt Nam có phải cùng một quốc gia không?
-explanation_correct.en: Asia is a continent. It has many countries.
-explanation_correct.vi: Châu Á là một châu lục. Châu Á có nhiều quốc gia.
-explanation_wrong.en: Na is not right. Asia has many countries.
-explanation_wrong.vi: Na chưa đúng. Châu Á là một châu lục, có nhiều quốc gia.
+explanation_correct.en: Asia is a continent with many countries, like Laos.
+explanation_correct.vi: Châu Á là châu lục có nhiều quốc gia, như Lào.
+explanation_wrong.en: Japan and Vietnam are two countries in Asia.
+explanation_wrong.vi: Nhật Bản và Việt Nam là hai quốc gia ở châu Á.
+feedback_true.en: Japan and Vietnam each have their own flag.
+feedback_true.vi: Nhật Bản và Việt Nam có lá cờ riêng.
 > DOK 3: bắt lỗi một lập luận. Chính câu của Na chứa bằng chứng phản bác: hai quốc gia khác nhau cùng ở châu Á, nên châu Á không thể là một quốc gia. Gợi ý chỉ vào bằng chứng đó, không nói thẳng đáp án.
 > Nhật Bản đã gặp ở phần Chơi (lá cờ, nhóm quốc gia).
 

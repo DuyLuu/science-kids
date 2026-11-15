@@ -16,8 +16,20 @@
       "note": "Hũ mật ong không nhãn, có thìa gỗ."
     },
     "w1.w1_resin": {
-      "same_as": "resin",
-      "lesson": "da-va-dat/nhieu-cach-tao-thanh-hoa-thach"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cedar_Fire-California_(20160824-FS-LSC-1116).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Cedar_Fire-California_%2820160824-FS-LSC-1116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Resin on a tree trunk",
+      "author": "USDAgov",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cedar_Fire-California_(20160824-FS-LSC-1116).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.36,
+        "width": 1.0,
+        "height": 0.267
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/nhieu-cach-tao-thanh-hoa-thach vocab.resin, cắt riêng cho khung 5:2 (trước: same_as resin (da-va-dat/nhieu-cach-tao-thanh-hoa-thach))."
     },
     "w1.w1_ice": {
       "same_as": "q1_ice",
@@ -279,14 +291,21 @@
       "author": "Diliff",
       "license": "CC BY 2.5",
       "license_url": "https://creativecommons.org/licenses/by/2.5",
-      "note": "Bể lớn ở thuỷ cung Georgia, đàn cá nhỏ và cá mú, không khách."
+      "note": "Bể lớn ở thuỷ cung Georgia, đàn cá nhỏ và cá mú, không khách. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.32,
+        "width": 1.0,
+        "height": 0.36
+      }
     },
     "q5.q5_zoo": {
       "same_as": "q2_zoo",
       "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
     "q6": {
-      "same_as": "q1.q1_cliffs"
+      "same_as": "vocab.cliff",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang vocab.cliff (bản cắt 4:3)."
     },
     "vocab.palaeontologist": {
       "same_as": "palaeontologist",
@@ -300,7 +319,20 @@
       "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
     "vocab.cliff": {
-      "same_as": "q1.q1_cliffs"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Cap_from_Charmouth_beach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Golden_Cap_from_Charmouth_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Cap from Charmouth beach",
+      "author": "Kevin Walsh",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.04,
+        "width": 0.437,
+        "height": 0.54
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/mary-anning-nguoi-san-hoa-thach q1.q1_cliffs, cắt riêng cho khung 4:3 (trước: same_as q1.q1_cliffs)."
     },
     "reward.mary_find_card": {
       "same_as": "learn.explore.explore_finds"

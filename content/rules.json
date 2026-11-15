@@ -1,6 +1,7 @@
 {
   "explorer": {
     "max_tries": 2,
+    "max_tries_by_format": { "true_false": 1 },
     "partial_order_min": null,
     "pass_threshold": { "num": 5, "den": 6 },
     "mastery_gap_days": 1,
@@ -33,6 +34,7 @@
   },
   "discoverer": {
     "max_tries": 2,
+    "max_tries_by_format": { "true_false": 1 },
     "partial_order_min": null,
     "pass_threshold": { "num": 5, "den": 6 },
     "mastery_gap_days": 1,
@@ -65,6 +67,7 @@
   },
   "scientist": {
     "max_tries": 2,
+    "max_tries_by_format": { "true_false": 1 },
     "partial_order_min": null,
     "pass_threshold": { "num": 5, "den": 6 },
     "mastery_gap_days": 1,

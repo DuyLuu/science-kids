@@ -21,6 +21,7 @@ vi: Em kể được những cách giữ cho phổi khoẻ.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-036, ngày 10/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids` sau ba bài trước.
 > Bài tổng kết (`review`): ôn trộn cả chủ đề. Khởi động ôn bài ba, bài hai (câu "Em nghĩ sao?" về `air_goes_to_belly`) và bài *Núi lửa* của chủ đề một; Quiz q2 ôn bài một (ô-xi), q5 ôn bài hai (đường đi của không khí), q4 nối với bài ba (chạy nhảy hít vào nhiều không khí hơn, nên chọn chỗ không khí sạch).
 > Bài sửa `clear_air_is_clean` ở ý chính ba, ô Bụi mịn, câu q4 và câu q6 (gắn key, Na chưa đúng). `smoke_only_hurts_smoker` chỉ nói nhẹ ở ô Khói và một món bẫy ở phần Chơi, không gắn key, không có câu hỏi riêng (mục An toàn ở `_topic.md`).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na và câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Dust and smoke in the air can hurt your lungs.
@@ -54,14 +55,16 @@ image.alt.en: An empty schoolyard
 image.alt.vi: Sân trường vắng
 hint.en: Remember the bar chart in the last lesson.
 hint.vi: Em nhớ lại biểu đồ cột ở bài trước nhé.
-explanation_correct.en: Yes! Skipping works your muscles hard.
-explanation_correct.vi: Đúng rồi! Nhảy dây làm cơ bắp hoạt động mạnh.
-explanation_wrong.en: The answer is skipping. Walking is slower and easier.
-explanation_wrong.vi: Đáp án là nhảy dây. Đi bộ thì nhẹ nhàng hơn.
+explanation_correct.en: Skipping had the tallest bar in Mai's chart.
+explanation_correct.vi: Nhảy dây có cột cao nhất trong biểu đồ của Mai.
+explanation_wrong.en: Skipping works your leg muscles the hardest.
+explanation_wrong.vi: Nhảy dây làm cơ bắp ở chân làm việc nhiều nhất.
 > Đi bộ là lựa chọn sai có sức hút (cũng là vận động, cũng có trong biểu đồ câu q4 bài ba). Đáp án ở chỗ thứ tư; câu w1 của bốn bài ở bốn chỗ khác nhau.
 
 #### option w1_walking
 correct: false
+feedback.en: Walking moves your legs, but gently.
+feedback.vi: Đi bộ có vận động, nhưng nhẹ nhàng.
 label.en: walking
 label.vi: đi bộ
 image.brief: [hình vẽ] Một lối đi lát gạch vắng trong công viên, hai bên có cây xanh, nhìn dọc theo lối đi; không có người, không có chữ, không có biển chỉ dẫn. Từ khoá tìm ảnh (EN): empty park footpath trees
@@ -70,6 +73,8 @@ image.alt.vi: Lối đi trong công viên
 
 #### option w1_chess
 correct: false
+feedback.en: In chess, your body sits still at the table.
+feedback.vi: Chơi cờ thì người em ngồi yên bên bàn.
 label.en: playing chess
 label.vi: chơi cờ vua
 image.brief: Dùng lại hình `q3_chess` ở bài `ho-hap/tho-khi-chay-nhay`. Từ khoá tìm ảnh (EN): chess board game in progress wooden table
@@ -78,6 +83,8 @@ image.alt.vi: Bàn cờ vua
 
 #### option w1_hammock
 correct: false
+feedback.en: In a hammock, your body rests.
+feedback.vi: Nằm võng là lúc cơ thể em nghỉ.
 label.en: lying in a hammock
 label.vi: nằm võng
 image.brief: Dùng lại hình `q3_hammock` ở bài `ho-hap/tho-khi-chay-nhay`. Từ khoá tìm ảnh (EN): empty hammock between trees garden
@@ -107,10 +114,12 @@ image.alt.vi: Bạn nhỏ nằm ngửa, gấu bông trên bụng
 answer: false
 hint.en: Remember the Food and air card.
 hint.vi: Em nhớ lại ô Thức ăn và không khí nhé.
-explanation_correct.en: Air goes into your lungs. Your belly just moves up and down.
-explanation_correct.vi: Không khí đi vào phổi. Bụng em chỉ nhấp nhô thôi.
-explanation_wrong.en: This is false. The air goes into your lungs.
-explanation_wrong.vi: Câu này sai. Không khí đi vào phổi.
+explanation_correct.en: Your belly moves, but the air goes into your lungs.
+explanation_correct.vi: Bụng em nhấp nhô, còn không khí đi vào phổi.
+explanation_wrong.en: The air goes down your windpipe into your lungs.
+explanation_wrong.vi: Không khí đi xuống khí quản, vào phổi.
+feedback_true.en: Food goes to your belly, but air takes another path.
+feedback_true.vi: Thức ăn xuống bụng, còn không khí đi đường khác.
 > Câu giữ đúng chữ `statement` của `air_goes_to_belly`, cũng là câu "Em nghĩ sao?" đề xuất ở bài một. Khi schema có `think_first` (v1.1), app hiện được câu trả lời ở bài một cạnh câu trả lời ở câu này.
 > Hình gấu bông trên bụng là hình câu q6 bài hai, cho thấy bụng nhấp nhô (vế đúng của misconception), không cho thấy không khí đi đâu.
 > Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai).
@@ -123,17 +132,19 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: be-mat-trai-dat/nui-lua
 prompt.en: Volcanoes can throw ash high into the sky.
-prompt.vi: Núi lửa có thể phun tro lên cao trên bầu trời.
+prompt.vi: Núi lửa có thể phun tro lên trời cao.
 image.brief: Dùng lại hình `q1` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): volcano cone quiet landscape
 image.alt.en: A quiet volcano
 image.alt.vi: Núi lửa đang yên lặng
 answer: true
 hint.en: Remember the volcano lesson about Earth.
 hint.vi: Em nhớ lại bài Núi lửa nhé.
-explanation_correct.en: Yes! Ash is like dust. It is bad to breathe in.
-explanation_correct.vi: Đúng rồi! Tro núi lửa giống như bụi. Hít phải tro thì có hại.
-explanation_wrong.en: This is true. Volcanoes can throw ash into the sky.
-explanation_wrong.vi: Câu này đúng. Núi lửa có thể phun tro lên trời.
+explanation_correct.en: Ash is like dust, and it is bad to breathe.
+explanation_correct.vi: Tro giống như bụi, hít phải tro thì có hại.
+explanation_wrong.en: Volcano ash is made of tiny bits of rock.
+explanation_wrong.vi: Tro núi lửa là những mảnh đá rất nhỏ.
+feedback_false.en: When a volcano wakes up, ash fills the sky.
+feedback_false.vi: Khi núi lửa phun, tro bay đầy trời.
 > Ôn món ví dụ "ash · tro núi lửa" ở ô Học và lựa chọn `q4_ash` của bài *Núi lửa*. Hình là núi lửa đang yên lặng (không có cột tro), không lộ đáp án.
 > [CẦN KIỂM] "Tro núi lửa giống như bụi, hít phải có hại": tro núi lửa là những mảnh đá, thuỷ tinh rất nhỏ (biên tập nhớ). Giải thích khi đúng bắc cầu sang bài này.
 
@@ -179,7 +190,7 @@ label.en: Smoke
 label.vi: Khói
 color: do_son
 sentence.en: Smoke from fires and cigarettes is bad for lungs.
-sentence.vi: Khói từ đám lửa và khói thuốc lá đều có hại cho phổi.
+sentence.vi: Khói lửa và khói thuốc lá đều hại cho phổi.
 image.brief: [hình vẽ] Khói trắng xám bốc lên từ những đống rơm rạ đang đốt trên cánh đồng sau mùa gặt, nhìn từ xa; không có người, không có nhà gần, không có chữ; khói không dày đặc như cháy lớn, không có cảnh đáng sợ. Món Chơi tray_straw, thẻ q2_smoke và từ smoke dùng lại ảnh này. Từ khoá tìm ảnh (EN): burning rice straw field smoke
 image.alt.en: Smoke from burning straw in a field
 image.alt.vi: Khói đốt rơm rạ trên cánh đồng
@@ -391,16 +402,18 @@ image.alt.en: A dusty road
 image.alt.vi: Con đường bụi mù
 hint.en: Think about how dust gets into your body.
 hint.vi: Em nghĩ xem bụi đi vào cơ thể qua đâu nhé.
-explanation_correct.en: Yes! A mask covers your nose and mouth.
-explanation_correct.vi: Đúng rồi! Khẩu trang che kín mũi và miệng.
-explanation_wrong.en: The answer is the mask. It covers your nose.
-explanation_wrong.vi: Đáp án là khẩu trang. Khẩu trang che mũi em.
+explanation_correct.en: A mask covers both your nose and your mouth.
+explanation_correct.vi: Khẩu trang che kín cả mũi lẫn miệng.
+explanation_wrong.en: A mask helps stop dust going into your nose.
+explanation_wrong.vi: Khẩu trang giúp ngăn bụi đi vào mũi.
 > Câu nhớ lại ý chính hai. Ba thứ đều là đồ người Việt Nam hay mang khi đi xe máy (mũ vải, áo mưa, khẩu trang), nên hai lựa chọn sai có sức hút. Không dùng mũ bảo hiểm (bài bốn của *Não bộ và giác quan* dạy mũ bảo hiểm).
 > Gợi ý nêu cách nghĩ (bụi vào qua đâu, tức là mũi), không gọi tên lựa chọn.
 > Rà chữ tester 10/11 (n1): khẩu trang chuyển xuống chỗ thứ ba (trước đây thứ hai). Chỉ đổi thứ tự khối, không đổi chữ hay hình.
 
 #### option q1_hat
 correct: false
+feedback.en: A sun hat shades your head from the sun.
+feedback.vi: Mũ vải che nắng cho đầu em.
 label.en: sun hat
 label.vi: mũ vải
 image.brief: [hình vẽ] Một chiếc mũ vải rộng vành màu trơn đặt trên mặt bàn gỗ, vẽ chéo từ trên xuống; không có người, không có nhãn hiệu, không có chữ. Cùng nền bàn gỗ như hình khẩu trang. Từ khoá tìm ảnh (EN): cloth sun hat on table
@@ -409,6 +422,8 @@ image.alt.vi: Chiếc mũ vải trên bàn
 
 #### option q1_raincoat
 correct: false
+feedback.en: A raincoat keeps rain off your body.
+feedback.vi: Áo mưa che mưa cho người em.
 label.en: raincoat
 label.vi: áo mưa
 image.brief: [hình vẽ] Một chiếc áo mưa ni-lông màu trơn gấp gọn trên mặt bàn gỗ, vẽ chéo từ trên xuống; không có người, không có nhãn hiệu, không có chữ. Từ khoá tìm ảnh (EN): folded plastic raincoat on table
@@ -439,15 +454,17 @@ sentence.vi: Cơ thể mình cần {1} từ không khí.
 answers: q2_oxygen
 hint.en: Remember the first lesson, Why we breathe.
 hint.vi: Em nhớ lại bài đầu tiên, Vì sao ta phải thở.
-explanation_correct.en: Yes! Oxygen is good for us. Dust and smoke are not.
-explanation_correct.vi: Đúng rồi! Ô-xi tốt cho cơ thể. Bụi và khói thì không.
-explanation_wrong.en: The answer is oxygen. Dust and smoke hurt lungs.
-explanation_wrong.vi: Đáp án là khí ô-xi. Bụi và khói làm hại phổi.
+explanation_correct.en: Every breath brings oxygen to your whole body.
+explanation_correct.vi: Mỗi hơi thở đưa ô-xi tới khắp cơ thể.
+explanation_wrong.en: Your body needs oxygen, while dust and smoke hurt lungs.
+explanation_wrong.vi: Cơ thể cần ô-xi, còn bụi và khói làm hại phổi.
 > Câu ôn ý chính ba bài một, đặt trong bối cảnh bài này: bụi và khói cũng ở trong không khí, nên có sức hút ("cũng từ không khí"), nhưng cơ thể không cần.
 
 #### bank q2_dust
 label.en: dust
 label.vi: bụi
+feedback.en: Dust in the air can hurt your lungs.
+feedback.vi: Bụi trong không khí làm hại phổi.
 image.brief: Dùng lại hình `explore_dust`. Từ khoá tìm ảnh (EN): dusty road truck dust cloud
 image.alt.en: A dusty road
 image.alt.vi: Con đường bụi mù
@@ -455,6 +472,8 @@ image.alt.vi: Con đường bụi mù
 #### bank q2_smoke
 label.en: smoke
 label.vi: khói
+feedback.en: Smoke is bad for your lungs.
+feedback.vi: Khói có hại cho phổi em.
 image.brief: Dùng lại hình `explore_smoke`. Từ khoá tìm ảnh (EN): burning rice straw field smoke
 image.alt.en: Smoke from burning straw in a field
 image.alt.vi: Khói đốt rơm rạ trên cánh đồng
@@ -473,7 +492,7 @@ format: multi_choice
 version: 1
 dok: 2
 prompt.en: Which ones put dust or smoke into the air?
-prompt.vi: Những thứ nào làm bụi hoặc khói bay vào không khí?
+prompt.vi: Thứ nào làm bụi, khói bay vào không khí?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: Dùng lại hình `q2`. Từ khoá tìm ảnh (EN): blue sky white clouds tree tops
@@ -481,15 +500,17 @@ image.alt.en: Blue sky over the trees
 image.alt.vi: Bầu trời xanh trên ngọn cây
 hint.en: Which ones make something you should not breathe?
 hint.vi: Thứ nào tạo ra thứ mà em không nên hít vào?
-explanation_correct.en: Yes! Busy roads and building sites make dust.
-explanation_correct.vi: Đúng rồi! Đường đông xe và công trường làm bụi bay lên.
-explanation_wrong.en: The answers are the road and the building site. Steam is water.
-explanation_wrong.vi: Đáp án là đường đông xe và công trường. Hơi nồi cơm chỉ là hơi nước.
+explanation_correct.en: Cars and digging both throw dust up into the air.
+explanation_correct.vi: Xe cộ và việc đào đất đều làm bụi bay lên.
+explanation_wrong.en: Roads and building sites put dust into the air.
+explanation_wrong.vi: Đường đông xe và công trường làm bụi bay lên.
 > DOK 2: phân loại nơi tạo ra bụi, khói, ở những cảnh chưa có ở phần Học (ô Bụi chỉ có đường đất đỏ). Hơi nồi cơm có sức hút vì trông như khói trắng; công viên có sức hút ngược (bé biết công viên là chỗ tốt, nên kiểm lại cách nghĩ).
 > [CẦN KIỂM] Hơi bốc lên từ nồi cơm là hơi nước, không hại phổi. Ý này nối với *Các thể của vật chất* (Discoverer số mười ba, "hơi nồi cơm").
 
 #### option q3_steam
 correct: false
+feedback.en: Steam from rice is just water, like tiny clouds.
+feedback.vi: Hơi nồi cơm chỉ là hơi nước thôi.
 label.en: steam from rice
 label.vi: hơi nồi cơm
 image.brief: [hình vẽ] Góc bếp trong nhà nhìn rộng: một nồi cơm đang sôi trên bếp, làn hơi nước trắng bốc cao từ khe vung, thấy cả mặt bếp và bức tường phía sau. Bắt buộc vẽ rộng cả góc bếp, cùng cỡ cảnh với ba hình kia (đường phố, công viên, công trường); không vẽ cận nồi. Không có người, không có nhãn hiệu trên nồi, không có chữ, không phải nồi cơm điện có logo. Từ khoá tìm ảnh (EN): kitchen stove pot steam rising
@@ -507,6 +528,8 @@ image.alt.vi: Con đường đông xe nhìn từ trên cao
 
 #### option q3_park
 correct: false
+feedback.en: Trees in a park help keep the air fresh.
+feedback.vi: Cây trong công viên giúp không khí trong lành.
 label.en: green park
 label.vi: công viên nhiều cây
 image.brief: Dùng lại hình `tray_park`. Từ khoá tìm ảnh (EN): green park big trees lawn morning
@@ -526,17 +549,17 @@ id: 45431ccf-b994-43e4-b619-a7468aee53e7
 format: single_choice
 version: 1
 dok: 2
-prompt.en: The air outside is smoky today. Where should Nam play?
-prompt.vi: Hôm nay ngoài trời nhiều khói bụi. Nam nên chơi ở đâu?
+prompt.en: Where should Nam play on a smoky day?
+prompt.vi: Hôm nhiều khói bụi, Nam nên chơi ở đâu?
 image.brief: Dùng lại hình `explore_tiny_dust`. Từ khoá tìm ảnh (EN): city haze smog skyline Hanoi
 image.alt.en: A hazy city
 image.alt.vi: Thành phố mù bụi
 hint.en: Where is the air cleanest on a smoky day?
 hint.vi: Hôm nhiều khói bụi, chỗ nào không khí sạch nhất?
-explanation_correct.en: Yes! On smoky days, playing inside keeps lungs safer.
-explanation_correct.vi: Đúng rồi! Hôm nhiều khói bụi, chơi trong nhà giúp phổi an toàn hơn.
-explanation_wrong.en: The answer is inside. Smoky air is outside today.
-explanation_wrong.vi: Đáp án là chơi trong nhà. Hôm nay ngoài trời nhiều khói bụi.
+explanation_correct.en: Closed windows help keep smoky air out.
+explanation_correct.vi: Đóng cửa sổ giúp ngăn bớt khói bụi vào nhà.
+explanation_wrong.en: On smoky days, playing inside keeps your lungs safer.
+explanation_wrong.vi: Hôm khói bụi, chơi trong nhà giúp phổi an toàn hơn.
 > DOK 2: áp dụng vào một ngày cụ thể. Công viên là lựa chọn sai có sức hút mạnh: bài ba và phần Chơi bài này đều khen chạy nhảy ngoài trời, công viên nhiều cây. Bé phải nghĩ theo tình huống: hôm nay không khí ngoài trời nhiều khói bụi. Nối với bài ba: chạy nhảy thì hít vào nhiều không khí hơn.
 > [CẦN KIỂM] Khuyến cáo chung khi chất lượng không khí xấu: hạn chế ra ngoài, đóng cửa sổ (mục An toàn ở `_topic.md`). Câu không bảo bé tự quyết, chỉ hỏi chỗ chơi.
 
@@ -550,6 +573,8 @@ image.alt.vi: Khối đồ chơi trong nhà, cạnh cửa sổ đóng
 
 #### option q4_park
 correct: false
+feedback.en: Today, the smoky air reaches the park too.
+feedback.vi: Hôm nay khói bụi bay cả vào công viên.
 label.en: in the park
 label.vi: ở công viên
 image.brief: Dùng lại hình `tray_park`. Từ khoá tìm ảnh (EN): green park big trees lawn morning
@@ -558,6 +583,8 @@ image.alt.vi: Công viên nhiều cây xanh
 
 #### option q4_road
 correct: false
+feedback.en: Cars by the road add even more dust.
+feedback.vi: Xe cộ bên đường còn làm thêm bụi.
 label.en: by the road
 label.vi: bên đường
 image.brief: Dùng lại hình `q3_road`. Từ khoá tìm ảnh (EN): busy road motorbikes aerial view Vietnam
@@ -579,10 +606,10 @@ sentence.vi: Bụi mịn có thể đi xuống {1}, vào tới phổi.
 answers: q5_windpipe
 hint.en: Follow the journey of air from the nose.
 hint.vi: Em lần theo đường đi của không khí từ mũi nhé.
-explanation_correct.en: Yes! It slips past nose hairs, down the windpipe.
-explanation_correct.vi: Đúng rồi! Bụi mịn lọt qua lông mũi, đi xuống khí quản.
-explanation_wrong.en: The answer is windpipe. Air and dust go down it.
-explanation_wrong.vi: Đáp án là khí quản. Không khí và bụi đi xuống ống này.
+explanation_correct.en: Tiny dust slips past nose hairs, down the windpipe.
+explanation_correct.vi: Bụi mịn lọt qua lông mũi, đi xuống khí quản.
+explanation_wrong.en: Air and dust go down the windpipe to the lungs.
+explanation_wrong.vi: Không khí và bụi đi xuống khí quản, vào phổi.
 > DOK 2: áp dụng đường đi của không khí (bài hai) cho bụi mịn (bài này). Thực quản và dạ dày là hai thẻ sai, nối với `air_goes_to_belly`.
 > Ba thẻ là ba hình tự vẽ dùng lại của bài hai, cùng nét. Hình câu hỏi là ảnh chụp; luật "cùng kiểu hình" áp cho các thẻ với nhau.
 > [CẦN KIỂM] Bụi mịn nhỏ tới mức lông mũi không giữ hết, vào sâu tới phổi (biên tập nhớ).
@@ -590,6 +617,8 @@ explanation_wrong.vi: Đáp án là khí quản. Không khí và bụi đi xuố
 #### bank q5_food_pipe
 label.en: food pipe
 label.vi: thực quản
+feedback.en: The food pipe is for food you swallow.
+feedback.vi: Thực quản là đường của thức ăn em nuốt.
 image.brief: Dùng lại hình `tray_food_pipe` ở bài `ho-hap/duong-di-cua-khong-khi`.
 image.alt.en: A food pipe
 image.alt.vi: Thực quản
@@ -604,6 +633,8 @@ image.alt.vi: Khí quản
 #### bank q5_stomach
 label.en: stomach
 label.vi: dạ dày
+feedback.en: The stomach is where food goes, not air.
+feedback.vi: Dạ dày chứa thức ăn, không chứa không khí.
 image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`.
 image.alt.en: A stomach
 image.alt.vi: Dạ dày
@@ -618,8 +649,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: The air looks clear today. So it has no dust.
-statement.vi: Hôm nay trời trông thật trong. Vậy trong không khí không có bụi.
+statement.en: The air looks clear today, so it has no dust.
+statement.vi: Trời trông thật trong, vậy không khí không có bụi.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -631,10 +662,12 @@ image.alt.en: A clear sky over the roofs
 image.alt.vi: Trời trong xanh trên những mái nhà
 hint.en: Remember the Tiny dust card.
 hint.vi: Em nhớ lại ô Bụi mịn nhé.
-explanation_correct.en: Some dust is too tiny to see. Clear air can have it.
-explanation_correct.vi: Có loại bụi nhỏ tới mức mắt không nhìn thấy. Trời trong vẫn có thể có bụi mịn.
-explanation_wrong.en: Na is not right. Tiny dust can hide in clear air.
-explanation_wrong.vi: Na chưa đúng. Bụi mịn có thể có cả khi trời trông trong.
+explanation_correct.en: Clear air can still hold dust too tiny to see.
+explanation_correct.vi: Trời trong vẫn có thể có bụi mịn, mắt không thấy.
+explanation_wrong.en: Tiny dust can hide in clear air.
+explanation_wrong.vi: Bụi mịn có thể có cả khi trời trông trong.
+feedback_true.en: Your eyes cannot see the tiniest dust.
+feedback_true.vi: Mắt em không nhìn thấy loại bụi nhỏ nhất.
 > Lời Na, hình và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: bé đánh giá một kết luận rút ra từ quan sát bằng mắt. Na lấy "trông trong" làm bằng chứng; bé phải dùng ý chính ba (có loại bụi mắt không nhìn thấy) để thấy bằng chứng đó chưa đủ. Câu không nói hôm nay có bụi hay không, chỉ nói "không thể biết chỉ bằng mắt".
 > Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn "Na chưa đúng".

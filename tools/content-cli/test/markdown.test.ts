@@ -433,7 +433,7 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     const file = path.join(root, LESSON_REL);
     let text = readFileSync(file, "utf8");
     text = text.replace(q2, `### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: order_sequence\nversion: 1\ndok: 1\nprompt.en: Put them in order\nprompt.vi: Xếp theo thứ tự\nhint.en: Start small.\nhint.vi: Bắt đầu từ nhỏ.\nexplanation_correct.en: Yes.\nexplanation_correct.vi: Đúng.\nexplanation_wrong.en: No.\nexplanation_wrong.vi: Chưa đúng.\nanswer: q2_seed, q2_sprout, q2_plant\n\n#### item q2_seed\nlabel.en: seed\nlabel.vi: hạt\nimage.brief: Hạt\nimage.alt.en: A seed\nimage.alt.vi: Hạt\n\n#### item q2_sprout\nlabel.en: sprout\nlabel.vi: mầm\n\n#### item q2_plant\nlabel.en: plant\nlabel.vi: cây\n\n`);
-    text = text.replace(q4, `### q4\nid: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\nformat: picture_bar_chart\nversion: 1\ndok: 2\nprompt.en: Which fruit do most children like?\nprompt.vi: Quả nào nhiều bạn thích nhất?\nhint.en: Find the tallest bar.\nhint.vi: Tìm cột cao nhất.\nexplanation_correct.en: Mango.\nexplanation_correct.vi: Xoài.\nexplanation_wrong.en: It is mango.\nexplanation_wrong.vi: Là xoài.\nchart.title.en: Fruit we like\nchart.title.vi: Quả chúng mình thích\nchart.unit.en: children\nchart.unit.vi: bạn\n\n#### bar q4_bar_mango\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\nvalue: 7\n\n#### bar q4_bar_banana\nlabel.en: banana\nlabel.vi: chuối\nvalue: 3\n\n#### option q4_mango\ncorrect: true\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\n\n#### option q4_banana\ncorrect: false\nlabel.en: banana\nlabel.vi: chuối\n\n#### option q4_lime\ncorrect: false\nlabel.en: lime\nlabel.vi: chanh\n\n`);
+    text = text.replace(q4, `### q4\nid: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\nformat: picture_bar_chart\nversion: 1\ndok: 2\nprompt.en: Which fruit do most children like?\nprompt.vi: Quả nào nhiều bạn thích nhất?\nhint.en: Find the tallest bar.\nhint.vi: Tìm cột cao nhất.\nexplanation_correct.en: Mango.\nexplanation_correct.vi: Xoài.\nexplanation_wrong.en: It is mango.\nexplanation_wrong.vi: Là xoài.\nchart.title.en: Fruit we like\nchart.title.vi: Quả chúng mình thích\nchart.unit.en: children\nchart.unit.vi: bạn\n\n#### bar q4_bar_mango\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\nvalue: 7\n\n#### bar q4_bar_banana\nlabel.en: banana\nlabel.vi: chuối\nvalue: 3\n\n#### bar q4_bar_lime\nlabel.en: lime\nlabel.vi: chanh\nvalue: 1\n\n#### option q4_mango\ncorrect: true\nlabel.en: mango\nlabel.vi: xoài\n\n#### option q4_banana\ncorrect: false\nlabel.en: banana\nlabel.vi: chuối\n\n#### option q4_lime\ncorrect: false\nlabel.en: lime\nlabel.vi: chanh\n\n`);
     text = text.replace("#### bank w1_air\nlabel.en: air\nlabel.vi: không khí\n", "#### bank w1_air\nlabel.en: air\nlabel.vi: không khí\nimage.brief: Bọt khí trong cốc nước\nimage.alt.en: Air bubbles in water\nimage.alt.vi: Bọt khí trong nước\n");
     text = text.replace("\n## Chơi\n", "\n### bridge\nid: 0d6a1c55-8a7e-4c1f-9b55-1f2e3d4c5b6a\ntype: sentence_card\nversion: 1\nmin_app_version: 0.1.0\ntext.en: Vegetables give us vitamins.\ntext.vi: Rau cho ta vitamin.\nimage.brief: Rổ rau\nimage.alt.en: A basket of vegetables\nimage.alt.vi: Rổ rau\n\n## Chơi\n");
     writeFileSync(file, text);
@@ -472,6 +472,34 @@ describe("thứ tự khoá theo JSON Schema (quyết định 6)", () => {
     ordered(keysIn(topic.misconceptions[0]), props("topic.schema.json", "Misconception"));
     // The one exception: the schema lists image before correct.
     assert.deepEqual(props("quiz-item.schema.json", "ChoiceOption"), ["key", "label", "image", "correct", "feedback"]);
+  });
+
+  // SK-043 (dev 14/11): #### option i goes with #### bar i (content-schema refs.mjs), reported on the option's own lines.
+  test("picture_bar_chart: #### option viết khác thứ tự #### bar, hoặc có hình → lỗi schema ở dòng của lựa chọn", () => {
+    const q4 = /### q4\n[\s\S]*?(?=### q5\n)/;
+    const root = materialize("bar-order");
+    const file = path.join(root, LESSON_REL);
+    const head = `### q4\nid: 00bb56f5-6adc-4d54-b48a-5bbbbae20eab\nformat: picture_bar_chart\nversion: 1\ndok: 2\nprompt.en: Which fruit do most children like?\nprompt.vi: Quả nào nhiều bạn thích nhất?\nhint.en: Find the tallest bar.\nhint.vi: Tìm cột cao nhất.\nexplanation_correct.en: Mango.\nexplanation_correct.vi: Xoài.\nexplanation_wrong.en: It is mango.\nexplanation_wrong.vi: Là xoài.\n\n`;
+    const bars = `#### bar q4_bar_mango\nlabel.en: mango\nlabel.vi: xoài\nvalue: 7\n\n#### bar q4_bar_banana\nlabel.en: banana\nlabel.vi: chuối\nvalue: 3\n\n#### bar q4_bar_lime\nlabel.en: lime\nlabel.vi: chanh\nvalue: 1\n\n`;
+    // Options in another order than bars; the right answer carries a picture.
+    const options = `#### option q4_banana\ncorrect: false\nlabel.en: banana\nlabel.vi: chuối\n\n#### option q4_mango\ncorrect: true\nlabel.en: mango\nlabel.vi: xoài\nimage.brief: Quả xoài\nimage.alt.en: A mango\nimage.alt.vi: Quả xoài\n\n#### option q4_lime\ncorrect: false\nlabel.en: lime\nlabel.vi: chanh\n\n`;
+    writeFileSync(file, readFileSync(file, "utf8").replace(q4, head + bars + options));
+    const issues = errorsOf(check(root)).filter((issue) => issue.code !== "format_not_rendered");
+    assert.deepEqual(
+      issues.map((issue) => [issue.pointer, issue.code]),
+      [
+        ["/quiz/3/options/0/label/en", "schema"],
+        ["/quiz/3/options/0/label/vi", "schema"],
+        ["/quiz/3/options/1/label/en", "schema"],
+        ["/quiz/3/options/1/label/vi", "schema"],
+        ["/quiz/3/options/1/image", "schema"],
+      ],
+    );
+    const lines = readFileSync(file, "utf8").split("\n");
+    const lineOf = (text: string, after = 0) => lines.findIndex((line, i) => i >= after && line === text) + 1;
+    const optionsStart = lineOf("#### option q4_banana");
+    assert.equal(issues[0]!.line, lineOf("label.en: banana", optionsStart - 1));
+    assert.match(issues[0]!.message, /cột 1 "q4_bar_mango"/);
   });
 
   test("validate (CLI) trên markdown in đúng dòng của runMarkdownValidate", () => {

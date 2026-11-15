@@ -53,10 +53,10 @@ image.alt.en: A forest of tall ferns
 image.alt.vi: Khu rừng dương xỉ cao
 hint.en: Think of the timeline from the last lesson.
 hint.vi: Em nhớ lại trục thời gian ở bài trước nhé.
-explanation_correct.en: Yes! Dinosaurs came first, long before mammoths and people.
-explanation_correct.vi: Đúng rồi! Khủng long có trước, rất lâu trước voi ma mút và con người.
-explanation_wrong.en: The answer is dinosaurs. Mammoths and people came much later.
-explanation_wrong.vi: Đáp án là khủng long. Voi ma mút và con người có muộn hơn rất nhiều.
+explanation_correct.en: Dinosaurs came first, long before mammoths and people.
+explanation_correct.vi: Khủng long có trước voi ma mút và con người rất lâu.
+explanation_wrong.en: Mammoths and people came much later than dinosaurs.
+explanation_wrong.vi: Voi ma mút và con người có muộn hơn khủng long nhiều.
 > Hình câu hỏi là cảnh chung, không phải hình đáp án (Quy ước hình, mục bốn). Ảnh rừng dương xỉ là hình của lựa chọn q2_ferns bài một (rừng ẩm, nhiều dương xỉ thân gỗ cao), dùng lại cả ở lựa chọn q2_land.
 > Câu hỏi nói "Loài nào", vì cả ba lựa chọn đều là một loài hay một nhóm con vật, kể cả con người.
 > [CẦN KIỂM] Thứ tự xuất hiện: khủng long (khoảng hai trăm ba mươi triệu năm trước), voi ma mút (khoảng năm triệu năm trước), con người (khoảng ba trăm nghìn năm trước). Voi ma mút và con người từng sống cùng thời; câu chỉ hỏi loài nào có trước. Biên tập nhớ, chưa tra nguồn; chữ cho trẻ không có số.
@@ -72,6 +72,8 @@ image.alt.vi: Tranh vẽ khủng long cổ dài
 
 #### option w1_mammoths
 correct: false
+feedback.en: Mammoths came much later, close to people's time.
+feedback.vi: Voi ma mút có muộn, gần thời con người.
 label.en: mammoths
 label.vi: voi ma mút
 image.brief: Dùng lại hình `khung-long-la-gi/tray_mammoth`
@@ -80,6 +82,8 @@ image.alt.vi: Tranh vẽ voi ma mút
 
 #### option w1_people
 correct: false
+feedback.en: People came last of all.
+feedback.vi: Con người có sau cùng.
 label.en: people
 label.vi: con người
 image.brief: [ảnh] Ảnh đen trắng cũ: vài người gánh hàng đi trên đường đất trong làng, nhà mái ngói và hàng cây hai bên; người ở xa, không nhận ra mặt; không có trẻ em, không có biển hiệu, không có chữ. Từ khoá tìm ảnh (EN): people walking village dirt road old photo
@@ -102,10 +106,12 @@ image.alt.vi: Cánh đồng lúa và con trâu ngày nay
 answer: false
 hint.en: Remember the plants and animals of dinosaur times.
 hint.vi: Em nhớ lại cây cối và con vật của thời khủng long nhé.
-explanation_correct.en: Earth looked very different then. There were fern forests.
-explanation_correct.vi: Khi ấy Trái Đất trông rất khác. Có những khu rừng dương xỉ.
-explanation_wrong.en: This is false. In dinosaur times, Earth looked very different.
-explanation_wrong.vi: Câu này sai. Thời khủng long, Trái Đất trông rất khác bây giờ.
+explanation_correct.en: Earth looked very different, with big fern forests.
+explanation_correct.vi: Khi ấy Trái Đất rất khác, có rừng dương xỉ lớn.
+explanation_wrong.en: Most land was joined, and there were no people.
+explanation_wrong.vi: Đất còn nối thành khối, và chưa có con người.
+feedback_true.en: There were no rice fields or towns back then.
+feedback_true.vi: Hồi đó chưa có ruộng lúa hay làng xóm.
 > Đáp án Sai, đúng bảng "Đáp án Đúng/Sai dự kiến". Giải thích khi đúng không mở đầu bằng "Yes!" hay "Đúng rồi!", vì bé vừa chọn Sai.
 > Câu đổi chữ so với kế hoạch ("Long ago, Earth looked just like today."). "Long ago" có thể hiểu là thời ông bà, khi ruộng lúa và con trâu đã có; khi đó câu thành gần đúng và có hai đáp án hợp lý (tester N2). "In dinosaur times" chỉ đúng mốc của bài một.
 > Hình là cảnh hôm nay, không phải cảnh thời xa xưa, nên không lộ đáp án. Con trâu cũng là món bẫy nhóm "Không phải thời khủng long" ở phần Chơi của bài một. Ảnh riêng, không dùng lại ruộng lúa q2_rice của bài một, vì cảnh này cần có con trâu.
@@ -127,15 +133,17 @@ image.alt.en: A corner of a garden
 image.alt.vi: Một góc vườn
 hint.en: Look for an animal covered in scales.
 hint.vi: Em tìm con vật có vảy phủ khắp mình nhé.
-explanation_correct.en: Yes! A lizard is a reptile. It has scaly skin.
-explanation_correct.vi: Đúng rồi! Thằn lằn là bò sát. Da thằn lằn có vảy.
-explanation_wrong.en: The answer is the lizard. Its skin has dry scales.
-explanation_wrong.vi: Đáp án là con thằn lằn. Da của nó có vảy khô.
+explanation_correct.en: Lizards, snakes and crocodiles are all reptiles.
+explanation_correct.vi: Thằn lằn, rắn và cá sấu đều là bò sát.
+explanation_wrong.en: A lizard has dry, scaly skin, like other reptiles.
+explanation_wrong.vi: Thằn lằn có da khô phủ vảy, như các loài bò sát khác.
 > [CẦN KIỂM] Trẻ Việt Nam học từ "bò sát" ở lớp mấy (biên tập nghĩ là môn Khoa học lớp bốn, chưa đối chiếu). Gợi ý chỉ vào vảy, để bé chưa biết từ này vẫn làm được.
 > Theo cách phân loại mới, chim cũng thuộc nhóm bò sát; sách ở trường xếp chim thành một nhóm riêng. Câu này theo sách ở trường và không nhắc chim với khủng long (Duy 9/11). Chân gà có vảy, nhưng mình gà phủ lông vũ, nên gợi ý nói "vảy phủ khắp mình".
 
 #### option w3_hen
 correct: false
+feedback.en: A hen has feathers, so it is a bird.
+feedback.vi: Gà mái có lông vũ, nên là chim.
 label.en: hen
 label.vi: con gà mái
 image.brief: [ảnh] Một con gà mái lông nâu đứng trong sân đất, nhìn ngang, thấy toàn thân; không có người, không có chữ. Từ khoá tìm ảnh (EN): brown hen standing farmyard side view
@@ -144,6 +152,8 @@ image.alt.vi: Con gà mái trong sân
 
 #### option w3_cat
 correct: false
+feedback.en: A cat has soft fur, so it is a mammal.
+feedback.vi: Mèo có lông mềm, nên là động vật có vú.
 label.en: cat
 label.vi: con mèo
 image.brief: [ảnh] Một con mèo mướp xám nằm khom trên bậc gạch, nhìn ngang, thấy toàn thân, cỏ phía sau; không có người, không có chữ. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -205,7 +215,8 @@ label.en: Land reptiles
 label.vi: Bò sát trên cạn
 color: gi_dong
 sentence.en: Dinosaurs were land reptiles with legs straight under their body.
-sentence.vi: Khủng long là bò sát sống trên cạn, chân thẳng ngay dưới thân.
+sentence.vi: Khủng long là bò sát trên cạn, chân thẳng dưới thân.
+> SK-044 (14/11, A2): câu VI cũ mười bốn tiếng, nay mười hai; câu EN giữ nguyên.
 image.brief: [sơ đồ ghép ảnh] Hai ảnh thật đặt cạnh nhau trên nền trơn: bên trái là con kỳ đà nhìn từ phía trước của lựa chọn `khung-long-la-gi/q4_lizard`, hai chân trước choãi sang hai bên, bụng sát đất; bên phải là bộ xương khủng long cổ dài (Giraffatitan) trong bảo tàng nhìn chéo phía trước, cùng ảnh gốc với câu q4 nhưng cắt khung khác (thân và hai chân trước), chân thẳng như cột ngay dưới thân; cắt bỏ biển tên, không có người; designer thêm mũi tên theo hướng chân (bên kỳ đà chỉ sang hai bên, bên bộ xương chỉ thẳng xuống); không có chữ, không ghi nhãn (Duy 10/11). Từ khoá tìm ảnh (EN): Giraffatitan skeleton museum front view
 image.alt.en: A lizard next to a dinosaur skeleton
 image.alt.vi: Con thằn lằn bên cạnh bộ xương khủng long
@@ -272,8 +283,9 @@ prompt.en: Find three different dinosaurs
 prompt.vi: Tìm ba con khủng long khác nhau
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: Dinosaurs were big and small. Find three very different ones.
-messages.start.vi: Khủng long có loài to, có loài nhỏ. Em tìm ba con khủng long thật khác nhau nhé.
+messages.start.en: Find three very different dinosaurs. Dinosaurs were big and small.
+messages.start.vi: Em tìm ba con khủng long thật khác nhau nhé. Khủng long có loài to, có loài nhỏ.
+> SK-044 (14/11, A2): đảo thứ tự, câu in trong bong bóng là việc cần làm, tự đứng được.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Chữ của `messages.full` theo `_topic.md` (rút kinh nghiệm SK-031) và nhãn của app.
@@ -284,7 +296,7 @@ messages.balanced.vi: Tuyệt! Có rất nhiều loài khủng long, sống vào
 messages.has_limited.en: That is not a dinosaur. Tap it to take it off.
 messages.has_limited.vi: Con vật đó không phải khủng long. Em chạm vào để bỏ ra nhé.
 messages.missing.tray_giant.en: You still need a giant, like a long-necked dinosaur.
-messages.missing.tray_giant.vi: Em còn thiếu một con khủng long khổng lồ, như khủng long cổ dài.
+messages.missing.tray_giant.vi: Em còn thiếu một khủng long khổng lồ, như con cổ dài.
 messages.missing.tray_small.en: You still need a small dinosaur.
 messages.missing.tray_small.vi: Em còn thiếu một con khủng long nhỏ.
 messages.missing.tray_armour.en: You still need a dinosaur with horns or armour.
@@ -419,14 +431,16 @@ image.alt.en: A T. rex skeleton in a museum
 image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 hint.en: Remember the lizard picture in the lesson.
 hint.vi: Em nhớ lại hình con thằn lằn ở phần Học nhé.
-explanation_correct.en: Yes! Dinosaurs were reptiles, like lizards and crocodiles.
-explanation_correct.vi: Đúng rồi! Khủng long là bò sát, cùng nhóm với thằn lằn và cá sấu.
-explanation_wrong.en: The answer is reptiles, like lizards and crocodiles.
-explanation_wrong.vi: Đáp án là bò sát, cùng nhóm với thằn lằn và cá sấu.
+explanation_correct.en: Dinosaurs were reptiles that walked on land.
+explanation_correct.vi: Khủng long là bò sát đi lại trên cạn.
+explanation_wrong.en: Dinosaurs belong with lizards and crocodiles.
+explanation_wrong.vi: Khủng long cùng nhóm với thằn lằn và cá sấu.
 > DOK 1: nhớ lại ý chính hai. Bộ xương không cho thấy da, nên hình câu hỏi không lộ đáp án.
 
 #### option q1_fish
 correct: false
+feedback.en: Fish live in water and breathe with gills.
+feedback.vi: Cá sống dưới nước và thở bằng mang.
 label.en: fish
 label.vi: cá
 image.brief: [ảnh] Một con cá chép nhìn ngang trên nền trắng, thấy rõ vây và vảy (ảnh của Cục Cá và Động vật hoang dã Mỹ); không có chữ, không có logo. Từ khoá tìm ảnh (EN): common carp side view
@@ -436,6 +450,8 @@ image.alt.vi: Con cá
 
 #### option q1_insects
 correct: false
+feedback.en: Insects are small, with six legs.
+feedback.vi: Côn trùng nhỏ và có sáu chân.
 label.en: insects
 label.vi: côn trùng
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_dragonfly`
@@ -464,10 +480,10 @@ image.alt.en: A painting of a Triceratops
 image.alt.vi: Tranh vẽ khủng long ba sừng
 hint.en: Think of the animals that were not dinosaurs.
 hint.vi: Em nhớ lại những con vật không phải khủng long nhé.
-explanation_correct.en: Yes! Dinosaurs lived on land.
-explanation_correct.vi: Đúng rồi! Khủng long sống trên cạn.
-explanation_wrong.en: The answer is on land. Dinosaurs walked on strong legs.
-explanation_wrong.vi: Đáp án là trên cạn. Khủng long đi lại bằng những đôi chân khoẻ.
+explanation_correct.en: Dinosaurs walked on land with strong legs.
+explanation_correct.vi: Khủng long đi trên cạn bằng đôi chân khoẻ.
+explanation_wrong.en: Dinosaurs were land reptiles, not sea or sky ones.
+explanation_wrong.vi: Khủng long là bò sát trên cạn, không ở biển hay trời.
 > DOK 1: nhớ lại ý chính hai. Hai lựa chọn sai ứng với hai nhóm không phải khủng long ở ý ba (bò sát biển, thằn lằn bay), chuẩn bị cho q6.
 > Rà chéo 9/11: hình câu hỏi đổi từ ảnh mô hình trên tường trơn sang tranh tray_triceratops của kệ Chơi (nền kem, thấy rõ bốn chân). Hai hình cùng ý "không có cảnh nền cây cỏ hay nước", đỡ tìm một ảnh.
 > [CẦN KIỂM] "Trên trời" là sai khi không tính chim (Duy 9/11). Biên tập nhớ có loài khủng long nhỏ lượn được giữa các cây (ví dụ Microraptor), nhưng không sống trên trời; bài không nhắc loài này.
@@ -476,6 +492,8 @@ explanation_wrong.vi: Đáp án là trên cạn. Khủng long đi lại bằng n
 
 #### option q2_sea
 correct: false
+feedback.en: Sea reptiles swam there, but they were not dinosaurs.
+feedback.vi: Bò sát biển ở đó, nhưng không phải khủng long.
 label.en: in the sea
 label.vi: dưới biển
 image.brief: [ảnh] Cảnh dưới mặt biển xanh trong, ánh nắng rọi xuống thành từng vệt, không thấy đáy, không có con vật; không có chữ. Từ khoá tìm ảnh (EN): underwater ocean sunlight rays empty blue
@@ -492,6 +510,8 @@ image.alt.vi: Khu rừng dương xỉ cao
 
 #### option q2_sky
 correct: false
+feedback.en: Flying reptiles were up there, not dinosaurs.
+feedback.vi: Trên trời là thằn lằn bay, không phải khủng long.
 label.en: in the sky
 label.vi: trên trời
 image.brief: Dùng lại hình `q2_cloud` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat` (đám mây trắng lớn trên trời xanh, chụp ngửa lên; không có chim, không có máy bay, không có chữ)
@@ -512,10 +532,10 @@ image.alt.en: A museum hall with animals from long ago
 image.alt.vi: Sảnh bảo tàng trưng bày con vật thời xa xưa
 hint.en: Which ones were reptiles that lived on land?
 hint.vi: Con nào là bò sát sống trên cạn?
-explanation_correct.en: Yes! Both were dinosaurs, one small and one with plates.
-explanation_correct.vi: Đúng rồi! Cả hai đều là khủng long, một con nhỏ, một con có phiến trên lưng.
-explanation_wrong.en: The answers are the feathered one and the plated one.
-explanation_wrong.vi: Đáp án là con có lông vũ và con có phiến trên lưng.
+explanation_correct.en: Some dinosaurs had feathers, and some had plates.
+explanation_correct.vi: Có khủng long có lông vũ, có con có phiến trên lưng.
+explanation_wrong.en: The feathered one and the plated one were land reptiles.
+explanation_wrong.vi: Con có lông vũ và con có phiến là bò sát trên cạn.
 > DOK 2: phân loại bốn con vật bé đã gặp ở phần Chơi (áp dụng vào tình huống quen). Hai chỗ khó có chủ ý: con khủng long nhỏ có lông vũ (bé nghĩ khủng long phải to, hoặc có lông vũ thì không phải khủng long; nối `dinosaurs_all_alike`) và voi ma mút (to, cổ xưa; nối `big_old_animal_is_dinosaur`).
 > Gợi ý không nói "chân thẳng dưới thân", vì voi ma mút cũng có chân thẳng dưới thân; gợi ý dùng hai điều tách được cả hai món bẫy: bò sát, và sống trên cạn.
 
@@ -529,6 +549,8 @@ image.alt.vi: Tranh vẽ một con vật nhỏ có lông vũ
 
 #### option q3_sea_reptile
 correct: false
+feedback.en: Its flippers show it lived in the sea.
+feedback.vi: Chân chèo cho thấy con này sống dưới biển.
 label.en: swam with flippers
 label.vi: bơi bằng chân chèo
 image.brief: Dùng lại hình `khung-long-la-gi/tray_sea_reptile`
@@ -545,6 +567,8 @@ image.alt.vi: Tranh vẽ một con vật có phiến trên lưng
 
 #### option q3_mammoth
 correct: false
+feedback.en: Long hair means a mammal, not a reptile.
+feedback.vi: Con có lông dài là động vật có vú.
 label.en: long hair and tusks
 label.vi: lông dài, có ngà
 image.brief: Dùng lại hình `khung-long-la-gi/tray_mammoth`
@@ -563,10 +587,10 @@ image.alt.en: A dinosaur skeleton seen from the front
 image.alt.vi: Bộ xương khủng long nhìn từ phía trước
 hint.en: Look at the skeleton. Where are its legs?
 hint.vi: Em nhìn bộ xương. Chân nằm ở đâu so với thân?
-explanation_correct.en: Yes! A buffalo's legs are straight under its body.
-explanation_correct.vi: Đúng rồi! Chân trâu thẳng ngay dưới thân, giống chân khủng long.
-explanation_wrong.en: The answer is the buffalo. Lizard and frog legs point out to the sides.
-explanation_wrong.vi: Đáp án là con trâu. Chân thằn lằn và chân ếch choãi sang hai bên.
+explanation_correct.en: Legs straight underneath hold up a heavy body.
+explanation_correct.vi: Chân thẳng dưới thân đỡ được thân nặng.
+explanation_wrong.en: A buffalo's legs stand straight under its body.
+explanation_wrong.vi: Chân trâu thẳng ngay dưới thân, giống khủng long.
 > DOK 2: so sánh dáng chân của bộ xương trong hình với ba con vật quen. Bẫy có chủ ý: khủng long là bò sát nên bé dễ chọn thằn lằn; ý chính hai và ô "Bò sát trên cạn" đã chỉ ra chân khủng long khác chân thằn lằn. Đây cũng là một chỗ của câu hỏi lớn "How do we know?": nhìn xương là biết con vật đứng ra sao.
 > Hình câu hỏi là vật được hỏi (bộ xương), không phải hình đáp án (con trâu). Ba lựa chọn là ảnh thật, cùng chụp thẳng từ phía trước, máy ảnh đặt thấp.
 > [CẦN KIỂM] Khủng long và thú lớn như con trâu đều có chân dựng thẳng dưới thân: giống nhau về dáng đứng, không phải họ hàng. Câu không nói hai loài là họ hàng.
@@ -581,6 +605,8 @@ image.alt.vi: Con trâu nhìn từ phía trước
 
 #### option q4_lizard
 correct: false
+feedback.en: A lizard's legs stick out to the sides.
+feedback.vi: Chân thằn lằn choãi sang hai bên.
 label.en: lizard
 label.vi: con thằn lằn
 image.brief: [ảnh] Một con kỳ đà nước nằm trên sỏi, nhìn từ phía trước, hai chân trước choãi sang hai bên, bụng sát đất; không có chữ. Hình ghép explore_reptiles dùng lại ảnh này ở nửa trái. Từ khoá tìm ảnh (EN): water monitor lizard front view sprawling legs
@@ -589,6 +615,8 @@ image.alt.vi: Con thằn lằn nhìn từ phía trước
 
 #### option q4_frog
 correct: false
+feedback.en: A frog's legs bend out to the sides.
+feedback.vi: Chân ếch gập, choãi ra hai bên.
 label.en: frog
 label.vi: con ếch
 image.brief: [ảnh] Một con ếch đồng ngồi trong nước nông, chụp thẳng từ phía trước, thấy rõ hai chân trước và hai chân sau choãi sang hai bên; không có chữ. Từ khoá tìm ảnh (EN): rice field frog Hoplobatrachus front view
@@ -607,10 +635,10 @@ image.alt.en: A scientist digging for fossils
 image.alt.vi: Nhà khoa học đang đào tìm hoá thạch
 hint.en: Was it a reptile? Did it live on land?
 hint.vi: Con đó có phải bò sát không? Có sống trên cạn không?
-explanation_correct.en: Yes! The crested one was a land reptile.
-explanation_correct.vi: Đúng rồi! Con có mào là bò sát sống trên cạn.
-explanation_wrong.en: The answer is the crested one. The others swam or had fur.
-explanation_wrong.vi: Đáp án là con có mào. Hai con kia thì bơi dưới biển, hoặc có lông dày.
+explanation_correct.en: The crested one was a reptile that lived on land.
+explanation_correct.vi: Con có mào là bò sát sống trên cạn.
+explanation_wrong.en: One swam in the sea, and one had thick fur.
+explanation_wrong.vi: Một con bơi dưới biển, một con có lông dày.
 > DOK 2: áp dụng ý hai và ý ba vào ba con vật bé chưa gặp trong bài, nên khó hơn q3. Bé không cần biết tên con nào; chỉ cần xét hai điều: có phải bò sát không, có sống trên cạn không.
 > Bẫy có chủ ý: con tê giác lông dày có sừng như khủng long ba sừng, to và cổ xưa (nối `big_old_animal_is_dinosaur`, không gắn key). Con bò sát biển dáng như cá heo là bò sát, sống cùng thời khủng long, nhưng ở dưới biển.
 > [CẦN KIỂM] Biên tập nhớ, chưa tra nguồn: Parasaurolophus là khủng long sống trên cạn, da có vảy (dấu da hoá thạch của nhóm khủng long mỏ vịt); thằn lằn cá (Ichthyosaurus) là bò sát biển, sống cùng thời khủng long, không phải khủng long; tê giác lông dày sống từ vài trăm nghìn năm trước tới khoảng mười bốn nghìn năm trước, cùng thời con người. Tên loài chỉ ở gợi ý hình.
@@ -618,6 +646,8 @@ explanation_wrong.vi: Đáp án là con có mào. Hai con kia thì bơi dưới 
 
 #### option q5_dolphin_like
 correct: false
+feedback.en: This one swam in the sea, like a dolphin.
+feedback.vi: Con này bơi dưới biển, giống cá heo.
 label.en: swam like a dolphin
 label.vi: bơi giống cá heo
 image.brief: [tranh phục dựng] Một con bò sát biển thân thuôn như cá heo, mõm dài, có vây lưng và vây đuôi (Ichthyosaurus), đang bơi, toàn thân nhìn ngang; nền trắng trơn như các hình ở kệ Chơi; chỉ một con vật, không có chữ. Từ khoá tìm ảnh (EN): Ichthyosaurus life restoration painting
@@ -634,6 +664,8 @@ image.alt.vi: Tranh vẽ một con vật có mào dài
 
 #### option q5_rhino
 correct: false
+feedback.en: Thick fur means a mammal, not a reptile.
+feedback.vi: Con có lông dày là động vật có vú.
 label.en: thick fur and a big horn
 label.vi: lông dày và sừng to
 image.brief: [tranh phục dựng] Một con tê giác lông dày thời xa xưa (Coelodonta, tranh của hoạ sĩ Mauricio Antón), lông nâu dày, sừng to và dài trên mũi, đi bốn chân, toàn thân nhìn ngang; nền đồng tuyết, không phải nền trơn như hai lựa chọn kia; đã cắt bỏ chân voi ma mút ở mép trái; không có người, không có chữ. Từ khoá tìm ảnh (EN): woolly rhinoceros life restoration painting
@@ -650,8 +682,9 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: This flying reptile lived with dinosaurs. But it was not a dinosaur.
-statement.vi: Con thằn lằn bay này sống cùng thời khủng long. Nhưng nó không phải khủng long.
+statement.en: This flying reptile lived with dinosaurs but was not one.
+statement.vi: Thằn lằn bay sống thời khủng long, nhưng không phải khủng long.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười hai tiếng), giữ hai vế.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -663,10 +696,12 @@ image.alt.vi: Tranh vẽ thằn lằn bay
 answer: true
 hint.en: Where did dinosaurs live? Where is this one?
 hint.vi: Khủng long sống ở đâu? Còn con này đang ở đâu?
-explanation_correct.en: Yes! It lived then, but it was a flying reptile.
-explanation_correct.vi: Đúng rồi! Nó sống cùng thời, nhưng nó là thằn lằn bay.
-explanation_wrong.en: Na is right. Not every animal from long ago was a dinosaur.
-explanation_wrong.vi: Na nói đúng. Không phải con vật nào thời xa xưa cũng là khủng long.
+explanation_correct.en: It flew in the sky, but dinosaurs lived on land.
+explanation_correct.vi: Nó bay trên trời, còn khủng long sống trên cạn.
+explanation_wrong.en: Not every animal from long ago was a dinosaur.
+explanation_wrong.vi: Không phải con vật nào thời xa xưa cũng là khủng long.
+feedback_false.en: Living with dinosaurs does not make it a dinosaur.
+feedback_false.vi: Sống cùng thời chưa chắc đã là khủng long.
 > Lời Na, hình và đáp án Đúng theo `_topic.md` (mục "Câu sáu, lời Na" và bảng "Đáp án Đúng/Sai dự kiến"). Nhãn câu sáu, nhãn hai nút và `speaker: na` như mọi câu sáu của chủ đề.
 > DOK 3: đánh giá một lập luận có hai vế. Bé còn tin "sống cùng thời khủng long thì là khủng long" hay "con vật to, cổ xưa nào cũng là khủng long" sẽ cho là Na sai. Gợi ý dẫn về bằng chứng: ý chính hai (khủng long sống trên cạn, câu q2 vừa hỏi) và hình (con này đang bay; ảnh Duy duyệt là tranh thằn lằn bay trên nền trắng, không có biển, nhưng dáng bay vẫn trả lời được "con này đang ở đâu"). Gợi ý không nói thẳng đáp án.
 > Gợi ý không hỏi "chân thẳng dưới thân" như bản nháp đầu: thằn lằn bay cũng đi lại trên mặt đất bằng bốn chi, và chân sau của chúng có thể khá thẳng [CẦN KIỂM]. Gợi ý chỉ hỏi chỗ con vật trong hình đang ở.

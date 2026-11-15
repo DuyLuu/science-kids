@@ -166,7 +166,14 @@
       "title": "Granite boulder beside Argyll and Sutherland Highlanders War Memorial, Oban, July 2020",
       "author": "Blood Red Sandman",
       "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0"
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.55,
+        "width": 1.0,
+        "height": 0.267
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null)."
     },
     "q1.q1_sand": {
       "source": "Wikimedia Commons",
@@ -175,7 +182,14 @@
       "title": "Heap of Fine Construction Sand",
       "author": "Paul The Writer",
       "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.35,
+        "width": 1.0,
+        "height": 0.3
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null)."
     },
     "q1.q1_mud": {
       "source": "Wikimedia Commons",
@@ -187,10 +201,11 @@
       "license_url": "https://commons.wikimedia.org/wiki/File:Natural_Texture_in_Mud_(f4420e90-b757-4b6a-afdb-71398a608c3f).jpg",
       "crop": {
         "left": 0,
-        "top": 0.2,
-        "width": 1,
-        "height": 0.6
-      }
+        "top": 0.368,
+        "width": 1.0,
+        "height": 0.267
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0, \"top\": 0.2, \"width\": 1, \"height\": 0.6})."
     },
     "q2": {
       "composed": {
@@ -294,12 +309,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.36,
-        "top": 0.18,
-        "width": 0.47,
-        "height": 0.32
+        "left": 0.45,
+        "top": 0.15,
+        "width": 0.34,
+        "height": 0.55
       },
-      "note": "Openverse/Flickr: đã mở trang gốc Flickr 10/11, ghi «CC0 (Public Domain Dedication)». Thay ảnh Rawpixel không kiểm được giấy phép ở trang gốc (main session quyết 10/11). Ảnh gốc có găng tay và bàn tay tượng, đã cắt bỏ."
+      "note": "Openverse/Flickr: đã mở trang gốc Flickr 10/11, ghi «CC0 (Public Domain Dedication)». Thay ảnh Rawpixel không kiểm được giấy phép ở trang gốc (main session quyết 10/11). Ảnh gốc có găng tay và bàn tay tượng, đã cắt bỏ. A2 14/11 (designer, SK-043): crop đổi cho khung 4:5 (crop cũ {\"left\": 0.36, \"top\": 0.18, \"width\": 0.47, \"height\": 0.32})."
     },
     "q4.q4_rock_eggs": {
       "source": "Wikimedia Commons",

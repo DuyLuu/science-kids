@@ -43,17 +43,17 @@ version: 1
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: da-va-dat/da-bi-bao-mon-theo-thoi-gian
-prompt.en: A river carries sand far away. What is this called?
-prompt.vi: Dòng sông mang cát đi thật xa. Việc đó gọi là gì?
+prompt.en: What do we call a river carrying sand away?
+prompt.vi: Sông mang cát đi xa, việc đó gọi là gì?
 image.brief: Dùng lại hình `tray_stream` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): stream small rocks clear water
 image.alt.en: A small stream over rocks
 image.alt.vi: Con suối nhỏ chảy qua đá
 hint.en: Remember lesson seven. Breaking and carrying are different.
 hint.vi: Em nhớ lại bài bảy nhé. Làm vỡ và mang đi là hai việc khác nhau.
-explanation_correct.en: Yes! Erosion carries bits of rock to new places.
-explanation_correct.vi: Đúng rồi! Xói mòn mang mảnh đá vụn đi tới nơi khác.
-explanation_wrong.en: The answer is erosion. Weathering only breaks the rock.
-explanation_wrong.vi: Đáp án là xói mòn. Phong hoá chỉ làm đá vỡ ra.
+explanation_correct.en: Rivers drop the sand far away, sometimes at the sea.
+explanation_correct.vi: Sông thả cát ở nơi xa, có khi tận biển.
+explanation_wrong.en: Erosion carries bits of rock to new places.
+explanation_wrong.vi: Xói mòn mang mảnh đá vụn đi tới nơi khác.
 > Hình câu hỏi là con suối (tình huống), không phải hình của đáp án. Gợi ý chỉ cách nghĩ, không gọi tên ô "Erosion" · "Xói mòn" của bài bảy (tên ô trùng nhãn đáp án). Lựa chọn và vị trí đáp án (thứ nhất) theo bảng Khởi động.
 
 #### option w1_erosion
@@ -66,6 +66,8 @@ image.alt.vi: Dòng sông có bờ bị lở
 
 #### option w1_weathering
 correct: false
+feedback.en: Weathering breaks rock but leaves the bits in place.
+feedback.vi: Phong hoá làm vỡ đá, mảnh vẫn ở tại chỗ.
 label.en: weathering
 label.vi: phong hoá
 image.brief: Dùng lại hình `explore_weathering` ở bài `da-va-dat/da-bi-bao-mon-theo-thoi-gian`. Từ khoá tìm ảnh (EN): banyan tree roots old stone wall
@@ -74,6 +76,8 @@ image.alt.vi: Rễ cây trùm lên bức tường đá cũ
 
 #### option w1_erupt
 correct: false
+feedback.en: An eruption is lava coming out of a volcano.
+feedback.vi: Phun trào là dung nham trào ra từ núi lửa.
 label.en: eruption
 label.vi: phun trào
 image.brief: Dùng lại hình `explore_erupt` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
@@ -96,10 +100,12 @@ image.alt.vi: Dụng cụ tìm hoá thạch
 answer: true
 hint.en: Remember how fossils formed in the dinosaur lessons.
 hint.vi: Em nhớ lại hoá thạch khủng long hình thành ra sao nhé.
-explanation_correct.en: Yes! Over millions of years, buried bones turn to rock.
-explanation_correct.vi: Đúng rồi! Qua hàng triệu năm, xương bị vùi kín dần hoá thành đá.
-explanation_wrong.en: This is true. Buried bones slowly turn to rock.
-explanation_wrong.vi: Câu này đúng. Xương bị vùi kín dần hoá thành đá.
+explanation_correct.en: Minerals slowly fill the bone and turn it to rock.
+explanation_correct.vi: Khoáng vật dần lấp đầy xương, biến xương thành đá.
+explanation_wrong.en: Over millions of years, buried bones turn to rock.
+explanation_wrong.vi: Xương bị vùi kín hoá đá qua hàng triệu năm.
+feedback_false.en: Dinosaur bones in museums were once buried bones.
+feedback_false.vi: Xương khủng long ở bảo tàng từng bị vùi kín.
 > Đúng chữ EN ở bảng Đúng/Sai (bài tám w2, Đúng). Câu khẳng định khớp ý chính hai của *Khủng long* bài ba ("Over millions of years, buried bones slowly turn to rock."). Hình là bộ dụng cụ tìm hoá thạch, không có hoá thạch, theo bảng Hình dùng chung.
 
 ## Học
@@ -121,7 +127,7 @@ label.en: Not just dinosaurs
 label.vi: Không chỉ khủng long
 color: gi_dong
 sentence.en: Shells, fish, plants and insects can become fossils too.
-sentence.vi: Vỏ sò, cá, cây cối và côn trùng cũng có thể thành hoá thạch.
+sentence.vi: Vỏ sò, cá, cây, côn trùng cũng thành được hoá thạch.
 image.brief: [ảnh] Một phiến đá có rất nhiều vỏ sò hoá thạch nằm sát nhau, chụp thẳng gần vừa; mẫu vật trong bảo tàng hay bộ sưu tập; không có nhãn mẫu vật, thước đo, tay người hay chữ. Món Chơi `tray_shells_rock` dùng lại ảnh này. Từ khoá tìm ảnh (EN): fossil shells in rock slab
 image.alt.en: Many shells in a slab of rock
 image.alt.vi: Nhiều vỏ sò trong một phiến đá
@@ -138,8 +144,8 @@ examples.4.vi: côn trùng
 label.en: Decay
 label.vi: Phân huỷ
 color: vang_hoe
-sentence.en: Soft parts decay. Shells, bones and teeth stay.
-sentence.vi: Phần mềm bị phân huỷ. Vỏ, xương và răng còn lại.
+sentence.en: Soft parts decay, but shells, bones and teeth stay.
+sentence.vi: Phần mềm phân huỷ, còn vỏ, xương và răng ở lại.
 image.brief: [hình vẽ] Bộ "Mặt cắt lòng đất", khung một: đáy biển nước xanh nhạt, một chiếc vỏ ốc biển xoắn đã rỗng (phần thân mềm không còn) nằm trên lớp bùn mịn màu nâu xám, vài cọng rong nhỏ; nhìn ngang như một lát cắt; không có con vật sống, không có xác con vật, không có chữ, không có mũi tên. Câu q4 và từ `decay` dùng lại hình này.
 image.alt.en: An empty shell on the sea floor
 image.alt.vi: Chiếc vỏ rỗng dưới đáy biển
@@ -219,7 +225,7 @@ messages.start.vi: Em tìm một hoá thạch cho mỗi nhóm nhé.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Shells, plants, fish and insects can all be fossils.
-messages.balanced.vi: Tuyệt! Vỏ sò, cây cối, cá và côn trùng đều có thể thành hoá thạch.
+messages.balanced.vi: Tuyệt! Vỏ sò, cây, cá, côn trùng đều thành được hoá thạch.
 messages.has_limited.en: That is new. It has not turned to rock.
 messages.has_limited.vi: Thứ này còn mới. Nó chưa hoá thành đá.
 messages.missing.tray_sea_group.en: You still need a sea animal in rock.
@@ -343,15 +349,17 @@ image.alt.en: Inside a museum
 image.alt.vi: Bên trong bảo tàng
 hint.en: Remember the three groups in today's game.
 hint.vi: Em nhớ lại ba nhóm ở trò chơi hôm nay nhé.
-explanation_correct.en: Yes! The dragonfly shape has turned to rock.
-explanation_correct.vi: Đúng rồi! Hình con chuồn chuồn đã hoá thành đá.
-explanation_wrong.en: The answer is the dragonfly in rock. The others are new.
-explanation_wrong.vi: Đáp án là hình chuồn chuồn trên đá. Hai thứ kia còn mới.
+explanation_correct.en: A dragonfly's thin wings can leave a print in rock.
+explanation_correct.vi: Cánh mỏng của chuồn chuồn cũng in lại được trên đá.
+explanation_wrong.en: The dragonfly shape has turned to rock.
+explanation_wrong.vi: Hình chuồn chuồn đã hoá thành đá.
 > DOK 1: nhận ra hoá thạch (phần Chơi). Câu phân loại: nhãn và `alt` tả vật, không có chữ "fossil" · "hoá thạch". Ba hình là hình vẽ cùng nét, nhìn từ trên xuống (designer 11/11: dấu lá trên bùn ướt chỉ vẽ được, nên vẽ cả câu; vỏ ốc và chuồn chuồn vẽ riêng, không dùng lại ảnh của kệ).
 > Rà chữ tester 11/11 (N1): lựa chọn sai `q1_dried_fish` (món bẫy của kệ) đổi thành `q1_mud_print` (dấu lá trên bùn ướt, ảnh mới), để hai lựa chọn sai không còn đúng là hai món bẫy vừa bị loại ở trò chơi. Không dùng "vỏ ốc mới trên kệ bếp" như tester gợi ý, vì câu đã có một vỏ ốc (`q1_shell`); dấu lá trên bùn ướt có sức hút hơn: cũng là dấu in như ô Dấu in, nhưng còn mới, chưa hoá thành đá (cách làm như "dấu chân trên cát ướt" ở *Khủng long* bài ba).
 
 #### option q1_shell
 correct: false
+feedback.en: This shell on the sand is new, not rock.
+feedback.vi: Vỏ ốc trên cát còn mới, chưa hoá đá.
 label.en: seashell on the sand
 label.vi: vỏ ốc biển trên cát
 image.brief: [hình vẽ] Một vỏ ốc biển xoắn màu kem có vân nâu nằm trên cát trắng, vẽ thẳng từ trên xuống, cùng nét và cùng góc với hai hình kia của câu; không có tay người, không có chữ. Vẽ riêng thay ảnh `tray_shell` của *Núi lửa* vì `q1_mud_print` chỉ vẽ được (một câu một loại hình).
@@ -368,6 +376,8 @@ image.alt.vi: Hình chuồn chuồn trên đá
 
 #### option q1_mud_print
 correct: false
+feedback.en: A print in wet mud has not turned to rock.
+feedback.vi: Dấu lá trên bùn ướt chưa hoá thành đá.
 label.en: leaf print in wet mud
 label.vi: dấu lá trên bùn ướt
 image.brief: [hình vẽ] Dấu một chiếc lá in rõ trên mặt bùn ướt màu nâu, còn bóng nước, vẽ thẳng từ trên xuống, cùng nét và cùng góc với hai hình kia; không có chiếc lá nằm trên bùn, không có dấu chân, người hay chữ.
@@ -385,14 +395,14 @@ image.brief: Dùng lại hình `q1_mud` ở bài `khung-long/hoa-thach-ke-chuyen
 image.alt.en: Wet brown mud
 image.alt.vi: Bùn nâu ướt
 sentence.en: Mud and sand that settle in layers are called {1}.
-sentence.vi: Bùn cát lắng xuống thành từng lớp được gọi là {1}.
+sentence.vi: Bùn cát lắng thành từng lớp gọi là {1}.
 answers: q2_sediment
 hint.en: Remember the layers in today's pictures.
 hint.vi: Em nhớ lại những lớp bùn cát trong hình bài học nhé.
-explanation_correct.en: Yes! Sediment settles in layers and slowly buries things.
-explanation_correct.vi: Đúng rồi! Trầm tích lắng thành từng lớp và dần vùi lấp mọi thứ.
-explanation_wrong.en: The answer is sediment. It settles in layers.
-explanation_wrong.vi: Đáp án là trầm tích. Trầm tích lắng xuống thành từng lớp.
+explanation_correct.en: Sediment settles in layers and slowly buries things.
+explanation_correct.vi: Trầm tích lắng thành từng lớp và dần vùi lấp mọi thứ.
+explanation_wrong.en: Sediment is mud and sand settling in layers.
+explanation_wrong.vi: Trầm tích là bùn cát lắng thành từng lớp.
 > DOK 1: nhớ lại câu ô Trầm tích. Câu không có gốc từ "sediment". Hai thẻ sai có sức hút: "soil" · "đất" (cũng có cát, bùn), "lava" · "dung nham" (cũng phủ lên mọi thứ, bài *Núi lửa*). Thẻ đúng ở chỗ thứ nhất (bảng vị trí). Ba thẻ là ảnh chụp.
 > Gợi ý không gọi tên ô "Sediment" · "Trầm tích" (trùng chữ nhãn đáp án).
 
@@ -406,6 +416,8 @@ image.alt.vi: Nhiều lớp bùn và cát
 #### bank q2_soil
 label.en: soil
 label.vi: đất
+feedback.en: Soil is the top layer where plants grow.
+feedback.vi: Đất là lớp trên cùng, nơi cây mọc.
 image.brief: Dùng lại hình `tray_red_soil` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): red soil field Vietnam basalt
 image.alt.en: Red soil in a field
 image.alt.vi: Đất đỏ trên ruộng
@@ -413,6 +425,8 @@ image.alt.vi: Đất đỏ trên ruộng
 #### bank q2_lava
 label.en: lava
 label.vi: dung nham
+feedback.en: Lava is hot melted rock from a volcano.
+feedback.vi: Dung nham là đá nóng chảy từ núi lửa.
 image.brief: Dùng lại hình `q4_slope` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): lava flow volcano slope
 image.alt.en: Red-hot lava on a volcano
 image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
@@ -431,16 +445,18 @@ image.alt.en: A green rice field
 image.alt.vi: Ruộng lúa xanh
 hint.en: Think beyond dinosaurs. What else lived long ago?
 hint.vi: Em nghĩ rộng hơn khủng long nhé. Còn những gì từng sống thời xa xưa?
-explanation_correct.en: Yes! Plants, insects and fish can all become fossils.
-explanation_correct.vi: Đúng rồi! Cây cối, côn trùng và cá đều có thể thành hoá thạch.
-explanation_wrong.en: The answers are the fern, the dragonfly and the fish.
-explanation_wrong.vi: Đáp án là cây dương xỉ, con chuồn chuồn và con cá.
+explanation_correct.en: Living things of many kinds can leave fossils.
+explanation_correct.vi: Nhiều loại sinh vật đều có thể để lại hoá thạch.
+explanation_wrong.en: The fern, the dragonfly and the fish were alive.
+explanation_wrong.vi: Cây dương xỉ, chuồn chuồn và cá đều từng sống.
 > DOK 2: phân loại sinh vật đang sống mà bé chưa gặp trong bài hôm nay; câu có ba đáp án (bảng vị trí, bài tám), để bé không quen "luôn chọn hai". Lựa chọn sai có sức hút ngược: khủng long đồ chơi trông giống khủng long nhất, nhưng không thể thành hoá thạch (đồ nhựa, bài chín dạy kỹ "chỉ thứ từng sống").
 > Bốn hình dùng lại ảnh của *Khủng long* (bé đã gặp khoảng một tháng trước), cùng là ảnh chụp. Hình câu hỏi là ruộng lúa: cảnh có sinh vật sống, không lộ đáp án.
 > Rà chữ tester 11/11 (n2): gợi ý cũ trỏ ô "Not just dinosaurs", mà ô đó liệt kê sẵn đáp án (lá dương xỉ, cá, côn trùng). Gợi ý mới chỉ cách nghĩ, không gọi tên ô hay lựa chọn.
 
 #### option q3_toy
 correct: false
+feedback.en: A toy dinosaur is plastic and was never alive.
+feedback.vi: Khủng long đồ chơi bằng nhựa, chưa từng sống.
 label.en: toy dinosaur
 label.vi: khủng long đồ chơi
 image.brief: Dùng lại hình `q6` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): plastic toy dinosaur on table
@@ -473,42 +489,47 @@ image.alt.vi: Con cá
 
 ### q4
 id: c1357c03-7311-4e3e-98e1-dca86334267b
-format: single_choice
-version: 1
+format: order_sequence
+version: 2
 dok: 2
-prompt.en: A sea snail sinks onto the sea floor. What happens first?
-prompt.vi: Một con ốc biển chìm xuống đáy biển. Chuyện gì xảy ra trước tiên?
-image.brief: [hình vẽ] Bộ "Mặt cắt lòng đất", khung không: đáy biển nước xanh nhạt, một con ốc biển còn nguyên thân mềm (thấy phần thân thò khỏi miệng vỏ) nằm yên trên lớp bùn mịn, cùng chỗ và cùng nét với khung một; không có con vật nào ăn nó, không có chữ, không có mũi tên.
-image.alt.en: A sea snail on the sea floor
-image.alt.vi: Con ốc biển dưới đáy biển
-hint.en: Think about the order of the steps.
-hint.vi: Em nghĩ về thứ tự các bước nhé.
-explanation_correct.en: Yes! First, its soft body decays. The shell stays.
-explanation_correct.vi: Đúng rồi! Trước tiên, phần thân mềm phân huỷ. Chiếc vỏ còn lại.
-explanation_wrong.en: The answer is decay. Layers and digging come much later.
-explanation_wrong.vi: Đáp án là phần thân mềm phân huỷ. Các lớp đè lên và việc đào lên đến rất lâu sau.
-> DOK 2: xếp thứ tự các bước, thay `order_sequence` (như gợi ý ở `_topic.md`). Ba lựa chọn đều là bước thật của câu chuyện hoá thạch; bé phải chọn bước sớm nhất. Không đưa "bùn cát phủ lên" làm lựa chọn, vì phân huỷ và vùi lấp có thể diễn ra gần cùng lúc, câu sẽ có hai đáp án.
-> Rà chữ tester 11/11 (n5): nhãn đáp án kéo dài ("its soft body decays away" · "phần thân mềm của nó phân huỷ") cho cùng độ dài hai nhãn sai.
-> Ba hình cùng nét bộ "Mặt cắt lòng đất": hai khung của ô Học (khung hai, khung một) và khung bốn vẽ mới. Câu này khác câu q3 *Khủng long* bài ba (bên đó hỏi bước sau khi xương nằm trong bùn, đáp án là "bùn cát phủ lên").
+prompt.en: How does a shell become a fossil?
+prompt.vi: Vỏ ốc thành hoá thạch ra sao?
+image.brief: Dùng lại hình `explore_not_dino`. Từ khoá tìm ảnh (EN): fossil shells in rock slab
+image.alt.en: Many shells in a slab of rock
+image.alt.vi: Nhiều vỏ sò trong một phiến đá
+answer: q4_snail, q4_decay, q4_layers, q4_found
+hint.en: Find the first step, then the next one.
+hint.vi: Em tìm bước đầu tiên, rồi bước tiếp theo nhé.
+explanation_correct.en: The shell lies under layers for a very long time.
+explanation_correct.vi: Vỏ nằm dưới các lớp rất lâu rồi mới hoá đá.
+explanation_wrong.en: The body decays, layers cover the shell, then someone digs.
+explanation_wrong.vi: Thân mềm phân huỷ, bùn phủ lên, rồi người ta đào thấy.
+> 14/11 (SK-043 dev chốt, SK-044): đổi từ `single_choice` ("chuyện gì xảy ra trước tiên") sang `order_sequence` bốn thẻ bộ "Mặt cắt lòng đất", `version` 2. Discoverer nay hiện được dạng này. Thứ tự đúng: ốc còn thân mềm → chỉ còn vỏ → các lớp ép thành đá → người săn hoá thạch tìm thấy. `order_sequence` không có `feedback`, nên hai dòng feedback cũ của `q4_layers`, `q4_found` đã bỏ; app đọc `hint`.
+> DOK 2: xếp thứ tự các bước. Thẻ "các lớp" ghi rõ "ép thành đá" (khung hai: lớp dưới cùng đã rắn như đá), nên chắc chắn sau bước phân huỷ; lo ngại cũ "phân huỷ và vùi lấp gần cùng lúc" chỉ đúng với "bùn cát vừa phủ lên". Thẻ trong file không theo thứ tự đúng.
+> Hình câu hỏi đổi từ khung không (nay là thẻ `q4_snail`) sang `explore_not_dino` (kết quả cuối, không cho thấy thứ tự). Câu này khác câu q3 *Khủng long* bài ba (bên đó là xương, bối cảnh sông).
 
-#### option q4_layers
-correct: false
+#### item q4_layers
 label.en: layers press it into rock
 label.vi: các lớp đè lên ép thành đá
 image.brief: Dùng lại hình `explore_sediment`.
 image.alt.en: Layers of mud and sand over a shell
 image.alt.vi: Nhiều lớp bùn cát phủ lên chiếc vỏ
 
-#### option q4_decay
-correct: true
+#### item q4_snail
+label.en: a snail on the sea floor
+label.vi: con ốc nằm trên đáy biển
+image.brief: [hình vẽ] Bộ "Mặt cắt lòng đất", khung không: đáy biển nước xanh nhạt, một con ốc biển còn nguyên thân mềm (thấy phần thân thò khỏi miệng vỏ) nằm yên trên lớp bùn mịn, cùng chỗ và cùng nét với khung một; không có con vật nào ăn nó, không có chữ, không có mũi tên.
+image.alt.en: A sea snail on the sea floor
+image.alt.vi: Con ốc biển dưới đáy biển
+
+#### item q4_decay
 label.en: its soft body decays away
 label.vi: phần thân mềm của nó phân huỷ
 image.brief: Dùng lại hình `explore_decay`.
 image.alt.en: An empty shell on the sea floor
 image.alt.vi: Chiếc vỏ rỗng dưới đáy biển
 
-#### option q4_found
-correct: false
+#### item q4_found
 label.en: a fossil hunter finds it
 label.vi: người săn hoá thạch tìm thấy nó
 image.brief: [hình vẽ] Bộ "Mặt cắt lòng đất", khung bốn: rất lâu sau, vách đá nhiều lớp trên bờ biển, chiếc vỏ xoắn đã hoá đá lộ ra giữa một lớp đá; một bàn tay người lớn (chỉ thấy tay và tay áo) cầm chổi nhỏ chải đá quanh vỏ; không vẽ mặt, không có chữ.
@@ -527,16 +548,18 @@ image.alt.en: A clam shell
 image.alt.vi: Một chiếc vỏ sò
 hint.en: Remember the Sediment picture in the lesson.
 hint.vi: Em nhớ lại ô Trầm tích trong bài học nhé.
-explanation_correct.en: Yes! Mud covers it fast and keeps it safe.
-explanation_correct.vi: Đúng rồi! Bùn sớm phủ kín chiếc vỏ và giữ cho nó an toàn.
-explanation_wrong.en: The answer is the shell in mud. Mud covers it fast.
-explanation_wrong.vi: Đáp án là chiếc vỏ vùi trong bùn. Bùn sớm phủ kín nó.
+explanation_correct.en: Covered fast, the shell stays safe from waves and animals.
+explanation_correct.vi: Bùn phủ nhanh giữ vỏ khỏi sóng và con vật.
+explanation_wrong.en: Mud covers the shell fast and keeps it safe.
+explanation_wrong.vi: Bùn sớm phủ kín chiếc vỏ, giữ cho nó an toàn.
 > DOK 2: áp ý chính hai (trầm tích vùi lấp phần cứng) vào ba chỗ mới. Hỏi "most likely" · "dễ … nhất", vì chiếc vỏ trên ghềnh đá vẫn có thể bị cát phủ về sau. Lựa chọn "trong lọ ở nhà" có sức hút: bé nghĩ vỏ được giữ cẩn thận thì sẽ còn mãi và thành hoá thạch.
 > [CẦN KIỂM] Giản lược: vỏ được bùn phủ kín sớm thì dễ thành hoá thạch; vỏ bị sóng đánh trên ghềnh đá thường vỡ vụn; vỏ cất trong nhà không bị trầm tích vùi lấp nên không thành hoá thạch.
 > Ba lựa chọn là ba hình vẽ cùng nét (designer 11/11), cùng là vỏ sò ở ba chỗ khác nhau; hình câu hỏi là ảnh một vỏ sò.
 
 #### option q5_waves
 correct: false
+feedback.en: Waves keep moving the shell and can break it.
+feedback.vi: Sóng đánh làm vỏ trôi đi, có khi vỡ.
 label.en: on rocks hit by waves
 label.vi: trên ghềnh đá bị sóng đánh
 image.brief: [hình vẽ] Vài vỏ sò nằm trên ghềnh đá ven biển, sóng trắng đang vỗ vào, vẽ gần vừa; không có người, không có chữ.
@@ -545,6 +568,8 @@ image.alt.vi: Vỏ sò trên ghềnh đá có sóng
 
 #### option q5_jar
 correct: false
+feedback.en: In a jar, no mud or sand covers the shell.
+feedback.vi: Trong lọ, không có bùn cát nào phủ lên vỏ.
 label.en: in a jar at home
 label.vi: trong lọ ở nhà
 image.brief: [hình vẽ] Một lọ thuỷ tinh đựng đầy vỏ sò đặt trên kệ trong nhà, vẽ ngang gần vừa; không có nhãn trên lọ, không có người, không có chữ.
@@ -569,8 +594,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: A snail is not a dinosaur. It cannot become a fossil.
-statement.vi: Con ốc không phải khủng long. Nó không thể thành hoá thạch.
+statement.en: Snails are not dinosaurs, so they cannot become fossils.
+statement.vi: Ốc không phải khủng long, nên không thể thành hoá thạch.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -582,10 +607,12 @@ image.alt.en: A snail on a leaf
 image.alt.vi: Con ốc sên trên chiếc lá
 hint.en: What kinds of fossils did you find today?
 hint.vi: Hôm nay em đã tìm thấy những loại hoá thạch nào?
-explanation_correct.en: A snail has a hard shell. Its shell can become a fossil.
-explanation_correct.vi: Con ốc có vỏ cứng. Vỏ ốc có thể thành hoá thạch.
-explanation_wrong.en: Na is not right. Shells can become fossils, too.
-explanation_wrong.vi: Na chưa đúng. Vỏ ốc cũng có thể thành hoá thạch.
+explanation_correct.en: Many fossils are shells of sea animals.
+explanation_correct.vi: Nhiều hoá thạch là vỏ của con vật biển.
+explanation_wrong.en: A snail's hard shell can become a fossil, too.
+explanation_wrong.vi: Vỏ ốc cứng cũng có thể thành hoá thạch.
+feedback_true.en: A snail's hard shell can be buried in mud.
+feedback_true.vi: Vỏ ốc cứng cũng có thể bị bùn vùi kín.
 > DOK 3: bắt lỗi một lập luận ("không phải khủng long nên không thành hoá thạch") về một con vật mới: ốc sên trên cạn, không phải vỏ biển ở phần Chơi. Bé phải áp ý "phần cứng còn lại" (ô Phân huỷ) và "không chỉ khủng long" (ô một). Lời Na đúng bảng "Câu sáu, lời Na"; đáp án Sai theo bảng Đúng/Sai. Giải thích khi đúng không mở đầu bằng "Yes!".
 > [CẦN KIỂM] Vỏ ốc sên trên cạn cũng có thể thành hoá thạch (biên tập nhớ có hoá thạch ốc cạn).
 
@@ -669,7 +696,7 @@ image.alt.vi: Cúc đá cắt đôi
 
 - **Loại hình** (theo file chọn ảnh designer 11/11): kệ Chơi, câu q2, q3, hình câu q5, q6 là ảnh chụp; bộ "Mặt cắt lòng đất" (bốn khung), `explore_imprint`, ba lựa chọn q1 và ba lựa chọn q5 là hình tự vẽ (mười một hình). Hình không có chữ, không nhãn mẫu vật, không thước đo trong bảo tàng.
 - **Bộ "Mặt cắt lòng đất"** (gốc bài này, bài chín vẽ thêm hổ phách, khúc gỗ cùng nét): cùng một góc nhìn ngang, cùng bảng màu (nước xanh nhạt, bùn nâu xám, cát vàng nhạt), không viền đen, không nét mặt, không chữ, không mũi tên.
-  - khung không (hình câu q4): con ốc còn thân mềm trên đáy biển;
+  - khung không (thẻ `q4_snail` của câu q4 từ 14/11; trước là hình câu hỏi): con ốc còn thân mềm trên đáy biển;
   - khung một (`explore_decay`): cùng chỗ, chỉ còn chiếc vỏ rỗng;
   - khung hai (`explore_sediment`): nhìn cắt ngang, nhiều lớp bùn cát phủ trên vỏ, lớp dưới cùng rắn như đá;
   - khung bốn (`q4_found`): rất lâu sau, vỏ đã hoá đá lộ ra trên vách đá, bàn tay cầm chổi.
@@ -697,7 +724,7 @@ image.alt.vi: Cúc đá cắt đôi
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `only_dinosaurs_fossils`.
 - **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; thẻ đúng q2 thứ nhất; q3 thứ hai, ba, bốn; q4 thứ hai; q5 thứ ba. Khớp bảng `_topic.md`.
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/da-bi-bao-mon-theo-thoi-gian` (w1), `khung-long/hoa-thach-ke-chuyen-khung-long` (w2, đã có id).
-- **Đề xuất khi app hiện được `order_sequence`:** câu q4 đổi thành câu sắp thứ tự bốn khung của bộ "Mặt cắt lòng đất" (khung không, một, hai, bốn). Khi đổi thì tăng `version`.
+- **q4 đã đổi sang `order_sequence` (14/11, `version` 2):** bốn thẻ bộ "Mặt cắt lòng đất" (khung không `q4_snail`, khung một `q4_decay`, khung hai `q4_layers`, khung bốn `q4_found`), `answer: q4_snail, q4_decay, q4_layers, q4_found`; thẻ trong file không theo thứ tự đúng. Bài nay có năm format (thêm `order_sequence`); dòng "Quiz" và "Vị trí đáp án" ở trên là bản cũ cho q4. Khung không chuyển từ hình câu hỏi sang thẻ; hình câu hỏi mới dùng lại `explore_not_dino`.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Vỏ xoắn trong đá, Hình lá dương xỉ trên đá, Hình con cá trên đá → đạt;
   - chạm Cá khô → `has_limited`;

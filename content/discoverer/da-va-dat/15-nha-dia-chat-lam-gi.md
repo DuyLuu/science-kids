@@ -53,15 +53,17 @@ image.alt.en: Two test bottles of soil and a jug of water
 image.alt.vi: Hai chai thí nghiệm đựng đất và một ca nước
 hint.en: Remember the Results picture in the last lesson.
 hint.vi: Em nhớ lại ô Kết quả ở bài trước nhé.
-explanation_correct.en: Yes! Big sand grains let water rush through.
-explanation_correct.vi: Đúng rồi! Hạt cát to cho nước chảy qua rất nhanh.
-explanation_wrong.en: The answer is sandy soil. Its grains are big.
-explanation_wrong.vi: Đáp án là đất cát. Hạt đất cát to.
+explanation_correct.en: That is why sandy soil dries fast after rain.
+explanation_correct.vi: Vì vậy đất cát mau khô sau mưa.
+explanation_wrong.en: Sandy soil has big grains that let water rush through.
+explanation_wrong.vi: Đất cát hạt to, nước chảy qua rất nhanh.
 > Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động. Đất vườn có sức hút (cũng là đất, `_topic.md`).
 > Hình câu hỏi là hai chai trước khi đổ nước (đúng bảng Hình dùng chung: `explore_setup` cho hình câu w1 bài 15), không cho thấy kết quả.
 
 #### option w1_clay
 correct: false
+feedback.en: Clay soil has tiny grains, so water is slow.
+feedback.vi: Đất sét hạt nhỏ, nước thấm qua chậm.
 label.en: clay soil
 label.vi: đất sét
 image.brief: Dùng lại hình `q4_grey` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`.
@@ -78,6 +80,8 @@ image.alt.vi: Nắm đất nhạt màu
 
 #### option w1_garden
 correct: false
+feedback.en: Garden soil has smaller grains than sand.
+feedback.vi: Đất vườn có hạt nhỏ hơn đất cát.
 label.en: garden soil
 label.vi: đất vườn
 image.brief: Dùng lại hình `q4_dark` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`.
@@ -93,17 +97,17 @@ version: 1
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: da-va-dat/da-bi-bao-mon-theo-thoi-gian
-prompt.en: Rain slowly wears down a rock where it is. What is this called?
-prompt.vi: Nước mưa làm đá mòn dần ngay tại chỗ. Hiện tượng này gọi là gì?
+prompt.en: What do we call rain wearing rock in place?
+prompt.vi: Mưa làm đá mòn tại chỗ, gọi là gì?
 image.brief: Dùng lại hình `ha_long` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): Ha Long Bay aerial islands
 image.alt.en: Islands in Ha Long Bay
 image.alt.vi: Các hòn đảo ở vịnh Hạ Long
 hint.en: Remember lesson seven about rocks changing.
 hint.vi: Em nhớ lại bài bảy, đá thay đổi theo thời gian nhé.
-explanation_correct.en: Yes! Weathering breaks rock. Erosion carries the pieces away.
-explanation_correct.vi: Đúng rồi! Phong hoá làm đá vỡ. Xói mòn mang mảnh vụn đi.
-explanation_wrong.en: The answer is weathering. The rock wears down where it is.
-explanation_wrong.vi: Đáp án là phong hoá. Đá mòn đi ngay tại chỗ.
+explanation_correct.en: Weathering comes first, then erosion carries the bits away.
+explanation_correct.vi: Phong hoá làm vỡ trước, rồi xói mòn mang mảnh đi.
+explanation_wrong.en: Rock wearing down where it is is weathering.
+explanation_wrong.vi: Đá mòn đi ngay tại chỗ là phong hoá.
 > Ý (phong hoá), thứ tự lựa chọn (xói mòn · phong hoá · phun trào) và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động.
 > Lệch chữ so với bảng Khởi động ("rễ cây làm nứt đá, đó là gì"): nếu câu hỏi nói "rễ cây" và hình đáp án có rễ cây thì bé chỉ cần tìm hình. Câu hỏi nói về nước mưa làm đá vôi mòn tại chỗ, đúng cảnh "rain wearing down limestone" · "mưa bào mòn đá vôi" mà bài 7 xếp vào phong hoá (câu q3 bài 7).
 > Rà chữ tester 11/11 (rà bài 1–8, n13): lựa chọn đúng đổi từ `explore_weathering` (rễ cây, không khớp chữ câu hỏi) sang `tray_rain_limestone` của bài 7 (mặt đá vôi có rãnh do nước mưa); câu hỏi đổi theo hình. Ảnh xói mòn (dòng sông) vẫn có sức hút với chữ "nước", chữ "mòn" của câu VI có sức hút với nhãn "xói mòn"; bé phải dựa vào ý "ngay tại chỗ" để chọn phong hoá.
@@ -111,6 +115,8 @@ explanation_wrong.vi: Đáp án là phong hoá. Đá mòn đi ngay tại chỗ.
 
 #### option w2_erosion
 correct: false
+feedback.en: Erosion carries the broken bits away to new places.
+feedback.vi: Xói mòn mang mảnh vụn đi nơi khác.
 label.en: erosion
 label.vi: xói mòn
 image.brief: Dùng lại hình `explore_erosion` ở bài `da-va-dat/da-bi-bao-mon-theo-thoi-gian`. Từ khoá tìm ảnh (EN): muddy river eroded riverbank
@@ -128,6 +134,8 @@ image.alt.vi: Mặt đá xám có nhiều rãnh sâu
 
 #### option w2_eruption
 correct: false
+feedback.en: An eruption is lava bursting out of a volcano.
+feedback.vi: Phun trào là dung nham trào ra từ núi lửa.
 label.en: eruption
 label.vi: phun trào
 image.brief: Dùng lại hình `explore_erupt` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
@@ -149,10 +157,12 @@ image.alt.vi: Hòn đá màu xám
 answer: false
 hint.en: Remember the Natural forces picture.
 hint.vi: Em nhớ lại ô Lực tự nhiên nhé.
-explanation_correct.en: Rocks change very slowly. Rain, wind and roots break them.
-explanation_correct.vi: Đá thay đổi rất chậm. Mưa, gió và rễ cây làm đá vỡ dần.
-explanation_wrong.en: This is false. Rocks change, but very slowly.
-explanation_wrong.vi: Câu này sai. Đá có thay đổi, nhưng rất chậm.
+explanation_correct.en: Rocks change so slowly that we rarely notice it.
+explanation_correct.vi: Đá đổi rất chậm, nên ta hiếm khi nhận ra.
+explanation_wrong.en: Rocks do change, but very slowly.
+explanation_wrong.vi: Đá có thay đổi, nhưng rất chậm.
+feedback_true.en: Rain, wind and roots slowly change rocks.
+feedback_true.vi: Mưa, gió và rễ cây làm đá đổi khác dần.
 > Câu `true_false` dùng đúng chữ EN ở bảng Khởi động và bảng Đúng/Sai (bài 15 w3, Sai); chữ VI theo câu "Em nghĩ sao?" của bài 1 ("Đá giữ nguyên mãi mãi."). Không gắn key (`rocks_never_change`): luật chỉ đếm câu misconception ở Quiz.
 > Khi schema có `think_first` (v1.1), app hiện được câu trả lời của bé ở bài 1 cạnh câu trả lời ở câu này.
 > Hình câu hỏi là một mẫu đá hoa cương nguyên khối (không nứt, không mòn), không cho thấy bằng chứng. Gợi ý trỏ ô "Natural forces" · "Lực tự nhiên" của bài 7 (đã đối chiếu file bài 7). Giải thích khi đúng không mở đầu bằng "Yes!".
@@ -217,7 +227,7 @@ label.en: Keeping people safe
 label.vi: Giữ an toàn
 color: do_son
 sentence.en: They watch hills and volcanoes to warn people early.
-sentence.vi: Họ theo dõi sườn đồi và núi lửa để báo trước cho mọi người.
+sentence.vi: Họ theo dõi sườn đồi, núi lửa để báo trước.
 image.brief: [ảnh] Một trạm đo đạc đặt trên sườn núi lửa: thiết bị trên chân ba chân, tấm pin mặt trời nhỏ, sườn núi đá phía sau, chụp vừa; không có người, không có chữ hay logo đọc được. Nguồn ưu tiên USGS (public domain). Món `tray_volcano_watch` dùng lại. Từ khoá tìm ảnh (EN): volcano monitoring station USGS
 image.alt.en: Science tools on the side of a volcano
 image.alt.vi: Thiết bị đo đạc trên sườn núi lửa
@@ -276,7 +286,7 @@ messages.start.vi: Em tìm việc trên Trái Đất, việc giữ an toàn và 
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Geologists study rocks almost everywhere.
-messages.balanced.vi: Tuyệt! Nhà địa chất nghiên cứu đá ở gần như khắp mọi nơi.
+messages.balanced.vi: Tuyệt! Nhà địa chất nghiên cứu đá ở gần khắp nơi.
 messages.has_limited.en: Other people do that job. Geologists study rocks and soil.
 messages.has_limited.vi: Việc đó do người khác làm. Nhà địa chất nghiên cứu đá và đất.
 messages.missing.tray_earth_group.en: You still need a job on Earth.
@@ -406,15 +416,17 @@ image.alt.en: A geologist looking at rocks
 image.alt.vi: Nhà địa chất đang xem đá
 hint.en: Remember the Fieldwork picture.
 hint.vi: Em nhớ lại ô Đi thực địa nhé.
-explanation_correct.en: Yes! Geologists use a rock hammer to take samples.
-explanation_correct.vi: Đúng rồi! Nhà địa chất dùng búa địa chất để lấy mẫu đá.
-explanation_wrong.en: The answer is the rock hammer. Only grown-ups use it.
-explanation_wrong.vi: Đáp án là búa địa chất. Chỉ người lớn mới dùng búa này.
+explanation_correct.en: Only grown-ups use a rock hammer, with safety goggles.
+explanation_correct.vi: Chỉ người lớn dùng búa địa chất, có đeo kính bảo hộ.
+explanation_wrong.en: A geologist uses a rock hammer to take samples.
+explanation_wrong.vi: Nhà địa chất dùng búa địa chất để lấy mẫu đá.
 > Câu nhớ lại ví dụ bốn ô Đi thực địa. Kính thiên văn có sức hút (dụng cụ của nhà khoa học); bình tưới có sức hút (dụng cụ làm với đất). Hai hình sai bé đã thấy (kệ Chơi bài này, kệ Chơi bài 11); búa địa chất là hình mới, ô Học chỉ nhắc tên.
 > Giải thích nhắc lại "chỉ người lớn dùng" (mục An toàn).
 
 #### option q1_telescope
 correct: false
+feedback.en: A telescope is for looking at stars far away.
+feedback.vi: Kính thiên văn để ngắm sao ở thật xa.
 label.en: a telescope
 label.vi: kính thiên văn
 image.brief: Dùng lại hình `tray_telescope`. Từ khoá tìm ảnh (EN): telescope tripod night sky stars
@@ -423,6 +435,8 @@ image.alt.vi: Kính thiên văn dưới bầu trời đêm
 
 #### option q1_watering
 correct: false
+feedback.en: A watering can is for giving plants water.
+feedback.vi: Bình tưới dùng để tưới nước cho cây.
 label.en: a watering can
 label.vi: bình tưới
 image.brief: [ảnh] Một bình tưới kim loại đặt trên cỏ, không rót nước, chụp vừa; không có người, không có tay, không có chữ, không có nhãn hiệu. Từ khoá tìm ảnh (EN): watering can on grass
@@ -453,10 +467,10 @@ sentence.vi: Khoáng vật cứng nhất là {1}.
 answers: q2_diamond
 hint.en: Remember the hardness scale in lesson four.
 hint.vi: Em nhớ lại thang độ cứng ở bài bốn nhé.
-explanation_correct.en: Yes! Diamond is the hardest mineral on Mohs' scale.
-explanation_correct.vi: Đúng rồi! Kim cương là khoáng vật cứng nhất.
-explanation_wrong.en: The answer is diamond. It is the hardest of all.
-explanation_wrong.vi: Đáp án là kim cương. Kim cương cứng nhất.
+explanation_correct.en: Diamond is number ten, the top of Mohs' scale.
+explanation_correct.vi: Kim cương ở bậc mười, cao nhất thang Mohs.
+explanation_wrong.en: Diamond is the hardest mineral of all.
+explanation_wrong.vi: Kim cương là khoáng vật cứng nhất.
 > Ôn bài 4 (khoáng vật, kim cương cứng nhất), đúng ý bảng Khởi động bài 5 ("bài 4 dạy kim cương cứng nhất"). Ba thẻ là ba khoáng vật của chính thang Mohs bài 4 (hoạt thạch mềm nhất, thạch anh, kim cương cứng nhất). Thạch anh có sức hút (cũng rất cứng, lựa chọn sai có sức hút ghi ở `_topic.md`); hoạt thạch có sức hút với bé nhớ nhầm bậc thang.
 > Rà chữ tester 11/11 (N1): thẻ `q2_chalk` (đá phấn) đổi thành `q2_talc` (hoạt thạch): đá phấn là đá, không phải khoáng vật (bài 3, bài 4), nên không được đứng trong danh sách khoáng vật.
 > Chuỗi VI không có chữ "Mohs" (khỏi cần dòng `READINGS` ở bài này); chuỗi EN giữ "Mohs' scale".
@@ -472,6 +486,8 @@ image.alt.vi: Mẩu nhỏ trong suốt
 #### bank q2_quartz
 label.en: quartz
 label.vi: thạch anh
+feedback.en: Quartz is hard, but something is harder.
+feedback.vi: Thạch anh cứng, nhưng còn thứ cứng hơn.
 image.brief: Dùng lại hình `quartz` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): white quartz crystal
 image.alt.en: A white piece
 image.alt.vi: Mẩu màu trắng
@@ -479,6 +495,8 @@ image.alt.vi: Mẩu màu trắng
 #### bank q2_talc
 label.en: talc
 label.vi: hoạt thạch
+feedback.en: Talc is the softest mineral on the scale.
+feedback.vi: Hoạt thạch là khoáng vật mềm nhất.
 image.brief: Dùng lại hình `tray_talc` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): talc mineral sample
 image.alt.en: A pale cream piece
 image.alt.vi: Mẩu màu trắng ngà
@@ -489,8 +507,8 @@ id: becb4081-748d-419a-ab9e-78731681ad1f
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Is this rock hard? Does it soak up water? Which tests can tell?
-prompt.vi: Hòn đá này cứng không? Có thấm nước không? Những cách thử nào cho biết?
+prompt.en: Which tests show hardness and if water soaks in?
+prompt.vi: Cách thử nào cho biết đá cứng, có thấm nước?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): basalt vesicular rock sample
@@ -498,10 +516,11 @@ image.alt.en: A dark rock with tiny holes
 image.alt.vi: Hòn đá sẫm màu có lỗ nhỏ
 hint.en: Remember the Samples picture.
 hint.vi: Em nhớ lại ô Mẫu nhé.
-explanation_correct.en: Yes! Scratch to test hardness. Drop water to test soaking.
-explanation_correct.vi: Đúng rồi! Thử cào để biết độ cứng. Nhỏ nước để biết có thấm không.
-explanation_wrong.en: The answers are the scratch test and the water test.
-explanation_wrong.vi: Đáp án là thử cào và thử nhỏ nước.
+explanation_correct.en: Geologists still use these simple tests in the field.
+explanation_correct.vi: Nhà địa chất vẫn dùng những cách thử này ngoài thực địa.
+explanation_wrong.en: Scratch to test hardness, and drop water to test soaking.
+explanation_wrong.vi: Cào để thử độ cứng, nhỏ nước để thử độ thấm.
+> A2 (SK-043, 14/11): câu hỏi cũ mười sáu chữ (ba câu), nay mười chữ.
 > DOK 2: ghép mỗi câu hỏi về tính chất với cách thử hợp (ôn bài 3, bài 5). Hai lựa chọn sai có sức hút: thử lọ đất lắng là cách thử thật của bài 11 nhưng dành cho đất; thử cân nối `heavy_means_hard` (bài 4: nặng không cho biết cứng).
 > Bốn hình vẽ cùng nét (bộ "Bàn tay thử đá" của bài 3, bài 5 và bộ "Lọ đất" của bài 11).
 
@@ -524,6 +543,8 @@ image.alt.vi: Ống nhỏ giọt phía trên hòn đá
 
 #### option q3_jar
 correct: false
+feedback.en: A jar test sorts out the parts of soil.
+feedback.vi: Lọ đất lắng dùng để tách các phần của đất.
 label.en: a jar test
 label.vi: thử lọ đất lắng
 image.brief: Dùng lại hình `explore_jar` ở bài `da-va-dat/dat-gom-nhung-gi`.
@@ -532,6 +553,8 @@ image.alt.vi: Lọ nước có đất lắng thành từng lớp
 
 #### option q3_weigh
 correct: false
+feedback.en: Weighing tells how heavy, not how hard.
+feedback.vi: Cân cho biết nặng nhẹ, không biết độ cứng.
 label.en: a weighing test
 label.vi: thử cân
 image.brief: [hình vẽ] Cùng nét bộ "Bàn tay thử đá": một hòn đá đặt trên chiếc cân đĩa nhà bếp có kim, mặt cân chỉ có vạch, không có chữ số; nền kem trơn; không có tay, không có chữ, không có nhãn hiệu.
@@ -543,17 +566,18 @@ id: e36e4d98-4dc4-4423-aea6-26945dea2067
 format: single_choice
 version: 1
 dok: 2
-prompt.en: It rained hard for days. Where should a geologist check first?
-prompt.vi: Mưa to nhiều ngày liền. Nhà địa chất nên đến kiểm tra nơi nào trước?
+prompt.en: After heavy rain, where should a geologist check first?
+prompt.vi: Mưa to nhiều ngày, nên kiểm tra nơi nào trước?
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
 hint.en: Remember the Keeping people safe picture.
 hint.vi: Em nhớ lại ô Giữ an toàn nhé.
-explanation_correct.en: Yes! After heavy rain, steep hillsides can slide.
-explanation_correct.vi: Đúng rồi! Sau mưa to, sườn đồi dốc có thể bị sạt lở.
-explanation_wrong.en: The answer is the steep hillside. It may slide.
-explanation_wrong.vi: Đáp án là sườn đồi dốc. Sườn đồi có thể bị sạt lở.
+explanation_correct.en: Soaked soil gets heavy and can slide down steep slopes.
+explanation_correct.vi: Đất ngấm nước nặng hơn, dễ trượt xuống sườn dốc.
+explanation_wrong.en: After heavy rain, a steep hillside may slide.
+explanation_wrong.vi: Sau mưa to, sườn đồi dốc có thể bị sạt lở.
+> A2 (SK-043, 14/11): câu hỏi cũ mười sáu chữ (hai câu), nay mười chữ.
 > DOK 2: áp ý chính hai vào một tình huống (mưa to nhiều ngày). Ao làng và ruộng lúa có sức hút (cũng đầy nước sau mưa); vườn rau có sức hút (đất). Câu chỉ hỏi việc của nhà địa chất, không dạy cách giữ an toàn khi mưa bão (*Thời tiết* bài năm).
 > Ảnh sườn đồi là món kệ Chơi bài này; vườn rau cũng là món kệ Chơi (món bẫy), ao làng và ruộng lúa là ảnh của chủ đề trước, nên đáp án không là ảnh duy nhất bé vừa thấy. Ô Giữ an toàn dùng ảnh trạm đo ở núi lửa, không dùng ảnh sườn đồi.
 > [CẦN KIỂM] Mưa lớn kéo dài làm sườn đồi dốc dễ sạt lở.
@@ -568,6 +592,8 @@ image.alt.vi: Sườn đồi dốc có vết sạt lở cũ
 
 #### option q4_pond
 correct: false
+feedback.en: A village pond is flat and low, not steep.
+feedback.vi: Ao làng nằm thấp, bằng phẳng, ít nguy hiểm.
 label.en: a village pond
 label.vi: cái ao làng
 image.brief: Dùng lại hình `tray_pond` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): pond village lotus leaves
@@ -576,6 +602,8 @@ image.alt.vi: Cái ao nhỏ có lá sen
 
 #### option q4_rice
 correct: false
+feedback.en: A flat rice field just fills with water.
+feedback.vi: Ruộng lúa bằng phẳng, chỉ ngập thêm nước.
 label.en: a rice field
 label.vi: ruộng lúa
 image.brief: Dùng lại hình `q2_rice` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): green rice paddy field Vietnam wide view
@@ -584,6 +612,8 @@ image.alt.vi: Ruộng lúa xanh
 
 #### option q4_garden
 correct: false
+feedback.en: A flat garden may get muddy, but it is safe.
+feedback.vi: Vườn rau phẳng có thể lầy, nhưng ít nguy hiểm.
 label.en: a vegetable garden
 label.vi: vườn rau
 image.brief: Dùng lại hình `q6` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): vegetable garden beds village Vietnam
@@ -595,23 +625,26 @@ id: 35211241-2875-40af-b6b9-a62779fdbd92
 format: single_choice
 version: 1
 dok: 2
-prompt.en: A geologist digs a deep hole in a garden. What is most likely near the top?
-prompt.vi: Nhà địa chất đào một hố sâu trong vườn. Gần mặt đất dễ thấy gì nhất?
+prompt.en: In a deep garden hole, what is near the top?
+prompt.vi: Đào hố sâu trong vườn, gần mặt đất có gì?
 image.brief: Dùng lại hình `soil` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): hand holding garden soil
 image.alt.en: Garden soil in a hand
 image.alt.vi: Nắm đất vườn trong lòng bàn tay
 hint.en: Remember the Organic matter picture in lesson eleven.
 hint.vi: Em nhớ lại ô Chất hữu cơ ở bài mười một nhé.
-explanation_correct.en: Yes! Leaves and roots rot near the top.
-explanation_correct.vi: Đúng rồi! Lá và rễ cây mục ở lớp đất gần mặt.
-explanation_wrong.en: The answer is dark soil with roots. Plants rot there.
-explanation_wrong.vi: Đáp án là đất sẫm màu có rễ cây. Cây cối mục ở đó.
+explanation_correct.en: Rotting leaves make the top layer dark and rich.
+explanation_correct.vi: Lá mục làm lớp đất trên sẫm màu, màu mỡ.
+explanation_wrong.en: Dark soil with roots lies near the top.
+explanation_wrong.vi: Gần mặt đất là lớp đất sẫm màu có rễ cây.
+> A2 (SK-043, 14/11): câu hỏi cũ mười tám chữ (hai câu), nay mười chữ.
 > Ôn bài 11 (chất hữu cơ): lá rụng xuống mặt đất, rễ cây ở gần mặt, nên lớp đất trên cùng sẫm màu, nhiều chất hữu cơ. Đá liền khối có sức hút (*Bề mặt Trái Đất* bài ba: vỏ Trái Đất là đá rắn), nhưng ở sâu hơn; sỏi nhỏ có sức hút (cũng có trong đất).
 > Hình câu hỏi là nắm đất vườn (không cho thấy các lớp). Không dùng `tray_soil_core` (ống mẫu đất thấy các lớp, là bằng chứng).
 > [CẦN KIỂM] Lớp đất mặt sẫm màu, nhiều chất hữu cơ; sâu hơn là đất nhạt màu, rồi đá vụn, rồi đá liền khối.
 
 #### option q5_rock
 correct: false
+feedback.en: Solid rock lies much deeper down.
+feedback.vi: Đá liền khối nằm sâu hơn nhiều.
 label.en: solid rock
 label.vi: đá liền khối
 image.brief: Dùng lại hình `tray_limestone` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): limestone rock sample
@@ -621,6 +654,8 @@ image.alt.vi: Hòn đá màu xám nhạt
 
 #### option q5_stones
 correct: false
+feedback.en: Small stones and broken rock lie lower down.
+feedback.vi: Sỏi và đá vỡ nằm ở lớp sâu hơn.
 label.en: small stones
 label.vi: sỏi nhỏ
 image.brief: [ảnh] Một đống sỏi nhỏ màu xám nâu, chụp gần; không có tay, không có chữ, không có thước. Từ khoá tìm ảnh (EN): small gravel stones pile close up
@@ -647,8 +682,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: This rock fell from space. A geologist can study it.
-statement.vi: Hòn đá này rơi từ vũ trụ xuống. Nhà địa chất nghiên cứu được nó.
+statement.en: A geologist can study this rock from space.
+statement.vi: Nhà địa chất nghiên cứu được hòn đá rơi từ vũ trụ.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -661,10 +696,12 @@ image.alt.vi: Hòn đá sẫm màu có nhiều vết lõm
 > Theo ảnh designer chọn 11/11 (mảnh thiên thạch sắt Sikhote-Alin, nền sáng): brief sửa nền; `alt` sửa vì ảnh không chụp trong bảo tàng (trước: "A dark rock on show in a museum" · "Hòn đá sẫm màu trưng bày trong bảo tàng"). `alt` vẫn không gọi tên loại đá.
 hint.en: Remember the Rocks from space picture.
 hint.vi: Em nhớ lại ô Đá ngoài vũ trụ nhé.
-explanation_correct.en: Yes! Geologists study rocks from Earth and from space.
-explanation_correct.vi: Đúng rồi! Nhà địa chất nghiên cứu đá trên Trái Đất và cả đá từ vũ trụ.
-explanation_wrong.en: Na is right. Geologists study rocks from space, too.
-explanation_wrong.vi: Na nói đúng. Nhà địa chất nghiên cứu cả đá từ vũ trụ.
+explanation_correct.en: Rocks from space tell us about faraway worlds.
+explanation_correct.vi: Đá từ vũ trụ kể cho ta về những nơi rất xa.
+explanation_wrong.en: Geologists study rocks from space, too.
+explanation_wrong.vi: Nhà địa chất nghiên cứu cả đá từ vũ trụ.
+feedback_false.en: Geologists also study rocks from the Moon.
+feedback_false.vi: Nhà địa chất cũng nghiên cứu đá Mặt Trăng.
 > Lời Na, hình và đáp án Đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đúng/Sai). Cả màn mười tám từ EN.
 > DOK 3: tình huống mới. Ô Đá ngoài vũ trụ chỉ nói đá Mặt Trăng và Sao Hoả; bé phải mở rộng sang hòn đá rơi xuống Trái Đất. Bé còn nghĩ nhà địa chất chỉ xem đá của Trái Đất sẽ chọn "Na chưa đúng".
 > Không dùng chữ "thiên thạch" trong chữ cho trẻ (bảng Tên gọi *Khủng long*); `alt` không gọi tên loại đá. [CẦN KIỂM] Nhà địa chất nghiên cứu những hòn đá rơi từ vũ trụ xuống.

@@ -26,8 +26,21 @@
       "lesson": "da-va-dat/lam-quen-voi-da"
     },
     "w3.w3_brick": {
-      "same_as": "tray_brick",
-      "lesson": "da-va-dat/lam-quen-voi-da"
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/49889874@N05/5270987711",
+      "file_url": "https://live.staticflickr.com/5124/5270987711_d18c4b98d0_b.jpg",
+      "title": "BRICKS",
+      "author": "marc falardeau",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "44e22d02-12ff-4533-8507-50ebc371a86b",
+      "crop": {
+        "left": 0.12,
+        "top": 0.18,
+        "width": 0.45,
+        "height": 0.27
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/lam-quen-voi-da tray.tray_brick, cắt riêng cho khung 5:2 (trước: same_as tray_brick (da-va-dat/lam-quen-voi-da))."
     },
     "w3.w3_pebble": {
       "same_as": "w1_stone",
@@ -247,7 +260,20 @@
       "lesson": "da-va-dat/da-nao-cung-hon"
     },
     "q5.q5_laterite": {
-      "same_as": "vocab.laterite"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Laterite blocks in a wall",
+      "author": "Phương Huy ( thảo luận )",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ki%E1%BA%BFn_tr%C3%BAc_%C4%90%C6%B0%E1%BB%9Dng_L%C3%A2m_t%E1%BA%A1i_S%C6%A1n_T%C3%A2y_(3).jpg",
+      "crop": {
+        "left": 0.44,
+        "top": 0.446,
+        "width": 0.44,
+        "height": 0.132
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/da-dung-lam-gi vocab.laterite, cắt riêng cho khung 5:2 (trước: same_as vocab.laterite)."
     },
     "q5.q5_basalt": {
       "same_as": "tray_dark_rock",

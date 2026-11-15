@@ -51,10 +51,10 @@ image.alt.en: An old wall in the grass
 image.alt.vi: Bức tường rào cũ giữa bãi cỏ
 hint.en: Remember the From the ground picture in lesson one.
 hint.vi: Em nhớ lại ô Từ lòng đất ở bài một nhé.
-explanation_correct.en: Yes! People dig out rock at a quarry.
-explanation_correct.vi: Đúng rồi! Người ta đào đá lên ở mỏ đá.
-explanation_wrong.en: The answer is the quarry.
-explanation_wrong.vi: Đáp án là mỏ đá.
+explanation_correct.en: At a quarry, people cut rock from the ground.
+explanation_correct.vi: Ở mỏ đá, người ta cắt đá từ lòng đất.
+explanation_wrong.en: People dig rock out of the ground at a quarry.
+explanation_wrong.vi: Người ta đào đá từ lòng đất lên ở mỏ đá.
 > Ruộng lúa và cái ao cũng là nơi người ta đào đất, nên có sức hút. Ba ảnh cùng là cảnh rộng, chụp ngoài trời. Hình câu hỏi là bức tường đá của bài một: đá này lấy từ đâu ra.
 
 #### option w1_quarry
@@ -67,6 +67,8 @@ image.alt.vi: Mỏ đá lộ thiên
 
 #### option w1_rice
 correct: false
+feedback.en: A rice field is soft mud for growing rice.
+feedback.vi: Ruộng lúa là đất bùn mềm để trồng lúa.
 label.en: rice field
 label.vi: ruộng lúa
 image.brief: Dùng lại hình `q2_rice` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): green rice paddy field Vietnam wide view
@@ -75,6 +77,8 @@ image.alt.vi: Ruộng lúa xanh
 
 #### option w1_pond
 correct: false
+feedback.en: People dig a pond to hold water, not rock.
+feedback.vi: Ao được đào để chứa nước, không để lấy đá.
 label.en: pond
 label.vi: cái ao
 image.brief: Dùng lại hình `tray_pond` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): pond village lotus leaves
@@ -96,10 +100,12 @@ image.alt.vi: Khối bê tông màu xám
 answer: false
 hint.en: Remember the Made by people picture in lesson one.
 hint.vi: Em nhớ lại ô Do con người làm ra ở bài một nhé.
-explanation_correct.en: People mix concrete. It is not natural rock.
+explanation_correct.en: People mix concrete, so it is not natural rock.
 explanation_correct.vi: Bê tông do con người trộn, không phải đá tự nhiên.
-explanation_wrong.en: This is false. People make concrete.
-explanation_wrong.vi: Câu này sai. Bê tông do con người làm ra.
+explanation_wrong.en: Concrete is made by people, not by nature.
+explanation_wrong.vi: Bê tông do người làm ra, không có sẵn trong tự nhiên.
+feedback_true.en: People mix concrete from cement, sand and gravel.
+feedback_true.vi: Bê tông do người trộn xi măng, cát và sỏi.
 > Chữ EN đúng bảng Khởi động và bảng Đáp án Đúng/Sai (đáp án Sai). Giải thích khi đúng không mở đầu bằng "Yes!". Ảnh khối bê tông xám trông hơi giống đá, nên câu vẫn cần nghĩ.
 
 ## Học
@@ -156,8 +162,8 @@ examples.3.vi: hạt lấp lánh nhiều màu
 label.en: Holes
 label.vi: Lỗ
 color: do_son
-sentence.en: Some rocks have tiny holes. They were once hot lava.
-sentence.vi: Có loại đá có lỗ nhỏ li ti. Những hòn đá này từng là dung nham nóng.
+sentence.en: Pumice has tiny holes and was once hot lava.
+sentence.vi: Đá bọt có lỗ nhỏ li ti, từng là dung nham nóng.
 image.brief: Dùng lại hình `pumice`. Từ khoá tìm ảnh (EN): pumice rock sample
 image.alt.en: A pale grey rock
 image.alt.vi: Hòn đá màu xám nhạt
@@ -169,6 +175,7 @@ examples.3.en: holes left by bubbles in lava
 examples.3.vi: lỗ do bọt khí trong dung nham để lại
 > Nối *Núi lửa* (dung nham nguội thành đá mới), không dạy lại núi lửa phun ra sao, không dùng tên "đá mác-ma".
 > [CẦN KIỂM] Đá bọt và đá ba-dan có lỗ vì bọt khí trong dung nham để lại khi đá nguội. Câu "They were once hot lava" nói về hai loại đá trong ô; không phải hòn đá nào có lỗ cũng từng là dung nham (đá vôi có thể có hốc), nên ví dụ chỉ gọi tên hai loại này.
+> A2 (SK-043, 14/11): câu cũ hai câu, mười bảy chữ, vượt ngân sách. Nay một câu mười hai chữ, theo bản rút của designer; câu nói về đá bọt (ảnh của ô), đá ba-dan vẫn là ví dụ. Không còn câu "có loại đá có lỗ… từng là dung nham" nói chung.
 
 #### group explore_layers
 label.en: Layers
@@ -346,14 +353,16 @@ image.alt.en: Many different rocks on a table
 image.alt.vi: Nhiều hòn đá khác nhau trên bàn
 hint.en: Remember the Look closely picture.
 hint.vi: Em nhớ lại ô Nhìn kỹ nhé.
-explanation_correct.en: Yes! A magnifying glass makes small things look bigger.
-explanation_correct.vi: Đúng rồi! Kính lúp làm những vật nhỏ trông to hơn.
-explanation_wrong.en: The answer is the magnifying glass.
-explanation_wrong.vi: Đáp án là kính lúp.
+explanation_correct.en: A magnifying glass helps you see tiny grains on rocks.
+explanation_correct.vi: Kính lúp giúp em thấy những hạt rất nhỏ trên đá.
+explanation_wrong.en: A magnifying glass makes small things look bigger.
+explanation_wrong.vi: Kính lúp làm vật nhỏ trông to hơn.
 > Đèn pin (cũng giúp nhìn rõ hơn) và gương (cũng để nhìn) có sức hút. Ba ảnh đều mới, cùng là một dụng cụ trên nền trơn. Ảnh kính lúp ở đây khác ảnh từ vựng `magnifying_glass` và ảnh ô `explore_look`, để đáp án không phải ảnh duy nhất bé vừa gặp ở phần Học (rút kinh nghiệm SK-037 N2).
 
 #### option q1_torch
 correct: false
+feedback.en: A torch gives light but does not make things bigger.
+feedback.vi: Đèn pin chiếu sáng, không làm vật to hơn.
 label.en: torch
 label.vi: đèn pin
 image.brief: [hình vẽ] Một chiếc đèn pin cầm tay đang tắt, đặt trên nền trơn, vẽ chéo; cùng cỡ trong khung như gương và kính lúp; không có logo, không có chữ. Bài năm câu q1 dùng lại ảnh này. Từ khoá tìm ảnh (EN): flashlight torch plain background
@@ -362,11 +371,14 @@ image.alt.vi: Chiếc đèn pin
 
 #### option q1_mirror
 correct: false
+feedback.en: A mirror shows things back, but not bigger.
+feedback.vi: Gương soi lại hình, không làm vật to hơn.
 label.en: mirror
 label.vi: cái gương
-image.brief: [hình vẽ] Một chiếc gương cầm tay tròn có cán, đặt nghiêng trên nền trơn, mặt gương chỉ phản chiếu nền trơn; cùng cỡ trong khung như đèn pin và kính lúp; không có người trong gương, không có chữ. Từ khoá tìm ảnh (EN): round hand mirror plain background
-image.alt.en: A hand mirror
-image.alt.vi: Chiếc gương cầm tay
+image.brief: [hình vẽ] Một chiếc gương soi để bàn hình chữ nhật, khung gỗ mỏng, có chân đỡ phía sau, đứng trên nền trơn, vẽ chéo; mặt gương chỉ phản chiếu nền trơn; không tròn, không có cán (để không giống kính lúp); cùng cỡ trong khung như đèn pin và kính lúp; không có người trong gương, không có chữ.
+image.alt.en: A mirror on a stand
+image.alt.vi: Chiếc gương soi để bàn
+> A2 (SK-043, 14/11): hình cũ (gương tròn có cán) trông giống kính lúp, bé không nhận ra khi thẻ không có nhãn. Đổi sang gương chữ nhật để bàn; nhãn giữ. Designer vẽ lại.
 
 #### option q1_magnifier
 correct: true
@@ -386,21 +398,24 @@ prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `magnifying_glass`. Từ khoá tìm ảnh (EN): magnifying glass plain background
 image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
-sentence.en: Granite has shiny {1} of many colours.
-sentence.vi: Đá hoa cương có những {1} lấp lánh nhiều màu.
+sentence.en: Granite has lots of shiny {1}.
+sentence.vi: Đá hoa cương có nhiều {1} lấp lánh.
 answers: q2_grains
 hint.en: Think of granite under a magnifying glass.
 hint.vi: Em nhớ lại đá hoa cương khi soi kính lúp nhé.
-explanation_correct.en: Yes! Granite has shiny grains you can see.
-explanation_correct.vi: Đúng rồi! Đá hoa cương có những hạt lấp lánh nhìn thấy được.
-explanation_wrong.en: The answer is grains. Granite has shiny grains.
-explanation_wrong.vi: Đáp án là hạt. Đá hoa cương có những hạt lấp lánh.
+explanation_correct.en: Granite's shiny grains are big enough to see.
+explanation_correct.vi: Hạt lấp lánh của đá hoa cương to, nhìn thấy được.
+explanation_wrong.en: Granite is full of shiny grains you can see.
+explanation_wrong.vi: Đá hoa cương có nhiều hạt lấp lánh nhìn thấy được.
+> A2 (SK-043, 14/11): câu điền bỏ "nhiều màu" cho ngắn (còn tám chữ có ô trống); ý "nhiều màu" còn ở ví dụ ô Hạt.
 > Gợi ý không gọi tên ô "Grains" (trùng nhãn đáp án). Hình câu hỏi là kính lúp, không phải ảnh đá hoa cương (ảnh đó cho thấy hạt).
 > Ba thẻ là ba món ăn quen ở Việt Nam minh hoạ ba từ: bánh bò nhiều lỗ, bánh lớp, hạt gạo. Cùng là hình vẽ đồ ăn (theo hình designer 11/11); không thẻ nào là hình bé vừa thấy ở phần Học. Thẻ đúng ở chỗ thứ ba.
 
 #### bank q2_holes
 label.en: holes
 label.vi: lỗ
+feedback.en: Under a magnifying glass, granite has no holes.
+feedback.vi: Soi kính lúp, đá hoa cương không có lỗ.
 image.brief: [hình vẽ] Một miếng bánh bò cắt ngang, thấy rõ nhiều lỗ nhỏ bên trong, đặt trên đĩa trắng, vẽ gần; không có bao bì, không có chữ. Từ khoá tìm ảnh (EN): banh bo honeycomb cake cross section
 image.alt.en: A steamed cake full of holes
 image.alt.vi: Bánh bò có nhiều lỗ
@@ -408,6 +423,8 @@ image.alt.vi: Bánh bò có nhiều lỗ
 #### bank q2_layers
 label.en: layers
 label.vi: lớp
+feedback.en: Granite is not stacked in flat layers.
+feedback.vi: Đá hoa cương không xếp thành từng lớp.
 image.brief: [hình vẽ] Hai đĩa bánh lớp hấp (bánh da lợn), một đĩa lớp hồng xen trắng, một đĩa lớp xanh xen trắng, thấy rõ các lớp; cùng nét với bánh bò và hạt gạo của hai thẻ kia; không có chữ.
 image.alt.en: Layered cakes on plates
 image.alt.vi: Bánh nhiều lớp trên đĩa
@@ -434,15 +451,17 @@ image.alt.en: A magnifying glass on a rock
 image.alt.vi: Kính lúp đặt trên hòn đá
 hint.en: Look closely at the surface of each rock.
 hint.vi: Em nhìn thật kỹ mặt từng hòn đá nhé.
-explanation_correct.en: Yes! Pumice and basalt have tiny holes.
-explanation_correct.vi: Đúng rồi! Đá bọt và đá ba-dan có lỗ nhỏ li ti.
-explanation_wrong.en: The answers are pumice and basalt.
-explanation_wrong.vi: Đáp án là đá bọt và đá ba-dan.
+explanation_correct.en: Gas bubbles in the lava left these tiny holes.
+explanation_correct.vi: Bọt khí trong dung nham để lại những lỗ nhỏ này.
+explanation_wrong.en: Pumice and basalt both have tiny holes.
+explanation_wrong.vi: Đá bọt và đá ba-dan đều có lỗ nhỏ li ti.
 > DOK 2: quan sát và phân loại bốn mẫu đá theo một đặc điểm nhìn được. Đá hoa cương (lốm đốm) và sa thạch (sần hạt cát) dễ bị nhìn nhầm là có lỗ. Bốn ảnh đều là mẫu đá bé đã gặp ở phần Học hoặc phần Chơi, cùng nền kem. `alt` chỉ tả màu.
 > Rà chữ tester 11/11 (n2): giữ. Gợi ý đã là cách nhìn, không trỏ tên ô; ô "Holes" phải gọi tên đá bọt và đá ba-dan vì đó là hai đá bài dạy, và bé vẫn phải nhìn ảnh để ghép tên với mẫu.
 
 #### option q3_granite
 correct: false
+feedback.en: Granite has grains, not holes.
+feedback.vi: Đá hoa cương có hạt, không có lỗ.
 label.en: granite
 label.vi: đá hoa cương
 image.brief: Dùng lại hình `granite`. Từ khoá tìm ảnh (EN): granite rock sample
@@ -468,6 +487,8 @@ image.alt.vi: Hòn đá sẫm màu
 
 #### option q3_sandstone
 correct: false
+feedback.en: Sandstone shows sand grains and layers.
+feedback.vi: Sa thạch có hạt cát và vân lớp.
 label.en: sandstone
 label.vi: sa thạch
 image.brief: Dùng lại hình `tray_sandstone`. Từ khoá tìm ảnh (EN): sandstone rock sample layers
@@ -479,17 +500,18 @@ id: e1173ae0-20a6-4daf-b027-bbf24bb4aaac
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam's rock is made of thin, flat sheets. Which rock is it?
-prompt.vi: Hòn đá của Nam gồm nhiều tấm mỏng, phẳng xếp chồng lên nhau. Đó là đá gì?
+prompt.en: Which rock is made of thin, flat sheets?
+prompt.vi: Hòn đá nào gồm nhiều tấm mỏng xếp chồng?
 image.brief: Dùng lại hình `quarry` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): open pit stone quarry terraces
 image.alt.en: An open quarry
 image.alt.vi: Mỏ đá lộ thiên
 hint.en: Look closely at the edge of each rock.
 hint.vi: Em nhìn kỹ mép của từng hòn đá nhé.
-explanation_correct.en: Yes! Slate splits into thin, flat sheets.
-explanation_correct.vi: Đúng rồi! Đá phiến tách được thành từng tấm mỏng.
-explanation_wrong.en: The answer is slate. It splits into thin sheets.
-explanation_wrong.vi: Đáp án là đá phiến. Đá phiến tách được thành tấm mỏng.
+explanation_correct.en: Slate splits along its layers into thin, flat sheets.
+explanation_correct.vi: Đá phiến tách theo lớp thành từng tấm mỏng, phẳng.
+explanation_wrong.en: The edge of slate shows many thin sheets.
+explanation_wrong.vi: Mép đá phiến có nhiều tấm mỏng xếp chồng.
+> A2 (SK-043, 14/11): câu hỏi cũ mười chín chữ ("Hòn đá của Nam…"), bỏ nhân vật Nam, còn chín chữ.
 > DOK 2: so một mô tả với vẻ ngoài của ba mẫu đá. Câu hỏi không nói màu, để bé không chọn theo màu. Đá hoa cương hồng (lốm đốm) và đá phấn (trắng, chưa học ở bài này) là hai mẫu không có lớp. Ảnh hình câu hỏi là mỏ đá, không cho thấy hòn đá của Nam.
 > [CẦN KIỂM] Đá phiến tách được thành tấm mỏng (ghi chú ô `explore_layers`).
 > Rà chữ tester 11/11 (n2): câu hỏi tả điều nhìn thấy ("made of thin, flat sheets") thay vì nhắc ví dụ ô Học; gợi ý đổi từ tên ô "Layers" sang cách nhìn (mép đá). Ảnh `tray_slate` phải thấy rõ mép tách lớp (brief gốc đã dặn).
@@ -504,6 +526,8 @@ image.alt.vi: Hòn đá màu xám sẫm
 
 #### option q4_pink_granite
 correct: false
+feedback.en: Pink granite has grains, but no thin sheets.
+feedback.vi: Đá hoa cương hồng có hạt, không tách thành tấm.
 label.en: pink granite
 label.vi: đá hoa cương hồng
 image.brief: Dùng lại hình `tray_pink_granite`. Từ khoá tìm ảnh (EN): pink granite rock sample
@@ -512,6 +536,8 @@ image.alt.vi: Hòn đá màu hồng
 
 #### option q4_chalk
 correct: false
+feedback.en: This chalk is soft and does not split into sheets.
+feedback.vi: Đá phấn mềm, không tách thành tấm mỏng.
 label.en: chalk
 label.vi: đá phấn
 image.brief: Dùng lại hình `chalk` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): chalk rock sample
@@ -523,22 +549,25 @@ id: 89a1dab5-e215-4fa7-8ecc-f8f6b593e8d3
 format: single_choice
 version: 1
 dok: 2
-prompt.en: These three things look a bit like rocks. Which one is a real rock?
-prompt.vi: Ba thứ này trông hơi giống đá. Thứ nào là đá thật?
+prompt.en: Which one is a real rock?
+prompt.vi: Thứ nào là đá thật?
 image.brief: Dùng lại hình `rock` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): limestone karst Ninh Binh river
 image.alt.en: A grey rocky mountain
 image.alt.vi: Núi đá vôi màu xám
 hint.en: Think about where each one comes from.
 hint.vi: Em nghĩ xem mỗi thứ từ đâu mà có nhé.
-explanation_correct.en: Yes! The pebble is a real rock.
-explanation_correct.vi: Đúng rồi! Hòn cuội là đá thật.
-explanation_wrong.en: The answer is the pebble. Sugar and sponges only look like rock.
-explanation_wrong.vi: Đáp án là hòn cuội. Đường phèn và bọt biển chỉ trông giống đá.
+explanation_correct.en: The pebble is real rock, worn smooth by water.
+explanation_correct.vi: Hòn cuội là đá thật, được nước mài nhẵn.
+explanation_wrong.en: Only the pebble is real rock from nature.
+explanation_wrong.vi: Chỉ hòn cuội là đá thật có sẵn trong tự nhiên.
+> A2 (SK-043, 14/11): bỏ câu ngữ cảnh "Ba thứ này trông hơi giống đá" (câu hỏi cũ mười lăm chữ, nay năm chữ); ba ảnh tự cho thấy điều đó.
 > DOK 2: nhìn kỹ để phân biệt đá thật với thứ trông giống đá (ôn bài một: đá có sẵn trong tự nhiên). Đường phèn lấp lánh như đá hoa cương, bọt biển có lỗ như đá bọt.
 > Đường phèn và bọt biển là ảnh của phần Chơi; hòn cuội là ảnh của *Hô hấp*, mới với bài này. Ba ảnh chụp, cùng là một vật chụp gần.
 
 #### option q5_sugar
 correct: false
+feedback.en: People make sugar crystals from cane sugar.
+feedback.vi: Đường phèn do người nấu từ đường mía.
 label.en: sugar crystal
 label.vi: cục đường phèn
 image.brief: Dùng lại hình `tray_rock_sugar`. Từ khoá tìm ảnh (EN): rock sugar crystal lump
@@ -556,6 +585,8 @@ image.alt.vi: Hòn đá cuội
 
 #### option q5_sponge
 correct: false
+feedback.en: A kitchen sponge is soft and made in factories.
+feedback.vi: Bọt biển rửa bát mềm, do nhà máy làm ra.
 label.en: sponge
 label.vi: miếng bọt biển
 image.brief: Dùng lại hình `tray_sponge`. Từ khoá tìm ảnh (EN): yellow kitchen sponge close up
@@ -572,8 +603,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Both rocks are grey. One has holes. They are different kinds.
-statement.vi: Hai hòn đá đều màu xám. Một hòn có lỗ. Đây là hai loại đá khác nhau.
+statement.en: Both are grey, but they are different kinds of rock.
+statement.vi: Cùng màu xám, nhưng đây là hai loại đá khác nhau.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -585,10 +616,12 @@ image.alt.en: Two grey rocks side by side
 image.alt.vi: Hai hòn đá xám đặt cạnh nhau
 hint.en: Think about what makes each kind of rock different.
 hint.vi: Em nghĩ xem điều gì làm các loại đá khác nhau nhé.
-explanation_correct.en: Yes! Same colour, but only one has holes. They are different kinds.
-explanation_correct.vi: Đúng rồi! Cùng màu xám, nhưng chỉ một hòn có lỗ. Đó là hai loại đá khác nhau.
-explanation_wrong.en: Na is right. Look for grains, holes and layers, not just colour.
-explanation_wrong.vi: Na nói đúng. Em nhìn hạt, lỗ và lớp, không chỉ nhìn màu.
+explanation_correct.en: Only one has holes, so colour is not enough.
+explanation_correct.vi: Chỉ một hòn có lỗ, nên nhìn màu thôi chưa đủ.
+explanation_wrong.en: Look for grains, holes and layers, not just colour.
+explanation_wrong.vi: Em nhìn hạt, lỗ và lớp, không chỉ nhìn màu.
+feedback_false.en: One rock has holes, and the other does not.
+feedback_false.vi: Một hòn có lỗ nhỏ, hòn kia thì không có.
 > DOK 3: bé đánh giá kết luận của Na trên hai hòn đá mới đặt cạnh nhau (chưa từng thấy ghép như vậy). Bé còn tin "đá nào cũng như nhau" sẽ cho rằng cùng màu là cùng loại và chọn "Na chưa đúng". Lời Na đúng chữ bảng "Câu sáu, lời Na" ở `_topic.md`. Đáp án Đúng.
 > Hình ghép là tình huống Na đang nhìn; `alt` không nói "có lỗ". Cả màn mười tám từ EN (prompt ba, instruction bốn, lời Na mười một).
 
@@ -675,7 +708,7 @@ image.alt.vi: Đá bọt nổi trên mặt nước
 - **Ảnh cần tìm (mười bảy):**
   - Học: kính lúp trên hòn đá (`explore_look`).
   - Chơi: bọt biển vàng, khúc gỗ cưa ngang, cục đường phèn; ba mẫu đá `tray_pink_granite`, `tray_sandstone`, `tray_slate`.
-  - Quiz: bàn bày nhiều hòn đá (`q1`); đèn pin, gương cầm tay, kính lúp cán đen (q1); bánh bò, nắm hạt gạo (thẻ q2).
+  - Quiz: bàn bày nhiều hòn đá (`q1`); đèn pin, gương soi để bàn hình chữ nhật (đổi 14/11, A2), kính lúp cán đen (q1); bánh bò, nắm hạt gạo (thẻ q2).
   - Từ vựng: kính lúp (`magnifying_glass`), đá hoa cương xám (`granite`), đá bọt (`pumice`).
   - Thưởng: đá bọt nổi trên mặt nước.
 - **Hình ghép (một):** câu q6, đá ba-dan và đá phiến cạnh nhau, cùng tông xám.

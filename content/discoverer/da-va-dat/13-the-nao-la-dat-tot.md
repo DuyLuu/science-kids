@@ -53,15 +53,17 @@ image.alt.en: Soft grey-brown soil in a field
 image.alt.vi: Đất nâu xám mềm trên ruộng
 hint.en: Remember the Alluvial soil picture in the last lesson.
 hint.vi: Em nhớ lại ô Đất phù sa ở bài trước nhé.
-explanation_correct.en: Yes! Rivers bring silt to the rice fields of the deltas.
-explanation_correct.vi: Đúng rồi! Sông mang bùn mịn về bồi cho ruộng lúa đồng bằng.
-explanation_wrong.en: The answer is the delta rice field. Rivers bring silt there.
-explanation_wrong.vi: Đáp án là ruộng lúa đồng bằng. Sông mang bùn mịn về đó.
+explanation_correct.en: Vietnam grows much of its rice on alluvial soil.
+explanation_correct.vi: Việt Nam trồng nhiều lúa trên đất phù sa.
+explanation_wrong.en: Rivers bring silt to delta rice fields.
+explanation_wrong.vi: Sông mang bùn mịn về bồi cho ruộng lúa đồng bằng.
 > Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ tư, bốn lựa chọn) đúng bảng Khởi động. Hình câu hỏi là đất phù sa chụp gần (thứ được hỏi), không phải nơi chốn của đáp án.
 > Bốn lựa chọn đều là ảnh cảnh chụp rộng bé đã gặp (ba ảnh ở bài 12, mỏ đá ở bài 1), nên đáp án không là ảnh duy nhất bé đã thấy. Mỏ đá có sức hút (nơi người ta đào đất đá); đồi cà phê, rừng phi lao là nơi của hai loại đất kia.
 
 #### option w1_coffee
 correct: false
+feedback.en: Coffee hills have red soil from old volcanoes.
+feedback.vi: Đồi cà phê có đất đỏ từ núi lửa xưa.
 label.en: a coffee hill
 label.vi: đồi cà phê
 image.brief: Dùng lại hình `tray_coffee` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`. Từ khoá tìm ảnh (EN): coffee plantation red soil rows
@@ -70,6 +72,8 @@ image.alt.vi: Những hàng cà phê trên đồi
 
 #### option w1_casuarina
 correct: false
+feedback.en: Casuarina forests grow on sandy soil by the sea.
+feedback.vi: Rừng phi lao mọc trên đất cát ven biển.
 label.en: a casuarina forest
 label.vi: rừng phi lao trên cát
 image.brief: Dùng lại hình `tray_casuarina` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`. Từ khoá tìm ảnh (EN): casuarina trees sand coast Vietnam
@@ -78,6 +82,8 @@ image.alt.vi: Rừng phi lao mọc trên cát
 
 #### option w1_quarry
 correct: false
+feedback.en: A quarry is where people dig out rock.
+feedback.vi: Mỏ đá là nơi người ta đào lấy đá.
 label.en: a quarry
 label.vi: mỏ đá
 image.brief: Dùng lại hình `quarry` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): open pit stone quarry terraces
@@ -107,10 +113,12 @@ image.alt.vi: Nắm đất vườn trong lòng bàn tay
 answer: false
 hint.en: Remember the last lesson about soils in Vietnam.
 hint.vi: Em nhớ lại bài Các loại đất ở Việt Nam nhé.
-explanation_correct.en: Soils differ in colour and grains. Each suits different plants.
-explanation_correct.vi: Mỗi loại đất có màu và cỡ hạt khác nhau, hợp với những cây khác nhau.
-explanation_wrong.en: This is false. Red, sandy and alluvial soils are different.
-explanation_wrong.vi: Câu này sai. Đất đỏ, đất cát và đất phù sa khác nhau.
+explanation_correct.en: Each kind of soil suits different plants.
+explanation_correct.vi: Mỗi loại đất hợp với những loại cây khác nhau.
+explanation_wrong.en: Red, sandy and alluvial soils are different.
+explanation_wrong.vi: Đất đỏ, đất cát và đất phù sa khác nhau.
+feedback_true.en: Red soil and sandy soil look very different.
+feedback_true.vi: Đất đỏ và đất cát trông rất khác nhau.
 > Câu `true_false` dùng đúng chữ EN ở bảng Khởi động và bảng Đúng/Sai (bài 13 w2, Sai). Giải thích khi đúng không mở đầu bằng "Yes!". Hình câu hỏi là một nắm đất (không đặt hai loại đất cạnh nhau, để hình không là bằng chứng).
 > Gợi ý gọi tên bài, không gọi "ba loại đất" (nói vậy là nói luôn đáp án).
 
@@ -128,16 +136,18 @@ image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
 hint.en: Remember the lesson Measuring the weather.
 hint.vi: Em nhớ lại bài Đo thời tiết nhé.
-explanation_correct.en: Yes! It catches rain to show how much fell.
-explanation_correct.vi: Đúng rồi! Ống đo mưa hứng nước mưa để biết mưa nhiều hay ít.
-explanation_wrong.en: The answer is the rain gauge. It catches the rain.
-explanation_wrong.vi: Đáp án là ống đo mưa. Ống hứng nước mưa.
+explanation_correct.en: Read the water level in the gauge each day.
+explanation_correct.vi: Mỗi ngày em đọc mực nước trong ống đo mưa.
+explanation_wrong.en: A rain gauge catches rain to show how much fell.
+explanation_wrong.vi: Ống đo mưa hứng nước để biết mưa nhiều hay ít.
 > **Câu tuỳ chọn** (bảng Khởi động ở `_topic.md`): điều kiện đã đủ, bài `thoi-tiet-va-thien-tai/do-thoi-tiet` đã có id (kiểm 11/11, sau khi soạn xong). Nếu sau này bài đó bị bỏ hay đổi slug thì xoá cả khối w3 (bảng vị trí giữ nguyên các ô khác).
 > Ôn ý chính hai của *Thời tiết* bài hai ("A rain gauge measures how much rain falls."). Ba lựa chọn là ba hình vẽ ô Học của bài đó, cùng nét; đáp án ở chỗ thứ hai như bảng. Không dùng ảnh đất nứt nẻ hay ruộng ngập (món bẫy kệ Chơi bài này).
 > Hình câu hỏi là ảnh mưa to (tình huống), khác loại với ba hình lựa chọn; luật "cùng loại hình" áp cho các lựa chọn với nhau.
 
 #### option w3_thermometer
 correct: false
+feedback.en: A thermometer measures how hot or cold it is.
+feedback.vi: Nhiệt kế đo trời nóng hay lạnh.
 label.en: a thermometer
 label.vi: nhiệt kế
 image.brief: Dùng lại hình `explore_thermometer` ở bài `thoi-tiet-va-thien-tai/do-thoi-tiet`.
@@ -154,6 +164,8 @@ image.alt.vi: Ống đo mưa giữa khoảng vườn trống
 
 #### option w3_windsock
 correct: false
+feedback.en: A windsock shows which way the wind blows.
+feedback.vi: Ống gió cho biết gió thổi về hướng nào.
 label.en: a windsock
 label.vi: ống gió
 image.brief: Dùng lại hình `explore_windsock` ở bài `thoi-tiet-va-thien-tai/do-thoi-tiet`.
@@ -242,7 +254,7 @@ label.en: Too wet or too dry
 label.vi: Quá ướt hay quá khô
 color: do_son
 sentence.en: A changing climate can make soil too wet or dry.
-sentence.vi: Khí hậu thay đổi có thể làm đất quá ướt hoặc quá khô.
+sentence.vi: Khí hậu thay đổi dễ làm đất quá ướt hoặc quá khô.
 image.brief: Dùng lại hình `explore_seasons` ở bài `thoi-tiet-va-thien-tai/lu-lut-va-han-han`.
 image.alt.en: A flooded field next to a dry field
 image.alt.vi: Ruộng ngập nước bên cạnh đất khô nứt nẻ
@@ -415,10 +427,10 @@ image.alt.en: Green vegetables in dark soil
 image.alt.vi: Luống rau xanh trên đất nâu sẫm
 hint.en: Remember the Soil helpers picture.
 hint.vi: Em nhớ lại ô Bạn của đất nhé.
-explanation_correct.en: Yes! Compost rots and adds nutrients to soil.
-explanation_correct.vi: Đúng rồi! Phân ủ mục dần, thêm chất dinh dưỡng cho đất.
-explanation_wrong.en: The answer is compost. It feeds the soil.
-explanation_wrong.vi: Đáp án là phân ủ. Phân ủ nuôi dưỡng đất.
+explanation_correct.en: You can make compost from fruit peels and leaves.
+explanation_correct.vi: Em có thể ủ phân từ vỏ trái cây và lá.
+explanation_wrong.en: Compost rots and adds nutrients to soil.
+explanation_wrong.vi: Phân ủ mục dần, thêm chất dinh dưỡng cho đất.
 > Câu nhớ lại ví dụ ba, bốn ô Bạn của đất. Sỏi nhỏ có sức hút (cũng là một phần của đất, bài 11); pin cũ có sức hút (cũng là thứ người ta bỏ xuống đất).
 > Ba hình vẽ cùng nét: vật vẽ gần. Phân ủ và pin là món kệ Chơi, sỏi là hình kệ bài 11, nên đáp án không là hình duy nhất bé đã thấy.
 
@@ -432,6 +444,8 @@ image.alt.vi: Đống phân ủ trong góc vườn
 
 #### option q1_batteries
 correct: false
+feedback.en: Old batteries leak harmful things into soil.
+feedback.vi: Pin cũ rỉ chất độc vào đất.
 label.en: old batteries
 label.vi: pin cũ
 image.brief: Dùng lại hình `tray_batteries`. Từ khoá tìm ảnh (EN): old rusty batteries on ground
@@ -440,6 +454,8 @@ image.alt.vi: Mấy viên pin cũ trên mặt đất
 
 #### option q1_stones
 correct: false
+feedback.en: Stones do not rot, so they add no food.
+feedback.vi: Sỏi không mục, nên không nuôi được đất.
 label.en: small stones
 label.vi: sỏi nhỏ
 image.brief: Dùng lại hình `tray_stones` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): small gravel stones pile close up
@@ -457,20 +473,22 @@ image.brief: Dùng lại hình `explore_rain_gauge` ở bài `thoi-tiet-va-thien
 image.alt.en: A rain gauge in an open garden
 image.alt.vi: Ống đo mưa giữa khoảng vườn trống
 sentence.en: The usual weather over many years is called {1}.
-sentence.vi: Kiểu thời tiết thường gặp qua nhiều năm gọi là {1}.
+sentence.vi: Thời tiết thường gặp qua nhiều năm gọi là {1}.
 answers: q2_climate
 hint.en: Remember the One day or many years picture.
 hint.vi: Em nhớ lại ô Một ngày hay nhiều năm nhé.
-explanation_correct.en: Yes! Climate is the usual weather over many years.
-explanation_correct.vi: Đúng rồi! Khí hậu là kiểu thời tiết thường gặp qua nhiều năm.
-explanation_wrong.en: The answer is climate. Weather is just one day.
-explanation_wrong.vi: Đáp án là khí hậu. Thời tiết chỉ là chuyện của từng ngày.
+explanation_correct.en: Climate tells us what weather to expect each season.
+explanation_correct.vi: Khí hậu cho biết mỗi mùa thường có thời tiết ra sao.
+explanation_wrong.en: Climate is the usual weather over many years.
+explanation_wrong.vi: Khí hậu là thời tiết thường gặp qua nhiều năm.
 > Câu nhớ lại câu của ô Một ngày hay nhiều năm. Thẻ "weather" là chính misconception `weather_is_climate` (bé còn nghĩ hai chữ là một sẽ chọn); thẻ "rain" có sức hút (một kiểu thời tiết hay gặp). Câu không chứa chữ "climate" · "khí hậu".
 > Hình câu hỏi là ống đo mưa của *Thời tiết* bài hai (đo nhiều năm thì biết khí hậu), không phải hình của thẻ nào. Ba thẻ cùng là ảnh chụp.
 
 #### bank q2_weather
 label.en: weather
 label.vi: thời tiết
+feedback.en: Weather is what the sky is like on one day.
+feedback.vi: Thời tiết là chuyện của từng ngày.
 image.brief: Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky
 image.alt.en: The bright sun in the sky
 image.alt.vi: Mặt Trời chói sáng trên trời
@@ -485,6 +503,8 @@ image.alt.vi: Cánh đồng sương mù buổi sáng mùa đông
 #### bank q2_rain
 label.en: rain
 label.vi: mưa
+feedback.en: Rain is one kind of weather, on some days.
+feedback.vi: Mưa chỉ là một kiểu thời tiết.
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
@@ -505,10 +525,10 @@ image.alt.vi: Nắm đất vườn trong lòng bàn tay
 hint.en: Which ones give the soil cover and food?
 hint.vi: Việc nào vừa che chở vừa nuôi đất nhé?
 > Rà chữ tester 11/11 (n11): gợi ý cũ gọi tên hai nhóm Chơi ("thức ăn cho đất", "nước vừa đủ"), mà "nước vừa đủ" chỉ ứng với một lựa chọn sai (tưới cả ngày). Gợi ý mới nói đúng điều hai đáp án cùng làm (che và nuôi đất), không gọi tên lựa chọn.
-explanation_correct.en: Yes! Straw and trees feed and protect the soil.
-explanation_correct.vi: Đúng rồi! Rơm phủ và cây xanh nuôi đất, che chở cho đất.
-explanation_wrong.en: The answers are covering with straw and planting trees.
-explanation_wrong.vi: Đáp án là phủ rơm lên đất và trồng thêm cây.
+explanation_correct.en: Straw keeps soil moist, and tree roots hold it.
+explanation_correct.vi: Rơm giữ ẩm cho đất, rễ cây giữ đất lại.
+explanation_wrong.en: Straw and trees feed and protect the soil.
+explanation_wrong.vi: Rơm phủ và cây xanh nuôi đất, che chở cho đất.
 > DOK 2: áp ba nhóm của phần Chơi vào bốn việc mới. Hai lựa chọn sai có sức hút: quét sạch lá trông gọn gàng nhưng lấy mất thức ăn của đất; tưới nước cả ngày nghe như chăm cây nhưng làm đất quá ướt.
 > [CẦN KIỂM] Phủ rơm giữ ẩm cho đất và mục dần thành chất hữu cơ; trồng cây giữ đất (nối ô "Slowing it down" bài bảy).
 > Bốn hình vẽ cùng nét: một khoảnh vườn vẽ gần vừa, không người.
@@ -523,6 +543,8 @@ image.alt.vi: Lớp rơm phủ quanh gốc rau non
 
 #### option q3_sweep
 correct: false
+feedback.en: Fallen leaves feed the soil as they rot.
+feedback.vi: Lá rụng mục ra sẽ nuôi đất.
 label.en: sweeping up every leaf
 label.vi: quét sạch mọi chiếc lá
 image.brief: [hình vẽ] Một khoảng đất dưới gốc cây bị quét sạch trơ đất, cây chổi tre dựng bên cạnh một đống lá vừa gom, vẽ gần vừa; không có người, không có chữ. Từ khoá tìm ảnh (EN): swept bare ground broom pile of leaves
@@ -531,6 +553,8 @@ image.alt.vi: Mặt đất quét trơ và một đống lá
 
 #### option q3_hose
 correct: false
+feedback.en: Too much water makes soil soggy and drowns roots.
+feedback.vi: Tưới quá nhiều làm đất sũng, rễ bị úng.
 label.en: watering all day long
 label.vi: tưới nước suốt cả ngày
 image.brief: [hình vẽ] Một ống nước để chảy mãi trên luống rau, nước đọng thành vũng giữa các cây, vẽ gần vừa; không có người, không có tay, không có chữ, không có nhãn hiệu trên vòi. Từ khoá tìm ảnh (EN): garden hose running puddle vegetable bed
@@ -550,23 +574,26 @@ id: 61dcbb89-5ae4-43cc-b497-132b18fdb39d
 format: single_choice
 version: 1
 dok: 2
-prompt.en: A garden has no earthworms. What will its soil most likely be like?
-prompt.vi: Một mảnh vườn không có giun đất. Đất ở đó dễ thành ra thế nào nhất?
+prompt.en: Without earthworms, what is garden soil likely like?
+prompt.vi: Vườn không có giun, đất dễ thành ra sao?
 image.brief: Dùng lại hình `q6` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): vegetable garden beds village Vietnam
 image.alt.en: A vegetable garden
 image.alt.vi: Góc vườn rau
 hint.en: What do earthworm tunnels do for soil?
 hint.vi: Đường hầm của giun đất giúp gì cho đất?
-explanation_correct.en: Yes! No tunnels means less air and water get in.
-explanation_correct.vi: Đúng rồi! Không có đường hầm thì ít không khí và nước len vào đất.
-explanation_wrong.en: The answer is hard and packed. No worms, no tunnels.
-explanation_wrong.vi: Đáp án là cứng và chặt. Không có giun thì không có đường hầm.
+explanation_correct.en: No tunnels means less air and water get in.
+explanation_correct.vi: Không có đường hầm, ít không khí và nước vào đất.
+explanation_wrong.en: No worms means no tunnels, so soil packs hard.
+explanation_wrong.vi: Không giun, không đường hầm, nên đất nén chặt.
+> A2 (SK-043, 14/11): câu hỏi cũ mười chín chữ (hai câu), nay chín chữ.
 > DOK 2: suy ngược từ ô Bạn của đất (giun đào đường hầm, không khí và nước len vào) sang trường hợp không có giun. "Tơi và thoáng khí" là điều giun làm ra (sức hút với bé chỉ nhớ "đất và giun"); "sẫm màu và màu mỡ" có sức hút (không có giun ăn lá thì lá còn nhiều).
 > Gợi ý là một câu hỏi về việc giun làm, câu trả lời của nó ("cho không khí và nước vào") không phải nhãn đáp án.
 > [CẦN KIỂM] Đất vườn thiếu giun dễ bị nén chặt, kém thoáng khí.
 
 #### option q4_airy
 correct: false
+feedback.en: Airy soil needs tunnels to let air in.
+feedback.vi: Đất thoáng khí cần đường hầm cho không khí vào.
 label.en: soft and airy
 label.vi: tơi và thoáng khí
 image.brief: [hình vẽ] Mặt cắt một khoảnh đất vườn, mặt đất ở trên có vài cây rau nhỏ: đất nâu tơi, nhiều khe hở nhỏ màu kem giữa các hạt; vẽ ngang, nền kem trơn; không có giun, không có mũi tên, không có chữ; cùng khung với hai lựa chọn kia.
@@ -575,6 +602,8 @@ image.alt.vi: Mặt cắt đất có nhiều khe hở nhỏ
 
 #### option q4_rich
 correct: false
+feedback.en: Rich soil needs helpers to mix in rotting leaves.
+feedback.vi: Đất màu mỡ cần giun trộn lá mục vào.
 label.en: dark and rich
 label.vi: sẫm màu và màu mỡ
 image.brief: [hình vẽ] Cùng khung với `q4_airy`: đất nâu sẫm, lẫn nhiều vụn lá mục, khe hở vừa phải; không có giun, không có chữ.
@@ -601,15 +630,17 @@ image.alt.en: Water pouring from a watering can
 image.alt.vi: Nước chảy từ bình tưới
 hint.en: Remember the Healthy soil picture.
 hint.vi: Em nhớ lại ô Đất tốt nhé.
-explanation_correct.en: Yes! Crumbly soil has spaces for air and water.
-explanation_correct.vi: Đúng rồi! Đất tơi xốp có khe hở cho không khí và nước.
-explanation_wrong.en: The answer is the dark, crumbly soil.
-explanation_wrong.vi: Đáp án là nắm đất sẫm màu, tơi xốp.
+explanation_correct.en: Its dark colour comes from rotting leaves, food for plants.
+explanation_correct.vi: Màu sẫm là nhờ lá mục, thức ăn cho cây.
+explanation_wrong.en: Dark, crumbly soil has room for air and water.
+explanation_wrong.vi: Đất sẫm màu, tơi xốp có chỗ cho không khí và nước.
 > DOK 2: ô Đất tốt nói "ẩm, không sũng nước" và "nhiều khe nhỏ chứa không khí", không tả đất tốt trông thế nào; bé áp hai ý đó vào ba nắm đất. Nắm sũng nước có sức hút (đất nhiều nước nghe như tốt cho cây).
 > Ba lựa chọn là ba hình vẽ cùng khung bàn tay đeo găng của bài 12 câu q4; nắm đất sẫm màu dùng lại `q4_dark` của bài 12 (ở đó là lựa chọn sai của một câu khác, bài khác).
 
 #### option q5_hard
 correct: false
+feedback.en: Hard, lumpy soil has few spaces for air.
+feedback.vi: Đất cứng, vón cục có ít khe cho không khí.
 label.en: hard and lumpy
 label.vi: cứng và vón cục
 image.brief: [hình vẽ] Cùng khung với `q4_dark` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`: bàn tay đeo găng xanh lá cầm một cục đất nâu nhạt cứng, vón thành khối, không tơi; nền kem trơn; không thấy mặt, không có chữ.
@@ -626,6 +657,8 @@ image.alt.vi: Nắm đất nâu sẫm tơi xốp
 
 #### option q5_wet
 correct: false
+feedback.en: Soggy soil has water but too little air.
+feedback.vi: Đất sũng nước thì thiếu không khí cho rễ.
 label.en: grey and very wet
 label.vi: xám và sũng nước
 image.brief: [hình vẽ] Cùng khung với `q4_dark` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`: bàn tay đeo găng xanh lá cầm một nắm đất xám nhão, nước nhỏ giọt qua kẽ ngón tay; nền kem trơn; không thấy mặt, không có chữ.
@@ -642,8 +675,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Da Lat is hot today. Its climate is still cool.
-statement.vi: Hôm nay Đà Lạt nóng. Nhưng khí hậu Đà Lạt vẫn mát mẻ.
+statement.en: Da Lat is hot today, but its climate stays cool.
+statement.vi: Hôm nay Đà Lạt nóng, nhưng khí hậu vẫn mát mẻ.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -655,10 +688,12 @@ image.alt.en: Pine hills on a sunny day
 image.alt.vi: Đồi thông ngày nắng
 hint.en: Remember the One day or many years picture.
 hint.vi: Em nhớ lại ô Một ngày hay nhiều năm nhé.
-explanation_correct.en: Yes! A hot day is weather. Climate is many years.
-explanation_correct.vi: Đúng rồi! Một ngày nóng là thời tiết. Khí hậu là chuyện của nhiều năm.
-explanation_wrong.en: Na is right. One hot day does not change the climate.
-explanation_wrong.vi: Na nói đúng. Một ngày nóng không làm thay đổi khí hậu.
+explanation_correct.en: Da Lat is high up, so most days stay cool.
+explanation_correct.vi: Đà Lạt nằm trên cao nên phần lớn ngày đều mát.
+explanation_wrong.en: One hot day does not change the climate.
+explanation_wrong.vi: Một ngày nóng không làm thay đổi khí hậu.
+feedback_false.en: One hot day is just weather.
+feedback_false.vi: Một ngày nóng chỉ là thời tiết.
 > Lời Na, hình và đáp án Đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đúng/Sai). Cả màn mười tám từ EN.
 > DOK 3: bé tách hai thang thời gian (một ngày, nhiều năm) trong một tình huống mới: Đà Lạt không có ở ô Học. Bé còn nghĩ thời tiết và khí hậu là một sẽ cho là Na tự mâu thuẫn và chọn "Na chưa đúng".
 > [CẦN KIỂM] Đà Lạt có khí hậu mát gần như quanh năm. "Da Lat" trong chuỗi EN viết không dấu (bảng Tên gọi); nghe thử giọng EN.

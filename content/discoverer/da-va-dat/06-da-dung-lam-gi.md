@@ -52,14 +52,16 @@ image.alt.en: A glass full of water
 image.alt.vi: Cốc đầy nước
 hint.en: Remember the water test in lesson five.
 hint.vi: Em nhớ lại trò thử nhỏ nước ở bài năm nhé.
-explanation_correct.en: Yes! Water soaks into sandstone.
-explanation_correct.vi: Đúng rồi! Nước thấm được vào sa thạch.
-explanation_wrong.en: The answer is sandstone. It is permeable.
-explanation_wrong.vi: Đáp án là sa thạch. Sa thạch thấm nước.
+explanation_correct.en: Water soaks into the gaps between sandstone's grains.
+explanation_correct.vi: Nước thấm vào khe giữa các hạt cát của sa thạch.
+explanation_wrong.en: Sandstone is permeable, so water soaks in.
+explanation_wrong.vi: Sa thạch thấm nước, nên nước thấm vào được.
 > Hình câu hỏi là cốc nước, gợi "nước" mà không cho thấy hòn đá nào. Lựa chọn và vị trí đáp án (thứ ba) theo bảng Khởi động.
 
 #### option w1_marble
 correct: false
+feedback.en: Water stays on top of marble.
+feedback.vi: Nước đọng lại trên mặt đá cẩm thạch.
 label.en: marble
 label.vi: đá cẩm thạch
 image.brief: Dùng lại hình `marble` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): white marble rock sample
@@ -69,6 +71,8 @@ image.alt.vi: Hòn đá trắng lấp lánh
 
 #### option w1_slate
 correct: false
+feedback.en: Water runs off slate without soaking in.
+feedback.vi: Nước trượt khỏi đá phiến, không thấm vào.
 label.en: slate
 label.vi: đá phiến
 image.brief: Dùng lại hình `tray_slate` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): slate rock sample
@@ -99,10 +103,12 @@ image.alt.vi: Hòn đá màu trắng
 answer: true
 hint.en: Remember the scratch test in lesson three.
 hint.vi: Em nhớ lại trò thử cào ở bài ba nhé.
-explanation_correct.en: Yes! A fingernail can scratch chalk.
-explanation_correct.vi: Đúng rồi! Móng tay cào xước được đá phấn.
-explanation_wrong.en: This is true. A fingernail can scratch chalk.
-explanation_wrong.vi: Câu này đúng. Móng tay cào xước được đá phấn.
+explanation_correct.en: Chalk is soft, so you can draw with it.
+explanation_correct.vi: Đá phấn mềm, em vẽ được lên nền sân.
+explanation_wrong.en: A fingernail can scratch chalk, so it is soft.
+explanation_wrong.vi: Móng tay cào xước được đá phấn, nên nó mềm.
+feedback_false.en: A fingernail leaves a scratch on chalk.
+feedback_false.vi: Móng tay để lại vết xước trên đá phấn.
 > Đúng chữ EN ở bảng Đúng/Sai (bài sáu w2, Đúng). `alt` không nói "mềm", để hình không thay bé trả lời. Không dùng hình `explore_scratch` (bàn tay cào đá phấn), vì đó là bằng chứng của đáp án.
 
 ### w3
@@ -119,10 +125,10 @@ image.alt.en: An open quarry
 image.alt.vi: Mỏ đá lộ thiên
 hint.en: Remember the Made by people picture in lesson one.
 hint.vi: Em nhớ lại ô Do con người làm ra ở bài một nhé.
-explanation_correct.en: Yes! People make bricks from clay.
-explanation_correct.vi: Đúng rồi! Con người làm gạch từ đất sét.
-explanation_wrong.en: The answer is the brick. The others are natural.
-explanation_wrong.vi: Đáp án là viên gạch. Hai thứ kia có sẵn trong tự nhiên.
+explanation_correct.en: People bake clay in a kiln to make bricks.
+explanation_correct.vi: Người ta nung đất sét trong lò để làm gạch.
+explanation_wrong.en: Bricks are made by people from baked clay.
+explanation_wrong.vi: Gạch do người làm từ đất sét nung.
 > Hình câu hỏi là mỏ đá (bài một, từ `quarry`): gợi "đá đến từ đâu", không cho thấy gạch. Gợi ý gọi tên ô "Made by people" · "Do con người làm ra" theo kế hoạch bài một; topic editor kiểm lại tên ô khi rà chéo.
 > Lựa chọn và vị trí đáp án (thứ nhất) theo bảng Khởi động. Hòn cuội nhẵn, tròn trông như được mài, nên có sức hút.
 
@@ -137,6 +143,8 @@ image.alt.vi: Mấy viên gạch xếp chồng
 
 #### option w3_pebble
 correct: false
+feedback.en: Water shaped this pebble, not people.
+feedback.vi: Hòn cuội do nước mài, không do người làm.
 label.en: pebble
 label.vi: hòn cuội
 image.brief: Dùng lại hình `w1_stone` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): smooth pebble stone sand
@@ -145,6 +153,8 @@ image.alt.vi: Hòn đá cuội
 
 #### option w3_hill
 correct: false
+feedback.en: Nature made limestone hills over a very long time.
+feedback.vi: Núi đá vôi do tự nhiên tạo nên rất lâu.
 label.en: limestone hill
 label.vi: núi đá vôi
 image.brief: Dùng lại hình `ha_long` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): Ha Long Bay aerial islands
@@ -392,15 +402,17 @@ image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
 hint.en: Remember the Laterite picture in the lesson.
 hint.vi: Em nhớ lại ô Đá ong trong bài học nhé.
-explanation_correct.en: Yes! Many old wells and walls are laterite.
-explanation_correct.vi: Đúng rồi! Nhiều giếng cổ và tường cổ làm bằng đá ong.
-explanation_wrong.en: The answer is the well. It is made of laterite.
-explanation_wrong.vi: Đáp án là cái giếng. Giếng làm bằng đá ong.
+explanation_correct.en: Laterite is red-brown and full of little holes.
+explanation_correct.vi: Đá ong màu nâu đỏ, có nhiều lỗ nhỏ.
+explanation_wrong.en: Many old village wells are built of laterite.
+explanation_wrong.vi: Nhiều giếng làng cổ xây bằng đá ong.
 > DOK 1: nhận ra đá ong (ô Học thứ hai, phần Chơi). Ba hình đều là món của kệ Chơi, cùng là hình vẽ đồ vật ở nhà và ở làng. Câu phân loại: nhãn và `alt` tả đồ vật, không có tên đá.
 > Hình câu hỏi là kính lúp, trung tính: không cho thấy đá ong.
 
 #### option q1_worktop
 correct: false
+feedback.en: This shiny, spotty worktop is granite.
+feedback.vi: Mặt bàn bếp lốm đốm này là đá hoa cương.
 label.en: kitchen worktop
 label.vi: mặt bàn bếp
 image.brief: Dùng lại hình `tray_worktop`.
@@ -409,6 +421,8 @@ image.alt.vi: Mặt bàn bếp bóng, có đốm
 
 #### option q1_white_wall
 correct: false
+feedback.en: The white paint on this wall comes from limestone.
+feedback.vi: Lớp vôi trắng trên tường làm từ đá vôi.
 label.en: whitewashed wall
 label.vi: tường quét vôi
 image.brief: Dùng lại hình `tray_white_wall`.
@@ -438,10 +452,10 @@ sentence.vi: Người ta nghiền nhỏ {1} để làm xi măng.
 answers: q2_limestone
 hint.en: Remember what the Learn pictures said about cement.
 hint.vi: Em nhớ lại phần Học nói gì về xi măng nhé.
-explanation_correct.en: Yes! Cement is made from crushed limestone.
-explanation_correct.vi: Đúng rồi! Xi măng làm từ đá vôi nghiền nhỏ.
-explanation_wrong.en: The answer is limestone. It is crushed to make cement.
-explanation_wrong.vi: Đáp án là đá vôi. Đá vôi được nghiền nhỏ để làm xi măng.
+explanation_correct.en: Cement mixed with sand and water sets hard.
+explanation_correct.vi: Xi măng trộn cát và nước sẽ đông cứng lại.
+explanation_wrong.en: Limestone is crushed and heated to make cement.
+explanation_wrong.vi: Đá vôi được nghiền, nung nóng để làm xi măng.
 > DOK 1: nhớ lại câu của ô Đá vôi. Câu không có chữ "lime", "vôi" (gốc từ của đáp án). Ba thẻ là ba loại đá của bài, dùng lại ba hình ô Học, cùng là ảnh cảnh có đá; thẻ đúng ở chỗ thứ nhất (bảng vị trí). Gợi ý không gọi tên ô Đá vôi, vì tên ô trùng chữ nhãn đáp án.
 
 #### bank q2_limestone
@@ -454,6 +468,8 @@ image.alt.vi: Những ngọn núi đá vôi cao
 #### bank q2_laterite
 label.en: laterite
 label.vi: đá ong
+feedback.en: Laterite is cut into blocks for walls.
+feedback.vi: Đá ong được đẽo thành khối để xây tường.
 image.brief: Dùng lại hình `explore_laterite`. Từ khoá tìm ảnh (EN): Duong Lam ancient village laterite house wall
 image.alt.en: An old house with red-brown stone walls
 image.alt.vi: Ngôi nhà cổ có tường đá màu nâu đỏ
@@ -461,6 +477,8 @@ image.alt.vi: Ngôi nhà cổ có tường đá màu nâu đỏ
 #### bank q2_granite
 label.en: granite
 label.vi: đá hoa cương
+feedback.en: Granite is used whole, for steps and worktops.
+feedback.vi: Đá hoa cương dùng làm bậc thềm, mặt bàn.
 image.brief: Dùng lại hình `tray_steps` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): granite stone steps entrance
 image.alt.en: Stone steps with a handrail
 image.alt.vi: Bậc đá có tay vịn
@@ -480,10 +498,10 @@ image.alt.en: A pile of crushed stone
 image.alt.vi: Một đống đá dăm
 hint.en: Some rock is crushed into tiny bits. Where does it go?
 hint.vi: Có loại đá được nghiền thật nhỏ. Bột đá ấy đi vào đâu?
-explanation_correct.en: Yes! People make cement and concrete. They have crushed rock inside.
-explanation_correct.vi: Đúng rồi! Xi măng và bê tông do con người làm ra. Bên trong chúng có đá nghiền nhỏ.
-explanation_wrong.en: The answers are the cement yard and the concrete block.
-explanation_wrong.vi: Đáp án là sân xi măng và khối bê tông.
+explanation_correct.en: Concrete also has gravel, small bits of rock, inside.
+explanation_correct.vi: Trong bê tông còn có sỏi, là những mẩu đá nhỏ.
+explanation_wrong.en: Cement and concrete both have crushed rock inside.
+explanation_wrong.vi: Xi măng và bê tông đều có đá nghiền nhỏ bên trong.
 > DOK 2: phân loại, áp ý "đồ dùng hằng ngày có đá nghiền nhỏ" (ô Đá vôi, ví dụ ba và bốn) vào khối bê tông, món bé chưa gặp trong bài này. Nối bài một: bê tông "do con người làm ra, không phải đá tự nhiên", nhưng vẫn có đá nghiền nhỏ ở bên trong; hai ý không trái nhau (ghi chú của `bricks_are_rocks`).
 > Rà chữ tester 11/11 (n6): giải thích khi đúng nói cả hai vế ("do con người làm ra" và "bên trong có đá nghiền nhỏ"), để chữ trẻ đọc nối được với bài một.
 > [CẦN KIỂM] Bê tông trộn từ xi măng, cát, đá dăm và nước; sân xi măng láng bằng vữa xi măng và cát (biên tập nhớ).
@@ -491,6 +509,8 @@ explanation_wrong.vi: Đáp án là sân xi măng và khối bê tông.
 
 #### option q3_table
 correct: false
+feedback.en: A wooden table comes from trees.
+feedback.vi: Bàn gỗ làm từ cây, không có đá.
 label.en: wooden table
 label.vi: bàn gỗ
 image.brief: Dùng lại hình `tray_wood_table`.
@@ -499,6 +519,8 @@ image.alt.vi: Chiếc bàn gỗ
 
 #### option q3_basket
 correct: false
+feedback.en: This basket is made of plastic, with no rock.
+feedback.vi: Rổ nhựa làm bằng nhựa, không có đá.
 label.en: plastic basket
 label.vi: rổ nhựa
 image.brief: [hình vẽ] Một chiếc rổ nhựa màu xanh lá có lỗ đan, đặt trên nền trơn, vẽ chéo, cùng nét và cùng cỡ với hình bàn gỗ của kệ; không có nhãn hiệu, không có thức ăn trong rổ, không có người, không có chữ.
@@ -526,17 +548,18 @@ id: 5f97360f-9033-4a23-bf49-a5dcbd7ac483
 format: single_choice
 version: 1
 dok: 2
-prompt.en: The step by the well gets wet and scrubbed daily. Which one suits it best?
-prompt.vi: Bậc đá cạnh giếng ngày nào cũng bị ướt và bị cọ rửa. Thứ nào hợp nhất?
+prompt.en: Which rock suits a step by the well?
+prompt.vi: Đá nào hợp làm bậc thềm cạnh giếng?
 image.brief: [hình vẽ] Một chiếc gàu nhôm múc đầy nước, nước tràn qua mép gàu, vẽ gần trên nền trơn; không thấy giếng, bậc hay đá, không có người, không có nhãn hiệu, không có chữ.
 image.alt.en: A bucket full of water
 image.alt.vi: Gàu đầy nước
 hint.en: Remember the scratch test and the water test.
 hint.vi: Em nhớ lại trò thử cào và trò thử nhỏ nước nhé.
-explanation_correct.en: Yes! Granite is hard and keeps water out.
-explanation_correct.vi: Đúng rồi! Đá hoa cương cứng và không thấm nước.
-explanation_wrong.en: The answer is granite. It is hard and keeps water out.
-explanation_wrong.vi: Đáp án là đá hoa cương. Đá hoa cương cứng và không thấm nước.
+explanation_correct.en: Granite steps stay strong even when wet every day.
+explanation_correct.vi: Bậc đá hoa cương vẫn bền dù ướt mỗi ngày.
+explanation_wrong.en: Granite is hard and keeps water out.
+explanation_wrong.vi: Đá hoa cương cứng và không thấm nước.
+> A2 (SK-043, 14/11): câu hỏi cũ hai mươi mốt chữ, nay tám chữ. Ý "ngày nào cũng ướt và bị cọ rửa" chuyển vào hình câu hỏi (gàu nước) và gợi ý (thử cào, thử nhỏ nước).
 > DOK 2: ghép hai tính chất (bài ba: cứng; bài năm: không thấm nước) để chọn đá cho một việc. Bốn lựa chọn, đáp án ở chỗ thứ hai (bảng vị trí).
 > Rà chữ tester 11/11 (n4): đổi việc từ "mặt bàn bếp" (ví dụ hai của ô Đá hoa cương và món kệ `tray_worktop`, bé chỉ cần nhớ lại) sang "bậc đá cạnh giếng", một việc chưa nêu trong bài, để câu là vận dụng thật. Hình câu hỏi đổi theo (gàu nước, không thấy đá); key không đổi.
 > Câu hỏi nói "Which one" · "Thứ nào", không nói "Which rock", vì hoạt thạch và thạch cao là khoáng vật (bài bốn).
@@ -545,6 +568,8 @@ explanation_wrong.vi: Đáp án là đá hoa cương. Đá hoa cương cứng v�
 
 #### option q4_talc
 correct: false
+feedback.en: Talc is so soft that scrubbing wears it away.
+feedback.vi: Hoạt thạch rất mềm, cọ rửa sẽ mòn ngay.
 label.en: talc
 label.vi: hoạt thạch
 image.brief: Dùng lại hình `tray_talc` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): talc mineral sample
@@ -562,6 +587,8 @@ image.alt.vi: Hòn đá màu xám
 
 #### option q4_pumice
 correct: false
+feedback.en: Pumice is full of holes and breaks easily.
+feedback.vi: Đá bọt nhiều lỗ, nhẹ và dễ vỡ.
 label.en: pumice
 label.vi: đá bọt
 image.brief: Dùng lại hình `pumice` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): pumice rock sample
@@ -570,6 +597,8 @@ image.alt.vi: Hòn đá màu xám nhạt
 
 #### option q4_gypsum
 correct: false
+feedback.en: A fingernail can scratch gypsum, so it wears away.
+feedback.vi: Thạch cao mềm, móng tay còn cào xước được.
 label.en: gypsum
 label.vi: thạch cao
 image.brief: Dùng lại hình `tray_gypsum` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): selenite gypsum crystal sample
@@ -582,23 +611,26 @@ id: e006f2cc-92e5-4b22-a3c6-2e87108ba5ce
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam's family cuts blocks by hand for a wall. Which rock suits them best?
-prompt.vi: Nhà Nam tự tay đẽo đá thành từng khối để xây tường. Loại đá nào hợp nhất?
+prompt.en: Which rock is best for cutting wall blocks by hand?
+prompt.vi: Đá nào hợp nhất để tự đẽo khối xây tường?
 image.brief: [hình vẽ] Một mảnh vườn nhỏ ở làng quê có mấy luống rau xanh, phía sau là bãi đất trống chưa có tường rào, vẽ ngang; không có người, không có tường, không có đá, không có chữ.
 image.alt.en: A small garden with no wall
 image.alt.vi: Mảnh vườn nhỏ chưa có tường rào
 hint.en: Easy to cut is good. But what about rain later?
 hint.vi: Dễ đẽo là tốt. Nhưng sau này gặp mưa thì sao?
-explanation_correct.en: Yes! Laterite is soft when dug up, then it hardens.
-explanation_correct.vi: Đúng rồi! Đá ong mới đào lên thì mềm, rồi cứng dần.
-explanation_wrong.en: The answer is laterite. It is easy to cut, then hardens.
-explanation_wrong.vi: Đáp án là đá ong. Đá ong dễ đẽo, rồi cứng dần.
+explanation_correct.en: Fresh laterite cuts easily, then hardens in the open air.
+explanation_correct.vi: Đá ong mới đào dễ đẽo, để ngoài trời sẽ cứng dần.
+explanation_wrong.en: Laterite is easy to cut, then slowly hardens.
+explanation_wrong.vi: Đá ong dễ đẽo, rồi cứng dần.
+> A2 (SK-043, 14/11): câu hỏi cũ hai mươi chữ (có nhà Nam), nay mười chữ.
 > DOK 2: tình huống mới, bé phải xét hai điều cùng lúc: dễ đẽo (đá phấn được, đá ba-dan không) và bền với mưa (đá phấn không, đá ong được). Thay câu gợi ý ở `_topic.md` ("vì sao không lát sân bằng đá phấn"): câu đó cần ba lựa chọn là ba lý do, khó có hình; và câu q6 cũng hỏi về đá phấn, hai câu sẽ cùng một ý.
 > Gợi ý chỉ cách nghĩ (hai điều kiện), không gọi tên đá.
 > [CẦN KIỂM] Đá phấn mềm, thấm nước, để ngoài mưa nắng thì mau mòn và vỡ; đá ba-dan rất cứng, khó đẽo bằng tay; đá ong đẽo được khi còn mềm rồi cứng dần (biên tập nhớ). Ở vài nơi người ta có xây nhà bằng đá phấn, nhưng chữ cho trẻ chỉ so ba loại đá trong câu.
 
 #### option q5_chalk
 correct: false
+feedback.en: Chalk soaks up rain and slowly wears away.
+feedback.vi: Đá phấn thấm nước mưa, lâu ngày sẽ mòn.
 label.en: chalk
 label.vi: đá phấn
 image.brief: Dùng lại hình `chalk` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): chalk rock sample
@@ -616,6 +648,8 @@ image.alt.vi: Mặt đá nâu đỏ có nhiều lỗ
 
 #### option q5_basalt
 correct: false
+feedback.en: Basalt is very hard to cut by hand.
+feedback.vi: Đá ba-dan rất cứng, khó đẽo bằng tay.
 label.en: basalt
 label.vi: đá ba-dan
 image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): basalt vesicular rock sample
@@ -632,8 +666,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Chalk is a rock. So it makes a good roof.
-statement.vi: Đá phấn cũng là đá. Vậy lợp mái bằng đá phấn là hợp.
+statement.en: Chalk is a rock, so it makes a good roof.
+statement.vi: Đá phấn là đá, nên dùng lợp mái rất hợp.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -645,10 +679,12 @@ image.alt.en: A small house with no roof yet
 image.alt.vi: Căn nhà nhỏ chưa có mái
 hint.en: Think about chalk in lessons three and five.
 hint.vi: Em nhớ lại đá phấn khi thử cào và thử nhỏ nước nhé.
-explanation_correct.en: Chalk is soft and soaks up rain. It does not suit a roof.
-explanation_correct.vi: Đá phấn mềm và thấm nước mưa. Đá phấn không hợp để lợp mái.
-explanation_wrong.en: Na is not right. Chalk is soft and soaks up rain.
-explanation_wrong.vi: Na chưa đúng. Đá phấn mềm và thấm nước mưa.
+explanation_correct.en: A roof needs rock that keeps rain out, like slate.
+explanation_correct.vi: Mái nhà cần đá không thấm nước, như đá phiến.
+explanation_wrong.en: Chalk is soft and soaks up rain.
+explanation_wrong.vi: Đá phấn mềm và thấm nước mưa.
+feedback_true.en: Chalk soaks up water and scratches easily.
+feedback_true.vi: Đá phấn thấm nước và dễ bị cào xước.
 > DOK 3: bắt lỗi một lập luận ("là đá thì làm việc gì cũng hợp"). Bé phải ghép tính chất của bài ba (đá phấn mềm) và bài năm (đá phấn thấm nước) vào một việc mới (lợp mái). Lời Na đúng bảng "Câu sáu, lời Na" ở `_topic.md`; đáp án Sai theo bảng Đúng/Sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!". Hình câu hỏi là căn nhà chưa có mái, không có mái đá phiến, để hình không gợi đáp án.
 > [CẦN KIỂM] Như ghi chú của `all_rocks_are_hard` và `rocks_never_soak_water`: đá phấn mềm, thấm nước.

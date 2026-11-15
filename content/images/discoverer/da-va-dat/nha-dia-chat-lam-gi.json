@@ -126,12 +126,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.44,
+        "left": 0.56,
         "top": 0.72,
-        "width": 0.56,
+        "width": 0.215,
         "height": 0.28
       },
-      "note": "Các ống mẫu đất trong khay; cắt bỏ người và giấy bản đồ (CC BY 2.0: giữ tên gốc)."
+      "note": "Các ống mẫu đất trong khay; cắt bỏ người và giấy bản đồ (CC BY 2.0: giữ tên gốc). A2 14/11 (designer, SK-043): crop đổi cho khung 1:1 (crop cũ {\"left\": 0.44, \"top\": 0.72, \"width\": 0.56, \"height\": 0.28})."
     },
     "tray.tray_volcano_watch": {
       "same_as": "learn.explore.explore_safe"
@@ -220,8 +220,9 @@
       "same_as": "tray.tray_slope"
     },
     "q4.q4_pond": {
-      "same_as": "tray_pond",
-      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+      "same_as": "q3_pond",
+      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang q3_pond (bản cắt 4:5) thay cho tray_pond."
     },
     "q4.q4_rice": {
       "same_as": "q2_rice",
@@ -247,11 +248,29 @@
       "author": "Ranjithkumar Murugesan",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Sỏi nhỏ chụp gần (CC0); ảnh vì hai lựa chọn kia là ảnh, sỏi của bài 11 là hình vẽ."
+      "note": "Sỏi nhỏ chụp gần (CC0); ảnh vì hai lựa chọn kia là ảnh, sỏi của bài 11 là hình vẽ. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.35,
+        "width": 1.0,
+        "height": 0.3
+      }
     },
     "q5.q5_topsoil": {
-      "same_as": "explore_organic",
-      "lesson": "da-va-dat/dat-gom-nhung-gi"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NRCSIA99344_-_Iowa_(3381)(NRCS_Photo_Gallery).tif",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/NRCSIA99344_-_Iowa_%283381%29%28NRCS_Photo_Gallery%29.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dark topsoil with roots",
+      "author": "Photo by Lynn Betts, USDA Natural Resources Conservation Service.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:NRCSIA99344_-_Iowa_(3381)(NRCS_Photo_Gallery).tif",
+      "crop": {
+        "left": 0,
+        "top": 0.22,
+        "width": 1.0,
+        "height": 0.285
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/dat-gom-nhung-gi learn.explore.explore_organic, cắt riêng cho khung 5:2 (trước: same_as explore_organic (da-va-dat/dat-gom-nhung-gi))."
     },
     "q6": {
       "source": "Wikimedia Commons",

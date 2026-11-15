@@ -21,6 +21,7 @@ vi: Em nói được vì sao cơ thể em cần không khí.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-036, ngày 10/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids`. Bài này chạy `ids` trước ba bài kia, vì bài hai, ba có câu Khởi động trỏ về bài này.
 > Bài mở màn (`opener`). Mục tiêu, ý chính, từ vựng, bốn ô Học và phần Chơi theo hàng bài một trong bảng kế hoạch ở `_topic.md`.
 > Bài sửa `breathe_out_same_air` ở ý chính ba, ô Hơi thở ra, câu q5 và câu q6 (gắn key). `fish_do_not_breathe` sửa ở ý chính hai, ô Con vật, nhóm Sống dưới nước ở phần Chơi và câu q2, không gắn key.
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: We breathe in and out, even when we sleep.
@@ -54,10 +55,10 @@ image.alt.en: Wind blowing over a rice field
 image.alt.vi: Gió thổi trên cánh đồng lúa
 hint.en: Think of a birthday party.
 hint.vi: Em nhớ lại một bữa tiệc sinh nhật nhé.
-explanation_correct.en: Yes! A balloon is full of air. You breathe air, too.
-explanation_correct.vi: Đúng rồi! Quả bóng bay chứa đầy không khí. Em cũng hít thở không khí.
-explanation_wrong.en: The answer is the balloon. It is full of air.
-explanation_wrong.vi: Đáp án là quả bóng bay. Bóng bay chứa đầy không khí.
+explanation_correct.en: You blow your breath into a balloon to fill it.
+explanation_correct.vi: Em thổi hơi thở vào để bóng căng lên.
+explanation_wrong.en: Balloons hold air, even though you cannot see it.
+explanation_wrong.vi: Bóng bay chứa không khí, dù mắt em không thấy.
 > Gợi ý chỉ tới một bối cảnh quen (tiệc sinh nhật), không nói tên vật. Câu w1 của bài này đặt đáp án ở chỗ thứ nhất; ba bài sau ở chỗ thứ ba, thứ hai, thứ tư (bảng Vị trí đáp án đúng ở `_topic.md`).
 > Hình câu hỏi dùng lại ở câu q4 bài hai và câu w1 bài ba.
 
@@ -71,6 +72,8 @@ image.alt.vi: Quả bóng bay màu đỏ
 
 #### option w1_water
 correct: false
+feedback.en: This glass is full of water, not air.
+feedback.vi: Cốc này đầy nước, không phải không khí.
 label.en: glass of water
 label.vi: cốc nước
 image.brief: [ảnh] Một cốc thuỷ tinh đầy nước trong đặt trên bàn gỗ, chụp ngang, nền trơn; không có nhãn hiệu, không có chữ. Nếu ảnh cốc nước đã chọn cho bài *Đất và nước trên Trái Đất* (SK-033) hợp khung thì dùng ảnh đó. Từ khoá tìm ảnh (EN): glass of water wooden table
@@ -79,6 +82,8 @@ image.alt.vi: Cốc nước
 
 #### option w1_stone
 correct: false
+feedback.en: A stone is solid all the way through.
+feedback.vi: Hòn đá đặc chắc, bên trong không rỗng.
 label.en: stone
 label.vi: hòn đá
 image.brief: [ảnh] Một hòn đá cuội nhẵn màu vàng nâu nằm trên cát, chụp gần; đá đặc, không có lỗ (không dùng ảnh đá ba-dan có lỗ bọt khí của chủ đề *Bề mặt Trái Đất*); không có chữ, không có thước đo. Từ khoá tìm ảnh (EN): smooth pebble stone sand
@@ -94,18 +99,20 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: khung-long/vi-sao-khung-long-bien-mat
 prompt.en: Some kinds of animals lived on and still live today.
-prompt.vi: Một số loài vật đã sống sót, và ngày nay vẫn còn.
+prompt.vi: Một số loài vật sống sót tới ngày nay.
 image.brief: Dùng lại hình `t_rex` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): Tyrannosaurus rex skeleton museum mount side view horizontal posture
 image.alt.en: A T. rex skeleton in a museum
 image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 answer: true
 hint.en: Remember the Lived on card in the dinosaur lessons.
 hint.vi: Em nhớ lại ô Sống sót trong bài khủng long nhé.
-explanation_correct.en: Yes! Crocodiles still live today. They breathe air, like you.
-explanation_correct.vi: Đúng rồi! Ngày nay cá sấu vẫn còn. Cá sấu cũng thở bằng không khí, như em.
-explanation_wrong.en: This is true. Crocodiles and turtles still live today.
-explanation_wrong.vi: Câu này đúng. Ngày nay cá sấu và rùa vẫn còn.
-> Câu hỏi giữ đúng chữ câu của ô `explore_survivors` bài năm *Khủng long* ("Some kinds of animals lived on and still live today." · "Một số loài vật đã sống sót, và ngày nay vẫn còn."), để bé nghe lại đúng câu đã học. [CẦN KIỂM] của ô đó áp luôn ở đây.
+explanation_correct.en: Crocodiles still live today, and they breathe air like you.
+explanation_correct.vi: Cá sấu vẫn sống tới nay, và thở không khí như em.
+explanation_wrong.en: Some animals lived on, like crocodiles and turtles.
+explanation_wrong.vi: Có loài đã sống sót, như cá sấu và rùa.
+feedback_false.en: Turtles lived with dinosaurs, and turtles still swim today.
+feedback_false.vi: Rùa sống từ thời khủng long, nay vẫn còn.
+> Câu EN giữ đúng chữ câu của ô `explore_survivors` bài năm *Khủng long* ("Some kinds of animals lived on and still live today."). Câu VI rút từ mười hai còn chín chữ cho ngân sách A2 (14/11), cùng ý với câu của ô đó ("Một số loài vật đã sống sót, và ngày nay vẫn còn."). [CẦN KIỂM] của ô đó áp luôn ở đây.
 > Hình câu hỏi là bộ xương khủng long bạo chúa (loài đã tuyệt chủng), không dùng ảnh cá sấu của ô Sống sót: ảnh cá sấu đang sống là bằng chứng của đáp án Đúng.
 > Gợi ý chỉ chỗ cần nhớ (ô Sống sót), không nói Đúng hay Sai. Bé chưa học *Khủng long* vẫn làm được nhờ biết cá sấu, rùa ngày nay còn.
 
@@ -151,8 +158,8 @@ examples.4.vi: lúc thức và cả lúc ngủ
 label.en: Animals
 label.vi: Con vật
 color: gi_dong
-sentence.en: Animals breathe too. Fish breathe in water with gills.
-sentence.vi: Con vật cũng thở. Cá thở dưới nước bằng mang.
+sentence.en: Animals breathe too, and fish breathe in water with gills.
+sentence.vi: Con vật cũng thở, cá thở dưới nước bằng mang.
 image.brief: Dùng lại hình `q1_fish` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): common carp side view
 image.alt.en: A carp
 image.alt.vi: Con cá chép
@@ -170,8 +177,8 @@ examples.4.vi: cá thở bằng mang
 label.en: Oxygen
 label.vi: Khí ô-xi
 color: vang_hoe
-sentence.en: Air has oxygen. Your whole body needs it.
-sentence.vi: Trong không khí có khí ô-xi. Cả cơ thể em đều cần ô-xi.
+sentence.en: Your whole body needs the oxygen in the air.
+sentence.vi: Cả cơ thể em cần khí ô-xi trong không khí.
 image.brief: [ảnh] Một thợ lặn bơi dưới biển xanh, chụp từ phía sau hơi chếch, thấy rõ bình khí trên lưng và bọt khí nổi lên; mặt nạ lặn che mặt, không nhận ra mặt; không có chữ, không có logo trên bình (cắt hoặc chọn ảnh khác). Ưu tiên ảnh NOAA trên Commons (public domain), không kèm logo cơ quan. Từ khoá tìm ảnh (EN): scuba diver from behind air tank bubbles NOAA
 image.alt.en: A diver under the sea with an air tank
 image.alt.vi: Thợ lặn dưới biển mang bình khí
@@ -366,10 +373,12 @@ image.alt.vi: Bạn nhỏ ngủ trong màn
 answer: true
 hint.en: Remember the In and out card.
 hint.vi: Em nhớ lại ô Hít vào và thở ra nhé.
-explanation_correct.en: Yes! You breathe all day and all night.
-explanation_correct.vi: Đúng rồi! Em thở suốt ngày, suốt đêm.
-explanation_wrong.en: This is true. You breathe even when you sleep.
-explanation_wrong.vi: Câu này đúng. Em vẫn thở cả khi đang ngủ.
+explanation_correct.en: Your body breathes by itself, even while you dream.
+explanation_correct.vi: Cơ thể em tự thở, cả khi em đang mơ.
+explanation_wrong.en: A sleeping person's chest still goes up and down.
+explanation_wrong.vi: Người đang ngủ, ngực vẫn phồng lên xẹp xuống.
+feedback_false.en: Your body needs air all night, too.
+feedback_false.vi: Cả đêm cơ thể em vẫn cần không khí.
 > Câu nhớ lại ý chính một. Câu khẳng định, không phủ định. Hình câu hỏi là hình vẽ; câu `true_false` không có lựa chọn bằng hình nên không vướng luật "cùng kiểu hình".
 
 ### q2
@@ -388,10 +397,10 @@ sentence.vi: Cá thở dưới nước bằng {1}.
 answers: q2_gills
 hint.en: Remember the Animals card in the lesson.
 hint.vi: Em nhớ lại ô Con vật ở phần Học nhé.
-explanation_correct.en: Yes! Fish breathe with gills, on the sides of their head.
-explanation_correct.vi: Đúng rồi! Cá thở bằng mang, ở hai bên đầu.
-explanation_wrong.en: The answer is gills. Fish use gills to breathe.
-explanation_wrong.vi: Đáp án là mang. Cá thở bằng mang.
+explanation_correct.en: Gills take oxygen from the water for the fish.
+explanation_correct.vi: Mang giúp cá lấy ô-xi từ trong nước.
+explanation_wrong.en: Fish breathe through gills on the sides of their head.
+explanation_wrong.vi: Cá thở bằng mang ở hai bên đầu.
 > Câu nhớ lại ý chính hai và ô Con vật. Ba thẻ là ba bộ phận của cá, cùng số nhiều (fins, gills, scales), cùng kiểu ảnh cận. Vây hấp dẫn vì cá dùng vây để bơi.
 > Ô trống ở cùng chỗ trong câu EN và câu VI.
 > Rà chữ tester 10/11 (n1): thẻ đúng chuyển lên chỗ thứ nhất (trước đây thứ hai), để cả chủ đề bớt dồn đáp án vào chỗ thứ hai. Chỉ đổi thứ tự khối, không đổi chữ hay hình.
@@ -407,6 +416,8 @@ image.alt.vi: Cận cảnh mang cá
 #### bank q2_fins
 label.en: fins
 label.vi: vây
+feedback.en: Fish use fins to swim and turn.
+feedback.vi: Cá dùng vây để bơi và rẽ.
 image.brief: [ảnh] Cận cảnh vây của một con cá chép (vây lưng hoặc vây ngực), thấy rõ các tia vây, nền nước hoặc nền trơn; không có chữ, không có tay người. Không có ảnh riêng thì designer cắt từ ảnh cá chép đã chọn cho bài Khủng long là gì, cùng cỡ với hai thẻ kia. Từ khoá tìm ảnh (EN): carp fin close up
 image.alt.en: A close-up of fish fins
 image.alt.vi: Cận cảnh vây cá
@@ -414,6 +425,8 @@ image.alt.vi: Cận cảnh vây cá
 #### bank q2_scales
 label.en: scales
 label.vi: vảy
+feedback.en: Scales cover a fish and keep it safe.
+feedback.vi: Vảy phủ ngoài thân, giữ cho cá an toàn.
 image.brief: [ảnh] Cận cảnh lớp vảy óng ánh trên thân một con cá còn sống, xếp như mái ngói; không có chữ, không có tay người. Không có ảnh riêng thì designer cắt từ ảnh cá chép đã chọn cho bài Khủng long là gì. Từ khoá tìm ảnh (EN): fish scales close up
 image.alt.en: A close-up of fish scales
 image.alt.vi: Cận cảnh vảy cá
@@ -432,10 +445,10 @@ image.alt.en: A yard in a village
 image.alt.vi: Sân nhà ở làng quê
 hint.en: Think about which ones are alive.
 hint.vi: Em nghĩ xem thứ nào là vật sống nhé.
-explanation_correct.en: Yes! Frogs and hens are alive, so they breathe.
-explanation_correct.vi: Đúng rồi! Ếch và gà là vật sống, nên chúng thở.
-explanation_wrong.en: The answers are the frog and the hen. They are alive.
-explanation_wrong.vi: Đáp án là con ếch và con gà mái. Chúng là vật sống.
+explanation_correct.en: Every living animal breathes, from frogs to hens.
+explanation_correct.vi: Con vật sống nào cũng thở, từ con ếch tới con gà.
+explanation_wrong.en: Frogs and hens are alive, so they need to breathe.
+explanation_wrong.vi: Ếch và gà là vật sống, nên chúng cần thở.
 > DOK 2: phân loại vật sống với vật không sống theo ý "con vật nào cũng thở". Khác phần Chơi: con vật mới (ếch, gà), và hai món sai đều "làm việc với không khí" (quạt thổi gió, chong chóng quay trong gió), nên có sức hút.
 > Gợi ý nêu cách nghĩ (thứ nào là vật sống), không nói tên lựa chọn.
 
@@ -449,6 +462,8 @@ image.alt.vi: Con ếch trên lá sen
 
 #### option q3_fan
 correct: false
+feedback.en: A fan blows air, but it is a machine.
+feedback.vi: Quạt thổi ra gió, nhưng quạt là cái máy.
 label.en: fan
 label.vi: cái quạt
 image.brief: [ảnh] Một cái quạt bàn đứng trên mặt bàn, chụp chéo phía trước, thấy cánh quạt sau lồng; đã cắt hoặc che logo, không có chữ, không có người. Từ khoá tìm ảnh (EN): electric desk fan white background
@@ -457,6 +472,8 @@ image.alt.vi: Cái quạt bàn
 
 #### option q3_pinwheel
 correct: false
+feedback.en: A pinwheel only spins when the wind pushes it.
+feedback.vi: Chong chóng chỉ quay khi có gió đẩy.
 label.en: pinwheel
 label.vi: chong chóng
 image.brief: [ảnh] Một chiếc chong chóng giấy nhiều màu cắm trên que, cánh đang quay hơi nhoè, nền trời hoặc nền cây xanh mờ; không có tay người, không có chữ. Câu q6 và câu q5 bài hai dùng lại ảnh này. Từ khoá tìm ảnh (EN): paper pinwheel spinning
@@ -481,18 +498,21 @@ prompt.vi: Dưới biển, thợ lặn lúc nào cũng cần thứ gì?
 image.brief: [ảnh] Cảnh dưới biển: rạn san hô nhiều màu, đàn cá nhỏ, nước xanh trong; không có thợ lặn, không có bình khí, không có người, không có chữ. Ưu tiên ảnh NOAA trên Commons. Từ khoá tìm ảnh (EN): coral reef underwater fish NOAA
 image.alt.en: A coral reef under the sea
 image.alt.vi: Rạn san hô dưới biển
-hint.en: You can save food for later. What cannot wait?
-hint.vi: Thức ăn để lát nữa ăn cũng được. Thứ gì thì không đợi được?
-explanation_correct.en: Yes! Divers need air all the time, even underwater.
-explanation_correct.vi: Đúng rồi! Thợ lặn lúc nào cũng cần không khí, cả khi ở dưới nước.
-explanation_wrong.en: The answer is the air tank. Divers need air every minute.
-explanation_wrong.vi: Đáp án là bình khí. Thợ lặn lúc nào cũng cần không khí.
+hint.en: Remember the diver on the Oxygen card.
+hint.vi: Em nhớ lại thợ lặn ở ô Khí ô-xi nhé.
+explanation_correct.en: Divers carry air on their backs to breathe underwater.
+explanation_correct.vi: Thợ lặn mang không khí trên lưng để thở dưới nước.
+explanation_wrong.en: Divers need air every minute, so they carry tanks.
+explanation_wrong.vi: Thợ lặn lúc nào cũng cần không khí, nên mang bình.
 > DOK 2: áp dụng "người cần không khí mọi lúc" vào tình huống mới. Ba thứ người cần (nước, thức ăn, không khí) đều hấp dẫn; chỉ không khí là cần "trong từng phút", nên chỉ một đáp án.
 > Hình câu hỏi không có thợ lặn, vì ảnh thợ lặn (ô Khí ô-xi) có bình khí, tức là đáp án.
+> 14/11 (SK-044): ý "thức ăn, nước chờ được" của gợi ý cũ nay nằm ở `feedback` của chai nước và hộp cơm; gợi ý mới chỉ chỗ cần nhớ (một câu, theo luật Discoverer), vì app đọc gợi ý ngay sau `feedback`.
 > Rà chữ tester 10/11 (N5): gợi ý cũ "What do you need even when you sleep?" có câu trả lời là "không khí", gần như nói thẳng đáp án "bình khí". Gợi ý mới nêu cách nghĩ (thứ nào chờ được, thứ nào không), không gọi tên lựa chọn. Rà chữ (n7): chữ VI "trong từng phút" đổi thành "lúc nào cũng" cho tự nhiên; EN giữ "every minute".
 
 #### option q4_bottle
 correct: false
+feedback.en: A diver can drink water later, back on the boat.
+feedback.vi: Thợ lặn lên thuyền rồi uống nước cũng được.
 label.en: water bottle
 label.vi: chai nước
 image.brief: [ảnh] Một chai nước bằng nhựa trong, đầy nước, không có nhãn, đứng trên nền trơn, chụp ngang; không có chữ, không có nhãn hiệu. Cùng cỡ trong khung như hai hình kia. Từ khoá tìm ảnh (EN): plastic water bottle no label
@@ -501,6 +521,8 @@ image.alt.vi: Chai nước
 
 #### option q4_lunch
 correct: false
+feedback.en: A diver can eat lunch after the dive.
+feedback.vi: Thợ lặn ăn cơm sau khi lặn xong cũng được.
 label.en: lunch box
 label.vi: hộp cơm
 image.brief: [ảnh] Một hộp cơm mở nắp có cơm, rau và trứng, đặt trên nền trơn, chụp chéo từ trên xuống; không có nhãn hiệu, không có chữ, không có tay người. Từ khoá tìm ảnh (EN): lunch box rice vegetables egg
@@ -521,23 +543,25 @@ id: 0049e003-230b-455e-8c8d-58f2c355bb6d
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai breathes on a cold window. What will she see?
-prompt.vi: Mai hà hơi vào cửa kính lạnh. Mai sẽ thấy gì?
+prompt.en: What happens when Mai breathes on cold glass?
+prompt.vi: Mai hà hơi vào kính lạnh thì sẽ thế nào?
 image.brief: [hình vẽ] Mai đứng quay lưng về phía người xem, ghé sát một ô cửa kính, chuẩn bị hà hơi; ngoài cửa là buổi sáng mùa đông miền Bắc, cây trơ lá; mặt kính vẫn trong, chưa mờ; chỉ thấy tóc và vai Mai, không vẽ nét mặt; không có chữ.
 image.alt.en: Mai by a cold window
 image.alt.vi: Mai đứng cạnh cửa kính lạnh
 hint.en: Remember the Breathing out card.
 hint.vi: Em nhớ lại ô Hơi thở ra nhé.
-explanation_correct.en: Yes! Your breath is wet, so the cold glass gets foggy.
-explanation_correct.vi: Đúng rồi! Hơi thở có hơi nước, nên mặt kính lạnh bị mờ.
-explanation_wrong.en: The answer is foggy glass. Your breath is warm and wet.
-explanation_wrong.vi: Đáp án là kính bị mờ. Hơi thở của em ấm và ẩm.
+explanation_correct.en: Tiny water drops from your breath make the glass foggy.
+explanation_correct.vi: Hơi nước trong hơi thở đọng lại làm kính mờ.
+explanation_wrong.en: Your wet breath makes tiny drops on the cold glass.
+explanation_wrong.vi: Hơi thở ẩm đọng thành giọt nhỏ trên kính lạnh.
 > DOK 2: dự đoán từ một điều đã học ("hơi thở ẩm") sang một tình huống chưa gặp trong bài (ô Học không có ảnh kính mờ). Bé ở miền Nam có thể thử với cốc nước đá hay cửa kính phòng có máy lạnh; câu không cần nói vậy.
 > Lựa chọn "kính vẫn trong" hấp dẫn bé nghĩ hơi thở chỉ là không khí (`breathe_out_same_air`, không gắn key). Câu chuẩn bị bằng chứng cho câu q6.
 > Hình câu hỏi cho thấy kính còn trong, đúng lúc trước khi hà hơi, không phải một lựa chọn. Theo hình designer làm (SK-036, designer 10/11): ba lựa chọn cũng là hình tự vẽ, cùng khung cửa gỗ, nên cả câu cùng kiểu hình.
 
 #### option q5_clear
 correct: false
+feedback.en: Warm, wet breath leaves something on cold glass.
+feedback.vi: Hơi thở ấm, ẩm để lại dấu trên kính lạnh.
 label.en: clear glass
 label.vi: kính trong
 image.brief: [hình vẽ] Một ô cửa kính trong, sạch, nhìn ra cây xanh bên ngoài, vẽ thẳng, khung cửa gỗ; không có người, không có phản chiếu người, không có chữ. Ba lựa chọn cùng một kiểu khung cửa, cùng góc chụp. Từ khoá tìm ảnh (EN): clean window glass trees outside
@@ -554,6 +578,8 @@ image.alt.vi: Cửa kính bị mờ
 
 #### option q5_dusty
 correct: false
+feedback.en: Dust comes from dirt in the air, not from breath.
+feedback.vi: Bụi đến từ đất cát, không từ hơi thở.
 label.en: dusty glass
 label.vi: kính bám bụi
 image.brief: [hình vẽ] Một ô cửa kính bám bụi xám, cây bên ngoài thấy mờ đục, vẽ thẳng, khung cửa gỗ; không có chữ viết trên bụi, không có người. Từ khoá tìm ảnh (EN): dusty dirty window glass
@@ -584,10 +610,12 @@ image.alt.en: A pinwheel
 image.alt.vi: Chiếc chong chóng
 hint.en: Think of the cold window, and of oxygen.
 hint.vi: Em nhớ lại cửa kính lạnh, và nghĩ về khí ô-xi nhé.
-explanation_correct.en: The air you breathe out is warmer and wetter. It has less oxygen, too.
-explanation_correct.vi: Không khí em thở ra ấm hơn và ẩm hơn. Trong đó cũng ít ô-xi hơn.
-explanation_wrong.en: Na is not right. Your body keeps some oxygen.
-explanation_wrong.vi: Na chưa đúng. Cơ thể em đã giữ lại một ít ô-xi.
+explanation_correct.en: Your breath out is warmer, wetter and has less oxygen.
+explanation_correct.vi: Hơi thở ra ấm hơn, ẩm hơn và ít ô-xi hơn.
+explanation_wrong.en: Your body keeps some oxygen from each breath.
+explanation_wrong.vi: Cơ thể em giữ lại một ít ô-xi mỗi lần thở.
+feedback_true.en: Breath fogs cold glass because it carries water.
+feedback_true.vi: Hơi thở làm mờ kính lạnh, vì có hơi nước.
 > Lời Na, hình và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: bé đánh giá một lời nói bằng hai bằng chứng của bài: hơi thở làm mờ kính lạnh (câu q5, ô Hơi thở ra) và cơ thể giữ lại ô-xi (ô Khí ô-xi, ý chính ba). Gợi ý chỉ hai chỗ cần nhớ, không nói Na đúng hay sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn "Na chưa đúng". Câu thứ nhất EN tám từ, câu thứ hai năm từ.

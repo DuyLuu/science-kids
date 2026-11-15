@@ -148,7 +148,13 @@
       "author": "joncutrer",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Khác ý brief. Alt đề xuất: EN «A hand holding seashells at the beach» · VI «Bàn tay cầm vỏ sò ở bãi biển». Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 9 = CC0."
+      "note": "Khác ý brief. Alt đề xuất: EN «A hand holding seashells at the beach» · VI «Bàn tay cầm vỏ sò ở bãi biển». Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 9 = CC0. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.5,
+        "width": 1.0,
+        "height": 0.3
+      }
     },
     "vocab.wave": {
       "source": "Openverse/StockSnap",

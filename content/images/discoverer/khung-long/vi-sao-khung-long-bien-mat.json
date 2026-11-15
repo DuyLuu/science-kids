@@ -2,8 +2,9 @@
   "note": "SK-033, chủ đề Khủng long bài 5. Designer (agent) chọn 10/11/2026, chưa fetch, chờ Duy duyệt. Chỗ dùng lại hình bài 1–2 chỉ ghi same_as + lesson (designer khác chọn ảnh gốc). Ảnh khác ý brief (ảnh chụp thay tranh phục dựng) có alt đề xuất trong note. Designer (agent) 10/11 chiều: thêm 15 chỗ (hình tự vẽ, hình ghép, ảnh mới, dùng lại); chi tiết ở review.html.",
   "images": {
     "w1": {
-      "same_as": "tray_long_neck",
-      "lesson": "khung-long/khung-long-la-gi"
+      "same_as": "w1_dinosaurs",
+      "lesson": "khung-long/khung-long-la-gi",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang w1_dinosaurs (ảnh rộng gốc) vì tray_long_neck nay là hình ghép vuông."
     },
     "w1.w1_fish": {
       "same_as": "q1_fish",
@@ -84,7 +85,16 @@
       "note": "Khác ý brief: brief cần ảnh mới (vạn tuế ra vòng lá non trong nắng); không tìm được nên dùng lại tray_cycad của bài một. Alt giữ được nếu ảnh bài một là cây vạn tuế xanh."
     },
     "q1.q1_rock": {
-      "same_as": "learn.explore.explore_rock"
+      "composed": {
+        "file": "content/images/composed/khung-long/vi-sao-khung-long-bien-mat.q1.q1_rock.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_rock"
+          }
+        ]
+      },
+      "title": "A painting of a giant space rock",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Tranh trên nền đen đặt giữa khung 5:2, nền đen kéo dài, thấy trọn hòn đá vũ trụ."
     },
     "q1.q1_storm": {
       "source": "Wikimedia Commons",
@@ -131,12 +141,25 @@
       "note": "Rùa mai cứng, đúng nhãn «con rùa». Alt giữ được: «A turtle walking»."
     },
     "q3.q3_croc": {
-      "same_as": "q1_reptiles",
-      "lesson": "khung-long/khung-long-la-gi"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.64,
+        "top": 0.3,
+        "width": 0.25,
+        "height": 0.416
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/khung-long-la-gi q1.q1_reptiles, cắt riêng cho khung 4:5 (trước: same_as q1_reptiles (khung-long/khung-long-la-gi)). Khung đặt quanh đầu và thân trước con cá sấu, mở rộng lên trên vùng crop cũ (top 0,38) để con vật ở giữa; vùng mới chưa xem tận mắt vì Commons trả 429, cần nhìn lại sau khi fetch."
     },
     "q3.q3_trike": {
-      "same_as": "w1_triceratops",
-      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+      "same_as": "q5_triceratops",
+      "lesson": "khung-long/khung-long-an-gi-song-ra-sao",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang q5_triceratops (bản cắt 4:5)."
     },
     "q5": {
       "source": "Wikimedia Commons",
@@ -193,8 +216,8 @@
       "same_as": "learn.explore.explore_survivors"
     },
     "reward.crocodile": {
-      "same_as": "q1_reptiles",
-      "lesson": "khung-long/khung-long-la-gi"
+      "same_as": "q3.q3_croc",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang q3.q3_croc (bản cắt gần vuông)."
     },
     "learn.explore.explore_dust": {
       "source": "Wikimedia Commons",

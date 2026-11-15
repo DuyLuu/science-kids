@@ -165,8 +165,8 @@
         "file": "content/images/own/da-va-dat/b02-q1.q1_mirror.jpg",
         "method": "drawn"
       },
-      "title": "A hand mirror",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét; mặt gương không có người."
+      "title": "A mirror on a stand",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của các chủ đề trước: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người. Commons trả HTTP 429 quá ba lần (hai lượt) 11/11 nên dừng gọi mạng và vẽ (main session dặn); ba lựa chọn vẽ cùng nét; mặt gương không có người. Designer (agent) 14/11 vẽ lại theo SK-044 (brief mới): gương soi để bàn hình chữ nhật, khung gỗ mỏng, chân đỡ phía sau, vẽ chéo, không tròn, không cán (gương cầm tay cũ trông giống kính lúp); cùng cỡ với đèn pin và kính lúp, nằm trong dải giữa 5:2 của thẻ A2. Nguồn SVG ở scratchpad sk039-b17/draw/mirror-a2.mjs."
     },
     "q1.q1_magnifier": {
       "own": {
@@ -238,7 +238,20 @@
       "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
     },
     "q5.q5_sugar": {
-      "same_as": "tray.tray_rock_sugar"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Single_crystal_rock_sugar.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Single_crystal_rock_sugar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Single crystal rock sugar",
+      "author": "François Nguyen",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.25,
+        "top": 0.4,
+        "width": 0.5,
+        "height": 0.2
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/nhin-ky-cac-loai-da tray.tray_rock_sugar, cắt riêng cho khung 5:2 (trước: same_as tray.tray_rock_sugar)."
     },
     "q5.q5_pebble": {
       "composed": {

@@ -20,6 +20,7 @@ en: I can say what the weather is like today.
 vi: Em nói được thời tiết hôm nay ra sao.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-038, ngày 11/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids` cho file này ngay sau `_topic.md`, vì bài hai, ba, bốn có câu Khởi động trỏ về bài này.
 > Bài mở màn (`opener`): gọi tên thời tiết bé thấy hằng ngày, rồi đi từ thứ thấy được (nắng, mưa) tới thứ không thấy (gió là không khí) và thứ ẩn bên trong (mây là giọt nước). Câu q6 sửa `trees_make_wind`; câu q2 sửa `clouds_are_smoke` (không gắn key).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Outside, the weather can be sunny, rainy, windy or cloudy.
@@ -45,22 +46,24 @@ dok: 1
 recall_from.kind: prior_knowledge
 recall_from.note.en: Prior knowledge: children dress for rain and sun.
 recall_from.note.vi: Kiến thức nền: trẻ đã biết mặc áo mưa khi trời mưa, đội mũ khi trời nắng.
-prompt.en: It is raining. What do you put on?
-prompt.vi: Trời đang mưa. Em mặc gì khi ra ngoài?
+prompt.en: What do you put on when it rains?
+prompt.vi: Trời mưa, em mặc gì khi ra ngoài?
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
 hint.en: Think of walking to school in the rainy season.
 hint.vi: Em nhớ lại những hôm đi học vào mùa mưa nhé.
-explanation_correct.en: Yes! A raincoat keeps the rain off you.
-explanation_correct.vi: Đúng rồi! Áo mưa giúp em không bị ướt.
-explanation_wrong.en: The answer is the raincoat. It keeps you dry.
-explanation_wrong.vi: Đáp án là áo mưa. Áo mưa giữ cho em khô ráo.
+explanation_correct.en: Rain slides off the smooth raincoat, so you stay dry.
+explanation_correct.vi: Mưa trôi tuột khỏi mặt áo mưa, em không ướt.
+explanation_wrong.en: A raincoat keeps you dry in the rain.
+explanation_wrong.vi: Áo mưa giữ cho em khô ráo khi mưa.
 > Gợi ý chỉ một bối cảnh quen, không gọi tên vật. Ba lựa chọn là ba thứ mặc cho ba kiểu thời tiết (nắng, mưa, lạnh), nên hai lựa chọn sai vẫn hợp lý ở hôm khác. Hình câu hỏi là ảnh mưa của ô "Trời mưa" (cùng một vật, một ảnh), không có áo mưa.
 > Đáp án ở chỗ thứ hai (bảng Vị trí đáp án đúng ở `_topic.md`).
 
 #### option w1_hat
 correct: false
+feedback.en: A sun hat shades you, but rain soaks through.
+feedback.vi: Mũ vải che nắng, nhưng mưa vẫn thấm ướt.
 label.en: sun hat
 label.vi: mũ vải
 image.brief: Dùng lại hình `q1_hat` ở bài `ho-hap/giu-phoi-khoe`. Từ khoá tìm ảnh (EN): cloth sun hat on table
@@ -77,6 +80,8 @@ image.alt.vi: Chiếc áo mưa trên bàn
 
 #### option w1_scarf
 correct: false
+feedback.en: A wool scarf keeps your neck warm in winter.
+feedback.vi: Khăn len giữ ấm cổ em vào mùa đông.
 label.en: wool scarf
 label.vi: khăn len
 image.brief: [hình vẽ] Một chiếc khăn len màu trơn gấp gọn trên mặt bàn gỗ, vẽ chéo từ trên xuống; cùng nét, cùng kiểu bàn gỗ, cùng cỡ vật trong khung với hình mũ vải và áo mưa của bài Giữ phổi khoẻ chủ đề Hô hấp; không có người, không có nhãn hiệu, không có chữ, không có hoa văn thành chữ.
@@ -91,22 +96,24 @@ version: 1
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: ho-hap/vi-sao-ta-phai-tho
-prompt.en: Mai breathes on a cold window. What does she see?
-prompt.vi: Mai hà hơi vào cửa kính lạnh. Mai thấy gì?
+prompt.en: What happens when Mai breathes on cold glass?
+prompt.vi: Mai hà hơi vào kính lạnh thì sẽ thế nào?
 image.brief: Dùng lại hình `q5` ở bài `ho-hap/vi-sao-ta-phai-tho`.
 image.alt.en: Mai by a cold window
 image.alt.vi: Mai đứng cạnh cửa kính lạnh
 hint.en: Remember the Breathing out card in the breathing lessons.
 hint.vi: Em nhớ lại ô Hơi thở ra trong các bài Hô hấp nhé.
-explanation_correct.en: Yes! Tiny drops of water make the glass foggy.
-explanation_correct.vi: Đúng rồi! Những giọt nước li ti làm mặt kính bị mờ.
-explanation_wrong.en: The answer is foggy glass. Your breath is wet.
-explanation_wrong.vi: Đáp án là kính bị mờ. Hơi thở của em có hơi nước.
+explanation_correct.en: Those tiny drops are like a little cloud on glass.
+explanation_correct.vi: Giọt nước li ti ấy giống một đám mây nhỏ trên kính.
+explanation_wrong.en: Tiny water drops from her breath make the glass foggy.
+explanation_wrong.vi: Giọt nước li ti từ hơi thở làm kính mờ.
 > Câu ôn câu q5 bài một *Hô hấp* (cùng hình, cùng ba lựa chọn), đổi thứ tự lựa chọn: bên đó kính mờ ở chỗ thứ hai, bên này ở chỗ thứ ba. Giải thích khi đúng nói "những giọt nước li ti", đúng chữ ý chính ba của bài này, để bé gặp lại ở ô "Trời nhiều mây".
 > [CẦN KIỂM] Lớp mờ trên kính lạnh là những giọt nước rất nhỏ (hơi nước trong hơi thở gặp lạnh). Câu không nói cơ chế ngưng tụ (để dành *Các thể của vật chất*).
 
 #### option w2_dusty
 correct: false
+feedback.en: Dust comes from dirt in the air, not from breath.
+feedback.vi: Bụi đến từ đất cát, không từ hơi thở.
 label.en: dusty glass
 label.vi: kính bám bụi
 image.brief: Dùng lại hình `q5_dusty` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): dusty dirty window glass
@@ -115,6 +122,8 @@ image.alt.vi: Cửa kính bám bụi
 
 #### option w2_clear
 correct: false
+feedback.en: Warm, wet breath leaves something on cold glass.
+feedback.vi: Hơi thở ấm, ẩm để lại dấu trên kính lạnh.
 label.en: clear glass
 label.vi: kính trong
 image.brief: Dùng lại hình `q5_clear` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): clean window glass trees outside
@@ -376,12 +385,12 @@ prompt.vi: Hình nào cho em biết trời đang có gió?
 image.brief: Dùng lại hình `w1_sky` ở bài `be-mat-trai-dat/cac-chau-luc-va-dai-duong`. Từ khoá tìm ảnh (EN): sky blue clear clouds
 image.alt.en: A blue sky
 image.alt.vi: Bầu trời xanh
-hint.en: Wind pushes things. Look for something being pushed.
-hint.vi: Gió đẩy mọi vật. Em tìm thứ đang bị gió đẩy nhé.
-explanation_correct.en: Yes! The wind is pushing the shirt.
-explanation_correct.vi: Đúng rồi! Gió đang đẩy chiếc áo bay phấp phới.
-explanation_wrong.en: The answer is the flapping shirt. Wind moves it.
-explanation_wrong.vi: Đáp án là chiếc áo bay phấp phới. Gió làm áo bay.
+hint.en: Look for something the wind is pushing.
+hint.vi: Em tìm thứ đang bị gió đẩy nhé.
+explanation_correct.en: Moving air pushes the shirt, so it flaps.
+explanation_correct.vi: Không khí chuyển động đẩy áo bay phấp phới.
+explanation_wrong.en: The flapping shirt shows the wind pushing it.
+explanation_wrong.vi: Áo bay phấp phới cho thấy gió đang đẩy.
 > Câu nhớ lại ý chính hai bằng một cảnh mới (không có ở Học hay Chơi). Hai lựa chọn sai là hai cảnh lặng gió: đường ướt (dấu hiệu của mưa) và mặt ao phẳng lặng. Ba hình vẽ đều mới, nên không hình nào quen hơn hình nào.
 
 #### option q1_shirt
@@ -394,6 +403,8 @@ image.alt.vi: Chiếc áo bay phấp phới trên dây phơi
 
 #### option q1_road
 correct: false
+feedback.en: A wet road shows it rained, not wind.
+feedback.vi: Đường ướt cho biết trời vừa mưa.
 label.en: wet road
 label.vi: mặt đường ướt nước mưa
 > Rà chữ tester 11/11 (n2): hai nhãn VI sai kéo dài cho bằng nhãn đúng "chiếc áo bay phấp phới" (cả ba năm tiếng). Nhãn EN giữ.
@@ -403,6 +414,8 @@ image.alt.vi: Mặt đường ướt
 
 #### option q1_pond
 correct: false
+feedback.en: The pond is flat and still, with no ripples.
+feedback.vi: Mặt ao phẳng lặng, không gợn sóng.
 label.en: still pond
 label.vi: mặt ao phẳng như gương
 image.brief: [hình vẽ] Mặt ao phẳng lặng như gương, phản chiếu rõ hàng cây và bầu trời, không một gợn sóng; không có người, không có chữ. Từ khoá tìm ảnh (EN): still pond mirror reflection trees
@@ -424,16 +437,18 @@ sentence.vi: Đám mây được tạo nên từ {1}.
 answers: q2_water
 hint.en: Remember the Cloudy card.
 hint.vi: Em nhớ lại ô Trời nhiều mây nhé.
-explanation_correct.en: Yes! A cloud is lots of tiny water drops.
-explanation_correct.vi: Đúng rồi! Đám mây gồm rất nhiều giọt nước li ti.
-explanation_wrong.en: The answer is water. Clouds are tiny water drops.
-explanation_wrong.vi: Đáp án là nước. Mây là những giọt nước li ti.
+explanation_correct.en: Big, heavy drops fall from clouds as rain.
+explanation_correct.vi: Giọt nước to và nặng thì rơi xuống thành mưa.
+explanation_wrong.en: Clouds are lots of tiny water drops.
+explanation_wrong.vi: Mây gồm rất nhiều giọt nước li ti.
 > Câu nhớ lại ý chính ba. Hai thẻ sai là hai ý của `clouds_are_smoke` (khói, bông), không gắn key. Thẻ đúng ở chỗ thứ ba.
 > Câu dùng "made of {1}" để ba thẻ đều là danh từ không đếm được, cùng một từ, không thẻ nào nổi bật.
 
 #### bank q2_smoke
 label.en: smoke
 label.vi: khói
+feedback.en: Smoke comes from fires, not from clouds.
+feedback.vi: Khói bay lên từ lửa, không làm ra mây.
 image.brief: [hình vẽ] Một làn khói xám mỏng bốc lên từ mái bếp một ngôi nhà ở làng quê lúc chiều, nhìn từ xa; không thấy lửa, không có người, không có chữ. Từ khoá tìm ảnh (EN): kitchen smoke rising village roof
 image.alt.en: Smoke rising from a roof
 image.alt.vi: Khói bốc lên từ mái bếp
@@ -441,6 +456,8 @@ image.alt.vi: Khói bốc lên từ mái bếp
 #### bank q2_cotton
 label.en: cotton
 label.vi: bông
+feedback.en: Cotton grows on plants and stays on the ground.
+feedback.vi: Bông mọc trên cây, không bay lên trời.
 image.brief: [hình vẽ] Mấy cục bông gòn trắng trên mặt gỗ trơn, vẽ gần; không có bao bì, không có nhãn hiệu, không có chữ. Từ khoá tìm ảnh (EN): cotton balls white wooden table
 image.alt.en: White cotton balls
 image.alt.vi: Mấy cục bông trắng
@@ -458,21 +475,22 @@ id: ba012d11-351f-436d-ae1f-a3990f17da2c
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Dark clouds are coming! What should Mai bring in?
-prompt.vi: Mây đen kéo tới! Mai nên mang những thứ nào vào nhà?
+prompt.en: What should Mai bring in before the rain?
+prompt.vi: Mai nên mang gì vào nhà trước cơn mưa?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: Dùng lại hình `tray_dark` ở bài `thoi-tiet-va-thien-tai/mua-mua-bao`.
 image.alt.en: Dark clouds over the rice fields
 image.alt.vi: Mây đen kéo tới trên cánh đồng lúa
 > Theo hình designer 11/11: không có ảnh hợp lệ mây đen trên làng, nên dùng lại hình vẽ mây đen trên cánh đồng của bài ba; `alt` chép gốc.
-hint.en: What will rain make wet? Think what must stay dry.
-hint.vi: Mưa sẽ làm ướt thứ gì? Em nghĩ xem thứ gì phải giữ khô nhé.
+hint.en: Think which things must stay dry.
+hint.vi: Em nghĩ xem thứ nào phải giữ khô nhé.
 > Rà chữ tester 11/11 (n12): vế hai cũ "What needs water?" · "Thứ gì lại cần nước?" chỉ thẳng hai lựa chọn sai. Nay chỉ dẫn cách nghĩ, không chia sẵn hai nhóm.
-explanation_correct.en: Yes! Bring in the rice and the chillies.
-explanation_correct.vi: Đúng rồi! Mai cất thóc và ớt đang phơi vào nhà.
-explanation_wrong.en: The answers are the rice and the chillies.
-explanation_wrong.vi: Đáp án là thóc và ớt đang phơi.
+explanation_correct.en: Dry rice and chillies keep well, but wet ones spoil.
+explanation_correct.vi: Thóc, ớt khô thì để lâu, bị ướt sẽ hỏng.
+explanation_wrong.en: Rain would wet the drying rice and chillies.
+explanation_wrong.vi: Mưa sẽ làm ướt thóc và ớt đang phơi.
+> 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười hai chữ VI; nay một câu chín chữ. Ý "mây đen kéo tới" nằm ở hình (mây đen trên cánh đồng).
 > DOK 2: vận dụng ví dụ "mây đen có thể mang mưa tới" vào việc nhà rất quen ở Việt Nam ("trời sắp mưa, cất thóc, cất đồ phơi"). Hai lựa chọn sai có sức hút: chum để ngoài sân để hứng nước mưa, cây trong chậu được tưới nhờ mưa; bé phải nghĩ "mưa có hại hay có ích cho thứ này".
 > Đáp án ở chỗ thứ nhất và thứ ba. Thóc phơi là hình của phần Chơi (ở đó cũng là món đúng); ba hình kia mới. Theo hình designer 11/11, cả bốn lựa chọn là hình vẽ.
 
@@ -486,6 +504,8 @@ image.alt.vi: Thóc phơi trên sân nắng
 
 #### option q3_jar
 correct: false
+feedback.en: A jar for rainwater should catch the rain.
+feedback.vi: Chum để ngoài sân để hứng nước mưa.
 label.en: jar for rainwater
 label.vi: chum hứng nước mưa
 image.brief: [hình vẽ] Một cái chum sành to đặt ngoài sân, miệng để mở, cạnh tường nhà hoặc gốc cây; không có người, không có chữ. Từ khoá tìm ảnh (EN): large clay water jar yard Vietnam
@@ -502,6 +522,8 @@ image.alt.vi: Ớt đỏ phơi trên nia
 
 #### option q3_plants
 correct: false
+feedback.en: Plants in pots like a drink of rain.
+feedback.vi: Cây trong chậu được mưa tưới thêm nước.
 label.en: plants in pots
 label.vi: cây trồng trong chậu
 image.brief: [hình vẽ] Mấy chậu cây xanh đặt ngoài sân, vẽ ngang; chậu trơn, không có nhãn, không có chữ, không có người. Từ khoá tìm ảnh (EN): potted plants outdoor yard
@@ -514,17 +536,17 @@ id: 0e99627c-8485-4b97-bea5-5e53b440ec26
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai's shirt is wet. Which day will dry it fastest?
-prompt.vi: Áo của Mai bị ướt. Hôm nào phơi áo sẽ mau khô nhất?
+prompt.en: Which day dries Mai's wet shirt fastest?
+prompt.vi: Hôm nào phơi áo ướt mau khô nhất?
 image.brief: [hình vẽ] Một chiếc áo trắng trơn ướt treo trên móc, vài giọt nước nhỏ xuống, vẽ gần, nền tường trơn; không có chữ, không có logo trường, không có người. Từ khoá tìm ảnh (EN): wet white shirt hanger dripping
 image.alt.en: A wet shirt on a hanger
 image.alt.vi: Chiếc áo ướt treo trên móc
 hint.en: Think of drying rice in the yard.
 hint.vi: Em nghĩ xem người ta phơi thóc vào hôm nào nhé.
-explanation_correct.en: Yes! The warm sun dries wet clothes fast.
-explanation_correct.vi: Đúng rồi! Nắng ấm làm quần áo ướt mau khô.
-explanation_wrong.en: The answer is the sunny day. The sun dries things.
-explanation_wrong.vi: Đáp án là hôm trời nắng. Nắng làm đồ ướt mau khô.
+explanation_correct.en: Warm sun helps the water leave the shirt fast.
+explanation_correct.vi: Nắng ấm giúp nước trong áo bay hơi nhanh.
+explanation_wrong.en: The warm sun dries wet clothes fast.
+explanation_wrong.vi: Nắng ấm làm quần áo ướt mau khô.
 > DOK 2: vận dụng ô "Trời nắng" (ví dụ "đồ ướt mau khô") vào việc phơi áo. Gợi ý nối với món thóc phơi ở phần Chơi, không gọi tên lựa chọn. Ba lựa chọn là ba ảnh ô Học (cùng loại ảnh chụp; đáp án không phải ảnh duy nhất bé đã thấy). Đáp án ở chỗ thứ nhất.
 > [CẦN KIỂM] Hôm nắng có gió phơi mau khô nhất; câu chỉ so nắng, mưa, nhiều mây.
 
@@ -538,6 +560,8 @@ image.alt.vi: Mặt Trời chói sáng trên trời
 
 #### option q4_rainy
 correct: false
+feedback.en: On a rainy day, the shirt gets wetter.
+feedback.vi: Hôm mưa, áo còn ướt thêm.
 label.en: a rainy day
 label.vi: hôm trời mưa
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
@@ -546,6 +570,8 @@ image.alt.vi: Mưa to đang rơi
 
 #### option q4_cloudy
 correct: false
+feedback.en: Clouds hide the sun, so drying is slow.
+feedback.vi: Mây che Mặt Trời, nên áo lâu khô.
 label.en: a cloudy day
 label.vi: hôm trời nhiều mây
 image.brief: Dùng lại hình `explore_cloudy`. Từ khoá tìm ảnh (EN): cloudy sky grey white clouds countryside
@@ -565,10 +591,12 @@ image.alt.vi: Cánh diều hình con chim trên trời
 answer: true
 hint.en: Think of a day with no wind at all.
 hint.vi: Em nghĩ tới một hôm lặng gió nhé.
-explanation_correct.en: Yes! Moving air pushes the kite up.
-explanation_correct.vi: Đúng rồi! Không khí chuyển động đẩy cánh diều lên cao.
-explanation_wrong.en: This is true. Wind pushes the kite up high.
-explanation_wrong.vi: Câu này đúng. Gió đẩy cánh diều bay lên cao.
+explanation_correct.en: Moving air pushes the kite up.
+explanation_correct.vi: Không khí chuyển động đẩy cánh diều lên cao.
+explanation_wrong.en: Wind pushes the kite up high.
+explanation_wrong.vi: Gió đẩy cánh diều bay lên cao.
+feedback_false.en: Without moving air, nothing holds the kite up.
+feedback_false.vi: Không có gió, chẳng có gì đẩy diều lên.
 > DOK 2: vận dụng ý chính hai và ví dụ "gió đẩy lá cây và cánh diều" sang câu hỏi "cần gì thì diều mới bay". Câu khẳng định, đáp án Đúng. Hình câu hỏi là cánh diều đang bay (vật được hỏi), không nói gì về gió.
 > [CẦN KIỂM] Khi lặng gió, người chạy kéo diều cũng tạo ra luồng không khí, nhưng muốn diều bay cao và lâu thì cần có gió.
 
@@ -585,20 +613,22 @@ image.alt.en: Trees leaning in the wind
 image.alt.vi: Hàng cây nghiêng trong gió
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: The trees are waving. They are making the wind.
-statement.vi: Hàng cây đang vẫy cành. Chính cây tạo ra gió đấy.
+statement.en: The trees are waving, so they make the wind.
+statement.vi: Hàng cây vẫy cành, nên chính cây tạo ra gió.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Remember the Windy card. What pushes what?
-hint.vi: Em nhớ lại ô Trời có gió. Cái gì đẩy cái gì?
-explanation_correct.en: Wind is moving air. It blows at sea, too.
-explanation_correct.vi: Gió là không khí đang chuyển động. Ngoài biển không có cây vẫn có gió.
-explanation_wrong.en: Na is not right. The wind moves the trees.
-explanation_wrong.vi: Na chưa đúng. Gió làm cây lay động.
+hint.en: On the Windy card, what pushes what?
+hint.vi: Ở ô Trời có gió, cái gì đẩy cái gì?
+explanation_correct.en: Wind blows at sea too, where there are no trees.
+explanation_correct.vi: Ngoài biển không có cây mà vẫn có gió.
+explanation_wrong.en: The wind moves the trees.
+explanation_wrong.vi: Gió làm cây lay động.
+feedback_true.en: The wind pushes the branches, not the other way.
+feedback_true.vi: Gió đẩy cành cây, chứ cây không đẩy gió.
 > Rà chữ tester 11/11 (n6): bỏ vế "không phải cây làm ra gió" chỉ có ở bản VI, cho khớp EN.
 > Lời Na, hình và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: bé đánh giá một lời giải thích nhân quả bị đảo chiều. Na thấy hai việc xảy ra cùng lúc (cây lay, gió thổi) rồi đoán sai cái nào gây ra cái nào. Bé phải dùng ô "Trời có gió" (gió là không khí chuyển động, gió đẩy lá cây và cánh diều) và ô "Trời nhiều mây" (gió đẩy mây trôi, ở trên cao không có cây). Ô Học không có câu "cây không làm ra gió".

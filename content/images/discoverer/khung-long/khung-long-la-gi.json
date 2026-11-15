@@ -6,10 +6,30 @@
       "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
     },
     "w1.w1_dinosaurs": {
-      "same_as": "tray.tray_long_neck"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Brontosaurus_2026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Brontosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Brontosaurus 2026",
+      "author": "Plegadis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "A2 14/11 (designer, SK-043): mục ảnh gốc chuyển từ tray.tray_long_neck sang đây (thẻ 5:2 giữ ảnh rộng); kệ Chơi dùng hình ghép ô vuông."
     },
     "w1.w1_mammoths": {
-      "same_as": "tray.tray_mammoth"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Woolly_mammoth_(Mammuthus_primigenius)_-_Mauricio_Ant%C3%B3n.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Woolly_mammoth_%28Mammuthus_primigenius%29_-_Mauricio_Ant%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Woolly mammoth (Mammuthus primigenius) - Mauricio Antón",
+      "author": "Mauricio Antón",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.05,
+        "top": 0.362,
+        "width": 0.34,
+        "height": 0.224
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/khung-long-la-gi tray.tray_mammoth, cắt riêng cho khung 5:2 (trước: same_as tray.tray_mammoth)."
     },
     "w1.w1_people": {
       "source": "Wikimedia Commons",
@@ -114,13 +134,16 @@
       "note": "Cắt hai tranh khỏi nền trắng, đặt lên cảnh biển bằng giấy: nửa trên trời giấy sáng, nửa dưới nước chàm nhạt; thằn lằn bay (Pteranodon) lượn trên mặt nước, bò sát biển cổ dài (Elasmosaurus) bơi dưới nước, cổ duỗi về phía trước. Cả hai sống ở biển nội địa Bắc Mỹ cuối kỷ Phấn Trắng. Không có đất liền, không có chữ. Hình vuông 1024."
     },
     "tray.tray_long_neck": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Brontosaurus_2026.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Brontosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Brontosaurus 2026",
-      "author": "Plegadis",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.tray.tray_long_neck.jpg",
+        "parts": [
+          {
+            "same_as": "w1.w1_dinosaurs"
+          }
+        ]
+      },
+      "title": "A painting of a long-necked dinosaur",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Tranh trên nền trắng đặt giữa ô vuông để thấy trọn cổ và đuôi; xoá dấu ký hiệu tác giả ở góc (ảnh CC0). Ảnh gốc chuyển sang mục w1.w1_dinosaurs (thẻ 5:2)."
     },
     "tray.tray_pterosaur": {
       "source": "Wikimedia Commons",
@@ -132,13 +155,22 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0"
     },
     "tray.tray_chicken_size": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Compsognathus_TD.png",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Compsognathus_TD.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Compsognathus TD",
-      "author": "TotalDino",
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0"
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.tray.tray_chicken_size.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Compsognathus_TD.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Compsognathus_TD.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Compsognathus TD",
+            "author": "TotalDino",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0"
+          }
+        ]
+      },
+      "title": "A painting of a small dinosaur",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Tranh trên nền trắng đặt giữa ô vuông để thấy trọn đuôi và đầu."
     },
     "tray.tray_triceratops": {
       "source": "Wikimedia Commons",
@@ -192,22 +224,40 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0"
     },
     "tray.tray_feathered": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Sinosauropteryx_color_pattern_(feathers).JPG",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sinosauropteryx_color_pattern_%28feathers%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Sinosauropteryx color pattern (feathers)",
-      "author": "Conty",
-      "license": "CC BY 3.0",
-      "license_url": "https://creativecommons.org/licenses/by/3.0"
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.tray.tray_feathered.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Sinosauropteryx_color_pattern_(feathers).JPG",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sinosauropteryx_color_pattern_%28feathers%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Sinosauropteryx color pattern (feathers)",
+            "author": "Conty",
+            "license": "CC BY 3.0",
+            "license_url": "https://creativecommons.org/licenses/by/3.0"
+          }
+        ]
+      },
+      "title": "A painting of a small animal with feathers",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Tranh trên nền trắng đặt giữa khung 4:5; con vật nằm trong ô vuông giữa nên kệ Chơi 1:1 cũng thấy trọn."
     },
     "tray.tray_armoured": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Ankylosaurus_2026.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ankylosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Ankylosaurus 2026",
-      "author": "Plegadis",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-la-gi.tray.tray_armoured.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Ankylosaurus_2026.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ankylosaurus_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Ankylosaurus 2026",
+            "author": "Plegadis",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
+      "title": "A painting of an armoured dinosaur",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Tranh trên nền trắng đặt giữa ô vuông; xoá dấu ký hiệu tác giả ở góc (ảnh CC0)."
     },
     "q1": {
       "same_as": "reward.t_rex",
@@ -312,10 +362,11 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "crop": {
         "left": 0.43,
-        "top": 0.36,
+        "top": 0.444,
         "width": 0.55,
-        "height": 0.56
-      }
+        "height": 0.146
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.43, \"top\": 0.36, \"width\": 0.55, \"height\": 0.56})."
     },
     "q4.q4_lizard": {
       "source": "Wikimedia Commons",
@@ -420,7 +471,7 @@
         "file": "content/images/composed/khung-long/khung-long-la-gi.learn.explore.explore_kinds.jpg",
         "parts": [
           {
-            "same_as": "tray.tray_long_neck"
+            "same_as": "w1.w1_dinosaurs"
           },
           {
             "same_as": "tray.tray_t_rex"

@@ -53,15 +53,17 @@ image.alt.en: A village kitchen
 image.alt.vi: Gian bếp ở làng quê
 hint.en: Think of a table and a door at home.
 hint.vi: Em nghĩ tới cái bàn, cánh cửa ở nhà mình nhé.
-explanation_correct.en: Yes! This chair is made of wood.
-explanation_correct.vi: Đúng rồi! Cái ghế này làm bằng gỗ.
-explanation_wrong.en: The answer is the chair. It is made of wood.
-explanation_wrong.vi: Đáp án là cái ghế. Ghế này làm bằng gỗ.
+explanation_correct.en: This wooden chair was once part of a tree.
+explanation_correct.vi: Cái ghế gỗ này từng là một phần của cây.
+explanation_wrong.en: The chair is made of wood from trees.
+explanation_wrong.vi: Cái ghế làm bằng gỗ, gỗ lấy từ cây.
 > Nhãn và `alt` chỉ gọi tên đồ vật và màu, không gọi tên vật liệu ("chair" · "cái ghế", không "wooden chair" · "ghế gỗ"), để bé phải nhìn hình. Ở Việt Nam ghế nhựa rất phổ biến, nên nhãn "cái ghế" không lộ đáp án; bé phải nhìn vân gỗ. Gợi ý trỏ tới đồ gỗ quen ở nhà, không gọi tên lựa chọn.
 > Ba ảnh cùng kiểu: một đồ vật trên nền trơn, chụp ngang, cùng cỡ trong khung. Ghế và chậu được ghép lại ở ô Học "Materials".
 
 #### option w1_cup
 correct: false
+feedback.en: This cup is made of clear glass.
+feedback.vi: Cái cốc này làm bằng thuỷ tinh trong suốt.
 label.en: cup
 label.vi: cái cốc
 image.brief: [hình vẽ] Một cái cốc thuỷ tinh trong suốt, rỗng, đặt trên nền trơn, vẽ ngang; cùng cỡ trong khung như cái ghế và cái chậu; không có nhãn hiệu, không có hình in, không có chữ. Từ khoá tìm ảnh (EN): empty drinking glass plain background
@@ -78,6 +80,8 @@ image.alt.vi: Cái ghế màu nâu
 
 #### option w1_basin
 correct: false
+feedback.en: This basin is made of plastic.
+feedback.vi: Cái chậu này làm bằng nhựa.
 label.en: basin
 label.vi: cái chậu
 image.brief: [hình vẽ] Một cái chậu nhựa tròn màu xanh dương, kiểu chậu rửa rau quen ở Việt Nam, đặt trên nền trơn, vẽ chéo từ trên xuống; cùng cỡ trong khung như cái cốc và cái ghế; không có nhãn hiệu, không có chữ. Ô Học `explore_materials` ghép lại ảnh này. Từ khoá tìm ảnh (EN): round plastic basin blue plain background
@@ -99,10 +103,12 @@ image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
 answer: true
 hint.en: Think back to the Volcanoes lesson.
 hint.vi: Em nhớ lại bài Núi lửa nhé.
-explanation_correct.en: Yes! Hot lava cools and turns into new rock.
-explanation_correct.vi: Đúng rồi! Dung nham nóng nguội đi và thành đá mới.
-explanation_wrong.en: This is true. Lava cools into new rock.
-explanation_wrong.vi: Câu này đúng. Dung nham nguội đi thành đá mới.
+explanation_correct.en: Volcanoes make new rock when hot lava cools.
+explanation_correct.vi: Núi lửa tạo đá mới khi dung nham nóng nguội đi.
+explanation_wrong.en: Hot lava cools and hardens into new rock.
+explanation_wrong.vi: Dung nham nóng nguội đi, cứng lại thành đá mới.
+feedback_false.en: Cooled lava gets hard, just like rock.
+feedback_false.vi: Dung nham nguội đi thì cứng như đá.
 > Câu Đúng/Sai dùng đúng chữ EN ở bảng Khởi động và bảng Đáp án Đúng/Sai của `_topic.md` (đáp án Đúng). Bài *Núi lửa* dạy đúng ý này ở ý chính ba và ô "New rock" · "Đá mới" ("Lava cools into new rock and new land.").
 > Gợi ý chỉ trỏ tới bài *Núi lửa*, không gọi tên ô "New rock" (tên ô trùng chữ của câu). Ảnh câu hỏi là dung nham còn đỏ, chưa cho thấy đá đã nguội.
 
@@ -124,7 +130,7 @@ label.en: Rock around us
 label.vi: Đá quanh em
 color: do_son
 sentence.en: People use rock to build and make many things.
-sentence.vi: Con người dùng đá để xây nhà và làm ra nhiều đồ vật.
+sentence.vi: Con người dùng đá để xây nhà và làm đồ vật.
 image.brief: [ảnh] Một bức tường rào xếp bằng những hòn đá tự nhiên, không trát vữa, giữa bãi cỏ (không có ảnh Việt Nam hợp giấy phép; ảnh đã chọn là tường đá xếp khô ở nước ngoài), chụp ngang tầm mắt; không có người, không có biển chữ, không có số nhà. Món Chơi `tray_wall`, câu q1 và bài hai câu w1 dùng lại ảnh này. Từ khoá tìm ảnh (EN): dry stone wall village path
 image.alt.en: An old wall in the grass
 image.alt.vi: Bức tường rào cũ giữa bãi cỏ
@@ -142,7 +148,7 @@ examples.4.vi: cối xay bằng đá
 label.en: From the ground
 label.vi: Từ lòng đất
 color: gi_dong
-sentence.en: Rock is natural. It comes from inside Earth.
+sentence.en: Rock is natural and comes from inside Earth.
 sentence.vi: Đá có sẵn trong tự nhiên, trong lòng Trái Đất.
 image.brief: Dùng lại hình `quarry`. Từ khoá tìm ảnh (EN): open pit stone quarry terraces
 image.alt.en: An open quarry
@@ -177,8 +183,8 @@ examples.3.vi: cái cối làm bằng đá
 label.en: Made by people
 label.vi: Do con người làm ra
 color: cham
-sentence.en: People make bricks and concrete. They are not natural rock.
-sentence.vi: Gạch và bê tông do con người làm ra, không phải đá tự nhiên.
+sentence.en: People make bricks and concrete, which are not natural rock.
+sentence.vi: Gạch và bê tông do người làm, không phải đá tự nhiên.
 image.brief: [ảnh] Những lò gạch thủ công bên sông Hậu ở Việt Nam, chụp rộng; cắt bỏ phần có bóng người ở xa; không có biển chữ, không có xe có biển số. Câu q1 dùng lại ảnh này. Từ khoá tìm ảnh (EN): brick kiln stacked red bricks Vietnam
 image.alt.en: Brick kilns by a river
 image.alt.vi: Những lò gạch bên sông
@@ -219,7 +225,7 @@ messages.start.vi: Em tìm đá trong tự nhiên, trong nhà cửa và trong đ
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Rock is natural, and people use it a lot.
-messages.balanced.vi: Tuyệt! Đá có sẵn trong tự nhiên, và con người dùng đá rất nhiều.
+messages.balanced.vi: Tuyệt! Đá có sẵn trong tự nhiên, người dùng đá rất nhiều.
 messages.has_limited.en: People make that. It is not natural rock.
 messages.has_limited.vi: Thứ đó do con người làm ra, không phải đá tự nhiên.
 messages.missing.tray_in_nature.en: You still need rock in nature.
@@ -345,15 +351,17 @@ image.alt.en: An old wall in the grass
 image.alt.vi: Bức tường rào cũ giữa bãi cỏ
 hint.en: Remember the From the ground picture.
 hint.vi: Em nhớ lại ô Từ lòng đất nhé.
-explanation_correct.en: Yes! People dig rock out of the ground at a quarry.
-explanation_correct.vi: Đúng rồi! Người ta đào đá từ lòng đất lên ở mỏ đá.
-explanation_wrong.en: The answer is the quarry. People dig out rock there.
-explanation_wrong.vi: Đáp án là mỏ đá. Người ta đào đá lên ở đó.
+explanation_correct.en: Rock from a quarry builds roads and houses.
+explanation_correct.vi: Đá ở mỏ đá được dùng làm đường, xây nhà.
+explanation_wrong.en: People dig rock out of the ground at a quarry.
+explanation_wrong.vi: Người ta đào đá từ lòng đất lên ở mỏ đá.
 > Ba nơi lấy hay làm ra vật liệu: xưởng gỗ (gỗ), lò gạch (gạch, bẫy nối `bricks_are_rocks`), mỏ đá (đá). Hình câu hỏi là bức tường đá: đá này lấy từ đâu ra, mà không cho thấy nơi nào.
 > Mỏ đá và lò gạch là hai ảnh bé đã thấy ở Học; xưởng gỗ là ảnh mới. Ba ảnh cùng là cảnh rộng.
 
 #### option q1_sawmill
 correct: false
+feedback.en: A sawmill cuts logs into planks of wood.
+feedback.vi: Xưởng gỗ là nơi cưa gỗ thành tấm.
 label.en: sawmill
 label.vi: xưởng gỗ
 image.brief: [ảnh] Bãi gỗ của một xưởng cưa: nhiều khúc gỗ tròn xếp chồng ngay ngắn, chụp rộng; không có người, không có máy có chữ hay logo, không có biển hiệu. Từ khoá tìm ảnh (EN): sawmill log yard stacked logs
@@ -362,6 +370,8 @@ image.alt.vi: Gỗ tròn xếp chồng ở xưởng gỗ
 
 #### option q1_kiln
 correct: false
+feedback.en: A brick kiln bakes clay into bricks.
+feedback.vi: Lò gạch nung đất sét thành gạch.
 label.en: brick kiln
 label.vi: lò gạch
 image.brief: Dùng lại hình `explore_made`. Từ khoá tìm ảnh (EN): brick kiln stacked red bricks Vietnam
@@ -391,10 +401,10 @@ sentence.vi: Gỗ và đá đều là {1}.
 answers: q2_materials
 hint.en: Think of the chair, the basin and the mortar.
 hint.vi: Em nghĩ tới cái ghế, cái chậu và cái cối nhé.
-explanation_correct.en: Yes! Wood and rock are materials. We make things from them.
-explanation_correct.vi: Đúng rồi! Gỗ và đá là vật liệu. Ta dùng chúng để làm ra đồ vật.
-explanation_wrong.en: The answer is materials. We make things from them.
-explanation_wrong.vi: Đáp án là vật liệu. Ta dùng chúng để làm ra đồ vật.
+explanation_correct.en: We make chairs and steps from these materials.
+explanation_correct.vi: Ta làm ghế, bậc thềm từ những vật liệu này.
+explanation_wrong.en: We make things from materials like wood and rock.
+explanation_wrong.vi: Ta làm ra đồ vật từ vật liệu như gỗ, đá.
 > Gợi ý không nói tên ô "Materials" (trùng nhãn đáp án), chỉ nhắc ba đồ vật của ô đó. Thẻ sai có sức hút: "tools" (bé vừa gặp nhóm Đồ dùng ở trò chơi), "plants" (gỗ lấy từ cây).
 > Ba thẻ đều là ảnh mới, cùng kiểu chụp trên nền trơn.
 
@@ -408,6 +418,8 @@ image.alt.vi: Mẩu gỗ, vải, kim loại, nhựa và đá
 #### bank q2_tools
 label.en: tools
 label.vi: đồ dùng
+feedback.en: We make tools out of wood and rock.
+feedback.vi: Ta làm đồ dùng từ gỗ và đá.
 image.brief: [hình vẽ] Vài đồ dùng nhà bếp bằng nhiều chất liệu (cái muôi, cái xẻng xào, cái kéo) xếp cạnh nhau trên nền trơn, vẽ nhìn từ trên xuống; không có dao nhọn, không có nhãn hiệu, không có chữ. Từ khoá tìm ảnh (EN): kitchen utensils flat lay plain background
 image.alt.en: Kitchen tools
 image.alt.vi: Đồ dùng nhà bếp
@@ -415,6 +427,8 @@ image.alt.vi: Đồ dùng nhà bếp
 #### bank q2_plants
 label.en: plants
 label.vi: cây cối
+feedback.en: Rock does not grow like a plant.
+feedback.vi: Đá không mọc lên như cây cối.
 image.brief: [hình vẽ] Một cây non xanh trong chậu đất nhỏ, đặt trên nền trơn, vẽ ngang; không có nhãn hiệu, không có chữ. Từ khoá tìm ảnh (EN): young plant small pot plain background
 image.alt.en: A young plant in a pot
 image.alt.vi: Cây non trong chậu
@@ -433,10 +447,10 @@ image.alt.en: Stone steps with a handrail
 image.alt.vi: Bậc đá có tay vịn
 hint.en: Think what each one is made from.
 hint.vi: Em nghĩ xem mỗi thứ làm bằng gì nhé.
-explanation_correct.en: Yes! The mortar and the hand mill are made of rock.
-explanation_correct.vi: Đúng rồi! Cối giã và cối xay làm bằng đá.
-explanation_wrong.en: The answers are the mortar and the hand mill. Bricks are baked clay.
-explanation_wrong.vi: Đáp án là cối giã và cối xay. Gạch là đất sét nung.
+explanation_correct.en: Rock is hard, so it is good for grinding.
+explanation_correct.vi: Đá cứng nên dùng tốt để giã và xay.
+explanation_wrong.en: The mortar and the hand mill are carved from rock.
+explanation_wrong.vi: Cối giã và cối xay được đục từ đá.
 > DOK 2: phân loại đồ vật theo vật liệu. Bẫy: cái thớt gỗ (vật liệu khác), viên gạch (nối `bricks_are_rocks`, trông cứng như đá). Nhãn chỉ gọi tên đồ vật; `alt` tả màu, hình dáng, không có chữ "rock", "stone" · "đá".
 > Rà chữ tester 11/11 (n3): gợi ý cũ trỏ ô "Rock around us", mà ô đó liệt kê sẵn hai đáp án ("a stone mortar", "a stone hand mill"); nay gợi ý là cách nghĩ, theo đề xuất của tester.
 > Cối giã, cối xay, viên gạch là ảnh của phần Chơi; cái thớt là ảnh mới. Hai đáp án đúng không phải những ảnh duy nhất bé đã thấy (viên gạch cũng đã thấy). Bốn ảnh cùng là đồ vật chụp gần.
@@ -451,6 +465,8 @@ image.alt.vi: Cối và chày màu xám
 
 #### option q3_board
 correct: false
+feedback.en: This cutting board is made of wood.
+feedback.vi: Cái thớt này làm bằng gỗ.
 label.en: cutting board
 label.vi: cái thớt
 image.brief: [ảnh] Một cái thớt gỗ hình chữ nhật có cán, thấy rõ vân gỗ, đặt trên nền trơn, chụp chéo; không có dao, không có thức ăn, không có chữ. Từ khoá tìm ảnh (EN): round wooden cutting board plain background
@@ -460,6 +476,8 @@ image.alt.vi: Cái thớt có cán
 
 #### option q3_brick
 correct: false
+feedback.en: Bricks are baked clay, made by people.
+feedback.vi: Gạch là đất sét nung, do người làm ra.
 label.en: stack of bricks
 label.vi: chồng gạch
 image.brief: Dùng lại hình `tray_brick`. Từ khoá tìm ảnh (EN): red clay brick plain background
@@ -479,17 +497,17 @@ id: 5a080daf-cd23-4c85-8adf-406608840b35
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan finds three small things in the garden. Which one is natural?
-prompt.vi: Lan nhặt được ba thứ nhỏ trong vườn. Thứ nào có sẵn trong tự nhiên?
+prompt.en: Which thing from the garden is natural?
+prompt.vi: Thứ nào nhặt trong vườn có sẵn trong tự nhiên?
 image.brief: [hình vẽ] Một góc vườn nhà ở làng quê, mặt đất có cỏ và vài chiếc lá rụng, vẽ gần mặt đất; không có hòn cuội, viên ngói hay viên bi nào trong ảnh; không có người, không có chữ. Từ khoá tìm ảnh (EN): garden ground grass fallen leaves close up
 image.alt.en: A corner of a garden
 image.alt.vi: Một góc vườn
 hint.en: Remember the Made by people picture.
 hint.vi: Em nhớ lại ô Do con người làm ra nhé.
-explanation_correct.en: Yes! Nobody made the pebble. It is natural rock.
-explanation_correct.vi: Đúng rồi! Không ai làm ra hòn cuội. Đó là đá tự nhiên.
-explanation_wrong.en: The answer is the pebble. People make tiles and marbles.
-explanation_wrong.vi: Đáp án là hòn cuội. Ngói và bi thuỷ tinh do con người làm ra.
+explanation_correct.en: Flowing water slowly shaped this pebble, not people.
+explanation_correct.vi: Nước chảy mài tròn hòn cuội, không phải con người.
+explanation_wrong.en: Nobody made the pebble, so it is natural rock.
+explanation_wrong.vi: Không ai làm ra hòn cuội, nên nó là đá tự nhiên.
 > DOK 2: áp ý "tự nhiên khác do con người làm ra" vào ba vật mới, cùng nhỏ, cứng, nhặt được ngoài vườn. Viên bi thuỷ tinh tròn nhẵn như hòn cuội; viên ngói đỏ cứng như đá. Cả ba hình vẽ mới, cùng một vật trên nền trơn (không dùng ảnh hòn cuội trên cát của *Hô hấp*, vì nền cát lộ "trong tự nhiên").
 > [CẦN KIỂM] Ngói nung từ đất sét (biên tập nhớ).
 
@@ -503,6 +521,8 @@ image.alt.vi: Hòn cuội xám
 
 #### option q4_tile
 correct: false
+feedback.en: People make roof tiles from baked clay.
+feedback.vi: Ngói do người làm từ đất sét nung.
 label.en: roof tile
 label.vi: viên ngói
 image.brief: [hình vẽ] Một viên ngói đỏ nung (ngói vảy cá hoặc ngói mũi hài kiểu Việt Nam), đặt trên nền trơn, vẽ chéo; cùng cỡ trong khung như hòn cuội và viên bi; không có chữ, không có dấu in. Từ khoá tìm ảnh (EN): single red clay roof tile plain background
@@ -511,6 +531,8 @@ image.alt.vi: Viên ngói đỏ
 
 #### option q4_marble
 correct: false
+feedback.en: People make glass marbles in factories.
+feedback.vi: Bi thuỷ tinh do người làm trong nhà máy.
 label.en: glass marble
 label.vi: viên bi thuỷ tinh
 image.brief: [hình vẽ] Một viên bi thuỷ tinh trong có sọc màu bên trong, đặt trên nền trơn, vẽ gần; cùng cỡ trong khung như hòn cuội và viên ngói; không có tay người, không có chữ. Từ khoá tìm ảnh (EN): glass marble toy plain background
@@ -522,17 +544,17 @@ id: dac0831d-fbc1-4eb4-bcdc-eef72a3535cd
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Steps outside get sun and rain every day. Which material lasts longest?
-prompt.vi: Bậc thềm ngoài sân ngày nào cũng gặp nắng mưa. Vật liệu nào bền lâu nhất?
+prompt.en: Which material lasts longest for steps outside?
+prompt.vi: Làm bậc thềm ngoài sân, vật liệu nào bền nhất?
 image.brief: Dùng lại hình `tray_rain_roof` ở bài `nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao`. Từ khoá tìm ảnh (EN): rain on corrugated metal roof close up
 image.alt.en: Rain on a roof
 image.alt.vi: Mưa rơi trên mái nhà
 hint.en: Think of very old steps you have seen.
 hint.vi: Em nghĩ tới những bậc thềm rất cũ em từng thấy nhé.
-explanation_correct.en: Yes! Rock lasts for many years in sun and rain.
-explanation_correct.vi: Đúng rồi! Đá bền nhiều năm dưới nắng mưa.
-explanation_wrong.en: The answer is rock. Wood and bamboo rot in the rain.
-explanation_wrong.vi: Đáp án là đá. Gỗ và tre để ngoài mưa lâu ngày sẽ mục.
+explanation_correct.en: Stone steps at old temples can last hundreds of years.
+explanation_correct.vi: Bậc đá ở chùa cổ có thể bền hàng trăm năm.
+explanation_wrong.en: Rock stays strong in sun and rain for years.
+explanation_wrong.vi: Đá vẫn bền chắc qua nắng mưa nhiều năm.
 > DOK 2: chọn vật liệu cho một việc (ý chính một: con người dùng đá để xây). Câu hỏi độ bền dưới nắng mưa, không hỏi độ cứng hay độ thấm (bài ba, bài năm). Gỗ và tre đều có sức hút vì nhà sàn, cầu thang gỗ, cầu tre quen với trẻ. Hình câu hỏi là mưa, không cho thấy vật liệu nào.
 > [CẦN KIỂM] Gỗ, tre để ngoài trời lâu ngày bị mục; bậc đá bền nhiều năm (kinh nghiệm phổ thông).
 
@@ -546,6 +568,8 @@ image.alt.vi: Tấm đá phẳng màu xám
 
 #### option q5_wood
 correct: false
+feedback.en: Wood left out in the rain slowly rots.
+feedback.vi: Gỗ để ngoài mưa lâu ngày sẽ mục.
 label.en: wood
 label.vi: gỗ
 image.brief: [hình vẽ] Một tấm ván gỗ nâu, thấy rõ vân gỗ, đặt trên nền trơn, vẽ chéo; cùng cỡ trong khung như tấm đá và bó tre; không có chữ, không có đinh. Từ khoá tìm ảnh (EN): wooden plank plain background
@@ -554,6 +578,8 @@ image.alt.vi: Tấm ván màu nâu
 
 #### option q5_bamboo
 correct: false
+feedback.en: Bamboo cracks and rots after years of sun and rain.
+feedback.vi: Tre gặp nắng mưa lâu sẽ nứt và mục.
 label.en: bamboo
 label.vi: tre
 image.brief: [hình vẽ] Mấy đoạn tre khô cắt ngắn bó lại, đặt trên nền trơn, vẽ chéo; cùng cỡ trong khung như tấm đá và tấm ván; không có chữ. Từ khoá tìm ảnh (EN): dry bamboo poles bundle plain background
@@ -570,8 +596,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Bricks are as hard as rock. So bricks are rock.
-statement.vi: Gạch cứng như đá. Vậy gạch là một loại đá.
+statement.en: Bricks are as hard as rock, so they are rock.
+statement.vi: Gạch cứng như đá, vậy gạch là một loại đá.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -585,8 +611,10 @@ hint.en: Think about where bricks come from.
 hint.vi: Em nghĩ xem gạch từ đâu mà có nhé.
 explanation_correct.en: Bricks are hard, but people make them from clay.
 explanation_correct.vi: Gạch cứng, nhưng gạch do con người làm từ đất sét.
-explanation_wrong.en: Na is not right. People make bricks, so they are not natural rock.
-explanation_wrong.vi: Na chưa đúng. Gạch do con người làm ra, nên không phải đá tự nhiên.
+explanation_wrong.en: People bake bricks from clay, so bricks are not rock.
+explanation_wrong.vi: Gạch do người nung từ đất sét, nên không phải đá.
+feedback_true.en: Being hard does not make something a rock.
+feedback_true.vi: Cứng như đá chưa chắc đã là đá.
 > DOK 3: bé đánh giá một lập luận nghe có lý (cứng như đá thì là đá) bằng điều đã học (đá có sẵn trong tự nhiên, gạch do con người làm ra). Lời Na đúng chữ bảng "Câu sáu, lời Na" ở `_topic.md`. Đáp án Sai; giải thích khi đúng không mở đầu bằng "Yes!".
 > Hình là tình huống (bức tường gạch), không phải bằng chứng. Ảnh mới, không dùng lại `tray_brick` (ảnh đó đã là lựa chọn sai ở câu q3; `_topic.md` cho phép "ảnh tường gạch").
 > Cả màn khoảng mười bảy từ EN (prompt ba, instruction bốn, lời Na mười).

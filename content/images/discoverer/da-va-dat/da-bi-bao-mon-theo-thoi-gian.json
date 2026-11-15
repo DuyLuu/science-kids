@@ -10,8 +10,9 @@
       "lesson": "da-va-dat/da-nao-cung-hon"
     },
     "w1.w1_laterite": {
-      "same_as": "laterite",
-      "lesson": "da-va-dat/da-dung-lam-gi"
+      "same_as": "q5_laterite",
+      "lesson": "da-va-dat/da-dung-lam-gi",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang q5_laterite (bản cắt 5:2) thay cho vocab.laterite."
     },
     "w1.w1_granite": {
       "same_as": "granite",

@@ -20,6 +20,7 @@ en: I can say how nerves carry messages around my body.
 vi: Em kể được dây thần kinh truyền tin đi khắp cơ thể ra sao.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-037, ngày 10/11/2026. Đã chạy `ids`. Sửa theo rà chữ tester 10/11 (ticket SK-037, mục "content-editor 10/11 · sửa theo tester").
 > Bài `core`. Sửa `nerve_messages_slow` ở ý chính ba, ô "Very fast", câu q5 dẫn vào q6 (gắn key, Na nói đúng). Món bẫy gân xanh ở phần Chơi chạm `veins_are_nerves`, không gắn key.
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na và câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Nerves are thin threads that go all over your body.
@@ -42,17 +43,17 @@ version: 1
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: nao-bo-va-giac-quan/nao-dieu-khien-co-the
-prompt.en: Mai is asleep. What does her brain still do?
-prompt.vi: Mai đang ngủ. Bộ não của Mai vẫn làm việc gì?
+prompt.en: What does Mai's brain still do while she sleeps?
+prompt.vi: Khi Mai ngủ, bộ não vẫn làm gì?
 image.brief: Dùng lại hình `q1` ở bài `ho-hap/vi-sao-ta-phai-tho`
 image.alt.en: A child asleep under a mosquito net
 image.alt.vi: Bạn nhỏ ngủ trong màn
 hint.en: Think of a job your brain does without thinking.
 hint.vi: Em nghĩ tới một việc bộ não làm mà em không cần nghĩ.
-explanation_correct.en: Yes! Her brain keeps her heart beating all night.
-explanation_correct.vi: Đúng rồi! Bộ não giữ cho tim Mai đập suốt đêm.
-explanation_wrong.en: The answer is keeping her heart beating. She cannot ride or read asleep.
-explanation_wrong.vi: Đáp án là giữ cho tim đập. Lúc ngủ thì Mai không đạp xe hay đọc sách được.
+explanation_correct.en: Her heart beats all night without Mai thinking about it.
+explanation_correct.vi: Tim Mai đập suốt đêm mà Mai không cần nghĩ.
+explanation_wrong.en: Her brain keeps her heart beating, even in sleep.
+explanation_wrong.vi: Cả khi ngủ, não vẫn giữ cho tim Mai đập.
 > Ôn ý chính ba và câu q3 của bài một, ở dạng một đáp án. Ba ảnh dùng lại kệ Chơi bài một, cùng là ảnh chụp.
 
 #### option w1_heart
@@ -65,6 +66,8 @@ image.alt.vi: Ngón tay bắt nhịp tim ở cổ tay
 
 #### option w1_ride
 correct: false
+feedback.en: Riding a bike needs Mai to be awake.
+feedback.vi: Muốn đạp xe, Mai phải thức dậy đã.
 label.en: ride a bike
 label.vi: đạp xe
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_bike`
@@ -73,6 +76,8 @@ image.alt.vi: Bạn nhỏ đang đạp xe
 
 #### option w1_read
 correct: false
+feedback.en: Reading needs Mai to be awake and looking.
+feedback.vi: Muốn đọc sách, Mai phải thức và nhìn.
 label.en: read a book
 label.vi: đọc sách
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_book`
@@ -93,15 +98,17 @@ image.alt.en: An empty schoolyard
 image.alt.vi: Sân trường vắng
 hint.en: Remember the Faster card in the breathing lessons.
 hint.vi: Em nhớ lại ô Nhanh hơn ở chủ đề Hô hấp nhé.
-explanation_correct.en: Yes! Skipping works your muscles, so you breathe faster.
-explanation_correct.vi: Đúng rồi! Nhảy dây làm cơ bắp hoạt động mạnh, nên em thở nhanh hơn.
-explanation_wrong.en: The answer is skipping. Reading and sleeping keep you still.
-explanation_wrong.vi: Đáp án là nhảy dây. Lúc đọc truyện hay lúc ngủ, em ngồi yên hoặc nằm yên.
+explanation_correct.en: Working muscles need more oxygen, so you breathe faster.
+explanation_correct.vi: Cơ bắp làm việc cần thêm ô-xi, nên em thở nhanh.
+explanation_wrong.en: Skipping makes your muscles work hard.
+explanation_wrong.vi: Nhảy dây làm cơ bắp hoạt động mạnh.
 > Rà chữ tester 10/11 (mục "Hết hiệu lực"): đổi từ câu ôn *Khủng long* (cái nào là hoá thạch) sang ôn bài ba *Hô hấp* (khoảng một tuần trước), lấp mốc "một tuần" của giãn cách. Giữ `id`, key `w2` và format `single_choice`; nội dung là câu mới. Câu ôn lại ý chính một của bài đó, không dạy lại.
 > Ba lựa chọn dùng lại ba ảnh của câu q1 bài `ho-hap/tho-khi-chay-nhay`, trỏ về hình gốc, cùng kiểu: một vật nằm trên mặt phẳng, không có người. Thứ tự khác câu đó (ở đó dây nhảy đứng thứ nhất).
 
 #### option w2_reading
 correct: false
+feedback.en: Reading keeps you still, so your muscles rest.
+feedback.vi: Đọc truyện em ngồi yên, cơ bắp được nghỉ.
 label.en: reading
 label.vi: đọc truyện
 image.brief: Dùng lại hình `tray_book` ở bài `ho-hap/tho-khi-chay-nhay`
@@ -118,6 +125,8 @@ image.alt.vi: Sợi dây nhảy
 
 #### option w2_sleeping
 correct: false
+feedback.en: When you sleep, your body is calm and slow.
+feedback.vi: Khi ngủ, cơ thể em nghỉ ngơi, thở chậm.
 label.en: sleeping
 label.vi: ngủ
 image.brief: Dùng lại hình `q1_sleeping` ở bài `ho-hap/tho-khi-chay-nhay`
@@ -142,7 +151,7 @@ label.en: Nerves
 label.vi: Dây thần kinh
 color: cham
 sentence.en: Nerves are thin threads that go all over your body.
-sentence.vi: Dây thần kinh là những sợi rất mảnh, chạy khắp cơ thể em.
+sentence.vi: Dây thần kinh là sợi rất mảnh, chạy khắp người em.
 image.brief: [hình vẽ] Đúng khuôn người nhìn nghiêng của câu q1 bài `nao-dieu-khien-co-the`, vẽ thêm bộ não nhỏ màu hồng xám trong đầu, một dải vàng nghệ đậm chạy từ não dọc theo lưng (tuỷ sống), rồi nhiều sợi vàng mảnh rẽ nhánh ra hai tay, hai chân, tới tận đầu ngón tay, ngón chân; không vẽ nét mặt, không có nhãn, không có mũi tên, không có chữ.
 image.alt.en: A child with nerves drawn all over the body
 image.alt.vi: Bạn nhỏ có dây thần kinh vẽ khắp cơ thể
@@ -195,7 +204,7 @@ label.en: Very fast
 label.vi: Rất nhanh
 color: gi_dong
 sentence.en: Nerve messages are very fast, faster than a blink.
-sentence.vi: Tin đi trên dây thần kinh rất nhanh, nhanh hơn một cái chớp mắt.
+sentence.vi: Tin trên dây thần kinh nhanh hơn một cái chớp mắt.
 image.brief: [hình vẽ] Một bàn tay vừa bắt được cây thước nhựa đang rơi, vẽ cận, thấy bàn tay khép lại quanh thước; thước trơn, không có vạch số hay chữ, không vẽ nét mặt. Từ khoá tìm ảnh (EN): hand catching falling ruler reaction test
 image.alt.en: A hand catching a falling ruler
 image.alt.vi: Bàn tay bắt cây thước đang rơi
@@ -352,15 +361,15 @@ prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/explore_nerves`
 image.alt.en: A child with nerves drawn all over the body
 image.alt.vi: Bạn nhỏ có dây thần kinh vẽ khắp cơ thể
-sentence.en: Nerves carry {1} to and from your brain.
-sentence.vi: Dây thần kinh mang {1} về não và từ não đi ra.
+sentence.en: Nerves carry {1} between your brain and your body.
+sentence.vi: Dây thần kinh mang {1} giữa não và cơ thể.
 answers: q1_messages
 hint.en: Remember the mosquito on your arm.
 hint.vi: Em nhớ lại con muỗi đậu trên tay nhé.
-explanation_correct.en: Yes! Nerves carry messages to and from your brain.
-explanation_correct.vi: Đúng rồi! Dây thần kinh mang tin về não và từ não đi ra.
-explanation_wrong.en: The answer is messages. Food and water do not go along nerves.
-explanation_wrong.vi: Đáp án là tin. Thức ăn và nước không đi theo dây thần kinh.
+explanation_correct.en: These messages tell your brain what your body feels.
+explanation_correct.vi: Tin báo cho não biết cơ thể đang cảm thấy gì.
+explanation_wrong.en: Nerves carry messages, not food or water.
+explanation_wrong.vi: Dây thần kinh mang tin, không mang thức ăn hay nước.
 > Hình câu hỏi là dây thần kinh (chủ ngữ của câu), không phải tin (đáp án). Ba thẻ từ là ảnh chụp cùng kiểu: một vật trên nền trơn. "Tin" là một ý; hình là lá thư trong phong bì, vật quen gắn với "gửi tin".
 > Gợi ý không nhắc tên bài (tên bài có chữ "messages").
 > Rà chữ tester 10/11: thẻ đúng chuyển xuống thứ ba (N1); câu tiếng Việt rút gọn cho khớp câu tiếng Anh (n3). Giữ chữ "tin" (tester đồng ý, n3).
@@ -368,6 +377,8 @@ explanation_wrong.vi: Đáp án là tin. Thức ăn và nước không đi theo 
 #### bank q1_food
 label.en: food
 label.vi: thức ăn
+feedback.en: Food travels down to your stomach.
+feedback.vi: Thức ăn đi xuống dạ dày em.
 image.brief: [ảnh] Một bát cơm trắng đặt trên nền trơn, chụp chéo; không có đũa có chữ, không có nhãn hiệu. Từ khoá tìm ảnh (EN): bowl of white rice plain background
 image.alt.en: A bowl of rice
 image.alt.vi: Một bát cơm
@@ -375,6 +386,8 @@ image.alt.vi: Một bát cơm
 #### bank q1_water
 label.en: water
 label.vi: nước
+feedback.en: Water you drink goes to your stomach too.
+feedback.vi: Nước em uống cũng đi xuống dạ dày.
 image.brief: [ảnh] Một cốc thuỷ tinh đựng nước trong đặt trên nền trơn, chụp ngang; không có nhãn, không có chữ. Từ khoá tìm ảnh (EN): glass of water plain background
 image.alt.en: A glass of water
 image.alt.vi: Một cốc nước
@@ -396,12 +409,12 @@ prompt.vi: Bó dây thần kinh lớn nằm ở đâu?
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/q1`
 image.alt.en: A child seen from the side
 image.alt.vi: Một bạn nhỏ nhìn nghiêng
-hint.en: Remember the Nerves picture. Where is the thick bundle?
-hint.vi: Em nhớ lại ô Dây thần kinh. Bó dây lớn nằm ở đâu?
-explanation_correct.en: Yes! The spinal cord runs down your back, inside your backbone.
-explanation_correct.vi: Đúng rồi! Tuỷ sống chạy dọc lưng, bên trong xương sống.
-explanation_wrong.en: The answer is the back. The spinal cord runs down it.
-explanation_wrong.vi: Đáp án là lưng. Tuỷ sống chạy dọc ở đó.
+hint.en: Remember the thick bundle in the Nerves picture.
+hint.vi: Em nhớ lại bó dây to trong ô Dây thần kinh nhé.
+explanation_correct.en: The spinal cord runs down your back, inside your backbone.
+explanation_correct.vi: Tuỷ sống chạy dọc lưng, bên trong xương sống.
+explanation_wrong.en: Your spinal cord runs down the middle of your back.
+explanation_wrong.vi: Tuỷ sống chạy dọc giữa lưng em.
 > Ba lựa chọn là cùng khuôn người của bài một, chỉ khác vùng tô vàng. Hình câu hỏi không tô vùng nào.
 > Rà chữ tester 10/11 (N6): ba nhãn cùng một dạng "in the …" · "ở …"; trước đây nhãn đáp án là nhãn duy nhất có "along" · "dọc theo". Nhãn tiếng Việt cả ba dùng "ở" ("ở lưng" xuôi hơn "trong lưng"); khác nhãn "trong ngực", "trong bụng" của câu q1 bài một, vì đó là nhãn riêng của câu đó.
 
@@ -415,6 +428,8 @@ image.alt.vi: Bạn nhỏ, phần lưng tô màu vàng
 
 #### option q2_chest
 correct: false
+feedback.en: Your chest holds your heart and lungs.
+feedback.vi: Trong ngực là tim và phổi.
 label.en: in the chest
 label.vi: ở ngực
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/q1_chest`
@@ -423,6 +438,8 @@ image.alt.vi: Bạn nhỏ, phần ngực tô màu vàng
 
 #### option q2_tummy
 correct: false
+feedback.en: Your tummy holds your stomach, for food.
+feedback.vi: Trong bụng là dạ dày, nơi chứa thức ăn.
 label.en: in the tummy
 label.vi: ở bụng
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/q1_tummy`
@@ -443,10 +460,10 @@ image.alt.en: A child with nerves drawn all over the body
 image.alt.vi: Bạn nhỏ có dây thần kinh vẽ khắp cơ thể
 hint.en: Does it start in your skin, or your brain?
 hint.vi: Tin bắt đầu từ da em, hay từ bộ não?
-explanation_correct.en: Yes! Your skin feels the mosquito and the cold rain.
-explanation_correct.vi: Đúng rồi! Da em cảm thấy con muỗi và mưa lạnh.
-explanation_wrong.en: The answers are the mosquito and the cold rain.
-explanation_wrong.vi: Đáp án là con muỗi và mưa lạnh.
+explanation_correct.en: Your skin feels them first, then tells your brain.
+explanation_correct.vi: Da cảm thấy trước, rồi báo tin về não.
+explanation_wrong.en: Your skin feels the mosquito and the cold rain.
+explanation_wrong.vi: Da em cảm thấy con muỗi và mưa lạnh.
 > DOK 2: phân loại tin theo chiều đi (về não hay từ não ra), có hai tình huống mới (mưa lạnh, chạy). Bốn hình vẽ cùng kiểu (theo hình designer 10/11): cận cảnh da, tay hoặc chân, không vẽ nét mặt. Lựa chọn `q3_bite` dùng lại hình vẽ con muỗi `tray_arm` của kệ Chơi thay cho ảnh ô `explore_to_brain`, để cả bốn cùng là hình vẽ.
 > Rà chữ tester 10/11 (N5): bốn nhãn cùng dạng câu có chủ ngữ và động từ; trước đây hai nhãn đúng là cụm danh từ, hai nhãn sai là câu, nên phân loại được chỉ bằng dạng câu. Giải thích vẫn khớp.
 
@@ -460,6 +477,8 @@ image.alt.vi: Con muỗi đậu trên da cánh tay
 
 #### option q3_scratch
 correct: false
+feedback.en: Your brain sent this message out to your hand.
+feedback.vi: Tin này do não gửi ra bàn tay.
 label.en: your hand scratches
 label.vi: tay em gãi
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/explore_from_brain`
@@ -476,6 +495,8 @@ image.alt.vi: Giọt mưa trên cánh tay
 
 #### option q3_run
 correct: false
+feedback.en: Your brain sends this message out to your legs.
+feedback.vi: Tin này do não gửi xuống đôi chân.
 label.en: your legs run
 label.vi: chân em chạy
 image.brief: [hình vẽ] Đôi chân một bạn nhỏ đang chạy trên đường đất hay sân trường, vẽ thấp, chỉ thấy chân và giày; giày không có logo; không vẽ nét mặt, không có chữ. Từ khoá tìm ảnh (EN): child legs running path close up
@@ -487,21 +508,24 @@ id: 56f3c1ad-27cb-41ce-b403-3b9bd4099c74
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam's brain tells his foot to kick. What carries the message?
-prompt.vi: Bộ não bảo chân Nam đá quả cầu. Cái gì mang tin đó tới chân?
+prompt.en: What carries Nam's brain message to his foot?
+prompt.vi: Cái gì mang tin từ não xuống chân Nam?
 image.brief: [hình vẽ] Đôi chân một bạn nhỏ đang tâng quả cầu lông gà lên cao trên sân gạch, vẽ thấp, chỉ thấy chân và quả cầu; không vẽ nét mặt, không có logo, không có chữ. Đá cầu là trò quen của trẻ Việt Nam. Từ khoá tìm ảnh (EN): kicking shuttlecock foot jianzi
 image.alt.en: A foot kicking a shuttlecock
 image.alt.vi: Bàn chân đang đá quả cầu
 hint.en: Remember the message path game.
 hint.vi: Em nhớ lại trò dựng đường đi của tin nhé.
-explanation_correct.en: Yes! Nerves carry the message from his brain to his foot.
-explanation_correct.vi: Đúng rồi! Dây thần kinh mang tin từ não xuống chân Nam.
-explanation_wrong.en: The answer is the nerve. Nerves carry messages.
-explanation_wrong.vi: Đáp án là dây thần kinh. Dây thần kinh mang tin đi.
+explanation_correct.en: The message races down nerves in his back and leg.
+explanation_correct.vi: Tin chạy theo dây thần kinh ở lưng và chân.
+explanation_wrong.en: Nerves carry messages from the brain to the body.
+explanation_wrong.vi: Dây thần kinh mang tin từ não tới cơ thể.
+> 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười hai từ EN, mười lăm chữ VI; nay một câu tám từ EN, chín chữ VI. Ý "đá quả cầu" nằm ở hình (bàn chân đá quả cầu).
 > DOK 2: áp đường đi của tin theo chiều ngược với phần Chơi (từ não ra chân). Trái tim và dạ dày dùng lại hình vẽ của *Hô hấp* (rà chữ tester 10/11); dây thần kinh là hình gốc mới, cùng nét. Ba nhãn cùng số ít.
 
 #### option q4_heart
 correct: false
+feedback.en: The heart pumps blood, not messages.
+feedback.vi: Tim bơm máu, không mang tin.
 label.en: heart
 label.vi: trái tim
 image.brief: Dùng lại hình `tray_heart` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -510,6 +534,8 @@ image.alt.vi: Trái tim
 
 #### option q4_stomach
 correct: false
+feedback.en: The stomach breaks down food.
+feedback.vi: Dạ dày lo tiêu hoá thức ăn.
 label.en: stomach
 label.vi: dạ dày
 image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -534,17 +560,19 @@ prompt.vi: Tin nào phải đi đường xa nhất mới tới não?
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/q1`
 image.alt.en: A child seen from the side
 image.alt.vi: Một bạn nhỏ nhìn nghiêng
-hint.en: Find your brain first. Which part is farthest from it?
-hint.vi: Em tìm chỗ bộ não trước. Bộ phận nào ở xa não nhất?
-explanation_correct.en: Yes! Your toes are the farthest from your brain.
-explanation_correct.vi: Đúng rồi! Ngón chân ở xa não nhất.
-explanation_wrong.en: The answer is your toe. Your ear is very close.
-explanation_wrong.vi: Đáp án là ngón chân. Tai ở rất gần não.
+hint.en: Find your brain, then the part farthest from it.
+hint.vi: Em tìm chỗ bộ não, rồi tìm phần ở xa não nhất nhé.
+explanation_correct.en: From your toes, a message travels all the way up.
+explanation_correct.vi: Tin từ ngón chân phải đi suốt chiều dài cơ thể.
+explanation_wrong.en: Your toes are the farthest part from your brain.
+explanation_wrong.vi: Ngón chân là phần ở xa não nhất.
 > DOK 2: so sánh khoảng cách trên cơ thể. Câu dẫn vào câu q6: đường xa nhất mà tin vẫn tới rất nhanh.
 > Ba lựa chọn là bộ giác quan (tai dùng lại bài một; bàn tay, bàn chân là hình gốc mới, cùng nét).
 
 #### option q5_ear
 correct: false
+feedback.en: Your ear is right next to your brain.
+feedback.vi: Tai ở ngay sát bộ não.
 label.en: from your ear
 label.vi: từ tai
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/w1_ear`
@@ -561,6 +589,8 @@ image.alt.vi: Một bàn chân có các ngón chân
 
 #### option q5_hand
 correct: false
+feedback.en: Your hand is about halfway down your body.
+feedback.vi: Bàn tay ở khoảng giữa thân người.
 label.en: from your hand
 label.vi: từ bàn tay
 image.brief: [hình vẽ] Một bàn tay của bạn nhỏ xoè ra, lòng bàn tay hướng về người xem, vẽ cận cảnh gần thực tế; cùng nét, cùng nền kem trơn với bộ giác quan; không có chữ. Ô `explore_five` bài `giac-quan-gui-tin-ve-nao` dùng lại hình này.
@@ -577,8 +607,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: My toe is far from my brain. I still feel it fast.
-statement.vi: Ngón chân ở xa não. Nhưng mình vẫn thấy ngay.
+statement.en: My toe is far away, but I feel it fast.
+statement.vi: Ngón chân ở xa não, nhưng mình vẫn thấy ngay.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -588,12 +618,14 @@ answer: true
 image.brief: [ảnh] Mấy bạn nhỏ đi chân trần trên đường, chụp từ phía sau, thấy lưng và đôi bàn chân trần; không thấy mặt, không có vết thương, không có chữ. Ảnh chân trần trên lối sỏi không có ảnh hợp giấy phép (designer 10/11). Từ khoá tìm ảnh (EN): bare feet walking pebble path
 image.alt.en: Children walking barefoot
 image.alt.vi: Các bạn nhỏ đi chân trần
-hint.en: Think of hitting your toe. When does it hurt?
-hint.vi: Em nhớ lúc vấp ngón chân. Bao lâu thì em thấy đau?
-explanation_correct.en: Yes! Nerve messages are very fast, even from your toes.
-explanation_correct.vi: Đúng rồi! Tin trên dây thần kinh rất nhanh, kể cả từ ngón chân.
-explanation_wrong.en: Na is right. Nerve messages are very fast.
-explanation_wrong.vi: Na nói đúng. Tin trên dây thần kinh đi rất nhanh.
+hint.en: When you stub your toe, how soon does it hurt?
+hint.vi: Em nhớ lúc vấp ngón chân, bao lâu thì thấy đau?
+explanation_correct.en: Nerve messages are very fast, even from your toes.
+explanation_correct.vi: Tin trên dây thần kinh rất nhanh, kể cả từ ngón chân.
+explanation_wrong.en: You feel a stubbed toe almost right away.
+explanation_wrong.vi: Vấp ngón chân, em thấy đau gần như ngay lập tức.
+feedback_false.en: Far away does not mean slow for nerve messages.
+feedback_false.vi: Tin đi xa trên dây thần kinh vẫn rất nhanh.
 > DOK 3: bé đánh giá lời Na bằng bằng chứng đời thường (vấp chân thấy đau ngay) và điều vừa học (ô "Very fast"). Bé còn tin "xa thì chậm" sẽ thấy vế một đúng nên nghĩ vế hai sai. Đáp án Đúng, theo bảng Đáp án Đúng/Sai ở `_topic.md` (câu sáu cả chủ đề: Sai, Đúng, Sai, Đúng).
 > Gợi ý chỉ vào trải nghiệm, không nói Na đúng hay sai.
 

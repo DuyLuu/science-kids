@@ -52,15 +52,17 @@ image.alt.en: A geologist looking at rocks
 image.alt.vi: Nhà địa chất đang xem đá
 hint.en: Remember the Mohs' scale picture in lesson four.
 hint.vi: Em nhớ lại ô Thang Mohs ở bài bốn nhé.
-explanation_correct.en: Yes! Diamond is at the top of Mohs' scale.
-explanation_correct.vi: Đúng rồi! Kim cương ở bậc cao nhất của thang Mohs.
-explanation_wrong.en: The answer is diamond. It is the hardest.
-explanation_wrong.vi: Đáp án là kim cương. Kim cương cứng nhất.
+explanation_correct.en: Diamond is so hard that it can cut glass.
+explanation_correct.vi: Kim cương cứng tới mức cắt được kính.
+explanation_wrong.en: Diamond is at the top of Mohs' scale.
+explanation_wrong.vi: Kim cương ở bậc cao nhất của thang Mohs.
 > Câu hỏi khác chữ câu q1 bài bốn ("Which mineral is the hardest?"), lựa chọn sai cũng khác (thạch cao, thạch anh thay cho hồng ngọc, thạch anh). Thạch anh trong, trông rất cứng, nên có sức hút. Ba ảnh khoáng vật cùng nền kem; `alt` chỉ tả màu. Chuỗi VI có "Mohs" (cần `READINGS`).
 > Rà chữ tester 11/11 (N5, N6): ảnh thạch cao nay trỏ về gốc ở bài bốn; ba `alt` chép khuôn mới của bài bốn ("A <màu> piece" · "Mẩu <màu>").
 
 #### option w1_gypsum
 correct: false
+feedback.en: Gypsum is so soft a fingernail can scratch it.
+feedback.vi: Thạch cao mềm tới mức móng tay cào xước được.
 label.en: gypsum
 label.vi: thạch cao
 image.brief: Dùng lại hình `tray_gypsum` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): selenite gypsum crystal sample
@@ -77,6 +79,8 @@ image.alt.vi: Mẩu nhỏ trong suốt
 
 #### option w1_quartz
 correct: false
+feedback.en: Quartz is hard, but one mineral is harder.
+feedback.vi: Thạch anh cứng, nhưng còn thứ cứng hơn.
 label.en: quartz
 label.vi: thạch anh
 image.brief: Dùng lại hình `quartz` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): white quartz crystal
@@ -98,10 +102,12 @@ image.alt.vi: Chiếc kính lúp
 answer: true
 hint.en: Remember the Grains picture in lesson two.
 hint.vi: Em nhớ lại ô Hạt ở bài hai nhé.
-explanation_correct.en: Yes! Granite has grains you can see.
-explanation_correct.vi: Đúng rồi! Đá hoa cương có những hạt nhìn thấy được.
-explanation_wrong.en: This is true. Granite has grains you can see.
-explanation_wrong.vi: Câu này đúng. Đá hoa cương có hạt nhìn thấy được.
+explanation_correct.en: You can see granite's grains even without a magnifying glass.
+explanation_correct.vi: Hạt đá hoa cương nhìn được cả bằng mắt thường.
+explanation_wrong.en: Granite is one rock with grains you can see.
+explanation_wrong.vi: Đá hoa cương là loại đá có hạt nhìn thấy được.
+feedback_false.en: Granite's grains are big enough to see.
+feedback_false.vi: Hạt của đá hoa cương to, nhìn thấy được.
 > Chữ EN đúng bảng Khởi động và bảng Đáp án Đúng/Sai (đáp án Đúng); khớp nguyên văn câu của ô "Grains" bài hai ("Some rocks have grains you can see, like granite."). Hình câu hỏi là kính lúp, không cho thấy đá có hạt.
 
 ## Học
@@ -159,8 +165,8 @@ examples.4.vi: vết ướt loang rộng
 label.en: Bubbles
 label.vi: Bọt khí
 color: vang_hoe
-sentence.en: Put a permeable rock in water. Bubbles keep rising.
-sentence.vi: Thả đá thấm nước vào cốc nước. Bọt khí cứ nổi lên mãi.
+sentence.en: In water, a permeable rock keeps giving off bubbles.
+sentence.vi: Đá thấm nước thả vào cốc, bọt khí cứ nổi lên mãi.
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": một cốc nhựa trong đựng nước, dưới đáy là hòn sa thạch vàng nâu, một chuỗi dài bọt khí nhỏ nổi lên từ hòn đá tới mặt nước; vẽ ngang tầm cốc; nền kem trơn; không có tay, không có chữ, không có vạch số trên cốc. Từ `bubble` dùng lại hình này.
 image.alt.en: Bubbles rising from a rock in water
 image.alt.vi: Bọt khí nổi lên từ hòn đá trong nước
@@ -344,15 +350,17 @@ image.alt.en: A plastic cup of water
 image.alt.vi: Cốc nhựa đựng nước
 hint.en: Remember the Water test picture.
 hint.vi: Em nhớ lại ô Thử nhỏ nước nhé.
-explanation_correct.en: Yes! A dropper lets out one drop at a time.
-explanation_correct.vi: Đúng rồi! Ống nhỏ giọt cho nước ra từng giọt một.
-explanation_wrong.en: The answer is the dropper. It lets out small drops.
-explanation_wrong.vi: Đáp án là ống nhỏ giọt. Ống cho nước ra từng giọt nhỏ.
+explanation_correct.en: Small drops let you see if water soaks in.
+explanation_correct.vi: Giọt nhỏ giúp em thấy nước có thấm vào không.
+explanation_wrong.en: A dropper lets out one small drop at a time.
+explanation_wrong.vi: Ống nhỏ giọt cho nước ra từng giọt nhỏ.
 > Kính lúp và đèn pin là dụng cụ "nhìn kỹ" của bài hai; bé dễ nhầm vì ý chính một nói "watch closely". Ba ảnh cùng một dụng cụ trên nền trơn. Ảnh ống nhỏ giọt là ảnh chụp mới (ô Học chỉ có ống nhỏ giọt trong hình vẽ), nên đáp án không phải ảnh bé vừa thấy.
 > Rà chữ tester 11/11 (n7): hình câu hỏi đổi từ cốc thuỷ tinh của *Hô hấp* sang cốc nhựa trong đựng nước (ảnh mới của bài ba, `q1_water`), cho khớp mục An toàn (thử nước bằng cốc nhựa).
 
 #### option q1_magnifier
 correct: false
+feedback.en: A magnifying glass helps you look, not drop water.
+feedback.vi: Kính lúp để nhìn, không nhỏ được nước.
 label.en: magnifying glass
 label.vi: kính lúp
 image.brief: Dùng lại hình `q1_magnifier` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): magnifying glass black handle plain background
@@ -361,6 +369,8 @@ image.alt.vi: Chiếc kính lúp
 
 #### option q1_torch
 correct: false
+feedback.en: A torch gives light but cannot hold water.
+feedback.vi: Đèn pin chiếu sáng, không đựng được nước.
 label.en: torch
 label.vi: đèn pin
 image.brief: Dùng lại hình `q1_torch` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): flashlight torch plain background
@@ -390,16 +400,18 @@ sentence.vi: Đá {1} cho nước đi vào bên trong.
 answers: q2_permeable
 hint.en: Think of sandstone after the water test.
 hint.vi: Em nhớ lại sa thạch sau khi thử nhỏ nước nhé.
-explanation_correct.en: Yes! A permeable rock lets water soak in.
-explanation_correct.vi: Đúng rồi! Đá thấm nước cho nước thấm vào bên trong.
-explanation_wrong.en: The answer is permeable.
-explanation_wrong.vi: Đáp án là thấm nước.
+explanation_correct.en: Sandstone is permeable, so water soaks into it.
+explanation_correct.vi: Sa thạch thấm nước, nên nước thấm được vào trong.
+explanation_wrong.en: A permeable rock lets water soak in.
+explanation_wrong.vi: Đá thấm nước cho nước thấm vào bên trong.
 > Câu EN không có gốc "perme-", câu VI không có chữ "thấm" (đáp án VI là "thấm nước"). Thẻ sai có sức hút: "impermeable" (chữ gần giống), "hard" (bé hay nghĩ đá cứng thì nước không vào được).
 > Ba thẻ là hình vẽ: hai hình của ô Học (thấm, không thấm; một đúng một sai, cùng là hình bé đã thấy) và hình hòn đá không vết xước của bài ba (cứng). Thẻ đúng ở chỗ thứ ba.
 
 #### bank q2_impermeable
 label.en: impermeable
 label.vi: không thấm nước
+feedback.en: An impermeable rock keeps water out.
+feedback.vi: Đá không thấm nước giữ nước ở bên ngoài.
 image.brief: Dùng lại hình `explore_impermeable`.
 image.alt.en: A drop sitting on a rock
 image.alt.vi: Giọt nước đọng trên mặt đá
@@ -407,6 +419,8 @@ image.alt.vi: Giọt nước đọng trên mặt đá
 #### bank q2_hard
 label.en: hard
 label.vi: cứng
+feedback.en: Hard is about scratching, not about water.
+feedback.vi: Cứng là nói về cào xước, không nói về nước.
 image.brief: Dùng lại hình `q5_none` ở bài `da-va-dat/da-nao-cung-hon`.
 image.alt.en: A rock with no scratches
 image.alt.vi: Hòn đá không có vết xước
@@ -432,10 +446,10 @@ image.alt.en: Many different rocks on a table
 image.alt.vi: Nhiều hòn đá khác nhau trên bàn
 hint.en: Think about the water test on each rock.
 hint.vi: Em nghĩ tới phép thử nhỏ nước trên từng hòn đá nhé.
-explanation_correct.en: Yes! Marble and slate are impermeable.
-explanation_correct.vi: Đúng rồi! Đá cẩm thạch và đá phiến không thấm nước.
-explanation_wrong.en: The answers are marble and slate.
-explanation_wrong.vi: Đáp án là đá cẩm thạch và đá phiến.
+explanation_correct.en: Water stays on top of marble and slate.
+explanation_correct.vi: Nước đọng lại trên mặt đá cẩm thạch và đá phiến.
+explanation_wrong.en: Marble and slate are impermeable, so water stays out.
+explanation_wrong.vi: Đá cẩm thạch và đá phiến không thấm nước.
 > DOK 2: phân loại bốn mẫu đá theo tính chất thấm nước. Đá phấn là bẫy mạnh: trắng như đá cẩm thạch, và bé vừa học đá phấn mềm (bài ba) chứ chưa quen việc nó thấm nước. Hỏi nhóm "giữ nước ở ngoài" để ảnh bé đã thấy ở phần Học (sa thạch, từ `sandstone`) là lựa chọn sai, không phải đáp án.
 > Bốn ảnh mẫu đá cùng nền kem của Bộ mẫu đá; `alt` chỉ tả màu, không tả tính chất thấm nước.
 > Rà chữ tester 11/11 (n2): gợi ý cũ trỏ ô "Impermeable", mà ô đó liệt kê sẵn hai đáp án; nay gợi ý là cách nghĩ (nhớ lại phép thử trên từng hòn đá).
@@ -450,6 +464,8 @@ image.alt.vi: Hòn đá trắng lấp lánh
 
 #### option q3_sandstone
 correct: false
+feedback.en: Water soaks into sandstone through tiny gaps.
+feedback.vi: Nước thấm vào sa thạch qua những khe nhỏ.
 label.en: sandstone
 label.vi: sa thạch
 image.brief: Dùng lại hình `tray_sandstone` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): sandstone rock sample layers
@@ -466,6 +482,8 @@ image.alt.vi: Hòn đá màu xám sẫm
 
 #### option q3_chalk
 correct: false
+feedback.en: Chalk soaks up water, and a wet patch spreads.
+feedback.vi: Đá phấn hút nước, vết ướt loang rộng ra.
 label.en: chalk
 label.vi: đá phấn
 image.brief: Dùng lại hình `chalk` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): chalk rock sample
@@ -477,22 +495,25 @@ id: 0c6bcd54-0c53-4171-9e75-04eea968fb02
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai drops water on three rocks. Which rock is permeable?
-prompt.vi: Mai nhỏ nước lên ba hòn đá. Hòn đá nào thấm nước?
+prompt.en: After the water test, which rock is permeable?
+prompt.vi: Sau khi nhỏ nước, hòn đá nào thấm nước?
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": bàn tay Mai cầm ống nhỏ giọt phía trên ba hòn đá xếp hàng trên khay nhựa (một hòn trắng vân xám, một hòn vàng nâu, một tấm xám sẫm), chưa nhỏ giọt nào, các hòn đá còn khô; nền kem trơn; chỉ thấy bàn tay, không vẽ nét mặt, không có chữ.
 image.alt.en: A dropper over three dry rocks
 image.alt.vi: Ống nhỏ giọt phía trên ba hòn đá khô
 hint.en: Remember the Permeable picture.
 hint.vi: Em nhớ lại ô Thấm nước nhé.
-explanation_correct.en: Yes! The drop soaked into the rock.
-explanation_correct.vi: Đúng rồi! Giọt nước đã thấm vào trong hòn đá.
-explanation_wrong.en: The answer is the rock where the drop disappears.
-explanation_wrong.vi: Đáp án là hòn đá có giọt nước biến mất.
+explanation_correct.en: The drop soaked into tiny gaps inside the rock.
+explanation_correct.vi: Giọt nước thấm vào những khe nhỏ trong hòn đá.
+explanation_wrong.en: On a permeable rock, the drop disappears.
+explanation_wrong.vi: Trên đá thấm nước, giọt nước biến mất.
+> A2 (SK-043, 14/11): câu hỏi cũ mười hai chữ (có nhân vật Mai), nay chín chữ; hình câu hỏi giữ ngữ cảnh.
 > DOK 2: đọc kết quả thử nhỏ nước (kế hoạch bài năm ở `_topic.md`). Nhãn gọi theo kết quả, cùng một dạng (việc xảy ra với giọt nước), không gọi tên đá. Nước trượt khỏi đá phiến dễ bị nhầm là "nước đi đâu mất".
 > Rà chữ tester 11/11 (N1): trước đây ba lựa chọn dùng lại ba món kệ Chơi (đáp án là món bắt buộc, hai lựa chọn sai là hai món bẫy), nên bé chọn được nhờ nhớ trò chơi. Nay ba lựa chọn là ba hình vẽ mới của chính tình huống câu hỏi: cùng ba hòn đá của hình câu hỏi sau khi nhỏ giọt, mỗi hình khoanh một hòn. Ba hình giống hệt nhau trừ vòng khoanh, nên bé phải đọc kết quả ở hòn được khoanh. Thứ tự lựa chọn trùng vị trí hòn đá (trái, giữa, phải); đáp án vẫn ở chỗ thứ hai.
 
 #### option q4_round
 correct: false
+feedback.en: A drop that stays round has not soaked in.
+feedback.vi: Giọt nước còn đọng tròn, chưa thấm vào đá.
 label.en: drop stays round
 label.vi: giọt nước đọng tròn
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": cùng khay và ba hòn đá của hình câu hỏi q4, cùng góc nhìn, sau khi đã nhỏ mỗi hòn một giọt: hòn trắng vân xám bên trái có một giọt nước tròn căng đọng trên mặt; hòn vàng nâu ở giữa chỉ còn một chấm ẩm sẫm màu, không còn giọt; tấm xám sẫm bên phải có nước đã trượt xuống khay, mặt đá khô; không có tay, không có ống nhỏ giọt. Một vòng tròn màu vàng hoe, nét dày mềm, khoanh hòn bên trái. Nền kem trơn; không có chữ, không có mũi tên, không có số. Hai lựa chọn `q4_gone`, `q4_runoff` vẽ y hệt, chỉ đổi chỗ vòng khoanh.
@@ -509,6 +530,8 @@ image.alt.vi: Hòn ở giữa, chỉ còn một chấm ẩm
 
 #### option q4_runoff
 correct: false
+feedback.en: Water running off is not going into the rock.
+feedback.vi: Nước trượt đi, nghĩa là không thấm vào đá.
 label.en: water runs off
 label.vi: nước trượt đi
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": y hệt hình lựa chọn `q4_round` (cùng ba hòn đá sau khi nhỏ giọt, cùng góc nhìn, cùng cỡ), chỉ khác: vòng tròn vàng hoe khoanh tấm xám sẫm bên phải (nước đã trượt xuống khay). Nền kem trơn; không có chữ, không có mũi tên, không có số.
@@ -520,17 +543,18 @@ id: a59378ec-91b6-41a7-9d95-0115f79014bc
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Nam puts rocks in cups of water. Which rock is permeable?
-prompt.vi: Nam thả đá vào các cốc nước. Hòn đá nào thấm nước?
+prompt.en: In cups of water, which rock is permeable?
+prompt.vi: Thả vào cốc nước, hòn đá nào thấm nước?
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": ba cốc nhựa trong đựng nước xếp hàng, bàn tay Nam đang thả một hòn đá vào cốc ở giữa, chưa có bọt khí nào; nền kem trơn; chỉ thấy bàn tay, không vẽ nét mặt, không có chữ, không có vạch số trên cốc.
 image.alt.en: A hand putting a rock into a cup of water
 image.alt.vi: Bàn tay thả hòn đá vào cốc nước
 hint.en: Remember the Bubbles picture.
 hint.vi: Em nhớ lại ô Bọt khí nhé.
-explanation_correct.en: Yes! Bubbles keep rising as water goes in.
-explanation_correct.vi: Đúng rồi! Bọt khí nổi lên mãi vì nước đang thấm vào.
-explanation_wrong.en: The answer is the long line of bubbles.
-explanation_wrong.vi: Đáp án là chuỗi bọt khí dài.
+explanation_correct.en: Water going in pushes air out as bubbles.
+explanation_correct.vi: Nước đi vào đẩy không khí ra thành bọt.
+explanation_wrong.en: A long line of bubbles shows water soaking in.
+explanation_wrong.vi: Chuỗi bọt khí dài cho thấy nước đang thấm vào.
+> A2 (SK-043, 14/11): câu hỏi cũ mười hai chữ (có nhân vật Nam), nay chín chữ.
 > DOK 2: đọc kết quả thử bọt khí. Bẫy "hai bọt khí bám trên đá" chính là ý của Oak (vài bọt lúc đầu chỉ là không khí bám ngoài mặt đá): bé thấy có bọt là chọn ngay. Ba nhãn cùng một dạng (cụm từ về bọt khí).
 > Chuỗi bọt và hai bọt là hình của phần Chơi; cốc không có bọt là hình vẽ mới, nên đáp án không phải hình duy nhất bé đã thấy.
 
@@ -544,6 +568,8 @@ image.alt.vi: Chuỗi bọt khí nổi lên từ hòn đá trắng
 
 #### option q5_two
 correct: false
+feedback.en: Only two bubbles means water is not soaking in.
+feedback.vi: Chỉ hai bọt khí rồi dừng, nước không vào thêm.
 label.en: two bubbles on the rock
 label.vi: hai bọt khí bám trên đá
 image.brief: Dùng lại hình `tray_granite_bubbles`.
@@ -552,6 +578,8 @@ image.alt.vi: Hai bọt khí trên hòn đá xám trong nước
 
 #### option q5_none
 correct: false
+feedback.en: No bubbles means water is not going in.
+feedback.vi: Không có bọt khí, nghĩa là nước không vào.
 label.en: no bubbles at all
 label.vi: không có bọt khí nào
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": cốc nhựa trong đựng nước, hòn đá cẩm thạch trắng vân xám dưới đáy, không có bọt khí nào; cùng cỡ cốc và góc nhìn như `tray_bubbles_sandstone`; nền kem trơn; không có tay, không có chữ, không có vạch số.
@@ -568,8 +596,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Rocks are solid. So water can never get into a rock.
-statement.vi: Đá rắn chắc. Vậy nước không bao giờ vào được trong đá.
+statement.en: Rocks are solid, so water can never get in.
+statement.vi: Đá rắn chắc, nên nước không bao giờ vào được.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -581,10 +609,12 @@ image.alt.en: A yellow-brown rock
 image.alt.vi: Hòn đá màu vàng nâu
 hint.en: Think about the water test.
 hint.vi: Em nhớ lại cách thử nhỏ nước nhé.
-explanation_correct.en: Some rocks are permeable. Water soaks into sandstone.
-explanation_correct.vi: Có loại đá thấm nước. Nước thấm được vào sa thạch.
-explanation_wrong.en: Na is not right. Some rocks let water soak in.
-explanation_wrong.vi: Na chưa đúng. Có loại đá cho nước thấm vào.
+explanation_correct.en: Sandstone is solid, but water still soaks into it.
+explanation_correct.vi: Sa thạch rắn chắc mà nước vẫn thấm vào được.
+explanation_wrong.en: Some solid rocks, like sandstone, let water soak in.
+explanation_wrong.vi: Có loại đá rắn như sa thạch vẫn cho nước thấm vào.
+feedback_true.en: A drop of water disappears on sandstone.
+feedback_true.vi: Giọt nước biến mất trên mặt sa thạch.
 > DOK 3: Na suy từ một điều đúng (đá rắn chắc) ra một kết luận sai (nước không bao giờ vào được). Bé phải dùng bằng chứng của phép thử nhỏ nước và thử bọt khí để bác bỏ. Lời Na đúng chữ bảng "Câu sáu, lời Na" ở `_topic.md`. Đáp án Sai; giải thích khi đúng không mở đầu bằng "Yes!".
 > Hình là hòn sa thạch khô, chưa nhỏ nước (ảnh mẫu của Bộ mẫu đá); `alt` không nói "thấm". Gợi ý không nêu phản ví dụ. Cả màn mười tám từ EN (prompt ba, instruction bốn, lời Na mười một).
 

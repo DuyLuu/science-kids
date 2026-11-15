@@ -20,6 +20,7 @@ en: I can say how air gets to my lungs.
 vi: Em kể được không khí đi tới phổi như thế nào.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-036, ngày 10/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids` sau bài một (câu w1, w2 trỏ về bài một).
 > Bài cốt lõi (`core`) và là bài sửa misconception chính của chủ đề, `air_goes_to_belly`: ý chính ba, ô Phổi, ô Thức ăn và không khí, nhóm `limit` ở phần Chơi (dạ dày, thực quản), lựa chọn sai ở câu q1 và q4, và câu q6 (gắn key, Na nói đúng).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Air goes in through your nose or mouth.
@@ -52,14 +53,16 @@ image.alt.vi: Cái ao có lá to
 > Theo hình designer chọn (SK-036, designer 10/11): dùng lại ảnh cái ao của bài một chủ đề *Bề mặt Trái Đất*, không tìm ảnh mới. `alt` tả đúng ảnh đó (lá to trên mặt ao), không thấy con vật nào, nên không lộ đáp án.
 hint.en: Remember the Animals card in the last lesson.
 hint.vi: Em nhớ lại ô Con vật ở bài trước nhé.
-explanation_correct.en: Yes! A carp breathes in water with its gills.
-explanation_correct.vi: Đúng rồi! Cá chép thở dưới nước bằng mang.
-explanation_wrong.en: The answer is the carp. Cats and birds use lungs.
-explanation_wrong.vi: Đáp án là cá chép. Mèo và chim thở bằng phổi.
+explanation_correct.en: A carp's gills are just behind its head.
+explanation_correct.vi: Mang cá chép nằm ngay sau phần đầu.
+explanation_wrong.en: A carp lives in water and breathes with gills.
+explanation_wrong.vi: Cá chép sống dưới nước, thở bằng mang.
 > Ba con vật quen, ba nơi sống (trên cạn, trên trời, dưới nước), ba ảnh đã có từ bài một. Đáp án ở chỗ thứ ba (bài một w1 ở chỗ thứ nhất).
 
 #### option w1_cat
 correct: false
+feedback.en: A cat lives on land and breathes air.
+feedback.vi: Mèo sống trên cạn, thở bằng không khí.
 label.en: cat
 label.vi: con mèo
 image.brief: Dùng lại hình `w3_cat` ở bài `khung-long/khung-long-la-gi`. Từ khoá tìm ảnh (EN): tabby cat on step side view
@@ -68,6 +71,8 @@ image.alt.vi: Con mèo trên bậc thềm
 
 #### option w1_sparrow
 correct: false
+feedback.en: A sparrow breathes air as it flies.
+feedback.vi: Chim sẻ hít không khí khi bay.
 label.en: sparrow
 label.vi: chim sẻ
 image.brief: Dùng lại hình `tray_sparrow` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): Eurasian tree sparrow perched branch
@@ -97,10 +102,12 @@ image.alt.vi: Bàn tay đặt lên ngực
 answer: true
 hint.en: Remember the cold window in the last lesson.
 hint.vi: Em nhớ lại cửa kính lạnh ở bài trước nhé.
-explanation_correct.en: Yes! That is why a cold window gets foggy.
-explanation_correct.vi: Đúng rồi! Vì vậy cửa kính lạnh bị mờ khi em hà hơi.
-explanation_wrong.en: This is true. Your breath is warm and wet.
-explanation_wrong.vi: Câu này đúng. Hơi thở của em ấm và ẩm.
+explanation_correct.en: That is why a cold window gets foggy.
+explanation_correct.vi: Vì vậy cửa kính lạnh bị mờ khi em hà hơi.
+explanation_wrong.en: Breathe on your hand, and it feels warm and damp.
+explanation_wrong.vi: Hà hơi vào tay, em thấy ấm và hơi ẩm.
+feedback_false.en: Air gets warm inside your body before it leaves.
+feedback_false.vi: Trong người, không khí được làm ấm lên.
 > Câu giữ đúng chữ câu của ô Hơi thở ra bài một. Hình câu hỏi là bàn tay trên ngực (ô Hít vào và thở ra), không dùng ảnh hơi thở thành làn sương (bằng chứng của đáp án Đúng).
 
 ## Học
@@ -183,8 +190,8 @@ examples.4.vi: phổi nhỏ lại khi em thở ra
 label.en: Food and air
 label.vi: Thức ăn và không khí
 color: nau_dat
-sentence.en: Food goes to your stomach. Air goes to your lungs.
-sentence.vi: Thức ăn đi xuống dạ dày. Không khí đi vào phổi.
+sentence.en: Food goes to your stomach, and air to your lungs.
+sentence.vi: Thức ăn xuống dạ dày, còn không khí vào phổi.
 image.brief: [hình vẽ] Cùng sơ đồ đường thở gốc, bản tô hai đường: thực quản và dạ dày tô nâu đất, khí quản và hai lá phổi tô đỏ son dịu; hai đường tách nhau rõ ở dưới họng; không có chữ, không có mũi tên.
 image.alt.en: A body drawing with two paths coloured, one to the stomach and one to the lungs
 image.alt.vi: Hình vẽ cơ thể, tô hai đường, một đường xuống dạ dày, một đường vào phổi
@@ -349,12 +356,12 @@ prompt.vi: Phổi của em nằm ở đâu?
 image.brief: [ảnh] Một cái ống nghe của bác sĩ đặt trên mặt bàn gỗ, cuộn gọn, chụp từ trên xuống; không có người, không có chữ, không có nhãn hiệu. Ảnh gợi "nghe phổi" mà không cho thấy chỗ nào trên cơ thể. Từ khoá tìm ảnh (EN): stethoscope on wooden table
 image.alt.en: A stethoscope on a table
 image.alt.vi: Cái ống nghe trên bàn
-hint.en: Remember the Lungs card. What keeps them safe?
-hint.vi: Em nhớ lại ô Phổi. Cái gì che chở cho phổi?
-explanation_correct.en: Yes! Your lungs are in your chest, behind your ribs.
-explanation_correct.vi: Đúng rồi! Phổi nằm trong lồng ngực, sau các xương sườn.
-explanation_wrong.en: The answer is in your chest. Your ribs keep them safe.
-explanation_wrong.vi: Đáp án là trong lồng ngực. Xương sườn che chở cho phổi.
+hint.en: Remember the Lungs card, and the bones that guard them.
+hint.vi: Em nhớ lại ô Phổi, và xương che chở cho phổi nhé.
+explanation_correct.en: Your ribs make a cage that keeps your lungs safe.
+explanation_correct.vi: Xương sườn như cái lồng che chở cho phổi.
+explanation_wrong.en: Your lungs sit in your chest, behind your ribs.
+explanation_wrong.vi: Phổi nằm trong lồng ngực, sau các xương sườn.
 > Câu nhớ lại ý chính ba. "In your belly" là lựa chọn sai có sức hút (`air_goes_to_belly`, không gắn key).
 > Nhãn nói chỗ (cổ, ngực, bụng), không nói tên bộ phận; `alt` tả đồng đều "tô màu phần …". Câu thứ hai của gợi ý hỏi về xương sườn, câu trả lời (xương sườn) không phải nhãn đáp án.
 
@@ -362,6 +369,8 @@ explanation_wrong.vi: Đáp án là trong lồng ngực. Xương sườn che ch�
 
 #### option q1_neck
 correct: false
+feedback.en: Your neck holds the windpipe, a tube for air.
+feedback.vi: Ở cổ là khí quản, một ống dẫn khí.
 label.en: in your neck
 label.vi: ở cổ
 image.brief: [hình vẽ] Cùng sơ đồ đường thở gốc, bản tô vùng cổ: một lớp màu vàng hoe trong suốt phủ đều cả vùng cổ, từ dưới cằm tới xương đòn; mọi cơ quan bên trong vẫn nhạt như bản gốc, không tô riêng khí quản hay cơ quan nào; không có chữ, không có mũi tên. Cùng màu phủ, cùng độ trong với hai bản vùng ngực và vùng bụng.
@@ -378,6 +387,8 @@ image.alt.vi: Hình vẽ cơ thể, tô màu phần ngực
 
 #### option q1_belly
 correct: false
+feedback.en: Your belly holds your stomach, for food.
+feedback.vi: Trong bụng là dạ dày, nơi chứa thức ăn.
 label.en: in your belly
 label.vi: trong bụng
 image.brief: [hình vẽ] Cùng sơ đồ đường thở gốc, bản tô vùng bụng: một lớp màu vàng hoe trong suốt phủ đều cả vùng bụng, từ dưới xương sườn tới thắt lưng; mọi cơ quan bên trong vẫn nhạt như bản gốc, không tô riêng dạ dày hay cơ quan nào; không có chữ, không có mũi tên. Cùng màu phủ, cùng độ trong với hai bản vùng cổ và vùng ngực.
@@ -399,10 +410,10 @@ sentence.vi: Không khí đi vào qua {1}, rồi xuống {2}.
 answers: q2_nose, q2_windpipe
 hint.en: Remember the journey you built in the game.
 hint.vi: Em nhớ lại đường đi em vừa dựng ở phần Chơi nhé.
-explanation_correct.en: Yes! Nose, then windpipe, then lungs.
-explanation_correct.vi: Đúng rồi! Mũi, rồi khí quản, rồi tới phổi.
-explanation_wrong.en: The answers are nose, then windpipe.
-explanation_wrong.vi: Đáp án là mũi, rồi đến khí quản.
+explanation_correct.en: From the windpipe, the air goes on into your lungs.
+explanation_correct.vi: Từ khí quản, không khí đi tiếp vào phổi.
+explanation_wrong.en: Air goes in your nose, then down your windpipe.
+explanation_wrong.vi: Không khí vào mũi, rồi đi xuống khí quản.
 > Câu nhớ lại ý chính một và hai, theo đúng thứ tự trên đường đi. Hai ô trống, cùng thứ tự ở câu EN và câu VI. Thực quản và dạ dày là hai thẻ sai, nối với hai món bẫy ở phần Chơi.
 > Rà chữ tester 10/11 (N7): câu cũ "Air goes from your {1}, down your {2}, to your lungs." mười một từ, quá luật mười từ. Câu mới mười từ, theo đề xuất của tester; ý "tới phổi" nằm ở giải thích khi đúng.
 > Hình câu hỏi là hơi thở của con vật (bài một): gợi "không khí" mà không cho thấy bộ phận nào.
@@ -410,6 +421,8 @@ explanation_wrong.vi: Đáp án là mũi, rồi đến khí quản.
 #### bank q2_food_pipe
 label.en: food pipe
 label.vi: thực quản
+feedback.en: The food pipe carries food to your stomach.
+feedback.vi: Thực quản đưa thức ăn xuống dạ dày.
 image.brief: Dùng lại hình `tray_food_pipe`.
 image.alt.en: A food pipe
 image.alt.vi: Thực quản
@@ -424,6 +437,8 @@ image.alt.vi: Cái mũi
 #### bank q2_stomach
 label.en: stomach
 label.vi: dạ dày
+feedback.en: Your stomach holds food, not air.
+feedback.vi: Dạ dày chứa thức ăn, không chứa không khí.
 image.brief: Dùng lại hình `tray_stomach`.
 image.alt.en: A stomach
 image.alt.vi: Dạ dày
@@ -440,23 +455,25 @@ id: ddee6e4f-ee6b-49e6-9918-a5bd9ea35457
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan's nose is blocked. She breathes through her mouth. Which part does the air skip?
-prompt.vi: Lan bị nghẹt mũi, nên Lan thở bằng miệng. Không khí không đi qua bộ phận nào?
+prompt.en: When Lan breathes by mouth, which part does air skip?
+prompt.vi: Lan thở bằng miệng, không khí bỏ qua phần nào?
 image.brief: [hình vẽ] Lan ngồi trên giường, tay cầm khăn tay đưa lên mũi, vẽ nghiêng từ phía sau vai nên chỉ thấy tóc và một phần má, không vẽ nét mặt; phòng sáng, gọn; không có thuốc, không có bác sĩ, không có chữ. Cảnh nhẹ nhàng, không ốm nặng.
 image.alt.en: Lan holding a hanky to her nose
 image.alt.vi: Lan cầm khăn tay lên mũi
 hint.en: Follow the air from her mouth to her lungs.
 hint.vi: Em lần theo đường không khí đi từ miệng tới phổi nhé.
-explanation_correct.en: Yes! The air skips her nose, so it is not cleaned.
-explanation_correct.vi: Đúng rồi! Không khí không đi qua mũi, nên không được làm sạch.
-explanation_wrong.en: The answer is the nose. Mouth air still uses the windpipe.
-explanation_wrong.vi: Đáp án là mũi. Không khí từ miệng vẫn đi xuống khí quản.
+explanation_correct.en: The air skips her nose, so it is not cleaned.
+explanation_correct.vi: Không khí bỏ qua mũi, nên chưa được làm sạch.
+explanation_wrong.en: Mouth air skips the nose, then goes down the windpipe.
+explanation_wrong.vi: Không khí từ miệng bỏ qua mũi, rồi xuống khí quản.
 > DOK 2: áp dụng đường đi của không khí vào tình huống mới (thở bằng miệng). Bé nghĩ không khí từ miệng xuống bụng (`air_goes_to_belly`) sẽ chọn "phổi" hoặc "khí quản"; cả hai lựa chọn sai đều nối với misconception.
-> Ba câu EN trong câu hỏi (4, 5, 6 từ), cả màn khoảng hai mươi sáu từ.
+> 14/11 (ngân sách A2): câu hỏi cũ ba câu, mười lăm từ EN, mười chín chữ VI; nay một câu mười từ EN, mười chữ VI. Ý "Lan bị nghẹt mũi" chuyển vào hình (Lan cầm khăn tay lên mũi).
 > [CẦN KIỂM] Nghẹt mũi là chuyện nhẹ, hay gặp khi bị cảm; câu không nói bệnh, không khuyên gì. Chữ "nghẹt mũi" · "blocked nose" khớp bảng Tên gọi của *Não bộ và giác quan* (SK-037), chủ đề đó dùng ở bài ba (nghẹt mũi thì đồ ăn kém ngon).
 
 #### option q3_windpipe
 correct: false
+feedback.en: Air from the mouth goes down the windpipe too.
+feedback.vi: Không khí từ miệng vẫn đi xuống khí quản.
 label.en: windpipe
 label.vi: khí quản
 image.brief: Dùng lại hình `explore_windpipe`.
@@ -465,6 +482,8 @@ image.alt.vi: Hình vẽ cơ thể, tô màu khí quản
 
 #### option q3_lungs
 correct: false
+feedback.en: All the air you breathe ends up in your lungs.
+feedback.vi: Không khí em hít vào đều tới phổi.
 label.en: lungs
 label.vi: phổi
 image.brief: Dùng lại hình `explore_lungs`.
@@ -484,8 +503,8 @@ id: 21580484-f8d3-43e3-a563-4f967d6796f6
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: You breathe in. What happens?
-prompt.vi: Em hít vào. Điều gì xảy ra?
+prompt.en: What happens when you breathe in?
+prompt.vi: Khi em hít vào, điều gì xảy ra?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: Dùng lại hình `w1` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): rice field wind waves Vietnam
@@ -493,10 +512,10 @@ image.alt.en: Wind blowing over a rice field
 image.alt.vi: Gió thổi trên cánh đồng lúa
 hint.en: Remember the Lungs card and the Food and air card.
 hint.vi: Em nhớ lại ô Phổi và ô Thức ăn và không khí nhé.
-explanation_correct.en: Yes! Your lungs fill up, so your chest gets bigger.
-explanation_correct.vi: Đúng rồi! Phổi căng đầy không khí, nên lồng ngực to ra.
-explanation_wrong.en: The answers are chest gets bigger and lungs fill.
-explanation_wrong.vi: Đáp án là lồng ngực to ra và phổi đầy không khí.
+explanation_correct.en: Your ribs move out to make room for full lungs.
+explanation_correct.vi: Xương sườn nở ra, nhường chỗ cho phổi đầy khí.
+explanation_wrong.en: Your lungs fill with air, and your chest gets bigger.
+explanation_wrong.vi: Phổi đầy không khí, và lồng ngực to ra.
 > DOK 2: phân loại điều xảy ra khi hít vào, có hai bẫy: dạ dày đầy không khí (`air_goes_to_belly`) và phổi nhỏ lại (lẫn với thở ra).
 > Rà chữ tester 10/11 (n9): giải thích khi sai theo mẫu "The answers are …" như mọi câu khác (chín từ EN).
 
@@ -510,6 +529,8 @@ image.alt.vi: Hình vẽ cơ thể, lồng ngực nở rộng ra
 
 #### option q4_stomach
 correct: false
+feedback.en: Air goes down the windpipe, not to your stomach.
+feedback.vi: Không khí đi xuống khí quản, không vào dạ dày.
 label.en: stomach fills with air
 label.vi: dạ dày đầy không khí
 image.brief: [hình vẽ] Cùng sơ đồ đường thở gốc, bản dạ dày căng phồng: dạ dày tô nâu đất đậm, to tròn hơn bình thường, hai mũi tên nhỏ chỉ ra ngoài quanh dạ dày; không có chữ.
@@ -526,6 +547,8 @@ image.alt.vi: Hình vẽ cơ thể, hai lá phổi căng lên
 
 #### option q4_lungs_small
 correct: false
+feedback.en: Lungs get smaller when air goes out, not in.
+feedback.vi: Phổi nhỏ lại khi không khí đi ra.
 label.en: lungs get smaller
 label.vi: phổi nhỏ lại
 image.brief: [hình vẽ] Cùng sơ đồ đường thở gốc, bản phổi xẹp: hai lá phổi tô đỏ son dịu, nhỏ hơn bản của ô Phổi, hai mũi tên nhỏ chỉ vào trong; không có chữ.
@@ -548,8 +571,10 @@ hint.en: Think of a balloon when the air comes out.
 hint.vi: Em nghĩ tới quả bóng bay khi xì hơi ra nhé.
 explanation_correct.en: Air leaves your lungs, so they get smaller.
 explanation_correct.vi: Không khí đi ra khỏi phổi, nên phổi nhỏ lại.
-explanation_wrong.en: This is false. Your lungs get smaller when you breathe out.
-explanation_wrong.vi: Câu này sai. Phổi nhỏ lại khi em thở ra.
+explanation_wrong.en: Your lungs get smaller when you breathe out.
+explanation_wrong.vi: Phổi nhỏ lại khi em thở ra.
+feedback_true.en: Breathing out pushes air out of your lungs.
+feedback_true.vi: Khi thở ra, không khí bị đẩy khỏi phổi.
 > DOK 2: áp dụng ô Phổi (ví dụ ba và bốn) vào chiều ngược lại của câu q4. Gợi ý là một phép so sánh (bóng bay xì hơi), không nói thẳng Đúng hay Sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai).
 
@@ -576,10 +601,12 @@ image.alt.en: A child lying down with a teddy on the belly
 image.alt.vi: Bạn nhỏ nằm ngửa, gấu bông trên bụng
 hint.en: Remember the Food and air card.
 hint.vi: Em nhớ lại ô Thức ăn và không khí nhé.
-explanation_correct.en: Yes! A muscle moves your belly. The air is in your lungs.
-explanation_correct.vi: Đúng rồi! Một cơ dưới phổi làm bụng em phình ra. Không khí thì ở trong phổi.
-explanation_wrong.en: Na is right. Air goes down the windpipe to the lungs.
-explanation_wrong.vi: Na nói đúng. Không khí đi xuống khí quản, vào phổi.
+explanation_correct.en: A muscle under your lungs pushes your belly out.
+explanation_correct.vi: Một cơ dưới phổi đẩy bụng em phình ra.
+explanation_wrong.en: Air goes down the windpipe to the lungs.
+explanation_wrong.vi: Không khí đi xuống khí quản, vào phổi.
+feedback_false.en: Both things Na says happen when you breathe in.
+feedback_false.vi: Hai điều Na nói đều đúng khi em hít vào.
 > Lời Na, hình và đáp án Đúng đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: Na nói hai ý, một điều quan sát được (bụng phình ra) và một kết luận ngược với điều bé dễ suy ra (không khí vào phổi, không vào bụng). Bé có misconception sẽ thấy câu thứ hai "lạ" và chọn "Na chưa đúng". Bé phải dùng ô Thức ăn và không khí để thấy hai ý không mâu thuẫn.
 > Hình là hoạt động bé làm thử được ở nhà (gấu bông nhấp nhô trên bụng): cho thấy bụng nhấp nhô, đúng vế một của Na, không cho thấy không khí đi đâu.

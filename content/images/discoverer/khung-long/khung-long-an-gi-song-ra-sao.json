@@ -6,8 +6,20 @@
       "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
     "w1.w1_rock": {
-      "same_as": "tray_rock_print",
-      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Magnoavipes_(theropod_dinosaur_track)_(Dakota_Sandstone,_Lower_Cretaceous;_Dinosaur_Ridge,_Colorado,_USA)_3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Magnoavipes_%28theropod_dinosaur_track%29_%28Dakota_Sandstone%2C_Lower_Cretaceous%3B_Dinosaur_Ridge%2C_Colorado%2C_USA%29_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Magnoavipes (theropod dinosaur track) (Dakota Sandstone, Lower Cretaceous; Dinosaur Ridge, Colorado, USA) 3",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.3,
+        "width": 0.85,
+        "height": 0.354
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/hoa-thach-ke-chuyen-khung-long tray.tray_rock_print, cắt riêng cho khung 5:2 (trước: same_as tray_rock_print (khung-long/hoa-thach-ke-chuyen-khung-long))."
     },
     "w1.w1_sand": {
       "same_as": "tray_sand_prints",
@@ -52,40 +64,56 @@
       }
     },
     "tray.tray_flat_teeth": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Edmontosaurus_regalis_CMN_2289_teeth.png",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Edmontosaurus_regalis_CMN_2289_teeth.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Edmontosaurus regalis CMN 2289 teeth",
-      "author": "Hai Xing, Jordan C. Mallon & Margaret L. Currie",
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0",
-      "crop": {
-        "left": 0.02,
-        "top": 0.07,
-        "width": 0.45,
-        "height": 0.25
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-an-gi-song-ra-sao.tray.tray_flat_teeth.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Edmontosaurus_regalis_CMN_2289_teeth.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Edmontosaurus_regalis_CMN_2289_teeth.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Edmontosaurus regalis CMN 2289 teeth",
+            "author": "Hai Xing, Jordan C. Mallon & Margaret L. Currie",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "crop": {
+              "left": 0.02,
+              "top": 0.07,
+              "width": 0.45,
+              "height": 0.25
+            }
+          }
+        ]
       },
-      "note": "Ảnh trong bài báo khoa học (Xing và cộng sự), cắt ô A. Dự phòng: «Trachodon-teeth» (public domain, đen trắng, rõ mặt nghiền hơn nhưng lệch kiểu màu với hai lựa chọn kia của q2)."
+      "title": "A fossil jaw with many flat teeth",
+      "note": "Ảnh trong bài báo khoa học (Xing và cộng sự), cắt ô A. Dự phòng: «Trachodon-teeth» (public domain, đen trắng, rõ mặt nghiền hơn nhưng lệch kiểu màu với hai lựa chọn kia của q2). A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Lấy 60% bên trái dải răng (ô A của hình gốc, không chữ), đặt giữa ô vuông nền trắng. Ảnh nhỏ (346 px): nên thay ảnh hàm răng phẳng chụp gần khi có mạng."
     },
     "tray.tray_fern": {
       "same_as": "tray_fern",
       "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
     },
     "tray.tray_sharp_tooth": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:B-rex_teeth.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/B-rex_teeth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "B-rex teeth",
-      "author": "John R. Horner, Mark B. Goodwin, Nathan Myhrvold",
-      "license": "CC BY 2.5",
-      "license_url": "https://creativecommons.org/licenses/by/2.5",
-      "crop": {
-        "left": 0,
-        "top": 0.07,
-        "width": 1,
-        "height": 0.62
+      "composed": {
+        "file": "content/images/composed/khung-long/khung-long-an-gi-song-ra-sao.tray.tray_sharp_tooth.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:B-rex_teeth.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/B-rex_teeth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "B-rex teeth",
+            "author": "John R. Horner, Mark B. Goodwin, Nathan Myhrvold",
+            "license": "CC BY 2.5",
+            "license_url": "https://creativecommons.org/licenses/by/2.5",
+            "crop": {
+              "left": 0,
+              "top": 0.07,
+              "width": 1,
+              "height": 0.62
+            }
+          }
+        ]
       },
-      "note": "Ảnh từ bài báo khoa học (răng của T. rex MOR 1125). Răng có cả phần chân răng, mép răng cưa khó thấy ở cỡ nhỏ."
+      "title": "A sharp, curved T. rex tooth",
+      "note": "Ảnh từ bài báo khoa học (răng của T. rex MOR 1125). Răng có cả phần chân răng, mép răng cưa khó thấy ở cỡ nhỏ. A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Răng xoay chéo 20°, đặt giữa khung 4:3 nền trắng, nằm trong ô vuông giữa (kệ Chơi 1:1 cắt giữa không mất chóp răng)."
     },
     "tray.tray_horns": {
       "source": "Wikimedia Commons",
@@ -193,12 +221,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.1,
-        "top": 0.35,
-        "width": 0.38,
-        "height": 0.507
+        "left": 0.08,
+        "top": 0.4,
+        "width": 0.7,
+        "height": 0.373
       },
-      "note": "Dùng lại ảnh của learn.explore.explore_meat, cắt riêng."
+      "note": "Dùng lại ảnh của learn.explore.explore_meat, cắt riêng. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.1, \"top\": 0.35, \"width\": 0.38, \"height\": 0.507})."
     },
     "q2.q2_flat": {
       "source": "Wikimedia Commons",
@@ -225,12 +253,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.2,
-        "top": 0.15,
-        "width": 0.496,
-        "height": 0.8
+        "left": 0.05,
+        "top": 0.37,
+        "width": 0.9,
+        "height": 0.581
       },
-      "note": "Dùng lại ảnh của tray.tray_pencil_teeth, cắt riêng."
+      "note": "Dùng lại ảnh của tray.tray_pencil_teeth, cắt riêng. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.2, \"top\": 0.15, \"width\": 0.496, \"height\": 0.8})."
     },
     "q3": {
       "source": "Wikimedia Commons",
@@ -284,8 +312,20 @@
       "note": "Brief muốn nửa phải sơ đồ explore_plants (dương xỉ + vạn tuế). explore_plants chưa ghép được nên dùng ảnh dương xỉ của bài một. Alt đề xuất: EN «Green ferns» · VI «Những bụi dương xỉ xanh»."
     },
     "q5.q5_triceratops": {
-      "same_as": "w1_triceratops",
-      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jurapark,_Solec_Kujawski,_Poland_(www.juraparksolec.pl)_-_panoramio_(46).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Jurapark%2C_Solec_Kujawski%2C_Poland_%28www.juraparksolec.pl%29_-_panoramio_%2846%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jurapark, Solec Kujawski, Poland (www.juraparksolec.pl) - panoramio (46)",
+      "author": "Almondox",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.226,
+        "top": 0.14,
+        "width": 0.311,
+        "height": 0.52
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/trai-dat-rat-lau-ve-truoc w1.w1_triceratops, cắt riêng cho khung 4:5 (trước: same_as w1_triceratops (khung-long/trai-dat-rat-lau-ve-truoc))."
     },
     "q5.q5_trex": {
       "source": "Wikimedia Commons",

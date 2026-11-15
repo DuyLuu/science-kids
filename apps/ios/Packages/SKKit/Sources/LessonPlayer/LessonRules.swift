@@ -9,11 +9,30 @@ public struct LessonRules: Hashable, Sendable {
     public var xp: XPRules
     /// Rest days of the day streak (SK-022).
     public var streak: StreakRules
+    /// Tries per question by `format`, over `scoring.maxTries` (`max_tries_by_format` of the age
+    /// group). Duy 14/11 (SK-043, point 6): `true_false`, Na's questions included, has one try in
+    /// every age group: with two sides, the feedback of a wrong tap all but says the answer.
+    /// Until `rules.json` carries the key (dev, SK-043), the app uses `defaultMaxTriesByFormat`.
+    public var maxTriesByFormat: [String: Int]
 
-    public init(scoring: Rules, xp: XPRules, streak: StreakRules = StreakRules(restDaysPerWeek: 0)) {
+    /// Used when the rules have no `max_tries_by_format` (Duy 14/11). Temporary: the key belongs
+    /// in `content/rules.json` with the server's copy.
+    public static let defaultMaxTriesByFormat = ["true_false": 1]
+
+    public init(scoring: Rules, xp: XPRules, streak: StreakRules = StreakRules(restDaysPerWeek: 0),
+                maxTriesByFormat: [String: Int] = LessonRules.defaultMaxTriesByFormat) {
         self.scoring = scoring
         self.xp = xp
         self.streak = streak
+        self.maxTriesByFormat = maxTriesByFormat
+    }
+
+    /// The scoring rules of one question: `maxTries` of its format when the rules give one.
+    public func scoring(forFormat format: String) -> Rules {
+        guard let tries = maxTriesByFormat[format], tries >= 1 else { return scoring }
+        var rules = scoring
+        rules.maxTries = tries
+        return rules
     }
 
     public enum LoadError: Error, Equatable, Sendable {
@@ -36,13 +55,24 @@ public struct LessonRules: Hashable, Sendable {
         }
         do {
             let decoder = JSONDecoder()
+            let byFormat = try decoder.decode(TriesByFormat.self, from: groupData).maxTriesByFormat
             return LessonRules(
                 scoring: try decoder.decode(Rules.self, from: groupData),
                 xp: try decoder.decode(XPRules.self, from: groupData),
-                streak: try decoder.decode(StreakRules.self, from: groupData)
+                streak: try decoder.decode(StreakRules.self, from: groupData),
+                maxTriesByFormat: byFormat ?? defaultMaxTriesByFormat
             )
         } catch {
             throw .unreadable(String(describing: error))
         }
+    }
+}
+
+/// `max_tries_by_format` of an age group's rules, when present.
+private struct TriesByFormat: Decodable {
+    let maxTriesByFormat: [String: Int]?
+
+    enum CodingKeys: String, CodingKey {
+        case maxTriesByFormat = "max_tries_by_format"
     }
 }

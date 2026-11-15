@@ -250,10 +250,10 @@ public final class LessonSession {
         let tries = tries(for: item, in: phase)
         guard let last = tries.last else { return .open }
         guard let scoring = item.answer.scoringItem,
-              case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring)
+              case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring(forFormat: item.format))
         else { return .done(correct: false, firstTry: false, last: last) }
         if score.finalCorrect { return .done(correct: true, firstTry: score.tryResults.count == 1, last: last) }
-        if tries.count >= rules.scoring.maxTries { return .done(correct: false, firstTry: false, last: last) }
+        if tries.count >= rules.scoring(forFormat: item.format).maxTries { return .done(correct: false, firstTry: false, last: last) }
         return .retry(last: last)
     }
 
@@ -261,7 +261,7 @@ public final class LessonSession {
     public func itemScore(of item: QuizItem, in phase: QuestionPhase) -> ItemScore? {
         let tries = tries(for: item, in: phase)
         guard !tries.isEmpty, let scoring = item.answer.scoringItem,
-              case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring)
+              case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring(forFormat: item.format))
         else { return nil }
         return score
     }
@@ -280,7 +280,7 @@ public final class LessonSession {
         let before = status(of: item, in: phase)
         guard !before.isDone, let scoring = item.answer.scoringItem else { return before }
         let tries = tries(for: item, in: phase) + [attempt]
-        guard case .success = scoreItem(item: scoring, tries: tries, rules: rules.scoring) else {
+        guard case .success = scoreItem(item: scoring, tries: tries, rules: rules.scoring(forFormat: item.format)) else {
             log.error("try refused for \(item.key, privacy: .public)")
             return before
         }
@@ -350,7 +350,7 @@ public final class LessonSession {
         for (slot, item) in quizItems.enumerated() {
             let tries = tries(for: item, in: .quiz)
             guard let scoring = item.answer.scoringItem,
-                  case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring)
+                  case .success(let score) = scoreItem(item: scoring, tries: tries, rules: rules.scoring(forFormat: item.format))
             else { continue }
             quizResults.append(ItemResult(itemId: item.id.uuidString.lowercased(), score: score))
             answers.append(AttemptRecord.Answer(
@@ -361,7 +361,7 @@ public final class LessonSession {
         }
         let warmupResults: [ItemResult] = warmupItems.compactMap { item in
             guard let scoring = item.answer.scoringItem,
-                  case .success(let score) = scoreItem(item: scoring, tries: tries(for: item, in: .warmup), rules: rules.scoring)
+                  case .success(let score) = scoreItem(item: scoring, tries: tries(for: item, in: .warmup), rules: rules.scoring(forFormat: item.format))
             else { return nil }
             return ItemResult(itemId: item.id.uuidString.lowercased(), score: score)
         }

@@ -52,15 +52,17 @@ image.alt.en: Tools for finding fossils
 image.alt.vi: Dụng cụ tìm hoá thạch
 hint.en: Fossils are from long, long ago. Which one is that old?
 hint.vi: Hoá thạch có từ rất lâu về trước. Cái nào cũ như vậy?
-explanation_correct.en: Yes! A footprint in rock is a fossil.
-explanation_correct.vi: Đúng rồi! Dấu chân in trên đá là hoá thạch.
-explanation_wrong.en: The answer is the footprint in rock. It is millions of years old.
-explanation_wrong.vi: Đáp án là dấu chân in trên đá. Dấu chân ấy có từ hàng triệu năm trước.
+explanation_correct.en: This footprint is millions of years old.
+explanation_correct.vi: Dấu chân này có từ hàng triệu năm trước.
+explanation_wrong.en: Only the footprint in rock is millions of years old.
+explanation_wrong.vi: Chỉ dấu chân in trên đá có từ hàng triệu năm trước.
 > Hình câu hỏi là cảnh chung, không có hoá thạch, để không lộ đáp án (Quy ước hình, mục bốn): dùng lại ảnh dụng cụ tìm hoá thạch của câu q4 bài ba (rà chéo 9/11, thay cho ảnh bàn làm việc riêng; ảnh Duy duyệt ở SK-033 là bộ dụng cụ trên nền trắng, không có vách đá bãi đào). Câu q2 cũng dùng hình này.
 > Câu phân loại (luật rà chéo 9/11): nhãn và `alt` của ba lựa chọn không có chữ "fossil" · "hoá thạch".
 
 #### option w1_toy
 correct: false
+feedback.en: A toy is new, made of plastic.
+feedback.vi: Đồ chơi là đồ mới, làm bằng nhựa.
 label.en: toy dinosaur
 label.vi: khủng long đồ chơi
 image.brief: Dùng lại hình `q6` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`. Từ khoá tìm ảnh (EN): plastic toy dinosaur on table
@@ -80,6 +82,8 @@ image.alt.vi: Dấu chân khủng long in trên đá
 
 #### option w1_sand
 correct: false
+feedback.en: Prints in wet sand soon wash away.
+feedback.vi: Dấu chân trên cát ướt sớm bị nước xoá.
 label.en: footprint in wet sand
 label.vi: dấu chân trên cát ướt
 image.brief: Dùng lại hình `hoa-thach-ke-chuyen-khung-long/tray_sand_prints`
@@ -104,8 +108,10 @@ hint.en: Remember the fossil game in the last lesson.
 hint.vi: Em nhớ lại trò tìm hoá thạch ở bài trước nhé.
 explanation_correct.en: Teeth, footprints and eggs can be fossils, too.
 explanation_correct.vi: Răng, dấu chân và trứng cũng có thể thành hoá thạch.
-explanation_wrong.en: This is false. Footprints and eggs can be fossils, too.
-explanation_wrong.vi: Câu này sai. Dấu chân và trứng cũng có thể thành hoá thạch.
+explanation_wrong.en: Footprints and eggs can turn to rock, too.
+explanation_wrong.vi: Dấu chân và trứng cũng có thể hoá đá.
+feedback_true.en: In the fossil game, you found eggs in rock.
+feedback_true.vi: Ở trò chơi, em đã tìm thấy trứng trong đá.
 > Câu trong bảng Khởi động ở `_topic.md`, đáp án Sai. Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn Sai. Hình chỉ có một khúc xương, không có trứng hay dấu chân, để không lộ đáp án.
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Tất cả đều là xương sao?" đã nói ý trả lời. Gợi ý mới chỉ chỗ cần nhớ (phần Chơi "Tìm ba loại hoá thạch" của bài ba), không nêu đáp án.
 
@@ -124,10 +130,12 @@ image.alt.vi: Tranh vẽ thằn lằn bay
 answer: true
 hint.en: Think of the flying reptile you met. When did it live?
 hint.vi: Em nhớ lại con thằn lằn bay. Nó sống vào thời nào?
-explanation_correct.en: Yes! Flying reptiles lived with dinosaurs, but were not dinosaurs.
-explanation_correct.vi: Đúng rồi! Thằn lằn bay sống cùng thời khủng long, nhưng không phải khủng long.
-explanation_wrong.en: This is true. They lived at the same time.
-explanation_wrong.vi: Câu này đúng. Thằn lằn bay sống cùng thời với khủng long.
+explanation_correct.en: They lived then, but they were not dinosaurs.
+explanation_correct.vi: Chúng sống cùng thời, nhưng không phải khủng long.
+explanation_wrong.en: Flying reptiles and dinosaurs lived at the same time.
+explanation_wrong.vi: Thằn lằn bay và khủng long sống cùng thời.
+feedback_false.en: Flying reptiles soared above dinosaurs long ago.
+feedback_false.vi: Thằn lằn bay từng bay trên đầu khủng long.
 > Câu trong bảng Khởi động ở `_topic.md`, đáp án Đúng. Giải thích khi đúng nhắc lại cả ý sửa `big_old_animal_is_dinosaur` của bài hai (sống cùng thời nhưng không phải khủng long), không gắn key.
 > Hình không có khủng long trong cảnh: có khủng long thì hình lộ đáp án "cùng thời". `alt` ghi "Tranh vẽ", theo Quy ước hình mục năm.
 > [CẦN KIỂM] Thằn lằn bay sống cùng thời khủng long, từ kỷ Tam Điệp tới cuối kỷ Phấn Trắng (biên tập nhớ, chưa tra nguồn).
@@ -174,7 +182,8 @@ label.en: Plant-eaters
 label.vi: Khủng long ăn thực vật
 color: gi_dong
 sentence.en: Many dinosaurs ate plants, like ferns and cycads.
-sentence.vi: Nhiều loài khủng long ăn thực vật, như dương xỉ và cây vạn tuế.
+sentence.vi: Nhiều khủng long ăn thực vật, như dương xỉ, vạn tuế.
+> SK-044 (14/11, A2): câu VI cũ mười bốn tiếng, nay mười một; câu EN giữ nguyên.
 image.brief: [ảnh] Hộp sọ khủng long cổ dài (Diplodocus, bảo tàng Field ở Chicago) nhìn ngang, thấy rõ hàng răng mảnh, thẳng như bút chì ở đầu mõm; hộp sọ là bản đúc có phần trám màu xám; không có người, không thấy biển tên, không thêm nhãn chữ (Duy 10/11). Chỉ một ảnh, không ghép thêm dương xỉ và vạn tuế như brief đầu (một hình chỉ nhận một ảnh). Từ khoá tìm ảnh (EN): Diplodocus skull teeth museum
 image.alt.en: A long-necked dinosaur skull with pencil-like teeth
 image.alt.vi: Hộp sọ khủng long cổ dài có răng như bút chì
@@ -212,7 +221,8 @@ label.en: Staying safe
 label.vi: Cách tự vệ
 color: nau_dat
 sentence.en: Footprints show some plant-eaters walked together in herds.
-sentence.vi: Dấu chân cho thấy một số loài khủng long ăn thực vật đi cùng nhau thành đàn.
+sentence.vi: Dấu chân cho thấy vài loài ăn thực vật đi theo đàn.
+> SK-044 (14/11, A2): câu VI cũ mười bảy tiếng, nay mười hai; vẫn nói "vài loài", không nói "mọi loài". Câu EN giữ nguyên.
 image.brief: [ảnh] Mặt đá phẳng rộng có nhiều đường dấu chân khủng long tròn, to, chạy song song cùng một hướng (ít nhất bốn đường), chụp từ trên cao hoặc chụp chéo từ mặt đất, nắng xiên để vết lõm rõ; không có người, cắt biển tên; không có chữ, không thêm nhãn chữ (Duy 10/11). Mũi tên chỉ hướng đi chỉ thêm được nếu designer làm ô này thành hình ghép; ảnh đang chọn để nguyên, chưa có mũi tên. Từ khoá tìm ảnh (EN): parallel sauropod trackways dinosaur footprints aerial view
 image.alt.en: Many dinosaur footprints going one way
 image.alt.vi: Nhiều dấu chân khủng long đi cùng một hướng
@@ -258,7 +268,8 @@ prompt.vi: Tìm manh mối của khủng long ăn thực vật
 capacity: 3
 success_when: all_required_and_no_limit
 messages.start.en: Find three plant-eater clues: teeth, food, staying safe.
-messages.start.vi: Em tìm ba manh mối của khủng long ăn thực vật: răng, thức ăn và cách tự vệ nhé.
+messages.start.vi: Em tìm ba manh mối: răng, thức ăn, cách tự vệ nhé.
+> SK-044 (14/11, A2): câu VI cũ mười chín tiếng, nay mười hai; "của khủng long ăn thực vật" đã có ở lệnh của trò chơi.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! These clues show how plant-eaters lived.
@@ -399,10 +410,10 @@ image.alt.en: A model of a baby dinosaur hatching
 image.alt.vi: Mô hình khủng long con đang nở
 hint.en: Remember the fossil eggs. Where were they lying?
 hint.vi: Em nhớ lại những quả trứng hoá thạch. Chúng nằm ở đâu?
-explanation_correct.en: Yes! Dinosaurs laid eggs in nests on land.
-explanation_correct.vi: Đúng rồi! Khủng long đẻ trứng trong tổ trên mặt đất.
-explanation_wrong.en: The answer is in a nest, on land.
-explanation_wrong.vi: Đáp án là trong tổ, trên mặt đất.
+explanation_correct.en: Fossil nests show dinosaurs laid eggs on land.
+explanation_correct.vi: Tổ hoá thạch cho thấy khủng long đẻ trứng trên cạn.
+explanation_wrong.en: Dinosaurs laid eggs in nests, on land.
+explanation_wrong.vi: Khủng long đẻ trứng trong tổ, trên mặt đất.
 > Hình câu hỏi là khủng long con đang nở (vật được hỏi là trứng của khủng long), cắt không thấy tổ, để không lộ đáp án. Hai lựa chọn sai là chỗ đẻ trứng của hai con vật quen: ếch đồng đẻ trứng dưới nước, bướm đẻ trứng trên lá.
 > Rà chữ tester 9/11 (n10): bản trước dùng ảnh quả trứng hoá thạch (`tray_rock_egg` bài ba) cho hình câu hỏi, mà lựa chọn đúng cũng là ảnh hoá thạch trong đá, còn hai lựa chọn sai là ảnh trứng ếch, trứng bướm ngày nay; bé chọn hình "giống hình trên" mà không cần nhớ. Hình mới là mô hình trong tủ kính, không phải đá, nên không giống riêng lựa chọn nào. Dùng lại hình từ vựng `hatch` của bài này, không phải tìm ảnh mới.
 > [CẦN KIỂM] Xem ghi chú ở ý chính một: tổ khủng long ở trên mặt đất.
@@ -410,6 +421,8 @@ explanation_wrong.vi: Đáp án là trong tổ, trên mặt đất.
 
 #### option q1_pond
 correct: false
+feedback.en: Frogs lay their eggs in pond water.
+feedback.vi: Ếch đẻ trứng dưới nước, trong ao.
 label.en: in a pond
 label.vi: dưới ao
 image.brief: [ảnh] Một đám trứng ếch trong suốt, mỗi trứng có chấm đen ở giữa, nổi dưới mặt nước ao, có hai con ếch ở giữa đám trứng (giúp bé nhận ra trứng ếch); chụp gần; không có tay người, không có chữ. Từ khoá tìm ảnh (EN): frog and frog spawn in pond
@@ -418,6 +431,8 @@ image.alt.vi: Trứng ếch dưới ao
 
 #### option q1_leaf
 correct: false
+feedback.en: Butterflies lay tiny eggs on leaves.
+feedback.vi: Bướm đẻ trứng nhỏ xíu trên lá.
 label.en: on a leaf
 label.vi: trên lá cây
 image.brief: [ảnh] Một quả trứng bướm nhỏ bám trên mặt một chiếc lá xanh, chụp cận; quả trứng nhỏ trong khung, cần xem trên máy có nhận ra không; không có sâu, không có tay người, không có chữ. Từ khoá tìm ảnh (EN): butterfly egg on leaf macro
@@ -444,10 +459,10 @@ image.alt.en: Tools for finding fossils
 image.alt.vi: Dụng cụ tìm hoá thạch
 hint.en: Remember the T. rex skull. What were its teeth like?
 hint.vi: Em nhớ lại hộp sọ khủng long bạo chúa. Răng của nó trông thế nào?
-explanation_correct.en: Yes! Meat-eaters had sharp, curved teeth.
-explanation_correct.vi: Đúng rồi! Khủng long ăn thịt có răng nhọn và cong.
-explanation_wrong.en: The answer is the sharp, curved teeth. Flat and pencil-like teeth are for plants.
-explanation_wrong.vi: Đáp án là răng nhọn và cong. Răng dẹt và răng như bút chì là để ăn thực vật.
+explanation_correct.en: Sharp, curved teeth helped meat-eaters grip and tear.
+explanation_correct.vi: Răng nhọn và cong giúp giữ chặt và xé thịt.
+explanation_wrong.en: Sharp, curved teeth are meat-eater teeth.
+explanation_wrong.vi: Răng nhọn và cong là răng của loài ăn thịt.
 > DOK 1: nhớ lại ô Khủng long ăn thịt. Gợi ý chỉ vào hình ô Học, không nói thẳng đáp án.
 > Rà chữ tester 9/11 (N3): bản trước lựa chọn đúng là một chiếc răng rời, nhãn số ít ("sharp, curved tooth"), còn hai lựa chọn sai là hàm nhiều răng, nhãn số nhiều; bé chọn "cái khác hẳn" mà không cần nhìn răng. Nay ba lựa chọn cùng một kiểu: ảnh hoá thạch cắt cận một đoạn hàm có nhiều răng, khung vuông, không nhãn chữ; ba nhãn EN cùng số nhiều ("teeth"). Món Chơi `tray_sharp_tooth` (một chiếc răng) giữ nguyên, vì ở kệ Chơi nó là món bẫy, không phải một trong ba đáp án, và từ `clue` dùng ảnh đó.
 > Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ hai).
@@ -463,6 +478,8 @@ image.alt.vi: Hàm hoá thạch có răng nhọn và cong
 
 #### option q2_flat
 correct: false
+feedback.en: Flat teeth grind up plants.
+feedback.vi: Răng dẹt dùng để nghiền thực vật.
 label.en: flat teeth
 label.vi: răng dẹt
 image.brief: Dùng lại hình `khung-long-an-gi-song-ra-sao/tray_flat_teeth`, cắt cận đoạn có nhiều răng dẹt xếp sát nhau, bỏ chữ chú thích bên dưới; không cắt vuông, vì ô lựa chọn trong app rộng khoảng gấp đôi bề cao
@@ -471,6 +488,8 @@ image.alt.vi: Hàm hoá thạch có nhiều răng dẹt
 
 #### option q2_pencil
 correct: false
+feedback.en: Pencil-like teeth strip leaves off branches.
+feedback.vi: Răng như bút chì tuốt lá khỏi cành.
 label.en: pencil-like teeth
 label.vi: răng như bút chì
 image.brief: Dùng lại hình `khung-long-an-gi-song-ra-sao/tray_pencil_teeth`, cắt vuông đoạn có nhiều răng như bút chì, cùng khung với lựa chọn q2_sharp
@@ -482,17 +501,18 @@ id: 69c86409-24f3-4a60-ac8e-b5ac305d821c
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Look at the teeth. What did this dinosaur eat?
-prompt.vi: Em nhìn răng nhé. Con khủng long này ăn gì?
+prompt.en: Look at its teeth: what did it eat?
+prompt.vi: Nhìn răng, con khủng long này ăn gì?
+> SK-044 (14/11, A2): gộp hai câu thành một (tám từ, tám tiếng); không nói "flat" trong câu hỏi, để bé tự nhìn.
 image.brief: [ảnh] Hộp sọ hoá thạch khủng long mỏ vịt (Edmontosaurus) trong bảo tàng, chụp ngang: phía trước là mỏ dẹt không có răng, phía sau là hàm dài; hàng răng dẹt nằm phía trong hàm, ở cỡ ô khó thấy rõ; không có chiếc răng nhọn nào; đã cắt bỏ góc có hình nhỏ và nhãn; không có người, không có chữ. Từ khoá tìm ảnh (EN): Edmontosaurus skull side view museum
 image.alt.en: A dinosaur skull with flat teeth
 image.alt.vi: Hộp sọ khủng long có răng dẹt
 hint.en: Are the teeth sharp, or flat?
 hint.vi: Răng của nó nhọn hay dẹt?
-explanation_correct.en: Yes! Flat teeth grind plants, like ferns.
-explanation_correct.vi: Đúng rồi! Răng dẹt dùng để nghiền thực vật, như dương xỉ.
-explanation_wrong.en: The answer is the fern. Flat teeth are for plants.
-explanation_wrong.vi: Đáp án là cây dương xỉ. Răng dẹt là răng để ăn thực vật.
+explanation_correct.en: Flat teeth grind plants, like a buffalo's teeth do.
+explanation_correct.vi: Răng dẹt nghiền lá cây, như răng con trâu.
+explanation_wrong.en: Flat teeth are for eating plants like ferns.
+explanation_wrong.vi: Răng dẹt là răng ăn thực vật, như dương xỉ.
 > DOK 2: đọc manh mối (răng) trên hộp sọ một loài bé chưa gặp, rồi suy ra thức ăn. Đây đúng là việc của mục tiêu bài. Câu không gọi tên loài: "khủng long mỏ vịt" chỉ có trong gợi ý hình.
 > Ba lựa chọn dùng lại ba hình ở kệ Chơi, cũng là bộ lựa chọn của câu w1 bài năm (khủng long cổ dài ăn gì). Bài năm dùng lại được ba hình này.
 > [CẦN KIỂM] Khủng long mỏ vịt (ví dụ Edmontosaurus) có răng dẹt xếp sát nhau để nghiền thực vật, và dương xỉ là một trong những thứ chúng ăn được. Chọn ảnh hộp sọ thấy rõ hàng răng; nếu ảnh không thấy răng thì đổi sang ảnh hàm dưới.
@@ -509,6 +529,8 @@ image.alt.vi: Cây dương xỉ xanh
 
 #### option q3_fish
 correct: false
+feedback.en: Fish was food for sharp-toothed meat-eaters.
+feedback.vi: Cá là mồi của khủng long ăn thịt răng nhọn.
 label.en: fish
 label.vi: con cá
 image.brief: Dùng lại hình `khung-long-la-gi/q1_fish`
@@ -517,6 +539,8 @@ image.alt.vi: Một con cá
 
 #### option q3_lizard
 correct: false
+feedback.en: A lizard is meat, food for meat-eaters.
+feedback.vi: Thằn lằn là thịt, mồi của loài ăn thịt.
 label.en: small lizard
 label.vi: con thằn lằn nhỏ
 image.brief: Dùng lại hình `khung-long-la-gi/w3_lizard`
@@ -528,17 +552,18 @@ id: 9fed1018-c94c-4d18-98f9-ef4cbbcd09a4
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Scientists found these footprints. What do they show?
-prompt.vi: Các nhà khoa học tìm thấy những dấu chân này. Chúng cho biết điều gì?
+prompt.en: What do these dinosaur footprints show?
+prompt.vi: Những dấu chân này cho biết điều gì?
+> SK-044 (14/11, A2): câu VI cũ hai câu, mười sáu tiếng; nay một câu tám tiếng, EN sáu từ. Bỏ câu kể "Các nhà khoa học tìm thấy".
 image.brief: [ảnh] Một bãi dấu chân khủng long khác với hình explore_safe: mặt đá rộng có năm sáu đường dấu chân tròn, to, chạy song song cùng một hướng, chụp từ trên cao; không có người, không có thước, không có mũi tên, không có chữ. Nếu không tìm được ảnh thứ hai đủ rõ thì dùng lại hình `khung-long-an-gi-song-ra-sao/explore_safe`, không có mũi tên, không có chữ. Từ khoá tìm ảnh (EN): dinosaur trackway site parallel tracks sauropod herd
 image.alt.en: Many footprints going one way
 image.alt.vi: Nhiều đường dấu chân đi cùng một hướng
 hint.en: Count the lines of footprints. Do they go the same way?
 hint.vi: Em đếm xem có mấy đường dấu chân. Chúng có đi cùng một hướng không?
-explanation_correct.en: Yes! Many footprints going one way are clues to a herd.
-explanation_correct.vi: Đúng rồi! Nhiều dấu chân đi cùng một hướng là manh mối cho biết có cả một đàn.
-explanation_wrong.en: The answer is a herd walking together.
-explanation_wrong.vi: Đáp án là cả đàn đi cùng nhau.
+explanation_correct.en: Walking in a herd helped keep them safe.
+explanation_correct.vi: Đi theo đàn giúp chúng an toàn hơn.
+explanation_wrong.en: Many lines going one way show a herd.
+explanation_wrong.vi: Nhiều đường dấu chân cùng hướng là dấu hiệu của đàn.
 > DOK 2: từ một bằng chứng (nhiều đường dấu chân song song) chọn cảnh đúng. Ba lựa chọn là ba tranh cùng một loài, cùng bối cảnh, cùng góc nhìn; chỉ khác số con và việc chúng làm. Một con đi một mình chỉ để lại một đường dấu chân; con đứng bên tổ không để lại đường dấu chân dài.
 > [CẦN KIỂM] Cách suy "nhiều đường dấu chân song song, cùng hướng là một đàn" (xem ô explore_safe). Tranh khủng long cổ dài bên tổ trứng: biên tập nhớ có bãi làm tổ của khủng long cổ dài (titanosaur) ở Nam Mỹ.
 > Rà chữ tester 9/11 (n9): bản trước nói chắc "show a herd" · "cho thấy cả một đàn" và "Nhiều con khủng long đã đi cùng một lúc", chắc hơn ghi chú `[CẦN KIỂM]`. Câu mới dùng chữ "clues" · "manh mối" (từ vựng của bài, ý chính ba): dấu chân là manh mối, các nhà khoa học suy ra có một đàn. Giải thích khi sai chỉ nêu đáp án.
@@ -546,6 +571,8 @@ explanation_wrong.vi: Đáp án là cả đàn đi cùng nhau.
 
 #### option q4_alone
 correct: false
+feedback.en: One dinosaur leaves just one line of footprints.
+feedback.vi: Một con chỉ để lại một đường dấu chân.
 label.en: one dinosaur alone
 label.vi: một con đi một mình
 image.brief: [sơ đồ ghép ảnh] Tranh phục dựng một con khủng long cổ dài (Brontosaurus) tách khỏi nền trắng, đặt lên nền bãi bùn ven hồ do designer vẽ (trời, hồ, bãi bùn, bóng đổ); con vật đi một mình, nhìn ngang; không có loài khác, không có người, không có chữ. Ba lựa chọn của câu này dùng cùng tranh, cùng nền (designer ghép 10/11). Từ khoá tìm ảnh (EN): Brontosaurus life restoration side view
@@ -562,6 +589,8 @@ image.alt.vi: Tranh vẽ đàn khủng long cổ dài
 
 #### option q4_nest
 correct: false
+feedback.en: There is no nest here, only footprints.
+feedback.vi: Ở đây không có tổ, chỉ có dấu chân.
 label.en: a dinosaur at its nest
 label.vi: một con bên tổ trứng
 image.brief: [sơ đồ ghép ảnh] Cùng tranh khủng long cổ dài và cùng nền bãi bùn ven hồ của lựa chọn `khung-long-an-gi-song-ra-sao/q4_alone`: một con đứng yên, trước mặt là một ổ trứng tròn vùi nửa trong cát (designer vẽ thêm ổ trứng); tranh gốc không cúi cổ được như brief cũ; không có loài khác, không có người, không có chữ.
@@ -582,10 +611,10 @@ image.alt.en: Green ferns
 image.alt.vi: Những bụi dương xỉ xanh
 hint.en: Look for clues: teeth, horns and armour.
 hint.vi: Em tìm manh mối: răng, sừng và giáp.
-explanation_correct.en: Yes! Three of them ate plants. T. rex ate meat.
-explanation_correct.vi: Đúng rồi! Ba loài này ăn thực vật. Khủng long bạo chúa ăn thịt.
-explanation_wrong.en: Only T. rex ate meat. The other three ate plants.
-explanation_wrong.vi: Chỉ khủng long bạo chúa ăn thịt. Ba loài còn lại ăn thực vật.
+explanation_correct.en: Horns and armour helped plant-eaters stay safe.
+explanation_correct.vi: Sừng và giáp giúp loài ăn thực vật tự vệ.
+explanation_wrong.en: Only T. rex here was a meat-eater.
+explanation_wrong.vi: Ở đây chỉ khủng long bạo chúa ăn thịt.
 > DOK 2: phân loại bốn loài bằng manh mối nhìn thấy trên mô hình (răng nhọn; sừng; giáp và đuôi chuỳ; cổ dài như ô Học). Ba trên bốn loài ăn thực vật: câu này chuẩn bị bằng chứng cho câu q6 ngay sau.
 > Hình câu hỏi là thức ăn (dương xỉ; SK-033 bỏ vạn tuế vì ô explore_plants chỉ còn ảnh hộp sọ), không có con khủng long nào, để không lộ đáp án.
 > Bốn lựa chọn đều là ảnh mô hình, cùng kiểu chụp ngang cả con, để khác nhau rõ bằng mắt mà vẫn công bằng. Bốn thẻ riêng nên không vướng luật "một cảnh chỉ có loài cùng thời".
@@ -600,6 +629,8 @@ image.alt.vi: Mô hình khủng long ba sừng
 
 #### option q5_trex
 correct: false
+feedback.en: T. rex had sharp teeth for eating meat.
+feedback.vi: Khủng long bạo chúa có răng nhọn để ăn thịt.
 label.en: T. rex
 label.vi: khủng long bạo chúa
 image.brief: [ảnh mô hình] Mô hình khủng long bạo chúa cỡ lớn ở một thị trấn (Milk River, Canada), chụp ngang cả con: lưng nằm ngang, đuôi nhấc khỏi đất, miệng mở khá rộng nhưng quay sang bên, không nhìn thẳng người xem; nền sân đá và cây trụi lá, khác nền cây xanh của ba mô hình kia; không có người, không thấy biển tên hay chữ. Từ khoá tìm ảnh (EN): Tyrannosaurus rex model side view horizontal posture
@@ -635,8 +666,9 @@ instruction.vi: Thử thách: kiểm tra ý của Na
 image.brief: Dùng lại hình `khung-long-an-gi-song-ra-sao/explore_meat`
 image.alt.en: A T. rex skull in a museum
 image.alt.vi: Hộp sọ khủng long bạo chúa trong bảo tàng
-statement.en: T. rex ate meat. So all dinosaurs ate meat.
-statement.vi: Khủng long bạo chúa ăn thịt. Vậy khủng long nào cũng ăn thịt.
+statement.en: T. rex ate meat, so all dinosaurs ate meat.
+statement.vi: Khủng long bạo chúa ăn thịt, vậy loài nào cũng thế.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (chín từ, mười một tiếng).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -645,10 +677,12 @@ labels.false.vi: Na chưa đúng
 answer: false
 hint.en: Think of the long-necked dinosaur. What did it eat?
 hint.vi: Em nghĩ tới khủng long cổ dài. Nó ăn gì?
-explanation_correct.en: T. rex is just one kind. Many others ate plants.
-explanation_correct.vi: Khủng long bạo chúa chỉ là một loài. Nhiều loài khác ăn thực vật.
-explanation_wrong.en: Na is not right. Many dinosaurs ate plants.
-explanation_wrong.vi: Na chưa đúng. Nhiều loài khủng long ăn thực vật.
+explanation_correct.en: T. rex is only one kind out of many.
+explanation_correct.vi: Khủng long bạo chúa chỉ là một trong nhiều loài.
+explanation_wrong.en: The long-necked dinosaur and Triceratops ate plants.
+explanation_wrong.vi: Khủng long cổ dài và ba sừng đều ăn thực vật.
+feedback_true.en: Many dinosaurs had flat teeth for plants.
+feedback_true.vi: Nhiều khủng long có răng dẹt để ăn thực vật.
 > Lời Na và hình theo `_topic.md`, mục "Câu sáu, lời Na". Đáp án Sai (bảng Đúng/Sai).
 > DOK 3: bắt lỗi một lập luận, suy từ một loài ra mọi loài. Giải thích khi đúng chỉ ra chỗ sai của lập luận ("chỉ là một loài"), không mở đầu bằng "Yes!", vì đáp án là "No". Gợi ý chỉ tới một phản ví dụ bé vừa gặp ở ô Học, câu q5 và phần Chơi, không nói thẳng đáp án.
 > Bắt lỗi bằng bằng chứng trong bài (răng, mô hình các loài), không chê phim hay đồ chơi.

@@ -75,7 +75,8 @@ extension LessonSession {
         case .fillBlankBank(let fill): fill.bank.map(\.label)
         case .trueFalse(let tf): tf.labels.map { [$0.trueLabel, $0.falseLabel] } ?? []
         case .orderSequence(let order): order.items.map(\.label)
-        case .pictureBarChart, .unknown: []
+        case .pictureBarChart(let chart): chart.chart.bars.map(\.label)
+        case .unknown: []
         }
     }
 
@@ -94,16 +95,17 @@ extension LessonSession {
         case .quiz(let index):
             return item(at: index, in: .quiz).map(questionUtterance)
         case .learn:
-            // Explorer (SK-043): the page that opens reads itself (the group shown).
-            if isExplorer, let explore = exploreBlock,
+            // Picture book (SK-043, Explorer and Discoverer A2): the page that opens reads itself
+            // (the group shown).
+            if let explore = exploreBlock,
                let group = explore.groups.first(where: { $0.key == progress.exploreSelected }) ?? explore.groups.first {
                 return explorerGroupUtterance(group)
             }
-            return exploreBlock.map { utterance("learn.prompt", $0.prompt) }
+            return nil
         case .play:
-            // Explorer (SK-040 lượt 2): the game's instruction too, then the message.
-            if isExplorer, let tray { return utterance("play.message", tray.prompt, trayMessage) }
-            return trayMessage.map { utterance("play.message", $0) }
+            // SK-040 lượt 2, A2: the game's instruction too, then the message.
+            if let tray { return utterance("play.message", tray.prompt, trayMessage) }
+            return nil
         case .reward:
             // Explorer: the mascot names the new sticker (SK-040); Discoverer celebrates quietly.
             guard isExplorer, let collectible = lesson.reward.collectible else { return nil }
@@ -181,7 +183,10 @@ extension LessonSession {
         case .multiChoice(let choice): choice.options.first { $0.key == key }?.label
         case .orderSequence(let order): order.items.first { $0.key == key }?.label
         case .fillBlankBank(let fill): fill.bank.first { $0.key == key }?.label
-        case .trueFalse, .pictureBarChart, .unknown: nil
+        // `options[i]` answers `chart.bars[i]` (dev 14/11): the bar's name.
+        case .pictureBarChart(let chart):
+            chart.options.firstIndex { $0.key == key }.flatMap { chart.chart.bars.indices.contains($0) ? chart.chart.bars[$0].label : nil }
+        case .trueFalse, .unknown: nil
         }
     }
 
@@ -199,8 +204,16 @@ extension LessonSession {
         switch status {
         case .open: questionSpoken(item)
         case .retry(let last): retryLines(item, last: last)
-        case .done(let correct, _, _): [correct ? item.explanationCorrect : item.explanationWrong]
+        case .done(let correct, _, let last): resultLines(item, correct: correct, last: last)
         }
+    }
+
+    /// Once done: `explanation_correct`; out of tries, the `feedback` of what the last try picked
+    /// (when it has one), then `explanation_wrong` (SK-044, main session 14/11: with one try for
+    /// true / false the feedback must still be said; the two lines are written not to repeat).
+    public static func resultLines(_ item: QuizItem, correct: Bool, last: Try) -> [Spoken] {
+        if correct { return [item.explanationCorrect] }
+        return [feedback(item, for: last), item.explanationWrong].compactMap { $0 }
     }
 
     /// SK-044: after a wrong try with a try left, what is said and shown: the `feedback` of the
@@ -234,15 +247,15 @@ extension LessonSession {
     }
 
     /// Discoverer (SK-044): what plays by itself after a check. A wrong try with a try left: the
-    /// feedback then the hint; done: the explanation (right or wrong). Explorer says the same lines
+    /// feedback then the hint; done: the explanation (out of tries: the feedback first). Explorer says the same lines
     /// through `explorerAnswerUtterance`. `name`: the word just tapped, said first in the same
     /// utterance (Khởi động answers on a tap), so the word is not cut off by the result.
     public func resultUtterance(_ item: QuizItem, status: QuestionStatus, name: Spoken? = nil) -> Utterance? {
         switch status {
         case .open: return nil
         case .retry(let last): return utterance("retry.\(item.key)", list: [name] + Self.retryLines(item, last: last))
-        case .done(let correct, _, _):
-            return utterance("explanation.\(item.key).\(correct ? "correct" : "wrong")", list: [name, correct ? item.explanationCorrect : item.explanationWrong])
+        case .done(let correct, _, let last):
+            return utterance("explanation.\(item.key).\(correct ? "correct" : "wrong")", list: [name] + Self.resultLines(item, correct: correct, last: last))
         }
     }
 

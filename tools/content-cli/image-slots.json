@@ -1,5 +1,5 @@
 {
-  "note": "Tỉ lệ khung (rộng:cao) app đặt ảnh vào, theo chỗ dùng (Duy 13/11, SK-043). build và images fetch cảnh báo (không chặn) khi ảnh lệch khung quá max_factor (lệch 2 = lấp khung mất nửa ảnh). max_factor 2,2 khớp PictureFit.maxCropRatio của app iOS (phiên chính chốt 13/11): quá mức đó app không cắt nữa mà hiện cả ảnh thu nhỏ giữa giấy, tức ảnh sai hướng so với khung. Hạ xuống (vd 1,5) để thấy cả ảnh bị cắt nhiều. default là số dev đặt tạm theo đề xuất của phiên chính; age_groups ghi đè theo kích thước đang có trong code iOS (iPhone 390). Designer ghi bảng tỉ lệ khung vào docs/backlog/SK-043-lesson-screens-picture-book.md thì sửa ở đây. Giá trị: \"rộng:cao\" hoặc số (rộng/cao).",
+  "note": "Tỉ lệ khung (rộng:cao) app đặt ảnh vào, theo chỗ dùng (Duy 13/11, SK-043). build và images fetch cảnh báo (không chặn) khi ảnh lệch khung quá max_factor (lệch 2 = lấp khung mất nửa ảnh). max_factor 2,2 khớp PictureFit.maxCropRatio của app iOS (phiên chính chốt 13/11): quá mức đó app không cắt nữa mà hiện cả ảnh thu nhỏ giữa giấy, tức ảnh sai hướng so với khung. Hạ xuống (vd 1,5) để thấy cả ảnh bị cắt nhiều. default là số dev đặt tạm theo đề xuất của phiên chính; age_groups ghi đè: explorer theo bảng designer 13/11 (code iOS iPhone 390), discoverer theo thiết kế A2 Duy duyệt 14/11. Designer ghi bảng tỉ lệ khung vào docs/backlog/SK-043-lesson-screens-picture-book.md thì sửa ở đây. Giá trị: \"rộng:cao\" hoặc số (rộng/cao).",
   "max_factor": 2.2,
   "default": {
     "question": "4:3",
@@ -23,12 +23,16 @@
       }
     },
     "discoverer": {
-      "note": "Discoverer (D2, layout.grid.quiz 3 cột, ô cao 104): hình trong ô rộng ~98, cao ~55 phía trên chữ, nên thẻ lựa chọn (mọi số lựa chọn) và thẻ từ có hình dùng chung khung ~16:9. Ước từ code, designer xác nhận.",
+      "note": "Discoverer A2 (Duy duyệt 14/11, SK-043; đo trên design/play-ui/options/lesson-less-text/Discoverer-A2.html, iPhone 390). Thẻ lựa chọn 2–3 lựa chọn xếp dọc, ảnh lấp đầy thẻ ngang ~333×128–158 (≈ 2,5:1). Từ 4 lựa chọn: lưới 2×2, ảnh ~159×206 (iPad 258×328) ≈ 0,8:1. Thẻ từ có hình (fill_blank_bank): ảnh ô vuông theo code ios-dev (~86–142×96) → 1:1 (designer chốt 14/11). Trang Học (nhóm) ~338×350, iPad 548×618 ≈ 1:1. Món Chơi: kệ 3×3 ô ~101×91, iPad 120×144 → 1:1. Thẻ Từ mới (trang Học 5/5) ảnh ~150×116 ≈ 4:3. Câu có thẻ hình (mọi lựa chọn, thẻ xếp hoặc thẻ từ đều có hình) thì app ẩn hình câu hỏi, như Explorer. Hình câu hỏi giữ mặc định 4:3 (true_false ~348×237 ≈ 3:2, câu Na ~348×196: đều dưới ngưỡng). picture_bar_chart: lựa chọn không có hình (SK-043 dev 14/11), cột không có khung ảnh nên không kiểm.",
+      "hide_question_image_with_picture_choices": true,
       "ratios": {
-        "choice_2": "16:9",
-        "choice_3": "16:9",
-        "choice_4": "16:9",
-        "bank_item": "16:9"
+        "choice_2": "5:2",
+        "choice_3": "5:2",
+        "choice_4": "4:5",
+        "bank_item": "1:1",
+        "learn_group": "1:1",
+        "tray_item": "1:1",
+        "vocab": "4:3"
       }
     }
   }

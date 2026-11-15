@@ -74,12 +74,12 @@
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
       "crop": {
-        "left": 0.0,
-        "top": 0.4,
-        "width": 1.0,
-        "height": 0.58
+        "left": 0.25,
+        "top": 0.38,
+        "width": 0.413,
+        "height": 0.62
       },
-      "note": "Cá khô nguyên con bổ đôi, chụp từ trên xuống; cắt bỏ lát bánh mì ở trên (CC BY: đã cắt, giữ tên gốc)."
+      "note": "Cá khô nguyên con bổ đôi, chụp từ trên xuống; cắt bỏ lát bánh mì ở trên (CC BY: đã cắt, giữ tên gốc). A2 14/11 (designer, SK-043): crop đổi cho khung 1:1 (crop cũ {\"left\": 0.0, \"top\": 0.4, \"width\": 1.0, \"height\": 0.58})."
     },
     "tray.tray_leaf_fossil": {
       "source": "Wikimedia Commons",
@@ -211,16 +211,29 @@
       "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
     },
     "q3.q3_fish": {
-      "same_as": "q1_fish",
-      "lesson": "khung-long/khung-long-la-gi"
+      "composed": {
+        "file": "content/images/composed/da-va-dat/hoa-thach-hinh-thanh-the-nao.q3.q3_fish.jpg",
+        "parts": [
+          {
+            "same_as": "q1_fish",
+            "lesson": "khung-long/khung-long-la-gi"
+          }
+        ]
+      },
+      "title": "A fish",
+      "note": "A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Cá chép trên nền trắng đặt giữa khung 4:5 (lưới 2×2) để thấy trọn con cá."
     },
     "q4": {
+      "same_as": "learn.explore.explore_not_dino",
+      "note": "14/11 (SK-044): hình câu hỏi đổi sang dùng lại explore_not_dino (kết quả cuối, không lộ thứ tự). Mọi thẻ xếp có hình nên app A2 ẩn hình này; giữ cho chế độ không ẩn."
+    },
+    "q4.q4_snail": {
       "own": {
-        "file": "content/images/own/da-va-dat/b08-q4.jpg",
+        "file": "content/images/own/da-va-dat/b08-q4.q4_snail.jpg",
         "method": "drawn"
       },
       "title": "A sea snail on the sea floor",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. 14/11 (SK-044): câu q4 thành order_sequence; hình khung không này chuyển từ hình câu hỏi sang thẻ q4_snail (đổi tên file b08-q4.jpg thành b08-q4.q4_snail.jpg), cùng cỡ 1024×768 với ba thẻ kia."
     },
     "q4.q4_layers": {
       "same_as": "learn.explore.explore_sediment"

@@ -350,12 +350,12 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.12,
+        "left": 0.358,
         "top": 0.12,
-        "width": 0.88,
+        "width": 0.396,
         "height": 0.56
       },
-      "note": "Designer (agent) 10/11 chiều: khối gỗ đồ chơi nhiều hình (vòm, cột, thanh cong, khối chữ nhật) trên bàn tròn; không có khối cầu, khối chóp như brief; không chữ, không người. Alt «Wooden blocks in different shapes» · «Khối gỗ nhiều hình dạng» đúng."
+      "note": "Designer (agent) 10/11 chiều: khối gỗ đồ chơi nhiều hình (vòm, cột, thanh cong, khối chữ nhật) trên bàn tròn; không có khối cầu, khối chóp như brief; không chữ, không người. Alt «Wooden blocks in different shapes» · «Khối gỗ nhiều hình dạng» đúng. A2 14/11 (designer, SK-043): crop đổi cho khung 1:1 (crop cũ {\"left\": 0.12, \"top\": 0.12, \"width\": 0.88, \"height\": 0.56})."
     },
     "q1": {
       "same_as": "w2"

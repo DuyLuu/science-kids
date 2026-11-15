@@ -71,7 +71,8 @@ import UIKit
         let firstWritten = content.journey(for: .discoverer).first { $0.firstPlayable != nil }?.key
         #expect(firstWritten != nil)
         #expect(current == [firstWritten].compactMap { $0 })
-        #expect(entries(.explorer).count == 2 + 12 + 1)
+        // Explorer since Duy 14/11: four stages (Year 1, 2, 1, 2), 12 stops, the flag.
+        #expect(entries(.explorer).count == 4 + 12 + 1)
         #expect(entries(.scientist).count == 3 + 16 + 1)
         #expect(JourneyMapEntry.entries(JourneyProgress(topics: [], progress: .empty)).isEmpty)
         // Laid out on a 390 phone, the map is the canvas's 2430 tall (rows at their minimum).

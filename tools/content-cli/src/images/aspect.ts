@@ -5,7 +5,8 @@
 // by more than max_factor; they never fail on it.
 //
 // Slot of an Image, from its JSON pointer:
-//   /quiz|warmup/<i>/image                 question   (Explorer: hidden when every option/item has a picture)
+//   /quiz|warmup/<i>/image                 question   (hide_question_image_with_picture_choices, Explorer and
+//                                                      Discoverer A2: hidden when every option, item or bank word has a picture)
 //   /quiz|warmup/<i>/options/<j>/image     choice_2 | choice_3 | choice_4 (4 or more options)
 //   /quiz|warmup/<i>/items/<j>/image       order_item
 //   /quiz|warmup/<i>/bank/<j>/image        bank_item
@@ -81,9 +82,9 @@ export function slotOf(doc: unknown, pointer: string, ageGroup: string, table: S
   if (tokens[tokens.length - 1] !== "image") return undefined;
   const [section, a, b, c] = tokens;
   if (QUESTION_SECTIONS.has(section!) && isIndex(a)) {
-    const item = getAt(doc, `/${section}/${a}`) as { options?: unknown[]; items?: unknown[] } | undefined;
+    const item = getAt(doc, `/${section}/${a}`) as { options?: unknown[]; items?: unknown[]; bank?: unknown[] } | undefined;
     if (tokens.length === 3) {
-      if (table.age_groups?.[ageGroup]?.hide_question_image_with_picture_choices && (allHavePictures(item?.options) || allHavePictures(item?.items))) return undefined;
+      if (table.age_groups?.[ageGroup]?.hide_question_image_with_picture_choices && (allHavePictures(item?.options) || allHavePictures(item?.items) || allHavePictures(item?.bank))) return undefined;
       return { kind: "question", label: "hình câu hỏi" };
     }
     if (tokens.length === 5 && isIndex(c)) {
@@ -111,7 +112,7 @@ export function aspectFactor(width: number, height: number, ratio: number): numb
 }
 
 const COMMON_RATIOS: [number, number][] = [
-  [1, 1], [5, 4], [4, 5], [4, 3], [3, 4], [3, 2], [2, 3], [16, 9], [9, 16], [2, 1], [1, 2], [5, 2], [2, 5], [3, 1], [1, 3],
+  [1, 1], [5, 4], [4, 5], [4, 3], [3, 4], [3, 2], [2, 3], [16, 9], [9, 16], [2, 1], [1, 2], [5, 2], [2, 5], [5, 3], [3, 5], [3, 1], [1, 3],
 ];
 const decimal = new Intl.NumberFormat("vi-VN", { maximumFractionDigits: 2 });
 /** 0.75 -> "3:4", 1.62 -> "1,62:1" (a common ratio within 3%, else decimal). */

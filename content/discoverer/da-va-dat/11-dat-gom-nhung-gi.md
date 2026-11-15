@@ -51,10 +51,10 @@ image.alt.en: Layered cliffs by the sea
 image.alt.vi: Vách đá nhiều lớp ven biển
 hint.en: Remember the story of Mary Anning.
 hint.vi: Em nhớ lại câu chuyện về Mary Anning nhé.
-explanation_correct.en: Yes! She found sea reptile skeletons in the rock.
-explanation_correct.vi: Đúng rồi! Bà tìm thấy bộ xương bò sát biển trong đá.
-explanation_wrong.en: The answer is a sea reptile skeleton.
-explanation_wrong.vi: Đáp án là bộ xương bò sát biển.
+explanation_correct.en: Her skeletons showed sea reptiles nobody had seen.
+explanation_correct.vi: Bộ xương bà tìm là loài bò sát biển chưa ai thấy.
+explanation_wrong.en: Mary found sea reptile skeletons in the cliffs.
+explanation_wrong.vi: Mary tìm thấy bộ xương bò sát biển ở vách đá.
 > Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ ba) đúng bảng Khởi động. Khủng long đồ chơi có sức hút (bé gắn hoá thạch với khủng long); đồng xu cổ có sức hút (vật cổ đào được, món bẫy bài chín).
 > Hình câu hỏi là vách đá ven biển của bài mười (`q1_cliffs`, hình gốc mà câu q6 bài đó dùng lại), không phải đáp án. Từ khoá và `alt` chép từ bài chín, bài mười.
 > "Mary Anning" trong chuỗi VI cần dòng `READINGS` như bài mười.
@@ -62,6 +62,8 @@ explanation_wrong.vi: Đáp án là bộ xương bò sát biển.
 
 #### option w1_toy
 correct: false
+feedback.en: A toy dinosaur is plastic, made by people.
+feedback.vi: Khủng long đồ chơi bằng nhựa, do người làm.
 label.en: a toy dinosaur
 label.vi: khủng long đồ chơi
 image.brief: [sơ đồ ghép ảnh] Ảnh khủng long đồ chơi `q6` ở bài `khung-long/trai-dat-rat-lau-ve-truoc`, tách nền, đặt lên nền kem trơn cho cùng khung với hai lựa chọn kia; không có chữ.
@@ -70,6 +72,8 @@ image.alt.vi: Khủng long đồ chơi trên bàn
 
 #### option w1_coin
 correct: false
+feedback.en: Mary hunted for fossils, not old coins.
+feedback.vi: Mary tìm hoá thạch, không tìm đồng xu cổ.
 label.en: an old coin
 label.vi: đồng xu cổ
 image.brief: [sơ đồ ghép ảnh] Ảnh đồng xu cổ `tray_old_coin` ở bài `da-va-dat/nhieu-cach-tao-thanh-hoa-thach`, tách nền trắng, đặt lên nền kem trơn cho cùng khung với hai lựa chọn kia; không có chữ.
@@ -99,10 +103,12 @@ image.alt.vi: Các hòn đảo ở vịnh Hạ Long
 answer: true
 hint.en: Remember the lesson about weathering.
 hint.vi: Em nhớ lại bài học về phong hoá nhé.
-explanation_correct.en: Yes! Rock breaks into smaller and smaller pieces.
-explanation_correct.vi: Đúng rồi! Đá vỡ thành những mảnh ngày càng nhỏ.
-explanation_wrong.en: This is true. Weathering breaks rock into smaller pieces.
-explanation_wrong.vi: Câu này đúng. Phong hoá làm đá vỡ thành những mảnh nhỏ hơn.
+explanation_correct.en: Those small pieces of rock help make soil.
+explanation_correct.vi: Những mảnh đá nhỏ ấy góp phần tạo nên đất.
+explanation_wrong.en: Weathering breaks rock into smaller pieces.
+explanation_wrong.vi: Phong hoá làm đá vỡ thành những mảnh nhỏ hơn.
+feedback_false.en: Rain and roots break rock bit by bit.
+feedback_false.vi: Mưa và rễ cây làm đá vỡ dần từng chút.
 > Câu `true_false` dùng đúng chữ EN ở bảng Khởi động và bảng Đúng/Sai (bài 11 w2, Đúng).
 > Hình câu hỏi là núi đá vôi trên biển (đá còn nguyên khối), không dùng `explore_weathering` (hình đá nứt là bằng chứng của câu, `_topic.md` bảng Hình dùng chung). Giải thích khi đúng không nói "thành đất", để câu q6 còn là việc bé tự nối.
 
@@ -149,7 +155,7 @@ label.en: Bits of rock
 label.vi: Mảnh đá
 color: nau_dat
 sentence.en: Over a very long time, rock breaks into tiny bits.
-sentence.vi: Qua thời gian rất dài, đá vỡ vụn thành những mảnh rất nhỏ.
+sentence.vi: Qua rất lâu, đá vỡ vụn thành những mảnh rất nhỏ.
 image.brief: [sơ đồ ghép ảnh] Bốn hình vẽ xếp thành lưới hai hàng, hai cột trên cùng nền kem trơn, hạt nhỏ dần theo thứ tự đọc: hàng trên `tray_stones`, `tray_sand`; hàng dưới `q2_silt`, `clay`; không có chữ, không có mũi tên, không có thước đo.
 image.alt.en: Small stones, sand, silt and clay
 image.alt.vi: Sỏi nhỏ, cát, bùn mịn và đất sét
@@ -348,21 +354,23 @@ id: bd0bb595-e733-4ac4-8c9c-b4de5d99aad8
 format: single_choice
 version: 1
 dok: 1
-prompt.en: Soil settles in a jar of water. What floats on top?
-prompt.vi: Đất lắng trong lọ nước. Thứ gì nổi lên trên cùng?
+prompt.en: In the jar test, what floats on top?
+prompt.vi: Trong lọ đất lắng, thứ gì nổi lên trên?
 image.brief: Dùng lại hình `prediction`.
 image.alt.en: A jar of muddy water, just shaken
 image.alt.vi: Lọ nước đục vừa lắc xong
 hint.en: Remember the Jar test picture.
 hint.vi: Em nhớ lại ô Lọ đất lắng nhé.
-explanation_correct.en: Yes! Bits of leaf are light, so they float.
-explanation_correct.vi: Đúng rồi! Vụn lá nhẹ nên nổi lên.
-explanation_wrong.en: The answer is rotting leaves. They are light.
-explanation_wrong.vi: Đáp án là lá mục. Lá mục nhẹ nên nổi lên.
+explanation_correct.en: Light bits of leaf float, while rock bits sink.
+explanation_correct.vi: Vụn lá nhẹ thì nổi, mảnh đá thì chìm.
+explanation_wrong.en: Rotting leaves are light, so they float.
+explanation_wrong.vi: Lá mục nhẹ nên nổi lên trên.
 > Câu nhớ lại ví dụ bốn ô Lọ đất lắng. Hình câu hỏi là lọ vừa lắc (chưa thấy lớp, chưa thấy lá nổi), không lộ đáp án. Câu w1 bài 12 hỏi vế còn lại (thứ gì chìm xuống đáy).
 
 #### option q1_stones
 correct: false
+feedback.en: Small stones are heavy and sink to the bottom.
+feedback.vi: Sỏi nhỏ nặng, chìm xuống đáy lọ.
 label.en: small stones
 label.vi: sỏi nhỏ
 image.brief: Dùng lại hình `tray_stones`. Từ khoá tìm ảnh (EN): small gravel stones pile close up
@@ -379,6 +387,8 @@ image.alt.vi: Một nắm lá mục
 
 #### option q1_sand
 correct: false
+feedback.en: Sand is heavy enough to sink.
+feedback.vi: Cát đủ nặng để chìm xuống.
 label.en: sand
 label.vi: cát
 image.brief: Dùng lại hình `tray_sand`. Từ khoá tìm ảnh (EN): pile of sand close up grains
@@ -400,15 +410,17 @@ sentence.vi: Những mảnh đá nhỏ nhất trong đất là {1}.
 answers: q2_clay
 hint.en: Remember the Bits of rock picture.
 hint.vi: Em nhớ lại ô Mảnh đá nhé.
-explanation_correct.en: Yes! Clay bits are tinier than silt and sand.
-explanation_correct.vi: Đúng rồi! Hạt đất sét còn nhỏ hơn bùn mịn và cát.
-explanation_wrong.en: The answer is clay. Its bits are the tiniest.
-explanation_wrong.vi: Đáp án là đất sét. Hạt đất sét nhỏ nhất.
+explanation_correct.en: Clay bits are so tiny they feel smooth and sticky.
+explanation_correct.vi: Hạt sét nhỏ tới mức sờ thấy mịn và dính.
+explanation_wrong.en: Clay bits are tinier than silt and sand.
+explanation_wrong.vi: Hạt đất sét nhỏ hơn bùn mịn và cát.
 > Câu nhớ lại ví dụ bốn ô Mảnh đá. Bùn mịn là thẻ sai có sức hút mạnh (cũng rất nhỏ); chất hữu cơ có sức hút (cũng là những mảnh nhỏ trong đất, nhưng không phải đá). Câu không chứa chữ "clay".
 
 #### bank q2_silt
 label.en: silt
 label.vi: bùn mịn
+feedback.en: Silt is fine, but some bits are even tinier.
+feedback.vi: Bùn mịn đã nhỏ, nhưng còn hạt nhỏ hơn.
 image.brief: [hình vẽ] Một khoảng bùn mịn màu xám, mặt láng và mịn, hơi ẩm, vẽ gần từ trên xuống, cùng nét và cùng khung với hai thẻ kia; nền kem trơn; không có vết nứt, không có chữ. Ô `explore_rock_bits` và bài 14 (câu q5) dùng lại.
 image.alt.en: Smooth silt
 image.alt.vi: Lớp bùn mịn
@@ -417,6 +429,8 @@ image.alt.vi: Lớp bùn mịn
 #### bank q2_organic
 label.en: organic matter
 label.vi: chất hữu cơ
+feedback.en: Organic matter comes from plants, not rock.
+feedback.vi: Chất hữu cơ đến từ cây cối, không từ đá.
 image.brief: [hình vẽ] Mặt cắt một khoảnh đất mặt sẫm màu, lẫn rễ cây nhỏ và vụn lá đang mục, vẽ gần, cùng nét và cùng khung với hai thẻ kia; nền kem trơn; không có chữ.
 image.alt.en: Dark topsoil with roots and bits of leaf
 image.alt.vi: Lớp đất mặt sẫm màu có rễ cây và vụn lá
@@ -442,10 +456,10 @@ image.alt.en: A rotting twig on the ground
 image.alt.vi: Cành cây mục trên mặt đất
 hint.en: Remember the Organic matter picture.
 hint.vi: Em nhớ lại ô Chất hữu cơ nhé.
-explanation_correct.en: Yes! Things from plants rot and become soil.
-explanation_correct.vi: Đúng rồi! Những thứ từ cây cối mục dần thành một phần của đất.
-explanation_wrong.en: The answers are the leaf, the peel and the root.
-explanation_wrong.vi: Đáp án là chiếc lá, vỏ chuối và đoạn rễ cây.
+explanation_correct.en: Worms and tiny living things help them rot.
+explanation_correct.vi: Giun và sinh vật nhỏ giúp chúng mục nhanh hơn.
+explanation_wrong.en: The leaf, the peel and the root come from plants.
+explanation_wrong.vi: Lá, vỏ chuối và rễ cây đều từ cây cối.
 > DOK 2: phân loại những vật mới (vỏ chuối chưa có ở bài) theo ý "từ sinh vật thì mục thành chất hữu cơ". Ba đáp án đúng, một sai (bài 11 là một trong bốn bài có câu ba đáp án, bảng vị trí ở `_topic.md`).
 > Túi nhựa là món bẫy kệ Chơi, ở đây vẫn là lựa chọn sai (cùng vai). Có sức hút vì nằm trong đất lâu ngày như lá.
 > Bốn hình cùng kiểu: một vật nằm trên mặt đất, chụp gần.
@@ -478,6 +492,8 @@ image.alt.vi: Đoạn rễ cây khô nằm trên đất
 
 #### option q3_bag
 correct: false
+feedback.en: A plastic bag stays plastic for a very long time.
+feedback.vi: Túi nhựa để rất lâu vẫn không mục.
 label.en: a plastic bag
 label.vi: túi nhựa
 image.brief: Dùng lại hình `tray_plastic_bag`. Từ khoá tìm ảnh (EN): plastic bag litter on ground
@@ -489,23 +505,26 @@ id: 4ac2fe2e-b72f-4231-b324-897a9e053376
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai's soil has small stones, sand and clay. Which jar shows it after waiting?
-prompt.vi: Đất của Mai có sỏi nhỏ, cát và đất sét. Lọ nào cho thấy đất đó sau khi chờ?
+prompt.en: Which jar shows stones, sand and clay after settling?
+prompt.vi: Sỏi, cát, đất sét lắng xong, lọ nào đúng?
 image.brief: Dùng lại hình `prediction`.
 image.alt.en: A jar of muddy water, just shaken
 image.alt.vi: Lọ nước đục vừa lắc xong
 hint.en: Remember the sizes in the Bits of rock picture.
 hint.vi: Em nhớ lại cỡ hạt ở ô Mảnh đá nhé.
-explanation_correct.en: Yes! Heavy stones sink first. Clay settles last, on top.
-explanation_correct.vi: Đúng rồi! Sỏi nặng chìm xuống trước. Đất sét lắng sau cùng, nằm trên.
-explanation_wrong.en: The answer is the jar with stones at the bottom.
-explanation_wrong.vi: Đáp án là lọ có sỏi ở dưới đáy.
+explanation_correct.en: Heavy stones sink first, and clay settles last on top.
+explanation_correct.vi: Sỏi nặng chìm trước, đất sét lắng sau cùng ở trên.
+explanation_wrong.en: Big, heavy stones sink first to the bottom.
+explanation_wrong.vi: Sỏi to, nặng chìm xuống đáy trước tiên.
+> A2 (SK-043, 14/11): câu hỏi cũ hai mươi mốt chữ (hai câu, có nhân vật Mai), nay mười chữ.
 > DOK 2: dự đoán cho một mẫu đất mới (không có lá), ghép ví dụ ba ô Lọ đất lắng ("hạt nặng chìm trước") với ô Mảnh đá (sỏi to nhất, đất sét nhỏ nhất). Ô Học không viết thành chữ "sỏi ở dưới đáy".
 > Ba lựa chọn là ba bản của cùng một lọ (bộ "Lọ đất"), chỉ khác lớp nào ở dưới đáy; nhãn gọi tên lớp đáy, không gọi vị trí thẻ.
 > Rà chữ tester 11/11 (n10): gợi ý cũ "Remember: heavy bits sink first." chép nguyên ví dụ ba ô Lọ đất lắng, gần như trả lời hộ. Gợi ý mới trỏ ô Mảnh đá (cỡ hạt); bé tự ghép với "hạt nặng chìm trước".
 
 #### option q4_clay_bottom
 correct: false
+feedback.en: Clay bits are tiniest, so they settle last.
+feedback.vi: Hạt sét nhỏ nhất nên lắng sau cùng.
 label.en: clay at the bottom
 label.vi: đất sét ở dưới đáy
 image.brief: [hình vẽ] Cùng nét bộ "Lọ đất", cùng lọ, cùng góc với hai lựa chọn kia: nước trong ở trên, ba lớp đã lắng: dưới đáy là đất sét nâu xám mịn, giữa là cát, trên cùng là sỏi nhỏ; không có vụn lá; nền kem trơn; không có tay, không có vạch số, không có chữ.
@@ -514,6 +533,8 @@ image.alt.vi: Lọ có đất sét ở dưới đáy
 
 #### option q4_sand_bottom
 correct: false
+feedback.en: Something heavier than sand sinks before it.
+feedback.vi: Có thứ nặng hơn cát, chìm xuống trước cát.
 label.en: sand at the bottom
 label.vi: cát ở dưới đáy
 image.brief: [hình vẽ] Cùng nét bộ "Lọ đất", cùng lọ, cùng góc: nước trong ở trên, ba lớp: dưới đáy là cát vàng nâu, giữa là sỏi nhỏ, trên cùng là đất sét; không có vụn lá; nền kem trơn; không có tay, không có vạch số, không có chữ.
@@ -534,17 +555,18 @@ id: 1af61df3-a3ae-48af-8185-c2432046d186
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan pours water on dry soil. Bubbles come up. What was in the soil before?
-prompt.vi: Lan đổ nước vào đất khô. Những bong bóng nhỏ nổi lên. Trước đó trong đất có gì?
+prompt.en: What comes out of dry soil as bubbles?
+prompt.vi: Đất khô gặp nước, thứ gì thoát ra thành bọt?
 image.brief: [hình vẽ] Cùng nét bộ "Lọ đất": một cốc nhựa trong đựng đất khô, một ca nhựa đang rót nước vào, mấy bong bóng nhỏ nổi lên mặt nước trong cốc; chỉ thấy ca nước, không thấy tay; nền kem trơn; không có vạch số, không có chữ.
 image.alt.en: Water poured on dry soil, with bubbles
 image.alt.vi: Nước rót vào đất khô, có bong bóng nổi lên
 hint.en: Remember the Tiny spaces picture.
 hint.vi: Em nhớ lại ô Khe hở nhỏ nhé.
-explanation_correct.en: Yes! Water pushed the air out of the spaces.
-explanation_correct.vi: Đúng rồi! Nước đẩy không khí ra khỏi các khe hở.
-explanation_wrong.en: The answer is air. It was in the tiny spaces.
-explanation_wrong.vi: Đáp án là không khí. Không khí nằm sẵn trong các khe hở nhỏ.
+explanation_correct.en: Roots and worms need that air in the soil.
+explanation_correct.vi: Rễ cây và giun cần không khí ấy trong đất.
+explanation_wrong.en: Water pushed air out of the tiny spaces.
+explanation_wrong.vi: Nước đẩy không khí ra khỏi các khe hở nhỏ.
+> A2 (SK-043, 14/11): câu hỏi cũ hai mươi hai chữ (ba câu, có nhân vật Lan), nay mười chữ; hình câu hỏi (rót nước, bọt nổi) giữ ngữ cảnh.
 > DOK 2: suy ra từ bằng chứng (bong bóng) điều ô Khe hở nhỏ nói (khe hở khô chứa không khí). Nước là lựa chọn sai có sức hút (Lan vừa đổ nước vào), nhưng đề bài nói đất khô; xà phòng có sức hút vì bé gắn bong bóng với xà phòng.
 > Chữ VI dùng "bong bóng nhỏ", không dùng "bọt khí" (bảng Tên gọi): chữ "khí" trong "bọt khí" lộ đáp án "không khí" khi bé nghe tiếng Việt. Chữ EN "bubbles" giữ (đã học ở bài năm).
 > [CẦN KIỂM] Bong bóng khi đổ nước vào đất khô là không khí trong khe hở bị nước đẩy ra (biên tập nhớ, Oak ghi cùng ý ở quiz lesson 11).
@@ -560,6 +582,8 @@ image.alt.vi: Quả bóng bay màu đỏ
 
 #### option q5_water
 correct: false
+feedback.en: The water was poured in from outside.
+feedback.vi: Nước được rót từ ngoài vào.
 label.en: water
 label.vi: nước
 image.brief: Dùng lại hình `q1_water` ở bài `da-va-dat/da-nao-cung-hon`. Từ khoá tìm ảnh (EN): clear plastic cup of water plain background
@@ -569,6 +593,8 @@ image.alt.vi: Cốc nhựa đựng nước
 
 #### option q5_soap
 correct: false
+feedback.en: There was no soap in the soil.
+feedback.vi: Trong đất không có xà phòng.
 label.en: soap
 label.vi: xà phòng
 image.brief: [hình vẽ] Một bánh xà phòng trơn màu trắng đặt trên nền kem trơn, vẽ chéo, cùng nét và cùng cỡ trong khung như quả bóng bay và cốc nước; không có chữ hay hình in trên bánh, không có bao bì, không có bọt.
@@ -600,9 +626,11 @@ image.alt.vi: Góc vườn rau
 hint.en: Think about what soil is made from.
 hint.vi: Em nghĩ xem đất được tạo nên từ những gì nhé.
 explanation_correct.en: Soil forms slowly from rock bits and rotting plants.
-explanation_correct.vi: Đất hình thành rất chậm, từ mảnh đá vụn và cây cối mục.
-explanation_wrong.en: Na is not right. Soil is made slowly, over time.
-explanation_wrong.vi: Na chưa đúng. Đất được tạo nên rất chậm, qua thời gian dài.
+explanation_correct.vi: Đất hình thành rất chậm, từ đá vụn và cây mục.
+explanation_wrong.en: Soil is made slowly, over a very long time.
+explanation_wrong.vi: Đất được tạo nên rất chậm, qua thời gian dài.
+feedback_true.en: Soil is made from rock bits that broke slowly.
+feedback_true.vi: Đất làm từ mảnh đá vỡ ra rất chậm.
 > Lời Na, hình và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đúng/Sai). Cả màn mười tám từ EN.
 > DOK 3: bé đánh giá một kết luận. Ô Học không nói "đất hình thành chậm"; bé phải nối ô Mảnh đá (đá vỡ vụn qua thời gian rất dài) với ô Chất hữu cơ (cây cối, con vật mục dần) để thấy đất được tạo nên dần, không có sẵn từ đầu.
 > Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai). Không đưa con số năm (`_topic.md`, ghi chú của `soil_was_always_there`).

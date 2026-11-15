@@ -94,6 +94,7 @@ function checkLesson({ file, data }, topics, report) {
     }
     if (item.format === "fill_blank_bank") checkFillBlank(item, pointer, file, report);
     if (item.format === "order_sequence") checkOrderSequence(item, pointer, file, report);
+    if (item.format === "picture_bar_chart") checkBarChart(item, pointer, file, report);
     checkFeedback(item, pointer, file, report);
   }
 
@@ -168,6 +169,32 @@ function checkOrderSequence(item, pointer, file, report) {
   });
   if (item.answer.length !== item.items.length) {
     report(file, `${pointer}/answer`, `answer phải xếp đủ ${item.items.length} mục của items, đang có ${item.answer.length}`);
+  }
+}
+
+// SK-043 (dev 14/11): in picture_bar_chart the bars are the answer buttons. options[i] is the
+// answer of bars[i] (same index, same count, same label): the app draws bars[i] left to right and
+// a tap on it selects options[i], scored like single_choice on the option key. The picture of a
+// bar is bars[i].image; options carry none. At least one value > 0, or no bar can be drawn.
+function checkBarChart(item, pointer, file, report) {
+  const bars = item.chart.bars;
+  if (item.options.length !== bars.length) {
+    report(file, `${pointer}/options`, `picture_bar_chart: options[i] là đáp án của cột chart.bars[i], nên cần đúng ${bars.length} lựa chọn (bằng số cột), đang có ${item.options.length}`);
+  }
+  item.options.forEach((option, i) => {
+    const bar = bars[i];
+    if (!bar) return;
+    for (const lang of ["en", "vi"]) {
+      if (option.label[lang] !== bar.label[lang]) {
+        report(file, `${pointer}/options/${i}/label/${lang}`, `picture_bar_chart: lựa chọn ${i + 1} "${option.key}" ứng với cột ${i + 1} "${bar.key}", label.${lang} phải trùng label.${lang} của cột ("${bar.label[lang]}"); kiểm thứ tự #### bar và #### option`);
+      }
+    }
+    if (option.image !== undefined) {
+      report(file, `${pointer}/options/${i}/image`, `picture_bar_chart: lựa chọn không có hình (bé chạm vào cột); hình đặt ở cột chart.bars[${i}].image`);
+    }
+  });
+  if (!bars.some((bar) => bar.value > 0)) {
+    report(file, `${pointer}/chart/bars`, "picture_bar_chart: mọi cột đều bằng 0, app không vẽ được cột nào");
   }
 }
 

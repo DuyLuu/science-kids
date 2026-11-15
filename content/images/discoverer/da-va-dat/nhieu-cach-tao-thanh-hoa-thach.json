@@ -10,18 +10,38 @@
       "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
     },
     "w1.w1_pressed_leaf": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Acer_saccharinum_leaf.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Acer_saccharinum_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "composed": {
+        "file": "content/images/composed/da-va-dat/nhieu-cach-tao-thanh-hoa-thach.w1.w1_pressed_leaf.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Acer_saccharinum_leaf.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Acer_saccharinum_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "A pressed leaf",
+            "author": "Editor115138",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ]
+      },
       "title": "A pressed leaf",
-      "author": "Editor115138",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Lá phong ép phẳng trên nền giấy trắng, chụp từ trên xuống (không có sách: ảnh lá trong sách mở đều có chữ)."
+      "note": "Lá phong ép phẳng trên nền giấy trắng, chụp từ trên xuống (không có sách: ảnh lá trong sách mở đều có chữ). A2 14/11 (designer, SK-043): hình ghép một phần (đệm khung, không cắt vật chính). Nền giấy scan làm trắng, đặt giữa khung 5:2 nền trắng để thấy trọn chiếc lá."
     },
     "w1.w1_leaf_rock": {
-      "same_as": "tray_leaf_fossil",
-      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pecopteris_plumosa_-_Naturmuseum_Freiburg_-_DSC06751.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Pecopteris_plumosa_-_Naturmuseum_Freiburg_-_DSC06751.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pecopteris plumosa - Naturmuseum Freiburg - DSC06751",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3,
+        "width": 0.82,
+        "height": 0.4
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/hoa-thach-hinh-thanh-the-nao tray.tray_leaf_fossil, cắt riêng cho khung 5:2 (trước: same_as tray_leaf_fossil (da-va-dat/hoa-thach-hinh-thanh-the-nao))."
     },
     "w2": {
       "same_as": "w1_stone",

@@ -20,6 +20,7 @@ en: I can use tools to measure the weather.
 vi: Em biết dùng dụng cụ để đo thời tiết.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-038, ngày 11/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids` sau bài một (câu w1 trỏ về bài một).
 > Bài sửa `feel_tells_temperature` ở ý chính ba, ô "Cảm giác của mình" và câu q6 (gắn key, Na chưa đúng). Kỹ năng khoa học: đo bằng dụng cụ, đặt dụng cụ đúng chỗ (câu q5), đọc ba ống đo mưa giống nhau (câu q4).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na và câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: A thermometer measures how hot or cold the air is.
@@ -51,14 +52,16 @@ image.alt.en: White and grey clouds over the fields
 image.alt.vi: Mây trắng và mây xám trên cánh đồng
 hint.en: Remember the game in the last lesson.
 hint.vi: Em nhớ lại trò chơi ở bài trước nhé.
-explanation_correct.en: Yes! A puddle shows that rain fell.
-explanation_correct.vi: Đúng rồi! Vũng nước cho thấy trời vừa mưa.
-explanation_wrong.en: The answer is the puddle. Rain made it.
-explanation_wrong.vi: Đáp án là vũng nước. Nước mưa đọng lại thành vũng.
+explanation_correct.en: Rainwater collects in low spots and makes puddles.
+explanation_correct.vi: Nước mưa đọng ở chỗ trũng thành vũng.
+explanation_wrong.en: Rain made the puddle on the ground.
+explanation_wrong.vi: Nước mưa đọng lại thành vũng.
 > Ba ảnh là ba món đúng của ba nhóm khác nhau ở phần Chơi bài một (nắng, gió, mưa); bé phải nhớ món nào thuộc nhóm mưa. Đáp án ở chỗ thứ ba.
 
 #### option w1_shadow
 correct: false
+feedback.en: A shadow shows the sun is shining.
+feedback.vi: Bóng cây cho biết trời đang có nắng.
 label.en: a tree's shadow
 label.vi: bóng cây trên sân
 image.brief: Dùng lại hình `tray_shadow` ở bài `thoi-tiet-va-thien-tai/nang-mua-gio-may`. Từ khoá tìm ảnh (EN): tree shadow sunny ground
@@ -67,6 +70,8 @@ image.alt.vi: Bóng cây in trên mặt đất
 
 #### option w1_kite
 correct: false
+feedback.en: A kite up high shows the wind.
+feedback.vi: Diều bay cao cho biết trời có gió.
 label.en: a kite up high
 label.vi: cánh diều bay cao
 image.brief: Dùng lại hình `tray_kite` ở bài `thoi-tiet-va-thien-tai/nang-mua-gio-may`.
@@ -96,10 +101,12 @@ image.alt.vi: Giọt mưa trên cánh tay
 answer: true
 hint.en: Remember the To the brain card.
 hint.vi: Em nhớ lại ô Tin về não nhé.
-explanation_correct.en: Yes! Your skin feels hot, cold and rain.
-explanation_correct.vi: Đúng rồi! Da em cảm thấy nóng, lạnh và cả mưa rơi.
-explanation_wrong.en: This is true. Your skin tells your brain.
-explanation_wrong.vi: Câu này đúng. Da em gửi tin về não.
+explanation_correct.en: Your skin feels hot, cold and rain.
+explanation_correct.vi: Da em cảm thấy nóng, lạnh và cả mưa rơi.
+explanation_wrong.en: Skin sends messages to your brain along nerves.
+explanation_wrong.vi: Da gửi tin về não theo dây thần kinh.
+feedback_false.en: That is how you feel a mosquito land.
+feedback_false.vi: Nhờ vậy em thấy ngay khi muỗi đậu.
 > Câu giữ đúng chữ câu của ô `explore_to_brain` bài hai *Não bộ và giác quan* ("Nerves carry a message from your skin to your brain." · "Dây thần kinh mang tin từ da em về não."). Hình câu hỏi là giọt mưa trên cánh tay (lựa chọn đúng "mưa lạnh rơi trên da em" của câu q3 bài đó), không cho thấy dây thần kinh.
 > Giải thích khi đúng thêm "nóng, lạnh" để bắc cầu sang ô "Cảm giác của mình" của bài này.
 
@@ -144,7 +151,7 @@ label.en: Rain gauge
 label.vi: Ống đo mưa
 color: cham
 sentence.en: A rain gauge catches rain to show how much fell.
-sentence.vi: Ống đo mưa hứng nước mưa để cho biết mưa nhiều hay ít.
+sentence.vi: Ống đo mưa hứng nước để biết mưa nhiều hay ít.
 image.brief: [hình vẽ] Một ống đo mưa bằng nhựa trong, thành thẳng, miệng phễu ở trên, gắn trên cột gỗ thấp giữa một khoảng vườn trống, xa cây và mái nhà; trong ống có một ít nước mưa màu xanh nhạt; trên ống chỉ có vạch chia, không có chữ số, không có chữ; không có người. Kệ Chơi, câu w1 bài ba, câu w1 bài năm và từ rain gauge dùng lại hình này.
 image.alt.en: A rain gauge in an open garden
 image.alt.vi: Ống đo mưa giữa khoảng vườn trống
@@ -185,7 +192,7 @@ label.en: Our feelings
 label.vi: Cảm giác của mình
 color: vang_hoe
 sentence.en: Two people can feel the same air differently.
-sentence.vi: Hai người có thể thấy cùng một không khí nóng lạnh khác nhau.
+sentence.vi: Hai người có thể thấy cùng không khí nóng lạnh khác nhau.
 image.brief: [hình vẽ] Hai bạn nhỏ ngồi cạnh nhau trên ghế đá trong sân trường, vẽ từ phía sau: một bạn mặc áo khoác, một bạn mặc áo cộc tay đang phe phẩy quạt giấy; trời nhiều mây nhẹ; không vẽ nét mặt, không có chữ, không có logo trên áo, không có biển trường.
 image.alt.en: Two children, one in a jacket
 image.alt.vi: Hai bạn nhỏ, một bạn mặc áo khoác
@@ -348,14 +355,16 @@ image.alt.en: The bright sun in the sky
 image.alt.vi: Mặt Trời chói sáng trên trời
 hint.en: Which one changes when the air gets hotter?
 hint.vi: Thứ nào thay đổi khi không khí nóng lên?
-explanation_correct.en: Yes! A thermometer measures how hot the air is.
-explanation_correct.vi: Đúng rồi! Nhiệt kế đo không khí nóng tới mức nào.
-explanation_wrong.en: The answer is the thermometer. Its red line moves.
-explanation_wrong.vi: Đáp án là nhiệt kế. Vạch đỏ của nhiệt kế dâng lên, tụt xuống.
+explanation_correct.en: Its red line goes up as the air warms.
+explanation_correct.vi: Vạch đỏ dâng lên khi không khí ấm hơn.
+explanation_wrong.en: A thermometer measures how hot or cold the air is.
+explanation_wrong.vi: Nhiệt kế đo không khí nóng hay lạnh.
 > Câu nhớ lại ý chính một. Hai lựa chọn sai đều có sức hút vì nói về nóng, mát (phích nước nóng, quạt bàn), nhưng không đo được gì. Ba hình vẽ cùng nét; nhiệt kế là hình ô Học, hai hình kia là món của phần Chơi, nên không hình nào lạ hơn. Đáp án ở chỗ thứ hai.
 
 #### option q1_flask
 correct: false
+feedback.en: A flask keeps water hot, but measures nothing.
+feedback.vi: Phích giữ nước nóng, nhưng không đo được gì.
 label.en: hot water flask
 label.vi: phích nước nóng
 image.brief: Dùng lại hình `tray_flask`.
@@ -373,6 +382,8 @@ image.alt.vi: Nhiệt kế treo trong bóng râm
 
 #### option q1_fan
 correct: false
+feedback.en: A fan cools you, but measures nothing.
+feedback.vi: Quạt làm mát, nhưng không đo được gì.
 label.en: desk fan
 label.vi: quạt bàn
 image.brief: Dùng lại hình `tray_fan`.
@@ -395,10 +406,10 @@ answers: q2_wind
 hint.en: Remember the three tool cards.
 hint.vi: Em nhớ lại ba ô về dụng cụ đo nhé.
 > Rà chữ tester 11/11 (N5): câu cũ "A windsock shows which way the {1} blows." · "Ống gió cho biết {1} thổi về hướng nào." chỉ hợp văn phạm với thẻ "gió" (chữ "blows", "thổi"). Câu mới đọc xuôi với cả ba thẻ ("about the rain", "về mưa"), bé phải nhớ ống gió dùng để làm gì. (n1): gợi ý cũ "bốn ô về dụng cụ" đếm nhầm, ô thứ tư là "Cảm giác của mình".
-explanation_correct.en: Yes! The windsock points the way the wind goes.
-explanation_correct.vi: Đúng rồi! Ống gió chỉ theo hướng gió thổi.
-explanation_wrong.en: The answer is wind. The windsock fills with wind.
-explanation_wrong.vi: Đáp án là gió. Có gió thì ống gió phồng lên.
+explanation_correct.en: The windsock points the way the wind goes.
+explanation_correct.vi: Ống gió chỉ theo hướng gió thổi.
+explanation_wrong.en: A windsock fills up and points with the wind.
+explanation_wrong.vi: Có gió thì ống gió phồng lên, chỉ theo gió.
 > Câu nhớ lại ô thứ ba. Ba thẻ là ba ảnh ô Học bài một (gió, mưa, nắng), cùng ảnh chụp, ôn lại cả ba kiểu thời tiết. Thẻ đúng ở chỗ thứ nhất. Hình câu hỏi là ống gió (vật được hỏi), không phải ảnh của thẻ nào.
 
 #### bank q2_wind
@@ -411,6 +422,8 @@ image.alt.vi: Gió thổi trên cánh đồng lúa
 #### bank q2_rain
 label.en: rain
 label.vi: mưa
+feedback.en: Rain does not puff up a windsock.
+feedback.vi: Mưa không làm ống gió phồng lên.
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
@@ -418,6 +431,8 @@ image.alt.vi: Mưa to đang rơi
 #### bank q2_sun
 label.en: sun
 label.vi: nắng
+feedback.en: Sunshine does not make a windsock move.
+feedback.vi: Nắng không làm ống gió lay động.
 image.brief: Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky
 image.alt.en: The bright sun in the sky
 image.alt.vi: Mặt Trời chói sáng trên trời
@@ -437,14 +452,16 @@ image.alt.en: A blue sky
 image.alt.vi: Bầu trời xanh
 hint.en: Remember the Wind direction card.
 hint.vi: Em nhớ lại ô Hướng gió nhé.
-explanation_correct.en: Yes! The windsock and the flag point with the wind.
-explanation_correct.vi: Đúng rồi! Ống gió và lá cờ bay theo hướng gió.
-explanation_wrong.en: The answers are the windsock and the flag.
-explanation_wrong.vi: Đáp án là ống gió và lá cờ trên thuyền.
+explanation_correct.en: A boat flag helps fishers know where the wind blows.
+explanation_correct.vi: Lá cờ giúp người đi thuyền biết hướng gió.
+explanation_wrong.en: The windsock and the flag point with the wind.
+explanation_wrong.vi: Ống gió và lá cờ bay theo hướng gió.
 > DOK 2: lá cờ trên thuyền là tình huống mới (ô Học chỉ nói "lá cờ bay cũng cho biết hướng gió"). Hai lựa chọn sai có sức hút: kim đồng hồ cũng "chỉ" về một phía; cái ô gắn với thời tiết. Đáp án ở chỗ thứ hai và thứ tư.
 
 #### option q3_umbrella
 correct: false
+feedback.en: An umbrella keeps rain off, but it points nowhere.
+feedback.vi: Cái ô để che mưa, không chỉ hướng gió.
 label.en: umbrella
 label.vi: cái ô
 image.brief: Dùng lại hình `tray_umbrella`.
@@ -461,6 +478,8 @@ image.alt.vi: Ống gió căng phồng
 
 #### option q3_clock
 correct: false
+feedback.en: A clock tells the time, not the wind.
+feedback.vi: Đồng hồ chỉ giờ, không chỉ hướng gió.
 label.en: wall clock
 label.vi: đồng hồ treo tường
 image.brief: Dùng lại hình `tray_clock` ở bài `nao-bo-va-giac-quan/nao-dieu-khien-co-the`. Từ khoá tìm ảnh (EN): wall clock no numbers minimalist
@@ -483,22 +502,25 @@ id: 190582e5-c605-4739-9cf5-4b12b921ff74
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Each gauge holds rain from one day. Which day had the most rain?
-prompt.vi: Mỗi ống hứng nước mưa của một ngày. Ngày nào mưa nhiều nhất?
+prompt.en: Which gauge shows the day with the most rain?
+prompt.vi: Ống nào cho thấy ngày mưa nhiều nhất?
 image.brief: [hình vẽ] Ba ống đo mưa giống hệt nhau (cùng kiểu với hình ô Ống đo mưa) đứng thẳng hàng trên một bậc gỗ ngoài vườn; nước trong ống bên trái cao vừa, ống ở giữa thấp nhất, ống bên phải cao nhất; ba ống cùng màu, nước cùng màu xanh nhạt; trên ống chỉ có vạch chia, không có chữ số, không có chữ; không có người. Ba lựa chọn và từ measure dùng lại hình này.
 image.alt.en: Three rain gauges in a row
 image.alt.vi: Ba ống đo mưa xếp thành hàng
 hint.en: More water in the gauge means more rain.
 hint.vi: Nước trong ống càng cao, mưa càng nhiều.
-explanation_correct.en: Yes! The right gauge has the most water.
-explanation_correct.vi: Đúng rồi! Ống bên phải có nhiều nước nhất.
-explanation_wrong.en: The answer is the right gauge. Its water is highest.
-explanation_wrong.vi: Đáp án là ống bên phải. Nước trong ống đó cao nhất.
+explanation_correct.en: Three same gauges make the comparison fair.
+explanation_correct.vi: Ba ống giống nhau nên so sánh mới công bằng.
+explanation_wrong.en: The right gauge holds the most water, so most rain.
+explanation_wrong.vi: Ống bên phải có nhiều nước nhất, tức mưa nhiều nhất.
+> 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười ba từ EN, mười bốn chữ VI; nay một câu chín từ EN, tám chữ VI. Ý "mỗi ống hứng mưa của một ngày" nằm trong chữ "ngày" của câu hỏi và ở hình.
 > DOK 2: đọc kết quả đo. Ba ống giống hệt nhau, nên so sánh là công bằng (nối với ô Ống đo mưa: xem vào cùng một giờ, cùng một kiểu ống). Câu hỏi không kể tên ba ngày, để thứ tự ống không gài bẫy (rút kinh nghiệm SK-036 N3a).
 > Nhãn theo vị trí trong hình (trái, giữa, phải), không theo màu (SK-036 N3b). Đáp án ở chỗ thứ ba.
 
 #### option q4_left
 correct: false
+feedback.en: The water in the left gauge is only medium.
+feedback.vi: Nước trong ống bên trái chỉ cao vừa.
 label.en: left gauge
 label.vi: ống bên trái
 image.brief: [hình vẽ] Cùng hình câu q4; ống bên trái giữ màu nước xanh đậm, hai ống kia nhạt màu xám; không có chữ, không có mũi tên.
@@ -507,6 +529,8 @@ image.alt.vi: Ba ống đo mưa, đánh dấu ống bên trái
 
 #### option q4_middle
 correct: false
+feedback.en: The middle gauge has the least water.
+feedback.vi: Ống ở giữa có ít nước nhất.
 label.en: middle gauge
 label.vi: ống ở giữa
 image.brief: [hình vẽ] Cùng hình câu q4; ống ở giữa giữ màu nước xanh đậm, hai ống kia nhạt màu xám; không có chữ, không có mũi tên.
@@ -527,17 +551,19 @@ format: true_false
 version: 1
 dok: 2
 prompt.en: A rain gauge works well under a big tree.
-prompt.vi: Đặt ống đo mưa dưới gốc cây to là đo được đúng.
+prompt.vi: Đặt ống đo mưa dưới cây to vẫn đo đúng.
 image.brief: [hình vẽ] Mai đứng quay lưng về phía người xem, đang đặt một ống đo mưa xuống đất dưới tán một cây bàng to, lá dày che kín phía trên; chỉ thấy tóc, lưng và tay Mai, không vẽ nét mặt; không có chữ.
 image.alt.en: Mai puts a gauge under a big tree
 image.alt.vi: Mai đặt ống đo mưa dưới gốc cây to
 answer: false
 hint.en: Remember where to put a rain gauge.
 hint.vi: Em nhớ lại nên đặt ống đo mưa ở đâu nhé.
-explanation_correct.en: The leaves block some rain. Use an open place.
-explanation_correct.vi: Lá cây che bớt nước mưa. Em nên đặt ống ở chỗ trống.
-explanation_wrong.en: This is false. Leaves stop some rain falling in.
-explanation_wrong.vi: Câu này sai. Lá cây che bớt nước mưa rơi vào ống.
+explanation_correct.en: Put the gauge in an open place, away from trees.
+explanation_correct.vi: Em đặt ống ở chỗ trống, xa cây cối.
+explanation_wrong.en: Leaves stop some rain falling into the gauge.
+explanation_wrong.vi: Lá cây che bớt nước mưa rơi vào ống.
+feedback_true.en: Thick leaves catch rain before it reaches the gauge.
+feedback_true.vi: Lá dày hứng bớt mưa trước khi rơi vào ống.
 > DOK 2: vận dụng ví dụ "đặt ở chỗ trống" vào một chỗ đặt cụ thể. Câu khẳng định, đáp án Sai. Hình cho thấy tình huống (đặt dưới tán cây), không cho thấy trong ống có ít nước.
 > [CẦN KIỂM] Tán cây che bớt mưa và nhỏ giọt không đều, nên đo sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai).
@@ -555,8 +581,8 @@ image.alt.en: Children playing at sunset
 image.alt.vi: Các bạn nhỏ chơi đùa lúc hoàng hôn
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: I just ran, so I feel hot. The air got hotter!
-statement.vi: Mình vừa chạy xong nên thấy nóng. Vậy là không khí nóng lên rồi!
+statement.en: I feel hot after running, so the air got hotter.
+statement.vi: Chạy xong mình thấy nóng, vậy không khí nóng lên rồi.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -565,10 +591,12 @@ labels.false.vi: Na chưa đúng
 answer: false
 hint.en: Remember the Our feelings card.
 hint.vi: Em nhớ lại ô Cảm giác của mình nhé.
-explanation_correct.en: Running made Na hot. Check the air with a thermometer.
-explanation_correct.vi: Chạy làm Na thấy nóng. Muốn biết không khí thì xem nhiệt kế.
-explanation_wrong.en: Na is not right. Her body got hot, not the air.
-explanation_wrong.vi: Na chưa đúng. Cơ thể Na nóng lên, không phải không khí.
+explanation_correct.en: A thermometer shows the air, not how Na feels.
+explanation_correct.vi: Nhiệt kế cho biết không khí, không phải cảm giác của Na.
+explanation_wrong.en: Na's body got hot from running, not the air.
+explanation_wrong.vi: Cơ thể Na nóng lên vì chạy, không phải không khí.
+feedback_true.en: Running warms Na's body, while the air stays the same.
+feedback_true.vi: Chạy làm người Na nóng, còn không khí vẫn vậy.
 > Lời Na, hình và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: bé đánh giá một kết luận rút ra từ cảm giác. Ô "Cảm giác của mình" dạy cảm giác có thể khác nhau (áo khoác, quạt, tắm mát); bé phải tự áp dụng sang việc chạy, và nhận ra cần nhiệt kế mới biết không khí. Nối với *Hô hấp* bài ba (chạy nhảy làm cơ thể vận động mạnh); hình là ảnh chạy chơi của bài đó.
 > [CẦN KIỂM] Sau khi chạy, cơ thể nóng lên và đổ mồ hôi; nhiệt độ không khí không đổi vì mình chạy.

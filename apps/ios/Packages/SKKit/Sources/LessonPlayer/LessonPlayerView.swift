@@ -58,8 +58,6 @@ public struct LessonPlayerView: View {
             .onDisappear { speech?.stop() }
     }
 
-    private var mode: LanguageMode { session.languageMode }
-
     @ViewBuilder private var stepView: some View {
         if session.isExplorer {
             explorerStepView
@@ -102,79 +100,35 @@ public struct LessonPlayerView: View {
         }
     }
 
+    /// Discoverer after A2 (SK-043, Duy 14/11): the picture-book screens of Explorer with the
+    /// Discoverer look (touch 56, radius 12), XP kept; headers without words.
     @ViewBuilder private var discovererStepView: some View {
         switch session.step {
         case .warmup(let index):
             if let item = session.item(at: index, in: .warmup) {
-                QuestionStep(session: session, phase: .warmup, index: index, item: item,
-                             isLast: index == session.warmupItems.count - 1) {
-                    VStack(alignment: .leading, spacing: LessonMetrics.gap) {
-                        lessonHeader
-                        StepSquares(current: session.phaseIndex)
-                        WarmupTagRow(item: item, index: index, count: session.warmupItems.count)
-                    }
-                }
-                .id(item.id)
+                DiscovererQuestionStep(session: session, phase: .warmup, index: index, item: item,
+                                       isLast: index == session.warmupItems.count - 1, onClose: exit)
+                    .id(item.id)
             }
         case .learn:
-            LearnStep(session: session) {
-                VStack(alignment: .leading, spacing: LessonMetrics.gap) {
-                    lessonHeader
-                    StepSquares(current: session.phaseIndex)
-                }
-            }
+            ExplorerLearnStep(session: session, onBack: exit)
         case .play:
             if let tray = session.tray {
                 PlayStep(session: session, tray: tray) {
-                    VStack(alignment: .leading, spacing: LessonMetrics.gap) {
-                        LessonHeader(
-                            backIcon: .arrowBack, backLabel: Text("lesson.play.back"),
-                            title: mode.name(tray.prompt), caption: mode.secondName(tray.prompt),
-                            session: session, onBack: session.backToLearn,
-                            // Explorer has no XP (SK-026 D1).
-                            trailing: session.isExplorer ? nil : AnyView(xpChip)
-                        )
-                        StepSquares(current: session.phaseIndex)
-                    }
+                    ExplorerStepHeader(session: session, backLabel: Text("lesson.play.back"), onBack: session.backToLearn)
                 }
             }
         case .quiz(let index):
             if let item = session.item(at: index, in: .quiz) {
-                QuestionStep(session: session, phase: .quiz, index: index, item: item,
-                             isLast: index == session.quizItems.count - 1) {
-                    QuizHeader(session: session, index: index,
-                               currentDone: session.status(of: item, in: .quiz).isDone,
-                               onClose: exit)
-                }
-                .id(item.id)
+                DiscovererQuestionStep(session: session, phase: .quiz, index: index, item: item,
+                                       isLast: index == session.quizItems.count - 1, onClose: exit)
+                    .id(item.id)
             }
         case .reward:
             if let summary = session.summary {
                 RewardStep(session: session, summary: summary, heading: heading, onClose: onExit, onShowCards: onShowCards)
             }
         }
-    }
-
-    private var lessonHeader: some View {
-        LessonHeader(
-            backIcon: .arrowBack, backLabel: Text("lesson.back"),
-            title: mode.name(session.lesson.title),
-            caption: String(localized: "lesson.caption \(mode.name(heading.topicTitle)) \(heading.lessonNumber) \(heading.lessonCount)"),
-            session: session, onBack: exit
-        )
-    }
-
-    /// "+10 XP" for finishing the game (`xp_game_complete`), as the canvas.
-    private var xpChip: some View {
-        HStack(spacing: Tokens.Space.s4) {
-            PaperIconView(.star, size: PaperMetrics.headerChipIcon, color: Tokens.Role.stateCurrent)
-            Text("lesson.xp_plus \(session.rules.xp.gameComplete)")
-                .typography(Tokens.Typography.label, fixedBox: true)
-        }
-        .padding(.horizontal, Tokens.Space.s8)
-        .frame(minHeight: PaperMetrics.chipHeight + Tokens.Space.s10)
-        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.tag)
-        .accessibilityElement(children: .combine)
     }
 
     private func exit() {

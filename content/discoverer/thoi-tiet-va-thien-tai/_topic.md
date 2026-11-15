@@ -37,7 +37,7 @@ statement.vi: Cây tạo ra gió bằng cách vẫy cành.
 correction.en: Wind is moving air. It pushes the trees. Wind blows over the sea, too.
 correction.vi: Gió là không khí đang chuyển động. Gió đẩy cây lay động. Ngoài biển không có cây vẫn có gió.
 > [CẦN KIỂM] Biên tập nhớ Piaget có ghi nhận trẻ nhỏ cho rằng cây cối vẫy cành làm ra gió (sách "The Child's Conception of the World"), chưa tra lại nguồn.
-note: Trẻ thấy cây lay động cùng lúc với gió thổi nên đảo ngược nguyên nhân. Sửa ở bài một: ý chính hai, ô Học "Trời có gió" (ví dụ "gió đẩy lá cây và cánh diều", "gió đẩy mây trôi đi"), câu q5 (diều cần gió), câu q6 gắn key này (lời Na: "Hàng cây đang vẫy cành. Chính cây tạo ra gió đấy."; Na chưa đúng). Bài ba hỏi lại ở Khởi động w3 dạng Đúng/Sai (đáp án Sai), không gắn key. Thêm 11/11/2026, nháp AI.
+note: Trẻ thấy cây lay động cùng lúc với gió thổi nên đảo ngược nguyên nhân. Sửa ở bài một: ý chính hai, ô Học "Trời có gió" (ví dụ "gió đẩy lá cây và cánh diều", "gió đẩy mây trôi đi"), câu q5 (diều cần gió), câu q6 gắn key này (lời Na: "Hàng cây vẫy cành, nên chính cây tạo ra gió."; Na chưa đúng). Bài ba hỏi lại ở Khởi động w3 dạng Đúng/Sai (đáp án Sai), không gắn key. Thêm 11/11/2026, nháp AI.
 
 ### clouds_are_smoke
 id: 9d895ee1-de31-48b6-800b-90ec3b89b419
@@ -55,7 +55,7 @@ statement.vi: Mình thấy nóng tới đâu thì không khí nóng tới đó.
 correction.en: How we feel can change, for example after running. A thermometer measures the air.
 correction.vi: Cảm giác nóng lạnh của mình có thể thay đổi, ví dụ sau khi chạy. Nhiệt kế mới đo được không khí.
 > [CẦN KIỂM] Cảm giác nóng lạnh phụ thuộc vào cơ thể (vừa vận động, vừa tắm, mặc dày hay mỏng) và gió, độ ẩm; nhiệt kế đặt trong bóng râm, nơi thoáng mới đo đúng nhiệt độ không khí.
-note: Trẻ đánh giá thời tiết bằng cảm giác của chính mình. Sửa ở bài hai: ý chính ba, ô Học "Cảm giác của mình" (hai bạn cùng ngồi một chỗ, một bạn thấy lạnh, một bạn thấy nóng), câu q6 gắn key này (lời Na: "Mình vừa chạy xong nên thấy nóng. Vậy là không khí nóng lên rồi!"; Na chưa đúng). Nối với *Não bộ và giác quan* (da gửi tin về não, câu w2) và *Hô hấp* bài ba (chạy nhảy, hình câu q6). Kinh nghiệm phổ thông, chưa có nguồn nghiên cứu. Thêm 11/11/2026, nháp AI.
+note: Trẻ đánh giá thời tiết bằng cảm giác của chính mình. Sửa ở bài hai: ý chính ba, ô Học "Cảm giác của mình" (hai bạn cùng ngồi một chỗ, một bạn thấy lạnh, một bạn thấy nóng), câu q6 gắn key này (lời Na: "Chạy xong mình thấy nóng, vậy không khí nóng lên rồi."; Na chưa đúng). Nối với *Não bộ và giác quan* (da gửi tin về não, câu w2) và *Hô hấp* bài ba (chạy nhảy, hình câu q6). Kinh nghiệm phổ thông, chưa có nguồn nghiên cứu. Thêm 11/11/2026, nháp AI.
 
 ### calm_means_storm_over
 id: 65ac75ad-286b-466b-ac82-3373683ea176
@@ -64,7 +64,7 @@ statement.vi: Gió lặng là bão đã qua.
 correction.en: The calm middle of a storm can pass over you. Then strong wind comes back.
 correction.vi: Vùng lặng gió ở giữa cơn bão có thể đi qua chỗ mình. Sau đó gió mạnh lại thổi tới.
 > [CẦN KIỂM] Mắt bão: vùng giữa cơn bão lặng gió, trời có khi hửng; khi mắt bão đi qua, gió mạnh thổi trở lại, thường từ hướng ngược lại. Biên tập nhớ cơ quan phòng chống thiên tai ở Việt Nam hay nhắc "không chủ quan khi gió lặng, chờ thông báo bão đã qua". Chuyên môn xác nhận cách nói cho trẻ.
-note: Trẻ (và cả người lớn) thấy gió lặng thì ra ngoài xem, dọn dẹp. Sửa ở bài ba: ô Học "Mắt bão" (lặng một lúc, rồi gió mạnh trở lại), câu q6 gắn key này (lời Na: "Gió bỗng lặng hẳn. Mình vẫn ở yên trong nhà."; Na nói đúng). Ô Học không có ví dụ "ở yên trong nhà", để câu q6 là việc vận dụng, không phải nhắc lại. Bài năm dạy lại ở ô "Ở trong nhà". Thêm 11/11/2026, nháp AI.
+note: Trẻ (và cả người lớn) thấy gió lặng thì ra ngoài xem, dọn dẹp. Sửa ở bài ba: ô Học "Mắt bão" (lặng một lúc, rồi gió mạnh trở lại), câu q6 gắn key này (lời Na: "Gió bỗng lặng hẳn, nhưng mình vẫn ở yên trong nhà."; Na nói đúng). Ô Học không có ví dụ "ở yên trong nhà", để câu q6 là việc vận dụng, không phải nhắc lại. Bài năm dạy lại ở ô "Ở trong nhà". Thêm 11/11/2026, nháp AI.
 
 ### flood_only_where_it_rains
 id: 7ef9b3fb-ca1a-47e4-9faf-1ab45df44f50
@@ -73,7 +73,7 @@ statement.vi: Sông chỉ dâng lũ khi trời mưa ngay tại chỗ mình.
 correction.en: Rain in the mountains can flow down rivers. It can flood places far away.
 correction.vi: Mưa trên núi có thể theo sông chảy về. Lũ có thể đến ở những nơi rất xa.
 > [CẦN KIỂM] Lũ ở hạ lưu có thể đến khi trời đang nắng, do mưa lớn ở thượng nguồn, do hồ chứa xả lũ, hoặc do triều cường. Chữ cho trẻ chỉ nói mưa ở nơi xa, không nói hồ thuỷ điện xả lũ.
-note: Misconception chính của chủ đề. Trẻ gắn lũ với mưa ngay trước mắt. Bài một đề xuất câu "Em nghĩ sao?" về ý này (Ghi chú cho dev bài một). Sửa ở bài bốn: ý chính ba, ô Học "Mưa ở nơi xa", câu q4 (chỗ nào ngập trước), câu q6 gắn key này (lời Na: "Ở đây trời nắng. Nhưng sông vẫn có thể dâng lũ."; Na nói đúng). Bài năm hỏi lại ở Khởi động w2 dạng Đúng/Sai (câu giống `statement`, đáp án Sai), không gắn key. Thêm 11/11/2026, nháp AI.
+note: Misconception chính của chủ đề. Trẻ gắn lũ với mưa ngay trước mắt. Bài một đề xuất câu "Em nghĩ sao?" về ý này (Ghi chú cho dev bài một). Sửa ở bài bốn: ý chính ba, ô Học "Mưa ở nơi xa", câu q4 (chỗ nào ngập trước), câu q6 gắn key này (lời Na: "Ở đây trời nắng, nhưng sông vẫn có thể dâng lũ."; Na nói đúng). Bài năm hỏi lại ở Khởi động w2 dạng Đúng/Sai (câu giống `statement`, đáp án Sai), không gắn key. Thêm 11/11/2026, nháp AI.
 
 ### drought_is_one_hot_day
 id: d1eddb98-63ec-4b0f-9701-98c90cdb5ad6
@@ -91,7 +91,7 @@ statement.vi: Nước lũ nông thì chơi trong đó cũng an toàn.
 correction.en: Flood water can be fast and dirty. It can hide holes and wires. Stay out of it.
 correction.vi: Nước lũ có thể chảy xiết và rất bẩn, có thể che giấu hố sâu và dây điện. Em tránh xa nước lũ.
 > [CẦN KIỂM] Biên tập nhớ khuyến cáo của cơ quan khí tượng Mỹ: nước chảy sâu khoảng mười lăm xăng-ti-mét đã có thể làm người lớn ngã. Chữ cho trẻ không đưa số. Chuyên môn xác nhận lời khuyên cho trẻ Việt Nam (không lội, không bơi, không chơi trong nước lũ).
-note: Sau mưa to, trẻ hay lội nước ngập trên đường, trong ngõ. Sửa ở bài năm: ý chính ba, ô Học "Nước lũ" (chảy xiết, bẩn, che giấu hố sâu và vật sắc), món bẫy "Lội nước lũ chơi" ở phần Chơi, câu q6 gắn key này (lời Na: "Nước lũ chỉ ngập tới mắt cá chân thôi. Vậy mình chơi trong đó được."; Na chưa đúng). Ô Học không nói "kể cả khi nước nông", để câu q6 là việc vận dụng. Thêm 11/11/2026, nháp AI.
+note: Sau mưa to, trẻ hay lội nước ngập trên đường, trong ngõ. Sửa ở bài năm: ý chính ba, ô Học "Nước lũ" (chảy xiết, bẩn, che giấu hố sâu và vật sắc), món bẫy "Lội nước lũ chơi" ở phần Chơi, câu q6 gắn key này (lời Na: "Nước lũ chỉ tới mắt cá chân, nên mình chơi được."; Na chưa đúng). Ô Học không nói "kể cả khi nước nông", để câu q6 là việc vận dụng. Thêm 11/11/2026, nháp AI.
 
 ## Ghi chú
 
@@ -263,7 +263,7 @@ Tám câu Đúng, tám câu Sai. Câu sáu là Sai, Sai, Đúng, Đúng, Sai. M�
 
 **Khi soạn năm bài** (áp cho cả năm bài; rút kinh nghiệm SK-031, SK-032, SK-033, SK-036, SK-037)
 
-- **Đúng/Sai:** theo bảng trên. Câu đáp án Sai thì giải thích khi đúng không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai" hoặc "Na is not right" · "Na chưa đúng". Câu đáp án Đúng thì giải thích khi sai nói "This is true" · "Câu này đúng" hoặc "Na is right" · "Na nói đúng". Câu Đúng/Sai viết dạng khẳng định, tránh "not", "cannot" (tránh phủ định hai lần khi đáp án là Sai).
+- **Đúng/Sai:** theo bảng trên. Câu đáp án Sai thì giải thích khi đúng không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai" hoặc "Na is not right" · "Na chưa đúng". Câu đáp án Đúng thì giải thích khi sai nói "This is true" · "Câu này đúng" hoặc "Na is right" · "Na nói đúng". Câu Đúng/Sai viết dạng khẳng định, tránh "not", "cannot" (tránh phủ định hai lần khi đáp án là Sai). **Phần "This is …" / "Na is …" hết hiệu lực 14/11** (SK-044, ngân sách A2): màn đã chỉ đáp án, nên hai lời giải thích bỏ "Yes!", "This is …", "Na is …", "The answer is …", mỗi lời còn một câu nêu lý do; phía bé chọn nhầm có `feedback_true` hoặc `feedback_false`.
 - **Gợi ý** chỉ chỗ cần nhớ (ô Học nào, trò Chơi nào, bài nào) hoặc cách nghĩ. Không hỏi một câu mà câu trả lời chính là đáp án, không đọc lại các lựa chọn, không nhắc đúng chữ của nhãn đáp án, kể cả chữ VI (ví dụ bài ba q1 không nói "ô Mùa mưa bão" vì đáp án là "mùa mưa").
 - **Lựa chọn:** mục Quy ước hình, mục bảy. Lựa chọn sai có sức hút, nối với misconception hay liên tưởng có thật: quạt bàn "cũng có gió", vòi hoa sen "cũng là nước rơi" (bài một); phích nước nóng, quạt bàn "cũng nói về nóng lạnh", đồng hồ "có kim chỉ hướng" (bài hai); mưa, mây "cũng do bão mang tới" (bài ba q2), "quanh năm" (bài ba q1, ý "bão tới lúc nào cũng được"), nhiệt kế ở nhà (bài ba q3); hồ đầy nước "trông như ngập" (bài bốn); thả diều trước bão vì có gió, tiếng gió và tiếng ếch "báo mưa" (bài năm).
 - **Độ dài nhãn** (rà chữ tester 11/11, N3, n2): trong một câu, nhãn đúng không dài hay ngắn hơn hẳn nhãn sai, kiểm cả bản VI (chữ trẻ Việt nghe), không chỉ bản EN.
@@ -287,11 +287,12 @@ Tám câu Đúng, tám câu Sai. Câu sáu là Sai, Sai, Đúng, Đúng, Sai. M�
 **Câu "Em nghĩ sao?"** (đề xuất schema v1.1 `think_first`, như các chủ đề trước): bài một hỏi "It is sunny here. Can the river flood?" · "Ở đây trời nắng. Sông có thể dâng lũ không?" (Ghi chú cho dev bài một). Bài bốn dạy (câu q6), bài năm hỏi lại ở w2 dạng `true_false`, đáp án Sai.
 
 **Câu sáu, lời Na** (mỗi câu EN tối đa mười từ)
-- Bài một: "The trees are waving. They are making the wind." · "Hàng cây đang vẫy cành. Chính cây tạo ra gió đấy." (Na chưa đúng). Hình: hàng cây nghiêng trong gió.
-- Bài hai: "I just ran, so I feel hot. The air got hotter!" · "Mình vừa chạy xong nên thấy nóng. Vậy là không khí nóng lên rồi!" (Na chưa đúng). Hình: các bạn nhỏ chơi lúc hoàng hôn (ảnh của *Hô hấp*).
-- Bài ba: "The wind suddenly stopped. I will still stay inside." · "Gió bỗng lặng hẳn. Mình vẫn ở yên trong nhà." (Na nói đúng). Hình: nhìn qua cửa kính, sân lặng gió.
-- Bài bốn: "It is sunny here. But the river can still flood." · "Ở đây trời nắng. Nhưng sông vẫn có thể dâng lũ." (Na nói đúng). Hình: dòng sông nước nâu ngày nắng, không thấy núi.
-- Bài năm: "The flood water is only ankle-deep. So I can play in it." · "Nước lũ chỉ ngập tới mắt cá chân thôi. Vậy mình chơi trong đó được." (Na chưa đúng). Hình: con ngõ ngập nước nông, không người.
+- 14/11 (ngân sách A2): lời Na một câu, tối đa mười từ EN và mười hai chữ VI; năm lời dưới đây đã rút, giữ ý và đáp án.
+- Bài một: "The trees are waving, so they make the wind." · "Hàng cây vẫy cành, nên chính cây tạo ra gió." (Na chưa đúng). Hình: hàng cây nghiêng trong gió.
+- Bài hai: "I feel hot after running, so the air got hotter." · "Chạy xong mình thấy nóng, vậy không khí nóng lên rồi." (Na chưa đúng). Hình: các bạn nhỏ chơi lúc hoàng hôn (ảnh của *Hô hấp*).
+- Bài ba: "The wind suddenly stopped, but I will stay inside." · "Gió bỗng lặng hẳn, nhưng mình vẫn ở yên trong nhà." (Na nói đúng). Hình: nhìn qua cửa kính, sân lặng gió.
+- Bài bốn: "It is sunny here, but the river can still flood." · "Ở đây trời nắng, nhưng sông vẫn có thể dâng lũ." (Na nói đúng). Hình: dòng sông nước nâu ngày nắng, không thấy núi.
+- Bài năm: "The flood water is only ankle-deep, so I can play." · "Nước lũ chỉ tới mắt cá chân, nên mình chơi được." (Na chưa đúng). Hình: con ngõ ngập nước nông, không người.
 
 **Thẻ thưởng:** bộ thẻ mới `set: weather`. Cần ios-dev thêm khoá `collectible.set.weather` (đề xuất "Weather cards" · "Thẻ thời tiết"); chưa có thì app hiện tên chung "Thẻ". Mỗi bài một thẻ, số liệu cần kiểm:
 - bài một: "Big white cloud" · "Đám mây trắng khổng lồ", một đám mây lớn có thể nặng bằng một trăm con voi [CẦN KIỂM];

@@ -89,11 +89,12 @@
       "license": "CC BY 3.0",
       "license_url": "https://creativecommons.org/licenses/by/3.0",
       "crop": {
-        "left": 0,
+        "left": 0.25,
         "top": 0.18,
-        "width": 1,
+        "width": 0.6,
         "height": 0.6
-      }
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 1:1 (crop cũ {\"left\": 0, \"top\": 0.18, \"width\": 1, \"height\": 0.6})."
     },
     "q1": {
       "source": "Wikimedia Commons",
@@ -113,11 +114,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.42,
-        "top": 0.12,
-        "width": 0.58,
-        "height": 0.85
-      }
+        "left": 0.38,
+        "top": 0.32,
+        "width": 0.62,
+        "height": 0.165
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.42, \"top\": 0.12, \"width\": 0.58, \"height\": 0.85})."
     },
     "q1.q1_melted_rock": {
       "same_as": "q4.q4_slope"
@@ -150,7 +152,13 @@
       "author": "kestingoforth",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
-      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 4 = CC BY 2.0."
+      "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 4 = CC BY 2.0. A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1.0,
+        "height": 0.4
+      }
     },
     "q3.q3_sun": {
       "source": "Wikimedia Commons",

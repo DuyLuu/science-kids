@@ -21,6 +21,7 @@ vi: Em giải thích được vì sao khi chạy nhảy, em thở nhanh hơn.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-036, ngày 10/11/2026. Mọi dòng `id:` để trống; phiên chính chạy `ids` sau bài một và bài hai.
 > Bài vận dụng (`apply`): dùng bài một (cơ thể cần ô-xi) và bài hai (không khí vào phổi) để giải thích một điều bé tự thấy (chạy nhảy thì thở nhanh). Kỹ năng khoa học: đếm hơi thở trong một phút, so sánh trước và sau khi nhảy, đọc biểu đồ cột không chữ (syllabus-progression mục 9).
 > Bài sửa `only_lungs_need_oxygen` ở ý chính ba, ô Cơ bắp, câu q3 và câu q6 (gắn key, Na nói đúng).
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na và câu ô Học một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: When you run and jump, you breathe faster.
@@ -52,14 +53,16 @@ image.alt.en: Wind blowing over a rice field
 image.alt.vi: Gió thổi trên cánh đồng lúa
 hint.en: Remember the last lesson, The journey of air.
 hint.vi: Em nhớ lại bài trước, Đường đi của không khí.
-explanation_correct.en: Yes! Your nose warms the air and cleans it.
-explanation_correct.vi: Đúng rồi! Mũi làm ấm và làm sạch không khí.
-explanation_wrong.en: The answer is the nose. Tiny hairs catch dust.
-explanation_wrong.vi: Đáp án là mũi. Lông mũi giữ bụi lại.
+explanation_correct.en: Tiny hairs inside your nose catch dust.
+explanation_correct.vi: Lông mũi nhỏ li ti giữ bụi lại.
+explanation_wrong.en: Your nose warms the air and cleans it.
+explanation_wrong.vi: Mũi làm ấm và làm sạch không khí.
 > Câu giữ đúng ý câu của ô Mũi bài hai. Gợi ý chỉ tên bài, không nói chặng nào. Ba lựa chọn là ba bản tô màu của sơ đồ đường thở bài hai, cùng nét. Đáp án ở chỗ thứ hai.
 
 #### option w1_lungs
 correct: false
+feedback.en: Air is already clean when it reaches the lungs.
+feedback.vi: Không khí tới phổi thì đã được làm sạch rồi.
 label.en: lungs
 label.vi: phổi
 image.brief: Dùng lại hình `explore_lungs` ở bài `ho-hap/duong-di-cua-khong-khi`.
@@ -76,6 +79,8 @@ image.alt.vi: Hình vẽ cơ thể, tô màu phần mũi
 
 #### option w1_windpipe
 correct: false
+feedback.en: The windpipe is a tube that carries air down.
+feedback.vi: Khí quản là ống đưa không khí xuống phổi.
 label.en: windpipe
 label.vi: khí quản
 image.brief: Dùng lại hình `explore_windpipe` ở bài `ho-hap/duong-di-cua-khong-khi`.
@@ -97,10 +102,12 @@ image.alt.vi: Con trâu
 answer: false
 hint.en: Remember the Animals card in the first lesson.
 hint.vi: Em nhớ lại ô Con vật ở bài đầu tiên nhé.
-explanation_correct.en: Fish in water breathe too. They use gills.
-explanation_correct.vi: Cá dưới nước cũng thở. Cá thở bằng mang.
-explanation_wrong.en: This is false. Fish breathe in water with gills.
-explanation_wrong.vi: Câu này sai. Cá thở dưới nước bằng mang.
+explanation_correct.en: Shrimp and fish in water breathe with gills too.
+explanation_correct.vi: Tôm, cá dưới nước cũng thở bằng mang.
+explanation_wrong.en: Fish breathe in water with their gills.
+explanation_wrong.vi: Cá thở dưới nước bằng mang.
+feedback_true.en: Animals in water and in the sky breathe too.
+feedback_true.vi: Con vật dưới nước, trên trời cũng thở.
 > Câu khẳng định có chữ "only" (không phải câu phủ định). Hình câu hỏi là con trâu (con vật trên cạn), không dùng ảnh cá: ảnh cá là bằng chứng của đáp án Sai.
 > Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai).
 > Rà chữ tester 10/11 (N5): gợi ý cũ "Remember the fish in the first lesson." nêu thẳng phản ví dụ. Gợi ý mới chỉ tên ô, theo mẫu câu w1 bài hai.
@@ -147,7 +154,7 @@ examples.4.vi: tim em cũng đập nhanh hơn
 label.en: Rest
 label.vi: Nghỉ ngơi
 color: cham
-sentence.en: Sit and rest. Your breathing slows down again.
+sentence.en: When you sit and rest, your breathing slows down.
 sentence.vi: Ngồi nghỉ một lúc, hơi thở em chậm lại như cũ.
 image.brief: [hình vẽ] Một chiếc ghế đá hoặc ghế gỗ dưới bóng cây lớn trong sân trường hay công viên, trên ghế có một chai nước không nhãn; không có người, không có chữ. Từ khoá tìm ảnh (EN): bench under shade tree park
 image.alt.en: A bench in the shade of a tree
@@ -166,8 +173,8 @@ examples.4.vi: thấy khó thở thì báo ngay cho người lớn
 label.en: Muscles
 label.vi: Cơ bắp
 color: vang_hoe
-sentence.en: Working muscles need more oxygen. Blood takes it there.
-sentence.vi: Cơ bắp khi vận động cần nhiều ô-xi hơn. Máu mang ô-xi tới đó.
+sentence.en: Working muscles need more oxygen, and blood brings it.
+sentence.vi: Cơ bắp vận động cần thêm ô-xi, máu mang ô-xi tới.
 image.brief: [hình vẽ] Đôi chân một người đang chạy trên đường chạy, vẽ cận từ đầu gối xuống, thấy rõ bắp chân; không thấy mặt, giày không có logo, không có chữ, không có số trên đường chạy. Từ khoá tìm ảnh (EN): runner legs running track close up
 image.alt.en: Legs running on a track
 image.alt.vi: Đôi chân đang chạy trên đường chạy
@@ -354,10 +361,10 @@ image.alt.en: An empty schoolyard
 image.alt.vi: Sân trường vắng
 hint.en: Remember the Faster card.
 hint.vi: Em nhớ lại ô Nhanh hơn nhé.
-explanation_correct.en: Yes! Skipping makes your muscles work hard.
-explanation_correct.vi: Đúng rồi! Nhảy dây làm cơ bắp hoạt động mạnh.
-explanation_wrong.en: The answer is skipping. You move a lot.
-explanation_wrong.vi: Đáp án là lúc nhảy dây. Lúc đó em vận động nhiều.
+explanation_correct.en: Skipping works your legs hard, so they need more oxygen.
+explanation_correct.vi: Nhảy dây làm chân vận động mạnh, cần thêm ô-xi.
+explanation_wrong.en: You move a lot when you skip.
+explanation_wrong.vi: Lúc nhảy dây, em vận động rất nhiều.
 > Câu nhớ lại ý chính một. Ba lựa chọn là ba ảnh đồ vật (dây nhảy, gối chăn, quyển truyện), cùng kiểu với kệ Chơi. Đáp án ở chỗ thứ nhất.
 
 #### option q1_skipping
@@ -370,6 +377,8 @@ image.alt.vi: Sợi dây nhảy
 
 #### option q1_sleeping
 correct: false
+feedback.en: When you sleep, your body is calm and slow.
+feedback.vi: Khi ngủ, cơ thể em nghỉ ngơi, thở chậm.
 label.en: sleeping
 label.vi: lúc ngủ
 image.brief: [hình vẽ] Một chiếc gối và chiếc chăn mỏng gấp gọn trên chiếu, vẽ từ trên xuống; không có người, không có chữ, không có hình in trên gối. Từ khoá tìm ảnh (EN): pillow blanket sleeping mat top view
@@ -378,6 +387,8 @@ image.alt.vi: Chiếc gối và chiếc chăn
 
 #### option q1_reading
 correct: false
+feedback.en: Reading keeps you still, so your muscles rest.
+feedback.vi: Đọc truyện em ngồi yên, cơ bắp được nghỉ.
 label.en: reading
 label.vi: lúc đọc truyện
 image.brief: Dùng lại hình `tray_book`. Từ khoá tìm ảnh (EN): open book face down wooden table
@@ -395,14 +406,14 @@ image.brief: Dùng lại hình `q1` ở bài `khung-long/trai-dat-rat-lau-ve-tru
 image.alt.en: An hourglass
 image.alt.vi: Chiếc đồng hồ cát
 sentence.en: Before you skip, count your {1} for one minute.
-sentence.vi: Trước khi nhảy dây, em đếm số {1} trong một phút.
+sentence.vi: Trước khi nhảy, em đếm số {1} trong một phút.
 answers: q2_breaths
 hint.en: Remember the hourglass in the lesson.
 hint.vi: Em nhớ lại chiếc đồng hồ cát ở phần Học nhé.
-explanation_correct.en: Yes! Count each breath in for one minute.
-explanation_correct.vi: Đúng rồi! Em đếm mỗi lần hít vào, trong một phút.
-explanation_wrong.en: The answer is breaths. Count each breath in.
-explanation_wrong.vi: Đáp án là lần thở. Em đếm mỗi lần hít vào.
+explanation_correct.en: Then skip and count again to compare.
+explanation_correct.vi: Rồi em nhảy dây và đếm lại để so sánh.
+explanation_wrong.en: Count each breath in for one minute.
+explanation_wrong.vi: Em đếm mỗi lần hít vào, trong một phút.
 > Câu nhớ lại ô Thử đếm. Hai thẻ sai cũng là thứ đếm được khi chạy nhảy (bước chân, lần nhảy), nên có sức hút. Gợi ý chỉ hình của ô (đồng hồ cát), không nhắc chữ "lần thở".
 > Câu VI "đếm số {1}" đọc được với cả ba thẻ: "đếm số lần nhảy", "đếm số bước chân", "đếm số lần thở".
 > Rà chữ tester 10/11 (N4): câu cũ "To check your breathing, count your {1}…" · "Muốn biết em thở nhanh hay chậm…" có sẵn gốc từ của đáp án ("breathing" · "thở"). Câu mới chín từ EN, theo đề xuất của tester, vẫn đúng ô Thử đếm (ví dụ một và hai). "Lần nhảy" vẫn hấp dẫn bé đọc vội (câu có chữ "nhảy dây"), nhưng bé hiểu câu thì loại được vì chưa nhảy.
@@ -411,6 +422,8 @@ explanation_wrong.vi: Đáp án là lần thở. Em đếm mỗi lần hít vào
 #### bank q2_jumps
 label.en: jumps
 label.vi: lần nhảy
+feedback.en: This count happens before any skipping starts.
+feedback.vi: Lúc này em chưa bắt đầu nhảy dây.
 image.brief: Dùng lại hình `tray_rope`. Từ khoá tìm ảnh (EN): skipping rope wooden handles ground
 image.alt.en: A skipping rope
 image.alt.vi: Sợi dây nhảy
@@ -418,6 +431,8 @@ image.alt.vi: Sợi dây nhảy
 #### bank q2_steps
 label.en: steps
 label.vi: bước chân
+feedback.en: Steps count walking, not what your chest does.
+feedback.vi: Bước chân là để đếm khi đi bộ.
 image.brief: [hình vẽ] Một hàng dấu chân trần in trên cát ướt, vẽ từ trên xuống; không phải dấu chân con vật; không có người, không có chữ. Từ khoá tìm ảnh (EN): bare footprints wet sand
 image.alt.en: Footprints in the sand
 image.alt.vi: Dấu chân trên cát
@@ -443,15 +458,17 @@ image.alt.en: An empty schoolyard
 image.alt.vi: Sân trường vắng
 hint.en: Which ones make your leg muscles work hard?
 hint.vi: Việc nào làm cơ bắp ở chân em hoạt động mạnh?
-explanation_correct.en: Yes! Climbing stairs and riding a bike work your legs.
-explanation_correct.vi: Đúng rồi! Leo cầu thang và đạp xe làm chân em hoạt động mạnh.
-explanation_wrong.en: The answers are climbing stairs and riding a bike.
-explanation_wrong.vi: Đáp án là leo cầu thang và đạp xe.
+explanation_correct.en: Stairs and bikes make your legs work hard.
+explanation_correct.vi: Leo cầu thang và đạp xe làm chân hoạt động mạnh.
+explanation_wrong.en: Climbing stairs and cycling move your legs a lot.
+explanation_wrong.vi: Leo cầu thang và đạp xe làm chân vận động nhiều.
 > DOK 2: chuyển từ trò chơi ở phần Chơi sang việc hằng ngày, bé phải nghĩ cơ bắp nào hoạt động. Cờ vua có sức hút vì là "môn thể thao" (có thi đấu) nhưng ngồi yên; nằm võng là việc nghỉ quen ở Việt Nam.
 > Gợi ý nêu cách nghĩ (cơ bắp ở chân), nối với ô Cơ bắp, không gọi tên lựa chọn.
 
 #### option q3_hammock
 correct: false
+feedback.en: Lying in a hammock lets your whole body rest.
+feedback.vi: Nằm võng là lúc cả người em nghỉ ngơi.
 label.en: lying in a hammock
 label.vi: nằm võng
 image.brief: [hình vẽ] Một cái võng mắc giữa hai thân cây trong vườn, võng trống, vẽ ngang; không có người, không có chữ. Câu w1 bài bốn dùng lại ảnh này. Từ khoá tìm ảnh (EN): empty hammock between trees garden
@@ -476,6 +493,8 @@ image.alt.vi: Chiếc xe đạp
 
 #### option q3_chess
 correct: false
+feedback.en: Chess works your brain, but your body sits still.
+feedback.vi: Chơi cờ dùng đầu óc, còn người ngồi yên.
 label.en: playing chess
 label.vi: chơi cờ vua
 image.brief: [hình vẽ] Một bàn cờ vua đang chơi dở trên mặt bàn gỗ, quân cờ đứng rải rác, vẽ chéo; không có tay người, không có chữ, không có đồng hồ thi đấu. Câu w1 bài bốn dùng lại ảnh này. Từ khoá tìm ảnh (EN): chess board game in progress wooden table
@@ -487,17 +506,18 @@ id: 2ba2a531-9602-41b7-9893-7b9b6d4a9550
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai counted her breaths after three different things. Which bar shows skipping?
-prompt.vi: Mai đếm số lần thở sau ba việc khác nhau. Cột nào là lúc nhảy dây?
+prompt.en: Which bar shows Mai's breaths after skipping?
+prompt.vi: Cột nào là số lần thở sau khi nhảy dây?
 image.brief: [hình vẽ] Biểu đồ cột đơn giản trên nền giấy kem: ba cột cùng một màu xanh chàm đứng trên một trục ngang; cột bên trái cao nhất, cột ở giữa thấp nhất, cột bên phải cao vừa; không có chữ, không có số, không có hình dưới chân cột, không có lưới. Thứ tự cột không theo độ cao, để bé không đoán theo vị trí.
 image.alt.en: A bar chart with three bars
 image.alt.vi: Biểu đồ có ba cột
 hint.en: Does skipping make you breathe a little or a lot?
 hint.vi: Nhảy dây làm em thở ít hay thở nhiều?
-explanation_correct.en: Yes! Skipping has the tallest bar. The others were reading and walking.
-explanation_correct.vi: Đúng rồi! Nhảy dây có cột cao nhất. Hai việc kia là đọc truyện và đi bộ.
-explanation_wrong.en: The answer is the left bar. It is the tallest.
-explanation_wrong.vi: Đáp án là cột bên trái. Cột bên trái cao nhất.
+explanation_correct.en: The other bars were for reading and walking.
+explanation_correct.vi: Hai cột kia là lúc đọc truyện và đi bộ.
+explanation_wrong.en: Skipping gives the most breaths, so its bar is tallest.
+explanation_wrong.vi: Nhảy dây thở nhiều nhất, nên cột cao nhất.
+> 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười ba từ EN, mười bảy chữ VI; nay một câu bảy từ EN, mười chữ VI. Ý "Mai đếm sau ba việc khác nhau" chỉ còn ở lời giải thích khi đúng (hai cột kia là đọc truyện, đi bộ).
 > DOK 2: đọc biểu đồ cột dạng tranh (syllabus-progression mục 9) và suy ra từ ý chính một: nhảy dây làm thở nhiều lần nhất, tức cột cao nhất. Biểu đồ không ghi việc nào ở cột nào, nên bé phải suy luận, không đọc nhãn.
 > Không dùng format `picture_bar_chart` vì app 0.1.0 chưa hiện (`format_not_rendered`); biểu đồ là hình vẽ trong câu `single_choice`.
 > [CẦN KIỂM] Tỉ lệ cột theo số lần thở trong một phút của trẻ bảy đến chín tuổi sau khi nhảy dây, đi bộ, đọc truyện (biên tập ước khoảng bốn mươi, hai mươi lăm, hai mươi; cột trái, cột phải, cột giữa). Hình không ghi số.
@@ -516,6 +536,8 @@ image.alt.vi: Biểu đồ, đánh dấu cột bên trái
 
 #### option q4_middle
 correct: false
+feedback.en: The middle bar is the shortest, so few breaths.
+feedback.vi: Cột ở giữa thấp nhất, tức là thở ít nhất.
 label.en: middle bar
 label.vi: cột ở giữa
 image.brief: [hình vẽ] Cùng biểu đồ của câu hỏi, cột ở giữa giữ màu xanh chàm đậm, cột bên trái và cột bên phải nhạt đi thành xám nhạt; không có chữ, không có mũi tên.
@@ -524,6 +546,8 @@ image.alt.vi: Biểu đồ, đánh dấu cột ở giữa
 
 #### option q4_right
 correct: false
+feedback.en: The right bar is only medium tall.
+feedback.vi: Cột bên phải chỉ cao vừa vừa.
 label.en: right bar
 label.vi: cột bên phải
 image.brief: [hình vẽ] Cùng biểu đồ của câu hỏi, cột bên phải giữ màu xanh chàm đậm, cột bên trái và cột ở giữa nhạt đi thành xám nhạt; không có chữ, không có mũi tên.
@@ -545,8 +569,10 @@ hint.en: Remember the Rest card.
 hint.vi: Em nhớ lại ô Nghỉ ngơi nhé.
 explanation_correct.en: Rest for a few minutes, and breathing slows down.
 explanation_correct.vi: Em nghỉ vài phút, hơi thở sẽ chậm lại.
-explanation_wrong.en: This is false. Breathing slows down when you rest.
-explanation_wrong.vi: Câu này sai. Khi em nghỉ, hơi thở chậm lại.
+explanation_wrong.en: Breathing slows down when you rest.
+explanation_wrong.vi: Khi em nghỉ, hơi thở chậm lại.
+feedback_true.en: Once you stop running, your legs need less oxygen.
+feedback_true.vi: Thôi chạy, chân em cần ít ô-xi hơn.
 > DOK 2: áp dụng ý chính hai vào tình huống sau một cuộc chạy thi. Giải thích khi đúng không mở đầu bằng "Yes!" (đáp án Sai).
 
 ### q6
@@ -559,8 +585,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: My legs need more oxygen when I run. So I breathe faster.
-statement.vi: Khi mình chạy, chân mình cần nhiều ô-xi hơn. Vì vậy mình thở nhanh hơn.
+statement.en: Running legs need more oxygen, so I breathe faster.
+statement.vi: Khi chạy, chân cần thêm ô-xi, nên mình thở nhanh hơn.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -572,10 +598,13 @@ image.alt.en: Children playing at sunset
 image.alt.vi: Các bạn nhỏ chơi đùa lúc hoàng hôn
 hint.en: Remember the Muscles card.
 hint.vi: Em nhớ lại ô Cơ bắp nhé.
-explanation_correct.en: Yes! Blood takes more oxygen to your working legs.
-explanation_correct.vi: Đúng rồi! Máu mang thêm ô-xi tới đôi chân đang chạy.
-explanation_wrong.en: Na is right. Your lungs take in oxygen for your muscles.
-explanation_wrong.vi: Na nói đúng. Phổi lấy ô-xi vào cho cơ bắp dùng.
+explanation_correct.en: Blood takes more oxygen to your working legs.
+explanation_correct.vi: Máu mang thêm ô-xi tới đôi chân đang chạy.
+explanation_wrong.en: Your lungs take in oxygen for your muscles.
+explanation_wrong.vi: Phổi lấy ô-xi vào cho cơ bắp dùng.
+feedback_false.en: Oxygen goes from your lungs to your legs.
+feedback_false.vi: Ô-xi đi từ phổi tới tận đôi chân.
+> 14/11 (ngân sách A2): lời Na cũ hai câu, mười hai từ EN, mười sáu chữ VI; nay một câu chín từ EN, mười hai chữ VI, giữ hai vế nhân quả.
 > Lời Na, hình và đáp án Đúng đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai).
 > DOK 3: bé đánh giá một lời giải thích nhân quả (chân cần ô-xi, nên thở nhanh). Bé nghĩ ô-xi chỉ dùng ở phổi (`only_lungs_need_oxygen`), hoặc nghĩ thở nhanh "vì mệt" hay "vì nóng", sẽ chọn "Na chưa đúng". Bé phải nối ý chính ba với ô Cơ bắp.
 > Rà chữ tester 10/11 (N2, phương án A): ô Cơ bắp không còn ví dụ "so you breathe faster" · "nên em thở nhanh hơn". Ô chỉ dạy hai vế riêng (cơ bắp cần thêm ô-xi, máu mang ô-xi tới chân, phổi lấy ô-xi vào); bé phải tự nối: chân cần thêm ô-xi, ô-xi vào qua phổi, nên phải thở nhanh hơn. Lời Na, đáp án Đúng và bảng Đúng/Sai giữ nguyên. Không đổi sang lời Na "thở nhanh vì nóng" (tester: nóng cũng làm thở nhanh hơn một chút, đáp án không sạch).

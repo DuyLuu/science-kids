@@ -44,10 +44,11 @@
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
         "left": 0.14,
-        "top": 0.12,
+        "top": 0.48,
         "width": 0.58,
-        "height": 0.75
-      }
+        "height": 0.333
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.14, \"top\": 0.12, \"width\": 0.58, \"height\": 0.75})."
     },
     "w2": {
       "same_as": "vocab.surface",
@@ -105,9 +106,21 @@
       "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khoảng 230 tới 66 triệu năm trước) có ảnh khủng long cổ dài tray_longneck, đoạn giấy lõm nhạt 29 % (66 triệu năm trước tới nay); sát cuối trục: voi ma mút (dưới trục) và cánh diều (trên trục). Designer (agent) 10/11 chiều: thay cánh diều cắt từ tray_kite (diều hình chim có cánh nhọn, ở cỡ ô Học trông như thằn lằn bay) bằng ảnh diều thoi bảy màu có đuôi ruy băng trên trời mây (WordPress Photo Directory, CC0, đã mở trang gốc 10/11). Không người, không chữ. Hình vuông 1024."
     },
     "learn.explore.explore_how_long": {
-      "same_as": "w1.w1_clock",
-      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat",
-      "note": "Khác ý brief. Alt đề xuất: EN «A wall clock» · VI «Chiếc đồng hồ treo tường». Hình gợi ví dụ «mỗi giây em đếm một số»; brief gốc là hai cuốn lịch xé."
+      "source": "Openverse/WordPress Photo Directory",
+      "source_url": "https://wordpress.org/photos/photo/75561fd429/",
+      "file_url": "https://pd.w.org/2022/02/75561fd429aa8da18.08808244-2048x2048.jpg",
+      "title": "Wall clock",
+      "author": "Michael Burridge",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "ea3ca817-7586-475d-9de5-a8c9c1b68978",
+      "crop": {
+        "left": 0.08,
+        "top": 0.07,
+        "width": 0.5,
+        "height": 0.5
+      },
+      "note": "Khác ý brief. Alt đề xuất: EN «A wall clock» · VI «Chiếc đồng hồ treo tường». Hình gợi ví dụ «mỗi giây em đếm một số»; brief gốc là hai cuốn lịch xé. A2 14/11 (designer, SK-043): chép mục ảnh w1.w1_clock bài dat-va-nuoc-tren-trai-dat với crop vuông cũ (bên đó đổi sang 5:2)."
     },
     "tray.tray_fern": {
       "source": "Wikimedia Commons",
@@ -163,11 +176,12 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "crop": {
-        "left": 0.08,
+        "left": 0.265,
         "top": 0.22,
-        "width": 0.84,
+        "width": 0.47,
         "height": 0.7
-      }
+      },
+      "note": "A2 14/11 (designer, SK-043): crop đổi cho khung 1:1 (crop cũ {\"left\": 0.08, \"top\": 0.22, \"width\": 0.84, \"height\": 0.7})."
     },
     "tray.tray_dragonfly": {
       "source": "Wikimedia Commons",
@@ -180,7 +194,20 @@
       "note": "Khác ý brief. Alt đề xuất: EN «A dragonfly» · VI «Con chuồn chuồn». Cùng alt cho q3.q3_dragonfly và bài 2 q1.q1_insects."
     },
     "tray.tray_buffalo": {
-      "same_as": "w1.w1_buffalo"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.12,
+        "width": 0.58,
+        "height": 0.75
+      },
+      "note": "A2 14/11 (designer, SK-043): giữ crop cũ của w1.w1_buffalo cho kệ Chơi, câu q3 (4:5) và các bài dùng lại; w1, q1 (5:2) dùng bản cắt mới."
     },
     "tray.tray_triceratops": {
       "same_as": "w1.w1_triceratops"
@@ -252,7 +279,8 @@
       "same_as": "tray.tray_dragonfly"
     },
     "q3.q3_buffalo": {
-      "same_as": "w1.w1_buffalo"
+      "same_as": "tray.tray_buffalo",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang tray.tray_buffalo (crop cũ)."
     },
     "q3.q3_cycad": {
       "same_as": "tray.tray_cycad"

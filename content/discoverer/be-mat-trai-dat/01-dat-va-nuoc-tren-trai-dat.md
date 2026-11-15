@@ -50,15 +50,18 @@ image.alt.vi: Trái Đất nhìn từ vũ trụ
 > Hình câu hỏi là Trái Đất (vật được so sánh), không phải quả bóng hay lựa chọn nào khác.
 hint.en: Look from the side. Which one is still round?
 hint.vi: Em nhìn từ bên cạnh. Vật nào vẫn tròn?
-explanation_correct.en: Yes! Earth is round like a ball.
-explanation_correct.vi: Đúng rồi! Trái Đất tròn như quả bóng.
-explanation_wrong.en: The answer is the ball. A clock is flat. Earth is round like a ball.
-explanation_wrong.vi: Đáp án là quả bóng. Đồng hồ thì dẹt. Trái Đất có dạng hình cầu, tròn như quả bóng.
+explanation_correct.en: From every side, a ball and Earth look round.
+explanation_correct.vi: Nhìn phía nào, quả bóng và Trái Đất cũng tròn.
+explanation_wrong.en: A ball is round from every side, like Earth.
+explanation_wrong.vi: Quả bóng tròn đều mọi phía, giống Trái Đất.
+> SK-044 (14/11, A2): giải thích một câu, bỏ "Yes!"/"Đáp án là…" vì màn đã chỉ đáp án. Lý do đồng hồ dẹt chuyển sang `feedback` của đồng hồ.
 > Trái Đất hơi dẹt ở hai cực. Với trẻ bảy đến chín tuổi, nói "tròn như quả bóng" là đủ.
 > Rà chữ 9/11 (tester N2): câu cũ "Which one has the same shape as Earth?" kèm gợi ý "ảnh Trái Đất chụp từ vũ trụ" có hai đáp án hợp lý, vì ảnh chụp thấy Trái Đất là một hình tròn, mà đồng hồ cũng tròn. Câu hỏi nay nói "tròn đều mọi phía"; gợi ý bảo bé nhìn từ bên cạnh (đồng hồ thành dẹt, cái hộp thành vuông); giải thích khi sai nói vì sao đồng hồ chưa đúng.
 
 #### option w1_clock
 correct: false
+feedback.en: A clock is round, but it is flat.
+feedback.vi: Đồng hồ tròn, nhưng mỏng và dẹt.
 label.en: clock
 label.vi: cái đồng hồ
 image.brief: [ảnh] Một cái đồng hồ treo tường tròn, mỏng, chụp hơi nghiêng để thấy rõ đồng hồ dẹt; nền trơn hoặc tường trơn; mặt đồng hồ có số thì được, không có tên hãng, logo. Từ khoá tìm ảnh (EN): wall clock round side view
@@ -76,6 +79,8 @@ image.alt.vi: Quả bóng tròn
 
 #### option w1_box
 correct: false
+feedback.en: A box has flat sides and sharp corners.
+feedback.vi: Cái hộp có mặt phẳng và góc nhọn.
 label.en: box
 label.vi: cái hộp
 image.brief: [ảnh] Một cái hộp giấy các-tông màu nâu gần như hình lập phương, đã đóng nắp, chụp chéo thấy ba mặt; nền trơn; không có chữ in, logo hay nhãn gửi hàng. Từ khoá tìm ảnh (EN): cardboard box closed brown
@@ -99,10 +104,12 @@ image.alt.vi: Biển xanh rộng
 answer: false
 hint.en: Salt for cooking can come from sea water.
 hint.vi: Muối ăn có thể làm từ nước biển.
-explanation_correct.en: Sea water is salty, not sweet.
-explanation_correct.vi: Nước biển có vị mặn, không ngọt.
-explanation_wrong.en: This is false. Sea water is salty.
-explanation_wrong.vi: Câu này sai. Nước biển có vị mặn.
+explanation_correct.en: Sea water is salty, so we cannot drink it.
+explanation_correct.vi: Nước biển mặn nên mình không uống được.
+explanation_wrong.en: Sea water is salty, and we make salt from it.
+explanation_wrong.vi: Nước biển mặn, người ta làm muối từ nước biển.
+feedback_true.en: Sea water has lots of salt in it.
+feedback_true.vi: Trong nước biển có rất nhiều muối.
 > Rà chữ 9/11 (tester N1): câu đổi sang đáp án Sai, giữ ý kiểm "nước biển mặn", để các câu Đúng/Sai của chủ đề không luôn có đáp án Đúng. Giải thích khi đúng không mở đầu bằng "Yes!" hay "Đúng rồi!", vì bé vừa chọn Sai (như câu w1 của bài một *Ăn uống lành mạnh*).
 
 ## Học
@@ -192,8 +199,9 @@ prompt.en: Find the places with water
 prompt.vi: Tìm những nơi có nước
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: Water covers most of Earth. Find a sea, a river and a lake.
-messages.start.vi: Nước phủ phần lớn Trái Đất. Em tìm biển, sông và hồ nhé.
+messages.start.en: Find a sea, a river and a lake. Water covers most of Earth.
+messages.start.vi: Em tìm biển, sông và hồ nhé. Nước phủ phần lớn Trái Đất.
+> SK-044 (14/11, A2): đảo thứ tự hai câu. Bong bóng chỉ in câu đầu, nên câu đầu phải là việc bé cần làm; câu ôn ý ba thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Rà chữ 9/11: "tap one", "chạm vào để bỏ ra" như nhãn của app (ios-dev 9/11). Thứ đã chọn hiện bằng chấm màu và tên, không có hình.
@@ -316,13 +324,15 @@ image.alt.vi: Dòng sông chảy ra biển
 > Hình câu hỏi là cảnh có cả đất (cánh đồng) và nước (sông, biển), không giống hình lựa chọn nào.
 hint.en: Land is dry. Where can you walk?
 hint.vi: Đất thì khô ráo. Em đi bộ được ở đâu?
-explanation_correct.en: Yes! A mountain is land.
-explanation_correct.vi: Đúng rồi! Ngọn núi thuộc phần đất.
-explanation_wrong.en: The answer is the mountain. You can walk on it.
-explanation_wrong.vi: Đáp án là ngọn núi. Em có thể đi bộ trên núi.
+explanation_correct.en: Mountains, hills and fields are all dry land.
+explanation_correct.vi: Núi, đồi và cánh đồng đều là phần đất khô.
+explanation_wrong.en: You can walk up a mountain, because it is land.
+explanation_wrong.vi: Em đi bộ lên núi được, vì núi là đất.
 
 #### option q1_sea
 correct: false
+feedback.en: The sea is water as far as you can see.
+feedback.vi: Biển toàn là nước, nhìn mãi không thấy bờ.
 label.en: sea
 label.vi: biển
 image.brief: Dùng lại hình `tray_sea`. Từ khoá tìm ảnh (EN): sea horizon fishing boat
@@ -331,6 +341,8 @@ image.alt.vi: Biển xanh rộng
 
 #### option q1_lake
 correct: false
+feedback.en: A lake is water, with land around it.
+feedback.vi: Hồ là nước, có bờ đất bao quanh.
 label.en: lake
 label.vi: hồ
 image.brief: Dùng lại hình `tray_lake`. Từ khoá tìm ảnh (EN): lake calm trees shore
@@ -360,15 +372,17 @@ sentence.vi: Quả địa cầu là {1} thu nhỏ của Trái Đất.
 answers: q2_model
 hint.en: A toy plane is like a real one, but small.
 hint.vi: Máy bay đồ chơi giống máy bay thật, nhưng nhỏ hơn.
-explanation_correct.en: Yes! A globe is a small model of Earth.
-explanation_correct.vi: Đúng rồi! Quả địa cầu là mô hình thu nhỏ của Trái Đất.
-explanation_wrong.en: The answer is model. A globe is a model of Earth.
-explanation_wrong.vi: Đáp án là mô hình. Quả địa cầu là mô hình của Trái Đất.
+explanation_correct.en: A model looks like the real thing, only smaller.
+explanation_correct.vi: Mô hình giống vật thật, chỉ nhỏ hơn.
+explanation_wrong.en: A globe shows Earth's shape, only much smaller.
+explanation_wrong.vi: Quả địa cầu có hình Trái Đất, chỉ nhỏ hơn nhiều.
 > Gợi ý nối với câu ví dụ của từ `model` (máy bay đồ chơi), không nói thẳng đáp án.
 
 #### bank q2_piece
 label.en: piece
 label.vi: mảnh
+feedback.en: A piece is only a part, not the whole thing.
+feedback.vi: Mảnh chỉ là một phần, không phải cả vật.
 image.brief: [ảnh] Một mảnh ghép xếp hình nằm cạnh bộ xếp hình đang ghép dở, chụp từ trên xuống, nền bàn trơn; mảnh ghép một màu hoặc in hình phong cảnh, không có chữ, không có nhân vật hoạt hình hay tranh có bản quyền. Từ khoá tìm ảnh (EN): puzzle piece jigsaw table
 image.alt.en: A puzzle piece
 image.alt.vi: Một mảnh ghép
@@ -383,6 +397,8 @@ image.alt.vi: Mô hình máy bay nhỏ trong tay
 #### bank q2_cloud
 label.en: cloud
 label.vi: đám mây
+feedback.en: A cloud floats in the sky above Earth.
+feedback.vi: Mây bay lơ lửng trên bầu trời.
 image.brief: [ảnh] Một đám mây trắng lớn trên nền trời xanh, chụp ngửa lên; không thấy đất, cây hay nhà; không có chữ. Từ khoá tìm ảnh (EN): cloud white blue sky
 image.alt.en: A white cloud in the sky
 image.alt.vi: Đám mây trắng trên trời
@@ -403,10 +419,10 @@ instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Land is dry. Where can you walk?
 hint.vi: Đất thì khô ráo. Em đi bộ được ở đâu?
 > Rà chữ 9/11: gợi ý cũ "Em có thể dựng nhà ở đâu?" dẫn sang nhà nổi trên sông, bè trên hồ; nay dùng lại gợi ý của câu q1.
-explanation_correct.en: Yes! An island and a forest are both land.
-explanation_correct.vi: Đúng rồi! Hòn đảo và khu rừng đều thuộc phần đất.
-explanation_wrong.en: The answers are the island and the forest. An island has water all around it.
-explanation_wrong.vi: Đáp án là hòn đảo và khu rừng. Hòn đảo có nước bao quanh, nhưng đảo vẫn là đất.
+explanation_correct.en: You can walk in a forest and on an island.
+explanation_correct.vi: Em đi bộ được trong rừng và trên đảo.
+explanation_wrong.en: An island has water around it, but it is land.
+explanation_wrong.vi: Đảo có nước bao quanh, nhưng đảo vẫn là đất.
 > Câu phân loại có hai chỗ chuyển: hòn đảo (ở phần Chơi là bẫy, nay là đáp án đúng) và cái ao (nơi mới ở phần Chơi).
 
 #### option q3_island
@@ -419,6 +435,8 @@ image.alt.vi: Hòn đảo nhỏ giữa biển
 
 #### option q3_river
 correct: false
+feedback.en: A river is water flowing between two banks.
+feedback.vi: Sông là nước chảy giữa hai bờ.
 label.en: river
 label.vi: dòng sông
 image.brief: Dùng lại hình `tray_river`. Từ khoá tìm ảnh (EN): river boat countryside Vietnam
@@ -435,6 +453,8 @@ image.alt.vi: Khu rừng xanh
 
 #### option q3_pond
 correct: false
+feedback.en: A pond holds water, with lotus leaves on top.
+feedback.vi: Ao chứa nước, trên mặt có lá sen.
 label.en: pond
 label.vi: cái ao
 image.brief: Dùng lại hình `tray_pond`. Từ khoá tìm ảnh (EN): pond village lotus leaves
@@ -454,14 +474,16 @@ image.alt.vi: Cốc đầy nước
 > Hình câu hỏi gợi ý "chứa nước" mà không nghiêng về nơi nào. Không dùng ảnh Trái Đất hay quả địa cầu ở câu này, vì ảnh đó cho thấy ngay biển rộng nhất.
 hint.en: Think about size. Which one is the biggest?
 hint.vi: Em nghĩ về độ rộng nhé. Nơi nào rộng nhất?
-explanation_correct.en: Yes! The sea is huge. Most of Earth's water is in the sea.
-explanation_correct.vi: Đúng rồi! Biển rất rộng. Phần lớn nước trên Trái Đất nằm ở biển.
+explanation_correct.en: Most of Earth's water is in the sea.
+explanation_correct.vi: Phần lớn nước trên Trái Đất nằm ở biển.
 > [CẦN KIỂM] "Phần lớn nước trên Trái Đất nằm ở biển": biên tập nhớ khoảng chín mươi bảy phần trăm nước trên Trái Đất nằm ở đại dương. Bài một gọi chung biển và đại dương là "biển"; bài hai mới tách đại dương.
-explanation_wrong.en: The answer is the sea. It is much bigger than a lake.
-explanation_wrong.vi: Đáp án là biển. Biển rộng hơn hồ rất nhiều.
+explanation_wrong.en: The sea is much bigger than a lake.
+explanation_wrong.vi: Biển rộng hơn hồ rất nhiều.
 
 #### option q4_lake
 correct: false
+feedback.en: A lake is big, but you can see across it.
+feedback.vi: Hồ rộng, nhưng em vẫn nhìn thấy bờ bên kia.
 label.en: lake
 label.vi: hồ
 image.brief: Dùng lại hình `tray_lake`. Từ khoá tìm ảnh (EN): lake calm trees shore
@@ -478,6 +500,8 @@ image.alt.vi: Biển xanh rộng
 
 #### option q4_pond
 correct: false
+feedback.en: You can walk all the way around a pond.
+feedback.vi: Em đi bộ quanh ao một vòng được.
 label.en: pond
 label.vi: ao
 image.brief: Dùng lại hình `tray_pond`. Từ khoá tìm ảnh (EN): pond village lotus leaves
@@ -489,17 +513,20 @@ id: c7c3960b-549f-4a43-a7cf-d66bf0df4fa5
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai stops a spinning globe with her finger. Will she touch water or land more often?
-prompt.vi: Mai lấy ngón tay chặn quả địa cầu đang quay. Ngón tay Mai sẽ chạm vào nước hay đất nhiều hơn?
+instruction.en: Mai stops a spinning globe with her finger.
+instruction.vi: Mai lấy ngón tay chặn quả địa cầu đang quay.
+prompt.en: What will her finger touch more often?
+prompt.vi: Ngón tay Mai chạm vào gì nhiều hơn?
+> SK-044 (14/11, A2): câu hỏi cũ mười sáu từ, hai câu. Câu ngữ cảnh chuyển sang `instruction` (A2: chỉ đọc, không in; app đọc `instruction` trước `prompt`), câu hỏi in còn bảy từ, tám tiếng. Ảnh tay cầm quả địa cầu giữ ngữ cảnh trên màn.
 image.brief: [ảnh] Chụp cận bàn tay cầm một quả địa cầu nhỏ, thấy châu Mỹ hoặc châu Phi, không thấy vùng Đông Nam Á, không thấy mặt người. Từ khoá tìm ảnh (EN): hand holding globe
 image.alt.en: A hand holds a small globe
 image.alt.vi: Bàn tay cầm quả địa cầu nhỏ
 hint.en: Remember: what covers most of Earth's surface?
 hint.vi: Nhớ lại nhé: thứ gì phủ phần lớn bề mặt Trái Đất?
-explanation_correct.en: Yes! Most of the globe is blue water.
-explanation_correct.vi: Đúng rồi! Phần lớn quả địa cầu là nước màu xanh dương.
-explanation_wrong.en: The answer is water. Water covers most of Earth.
-explanation_wrong.vi: Đáp án là nước. Nước phủ phần lớn Trái Đất.
+explanation_correct.en: Blue water covers most of the globe and of Earth.
+explanation_correct.vi: Nước xanh dương phủ phần lớn quả địa cầu và Trái Đất.
+explanation_wrong.en: Water covers most of Earth, and most of a globe.
+explanation_wrong.vi: Nước phủ phần lớn Trái Đất, và cả quả địa cầu.
 > Câu vận dụng ý ba vào một trò chơi quen ở lớp học. "More often" ngầm hiểu Mai chơi nhiều lần. Nếu tester thấy chưa rõ thì thêm câu "She plays many times.", rồi rút chữ ở chỗ khác để màn vẫn trong ba mươi từ.
 > Giải thích nói "covers" (phủ bề mặt), không nói "Earth is mostly water": tính cả khối thì Trái Đất chủ yếu là đá.
 > SK-033 (9/11): lựa chọn trước chỉ có chữ, nay có hình. Nước và đất dùng lại hai ảnh phong cảnh đã có (biển, ô Phần đất); "cả hai như nhau" là ảnh bờ biển nửa đất nửa nước.
@@ -514,6 +541,8 @@ image.alt.vi: Biển xanh rộng
 
 #### option q5_land
 correct: false
+feedback.en: Land is only the green and brown patches.
+feedback.vi: Đất chỉ là những mảng xanh lá và nâu.
 label.en: land
 label.vi: đất
 image.brief: Dùng lại hình `explore_land`. Từ khoá tìm ảnh (EN): hills tea plantation Vietnam village
@@ -522,6 +551,8 @@ image.alt.vi: Đồi, núi và làng quê
 
 #### option q5_same
 correct: false
+feedback.en: Land and water on Earth are not the same size.
+feedback.vi: Đất và nước trên Trái Đất không rộng bằng nhau.
 label.en: both the same
 label.vi: cả hai như nhau
 image.brief: [ảnh] Bờ biển chụp thẳng từ trên cao, đường bờ chạy chéo qua giữa khung hình: một nửa là đất (cát hoặc cây xanh), một nửa là nước biển, hai phần gần bằng nhau; không có người, nhà hay chữ. Từ khoá tìm ảnh (EN): coastline aerial beach sea land
@@ -543,8 +574,9 @@ image.alt.vi: Đồi, núi và làng quê
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
 > Rà chữ 9/11 (tester N1): nhãn cũ "Challenge: spot the mistake · Thử thách: bắt lỗi sai" báo trước là Na sai. Chủ đề này có hai câu sáu Na nói đúng (bài ba, bài năm), nên cả năm câu sáu dùng chung nhãn trung tính này.
-statement.en: We live on land. So Earth is mostly land.
-statement.vi: Mình sống trên mặt đất. Vậy bề mặt Trái Đất phần lớn là đất.
+statement.en: We live on land, so Earth is mostly land.
+statement.vi: Mình sống trên đất, nên Trái Đất phần lớn là đất.
+> SK-044 (14/11, A2): lời Na gộp thành một câu, mười hai tiếng.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -553,10 +585,12 @@ labels.false.vi: Na chưa đúng
 answer: false
 hint.en: Think of a globe. Which colour do you see most?
 hint.vi: Em nghĩ tới quả địa cầu. Em thấy màu nào nhiều nhất?
-explanation_correct.en: Water covers most of Earth. We live on the land part.
-explanation_correct.vi: Nước phủ phần lớn Trái Đất. Mình chỉ sống trên phần đất.
-explanation_wrong.en: Na is not right. Earth has more water than land.
-explanation_wrong.vi: Na chưa đúng. Trái Đất có nhiều nước hơn đất.
+explanation_correct.en: We live on land, but water covers most of Earth.
+explanation_correct.vi: Mình sống trên đất, nhưng nước phủ phần lớn Trái Đất.
+explanation_wrong.en: A globe shows more blue water than land.
+explanation_wrong.vi: Quả địa cầu có phần nước nhiều hơn phần đất.
+feedback_true.en: Where we live is only one small part of Earth.
+feedback_true.vi: Nơi mình sống chỉ là phần nhỏ của Trái Đất.
 > DOK 3: bắt lỗi một lập luận (nơi mình sống là đất, nên nghĩ cả Trái Đất phần lớn là đất). Gợi ý chỉ vào bằng chứng (quả địa cầu), không nói thẳng đáp án.
 
 ## Từ vựng

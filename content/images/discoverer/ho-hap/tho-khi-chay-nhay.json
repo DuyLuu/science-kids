@@ -17,8 +17,9 @@
       "lesson": "ho-hap/duong-di-cua-khong-khi"
     },
     "w2": {
-      "same_as": "w1_buffalo",
-      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+      "same_as": "tray_buffalo",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang tray_buffalo (crop cũ) vì w1_buffalo nay cắt 5:2."
     },
     "learn.explore.explore_faster": {
       "source": "Wikimedia Commons",

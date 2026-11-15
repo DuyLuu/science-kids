@@ -47,16 +47,16 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: da-va-dat/nhin-ky-cac-loai-da
 prompt.en: What helps you see the tiny grains in a rock?
-prompt.vi: Thứ gì giúp em nhìn rõ những hạt nhỏ trong hòn đá?
+prompt.vi: Thứ gì giúp em nhìn rõ hạt nhỏ trên đá?
 image.brief: Dùng lại hình `tray_pink_granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): pink granite rock sample
 image.alt.en: A pink rock
 image.alt.vi: Hòn đá màu hồng
 hint.en: Remember the Look closely picture in lesson two.
 hint.vi: Em nhớ lại ô Nhìn kỹ ở bài hai nhé.
-explanation_correct.en: Yes! A magnifying glass makes the grains look bigger.
-explanation_correct.vi: Đúng rồi! Kính lúp làm các hạt trông to hơn.
-explanation_wrong.en: The answer is the magnifying glass.
-explanation_wrong.vi: Đáp án là kính lúp.
+explanation_correct.en: A magnifying glass makes each grain look bigger and clearer.
+explanation_correct.vi: Kính lúp làm từng hạt trông to hơn, rõ hơn.
+explanation_wrong.en: A magnifying glass makes tiny grains look bigger.
+explanation_wrong.vi: Kính lúp làm những hạt nhỏ trông to hơn.
 > Ống nhòm (cũng làm vật trông to hơn, nhưng là vật ở xa) và kính râm (cũng là một loại kính) có sức hút. Ba ảnh cùng một dụng cụ trên nền trơn. Hình câu hỏi là đá hoa cương hồng (có hạt để soi), không có kính lúp.
 
 #### option w1_magnifier
@@ -69,6 +69,8 @@ image.alt.vi: Chiếc kính lúp
 
 #### option w1_binoculars
 correct: false
+feedback.en: Binoculars help you see things far away.
+feedback.vi: Ống nhòm giúp em nhìn vật ở thật xa.
 label.en: binoculars
 label.vi: ống nhòm
 image.brief: [hình vẽ] Một chiếc ống nhòm đặt trên nền trơn, vẽ chéo từ trên xuống; cùng cỡ trong khung như kính lúp và kính râm; không có logo, không có chữ. Từ khoá tìm ảnh (EN): binoculars plain background
@@ -77,6 +79,8 @@ image.alt.vi: Chiếc ống nhòm
 
 #### option w1_sunglasses
 correct: false
+feedback.en: Sunglasses keep bright light out of your eyes.
+feedback.vi: Kính râm che bớt nắng chói cho mắt.
 label.en: sunglasses
 label.vi: kính râm
 image.brief: [hình vẽ] Một chiếc kính râm gọng đen đặt trên nền trơn, vẽ nhìn từ trên xuống; cùng cỡ trong khung như kính lúp và ống nhòm; không có logo, không có chữ. Từ khoá tìm ảnh (EN): sunglasses plain background
@@ -98,10 +102,12 @@ image.alt.vi: Hòn đá cuội
 answer: true
 hint.en: Remember the From the ground picture in lesson one.
 hint.vi: Em nhớ lại ô Từ lòng đất ở bài một nhé.
-explanation_correct.en: Yes! Rock comes from inside Earth. Nobody makes it.
-explanation_correct.vi: Đúng rồi! Đá có từ trong lòng Trái Đất. Không ai làm ra đá.
-explanation_wrong.en: This is true. Rock is a natural material.
-explanation_wrong.vi: Câu này đúng. Đá là vật liệu có sẵn trong tự nhiên.
+explanation_correct.en: Rock comes from inside Earth, and nobody makes it.
+explanation_correct.vi: Đá có từ trong lòng Trái Đất, không ai làm ra.
+explanation_wrong.en: Rock is a natural material from inside Earth.
+explanation_wrong.vi: Đá là vật liệu có sẵn trong lòng Trái Đất.
+feedback_false.en: Rock forms in nature, not in a factory.
+feedback_false.vi: Đá hình thành trong tự nhiên, không do nhà máy.
 > Chữ EN đúng bảng Khởi động và bảng Đáp án Đúng/Sai (đáp án Đúng). Ảnh dùng lại theo bảng Hình dùng chung (`w1_stone`, bài ba w2).
 
 ## Học
@@ -178,7 +184,7 @@ label.en: Properties
 label.vi: Tính chất
 color: cham
 sentence.en: Hardness is a property we can use to group rocks.
-sentence.vi: Độ cứng là một tính chất giúp ta xếp nhóm các loại đá.
+sentence.vi: Độ cứng là tính chất giúp ta xếp nhóm các loại đá.
 image.brief: [sơ đồ ghép ảnh] Ghép ba mẫu đá thành một hàng ngang trên nền kem, cùng cỡ, từ trái sang phải: `chalk`, `marble`, `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`; không có chữ, không có số, không có mũi tên.
 image.alt.en: Three rocks in a row
 image.alt.vi: Ba hòn đá xếp thành hàng
@@ -349,14 +355,16 @@ image.alt.en: Three rocks in a row
 image.alt.vi: Ba hòn đá xếp thành hàng
 hint.en: Remember the Scratch test picture.
 hint.vi: Em nhớ lại ô Thử cào nhé.
-explanation_correct.en: Yes! Scratch the rock with the spoon handle.
-explanation_correct.vi: Đúng rồi! Em cào lên hòn đá bằng cán thìa.
-explanation_wrong.en: The answer is the metal spoon. You scratch with it.
-explanation_wrong.vi: Đáp án là thìa inox. Em dùng cán thìa để cào.
+explanation_correct.en: Scratch with the spoon handle, then look for a mark.
+explanation_correct.vi: Em cào bằng cán thìa rồi tìm vết xước.
+explanation_wrong.en: You test hardness by scratching with a metal spoon.
+explanation_wrong.vi: Em thử độ cứng bằng cách cào với thìa inox.
 > Kính lúp (dụng cụ của bài hai) và cốc nước (dụng cụ của bài năm sắp học) đều là dụng cụ thử đá thật, nên có sức hút. Ba ảnh cùng một dụng cụ trên nền trơn; không ảnh nào bé đã thấy ở phần Học của bài này.
 
 #### option q1_magnifier
 correct: false
+feedback.en: A magnifying glass helps you look, not scratch.
+feedback.vi: Kính lúp giúp em nhìn, không dùng để cào.
 label.en: magnifying glass
 label.vi: kính lúp
 image.brief: Dùng lại hình `q1_magnifier` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): magnifying glass black handle plain background
@@ -373,6 +381,8 @@ image.alt.vi: Chiếc thìa inox
 
 #### option q1_water
 correct: false
+feedback.en: A cup of water cannot scratch a rock.
+feedback.vi: Cốc nước không cào xước được hòn đá.
 label.en: cup of water
 label.vi: cốc nước
 image.brief: [hình vẽ] Một cốc nhựa trong (không phải cốc thuỷ tinh) đựng nước sạch, đặt trên nền trơn, vẽ ngang; cùng cỡ trong khung như kính lúp và thìa; không có vạch số, không có nhãn hiệu, không có chữ. Bài năm câu q1 dùng lại ảnh này (hình câu hỏi). Từ khoá tìm ảnh (EN): clear plastic cup of water plain background
@@ -395,16 +405,18 @@ sentence.vi: Móng tay em để lại một {1} trên hòn đá mềm.
 answers: q2_scratch
 hint.en: Think of chalk after you try your fingernail.
 hint.vi: Em nghĩ tới đá phấn sau khi cào móng tay nhé.
-explanation_correct.en: Yes! A soft rock gets a scratch easily.
-explanation_correct.vi: Đúng rồi! Đá mềm dễ bị xước.
-explanation_wrong.en: The answer is scratch. Soft rocks scratch easily.
-explanation_wrong.vi: Đáp án là vết xước. Đá mềm dễ bị cào xước.
+explanation_correct.en: A scratch shows the rock is softer than your nail.
+explanation_correct.vi: Vết xước cho thấy đá mềm hơn móng tay.
+explanation_wrong.en: A fingernail easily scratches a soft rock.
+explanation_wrong.vi: Đá mềm dễ bị móng tay cào xước.
 > Gợi ý không gọi tên ô "Scratch test" (trùng nhãn đáp án). Câu không có gốc từ "scratch" · "xước".
 > Ba thẻ là ba mẫu đá cùng nền kem: lỗ (dùng lại ảnh đá bọt của bài hai), vết xước (ảnh mới), lớp (dùng lại ảnh sa thạch của bài hai). Hai thẻ sai nối bài hai (hạt, lỗ, lớp), nên có sức hút. Không thẻ nào là ảnh bé vừa thấy ở phần Học của bài này. Thẻ đúng ở chỗ thứ hai.
 
 #### bank q2_hole
 label.en: hole
 label.vi: cái lỗ
+feedback.en: A fingernail cannot dig a hole in rock.
+feedback.vi: Móng tay không khoét được lỗ trên đá.
 image.brief: Dùng lại hình `pumice` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): pumice rock sample
 image.alt.en: Tiny holes in a rock
 image.alt.vi: Những lỗ nhỏ trên đá
@@ -420,6 +432,8 @@ image.alt.vi: Vết xước trên hòn đá
 #### bank q2_layer
 label.en: layer
 label.vi: lớp
+feedback.en: A fingernail cannot make a layer in rock.
+feedback.vi: Móng tay không tạo ra lớp trong đá.
 image.brief: Dùng lại hình `tray_sandstone` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): sandstone rock sample layers
 image.alt.en: Layers in a rock
 image.alt.vi: Các lớp trong đá
@@ -439,10 +453,10 @@ image.alt.en: A metal spoon
 image.alt.vi: Chiếc thìa inox
 hint.en: Think: a spoon is harder than a fingernail.
 hint.vi: Em nghĩ nhé: cán thìa cứng hơn móng tay.
-explanation_correct.en: Yes! A spoon scratches soft rocks and medium rocks.
-explanation_correct.vi: Đúng rồi! Cán thìa cào xước được cả đá mềm và đá vừa.
-explanation_wrong.en: The answers are limestone, chalk and marble.
-explanation_wrong.vi: Đáp án là đá vôi, đá phấn và đá cẩm thạch.
+explanation_correct.en: A spoon scratches soft and medium rocks, not hard ones.
+explanation_correct.vi: Thìa cào xước đá mềm và vừa, không xước đá cứng.
+explanation_wrong.en: A spoon scratches limestone, chalk and marble.
+explanation_wrong.vi: Thìa cào xước được đá vôi, đá phấn và đá cẩm thạch.
 > DOK 2: suy ra từ kết quả trò chơi. Bé dễ chỉ chọn nhóm "Only a spoon scratches it" (đá vôi, đá cẩm thạch) mà quên rằng thìa cũng cào xước được đá mềm (đá phấn). Ba đáp án đúng, theo bảng vị trí (bài ba là một trong bốn câu ba đáp án). Gợi ý là cách nghĩ, không gọi tên lựa chọn.
 > Bốn ảnh đều là mẫu đá bé đã gặp ở phần Chơi, cùng nền kem; `alt` chỉ tả màu.
 > [CẦN KIỂM] Thìa inox cào xước được đá vôi, đá cẩm thạch, đá phấn; không cào xước được đá ba-dan.
@@ -465,6 +479,8 @@ image.alt.vi: Hòn đá màu trắng
 
 #### option q3_basalt
 correct: false
+feedback.en: Basalt is too hard for a spoon to scratch.
+feedback.vi: Đá ba-dan quá cứng, thìa cào không xước.
 label.en: basalt
 label.vi: đá ba-dan
 image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): basalt vesicular rock sample
@@ -484,17 +500,18 @@ id: 2f905c8e-ea42-4b82-81dc-fff0780e40da
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai scratches three rocks with her fingernail. Which one gets a scratch?
-prompt.vi: Mai cào móng tay lên ba hòn đá. Hòn nào bị xước?
+prompt.en: Which rock can a fingernail scratch?
+prompt.vi: Móng tay cào xước được hòn đá nào?
 image.brief: Dùng lại hình `q1` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): rock collection table top view
 image.alt.en: Many different rocks on a table
 image.alt.vi: Nhiều hòn đá khác nhau trên bàn
 hint.en: Think which rock scratched most easily in the game.
 hint.vi: Em nhớ lại hòn đá nào dễ xước nhất trong trò chơi nhé.
-explanation_correct.en: Yes! Soapstone is soft. A fingernail can scratch it.
-explanation_correct.vi: Đúng rồi! Đá xà phòng mềm. Móng tay cào xước được.
-explanation_wrong.en: The answer is soapstone. It is a soft rock.
-explanation_wrong.vi: Đáp án là đá xà phòng. Đó là loại đá mềm.
+explanation_correct.en: Soapstone is so soft it feels like soap.
+explanation_correct.vi: Đá xà phòng mềm, sờ trơn như xà phòng.
+explanation_wrong.en: Soapstone is soft, so a fingernail scratches it.
+explanation_wrong.vi: Đá xà phòng mềm, móng tay cào xước được.
+> A2 (SK-043, 14/11): câu hỏi cũ mười hai chữ ("Mai cào móng tay lên ba hòn đá…"), nay tám chữ, bỏ nhân vật Mai.
 > DOK 2: dự đoán kết quả thử cào. Đá xà phòng bóng như sáp, đá phiến mỏng, dẹt, trông dễ xước; bé phải nhớ kết quả trò chơi. Đá xà phòng và đá hoa cương là ảnh bé đã thấy ở phần Chơi (đá hoa cương cũng ở ô Học); đá phiến là ảnh của bài hai. Ba ảnh cùng nền kem.
 > Rà chữ tester 11/11 (N6, n2): đáp án đổi từ thạch cao sang đá xà phòng (bài ba chỉ nói về đá); gợi ý đổi từ tên ô "Đá mềm" sang cách nghĩ, theo đề xuất của tester. Tên "đá xà phòng" gợi chữ "xà phòng" (mềm), giống "đá bọt" ở bài hai: tên tiếng Việt vốn vậy, bé vẫn phải nhìn ảnh và nhớ trò chơi.
 > [CẦN KIỂM] Móng tay không cào xước được đá phiến (đá phiến khoảng bậc ba tới bốn, móng tay khoảng hai phẩy năm; biên tập nhớ).
@@ -509,6 +526,8 @@ image.alt.vi: Hòn đá màu xám xanh
 
 #### option q4_granite
 correct: false
+feedback.en: Granite is too hard for a fingernail.
+feedback.vi: Đá hoa cương quá cứng với móng tay.
 label.en: granite
 label.vi: đá hoa cương
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
@@ -517,6 +536,8 @@ image.alt.vi: Hòn đá màu xám
 
 #### option q4_slate
 correct: false
+feedback.en: Slate is harder than a fingernail.
+feedback.vi: Đá phiến cứng hơn móng tay.
 label.en: slate
 label.vi: đá phiến
 image.brief: Dùng lại hình `tray_slate` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): slate rock sample
@@ -528,22 +549,25 @@ id: 34359ab0-4443-4637-bcde-74b22f4c707a
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai scratched each rock with her fingernail, then a spoon. Which rock is the hardest?
-prompt.vi: Mai cào từng hòn đá bằng móng tay, rồi bằng cán thìa. Hòn đá nào cứng nhất?
+prompt.en: After the scratch test, which rock is hardest?
+prompt.vi: Sau khi thử cào, hòn đá nào cứng nhất?
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": bàn tay một bạn nhỏ cầm cán thìa inox, bên cạnh là ba hòn đá xám nhạt giống hệt nhau về hình dáng, chưa có vết xước nào; nền kem trơn; chỉ thấy bàn tay, không vẽ nét mặt; không có chữ, không có số.
 image.alt.en: A spoon and three grey rocks
 image.alt.vi: Cán thìa và ba hòn đá xám
 hint.en: Remember the Hard rocks picture.
 hint.vi: Em nhớ lại ô Đá cứng nhé.
-explanation_correct.en: Yes! Nothing scratched it, so it is the hardest.
-explanation_correct.vi: Đúng rồi! Không gì cào xước được nó, nên nó cứng nhất.
-explanation_wrong.en: The answer is the rock with no scratches.
-explanation_wrong.vi: Đáp án là hòn đá không có vết xước nào.
+explanation_correct.en: It is harder than both the nail and the spoon.
+explanation_correct.vi: Hòn đá này cứng hơn cả móng tay và cán thìa.
+explanation_wrong.en: The hardest rock has no scratches at all.
+explanation_wrong.vi: Hòn đá cứng nhất không có vết xước nào.
+> A2 (SK-043, 14/11): câu hỏi cũ mười tám chữ (hai câu, có nhân vật Mai), nay chín chữ; hình câu hỏi (cán thìa và ba hòn đá) giữ ngữ cảnh.
 > DOK 2: đọc kết quả thử cào (kế hoạch bài ba ở `_topic.md`). Ba hòn đá trông giống hệt nhau, chỉ khác số vết xước, nên bé không đoán theo màu hay tên đá. Hai vết xước: cả móng tay và thìa đều cào được (mềm). Một vết: chỉ thìa cào được (vừa). Không vết nào: cứng nhất.
 > Ba nhãn cùng một dạng (số vết xước). Bốn hình (câu hỏi và ba lựa chọn) là hình tự vẽ cùng bộ.
 
 #### option q5_two
 correct: false
+feedback.en: Two scratches show that this rock is soft.
+feedback.vi: Có hai vết xước, nên hòn đá này mềm.
 label.en: two scratches
 label.vi: hai vết xước
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": một hòn đá xám nhạt, cùng hình dáng và cỡ với hai hòn ở hai lựa chọn kia, trên mặt có hai vết xước trắng: một vết mảnh (móng tay) và một vết đậm hơn (cán thìa); nền kem trơn; không có tay, không có chữ, không có số.
@@ -552,6 +576,8 @@ image.alt.vi: Hòn đá có hai vết xước
 
 #### option q5_one
 correct: false
+feedback.en: One scratch shows the spoon could still scratch it.
+feedback.vi: Có một vết xước, nên thìa vẫn cào được nó.
 label.en: one scratch
 label.vi: một vết xước
 image.brief: [hình vẽ] Bộ "Bàn tay thử đá": cùng hòn đá xám nhạt như lựa chọn `q5_two`, trên mặt chỉ có một vết xước trắng đậm (cán thìa); nền kem trơn; không có tay, không có chữ, không có số.
@@ -576,8 +602,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Chalk is a rock. So chalk must be very hard.
-statement.vi: Đá phấn là đá. Vậy đá phấn chắc chắn rất cứng.
+statement.en: Chalk is a rock, so it must be very hard.
+statement.vi: Đá phấn là đá, vậy chắc chắn nó rất cứng.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -589,10 +615,12 @@ image.alt.en: A white rock
 image.alt.vi: Hòn đá màu trắng
 hint.en: Remember the Fingernail group in the game.
 hint.vi: Em nhớ lại nhóm Móng tay cào xước được ở trò chơi nhé.
-explanation_correct.en: Chalk is a rock, but it is soft. A fingernail can scratch it.
-explanation_correct.vi: Đá phấn là đá, nhưng đá phấn mềm. Móng tay cào xước được.
-explanation_wrong.en: Na is not right. Most rocks are hard, but some are soft.
-explanation_wrong.vi: Na chưa đúng. Phần lớn đá đều cứng, nhưng có loại đá mềm.
+explanation_correct.en: Chalk is a rock, but soft enough to draw with.
+explanation_correct.vi: Đá phấn là đá, nhưng mềm tới mức vẽ được.
+explanation_wrong.en: Most rocks are hard, but some, like chalk, are soft.
+explanation_wrong.vi: Phần lớn đá cứng, nhưng có loại mềm như đá phấn.
+feedback_true.en: A fingernail can scratch chalk easily.
+feedback_true.vi: Móng tay cào xước đá phấn rất dễ.
 > DOK 3: Na dùng một suy luận nghe có lý (đá thì cứng, đá phấn là đá, vậy đá phấn cứng); vế đầu đúng, kết luận sai. Bé phải bác bỏ một khái quát bằng một ví dụ đã thử. Lời Na đúng chữ bảng "Câu sáu, lời Na" ở `_topic.md`. Đáp án Sai; giải thích khi đúng không mở đầu bằng "Yes!".
 > Gợi ý trỏ tới chỗ cần nhớ (nhóm của trò chơi), không hỏi "đá nào cũng cứng không". Hình là mẫu đá phấn (dùng lại `chalk`), `alt` không nói "mềm". Cả màn mười bảy từ EN.
 

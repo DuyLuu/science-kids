@@ -51,10 +51,10 @@ image.alt.en: A pile of grey cement powder
 image.alt.vi: Một đống bột xi măng xám
 hint.en: Remember what rocks are used for in lesson six.
 hint.vi: Em nhớ lại bài sáu, đá dùng làm gì nhé.
-explanation_correct.en: Yes! Crushed limestone is used to make cement.
-explanation_correct.vi: Đúng rồi! Đá vôi nghiền nhỏ được dùng để làm xi măng.
-explanation_wrong.en: The answer is limestone. It is crushed to make cement.
-explanation_wrong.vi: Đáp án là đá vôi. Người ta nghiền đá vôi để làm xi măng.
+explanation_correct.en: Cement made from limestone holds bricks together.
+explanation_correct.vi: Xi măng làm từ đá vôi giúp gắn gạch với nhau.
+explanation_wrong.en: Limestone is crushed and heated to make cement.
+explanation_wrong.vi: Người ta nghiền đá vôi để làm xi măng.
 > Hình câu hỏi là bột xi măng (vật được hỏi), không phải đá vôi. Gợi ý không gọi tên ô "Limestone" · "Đá vôi" của bài sáu, vì tên ô trùng chữ nhãn đáp án.
 > Ba lựa chọn đều là ảnh đá; ảnh đá ong (`laterite`) là cận cảnh mặt tường đá, đã dặn cắt sát để đứng được cạnh hai ảnh mẫu đá (Ghi chú cho hoạ sĩ bài sáu).
 
@@ -68,6 +68,8 @@ image.alt.vi: Hòn đá màu xám nhạt
 
 #### option w1_laterite
 correct: false
+feedback.en: Laterite is cut into blocks for walls and wells.
+feedback.vi: Đá ong được đẽo thành khối xây tường, xây giếng.
 label.en: laterite
 label.vi: đá ong
 image.brief: Dùng lại hình `laterite` ở bài `da-va-dat/da-dung-lam-gi`. Từ khoá tìm ảnh (EN): laterite wall blocks close up
@@ -77,6 +79,8 @@ image.alt.vi: Mặt đá nâu đỏ có nhiều lỗ
 
 #### option w1_granite
 correct: false
+feedback.en: Granite is used whole for steps and worktops.
+feedback.vi: Đá hoa cương dùng làm bậc thềm, mặt bàn.
 label.en: granite
 label.vi: đá hoa cương
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
@@ -99,9 +103,11 @@ answer: false
 hint.en: Remember the three groups in lesson three's game.
 hint.vi: Em nhớ lại ba nhóm đá ở trò chơi bài ba nhé.
 explanation_correct.en: Some rocks, like granite, are too hard to scratch.
-explanation_correct.vi: Có loại đá, như đá hoa cương, quá cứng nên móng tay không cào xước được.
-explanation_wrong.en: This is false. Some rocks are too hard to scratch.
-explanation_wrong.vi: Câu này sai. Có loại đá quá cứng, móng tay không cào xước được.
+explanation_correct.vi: Có loại đá quá cứng, như đá hoa cương.
+explanation_wrong.en: A fingernail can scratch only soft rocks.
+explanation_wrong.vi: Móng tay chỉ cào xước được đá mềm.
+feedback_true.en: A fingernail leaves no mark on granite.
+feedback_true.vi: Móng tay cào đá hoa cương không để lại vết.
 > Đúng chữ EN ở bảng Đúng/Sai (bài bảy w2, Sai). Giải thích khi đúng không mở đầu bằng "Yes!".
 > Hình câu hỏi là tình huống thử cào (bàn tay cào đá phấn), không phải bằng chứng của đáp án Sai. `explore_scratch` không có ở cột "Dùng lại ở" của bảng Hình dùng chung; key và nội dung theo bảng (bài ba, "bàn tay trẻ cào móng lên đá phấn"). Rà chữ tester 11/11 (N3, N4): `alt` chép đúng gốc; gốc là hình vẽ (bộ "Bàn tay thử đá"), brief gốc không có từ khoá nên ở đây cũng không có.
 
@@ -124,7 +130,7 @@ label.en: Natural forces
 label.vi: Lực tự nhiên
 color: vang_hoe
 sentence.en: Rain, wind, heat and roots change rocks very slowly.
-sentence.vi: Mưa, gió, nắng nóng và rễ cây làm đá thay đổi rất chậm.
+sentence.vi: Mưa, gió, nắng, rễ cây làm đá thay đổi rất chậm.
 image.brief: [hình vẽ] Mưa rơi trên mấy tảng đá xám ven suối, thấy rõ hạt mưa và mặt đá ướt, vẽ gần vừa; không có người, không có chữ. Câu q1 dùng lại hình này (cạnh hai hình vẽ gầu máy xúc, tay đục đá của kệ).
 image.alt.en: Rain falling on rocks
 image.alt.vi: Mưa rơi trên những tảng đá
@@ -143,7 +149,7 @@ label.en: Weathering
 label.vi: Phong hoá
 color: gi_dong
 sentence.en: Weathering breaks rock into smaller pieces, right where it is.
-sentence.vi: Phong hoá làm đá vỡ thành những mảnh nhỏ hơn, ngay tại chỗ.
+sentence.vi: Phong hoá làm đá vỡ thành mảnh nhỏ, ngay tại chỗ.
 image.brief: [ảnh] Rễ một cây cổ thụ trùm lên chân bức tường đá cũ, rễ len vào khe làm đá nứt, vài mảng đá bong ra, chụp gần vừa; không có người, không có tượng thờ, không có bát hương, không có chữ hay biển giới thiệu. Ảnh designer chọn 11/11 không phải cảnh Việt Nam (không có ảnh Việt Nam hợp lệ). Hình gốc của bảng Hình dùng chung; câu q4 và từ `weathering` dùng lại ảnh này (món Chơi `tray_banyan` nay là hình vẽ riêng). Từ khoá tìm ảnh (EN): banyan tree roots old stone wall
 image.alt.en: Tree roots over an old stone wall
 image.alt.vi: Rễ cây trùm lên bức tường đá cũ
@@ -229,7 +235,7 @@ messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Water, wind and plants all change rocks slowly.
 messages.balanced.vi: Tuyệt! Nước, gió và cây đều làm đá thay đổi từ từ.
 messages.has_limited.en: People and machines did that, not nature.
-messages.has_limited.vi: Việc đó do con người và máy móc làm, không phải thiên nhiên.
+messages.has_limited.vi: Việc đó do người và máy làm, không phải thiên nhiên.
 messages.missing.tray_water_group.en: You still need water at work.
 messages.missing.tray_water_group.vi: Em còn thiếu một cảnh nước đang làm đá thay đổi.
 messages.missing.tray_wind_group.en: You still need wind at work.
@@ -345,14 +351,16 @@ image.alt.en: Broken rocks below a cliff
 image.alt.vi: Đá vụn dưới chân vách đá
 hint.en: Remember the Natural forces picture in the lesson.
 hint.vi: Em nhớ lại ô Lực tự nhiên trong bài học nhé.
-explanation_correct.en: Yes! Rain is a natural force. It changes rocks.
-explanation_correct.vi: Đúng rồi! Mưa là một lực tự nhiên. Mưa làm đá thay đổi.
-explanation_wrong.en: The answer is rain. People make diggers and chisels.
-explanation_wrong.vi: Đáp án là mưa. Máy xúc và cái đục do con người làm ra.
+explanation_correct.en: Rain slowly wears rock away, year after year.
+explanation_correct.vi: Mưa bào mòn đá dần dần, năm này qua năm khác.
+explanation_wrong.en: Rain is a natural force that changes rocks.
+explanation_wrong.vi: Mưa là lực tự nhiên làm đá thay đổi.
 > DOK 1: nhớ lại ô một. Hai lựa chọn sai là hai món bẫy của kệ Chơi, cũng làm đá thay đổi nhưng do con người. Ba hình đều là hình vẽ bé đã gặp hôm nay (ô Học và kệ Chơi). Gợi ý gọi tên ô "Natural forces", trùng chữ câu hỏi, không trùng chữ nhãn đáp án.
 
 #### option q1_digger
 correct: false
+feedback.en: A digger is a machine that people drive.
+feedback.vi: Máy xúc là máy do con người lái.
 label.en: digger
 label.vi: máy xúc
 image.brief: Dùng lại hình `tray_digger`.
@@ -361,6 +369,8 @@ image.alt.vi: Gầu máy xúc đang xúc đá
 
 #### option q1_chisel
 correct: false
+feedback.en: People use a chisel to cut rock by hand.
+feedback.vi: Cái đục là dụng cụ người dùng để đục đá.
 label.en: chisel
 label.vi: cái đục
 image.brief: Dùng lại hình `tray_chisel`.
@@ -390,15 +400,17 @@ sentence.vi: Lâu dần, rễ cây làm hòn đá có một {1}.
 answers: q2_crack
 hint.en: Remember the Weathering picture in the lesson.
 hint.vi: Em nhớ lại ô Phong hoá trong bài học nhé.
-explanation_correct.en: Yes! Roots push into rock and make a crack.
-explanation_correct.vi: Đúng rồi! Rễ cây len vào đá và làm đá nứt.
-explanation_wrong.en: The answer is crack. Roots slowly crack the rock.
-explanation_wrong.vi: Đáp án là vết nứt. Rễ cây dần làm đá nứt ra.
+explanation_correct.en: As roots grow thicker, the crack gets wider.
+explanation_correct.vi: Rễ càng to ra, vết nứt càng rộng thêm.
+explanation_wrong.en: Roots slowly push into rock and crack it.
+explanation_wrong.vi: Rễ cây len vào đá và dần làm đá nứt.
 > DOK 1: nhớ lại ô Phong hoá và từ `crack`. Câu không có gốc từ "crack". Hai thẻ sai có sức hút: "layer" (đá có từng lớp, bài hai), "fossil" (thứ nằm trong đá, *Khủng long*). Thẻ đúng ở chỗ thứ ba (bảng vị trí). Hình câu hỏi là cây đa, không thấy rễ trên đá.
 
 #### bank q2_layer
 label.en: layer
 label.vi: lớp
+feedback.en: Roots cannot add a layer to a rock.
+feedback.vi: Rễ cây không tạo thêm lớp cho hòn đá.
 image.brief: Dùng lại hình `tray_sandstone` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): sandstone rock sample layers
 image.alt.en: A rock with layers
 image.alt.vi: Hòn đá có nhiều lớp
@@ -407,6 +419,8 @@ image.alt.vi: Hòn đá có nhiều lớp
 #### bank q2_fossil
 label.en: fossil
 label.vi: hoá thạch
+feedback.en: A fossil comes from a living thing long ago.
+feedback.vi: Hoá thạch là dấu vết sinh vật từ rất lâu.
 image.brief: Dùng lại hình `tray_rock_print` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): dinosaur footprint fossil three toed rock top view
 image.alt.en: A dinosaur footprint in rock
 image.alt.vi: Dấu chân khủng long in trên đá
@@ -432,10 +446,10 @@ image.alt.en: A big rock on a hill
 image.alt.vi: Tảng đá lớn trên sườn đồi
 hint.en: Did the rock break, or was it carried away?
 hint.vi: Đá bị vỡ ra tại chỗ, hay bị mang đi nơi khác?
-explanation_correct.en: Yes! Roots and rain broke the rock where it is.
-explanation_correct.vi: Đúng rồi! Rễ cây và nước mưa làm đá vỡ ngay tại chỗ.
-explanation_wrong.en: The answers are the roots and the rain.
-explanation_wrong.vi: Đáp án là rễ cây làm nứt bậc đá và mưa bào mòn đá vôi.
+explanation_correct.en: The broken bits stay put until erosion moves them.
+explanation_correct.vi: Mảnh vỡ nằm tại chỗ, tới khi xói mòn mang đi.
+explanation_wrong.en: Roots and rain broke the rock right where it is.
+explanation_wrong.vi: Rễ cây và mưa làm đá vỡ ngay tại chỗ.
 > DOK 2: phân loại bốn cảnh của kệ Chơi theo phong hoá và xói mòn (ở kệ Chơi bé xếp theo lực: nước, gió, cây; ở đây xếp theo việc đá vỡ hay bị mang đi). Hai lựa chọn sai là hai cảnh mang cát, sỏi đi (xói mòn): gió thổi cát, suối cuốn sỏi đá. Bốn hình đều là hình vẽ của kệ Chơi. Đáp án ở chỗ thứ nhất và thứ hai (bảng vị trí).
 > Bốn nhãn cùng một khuôn (vật đang làm gì), để đáp án không lộ bằng dạng câu (SK-037, tester N5). Nhãn ở đây khác nhãn món ở kệ Chơi: kệ gọi tên cảnh, câu này nói việc đang xảy ra, nên nhãn suối là "stream carrying pebbles" để câu chỉ có một cách hiểu. [CẦN KIỂM] Nước suối vừa mài mòn vừa mang sỏi đá đi; chữ cho trẻ xếp cảnh này vào xói mòn.
 
@@ -457,6 +471,8 @@ image.alt.vi: Mặt đá xám có nhiều rãnh sâu
 
 #### option q3_dunes
 correct: false
+feedback.en: Wind carrying sand away is erosion, not weathering.
+feedback.vi: Gió mang cát đi nơi khác, đó là xói mòn.
 label.en: wind blowing sand away
 label.vi: gió thổi cát bay đi
 image.brief: Dùng lại hình `tray_dunes`.
@@ -465,6 +481,8 @@ image.alt.vi: Gió thổi cát bay trên đồi cát
 
 #### option q3_stream
 correct: false
+feedback.en: A stream carrying pebbles away is erosion.
+feedback.vi: Suối cuốn sỏi đi nơi khác, đó là xói mòn.
 label.en: stream carrying pebbles
 label.vi: suối cuốn sỏi đá đi
 image.brief: Dùng lại hình `tray_stream`.
@@ -476,23 +494,26 @@ id: 20b231a3-0d56-4ca4-973b-09b5304f95c1
 format: single_choice
 version: 1
 dok: 2
-prompt.en: New land formed where a river meets the sea. What made it?
-prompt.vi: Ở cửa sông có một bãi đất mới. Điều gì tạo ra bãi đất đó?
+prompt.en: What made new land at the river mouth?
+prompt.vi: Điều gì tạo ra bãi đất mới ở cửa sông?
 image.brief: [ảnh] Cửa sông nhìn từ trên cao: dòng nước đục màu phù sa đổ ra biển xanh, thấy bãi bồi màu nâu ở chỗ sông gặp biển; không có thành phố, không có người, không có chữ; không phải bản đồ, không phải ảnh vệ tinh thấy cả vùng. Từ khoá tìm ảnh (EN): river mouth sediment aerial
 image.alt.en: A river flowing into the sea
 image.alt.vi: Dòng sông chảy ra biển
 hint.en: Where did the bits of rock come from?
 hint.vi: Những mảnh đá vụn đó từ đâu tới?
-explanation_correct.en: Yes! The river carried mud and sand there.
-explanation_correct.vi: Đúng rồi! Dòng sông đã mang bùn và cát tới đó.
-explanation_wrong.en: The answer is erosion. The river carried the bits there.
-explanation_wrong.vi: Đáp án là xói mòn. Dòng sông đã mang mảnh vụn tới đó.
+explanation_correct.en: River mud built the Mekong Delta this way.
+explanation_correct.vi: Bùn sông mang tới đã bồi nên đồng bằng sông Cửu Long.
+explanation_wrong.en: The river carried mud and sand there by erosion.
+explanation_wrong.vi: Dòng sông mang bùn cát tới đó, đó là xói mòn.
+> A2 (SK-043, 14/11): câu hỏi cũ mười lăm chữ (hai câu), nay mười chữ. Giải thích khi đúng thêm ý đồng bằng sông Cửu Long do phù sa bồi.
 > DOK 2: áp ý chính ba vào một nơi mới (cửa sông), như gợi ý ở `_topic.md`; nối bài mười hai (đất phù sa). Lựa chọn sai "phun trào" có sức hút: bài *Núi lửa* dạy dung nham nguội thành đá mới, thành đất mới; "phong hoá" bắt `weathering_is_erosion`.
 > Ba lựa chọn cùng là ba ảnh bé đã gặp (hai ô Học hôm nay, một ô *Núi lửa*). Câu w1 bài tám dùng lại đúng ba hình này để ôn (bảng Hình dùng chung); câu hỏi bên đó khác (sông mang cát đi xa).
 > [CẦN KIỂM] Cách nói giản lược: sông mang bùn cát đi rồi để lắng lại ở cửa sông thành bãi đất mới (bồi tụ). Chữ cho trẻ không dùng chữ "bồi tụ".
 
 #### option q4_erupt
 correct: false
+feedback.en: There is no volcano at this river mouth.
+feedback.vi: Ở cửa sông này không có núi lửa phun trào.
 label.en: eruption
 label.vi: phun trào
 image.brief: Dùng lại hình `explore_erupt` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
@@ -510,6 +531,8 @@ image.alt.vi: Dòng sông có bờ bị lở
 
 #### option q4_weathering
 correct: false
+feedback.en: Weathering breaks rock but does not move the bits.
+feedback.vi: Phong hoá làm vỡ đá, nhưng không mang mảnh đi.
 label.en: weathering
 label.vi: phong hoá
 image.brief: Dùng lại hình `explore_weathering`. Từ khoá tìm ảnh (EN): banyan tree roots old stone wall
@@ -521,22 +544,24 @@ id: e0791c63-8349-462c-91a7-b042586cccfc
 format: single_choice
 version: 1
 dok: 2
-prompt.en: A riverbank keeps falling in. What helps most?
-prompt.vi: Bờ sông cứ bị lở dần. Việc nào giúp ích nhất?
+prompt.en: What helps most when a riverbank keeps falling in?
+prompt.vi: Bờ sông bị lở, việc nào giúp ích nhất?
 image.brief: [ảnh] Bờ sông bằng đất bị lở thành vách thấp, rễ cây nhỏ lộ ra, có tuyết phủ (ảnh designer chọn 11/11), chụp gần vừa từ dưới mép nước; không có nhà, không có người, không có chữ. Khác ảnh `explore_erosion` (ảnh đó chụp xa cả khúc sông). Từ khoá tìm ảnh (EN): eroded riverbank exposed roots close
 image.alt.en: A riverbank falling in
 image.alt.vi: Bờ sông đang bị lở
 hint.en: Remember the Slowing it down picture.
 hint.vi: Em nhớ lại ô Làm chậm lại nhé.
-explanation_correct.en: Yes! A stone bank protects the riverbank.
-explanation_correct.vi: Đúng rồi! Kè đá che chắn cho bờ sông.
-explanation_wrong.en: The answer is a stone bank. It slows erosion down.
-explanation_wrong.vi: Đáp án là xây kè đá. Kè đá làm xói mòn chậm lại.
+explanation_correct.en: A stone bank stops water washing the soil away.
+explanation_correct.vi: Kè đá ngăn nước cuốn trôi đất ở bờ sông.
+explanation_wrong.en: A stone bank slows erosion down.
+explanation_wrong.vi: Kè đá giúp xói mòn chậm lại.
 > DOK 2: áp ô "Slowing it down" vào một bờ sông đang lở, như gợi ý ở `_topic.md`. Hai lựa chọn sai có sức hút: chặt cây ven bờ (bé có thể nghĩ cây làm vướng dòng nước), hút cát dưới sông (bé có thể nghĩ lòng sông sâu hơn thì nước chảy êm hơn). Ba lựa chọn là ba hình vẽ cùng nét (designer 11/11: không có ảnh tàu hút cát không chữ), cùng là cảnh bờ sông; hình câu hỏi là ảnh.
 > [CẦN KIỂM] Chặt cây ven bờ và hút cát dưới lòng sông làm bờ sông dễ lở hơn; kè đá giúp giữ bờ (biên tập nhớ, chuyện hay gặp ở Việt Nam).
 
 #### option q5_cut
 correct: false
+feedback.en: Roots hold the bank, so cutting trees makes it worse.
+feedback.vi: Rễ cây giữ đất, chặt đi bờ càng lở.
 label.en: cut down the trees
 label.vi: chặt hết cây ven bờ
 image.brief: [hình vẽ] Mấy gốc cây vừa bị chặt trên một bờ đất trống sát mép nước, vẽ gần vừa; không có người, không có cưa máy, không có chữ.
@@ -553,6 +578,8 @@ image.alt.vi: Kè đá dọc bờ sông
 
 #### option q5_dig
 correct: false
+feedback.en: Taking sand from the river makes banks fall faster.
+feedback.vi: Hút cát dưới sông làm bờ lở nhanh hơn.
 label.en: dig sand from the river
 label.vi: hút cát dưới sông
 image.brief: [hình vẽ] Một chiếc tàu hút cát trên sông, ống hút thả xuống nước, đống cát trên tàu, vẽ từ bờ; không có người, không có tên tàu, biển số, cờ hay chữ.
@@ -569,8 +596,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: Tree roots cracked this rock. That is weathering, not erosion.
-statement.vi: Rễ cây làm nứt hòn đá này. Đó là phong hoá, chưa phải xói mòn.
+statement.en: Rock cracked by roots is weathering, not erosion.
+statement.vi: Đá nứt vì rễ cây là phong hoá, không phải xói mòn.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -582,10 +609,12 @@ image.alt.en: Tree roots over a big rock
 image.alt.vi: Rễ cây trùm lên tảng đá lớn
 hint.en: Think: did the bits go anywhere?
 hint.vi: Em thử nghĩ: mảnh đá có bị mang đi đâu không?
-explanation_correct.en: Yes! The rock broke where it is. That is weathering.
-explanation_correct.vi: Đúng rồi! Hòn đá vỡ ra ngay tại chỗ. Đó là phong hoá.
-explanation_wrong.en: Na is right. Erosion carries the bits away.
-explanation_wrong.vi: Na nói đúng. Xói mòn là khi mảnh vụn bị mang đi nơi khác.
+explanation_correct.en: It becomes erosion only when the bits are carried away.
+explanation_correct.vi: Khi mảnh vỡ bị mang đi mới là xói mòn.
+explanation_wrong.en: The rock broke in place, so that is weathering.
+explanation_wrong.vi: Hòn đá vỡ ngay tại chỗ, đó là phong hoá.
+feedback_false.en: The cracked bits are still in the same place.
+feedback_false.vi: Mảnh đá nứt vẫn nằm nguyên tại chỗ.
 > DOK 3: bé đánh giá một lời phân loại về một cảnh mới (tảng đá trong rừng). Bé còn tin "phong hoá và xói mòn là một" sẽ thấy vế "chưa phải xói mòn" là sai và chọn "Na chưa đúng". Lời Na đúng bảng "Câu sáu, lời Na"; đáp án Đúng theo bảng Đúng/Sai.
 > Ảnh designer chọn 11/11 là rễ cây trùm, len vào tảng đá lớn, không thấy rõ hai mảnh tách đôi; `alt` đổi theo ("Tree roots over a big rock" · "Rễ cây trùm lên tảng đá lớn"). Lời Na vẫn đúng với ảnh: rễ len vào khe làm đá nứt, đá vẫn nằm tại chỗ. Hình không có mũi tên hay chữ.
 

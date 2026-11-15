@@ -282,6 +282,7 @@ struct ExplorerSpeechRow: View {
     let sways: Bool
     @Environment(\.speechPlayer) private var speech
     @Environment(\.layoutMetrics) private var metrics
+    @Environment(\.ageGroup) private var ageGroup
 
     private var speaking: Bool { speech?.speaking != nil }
 
@@ -344,7 +345,7 @@ struct ExplorerSpeechRow: View {
                                 .paperDropShadow(Tokens.Shadow.paper2)
                             PaperIconView(.speaker, size: ExplorerMetrics.speakerGlyph, color: speaking ? Tokens.Role.textPrimary : Tokens.Role.textOnAccent)
                         }
-                        .frame(width: Tokens.AgeGroup.explorer.touchTarget, height: Tokens.AgeGroup.explorer.touchTarget)
+                        .frame(width: ageGroup.touchTarget, height: ageGroup.touchTarget)
                     }
                     .buttonStyle(.paperPress)
                     .accessibilityLabel(Text("lesson.listen"))
@@ -417,10 +418,12 @@ struct ExplorerTopBar: View {
 struct ExplorerNextButton: View {
     let label: LocalizedStringKey
     let action: () -> Void
+    @Environment(\.ageGroup) private var ageGroup
 
     var body: some View {
         TwoLayerButton(role: .primary, action: action) {
-            PaperIconView(.arrowForward, size: ExplorerMetrics.nextIcon, color: Tokens.Role.textOnAccent)
+            // Discoverer A2 uses the same arrow-only button with a smaller arrow.
+            PaperIconView(.arrowForward, size: ageGroup == .explorer ? ExplorerMetrics.nextIcon : DiscovererMetrics.arrowIcon, color: Tokens.Role.textOnAccent)
         }
         .accessibilityLabel(Text(label, bundle: .main))
         .accessibilityIdentifier("lesson.explorer.next")

@@ -53,21 +53,23 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: be-mat-trai-dat/nui-lua
 prompt.en: What is melted rock called outside a volcano?
-prompt.vi: Đá nóng chảy trào ra ngoài núi lửa gọi là gì?
+prompt.vi: Đá nóng chảy ra ngoài núi lửa gọi là gì?
 image.brief: Dùng lại hình `q1` ở bài `be-mat-trai-dat/nui-lua`. Ảnh núi lửa yên lặng không có dung nham, để không giống ảnh lựa chọn w1_lava. Từ khoá tìm ảnh (EN): volcano cone quiet landscape
 image.alt.en: A quiet volcano
 image.alt.vi: Núi lửa đang yên lặng
 hint.en: Under the ground it has one name. Outside, it has another.
 hint.vi: Đá nóng chảy ở dưới lòng đất và ở bên ngoài có hai tên khác nhau.
-explanation_correct.en: Yes! Outside a volcano, melted rock is lava.
-explanation_correct.vi: Đúng rồi! Trào ra ngoài núi lửa, đá nóng chảy gọi là dung nham.
-explanation_wrong.en: The answer is lava. Underground, it is called magma.
-explanation_wrong.vi: Đáp án là dung nham. Khi còn ở dưới lòng đất, đá nóng chảy gọi là mác-ma.
+explanation_correct.en: Lava cools down into new rock.
+explanation_correct.vi: Dung nham nguội đi thành đá mới.
+explanation_wrong.en: Melted rock is lava once it comes outside.
+explanation_wrong.vi: Đá nóng chảy ra ngoài thì gọi là dung nham.
 > Tên tiếng Việt "mác-ma", "dung nham" đã khớp bài bốn và bảng Tên gọi ở `_topic.md`. Hình không được có chữ "lava" hay "magma", vì chữ trên hình sẽ lộ đáp án. Không dùng hình bổ đôi `explore_magma` làm hình câu hỏi: hình đó có cả dòng dung nham bên ngoài, giống lựa chọn đúng (từ 10/11 hình đó là hình tự vẽ, không còn nhãn chữ).
 > SK-033 (9/11): ảnh câu hỏi đổi từ `explore_erupt` (núi lửa đang phun) sang ảnh núi lửa yên lặng của câu q1 bài bốn. Lựa chọn w1_lava nay có ảnh dòng dung nham; câu hỏi có dung nham sẽ giống ảnh lựa chọn đúng và lộ đáp án. Ba lựa chọn: sơ đồ túi mác-ma dưới đất, ảnh cát, ảnh dòng dung nham, đều dùng lại hoặc cùng kiểu với bài bốn.
 
 #### option w1_magma
 correct: false
+feedback.en: Magma is melted rock still under the ground.
+feedback.vi: Mác-ma là đá nóng chảy còn ở dưới đất.
 label.en: magma
 label.vi: mác-ma
 image.brief: Dùng lại hình `q4_underground` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): magma chamber diagram underground
@@ -76,6 +78,8 @@ image.alt.vi: Đá nóng chảy sâu dưới lòng đất
 
 #### option w1_sand
 correct: false
+feedback.en: Sand is tiny grains, cool and dry.
+feedback.vi: Cát là những hạt nhỏ, khô và mát.
 label.en: sand
 label.vi: cát
 image.brief: Dùng lại hình `q1_sand` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Đống cát mịn chụp gần; không có tay người, dấu chân hay chữ. Từ khoá tìm ảnh (EN): heap of fine sand close up
@@ -105,15 +109,17 @@ image.alt.en: A balance scale
 image.alt.vi: Cái cân đĩa
 hint.en: Think of a globe. Which colour covers the most?
 hint.vi: Em nghĩ tới quả địa cầu. Màu nào phủ nhiều nhất?
-explanation_correct.en: Yes! Water covers most of Earth's surface.
-explanation_correct.vi: Đúng rồi! Nước phủ phần lớn bề mặt Trái Đất.
-explanation_wrong.en: The answer is more water. Most of a globe is blue.
-explanation_wrong.vi: Đáp án là nhiều nước hơn. Phần lớn quả địa cầu có màu xanh dương.
+explanation_correct.en: Water covers most of Earth, mostly as oceans.
+explanation_correct.vi: Nước phủ phần lớn Trái Đất, chủ yếu là đại dương.
+explanation_wrong.en: Most of a globe is blue water.
+explanation_wrong.vi: Phần lớn quả địa cầu là nước xanh dương.
 > Câu hỏi và ba lựa chọn giữ đúng chữ của câu "Em nghĩ sao?" mà bài một đề xuất. Nhờ vậy, khi schema có `think_first`, app so được câu trả lời ở đầu và ở cuối chủ đề.
 > Câu trước đây không có hình, vì nhìn quả địa cầu là thấy ngay đáp án. SK-033 (9/11): mọi câu phải có hình, nên ảnh câu hỏi là cái cân đĩa (so nhiều hay ít), không phải quả địa cầu. Ba lựa chọn dùng lại ba hình của câu q5 bài một (cùng ba ý: toàn đất, toàn nước, nửa đất nửa nước), để bé gặp lại đúng câu hỏi cũ với đúng hình cũ. Ảnh chỉ minh hoạ chữ của lựa chọn, không cho thấy cả Trái Đất, nên không lộ đáp án.
 
 #### option w2_land
 correct: false
+feedback.en: Land is only the green and brown patches.
+feedback.vi: Đất chỉ là những mảng xanh lá và nâu.
 label.en: More land
 label.vi: Nhiều đất hơn
 image.brief: Dùng lại hình `explore_land` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): hills tea plantation Vietnam village
@@ -130,6 +136,8 @@ image.alt.vi: Biển xanh rộng
 
 #### option w2_same
 correct: false
+feedback.en: Land and water on Earth are not the same size.
+feedback.vi: Đất và nước trên Trái Đất không rộng bằng nhau.
 label.en: About the same
 label.vi: Gần bằng nhau
 image.brief: Dùng lại hình `q5_same` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): coastline aerial beach sea land
@@ -151,10 +159,12 @@ image.alt.vi: Ruộng bậc thang trên núi
 answer: false
 hint.en: Think of Vietnam and Japan. Where are they?
 hint.vi: Em nghĩ tới Việt Nam và Nhật Bản. Hai quốc gia này ở đâu?
-explanation_correct.en: Asia is a continent. It has many countries.
-explanation_correct.vi: Châu Á là một châu lục. Châu Á có nhiều quốc gia.
-explanation_wrong.en: This is false. Asia is a continent with many countries.
-explanation_wrong.vi: Câu này sai. Châu Á là một châu lục, có nhiều quốc gia.
+explanation_correct.en: Asia is the biggest continent, with many countries.
+explanation_correct.vi: Châu Á là châu lục lớn nhất, có nhiều quốc gia.
+explanation_wrong.en: Asia is a continent with many countries.
+explanation_wrong.vi: Châu Á là một châu lục, có nhiều quốc gia.
+feedback_true.en: Vietnam and Japan are both in Asia.
+feedback_true.vi: Việt Nam và Nhật Bản đều ở châu Á.
 > Khối mới (rà chữ 9/11), `id:` để trống, chờ lệnh `ids`. Bài hai đã có id nên `recall_from.lesson` hợp lệ.
 > Giải thích khi đúng giống câu q6 của bài hai, để bé nghe lại đúng câu sửa misconception. Không mở đầu bằng "Yes!", vì bé vừa chọn Sai.
 > Câu trước đây không có hình: hình ruộng bậc thang của châu Á ở bài hai không giúp bé phân biệt châu lục với quốc gia. SK-033 (9/11): mọi câu phải có hình, nên dùng lại đúng ảnh đó, chỉ để gợi bối cảnh. Không dùng bản đồ châu Á: vừa lộ đáp án (thấy nhiều quốc gia), vừa vướng quy tắc bản đồ (Hoàng Sa, Trường Sa). Không dùng hai lá cờ Việt Nam và Nhật Bản: cũng lộ đáp án.
@@ -249,7 +259,8 @@ label.en: Stay safe
 label.vi: Giữ an toàn
 color: gi_dong
 sentence.en: Drop, cover and hold on until the shaking stops.
-sentence.vi: Em cúi xuống, che đầu và bám chắc tới khi đất hết rung.
+sentence.vi: Cúi xuống, che đầu, bám chắc tới khi hết rung.
+> SK-044 (14/11, A2): câu VI cũ mười ba tiếng, nay mười; câu EN giữ nguyên.
 image.brief: [hình vẽ] Lớp học có bảng xanh để trống: một bạn nhỏ quỳ dưới gầm bàn, một tay vòng che đầu và gáy, tay kia nắm chân bàn; vẽ nhìn ngang, mặt cúi, không vẽ nét mặt; không có đồ rơi, không có chữ, cờ, khẩu hiệu hay logo. Không tìm được ảnh diễn tập hợp giấy phép (cả ảnh public domain của FEMA, USGS), nên designer vẽ (Duy 10/11). Từ khoá tìm ảnh (EN): earthquake drill classroom desk
 image.alt.en: A child under a desk holds on
 image.alt.vi: Bạn nhỏ dưới gầm bàn bám chắc chân bàn
@@ -289,8 +300,9 @@ prompt.en: Stay safe in an earthquake
 prompt.vi: Giữ an toàn khi có động đất
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: When the ground shakes: drop, cover, hold on. Find a picture for each step.
-messages.start.vi: Khi đất rung: cúi xuống, che đầu, bám chắc. Em tìm một hình cho mỗi bước nhé.
+messages.start.en: Find a picture for each step: drop, cover, hold on. Do this when the ground shakes.
+messages.start.vi: Em tìm hình cho mỗi bước: cúi xuống, che đầu, bám chắc. Làm vậy khi đất rung nhé.
+> SK-044 (14/11, A2): câu in trong bong bóng nay là việc cần làm kèm ba bước (mười từ, mười hai tiếng); "khi đất rung" thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Rà chữ 9/11: "tap one", "chạm vào để bỏ ra" như nhãn của app (ios-dev 9/11).
@@ -417,14 +429,16 @@ image.alt.en: A long line where two plates meet
 image.alt.vi: Đường dài nơi hai mảng gặp nhau
 hint.en: Plates slip under our feet. What do we feel?
 hint.vi: Các mảng trượt ngay dưới chân mình. Mình cảm thấy gì?
-explanation_correct.en: Yes! In an earthquake, the ground shakes.
-explanation_correct.vi: Đúng rồi! Khi có động đất, mặt đất rung lắc.
-explanation_wrong.en: The answer is the ground shakes. Lava comes out of volcanoes.
-explanation_wrong.vi: Đáp án là mặt đất rung lắc. Dung nham thì trào ra từ núi lửa.
+explanation_correct.en: Plates slip, and the shaking spreads through the ground.
+explanation_correct.vi: Các mảng trượt, rung lắc lan khắp mặt đất.
+explanation_wrong.en: When plates slip, the ground shakes.
+explanation_wrong.vi: Khi các mảng trượt, mặt đất rung lắc.
 > Lựa chọn dung nham ôn bài bốn và tách động đất khỏi núi lửa. Hai hiện tượng hay xảy ra ở cùng vùng, nên trẻ dễ lẫn.
 
 #### option q1_rain
 correct: false
+feedback.en: Rain falls from clouds, not from under the ground.
+feedback.vi: Mưa rơi từ mây, không từ dưới đất.
 label.en: heavy rain
 label.vi: mưa to
 image.brief: [hình vẽ] Mưa to trắng xoá trút xuống một căn nhà mái ngói giữa vườn cây, trước nhà có vũng nước gợn; không có người, không có chữ; cùng nét với hình cốc nước của lựa chọn `q1_shake`. Câu q2 bài năm *Khủng long* dùng lại hình này. Từ khoá tìm ảnh (EN): heavy rain house garden
@@ -444,6 +458,8 @@ image.alt.vi: Nước trong cốc đang rung
 
 #### option q1_lava
 correct: false
+feedback.en: Lava pours out when a volcano erupts.
+feedback.vi: Dung nham trào ra khi núi lửa phun.
 label.en: lava comes out
 label.vi: dung nham trào ra
 image.brief: [hình vẽ] Một núi lửa đang phun trào lúc chạng vạng, vẽ từ xa: cột dung nham đỏ ở miệng núi, hai dòng dung nham chảy xuống sườn, cột tro mờ phía trên; không có người, không có nhà cửa, không có ngọn lửa cháy rừng, không có chữ; cùng nét với hình cốc nước của lựa chọn `q1_shake`. Thẻ q4_erupts dùng lại hình này. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
@@ -466,10 +482,10 @@ sentence.vi: Các mảng là những phần rất lớn của {1}.
 answers: q2_crust
 hint.en: Which layer do we live on?
 hint.vi: Mình sống trên lớp nào của Trái Đất?
-explanation_correct.en: Yes! Plates are giant pieces of the crust.
-explanation_correct.vi: Đúng rồi! Các mảng là những phần rất lớn của vỏ Trái Đất.
-explanation_wrong.en: The answer is crust. We live on the crust.
-explanation_wrong.vi: Đáp án là vỏ Trái Đất. Mình sống trên lớp vỏ này.
+explanation_correct.en: We live on these plates, and they move slowly.
+explanation_correct.vi: Mình sống trên các mảng ấy, chúng dịch chuyển rất chậm.
+explanation_wrong.en: Plates are pieces of the crust we live on.
+explanation_wrong.vi: Các mảng là phần của vỏ, nơi mình sống.
 > Câu nhắc lại ý chính một bằng cách nói khác, và ôn ba lớp của bài ba: ngân hàng từ là vỏ Trái Đất, lớp manti, nhân Trái Đất. Gợi ý nối với ý chính một và câu q1 của bài ba ("mình sống trên vỏ Trái Đất").
 > Rà chéo 9/11: ngân hàng từ đổi sang tên đầy đủ như bài ba ("vỏ" thành "vỏ Trái Đất", "nhân" thành "nhân Trái Đất"), và câu tiếng Việt bỏ chữ "Trái Đất" sau ô trống cho khỏi lặp. [CẦN KIỂM] tên ba lớp theo sách giáo khoa hiện hành, xem bảng Tên gọi ở `_topic.md` và ghi chú ở ý chính một.
 > [CẦN KIỂM] (tester, lỗi nhỏ 10) Câu này có một đáp án duy nhất "các mảng là phần của vỏ Trái Đất", còn "lớp manti" là lựa chọn sai. Thật ra mảng gồm vỏ Trái Đất và phần trên cùng của lớp manti. Biên tập giữ câu vì khớp ý chính một, từ `plate` và ô `explore_plates` (cùng một cách giản lược). Nếu chuyên môn muốn nói "lớp ngoài cùng cứng" thay cho "vỏ Trái Đất", phải sửa cả bốn chỗ; riêng câu này thì đổi sang hỏi lớp mình sống bên trên (ví dụ "We live on the {1}, and it is broken into plates."), để không dạy bé "mảng chỉ là vỏ".
@@ -478,6 +494,8 @@ explanation_wrong.vi: Đáp án là vỏ Trái Đất. Mình sống trên lớp 
 #### bank q2_core
 label.en: core
 label.vi: nhân Trái Đất
+feedback.en: The core is deep in the middle, not outside.
+feedback.vi: Nhân nằm sâu ở giữa, không ở ngoài cùng.
 image.brief: Dùng lại hình `q1_core` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
 image.alt.en: Earth cut open, the core shown
 image.alt.vi: Mặt cắt Trái Đất, tô rõ nhân
@@ -485,6 +503,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ nhân
 #### bank q2_mantle
 label.en: mantle
 label.vi: lớp manti
+feedback.en: The mantle is the hot layer below the plates.
+feedback.vi: Lớp manti là lớp đá nóng bên dưới các mảng.
 image.brief: Dùng lại hình `q1_mantle` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
 image.alt.en: Earth cut open, the mantle shown
 image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp manti
@@ -501,8 +521,9 @@ id: 429f6670-befe-4b33-9297-6c5903dd761f
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Shaking in class! What is safe?
-prompt.vi: Đất rung khi em đang ở lớp! Việc nào an toàn?
+prompt.en: When the classroom shakes, what is safe?
+prompt.vi: Lớp học rung lắc, việc nào an toàn?
+> SK-044 (14/11, A2): câu VI cũ hai câu, mười một tiếng; nay một câu tám tiếng, EN bảy từ.
 image.brief: [ảnh] Một lớp học tiểu học không có người, chụp từ cuối lớp: bảng đen, hai dãy bàn gỗ, cửa sổ kính một bên, cửa ra hành lang; ưu tiên lớp học Việt Nam; không có chữ trên bảng, không có cờ, khẩu hiệu hay ảnh chân dung (cắt bỏ hoặc chọn ảnh khác). Designer thêm vài nét rung nhỏ quanh đèn trần và bàn. Không có cảnh đổ vỡ. Lớp không có học sinh, để không có mặt trẻ em và không cho thấy bạn nào đang làm gì (sẽ lộ đáp án). Từ khoá tìm ảnh (EN): classroom empty desks blackboard Vietnam
 image.alt.en: A classroom starts to shake
 image.alt.vi: Lớp học bắt đầu rung
@@ -510,10 +531,10 @@ instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Remember the three steps you just played.
 hint.vi: Em nhớ lại ba bước vừa chơi nhé.
-explanation_correct.en: Yes! Get under a desk, or cover your head.
-explanation_correct.vi: Đúng rồi! Em chui xuống gầm bàn, hoặc lấy tay che đầu.
-explanation_wrong.en: The answers are under a desk and arms over head.
-explanation_wrong.vi: Đáp án là chui xuống gầm bàn và lấy tay che đầu.
+explanation_correct.en: A desk and your arms protect your head.
+explanation_correct.vi: Gầm bàn và cánh tay giúp che chở đầu em.
+explanation_wrong.en: Stay where you are, get low and cover your head.
+explanation_wrong.vi: Em ở yên tại chỗ, cúi thấp và che đầu.
 > Phần Chơi diễn ra ở nhà; câu này đưa ba bước sang lớp học, một tình huống quen khác. Có một việc mới chưa gặp ở phần Chơi: chạy xuống cầu thang.
 > Lựa chọn trước đây chỉ có chữ, vì nhãn là cụm hành động và lưới hình ba cột sẽ cắt nhãn dài (`lineLimit(2)` ở `QuestionViews.swift`). SK-033 (9/11): mọi lựa chọn phải có hình. Ba ảnh dùng lại kệ Chơi (gầm bàn, cửa kính, tay che đầu), một ảnh mới (cầu thang); cả bốn đều có trẻ em, để bé không chọn theo việc ảnh có người hay không. Nhờ ios-dev xem nhãn VI dài nhất "Đứng cạnh cửa sổ kính", "Chui xuống gầm bàn" trong ô hình.
 > [CẦN KIỂM] Không chạy xuống cầu thang khi đất đang rung. Trường học thường diễn tập: hết rung mới đi xuống sân theo hàng.
@@ -528,6 +549,8 @@ image.alt.vi: Bạn nhỏ chui xuống gầm bàn chắc chắn
 
 #### option q3_window
 correct: false
+feedback.en: Glass can break and fall when the ground shakes.
+feedback.vi: Kính có thể vỡ và rơi khi đất rung.
 label.en: By a window
 label.vi: Đứng cạnh cửa sổ kính
 image.brief: Dùng lại hình `tray_window`. Từ khoá tìm ảnh (EN): child window from behind
@@ -536,6 +559,8 @@ image.alt.vi: Bạn nhỏ đứng cạnh cửa kính
 
 #### option q3_stairs
 correct: false
+feedback.en: Running on shaking stairs can make you fall.
+feedback.vi: Chạy trên cầu thang lúc rung dễ bị ngã.
 label.en: Run downstairs
 label.vi: Chạy xuống cầu thang
 image.brief: [hình vẽ] Một bạn nhỏ đang chạy xuống cầu thang có tay vịn, vẽ nhìn ngang, đầu quay đi chỉ thấy tóc, không vẽ nét mặt; không có chữ hay biển chỉ dẫn. Từ khoá tìm ảnh (EN): child running down stairs
@@ -565,15 +590,17 @@ sentence.vi: Các mảng trượt, và mặt đất {1}. Dưới đáy biển, �
 answers: q4_shakes, q4_tsunami
 hint.en: Two words are about volcanoes. Leave them out.
 hint.vi: Có hai từ nói về núi lửa. Em bỏ qua hai từ đó nhé.
-explanation_correct.en: Yes! The ground shakes. Under the sea, a tsunami can start.
-explanation_correct.vi: Đúng rồi! Mặt đất rung lắc. Dưới đáy biển, động đất có thể gây ra sóng thần.
-explanation_wrong.en: The answers are shakes and tsunami. Volcanoes erupt lava.
-explanation_wrong.vi: Đáp án là rung lắc và sóng thần. Còn núi lửa thì phun trào dung nham.
+explanation_correct.en: An earthquake under the sea can make giant waves.
+explanation_correct.vi: Động đất dưới biển có thể gây sóng rất lớn.
+explanation_wrong.en: Lava and erupts belong with volcanoes, not earthquakes.
+explanation_wrong.vi: Dung nham và phun trào là chuyện của núi lửa.
 > DOK 2: bé nối ý chính hai với ý chính ba thành một chuỗi nguyên nhân và kết quả, rồi loại hai từ của bài bốn (phun trào, dung nham). Bài một của *Ăn uống lành mạnh* và bài một của chủ đề này chỉ dùng câu một chỗ trống; đây là câu hai chỗ trống đầu tiên trong nội dung thật (xem Ghi chú cho dev).
 
 #### bank q4_lava
 label.en: lava
 label.vi: dung nham
+feedback.en: Lava comes from volcanoes, not from slipping plates.
+feedback.vi: Dung nham đến từ núi lửa, không do mảng trượt.
 image.brief: [hình vẽ] Một dòng dung nham đỏ rực chảy xuống sườn núi lửa màu tối, vẽ gần vừa; mặt dòng có lớp vỏ nguội sẫm màu nứt thành mảng, khe nứt sáng cam; không có người, không có ngọn lửa, không có chữ; cùng nét với ba thẻ kia của câu q4. Từ khoá tìm ảnh (EN): lava flow volcano slope
 image.alt.en: Red-hot lava on a volcano
 image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
@@ -589,6 +616,8 @@ image.alt.vi: Nước trong cốc đang rung
 #### bank q4_erupts
 label.en: erupts
 label.vi: phun trào
+feedback.en: Erupts is a word for volcanoes.
+feedback.vi: Phun trào là từ dùng cho núi lửa.
 image.brief: Dùng lại hình `q1_lava`. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
 image.alt.en: A volcano erupting
 image.alt.vi: Núi lửa đang phun trào
@@ -606,8 +635,9 @@ id: 2f539483-28d0-49f6-8c04-37e4c403f8b6
 format: single_choice
 version: 1
 dok: 2
-prompt.en: At the beach, the sea suddenly pulls far back. What should Lan do?
-prompt.vi: Ở bãi biển, nước biển bỗng rút ra rất xa. Lan nên làm gì?
+prompt.en: What should Lan do if the sea suddenly pulls back?
+prompt.vi: Biển bỗng rút ra rất xa, Lan nên làm gì?
+> SK-044 (14/11, A2): câu cũ hai câu, mười ba từ; gộp thành một câu mười từ, mười tiếng. "Ở bãi biển" do ảnh bãi cát nước rút cho thấy.
 image.brief: [ảnh] Bãi cát ướt rộng lúc nước rút, mặt biển phẳng ở xa, không có sóng lớn; vài người rất nhỏ ở xa, không nhận ra mặt; không có bạn nhỏ hay người lớn đứng gần; đã cắt bỏ ngọn đồi bên phải, để ảnh không thấy đồi hay bậc thang; không có chữ. Từ khoá tìm ảnh (EN): beach low tide wet sand
 image.alt.en: A wide beach of wet sand, the sea far away
 image.alt.vi: Bãi cát ướt rộng, biển ở xa
@@ -616,15 +646,17 @@ image.alt.vi: Bãi cát ướt rộng, biển ở xa
 > SK-033 (9/11): ảnh câu hỏi bỏ ngọn đồi có bậc thang của bản vẽ cũ, vì ảnh lựa chọn đúng q5_hill là bậc thang lên đồi; hai ảnh giống nhau sẽ lộ đáp án. Ảnh thật lúc nước rút trông như lúc thuỷ triều xuống bình thường; câu hỏi đã nói "bỗng rút ra rất xa".
 hint.en: The sea pulling back can mean big waves. Where is safe?
 hint.vi: Nước biển rút xa có thể là dấu hiệu sóng lớn sắp tới. Chỗ nào an toàn?
-explanation_correct.en: Yes! Go up high fast, and listen to grown-ups.
-explanation_correct.vi: Đúng rồi! Em chạy ngay lên chỗ cao và nghe lời người lớn.
-explanation_wrong.en: The answer is high ground. Big waves may come.
-explanation_wrong.vi: Đáp án là chạy lên chỗ cao. Sóng lớn có thể tới.
+explanation_correct.en: Go up high fast, and listen to grown-ups.
+explanation_correct.vi: Em chạy ngay lên chỗ cao và nghe lời người lớn.
+explanation_wrong.en: Big waves may come, so go up high fast.
+explanation_wrong.vi: Sóng lớn có thể tới, nên em chạy ngay lên chỗ cao.
 > Câu vận dụng ý chính ba và các dấu hiệu ở ô Sóng thần vào một chuyến đi biển quen thuộc. "Ra nhặt vỏ ốc" là việc trẻ dễ làm thật, vì nước rút để lộ cát, cá và vỏ ốc.
 > Giữ giọng nhẹ nhàng: hình không có sóng, không ai gặp nạn; giải thích chỉ nói "sóng lớn có thể tới". Xem [CẦN KIỂM] ở ô Sóng thần.
 
 #### option q5_shells
 correct: false
+feedback.en: On the wet sand, Lan is too near the sea.
+feedback.vi: Ở bãi cát ướt, Lan đang ở quá gần biển.
 label.en: Pick up shells
 label.vi: Ra nhặt vỏ ốc
 image.brief: [ảnh] Một bàn tay cầm mấy vỏ sò ở mép nước bãi biển, chụp gần; chỉ thấy bàn tay, không thấy mặt; không có chữ. Ba lựa chọn của câu này đều có người (bàn tay hoặc lưng), để bé không chọn theo việc ảnh có người hay không. Từ khoá tìm ảnh (EN): hand holding seashells beach
@@ -634,6 +666,8 @@ image.alt.vi: Bàn tay cầm vỏ sò ở bãi biển
 
 #### option q5_watch
 correct: false
+feedback.en: Standing on the beach keeps Lan near the water.
+feedback.vi: Đứng trên bãi biển, Lan vẫn ở gần nước.
 label.en: Watch the sea
 label.vi: Đứng xem biển
 image.brief: [hình vẽ] Một bạn nhỏ đứng một mình trên bãi cát nhìn ra biển êm, vẽ từ phía sau, thấy lưng và mặt biển phía trước; không có chữ. Hình khác ảnh câu hỏi (hình này vẽ gần một bạn, không có người lớn, không thấy dải cát nước rút). Từ khoá tìm ảnh (EN): child looking at sea
@@ -662,8 +696,9 @@ image.alt.vi: Nước trong cốc đang rung
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
 > Rà chữ 9/11 (tester N1): nhãn trung tính chung cho cả năm câu sáu, xem ghi chú ở câu q6 bài một.
-statement.en: The ground shakes a little. I still drop, cover and hold on.
-statement.vi: Đất chỉ rung nhẹ thôi. Mình vẫn cúi xuống, che đầu, bám chắc.
+statement.en: Even for small shakes, I drop, cover and hold on.
+statement.vi: Đất rung nhẹ, mình vẫn cúi xuống, che đầu, bám chắc.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười hai tiếng).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -672,10 +707,12 @@ labels.false.vi: Na chưa đúng
 answer: true
 hint.en: Can you tell how big it will get?
 hint.vi: Em có biết trước trận động đất sẽ mạnh tới đâu không?
-explanation_correct.en: Yes! Shaking can get stronger, and things can fall.
-explanation_correct.vi: Đúng rồi! Đất có thể rung mạnh hơn, và đồ đạc có thể rơi.
-explanation_wrong.en: Na is right. Shaking can get stronger.
-explanation_wrong.vi: Na nói đúng. Đất đang rung nhẹ vẫn có thể rung mạnh hơn.
+explanation_correct.en: Shaking can grow stronger, so act right away.
+explanation_correct.vi: Đất có thể rung mạnh hơn, nên em làm ngay.
+explanation_wrong.en: No one knows how strong the shaking will get.
+explanation_wrong.vi: Không ai biết trước đất sẽ rung mạnh tới đâu.
+feedback_false.en: Things on shelves can fall, even in small shakes.
+feedback_false.vi: Đồ trên kệ có thể rơi dù đất rung nhẹ.
 > Rà chữ 9/11 (tester N1): câu này đổi sang đáp án "Na đúng", vẫn gắn `quake_just_shaking`. Bản cũ: Na nói "Đất chỉ rung nhẹ thôi. Vậy mình cứ chơi tiếp." (đáp án Sai).
 > DOK 3: bé đánh giá việc Na làm. Đất mới rung nhẹ mà Na vẫn làm đủ ba bước; bé còn nghĩ "rung nhẹ thì không cần làm gì" sẽ cho là Na làm quá và chọn "No". Lúc mới rung chưa ai biết trận động đất sẽ mạnh tới đâu. Gợi ý hỏi đúng chỗ đó, không nói thẳng đáp án.
 > [CẦN KIỂM] Ý "đất đang rung nhẹ có thể rung mạnh hơn, nên cúi xuống, che đầu, bám chắc ngay": biên tập hiểu đây là lý do khuyến cáo yêu cầu làm ba bước ngay khi thấy rung.

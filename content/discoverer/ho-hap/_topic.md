@@ -242,7 +242,7 @@ Câu w1 của bốn bài ở bốn chỗ khác nhau. Không bài nào theo chu k
 
 **Khi soạn bốn bài** (áp cho cả bốn bài; rút kinh nghiệm SK-031, SK-032, SK-033)
 
-- **Đúng/Sai:** theo bảng trên. Câu đáp án Sai thì giải thích khi đúng không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai" hoặc "Na is not right" · "Na chưa đúng". Câu đáp án Đúng thì giải thích khi sai nói "This is true" · "Câu này đúng" hoặc "Na is right" · "Na nói đúng".
+- **Đúng/Sai:** theo bảng trên. Câu đáp án Sai thì giải thích khi đúng không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai" hoặc "Na is not right" · "Na chưa đúng". Câu đáp án Đúng thì giải thích khi sai nói "This is true" · "Câu này đúng" hoặc "Na is right" · "Na nói đúng". **Hết hiệu lực 14/11** (SK-044, ngân sách A2): màn đã chỉ đáp án, nên hai lời giải thích bỏ "Yes!", "This is …", "Na is …", "The answer is …", mỗi lời còn một câu nêu lý do; phía bé chọn nhầm có `feedback_true` hoặc `feedback_false`.
 - **Gợi ý** chỉ chỗ cần nhớ (ô Học nào, trò Chơi nào, bài nào) hoặc cách nghĩ. Không hỏi một câu mà câu trả lời chính là đáp án, không đọc lại các lựa chọn, không nhắc đúng chữ của nhãn đáp án (kể cả chữ VI: ô Học bài ba tên "Thử đếm", không tên "Đếm hơi thở", vì câu q2 có thẻ "lần thở").
 - **Lựa chọn trong một câu:** cùng loại hình (cùng ảnh chụp hoặc cùng hình vẽ), cùng khung, cùng số ít hay số nhiều, cùng kiểu nhãn. Lựa chọn sai có sức hút, nối với misconception hay một liên tưởng có thật: bóng bay và chong chóng "có không khí" (bài một), dạ dày (bài hai), cờ vua "là môn thể thao" (bài ba), hơi nồi cơm "trông như khói" và công viên "thường là chỗ tốt" (bài bốn).
 - **Câu sáu:** `instruction` "Challenge: check Na's idea" · "Thử thách: kiểm tra ý của Na"; `labels` "Yes" · "Na đúng", "No" · "Na chưa đúng"; `speaker: na`; DOK ba; gắn key misconception.
@@ -263,8 +263,8 @@ Câu w1 của bốn bài ở bốn chỗ khác nhau. Không bài nào theo chu k
 - **Câu sáu, lời Na** (mỗi câu EN tối đa mười từ):
   - Bài một: "I breathe out the same air I breathe in." · "Không khí mình thở ra y hệt không khí mình hít vào." (Na chưa đúng). Hình: chiếc chong chóng.
   - Bài hai: "My belly moves out, but air fills my lungs." · "Bụng mình phình ra, nhưng không khí thì đi vào phổi." (Na nói đúng; chín từ, rút gọn theo rà chữ tester 10/11 n3). Hình: bạn nhỏ nằm ngửa, gấu bông nhấp nhô trên bụng.
-  - Bài ba: "My legs need more oxygen when I run. So I breathe faster." · "Khi mình chạy, chân mình cần nhiều ô-xi hơn. Vì vậy mình thở nhanh hơn." (Na nói đúng). Hình: bóng mấy bạn đá bóng lúc hoàng hôn.
-  - Bài bốn: "The air looks clear today. So it has no dust." · "Hôm nay trời trông thật trong. Vậy trong không khí không có bụi." (Na chưa đúng). Hình: trời xanh trong trên những mái nhà.
+  - Bài ba: "Running legs need more oxygen, so I breathe faster." · "Khi chạy, chân cần thêm ô-xi, nên mình thở nhanh hơn." (Na nói đúng; một câu, rút theo ngân sách A2 ngày 14/11). Hình: bóng mấy bạn đá bóng lúc hoàng hôn.
+  - Bài bốn: "The air looks clear today, so it has no dust." · "Trời trông thật trong, vậy không khí không có bụi." (Na chưa đúng; một câu, rút theo ngân sách A2 ngày 14/11). Hình: trời xanh trong trên những mái nhà.
 - **Thẻ thưởng:** bộ thẻ mới `set: breathing`. Cần ios-dev thêm khoá `collectible.set.breathing` (đề xuất "Breathing cards" · "Thẻ hô hấp"); chưa có thì app hiện tên chung "Thẻ". Mỗi bài một thẻ, số liệu cần kiểm:
   - bài một: "Whale" · "Cá voi", "Whales live in the sea, but they breathe air." [CẦN KIỂM];
   - bài hai: "Elephant" · "Con voi", vòi là mũi, voi bơi giơ vòi lên để thở [CẦN KIỂM];

@@ -55,10 +55,11 @@ image.alt.en: Hands brushing rock at a fossil dig
 image.alt.vi: Đôi tay chải đất đá ở bãi đào hoá thạch
 hint.en: Which one can no one see alive today?
 hint.vi: Con nào ngày nay không ai còn thấy sống nữa?
-explanation_correct.en: Yes! Triceratops was a dinosaur. It walked on four legs.
-explanation_correct.vi: Đúng rồi! Khủng long ba sừng là một loài khủng long. Nó đi bằng bốn chân.
-explanation_wrong.en: The answer is Triceratops. Elephants and buffaloes are not dinosaurs.
-explanation_wrong.vi: Đáp án là khủng long ba sừng. Voi và trâu không phải khủng long.
+explanation_correct.en: Triceratops walked on four legs and ate plants.
+explanation_correct.vi: Khủng long ba sừng đi bốn chân và ăn thực vật.
+explanation_wrong.en: No one sees a living Triceratops today.
+explanation_wrong.vi: Ngày nay không ai thấy khủng long ba sừng còn sống.
+> SK-044 (14/11, A2): giải thích một câu, bỏ "Yes!"/"Đáp án là…". Lý do voi và trâu chưa đúng nay nằm ở `feedback` của hai lựa chọn đó. Ý "ăn thực vật" nói trước bài bốn.
 > Hình câu hỏi là cảnh chung (Quy ước hình, mục bốn): bãi đào chưa thấy rõ xương con gì, nên không lộ đáp án. Hình này mở sợi chỉ "Làm sao mình biết được?" của Câu hỏi lớn; câu q3 và câu q5 bài hai dùng lại.
 > Sửa theo rà chữ tester 9/11 (n6): câu cũ "là một loài khủng long có ba cái sừng" lặp lại chính tên gọi tiếng Việt, nghe như định nghĩa vòng. Câu mới tách hai ý; ý thứ hai ("đi bằng bốn chân") cho bé thêm một điều mới và chuẩn bị ý "chân" của bài hai.
 > Mô hình khủng long ba sừng đứng cạnh ảnh voi và trâu còn sống, nên chữ "mô hình" đã gợi ý phần nào. Không tránh được, vì khủng long chỉ có ảnh mô hình, ảnh bộ xương hoặc tranh. Câu ôn kiến thức nền, DOK một, nên chấp nhận. Tester 9/11 (n2) đề xuất đổi voi và trâu sang tranh nền kem; biên tập giữ ảnh thật, vì Quy ước hình mục hai yêu cầu con vật ngày nay là ảnh chụp thật, và `alt` của mô hình phải nói "model" (mục năm).
@@ -67,6 +68,8 @@ explanation_wrong.vi: Đáp án là khủng long ba sừng. Voi và trâu không
 
 #### option w1_elephant
 correct: false
+feedback.en: Elephants live today, in forests and zoos.
+feedback.vi: Voi ngày nay vẫn sống trong rừng và sở thú.
 label.en: a long trunk
 label.vi: có vòi dài
 image.brief: [ảnh] Một con voi châu Á non đứng cả con, hơi chéo, thấy rõ vòi dài; nền cỏ cao và hàng rào gỗ; cùng cỡ trong khung như hai hình kia; không có người, không có chữ. Từ khoá tìm ảnh (EN): young Asian elephant standing tall grass
@@ -85,6 +88,8 @@ image.alt.vi: Mô hình một con vật có ba sừng
 
 #### option w1_buffalo
 correct: false
+feedback.en: Buffaloes live today and help on farms.
+feedback.vi: Trâu ngày nay vẫn giúp nhà nông cày ruộng.
 label.en: two curved horns
 label.vi: có hai sừng cong
 image.brief: [ảnh] Con trâu đen cúi uống nước bên bờ suối, thấy cả con, hơi chéo từ phía trước, cặp sừng cong rất rõ; đã cắt bỏ con cò bên phải; không có người, không có chữ. Từ khoá tìm ảnh (EN): water buffalo drinking stream horns
@@ -107,10 +112,12 @@ image.alt.vi: Trái Đất nhìn từ vũ trụ
 answer: true
 hint.en: Earth's crust is like a cracked eggshell.
 hint.vi: Vỏ Trái Đất giống như vỏ quả trứng bị nứt.
-explanation_correct.en: Yes! Plates move very slowly. The land moves with them.
-explanation_correct.vi: Đúng rồi! Các mảng chuyển động rất chậm. Các vùng đất cũng chuyển động theo.
-explanation_wrong.en: This is true. Earth's crust is broken into giant plates.
-explanation_wrong.vi: Câu này đúng. Vỏ Trái Đất bị chia thành những mảng rất lớn.
+explanation_correct.en: Plates move very slowly, and the land moves with them.
+explanation_correct.vi: Các mảng dịch chuyển rất chậm, đất cũng dịch theo.
+explanation_wrong.en: The crust is in giant pieces, like a cracked eggshell.
+explanation_wrong.vi: Vỏ Trái Đất chia thành mảng, như vỏ trứng nứt.
+feedback_false.en: Earthquakes happen where giant plates slip.
+feedback_false.vi: Động đất xảy ra khi các mảng lớn trượt.
 > Câu hỏi giữ đúng chữ ý chính một của bài năm chủ đề một, để bé nghe lại đúng câu đã học. [CẦN KIỂM] của câu đó áp luôn ở đây: "vỏ Trái Đất chia thành mảng" là cách giản lược (mảng gồm vỏ và phần trên cùng của lớp manti).
 > Gợi ý mạnh hơn thường lệ, vì bé chưa học chủ đề một cũng phải làm được (`_topic.md`, mục Frontmatter, dòng `prerequisites`). Gợi ý dùng lại ví dụ vỏ trứng nứt của bài năm chủ đề một, là một phép so sánh chứ không nói thẳng "câu này đúng". Câu Đúng/Sai chỉ có hai lựa chọn, nên gợi ý mạnh ở lần thử hai không làm câu dễ hơn đáng kể.
 > Hình Trái Đất là ảnh thật, không có đường ranh giới mảng, vì vẽ đường mảng sẽ lộ đáp án. Không dùng lại hình `explore_plates` của chủ đề một: hình đó là giấy cắt, và có quả trứng nứt (lộ đáp án). Ảnh Duy duyệt (SK-033, 10/11) dùng lại ảnh Blue Marble của từ `surface` ở bài một chủ đề một; lệch brief đầu một chút: không thấy châu Mỹ.
@@ -140,7 +147,8 @@ label.en: Long ago
 label.vi: Thời xa xưa
 color: gi_dong
 sentence.en: When the first dinosaurs lived, most land was joined together.
-sentence.vi: Khi những con khủng long đầu tiên sống, phần lớn các vùng đất nối liền thành một khối.
+sentence.vi: Thời khủng long đầu tiên, phần lớn đất nối thành một khối.
+> SK-044 (14/11, A2): câu VI cũ mười chín tiếng, nay mười hai. Không viết "đất liền" (dễ hiểu là đất liền đối với đảo); câu EN giữ nguyên.
 > Lệch kế hoạch: `_topic.md` ghi "all land was joined together". Biên tập đổi "all" thành "most" ("tất cả" thành "phần lớn"). `_topic.md` đã sửa theo (rà chéo 9/11).
 > [CẦN KIỂM] Lý do đổi, theo trí nhớ của biên tập, chưa tra nguồn: lúc khủng long mới xuất hiện vẫn có vài mảnh đất chưa ghép hẳn vào khối lớn, có thể gồm cả vùng nay là Đông Nam Á. Nếu chuyên gia nói "tất cả" vẫn đúng ở mức trẻ bảy đến chín tuổi thì đổi lại "all", "tất cả".
 > [CẦN KIỂM] Khối đất liền lớn (Pangaea) đã có trước khi khủng long xuất hiện, và bắt đầu tách ra vào kỷ Jura. Cách nói "phần lớn các vùng đất nối liền thành một khối" dùng được cho trẻ bảy đến chín tuổi. Không dùng tên "Pangaea" trong chữ cho trẻ.
@@ -187,7 +195,8 @@ label.en: People
 label.vi: Con người
 color: do_son
 sentence.en: Scientists found that people came long after dinosaurs.
-sentence.vi: Các nhà khoa học tìm ra con người xuất hiện rất lâu sau khủng long.
+sentence.vi: Nhà khoa học tìm ra người đến rất lâu sau khủng long.
+> SK-044 (14/11, A2): câu VI cũ mười lăm tiếng, nay mười hai; giữ "nhà khoa học tìm ra" (sợi chỉ "Làm sao mình biết được?").
 image.brief: [sơ đồ ghép ảnh] Trục thời gian là một dải giấy dài nằm ngang trên nền trơn, chạy từ trái sang phải: mẩu xám ngắn bên trái có dấu ngắt hai vạch chéo; tiếp theo là dải màu nâu đất dài, là thời khủng long, trên dải có hình nhỏ khủng long cổ dài (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`); rồi một đoạn trống màu nhạt; sát mép phải là hình nhỏ voi ma mút (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_mammoth`), và ở tận cùng là cánh diều thoi nhiều màu có đuôi ruy băng bay trên trời mây (ảnh CC0 tìm riêng, không cắt từ ảnh bạn nhỏ thả diều của kệ Chơi); không có người, không có chữ, không ghi nhãn trong hình (Duy 10/11). Từ khoá cho cánh diều: rainbow kite cloudy sky.
 image.alt.en: A timeline from dinosaur times to today
 image.alt.vi: Trục thời gian từ thời khủng long tới ngày nay
@@ -208,8 +217,9 @@ examples.4.vi: rồi mới tới con người
 label.en: How long?
 label.vi: Lâu cỡ nào?
 color: vang_hoe
-sentence.en: Scientists found dinosaurs died out about 66 million years ago.
-sentence.vi: Các nhà khoa học tìm ra khủng long tuyệt chủng khoảng sáu mươi sáu triệu năm trước.
+sentence.en: Dinosaurs died out about 66 million years ago.
+sentence.vi: Khủng long tuyệt chủng khoảng sáu mươi sáu triệu năm trước.
+> SK-044 (14/11, A2): câu VI cũ mười tám tiếng, nay mười một. Bỏ "Các nhà khoa học tìm ra" ở ô này (ô Con người ngay trước vẫn giữ), đổi cả câu EN cho khớp.
 > [CẦN KIỂM] Mốc sáu mươi sáu triệu năm trước. "Khủng long tuyệt chủng" là cách nói giản lược, không nhắc chim (Duy 9/11, Quyết định đã ghi của SK-032). Đây là một trong hai chỗ chữ cho trẻ có số năm (ô này và thẻ thưởng), theo bảng Tên gọi. EN viết chữ số, VI viết bằng chữ.
 > Lệch kế hoạch: `_topic.md` đề xuất câu "Counting to 66 million takes over two years." Biên tập đặt mốc sáu mươi sáu triệu năm vào câu, còn phép đếm chuyển xuống bốn món ví dụ. Lý do: câu cũ không cho bé biết sáu mươi sáu triệu là gì, và bản EN với bản VI của câu cũ nói hai ý khác nhau (bản VI có "mỗi giây một số, không ngủ, không nghỉ", bản EN không có). `_topic.md` đã sửa theo (rà chéo 9/11).
 image.brief: Dùng lại hình `w1_clock` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat` (chiếc đồng hồ treo tường tròn; thay hai cuốn lịch xé của brief đầu, vì ảnh lịch xé có giấy phép đều đọc được chữ số)
@@ -254,7 +264,8 @@ prompt.vi: Dựng cảnh thời khủng long
 capacity: 3
 success_when: all_required_and_no_limit
 messages.start.en: Pick a plant, a dinosaur and a small animal.
-messages.start.vi: Em chọn một loài cây, một con khủng long và một con vật nhỏ của thời đó nhé.
+messages.start.vi: Em chọn một cây, một khủng long, một con vật nhỏ nhé.
+> SK-044 (14/11, A2): câu VI cũ mười bảy tiếng, nay mười hai; "của thời đó" đã có ở lệnh và ba chip nhóm, như bản EN.
 > Câu EN không nhắc lại "from dinosaur times" để giữ dưới mười từ; lệnh ngay trên đã nói "Build a scene from dinosaur times", và ba chip nhóm có chữ "of that time". Bản VI thêm "của thời đó" vì câu tiếng Việt vẫn ngắn.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
@@ -389,16 +400,18 @@ image.alt.en: An hourglass
 image.alt.vi: Chiếc đồng hồ cát
 hint.en: Which one lived long, long ago?
 hint.vi: Loài nào sống từ rất, rất lâu về trước?
-explanation_correct.en: Yes! Dinosaurs lived long before people.
-explanation_correct.vi: Đúng rồi! Khủng long sống từ rất lâu trước khi có con người.
-explanation_wrong.en: The answer is the dinosaur. People and buffaloes came much later.
-explanation_wrong.vi: Đáp án là khủng long. Con người và con trâu xuất hiện muộn hơn rất nhiều.
+explanation_correct.en: Dinosaurs lived millions of years before people.
+explanation_correct.vi: Khủng long sống trước con người hàng triệu năm.
+explanation_wrong.en: Dinosaurs came first, and people much later.
+explanation_wrong.vi: Khủng long có trước, con người có sau rất lâu.
 > Câu nhớ lại mục tiêu của bài. Hình câu hỏi là đồng hồ cát, gợi ý về thời gian, không lộ đáp án.
 > Câu w1 của bài hai (theo `_topic.md`) cũng hỏi "cái nào có trước", với voi ma mút thay cho con trâu. Hai câu gần giống nhau là có chủ ý: bài sau ôn lại bài trước.
 > Ba lựa chọn là ba hình riêng; không hình nào có người và khủng long cùng lúc (Quy ước hình, mục sáu).
 
 #### option q1_people
 correct: false
+feedback.en: People came only very recently.
+feedback.vi: Con người mới xuất hiện gần đây thôi.
 label.en: people
 label.vi: con người
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_kite`
@@ -415,6 +428,8 @@ image.alt.vi: Mô hình khủng long cổ dài
 
 #### option q1_buffalo
 correct: false
+feedback.en: Buffaloes are newer animals, from much later times.
+feedback.vi: Trâu là loài có mặt muộn hơn rất nhiều.
 label.en: water buffalo
 label.vi: con trâu
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_buffalo`
@@ -433,10 +448,10 @@ image.alt.en: A painting of Earth long ago, with the land joined
 image.alt.vi: Tranh vẽ Trái Đất thời xa xưa, các vùng đất nối liền
 hint.en: Think of the plants in your dinosaur scene.
 hint.vi: Em nhớ lại những cây trong cảnh thời khủng long em vừa dựng.
-explanation_correct.en: Yes! Ferns grew in dinosaur times. People made the other two much later.
-explanation_correct.vi: Đúng rồi! Dương xỉ đã mọc từ thời khủng long. Ruộng lúa và sân chơi do con người làm ra, muộn hơn rất nhiều.
-explanation_wrong.en: The answer is the fern forest. People made the other two much later.
-explanation_wrong.vi: Đáp án là rừng dương xỉ. Hai cảnh kia do con người làm ra, muộn hơn rất nhiều.
+explanation_correct.en: Ferns are very old plants, and they still grow today.
+explanation_correct.vi: Dương xỉ là cây rất cổ, ngày nay vẫn còn mọc.
+explanation_wrong.en: Ferns grew in dinosaur times, long before people.
+explanation_wrong.vi: Dương xỉ đã mọc từ thời khủng long, trước con người.
 > Câu nhớ lại ý chính một (cây thời đó) và nối với ý chính ba: ruộng lúa, sân chơi do con người làm ra, nên chưa thể có vào thời khủng long. Hai lựa chọn sai là nơi do con người làm, không phải loài cây, để tránh hỏi loài cây nào có từ bao giờ (chỗ chưa chắc về khoa học).
 > [CẦN KIỂM] Rừng nhiều dương xỉ, có cả dương xỉ thân gỗ, đã có từ thời khủng long (nói theo nhóm cây).
 > Gợi ý trỏ về phần Chơi, không gọi tên đáp án.
@@ -451,6 +466,8 @@ image.alt.vi: Khu rừng nhiều dương xỉ
 
 #### option q2_rice
 correct: false
+feedback.en: People made rice fields much, much later.
+feedback.vi: Ruộng lúa do con người làm, rất lâu sau này.
 label.en: rice field
 label.vi: ruộng lúa
 image.brief: [ảnh] Ruộng lúa xanh ở đồng bằng Việt Nam nhìn rộng, núi ở xa, trời trong; không có người, không có chữ. Từ khoá tìm ảnh (EN): green rice paddy field Vietnam wide view
@@ -459,6 +476,8 @@ image.alt.vi: Ruộng lúa xanh
 
 #### option q2_playground
 correct: false
+feedback.en: People built playgrounds only in our time.
+feedback.vi: Sân chơi do con người xây, mới gần đây thôi.
 label.en: playground
 label.vi: sân chơi
 image.brief: [ảnh] Sân chơi trong công viên nhìn rộng, có cầu trượt và nhà leo dưới tán cây; không có người, không có chữ đọc được, không thấy nhãn hiệu. Từ khoá tìm ảnh (EN): empty playground slide under trees
@@ -480,15 +499,17 @@ image.alt.en: Hands brushing rock at a fossil dig
 image.alt.vi: Đôi tay chải đất đá ở bãi đào hoá thạch
 hint.en: Remember the plants and small animals of that time.
 hint.vi: Em nhớ lại những cây và con vật nhỏ thời đó nhé.
-explanation_correct.en: Yes! Dragonflies and cycads were there in dinosaur times.
-explanation_correct.vi: Đúng rồi! Chuồn chuồn và cây vạn tuế đã có từ thời khủng long.
-explanation_wrong.en: The answers are the dragonfly and the cycad. Mammoths came much later.
-explanation_wrong.vi: Đáp án là con chuồn chuồn và cây vạn tuế. Voi ma mút có muộn hơn nhiều.
+explanation_correct.en: Dragonflies and cycads still live today, too.
+explanation_correct.vi: Chuồn chuồn và cây vạn tuế ngày nay vẫn còn.
+explanation_wrong.en: Mammoths and buffaloes came long after dinosaurs.
+explanation_wrong.vi: Voi ma mút và trâu có rất lâu sau khủng long.
 > DOK 2: phân loại trước và sau, có bẫy voi ma mút (to, cổ xưa). Khác phần Chơi ở chỗ bé phải chọn cả cây lẫn con vật trong một lần, và mỗi nhóm chỉ có một món đúng.
 > [CẦN KIỂM] Chuồn chuồn và cây vạn tuế đã có từ thời khủng long, nói theo nhóm; trâu và voi ma mút xuất hiện sau khi khủng long tuyệt chủng.
 
 #### option q3_mammoth
 correct: false
+feedback.en: Mammoths came long after the dinosaurs died out.
+feedback.vi: Voi ma mút có rất lâu sau khủng long.
 label.en: mammoth
 label.vi: voi ma mút
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_mammoth`
@@ -505,6 +526,8 @@ image.alt.vi: Con chuồn chuồn
 
 #### option q3_buffalo
 correct: false
+feedback.en: Buffaloes came much later, close to our time.
+feedback.vi: Trâu có muộn hơn nhiều, gần thời của mình.
 label.en: water buffalo
 label.vi: con trâu
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_buffalo`
@@ -531,10 +554,10 @@ image.alt.en: A timeline with dinosaur times on it
 image.alt.vi: Trục thời gian có thời khủng long
 hint.en: Find dinosaur times first. Were there people then?
 hint.vi: Em tìm thời khủng long trước. Lúc đó đã có con người chưa?
-explanation_correct.en: Yes! People are at the far end, long after dinosaurs.
-explanation_correct.vi: Đúng rồi! Con người nằm ở tận cuối trục, rất lâu sau khủng long.
-explanation_wrong.en: The answer is long after the dinosaurs. People came much later.
-explanation_wrong.vi: Đáp án là rất lâu sau khủng long. Con người xuất hiện muộn hơn rất nhiều.
+explanation_correct.en: People are at the far end, near today.
+explanation_correct.vi: Con người ở tận cuối trục, gần ngày nay.
+explanation_wrong.en: People came long after the dinosaurs died out.
+explanation_wrong.vi: Con người có rất lâu sau khi khủng long tuyệt chủng.
 > DOK 2: đọc một trục thời gian đơn giản và dùng từ mới `timeline`. Không dùng `order_sequence` (sắp thứ tự) dù hợp ý, vì app 0.1.0 chưa hiện format này (`format_not_rendered`).
 > Lựa chọn là ba sơ đồ khác nhau rõ ở vị trí chấm đỏ: trên mẩu xám, giữa dải nâu, tận cùng mép phải. Hình câu hỏi không có chấm và không có người, nên không lộ đáp án.
 > Rà chữ tester 9/11 (n3): ba lựa chọn trỏ thẳng về hình gốc, không trỏ qua hình câu q4 (cũng là hình dùng lại), đúng Quy ước hình mục ba.
@@ -543,6 +566,8 @@ explanation_wrong.vi: Đáp án là rất lâu sau khủng long. Con người xu
 
 #### option q4_before
 correct: false
+feedback.en: Before dinosaurs, there were no people yet.
+feedback.vi: Trước khủng long, chưa hề có con người.
 label.en: Before the dinosaurs
 label.vi: Trước khủng long
 image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh nhỏ khủng long cổ dài, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son trên mẩu xám bên trái, trước dải nâu; không có chữ
@@ -551,6 +576,8 @@ image.alt.vi: Chấm đỏ ở trước thời khủng long
 
 #### option q4_with
 correct: false
+feedback.en: No person ever saw a living dinosaur.
+feedback.vi: Chưa người nào thấy khủng long còn sống.
 label.en: With the dinosaurs
 label.vi: Cùng thời khủng long
 image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh nhỏ khủng long cổ dài, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son ở giữa dải nâu, ngay cạnh ảnh khủng long cổ dài; không có chữ
@@ -577,10 +604,10 @@ image.alt.en: A big hall in a museum
 image.alt.vi: Sảnh lớn trong bảo tàng
 hint.en: Think of the timeline. Which one is closest to people?
 hint.vi: Em nghĩ tới trục thời gian. Con nào nằm gần con người nhất?
-explanation_correct.en: Yes! Mammoths came much later, closer to our time.
-explanation_correct.vi: Đúng rồi! Voi ma mút có muộn hơn nhiều, gần thời của chúng mình hơn.
-explanation_wrong.en: The answer is the mammoth. It came long after the dinosaurs.
-explanation_wrong.vi: Đáp án là voi ma mút. Voi ma mút có muộn hơn khủng long rất nhiều.
+explanation_correct.en: Mammoths had thick fur and lived after dinosaurs.
+explanation_correct.vi: Voi ma mút có lông dày, sống sau thời khủng long.
+explanation_wrong.en: Mammoths came long after the dinosaurs.
+explanation_wrong.vi: Voi ma mút có muộn hơn khủng long rất nhiều.
 > DOK 2: so sánh thời gian của ba con vật to lớn, cổ xưa. Bé phải nhớ voi ma mút có muộn hơn khủng long, nên gần thời mình hơn. Câu chuẩn bị cho chữ "closer to our time" ở thẻ thưởng.
 > Đáp án duy nhất: khủng long cổ dài và khủng long ba sừng đều sống trước khi khủng long tuyệt chủng, voi ma mút xuất hiện hàng triệu năm sau đó. [CẦN KIỂM] như ô Con người.
 > Ba lựa chọn cùng là ảnh mô hình, chụp ngang cả con (Quy ước hình, mục bốn). [CẦN KIỂM] Nếu có ảnh sảnh Bảo tàng Thiên nhiên Việt Nam dùng được thì ưu tiên ảnh đó (Quy ước hình, mục tám).
@@ -595,6 +622,8 @@ image.alt.vi: Mô hình voi ma mút
 
 #### option q5_longneck
 correct: false
+feedback.en: Long-necked dinosaurs lived very long ago.
+feedback.vi: Khủng long cổ dài sống từ rất lâu rồi.
 label.en: long-necked dinosaur
 label.vi: khủng long cổ dài
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`
@@ -603,6 +632,8 @@ image.alt.vi: Mô hình khủng long cổ dài
 
 #### option q5_triceratops
 correct: false
+feedback.en: Triceratops died out a very long time ago.
+feedback.vi: Khủng long ba sừng đã tuyệt chủng từ rất lâu.
 label.en: Triceratops
 label.vi: khủng long ba sừng
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_triceratops`
@@ -619,8 +650,9 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: In cartoons, people ride dinosaurs. So they lived together.
-statement.vi: Trong phim hoạt hình, người cưỡi khủng long. Vậy người và khủng long từng sống cùng nhau.
+statement.en: In cartoons people ride dinosaurs, so they lived together.
+statement.vi: Hoạt hình có người cưỡi khủng long, nên họ từng sống chung.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (chín từ, mười hai tiếng).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -633,9 +665,11 @@ image.alt.vi: Khủng long đồ chơi trên bàn
 hint.en: Look at the timeline. Where are dinosaurs and people?
 hint.vi: Em nhìn lại trục thời gian. Khủng long và con người nằm ở đâu?
 explanation_correct.en: Dinosaurs died out millions of years before people came.
-explanation_correct.vi: Khủng long đã tuyệt chủng hàng triệu năm trước khi có con người.
-explanation_wrong.en: Na is not right. People came long after the dinosaurs.
-explanation_wrong.vi: Na chưa đúng. Con người xuất hiện rất lâu sau khủng long.
+explanation_correct.vi: Khủng long tuyệt chủng hàng triệu năm trước khi có người.
+explanation_wrong.en: On the timeline, people come long after dinosaurs.
+explanation_wrong.vi: Trên trục thời gian, con người ở rất xa sau khủng long.
+feedback_true.en: Cartoons are made up, not real history.
+feedback_true.vi: Phim hoạt hình là chuyện tưởng tượng.
 > Lời Na, nhãn, hình câu hỏi và đáp án Sai đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đáp án Đúng/Sai dự kiến).
 > DOK 3: bé đánh giá một lập luận bằng bằng chứng. Na lấy phim hoạt hình làm bằng chứng; bé phải đặt nó cạnh trục thời gian vừa học. Câu sửa không chê ai tin như Na (mục An toàn và nhạy cảm).
 > Rà chữ tester 9/11 (N2): gợi ý cũ mở đầu bằng "Phim hoạt hình là chuyện tưởng tượng", tức đã nói lời giải. Gợi ý mới chỉ chỗ cần nhìn (trục thời gian, câu q4 vừa hỏi) và câu hỏi để bé tự so, không nói Na đúng hay sai.

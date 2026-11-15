@@ -132,6 +132,10 @@ export const BarChart = z.strictObject({
   bars: z.array(Bar).min(2).max(6),
 });
 
+/**
+ * SK-043 (dev 14/11): options[i] is the answer of chart.bars[i] (same count, same label, no option
+ * image; refs.mjs). The app draws bars left to right; a tap on bar i selects options[i].
+ */
 export const PictureBarChart = QuizBase.extend({
   format: z.literal("picture_bar_chart"),
   chart: BarChart,

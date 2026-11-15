@@ -30,9 +30,9 @@ export const FORMAT_FIRST_APP_VERSION: Readonly<Record<string, string | null>> =
   multi_choice: "0.1.0",
   true_false: "0.1.0",
   fill_blank_bank: "0.1.0",
-  // Renderers planned for GĐ 1 S4 (technical-plan.md line 663).
-  order_sequence: null,
-  picture_bar_chart: null,
+  // SK-043 (ios-dev 14/11, lượt 2): Discoverer A2 screens, before the first shipped build.
+  order_sequence: "0.1.0",
+  picture_bar_chart: "0.1.0",
 };
 
 /**

@@ -26,6 +26,13 @@
       "additionalProperties": false,
       "properties": {
         "max_tries": { "description": "Số lần thử tối đa một câu (B4.4)", "type": "integer", "minimum": 1 },
+        "max_tries_by_format": {
+          "description": "Số lần thử tối đa theo format, ghi đè max_tries cho format có ở đây; format không có thì theo max_tries. Áp cả Khởi động lẫn Quiz. Duy 14/11 (SK-043): true_false (gồm câu Na) một lượt (Explorer, Discoverer; Scientist theo cùng lý do). Tuỳ chọn: thiếu khoá thì mọi format theo max_tries (app cũ bỏ qua khoá này).",
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": { "$ref": "#/$defs/QuizFormat" },
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        },
         "partial_order_min": { "description": "Sắp thứ tự: số vị trí đúng tối thiểu để có điểm; null = tắt", "oneOf": [{ "type": "null" }, { "type": "integer", "minimum": 1 }] },
         "pass_threshold": { "description": "Ngưỡng ⭐⭐, so bằng correct * den >= num * max", "$ref": "#/$defs/Fraction" },
         "mastery_gap_days": { "description": "⭐⭐⭐: đạt lại ngưỡng cách lần đạt đầu ít nhất ngần này ngày", "type": "integer", "minimum": 0 },
@@ -124,7 +131,7 @@
       }
     },
     "ImageSlot": {
-      "description": "Chỗ đặt hình trong Khởi động và Quiz (và món Chơi): question = trường image của chính câu, mọi format; choice_option = mọi lựa chọn của single_choice, multi_choice, picture_bar_chart; sequence_item = mọi thẻ của order_sequence; true_false = trường image của chính câu true_false; bank_word = mọi thẻ từ trong bank của fill_blank_bank; tray_item = mọi món của build_tray ở Chơi",
+      "description": "Chỗ đặt hình trong Khởi động và Quiz (và món Chơi): question = trường image của chính câu, mọi format; choice_option = mọi lựa chọn của single_choice, multi_choice (không gồm picture_bar_chart: bé chạm cột, lựa chọn không có hình, SK-043); sequence_item = mọi thẻ của order_sequence; true_false = trường image của chính câu true_false; bank_word = mọi thẻ từ trong bank của fill_blank_bank; tray_item = mọi món của build_tray ở Chơi",
       "enum": ["question", "choice_option", "sequence_item", "true_false", "bank_word", "tray_item"]
     },
     "FormatList": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/QuizFormat" } },

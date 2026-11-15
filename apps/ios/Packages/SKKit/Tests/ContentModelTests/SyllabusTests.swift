@@ -49,7 +49,8 @@ import Testing
     @Test func oakYearOfEachTopic() throws {
         let syllabus = try Self.syllabus()
         #expect(syllabus.topics(for: .discoverer).map(\.oakYear) == [nil, nil, nil, nil, nil, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4])
-        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == Array(repeating: 1, count: 6) + Array(repeating: 2, count: 6))
+        // Duy 14/11: Explorer #2 "Sinh vật sống ở đâu?" and #3 "Chuỗi thức ăn" (Oak Year 2) move up.
+        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == [1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2])
         #expect(syllabus.topics(for: .scientist).prefix(3).allSatisfy { $0.oakYear == nil })
         let topic = try #require(syllabus.topics(for: .discoverer).first { $0.key == "healthy-eating" })
         let again = try JSONDecoder().decode(Syllabus.TopicEntry.self, from: JSONEncoder().encode(topic))

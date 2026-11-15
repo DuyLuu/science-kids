@@ -24,9 +24,9 @@ extension QuizItem.Answer {
         }
     }
 
-    /// Formats with a renderer in this build (SK-012 scope) for the Discoverer screens.
-    /// `order_sequence` and `picture_bar_chart` have none there yet: such a question is left out
-    /// like an unknown format.
+    /// Formats with a renderer in this build for the Discoverer screens (SK-012; SK-043 A2 adds
+    /// `order_sequence` and `picture_bar_chart`, whose `options[i]` answers `chart.bars[i]`, dev
+    /// 14/11). A format of a later schema is left out.
     public var hasRenderer: Bool {
         hasRenderer(for: .discoverer)
     }
@@ -36,7 +36,7 @@ extension QuizItem.Answer {
     /// any other format in an Explorer lesson is left out like an unknown one.
     public func hasRenderer(for presentation: LessonPresentation) -> Bool {
         switch (presentation, self) {
-        case (.discoverer, .singleChoice), (.discoverer, .multiChoice), (.discoverer, .trueFalse), (.discoverer, .fillBlankBank):
+        case (.discoverer, .singleChoice), (.discoverer, .multiChoice), (.discoverer, .trueFalse), (.discoverer, .fillBlankBank), (.discoverer, .orderSequence), (.discoverer, .pictureBarChart):
             true
         case (.explorer, .singleChoice), (.explorer, .trueFalse), (.explorer, .orderSequence):
             true

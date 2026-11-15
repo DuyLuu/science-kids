@@ -20,6 +20,7 @@ en: I can tell how senses send messages to my brain.
 vi: Em kể được các giác quan gửi tin về não ra sao.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ticket SK-037, ngày 10/11/2026. Đã chạy `ids`. Sửa theo rà chữ tester 10/11 (ticket SK-037, mục "content-editor 10/11 · sửa theo tester").
 > Bài `apply` (áp chót): áp đường đi của tin (bài hai) vào năm giác quan bé đã biết. Sửa `taste_only_tongue` ở ô "Nose and taste" và câu q6 (gắn key). `senses_know_alone` sửa ở ý chính hai, ba, ô "To the brain", "Put together", câu q3, q5; không gắn key.
+> 14/11 (SK-044, ngân sách chữ Discoverer A2): thêm `feedback` cho mọi lựa chọn sai và `feedback_true/false`; hai lời giải thích còn một câu, bỏ "Yes!" · "Đúng rồi!" và "The answer is…" · "Đáp án là…"; câu hỏi tối đa mười chữ VI, lời Na một câu tối đa mười hai chữ. Nháp AI.
 
 ## Ý chính
 1.en: Your eyes, ears, nose, tongue and skin sense things.
@@ -49,14 +50,16 @@ image.alt.en: Legs kicking a ball
 image.alt.vi: Đôi chân đang đá bóng
 hint.en: Remember the Move picture in the first lesson.
 hint.vi: Em nhớ lại ô Cử động ở bài đầu tiên nhé.
-explanation_correct.en: Yes! Your brain tells your legs how to move.
-explanation_correct.vi: Đúng rồi! Bộ não bảo đôi chân em cử động.
-explanation_wrong.en: The answer is the brain. It sends messages to your legs.
-explanation_wrong.vi: Đáp án là bộ não. Bộ não gửi tin tới đôi chân.
+explanation_correct.en: Your brain sends the kick message down your nerves.
+explanation_correct.vi: Bộ não gửi tin xuống chân theo dây thần kinh.
+explanation_wrong.en: Your brain tells your legs how to move.
+explanation_wrong.vi: Bộ não bảo đôi chân em cử động.
 > Ba lựa chọn là bộ cơ quan (bộ não của bài một; trái tim, dạ dày của *Hô hấp*, rà chữ tester 10/11), cùng hình vẽ, cùng số ít.
 
 #### option w1_heart
 correct: false
+feedback.en: The heart pumps blood, not messages.
+feedback.vi: Tim bơm máu, không mang tin.
 label.en: heart
 label.vi: trái tim
 image.brief: Dùng lại hình `tray_heart` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -73,6 +76,8 @@ image.alt.vi: Bộ não
 
 #### option w1_stomach
 correct: false
+feedback.en: The stomach breaks down food.
+feedback.vi: Dạ dày lo tiêu hoá thức ăn.
 label.en: stomach
 label.vi: dạ dày
 image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`
@@ -87,17 +92,19 @@ dok: 1
 recall_from.kind: lesson
 recall_from.lesson: nao-bo-va-giac-quan/day-than-kinh-truyen-tin
 prompt.en: The blue lines on your wrist are nerves.
-prompt.vi: Những đường gân xanh ở cổ tay là dây thần kinh.
+prompt.vi: Gân xanh ở cổ tay là dây thần kinh.
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/tray_veins`
 image.alt.en: Blue lines under the skin of a wrist
 image.alt.vi: Những đường gân xanh dưới da cổ tay
 answer: false
 hint.en: Remember the message path game.
 hint.vi: Em nhớ lại trò dựng đường đi của tin nhé.
-explanation_correct.en: Those blue lines are veins. Nerves are thin and hidden.
-explanation_correct.vi: Những đường gân xanh đó là mạch máu. Dây thần kinh rất mảnh và nằm khuất bên trong.
-explanation_wrong.en: This is false. The blue lines are veins, not nerves.
-explanation_wrong.vi: Câu này sai. Gân xanh là mạch máu, không phải dây thần kinh.
+explanation_correct.en: Those blue lines are veins that carry blood.
+explanation_correct.vi: Gân xanh là mạch máu, chở máu đi khắp người.
+explanation_wrong.en: Nerves are thin and hidden deep inside you.
+explanation_wrong.vi: Dây thần kinh rất mảnh, nằm khuất bên trong.
+feedback_true.en: Blood flows through those blue lines.
+feedback_true.vi: Trong những đường gân xanh ấy là máu.
 > Đáp án Sai, theo bảng Đáp án Đúng/Sai ở `_topic.md`. Giải thích khi đúng không mở đầu bằng "Yes!". [CẦN KIỂM] như ghi chú ở `veins_are_nerves`.
 > Hình câu hỏi là chính vật được hỏi (gân xanh), không cho thấy đó là mạch máu hay dây thần kinh.
 
@@ -334,10 +341,10 @@ image.alt.en: A lime cut in half
 image.alt.vi: Quả chanh cắt đôi
 hint.en: Think of eating a sour lime.
 hint.vi: Em nghĩ tới lúc ăn một miếng chanh chua nhé.
-explanation_correct.en: Yes! Your tongue sends taste messages, like sour or sweet.
-explanation_correct.vi: Đúng rồi! Lưỡi gửi tin về vị, như chua hay ngọt.
-explanation_wrong.en: The answer is the tongue. Ears hear, and eyes see.
-explanation_wrong.vi: Đáp án là cái lưỡi. Tai để nghe, mắt để nhìn.
+explanation_correct.en: Your tongue sends taste messages, like sour or sweet.
+explanation_correct.vi: Lưỡi gửi tin về vị, như chua hay ngọt.
+explanation_wrong.en: Your tongue tastes sour lime and sweet mango.
+explanation_wrong.vi: Lưỡi nếm vị chua của chanh, vị ngọt của xoài.
 > Ba lựa chọn là bộ giác quan: tai, mắt dùng lại bài một; lưỡi là hình gốc mới, cùng nét. Không có mũi trong câu này, để câu chỉ có một đáp án (mũi cũng giúp nếm, ý của câu q6).
 
 #### option q1_tongue
@@ -350,6 +357,8 @@ image.alt.vi: Cái lưỡi
 
 #### option q1_ear
 correct: false
+feedback.en: Your ears hear sounds, like a rooster.
+feedback.vi: Tai giúp em nghe, như tiếng gà gáy.
 label.en: ear
 label.vi: tai
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/w1_ear`
@@ -358,6 +367,8 @@ image.alt.vi: Một cái tai
 
 #### option q1_eye
 correct: false
+feedback.en: Your eyes see colours and shapes.
+feedback.vi: Mắt giúp em nhìn màu sắc, hình dạng.
 label.en: eye
 label.vi: mắt
 image.brief: Dùng lại hình `nao-dieu-khien-co-the/w1_eye`
@@ -379,15 +390,17 @@ sentence.vi: Các giác quan gửi tin theo {1} về não.
 answers: q2_nerves
 hint.en: Remember the message path game in the last lesson.
 hint.vi: Em nhớ lại trò dựng đường đi của tin ở bài trước nhé.
-explanation_correct.en: Yes! Messages go along nerves to your brain.
-explanation_correct.vi: Đúng rồi! Tin đi theo dây thần kinh về não.
-explanation_wrong.en: The answer is nerves. Veins carry blood, and wires carry electricity.
-explanation_wrong.vi: Đáp án là dây thần kinh. Mạch máu chở máu, còn dây điện dẫn điện.
+explanation_correct.en: Nerves carry messages from all five senses.
+explanation_correct.vi: Dây thần kinh mang tin của cả năm giác quan.
+explanation_wrong.en: Messages travel along nerves to your brain.
+explanation_wrong.vi: Tin đi theo dây thần kinh về não.
 > Nối bài hai với bài ba. Ba thẻ từ dùng lại hình vẽ của bài hai (kệ Chơi và câu q4), cùng nét. Hai thẻ sai là hai món bẫy của phần Chơi bài hai, nên có sức hút; cả ba cùng số nhiều, đọc xuôi trong câu.
 
 #### bank q2_veins
 label.en: veins
 label.vi: mạch máu
+feedback.en: Veins carry blood around your body.
+feedback.vi: Mạch máu chở máu đi khắp người.
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/tray_veins`
 image.alt.en: Blue lines under the skin of a wrist
 image.alt.vi: Những đường gân xanh dưới da cổ tay
@@ -402,6 +415,8 @@ image.alt.vi: Một dây thần kinh có nhiều nhánh mảnh
 #### bank q2_wires
 label.en: wires
 label.vi: dây điện
+feedback.en: Wires carry electricity in a house, not a body.
+feedback.vi: Dây điện dẫn điện trong nhà, không ở trong người.
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/tray_wire`
 image.alt.en: A piece of electric wire
 image.alt.vi: Một đoạn dây điện
@@ -411,8 +426,8 @@ id: c39f8741-8d71-471a-a65b-a51b7759729d
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Mai sees a red light. What helps the message reach her brain?
-prompt.vi: Mai nhìn thấy đèn đỏ. Những bộ phận nào giúp tin về tới não của Mai?
+prompt.en: What helps Mai's red-light message reach her brain?
+prompt.vi: Bộ phận nào giúp tin đèn đỏ về tới não?
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: [ảnh] Một cột đèn giao thông đang sáng đèn đỏ, chụp gần, nền trời; không có số đếm ngược, không có biển chữ, không có người, không thấy biển số xe. Từ khoá tìm ảnh (EN): traffic light red close up sky
@@ -420,15 +435,17 @@ image.alt.en: A red traffic light
 image.alt.vi: Đèn giao thông màu đỏ
 hint.en: Where does the message start, and how does it travel?
 hint.vi: Tin bắt đầu từ đâu, và đi bằng đường nào?
-explanation_correct.en: Yes! Eyes see the light. Nerves carry the message.
-explanation_correct.vi: Đúng rồi! Mắt nhìn thấy đèn. Dây thần kinh mang tin về não.
-explanation_wrong.en: The answers are her eyes and her nerves.
-explanation_wrong.vi: Đáp án là mắt và dây thần kinh.
+explanation_correct.en: Then her brain tells her to stop and wait.
+explanation_correct.vi: Rồi bộ não bảo Mai dừng lại chờ.
+explanation_wrong.en: Her eyes see the light, and nerves carry the message.
+explanation_wrong.vi: Mắt thấy đèn, dây thần kinh mang tin về não.
 > DOK 2: áp đường đi của tin vào tình huống mới (đèn giao thông, nối sang bài bốn). Câu sửa `senses_know_alone`, không gắn key: mắt nhìn thấy, nhưng phải có dây thần kinh mang tin thì bộ não mới biết "dừng lại". Bốn hình vẽ cùng nét: hai hình bộ giác quan (lưỡi, mắt), một dây thần kinh, gân xanh ở cổ tay.
 > Rà chữ tester 10/11 (n7): lựa chọn sai "toe" · "ngón chân" quá yếu, đổi thành "veins" · "mạch máu" (hình gân xanh của bài hai): bẫy thật, nối `veins_are_nerves` và câu w2 của bài. Bé còn nghĩ gân xanh là dây thần kinh sẽ chọn cả "mạch máu".
 
 #### option q3_tongue
 correct: false
+feedback.en: Your tongue tastes food, not light.
+feedback.vi: Lưỡi để nếm đồ ăn, không nhìn được.
 label.en: tongue
 label.vi: lưỡi
 image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/q1_tongue`
@@ -453,6 +470,8 @@ image.alt.vi: Một dây thần kinh có nhiều nhánh mảnh
 
 #### option q3_veins
 correct: false
+feedback.en: Veins carry blood, not messages.
+feedback.vi: Mạch máu chở máu, không mang tin.
 label.en: veins
 label.vi: mạch máu
 image.brief: Dùng lại hình `day-than-kinh-truyen-tin/tray_veins`
@@ -464,22 +483,25 @@ id: 76609464-58db-40e1-910e-cbfd6b43ee89
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan closes her eyes. She feels something soft and furry. What is it most likely?
-prompt.vi: Lan nhắm mắt. Bạn ấy sờ thấy một thứ mềm và có lông. Đó dễ là gì nhất?
+prompt.en: What soft, furry thing is Lan touching?
+prompt.vi: Lan đang sờ thấy thứ gì mềm và có lông?
 image.brief: [hình vẽ] Một bạn nhỏ bị bịt mắt bằng chiếc khăn vải đỏ (trò bịt mắt đoán đồ), vẽ từ phía sau lưng, thấy nút khăn buộc sau đầu và hai tay đưa ra phía trước; không vẽ nét mặt, không có chữ, không có logo. Từ khoá tìm ảnh (EN): child blindfolded game from behind
 image.alt.en: A child with a blindfold, seen from behind
 image.alt.vi: Bạn nhỏ bịt mắt, nhìn từ phía sau
 > Rà chữ tester 10/11 (n8): hình câu hỏi cũ (tay thò vào túi vải) lệch với câu "Lan nhắm mắt". Giữ câu hỏi, đổi hình sang trò bịt mắt. Không đổi câu sang trò túi như tester gợi ý, vì một chú mèo con trong túi là cảnh lạ, không nên gợi cho trẻ.
 hint.en: Think of holding each one in your hands.
 hint.vi: Em tưởng tượng cầm từng thứ trong tay nhé.
-explanation_correct.en: Yes! Her skin felt soft fur. Her brain says: kitten!
-explanation_correct.vi: Đúng rồi! Da Lan cảm thấy lông mềm. Bộ não nhận ra: mèo con!
-explanation_wrong.en: The answer is the kitten. A pillow is soft, but not furry.
-explanation_wrong.vi: Đáp án là mèo con. Cái gối mềm, nhưng không có lông.
+explanation_correct.en: Her skin felt soft fur, and her brain knew it.
+explanation_correct.vi: Da Lan thấy lông mềm, và bộ não nhận ra ngay.
+explanation_wrong.en: Only the kitten is both soft and furry.
+explanation_wrong.vi: Chỉ mèo con vừa mềm vừa có lông.
+> 14/11 (ngân sách A2): câu hỏi cũ ba câu, mười lăm từ EN, mười tám chữ VI; nay một câu bảy từ EN, mười chữ VI. Ý "Lan nhắm mắt" nằm ở hình (Lan bịt mắt, nhìn từ phía sau).
 > DOK 2: bé ghép hai tin của da (mềm, có lông) để loại cái gối (chỉ mềm) và hòn đá (cứng). Câu hỏi dùng "most likely" · "dễ là gì nhất" (luật của *Khủng long*). Ba hình vẽ riêng cho câu này, cùng kiểu: một vật nguyên cái, cùng cỡ, nền trơn (theo hình designer 10/11: không có ảnh hòn cuội nền trơn hợp giấy phép, nên vẽ cả ba; ảnh gối của câu q5 bài một và ảnh mèo của kệ Chơi giữ ở chỗ gốc).
 
 #### option q4_pillow
 correct: false
+feedback.en: A pillow is soft, but it has no fur.
+feedback.vi: Gối mềm, nhưng không có lông.
 label.en: pillow
 label.vi: cái gối
 image.brief: [hình vẽ] Một cái gối trắng đặt trên nền trơn, vẽ chéo, cả cái gối trong khung; không có hoa văn chữ; cùng nét, cùng cỡ với hai lựa chọn kia. Từ khoá tìm ảnh (EN): white pillow plain background
@@ -497,6 +519,8 @@ image.alt.vi: Chú mèo con nằm cuộn tròn
 
 #### option q4_stone
 correct: false
+feedback.en: A stone feels hard and smooth.
+feedback.vi: Hòn đá sờ vào thấy cứng và nhẵn.
 label.en: stone
 label.vi: hòn đá cuội
 image.brief: [hình vẽ] Một hòn đá cuội nhẵn màu xám đặt trên nền trơn, vẽ chéo, cùng cỡ trong khung với cái gối và mèo con; không có chữ. Từ khoá tìm ảnh (EN): smooth river stone plain background
@@ -508,22 +532,24 @@ id: e0508aea-1234-403a-a920-727539b26bc4
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Red, a little soft, sweet smell. What does your brain say?
-prompt.vi: Màu đỏ, hơi mềm, mùi thơm ngọt. Bộ não của em nhận ra đó là gì?
+prompt.en: Which fruit is red, a little soft and sweet-smelling?
+prompt.vi: Quả nào màu đỏ, hơi mềm, mùi thơm ngọt?
 image.brief: [ảnh] Một sạp hoa quả ở chợ Việt Nam nhìn từ xa, nhiều loại quả xếp trong rổ, nhìn không rõ quả nào; không có người hoặc người ở rất xa không nhận ra mặt, không có biển giá, không có chữ. Từ khoá tìm ảnh (EN): Vietnam market fruit stall baskets
 image.alt.en: A fruit stall at a market
 image.alt.vi: Sạp hoa quả ở chợ
 hint.en: Put all three messages together.
 hint.vi: Em ghép cả ba tin lại với nhau nhé.
-explanation_correct.en: Yes! Your brain joins the messages: a ripe strawberry!
-explanation_correct.vi: Đúng rồi! Bộ não ghép các tin lại: quả dâu tây chín!
-explanation_wrong.en: The answer is the strawberry. The apple is hard. The banana is yellow.
-explanation_wrong.vi: Đáp án là quả dâu tây chín. Quả táo thì cứng, quả chuối thì màu vàng.
+explanation_correct.en: Your brain joined three messages to find the strawberry.
+explanation_correct.vi: Bộ não ghép ba tin lại để nhận ra dâu tây.
+explanation_wrong.en: Only the strawberry is red, soft and sweet.
+explanation_wrong.vi: Chỉ dâu tây vừa đỏ, vừa mềm, vừa thơm ngọt.
 > DOK 2: ghép ba tin của ba giác quan (ý chính ba, ô "Put together") cho một quả chưa gặp ở phần Học. Mỗi lựa chọn sai khớp hai trong ba tin nhưng trật một tin: táo đỏ, thơm nhưng cứng; chuối chín mềm, thơm nhưng màu vàng. Ba hình vẽ mới (theo hình designer 10/11), cùng kiểu: một quả nguyên, nền trơn, vẽ chéo, cùng cỡ.
 > Rà chữ tester 10/11 (N2, N8): câu cũ hỏi lại đúng ba dấu hiệu của quả xoài ở ô `explore_join`, và đáp án đúng dùng lại đúng ảnh của ô đó, nên thực chất là nhớ lại một ô. Đổi sang dâu tây (quen với trẻ Việt Nam qua dâu tây Đà Lạt); ô Học giữ quả xoài. Đổi key ba lựa chọn.
 
 #### option q5_apple
 correct: false
+feedback.en: An apple is red, but it feels hard.
+feedback.vi: Táo màu đỏ, nhưng sờ vào thấy cứng.
 label.en: red apple
 label.vi: táo đỏ
 image.brief: [hình vẽ] Một quả táo đỏ nguyên quả, đặt trên nền trơn sáng, vẽ chéo, cùng cỡ với hai quả kia; không có tem, không có chữ. Từ khoá tìm ảnh (EN): red apple whole plain background
@@ -532,6 +558,8 @@ image.alt.vi: Quả táo đỏ
 
 #### option q5_banana
 correct: false
+feedback.en: A ripe banana is soft, but it is yellow.
+feedback.vi: Chuối chín mềm, nhưng có màu vàng.
 label.en: ripe banana
 label.vi: chuối chín
 image.brief: [hình vẽ] Một quả chuối chín vàng (một quả, không phải cả nải), đặt trên nền trơn sáng, vẽ chéo, cùng cỡ với hai quả kia; không có tem, không có chữ. Từ khoá tìm ảnh (EN): single ripe banana plain background
@@ -557,8 +585,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: My nose is blocked. My pho still tastes the same.
-statement.vi: Mũi mình bị nghẹt. Bát phở vẫn ngon y như mọi khi.
+statement.en: My nose is blocked, but my pho tastes the same.
+statement.vi: Mũi mình bị nghẹt, nhưng phở vẫn ngon như mọi khi.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -570,10 +598,12 @@ image.alt.en: A hot bowl of pho
 image.alt.vi: Bát phở nóng
 hint.en: Remember eating when you had a cold.
 hint.vi: Em nhớ lại lúc bị cảm, em ăn có thấy ngon không?
-explanation_correct.en: Your nose helps you taste. A blocked nose makes food plain.
-explanation_correct.vi: Mũi giúp em nếm. Mũi bị nghẹt thì đồ ăn kém ngon hơn.
-explanation_wrong.en: Na is not right. Food tastes plain with a blocked nose.
-explanation_wrong.vi: Na chưa đúng. Khi mũi bị nghẹt, đồ ăn kém ngon hơn.
+explanation_correct.en: Smells from food reach your nose and help you taste.
+explanation_correct.vi: Mùi đồ ăn bay lên mũi, giúp em nếm ngon hơn.
+explanation_wrong.en: Food tastes plain when your nose is blocked.
+explanation_wrong.vi: Khi mũi bị nghẹt, đồ ăn kém ngon hơn.
+feedback_true.en: A blocked nose cannot smell the pho well.
+feedback_true.vi: Mũi bị nghẹt thì không ngửi rõ mùi phở.
 > DOK 3: bé đánh giá lời Na bằng trải nghiệm (lúc bị cảm) và ô "Nose and taste". Đáp án Sai, theo bảng Đáp án Đúng/Sai ở `_topic.md`. Giải thích khi đúng không mở đầu bằng "Yes!".
 > Bé có thể tự kiểm ở nhà: bịt mũi, ăn một miếng táo, rồi bỏ tay ra (mục Thí nghiệm ở nhà, `_topic.md`).
 

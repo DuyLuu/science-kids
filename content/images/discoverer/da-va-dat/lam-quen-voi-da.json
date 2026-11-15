@@ -178,7 +178,20 @@
       "note": "Gỗ tròn xếp chồng ở xưởng gỗ; cắt bỏ phần đầu gỗ có vết sơn đánh dấu."
     },
     "q1.q1_kiln": {
-      "same_as": "learn.explore.explore_made"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Simple_Brick_Kiln_@SongHau-Mekong_Vietnam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Simple_Brick_Kiln_%40SongHau-Mekong_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Brick kilns by a river in Vietnam",
+      "author": "BacLuong at Vietnamese Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Simple_Brick_Kiln_@SongHau-Mekong_Vietnam.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.16,
+        "width": 0.56,
+        "height": 0.34
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với da-va-dat/lam-quen-voi-da learn.explore.explore_made, cắt riêng cho khung 5:2 (trước: same_as learn.explore.explore_made)."
     },
     "q1.q1_quarry": {
       "same_as": "vocab.quarry"

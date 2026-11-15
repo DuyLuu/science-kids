@@ -19,16 +19,28 @@
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "crop": {
-        "left": 0.5,
-        "top": 0.22,
-        "width": 0.36,
-        "height": 0.5
+        "left": 0.507,
+        "top": 0.225,
+        "width": 0.345,
+        "height": 0.3
       },
-      "note": "cắt quanh quả bóng và dây, nền trời trơn"
+      "note": "cắt quanh quả bóng và dây, nền trời trơn A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.5, \"top\": 0.22, \"width\": 0.36, \"height\": 0.5})."
     },
     "w1.w1_water": {
-      "same_as": "q4",
-      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1.0,
+        "height": 0.345
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với be-mat-trai-dat/dat-va-nuoc-tren-trai-dat q4, cắt riêng cho khung 5:2 (trước: same_as q4 (be-mat-trai-dat/dat-va-nuoc-tren-trai-dat))."
     },
     "w1.w1_stone": {
       "source": "Wikimedia Commons",
@@ -96,8 +108,9 @@
       "note": "chim sẻ đậu trên cành"
     },
     "tray.tray_buffalo": {
-      "same_as": "w1_buffalo",
-      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
+      "same_as": "tray_buffalo",
+      "lesson": "khung-long/trai-dat-rat-lau-ve-truoc",
+      "note": "A2 14/11 (designer, SK-043): trỏ sang tray_buffalo (crop cũ) vì w1_buffalo nay cắt 5:2."
     },
     "tray.tray_kite": {
       "source": "Wikimedia Commons",
@@ -255,7 +268,13 @@
       "author": "Jiafei Slay Queen",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "chai không nhãn, nền tối"
+      "note": "chai không nhãn, nền tối A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1.0,
+        "height": 0.3
+      }
     },
     "q4.q4_lunch": {
       "source": "Wikimedia Commons",
@@ -265,7 +284,13 @@
       "author": "Battlesnake1",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "hộp cơm mở nắp, nền tối"
+      "note": "hộp cơm mở nắp, nền tối A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.33,
+        "width": 1.0,
+        "height": 0.3
+      }
     },
     "q4.q4_tank": {
       "source": "Wikimedia Commons",
@@ -275,7 +300,13 @@
       "author": "Mark.murphy at English Wikipedia",
       "license": "Public domain",
       "license_url": "https://commons.wikimedia.org/wiki/File:Diving_cylinder_twin_7s.JPG",
-      "note": "hai bình khí lặn trên sàn gỗ, không thấy chữ"
+      "note": "hai bình khí lặn trên sàn gỗ, không thấy chữ A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ null).",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1.0,
+        "height": 0.3
+      }
     },
     "q5": {
       "own": {

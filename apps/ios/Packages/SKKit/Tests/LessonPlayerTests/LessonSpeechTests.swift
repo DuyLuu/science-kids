@@ -104,9 +104,11 @@ import Testing
                 let item = try #require(session.item(at: index, in: .quiz))
                 #expect(opening == session.questionUtterance(item))
             case .learn:
-                #expect(opening?.clips.map(\.text) == session.exploreBlock.map { [$0.prompt.en] })
+                // SK-043 picture book (Explorer, Discoverer A2): the first page reads itself.
+                let group = try #require(session.exploreBlock?.groups.first)
+                #expect(opening == session.explorerGroupUtterance(group))
             case .play:
-                #expect(opening?.clips.map(\.text) == session.tray.map { [$0.messages.start.en] }, "fresh tray: the start message")
+                #expect(opening?.clips.map(\.text) == session.tray.map { [$0.prompt.en, $0.messages.start.en] }, "fresh tray: the prompt, then the start message")
             case .reward:
                 #expect(opening == nil)
             }

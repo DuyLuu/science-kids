@@ -64,15 +64,17 @@ image.alt.vi: Tranh vẽ khủng long cổ dài
 > Hình câu hỏi không có dương xỉ hay cây gần miệng, để không lộ đáp án. Rà chéo 9/11: dùng tranh khủng long cổ dài nền kem của kệ Chơi bài hai (không có cây cối), thay cho ảnh mô hình; mô hình ở công viên của bài một có nền cây xanh, dễ gợi đáp án.
 hint.en: Was it a plant-eater or a meat-eater?
 hint.vi: Nó là khủng long ăn thực vật hay khủng long ăn thịt?
-explanation_correct.en: Yes! Long-necked dinosaurs ate plants, like ferns.
-explanation_correct.vi: Đúng rồi! Khủng long cổ dài ăn thực vật, như dương xỉ.
-explanation_wrong.en: The answer is ferns. Long-necked dinosaurs ate plants.
-explanation_wrong.vi: Đáp án là dương xỉ. Khủng long cổ dài ăn thực vật.
+explanation_correct.en: Long necks reached leaves high up in the trees.
+explanation_correct.vi: Cổ dài giúp chúng với tới lá trên cây cao.
+explanation_wrong.en: Long-necked dinosaurs ate plants, like ferns.
+explanation_wrong.vi: Khủng long cổ dài ăn thực vật, như dương xỉ.
 > [CẦN KIỂM] Khủng long cổ dài ăn dương xỉ, cây lá kim, cây vạn tuế và các cây khác thời đó (biên tập nhớ, chưa tra nguồn).
 > Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ hai).
 
 #### option w1_fish
 correct: false
+feedback.en: Fish was food for meat-eaters.
+feedback.vi: Cá là mồi của khủng long ăn thịt.
 label.en: a fish
 label.vi: con cá
 image.brief: Dùng lại hình `khung-long-la-gi/q1_fish`
@@ -81,6 +83,8 @@ image.alt.vi: Con cá
 
 #### option w1_lizard
 correct: false
+feedback.en: A lizard is meat, food for meat-eaters.
+feedback.vi: Thằn lằn là thịt, mồi của loài ăn thịt.
 label.en: a small lizard
 label.vi: con thằn lằn nhỏ
 image.brief: Dùng lại hình `khung-long-la-gi/w3_lizard`
@@ -113,9 +117,11 @@ image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 hint.en: Remember the timeline. Who came first?
 hint.vi: Em nhớ lại trục thời gian. Khủng long hay con người có trước?
 explanation_correct.en: Dinosaurs died out millions of years before people came.
-explanation_correct.vi: Khủng long đã tuyệt chủng hàng triệu năm trước khi có con người.
-explanation_wrong.en: This is false. People came long after the dinosaurs.
-explanation_wrong.vi: Câu này sai. Con người xuất hiện rất lâu sau khủng long.
+explanation_correct.vi: Khủng long tuyệt chủng hàng triệu năm trước khi có người.
+explanation_wrong.en: People came long after the dinosaurs.
+explanation_wrong.vi: Con người có rất lâu sau khủng long.
+feedback_true.en: No person ever saw a living dinosaur.
+feedback_true.vi: Chưa người nào thấy khủng long còn sống.
 > Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn Sai (rút kinh nghiệm SK-031). Câu này gần đúng câu sửa của `people_with_dinosaurs`.
 
 ### w3
@@ -135,10 +141,12 @@ image.alt.vi: Dấu chân chim trên bùn
 > SK-033: ảnh Duy duyệt là dấu chân chim công, không phải dấu chân khủng long. Chữ của câu không đổi: câu hỏi, gợi ý và hai giải thích chỉ nói "dấu chân", đúng cho mọi dấu chân, và không nhắc chim cạnh khủng long (Duy 9/11).
 hint.en: Remember the fossil game. What kinds did you find?
 hint.vi: Em nhớ lại trò tìm hoá thạch. Em đã tìm những loại nào?
-explanation_correct.en: Yes! Mud with footprints can slowly turn to rock.
-explanation_correct.vi: Đúng rồi! Lớp bùn có dấu chân có thể dần hoá thành đá.
-explanation_wrong.en: This is true. Footprints can be fossils, too.
-explanation_wrong.vi: Câu này đúng. Dấu chân cũng có thể thành hoá thạch.
+explanation_correct.en: Some fossil footprints show herds walking together.
+explanation_correct.vi: Có dấu chân hoá thạch cho thấy cả đàn đi cùng nhau.
+explanation_wrong.en: Mud with footprints can slowly turn to rock.
+explanation_wrong.vi: Bùn có dấu chân có thể dần hoá thành đá.
+feedback_false.en: Some rocks still show dinosaur footprints today.
+feedback_false.vi: Có tảng đá vẫn còn dấu chân khủng long.
 > [CẦN KIỂM] "Lớp bùn có dấu chân dần hoá thành đá" là cách giản lược cho hoá thạch dấu vết. Gợi ý nối với phần Chơi "Tìm ba loại hoá thạch" của bài ba (nhóm "Dấu chân hoá thạch") và câu w2 bài bốn ("Only bones can become fossils."); đã đối chiếu (rà chéo 9/11).
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Những hoá thạch em đã tìm có phải tất cả đều là xương không?" đã nói ý trả lời. Gợi ý mới chỉ chỗ cần nhớ (phần Chơi bài ba) và hỏi bé tự kể lại, không nêu đáp án.
 
@@ -164,8 +172,9 @@ complete_when: all_seen
 label.en: Space rock
 label.vi: Khối đá từ vũ trụ
 color: nau_dat
-sentence.en: Scientists found that a giant rock from space hit Earth.
-sentence.vi: Các nhà khoa học tìm ra rằng một khối đá khổng lồ từ vũ trụ đã đâm vào Trái Đất.
+sentence.en: A giant rock from space hit Earth.
+sentence.vi: Một khối đá khổng lồ từ vũ trụ đâm vào Trái Đất.
+> SK-044 (14/11, A2): câu VI cũ hai mươi tiếng, nay mười hai; đổi cả câu EN cho khớp. Ý "nhà khoa học tìm ra" vẫn có ở ví dụ bốn của ô ("scientists found the giant hole") và ở câu q5.
 image.brief: [tranh] Tranh của NASA vẽ một tiểu hành tinh (Psyche): khối đá xù xì khổng lồ trong vũ trụ; không có Trái Đất, không có lửa, không có vệt cháy, không có vụ nổ, không có chữ; không phải tranh do AI tạo. Tranh chỉ minh hoạ "một khối đá khổng lồ từ vũ trụ", không phải chính khối đá đã đâm vào Trái Đất; chưa có tranh hợp giấy phép vừa có Trái Đất quay về châu Mỹ vừa có khối đá bay tới như brief đầu. Từ khoá tìm ảnh (EN): asteroid artist concept NASA
 image.alt.en: A painting of a giant space rock
 image.alt.vi: Tranh vẽ khối đá khổng lồ trong vũ trụ
@@ -272,8 +281,9 @@ prompt.en: What happened next?
 prompt.vi: Chuyện gì xảy ra tiếp theo?
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: The space rock has hit Earth. Find one for the sky, plants and dinosaurs.
-messages.start.vi: Khối đá từ vũ trụ đã đâm vào Trái Đất. Em tìm một hình cho bầu trời, một hình cho cây cối và một hình cho khủng long nhé.
+messages.start.en: Find what happened to the sky, plants and dinosaurs. The space rock had just hit Earth.
+messages.start.vi: Em tìm xem bầu trời, cây cối, khủng long ra sao nhé. Lúc đó khối đá từ vũ trụ vừa đâm vào Trái Đất.
+> SK-044 (14/11, A2): câu VI cũ hai câu, hai mươi tám tiếng. Câu in trong bong bóng nay là việc cần làm (chín từ, mười hai tiếng); câu ngữ cảnh khối đá thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Dust hid the Sun. Plants died. Dinosaurs went hungry.
@@ -402,7 +412,7 @@ format: single_choice
 version: 1
 dok: 1
 prompt.en: What hit Earth at the end of dinosaur times?
-prompt.vi: Cuối thời khủng long, cái gì đã đâm vào Trái Đất?
+prompt.vi: Cuối thời khủng long, cái gì đâm vào Trái Đất?
 image.brief: [sơ đồ ghép ảnh] Cảnh yên bình cuối thời khủng long: tranh khủng long ba sừng của món `khung-long-la-gi/tray_triceratops` tách khỏi nền, đặt trước ảnh rừng dương xỉ xanh tốt `trai-dat-rat-lau-ve-truoc/q2_ferns`; không thấy trời và khối đá trên trời, không có người, không có chữ. Cùng con khủng long ba sừng, cùng chỗ với hình ô explore_food (designer ghép 10/11).
 image.alt.en: A painting of a Triceratops among green ferns
 image.alt.vi: Tranh vẽ khủng long ba sừng giữa dương xỉ xanh
@@ -410,10 +420,11 @@ image.alt.vi: Tranh vẽ khủng long ba sừng giữa dương xỉ xanh
 > Hình câu hỏi là bối cảnh trước khi khối đá tới, không phải hình của đáp án. Hình gốc; món bẫy `tray_lots_food` ở phần Chơi dùng lại (rà chữ tester 9/11, N5).
 hint.en: It flew a long way before it hit Earth.
 hint.vi: Nó đã bay một quãng rất xa rồi mới đâm vào Trái Đất.
-explanation_correct.en: Yes! A giant rock from space hit Earth.
-explanation_correct.vi: Đúng rồi! Một khối đá khổng lồ từ vũ trụ đã đâm vào Trái Đất.
-explanation_wrong.en: The answer is the giant rock from space.
-explanation_wrong.vi: Đáp án là khối đá khổng lồ từ vũ trụ.
+explanation_correct.en: The rock was bigger than the tallest mountain.
+explanation_correct.vi: Khối đá còn to hơn ngọn núi cao nhất.
+explanation_wrong.en: A giant rock flew in from space and hit Earth.
+explanation_wrong.vi: Một khối đá khổng lồ từ vũ trụ đâm vào Trái Đất.
+> SK-044 (14/11, A2): giải thích khi đúng dùng ví dụ hai của ô Khối đá; [CẦN KIỂM] "to hơn ngọn núi cao nhất" như ghi chú ở ô đó.
 > Hai lựa chọn sai đều là thứ "từ trên trời xuống" mà trẻ quen: bão, mưa đá. Không dùng núi lửa (xem ghi chú ý chính ba), sóng thần hay động đất (khối đá cũng gây ra những thứ đó) làm lựa chọn sai.
 > Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
 
@@ -427,6 +438,8 @@ image.alt.vi: Tranh vẽ khối đá khổng lồ trong vũ trụ
 
 #### option q1_storm
 correct: false
+feedback.en: Storms form in Earth's air, not in space.
+feedback.vi: Bão hình thành trong không khí của Trái Đất.
 label.en: a big storm
 label.vi: cơn bão lớn
 image.brief: [ảnh] Ảnh chụp từ Trạm vũ trụ quốc tế (NASA) một cơn bão lớn trên Nam Đại Tây Dương: mây trắng xoáy tròn, có mắt bão ở giữa; khung hình chỉ có mây và biển, không thấy đất liền, không thấy phần trạm vũ trụ, không có chữ. Từ khoá tìm ảnh (EN): cyclone eye from space ocean
@@ -435,6 +448,8 @@ image.alt.vi: Cơn bão lớn nhìn từ vũ trụ
 
 #### option q1_hail
 correct: false
+feedback.en: Hailstones are small balls of ice from clouds.
+feedback.vi: Mưa đá là những viên đá lạnh nhỏ từ mây.
 label.en: hailstones
 label.vi: mưa đá
 image.brief: [ảnh] Nhiều viên mưa đá trắng đục rải trên mặt đất cạnh một chiếc lá xanh, chụp gần; nền đất và lá, không phải bãi cỏ như brief đầu; không có người, không có chữ. Từ khoá tìm ảnh (EN): hailstones on ground close up
@@ -453,16 +468,18 @@ image.alt.en: A T. rex skeleton in a museum
 image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 hint.en: What happened to the plants first?
 hint.vi: Cây cối đã ra sao trước tiên?
-explanation_correct.en: Yes! Plants died, so dinosaurs had too little food.
-explanation_correct.vi: Đúng rồi! Cây cối chết, nên khủng long thiếu thức ăn.
-explanation_wrong.en: The answer is too little food. Dust hid the Sun.
-explanation_wrong.vi: Đáp án là thiếu thức ăn. Bụi đã che mất Mặt Trời.
+explanation_correct.en: Without sunlight, plants died, and dinosaurs went hungry.
+explanation_correct.vi: Thiếu nắng, cây chết, khủng long bị đói.
+explanation_wrong.en: Dust hid the Sun, plants died, and food ran out.
+explanation_wrong.vi: Bụi che nắng, cây chết, thức ăn cạn dần.
 > Câu nhớ lại ý chính ba, cũng là mục tiêu của bài. Ba lựa chọn là ba cảnh chụp được; lựa chọn "quá nhiều nắng" ngược hẳn với điều đã xảy ra (thiếu nắng).
 > [CẦN KIỂM] Biên tập nhớ có giả thuyết về mưa a-xít sau va chạm. Lựa chọn "quá nhiều mưa" vẫn sai rõ với điều bài dạy, nhưng nhờ chuyên môn xem có cần đổi sang cảnh khác không.
 > Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ hai (trước đây thứ nhất).
 
 #### option q2_sun
 correct: false
+feedback.en: Dust hid the Sun, so there was less sunshine.
+feedback.vi: Bụi che Mặt Trời, nên nắng ít đi.
 label.en: too much sunshine
 label.vi: quá nhiều nắng
 image.brief: [hình vẽ] Mặt Trời trắng chói trên trời xanh, có quầng sáng và tia nắng mềm, vài gợn mây trắng thấp; vẽ gần như thật, cùng nét với hình dương xỉ khô của lựa chọn `q2_food`; không có người, không có chữ. Món `tray_sunny` ở kệ Chơi vẫn là ảnh chụp. Từ khoá tìm ảnh (EN): bright sun blue sky few clouds
@@ -480,6 +497,8 @@ image.alt.vi: Cây dương xỉ khô héo
 
 #### option q2_rain
 correct: false
+feedback.en: The big change was dust, not rain.
+feedback.vi: Thay đổi lớn là bụi, không phải mưa.
 label.en: too much rain
 label.vi: quá nhiều mưa
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/dong-dat-va-song-than`. Từ khoá tìm ảnh (EN): heavy rain house garden
@@ -492,8 +511,9 @@ id: 96658609-a15b-403c-baf8-9abd3699555d
 format: multi_choice
 version: 1
 dok: 2
-prompt.en: Dinosaurs were reptiles. Which reptiles are still here today?
-prompt.vi: Khủng long là bò sát. Những con bò sát nào ngày nay vẫn còn?
+prompt.en: Which reptiles still live today?
+prompt.vi: Những con bò sát nào ngày nay vẫn còn?
+> SK-044 (14/11, A2): câu cũ hai câu, mười lăm tiếng; bỏ câu "Khủng long là bò sát" (ảnh da vảy của mô hình khủng long gợi ý này; `feedback` của lựa chọn khủng long ba sừng nhắc lại). Nay năm từ, chín tiếng.
 instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 image.brief: [ảnh mô hình] Nhìn gần mô hình khủng long ba sừng cỡ thật ở công viên (Anava, Israel, cùng công viên với `tray_longneck` bài một), cắt vuông quanh diềm cổ, mắt, vai và lưng, thấy rõ da có vảy; mép dưới thấy vài gai diềm của một mô hình con nhỏ; không thấy chân; không có người, không có chữ, không có biển tên. Từ khoá tìm ảnh (EN): Triceratops model scaly skin close up
@@ -503,16 +523,18 @@ image.alt.vi: Nhìn gần lớp da có vảy của mô hình khủng long
 > Chỗ chưa chắc: hình câu hỏi và lựa chọn sai `q3_trike` cùng là mô hình khủng long ba sừng (khác công viên, khác góc). Hình câu hỏi không lộ đáp án đúng, nhưng có thể kéo bé chọn `q3_trike` vì giống hình. Đây là bẫy hợp ý câu hỏi (khủng long là bò sát nhưng đã tuyệt chủng); nhờ tester xem bé có chọn theo hình không.
 hint.en: Each one needs scales and must still live today.
 hint.vi: Mỗi con phải có vảy, và ngày nay vẫn còn sống.
-explanation_correct.en: Yes! Turtles and crocodiles are reptiles, and they lived on.
-explanation_correct.vi: Đúng rồi! Rùa và cá sấu là bò sát, và chúng đã sống sót.
-explanation_wrong.en: The answers are turtle and crocodile. Frogs are not reptiles.
-explanation_wrong.vi: Đáp án là rùa và cá sấu. Ếch không phải bò sát.
+explanation_correct.en: Turtles and crocodiles lived on after the dinosaurs.
+explanation_correct.vi: Rùa và cá sấu vẫn sống sót sau thời khủng long.
+explanation_wrong.en: Turtles and crocodiles have scales and still live today.
+explanation_wrong.vi: Rùa và cá sấu có vảy, ngày nay vẫn còn.
 > Câu ôn bài hai (khủng long là bò sát, có vảy) theo bảng kế hoạch, ghép với ô "Sống sót" của bài này. DOK 2: bé phân loại theo hai điều kiện cùng lúc. Khủng long ba sừng là bò sát nhưng đã tuyệt chủng; ếch vẫn còn nhưng không phải bò sát.
 > [CẦN KIỂM] Rùa có vảy ở chân, đầu và đẻ trứng trên cạn; ếch không có vảy. Rà chéo 9/11 đã đối chiếu bài hai: bài hai dạy "vảy" là đặc điểm của bò sát (từ core `scales`, ô "Bò sát trên cạn", câu w3 "Con nào là bò sát?" với gợi ý "vảy phủ khắp mình", câu q1 "khủng long là bò sát, cùng nhóm với thằn lằn và cá sấu").
 > Rà chữ tester 9/11 (n1): hai đáp án chuyển sang thứ hai và thứ ba (trước đây thứ nhất và thứ ba, trùng câu q3 bài hai).
 
 #### option q3_frog
 correct: false
+feedback.en: A frog has smooth, wet skin, not scales.
+feedback.vi: Ếch có da trơn và ướt, không có vảy.
 label.en: frog
 label.vi: con ếch
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_frog`
@@ -537,6 +559,8 @@ image.alt.vi: Cá sấu nằm trên bờ sông
 
 #### option q3_trike
 correct: false
+feedback.en: Triceratops was a reptile, but it died out.
+feedback.vi: Khủng long ba sừng là bò sát, đã tuyệt chủng.
 label.en: Triceratops
 label.vi: khủng long ba sừng
 image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_triceratops`
@@ -548,17 +572,18 @@ id: 6140cce0-0ed0-4646-8ac8-5af1ff071923
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan puts a young bean plant in a dark box. What happens after two weeks?
-prompt.vi: Lan đặt một cây đậu non vào trong hộp tối. Sau hai tuần, cây sẽ ra sao?
+prompt.en: After two weeks in the dark, how is the plant?
+prompt.vi: Sau hai tuần trong hộp tối, cây ra sao?
+> SK-044 (14/11, A2): câu cũ hai câu, mười lăm từ, mười tám tiếng; nay một câu mười từ, mười tiếng. Bỏ tên bạn Lan; ảnh cây đậu non đặt cạnh chiếc hộp giữ ngữ cảnh.
 image.brief: [hình vẽ] Cây đậu non xanh trồng trong cốc nhựa trong suốt có đất, đặt cạnh một hộp các-tông có nắp đang mở, trên bàn học cạnh cửa sổ, vẽ gần như thật; không có người, không có chữ. Ba lựa chọn vẽ cùng chiếc cốc này. Từ khoá tìm ảnh (EN): bean seedling in plastic cup next to cardboard box
 image.alt.en: A young bean plant next to a box
 image.alt.vi: Cây đậu non đặt cạnh chiếc hộp
 hint.en: What do plants need to stay green?
 hint.vi: Cây cần gì để luôn xanh tốt?
-explanation_correct.en: Yes! Without sunlight, plants turn yellow and weak.
-explanation_correct.vi: Đúng rồi! Thiếu ánh nắng, cây vàng úa và yếu dần.
-explanation_wrong.en: The answer is yellow and weak. Plants need sunlight.
-explanation_wrong.vi: Đáp án là vàng úa, yếu ớt. Cây cần ánh nắng Mặt Trời.
+explanation_correct.en: Dust did the same to plants in dinosaur times.
+explanation_correct.vi: Thời khủng long, bụi cũng làm cây cối như vậy.
+explanation_wrong.en: Without sunlight, a plant turns yellow and weak.
+explanation_wrong.vi: Thiếu ánh nắng, cây vàng úa và yếu dần.
 > DOK 2: bé dùng ý chính hai (thiếu ánh nắng thì cây chết) cho một tình huống quen, gần với giờ trồng cây ở lớp. Đây là cách bé tự thấy được ở nhà vì sao bụi che nắng làm cây cối chết. Có thể làm thí nghiệm này cùng bố mẹ.
 > [CẦN KIỂM] Cây đậu non để trong tối khoảng hai tuần thì thân dài, mảnh, lá vàng nhạt, yếu dần (biên tập nhớ, chưa tra nguồn).
 > Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ hai).
@@ -573,6 +598,8 @@ image.alt.vi: Cây đậu vàng úa, yếu ớt
 
 #### option q4_green
 correct: false
+feedback.en: In the dark, a plant cannot make its food.
+feedback.vi: Trong tối, cây không tự làm ra thức ăn được.
 label.en: green and strong
 label.vi: xanh tốt, khoẻ mạnh
 image.brief: [hình vẽ] Cùng chiếc cốc, cùng cây đậu với hình câu hỏi, thân mập, đứng thẳng, lá xanh đậm; nền trơn, không có chữ. Từ khoá tìm ảnh (EN): healthy green bean seedling plastic cup
@@ -581,6 +608,8 @@ image.alt.vi: Cây đậu xanh tốt, khoẻ mạnh
 
 #### option q4_flowers
 correct: false
+feedback.en: A plant needs sunlight to grow flowers.
+feedback.vi: Cây cần ánh nắng mới ra hoa được.
 label.en: full of flowers
 label.vi: nở đầy hoa
 image.brief: [hình vẽ] Cây đậu trong cùng chiếc cốc nhựa trong suốt, lá xanh, nở nhiều hoa nhỏ trắng tím; nền trơn, không có chữ. Từ khoá tìm ảnh (EN): bean plant flowering in plastic cup
@@ -592,23 +621,26 @@ id: da960e6a-28c3-4d06-9b5c-f28e039123bf
 format: single_choice
 version: 1
 dok: 2
-prompt.en: No one saw the space rock hit. How do scientists know?
-prompt.vi: Không ai nhìn thấy khối đá đâm vào Trái Đất. Làm sao các nhà khoa học biết được?
+prompt.en: How do scientists know the space rock hit?
+prompt.vi: Sao nhà khoa học biết khối đá đã đâm xuống?
+> SK-044 (14/11, A2): câu cũ hai câu, mười một từ, mười chín tiếng; nay một câu tám từ, mười tiếng. Ý "không ai nhìn thấy" chuyển vào `feedback` của hai lựa chọn ảnh cũ và sách cổ.
 image.brief: [ảnh] Bầu trời đêm đầy sao nhìn từ một ngọn đồi, thấy dải Ngân Hà mờ; không có người, không có chữ. Từ khoá tìm ảnh (EN): starry night sky Milky Way over hill
 image.alt.en: A starry night sky
 image.alt.vi: Bầu trời đêm đầy sao
 hint.en: What do scientists dig up and study?
 hint.vi: Các nhà khoa học đào lên và nghiên cứu cái gì?
-explanation_correct.en: Yes! They found the dust layer and the giant hole.
-explanation_correct.vi: Đúng rồi! Các nhà khoa học tìm thấy lớp bụi trong đá và cái hố rất lớn.
-explanation_wrong.en: The answer is clues in rocks. No people lived then.
-explanation_wrong.vi: Đáp án là manh mối trong đá. Thời đó chưa có con người.
+explanation_correct.en: They found the dust layer and the giant hole.
+explanation_correct.vi: Họ tìm thấy lớp bụi trong đá và cái hố rất lớn.
+explanation_wrong.en: Scientists study clues hidden in rocks.
+explanation_wrong.vi: Nhà khoa học tìm manh mối nằm trong đá.
 > Câu nối câu hỏi lớn "How do we know?" của chủ đề. Hai lựa chọn sai là hai thứ con người ghi lại, nên đều sai vì thời đó chưa có con người: ảnh chụp ngày xưa (bài ba, `dinosaur_pictures_are_photos`: không ai chụp được ảnh khủng long) và sách cổ (bài một: con người có rất lâu sau khủng long, nên không ai viết lại được). Giải thích khi sai nhắc lại `people_with_dinosaurs`. Không gắn key, vì luật chỉ cho một câu misconception (q6).
 > Rà chữ tester 9/11 (N6): lựa chọn sai cũ "dinosaur toys" · "khủng long đồ chơi" quá yếu, không bé nào nghĩ nhà khoa học biết nhờ đồ chơi, nên câu chỉ còn hai lựa chọn thật. "Old books" · "sách cổ" có sức hút hơn: trẻ quen ý "sách xưa ghi lại chuyện ngày xưa". Không chọn "someone told us" · "có người kể lại", vì khó chụp thành một hình không có mặt người (Quy ước hình mục bốn và sáu). Key cũ `q5_toys` bỏ.
 > "Clue" · "manh mối" là từ của bài bốn (bảng Tên gọi). Hai bằng chứng trong giải thích khi đúng đã dạy ở ô `explore_rock` (ví dụ bốn) và ô `explore_dust` (ví dụ ba).
 
 #### option q5_photos
 correct: false
+feedback.en: There were no people then to take photos.
+feedback.vi: Thời đó chưa có người để chụp ảnh.
 label.en: old photos
 label.vi: ảnh chụp ngày xưa
 image.brief: [hình vẽ] Ba tấm ảnh giấy cũ đen trắng, ố vàng, chụp phong cảnh (núi, hàng cây, đồi), không có người, đặt trên bàn gỗ, vẽ gần như thật; không có chữ. Từ khoá tìm ảnh (EN): old black and white photographs pile on wooden table
@@ -617,6 +649,8 @@ image.alt.vi: Một xấp ảnh cũ
 
 #### option q5_books
 correct: false
+feedback.en: There were no people then to write books.
+feedback.vi: Thời đó chưa có người để viết sách.
 label.en: old books
 label.vi: sách cổ
 image.brief: [ảnh] Một chồng sách cổ bìa da sờn, giấy ố vàng, đặt trên bàn gỗ, chụp ngang, cùng khung và cùng kiểu chụp với xấp ảnh cũ ở lựa chọn q5_photos; không đọc được chữ trên bìa và gáy, không có tranh khủng long, không có người. Từ khoá tìm ảnh (EN): stack of antique leather books on wooden table
@@ -645,8 +679,9 @@ instruction.vi: Thử thách: kiểm tra ý của Na
 image.brief: Dùng lại hình `vi-sao-khung-long-bien-mat/explore_rock`
 image.alt.en: A painting of a giant space rock
 image.alt.vi: Tranh vẽ khối đá khổng lồ trong vũ trụ
-statement.en: The space rock hit one place. But the whole Earth changed.
-statement.vi: Khối đá chỉ đâm vào một nơi. Nhưng cả Trái Đất đã thay đổi.
+statement.en: The rock hit one place, but the whole Earth changed.
+statement.vi: Khối đá đâm một nơi, nhưng cả Trái Đất thay đổi.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười một tiếng); khác chữ ở `_topic.md` (mục "Câu sáu, lời Na"), giữ hai vế và đáp án. PM sửa `_topic.md` cho khớp nếu đồng ý.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -655,10 +690,12 @@ labels.false.vi: Na chưa đúng
 answer: true
 hint.en: Where did the dust go?
 hint.vi: Bụi đã bay đi những đâu?
-explanation_correct.en: Yes! Dust spread around Earth and blocked the sunlight.
-explanation_correct.vi: Đúng rồi! Bụi lan khắp Trái Đất và che ánh nắng Mặt Trời.
-explanation_wrong.en: Na is right. The dust spread all around Earth.
-explanation_wrong.vi: Na nói đúng. Bụi đã lan ra khắp Trái Đất.
+explanation_correct.en: Dust spread around Earth and blocked the sunlight.
+explanation_correct.vi: Bụi lan khắp Trái Đất và che ánh nắng Mặt Trời.
+explanation_wrong.en: Dust from that one place spread all around Earth.
+explanation_wrong.vi: Bụi từ nơi ấy đã lan ra khắp Trái Đất.
+feedback_false.en: Dust from one place can travel very far.
+feedback_false.vi: Bụi từ một nơi có thể bay rất xa.
 > Lời Na giữ đúng chữ ở `_topic.md` (mục "Câu sáu, lời Na"); đáp án "Na đúng" theo bảng Đúng/Sai.
 > DOK 3: bé đánh giá lời Na. Bé còn nghĩ "khối đá rơi trúng từng con khủng long" sẽ thấy hai vế mâu thuẫn ("chỉ một nơi" mà "cả Trái Đất") và chọn "No". Bé hiểu chuỗi bụi, thiếu nắng, cây chết thì thấy hai vế khớp nhau. Gợi ý hỏi đúng chỗ đó (bụi đi đâu), không nói thẳng đáp án.
 > [CẦN KIỂM] "Khối đá chỉ đâm vào một nơi; bụi lan khắp Trái Đất": xem ghi chú ở ý chính một và hai.

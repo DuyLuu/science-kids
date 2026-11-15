@@ -42,8 +42,8 @@ export function readJson(file: string): Record<string, unknown> & { kind: "topic
 /**
  * SK-026: lesson 1 with q2 (fill_blank_bank, DOK 1) replaced by a valid order_sequence of 3 cards
  * that reuses Spoken objects already in the lesson (q2's texts, q1's option labels), so a copy
- * that went through tts keeps audio on every Spoken. Discoverer rules still pass; only
- * format_not_rendered fires (no app renders order_sequence in a Discoverer lesson yet).
+ * that went through tts keeps audio on every Spoken. Discoverer rules still pass; format_not_rendered
+ * fires only below 0.1.0 (Discoverer renders order_sequence from 0.1.0, SK-043).
  */
 export function withOrderSequence<T extends Record<string, any>>(lesson: T): T {
   const copy = structuredClone(lesson);

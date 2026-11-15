@@ -218,36 +218,9 @@
       "same_as": "tray.tray_drips"
     },
     "q4": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q4.jpg",
-        "method": "drawn"
-      },
-      "title": "A bar chart with three bars",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
-    },
-    "q4.q4_left": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q4_left.jpg",
-        "method": "drawn"
-      },
-      "title": "The chart with the left bar marked",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
-    },
-    "q4.q4_middle": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q4_middle.jpg",
-        "method": "drawn"
-      },
-      "title": "The chart with the middle bar marked",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
-    },
-    "q4.q4_right": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q4_right.jpg",
-        "method": "drawn"
-      },
-      "title": "The chart with the right bar marked",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+      "same_as": "sandy_soil",
+      "lesson": "da-va-dat/cac-loai-dat-o-viet-nam",
+      "note": "14/11 (SK-044): hình câu hỏi biểu đồ cột (ô 64 cạnh câu hỏi, màn chart-ask) dùng lại ảnh đất cát bài 12. Ba hình biểu đồ có vầng sáng (q4_left, q4_middle, q4_right) đã bỏ cùng file vẽ."
     },
     "q5": {
       "own": {
@@ -287,7 +260,12 @@
       "lesson": "da-va-dat/cac-loai-dat-o-viet-nam"
     },
     "vocab.data": {
-      "same_as": "q4"
+      "own": {
+        "file": "content/images/own/da-va-dat/b14-vocab.data.jpg",
+        "method": "drawn"
+      },
+      "title": "A bar chart with three bars",
+      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau. 14/11 (SK-044): q4 thành picture_bar_chart (app vẽ cột), hình biểu đồ không đánh dấu này chuyển làm hình gốc của từ data (đổi tên file b14-q4.jpg thành b14-vocab.data.jpg)."
     },
     "reward.paddy_card": {
       "source": "Wikimedia Commons",

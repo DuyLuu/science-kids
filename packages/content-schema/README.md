@@ -47,7 +47,7 @@ import { validateSyllabus } from "@science-kids/content-schema/syllabus";   // c
    - Mọi `id` (UUID) duy nhất trên mọi file được đưa vào.
    - `key` duy nhất trong cả bài, kể cả key con (`options`, `groups`, `items`, `bank`, `bars`), theo quy ước `q5_egg`, `tray_egg` của `content/TEMPLATE.md`. Trong topic: key của `misconceptions`.
    - `lesson.topic_id` trỏ tới một topic trong các file được đưa vào. `misconception_id` có trong `misconceptions` của topic đó.
-   - `word_list.term_keys` có trong `vocab`. `fill_blank_bank.answers` có trong `bank`. `order_sequence.answer` là hoán vị của `items`. `build_tray.items[].group` có trong `groups`.
+   - `word_list.term_keys` có trong `vocab`. `fill_blank_bank.answers` có trong `bank`. `order_sequence.answer` là hoán vị của `items`. `picture_bar_chart`: `options[i]` đi với `chart.bars[i]` (cùng số, cùng `label`, lựa chọn không có hình, có cột > 0). `build_tray.items[].group` có trong `groups`.
    - `feedback` (SK-044) chỉ ở lựa chọn sai: không ở option `correct: true`, không ở thẻ `bank` có trong `answers`; `true_false` chỉ có `feedback_true` khi `answer: false` và `feedback_false` khi `answer: true`.
    - `fill_blank_bank`: ô trống trong `sentence.en` đánh số `{1}…{n}`, mỗi số một lần, và `answers` có đúng `n` phần tử. Ô trống trong `vi` là tuỳ chọn, nhưng không được vượt quá `n`.
    - `build_tray`: có ít nhất 1 nhóm `required`. Mỗi nhóm `required` có một lời nhắc trong `messages.missing`, và `missing` chỉ chứa nhóm `required`. `capacity` không nhỏ hơn số nhóm `required`.
@@ -132,7 +132,7 @@ Luật theo nhóm tuổi (format được dùng, số lựa chọn, hình bắt 
 | `true_false` | `answer: boolean`, `statement?`, `speaker?: Key`, `labels?: { true, false }`, `feedback_true?`, `feedback_false?` |
 | `fill_blank_bank` | `sentence` (ô `{1}`, `{2}`… trong `en`), `bank[2..]: { key, label, image?, feedback? }`, `answers: Key[1..]` |
 | `order_sequence` | `items[3..6]: { key, label, image? }`, `answer: Key[]` (hoán vị của `items`) |
-| `picture_bar_chart` | `chart: { title?, unit?, bars[2..6]: { key, label, image?, value ≥ 0 } }` + `options` như `single_choice` |
+| `picture_bar_chart` | `chart: { title?, unit?, bars[2..6]: { key, label, image?, value ≥ 0 } }` + `options` như `single_choice`. **Nối theo vị trí** (SK-043, 14/11): `options[i]` là đáp án của `chart.bars[i]`; số lựa chọn bằng số cột, `options[i].label` trùng `bars[i].label` (cả `en`, `vi`), lựa chọn không có `image` (hình ở `bars[i].image`), ít nhất một cột `value > 0`. App vẽ cột theo thứ tự `bars` từ trái sang phải, chạm cột i là chọn `options[i]`, chấm như `single_choice` theo `options[i].key` |
 
 `feedback` (SK-044, tuỳ chọn, Spoken nên có audio EN/VI như mọi chữ trẻ nghe): một câu nói vì sao **lựa chọn sai** đó chưa đúng; app đọc khi bé chọn nó mà còn lượt, rồi đọc `hint`. Chỉ lựa chọn `correct: false` (cả `picture_bar_chart`) và thẻ `bank` không nằm trong `answers` được có. `true_false` không có lựa chọn nên dùng `feedback_true` (bé chạm Đúng, chỉ khi `answer: false`) và `feedback_false` (bé chạm Sai, chỉ khi `answer: true`). `order_sequence` không có `feedback`. Ràng buộc "chỉ lựa chọn sai" kiểm ở bước kiểm chéo (`refs.mjs`).
 

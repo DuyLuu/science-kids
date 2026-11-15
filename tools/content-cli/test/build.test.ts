@@ -293,16 +293,18 @@ describe("build (cache giả, không cần model)", () => {
     assert.deepEqual(lines, validateLines(files).filter((line) => line.includes(" [age_")));
   });
 
-  test("format chưa hiện được ở --min-app-version 0.1.0 (q2 thành order_sequence): build exit 1, validate chỉ cảnh báo", () => {
+  test("format chưa hiện được ở --min-app-version 0.0.9 (q2 thành order_sequence, hiện từ 0.1.0, SK-043): build exit 1, validate chỉ cảnh báo", () => {
     const files = editedInput("sequence", (lesson) => withOrderSequence(lesson));
     const out = path.join(root, "pack-sequence");
-    const run = runCli(...files, "--out", out, "--cache", ws.cacheDir, "--min-app-version", "0.1.0");
+    const run = runCli(...files, "--out", out, "--cache", ws.cacheDir, "--min-app-version", "0.0.9");
     assert.equal(run.status, 1, run.stdout);
     assert.equal(existsSync(out), false);
     const problems = run.stderr.split("\n").filter((line) => line.includes(" ["));
-    assert.equal(problems.length, 1, run.stderr);
-    assert.match(problems[0]!, /lesson\.json \/quiz\/1\/format \[format_not_rendered\] format order_sequence chưa hiện được ở app 0\.1\.0: chưa bản app nào hiện được format này/);
-    const validate = spawnSync(process.execPath, [cli, "validate", ...files], { encoding: "utf8" });
+    // 0.0.9 is older than every renderer: one line per warm-up and quiz item.
+    assert.equal(problems.length, 8, run.stderr);
+    assert.ok(problems.every((line) => line.includes("[format_not_rendered]")), run.stderr);
+    assert.ok(problems.some((line) => /lesson\.json \/quiz\/1\/format \[format_not_rendered\] format order_sequence chưa hiện được ở app 0\.0\.9: app hiện được từ 0\.1\.0/.test(line)), run.stderr);
+    const validate = spawnSync(process.execPath, [cli, "validate", ...files, "--min-app-version", "0.0.9"], { encoding: "utf8" });
     assert.equal(validate.status, 0, validate.stdout);
     assert.match(validate.stdout, /lesson\.json \/quiz\/1\/format \[format_not_rendered\] cảnh báo: format order_sequence/);
   });
@@ -470,7 +472,7 @@ describe("build với ảnh (SK-033: file chọn ảnh + cache ảnh giả)", ()
   });
 
   test("ảnh lệch khung (Duy 13/11, SK-043): cảnh báo tên bài, khoá, tỉ lệ ảnh, tỉ lệ khung, gợi ý crop; vẫn build", () => {
-    // B (683×1024, dọc 2:3) ở thẻ lựa chọn q1 (Discoverer, khung 16:9): lệch ×2,67 > max_factor 2,2.
+    // B (683×1024, dọc 2:3) ở thẻ lựa chọn q1 (Discoverer A2, khung 5:2): lệch ×3,75 > max_factor 2,2.
     // B làm hình câu hỏi w2 (khung 4:3): lệch ×2, không báo. A (1024×768) ở kệ Chơi và nhóm Học (1:1): lệch ×1,33, không báo.
     writeSelection({ "tray.tray_rice": PICK_A, "learn.explore.explore_carb": PICK_A, w2: PICK_B, "q1.q1_rice": PICK_B });
     const run = build(path.join(root, "pack-shape"));
@@ -478,9 +480,9 @@ describe("build với ảnh (SK-033: file chọn ảnh + cache ảnh giả)", ()
     assert.match(run.stdout, /ảnh lệch khung \(tỉ lệ ảnh khác chỗ dùng, tools\/content-cli\/image-slots\.json\): 1 hình · an-uong-lanh-manh 1/);
     const lines = run.stdout.split("\n").filter((line) => line.includes("lệch ×"));
     assert.equal(lines.length, 1, lines.join("\n"));
-    assert.match(lines[0]!, /bài 01-thuc-an-cho-ta-nhung-gi · hình q1\.q1_rice \(thẻ lựa chọn \(\d lựa chọn\)\): ảnh 683×1024 dọc 2:3, khung 16:9 ngang; lệch ×2,67/);
-    // Centred 16:9 band of the picture, inside B's own crop (left half of the source).
-    assert.match(lines[0]!, /Đặt "crop" trong .*thuc-an-cho-ta-nhung-gi\.json mục q1\.q1_rice \(gợi ý cắt giữa \{"left":0,"top":0\.31[23],"width":0\.5,"height":0\.375\}/);
+    assert.match(lines[0]!, /bài 01-thuc-an-cho-ta-nhung-gi · hình q1\.q1_rice \(thẻ lựa chọn \(\d lựa chọn\)\): ảnh 683×1024 dọc 2:3, khung 5:2 ngang; lệch ×3,75/);
+    // Centred 5:2 band of the picture, inside B's own crop (left half of the source).
+    assert.match(lines[0]!, /Đặt "crop" trong .*thuc-an-cho-ta-nhung-gi\.json mục q1\.q1_rice \(gợi ý cắt giữa \{"left":0,"top":0\.36[67],"width":0\.5,"height":0\.26[67]\}/);
   });
 
   test("--require-assets: mỗi Image chưa có ảnh là một lỗi, không ghi gói", () => {

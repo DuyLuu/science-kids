@@ -46,7 +46,7 @@ statement.vi: Tin từ những chỗ ở xa, như ngón chân, phải rất lâu
 correction.en: Nerve messages are very fast. You feel your toe at once.
 correction.vi: Tin đi trên dây thần kinh rất nhanh. Em thấy ngón chân đau ngay lập tức.
 > [CẦN KIỂM] Tốc độ tin trên dây thần kinh từ khoảng một mét mỗi giây (sợi nhỏ, chậm) tới khoảng một trăm hai mươi mét mỗi giây (sợi lớn có bao). Tin chạm từ ngón chân của trẻ (khoảng một mét) về não mất vài phần trăm giây, nhanh hơn một cái chớp mắt (khoảng một phần mười tới ba phần mười giây). Biên tập nhớ, chưa tra nguồn. Cảm giác đau "nhói" tới rất nhanh, cảm giác "âm ỉ" tới chậm hơn một chút; chữ cho trẻ không nói ý này.
-note: Trẻ hình dung tin "đi đường" như người đi bộ: xa thì lâu. Sửa ở bài hai: ý chính ba, ô Học "Very fast", câu q5 (tin nào đi đường xa nhất) dẫn vào câu q6 gắn key này. Câu q6 cho Na nói đúng ("Ngón chân ở xa não. Nhưng mình vẫn thấy ngay."), để câu sáu cả chủ đề không luôn là "Na chưa đúng" (rút kinh nghiệm SK-031 N1). Bé còn tin "xa thì chậm" sẽ chọn "Na chưa đúng". Kinh nghiệm phổ thông, chưa có nguồn nghiên cứu. Thêm 10/11/2026, nháp AI.
+note: Trẻ hình dung tin "đi đường" như người đi bộ: xa thì lâu. Sửa ở bài hai: ý chính ba, ô Học "Very fast", câu q5 (tin nào đi đường xa nhất) dẫn vào câu q6 gắn key này. Câu q6 cho Na nói đúng ("Ngón chân ở xa não, nhưng mình vẫn thấy ngay."), để câu sáu cả chủ đề không luôn là "Na chưa đúng" (rút kinh nghiệm SK-031 N1). Bé còn tin "xa thì chậm" sẽ chọn "Na chưa đúng". Kinh nghiệm phổ thông, chưa có nguồn nghiên cứu. Thêm 10/11/2026, nháp AI.
 
 ### veins_are_nerves
 id: c00d84f7-93f3-4172-a81b-da8f1b5aa65a
@@ -225,14 +225,14 @@ note: Cảnh quen ở Việt Nam: chở con ra chợ, tới trường gần nhà
 | --- | --- | --- |
 | 1 | w2 "We have five senses." | Đúng |
 | 1 | q6 `brain_stops_when_resting` (Na nằm võng: "My brain is not working.") | Sai |
-| 2 | q6 `nerve_messages_slow` (Na: "My toe is far from my brain. I still feel it fast.") | Đúng |
+| 2 | q6 `nerve_messages_slow` (Na: "My toe is far away, but I feel it fast.") | Đúng |
 | 3 | w2 "The blue lines on your wrist are nerves." (`veins_are_nerves`, không gắn key) | Sai |
-| 3 | q6 `taste_only_tongue` (Na: "My nose is blocked. My pho still tastes the same.") | Sai |
+| 3 | q6 `taste_only_tongue` (Na: "My nose is blocked, but my pho tastes the same.") | Sai |
 | 4 | w2 "In an earthquake, cover your head with your arm." (ôn *Bề mặt Trái Đất*) | Đúng |
 | 4 | w3 "When you sleep, your brain switches off." (câu "Em nghĩ sao?" của bài một) | Sai |
-| 4 | q6 `helmet_only_long_rides` (Na: "School is very close. I still wear my helmet.") | Đúng |
+| 4 | q6 `helmet_only_long_rides` (Na: "School is very close, but I still wear my helmet.") | Đúng |
 
-Bốn câu Đúng, bốn câu Sai. Câu sáu là Sai, Đúng, Sai, Đúng. Không bài nào có câu Đúng/Sai ở q1 tới q5. Rà chữ 10/11 thêm hai câu Khởi động ôn *Hô hấp* (bài một w3, bài hai w2), cả hai `single_choice`, nên bảng không đổi. Câu Đúng/Sai thêm sau này thì giữ cân bằng này. Giải thích khi đúng của câu đáp án Sai không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai", "This is true" · "Câu này đúng", "Na is right" · "Na nói đúng" hoặc "Na is not right" · "Na chưa đúng".
+Bốn câu Đúng, bốn câu Sai. Câu sáu là Sai, Đúng, Sai, Đúng. Không bài nào có câu Đúng/Sai ở q1 tới q5. Rà chữ 10/11 thêm hai câu Khởi động ôn *Hô hấp* (bài một w3, bài hai w2), cả hai `single_choice`, nên bảng không đổi. Câu Đúng/Sai thêm sau này thì giữ cân bằng này. Giải thích khi đúng của câu đáp án Sai không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai", "This is true" · "Câu này đúng", "Na is right" · "Na nói đúng" hoặc "Na is not right" · "Na chưa đúng". **Hết hiệu lực 14/11** (SK-044, ngân sách A2): màn đã chỉ đáp án, nên hai lời giải thích bỏ "Yes!", "This is …", "Na is …", "The answer is …", mỗi lời còn một câu nêu lý do; phía bé chọn nhầm có `feedback_true` hoặc `feedback_false`.
 
 **Vị trí đáp án đúng** (app không xáo lựa chọn; xáo tay, không theo chu kỳ)
 
@@ -277,10 +277,11 @@ Tổng câu một đáp án: thứ nhất sáu, thứ hai sáu, thứ ba sáu. C
 **Câu "Em nghĩ sao?"** (đề xuất schema v1.1 `think_first`, như các chủ đề trước): bài một hỏi "When you sleep, your brain switches off. What do you think?" · "Khi em ngủ, bộ não tắt hẳn. Em nghĩ sao?"; lựa chọn không chấm điểm "True" · "Đúng", "False" · "Sai", "I am not sure" · "Em chưa chắc". Bài bốn hỏi lại đúng câu khẳng định này ở w3 (đáp án Sai), để bé tự so.
 
 **Câu sáu, lời Na** (mỗi câu EN tối đa mười từ)
-- Bài một: "I am resting in the hammock. My brain is not working." · "Mình đang nằm nghỉ trên võng. Bộ não của mình không làm việc." Na chưa đúng. Hình: võng trống mắc giữa hai thân cây.
-- Bài hai: "My toe is far from my brain. I still feel it fast." · "Ngón chân ở xa não. Nhưng mình vẫn thấy ngay." Na nói đúng. Hình: đôi bàn chân trần trên lối sỏi.
-- Bài ba: "My nose is blocked. My pho still tastes the same." · "Mũi mình bị nghẹt. Bát phở vẫn ngon y như mọi khi." Na chưa đúng. Hình: bát phở bốc khói.
-- Bài bốn: "School is very close. I still wear my helmet." · "Trường ở rất gần. Mình vẫn đội mũ bảo hiểm." Na nói đúng. Hình: ngõ nhỏ vắng người, không biển chữ.
+- 14/11 (ngân sách A2): lời Na một câu, tối đa mười từ EN và mười hai chữ VI; bốn lời dưới đây đã rút, giữ ý và đáp án.
+- Bài một: "I am resting, so my brain is not working." · "Mình đang nằm nghỉ, nên não mình không làm việc." Na chưa đúng. Hình: võng trống mắc giữa hai thân cây.
+- Bài hai: "My toe is far away, but I feel it fast." · "Ngón chân ở xa não, nhưng mình vẫn thấy ngay." Na nói đúng. Hình: đôi bàn chân trần trên lối sỏi.
+- Bài ba: "My nose is blocked, but my pho tastes the same." · "Mũi mình bị nghẹt, nhưng phở vẫn ngon như mọi khi." Na chưa đúng. Hình: bát phở bốc khói.
+- Bài bốn: "School is very close, but I still wear my helmet." · "Trường ở rất gần, nhưng mình vẫn đội mũ bảo hiểm." Na nói đúng. Hình: ngõ nhỏ vắng người, không biển chữ.
 
 **Thẻ thưởng:** bộ thẻ mới `set: body`, riêng của chủ đề này (*Hô hấp* dùng `set: breathing`, tester 10/11 kiểm). Đề xuất ios-dev thêm khoá `collectible.set.body` "Body cards" · "Thẻ cơ thể" (mục Đề xuất). Mỗi bài một thẻ, mọi số liệu cần kiểm:
 - bài một: "Brain" · "Bộ não", "A grown-up's brain weighs about as much as a pineapple." · "Bộ não của người lớn nặng cỡ một quả dứa." [CẦN KIỂM];

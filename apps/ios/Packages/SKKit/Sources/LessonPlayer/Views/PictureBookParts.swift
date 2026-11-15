@@ -14,6 +14,10 @@ enum PictureBookMetrics {
     static let stepSquare: CGFloat = 14
     /// Explorer · Học: the page picture (`322 × 380`, the only part that grows or shrinks).
     static let pagePictureMax: CGFloat = 380
+    /// Discoverer A2 · Học (`learn-2`): the picture up to `440` (the sentence is under it).
+    static let pagePictureMaxDiscoverer: CGFloat = 440
+    /// Discoverer A2 · Từ mới (`learn-words`): the word's picture (`150 × 124`).
+    static let wordPicture: CGFloat = 104
     static let pagePictureMin: CGFloat = 180
     /// Explorer · Chơi: a shelf cell (`110 × 96`), three columns; iPad four columns of `124`.
     static let shelfPicture: CGFloat = 96
@@ -100,10 +104,14 @@ struct PageDots: View {
 
 /// Explorer header (SK-043 Explorer-A, "header bước giữ như SK-040"): back and the four step
 /// squares, no title (the child does not read it; the voice says what to do).
+///
+/// Discoverer A2 (SK-043, Duy 14/11): the same header, without the "VI" switch ("Cả hai" prints
+/// English only; Vietnamese is on the speakers' "VI" button).
 struct ExplorerStepHeader: View {
     let session: LessonSession
     let backLabel: Text
     let onBack: () -> Void
+    @Environment(\.ageGroup) private var ageGroup
 
     var body: some View {
         HStack(spacing: Tokens.Space.s12) {
@@ -111,8 +119,10 @@ struct ExplorerStepHeader: View {
                 .accessibilityIdentifier("lesson.back")
             StepSquaresPlain(current: session.phaseIndex)
                 .frame(maxWidth: .infinity)
-            SecondLanguageSwitch(session: session)
-            Color.clear.frame(width: Tokens.AgeGroup.explorer.touchTarget, height: 1)
+            if session.isExplorer {
+                SecondLanguageSwitch(session: session)
+            }
+            Color.clear.frame(width: ageGroup.touchTarget, height: 1)
         }
     }
 }

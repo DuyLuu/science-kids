@@ -47,13 +47,15 @@ image.alt.en: A village seen from above
 image.alt.vi: Làng quê nhìn từ trên cao
 hint.en: Which layer is on the outside?
 hint.vi: Lớp nào nằm ở ngoài cùng?
-explanation_correct.en: Yes! We live on the crust, Earth's outside layer.
-explanation_correct.vi: Đúng rồi! Mình sống trên vỏ Trái Đất, lớp ngoài cùng.
-explanation_wrong.en: The answer is the crust. It is the outside layer.
-explanation_wrong.vi: Đáp án là vỏ Trái Đất. Đó là lớp ngoài cùng.
+explanation_correct.en: Land, seas and mountains all sit on the crust.
+explanation_correct.vi: Đất, biển và núi đều nằm trên vỏ Trái Đất.
+explanation_wrong.en: We live on the crust, Earth's outside layer.
+explanation_wrong.vi: Mình sống trên vỏ, lớp ngoài cùng của Trái Đất.
 
 #### option w1_mantle
 correct: false
+feedback.en: The mantle is very hot rock, deep below us.
+feedback.vi: Lớp manti là đá rất nóng, ở sâu bên dưới.
 label.en: mantle
 label.vi: lớp manti
 image.brief: Dùng lại hình `q1_mantle` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
@@ -70,6 +72,8 @@ image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp vỏ
 
 #### option w1_core
 correct: false
+feedback.en: The core is in the very middle of Earth.
+feedback.vi: Nhân nằm ở chính giữa Trái Đất.
 label.en: core
 label.vi: nhân Trái Đất
 image.brief: Dùng lại hình `q1_core` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
@@ -92,10 +96,12 @@ image.alt.vi: Lớp manti bên cạnh lòng trắng trứng
 answer: false
 hint.en: Remember the mantle. Is most of it melted or solid?
 hint.vi: Em nhớ lại lớp manti. Phần lớn lớp đó nóng chảy hay vẫn rắn?
-explanation_correct.en: The mantle is very hot rock. Most of it is solid.
-explanation_correct.vi: Lớp manti là đá rất nóng. Nhưng phần lớn vẫn rắn.
-explanation_wrong.en: This is false. The mantle is very hot, but mostly solid.
-explanation_wrong.vi: Câu này sai. Lớp manti rất nóng, nhưng phần lớn vẫn rắn.
+explanation_correct.en: The mantle is very hot, but mostly solid.
+explanation_correct.vi: Lớp manti rất nóng, nhưng phần lớn vẫn rắn.
+explanation_wrong.en: Only some places deep down have melted rock.
+explanation_wrong.vi: Chỉ một số nơi sâu dưới đất có đá nóng chảy.
+feedback_true.en: Very hot rock can still be solid.
+feedback_true.vi: Đá rất nóng vẫn có thể rắn.
 > Rà chữ 9/11 (tester N1): câu đổi sang đáp án Sai. Bản cũ "The mantle is a layer of very hot rock." (đáp án Đúng). Bản mới kiểm thẳng ý "lớp manti phần lớn vẫn rắn" của bài ba, nối với misconception `inside_is_lava` và với ý "mác-ma chỉ có ở một số nơi" của bài này; câu khởi động không gắn key. Giải thích khi đúng không mở đầu bằng "Yes!", vì bé vừa chọn Sai.
 > [CẦN KIỂM] "Phần lớn lớp manti vẫn rắn" theo cách nói của `_topic.md` (correction của `inside_is_lava`: "đá rất nóng nhưng phần lớn vẫn rắn") và món "mostly solid · phần lớn vẫn rắn" ở ô Lớp manti của bài ba. Có chỗ trong lớp manti đá nóng chảy một phần; với trẻ bảy đến chín tuổi, câu "Lớp manti là một lớp đá nóng chảy" được coi là sai.
 > Thêm hình dùng lại `explore_mantle` của bài ba, như ghi chú cũ đề xuất.
@@ -115,10 +121,12 @@ image.alt.vi: Bãi cát trên một hòn đảo nhỏ
 answer: true
 hint.en: Can you walk on an island?
 hint.vi: Em đi bộ trên đảo được không?
-explanation_correct.en: Yes! An island is land. Water is all around it.
-explanation_correct.vi: Đúng rồi! Hòn đảo là đất, xung quanh là nước.
-explanation_wrong.en: This is true. An island is land with water all around.
-explanation_wrong.vi: Câu này đúng. Hòn đảo là đất, có nước bao quanh.
+explanation_correct.en: Cat Ba and Ly Son are islands of Vietnam.
+explanation_correct.vi: Cát Bà và Lý Sơn là những hòn đảo của Việt Nam.
+explanation_wrong.en: An island is land, with sea on every side.
+explanation_wrong.vi: Đảo là đất, bốn phía đều có nước.
+feedback_false.en: Trees grow on islands, because islands are land.
+feedback_false.vi: Trên đảo có cây mọc, vì đảo là đất.
 
 ## Học
 
@@ -156,7 +164,8 @@ label.en: Magma and lava
 label.vi: Mác-ma và dung nham
 color: vang_hoe
 sentence.en: Melted rock is magma underground and lava outside.
-sentence.vi: Đá nóng chảy dưới lòng đất là mác-ma, trào ra ngoài là dung nham.
+sentence.vi: Đá nóng chảy dưới đất là mác-ma, ra ngoài là dung nham.
+> SK-044 (14/11, A2): câu VI cũ mười bốn tiếng; bỏ "lòng", "trào" còn mười hai (đếm "mác-ma" là một chữ như cách đếm theo dấu cách của A2; đếm theo tiếng là mười ba).
 > [CẦN KIỂM] Cách viết "mác-ma" theo sách giáo khoa hiện hành (có sách viết "macma"). Cả chủ đề viết "mác-ma" (bảng Tên gọi ở `_topic.md`). Nghe thử giọng VI đọc "mác-ma" và "dung nham".
 image.brief: [hình vẽ] Sơ đồ gốc của bài, designer tự vẽ (không có sơ đồ public domain hợp đường ảnh, Duy 10/11): mặt cắt dọc một núi lửa, sâu dưới lòng đất, giữa lớp đá rắn, có một túi mác-ma màu cam (buồng mác-ma); một ống hẹp đi từ túi đó lên miệng núi lửa; ngoài miệng, dòng dung nham chảy xuống sườn; một mũi tên cong chỉ lên. Túi mác-ma phải là một túi riêng, không lan thành biển dung nham dưới cả mặt đất (misconception inside_is_lava của bài ba). Không có chữ (Duy 10/11: hình không có nhãn chữ); tên "magma · mác-ma", "lava · dung nham" có ở câu của ô và ở ô Từ mới. Câu q2 dùng bản không mũi tên của sơ đồ này. Từ khoá tìm ảnh (EN): volcano cross section magma chamber
 image.alt.en: Magma under a volcano and lava outside
@@ -189,7 +198,8 @@ label.en: In Vietnam
 label.vi: Ở Việt Nam
 color: gi_dong
 sentence.en: Vietnam has old volcanoes that stopped erupting long ago.
-sentence.vi: Việt Nam có những núi lửa đã ngừng phun từ rất lâu rồi.
+sentence.vi: Việt Nam có núi lửa đã ngừng phun từ rất lâu.
+> SK-044 (14/11, A2): câu VI cũ mười ba tiếng, nay mười một. Vẫn không nói "mọi núi lửa ở Việt Nam đều đã tắt".
 > [CẦN KIỂM] Câu viết dạng "những núi lửa đã ngừng phun", không viết "mọi núi lửa ở Việt Nam đều đã tắt". Biên tập nhớ có tài liệu về một lần núi lửa phun dưới biển ngoài khơi miền Trung Nam Bộ đầu thế kỷ hai mươi (Hòn Tro), nên chưa dám nói Việt Nam không có núi lửa còn hoạt động. Chuyên gia xác nhận núi lửa Chư Đăng Ya (Tây Nguyên) và các miệng núi lửa trên đảo Lý Sơn được gọi là "núi lửa đã tắt"; không đưa năm hay số triệu năm.
 image.brief: [ảnh] Đồi núi lửa đã tắt trên đảo Lý Sơn (núi Thới Lới), chụp từ dưới đồng: ngọn đồi tròn phủ cỏ cây sau ruộng và nhà dân, cắt sát ngọn đồi; trời xanh, không khói; người (nếu có) rất nhỏ, không nhận ra mặt; không có biển chữ, không phải bản đồ. Không lấy núi lửa ở nước khác, vì ô này nói về Việt Nam. Đổi từ núi lửa Chư Đăng Ya ở Tây Nguyên (SK-033, designer chọn ảnh 10/11): không có ảnh Chư Đăng Ya hay núi lửa đã tắt khác ở Tây Nguyên hợp giấy phép. Từ vựng volcano dùng lại ảnh này. Từ khoá tìm ảnh (EN): Ly Son Island volcano hill
 image.alt.en: An old volcano hill on Ly Son Island
@@ -228,8 +238,9 @@ prompt.en: Find what old volcanoes made
 prompt.vi: Tìm những thứ núi lửa đã tắt tạo ra
 capacity: 3
 success_when: all_required_and_no_limit
-messages.start.en: Lava cools into new rock and land. Find rock, red soil and a crater.
-messages.start.vi: Dung nham nguội đi thành đá mới, đất mới. Em tìm đá, đất đỏ và miệng núi lửa nhé.
+messages.start.en: Find rock, red soil and a crater. Lava cools into new rock and land.
+messages.start.vi: Em tìm đá, đất đỏ và miệng núi lửa nhé. Dung nham nguội đi thành đá mới, đất mới.
+> SK-044 (14/11, A2): đảo thứ tự, câu in trong bong bóng là việc cần làm; câu ôn ý ba thành câu chỉ đọc.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 > Lời nhắn không gọi tên vật chứa ("tray", "mâm", "khay"), để vẫn đúng khi app đổi chữ giao diện màn Chơi. Rà chữ 9/11: "tap one", "chạm vào để bỏ ra" như nhãn của app (ios-dev 9/11).
@@ -346,13 +357,15 @@ image.alt.en: A quiet volcano
 image.alt.vi: Núi lửa đang yên lặng
 hint.en: Think of the volcano picture. What was red and hot?
 hint.vi: Em nhớ lại hình núi lửa. Thứ gì đỏ rực và nóng?
-explanation_correct.en: Yes! Hot melted rock comes out of a volcano.
-explanation_correct.vi: Đúng rồi! Đá nóng chảy trào ra từ núi lửa.
-explanation_wrong.en: The answer is hot melted rock. It is red and very hot.
-explanation_wrong.vi: Đáp án là đá nóng chảy. Đá ấy đỏ rực và rất nóng.
+explanation_correct.en: Melted rock is so hot that it glows red.
+explanation_correct.vi: Đá nóng chảy nóng tới mức đỏ rực lên.
+explanation_wrong.en: A volcano pours out red-hot melted rock.
+explanation_wrong.vi: Núi lửa phun ra đá nóng chảy đỏ rực.
 
 #### option q1_ice
 correct: false
+feedback.en: Ice is cold, but a volcano is very hot.
+feedback.vi: Nước đá lạnh, còn núi lửa rất nóng.
 label.en: ice
 label.vi: nước đá
 image.brief: [ảnh] Mấy viên nước đá trong suốt trong cốc thuỷ tinh, chụp gần, nền trơn; không có nhãn hiệu, không có chữ. Câu q5 dùng lại ảnh này. Từ khoá tìm ảnh (EN): ice cubes glass
@@ -369,6 +382,8 @@ image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
 
 #### option q1_rain
 correct: false
+feedback.en: Rain falls from clouds in the sky.
+feedback.vi: Mưa rơi xuống từ những đám mây.
 label.en: rain
 label.vi: nước mưa
 image.brief: [ảnh] Mưa to trút xuống một căn nhà gỗ nhỏ giữa vườn cây, thấy rõ những vệt mưa trắng; không có người, không có chữ. Lựa chọn q1_rain của bài năm dùng lại ảnh này. Từ khoá tìm ảnh (EN): heavy rain house garden
@@ -386,15 +401,16 @@ prompt.vi: Chọn từ còn thiếu
 image.brief: [hình vẽ] Cùng sơ đồ tự vẽ của ô `explore_magma`, bản không có mũi tên: thấy túi mác-ma dưới đất và dòng dung nham bên ngoài. Không có chữ, vì nhãn chữ sẽ lộ đáp án. Từ khoá tìm ảnh (EN): volcano cross section magma chamber
 image.alt.en: Melted rock under and outside a volcano
 image.alt.vi: Đá nóng chảy dưới núi lửa và bên ngoài
-sentence.en: Under the ground, melted rock is called {1}. Outside, it is called {2}.
-sentence.vi: Dưới lòng đất, đá nóng chảy gọi là {1}. Trào ra ngoài thì gọi là {2}.
+sentence.en: Melted rock is {1} underground and {2} outside.
+sentence.vi: Đá nóng chảy dưới đất là {1}, ra ngoài là {2}.
+> SK-044 (14/11, A2): câu điền cũ hai câu, mười bốn từ. Gộp thành một câu như câu ô Mác-ma và dung nham; thứ tự hai chỗ trống giữ nguyên.
 answers: q2_magma, q2_lava
 hint.en: Remember the volcano picture, cut in half.
 hint.vi: Em nhớ lại hình núi lửa bổ đôi ở phần Học nhé.
-explanation_correct.en: Yes! Magma is under the ground. Lava is outside.
-explanation_correct.vi: Đúng rồi! Mác-ma ở dưới lòng đất. Dung nham ở bên ngoài.
-explanation_wrong.en: The answers are magma, then lava.
-explanation_wrong.vi: Đáp án là mác-ma, rồi đến dung nham.
+explanation_correct.en: Magma rises up and flows out as lava.
+explanation_correct.vi: Mác-ma dâng lên, trào ra ngoài thành dung nham.
+explanation_wrong.en: It is magma underground, then lava when it comes out.
+explanation_wrong.vi: Ở dưới đất là mác-ma, trào ra thì là dung nham.
 > Hai ô trống, cùng thứ tự ở câu EN và câu VI. Gợi ý chỉ vào hình ô explore_magma và câu của ô đó, không nói thẳng đáp án. Hình ô explore_magma không có nhãn chữ (Duy 10/11).
 > SK-033 (9/11): thẻ có hình làm câu dễ hơn, vì bé ghép được theo hình (túi đá dưới đất là mác-ma, dòng chảy bên ngoài là dung nham). Vẫn đúng ý bài; ảnh câu hỏi là sơ đồ không nhãn nên không gọi tên. Ba hình thẻ dùng lại ba lựa chọn của câu q4, để bé gặp lại đúng hình đó ở câu sau.
 
@@ -408,6 +424,8 @@ image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
 #### bank q2_ash
 label.en: ash
 label.vi: tro núi lửa
+feedback.en: Ash is grey dust that flies into the sky.
+feedback.vi: Tro là bụi xám bay lên trời.
 image.brief: Dùng lại hình `q4_ash`. Từ khoá tìm ảnh (EN): ash plume volcano distant
 image.alt.en: Grey ash rising into the sky
 image.alt.vi: Tro xám bay lên trời
@@ -431,11 +449,12 @@ image.alt.en: A quiet volcano
 image.alt.vi: Núi lửa đang yên lặng
 hint.en: Think about what is deep under the volcano.
 hint.vi: Em nghĩ xem sâu dưới núi lửa có gì nhé.
-explanation_correct.en: Yes! Magma pushes up and comes out as lava.
-explanation_correct.vi: Đúng rồi! Mác-ma đẩy lên rồi trào ra ngoài thành dung nham.
-explanation_wrong.en: The answer is magma pushing up. Not fire, and not the sun.
-explanation_wrong.vi: Đáp án là mác-ma đẩy lên. Không phải lửa, cũng không phải Mặt Trời.
-> Rà chữ 9/11 (tester, lỗi nhỏ 8): giải thích sai cũ chỉ nói "đó là đá nóng chảy, không phải lửa", không khớp khi bé chọn Mặt Trời. Câu mới nói tới cả hai lựa chọn sai. Ý "mác-ma là đá nóng chảy" đã có ở câu q1 và câu q2 ngay trước. Ba lựa chọn bỏ dấu chấm cuối câu cho giống các bài khác.
+explanation_correct.en: Magma rises up a narrow pipe, then flows out.
+explanation_correct.vi: Mác-ma dâng lên theo một ống hẹp rồi trào ra.
+explanation_wrong.en: Hot magma deep below pushes up and out.
+explanation_wrong.vi: Mác-ma nóng ở sâu bên dưới đẩy lên, trào ra.
+> Rà chữ 9/11 (tester, lỗi nhỏ 8): giải thích sai cũ chỉ nói "đó là đá nóng chảy, không phải lửa", không khớp khi bé chọn Mặt Trời. Câu mới nói tới cả hai lựa chọn sai.
+> SK-044 (14/11, A2): giải thích sai còn một câu nói lý do; vì sao lửa và Mặt Trời chưa đúng nay nằm ở `feedback` của từng lựa chọn. Ý "mác-ma là đá nóng chảy" đã có ở câu q1 và câu q2 ngay trước. Ba lựa chọn bỏ dấu chấm cuối câu cho giống các bài khác.
 > DOK 2: chọn cách giải thích đúng cho một quá trình. Hai lựa chọn sai là hai cách nghĩ ngây thơ: bên trong núi có lửa cháy (tên tiếng Việt "núi lửa" dễ gợi ý này) và Mặt Trời làm núi nóng. Câu không gắn `misconception` vì Discoverer chỉ có đúng một câu như vậy. Ý "núi lửa có lửa cháy" đã được ghi thành key `volcano_is_fire` trong `_topic.md` (rà chéo 9/11), chỉ để ghi nhận, không gắn ở câu này.
 > Khi app hiện được `order_sequence`, câu này nên đổi thành câu sắp thứ tự ba thẻ: mác-ma đẩy lên, dung nham trào ra, dung nham nguội thành đá (xem Ghi chú cho dev).
 
@@ -443,6 +462,8 @@ explanation_wrong.vi: Đáp án là mác-ma đẩy lên. Không phải lửa, c�
 
 #### option q3_fire
 correct: false
+feedback.en: Deep underground, there is no wood to burn.
+feedback.vi: Sâu dưới lòng đất không có củi để cháy.
 label.en: A fire burns inside it
 label.vi: Lửa cháy bên trong núi
 image.brief: [ảnh] Một đống lửa củi đang cháy, ngọn lửa vàng cam, chụp gần trên nền tối; không có người, không có chữ. Từ khoá tìm ảnh (EN): campfire flames wood
@@ -451,6 +472,8 @@ image.alt.vi: Đống lửa củi đang cháy
 
 #### option q3_sun
 correct: false
+feedback.en: The sun warms the ground, but only a little.
+feedback.vi: Mặt Trời chỉ sưởi ấm mặt đất một chút.
 label.en: The sun makes it hot
 label.vi: Mặt Trời làm núi nóng lên
 image.brief: [ảnh] Mặt Trời chói sáng trên bầu trời xanh trong, chụp từ mặt đất, mép dưới có ngọn cây hoặc mái nhà; không có người, không có chữ. Từ khoá tìm ảnh (EN): sun bright blue sky
@@ -479,14 +502,16 @@ instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Is the melted rock outside or under the ground?
 hint.vi: Đá nóng chảy ở bên ngoài hay ở dưới lòng đất?
-explanation_correct.en: Yes! Melted rock outside is called lava.
-explanation_correct.vi: Đúng rồi! Đá nóng chảy ở bên ngoài gọi là dung nham.
-explanation_wrong.en: Lava is outside. Under the ground, it is magma.
-explanation_wrong.vi: Dung nham ở bên ngoài. Dưới lòng đất thì gọi là mác-ma.
+explanation_correct.en: Lava can flow down a volcano or into the sea.
+explanation_correct.vi: Dung nham chảy xuống sườn núi hoặc xuống biển.
+explanation_wrong.en: Lava is melted rock outside, even in the sea.
+explanation_wrong.vi: Ra ngoài là dung nham, kể cả khi chảy xuống biển.
 > Áp dụng ý hai vào bốn hình mới. Nhãn lựa chọn chỉ nói chỗ của đá nóng chảy, không nói "magma" hay "lava", để bé phải tự xếp. Hình q4_underground không có nhãn chữ (như mọi hình của bài), để không lộ đáp án.
 
 #### option q4_ash
 correct: false
+feedback.en: Ash is grey dust, not melted rock.
+feedback.vi: Tro là bụi xám, không phải đá nóng chảy.
 label.en: ash in the sky
 label.vi: tro bay trên trời
 image.brief: [ảnh] Cột tro núi lửa màu xám bay cao lên trời từ đỉnh một núi lửa ở rất xa; không thấy dung nham đỏ; không có người, nhà, không có chữ; ưu tiên ảnh public domain của USGS, không kèm logo. Câu q2 (thẻ q2_ash) và từ vựng ash dùng lại ảnh này. Từ khoá tìm ảnh (EN): ash plume volcano distant
@@ -503,6 +528,8 @@ image.alt.vi: Dung nham đỏ rực trên sườn núi lửa
 
 #### option q4_underground
 correct: false
+feedback.en: Under the ground, melted rock has another name.
+feedback.vi: Dưới lòng đất, đá nóng chảy có tên khác.
 label.en: under the ground
 label.vi: dưới lòng đất
 image.brief: [hình vẽ] Cùng sơ đồ tự vẽ của ô `explore_magma`, bản chỉ có phần dưới đất: núi lửa chưa phun; sâu bên dưới, giữa lớp đá rắn, có một túi mác-ma màu cam và ống dẫn dừng sâu dưới đất; trên mặt đất không thấy đá nóng chảy, không có mũi tên. Không có chữ, vì nhãn chữ sẽ lộ đáp án. Câu q2 (thẻ q2_magma) và bài năm dùng lại hình này. Từ khoá tìm ảnh (EN): magma chamber diagram underground
@@ -522,17 +549,18 @@ id: 5302f303-510f-468b-a8f1-70526df0e8e3
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lava flows into the sea and cools down. What can it make?
-prompt.vi: Dung nham chảy xuống biển rồi nguội đi. Nó có thể tạo ra gì?
+prompt.en: What can lava make when it cools in the sea?
+prompt.vi: Dung nham nguội trong biển có thể tạo ra gì?
+> SK-044 (14/11, A2): câu cũ hai câu, mười ba từ; gộp thành một câu mười từ, mười tiếng. Ảnh dung nham chảy xuống biển giữ ngữ cảnh.
 image.brief: Dùng lại hình `q4_sea`. Ảnh chưa cho thấy dung nham nguội thành gì, để không lộ đáp án. Từ khoá tìm ảnh (EN): lava ocean entry steam
 image.alt.en: Lava flowing into the sea
 image.alt.vi: Dung nham chảy xuống biển
 hint.en: Think of Ly Son Island. How was it made?
 hint.vi: Em nghĩ tới đảo Lý Sơn. Đảo ấy được tạo ra thế nào?
-explanation_correct.en: Yes! Lava cools into new rock and new land.
-explanation_correct.vi: Đúng rồi! Dung nham nguội đi thành đá mới, đất mới.
-explanation_wrong.en: The answer is new land. Lava cools into rock and land.
-explanation_wrong.vi: Đáp án là đất mới. Dung nham nguội đi thành đá và đất.
+explanation_correct.en: New land can grow out into the sea this way.
+explanation_correct.vi: Đất mới có thể lấn dần ra biển như thế.
+explanation_wrong.en: Lava cools and hardens into new rock and land.
+explanation_wrong.vi: Dung nham nguội, cứng lại thành đá và đất mới.
 > Áp dụng ý ba vào chỗ mới (biển). Gợi ý chỉ vào ví dụ đảo Lý Sơn ở ô "Ở Việt Nam" và món tray_island_crater, không nói thẳng đáp án. Câu không nói Lý Sơn được tạo ra đúng theo cách này (xem [CẦN KIỂM] ở thẻ ly_son).
 > SK-033 (9/11): ba lựa chọn nay có hình (trước đây chỉ có chữ). Ba hình đều là ảnh chụp; ảnh đất mới dùng lại ô explore_new_rock mà bé đã xem ở phần Học, đúng ý chính ba.
 
@@ -546,6 +574,8 @@ image.alt.vi: Dung nham nguội thành đất mới bên bờ biển
 
 #### option q5_water
 correct: false
+feedback.en: Lava is rock, so it cannot turn into water.
+feedback.vi: Dung nham là đá, không biến thành nước được.
 label.en: more sea water
 label.vi: thêm nước biển
 image.brief: [ảnh] Mặt nước biển xanh có sóng nhỏ, chụp gần, chỉ thấy nước, không thấy bờ, đá hay đất; không có người, không có chữ. Từ khoá tìm ảnh (EN): sea water small waves
@@ -554,6 +584,8 @@ image.alt.vi: Nước biển có sóng nhỏ
 
 #### option q5_ice
 correct: false
+feedback.en: Ice is frozen water, and lava is rock.
+feedback.vi: Nước đá là nước đông, còn dung nham là đá.
 label.en: ice
 label.vi: nước đá
 image.brief: Dùng lại hình `q1_ice`. Từ khoá tìm ảnh (EN): ice cubes glass
@@ -574,8 +606,9 @@ image.alt.vi: Núi lửa đang phun trào
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
 > Rà chữ 9/11 (tester N1): nhãn trung tính chung cho cả năm câu sáu, xem ghi chú ở câu q6 bài một.
-statement.en: I only see volcanoes on TV. So Vietnam has none.
-statement.vi: Mình chỉ thấy núi lửa trên ti vi. Vậy Việt Nam không có núi lửa.
+statement.en: I only see volcanoes on TV, so Vietnam has none.
+statement.vi: Chỉ thấy núi lửa trên ti vi, nên Việt Nam không có.
+> SK-044 (14/11, A2): lời Na gộp thành một câu (mười từ, mười hai tiếng).
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -587,8 +620,10 @@ hint.vi: Em nghĩ tới miệng núi lửa và đất đỏ em vừa tìm thấy
 > SK-033 (10/11): "craters" đổi thành "crater", vì kệ Chơi nay chỉ còn một miệng núi lửa. Câu VI không đổi. Cần sinh lại giọng EN của gợi ý này.
 explanation_correct.en: Vietnam has old volcanoes, like on Ly Son Island.
 explanation_correct.vi: Việt Nam có núi lửa đã tắt, ví dụ trên đảo Lý Sơn.
-explanation_wrong.en: Na is not right. Vietnam has old volcanoes too.
-explanation_wrong.vi: Na chưa đúng. Việt Nam cũng có những núi lửa đã tắt.
+explanation_wrong.en: Ly Son and the Central Highlands have old volcanoes.
+explanation_wrong.vi: Lý Sơn và Tây Nguyên đều có núi lửa đã tắt.
+feedback_true.en: Old volcanoes are quiet, so they are easy to miss.
+feedback_true.vi: Núi lửa đã tắt yên lặng, khó nhận ra.
 > DOK 3: bắt lỗi một lập luận (chưa tự thấy thì cho là không có). Gợi ý chỉ vào bằng chứng bé vừa tìm ở phần Chơi, không nói thẳng đáp án. Giải thích khi đúng không mở đầu bằng "Yes!", vì đáp án là "No" (như câu q6 của bài một).
 
 ## Từ vựng

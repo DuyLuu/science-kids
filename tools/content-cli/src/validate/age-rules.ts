@@ -77,7 +77,8 @@ const COUNTED: Readonly<Record<string, { field: "options" | "items" | "bank"; no
   order_sequence: { field: "items", noun: "thẻ" },
   fill_blank_bank: { field: "bank", noun: "từ trong ngân hàng" },
 };
-const CHOICE_FORMATS = new Set(["single_choice", "multi_choice", "picture_bar_chart"]);
+/** Formats whose options are picture cards (choice_option). Not picture_bar_chart: the child taps a bar, options carry no image (SK-043, 14/11). */
+const CHOICE_FORMATS = new Set(["single_choice", "multi_choice"]);
 const SECTIONS = [
   { field: "warmup", name: "Khởi động", formats: (a: Authoring) => a.warmup_formats },
   { field: "quiz", name: "Quiz", formats: (a: Authoring) => a.quiz_formats },

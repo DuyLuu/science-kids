@@ -131,6 +131,7 @@ struct ExplorerOrderSequence: View {
                 ExplorerCardFace(look: isEditing ? .idle : look, showsRetry: false, height: height,
                                  showsSeal: index == shown.count - 1) {
                     ContentPicture(asset: item.image?.asset, color: nil, size: height - 2 * Tokens.Space.s6, box: .fillWidth, accessibilityLabel: nil)
+                        .frame(maxWidth: max(cellWidth - 2 * Tokens.Space.s6, 0))
                         .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s6, style: .continuous))
                         .padding(Tokens.Space.s6)
                 }
@@ -173,6 +174,8 @@ struct ExplorerOrderSequence: View {
                         } label: {
                             ExplorerCardFace(look: .idle, showsRetry: false, height: metrics.illustration(ExplorerMetrics.choiceHeight)) {
                                 ContentPicture(asset: item.image?.asset, color: nil, size: metrics.illustration(ExplorerMetrics.choiceHeight) - 2 * Tokens.Space.s6, box: .fillWidth, accessibilityLabel: nil)
+                                    // Never wider than the cell (a stand-in picture has a fixed size).
+                                    .frame(maxWidth: max(cellWidth - 2 * Tokens.Space.s6, 0))
                                     .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.explorer - Tokens.Space.s6, style: .continuous))
                                     .padding(Tokens.Space.s6)
                             }

@@ -5,8 +5,10 @@ import LessonEngine
 import Profiles
 import SwiftUI
 
-/// Thưởng (canvas Discoverer 13): stars from `computeStars`, the quiz score and XP from the engine,
-/// paper confetti (`fall`, only on this screen), the collectible card that turns over (`flip`).
+/// Thưởng, Discoverer A2 (SK-043, Duy 14/11; `?shot=d-reward`): a two-word praise, the stars of
+/// `computeStars`, the numbers as icon + number (their names only for VoiceOver), the new card
+/// (the lesson's collectible: its picture, name and one-sentence fact with a speaker), paper
+/// confetti (`fall`, only on this screen). Buttons with pictures only: the cards, the arrow home.
 struct RewardStep: View {
     let session: LessonSession
     let summary: LessonSummary
@@ -14,25 +16,15 @@ struct RewardStep: View {
     let onClose: () -> Void
     let onShowCards: () -> Void
 
-    @State private var flipped = false
-    /// The side shown once the turn has ended. The far side's words leave the screen (and
-    /// VoiceOver) only then, so they never vanish while the card is still turning.
-    @State private var settledFlipped = false
-    @ReducedMotion private var reduced
     @Environment(\.layoutMetrics) private var metrics
 
     private var mode: LanguageMode { session.languageMode }
-    private var showsSecond: Bool { session.showsSecondLanguage }
 
     var body: some View {
         PaperFrame(scrolls: true) {
             content
-                // Behind the words, across the whole screen width (canvas z-index 0). A background
-                // never sizes the content, so the wider layer cannot push the column sideways.
+                // Behind the words, across the whole screen width (canvas z-index 0).
                 .background(alignment: .top) {
-                    // Canvas positions are measured from the frame's top edge, the content
-                    // starts `contentInsets.top` lower.
-                    // Regular: the confetti falls over the paper frame, scaled from the 390 canvas.
                     Confetti()
                         .frame(width: metrics.drawsPaperFrame ? metrics.frameWidth : metrics.containerWidth, height: LessonMetrics.confettiHeight)
                         .offset(y: -metrics.contentInsets.top)
@@ -41,10 +33,10 @@ struct RewardStep: View {
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             BottomBar {
-                HStack(alignment: .top, spacing: Tokens.Space.s12) {
-                    TwoLayerButton("lesson.reward.cards", role: .secondary, action: onShowCards)
+                HStack(alignment: .center, spacing: Tokens.Space.s12) {
+                    PaperIconButton(.cards, accessibilityLabel: Text("lesson.reward.cards"), action: onShowCards)
                         .accessibilityIdentifier("lesson.reward.cards")
-                    TwoLayerButton("lesson.reward.home", icon: .arrowForward, action: onClose)
+                    ArrowButton(label: "lesson.reward.home", action: onClose)
                         .accessibilityIdentifier("lesson.reward.home")
                 }
             }
@@ -54,27 +46,18 @@ struct RewardStep: View {
 
     private var content: some View {
         VStack(spacing: LessonMetrics.gap) {
-            HStack {
-                Spacer()
-                PaperIconButton(.close, accessibilityLabel: Text("lesson.reward.close"), action: onClose)
-                    .accessibilityIdentifier("lesson.back")
-            }
-            VStack(spacing: Tokens.Space.s4) {
-                Text("lesson.reward.title \(heading.lessonNumber)")
-                    .typography(Tokens.Typography.titleXl)
-                    .foregroundStyle(Tokens.Role.textAccent)
-                    .accessibilityAddTraits(.isHeader)
-                    .accessibilityIdentifier("lesson.reward.title")
-                Text("lesson.reward.subtitle \(mode.name(session.lesson.title))")
-                    .typography(Tokens.Typography.bodyStrong)
-                    .foregroundStyle(Tokens.Role.textSecondary)
-            }
-            .multilineTextAlignment(.center)
-            .reveal(order: 2)
+            Text("lesson.reward.praise")
+                .typography(Tokens.Typography.titleXl)
+                .foregroundStyle(Tokens.Role.textAccent)
+                .multilineTextAlignment(.center)
+                .accessibilityAddTraits(.isHeader)
+                .accessibilityIdentifier("lesson.reward.title")
+                .padding(.top, Tokens.Space.s20)
+                .reveal(order: 1)
             stars
-            stats.reveal(order: 7)
+            stats.reveal(order: 6)
             if let collectible = session.lesson.reward.collectible {
-                card(collectible).reveal(order: 8)
+                card(collectible).reveal(order: 7)
             }
         }
         .frame(maxWidth: .infinity)
@@ -84,162 +67,99 @@ struct RewardStep: View {
 
     private var stars: some View {
         let count = summary.stars.stars
-        return VStack(spacing: Tokens.Space.s6) {
-            HStack(alignment: .bottom, spacing: Tokens.Space.s10) {
-                ForEach(0..<3, id: \.self) { index in
-                    let filled = index < count
-                    PaperIconView(.star, size: metrics.illustration(index == 1 ? LessonMetrics.star * 1.15 : LessonMetrics.star),
-                                  color: filled ? Tokens.Role.stateCurrent : Tokens.Role.surfaceInactive)
-                        .paperDropShadow(filled ? Tokens.Shadow.paper2 : Tokens.Shadow.paper1)
-                        .rotationEffect(.degrees(Double(index - 1) * 8))
-                        .motion(filled ? Tokens.Motion.Preset.stamp : Tokens.Motion.Preset.lay,
-                                delay: Tokens.Motion.Stagger.maxDelay * Double(index + 2) / 3)
-                }
+        return HStack(alignment: .bottom, spacing: Tokens.Space.s10) {
+            ForEach(0..<3, id: \.self) { index in
+                let filled = index < count
+                PaperIconView(.star, size: metrics.illustration(index == 1 ? LessonMetrics.star * 1.15 : LessonMetrics.star),
+                              color: filled ? Tokens.Role.stateCurrent : Tokens.Role.surfaceInactive)
+                    .paperDropShadow(filled ? Tokens.Shadow.paper2 : Tokens.Shadow.paper1)
+                    .rotationEffect(.degrees(Double(index - 1) * 8))
+                    .motion(filled ? Tokens.Motion.Preset.stamp : Tokens.Motion.Preset.lay,
+                            delay: Tokens.Motion.Stagger.maxDelay * Double(index + 2) / 3)
             }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel(Text("lesson.reward.stars_a11y \(count)"))
-            .accessibilityIdentifier("lesson.reward.stars")
-            Text(starsHint)
-                .typography(Tokens.Typography.caption)
-                .foregroundStyle(Tokens.Role.textSecondary)
-                .multilineTextAlignment(.center)
-                .reveal(order: 6)
         }
-    }
-
-    /// What the next star needs (rules: pass threshold, mastery gap).
-    private var starsHint: LocalizedStringKey {
-        let threshold = session.rules.scoring.passThreshold
-        switch summary.stars.stars {
-        case 3: return "lesson.reward.hint_mastered"
-        case 2:
-            let days = session.rules.scoring.masteryGapDays
-            return days == 1 ? "lesson.reward.hint_tomorrow" : "lesson.reward.hint_days \(days)"
-        default:
-            return "lesson.reward.hint_pass \(threshold.num) \(threshold.den)"
-        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("lesson.reward.stars_a11y \(count)"))
+        .accessibilityIdentifier("lesson.reward.stars")
     }
 
     // MARK: Numbers
 
+    /// Icon + number tiles: right answers, XP. (A2 also shows the day streak; the lesson screen
+    /// does not know it yet.)
     private var stats: some View {
         HStack(spacing: Tokens.Space.s10) {
-            tile(value: Text("lesson.reward.score \(summary.score.correct) \(summary.score.max)"),
-                 caption: Text("lesson.reward.score_caption"), accent: false, identifier: "lesson.reward.score")
-            tile(value: Text("lesson.reward.xp \(summary.xp.total)"),
-                 caption: Text(verbatim: "XP"), accent: true, identifier: "lesson.reward.xp")
+            tile(icon: .check, iconColor: Tokens.Role.feedbackCorrect,
+                 value: Text("lesson.reward.score \(summary.score.correct) \(summary.score.max)"),
+                 label: Text("lesson.reward.score_a11y \(summary.score.correct) \(summary.score.max)"),
+                 identifier: "lesson.reward.score")
+            tile(icon: .star, iconColor: Tokens.Role.stateCurrent,
+                 value: Text("lesson.reward.xp \(summary.xp.total)"),
+                 label: Text("lesson.xp_plus \(summary.xp.total)"),
+                 identifier: "lesson.reward.xp")
         }
     }
 
-    private func tile(value: Text, caption: Text, accent: Bool, identifier: String) -> some View {
-        VStack(spacing: Tokens.Space.s2) {
+    private func tile(icon: PaperIcon, iconColor: Color, value: Text, label: Text, identifier: String) -> some View {
+        HStack(spacing: Tokens.Space.s8) {
+            PaperIconView(icon, size: PaperMetrics.headerChipIcon * 1.4, color: iconColor)
             value
                 .typography(Tokens.Typography.titleL, fixedBox: true)
-                .foregroundStyle(accent ? Tokens.Role.textAccent : Tokens.Role.textPrimary)
-            caption
-                .typography(Tokens.Typography.captionS)
-                .foregroundStyle(Tokens.Role.textSecondary)
         }
-        .padding(EdgeInsets(top: Tokens.Space.s10, leading: Tokens.Space.s6, bottom: Tokens.Space.s10, trailing: Tokens.Space.s6))
+        .padding(.vertical, Tokens.Space.s10)
         .frame(maxWidth: .infinity)
-        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper3, cornerRadius: Tokens.Radius.discoverer)
-        .accessibilityElement(children: .combine)
+        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
         .accessibilityIdentifier(identifier)
     }
 
     // MARK: Card
 
+    /// The new card: "Thẻ mới" on a cut tag, the picture filling the card, the name, the fact
+    /// (one sentence) and the speaker that says both.
     private func card(_ collectible: Collectible) -> some View {
-        VStack(alignment: .leading, spacing: Tokens.Space.s10) {
-            HStack(alignment: .center, spacing: Tokens.Space.s8) {
-                Text("lesson.reward.card_label")
-                    .typography(Tokens.Typography.number)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                // The side the child sees: the name and its tag, or "Em có biết?" on the back.
-                ListenButton(
-                    flipped
-                        ? session.utterance("reward.fact", collectible.fact)
-                        : session.utterance("reward.card", collectible.name, collectible.tag),
-                    label: flipped ? "lesson.listen.fact" : "lesson.listen.card",
-                    disc: .paper
-                )
-            }
-            Button {
-                flipped.toggle()
-            } label: {
-                FlipCard(isFlipped: flipped) {
-                    cardFront(collectible, showsContent: !flipped || !settledFlipped)
-                } back: {
-                    cardBack(collectible, showsContent: flipped || settledFlipped)
-                }
-                .background {
-                    RoundedRectangle(cornerRadius: Tokens.Radius.tileL, style: .continuous)
-                        .fill(Tokens.Palette.cham)
-                        .padding(-Tokens.Space.s6)
-                        .rotationEffect(LessonMetrics.cardBackTilt)
-                        .paperDropShadow(Tokens.Shadow.paper3)
-                }
-                .rotationEffect(LessonMetrics.cardTilt)
-                .padding(Tokens.Space.s8)
-            }
-            .buttonStyle(.paperPress)
-            .accessibilityLabel(Text("lesson.reward.card_a11y \(collectible.name.en)"))
-            .accessibilityValue(flipped ? Text(verbatim: collectible.fact.en) : Text(verbatim: ""))
-            .accessibilityIdentifier("lesson.reward.card")
-            .task(id: flipped) {
-                if !reduced { try? await Task.sleep(for: .seconds(Tokens.Motion.Preset.flip.duration)) }
-                if !Task.isCancelled { settledFlipped = flipped }
-            }
-        }
-    }
-
-    private func cardFront(_ collectible: Collectible, showsContent: Bool) -> some View {
-        HStack(spacing: Tokens.Space.s14) {
-            ContentPicture(image: collectible.image, color: Tokens.Palette.giDong, size: metrics.illustration(LessonMetrics.cardArt) * 0.8)
-                .frame(width: metrics.illustration(LessonMetrics.cardArt), height: metrics.illustration(LessonMetrics.cardArt))
-                .paperSurface(Tokens.Role.bgScreen, shadow: Tokens.Shadow.sunken, cornerRadius: Tokens.Radius.discoverer)
-            VStack(alignment: .leading, spacing: Tokens.Space.s4) {
-                PaperTag(Text("lesson.reward.new"), style: .cut(eyebrow: true))
-                Text(verbatim: mode.name(collectible.name))
-                    .typography(Tokens.Typography.titleL, fixedBox: true)
-                    .lineLimit(2)
-                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
-                if let second = mode.secondName(collectible.name) {
-                    Text(verbatim: second)
-                        .typography(Tokens.Typography.bodyStrong, fixedBox: true)
+        let say = session.utterance("reward.card", collectible.name, collectible.fact)
+        return VStack(alignment: .leading, spacing: Tokens.Space.s10) {
+            ContentPicture(image: collectible.image, color: Tokens.Palette.giDong, size: metrics.illustration(RewardMetrics.picture), box: .fillWidth)
+                .frame(height: metrics.illustration(RewardMetrics.picture))
+                .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous))
+            HStack(alignment: .center, spacing: Tokens.Space.s10) {
+                VStack(alignment: .leading, spacing: Tokens.Space.s4) {
+                    Text(verbatim: mode.sentence(collectible.name))
+                        .typography(Tokens.Typography.title)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("lesson.reward.card.name")
+                    Text(verbatim: mode.sentence(collectible.fact))
+                        .typography(Tokens.Typography.bodyStrong)
                         .foregroundStyle(Tokens.Role.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                if let tag = collectible.tag {
-                    PaperTag(Text(verbatim: mode.name(tag)), style: .chip(dot: Tokens.Palette.giDong))
-                }
-                Text(LocalizedStringKey(CollectibleSetName.key(for: collectible.set)))
-                    .typography(Tokens.Typography.captionS)
-                    .foregroundStyle(Tokens.Role.textSecondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                ListenButton(say, label: "lesson.listen.card")
             }
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .opacity(showsContent ? 1 : 0)
-        .accessibilityHidden(!showsContent)
-        .padding(Tokens.Space.s14)
-        .frame(maxWidth: .infinity, minHeight: LessonMetrics.cardHeight, alignment: .leading)
-        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.onDark, cornerRadius: Tokens.Radius.discoverer)
+        .padding(Tokens.Space.s8)
+        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
+        .background {
+            RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous)
+                .fill(Tokens.Role.actionPrimary)
+                .offset(x: Tokens.Space.s6, y: Tokens.Space.s8)
+        }
+        .overlay(alignment: .topLeading) {
+            PaperTag(Text("lesson.reward.new_card"), style: .cut(eyebrow: true))
+                .offset(x: -Tokens.Space.s6, y: -Tokens.Space.s10)
+        }
+        .padding(.trailing, metrics.gridTrailingInset)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("lesson.reward.card")
     }
+}
 
-    private func cardBack(_ collectible: Collectible, showsContent: Bool) -> some View {
-        Group {
-            if showsContent {
-                VStack(alignment: .leading, spacing: Tokens.Space.s6) {
-                    PaperTag(Text("lesson.reward.fact"), style: .cut(eyebrow: true))
-                    BilingualLines(spoken: collectible.fact, mode: mode, showsSecond: showsSecond, secondary: Tokens.Typography.bodyS)
-                }
-                .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .padding(Tokens.Space.s14)
-        .frame(maxWidth: .infinity, minHeight: LessonMetrics.cardHeight, alignment: .leading)
-        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.onDark, cornerRadius: Tokens.Radius.discoverer)
-    }
+/// Canvas sizes of Thưởng A2 with no token.
+enum RewardMetrics {
+    /// The card's picture (`336 × 300`).
+    static let picture: CGFloat = 260
 }
 
 /// Paper confetti falling once at the top of Thưởng (canvas positions, `fall` with a growing delay).

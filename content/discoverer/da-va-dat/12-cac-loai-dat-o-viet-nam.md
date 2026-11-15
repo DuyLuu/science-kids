@@ -53,15 +53,17 @@ image.alt.en: A jar of muddy water, just shaken
 image.alt.vi: Lọ nước đục vừa lắc xong
 hint.en: Remember the Jar test picture in the last lesson.
 hint.vi: Em nhớ lại ô Lọ đất lắng ở bài trước nhé.
-explanation_correct.en: Yes! Small stones are heavy, so they sink first.
-explanation_correct.vi: Đúng rồi! Sỏi nặng nên chìm xuống trước.
-explanation_wrong.en: The answer is small stones. Heavy bits sink first.
-explanation_wrong.vi: Đáp án là sỏi nhỏ. Hạt nặng chìm xuống trước.
+explanation_correct.en: The heaviest bits always settle at the bottom first.
+explanation_correct.vi: Hạt nặng luôn lắng xuống đáy trước tiên.
+explanation_wrong.en: Small stones are heavy, so they sink first.
+explanation_wrong.vi: Sỏi nhỏ nặng nên chìm xuống trước.
 > Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động. Bài 11 dạy ý này ở ô Lọ đất lắng (ví dụ "hạt nặng chìm xuống trước", hình lọ đã lắng) và câu q4.
 > Lệch `_topic.md` (bảng Hình dùng chung ghi `explore_jar` là hình câu w1 bài 12): hình `explore_jar` vẽ sỏi nằm dưới đáy lọ, tức là cho thấy đáp án. Câu này dùng hình `prediction` (lọ vừa lắc, chưa thấy lớp) của bài 11.
 
 #### option w1_clay
 correct: false
+feedback.en: Clay bits are tiny, so they settle slowly.
+feedback.vi: Hạt sét rất nhỏ nên lắng rất chậm.
 label.en: clay
 label.vi: đất sét
 image.brief: Dùng lại hình `clay` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): lump of wet clay soil
@@ -78,6 +80,8 @@ image.alt.vi: Một đống sỏi nhỏ
 
 #### option w1_leaves
 correct: false
+feedback.en: Rotting leaves are light and float on top.
+feedback.vi: Lá mục nhẹ, nổi lên trên mặt nước.
 label.en: rotting leaves
 label.vi: lá mục
 image.brief: Dùng lại hình `tray_rotting_leaves` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): rotting leaves on soil close up
@@ -101,8 +105,10 @@ hint.en: Remember everything that was in the jar.
 hint.vi: Em nhớ lại mọi thứ có trong lọ đất lắng nhé.
 explanation_correct.en: Soil also has organic matter, air and water.
 explanation_correct.vi: Đất còn có chất hữu cơ, không khí và nước.
-explanation_wrong.en: This is false. Soil also has organic matter.
-explanation_wrong.vi: Câu này sai. Đất còn có cả chất hữu cơ.
+explanation_wrong.en: Soil has rock bits, organic matter, air and water.
+explanation_wrong.vi: Đất có mảnh đá, chất hữu cơ, không khí và nước.
+feedback_true.en: In the jar, bits of leaf floated on top.
+feedback_true.vi: Trong lọ, vụn lá còn nổi lên trên.
 > Câu `true_false` dùng đúng chữ EN ở bảng Khởi động và bảng Đúng/Sai (bài 12 w2, Sai). Giải thích khi đúng không mở đầu bằng "Yes!".
 > Gợi ý không gọi tên ô Chất hữu cơ (đó là phản ví dụ); chỉ nhắc cả lọ đất, nơi bé đã thấy vụn lá nổi lên.
 
@@ -120,10 +126,10 @@ image.alt.en: A quiet volcano
 image.alt.vi: Núi lửa đang yên lặng
 hint.en: Remember the volcano lesson about Earth.
 hint.vi: Em nhớ lại bài Núi lửa nhé.
-explanation_correct.en: Yes! Old lava rock slowly broke down into red soil.
-explanation_correct.vi: Đúng rồi! Đá dung nham xưa vỡ vụn dần thành đất đỏ.
-explanation_wrong.en: The answer is red soil. It formed from old lava rock.
-explanation_wrong.vi: Đáp án là đất đỏ. Đất đỏ có từ đá dung nham xưa.
+explanation_correct.en: Old lava rock slowly crumbled into this red soil.
+explanation_correct.vi: Đá dung nham xưa vỡ vụn dần thành đất đỏ.
+explanation_wrong.en: Red soil formed from old volcano rock.
+explanation_wrong.vi: Đất đỏ có từ đá núi lửa xưa.
 > Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ ba) đúng bảng Khởi động. Ôn món ví dụ "red soil from lava rock" · "đất đỏ ba-dan từ đá dung nham" của ô "Ở Việt Nam" bài *Núi lửa*.
 > Hình câu hỏi là núi lửa đang yên lặng, không thấy đất đỏ.
 > Lệch `_topic.md` (bảng Hình dùng chung ghi `q2_rice` cho lựa chọn "đất ruộng lúa"): ảnh `q2_rice` là cánh đồng lúa xanh chụp rộng, lệch khung với hai ảnh mặt đất chụp gần. Lựa chọn này dùng ảnh đất phù sa chụp gần `alluvial_soil` (từ vựng bài này); nhãn giữ "rice field soil" · "đất ruộng lúa" như bảng Khởi động. Ảnh `q2_rice` vẫn dùng ở kệ Chơi và câu q3.
@@ -131,6 +137,8 @@ explanation_wrong.vi: Đáp án là đất đỏ. Đất đỏ có từ đá dun
 
 #### option w3_sandy
 correct: false
+feedback.en: Sandy soil forms from sand by the sea.
+feedback.vi: Đất cát có từ cát ven biển.
 label.en: sandy soil
 label.vi: đất cát
 image.brief: Dùng lại hình `sandy_soil`. Từ khoá tìm ảnh (EN): sandy soil close up coast grains
@@ -140,6 +148,8 @@ image.alt.vi: Đất nhạt màu, hạt to
 
 #### option w3_rice
 correct: false
+feedback.en: Rice field soil is silt left by rivers.
+feedback.vi: Đất ruộng lúa là bùn mịn do sông bồi.
 label.en: rice field soil
 label.vi: đất ruộng lúa
 image.brief: Dùng lại hình `alluvial_soil`. Từ khoá tìm ảnh (EN): alluvial soil field close up Mekong Delta
@@ -410,15 +420,17 @@ image.alt.en: Sandy soil with big grains
 image.alt.vi: Đất cát hạt to
 hint.en: Remember the Sandy soil picture.
 hint.vi: Em nhớ lại ô Đất cát nhé.
-explanation_correct.en: Yes! Casuarina roots hold the sand in place.
-explanation_correct.vi: Đúng rồi! Rễ phi lao giữ cát lại.
-explanation_wrong.en: The answer is casuarina trees. They hold the sand.
-explanation_wrong.vi: Đáp án là cây phi lao. Phi lao giữ cát lại.
+explanation_correct.en: Rows of casuarina also block strong sea winds.
+explanation_correct.vi: Hàng phi lao còn chắn gió biển mạnh.
+explanation_wrong.en: Casuarina roots hold the sand in place.
+explanation_wrong.vi: Rễ phi lao giữ cát lại.
 > Câu nhớ lại ví dụ ba ô Đất cát. Dưa hấu có sức hút (cũng mọc trên đất cát, ví dụ bốn) nhưng không giữ cát; cà phê là cây của loại đất khác.
 > [CẦN KIỂM] Rễ phi lao giữ cát, chắn gió cát ven biển.
 
 #### option q1_coffee
 correct: false
+feedback.en: Coffee plants grow in the hills, not on beaches.
+feedback.vi: Cà phê trồng trên đồi, không trồng ở bãi biển.
 label.en: coffee plants
 label.vi: cây cà phê
 image.brief: Dùng lại hình `tray_coffee`. Từ khoá tìm ảnh (EN): coffee plantation red soil rows
@@ -427,6 +439,8 @@ image.alt.vi: Những hàng cà phê trên đồi
 
 #### option q1_watermelon
 correct: false
+feedback.en: Watermelons grow on sand, but cannot hold it in place.
+feedback.vi: Dưa hấu mọc trên cát, nhưng không giữ cát lại.
 label.en: watermelon plants
 label.vi: cây dưa hấu
 image.brief: Dùng lại hình `tray_watermelon`. Từ khoá tìm ảnh (EN): watermelon field sandy soil coast
@@ -456,16 +470,18 @@ sentence.vi: Sông mang {1} về, bồi thành đất phù sa.
 answers: q2_silt
 hint.en: Remember the Alluvial soil picture.
 hint.vi: Em nhớ lại ô Đất phù sa nhé.
-explanation_correct.en: Yes! Rivers leave silt, and it becomes alluvial soil.
-explanation_correct.vi: Đúng rồi! Sông để lại bùn mịn, bồi thành đất phù sa.
-explanation_wrong.en: The answer is silt. Rivers carry it to the deltas.
-explanation_wrong.vi: Đáp án là bùn mịn. Sông mang bùn mịn về các đồng bằng.
+explanation_correct.en: Each flood season, rivers leave new silt on fields.
+explanation_correct.vi: Mỗi mùa lũ, sông để lại bùn mịn mới trên ruộng.
+explanation_wrong.en: Rivers carry silt that builds alluvial soil.
+explanation_wrong.vi: Sông mang bùn mịn về, bồi thành đất phù sa.
 > Câu nhớ lại ý chính hai, ôn từ `silt` của bài 11. Hai thẻ sai đều là đá núi lửa (đá dung nham có lỗ, đá bọt): sức hút với bé còn lẫn nguồn gốc đất phù sa với đất đỏ (`all_soil_is_same`). Không dùng thẻ "cát" hay "đất sét", vì sông cũng mang cát và sét về, câu sẽ có hai đáp án.
 > Ba thẻ cùng là ảnh mẫu chụp gần.
 
 #### bank q2_pumice
 label.en: pumice
 label.vi: đá bọt
+feedback.en: Pumice is a rock from lava, not from rivers.
+feedback.vi: Đá bọt là đá từ dung nham, không từ sông.
 image.brief: Dùng lại hình `pumice` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): pumice rock sample
 image.alt.en: A pale grey rock
 image.alt.vi: Hòn đá màu xám nhạt
@@ -473,6 +489,8 @@ image.alt.vi: Hòn đá màu xám nhạt
 #### bank q2_lava_rock
 label.en: lava rock
 label.vi: đá dung nham
+feedback.en: Lava rock breaks down into red soil instead.
+feedback.vi: Đá dung nham vỡ ra thành đất đỏ.
 image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): basalt vesicular rock sample
 image.alt.en: A dark rock with tiny holes
 image.alt.vi: Hòn đá sẫm màu có lỗ nhỏ
@@ -498,10 +516,10 @@ image.alt.en: A river with a worn bank
 image.alt.vi: Dòng sông có bờ bị lở
 hint.en: Remember the Alluvial soil picture.
 hint.vi: Em nhớ lại ô Đất phù sa nhé.
-explanation_correct.en: Yes! Rice, fruit trees and vegetables like alluvial soil.
-explanation_correct.vi: Đúng rồi! Lúa, cây ăn trái và rau xanh đều hợp đất phù sa.
-explanation_wrong.en: The answers are rice, fruit trees and vegetables.
-explanation_wrong.vi: Đáp án là lúa, cây ăn trái và rau xanh.
+explanation_correct.en: Soft, rich alluvial soil feeds the Mekong rice fields.
+explanation_correct.vi: Đất phù sa mềm, màu mỡ nuôi ruộng lúa miền Tây.
+explanation_wrong.en: Rice, fruit trees and vegetables like alluvial soil.
+explanation_wrong.vi: Lúa, cây ăn trái và rau xanh đều hợp đất phù sa.
 > DOK 2: phân loại cây theo loại đất, có một cây mới (rau xanh ở bãi bồi) chưa có ở ô Học. Hồ tiêu là lựa chọn sai có sức hút (cây trồng quen, ở ô Đất đỏ ba-dan). Ba đáp án đúng, một sai (bài 12 là một trong bốn bài có câu ba đáp án).
 > [CẦN KIỂM] Rau màu trồng trên bãi bồi ven sông (đất phù sa); hồ tiêu trồng nhiều trên đất đỏ ba-dan.
 
@@ -515,6 +533,8 @@ image.alt.vi: Ruộng lúa xanh
 
 #### option q3_pepper
 correct: false
+feedback.en: Pepper vines grow best on hills, not river banks.
+feedback.vi: Hồ tiêu hợp với đồi cao, không phải bãi sông.
 label.en: pepper
 label.vi: hồ tiêu
 image.brief: [ảnh] Một vườn hồ tiêu xanh, dây tiêu leo quanh những cột trụ, chụp rộng vừa; không có người, không có chữ, không có biển. Từ khoá tìm ảnh (EN): black pepper vines plantation poles
@@ -543,17 +563,18 @@ id: 8d901b51-bc69-4e5e-82b6-cc12eba03e5d
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Lan visits a coffee farm in the hills. Which soil will she most likely see?
-prompt.vi: Lan đến thăm một vườn cà phê trên đồi. Bạn ấy dễ thấy loại đất nào nhất?
+prompt.en: Which soil is most likely on a coffee hill?
+prompt.vi: Đồi cà phê thường có loại đất nào?
 image.brief: [hình vẽ] Một cành cà phê có những chùm quả còn xanh và lá xanh bóng, vẽ gần; nền kem trơn; không thấy đất, không có quả chín đỏ (để màu đỏ không gợi đáp án), không có người, không có chữ. Theo hình designer làm 11/11: không có ảnh cành cà phê chỉ có quả xanh hợp lệ.
 image.alt.en: A coffee branch with green berries
 image.alt.vi: Cành cà phê có quả còn xanh
 hint.en: Think about where coffee grows in Vietnam.
 hint.vi: Em nghĩ xem cà phê được trồng nhiều ở đâu nhé.
-explanation_correct.en: Yes! Coffee grows on red, crumbly soil.
-explanation_correct.vi: Đúng rồi! Cà phê mọc trên đất đỏ tơi xốp.
-explanation_wrong.en: The answer is the red crumbly soil.
-explanation_wrong.vi: Đáp án là đất đỏ tơi xốp.
+explanation_correct.en: Red soil from old volcanoes covers many coffee hills.
+explanation_correct.vi: Đất đỏ từ núi lửa xưa phủ nhiều đồi cà phê.
+explanation_wrong.en: Coffee hills usually have red, crumbly soil.
+explanation_wrong.vi: Đồi cà phê thường có đất đỏ tơi xốp.
+> A2 (SK-043, 14/11): câu hỏi cũ mười chín chữ (hai câu, có nhân vật Lan), nay tám chữ.
 > DOK 2: hai bước, từ cây (cà phê) tới vùng (Tây Nguyên) tới vẻ ngoài của đất (ví dụ hai ô Đất đỏ ba-dan). Ba lựa chọn sai là vẻ ngoài của ba loại đất khác: đất phù sa (xám, mịn), đất cát (nhạt, ráp), đất vườn (nâu sẫm, tơi).
 > Gợi ý không gọi tên ô Đất đỏ ba-dan, vì chữ "đỏ" có trong nhãn đáp án.
 > Bốn lựa chọn là bốn hình vẽ cùng một khung (bàn tay đeo găng cầm một nắm đất), chỉ khác màu và hạt. Bài 13 (câu q5) dùng lại `q4_dark`.
@@ -568,6 +589,8 @@ image.alt.vi: Nắm đất đỏ tơi xốp
 
 #### option q4_grey
 correct: false
+feedback.en: Grey, smooth soil is common in rice fields.
+feedback.vi: Đất xám mịn hay gặp ở ruộng lúa.
 label.en: grey smooth soil
 label.vi: đất xám mịn
 image.brief: [hình vẽ] Cùng khung với `q4_red`: bàn tay đeo găng xanh lá cầm một nắm đất màu nâu xám, mịn, hơi ẩm, dính thành khối mềm; nền kem trơn; không có chữ.
@@ -576,6 +599,8 @@ image.alt.vi: Nắm đất xám mịn
 
 #### option q4_pale
 correct: false
+feedback.en: Pale, rough soil is sandy soil by the sea.
+feedback.vi: Đất vàng nhạt, sờ ráp là đất cát ven biển.
 label.en: pale rough soil
 label.vi: đất vàng nhạt sờ ráp
 image.brief: [hình vẽ] Cùng khung với `q4_red`: bàn tay đeo găng xanh lá cầm một nắm đất màu vàng nhạt, hạt to nhìn rõ từng hạt, rời nhau; nền kem trơn; không có chữ.
@@ -584,6 +609,8 @@ image.alt.vi: Nắm đất nhạt màu, hạt to
 
 #### option q4_dark
 correct: false
+feedback.en: Dark, crumbly soil is common in home gardens.
+feedback.vi: Đất nâu sẫm tơi xốp hay gặp ở vườn nhà.
 label.en: dark crumbly soil
 label.vi: đất nâu sẫm tơi xốp
 image.brief: [hình vẽ] Cùng khung với `q4_red`: bàn tay đeo găng xanh lá cầm một nắm đất màu nâu sẫm gần đen, tơi thành cục nhỏ, có vài vụn lá mục; nền kem trơn; không có chữ. Bài 13 (câu q5) dùng lại hình này.
@@ -596,23 +623,26 @@ id: 2891503e-da64-4585-b266-9733ee366e7f
 format: single_choice
 version: 1
 dok: 2
-prompt.en: Mai looks closely at sandy soil and red soil. What are the sandy soil's grains like?
-prompt.vi: Mai nhìn kỹ đất cát và đất đỏ. Đất cát có hạt thế nào?
+prompt.en: Next to red soil, what are sandy grains like?
+prompt.vi: So với đất đỏ, hạt đất cát thế nào?
 image.brief: Dùng lại hình `magnifying_glass` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): magnifying glass plain background
 image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
 hint.en: Remember the Sandy soil picture.
 hint.vi: Em nhớ lại ô Đất cát nhé.
-explanation_correct.en: Yes! Sandy soil has bigger grains than red soil.
-explanation_correct.vi: Đúng rồi! Đất cát có hạt to hơn đất đỏ.
-explanation_wrong.en: The answer is bigger grains. Sandy soil feels rough.
-explanation_wrong.vi: Đáp án là hạt to hơn. Đất cát sờ thấy ráp.
+explanation_correct.en: You can feel each big sandy grain between your fingers.
+explanation_correct.vi: Sờ đất cát, em cảm thấy từng hạt to.
+explanation_wrong.en: Sandy soil has bigger grains than red soil.
+explanation_wrong.vi: Đất cát có hạt to hơn đất đỏ.
+> A2 (SK-043, 14/11): câu hỏi cũ mười bốn chữ (hai câu, có nhân vật Mai), nay chín chữ.
 > DOK 2: so sánh hai loại đất theo một đặc điểm (cỡ hạt), sửa đúng `all_soil_is_same` (ý chính một). "Hạt nhỏ hơn" có sức hút với bé chỉ nhớ "cát là hạt nhỏ"; "hạt bằng nhau" là chính misconception.
 > Ba lựa chọn là ba hình vẽ cùng khung: hai đống đất nhỏ cạnh nhau, đống trái đỏ hạt mịn (giống nhau ở cả ba), đống phải nhạt màu, chỉ khác cỡ hạt.
 > [CẦN KIỂM] Đất đỏ ba-dan nhiều sét, hạt mịn hơn đất cát.
 
 #### option q5_smaller
 correct: false
+feedback.en: Small grains feel smooth, but sandy soil feels rough.
+feedback.vi: Hạt nhỏ sờ thấy mịn, còn đất cát sờ ráp.
 label.en: smaller grains
 label.vi: hạt nhỏ hơn
 image.brief: [hình vẽ] Hai đống đất nhỏ cạnh nhau trên nền kem trơn, vẽ gần như soi kính lúp: đống trái màu đỏ gạch, hạt mịn; đống phải màu vàng nhạt, hạt còn mịn hơn đống trái; cùng khung với hai lựa chọn kia; không có chữ, không có kính lúp trong hình.
@@ -629,6 +659,8 @@ image.alt.vi: Đất nhạt màu có hạt to hơn đất đỏ
 
 #### option q5_same
 correct: false
+feedback.en: Up close, sandy soil looks different from red soil.
+feedback.vi: Nhìn kỹ, đất cát khác hẳn đất đỏ.
 label.en: same-size grains
 label.vi: hạt bằng nhau
 image.brief: [hình vẽ] Cùng khung với `q5_smaller`: đống trái đỏ gạch, hạt mịn; đống phải vàng nhạt, hạt mịn đúng bằng đống trái; không có chữ.
@@ -645,8 +677,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: This soil feels rough and dries fast. It is sandy soil.
-statement.vi: Đất này sờ thấy ráp và mau khô. Đó là đất cát.
+statement.en: Rough soil that dries fast must be sandy soil.
+statement.vi: Đất sờ ráp, mau khô, vậy đó là đất cát.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -658,10 +690,12 @@ image.alt.en: A handful of soil in a hand
 image.alt.vi: Nắm đất trong lòng bàn tay
 hint.en: Remember the Sandy soil and Feel and look pictures.
 hint.vi: Em nhớ lại ô Đất cát và ô Sờ và nhìn nhé.
-explanation_correct.en: Yes! Big grains feel rough. Water runs out fast.
-explanation_correct.vi: Đúng rồi! Hạt to sờ thấy ráp. Nước chảy đi nhanh nên đất mau khô.
-explanation_wrong.en: Na is right. Rough soil that dries fast is sandy soil.
-explanation_wrong.vi: Na nói đúng. Đất sờ ráp, mau khô là đất cát.
+explanation_correct.en: Big grains feel rough and let water drain fast.
+explanation_correct.vi: Hạt to sờ ráp, nước thoát nhanh nên mau khô.
+explanation_wrong.en: Rough soil that dries fast is sandy soil.
+explanation_wrong.vi: Đất sờ ráp, mau khô là đất cát.
+feedback_false.en: Water drains fast through the big gaps in sand.
+feedback_false.vi: Nước thoát nhanh qua khe rộng giữa hạt cát.
 > Lời Na, hình và đáp án Đúng như `_topic.md` (mục "Câu sáu, lời Na" và bảng Đúng/Sai). `alt` không tả "cát". Cả màn mười chín từ EN.
 > DOK 3: bé dùng hai bằng chứng (sờ ráp, mau khô) để nhận ra một loại đất. "Sờ ráp" có ở ô Sờ và nhìn; "mau khô" không có ở ô nào, bé phải suy ra từ "hạt to, nhiều khe hở" (ô Đất cát) và bài 11 (nước đi vào khe hở). Bé còn nghĩ đất nào cũng như nhau sẽ chọn "Na chưa đúng".
 > Ảnh nắm đất khác ảnh `soil` của bài 11 (đất vườn nâu sẫm) và khác bốn hình vẽ câu q4. Theo ảnh designer chọn 11/11 (USDA NRCS, public domain): tay không đeo găng (không có ảnh hợp lệ tay đeo găng); brief, `alt` sửa theo.

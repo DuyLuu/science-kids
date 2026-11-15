@@ -111,6 +111,38 @@ test("order_sequence: answer must be a permutation of items", () => {
   only(check([withSequence(["q2_seed", "q2_sprout"])]), "/quiz/1/answer");
 });
 
+// SK-043 (dev 14/11): options[i] is the answer of chart.bars[i] (same count, same label, no option image).
+test("picture_bar_chart: options[i] goes with chart.bars[i]", () => {
+  const label = (en, vi = en) => ({ en, vi });
+  const bar = (key, en, vi, value) => ({ key, label: label(en, vi), value });
+  const option = (key, en, vi, correct) => ({ key, label: label(en, vi), correct });
+  const withChart = (edit) => {
+    const lesson = validLesson();
+    const { id, key, version, dok, prompt, hint, explanation_correct, explanation_wrong } = lesson.quiz[1];
+    const item = {
+      id, key, format: "picture_bar_chart", version, dok, prompt, hint, explanation_correct, explanation_wrong,
+      chart: { bars: [bar("q2_bar_clay", "clay soil", "đất sét", 2), bar("q2_bar_garden", "garden soil", "đất vườn", 5), bar("q2_bar_sand", "sand", "đất cát", 8)] },
+      options: [option("q2_clay", "clay soil", "đất sét", false), option("q2_garden", "garden soil", "đất vườn", false), option("q2_sand", "sand", "đất cát", true)],
+    };
+    edit?.(item);
+    lesson.quiz[1] = item;
+    return lesson;
+  };
+  assert.equal(check([withChart()]).ok, true);
+  // A bar may carry a picture; an option may not.
+  const image = { alt: label("Sand", "Đất cát") };
+  assert.equal(check([withChart((item) => (item.chart.bars[2].image = image))]).ok, true);
+  only(check([withChart((item) => (item.options[2].image = image))]), "/quiz/1/options/2/image");
+  // One option fewer than bars.
+  only(check([withChart((item) => item.options.splice(1, 1))]), "/quiz/1/options", "/quiz/1/options/1/label/en", "/quiz/1/options/1/label/vi");
+  // Options written in another order than bars.
+  only(check([withChart((item) => item.options.reverse())]), "/quiz/1/options/0/label/en", "/quiz/1/options/0/label/vi", "/quiz/1/options/2/label/en", "/quiz/1/options/2/label/vi");
+  // Same English, different Vietnamese.
+  only(check([withChart((item) => (item.options[0].label.vi = "đất thịt"))]), "/quiz/1/options/0/label/vi");
+  // Every bar at 0.
+  only(check([withChart((item) => item.chart.bars.forEach((b) => (b.value = 0)))]), "/quiz/1/chart/bars");
+});
+
 test("build_tray: groups, items, missing messages and capacity agree", () => {
   const tray = validLesson().play;
   const required = tray.groups.find((g) => g.role === "required").key;

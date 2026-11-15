@@ -51,15 +51,17 @@ image.alt.en: Tools for finding fossils
 image.alt.vi: Dụng cụ tìm hoá thạch
 hint.en: Remember the Imprint picture in lesson eight.
 hint.vi: Em nhớ lại ô Dấu in ở bài tám nhé.
-explanation_correct.en: Yes! The fern left its shape in the rock.
-explanation_correct.vi: Đúng rồi! Lá dương xỉ để lại hình của nó trên đá.
-explanation_wrong.en: The answer is the fern shape in rock. It is an imprint.
-explanation_wrong.vi: Đáp án là hình lá dương xỉ trên đá. Đó là một dấu in.
+explanation_correct.en: The fern is gone, but its shape stayed in rock.
+explanation_correct.vi: Lá dương xỉ đã mất, chỉ còn hình in trên đá.
+explanation_wrong.en: The fern left its shape in the rock.
+explanation_wrong.vi: Lá dương xỉ để lại hình của nó trên đá.
 > Câu phân loại: nhãn và `alt` tả vật, không có chữ "imprint" · "dấu in", "fossil" · "hoá thạch". Câu hỏi tiếng Việt không có chữ "trên đá", để phụ đề không khớp chữ với nhãn đáp án. Lá ép trong sách có sức hút: cũng phẳng, cũng là "ép, in". Lựa chọn và vị trí đáp án (thứ ba) theo bảng Khởi động.
 > Hình câu hỏi là bộ dụng cụ tìm hoá thạch (không có hoá thạch), không dùng hình đất nặn của ô Dấu in bài tám (đó là bằng chứng của gợi ý).
 
 #### option w1_dry_leaf
 correct: false
+feedback.en: This leaf just fell and is not in rock.
+feedback.vi: Lá này vừa rụng, chưa in vào đá.
 label.en: dry leaf that just fell
 label.vi: lá khô vừa rụng
 image.brief: Dùng lại hình `tray_dry_leaf` ở bài `da-va-dat/hoa-thach-hinh-thanh-the-nao`. Từ khoá tìm ảnh (EN): dry fallen leaf on ground top view
@@ -68,6 +70,8 @@ image.alt.vi: Chiếc lá khô vừa rụng
 
 #### option w1_pressed_leaf
 correct: false
+feedback.en: This is the leaf itself, pressed flat, not a print.
+feedback.vi: Đây là chiếc lá ép khô, chưa phải dấu in.
 label.en: leaf pressed flat
 label.vi: lá ép khô
 image.brief: [ảnh] Một chiếc lá đã ép khô, phẳng, nằm trên nền giấy trắng, chụp thẳng từ trên xuống, cùng góc chụp với hai ảnh lá kia; không có sách, không có chữ, không có người. Từ khoá tìm ảnh (EN): pressed leaf white paper top view
@@ -98,10 +102,12 @@ image.alt.vi: Hòn đá cuội
 answer: true
 hint.en: Remember the Minerals picture in lesson four.
 hint.vi: Em nhớ lại ô Khoáng vật ở bài bốn nhé.
-explanation_correct.en: Yes! Most rocks are made of minerals.
-explanation_correct.vi: Đúng rồi! Phần lớn các loại đá được tạo nên từ khoáng vật.
-explanation_wrong.en: This is true. Rocks are made of minerals.
-explanation_wrong.vi: Câu này đúng. Đá được tạo nên từ các khoáng vật.
+explanation_correct.en: Most rocks are a mix of different minerals.
+explanation_correct.vi: Phần lớn đá là hỗn hợp nhiều khoáng vật khác nhau.
+explanation_wrong.en: Rocks are made of minerals, like granite's grains.
+explanation_wrong.vi: Đá tạo nên từ khoáng vật, như hạt đá hoa cương.
+feedback_false.en: Each grain in granite is a mineral.
+feedback_false.vi: Mỗi hạt trong đá hoa cương là một khoáng vật.
 > Đúng chữ EN ở bảng Đúng/Sai (bài chín w2, Đúng). Hình là một hòn cuội trơn, không thấy hạt khoáng vật (không dùng ảnh đá hoa cương có hạt, vì đó là bằng chứng của đáp án). Gợi ý gọi tên ô "Minerals" · "Khoáng vật" theo kế hoạch bài bốn; topic editor kiểm tên ô khi rà chéo.
 > [CẦN KIỂM] Như `_topic.md` mục bài bốn: "đá được tạo nên từ khoáng vật" (phần lớn các loại đá).
 
@@ -124,7 +130,7 @@ label.en: Amber
 label.vi: Hổ phách
 color: vang_hoe
 sentence.en: Sticky resin trapped an insect, then hardened into amber.
-sentence.vi: Nhựa cây dính giữ chặt một con côn trùng, rồi cứng dần thành hổ phách.
+sentence.vi: Nhựa cây giữ chặt côn trùng, rồi cứng dần thành hổ phách.
 image.brief: [hình vẽ] Cùng nét bộ "Mặt cắt lòng đất" của bài tám, hai khung nối bằng mũi tên đơn giản: khung trái, một giọt nhựa thông vàng óng chảy trên thân cây thông, một con kiến nhỏ mắc trong giọt nhựa; khung phải, rất lâu sau, giọt nhựa ấy đã thành miếng hổ phách vàng trong, con kiến vẫn nằm bên trong. Không có chữ, không ghi nhãn dưới khung.
 image.alt.en: Resin traps an ant, then becomes amber
 image.alt.vi: Nhựa cây giữ chặt con kiến, rồi thành hổ phách
@@ -143,7 +149,7 @@ label.en: Filled with minerals
 label.vi: Chất khoáng lấp đầy
 color: cham
 sentence.en: Water carries minerals into a buried shell or log.
-sentence.vi: Nước mang chất khoáng thấm vào vỏ ốc hay khúc gỗ bị vùi.
+sentence.vi: Nước mang chất khoáng vào vỏ ốc, khúc gỗ bị vùi.
 image.brief: [hình vẽ] Bộ "Mặt cắt lòng đất", khung mới: nhìn cắt ngang lòng đất, một khúc gỗ nằm giữa các lớp bùn cát; những chấm nhỏ màu sáng (chất khoáng) theo dòng nước ngấm xuống, đi vào thớ gỗ; nửa khúc gỗ đã chuyển màu xám như đá. Không có chữ.
 image.alt.en: Water seeping into a buried log
 image.alt.vi: Nước thấm vào khúc gỗ bị vùi
@@ -181,7 +187,7 @@ label.en: Palaeontology
 label.vi: Cổ sinh vật học
 color: gi_dong
 sentence.en: Palaeontology studies fossils of things that were once alive.
-sentence.vi: Cổ sinh vật học nghiên cứu hoá thạch của những gì từng sống.
+sentence.vi: Cổ sinh vật học nghiên cứu hoá thạch sinh vật xưa.
 image.brief: Dùng lại hình `palaeontologist` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): palaeontologist hands tool fossil rock quarry
 image.alt.en: A palaeontologist digging out a fossil
 image.alt.vi: Nhà cổ sinh vật học đào hoá thạch
@@ -223,7 +229,7 @@ messages.start.vi: Em tìm một hoá thạch cho mỗi cách nhé.
 messages.full.en: No more room! Tap one to take it off.
 messages.full.vi: Hết chỗ rồi! Em chạm vào để bỏ ra nhé.
 messages.balanced.en: Great! Amber, minerals and imprints all make fossils.
-messages.balanced.vi: Tuyệt! Hổ phách, chất khoáng và dấu in đều tạo nên hoá thạch.
+messages.balanced.vi: Tuyệt! Hổ phách, chất khoáng, dấu in đều tạo hoá thạch.
 messages.has_limited.en: People made that. It was never alive.
 messages.has_limited.vi: Đồ này do con người làm ra. Nó chưa từng sống.
 messages.missing.tray_amber_group.en: You still need a fossil in amber.
@@ -347,10 +353,10 @@ image.alt.en: Resin on a pine tree
 image.alt.vi: Nhựa thông trên thân cây
 hint.en: Remember the insect in today's lesson.
 hint.vi: Em nhớ lại con côn trùng trong bài hôm nay nhé.
-explanation_correct.en: Yes! Resin slowly hardens into amber.
-explanation_correct.vi: Đúng rồi! Nhựa cây cứng dần thành hổ phách.
-explanation_wrong.en: The answer is amber. Resin hardens into amber.
-explanation_wrong.vi: Đáp án là hổ phách. Nhựa cây cứng dần thành hổ phách.
+explanation_correct.en: Amber can keep an insect for millions of years.
+explanation_correct.vi: Hổ phách giữ được côn trùng hàng triệu năm.
+explanation_wrong.en: Sticky resin slowly hardens into amber.
+explanation_wrong.vi: Nhựa cây dính cứng dần thành hổ phách.
 > DOK 1: nhớ lại ô Hổ phách. Hai lựa chọn sai có sức hút: thuỷ tinh biển (cũng trong, nhẵn, nhặt được ở bờ biển như hổ phách), nước đá (cũng trong, cứng lại). Khác câu w1 bài mười (bên đó hỏi ngược lại "hổ phách tạo thành từ gì", lựa chọn mật ong, nhựa cây, nước đá).
 > Đáp án dùng ảnh từ `amber` (bé đã thấy ở ô Từ mới); nước đá bé đã thấy ở bài *Núi lửa*; chỉ thuỷ tinh là ảnh mới. Gợi ý không gọi tên ô "Amber" (trùng nhãn đáp án).
 
@@ -364,6 +370,8 @@ image.alt.vi: Mấy mẩu hổ phách
 
 #### option q1_ice
 correct: false
+feedback.en: Ice is frozen water and melts when warm.
+feedback.vi: Nước đá là nước đông lại, gặp nóng sẽ tan.
 label.en: ice
 label.vi: nước đá
 image.brief: Dùng lại hình `q1_ice` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): ice cubes glass
@@ -372,6 +380,8 @@ image.alt.vi: Nước đá trong cốc
 
 #### option q1_glass
 correct: false
+feedback.en: Glass is made by people from melted sand.
+feedback.vi: Thuỷ tinh do người nấu chảy cát mà thành.
 label.en: glass
 label.vi: thuỷ tinh
 image.brief: [ảnh] Mấy mảnh thuỷ tinh biển màu xanh lá và trắng đã mài nhẵn cạnh, nằm trên nền trơn, chụp gần, cùng cỡ với ảnh hổ phách (designer 11/11: không có ảnh thuỷ tinh nâu hợp lệ); không có nhãn, không có chữ. Từ khoá tìm ảnh (EN): sea glass pieces
@@ -393,15 +403,17 @@ sentence.vi: Cổ sinh vật học là ngành nghiên cứu {1}.
 answers: q2_fossils
 hint.en: Remember the Palaeontology picture in the lesson.
 hint.vi: Em nhớ lại ô Cổ sinh vật học trong bài học nhé.
-explanation_correct.en: Yes! Palaeontologists study fossils from long ago.
-explanation_correct.vi: Đúng rồi! Nhà cổ sinh vật học nghiên cứu hoá thạch thời xa xưa.
-explanation_wrong.en: The answer is fossils. Palaeontologists study fossils.
-explanation_wrong.vi: Đáp án là hoá thạch. Nhà cổ sinh vật học nghiên cứu hoá thạch.
+explanation_correct.en: Fossils show how animals lived long ago.
+explanation_correct.vi: Nhờ hoá thạch, ta biết con vật xưa sống ra sao.
+explanation_wrong.en: Palaeontologists study fossils from long ago.
+explanation_wrong.vi: Nhà cổ sinh vật học nghiên cứu hoá thạch thời xa xưa.
 > DOK 1: nhớ lại nghĩa của từ mới `palaeontology`. Câu không có gốc từ "fossil". Thẻ sai "rocks" · "đá" có sức hút (nhà cổ sinh vật học đào hoá thạch trong đá; nghiên cứu đá là việc của nhà địa chất, bài bốn); "stars" · "các vì sao" cũng là một ngành nghiên cứu. Thẻ đúng ở chỗ thứ hai (bảng vị trí). Ba thẻ là ảnh chụp.
 
 #### bank q2_rocks
 label.en: rocks
 label.vi: đá
+feedback.en: Rocks were never alive.
+feedback.vi: Đá chưa từng là sinh vật sống.
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
 image.alt.en: A grey rock
 image.alt.vi: Hòn đá màu xám
@@ -416,6 +428,8 @@ image.alt.vi: Vỏ xoắn trong đá
 #### bank q2_stars
 label.en: stars
 label.vi: các vì sao
+feedback.en: Stars are far up in the sky, not in rock.
+feedback.vi: Các vì sao ở trên trời, không nằm trong đá.
 image.brief: Dùng lại hình `q5` ở bài `khung-long/vi-sao-khung-long-bien-mat`. Từ khoá tìm ảnh (EN): starry night sky Milky Way over hill
 image.alt.en: A starry night sky
 image.alt.vi: Bầu trời đêm đầy sao
@@ -434,10 +448,10 @@ image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
 hint.en: Think about who or what made each one.
 hint.vi: Em nghĩ xem mỗi thứ do ai hay do gì tạo nên nhé.
-explanation_correct.en: Yes! The insect and the shell were once alive.
-explanation_correct.vi: Đúng rồi! Con côn trùng và con ốc từng là sinh vật sống.
-explanation_wrong.en: The answers are the insect and the shell.
-explanation_wrong.vi: Đáp án là côn trùng trong hổ phách và vỏ ốc hoá thành đá.
+explanation_correct.en: Fossils in amber and in rock both come from life.
+explanation_correct.vi: Hoá thạch trong hổ phách hay trong đá đều từ sinh vật.
+explanation_wrong.en: The insect and the shell were once alive.
+explanation_wrong.vi: Con côn trùng và con ốc từng là sinh vật sống.
 > DOK 2: phân loại theo ý chính ba. Cối đá có sức hút mạnh: làm bằng đá, rất cũ, nhưng do con người làm ra, chưa từng sống. Viên gạch nối `bricks_are_rocks` của bài một: làm từ đất sét, do con người làm ra, chưa từng sống. Đáp án ở chỗ thứ nhất và thứ ba (bảng vị trí).
 > Rà chữ tester 11/11 (N4): lựa chọn sai `q3_pot` (bình gốm cổ, món bẫy của kệ) đổi thành `q3_brick` (dùng lại ảnh bài một), để hai lựa chọn sai đều là vật ngoài kệ, bé không trả lời bằng trí nhớ trò chơi. Nay hai đáp án là món kệ Chơi, hai lựa chọn sai là ảnh bài một; cả bốn là ảnh chụp đồ vật.
 
@@ -451,6 +465,8 @@ image.alt.vi: Côn trùng trong hổ phách
 
 #### option q3_mortar
 correct: false
+feedback.en: People carved this mortar out of rock.
+feedback.vi: Cối đá do người đục từ đá ra.
 label.en: stone mortar
 label.vi: cối đá
 image.brief: Dùng lại hình `tray_mortar` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): granite mortar and pestle
@@ -468,6 +484,8 @@ image.alt.vi: Vỏ ốc hoá thành đá
 
 #### option q3_brick
 correct: false
+feedback.en: People bake clay to make bricks.
+feedback.vi: Gạch do người nung từ đất sét.
 label.en: clay brick
 label.vi: viên gạch
 image.brief: Dùng lại hình `tray_brick` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): red clay brick plain background
@@ -480,22 +498,25 @@ id: 102e086d-5c63-4a77-bd09-15c857067f72
 format: single_choice
 version: 1
 dok: 2
-prompt.en: This log turned to rock over millions of years. What made it happen?
-prompt.vi: Khúc gỗ này đã hoá thành đá qua hàng triệu năm. Điều gì làm nên việc đó?
+prompt.en: What turned this log into rock?
+prompt.vi: Điều gì biến khúc gỗ này thành đá?
 image.brief: Dùng lại hình `tray_stone_wood`. Từ khoá tìm ảnh (EN): petrified wood log
 image.alt.en: A log turned to rock
 image.alt.vi: Khúc gỗ hoá thành đá
 hint.en: It happened slowly, deep under the ground.
 hint.vi: Việc này xảy ra rất chậm, sâu dưới lòng đất.
-explanation_correct.en: Yes! Minerals in water slowly filled the wood.
-explanation_correct.vi: Đúng rồi! Chất khoáng trong nước dần lấp đầy khúc gỗ.
-explanation_wrong.en: The answer is minerals in water. They filled the wood.
-explanation_wrong.vi: Đáp án là chất khoáng trong nước. Chất khoáng lấp đầy khúc gỗ.
+explanation_correct.en: Minerals slowly filled the wood over millions of years.
+explanation_correct.vi: Chất khoáng dần lấp đầy gỗ qua hàng triệu năm.
+explanation_wrong.en: Minerals in water slowly filled the wood.
+explanation_wrong.vi: Chất khoáng trong nước dần lấp đầy khúc gỗ.
+> A2 (SK-043, 14/11): câu hỏi cũ mười tám chữ (hai câu), nay tám chữ; ý "hàng triệu năm" chuyển sang giải thích khi đúng.
 > DOK 2: áp ý chính hai vào vật bé vừa gặp ở kệ Chơi, hỏi nguyên nhân. Bốn lựa chọn, đáp án ở chỗ thứ ba (bảng vị trí). Lựa chọn sai có sức hút: lửa (gỗ cháy thành than đen, cứng), nắng (gỗ phơi khô, cứng), nhựa cây (cũng từ cây, cũng tạo hoá thạch, nhưng là cách khác). Gợi ý chỉ cách nghĩ (chậm, sâu dưới đất), không gọi tên ô "Filled with minerals" (trùng chữ nhãn đáp án).
 > Bốn nhãn cùng một khuôn "X from/in Y".
 
 #### option q4_fire
 correct: false
+feedback.en: Fire burns wood into ash, not rock.
+feedback.vi: Lửa đốt gỗ thành tro, không thành đá.
 label.en: heat from fire
 label.vi: hơi nóng của lửa
 image.brief: [ảnh] Một khúc gỗ đang cháy trong đống lửa ngoài trời, ngọn lửa cam, chụp gần vừa; không có người, không có chữ. Từ khoá tìm ảnh (EN): burning log campfire close
@@ -504,6 +525,8 @@ image.alt.vi: Khúc gỗ đang cháy
 
 #### option q4_sun
 correct: false
+feedback.en: Sunlight dries wood but cannot turn it to rock.
+feedback.vi: Nắng làm khô gỗ, không biến gỗ thành đá.
 label.en: light from the sun
 label.vi: ánh nắng mặt trời
 image.brief: [ảnh] Nắng chiếu lên một khúc gỗ khô nằm trên bãi đất trống, bóng đổ rõ, chụp gần vừa; không có người, không có chữ. Từ khoá tìm ảnh (EN): sunlight on dry log
@@ -521,6 +544,8 @@ image.alt.vi: Nước chảy qua những bậc khoáng trắng
 
 #### option q4_resin
 correct: false
+feedback.en: Resin makes amber, but it cannot turn wood to rock.
+feedback.vi: Nhựa cây tạo hổ phách, không biến gỗ thành đá.
 label.en: resin from trees
 label.vi: nhựa từ cây
 image.brief: Dùng lại hình `resin`. Từ khoá tìm ảnh (EN): pine resin dripping tree trunk
@@ -539,10 +564,10 @@ image.alt.en: Clear shallow sea water
 image.alt.vi: Nước biển nông trong vắt
 hint.en: Which parts last after an animal dies?
 hint.vi: Phần nào của con vật còn lại lâu sau khi nó chết?
-explanation_correct.en: Yes! A crab has a hard shell that can last.
-explanation_correct.vi: Đúng rồi! Con cua có mai cứng, giữ được lâu.
-explanation_wrong.en: The answer is the crab. Its hard shell can last.
-explanation_wrong.vi: Đáp án là con cua. Mai cua cứng nên giữ được lâu.
+explanation_correct.en: Hard parts last long enough to become fossils.
+explanation_correct.vi: Phần cứng như mai, vỏ giữ đủ lâu để thành hoá thạch.
+explanation_wrong.en: A crab's hard shell can last a long time.
+explanation_wrong.vi: Mai cua cứng nên giữ được lâu.
 > DOK 2: áp ô "Soft bodies" (và ô Phân huỷ bài tám) vào con vật mới. Thay câu gợi ý ở `_topic.md` ("vì sao con sứa rất hiếm khi thành hoá thạch"): câu "vì sao" cần ba lựa chọn là ba lý do, khó có hình; câu này giữ ý, bé chọn giữa ba con vật biển. Bạch tuộc có sức hút (to, khoẻ) nhưng thân mềm.
 > Đáp án (con cua) là ảnh mới; một lựa chọn sai (con sứa) là ảnh ô Học, lựa chọn sai kia (bạch tuộc) là ảnh mới. Ba ảnh cùng là con vật dưới nước biển.
 > [CẦN KIỂM] Mai cua cứng nên dễ thành hoá thạch hơn sứa, bạch tuộc (biên tập nhớ).
@@ -550,6 +575,8 @@ explanation_wrong.vi: Đáp án là con cua. Mai cua cứng nên giữ được 
 
 #### option q5_jellyfish
 correct: false
+feedback.en: A jellyfish has a soft body that decays away.
+feedback.vi: Sứa có thân mềm, dễ phân huỷ hết.
 label.en: jellyfish
 label.vi: con sứa
 image.brief: Dùng lại hình `explore_soft`. Từ khoá tìm ảnh (EN): jellyfish swimming blue water
@@ -566,6 +593,8 @@ image.alt.vi: Con cua dưới đáy biển
 
 #### option q5_octopus
 correct: false
+feedback.en: An octopus has no hard shell or bones.
+feedback.vi: Bạch tuộc không có vỏ cứng, không có xương.
 label.en: octopus
 label.vi: con bạch tuộc
 image.brief: [ảnh] Một con bạch tuộc dưới nước biển, các xúc tu duỗi ra, chụp gần vừa; không có tay người, không có chữ. Từ khoá tìm ảnh (EN): octopus underwater
@@ -582,8 +611,8 @@ prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
 instruction.en: Challenge: check Na's idea
 instruction.vi: Thử thách: kiểm tra ý của Na
-statement.en: This bronze drum is very old. So it is a fossil.
-statement.vi: Chiếc trống đồng này rất cổ. Vậy nó là hoá thạch.
+statement.en: This old bronze drum must be a fossil.
+statement.vi: Trống đồng này rất cổ, vậy nó là hoá thạch.
 speaker: na
 labels.true.en: Yes
 labels.true.vi: Na đúng
@@ -595,10 +624,12 @@ image.alt.en: An old bronze drum
 image.alt.vi: Chiếc trống đồng cổ
 hint.en: Who made this drum? What is it made of?
 hint.vi: Ai làm ra chiếc trống này? Trống làm bằng gì?
-explanation_correct.en: People made this drum from metal. It was never alive.
-explanation_correct.vi: Người xưa làm chiếc trống này bằng đồng. Nó chưa từng sống.
-explanation_wrong.en: Na is not right. Only things once alive become fossils.
-explanation_wrong.vi: Na chưa đúng. Chỉ những gì từng sống mới thành hoá thạch.
+explanation_correct.en: Old things that people made are not fossils.
+explanation_correct.vi: Đồ cổ do người làm ra không phải hoá thạch.
+explanation_wrong.en: Only things that were once alive become fossils.
+explanation_wrong.vi: Chỉ những gì từng sống mới thành hoá thạch.
+feedback_true.en: Bronze is a metal that people melt and shape.
+feedback_true.vi: Đồng là kim loại, người ta nấu chảy rồi đúc.
 > DOK 3: bắt lỗi một lập luận ("rất cổ nên là hoá thạch") về một vật mới, không có ở kệ Chơi (`_topic.md`, ghi chú của `old_things_are_fossils`). Lời Na đúng bảng "Câu sáu, lời Na"; đáp án Sai theo bảng Đúng/Sai. Giải thích khi đúng không mở đầu bằng "Yes!".
 > Trống đồng giữ theo Main session chốt 11/11. Chữ không chê trống đồng: chỉ nói "người xưa làm ra", không nói "không quý".
 

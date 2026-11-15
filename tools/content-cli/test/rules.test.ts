@@ -13,6 +13,13 @@ import { CLI_ROOT } from "./helpers.ts";
 const VECTOR_DIR = path.resolve(CLI_ROOT, "../../packages/content-schema/test-vectors");
 /** Keys rules.json adds on top of the scoring vectors: XP (B4.4), default voice (B4.1), authoring (SK-026). */
 const EXTRA_KEYS = ["xp_per_correct", "xp_lesson_complete", "xp_game_complete", "xp_mastery_review", "default_voice_mode", "authoring"];
+/**
+ * Duy 14/11 (SK-043): true_false (and the "check Na's idea" question, which is true_false) has one
+ * try in Explorer and Discoverer. Scientist gets the same (dev 14/11: the reason, two sides, holds
+ * for every group, and the iOS app already falls back to it when the key is missing). Optional key,
+ * not in default_rules of the vectors yet (proposal for tester in SK-043 "dev 14/11").
+ */
+const MAX_TRIES_BY_FORMAT: Record<string, Record<string, number> | undefined> = { explorer: { true_false: 1 }, discoverer: { true_false: 1 }, scientist: { true_false: 1 } };
 const V1_FORMATS = ["single_choice", "multi_choice", "true_false", "fill_blank_bank", "order_sequence", "picture_bar_chart"];
 const WARMUP_FORMATS = ["single_choice", "multi_choice", "true_false", "fill_blank_bank"];
 
@@ -88,7 +95,8 @@ describe("content/rules.json", () => {
     test(`${group}: khoá và giá trị luật chấm trùng default_rules, thêm đúng XP, giọng mặc định và authoring`, () => {
       const own = rules![group]!;
       const defaults = vectors[0]!.defaults as Record<string, unknown>;
-      assert.deepEqual(Object.keys(own).sort(), [...Object.keys(defaults), ...EXTRA_KEYS].sort());
+      const optional = MAX_TRIES_BY_FORMAT[group] ? ["max_tries_by_format"] : [];
+      assert.deepEqual(Object.keys(own).sort(), [...Object.keys(defaults), ...EXTRA_KEYS, ...optional].sort());
       for (const key of Object.keys(defaults)) assert.deepEqual(own[key], defaults[key], `${group}.${key}`);
     });
   }
@@ -104,6 +112,33 @@ describe("content/rules.json", () => {
     assert.deepEqual(rules!.discoverer!.default_voice_mode, { bilingual: "both", en_first: "en", vi_first: "both" });
     assert.deepEqual(rules!.scientist!.default_voice_mode, { bilingual: "both", en_first: "en", vi_first: "both" });
     assert.deepEqual(rules!.explorer!.default_voice_mode, { bilingual: "both", en_first: "both", vi_first: "both" });
+  });
+
+  test("max_tries_by_format (Duy 14/11, SK-043): true_false một lượt ở mọi nhóm; format khác theo max_tries", () => {
+    for (const group of AGE_GROUPS) assert.deepEqual(rules![group]!.max_tries_by_format, MAX_TRIES_BY_FORMAT[group], group);
+  });
+
+  test("rules.schema.json: max_tries_by_format chỉ nhận format có thật và số >= 1", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "rules-tries-"));
+    try {
+      const file = path.join(dir, "rules.json");
+      const bad: [unknown, RegExp][] = [
+        [{ true_flase: 1 }, /\/explorer\/max_tries_by_format/],
+        [{ true_false: 0 }, /\/explorer\/max_tries_by_format\/true_false/],
+        [{}, /\/explorer\/max_tries_by_format/],
+      ];
+      for (const [value, pointer] of bad) {
+        writeFileSync(file, JSON.stringify({ ...rules, explorer: { ...rules!.explorer, max_tries_by_format: value } }));
+        const { errors } = loadRules(file);
+        assert.ok(errors.some((error) => pointer.test(error.pointer)), `${JSON.stringify(value)}: ${JSON.stringify(errors)}`);
+      }
+      const { explorer, ...rest } = rules!;
+      const { max_tries_by_format: _dropped, ...withoutKey } = explorer!;
+      writeFileSync(file, JSON.stringify({ ...rest, explorer: withoutKey }));
+      assert.deepEqual(loadRules(file).errors, [], "khoá tuỳ chọn: thiếu thì mọi format theo max_tries");
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 
   for (const group of AGE_GROUPS) {

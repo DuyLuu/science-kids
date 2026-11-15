@@ -55,14 +55,12 @@ describe("bảng mã và bảng format → bản app", () => {
     });
   });
 
-  test("mỗi format của content-schema có một dòng; 0.1.0 hiện đúng 4 format như hasRenderer của iOS", () => {
+  test("mỗi format của content-schema có một dòng; 0.1.0 hiện cả 6 format như hasRenderer của iOS (SK-043: order_sequence, picture_bar_chart)", () => {
     assert.deepEqual(Object.keys(FORMAT_FIRST_APP_VERSION).sort(), [...QUIZ_FORMATS].sort());
     assert.deepEqual(
       Object.entries(FORMAT_FIRST_APP_VERSION).filter(([, version]) => version === "0.1.0").map(([format]) => format).sort(),
-      ["fill_blank_bank", "multi_choice", "single_choice", "true_false"],
+      ["fill_blank_bank", "multi_choice", "order_sequence", "picture_bar_chart", "single_choice", "true_false"],
     );
-    assert.equal(FORMAT_FIRST_APP_VERSION.order_sequence, null);
-    assert.equal(FORMAT_FIRST_APP_VERSION.picture_bar_chart, null);
   });
 
   test("cột Explorer (SK-040): đủ mọi format; 0.1.0 hiện đúng 3 format như hasRenderer(for: .explorer); Scientist dùng cột Discoverer", () => {
@@ -75,8 +73,9 @@ describe("bảng mã và bảng format → bản app", () => {
     );
     assert.equal(firstAppVersion("order_sequence", "explorer"), "0.1.0");
     assert.equal(firstAppVersion("multi_choice", "explorer"), null);
-    assert.equal(firstAppVersion("order_sequence", "discoverer"), null);
-    assert.equal(firstAppVersion("order_sequence", "scientist"), null);
+    assert.equal(firstAppVersion("order_sequence", "discoverer"), "0.1.0");
+    assert.equal(firstAppVersion("picture_bar_chart", "scientist"), "0.1.0");
+    assert.equal(firstAppVersion("picture_bar_chart", "explorer"), null);
     assert.equal(firstAppVersion("multi_choice", "scientist"), "0.1.0");
   });
 });
@@ -207,24 +206,41 @@ describe("content-cli validate", () => {
     assert.match(result.out, /topic\.json \/age_group \[age_rules_missing\] nhóm tuổi discoverer không có trong/);
   });
 
-  test("q2 thành order_sequence: validate chỉ cảnh báo format_not_rendered, exit 0", () => {
+  // SK-043: Discoverer renders every format from 0.1.0, so format_not_rendered needs an older --min-app-version.
+  test("q2 thành order_sequence, --min-app-version 0.0.9: validate chỉ cảnh báo format_not_rendered (mọi câu, kể cả order_sequence), exit 0; 0.1.0 thì không", () => {
     const files = lesson1Copy("sequence", { lesson: withOrderSequence });
-    const result = run("validate", ...files, "--min-app-version", "0.1.0", ...NO_IMAGE_RULES);
+    const clean = run("validate", ...files, "--min-app-version", "0.1.0", ...NO_IMAGE_RULES);
+    assert.equal(clean.status, 0, clean.out);
+    assert.deepEqual(clean.lines.filter((line) => line.includes(" [")), []);
+    const result = run("validate", ...files, "--min-app-version", "0.0.9", ...NO_IMAGE_RULES);
     assert.equal(result.status, 0, result.out);
     const lines = result.lines.filter((line) => line.includes(" ["));
-    assert.equal(lines.length, 1, result.out);
-    assert.match(lines[0]!, /01-thuc-an-cho-ta-nhung-gi\.json \/quiz\/1\/format \[format_not_rendered\] cảnh báo: format order_sequence chưa hiện được ở app 0\.1\.0/);
+    // 0.0.9 is older than every renderer: each of the 2 warm-up and 6 quiz items gets one line.
+    assert.equal(lines.length, 8, result.out);
+    assert.ok(lines.every((line) => line.includes("[format_not_rendered] cảnh báo:")), result.out);
+    assert.ok(lines.some((line) => /01-thuc-an-cho-ta-nhung-gi\.json \/quiz\/1\/format \[format_not_rendered\] cảnh báo: format order_sequence chưa hiện được ở app 0\.0\.9: app hiện được từ 0\.1\.0/.test(line)), result.out);
   });
 
   test("format_not_rendered: lỗi ở build; format chưa có bản app nào (null) thì --min-app-version cao mấy cũng lỗi", () => {
     const files = lesson1Copy("sequence-build", { lesson: withOrderSequence });
     const docs = files.map((file) => ({ display: file, data: JSON.parse(readFileSync(file, "utf8")) }));
-    for (const minAppVersion of ["0.1.0", "9.9.9"]) {
-      const issues = checkAgeRules(docs, RULES_026, { minAppVersion, mode: "build", rulesDisplay: "rules" });
-      assert.deepEqual(only(issues, "error"), [{ pointer: "/quiz/1/format", code: "format_not_rendered" }], minAppVersion);
-    }
-    // 4 formats of lesson 1 render from 0.1.0: nothing at 0.1.0.
+    const errorsAt = (minAppVersion: string, withRules = RULES_026, data = docs) =>
+      only(checkAgeRules(data, withRules, { minAppVersion, mode: "build", rulesDisplay: "rules" }), "error").filter((issue) => issue.code === "format_not_rendered");
+    assert.ok(errorsAt("0.0.9").some((issue) => issue.pointer === "/quiz/1/format"));
+    assert.deepEqual(errorsAt("0.1.0"), []);
+    // Lesson 1 formats render from 0.1.0: nothing at 0.1.0.
     assert.deepEqual(check(LESSON1, "build"), []);
+    // null (no app renders it): the Explorer column has multi_choice and fill_blank_bank at null. With rules
+    // that allow them for Explorer, every such item is an error whatever --min-app-version.
+    const asExplorer = docs.map((d) => (d.data.kind === "topic" ? { ...d, data: { ...d.data, age_group: "explorer" } } : d));
+    const allFormats = { ...RULES_026.discoverer!.authoring as object };
+    const explorerRules = { ...RULES_026, explorer: { ...RULES_026.explorer!, authoring: allFormats } };
+    const lesson = docs.find((d) => d.data.kind === "lesson")!.data as { quiz: { format: string }[]; warmup: { format: string }[] };
+    const nulls = (["warmup", "quiz"] as const).flatMap((section) =>
+      lesson[section].flatMap((item, i) => (firstAppVersion(item.format, "explorer") === null ? [{ pointer: `/${section}/${i}/format`, code: "format_not_rendered" }] : [])),
+    );
+    assert.ok(nulls.length > 0);
+    for (const minAppVersion of ["0.1.0", "9.9.9"]) assert.deepEqual(errorsAt(minAppVersion, explorerRules, asExplorer), nulls, minAppVersion);
   });
 
   test("input sai content-schema: in lỗi schema, exit 1, chưa chạy luật tuổi", () => {

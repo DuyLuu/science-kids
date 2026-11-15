@@ -114,9 +114,110 @@ struct ExplorerLearnStep: View {
 
     @ViewBuilder private func pageView(_ page: Page) -> some View {
         switch page {
-        case .group(let group): groupPage(group)
-        case .words(let list): wordsPage(list)
+        case .group(let group):
+            if session.isExplorer { groupPage(group) } else { discovererGroupPage(group) }
+        case .words(let list):
+            if session.isExplorer { wordsPage(list) } else { discovererWordsPage(list) }
         }
+    }
+
+    /// The page's picture on a piece of the group's colour, the group's name on a cut tag.
+    private func pagePicture(_ group: ExploreGroup, name: String) -> some View {
+        GeometryReader { proxy in
+            let height = min(max(proxy.size.height, PictureBookMetrics.pagePictureMin), metrics.illustration(pictureMax))
+            ContentPicture(image: group.image, color: nil, size: height - 2 * Tokens.Space.s8, box: .fillWidth)
+                .clipShape(RoundedRectangle(cornerRadius: radius - Tokens.Space.s8, style: .continuous))
+                .padding(Tokens.Space.s8)
+                .frame(width: proxy.size.width - metrics.gridTrailingInset, height: height)
+                .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: radius)
+                .background {
+                    RoundedRectangle(cornerRadius: radius, style: .continuous)
+                        .fill(group.color.color)
+                        .offset(x: Tokens.Space.s6, y: Tokens.Space.s8)
+                }
+                .overlay(alignment: .topLeading) {
+                    PaperTag(Text(verbatim: name), style: .cut(fill: group.color.color))
+                        .offset(x: -Tokens.Space.s6, y: -Tokens.Space.s10)
+                        .accessibilityAddTraits(.isHeader)
+                }
+        }
+        .frame(minHeight: PictureBookMetrics.pagePictureMin, maxHeight: metrics.illustration(pictureMax))
+    }
+
+    private var radius: CGFloat { session.isExplorer ? Tokens.Radius.explorer : Tokens.Radius.discoverer }
+    private var pictureMax: CGFloat { session.isExplorer ? PictureBookMetrics.pagePictureMax : PictureBookMetrics.pagePictureMaxDiscoverer }
+
+    /// Discoverer A2 (`learn-2`): the picture first, its sentence under it on its own paper with
+    /// the speaker; the examples are read after the sentence, not printed (schema v1 has no
+    /// picture for an example). "Cả hai" prints English only.
+    private func discovererGroupPage(_ group: ExploreGroup) -> some View {
+        VStack(alignment: .leading, spacing: Tokens.Space.s14) {
+            pagePicture(group, name: mode.sentence(group.label))
+            HStack(alignment: .center, spacing: Tokens.Space.s10) {
+                Text(verbatim: mode.sentence(group.sentence))
+                    .typography(Tokens.Typography.itemTitle)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityIdentifier("lesson.learn.sentence")
+                ListenButton(session.explorerGroupUtterance(group), label: "lesson.listen")
+            }
+            .padding(EdgeInsets(top: Tokens.Space.s12, leading: Tokens.Space.s14, bottom: Tokens.Space.s12, trailing: Tokens.Space.s10))
+            .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
+            .padding(.trailing, metrics.gridTrailingInset)
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("lesson.learn.group.\(group.key)")
+    }
+
+    /// Discoverer A2 (`learn-words`): "Từ mới", then one row per word: its picture, the English
+    /// word in big letters and the Vietnamese meaning under it (SK-042; English only in the
+    /// English mode), a speaker. The whole row says the word.
+    private func discovererWordsPage(_ list: WordList) -> some View {
+        let terms = list.termKeys.compactMap { key in session.lesson.vocab.first { $0.key == key } }
+        return VStack(alignment: .leading, spacing: Tokens.Space.s12) {
+            PaperTag(Text("lesson.learn.words_tag"), style: .cut(eyebrow: true))
+                .accessibilityAddTraits(.isHeader)
+            ForEach(terms, id: \.key) { term in
+                let say = session.utterance("word.\(term.key)", term.term)
+                HStack(spacing: Tokens.Space.s8) {
+                    Button {
+                        speech?.play(say)
+                    } label: {
+                        HStack(spacing: Tokens.Space.s14) {
+                            // dev 14/11: vocab pictures are 4 : 3.
+                            ContentPicture(image: term.image, color: nil, size: metrics.illustration(PictureBookMetrics.wordPicture) * 0.75, box: .fillWidth)
+                                .frame(width: metrics.illustration(PictureBookMetrics.wordPicture), height: metrics.illustration(PictureBookMetrics.wordPicture) * 0.75)
+                                .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous))
+                            VStack(alignment: .leading, spacing: Tokens.Space.s2) {
+                                // A long word ("MAGNIFYING GLASS") breaks between words, never
+                                // inside one: it shrinks a little first.
+                                Text(verbatim: term.term.en.uppercased())
+                                    .typography(Tokens.Typography.titleS)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                                if mode != .enFirst {
+                                    Text(verbatim: term.term.vi)
+                                        .typography(Tokens.Typography.bodyStrong)
+                                        .foregroundStyle(Tokens.Role.textSecondary)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            PaperIconView(.speaker, size: PaperMetrics.headerChipIcon, color: Tokens.Role.textPrimary)
+                                .accessibilityHidden(true)
+                        }
+                        .padding(Tokens.Space.s8)
+                        .frame(maxWidth: .infinity)
+                        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
+                    }
+                    .buttonStyle(.paperPress)
+                    .accessibilityLabel(Text(verbatim: mode == .enFirst ? term.term.en : "\(term.term.en), \(term.term.vi)"))
+                    .accessibilityAddTraits(.startsMediaSession)
+                    .accessibilityIdentifier("lesson.word_list.\(term.key)")
+                    SecondVoiceButton(say)
+                }
+            }
+        }
+        .padding(.trailing, metrics.gridTrailingInset)
     }
 
     private func groupPage(_ group: ExploreGroup) -> some View {
