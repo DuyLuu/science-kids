@@ -176,4 +176,10 @@ Khi Duy chốt, pm sẽ:
   - content-editor: lưu kho 2 bài, sau đó lên danh sách bài cho chủ đề Explorer mới.
 
 ## Duy chốt 14/11 (thứ tự Explorer)
-Sau *Gọi tên và nhóm động vật*, hai chủ đề tiếp theo là *Sinh vật sống ở đâu?* (Oak Y2 `living-things-and-where-they-live`) rồi *Chuỗi thức ăn* (Oak Y2 `introduction-to-food-chains`). Đã đổi thứ tự trong `content/syllabus.json` (Explorer #2, #3; các chủ đề sau lùi một bậc). Lệch luật "Mức không giảm" (hai chủ đề Mức 3 đứng trước các chủ đề Mức 1–2) theo quyết định của Duy. PM cập nhật `syllabus.md`, `syllabus-lessons.md`.
+Sau *Gọi tên và nhóm động vật*, hai chủ đề tiếp theo là *Sinh vật sống ở đâu?* (Oak Y2 `living-things-and-where-they-live`) rồi *Chuỗi thức ăn* (Oak Y2 `introduction-to-food-chains`). Đã đổi thứ tự trong `content/syllabus.json` (Explorer #2, #3; các chủ đề sau lùi một bậc). Lệch luật "Mức không giảm" (hai chủ đề Mức 3 đứng trước các chủ đề Mức 1–2) theo quyết định của Duy. PM cập nhật `syllabus.md`, `syllabus-lessons.md`. *(16/11: đã cập nhật cả hai file.)*
+
+## Ghi chú 16/11 (câu D3, SK-048)
+- Explorer đã có một chủ đề mới: *Những nơi sống trên Trái Đất*, đứng #4 sau *Chuỗi thức ăn*, 8 bài (Duy chốt 16/11, [SK-048](backlog/SK-048-explorer-habitats-around-the-world.md)). Chủ đề này không đứng đầu nhóm.
+- Số đếm hiện hành: Explorer 13 chủ đề / 83 bài; cả app 46 chủ đề / 394 bài ([syllabus.md](../syllabus.md) mục 0, 3).
+- Bảng mục 2.1 và 2.4 ở trên là thứ tự, số đếm trước 14/11. Con số "14 / 83" ở mục 2.4 là đề xuất D3 cũ (12 chủ đề + 2 chủ đề mới, 73 + 10 bài), chỉ trùng số bài với số hiện hành, không cùng nghĩa.
+- D3 vẫn chờ Duy. Nếu Duy chốt D3, PM xếp hai chủ đề còn lại (bầu trời; đẩy, kéo và âm thanh) tính cả chủ đề #4 này, và đánh số từ thứ tự hiện hành ở `content/syllabus.json`.

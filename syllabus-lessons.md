@@ -1,6 +1,8 @@
 # Syllabus từng bài: đề xuất 9/11/2026, chờ Duy duyệt
 
 > Đi kèm [syllabus.md](syllabus.md). Trong mỗi nhóm, các chủ đề **Mới** đứng đầu (Duy chốt 9/11), rồi tới các unit Oak theo đúng thứ tự trên trang Oak. Mỗi chủ đề Oak liệt kê đủ lesson theo thứ tự trên trang unit (đọc ngày 9/11/2026), kèm đề xuất cho từng lesson. Tên lesson giữ tiếng Anh của Oak; tên tiếng Việt soạn sau khi Duy duyệt danh sách. Chủ đề **Mới** là nháp AI, chưa duyệt.
+>
+> **16/11/2026:** nhóm Explorer xếp lại theo danh mục `content/syllabus.json`: *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11); thêm chủ đề mới #4 *Những nơi sống trên Trái Đất*, 8 bài (Duy chốt 16/11, SK-048); các unit Oak còn lại thành #5–#13. Explorer #1 ghi thêm 2 bài mở rộng đã có trong danh mục. Explorer: 13 chủ đề, 83 bài; cả app 46 chủ đề, 394 bài.
 
 Cột "Bài app": số thứ tự bài trong app. Mỗi lesson Oak là một bài app, trừ hai trường hợp:
 
@@ -15,7 +17,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 
 ### 1. Gọi tên và nhóm động vật · Oak Y1 #1 [Naming and grouping animals](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/naming-and-grouping-animals/lessons)
 
-6 lesson Oak (6 bắt buộc) → **6 bài app**.
+6 lesson Oak (6 bắt buộc) → **8 bài app**: 6 bài theo Oak và 2 bài mở rộng (`extension: true` trong `content/syllabus.json`, không có lesson Oak).
 
 | Lesson Oak | Bắt buộc | Bài app | Đề xuất |
 | --- | --- | --- | --- |
@@ -25,8 +27,50 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 4. Naming fish and amphibians | ✓ | 4 | Giữ |
 | 5. Animal structure | ✓ | 5 | Giữ |
 | 6. What animals eat | ✓ | 6 | Giữ |
+| (không có lesson Oak) | — | 7 | Bài mở rộng: *Insects and other many-legged animals* · Côn trùng và con vật nhiều chân |
+| (không có lesson Oak) | — | 8 | Bài mở rộng: *Snails, octopuses and sea animals* · Ốc, bạch tuộc và những con vật ở biển |
 
-### 2. Thu, đông và mùa khô · Oak Y1 #2 [Seasonal changes: autumn and winter](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-autumn-and-winter/lessons)
+### 2. Sinh vật sống ở đâu? · Oak Y2 #5 [Living things and where they live](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/living-things-and-where-they-live/lessons)
+
+Lên #2 (Duy chốt 14/11; [docs/syllabus-review-2026-11-13.md](docs/syllabus-review-2026-11-13.md) mục "Duy chốt 14/11"). 7 lesson Oak (7 bắt buộc) → **7 bài app**.
+
+| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
+| --- | --- | --- | --- |
+| 1. Living or non-living | ✓ | 1 | Giữ |
+| 2. Living things and movement | ✓ | 2 | Giữ |
+| 3. Alive, dead and never alive | ✓ | 3 | Giữ |
+| 4. Animal habitats | ✓ | 4 | Giữ |
+| 5. Plant habitats | ✓ | 5 | Giữ |
+| 6. Plants and animals in microhabitats | ✓ | 6 | Giữ |
+| 7. Protecting microhabitats | ✓ | 7 | Giữ |
+
+### 3. Chuỗi thức ăn · Oak Y2 #4 [Introduction to food chains](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/introduction-to-food-chains/lessons)
+
+Lên #3 (Duy chốt 14/11). 4 lesson Oak (4 bắt buộc) → **4 bài app**.
+
+| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
+| --- | --- | --- | --- |
+| 1. How animals get food | ✓ | 1 | Giữ |
+| 2. Introduction to food chains | ✓ | 2 | Giữ |
+| 3. Roles within food chains | ✓ | 3 | Giữ |
+| 4. Comparing food chains | ✓ | 4 | Giữ |
+
+### 4. Những nơi sống trên Trái Đất · Mới
+
+Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-explorer-habitats-around-the-world.md), [đề xuất](docs/explorer-habitats-proposal.md)). Oak Science tiểu học không có unit này. Tên EN: *Habitats around the world*. Đứng #4, không đứng đầu nhóm, vì cần nền của #1–#3 (lệch luật "chủ đề mới đứng đầu", [syllabus.md](syllabus.md) mục 2). Bài 1, 2, 3, 7 lấy sườn một phần từ Oak **Địa lý** Year 2 ([docs/oak/geography-y2-cold-and-hot-places.md](docs/oak/geography-y2-cold-and-hot-places.md)); thứ tự theo Oak: nơi lạnh (unit 3 *Cold places*) trước nơi nóng (unit 4 *Hot places*). Trong danh mục, mọi bài `oak_lessons: []` (trường này chỉ ghi lesson Oak Science).
+
+| Bài app | Tên bài (VI) | EN | Lesson Oak Địa lý (sườn một phần) |
+| --- | --- | --- | --- |
+| 1 | Bắc Cực | The Arctic | Y2 unit 3 lesson 5 `arctic-wildlife` |
+| 2 | Nam Cực | The Antarctic | Y2 unit 3 lesson 6 `antarctic-wildlife` |
+| 3 | Rừng mưa nhiệt đới | Rainforests | Y2 unit 4 lesson 2 `tropical-rainforests-climate-and-location` |
+| 4 | Rừng ngập mặn và đầm lầy | Mangroves and swamps | — (KS1 không có) |
+| 5 | Biển và đại dương | Oceans | — |
+| 6 | Đồng cỏ xavan | Savannas | — (KS1 không có) |
+| 7 | Sa mạc | Deserts | Y2 unit 4 lesson 3 `hot-deserts-climate-and-location` |
+| 8 | Mỗi con vật một nơi sống | Every animal has its place | — (bài tổng kết) |
+
+### 5. Thu, đông và mùa khô · Oak Y1 #2 [Seasonal changes: autumn and winter](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-autumn-and-winter/lessons)
 
 5 lesson Oak (5 bắt buộc) → **5 bài app**.
 
@@ -38,7 +82,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 4. Weather in winter | ✓ | 4 | Bản địa hoá: rét, gió mùa đông bắc; nắng khô miền Nam |
 | 5. Day length in winter | ✓ | 5 | Bản địa hoá: ngày ngắn rõ ở miền Bắc; miền Nam đổi ít |
 
-### 3. Cơ thể của em · Oak Y1 #3 [Human body parts](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/human-body-parts/lessons)
+### 6. Cơ thể của em · Oak Y1 #3 [Human body parts](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/human-body-parts/lessons)
 
 6 lesson Oak (6 bắt buộc) → **6 bài app**.
 
@@ -51,7 +95,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 5. More about sight, smell and sound | ✓ | 5 | Giữ |
 | 6. More about taste and touch | ✓ | 6 | Giữ |
 
-### 4. Cây quanh em · Oak Y1 #4 [Identifying plants and their basic parts](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/identifying-plants-and-their-basic-parts/lessons)
+### 7. Cây quanh em · Oak Y1 #4 [Identifying plants and their basic parts](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/identifying-plants-and-their-basic-parts/lessons)
 
 7 lesson Oak (7 bắt buộc) → **7 bài app**.
 
@@ -65,7 +109,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 6. Common flowering plants | ✓ | 6 | Bản địa hoá: hoa Việt Nam: sen, mai, đào, hoa giấy |
 | 7. Wildflowers | ✓ | 7 | Bản địa hoá: hoa dại Việt Nam thay hoa dại Anh |
 
-### 5. Xuân, hè và mùa mưa · Oak Y1 #5 [Seasonal changes: spring and summer](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-spring-and-summer/lessons)
+### 8. Xuân, hè và mùa mưa · Oak Y1 #5 [Seasonal changes: spring and summer](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-spring-and-summer/lessons)
 
 5 lesson Oak (5 bắt buộc) → **5 bài app**.
 
@@ -77,7 +121,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 4. Weather in summer | ✓ | 4 | Bản địa hoá: nắng nóng, mưa rào, giông |
 | 5. Day length in summer | ✓ | 5 | Bản địa hoá: ngày dài rõ ở miền Bắc; miền Nam đổi ít |
 
-### 6. Vật liệu quanh em · Oak Y1 #6 [Everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/everyday-materials/lessons)
+### 9. Vật liệu quanh em · Oak Y1 #6 [Everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/everyday-materials/lessons)
 
 9 lesson Oak (7 bắt buộc) → **7 bài app**.
 
@@ -93,7 +137,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 8. Transparent and opaque materials: plan and do | ✓ | 7 | Gộp lesson 8, 9 |
 | 9. Transparent and opaque materials: review | ✓ | — | Gộp vào bài 7 |
 
-### 7. Vật liệu dùng làm gì? · Oak Y2 #1 [Uses of everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/uses-of-everyday-materials/lessons)
+### 10. Vật liệu dùng làm gì? · Oak Y2 #1 [Uses of everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/uses-of-everyday-materials/lessons)
 
 7 lesson Oak (7 bắt buộc) → **6 bài app**.
 
@@ -107,7 +151,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 6. Changing shape: plan and do | ✓ | 6 | Gộp lesson 6, 7 |
 | 7. Changing shape: review | ✓ | — | Gộp vào bài 6 |
 
-### 8. Trồng cây · Oak Y2 #2 [Growing plants](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/growing-plants/lessons)
+### 11. Trồng cây · Oak Y2 #2 [Growing plants](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/growing-plants/lessons)
 
 8 lesson Oak (7 bắt buộc) → **8 bài app**.
 
@@ -122,7 +166,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 7. Plants without light | ✓ | 7 | Giữ |
 | 8. Grow your own food | — | 8 | Giữ |
 
-### 9. Sự sống mới · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
+### 12. Sự sống mới · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
 
 5 lesson Oak (5 bắt buộc) → **5 bài app**.
 
@@ -134,32 +178,7 @@ Cột "Bắt buộc": ✓ là lesson Oak không gắn nhãn non-statutory.
 | 4. Changes in animal life cycles | ✓ | 4 | Giữ |
 | 5. The basic needs of animals | ✓ | 5 | Giữ |
 
-### 10. Chuỗi thức ăn · Oak Y2 #4 [Introduction to food chains](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/introduction-to-food-chains/lessons)
-
-4 lesson Oak (4 bắt buộc) → **4 bài app**.
-
-| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
-| --- | --- | --- | --- |
-| 1. How animals get food | ✓ | 1 | Giữ |
-| 2. Introduction to food chains | ✓ | 2 | Giữ |
-| 3. Roles within food chains | ✓ | 3 | Giữ |
-| 4. Comparing food chains | ✓ | 4 | Giữ |
-
-### 11. Sinh vật sống ở đâu? · Oak Y2 #5 [Living things and where they live](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/living-things-and-where-they-live/lessons)
-
-7 lesson Oak (7 bắt buộc) → **7 bài app**.
-
-| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
-| --- | --- | --- | --- |
-| 1. Living or non-living | ✓ | 1 | Giữ |
-| 2. Living things and movement | ✓ | 2 | Giữ |
-| 3. Alive, dead and never alive | ✓ | 3 | Giữ |
-| 4. Animal habitats | ✓ | 4 | Giữ |
-| 5. Plant habitats | ✓ | 5 | Giữ |
-| 6. Plants and animals in microhabitats | ✓ | 6 | Giữ |
-| 7. Protecting microhabitats | ✓ | 7 | Giữ |
-
-### 12. Em khoẻ mạnh · Oak Y2 #6 [Healthy me](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/healthy-me/lessons)
+### 13. Em khoẻ mạnh · Oak Y2 #6 [Healthy me](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/healthy-me/lessons)
 
 7 lesson Oak (7 bắt buộc) → **7 bài app**.
 

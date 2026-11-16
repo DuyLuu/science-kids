@@ -3,6 +3,8 @@
 > **Trạng thái:** thứ tự chủ đề, cột Free, Mức và Mạch **đã áp dụng** vào [syllabus.md](syllabus.md) (26/10/2026). Các đề xuất còn lại (ngưỡng 5/6, từ vựng theo nhóm, PRD, schema) vẫn chờ duyệt — xem mục 12. Sửa 1/11/2026: mục 7 thêm cách hiện quiz theo nhóm tuổi (Duy chốt SK-026). Sửa 8/11/2026: thêm mục 13, đối chiếu lại với trang Oak; ví dụ ở mục 6 thêm ý lực tiếp xúc và lực từ tác dụng từ xa. Sửa 9/11/2026: Duy chốt giữ *Giữ gìn sức khoẻ* ở #3 Scientist (13.3 mục 3).
 >
 > **9/11/2026, sau đó: Duy đổi thứ tự.** Chủ đề mới đứng đầu mỗi nhóm, rồi các unit Oak đúng thứ tự Oak; 1 bài = 1 lesson Oak (gộp thí nghiệm plan/do/review); thêm 8 chủ đề cơ bản hợp Việt Nam; không khoá bài. Xem [syllabus.md](syllabus.md) và [syllabus-lessons.md](syllabus-lessons.md). Thứ tự theo độ khó ở mục 5 và quyết định ở 13.3 mục 3 hết hiệu lực (theo Oak, *Giữ gìn sức khoẻ* đứng sau *Hệ tuần hoàn*). Rubric độ khó (mục 3), tiến trình trong bài (mục 6–10) và bản địa hoá (mục 11) vẫn dùng.
+>
+> **16/11/2026:** Explorer thêm chủ đề mới *Những nơi sống trên Trái Đất* ở #4 (8 bài; Duy chốt, SK-048), chấm theo rubric mục 3: 11 điểm (2-3-2-2-2), Mức 3, mạch Sinh vật & môi trường. Sửa mục 4 (bảng mạch) và ghi chú ở mục 5.1. Số đếm hiện hành ở [syllabus.md](syllabus.md): 46 chủ đề, 394 bài; Explorer 13 chủ đề, 83 bài. Các con số 38 chủ đề, 56 bài… trong file này là của bản phân tích 22/10–26/10, giữ nguyên làm hồ sơ.
 > Liên quan: [prd.md](prd.md) · [syllabus.md](syllabus.md) · Nguồn research ở [cuối file](#nguồn-tham-khảo)
 > Cập nhật: 22/10/2026
 
@@ -84,7 +86,7 @@ Gom 15 Big Questions của Oak thành 6 mạch. Tên mạch gần như trùng t�
 | Mạch | Khớp CT GDPT 2018 | Oak BQ | Explorer (5–7) | Discoverer (7–9) | Scientist (9–11) |
 | --- | --- | --- | --- | --- | --- |
 | 🌱 Thực vật & động vật | Thực vật và động vật | BQ01, 02, 04 | Động vật (7) · Cây (7) · Sự sống mới (8) · Trồng cây (10) | Cây làm gì (11) | Sinh sản ĐV (11) · Sinh sản TV (11) · Phân loại (13) · Tiến hoá (15) |
-| 🌳 Sinh vật & môi trường | Sinh vật và môi trường | BQ03, 15 | Chuỗi thức ăn (11) · Sinh vật sống ở đâu (11) | Sinh vật & môi trường (12) · Chuỗi thức ăn nâng cao (12) | Biến đổi khí hậu (15) |
+| 🌳 Sinh vật & môi trường | Sinh vật và môi trường | BQ03, 15 | Chuỗi thức ăn (11) · Sinh vật sống ở đâu (11) · Những nơi sống trên Trái Đất (11; mới 16/11) | Sinh vật & môi trường (12) · Chuỗi thức ăn nâng cao (12) | Biến đổi khí hậu (15) |
 | 🫀 Con người & sức khoẻ | Con người và sức khoẻ | BQ01, 02, 05 | Cơ thể (5) · Em khoẻ mạnh (7) | Ăn uống (9) · Bộ xương (11) · Tiêu hoá (13) | Giữ gìn sức khoẻ (11) · Phát triển (12) · Tuần hoàn (14) |
 | 🧪 Chất & vật liệu | Chất | BQ06–08, 10 | Vật liệu (8) · Vật liệu dùng làm gì (9) | Các thể của vật chất (13) | Tính chất & biến đổi (15) · Vật liệu mở rộng (15) |
 | ⚡ Năng lượng & lực | Năng lượng | BQ11–13 | **— (trống)** | Ánh sáng (11) · Lực & nam châm (11) · Âm thanh (11) · Mạch điện (12) | Lực & máy (13) · Ánh sáng truyền (13) · Mạch điện nâng cao (14) |
@@ -127,6 +129,12 @@ Tổng 56 bài, không đổi. Thay đổi so với bản cũ:
 - **Hai chủ đề mùa** đứng liền nhau sau *Cây quanh em*: trẻ học tên cây rồi mới quan sát cây thay lá theo mùa.
 - **Vật liệu** chuyển xuống Mức 2 vì có misconception "đồ vật hay vật liệu" và bắt đầu cần thí nghiệm đơn giản. Hai chủ đề vật liệu được xen bằng *Sự sống mới* để có giãn cách.
 - **Chuỗi thức ăn** và **Sinh vật sống ở đâu** để cuối vì cần cả kiến thức về động vật lẫn thực vật. Riêng *Sinh vật sống ở đâu* chạm misconception "sống / không sống" (trẻ hay nghĩ cái gì chuyển động là sống).
+
+> **Ghi chú 16/11/2026:** bảng trên là thứ tự theo độ khó của bản 26/10, đã hết hiệu lực từ 9/11. Thứ tự Explorer hiện hành ở [syllabus.md](syllabus.md) mục 3 (13 chủ đề, 83 bài):
+> - *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11);
+> - chủ đề mới *Những nơi sống trên Trái Đất* ở #4 (Duy chốt 16/11, SK-048). Điểm 11 (A2-B3-C2-D2-E2), Mức 3; cách chấm ở [docs/explorer-habitats-proposal.md](docs/explorer-habitats-proposal.md) mục 1.2.
+>
+> Ba chủ đề Mức 3 ở #2–#4 đứng trước các chủ đề Mức 1–2, lệch quy tắc 2 ở mục 3 ("Mức không được giảm"). Duy chấp nhận chỗ lệch này ngày 14/11 cho #2, #3; vị trí #4 Duy chốt 16/11 kéo theo cùng chỗ lệch.
 
 ### 5.2 Discoverer (7–9 tuổi, nhóm pilot) — Mức 2 → 4
 

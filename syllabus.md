@@ -2,6 +2,8 @@
 
 > Bản copy để review từ artifact tab "Syllabus & nội dung" (https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe).
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
+> **16/11/2026 — thêm chủ đề Explorer #4 *Những nơi sống trên Trái Đất* (8 bài; Duy chốt, [SK-048](docs/backlog/SK-048-explorer-habitats-around-the-world.md)).** Explorer nay xếp theo `content/syllabus.json`: *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11), chủ đề mới ở #4, các unit Oak còn lại ở #5–#13. Explorer #1 có 8 bài (6 bài Oak và 2 bài mở rộng). Tổng **46 chủ đề, 394 bài** (sửa mục 0, 1, 2, 3, 7, 9).
+>
 > **9/11/2026 — gom lại theo yêu cầu của Duy; còn 1 câu hỏi ở mục 8 (tên hai chủ đề mùa).** Duy chốt ngày 9/11 (pilot GĐ 0 = 6 chủ đề đầu Discoverer, 38 bài, mục 8):
 > 1. giữ 3 nhóm tuổi; trong mỗi nhóm, các chủ đề mới đứng đầu, rồi tới các unit Oak theo đúng thứ tự trên trang Oak;
 > 2. 1 bài app = 1 lesson Oak; riêng thí nghiệm Oak tách plan/do/review thì gộp thành 1 bài;
@@ -23,13 +25,18 @@ Sườn là khung Year 1–6 của Oak, gom thành **3 nhóm tuổi**. Mỗi uni
 | Mức 1–5 | Dùng để xếp thứ tự | Chỉ để tham khảo độ khó; chủ đề mới chưa chấm |
 | Free | Chủ đề đầu mỗi nhóm | Gói trả phí giữ nhưng tạm tắt; bản test mở toàn bộ. Chủ đề miễn phí chọn sau |
 
+**Sau 9/11** (bảng trên giữ số của bản 9/11):
+- *14/11, Duy chốt:* Explorer đưa *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 ([docs/syllabus-review-2026-11-13.md](docs/syllabus-review-2026-11-13.md), mục "Duy chốt 14/11").
+- *16/11, Duy chốt (SK-048):* thêm chủ đề mới *Những nơi sống trên Trái Đất* ở Explorer #4, 8 bài. Chủ đề này không đứng đầu nhóm (lệch luật 9/11, mục 2).
+- **Số đếm từ 16/11: 46 chủ đề** (37 unit Oak và 9 chủ đề mới: Explorer 1, Discoverer 5, Scientist 3), **394 bài**, đếm từ danh mục `content/syllabus.json`. 394 = 384 bài của bản 9/11 + 2 bài mở rộng của Explorer #1 (đã có trong danh mục, bản 9/11 chưa cộng) + 8 bài của chủ đề mới.
+
 ## 1. Ba nhóm tuổi & format bài học
 
 Chia theo giai đoạn đọc–viết thay vì theo lớp: trẻ VN cùng tuổi có trình độ tiếng Anh rất khác nhau, nên onboarding hỏi tuổi + cho phép đổi nhóm tự do.
 
 | Nhóm | Tuổi | Sườn Oak | Chủ đề | Bài | Độ dài bài | Đặc thù format |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Explorer** | 5–7 | Year 1–2 | 12 | 73 | 5–7 phút | Chưa cần biết đọc: audio EN và VI đọc toàn bộ, đáp án bằng hình, thao tác kéo–thả, phụ đề VI chủ yếu cho phụ huynh |
+| **Explorer** | 5–7 | Year 1–2 | 13 (1 mới) | 83 | 5–7 phút | Chưa cần biết đọc: audio EN và VI đọc toàn bộ, đáp án bằng hình, thao tác kéo–thả, phụ đề VI chủ yếu cho phụ huynh |
 | **Discoverer** | 7–9 | Year 3–4 | 17 (5 mới) | 155 | 8–10 phút | Đọc được EN đơn giản; flashcard từ vựng, điền từ, thử thách tuần |
 | **Scientist** | 9–11 | Year 5–6 | 16 (3 mới) | 156 | 10–12 phút | Đoạn đọc hiểu EN dài hơn, thí nghiệm tại nhà, câu hỏi mở |
 
@@ -64,11 +71,12 @@ Năm luật:
 | Trái Đất | Hành tinh xanh, Lục địa, Đại dương, Động đất, Núi lửa | **Mới:** Bề mặt Trái Đất (Discoverer #1) |
 | | Mặt Trăng, Hệ Mặt Trời | Trái Đất, Mặt Trời, Mặt Trăng (Scientist #6) |
 | | Các ngôi sao, Du hành vũ trụ | **Mới:** Các vì sao và du hành vũ trụ (Scientist #2) |
-| | Bốn mùa, Thời tiết | Hai chủ đề mùa, bản địa hoá (Explorer #2, #5); **Mới:** Thời tiết và thiên tai ở Việt Nam (Discoverer #5) |
+| | Bốn mùa, Thời tiết | Hai chủ đề mùa, bản địa hoá (Explorer #5, #8); **Mới:** Thời tiết và thiên tai ở Việt Nam (Discoverer #5) |
 | | Đá và khoáng vật | Đá và đất (Discoverer #6) |
 | Động vật | Động vật, Có vú, Chim, Bò sát, Lưỡng cư, Cá | Gọi tên và nhóm động vật (Explorer #1); Sinh sản ở động vật (Scientist #8) |
 | | Không xương sống | Bộ xương và cơ bắp (Discoverer #7, bài "Animals without bones"); Phân loại sinh vật (Scientist #13) |
-| Thực vật | Cây cối, Hoa | Cây quanh em (Explorer #4); Cây làm gì và cần gì (Discoverer #10) |
+| | (sách không có mục riêng về nơi sống; gần nhất là mảng Động vật và Trái Đất: Hành tinh xanh, Lục địa, Đại dương) | **Mới (16/11):** Những nơi sống trên Trái Đất (Explorer #4), Duy yêu cầu. Sườn một phần từ Oak **Địa lý** Year 2 *Cold places*, *Hot places* ([docs/oak/geography-y2-cold-and-hot-places.md](docs/oak/geography-y2-cold-and-hot-places.md)) |
+| Thực vật | Cây cối, Hoa | Cây quanh em (Explorer #7); Cây làm gì và cần gì (Discoverer #10) |
 | | Dương xỉ | Sinh vật và môi trường (Discoverer #16, bài nhóm cây) |
 | | Nấm | **Mới:** Nấm (Scientist #3) |
 | Lịch sử | Trái Đất cổ đại, kỷ Tam Điệp, Jura, Phấn Trắng | **Mới:** Khủng long và Trái Đất thời xa xưa (Discoverer #2) |
@@ -78,13 +86,13 @@ Năm luật:
 | | Nhiên liệu hoá thạch, Năng lượng tái tạo, Bảo vệ hành tinh xanh | Năng lượng và biến đổi khí hậu (Scientist #16) |
 | | Công nghệ | Lực và máy đơn giản (Scientist #5, bài thiết kế máy) |
 | Phương tiện di chuyển | Trang trại, đường bộ, đường ray, trên trời, dưới biển | Không thành chủ đề riêng: lực và máy có ở Scientist #5, xe điện ở Scientist #11. Thêm sau nếu Duy muốn |
-| Cơ thể người | Cơ thể của tớ | Cơ thể của em (Explorer #3) |
+| Cơ thể người | Cơ thể của tớ | Cơ thể của em (Explorer #6) |
 | | Não bộ và giác quan | **Mới:** Não bộ và giác quan (Discoverer #4) |
 | | Sinh sản, Quá trình trưởng thành | Sự phát triển của con người (Scientist #9) |
 | | Hệ tuần hoàn, Hệ tiêu hoá | Hệ tuần hoàn (Scientist #10), Hệ tiêu hoá (Discoverer #12) |
 | | (sách không có) | **Mới:** Hô hấp (Discoverer #3), vì CT VN có |
-| Con người | Thực phẩm | Em khoẻ mạnh (Explorer #12), Ăn uống lành mạnh (Discoverer #9) |
-| | Mọi thứ được làm ra thế nào? | Vật liệu quanh em, Vật liệu dùng làm gì? (Explorer #6, #7) |
+| Con người | Thực phẩm | Em khoẻ mạnh (Explorer #13), Ăn uống lành mạnh (Discoverer #9) |
+| | Mọi thứ được làm ra thế nào? | Vật liệu quanh em, Vật liệu dùng làm gì? (Explorer #9, #10) |
 | | Cờ, Tôn giáo, Nghề nghiệp, Nghệ thuật, Chữ viết, Âm nhạc, Quần áo, Thể thao | Không đưa: ngoài môn khoa học |
 
 **Bỏ một unit Oak:** *Materials* (Year 6, không bắt buộc, 3 lesson): so muối mỏ với muối ăn, rải muối lên băng trên đường. Việt Nam không có đường đóng băng; ý muối ăn đã có trong bài làm muối từ nước biển (Scientist #4).
@@ -95,26 +103,33 @@ Năm luật:
 - *Nấm* (Scientist #3) đứng trước bài vi sinh vật của *Phân loại sinh vật* (#13).
 - *Các vì sao* (Scientist #2) đứng trước *Trái Đất, Mặt Trời, Mặt Trăng* (#6).
 
+**Ngoại lệ (Duy chốt 16/11, SK-048):** *Những nơi sống trên Trái Đất* đứng Explorer #4, ngay sau *Chuỗi thức ăn*, không đứng đầu nhóm. Chủ đề cần nền của #1–#3 (tên con vật, nơi sống, con vật ăn gì), và bốn lesson Oak Địa lý làm sườn đều ở Year 2. Đây là chỗ lệch luật "chủ đề mới đứng đầu"; thứ tự các unit Oak không lệch thêm.
+
 ## 3. Syllabus nhóm Explorer (5–7 tuổi)
 
-12 chủ đề, đúng 12 unit Year 1–2 của Oak theo thứ tự trên trang; nhóm này không có chủ đề mới. Tên VI là đề xuất, sửa trực tiếp ở đây.
+13 chủ đề: 12 unit Year 1–2 của Oak và 1 chủ đề mới (#4). Thứ tự theo danh mục `content/syllabus.json`. Hai chỗ lệch thứ tự, đều do Duy chốt:
+- *Sinh vật sống ở đâu?* (Oak Y2 #5) và *Chuỗi thức ăn* (Y2 #4) lên #2, #3 (14/11). Lệch thứ tự Oak và luật "Mức không giảm".
+- Chủ đề mới *Những nơi sống trên Trái Đất* ở #4, không đứng đầu nhóm (16/11, SK-048). Lệch luật "chủ đề mới đứng đầu" (mục 2).
+
+Tên VI là đề xuất, sửa trực tiếp ở đây.
 
 | # | Chủ đề (VI) | Sườn Oak (EN) | Nguồn | Mạch | Bài app (tách đủ) | Mức | Ghi chú Việt Nam |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Gọi tên và nhóm động vật | Naming and grouping animals | Y1 #1 | Thực vật & động vật | 6 (6) | 1 | Động vật quen ở Việt Nam |
-| 2 | Thu, đông và mùa khô | Seasonal changes: autumn and winter | Y1 #2 | Trái Đất & bầu trời | 5 (5) | 1 | Bản địa hoá: miền Bắc thu, đông; miền Nam mùa khô |
-| 3 | Cơ thể của em | Human body parts | Y1 #3 | Con người & sức khoẻ | 6 (6) | 1 | — |
-| 4 | Cây quanh em | Identifying plants and their basic parts | Y1 #4 | Thực vật & động vật | 7 (7) | 1 | Cây, hoa Việt Nam |
-| 5 | Xuân, hè và mùa mưa | Seasonal changes: spring and summer | Y1 #5 | Trái Đất & bầu trời | 5 (5) | 1 | Bản địa hoá: miền Bắc xuân, hè; miền Nam mùa mưa |
-| 6 | Vật liệu quanh em | Everyday materials | Y1 #6 | Chất & vật liệu | 7 (9) | 2 | — |
-| 7 | Vật liệu dùng làm gì? | Uses of everyday materials | Y2 #1 | Chất & vật liệu | 6 (7) | 2 | — |
-| 8 | Trồng cây | Growing plants | Y2 #2 | Thực vật & động vật | 8 (8) | 3 | — |
-| 9 | Sự sống mới | New life | Y2 #3 | Thực vật & động vật | 5 (5) | 2 | — |
-| 10 | Chuỗi thức ăn | Introduction to food chains | Y2 #4 | Sinh vật & môi trường | 4 (4) | 3 | — |
-| 11 | Sinh vật sống ở đâu? | Living things and where they live | Y2 #5 | Sinh vật & môi trường | 7 (7) | 3 | — |
-| 12 | Em khoẻ mạnh | Healthy me | Y2 #6 | Con người & sức khoẻ | 7 (7) | 1 | — |
+| 1 | Gọi tên và nhóm động vật | Naming and grouping animals | Y1 #1 | Thực vật & động vật | 8 (6) | 1 | Động vật quen ở Việt Nam. Bài 7, 8 là bài mở rộng (côn trùng; ốc, bạch tuộc và con vật biển), không có lesson Oak, `extension: true` |
+| 2 | Sinh vật sống ở đâu? | Living things and where they live | Y2 #5 | Sinh vật & môi trường | 7 (7) | 3 | Lên #2 (Duy chốt 14/11) |
+| 3 | Chuỗi thức ăn | Introduction to food chains | Y2 #4 | Sinh vật & môi trường | 4 (4) | 3 | Lên #3 (Duy chốt 14/11) |
+| 4 | Những nơi sống trên Trái Đất | — (tên EN: *Habitats around the world*) | **Mới** | Sinh vật & môi trường | 8 | 3 | Duy chốt 16/11 (SK-048). Sườn một phần: Oak Địa lý Y2 *Cold places* lesson 5, 6 và *Hot places* lesson 2, 3. Có Việt Nam: rừng mưa, rừng ngập mặn, đầm lầy, biển |
+| 5 | Thu, đông và mùa khô | Seasonal changes: autumn and winter | Y1 #2 | Trái Đất & bầu trời | 5 (5) | 1 | Bản địa hoá: miền Bắc thu, đông; miền Nam mùa khô |
+| 6 | Cơ thể của em | Human body parts | Y1 #3 | Con người & sức khoẻ | 6 (6) | 1 | — |
+| 7 | Cây quanh em | Identifying plants and their basic parts | Y1 #4 | Thực vật & động vật | 7 (7) | 1 | Cây, hoa Việt Nam |
+| 8 | Xuân, hè và mùa mưa | Seasonal changes: spring and summer | Y1 #5 | Trái Đất & bầu trời | 5 (5) | 1 | Bản địa hoá: miền Bắc xuân, hè; miền Nam mùa mưa |
+| 9 | Vật liệu quanh em | Everyday materials | Y1 #6 | Chất & vật liệu | 7 (9) | 2 | — |
+| 10 | Vật liệu dùng làm gì? | Uses of everyday materials | Y2 #1 | Chất & vật liệu | 6 (7) | 2 | — |
+| 11 | Trồng cây | Growing plants | Y2 #2 | Thực vật & động vật | 8 (8) | 3 | — |
+| 12 | Sự sống mới | New life | Y2 #3 | Thực vật & động vật | 5 (5) | 2 | — |
+| 13 | Em khoẻ mạnh | Healthy me | Y2 #6 | Con người & sức khoẻ | 7 (7) | 1 | — |
 
-Tổng: **73 bài**. Nhóm này chưa có chủ đề thuộc mạch Năng lượng & lực, giống Oak.
+Tổng: **83 bài**, gồm 8 bài của chủ đề mới và 2 bài mở rộng của #1. Bản 9/11 ghi 73 bài: chưa cộng 2 bài mở rộng, chưa có chủ đề #4. Nhóm này chưa có chủ đề thuộc mạch Năng lượng & lực, giống Oak.
 
 ## 4. Syllabus nhóm Discoverer (7–9 tuổi), nhóm pilot
 
@@ -181,7 +196,7 @@ Nhịp khuyến nghị: **3 bài/tuần** (mỗi bài 5–12 phút), vừa với
 
 | Nhóm | Số bài | Hết cả nhóm (3 bài/tuần + tuần ôn) |
 | --- | --- | --- |
-| Explorer (5–7) | 73 | ~30 tuần ≈ 1 năm học |
+| Explorer (5–7) | 83 | ~35 tuần ≈ 1 năm học |
 | Discoverer (7–9) | 155 | ~65 tuần ≈ 2 năm học |
 | Scientist (9–11) | 156 | ~65 tuần ≈ 2 năm học |
 
@@ -215,7 +230,7 @@ Ghi chú, không cần Duy chốt: hai bài *Ăn uống lành mạnh* đã soạ
   - tên VI cho mọi bài;
   - tách lại kế hoạch Ăn uống lành mạnh theo 1:1;
   - `content/TEMPLATE.md` thêm mã lesson Oak cho mỗi bài;
-  - soạn 8 chủ đề mới theo lưu ý ở cuối mục 2.
+  - soạn 8 chủ đề mới theo lưu ý ở cuối mục 2. *(16/11)* Thêm chủ đề mới thứ 9, Explorer #4 *Những nơi sống trên Trái Đất*, theo [SK-048](docs/backlog/SK-048-explorer-habitats-around-the-world.md).
 - **dev:** schema và `validate` cho danh mục syllabus `content/syllabus.json` (mọi chủ đề, mọi bài, kể cả bài chưa soạn, kèm mã lesson Oak). Đóng danh mục vào gói nội dung làm sau, khi có CMS (SK-030 ngoài phạm vi).
 - **ios-dev:**
   - Home hiện đủ chủ đề của nhóm, màn chủ đề hiện đủ bài, bỏ khoá;
@@ -237,5 +252,6 @@ Soạn nội dung, làm hình và dựng CMS chạy song song sau khi chốt syl
 ## Nguồn
 
 - Oak National Academy, [Primary science units](https://www.thenational.academy/teachers/programmes/science-primary/units) và trang lesson của từng unit, đọc ngày 9/11/2026. Nội dung chương trình Oak dùng theo Open Government Licence.
+- Oak National Academy, Geography KS1: Year 2 unit *Cold places* và *Hot places*, đọc ngày 16/11/2026, chỉ dùng làm sườn một phần cho Explorer #4 ([docs/oak/geography-y2-cold-and-hot-places.md](docs/oak/geography-y2-cold-and-hot-places.md)).
 - Mục lục sách bách khoa thiếu nhi (ảnh Duy gửi ngày 9/11/2026).
 - CT GDPT 2018 môn Tự nhiên và Xã hội, môn Khoa học; tóm tắt ở [syllabus-progression.md](syllabus-progression.md) mục 11. Các dòng [CẦN KIỂM] là chỗ chưa đối chiếu văn bản chương trình.
