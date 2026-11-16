@@ -127,7 +127,17 @@
         "first_item_dok": { "description": "DOK bắt buộc của câu quiz 1", "enum": [1, 2, 3] },
         "misconception_items": { "description": "[min, max] số câu quiz có misconception_id", "$ref": "#/$defs/Range" },
         "min_formats": { "description": "Số format khác nhau tối thiểu trong quiz", "type": "integer", "minimum": 1, "maximum": 6 },
-        "max_words_en": { "description": "Số từ tối đa mỗi câu EN trên mọi Spoken của topic và bài; vượt thì cảnh báo age_words_en. Thiếu thì không kiểm", "type": "integer", "minimum": 1 }
+        "max_words_en": { "description": "Số từ tối đa mỗi câu EN trên mọi Spoken của topic và bài; vượt thì cảnh báo age_words_en. Thiếu thì không kiểm", "type": "integer", "minimum": 1 },
+        "multi_choice_correct_spread": {
+          "description": "SK-047 (đề xuất quiz 4.6, 4.7): trong một chủ đề, gom mọi câu multi_choice (Khởi động và Quiz của các bài trong lần gọi), đếm theo số đáp án đúng; một số đáp án đúng có quá max(1, floor(tỉ lệ × số câu MC)) câu thì báo multi_choice_correct_spread ở topic. Số trong (0, 1]. Thiếu khoá thì không kiểm",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "vocab_item_uses_lesson_word": {
+          "description": "SK-047 (đề xuất quiz 4.6, 4.7): true = câu Từ mới phải dùng một từ trong vocab của bài, thiếu thì cảnh báo vocab_item_uses_lesson_word. Đợt 1: câu Từ mới là mọi fill_blank_bank ở Quiz, đạt khi ít nhất một từ trong answers có label.en trùng term.en của một từ vựng tier core, từ mới của bài (không phân biệt hoa thường, nhận biến thể -s, -es, -ed, -ing). Đợt 2 thêm câu có skill vocab. Thiếu khoá = false",
+          "type": "boolean"
+        }
       }
     },
     "ImageSlot": {

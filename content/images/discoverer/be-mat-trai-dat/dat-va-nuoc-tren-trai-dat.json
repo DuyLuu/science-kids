@@ -218,8 +218,8 @@
     "q3.q3_river": {
       "same_as": "tray.tray_river"
     },
-    "q3.q3_forest": {
-      "same_as": "tray.tray_forest"
+    "q3.q3_lake": {
+      "same_as": "tray.tray_lake"
     },
     "q3.q3_pond": {
       "source": "Wikimedia Commons",

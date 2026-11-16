@@ -84,7 +84,7 @@ image.brief: [ảnh mô hình] Mô hình khủng long ba sừng cỡ thật ở 
 image.alt.en: A model of an animal with three horns
 image.alt.vi: Mô hình một con vật có ba sừng
 > Hình gốc, dùng nhiều lần trong bài (món Chơi, câu q5, từ `dinosaur`) và xuyên chủ đề: bài bốn q5 (bốn mô hình cùng nền cây cối), bài năm q3 (bảng hình dùng chung ở `_topic.md`, Quy ước hình mục mười). Chỗ dùng lại có `alt` riêng: "A model of a Triceratops" · "Mô hình khủng long ba sừng".
-> Rà chữ tester 9/11 (n1): lựa chọn này chuyển lên thứ hai, để câu w1 của năm bài không cùng đặt đáp án ở chỗ thứ ba.
+> Rà chữ tester 9/11 (n1): đổi chỗ lựa chọn này để cân vị trí đáp án; hết hiệu lực từ 15/11 (SK-047, app xáo lựa chọn).
 
 #### option w1_buffalo
 correct: false
@@ -110,8 +110,9 @@ image.brief: Dùng lại hình `surface` ở bài `be-mat-trai-dat/dat-va-nuoc-t
 image.alt.en: Earth seen from space
 image.alt.vi: Trái Đất nhìn từ vũ trụ
 answer: true
-hint.en: Earth's crust is like a cracked eggshell.
-hint.vi: Vỏ Trái Đất giống như vỏ quả trứng bị nứt.
+hint.en: Remember the egg in the Earth lessons.
+hint.vi: Em nhớ lại quả trứng ở các bài về Trái Đất nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ nói thẳng "vỏ Trái Đất giống vỏ trứng bị nứt", tức là câu khẳng định. Gợi ý mới chỉ trỏ chỗ cần nhớ (ô Các mảng, bài *Động đất và sóng thần*).
 explanation_correct.en: Plates move very slowly, and the land moves with them.
 explanation_correct.vi: Các mảng dịch chuyển rất chậm, đất cũng dịch theo.
 explanation_wrong.en: The crust is in giant pieces, like a cracked eggshell.
@@ -174,7 +175,7 @@ label.vi: Khủng long
 color: nau_dat
 sentence.en: Dinosaurs lived on Earth for millions of years.
 sentence.vi: Khủng long sống trên Trái Đất suốt hàng triệu năm.
-image.brief: [sơ đồ ghép ảnh] Ba tranh phục dựng khoa học xếp thành hàng ngang trên nền giấy trơn, mỗi tranh một khung riêng, cách nhau rõ, bên dưới có một mũi tên mảnh chạy từ trái sang phải. Khung một (tìm mới): khủng long Plateosaurus đi bằng hai chân, toàn thân nhìn ngang, tách khỏi cảnh nền, đặt trên nền kem nhạt cùng kiểu kệ Chơi bài hai. Khung hai dùng lại hình `khung-long-la-gi/tray_stegosaurus`. Khung ba dùng lại hình `khung-long-la-gi/tray_t_rex`. Không loài nào đứng chung một khung, không có người, không có chữ; tên ba kỷ chỉ có ở món ví dụ, không ghi nhãn trong hình (Duy 10/11). Từ khoá tìm ảnh (EN): Plateosaurus life restoration painting side view
+image.brief: [sơ đồ ghép ảnh] Ba tranh phục dựng khoa học xếp thành một cột dọc trên nền giấy trơn, con cũ nhất ở trên cùng; mỗi tranh một khung giấy riêng, ba khung cùng bề rộng, cắt sát con vật, cách nhau rõ; một mũi tên màu đỏ son chạy dọc bên trái, từ trên xuống. Khung một, trên cùng (tìm mới): khủng long Plateosaurus đi bằng hai chân, toàn thân nhìn ngang, tách khỏi cảnh nền, đặt trên nền kem nhạt cùng kiểu kệ Chơi bài hai. Khung hai, ở giữa, dùng lại hình `khung-long-la-gi/tray_stegosaurus`. Khung ba, dưới cùng, dùng lại hình `khung-long-la-gi/tray_t_rex`. Không loài nào đứng chung một khung, không có người, không có chữ; tên ba kỷ chỉ có ở món ví dụ, không ghi nhãn trong hình (Duy 10/11). Từ khoá tìm ảnh (EN): Plateosaurus life restoration painting side view
 image.alt.en: Paintings of dinosaurs from three different times
 image.alt.vi: Tranh vẽ khủng long của ba thời khác nhau
 examples.1.en: Triassic
@@ -185,6 +186,7 @@ examples.3.en: Cretaceous
 examples.3.vi: kỷ Phấn Trắng
 examples.4.en: different dinosaurs at different times
 examples.4.vi: mỗi thời có những loài khủng long khác nhau
+> 16/11 (sửa chữ brief theo hình designer dựng lại, ticket SK-047 mục "designer 16/11"): brief cũ ghi ba khung "xếp thành hàng ngang… mũi tên chạy từ trái sang phải". Hình nay xếp cột dọc, mũi tên đỏ son từ trên xuống, vì hàng ngang trong khung vuông làm mỗi con vật chỉ rộng chừng 37 pt ở thẻ ý chính. Chỉ đổi ghi chú cho hoạ sĩ, không đổi chữ bé đọc hay nghe. Từ `million` có hình ghép 4:3 riêng (`vocab.million`, cùng ba ảnh nguồn) trong file chọn ảnh; brief của từ vẫn trỏ hình này.
 > Ba kỷ chỉ là món ví dụ: không thành từ vựng, quiz không hỏi (bảng Tên gọi). [CẦN KIỂM] tên tiếng Việt ba kỷ theo sách; Plateosaurus thuộc kỷ Tam Điệp, khủng long phiến sừng thuộc kỷ Jura, khủng long bạo chúa thuộc cuối kỷ Phấn Trắng.
 > Ví dụ bốn và ba khung tách rời nhau dạy `all_dinosaurs_same_time` (không gắn key), và chuẩn bị cho thẻ thưởng khủng long bạo chúa.
 > Rà chéo 9/11: khung hai và khung ba dùng lại hai tranh nền kem của kệ Chơi bài hai, nên ba khung không còn cây cối riêng của mỗi kỷ; chỉ phải tìm một tranh mới (Plateosaurus). Nếu PM muốn giữ cảnh có cây thì tìm ba tranh riêng như bản trước.
@@ -197,7 +199,8 @@ color: do_son
 sentence.en: Scientists found that people came long after dinosaurs.
 sentence.vi: Nhà khoa học tìm ra người đến rất lâu sau khủng long.
 > SK-044 (14/11, A2): câu VI cũ mười lăm tiếng, nay mười hai; giữ "nhà khoa học tìm ra" (sợi chỉ "Làm sao mình biết được?").
-image.brief: [sơ đồ ghép ảnh] Trục thời gian là một dải giấy dài nằm ngang trên nền trơn, chạy từ trái sang phải: mẩu xám ngắn bên trái có dấu ngắt hai vạch chéo; tiếp theo là dải màu nâu đất dài, là thời khủng long, trên dải có hình nhỏ khủng long cổ dài (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`); rồi một đoạn trống màu nhạt; sát mép phải là hình nhỏ voi ma mút (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_mammoth`), và ở tận cùng là cánh diều thoi nhiều màu có đuôi ruy băng bay trên trời mây (ảnh CC0 tìm riêng, không cắt từ ảnh bạn nhỏ thả diều của kệ Chơi); không có người, không có chữ, không ghi nhãn trong hình (Duy 10/11). Từ khoá cho cánh diều: rainbow kite cloudy sky.
+image.brief: [sơ đồ ghép ảnh] Trục thời gian là một dải giấy dày nằm ngang, chạy hết bề ngang hình, trên nền trơn, đi từ trái sang phải: mẩu xám ngắn bên trái có dấu ngắt hai vạch chéo; tiếp theo là dải màu nâu đất dài, là thời khủng long, có ảnh khủng long cổ dài cỡ to đứng trên dải (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`); rồi một đoạn trống màu nhạt (dải nâu chừng bảy phần mười trục, đoạn nhạt chừng ba phần mười); ở cuối trục, bên phải, là một cột hai ảnh xếp sát nhau: cánh diều thoi nhiều màu có đuôi ruy băng bay trên trời mây ở trên (ảnh CC0 tìm riêng, không cắt từ ảnh bạn nhỏ thả diều của kệ Chơi), voi ma mút ở dưới (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_mammoth`); mọi ảnh chạm trục, không mảnh nào lơ lửng; không có người, không có chữ, không ghi nhãn trong hình (Duy 10/11). Từ khoá cho cánh diều: rainbow kite cloudy sky.
+> 16/11 (sửa chữ brief theo hình designer dựng lại, ticket SK-047 mục "designer 16/11"): brief cũ ghi trục là "dải giấy dài", ảnh khủng long cổ dài "nhỏ", voi ma mút "sát mép phải" và cánh diều "ở tận cùng". Hình nay là trục dày chạy hết bề ngang, ảnh khủng long to đứng trên dải nâu, diều và voi ma mút xếp một cột ở cuối trục, để đọc được ở cỡ thẻ ý chính. Chỉ đổi ghi chú cho hoạ sĩ, không đổi chữ bé đọc hay nghe.
 image.alt.en: A timeline from dinosaur times to today
 image.alt.vi: Trục thời gian từ thời khủng long tới ngày nay
 examples.1.en: first, the dinosaurs
@@ -488,7 +491,7 @@ image.alt.vi: Sân chơi có cầu trượt
 ### q3
 id: 28c3c10f-53fd-49a5-9a61-78f36f5426ad
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones lived in dinosaur times?
 prompt.vi: Những loài nào đã sống vào thời khủng long?
@@ -499,10 +502,11 @@ image.alt.en: Hands brushing rock at a fossil dig
 image.alt.vi: Đôi tay chải đất đá ở bãi đào hoá thạch
 hint.en: Remember the plants and small animals of that time.
 hint.vi: Em nhớ lại những cây và con vật nhỏ thời đó nhé.
-explanation_correct.en: Dragonflies and cycads still live today, too.
-explanation_correct.vi: Chuồn chuồn và cây vạn tuế ngày nay vẫn còn.
-explanation_wrong.en: Mammoths and buffaloes came long after dinosaurs.
-explanation_wrong.vi: Voi ma mút và trâu có rất lâu sau khủng long.
+explanation_correct.en: Dragonflies, frogs and cycads still live today, too.
+explanation_correct.vi: Chuồn chuồn, ếch và cây vạn tuế ngày nay vẫn còn.
+explanation_wrong.en: Only the mammoth came later, after the dinosaurs.
+explanation_wrong.vi: Chỉ voi ma mút là có sau thời khủng long.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_buffalo` thay bằng `q3_frog` (con ếch, đúng; món nhóm con vật nhỏ ở kệ Chơi), dùng lại hình kệ; `version` 2. Bẫy voi ma mút giữ. Không dùng dương xỉ, vì câu q2 đã hỏi rừng dương xỉ. [CẦN KIỂM] Ếch đã có từ thời khủng long, nói theo nhóm (như món `tray_frog` của kệ Chơi).
 > DOK 2: phân loại trước và sau, có bẫy voi ma mút (to, cổ xưa). Khác phần Chơi ở chỗ bé phải chọn cả cây lẫn con vật trong một lần, và mỗi nhóm chỉ có một món đúng.
 > [CẦN KIỂM] Chuồn chuồn và cây vạn tuế đã có từ thời khủng long, nói theo nhóm; trâu và voi ma mút xuất hiện sau khi khủng long tuyệt chủng.
 
@@ -524,15 +528,14 @@ image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_dragonfly`
 image.alt.en: A dragonfly
 image.alt.vi: Con chuồn chuồn
 
-#### option q3_buffalo
-correct: false
-feedback.en: Buffaloes came much later, close to our time.
-feedback.vi: Trâu có muộn hơn nhiều, gần thời của mình.
-label.en: water buffalo
-label.vi: con trâu
-image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/w1_buffalo`
-image.alt.en: A water buffalo
-image.alt.vi: Con trâu
+#### option q3_frog
+correct: true
+label.en: frog
+label.vi: con ếch
+image.brief: Dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_frog`
+image.alt.en: A frog on a lotus leaf
+image.alt.vi: Con ếch trên lá sen
+> SK-047 (15/11): thay `q3_buffalo`; hình kệ Chơi, không cần hình mới.
 
 #### option q3_cycad
 correct: true
@@ -549,7 +552,8 @@ version: 1
 dok: 2
 prompt.en: Where do people go on this timeline?
 prompt.vi: Trên trục thời gian này, con người nằm ở đâu?
-image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của ô explore_people, designer dựng lại, bỏ voi ma mút và cánh diều: chỉ còn mẩu xám có dấu ngắt, dải nâu thời khủng long có ảnh nhỏ khủng long cổ dài (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), và đoạn trống màu nhạt chạy tới mép phải; không có chấm, không có người, không có chữ
+image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy dày chạy hết bề ngang của ô explore_people, designer dựng lại, bỏ voi ma mút và cánh diều: chỉ còn mẩu xám có dấu ngắt hai vạch chéo ở phần bên phải mẩu xám, dải nâu thời khủng long có ảnh khủng long cổ dài cỡ to đứng trên dải, cắt giống hệt ô explore_people (dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), và đoạn trống màu nhạt chạy tới mép phải; không có chấm, không có người, không có chữ
+> 16/11 (sửa chữ brief theo hình designer dựng lại, mục "designer 16/11"): ô explore_people nay có trục dày và ảnh khủng long to, nên hình câu q4 và ba lựa chọn dựng lại cùng trục, cùng cách cắt; dấu ngắt dời sang phần phải mẩu xám để chấm đỏ của lựa chọn "trước khủng long" không che nó. Brief cũ ghi "ảnh nhỏ khủng long cổ dài". Chỉ đổi ghi chú, không đổi chữ bé đọc hay nghe.
 image.alt.en: A timeline with dinosaur times on it
 image.alt.vi: Trục thời gian có thời khủng long
 hint.en: Find dinosaur times first. Were there people then?
@@ -562,7 +566,7 @@ explanation_wrong.vi: Con người có rất lâu sau khi khủng long tuyệt c
 > Lựa chọn là ba sơ đồ khác nhau rõ ở vị trí chấm đỏ: trên mẩu xám, giữa dải nâu, tận cùng mép phải. Hình câu hỏi không có chấm và không có người, nên không lộ đáp án.
 > Rà chữ tester 9/11 (n3): ba lựa chọn trỏ thẳng về hình gốc, không trỏ qua hình câu q4 (cũng là hình dùng lại), đúng Quy ước hình mục ba.
 > SK-033 (10/11 tối): theo file chọn ảnh, bốn hình q4 là bốn hình ghép riêng, mỗi hình chỉ có một ảnh nguồn là `tray_longneck` (trục thời gian giấy do designer dựng lại). Brief nay đặt `tray_longneck` trong backtick, không đặt `explore_people`: máy coi mọi key trong backtick của brief ghép là một phần của hình, mà `explore_people` còn có voi ma mút và cánh diều.
-> Đáp án đúng ở chỗ thứ ba vì ba lựa chọn xếp theo thứ tự thời gian (trước, cùng, sau); giữ thứ tự này cho dễ đọc trục.
+> Nhãn ba lựa chọn tự nói thời điểm (trước, cùng, sau), nên app xáo thứ tự (SK-047) vẫn đọc được.
 
 #### option q4_before
 correct: false
@@ -570,7 +574,7 @@ feedback.en: Before dinosaurs, there were no people yet.
 feedback.vi: Trước khủng long, chưa hề có con người.
 label.en: Before the dinosaurs
 label.vi: Trước khủng long
-image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh nhỏ khủng long cổ dài, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son trên mẩu xám bên trái, trước dải nâu; không có chữ
+image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh khủng long cổ dài cỡ to đứng trên dải nâu, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son trên mẩu xám bên trái, trước dải nâu, không che dấu ngắt; không có chữ
 image.alt.en: A red dot before dinosaur times
 image.alt.vi: Chấm đỏ ở trước thời khủng long
 
@@ -580,7 +584,7 @@ feedback.en: No person ever saw a living dinosaur.
 feedback.vi: Chưa người nào thấy khủng long còn sống.
 label.en: With the dinosaurs
 label.vi: Cùng thời khủng long
-image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh nhỏ khủng long cổ dài, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son ở giữa dải nâu, ngay cạnh ảnh khủng long cổ dài; không có chữ
+image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh khủng long cổ dài cỡ to đứng trên dải nâu, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son ở giữa dải nâu, ngay cạnh ảnh khủng long cổ dài; không có chữ
 image.alt.en: A red dot in dinosaur times
 image.alt.vi: Chấm đỏ ở giữa thời khủng long
 
@@ -588,7 +592,7 @@ image.alt.vi: Chấm đỏ ở giữa thời khủng long
 correct: true
 label.en: Long after the dinosaurs
 label.vi: Rất lâu sau khủng long
-image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh nhỏ khủng long cổ dài, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son ở tận cùng mép phải của đoạn trống; không có chữ
+image.brief: [sơ đồ ghép ảnh] Cùng trục thời gian giấy của hình câu q4 (có ảnh khủng long cổ dài cỡ to đứng trên dải nâu, dùng lại hình `trai-dat-rat-lau-ve-truoc/tray_longneck`), bản ngang cho ô lựa chọn, thêm một chấm tròn to màu đỏ son ở tận cùng mép phải của đoạn trống; không có chữ
 image.alt.en: A red dot at the far end
 image.alt.vi: Chấm đỏ ở tận cuối trục
 
@@ -823,10 +827,8 @@ image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
   - `recall_from.lesson: be-mat-trai-dat/dong-dat-va-song-than` (w2) trỏ bài năm chủ đề một, đã có id.
   - `misconception: people_with_dinosaurs` → `misconception_id` (đã có id ở `_topic.md`).
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng. Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ hai (rà chữ tester 9/11 n1: trước đây w1 của bài một tới bài bốn đều là thứ ba);
-  - q1: thứ hai; q2: thứ nhất; q3: thứ hai và thứ tư; q4: thứ ba (ba lựa chọn xếp theo thứ tự thời gian); q5: thứ nhất.
-  - Kệ Chơi đã xếp xen ba nhóm và nhóm `limit`, dù app xáo kệ mỗi lượt học.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kệ Chơi). Lưu ý q4: ba lựa chọn từng xếp theo thứ tự thời gian (trước, cùng, sau); app nay xáo, nên nhãn tự nói thời điểm, không dựa vào thứ tự.
+- **q3 (15/11, SK-047):** `multi_choice` ba đáp án đúng, `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn, chưa chạm gì → `start`;
   - chạm Cây dương xỉ, Khủng long cổ dài, Con ếch → đạt (`balanced`);

@@ -174,6 +174,7 @@ Chuỗi nào cũng bắt đầu từ một cây, có ba món, mỗi mắt xích 
 - Cảnh trời chiều không dùng cho câu có con biết bay (chủ đề này không dùng cảnh trời chiều).
 - Hình câu `true_false` không là bằng chứng cho phía sai: bài 2 q2 ("A food chain starts with a plant.") dùng ao làng, không dùng hình chuỗi.
 - Không đặt đáp án ở cùng vị trí với thứ tự bé vừa nghe: bài 3 q4 đọc "Rice, mouse, owl" nên thẻ đúng (chuột) không đặt ở giữa.
+  - **Hết hiệu lực 15/11 (SK-047, app xáo):** biên tập không còn chọn được chỗ thẻ. Khoảng một lần trong ba, thẻ chuột sẽ nằm giữa; câu vẫn dùng được vì bé phải hiểu vai "vừa ăn, vừa là thức ăn". Câu mới thì tránh kể lựa chọn theo một thứ tự trong lời hỏi.
 - Nhóm `limit` luôn `do_son`; nhóm `required` không dùng `do_son`.
 - Phần Chơi: món bẫy giống một nhóm bắt buộc (bài 1 cánh diều giống con chim săn mồi; bài 2 châu chấu lá dừa giống châu chấu; bài 3 chuột đồ chơi giống chuột, tượng cú gỗ giống cú; bài 4 cú và cò là chim như nhóm "Chim"). Món bẫy phải nhìn ảnh là biết đồ vật (luật Explorer số 7): không dùng hoa nhựa, vì ảnh hoa nhựa khó phân biệt với hoa thật.
 
@@ -241,16 +242,17 @@ Chín câu Đúng, bảy câu Sai; bài nào cũng có cả hai. Không câu nà
 
 ### Vị trí đáp án đúng
 
-App không xáo lựa chọn; thứ tự theo `####` trong file.
+Hết hiệu lực 15/11 (SK-047, app xáo). App xáo lựa chọn, thẻ trong kho và thẻ `order_sequence` mỗi lần hiện câu, nên bảng cân vị trí đáp án cũ đã bỏ. Biên tập không cần cân chỗ đáp án đúng nữa. `hint`, `feedback` và giải thích không nhắc vị trí thẻ ("thẻ đầu", "bên trái"). Mỗi câu `order_sequence` vẫn chỉ có một thứ tự đúng.
 
-| Bài | Khởi động `single_choice` | Quiz `single_choice` | Quiz `order_sequence` (thẻ trong file → thứ tự đúng) |
-| --- | --- | --- | --- |
-| 1 | w1 thứ hai (hai) | q1 thứ nhất; q3 thứ ba; q4 thứ hai | — |
-| 2 | w1 thứ hai (hai) | q1 thứ nhất; q3 thứ ba; q5 thứ nhất | q4: chim sẻ, lá cải, sâu → lá cải, sâu, chim sẻ |
-| 3 | w1 thứ nhất (hai) | q1 thứ hai; q3 thứ nhất; q4 thứ ba | q5: ếch, lúa, châu chấu → lúa, châu chấu, ếch |
-| 4 | w1 thứ hai (hai) | q1 thứ ba; q3 thứ ba; q4 thứ nhất | q5: châu chấu, gà mái, lúa → lúa, châu chấu, gà mái |
+Thứ tự đúng của các câu `order_sequence` (để tra, không liên quan vị trí):
 
-Mười sáu câu một đáp án: chỗ thứ nhất sáu, thứ hai năm, thứ ba năm (bốn câu chỉ có hai lựa chọn). Không thẻ `order_sequence` nào nằm sẵn đúng thứ tự trong file; mỗi câu chỉ có một thứ tự đúng.
+| Bài | Câu | Thứ tự đúng |
+| --- | --- | --- |
+| 2 | q4 | lá cải, sâu, chim sẻ |
+| 3 | q5 | lúa, châu chấu, ếch |
+| 4 | q5 | lúa, châu chấu, gà mái |
+
+> SK-047 (15/11, nháp AI): thay bảng vị trí đáp án bằng ghi chú hết hiệu lực; giữ thứ tự đúng của `order_sequence`.
 
 ### Khởi động (giãn cách)
 

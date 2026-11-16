@@ -58,8 +58,7 @@ explanation_correct.en: A windsock swings around when the wind changes.
 explanation_correct.vi: Gió đổi hướng thì ống gió xoay theo.
 explanation_wrong.en: A windsock points the way the wind goes.
 explanation_wrong.vi: Ống gió chỉ theo hướng gió thổi.
-> Ba hình vẽ của bài hai, cùng nét. Đồng hồ treo tường có kim "chỉ" về một phía nên có sức hút. Đáp án ở chỗ thứ nhất.
-
+> Ba hình vẽ của bài hai, cùng nét. Đồng hồ treo tường có kim "chỉ" về một phía nên có sức hút.
 #### option w1_windsock
 correct: true
 label.en: windsock
@@ -102,8 +101,9 @@ image.brief: Dùng lại hình `tray_sea` ở bài `be-mat-trai-dat/dat-va-nuoc-
 image.alt.en: The wide blue sea
 image.alt.vi: Biển xanh rộng
 answer: true
-hint.en: Remember the Tsunami card about Earth.
-hint.vi: Em nhớ lại ô Sóng thần ở bài Động đất và sóng thần nhé.
+hint.en: Remember the lesson about earthquakes and the sea.
+hint.vi: Em nhớ lại bài về động đất và biển nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "Tsunami" · "Sóng thần" trùng chữ của câu khẳng định. Gợi ý mới chỉ trỏ bài cần nhớ.
 explanation_correct.en: Storms bring big waves too, but not tsunamis.
 explanation_correct.vi: Bão cũng gây sóng lớn, nhưng không gây sóng thần.
 explanation_wrong.en: A tsunami can start with a shake under the sea.
@@ -117,7 +117,7 @@ feedback_false.vi: Đáy biển rung lắc đẩy rất nhiều nước lên.
 ### w3
 id: bfd49528-e316-4898-bc73-1330edfce1e7
 format: true_false
-version: 1
+version: 2
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: thoi-tiet-va-thien-tai/nang-mua-gio-may
@@ -127,8 +127,9 @@ image.brief: Dùng lại hình `tray_bending` ở bài `thoi-tiet-va-thien-tai/n
 image.alt.en: Trees leaning in the wind
 image.alt.vi: Hàng cây nghiêng trong gió
 answer: false
-hint.en: Remember Na's idea in the first lesson.
-hint.vi: Em nhớ lại ý của Na ở bài đầu tiên nhé.
+hint.en: Think of wind over the sea, far from trees.
+hint.vi: Em nghĩ tới gió ngoài biển, nơi không có cây nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember Na's idea in the first lesson." · "Em nhớ lại ý của Na ở bài đầu tiên nhé." trỏ đúng lời Na ở câu q6 bài một, chính là câu khẳng định này, mà ở đó Na chưa đúng; nhớ ra là có phán quyết. Gợi ý mới trỏ bằng chứng: ngoài biển không có cây mà vẫn có gió. `version` 2.
 explanation_correct.en: Wind is moving air that pushes the trees.
 explanation_correct.vi: Gió là không khí chuyển động, đẩy cây lay động.
 explanation_wrong.en: The wind moves the trees.
@@ -386,8 +387,7 @@ explanation_correct.vi: Bão thường tới từ tháng sáu đến tháng mư�
 explanation_wrong.en: Many storms come in the rainy season.
 explanation_wrong.vi: Nhiều cơn bão tới vào mùa mưa.
 > 14/11 (SK-044): [CẦN KIỂM] mùa bão ở Việt Nam khoảng tháng sáu tới tháng mười một (biên tập nhớ; miền Bắc sớm hơn, miền Trung muộn hơn). Nếu không chắc, đổi lời giải thích khi đúng thành "Storms bring lots of rain in the rainy season." · "Bão mang theo nhiều mưa trong mùa mưa.".
-> Câu nhớ lại ý chính hai. Gợi ý không gọi tên ô "Mùa mưa bão", vì tên ô có chữ "mùa mưa" của đáp án (`_topic.md`, mục "Khi soạn năm bài"). Ba hình vẽ mới, cùng một cánh đồng. Đáp án ở chỗ thứ hai.
-> Rà chữ tester 11/11 (N7):
+> Câu nhớ lại ý chính hai. Gợi ý không gọi tên ô "Mùa mưa bão", vì tên ô có chữ "mùa mưa" của đáp án (`_topic.md`, mục "Khi soạn năm bài"). Ba hình vẽ mới, cùng một cánh đồng.> Rà chữ tester 11/11 (N7):
 > - hình câu hỏi đổi từ ảnh cơn bão nhìn từ vũ trụ sang cảnh làng ven biển trong bão của ô Bão (cảnh có bão, không nói mùa); gợi ý cũ "Remember the picture of a storm from space." trỏ đúng tấm ảnh đang hiện ở câu hỏi, nay trỏ vào dấu hiệu của mùa mưa;
 > - lựa chọn "the Tet holiday" · "dịp Tết" đổi thành "the whole year" · "quanh năm": Tết nằm trong mùa khô, nên hai lựa chọn sai cũ cùng một lý do, và một dịp lễ đứng cạnh hai mùa. Lựa chọn mới bắt ý sai "bão tới lúc nào cũng được", khác lý do với "mùa khô".
 > [CẦN KIỂM] Mùa bão trùng mùa mưa (ở miền Trung, mùa mưa lệch về cuối năm); từ khoảng tháng một tới tháng tư rất ít khi có bão vào Việt Nam.
@@ -424,55 +424,55 @@ image.alt.vi: Cánh đồng ấy qua các mùa trong năm
 ### q2
 id: 8bd3bac7-0207-40ab-9f16-375ca18bd8b7
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `q1_storm` ở bài `khung-long/vi-sao-khung-long-bien-mat`. Từ khoá tìm ảnh (EN): cyclone eye from space ocean
-image.alt.en: A big storm seen from space
-image.alt.vi: Cơn bão lớn nhìn từ vũ trụ
-sentence.en: In a storm, {1} can bend the trees low.
-sentence.vi: Khi có bão, {1} có thể làm cây nghiêng rạp.
-answers: q2_wind
-hint.en: Remember the Storm card.
-hint.vi: Em nhớ lại ô Bão nhé.
+image.alt.en: Swirling clouds over the sea, seen from space
+image.alt.vi: Mây xoáy trên biển, nhìn từ vũ trụ
+sentence.en: A {1} brings strong wind and heavy rain.
+sentence.vi: Thứ mang tới gió mạnh và mưa to là {1}.
+answers: q2_storm
+hint.en: Think of the wildest weather in the rainy season.
+hint.vi: Em nghĩ tới kiểu thời tiết dữ dội nhất mùa mưa nhé.
 explanation_correct.en: Storm wind can be strong enough to snap branches.
 explanation_correct.vi: Gió bão mạnh tới mức có thể làm gãy cành.
-explanation_wrong.en: Moving air pushes the trees low.
-explanation_wrong.vi: Không khí chuyển động đẩy cây nghiêng.
-> Câu nhớ lại ý chính một (bão mang gió rất mạnh) và ví dụ "cây cối nghiêng ngả" của ô Bão, nối với bài một (gió là không khí chuyển động, gió đẩy cây). Hình câu hỏi là cơn bão nhìn từ vũ trụ (không cho thấy cây hay gió). Thẻ đúng ở chỗ thứ hai.
-> Rà chữ tester 11/11 (N2): câu cũ "A storm brings strong {1} and heavy rain." có ba thẻ gió (món bắt buộc của kệ), rung lắc và nắng (hai món bẫy của kệ), nên bé chạm thẻ còn lại theo trí nhớ trò chơi; bản VI "nắng rất mạnh" còn tự loại vì không tự nhiên. Lệch đề xuất của tester (thay nắng bằng mây, giữ câu cũ): với câu cũ, "mây rất mạnh" cũng không tự nhiên ở bản VI. Nay ba thẻ là ba món bắt buộc của kệ (gió, mưa, mây), bão đều mang tới cả ba, nên bé không loại được thẻ nào bằng trí nhớ; câu mới đọc xuôi với cả ba thẻ ở hai thứ tiếng, và chỉ gió làm cây nghiêng rạp. Thẻ gió dùng hình lá bay (`tray_leaves`), không dùng hình cây nghiêng rạp (`tray_bend`), vì hình đó vẽ đúng chữ của câu.
-> [CẦN KIỂM] Mưa to có thể làm cành nhỏ, cây lúa trĩu xuống, nhưng làm cả hàng cây nghiêng rạp là gió.
+explanation_wrong.en: A storm brings strong wind and heavy rain together.
+explanation_wrong.vi: Bão mang gió mạnh và mưa to cùng một lúc.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (storm, season, forecast); câu cũ điền "wind". Câu mới là câu ví dụ của từ `storm`, nhớ lại ý chính một. Không dùng "forecast" (câu q3, q5 đã hỏi dự báo) hay "season" (câu q1 đã hỏi mùa mưa). Hai thẻ sai: ngày nắng (món bẫy của kệ Chơi, đúng vai sai) và cầu vồng (gắn với mưa nên có sức hút, nhưng đến khi trời đã tạnh). Câu EN dùng "A", đọc đúng với cả ba thẻ; câu VI đặt chỗ trống cuối câu. `alt` hình câu hỏi đổi để không có chữ "storm" (hình ẩn ở A2 vì mọi thẻ từ có hình). `version` 2; ba thẻ cũ (mưa, gió, mây) bỏ.
+> (Bản trước 15/11: câu "In a storm, {1} can bend the trees low." với ba thẻ gió, mưa, mây; ghi chú rà chữ tester 11/11 N2 về câu đó không còn áp.)
 
-#### bank q2_rain
-label.en: rain
-label.vi: mưa
-feedback.en: Rain soaks the trees, but does not bend them.
-feedback.vi: Mưa làm cây ướt, nhưng không làm cây nghiêng.
-image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/dong-dat-va-song-than`. Từ khoá tìm ảnh (EN): heavy rain house garden
-image.alt.en: Heavy rain
-image.alt.vi: Mưa to
+#### bank q2_storm
+label.en: storm
+label.vi: bão
+image.brief: Dùng lại hình `explore_storm`.
+image.alt.en: A seaside village in a storm
+image.alt.vi: Làng ven biển trong cơn bão
 
-#### bank q2_wind
-label.en: wind
-label.vi: gió
-image.brief: Dùng lại hình `tray_leaves`.
-image.alt.en: Leaves flying in the wind
-image.alt.vi: Lá bay trong gió
+#### bank q2_sunny
+label.en: sunny day
+label.vi: ngày nắng
+feedback.en: A sunny day has no heavy rain.
+feedback.vi: Ngày nắng thì không có mưa to.
+image.brief: Dùng lại hình `tray_sun`. Từ khoá tìm ảnh (EN): bright sun blue sky few clouds
+image.alt.en: A bright sun in a blue sky
+image.alt.vi: Mặt Trời sáng chói trên bầu trời xanh
 
-#### bank q2_clouds
-label.en: clouds
-label.vi: mây
-feedback.en: Clouds stay high in the sky, far from the trees.
-feedback.vi: Mây ở trên cao, cách xa ngọn cây.
-image.brief: Dùng lại hình `tray_dark`.
-image.alt.en: Dark clouds over the rice fields
-image.alt.vi: Mây đen kéo tới trên cánh đồng lúa
+#### bank q2_rainbow
+label.en: rainbow
+label.vi: cầu vồng
+feedback.en: A rainbow comes after rain, when the sun shines.
+feedback.vi: Cầu vồng hiện ra sau mưa, khi có nắng.
+image.brief: [hình vẽ] Một cầu vồng cong trên cánh đồng lúa sau cơn mưa, trời còn vài đám mây xám, nắng chiếu từ phía sau người xem, vẽ rộng; cây đứng yên, không có gió mạnh; không có người, không có chữ; cùng nét với hình vẽ ô Bão và món nắng của kệ Chơi. Vẽ riêng để ba thẻ cùng là hình vẽ (như thẻ ếch ở bài năm); nếu có ảnh cầu vồng hợp giấy phép mà hai thẻ kia cũng là ảnh thì dùng ảnh. Từ khoá tìm ảnh (EN): rainbow over rice field after rain
+image.alt.en: A rainbow over the fields
+image.alt.vi: Cầu vồng trên cánh đồng
+> SK-047 (15/11): hình mới duy nhất của câu; hai thẻ kia dùng lại hình của bài.
 
 ### q3
 id: f59429bf-3e41-4ddf-94fc-2b800f938b20
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: How can Nam's family find out a storm is coming?
 prompt.vi: Nhà Nam biết tin bão tới bằng cách nào?
@@ -485,11 +485,11 @@ hint.en: Who watches storms far away?
 hint.vi: Ai theo dõi được những cơn bão ở rất xa?
 explanation_correct.en: Forecasts can warn families days before a storm.
 explanation_correct.vi: Dự báo có thể báo tin bão trước vài ngày.
-explanation_wrong.en: TV news and the village loudspeaker share forecasts.
-explanation_wrong.vi: Ti vi và loa phát thanh làng đưa tin dự báo.
+explanation_wrong.en: TV, radio and the village loudspeaker share forecasts.
+explanation_wrong.vi: Ti vi, đài và loa phát thanh làng đưa tin dự báo.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_umbrella` thay bằng `q3_radio` (bản tin trên đài, đúng; ô Dự báo có ví dụ "on TV, radio and phones"), dùng lại hình chiếc đài của bài năm; `version` 2. Bẫy còn lại là nhiệt kế (bé vừa học ở bài hai). Giải thích khi sai sửa theo.
 > DOK 2: phân biệt dụng cụ đo thời tiết ở nhà (nhiệt kế: chỉ cho biết bây giờ ở đây) với tin dự báo (cho biết bão ở xa sắp tới). Nhiệt kế là lựa chọn sai có sức hút vì bé vừa học ở bài hai. Loa phát thanh là tình huống mới, rất quen ở làng quê Việt Nam.
 > [CẦN KIỂM] Loa phát thanh của xã, phường thông báo tin bão.
-> Đáp án ở chỗ thứ nhất và thứ hai.
 
 #### option q3_tv
 correct: true
@@ -517,15 +517,14 @@ image.brief: Dùng lại hình `explore_thermometer` ở bài `thoi-tiet-va-thie
 image.alt.en: A thermometer in the shade
 image.alt.vi: Nhiệt kế treo trong bóng râm
 
-#### option q3_umbrella
-correct: false
-feedback.en: An umbrella keeps rain off, but brings no news.
-feedback.vi: Cái ô che mưa, nhưng không báo tin gì.
-label.en: open umbrella
-label.vi: cái ô đang mở
-image.brief: Dùng lại hình `tray_umbrella` ở bài `thoi-tiet-va-thien-tai/do-thoi-tiet`.
-image.alt.en: An open umbrella
-image.alt.vi: Chiếc ô đang mở
+#### option q3_radio
+correct: true
+label.en: radio news
+label.vi: bản tin trên đài
+image.brief: Dùng lại hình `q2_news` ở bài `thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu`.
+image.alt.en: A radio on a table
+image.alt.vi: Chiếc đài trên bàn
+> SK-047 (15/11): thay `q3_umbrella`; hình vẽ chiếc đài của bài năm (cùng nét các hình vẽ của bài), không cần hình mới. Nhãn hai từ EN, bốn tiếng VI như ba nhãn kia.
 > Bốn nhãn cùng dạng cụm danh từ số ít: EN hai chữ, VI bốn tiếng ("bản tin trên ti vi", "loa phát thanh làng", "nhiệt kế ở nhà", "cái ô đang mở"), để hai đáp án không nổi bật bằng độ dài. Rà chữ tester 11/11 (N3): hai nhãn VI đúng trước dài sáu và năm tiếng ("bản tin dự báo trên ti vi", "loa phát thanh của làng"); bảng Tên gọi ở `_topic.md` sửa theo thành "loa phát thanh làng".
 
 ### q4
@@ -545,8 +544,7 @@ explanation_correct.vi: Gió mạnh và mưa to cùng lúc là có bão.
 explanation_wrong.en: A storm brings heavy rain and wind that bends trees.
 explanation_wrong.vi: Bão mang mưa to và gió làm cây nghiêng rạp.
 > DOK 2: so sánh ba cảnh của cùng một khoảng sân để phân biệt bão với mưa thường và với gió thường. Hình câu hỏi là khoảng sân lúc trời yên, để bé so ba lựa chọn với cùng một chỗ. Ba lựa chọn là ba hình vẽ mới (không dùng lại hình ô "Bão"), nên đáp án không phải hình duy nhất bé đã thấy.
-> Ba nhãn cùng khuôn hai vế "trời/mưa, cây" (rút kinh nghiệm SK-037 N4). Đáp án ở chỗ thứ ba.
-
+> Ba nhãn cùng khuôn hai vế "trời/mưa, cây" (rút kinh nghiệm SK-037 N4).
 #### option q4_light
 correct: false
 feedback.en: Light rain and still trees mean no strong wind.
@@ -588,8 +586,9 @@ image.alt.en: A blue sky
 image.alt.vi: Bầu trời xanh
 > Rà chữ tester 11/11 (n7): hình câu hỏi cũ là khoảng sân `q3`, dùng ở ba màn liền nhau (q3, q4, q5). Nay là ảnh bầu trời xanh (đúng tình huống "hôm nay trời xanh"). Lệch đề xuất của tester (dùng `explore_forecast`): ảnh ti vi dự báo chính là bằng chứng mà gợi ý "ô Dự báo" trỏ tới, trái Quy ước hình mục bảy.
 answer: false
-hint.en: Remember the Forecast card.
-hint.vi: Em nhớ lại ô Dự báo nhé.
+hint.en: Where do big storms come from?
+hint.vi: Những cơn bão lớn thường từ đâu kéo tới?
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Dự báo, mà câu của ô ("theo dõi bão và báo sớm") gần như là lời bác bỏ. Gợi ý mới hỏi một mắt xích (bão từ biển xa kéo tới), bé tự suy ra trời hôm nay chưa cho biết được.
 explanation_correct.en: Listen to the forecast, because storms come from far away.
 explanation_correct.vi: Em nghe dự báo, vì bão từ rất xa kéo tới.
 explanation_wrong.en: The weather can change fast.
@@ -620,8 +619,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: true
-hint.en: Remember the card about the storm's eye.
-hint.vi: Em nhớ lại ô Mắt bão nhé.
+hint.en: Think of a storm seen from space.
+hint.vi: Em nghĩ tới cơn bão nhìn từ vũ trụ nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Mắt bão, mà ví dụ của ô ("rồi gió mạnh lại thổi tới") là bằng chứng quyết định. Gợi ý mới chỉ vào hình bé đã thấy (mây xoáy quanh một vùng giữa), bé tự nhớ ra mắt bão và tự suy ra việc nên làm.
 explanation_correct.en: The calm eye passes, then strong wind comes back.
 explanation_correct.vi: Mắt bão đi qua, rồi gió mạnh lại thổi tới.
 explanation_wrong.en: The wind can come back strongly after the calm.
@@ -737,7 +737,8 @@ image.alt.vi: Cơn bão nhìn từ trên cao, ở giữa trời quang
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `calm_means_storm_over`.
 - **Tham chiếu:** chạy `ids` cho bài một, bài hai trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; q2 thẻ thứ hai; q3 thứ nhất và thứ hai; q4 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "storm", `version` 2; thẻ `q2_rainbow` cần hình mới.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Cây nghiêng rạp, Mưa như trút nước, Mây đen kéo tới → `balanced`;

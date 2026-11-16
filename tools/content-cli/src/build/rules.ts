@@ -35,6 +35,10 @@ export type Authoring = {
   misconception_items: Range;
   min_formats: number;
   max_words_en?: number;
+  /** SK-047: in one topic, at most max(1, floor(this × n)) of the n multi_choice items share a number of right answers. */
+  multi_choice_correct_spread?: number;
+  /** SK-047 (wave 1): every fill_blank_bank of the quiz puts a word of the lesson's vocab in a blank (warning). */
+  vocab_item_uses_lesson_word?: boolean;
 };
 
 export function authoringOf(rules: Rules, group: string): Authoring | undefined {

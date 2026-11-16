@@ -119,21 +119,23 @@ struct ExplorerQuestionStep: View {
     }
 
     private var nextLabel: LocalizedStringKey {
-        guard isLast else { return "lesson.next" }
-        return phase == .warmup ? "lesson.warmup.done" : "lesson.explorer.to_reward"
+        // SK-047: after the last quiz question comes Tổng kết, not the reward.
+        guard isLast, phase == .warmup else { return "lesson.next" }
+        return "lesson.warmup.done"
     }
 
     // MARK: Answers
 
     @ViewBuilder private var answers: some View {
         switch item.answer {
-        case .singleChoice(let choice):
-            choiceCards(choice.options)
+        case .singleChoice:
+            // SK-047: in the attempt's order, not the content's.
+            choiceCards(session.shownOptions(item))
         case .trueFalse(let tf):
             trueFalseCards(tf)
         case .orderSequence(let order):
             ExplorerOrderSequence(
-                order: order, status: status, tried: session.tries(for: item, in: phase),
+                order: order, cards: session.shownOrderCards(item), status: status, tried: session.tries(for: item, in: phase),
                 naming: naming, mode: mode,
                 onPlace: { key in speech?.play(session.utterance("word.\(key)", LessonSession.answerName(item, key: key))) },
                 onComplete: { keys in answer(.order(keys), pick: keys.joined(separator: ","), name: keys.last.flatMap { LessonSession.answerName(item, key: $0) }) }

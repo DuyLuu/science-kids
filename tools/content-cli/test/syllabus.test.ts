@@ -14,7 +14,7 @@ import { DEFAULT_RULES_FILE } from "../src/paths.ts";
 import { runMarkdownValidate } from "../src/markdown/command.ts";
 import { contentIndex } from "../src/markdown/files.ts";
 import { SYLLABUS_CODES } from "../src/markdown/syllabus.ts";
-import { CLI_ROOT, rulesFileWithoutImageChecks } from "./helpers.ts";
+import { CLI_ROOT, rulesFileWithoutLaterWarnings } from "./helpers.ts";
 
 const cli = path.join(CLI_ROOT, "src", "cli.ts");
 const REPO = path.resolve(CLI_ROOT, "..", "..");
@@ -78,7 +78,7 @@ function validate(root: string, inputs: string[] = ["."]): { status: number; lin
     const status = runMarkdownValidate({
       inputs: inputs.map((input) => path.join(root, input)),
       contentRoot: root,
-      rulesFile: rulesFileWithoutImageChecks(),
+      rulesFile: rulesFileWithoutLaterWarnings(),
       minAppVersion: "0.1.0",
       cwd: root,
       display: (file) => path.relative(root, file) || ".",

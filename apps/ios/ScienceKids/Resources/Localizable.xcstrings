@@ -2773,24 +2773,6 @@
         }
       }
     },
-    "lesson.explorer.to_reward" : {
-      "comment" : "Explorer quiz: VoiceOver label of the arrow button after the last question (icon only, SK-040).",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "See your reward"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Xem phần thưởng"
-          }
-        }
-      }
-    },
     "lesson.explorer.true" : {
       "comment" : "Explorer quiz: VoiceOver label of the nod card (true), which shows no word (SK-026 D2, SK-040).",
       "extractionState" : "manual",
@@ -2859,6 +2841,42 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gợi ý"
+          }
+        }
+      }
+    },
+    "lesson.hint.button" : {
+      "comment" : "SK-047: VoiceOver label of the hint button (bulb, icon only) beside the question's speaker. Not read aloud.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hint"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gợi ý"
+          }
+        }
+      }
+    },
+    "lesson.hint.opened_a11y" : {
+      "comment" : "SK-047: VoiceOver value of the hint button once the hint is open.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã mở"
           }
         }
       }
@@ -3151,6 +3169,24 @@
         }
       }
     },
+    "lesson.listen.key_point" : {
+      "comment" : "SK-047 Tổng kết: speaker of a key point card (icon only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen to this idea"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe ý này"
+          }
+        }
+      }
+    },
     "lesson.listen.message" : {
       "comment" : "Chơi: speaker button of the mascot's message (icon only).",
       "extractionState" : "manual",
@@ -3165,6 +3201,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nghe lời nhắn"
+          }
+        }
+      }
+    },
+    "lesson.listen.myth" : {
+      "comment" : "SK-047 Tổng kết: speaker of the \"wrong idea → right idea\" card (icon only); it reads both.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hear both ideas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe ý sai và ý đúng"
           }
         }
       }
@@ -3345,6 +3399,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tiếp"
+          }
+        }
+      }
+    },
+    "lesson.order.locked_a11y" : {
+      "comment" : "SK-047: VoiceOver value of an order place whose card was right on the last try and stays locked.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the right place, locked"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đúng chỗ, đã khoá"
           }
         }
       }
@@ -3547,24 +3619,6 @@
         }
       }
     },
-    "lesson.quiz.done" : {
-      "comment" : "Button after the last quiz question.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "See the result"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Xem kết quả"
-          }
-        }
-      }
-    },
     "lesson.quiz.progress_a11y %lld %lld" : {
       "comment" : "VoiceOver label of the quiz squares.",
       "extractionState" : "manual",
@@ -3579,6 +3633,168 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Câu %1$lld trên %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.recap.goal_a11y" : {
+      "comment" : "SK-047 Tổng kết: VoiceOver label of the check seal before the lesson's \"I can…\".",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lesson goal"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mục tiêu bài"
+          }
+        }
+      }
+    },
+    "lesson.recap.key_point_a11y %lld %lld" : {
+      "comment" : "SK-047 Tổng kết: VoiceOver label of a key point card: its number, the number of key points.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idea %1$lld of %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ý %1$lld trên %2$lld"
+          }
+        }
+      }
+    },
+    "lesson.recap.learned_a11y" : {
+      "comment" : "SK-047 Tổng kết page 1: hidden heading for VoiceOver only (not printed, not read aloud).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What I learned"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em đã học"
+          }
+        }
+      }
+    },
+    "lesson.recap.na_right_a11y" : {
+      "comment" : "SK-047 Tổng kết: VoiceOver label of Na's face with the nod (her line was right).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na said this. Na was right"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na nói, Na đúng"
+          }
+        }
+      }
+    },
+    "lesson.recap.na_wrong_a11y" : {
+      "comment" : "SK-047 Tổng kết: VoiceOver label of Na's face with the shake (her line was not right).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na said this. Na was not right"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na nói, Na chưa đúng"
+          }
+        }
+      }
+    },
+    "lesson.recap.not_true_a11y" : {
+      "comment" : "SK-047 Tổng kết, Explorer: VoiceOver label of the shake on the question's photo.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not true"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa đúng"
+          }
+        }
+      }
+    },
+    "lesson.recap.remember_a11y" : {
+      "comment" : "SK-047 Tổng kết page 2: hidden heading for VoiceOver only (not printed, not read aloud).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remember"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhớ nhé"
+          }
+        }
+      }
+    },
+    "lesson.recap.steps_done_a11y" : {
+      "comment" : "SK-047 Tổng kết: VoiceOver label of the four step squares, all done.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All four steps are done"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bài đã xong cả bốn bước"
+          }
+        }
+      }
+    },
+    "lesson.recap.to_reward" : {
+      "comment" : "SK-047 Tổng kết page 2: the arrow-only button to the reward (VoiceOver).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get my reward"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhận thưởng"
           }
         }
       }

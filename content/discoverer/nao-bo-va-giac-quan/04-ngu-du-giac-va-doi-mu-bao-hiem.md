@@ -126,8 +126,9 @@ image.brief: Dùng lại hình `q1` ở bài `ho-hap/vi-sao-ta-phai-tho`
 image.alt.en: A child asleep under a mosquito net
 image.alt.vi: Bạn nhỏ ngủ trong màn
 answer: false
-hint.en: Remember the All the time picture in the first lesson.
-hint.vi: Em nhớ lại ô Suốt ngày đêm ở bài đầu tiên nhé.
+hint.en: Think about what your heart does at night.
+hint.vi: Em nghĩ xem ban đêm tim em làm gì nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô "All the time" · "Suốt ngày đêm", tên ô đã là lời bác bỏ. Gợi ý mới chỉ vào bằng chứng (tim vẫn đập), bé tự nối với bộ não.
 explanation_correct.en: Your brain works all night, keeping your heart beating.
 explanation_correct.vi: Bộ não làm việc suốt đêm, giữ cho tim em đập.
 explanation_wrong.en: Your brain keeps working while you sleep.
@@ -429,7 +430,7 @@ explanation_correct.vi: Quai cài vừa khít giữ mũ chặt, cả khi xe xóc
 explanation_wrong.en: Click the strap under your chin.
 explanation_wrong.vi: Em cài quai mũ dưới cằm.
 > Hình câu hỏi vẽ từ phía sau, không thấy khoá quai, nên không lộ đáp án. Ba thẻ từ là ba bộ phận quen của chuyến đi xe, cùng là hình vẽ cận (theo hình designer 10/11), không có tay người.
-> Rà chữ tester 10/11: thẻ đúng chuyển xuống thứ ba (N1). Thẻ `q2_strap` dùng một hình mới (khoá quai đã cài, không có tay), không dùng lại hình ô `explore_strap`, để đáp án không phải hình duy nhất bé đã gặp ở phần Học (N2).
+> Rà chữ tester 10/11: thẻ `q2_strap` dùng một hình mới (khoá quai đã cài, không có tay), không dùng lại hình ô `explore_strap`, để đáp án không phải hình duy nhất bé đã gặp ở phần Học (N2).
 
 #### bank q2_bell
 label.en: bell
@@ -459,7 +460,7 @@ image.alt.vi: Quai mũ bảo hiểm đã cài
 ### q3
 id: 11461a24-84bd-45d1-8d31-72a76f5f628f
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones are good for your brain?
 prompt.vi: Những việc nào tốt cho bộ não?
@@ -470,21 +471,21 @@ image.alt.en: A head with the brain inside the skull
 image.alt.vi: Đầu một bạn nhỏ, bộ não nằm trong hộp sọ
 hint.en: Think of the three groups in today's game.
 hint.vi: Em nhớ lại ba nhóm ở trò chơi hôm nay nhé.
-explanation_correct.en: Reading teaches your brain, and sleep helps it remember.
-explanation_correct.vi: Đọc sách giúp não học, giấc ngủ giúp não nhớ.
-explanation_wrong.en: Reading and an early bedtime are good for your brain.
-explanation_wrong.vi: Đọc sách và đi ngủ sớm đều tốt cho bộ não.
-> DOK 2: phân loại, ôn bài một (đọc sách) và bài này (giấc ngủ, mũ bảo hiểm). Bốn ảnh dùng lại kệ Chơi, cùng là ảnh chụp.
+explanation_correct.en: Reading, sleep and a clicked helmet all help your brain.
+explanation_correct.vi: Đọc sách, ngủ đủ và cài quai mũ đều giúp bộ não.
+explanation_wrong.en: A helmet guards your brain only when you wear it.
+explanation_wrong.vi: Mũ chỉ che chở bộ não khi em đội lên đầu.
+> DOK 2: phân loại, ôn bài một (đọc sách) và bài này (giấc ngủ, mũ bảo hiểm). Bốn hình dùng lại kệ Chơi.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng, mỗi nhóm của trò chơi một đáp án (luật phân bố MC của chủ đề). Lựa chọn sai `q3_games` thay bằng `q3_strap` (đã cài quai mũ, đúng), dùng lại hình kệ Chơi; `version` 2. Bẫy còn lại là mũ treo trên tay lái, đặt cạnh quai đã cài. Giải thích khi sai nay nói lý do của bẫy đó.
 
-#### option q3_games
-correct: false
-feedback.en: Late games keep your brain awake when it needs sleep.
-feedback.vi: Chơi khuya làm bộ não không được ngủ đủ.
-label.en: games late at night
-label.vi: chơi điện tử tới khuya
-image.brief: Dùng lại hình `ngu-du-giac-va-doi-mu-bao-hiem/tray_late_games`
-image.alt.en: A phone glowing in a dark room
-image.alt.vi: Điện thoại sáng trong phòng tối
+#### option q3_strap
+correct: true
+label.en: a clicked helmet strap
+label.vi: cài quai mũ bảo hiểm
+image.brief: Dùng lại hình `ngu-du-giac-va-doi-mu-bao-hiem/explore_strap`
+image.alt.en: Hands clicking a helmet strap
+image.alt.vi: Đôi tay cài quai mũ bảo hiểm
+> SK-047 (15/11): thay `q3_games`; cùng hình với món `tray_strap` (hình gốc `explore_strap`), không cần hình mới.
 
 #### option q3_book
 correct: true
@@ -629,8 +630,9 @@ answer: true
 image.brief: [ảnh] Một con ngõ nhỏ ở Việt Nam buổi sáng, vắng người, hai bên là nhà thấp và cây xanh, chụp dọc theo ngõ; không có người, không có xe có biển số, không có biển hiệu, số nhà hay chữ. Khác hình `explore_helmet` (không có xe, không có người). Designer 10/11 đã cắt tấm biển nhỏ trên cổng; nên mở ảnh gốc xem lại. Từ khoá tìm ảnh (EN): narrow alley Vietnam morning quiet
 image.alt.en: A quiet little alley
 image.alt.vi: Con ngõ nhỏ vắng người
-hint.en: Is a short ride always safe?
-hint.vi: Đi gần thì có chắc chắn an toàn không em?
+hint.en: Think of the bumps and traffic on a short ride.
+hint.vi: Em nghĩ tới ổ gà, xe cộ trên quãng đường ngắn nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời ("không") gần như quyết định đáp án. Gợi ý mới chỉ vào điều có thật trên đường, không doạ, không nhắc tai nạn.
 explanation_correct.en: Wear a helmet on every ride, short or long.
 explanation_correct.vi: Đi gần hay đi xa, em đều đội mũ bảo hiểm.
 explanation_wrong.en: Short rides need a helmet, too.
@@ -743,7 +745,7 @@ image.alt.vi: Lớp xốp bên trong mũ bảo hiểm
   - Khởi động: `single_choice` (w1 ôn bài ba), `true_false` (w2 ôn *Bề mặt Trái Đất*, đáp án Đúng; w3 ôn bài một, đáp án Sai).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Đúng). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `helmet_only_long_rides`.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ nhất; q4 thứ ba; q5 thứ hai; q3 thứ hai và thứ tư; thẻ đúng của q2 thứ ba (rà chữ 10/11, N1).
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Tham chiếu:** `recall_from.lesson` trỏ `nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao` (w1), `be-mat-trai-dat/dong-dat-va-song-than` (w2), `nao-bo-va-giac-quan/nao-dieu-khien-co-the` (w3); cả ba đã có id.
 - **Key đổi sau rà chữ 10/11:** q1 `q1_hat` thành `q1_cap`; q5 `q5_games` thành `q5_tv`.
 - **Màn Chơi, ví dụ để kiểm:**

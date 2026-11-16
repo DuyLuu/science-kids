@@ -218,7 +218,7 @@ note: Sau mưa to, trẻ hay lội nước ngập trên đường, trong ngõ. S
 | `khung-long/trai-dat-rat-lau-ve-truoc` `q2_rice`: ruộng lúa xanh | ảnh | 4 (từ `crop`) |
 | `nang-mua-gio-may/explore_cloudy` (ảnh); `tray_puddle`, `tray_shadow`, `tray_kite`, `tray_bending` (hình vẽ) | ảnh, hình vẽ | 1 (trong bài); 2 (câu w1); 3 (câu w3); 4 (câu w2, `explore_cloudy`; rà chữ tester 11/11, n11) |
 | `do-thoi-tiet/explore_thermometer`, `explore_rain_gauge`, `explore_windsock`, `tray_umbrella`, `tray_fan` | hình vẽ | 1 (kệ Chơi `tray_fan`); 2 (trong bài); 3 (câu w1, q3); 5 (câu w1: ba hình dụng cụ) |
-| `nao-bo-va-giac-quan/nao-dieu-khien-co-the` `tray_clock`: đồng hồ treo tường không chữ số | hình vẽ | 2 (q3_clock); 3 (w1_clock) |
+| `nao-bo-va-giac-quan/nao-dieu-khien-co-the` `tray_clock`: đồng hồ treo tường không chữ số | hình vẽ | 3 (w1_clock); bài 2 q3_clock đã bỏ 15/11 (SK-047) |
 | `mua-mua-bao/explore_storm`, `explore_forecast`, `tray_bend`, `tray_leaves`, `tray_dark`, `q3`, `q4_storm` | hình vẽ | 1 (câu q3, `tray_dark`); 3 (trong bài); 4 (câu w1); 5 (Học, kệ Chơi, câu q1, q2, q3, q4, q5) |
 | `lu-lut-va-han-han/q6` | hình vẽ | 4 (trong bài); 5 (câu w2) |
 
@@ -245,21 +245,11 @@ note: Sau mưa to, trẻ hay lội nước ngập trên đường, trong ngõ. S
 
 Tám câu Đúng, tám câu Sai. Câu sáu là Sai, Sai, Đúng, Đúng, Sai. Mỗi bài có cả Đúng lẫn Sai. Hai câu sáu Na nói đúng có hai kiểu khác nhau (bài ba: Na thận trọng; bài bốn: Na lập luận từ dấu hiệu), để bé không học mẹo "Na cẩn thận thì Na đúng". Câu `true_false` thêm sau này thì giữ cân bằng này.
 
-**Vị trí đáp án đúng** (app không xáo lựa chọn, không xáo thẻ từ; thứ tự theo `####` trong file; xáo tay, không theo chu kỳ)
+**Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ). Bảng cân vị trí bằng tay đã bỏ.
 
-| Bài | Câu một đáp án (`single_choice`) | Nhiều đáp án (`multi_choice`, bốn lựa chọn) | Thẻ đúng của câu điền từ (`fill_blank_bank`, ba thẻ) |
-| --- | --- | --- | --- |
-| 1 | w1 2, w2 3, q1 1, q4 1 | q3: 1, 3 | q2: 3 |
-| 2 | w1 3, q1 2, q4 3 | q3: 2, 4 | q2: 1 |
-| 3 | w1 1, q1 2, q4 3 | q3: 1, 2 | q2: 2 |
-| 4 | w2 3, q1 2, q4 1 | q3: 3, 4 | w1: 1; q2: 3 |
-| 5 | w1 2, q1 1, q4 2 | q3: 2, 3 | q2: 3 |
+**Câu `multi_choice` (SK-047, 15/11):** trong chủ đề, không số đáp án đúng nào chiếm quá một nửa số câu MC. Năm câu q3: bài 1 hai đúng, bài 2 ba đúng, bài 3 ba đúng, bài 4 hai đúng, bài 5 một đúng.
 
-- Mười sáu câu `single_choice`: thứ nhất năm, thứ hai sáu, thứ ba năm.
-- Sáu câu điền từ (thẻ đúng): thứ nhất hai, thứ hai một, thứ ba ba.
-- Tính chung hai loại (hai mươi hai câu): thứ nhất bảy, thứ hai bảy, thứ ba tám.
-- Câu w1 của năm bài: 2, 3, 1, 1 (thẻ), 2.
-- Câu nhiều đáp án năm bài ở năm cặp khác nhau.
+**Câu Từ mới (SK-047, 15/11):** câu `fill_blank_bank` ở Quiz điền một từ `tier: core` của chính bài: bài 1 "clouds", bài 2 "rain gauge", bài 3 "storm", bài 4 "drought", bài 5 "warning". Luật "không hình nào vừa đúng vừa sai" vẫn giữ: thẻ sai dùng lại hình đã là lựa chọn sai ở câu khác (cái ô, phích nước ở bài 2) hoặc món bẫy của kệ.
 
 **Khi soạn năm bài** (áp cho cả năm bài; rút kinh nghiệm SK-031, SK-032, SK-033, SK-036, SK-037)
 

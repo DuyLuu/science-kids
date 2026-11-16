@@ -161,8 +161,8 @@
       "same_as": "learn.explore.explore_head",
       "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the"
     },
-    "q3.q3_games": {
-      "same_as": "tray.tray_late_games"
+    "q3.q3_strap": {
+      "same_as": "learn.explore.explore_strap"
     },
     "q3.q3_book": {
       "same_as": "tray.tray_book",

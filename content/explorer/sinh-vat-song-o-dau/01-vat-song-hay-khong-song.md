@@ -620,7 +620,7 @@ image.alt.vi: Bụi tre xanh
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (living thing, non-living). Chơi `build_tray` hai chỗ, hai nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Đúng). Quiz `single_choice` (q1, q3, q4, q5, q6), `true_false` (q2 Sai). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`plants_not_alive`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ hai; q3 thứ ba; q4 thứ nhất; q5 thứ hai; q6 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** Con gà mái, Cây non → `balanced` (nhóm `limit` nay tên "Non-living" · "Vật không sống"); Con ếch, Khủng long đồ chơi → `has_limited`; Con gà mái, Con ếch → `missing.tray_plant`.
 - **Câu hỏi chiều phủ định** (rà chữ tester 14/11 n4): q4 "Which one is non-living?" · "Cái nào là vật không sống?" không viết khẳng định được; đề xuất ios-dev cho giọng đọc chậm và nhấn "non-living" · "không" (như SK-041 13/11 n13).
 - **Thẻ thưởng:** bộ mới `set: living_things`; đề xuất khoá `collectible.set.living_things` "Living things cards" · "Thẻ sinh vật".

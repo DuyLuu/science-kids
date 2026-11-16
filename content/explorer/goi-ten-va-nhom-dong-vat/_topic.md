@@ -107,7 +107,7 @@ note: Bài mở rộng 8. Tên tiếng Anh "starfish", "jellyfish" có chữ "fi
 
 - Sườn từng lesson: `docs/oak/naming-and-grouping-animals.md` (12/11/2026). Chỉ lấy mục tiêu, ý chính, từ khoá, misconception. Không chép câu, hình, ví dụ, câu quiz của Oak; không nhắc tên Oak trong chữ cho trẻ. Không dùng lại câu hỏi nào của Oak. Các con vật Oak dùng trong quiz (gấu Bắc Cực, cá mập, hươu cao cổ, sói, sóc, cá hề, cá hồi, sư tử, gấu trúc, chim cổ đỏ) không có trong chủ đề này; con thỏ có (bài 2, 3, 6, 7) nhưng trong câu hỏi khác với câu của Oak (rà chữ tester 13/11 n18).
 - Danh mục tám bài và tên bài: `content/syllabus.json` (bài 7, 8 là phần mở rộng, `extension: true`). Luật Explorer: `content/rules.json` (`explorer.authoring`), SK-026 (D1 đến D5), `content/TEMPLATE.md` mục "Luật soạn câu Explorer".
-- Luật rút kinh nghiệm từ SK-036 đến SK-039: một câu, một kệ một loại hình; đáp án không là hình duy nhất bé đã thấy ở Học; nhãn cùng dạng; gợi ý không nói đáp án; vị trí đáp án xáo; không người lộ mặt, logo, chữ; chuỗi `.en` không dấu tiếng Việt.
+- Luật rút kinh nghiệm từ SK-036 đến SK-039: một câu, một kệ một loại hình; đáp án không là hình duy nhất bé đã thấy ở Học; nhãn cùng dạng; gợi ý không nói đáp án; vị trí đáp án xáo (hết hiệu lực 15/11, SK-047: app tự xáo); không người lộ mặt, logo, chữ; chuỗi `.en` không dấu tiếng Việt.
 - [CẦN KIỂM] CT GDPT 2018, Tự nhiên và Xã hội lớp một có chủ đề "Thực vật và động vật" (biên tập nhớ: gọi tên, bộ phận bên ngoài của con vật, chăm sóc vật nuôi). Chưa đối chiếu sách. Nếu đúng, bé mẫu giáo lớn và lớp một học chủ đề này song song với trường.
 
 ### Frontmatter
@@ -307,20 +307,19 @@ Tám bài: mười bốn câu Đúng, mười bốn câu Sai (sáu bài đầu: 
 
 ### Vị trí đáp án đúng
 
-App không xáo lựa chọn; thứ tự theo `####` trong file. `order_sequence` ghi thứ tự thẻ trong file so với thứ tự đúng.
+Hết hiệu lực 15/11 (SK-047, app xáo). App xáo lựa chọn, thẻ trong kho và thẻ `order_sequence` mỗi lần hiện câu, nên bảng cân vị trí đáp án cũ đã bỏ. Biên tập không cần cân chỗ đáp án đúng nữa. `hint`, `feedback` và giải thích không nhắc vị trí thẻ ("thẻ đầu", "bên trái").
 
-| Bài | Khởi động | Quiz `single_choice` | Quiz `order_sequence` (thẻ trong file → thứ tự đúng) |
-| --- | --- | --- | --- |
-| 1 | w1 thứ hai (ba) | q2 thứ ba; q4 thứ nhất; q5 thứ hai; q6 thứ nhất | — |
-| 2 | w2 thứ hai (ba) | q1 thứ ba; q5 thứ nhất | q4: voi, mèo, trâu → mèo, trâu, voi |
-| 3 | w1 thứ nhất (hai) | q1 thứ hai; q3 thứ nhất; q5 thứ hai; q6 thứ ba | q4: gà con, gà mái, trứng → trứng, gà con, gà mái |
-| 4 | w1 thứ hai (hai) | q1 thứ nhất; q3 thứ ba; q5 thứ hai | q4: ếch, trứng ếch, nòng nọc → trứng ếch, nòng nọc, ếch |
-| 5 | w1 thứ ba (ba) | q1 thứ nhất; q3 thứ hai; q5 thứ ba; q6 thứ hai | q4: trâu, cá vàng, chim cánh cụt → cá vàng, chim cánh cụt, trâu |
-| 6 | w2 thứ nhất (hai) | q1 thứ nhất; q3 thứ ba; q4 thứ hai; q6 thứ ba | — |
-| 7 | w1 thứ hai (hai) | q1 thứ hai; q5 thứ ba | q4: cuốn chiếu, kiến, nhện → kiến, nhện, cuốn chiếu |
-| 8 | w1 thứ nhất (hai) | q1 thứ ba; q3 thứ nhất; q4 thứ hai; q5 thứ ba | — |
+Thứ tự đúng của các câu `order_sequence` (để tra, không liên quan vị trí):
 
-Sáu bài đầu: hai mươi bảy câu một đáp án (tính cả Khởi động), chỗ thứ nhất chín, thứ hai mười, thứ ba tám. Tám bài: ba mươi lăm câu, chỗ thứ nhất mười một, thứ hai mười ba, thứ ba mười một (năm câu chỉ có hai lựa chọn; đếm lại theo rà chữ tester 13/11 n3). Không bài nào theo chu kỳ. Không thẻ `order_sequence` nào nằm sẵn đúng thứ tự trong file.
+| Bài | Câu | Thứ tự đúng |
+| --- | --- | --- |
+| 2 | q4 | mèo, trâu, voi |
+| 3 | q4 | trứng, gà con, gà mái |
+| 4 | q4 | trứng ếch, nòng nọc, ếch |
+| 5 | q4 | cá vàng, chim cánh cụt, trâu |
+| 7 | q4 | kiến, nhện, cuốn chiếu |
+
+> SK-047 (15/11, nháp AI): thay bảng vị trí đáp án (đếm theo rà chữ tester 13/11 n3) bằng ghi chú hết hiệu lực; giữ thứ tự đúng của `order_sequence`.
 
 ### Khởi động (giãn cách)
 

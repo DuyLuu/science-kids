@@ -378,23 +378,23 @@ image.alt.vi: Một con mắt
 ### q2
 id: 620c9ccf-a5da-4ce4-a11a-7adbb6304ca1
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/explore_send`
 image.alt.en: A school drum
 image.alt.vi: Chiếc trống trường
-sentence.en: Your senses send messages along {1} to your brain.
-sentence.vi: Các giác quan gửi tin theo {1} về não.
-answers: q2_nerves
-hint.en: Remember the message path game in the last lesson.
-hint.vi: Em nhớ lại trò dựng đường đi của tin ở bài trước nhé.
-explanation_correct.en: Nerves carry messages from all five senses.
-explanation_correct.vi: Dây thần kinh mang tin của cả năm giác quan.
-explanation_wrong.en: Messages travel along nerves to your brain.
-explanation_wrong.vi: Tin đi theo dây thần kinh về não.
-> Nối bài hai với bài ba. Ba thẻ từ dùng lại hình vẽ của bài hai (kệ Chơi và câu q4), cùng nét. Hai thẻ sai là hai món bẫy của phần Chơi bài hai, nên có sức hút; cả ba cùng số nhiều, đọc xuôi trong câu.
+sentence.en: Seeing and hearing are two of your {1}.
+sentence.vi: Nhìn và nghe là hai trong các {1} của em.
+answers: q2_senses
+hint.en: Think of your eyes, ears, nose, tongue and skin.
+hint.vi: Em nghĩ tới mắt, tai, mũi, lưỡi và da nhé.
+explanation_correct.en: Smell, taste and touch are your other three senses.
+explanation_correct.vi: Ngửi, nếm và sờ là ba giác quan còn lại.
+explanation_wrong.en: Seeing and hearing are senses; veins and wires are not.
+explanation_wrong.vi: Nhìn và nghe là giác quan, mạch máu và dây điện thì không.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (sense, smell, taste); câu cũ điền "nerves", từ của bài hai. Câu mới nhớ lại ý chính một và câu ví dụ của từ `sense`. Giữ hai thẻ sai cũ (mạch máu, dây điện, cùng số nhiều); thẻ `q2_nerves` bỏ, thêm `q2_senses` (dùng lại hình của từ `sense`). `version` 2.
 
 #### bank q2_veins
 label.en: veins
@@ -405,12 +405,13 @@ image.brief: Dùng lại hình `day-than-kinh-truyen-tin/tray_veins`
 image.alt.en: Blue lines under the skin of a wrist
 image.alt.vi: Những đường gân xanh dưới da cổ tay
 
-#### bank q2_nerves
-label.en: nerves
-label.vi: dây thần kinh
-image.brief: Dùng lại hình `day-than-kinh-truyen-tin/q4_nerve`
-image.alt.en: A nerve with thin branches
-image.alt.vi: Một dây thần kinh có nhiều nhánh mảnh
+#### bank q2_senses
+label.en: senses
+label.vi: giác quan
+image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/explore_five`
+image.alt.en: An eye, an ear, a nose, a tongue and a hand
+image.alt.vi: Mắt, tai, mũi, lưỡi và bàn tay
+> SK-047 (15/11): cùng hình với từ `sense` (hình ghép bộ giác quan, hình vẽ), cùng nét hai thẻ kia; không cần hình mới.
 
 #### bank q2_wires
 label.en: wires
@@ -597,7 +598,8 @@ image.brief: Dùng lại hình `giac-quan-gui-tin-ve-nao/explore_taste`
 image.alt.en: A hot bowl of pho
 image.alt.vi: Bát phở nóng
 hint.en: Remember eating when you had a cold.
-hint.vi: Em nhớ lại lúc bị cảm, em ăn có thấy ngon không?
+hint.vi: Em nhớ lại những bữa ăn lúc em bị cảm nhé.
+> SK-047 (15/11, nháp AI): bản VI cũ là câu hỏi "ăn có thấy ngon không?", câu trả lời gần như là đáp án; nay VI khớp EN, chỉ gọi lại trải nghiệm.
 explanation_correct.en: Smells from food reach your nose and help you taste.
 explanation_correct.vi: Mùi đồ ăn bay lên mũi, giúp em nếm ngon hơn.
 explanation_wrong.en: Food tastes plain when your nose is blocked.
@@ -704,7 +706,7 @@ image.alt.vi: Cái lưỡi
   - Khởi động: `single_choice` (w1 ôn bài một), `true_false` (w2 ôn bài hai, đáp án Sai).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2, ba thẻ từ có hình), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Sai). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `taste_only_tongue`.
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q4 thứ hai; q5 thứ ba; q3 thứ hai và thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Tham chiếu:** `recall_from.lesson` trỏ bài một (w1) và bài hai (w2) của chủ đề này, đã có id.
 - **Key đổi sau rà chữ 10/11:** q3 `q3_toe` thành `q3_veins`; q5 `q5_green_mango`, `q5_lime`, `q5_ripe_mango` thành `q5_apple`, `q5_banana`, `q5_strawberry`. Khi `import`, các key cũ mất (lựa chọn không có dòng `id:`).
 - **Màn Chơi, ví dụ để kiểm:**

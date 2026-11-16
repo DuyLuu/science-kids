@@ -638,6 +638,6 @@ image.alt.vi: Con ếch nhìn từ phía trước
   - Chơi: `build_tray`: **hai chỗ**, hai nhóm `required`, một nhóm `limit`, bảy món. Lời nhắn `start` nói "một con cá và một con lưỡng cư".
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn bài ba), `true_false` (w2 Sai, ôn bài ba; w3 Đúng, ôn bài hai).
   - Quiz: `single_choice` (q1, q3, q5), `true_false` (q2 Đúng, q6 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`water_animals_are_fish`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q3 thứ ba; q5 thứ hai. q4 thẻ trong file: ếch, trứng ếch, nòng nọc; thứ tự đúng: trứng ếch, nòng nọc, ếch.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: trứng ếch, nòng nọc, ếch.
 - **Màn Chơi, ví dụ để kiểm:** Cá chép, Con cóc → `balanced`; Cá heo, Con ếch → `has_limited`; Cá rô đồng, Cá chép → `missing.tray_amph`; rồi chạm Con ếch → `full`.
 - **Từ EN có thể ngoài Starters/Movers:** amphibian, gills, fins, tadpole, toad, perch, carp, dolphin.

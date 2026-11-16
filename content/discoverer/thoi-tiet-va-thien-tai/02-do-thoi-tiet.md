@@ -30,7 +30,7 @@ vi: Em biết dùng dụng cụ để đo thời tiết.
 3.en: How we feel can change, so we use tools.
 3.vi: Cảm giác nóng lạnh của mình có thể thay đổi, nên mình dùng dụng cụ để đo.
 > [CẦN KIỂM] như `feel_tells_temperature` ở `_topic.md`.
-> Ba ý đi từ hai dụng cụ cụ thể (nhiệt kế, ống đo mưa) tới lý do phải đo bằng dụng cụ. Hướng gió (ống gió) có ở ô Học thứ ba, phần Chơi và câu q2, q3, nhưng không thành một ý chính, để ba ý đúng luật mỗi câu một ý.
+> Ba ý đi từ hai dụng cụ cụ thể (nhiệt kế, ống đo mưa) tới lý do phải đo bằng dụng cụ. Hướng gió (ống gió) có ở ô Học thứ ba, phần Chơi và câu q3 (câu q2 hỏi gió đến 15/11), nhưng không thành một ý chính, để ba ý đúng luật mỗi câu một ý.
 
 ## Khởi động
 
@@ -56,8 +56,7 @@ explanation_correct.en: Rainwater collects in low spots and makes puddles.
 explanation_correct.vi: Nước mưa đọng ở chỗ trũng thành vũng.
 explanation_wrong.en: Rain made the puddle on the ground.
 explanation_wrong.vi: Nước mưa đọng lại thành vũng.
-> Ba ảnh là ba món đúng của ba nhóm khác nhau ở phần Chơi bài một (nắng, gió, mưa); bé phải nhớ món nào thuộc nhóm mưa. Đáp án ở chỗ thứ ba.
-
+> Ba ảnh là ba món đúng của ba nhóm khác nhau ở phần Chơi bài một (nắng, gió, mưa); bé phải nhớ món nào thuộc nhóm mưa.
 #### option w1_shadow
 correct: false
 feedback.en: A shadow shows the sun is shining.
@@ -99,8 +98,9 @@ image.brief: Dùng lại hình `q3_rain` ở bài `nao-bo-va-giac-quan/day-than-
 image.alt.en: Raindrops on an arm
 image.alt.vi: Giọt mưa trên cánh tay
 answer: true
-hint.en: Remember the To the brain card.
-hint.vi: Em nhớ lại ô Tin về não nhé.
+hint.en: Remember the mosquito on your arm.
+hint.vi: Em nhớ lại con muỗi đậu trên tay nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "To the brain" · "Tin về não" gần như là câu khẳng định. Gợi ý mới trỏ ví dụ của bài *Dây thần kinh truyền tin* (muỗi đậu trên tay), bé tự nhớ tin đi về đâu.
 explanation_correct.en: Your skin feels hot, cold and rain.
 explanation_correct.vi: Da em cảm thấy nóng, lạnh và cả mưa rơi.
 explanation_wrong.en: Skin sends messages to your brain along nerves.
@@ -341,7 +341,7 @@ image.alt.vi: Ống đo mưa giữa khoảng vườn trống
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q5, q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vai của hình (`_topic.md`, Quy ước hình mục bảy): nhiệt kế đúng ở phần Chơi và câu q1; ống gió đúng ở phần Chơi và câu q3; phích, quạt sai ở phần Chơi và câu q1; ô sai ở phần Chơi và câu q3. Ống đo mưa không là lựa chọn ở câu nào, nên không có hình dụng cụ nào vừa đúng vừa sai. Không hai câu nào dùng chung một hình lựa chọn.
+> Vai của hình (`_topic.md`, Quy ước hình mục bảy; cập nhật 16/11 theo câu q2, q3 đổi ở SK-047): nhiệt kế đúng ở phần Chơi và câu q1; ống đo mưa đúng ở phần Chơi và câu q2; ống gió, dải ruy băng đúng ở phần Chơi và câu q3; phích, quạt sai ở phần Chơi và câu q1, phích còn sai ở câu q2; cái ô sai ở phần Chơi, câu q2 và câu q3. Không hình dụng cụ nào vừa đúng vừa sai. Hai hình (phích, cái ô) lặp lại ở hai câu với cùng vai sai; đã ghi ở bàn giao SK-047 15/11 mục Chưa chắc 5.
 
 ### q1
 id: 991b0303-bd50-476e-a48e-4af64e06d890
@@ -359,8 +359,7 @@ explanation_correct.en: Its red line goes up as the air warms.
 explanation_correct.vi: Vạch đỏ dâng lên khi không khí ấm hơn.
 explanation_wrong.en: A thermometer measures how hot or cold the air is.
 explanation_wrong.vi: Nhiệt kế đo không khí nóng hay lạnh.
-> Câu nhớ lại ý chính một. Hai lựa chọn sai đều có sức hút vì nói về nóng, mát (phích nước nóng, quạt bàn), nhưng không đo được gì. Ba hình vẽ cùng nét; nhiệt kế là hình ô Học, hai hình kia là món của phần Chơi, nên không hình nào lạ hơn. Đáp án ở chỗ thứ hai.
-
+> Câu nhớ lại ý chính một. Hai lựa chọn sai đều có sức hút vì nói về nóng, mát (phích nước nóng, quạt bàn), nhưng không đo được gì. Ba hình vẽ cùng nét; nhiệt kế là hình ô Học, hai hình kia là món của phần Chơi, nên không hình nào lạ hơn.
 #### option q1_flask
 correct: false
 feedback.en: A flask keeps water hot, but measures nothing.
@@ -393,55 +392,55 @@ image.alt.vi: Cái quạt bàn
 ### q2
 id: 21f54aca-4f5b-4259-8904-726ceae1b455
 format: fill_blank_bank
-version: 1
+version: 3
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
-image.brief: Dùng lại hình `explore_windsock`.
-image.alt.en: A windsock full of wind
-image.alt.vi: Ống gió căng phồng
-sentence.en: A windsock tells us about the {1}.
-sentence.vi: Ống gió cho mình biết về {1}.
-answers: q2_wind
-hint.en: Remember the three tool cards.
-hint.vi: Em nhớ lại ba ô về dụng cụ đo nhé.
-> Rà chữ tester 11/11 (N5): câu cũ "A windsock shows which way the {1} blows." · "Ống gió cho biết {1} thổi về hướng nào." chỉ hợp văn phạm với thẻ "gió" (chữ "blows", "thổi"). Câu mới đọc xuôi với cả ba thẻ ("about the rain", "về mưa"), bé phải nhớ ống gió dùng để làm gì. (n1): gợi ý cũ "bốn ô về dụng cụ" đếm nhầm, ô thứ tư là "Cảm giác của mình".
-explanation_correct.en: The windsock points the way the wind goes.
-explanation_correct.vi: Ống gió chỉ theo hướng gió thổi.
-explanation_wrong.en: A windsock fills up and points with the wind.
-explanation_wrong.vi: Có gió thì ống gió phồng lên, chỉ theo gió.
-> Câu nhớ lại ô thứ ba. Ba thẻ là ba ảnh ô Học bài một (gió, mưa, nắng), cùng ảnh chụp, ôn lại cả ba kiểu thời tiết. Thẻ đúng ở chỗ thứ nhất. Hình câu hỏi là ống gió (vật được hỏi), không phải ảnh của thẻ nào.
-
-#### bank q2_wind
-label.en: wind
-label.vi: gió
-image.brief: Dùng lại hình `w1` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): rice field wind waves Vietnam
-image.alt.en: Wind blowing over a rice field
-image.alt.vi: Gió thổi trên cánh đồng lúa
-
-#### bank q2_rain
-label.en: rain
-label.vi: mưa
-feedback.en: Rain does not puff up a windsock.
-feedback.vi: Mưa không làm ống gió phồng lên.
 image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
+sentence.en: The {1} shows how much water fell from the sky.
+sentence.vi: Nhìn {1}, mình biết trời đổ xuống bao nhiêu nước.
+> SK-047 (16/11, nháp AI, tester "nên sửa" 4): câu cũ "The {1} catches rain to show how much fell." · "Mình dùng {1} để hứng mưa, xem mưa nhiều hay ít." có chữ "rain" · "mưa", là gốc của thẻ đúng "rain gauge" · "ống đo mưa"; hai thẻ sai không có chữ đó, nên bé chọn được bằng cách khớp chữ. Câu mới nói "nước từ trên trời rơi xuống", không có "rain", "gauge", "mưa", "đo"; bé phải tự nối nước trên trời với mưa. Mười từ EN (chỗ trống tính một từ). Chữ "nước" trong câu VI làm thẻ "phích nước" có sức hút; `feedback` của thẻ đó đã nói phích không hứng mưa. `version` 3.
+answers: q2_rain_gauge
+hint.en: Remember the three tool cards.
+hint.vi: Em nhớ lại ba ô về dụng cụ đo nhé.
+explanation_correct.en: Check the gauge at the same time every day.
+explanation_correct.vi: Em xem ống đo mưa vào cùng một giờ mỗi ngày.
+explanation_wrong.en: A rain gauge collects rain, so we can measure it.
+explanation_wrong.vi: Ống đo mưa hứng nước mưa để mình đo.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (thermometer, temperature, rain gauge); câu cũ điền "wind". Không dùng "thermometer" vì câu q1 đã hỏi nhiệt kế. Câu mới nhớ lại ý của ô Ống đo mưa (16/11: không còn chép chữ của ô, xem dòng trên). Hai thẻ sai là hai vật bé đã gặp, đều đúng vai sai ở câu khác (cái ô ở câu q3, phích nước ở câu q1), theo luật "không hình nào vừa đúng vừa sai" của chủ đề. Câu EN dùng "The", để cả ba thẻ đọc đúng văn phạm. Hình câu hỏi đổi sang mưa to (không cho thấy dụng cụ nào); ở A2 hình này ẩn vì mọi thẻ từ có hình. `version` 2; ba thẻ cũ (gió, mưa, nắng) bỏ.
 
-#### bank q2_sun
-label.en: sun
-label.vi: nắng
-feedback.en: Sunshine does not make a windsock move.
-feedback.vi: Nắng không làm ống gió lay động.
-image.brief: Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky
-image.alt.en: The bright sun in the sky
-image.alt.vi: Mặt Trời chói sáng trên trời
-> Câu q1 dùng ảnh này làm hình câu hỏi (không phải lựa chọn), nên không mang vai đúng hay sai ở đó.
+#### bank q2_rain_gauge
+label.en: rain gauge
+label.vi: ống đo mưa
+image.brief: Dùng lại hình `explore_rain_gauge`.
+image.alt.en: A rain gauge in an open garden
+image.alt.vi: Ống đo mưa giữa khoảng vườn trống
+
+#### bank q2_umbrella
+label.en: umbrella
+label.vi: cái ô
+feedback.en: An umbrella keeps rain off, but it measures nothing.
+feedback.vi: Cái ô che mưa, nhưng không đo được gì.
+image.brief: Dùng lại hình `tray_umbrella`.
+image.alt.en: An open umbrella
+image.alt.vi: Chiếc ô đang mở
+
+#### bank q2_flask
+label.en: flask
+label.vi: phích nước
+feedback.en: A flask keeps water hot; it does not catch rain.
+feedback.vi: Phích giữ nước nóng, không dùng để hứng mưa.
+image.brief: Dùng lại hình `tray_flask`.
+image.alt.en: A hot water flask
+image.alt.vi: Chiếc phích nước nóng
+> SK-047 (15/11): ba thẻ dùng lại hình có sẵn của bài; không cần hình mới. Designer xem ba hình cùng loại (hình vẽ hay ảnh) chưa; lệch thì báo.
 
 ### q3
 id: f1f66f53-6662-4f7a-92e6-2a78a60c85cb
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones show which way the wind blows?
 prompt.vi: Những thứ nào cho biết gió thổi về hướng nào?
@@ -454,9 +453,10 @@ hint.en: Remember the Wind direction card.
 hint.vi: Em nhớ lại ô Hướng gió nhé.
 explanation_correct.en: A boat flag helps fishers know where the wind blows.
 explanation_correct.vi: Lá cờ giúp người đi thuyền biết hướng gió.
-explanation_wrong.en: The windsock and the flag point with the wind.
-explanation_wrong.vi: Ống gió và lá cờ bay theo hướng gió.
-> DOK 2: lá cờ trên thuyền là tình huống mới (ô Học chỉ nói "lá cờ bay cũng cho biết hướng gió"). Hai lựa chọn sai có sức hút: kim đồng hồ cũng "chỉ" về một phía; cái ô gắn với thời tiết. Đáp án ở chỗ thứ hai và thứ tư.
+explanation_wrong.en: The windsock, flag and ribbon all point with the wind.
+explanation_wrong.vi: Ống gió, lá cờ và dải ruy băng bay theo hướng gió.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_clock` thay bằng `q3_ribbon` (dải ruy băng trên que, đúng), dùng lại hình kệ Chơi; `version` 2. Bẫy còn lại là cái ô. Giải thích khi sai sửa theo.
+> DOK 2: lá cờ trên thuyền là tình huống mới (ô Học chỉ nói "lá cờ bay cũng cho biết hướng gió"). Bốn lựa chọn: ba đúng (ống gió, dải ruy băng trên que, lá cờ trên thuyền), một sai (cái ô). Cái ô có sức hút vì gắn với mưa gió, nhưng không chỉ hướng nào. Dải ruy băng là món bé tự làm ở kệ Chơi. App xáo thứ tự lựa chọn (SK-047), nên không ghi vị trí đáp án. *(Sửa 16/11 theo tester "nên sửa" 5: dòng cũ còn kể kim đồng hồ và vị trí đáp án đã hết hiệu lực, từ trước khi đổi câu.)*
 
 #### option q3_umbrella
 correct: false
@@ -476,17 +476,15 @@ image.brief: Dùng lại hình `explore_windsock`.
 image.alt.en: A windsock full of wind
 image.alt.vi: Ống gió căng phồng
 
-#### option q3_clock
-correct: false
-feedback.en: A clock tells the time, not the wind.
-feedback.vi: Đồng hồ chỉ giờ, không chỉ hướng gió.
-label.en: wall clock
-label.vi: đồng hồ treo tường
-image.brief: Dùng lại hình `tray_clock` ở bài `nao-bo-va-giac-quan/nao-dieu-khien-co-the`. Từ khoá tìm ảnh (EN): wall clock no numbers minimalist
-image.alt.en: A wall clock
-image.alt.vi: Chiếc đồng hồ treo tường
-> Rà chữ tester 11/11 (n3): bốn nhãn EN cùng khuôn danh từ trơn, không giới từ: "umbrella", "windsock", "wall clock", "boat flag" (trước "flag on a boat"). Nhãn VI giữ.
-> Theo hình designer 11/11: dùng lại hình vẽ đồng hồ (mặt chỉ có vạch) của *Não bộ*, trỏ thẳng hình gốc; không vẽ riêng. Câu w1 bài ba cũng trỏ về hình gốc đó.
+#### option q3_ribbon
+correct: true
+label.en: ribbon on a stick
+label.vi: ruy băng trên que
+image.brief: Dùng lại hình `tray_ribbon`.
+image.alt.en: A red ribbon blowing on a stick
+image.alt.vi: Dải ruy băng đỏ bay trên que tre
+> SK-047 (15/11): thay `q3_clock`; hình kệ Chơi (hình vẽ), không cần hình mới.
+> Nhãn (sửa ghi chú 16/11): ba nhãn EN là danh từ trơn "umbrella", "windsock", "boat flag"; riêng "ribbon on a stick" có thêm "on a stick" để khớp hình (dải ruy băng buộc trên que tre) và khớp món `tray_ribbon` của kệ Chơi. Ghi chú cũ (rà chữ tester 11/11, n3, và hình designer 11/11) nói về nhãn "wall clock" và hình đồng hồ của *Não bộ*: lựa chọn đó đã bỏ 15/11, ghi chú hết hiệu lực.
 
 #### option q3_flag
 correct: true
@@ -515,8 +513,7 @@ explanation_wrong.en: The right gauge holds the most water, so most rain.
 explanation_wrong.vi: Ống bên phải có nhiều nước nhất, tức mưa nhiều nhất.
 > 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười ba từ EN, mười bốn chữ VI; nay một câu chín từ EN, tám chữ VI. Ý "mỗi ống hứng mưa của một ngày" nằm trong chữ "ngày" của câu hỏi và ở hình.
 > DOK 2: đọc kết quả đo. Ba ống giống hệt nhau, nên so sánh là công bằng (nối với ô Ống đo mưa: xem vào cùng một giờ, cùng một kiểu ống). Câu hỏi không kể tên ba ngày, để thứ tự ống không gài bẫy (rút kinh nghiệm SK-036 N3a).
-> Nhãn theo vị trí trong hình (trái, giữa, phải), không theo màu (SK-036 N3b). Đáp án ở chỗ thứ ba.
-
+> Nhãn theo vị trí trong hình (trái, giữa, phải), không theo màu (SK-036 N3b).
 #### option q4_left
 correct: false
 feedback.en: The water in the left gauge is only medium.
@@ -548,7 +545,7 @@ image.alt.vi: Ba ống đo mưa, đánh dấu ống bên phải
 ### q5
 id: 60290809-652b-4655-aab1-5cd7371dcccb
 format: true_false
-version: 1
+version: 2
 dok: 2
 prompt.en: A rain gauge works well under a big tree.
 prompt.vi: Đặt ống đo mưa dưới cây to vẫn đo đúng.
@@ -556,8 +553,9 @@ image.brief: [hình vẽ] Mai đứng quay lưng về phía người xem, đang 
 image.alt.en: Mai puts a gauge under a big tree
 image.alt.vi: Mai đặt ống đo mưa dưới gốc cây to
 answer: false
-hint.en: Remember where to put a rain gauge.
-hint.vi: Em nhớ lại nên đặt ống đo mưa ở đâu nhé.
+hint.en: Think of standing under a big tree in the rain.
+hint.vi: Em nghĩ tới lúc đứng dưới tán cây to khi trời mưa nhé.
+> SK-047 (16/11, nháp AI, tester "nên sửa" 1): gợi ý cũ "Remember where to put a rain gauge." · "Em nhớ lại nên đặt ống đo mưa ở đâu nhé." trỏ thẳng ví dụ "put it in an open place" của ô Ống đo mưa, mà ví dụ đó chính là phán quyết. Gợi ý mới trỏ một điều bé từng trải qua: đứng dưới tán cây lúc mưa thì ít bị ướt. Bé tự nối sang việc lá cây che bớt mưa rơi vào ống. `version` 2.
 explanation_correct.en: Put the gauge in an open place, away from trees.
 explanation_correct.vi: Em đặt ống ở chỗ trống, xa cây cối.
 explanation_wrong.en: Leaves stop some rain falling into the gauge.
@@ -571,7 +569,7 @@ feedback_true.vi: Lá dày hứng bớt mưa trước khi rơi vào ống.
 ### q6
 id: 07dc16e4-dc26-463f-898f-6eb80bf5b849
 format: true_false
-version: 1
+version: 2
 dok: 3
 misconception: feel_tells_temperature
 prompt.en: Is Na right?
@@ -589,8 +587,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Remember the Our feelings card.
-hint.vi: Em nhớ lại ô Cảm giác của mình nhé.
+hint.en: Think of a friend who sat and watched Na run.
+hint.vi: Em nghĩ tới một bạn ngồi yên xem Na chạy nhé.
+> SK-047 (16/11, nháp AI, tester "nên sửa" 1): gợi ý cũ "Remember the Our feelings card." · "Em nhớ lại ô Cảm giác của mình nhé." trỏ ô có câu "Two people can feel the same air differently.", chính là phán quyết. Gợi ý mới trỏ bằng chứng: một bạn ngồi yên trong cùng không khí thì không thấy nóng như Na, nên cái nóng đến từ việc chạy, không phải từ không khí. `version` 2.
 explanation_correct.en: A thermometer shows the air, not how Na feels.
 explanation_correct.vi: Nhiệt kế cho biết không khí, không phải cảm giác của Na.
 explanation_wrong.en: Na's body got hot from running, not the air.
@@ -680,7 +679,8 @@ image.alt.vi: Lều khí tượng màu trắng trên chân cao
 
 ## Ghi chú cho hoạ sĩ
 
-- **Loại hình:** dụng cụ đo là hình tự vẽ, vì nhiệt kế và ống đo mưa thật luôn có chữ số trên vạch chia, mà hình không được có chữ số (`_topic.md`, Quy ước hình mục hai). Vì vậy ô Học thứ nhất tới thứ tư, cả kệ Chơi, câu q1, q3, q4, q5 là hình vẽ cùng nét. Ảnh chụp chỉ còn ở câu w1 (ba ảnh của bài một), câu q2 (ba ảnh thời tiết), hình câu hỏi q1, q3, q6 và thẻ thưởng.
+- **Loại hình:** dụng cụ đo là hình tự vẽ, vì nhiệt kế và ống đo mưa thật luôn có chữ số trên vạch chia, mà hình không được có chữ số (`_topic.md`, Quy ước hình mục hai). Vì vậy ô Học thứ nhất tới thứ tư, cả kệ Chơi, câu q1, q2 (ba thẻ, từ 15/11), q3, q4, q5 là hình vẽ cùng nét. Ảnh chụp chỉ còn ở câu w1 (ba ảnh của bài một), hình câu hỏi q1, q2, q3, q6 và thẻ thưởng.
+- **16/11:** đồng hồ treo tường không còn ở câu q3 (bỏ 15/11, SK-047); câu q2 không còn ba ảnh gió, mưa, nắng. Các dòng dưới nhắc `tray_clock`, `vi-sao-ta-phai-tho/w1` là bản trước SK-047.
 - **Hình tự vẽ (mười lăm, theo hình designer làm 11/11):**
   - Học (bốn): nhiệt kế treo trong bóng râm; ống đo mưa giữa vườn; ống gió sọc đỏ trắng trên bãi cỏ; hai bạn nhỏ ngồi ghế đá nhìn từ sau, một bạn mặc áo khoác.
   - Chơi (năm): quạt bàn; cái ô đang mở; ống đo mưa làm từ chai nhựa; phích nước nóng kiểu Việt Nam; dải ruy băng đỏ trên que tre.
@@ -705,18 +705,20 @@ image.alt.vi: Lều khí tượng màu trắng trên chân cao
   - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, ba từ core: thermometer, temperature, rain_gauge).
   - Chơi: `build_tray` (`tray`): ba chỗ, ba nhóm `required` (1-2-2 món, cố ý), một nhóm `limit`, tám món.
   - Khởi động: `single_choice` (w1, `recall_from.lesson: thoi-tiet-va-thien-tai/nang-mua-gio-may`), `true_false` (w2 Đúng, `recall_from.lesson: nao-bo-va-giac-quan/day-than-kinh-truyen-tin`, đã có id). DOK một.
-  - Quiz: `single_choice` (q1; q4 ba bản của một hình vẽ), `fill_blank_bank` (q2, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q5 Sai; q6 Sai, `speaker: na`).
+  - Quiz: `single_choice` (q1; q4 ba bản của một hình vẽ), `fill_blank_bank` (q2, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, ba đúng từ 15/11), `true_false` (q5 Sai; q6 Sai, `speaker: na`).
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `feel_tells_temperature`.
 - **Tham chiếu:** chạy `ids` cho bài một trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ hai; q2 thẻ thứ nhất; q3 thứ hai và thứ tư; q4 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **15/11 (SK-047):** q2 câu Từ mới "rain gauge", `version` 2; q3 `multi_choice` ba đáp án đúng, `version` 2.
+- **16/11 (SK-047, tester "nên sửa"):** q2 đổi `sentence` (EN, VI), `version` 3; q5, q6 đổi `hint` (EN, VI), `version` 2. Sinh lại giọng cho năm chuỗi này.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Nhiệt kế, Ống đo mưa, Ống gió → `balanced`;
   - Phích nước nóng → `has_limited`;
   - Ống đo mưa, Ống đo mưa làm từ chai, Dải ruy băng buộc trên que (thiếu nóng lạnh) → `missing.tray_heat`;
   - rồi chạm Nhiệt kế → `full`; bỏ Ống đo mưa làm từ chai, đặt Nhiệt kế → `balanced`.
-- **Nhãn dài:** "Ống đo mưa làm từ chai", "Dải ruy băng buộc trên que" (món Chơi), "Mưa nhiều hay ít" (chip nhóm), "đồng hồ treo tường" (q3), "nhiệt kế treo tường" (q1). Nhờ tester xem trên iPhone bề rộng nhỏ nhất.
+- **Nhãn dài:** "Ống đo mưa làm từ chai", "Dải ruy băng buộc trên que" (món Chơi), "Mưa nhiều hay ít" (chip nhóm), "ruy băng trên que" (q3; thay "đồng hồ treo tường" từ 15/11), "nhiệt kế treo tường" (q1). Nhờ tester xem trên iPhone bề rộng nhỏ nhất.
 - **Câu q4** (ba ống đo mưa): đọc hình như câu biểu đồ cột bài ba *Hô hấp*. Nhãn theo vị trí trong hình; VoiceOver đọc `alt` "đánh dấu ống bên phải". Nhờ tester xem ba bản lựa chọn đủ khác nhau trên iPhone.
 - **Số từ EN trên một màn:** Học khoảng ba mươi tư (mục tiêu 8, hướng dẫn 3, bốn nhãn 7, câu dài nhất 10, ô Từ mới 6), như các chủ đề trước; nếu PM muốn dưới ba mươi thì bỏ tiêu đề "New words". Nhiều chữ nhất ở Quiz là q4 (khoảng hai mươi tám: câu hỏi 13, ba nhãn 6, giải thích sai 9) và q6 (khoảng hai mươi lăm).
 - **Từ EN có thể ngoài Starters/Movers:** từ mới thermometer, temperature, rain gauge, windsock, measure; tool, degrees, shade, gauge, flask, ribbon, stick, nerves, message, brain (từ *Não bộ*), jacket, bath, grown-up.

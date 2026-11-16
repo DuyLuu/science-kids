@@ -56,7 +56,7 @@ explanation_correct.en: Water soaks into the gaps between sandstone's grains.
 explanation_correct.vi: Nước thấm vào khe giữa các hạt cát của sa thạch.
 explanation_wrong.en: Sandstone is permeable, so water soaks in.
 explanation_wrong.vi: Sa thạch thấm nước, nên nước thấm vào được.
-> Hình câu hỏi là cốc nước, gợi "nước" mà không cho thấy hòn đá nào. Lựa chọn và vị trí đáp án (thứ ba) theo bảng Khởi động.
+> Hình câu hỏi là cốc nước, gợi "nước" mà không cho thấy hòn đá nào. Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 
 #### option w1_marble
 correct: false
@@ -130,7 +130,7 @@ explanation_correct.vi: Người ta nung đất sét trong lò để làm gạch
 explanation_wrong.en: Bricks are made by people from baked clay.
 explanation_wrong.vi: Gạch do người làm từ đất sét nung.
 > Hình câu hỏi là mỏ đá (bài một, từ `quarry`): gợi "đá đến từ đâu", không cho thấy gạch. Gợi ý gọi tên ô "Made by people" · "Do con người làm ra" theo kế hoạch bài một; topic editor kiểm lại tên ô khi rà chéo.
-> Lựa chọn và vị trí đáp án (thứ nhất) theo bảng Khởi động. Hòn cuội nhẵn, tròn trông như được mài, nên có sức hút.
+> Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Hòn cuội nhẵn, tròn trông như được mài, nên có sức hút.
 
 #### option w3_brick
 correct: true
@@ -386,7 +386,7 @@ image.alt.vi: Hàng rào tre
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án theo bảng `_topic.md` (bài sáu): q1 thứ ba, thẻ đúng q2 thứ nhất, q3 thứ ba và thứ tư, q4 thứ hai trong bốn, q5 thứ hai.
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Ôn trộn: q4 ôn bài hai, ba, bốn, năm (đá bọt, đá hoa cương, thạch cao, hoạt thạch; thử cào, thử nhỏ nước); q5, q6 ôn bài ba và bài năm (đá phấn mềm, thấm nước).
 > Mỗi hình chỉ một vai trong bài (bảng ở Ghi chú cho hoạ sĩ).
 
@@ -456,7 +456,7 @@ explanation_correct.en: Cement mixed with sand and water sets hard.
 explanation_correct.vi: Xi măng trộn cát và nước sẽ đông cứng lại.
 explanation_wrong.en: Limestone is crushed and heated to make cement.
 explanation_wrong.vi: Đá vôi được nghiền, nung nóng để làm xi măng.
-> DOK 1: nhớ lại câu của ô Đá vôi. Câu không có chữ "lime", "vôi" (gốc từ của đáp án). Ba thẻ là ba loại đá của bài, dùng lại ba hình ô Học, cùng là ảnh cảnh có đá; thẻ đúng ở chỗ thứ nhất (bảng vị trí). Gợi ý không gọi tên ô Đá vôi, vì tên ô trùng chữ nhãn đáp án.
+> DOK 1: nhớ lại câu của ô Đá vôi. Câu không có chữ "lime", "vôi" (gốc từ của đáp án). Ba thẻ là ba loại đá của bài, dùng lại ba hình ô Học, cùng là ảnh cảnh có đá. Gợi ý không gọi tên ô Đá vôi, vì tên ô trùng chữ nhãn đáp án.
 
 #### bank q2_limestone
 label.en: limestone
@@ -505,8 +505,7 @@ explanation_wrong.vi: Xi măng và bê tông đều có đá nghiền nhỏ bên
 > DOK 2: phân loại, áp ý "đồ dùng hằng ngày có đá nghiền nhỏ" (ô Đá vôi, ví dụ ba và bốn) vào khối bê tông, món bé chưa gặp trong bài này. Nối bài một: bê tông "do con người làm ra, không phải đá tự nhiên", nhưng vẫn có đá nghiền nhỏ ở bên trong; hai ý không trái nhau (ghi chú của `bricks_are_rocks`).
 > Rà chữ tester 11/11 (n6): giải thích khi đúng nói cả hai vế ("do con người làm ra" và "bên trong có đá nghiền nhỏ"), để chữ trẻ đọc nối được với bài một.
 > [CẦN KIỂM] Bê tông trộn từ xi măng, cát, đá dăm và nước; sân xi măng láng bằng vữa xi măng và cát (biên tập nhớ).
-> Rà chữ tester 11/11 (N1): lựa chọn sai `q3_fence` (món bẫy của kệ) đổi thành `q3_basket` (rổ nhựa, ảnh mới), để hai lựa chọn sai không còn đúng là hai món bẫy vừa bị loại ở trò chơi. Theo hình designer 11/11, cả bốn là hình vẽ cùng nét: hai món kệ (bàn gỗ, sân xi măng), hai hình vẽ mới (rổ nhựa, khối bê tông; khối bê tông vẽ riêng thay ảnh `tray_concrete` của bài một). Đáp án ở chỗ thứ ba và thứ tư (bảng vị trí).
-
+> Rà chữ tester 11/11 (N1): lựa chọn sai `q3_fence` (món bẫy của kệ) đổi thành `q3_basket` (rổ nhựa, ảnh mới), để hai lựa chọn sai không còn đúng là hai món bẫy vừa bị loại ở trò chơi. Theo hình designer 11/11, cả bốn là hình vẽ cùng nét: hai món kệ (bàn gỗ, sân xi măng), hai hình vẽ mới (rổ nhựa, khối bê tông; khối bê tông vẽ riêng thay ảnh `tray_concrete` của bài một).
 #### option q3_table
 correct: false
 feedback.en: A wooden table comes from trees.
@@ -560,7 +559,7 @@ explanation_correct.vi: Bậc đá hoa cương vẫn bền dù ướt mỗi ngà
 explanation_wrong.en: Granite is hard and keeps water out.
 explanation_wrong.vi: Đá hoa cương cứng và không thấm nước.
 > A2 (SK-043, 14/11): câu hỏi cũ hai mươi mốt chữ, nay tám chữ. Ý "ngày nào cũng ướt và bị cọ rửa" chuyển vào hình câu hỏi (gàu nước) và gợi ý (thử cào, thử nhỏ nước).
-> DOK 2: ghép hai tính chất (bài ba: cứng; bài năm: không thấm nước) để chọn đá cho một việc. Bốn lựa chọn, đáp án ở chỗ thứ hai (bảng vị trí).
+> DOK 2: ghép hai tính chất (bài ba: cứng; bài năm: không thấm nước) để chọn đá cho một việc. Bốn lựa chọn.
 > Rà chữ tester 11/11 (n4): đổi việc từ "mặt bàn bếp" (ví dụ hai của ô Đá hoa cương và món kệ `tray_worktop`, bé chỉ cần nhớ lại) sang "bậc đá cạnh giếng", một việc chưa nêu trong bài, để câu là vận dụng thật. Hình câu hỏi đổi theo (gàu nước, không thấy đá); key không đổi.
 > Câu hỏi nói "Which one" · "Thứ nào", không nói "Which rock", vì hoạt thạch và thạch cao là khoáng vật (bài bốn).
 > Không dùng đá cẩm thạch hay đá phiến làm lựa chọn sai: ngoài đời người ta cũng lát bậc, lát nền bằng hai loại đá này, nên câu sẽ có hai đáp án. Không dùng sa thạch: sa thạch là đáp án đúng của câu w1 hôm nay (một hình không giữ hai vai trái nhau). Ba lựa chọn sai đều mềm hoặc có lỗ, rõ là không hợp khi đã học bài ba, bài năm.
@@ -776,7 +775,7 @@ image.alt.vi: Cổng làng cổ Đường Lâm
   - Khởi động: `single_choice` (w1 ôn bài năm, w3 ôn bài một), `true_false` (w2 ôn bài ba, Đúng).
   - Quiz: `single_choice` (q1, q4 bốn lựa chọn, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, Sai). Bốn format.
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `any_rock_for_any_job`.
-- **Vị trí đáp án đúng:** w1 thứ ba; w3 thứ nhất; q1 thứ ba; thẻ đúng q2 thứ nhất; q3 thứ ba và thứ tư; q4 thứ hai (bốn lựa chọn); q5 thứ hai. Khớp bảng `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/da-nao-tham-nuoc` (w1), `da-va-dat/da-nao-cung-hon` (w2), `da-va-dat/lam-quen-voi-da` (w3). Ba bài này phải có id trước bài này (thứ tự `ids` ở `_topic.md`).
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Tường quét vôi, Giếng làng, Mặt bàn bếp → đạt;

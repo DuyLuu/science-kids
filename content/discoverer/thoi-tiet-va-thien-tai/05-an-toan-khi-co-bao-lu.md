@@ -61,8 +61,7 @@ explanation_correct.vi: Số đo mưa giúp người dự báo cảnh báo sớm
 explanation_wrong.en: A rain gauge catches rain to measure it.
 explanation_wrong.vi: Ống đo mưa hứng nước mưa để đo.
 > Rà chữ tester 11/11 (n10): câu w1 cũ ôn bài bốn (chum hứng nước mưa khi hạn hán), nên bài năm có hai câu Khởi động cùng trỏ bài bốn và không có mốc "khoảng một tuần". Nay w1 ôn bài hai (cách khoảng một tuần). Giữ `id` và key `w1`, nội dung là câu mới; nếu phiên chính muốn `id` mới thì xoá dòng `id:` của w1 rồi chạy `ids`.
-> Ba hình vẽ dụng cụ của ô Học bài hai, cùng nét. Ống đo mưa không là lựa chọn ở câu nào của bài hai, nên không có vai nào khác. Đáp án ở chỗ thứ hai.
-
+> Ba hình vẽ dụng cụ của ô Học bài hai, cùng nét. Ống đo mưa không là lựa chọn ở câu nào của bài hai, nên không có vai nào khác.
 #### option w1_thermometer
 correct: false
 feedback.en: A thermometer measures how hot or cold it is.
@@ -386,8 +385,7 @@ explanation_correct.en: Strong walls and a roof keep the wind out.
 explanation_correct.vi: Tường và mái nhà vững chắn gió mưa cho em.
 explanation_wrong.en: Inside the house is safest during a storm.
 explanation_wrong.vi: Khi có bão, ở trong nhà là an toàn nhất.
-> Câu nhớ lại ý chính hai. Lựa chọn "dưới gốc cây to" có sức hút vì trẻ quen trú mưa dưới gốc cây; "bên bờ sông" có sức hút với bé thích xem nước dâng. Ba hình vẽ có trẻ từ phía sau, cùng nét. Đáp án ở chỗ thứ nhất.
-> Rà chữ tester 11/11 (trả lời "Còn chưa chắc" 3): tester gợi ý đổi `q1_tree` sang một chỗ mới chưa gặp. Biên tập giữ: đáp án `q1_inside` là hình ô Học và món của kệ; nếu cả hai lựa chọn sai đều là hình mới thì đáp án thành hình duy nhất bé đã thấy (tiêu chí SK-038). Giữ một lựa chọn sai đã gặp (cây to, món bẫy của kệ) và một lựa chọn sai mới (bờ sông) thì không lựa chọn nào nổi bật vì quen hay lạ.
+> Câu nhớ lại ý chính hai. Lựa chọn "dưới gốc cây to" có sức hút vì trẻ quen trú mưa dưới gốc cây; "bên bờ sông" có sức hút với bé thích xem nước dâng. Ba hình vẽ có trẻ từ phía sau, cùng nét.> Rà chữ tester 11/11 (trả lời "Còn chưa chắc" 3): tester gợi ý đổi `q1_tree` sang một chỗ mới chưa gặp. Biên tập giữ: đáp án `q1_inside` là hình ô Học và món của kệ; nếu cả hai lựa chọn sai đều là hình mới thì đáp án thành hình duy nhất bé đã thấy (tiêu chí SK-038). Giữ một lựa chọn sai đã gặp (cây to, món bẫy của kệ) và một lựa chọn sai mới (bờ sông) thì không lựa chọn nào nổi bật vì quen hay lạ.
 
 #### option q1_inside
 correct: true
@@ -420,7 +418,7 @@ image.alt.vi: Bạn nhỏ đứng bên bờ sông lúc mưa gió
 ### q2
 id: 9ef0b891-1d11-4fed-8a3f-8debf1e9cacc
 format: fill_blank_bank
-version: 1
+version: 3
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
@@ -430,14 +428,15 @@ image.alt.vi: Cơn bão lớn nhìn từ vũ trụ
 sentence.en: Before a storm, listen to grown-ups and the {1}.
 sentence.vi: Trước bão, em nghe người lớn và nghe {1}.
 answers: q2_news
-hint.en: Remember the Listen card.
-hint.vi: Em nhớ lại ô Lắng nghe nhé.
-explanation_correct.en: The news tells us where the storm is going.
-explanation_correct.vi: Tin tức cho biết bão đang đi về đâu.
-explanation_wrong.en: The news warns us early about storms.
-explanation_wrong.vi: Tin tức báo trước cho mình về bão.
-> Câu nhớ lại ý chính một, ôn ý chính ba bài ba (dự báo, cảnh báo trước). Thẻ đúng là hình vẽ mới (chiếc đài), không dùng lại hình ti vi của ô Học; thẻ gió là hình lá bay của phần Chơi bài ba, thẻ ếch là hình vẽ mới, nên thẻ đúng không là hình duy nhất bé đã thấy. Câu tiếng Việt đọc xuôi với cả ba thẻ ("nghe tiếng gió", "nghe tiếng ếch kêu", "nghe tin tức"). Thẻ đúng ở chỗ thứ ba.
-> Rà chữ tester 11/11 (n9): hai thẻ sai cũ "birds" · "tiếng chim hót", "music" · "nhạc" không dính gì tới chuẩn bị trước bão. Nay là hai "dấu hiệu" quen ở làng quê: tiếng gió nổi lên, tiếng ếch kêu (câu ca "ếch kêu uôm uôm, ao chuôm đầy nước"); có sức hút, nhưng không cho biết bão ở xa sẽ đi về đâu, chỉ tin dự báo mới cho biết. Không lấy thẻ "loa phát thanh" tester gợi ý: loa làng cũng đưa tin bão (đáp án đúng ở câu q3 bài ba), câu sẽ có hai đáp án.
+hint.en: Think of the village loudspeaker before a storm.
+hint.vi: Em nghĩ tới cái loa xã trước khi bão tới nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember the Listen card." · "Em nhớ lại ô Lắng nghe nhé." trỏ ô có câu "Before a storm, listen to grown-ups and the news.", là chính câu này với chỗ trống đã điền. Gợi ý mới trỏ bằng chứng bé đã gặp (loa xã ở câu q3 bài ba): loa báo cho cả làng biết bão sắp tới. `version` 3.
+explanation_correct.en: A warning tells us where the storm is going.
+explanation_correct.vi: Tin cảnh báo cho biết bão đang đi về đâu.
+explanation_wrong.en: Storm warnings on the radio help us get ready.
+explanation_wrong.vi: Tin cảnh báo bão trên đài giúp mình chuẩn bị.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (warning, power line, torch). Giữ câu và ba hình; thẻ đúng đổi nhãn từ "news" · "tin tức" sang "warning" · "tin cảnh báo" (hình chiếc đài giữ, cũng là hình của từ `warning`). Câu EN và VI đọc xuôi với cả ba thẻ. Giữ key `q2_news` để file chọn ảnh không đổi; `version` 2 vì nhãn đáp án đổi. Không dùng "torch": câu q3 đã có đèn pin.
+> Câu nhớ lại ý chính một, ôn ý chính ba bài ba (dự báo, cảnh báo trước). Thẻ đúng là hình vẽ mới (chiếc đài), không dùng lại hình ti vi của ô Học; thẻ gió là hình lá bay của phần Chơi bài ba, thẻ ếch là hình vẽ mới, nên thẻ đúng không là hình duy nhất bé đã thấy. Câu tiếng Việt đọc xuôi với cả ba thẻ ("nghe tiếng gió", "nghe tiếng ếch kêu", "nghe tin tức").> Rà chữ tester 11/11 (n9): hai thẻ sai cũ "birds" · "tiếng chim hót", "music" · "nhạc" không dính gì tới chuẩn bị trước bão. Nay là hai "dấu hiệu" quen ở làng quê: tiếng gió nổi lên, tiếng ếch kêu (câu ca "ếch kêu uôm uôm, ao chuôm đầy nước"); có sức hút, nhưng không cho biết bão ở xa sẽ đi về đâu, chỉ tin dự báo mới cho biết. Không lấy thẻ "loa phát thanh" tester gợi ý: loa làng cũng đưa tin bão (đáp án đúng ở câu q3 bài ba), câu sẽ có hai đáp án.
 > [CẦN KIỂM] Tiếng gió, tiếng ếch không phải nguồn cảnh báo bão.
 
 #### bank q2_wind
@@ -459,8 +458,8 @@ image.alt.en: A frog croaking by a rice field
 image.alt.vi: Con ếch đang kêu bên bờ ruộng
 
 #### bank q2_news
-label.en: news
-label.vi: tin tức
+label.en: warning
+label.vi: tin cảnh báo
 image.brief: [hình vẽ] Một chiếc đài (radio) kiểu cũ trên mặt bàn gỗ, có núm vặn và loa tròn, vài nét sóng âm nhẹ quanh loa; không có chữ, không có số trên mặt đài, không có nhãn hiệu, không có người. Từ warning dùng lại hình này.
 image.alt.en: A radio on a table
 image.alt.vi: Chiếc đài trên bàn
@@ -468,7 +467,7 @@ image.alt.vi: Chiếc đài trên bàn
 ### q3
 id: 3f85215c-72fd-4bb0-8f1f-0a538516581f
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: A storm comes tonight, so what should Lan do now?
 prompt.vi: Tối nay bão tới, bây giờ Lan nên làm gì?
@@ -481,10 +480,10 @@ hint.en: What will help when wind and rain come?
 hint.vi: Việc gì sẽ giúp ích khi gió mưa kéo tới?
 explanation_correct.en: A torch helps if the power goes out at night.
 explanation_correct.vi: Đèn pin giúp khi mất điện vào ban đêm.
-explanation_wrong.en: Bring things inside and get a torch ready.
-explanation_wrong.vi: Lan cất đồ vào nhà và chuẩn bị đèn pin.
-> DOK 2: vận dụng ô "Lắng nghe" và ô "Ở trong nhà" vào việc làm ngay trước cơn bão. "Chuẩn bị đèn pin" là việc mới: ô Học chỉ nói "mất điện thì dùng đèn pin", bé phải suy ra nên chuẩn bị trước. Lựa chọn "đi thả diều" có sức hút vì bài một dạy diều cần gió, mà trước bão gió to; "ra bãi biển chơi" có sức hút vì trời còn đẹp. Bốn nhãn cùng dạng cụm động từ. Đáp án ở chỗ thứ hai và thứ ba.
-> Hình câu hỏi là sân nhà buổi chiều trời còn xanh của bài ba, đúng lúc trước khi bão tới.
+explanation_wrong.en: Get a torch ready in case the power goes out.
+explanation_wrong.vi: Lan chuẩn bị đèn pin, phòng khi mất điện.
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_bring` (cất đồ vào nhà, món của kệ Chơi) thay bằng `q3_window` (đứng cạnh cửa kính, sai; món bẫy của kệ); `version` 2. Đáp án còn lại là việc bé phải tự suy ra (chuẩn bị đèn pin). Giải thích khi sai sửa theo.
+> DOK 2: vận dụng ô "Lắng nghe" và ô "Ở trong nhà" vào việc làm ngay trước cơn bão. "Chuẩn bị đèn pin" là việc mới: ô Học chỉ nói "mất điện thì dùng đèn pin", bé phải suy ra nên chuẩn bị trước. Lựa chọn "đi thả diều" có sức hút vì bài một dạy diều cần gió, mà trước bão gió to; "ra bãi biển chơi" có sức hút vì trời còn đẹp. Bốn nhãn cùng dạng cụm động từ.> Hình câu hỏi là sân nhà buổi chiều trời còn xanh của bài ba, đúng lúc trước khi bão tới.
 
 #### option q3_kite
 correct: false
@@ -497,13 +496,16 @@ image.alt.en: A kite on the grass on a cloudy day
 image.alt.vi: Cánh diều trên bãi cỏ ngày âm u
 > Hình vẽ riêng, không dùng lại ảnh cánh diều của bài một, để cả câu là hình vẽ.
 
-#### option q3_bring
-correct: true
-label.en: bring things inside
-label.vi: cất đồ vào nhà
-image.brief: Dùng lại hình `tray_bring_in`.
-image.alt.en: A child carrying a plant inside
-image.alt.vi: Bạn nhỏ bê chậu cây vào nhà
+#### option q3_window
+correct: false
+feedback.en: Big windows can break when the storm wind comes.
+feedback.vi: Cửa kính có thể vỡ khi gió bão tới.
+label.en: stand by the window
+label.vi: đứng cạnh cửa kính
+image.brief: Dùng lại hình `tray_window` ở bài `be-mat-trai-dat/dong-dat-va-song-than`. Từ khoá tìm ảnh (EN): child window from behind
+image.alt.en: A child stands by a glass window
+image.alt.vi: Bạn nhỏ đứng cạnh cửa kính
+> SK-047 (15/11): thay `q3_bring`; cùng hình với món `tray_window` của kệ Chơi (hình vẽ, có trẻ từ phía sau), không cần hình mới.
 
 #### option q3_torch
 correct: true
@@ -540,8 +542,7 @@ explanation_correct.en: A middle room is far from glass and wind.
 explanation_correct.vi: Căn phòng ở giữa nhà xa cửa kính và gió.
 explanation_wrong.en: A middle room keeps you away from glass.
 explanation_wrong.vi: Phòng giữa nhà giúp em tránh xa cửa kính.
-> DOK 2: áp dụng ví dụ "tránh xa cửa kính" và ý "ở trong nhà" vào ba chỗ cụ thể trong nhà. Ô Học không nói "phòng ở giữa nhà" hay "ban công". Ba hình vẽ ba chỗ của cùng một ngôi nhà, không có trẻ. Ba nhãn cùng dạng cụm giới từ. Đáp án ở chỗ thứ hai.
-> [CẦN KIỂM] Khi có bão nên ở phòng phía trong, ít cửa kính; không ra ban công.
+> DOK 2: áp dụng ví dụ "tránh xa cửa kính" và ý "ở trong nhà" vào ba chỗ cụ thể trong nhà. Ô Học không nói "phòng ở giữa nhà" hay "ban công". Ba hình vẽ ba chỗ của cùng một ngôi nhà, không có trẻ. Ba nhãn cùng dạng cụm giới từ.> [CẦN KIỂM] Khi có bão nên ở phòng phía trong, ít cửa kính; không ra ban công.
 
 #### option q4_balcony
 correct: false
@@ -576,7 +577,7 @@ image.alt.vi: Cửa kính lớn lúc mưa gió
 ### q5
 id: dd6d8a4d-c92d-46b0-b935-526b0e82466b
 format: true_false
-version: 1
+version: 2
 dok: 2
 prompt.en: Storm wind is air that moves very fast.
 prompt.vi: Gió bão là không khí chuyển động rất nhanh.
@@ -584,8 +585,9 @@ image.brief: Dùng lại hình `tray_bend` ở bài `thoi-tiet-va-thien-tai/mua-
 image.alt.en: Trees bending low in strong wind
 image.alt.vi: Hàng cây nghiêng rạp trong gió mạnh
 answer: true
-hint.en: Remember what wind is from the first lesson.
-hint.vi: Em nhớ lại gió là gì ở bài đầu tiên nhé.
+hint.en: Think of how trees bend in a storm.
+hint.vi: Em nghĩ tới cây cối ngả rạp trong cơn bão nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember what wind is from the first lesson." · "Em nhớ lại gió là gì ở bài đầu tiên nhé." trỏ câu ô Có gió bài một "Wind is air that is moving.", gần trùng câu khẳng định. Gợi ý mới trỏ bằng chứng bé đã thấy (cây ngả rạp ở bài ba): không khí phải chuyển động rất nhanh mới đẩy cây như vậy. `version` 2.
 explanation_correct.en: Fast-moving air pushes hard on trees and roofs.
 explanation_correct.vi: Không khí chuyển động nhanh đẩy mạnh vào cây, mái nhà.
 explanation_wrong.en: Storm wind is very fast-moving air.
@@ -616,8 +618,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Remember the Flood water card.
-hint.vi: Em nhớ lại ô Nước lũ nhé.
+hint.en: Look at the colour of the flood water.
+hint.vi: Em nhìn màu nước lũ nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Nước lũ, mà câu của ô ("che giấu hố sâu") là lời bác bỏ. Gợi ý mới chỉ vào điều thấy được trong hình (nước đục), bé tự suy ra không thấy được bên dưới.
 explanation_correct.en: Even shallow flood water can hide holes and wires.
 explanation_correct.vi: Nước lũ nông vẫn có thể giấu hố sâu, dây điện.
 explanation_wrong.en: Stay out of all flood water, deep or shallow.
@@ -736,7 +739,8 @@ image.alt.vi: Túi đồ có đèn pin, nước và đồ ăn
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `shallow_floodwater_safe`.
 - **Tham chiếu:** `ids` đã chạy; w1 trỏ bài hai, w2 trỏ bài bốn, đều đã có id. Không có khối `###` mới, không đổi dòng `id:` nào.
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q2 thẻ thứ ba; q3 thứ hai và thứ ba; q4 thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **15/11 (SK-047):** q2 câu Từ mới "warning" (đổi nhãn thẻ đúng), `version` 2; q3 `multi_choice` một đáp án đúng (đèn pin), `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Nghe tin bão, Ở yên trong nhà, Đứng ở chỗ khô ráo → `balanced`;

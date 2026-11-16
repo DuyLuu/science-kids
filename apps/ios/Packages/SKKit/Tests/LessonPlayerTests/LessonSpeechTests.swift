@@ -109,6 +109,10 @@ import Testing
                 #expect(opening == session.explorerGroupUtterance(group))
             case .play:
                 #expect(opening?.clips.map(\.text) == session.tray.map { [$0.prompt.en, $0.messages.start.en] }, "fresh tray: the prompt, then the start message")
+            case .recap:
+                // SK-047: the first key point; the page reads the next ones after it.
+                #expect(opening?.id == "recap.key_point.0")
+                #expect(opening?.clips.map(\.text) == [session.lesson.keyPoints[0].en])
             case .reward:
                 #expect(opening == nil)
             }
@@ -213,7 +217,7 @@ import Testing
                 session.submit(rightTry(session.item(at: index, in: .quiz)!), for: session.item(at: index, in: .quiz)!, in: .quiz)
             case .learn:
                 for group in session.exploreBlock?.groups ?? [] { session.selectGroup(group.key) }
-            case .play, .reward:
+            case .play, .recap, .reward:
                 break
             }
             session.advance()

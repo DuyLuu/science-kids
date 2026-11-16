@@ -78,8 +78,6 @@ image.brief: Dùng lại hình `hoa-thach-ke-chuyen-khung-long/tray_rock_print`
 image.alt.en: A dinosaur footprint in rock
 image.alt.vi: Dấu chân khủng long in trên đá
 > Nhãn tiếng Việt đổi "dấu chân trong đá" thành "dấu chân in trên đá" cho khớp đúng tên món ở phần Chơi bài ba (bảng Tên gọi).
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ hai (trước đây thứ ba).
-
 #### option w1_sand
 correct: false
 feedback.en: Prints in wet sand soon wash away.
@@ -128,8 +126,9 @@ image.brief: Dùng lại hình `khung-long-la-gi/tray_pterosaur` (tranh thằn l
 image.alt.en: A painting of a flying reptile
 image.alt.vi: Tranh vẽ thằn lằn bay
 answer: true
-hint.en: Think of the flying reptile you met. When did it live?
-hint.vi: Em nhớ lại con thằn lằn bay. Nó sống vào thời nào?
+hint.en: Remember the animals that were not dinosaurs.
+hint.vi: Em nhớ lại những con vật không phải khủng long nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "nó sống vào thời nào", câu trả lời chính là câu khẳng định. Gợi ý mới chỉ trỏ chỗ cần nhớ (ô Không phải khủng long, bài hai).
 explanation_correct.en: They lived then, but they were not dinosaurs.
 explanation_correct.vi: Chúng sống cùng thời, nhưng không phải khủng long.
 explanation_wrong.en: Flying reptiles and dinosaurs lived at the same time.
@@ -417,8 +416,6 @@ explanation_wrong.vi: Khủng long đẻ trứng trong tổ, trên mặt đất.
 > Hình câu hỏi là khủng long con đang nở (vật được hỏi là trứng của khủng long), cắt không thấy tổ, để không lộ đáp án. Hai lựa chọn sai là chỗ đẻ trứng của hai con vật quen: ếch đồng đẻ trứng dưới nước, bướm đẻ trứng trên lá.
 > Rà chữ tester 9/11 (n10): bản trước dùng ảnh quả trứng hoá thạch (`tray_rock_egg` bài ba) cho hình câu hỏi, mà lựa chọn đúng cũng là ảnh hoá thạch trong đá, còn hai lựa chọn sai là ảnh trứng ếch, trứng bướm ngày nay; bé chọn hình "giống hình trên" mà không cần nhớ. Hình mới là mô hình trong tủ kính, không phải đá, nên không giống riêng lựa chọn nào. Dùng lại hình từ vựng `hatch` của bài này, không phải tìm ảnh mới.
 > [CẦN KIỂM] Xem ghi chú ở ý chính một: tổ khủng long ở trên mặt đất.
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ nhất).
-
 #### option q1_pond
 correct: false
 feedback.en: Frogs lay their eggs in pond water.
@@ -465,8 +462,6 @@ explanation_wrong.en: Sharp, curved teeth are meat-eater teeth.
 explanation_wrong.vi: Răng nhọn và cong là răng của loài ăn thịt.
 > DOK 1: nhớ lại ô Khủng long ăn thịt. Gợi ý chỉ vào hình ô Học, không nói thẳng đáp án.
 > Rà chữ tester 9/11 (N3): bản trước lựa chọn đúng là một chiếc răng rời, nhãn số ít ("sharp, curved tooth"), còn hai lựa chọn sai là hàm nhiều răng, nhãn số nhiều; bé chọn "cái khác hẳn" mà không cần nhìn răng. Nay ba lựa chọn cùng một kiểu: ảnh hoá thạch cắt cận một đoạn hàm có nhiều răng, khung vuông, không nhãn chữ; ba nhãn EN cùng số nhiều ("teeth"). Món Chơi `tray_sharp_tooth` (một chiếc răng) giữ nguyên, vì ở kệ Chơi nó là món bẫy, không phải một trong ba đáp án, và từ `clue` dùng ảnh đó.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ hai).
-
 #### option q2_sharp
 correct: true
 label.en: sharp, curved teeth
@@ -517,8 +512,6 @@ explanation_wrong.vi: Răng dẹt là răng ăn thực vật, như dương xỉ.
 > Ba lựa chọn dùng lại ba hình ở kệ Chơi, cũng là bộ lựa chọn của câu w1 bài năm (khủng long cổ dài ăn gì). Bài năm dùng lại được ba hình này.
 > [CẦN KIỂM] Khủng long mỏ vịt (ví dụ Edmontosaurus) có răng dẹt xếp sát nhau để nghiền thực vật, và dương xỉ là một trong những thứ chúng ăn được. Chọn ảnh hộp sọ thấy rõ hàng răng; nếu ảnh không thấy răng thì đổi sang ảnh hàm dưới.
 > SK-033: ảnh Duy duyệt có hàng răng dẹt nằm trong hàm, ở cỡ ô khó thấy; chữ của câu chưa đổi, vì ảnh không làm câu sai (con khủng long này có răng dẹt, và nhìn là thấy không có răng nhọn). Nếu xem trên máy thấy bé không nhìn ra răng, đề xuất đổi câu hỏi thành "Look at this skull. What did this dinosaur eat?" · "Em nhìn hộp sọ này nhé. Con khủng long này ăn gì?" và gợi ý thành "Can you see any sharp, curved teeth?" · "Em có thấy chiếc răng nhọn và cong nào không?".
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
-
 #### option q3_fern
 correct: true
 label.en: fern
@@ -567,8 +560,6 @@ explanation_wrong.vi: Nhiều đường dấu chân cùng hướng là dấu hi�
 > DOK 2: từ một bằng chứng (nhiều đường dấu chân song song) chọn cảnh đúng. Ba lựa chọn là ba tranh cùng một loài, cùng bối cảnh, cùng góc nhìn; chỉ khác số con và việc chúng làm. Một con đi một mình chỉ để lại một đường dấu chân; con đứng bên tổ không để lại đường dấu chân dài.
 > [CẦN KIỂM] Cách suy "nhiều đường dấu chân song song, cùng hướng là một đàn" (xem ô explore_safe). Tranh khủng long cổ dài bên tổ trứng: biên tập nhớ có bãi làm tổ của khủng long cổ dài (titanosaur) ở Nam Mỹ.
 > Rà chữ tester 9/11 (n9): bản trước nói chắc "show a herd" · "cho thấy cả một đàn" và "Nhiều con khủng long đã đi cùng một lúc", chắc hơn ghi chú `[CẦN KIỂM]`. Câu mới dùng chữ "clues" · "manh mối" (từ vựng của bài, ý chính ba): dấu chân là manh mối, các nhà khoa học suy ra có một đàn. Giải thích khi sai chỉ nêu đáp án.
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ hai (trước đây thứ nhất).
-
 #### option q4_alone
 correct: false
 feedback.en: One dinosaur leaves just one line of footprints.
@@ -675,10 +666,12 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Think of the long-necked dinosaur. What did it eat?
-hint.vi: Em nghĩ tới khủng long cổ dài. Nó ăn gì?
-explanation_correct.en: T. rex is only one kind out of many.
-explanation_correct.vi: Khủng long bạo chúa chỉ là một trong nhiều loài.
+hint.en: Remember the clues on the dinosaur models.
+hint.vi: Em nhớ lại manh mối trên các mô hình khủng long nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ gọi tên phản ví dụ và hỏi "nó ăn gì", câu trả lời là lời bác bỏ. Gợi ý mới trỏ bằng chứng của câu q5 (răng, sừng, giáp), bé tự tìm loài ăn thực vật.
+explanation_correct.en: T. rex ate meat, but many dinosaurs ate plants.
+explanation_correct.vi: Khủng long bạo chúa ăn thịt, nhưng nhiều loài ăn thực vật.
+> SK-047 (15/11, nháp AI): câu cũ "T. rex is only one kind out of many." chỉ nói chỗ sai của lập luận; trên thẻ "Ý sai → Ý đúng" của màn Tổng kết, câu đúng cần tự nói ý đúng.
 explanation_wrong.en: The long-necked dinosaur and Triceratops ate plants.
 explanation_wrong.vi: Khủng long cổ dài và ba sừng đều ăn thực vật.
 feedback_true.en: Many dinosaurs had flat teeth for plants.
@@ -834,11 +827,7 @@ image.alt.vi: Trứng khủng long hoá thạch nằm trong đá
   - w1, w2: `recall_from.lesson: khung-long/hoa-thach-ke-chuyen-khung-long` → `lesson_id` của bài ba. w3: `recall_from.lesson: khung-long/khung-long-la-gi` → `lesson_id` của bài hai. Hai bài đã có id; slug đúng (rà chéo 9/11).
   - `misconception: all_dinosaurs_ate_meat` → `misconception_id` (đã có id trong `_topic.md`).
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng. Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ hai;
-  - q1: thứ ba; q2: thứ nhất; q3: thứ nhất; q4: thứ hai; q5: thứ nhất, thứ ba, thứ tư.
-  - Rà chữ tester 9/11 (n1) đã xáo lại tay w1, q1 tới q4: bản trước theo chu kỳ 3-1-2-3-1, đoán được. Thứ tự `#### option` trong file đổi, key không đổi.
-  - Kệ Chơi app tự xáo mỗi lượt học; thứ tự `#### item` trong file đã xếp xen cho chắc.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kệ Chơi).
 - **Màn Chơi, ví dụ để kiểm** (ưu tiên lời nhắn theo SK-012: balanced, full, has_limited, start, missing):
   - mở màn, chưa chạm gì → `start`;
   - chạm Răng dẹt, Dương xỉ, Ba chiếc sừng → đạt (`balanced`);

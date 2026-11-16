@@ -591,6 +591,6 @@ image.alt.vi: Giọt nước trên lá sen
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (dry, wet). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Đúng). Quiz `single_choice` (q1, q3, q5), `true_false` (q2 Sai, q6 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`plants_grow_anywhere`).
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; q3 thứ nhất; q5 thứ ba. q4 thẻ trong file: ao, đồi cát, rừng râm mát; thứ tự đúng: đồi cát, rừng râm mát, ao.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: đồi cát, rừng râm mát, ao.
 - **Màn Chơi, ví dụ để kiểm:** Hoa sen, Cây lúa, Cây đước → `balanced`; Bèo tây, Cây lúa, Cây dương xỉ → `has_limited`; Hoa sen, Bèo tây, Cây lúa → `missing.tray_salty`.
 - **Từ EN có thể ngoài Starters/Movers:** habitat, cactus, fern, mangrove, water hyacinth, lotus, shade, damp, salty, spines, moss.

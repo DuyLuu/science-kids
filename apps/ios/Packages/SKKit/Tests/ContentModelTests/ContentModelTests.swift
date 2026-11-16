@@ -415,7 +415,7 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
         Issue.record("q2 should be fill_blank_bank")
         return
     }
-    #expect(q2.segmentsEN == [.text("Carbohydrates give us "), .blank(1), .text(".")])
+    #expect(q2.segmentsEN == [.text("Food gives us "), .blank(1), .text(", like protein and fat.")])
     // vi may or may not have the blank (SK-017 adds it); never more blanks than answers.
     let viBlanks = q2.segmentsVI.filter { if case .blank = $0 { true } else { false } }
     #expect(viBlanks.count <= q2.answers.count)
@@ -451,7 +451,7 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
     @Test("Word cards without image: image is nil, the bank has no pictures")
     func withoutImage() throws {
         let fill = try Self.q2(Self.lesson(images: [:]))
-        #expect(fill.bank.map(\.key) == ["q2_energy", "q2_air", "q2_sunlight"])
+        #expect(fill.bank.map(\.key) == ["q2_nutrients", "q2_air", "q2_sunlight"])
         #expect(fill.bank.allSatisfy { $0.image == nil })
         #expect(!fill.hasPictures)
     }
@@ -462,17 +462,17 @@ final class RecordingLog: ContentLog, @unchecked Sendable {
             "alt": ["en": "A child running in the park", "vi": "Bạn nhỏ chạy trong công viên"],
             "brief": "Ảnh chụp thật, trẻ chạy trên cỏ (từ khoá: child running park)",
         ]
-        let lesson = try Self.lesson(images: ["q2_energy": image])
+        let lesson = try Self.lesson(images: ["q2_nutrients": image])
         let fill = try Self.q2(lesson)
-        let energy = try #require(fill.bank.first { $0.key == "q2_energy" })
+        let energy = try #require(fill.bank.first { $0.key == "q2_nutrients" })
         #expect(energy.image == ContentImage(
             alt: BilingualText(en: "A child running in the park", vi: "Bạn nhỏ chạy trong công viên"),
             brief: "Ảnh chụp thật, trẻ chạy trên cỏ (từ khoá: child running park)"
         ))
-        #expect(fill.bank.filter { $0.key != "q2_energy" }.allSatisfy { $0.image == nil })
+        #expect(fill.bank.filter { $0.key != "q2_nutrients" }.allSatisfy { $0.image == nil })
         #expect(fill.hasPictures)
         // Scoring reads keys only: the answers do not change.
-        #expect(fill.answers == ["q2_energy"])
+        #expect(fill.answers == ["q2_nutrients"])
 
         // Encodes back the same (no `image` key is written for the cards without one).
         let again = try ContentDecoder().decodeLesson(from: JSONEncoder().encode(lesson))

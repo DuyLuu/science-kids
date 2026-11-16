@@ -58,7 +58,7 @@ explanation_correct.vi: Mưa trôi tuột khỏi mặt áo mưa, em không ướ
 explanation_wrong.en: A raincoat keeps you dry in the rain.
 explanation_wrong.vi: Áo mưa giữ cho em khô ráo khi mưa.
 > Gợi ý chỉ một bối cảnh quen, không gọi tên vật. Ba lựa chọn là ba thứ mặc cho ba kiểu thời tiết (nắng, mưa, lạnh), nên hai lựa chọn sai vẫn hợp lý ở hôm khác. Hình câu hỏi là ảnh mưa của ô "Trời mưa" (cùng một vật, một ảnh), không có áo mưa.
-> Đáp án ở chỗ thứ hai (bảng Vị trí đáp án đúng ở `_topic.md`).
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 
 #### option w1_hat
 correct: false
@@ -107,7 +107,7 @@ explanation_correct.en: Those tiny drops are like a little cloud on glass.
 explanation_correct.vi: Giọt nước li ti ấy giống một đám mây nhỏ trên kính.
 explanation_wrong.en: Tiny water drops from her breath make the glass foggy.
 explanation_wrong.vi: Giọt nước li ti từ hơi thở làm kính mờ.
-> Câu ôn câu q5 bài một *Hô hấp* (cùng hình, cùng ba lựa chọn), đổi thứ tự lựa chọn: bên đó kính mờ ở chỗ thứ hai, bên này ở chỗ thứ ba. Giải thích khi đúng nói "những giọt nước li ti", đúng chữ ý chính ba của bài này, để bé gặp lại ở ô "Trời nhiều mây".
+> Câu ôn câu q5 bài một *Hô hấp* (cùng hình, cùng ba lựa chọn); app xáo thứ tự lựa chọn (SK-047). Giải thích khi đúng nói "những giọt nước li ti", đúng chữ ý chính ba của bài này, để bé gặp lại ở ô "Trời nhiều mây".
 > [CẦN KIỂM] Lớp mờ trên kính lạnh là những giọt nước rất nhỏ (hơi nước trong hơi thở gặp lạnh). Câu không nói cơ chế ngưng tụ (để dành *Các thể của vật chất*).
 
 #### option w2_dusty
@@ -425,30 +425,29 @@ image.alt.vi: Mặt ao phẳng lặng
 ### q2
 id: ec3d16b0-7dd3-4bb3-805e-81652b17bd54
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
-image.brief: Dùng lại hình `explore_cloudy`. Từ khoá tìm ảnh (EN): cloudy sky grey white clouds countryside
-image.alt.en: White and grey clouds over the fields
-image.alt.vi: Mây trắng và mây xám trên cánh đồng
-sentence.en: A cloud is made of {1}.
-sentence.vi: Đám mây được tạo nên từ {1}.
-answers: q2_water
-hint.en: Remember the Cloudy card.
-hint.vi: Em nhớ lại ô Trời nhiều mây nhé.
-explanation_correct.en: Big, heavy drops fall from clouds as rain.
-explanation_correct.vi: Giọt nước to và nặng thì rơi xuống thành mưa.
-explanation_wrong.en: Clouds are lots of tiny water drops.
-explanation_wrong.vi: Mây gồm rất nhiều giọt nước li ti.
-> Câu nhớ lại ý chính ba. Hai thẻ sai là hai ý của `clouds_are_smoke` (khói, bông), không gắn key. Thẻ đúng ở chỗ thứ ba.
-> Câu dùng "made of {1}" để ba thẻ đều là danh từ không đếm được, cùng một từ, không thẻ nào nổi bật.
+image.brief: Dùng lại hình `tray_puddle`. Từ khoá tìm ảnh (EN): rain puddle reflection ground
+image.alt.en: A puddle after rain
+image.alt.vi: Vũng nước sau mưa
+sentence.en: Dark {1} can bring rain.
+sentence.vi: Những đám {1} đen có thể mang mưa tới.
+answers: q2_clouds
+hint.en: Look up at the sky before a storm.
+hint.vi: Em nhìn lên trời lúc sắp có mưa giông nhé.
+explanation_correct.en: Clouds are tiny water drops; big drops fall as rain.
+explanation_correct.vi: Mây là giọt nước li ti, giọt to thì rơi thành mưa.
+explanation_wrong.en: Dark clouds are full of water, ready to fall as rain.
+explanation_wrong.vi: Mây đen chứa nhiều nước, sắp rơi xuống thành mưa.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (weather, wind, cloud); câu cũ điền "water". Câu mới là câu ví dụ của từ `cloud`. Giữ hai thẻ sai cũ (khói, bông), hai ý của `clouds_are_smoke`, không gắn key; giải thích khi đúng giữ ý chính ba (mây là giọt nước li ti). Hình câu hỏi cũ là ảnh mây (lộ đáp án, `alt` có chữ "clouds"), nay là vũng nước sau mưa của kệ Chơi. `version` 2; thẻ `q2_water` bỏ, thêm `q2_clouds`. Gợi ý cũ trỏ ô "Cloudy", tên ô gần như là đáp án.
 
 #### bank q2_smoke
 label.en: smoke
 label.vi: khói
-feedback.en: Smoke comes from fires, not from clouds.
-feedback.vi: Khói bay lên từ lửa, không làm ra mây.
+feedback.en: Smoke comes from fires, and it brings no rain.
+feedback.vi: Khói bay lên từ lửa, khói không mang mưa tới.
 image.brief: [hình vẽ] Một làn khói xám mỏng bốc lên từ mái bếp một ngôi nhà ở làng quê lúc chiều, nhìn từ xa; không thấy lửa, không có người, không có chữ. Từ khoá tìm ảnh (EN): kitchen smoke rising village roof
 image.alt.en: Smoke rising from a roof
 image.alt.vi: Khói bốc lên từ mái bếp
@@ -462,13 +461,13 @@ image.brief: [hình vẽ] Mấy cục bông gòn trắng trên mặt gỗ trơn,
 image.alt.en: White cotton balls
 image.alt.vi: Mấy cục bông trắng
 
-#### bank q2_water
-label.en: water
-label.vi: nước
-image.brief: [hình vẽ] Rất nhiều giọt nước nhỏ đọng trên mặt kính cửa sổ, vẽ cận, phía sau mờ; không có chữ, không có người, không có phản chiếu người. Từ khoá tìm ảnh (EN): water droplets on glass close up
-image.alt.en: Tiny drops of water
-image.alt.vi: Những giọt nước li ti
-> Hình giọt nước trên kính, không dùng hình lá ướt của phần Chơi, để thẻ đúng không là hình bé đã thấy. Theo hình designer 11/11, ba thẻ là hình vẽ.
+#### bank q2_clouds
+label.en: clouds
+label.vi: mây
+image.brief: Dùng lại hình `tray_dark` ở bài `thoi-tiet-va-thien-tai/mua-mua-bao`.
+image.alt.en: Dark clouds over the rice fields
+image.alt.vi: Mây đen kéo tới trên cánh đồng lúa
+> SK-047 (15/11): thay `q2_water`. Hình vẽ mây đen của bài ba (cùng nét hai thẻ kia), cũng là hình câu hỏi của câu q3; không cần hình mới. Hình giọt nước trên kính của thẻ cũ (đã vẽ, designer 11/11) không còn dùng ở bài này.
 
 ### q3
 id: ba012d11-351f-436d-ae1f-a3990f17da2c
@@ -492,7 +491,7 @@ explanation_wrong.en: Rain would wet the drying rice and chillies.
 explanation_wrong.vi: Mưa sẽ làm ướt thóc và ớt đang phơi.
 > 14/11 (ngân sách A2): câu hỏi cũ hai câu, mười hai chữ VI; nay một câu chín chữ. Ý "mây đen kéo tới" nằm ở hình (mây đen trên cánh đồng).
 > DOK 2: vận dụng ví dụ "mây đen có thể mang mưa tới" vào việc nhà rất quen ở Việt Nam ("trời sắp mưa, cất thóc, cất đồ phơi"). Hai lựa chọn sai có sức hút: chum để ngoài sân để hứng nước mưa, cây trong chậu được tưới nhờ mưa; bé phải nghĩ "mưa có hại hay có ích cho thứ này".
-> Đáp án ở chỗ thứ nhất và thứ ba. Thóc phơi là hình của phần Chơi (ở đó cũng là món đúng); ba hình kia mới. Theo hình designer 11/11, cả bốn lựa chọn là hình vẽ.
+> Thóc phơi là hình của phần Chơi (ở đó cũng là món đúng); ba hình kia mới. Theo hình designer 11/11, cả bốn lựa chọn là hình vẽ.
 
 #### option q3_rice
 correct: true
@@ -547,8 +546,7 @@ explanation_correct.en: Warm sun helps the water leave the shirt fast.
 explanation_correct.vi: Nắng ấm giúp nước trong áo bay hơi nhanh.
 explanation_wrong.en: The warm sun dries wet clothes fast.
 explanation_wrong.vi: Nắng ấm làm quần áo ướt mau khô.
-> DOK 2: vận dụng ô "Trời nắng" (ví dụ "đồ ướt mau khô") vào việc phơi áo. Gợi ý nối với món thóc phơi ở phần Chơi, không gọi tên lựa chọn. Ba lựa chọn là ba ảnh ô Học (cùng loại ảnh chụp; đáp án không phải ảnh duy nhất bé đã thấy). Đáp án ở chỗ thứ nhất.
-> [CẦN KIỂM] Hôm nắng có gió phơi mau khô nhất; câu chỉ so nắng, mưa, nhiều mây.
+> DOK 2: vận dụng ô "Trời nắng" (ví dụ "đồ ướt mau khô") vào việc phơi áo. Gợi ý nối với món thóc phơi ở phần Chơi, không gọi tên lựa chọn. Ba lựa chọn là ba ảnh ô Học (cùng loại ảnh chụp; đáp án không phải ảnh duy nhất bé đã thấy).> [CẦN KIỂM] Hôm nắng có gió phơi mau khô nhất; câu chỉ so nắng, mưa, nhiều mây.
 
 #### option q4_sunny
 correct: true
@@ -621,8 +619,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: On the Windy card, what pushes what?
-hint.vi: Ở ô Trời có gió, cái gì đẩy cái gì?
+hint.en: Think of a kite and clouds high in the sky.
+hint.vi: Em nghĩ tới cánh diều, đám mây trên cao nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Trời có gió và hỏi "cái gì đẩy cái gì", câu trả lời ("gió đẩy cây") là lời bác bỏ. Gợi ý mới chỉ vào những thứ gió đẩy ở trên cao, xa cây cối; bé tự suy ra gió có trước, không do cây.
 explanation_correct.en: Wind blows at sea too, where there are no trees.
 explanation_correct.vi: Ngoài biển không có cây mà vẫn có gió.
 explanation_wrong.en: The wind moves the trees.
@@ -738,7 +737,8 @@ image.alt.vi: Đám mây trắng trên trời
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `trees_make_wind`.
 - **Tham chiếu:** chạy `ids` cho `_topic.md` rồi bài này, trước bài hai, ba, bốn (Khởi động của ba bài đó trỏ về đây).
-- **Vị trí đáp án đúng:** w1 thứ hai; w2 thứ ba; q1 thứ nhất; q2 thẻ thứ ba; q3 thứ nhất và thứ ba; q4 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "clouds", `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Vũng nước mưa, Bóng cây trên sân, Cánh diều bay cao → `balanced`;

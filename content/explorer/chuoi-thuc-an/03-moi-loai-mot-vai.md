@@ -450,6 +450,7 @@ explanation_wrong.en: The answer is the mouse. It is in the middle.
 explanation_wrong.vi: Đáp án là con chuột. Chuột đứng giữa chuỗi.
 > DOK 2: nói vai của từng món trong chuỗi bé nghe bằng lời. Hai câu EN ba và sáu từ, cả màn chín từ.
 > Thẻ đúng (chuột) đặt thứ ba, không đặt ở giữa: bé vừa nghe "lúa, chuột, cú" sẽ không chọn được theo vị trí.
+> SK-047 (15/11): ghi chú vị trí trên hết hiệu lực, app xáo lựa chọn; có lúc thẻ chuột nằm giữa. "in the middle" trong giải thích là giữa chuỗi, không phải giữa màn.
 
 #### option q4_owl
 correct: false
@@ -627,7 +628,7 @@ image.alt.vi: Con chuột trên mặt đất
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món.
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn bài hai), `true_false` (w2 Đúng, ôn bài một; w3 Sai, ôn chủ đề số một bài ba).
   - Quiz: `single_choice` (q1, q3, q4), `true_false` (q2 Sai, q6 Đúng), `order_sequence` (q5). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`end_animal_matters_most`).
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; q3 thứ nhất; q4 thứ ba. q5: thẻ trong file ếch, lúa, châu chấu → đúng: lúa, châu chấu, ếch.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q5 thứ tự đúng: lúa, châu chấu, ếch.
 - **Màn Chơi, ví dụ để kiểm:** Cây lúa, Con chuột, Con cú → `balanced`; Cỏ, Con châu chấu, Chuột đồ chơi → `has_limited`; Cây lúa, Cỏ, Con cú → `missing.tray_middle`.
 - **Tên bài mới:** đã có trong `content/syllabus.json` (phiên chính đổi 14/11).
 - **Từ EN có thể ngoài Starters/Movers:** role, owl, grasshopper, wooden, carved, ripe.

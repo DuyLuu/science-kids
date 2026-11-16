@@ -183,9 +183,9 @@
       "same_as": "granite",
       "lesson": "da-va-dat/nhin-ky-cac-loai-da"
     },
-    "q2.q2_fossils": {
-      "same_as": "tray_ammonite",
-      "lesson": "da-va-dat/hoa-thach-hinh-thanh-the-nao"
+    "q2.q2_palaeontology": {
+      "same_as": "vocab.palaeontologist",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
     "q2.q2_stars": {
       "same_as": "q5",
@@ -205,9 +205,9 @@
     "q3.q3_shell": {
       "same_as": "tray.tray_stone_shell"
     },
-    "q3.q3_brick": {
-      "same_as": "tray_brick",
-      "lesson": "da-va-dat/lam-quen-voi-da"
+    "q3.q3_footprint": {
+      "same_as": "tray.tray_rock_print",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
     "q4": {
       "same_as": "tray.tray_stone_wood"

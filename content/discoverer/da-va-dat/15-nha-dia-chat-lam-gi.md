@@ -57,7 +57,7 @@ explanation_correct.en: That is why sandy soil dries fast after rain.
 explanation_correct.vi: Vì vậy đất cát mau khô sau mưa.
 explanation_wrong.en: Sandy soil has big grains that let water rush through.
 explanation_wrong.vi: Đất cát hạt to, nước chảy qua rất nhanh.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động. Đất vườn có sức hút (cũng là đất, `_topic.md`).
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Đất vườn có sức hút (cũng là đất, `_topic.md`).
 > Hình câu hỏi là hai chai trước khi đổ nước (đúng bảng Hình dùng chung: `explore_setup` cho hình câu w1 bài 15), không cho thấy kết quả.
 
 #### option w1_clay
@@ -108,7 +108,7 @@ explanation_correct.en: Weathering comes first, then erosion carries the bits aw
 explanation_correct.vi: Phong hoá làm vỡ trước, rồi xói mòn mang mảnh đi.
 explanation_wrong.en: Rock wearing down where it is is weathering.
 explanation_wrong.vi: Đá mòn đi ngay tại chỗ là phong hoá.
-> Ý (phong hoá), thứ tự lựa chọn (xói mòn · phong hoá · phun trào) và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động.
+> Ý (phong hoá) và lựa chọn (xói mòn · phong hoá · phun trào) đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 > Lệch chữ so với bảng Khởi động ("rễ cây làm nứt đá, đó là gì"): nếu câu hỏi nói "rễ cây" và hình đáp án có rễ cây thì bé chỉ cần tìm hình. Câu hỏi nói về nước mưa làm đá vôi mòn tại chỗ, đúng cảnh "rain wearing down limestone" · "mưa bào mòn đá vôi" mà bài 7 xếp vào phong hoá (câu q3 bài 7).
 > Rà chữ tester 11/11 (rà bài 1–8, n13): lựa chọn đúng đổi từ `explore_weathering` (rễ cây, không khớp chữ câu hỏi) sang `tray_rain_limestone` của bài 7 (mặt đá vôi có rãnh do nước mưa); câu hỏi đổi theo hình. Ảnh xói mòn (dòng sông) vẫn có sức hút với chữ "nước", chữ "mòn" của câu VI có sức hút với nhãn "xói mòn"; bé phải dựa vào ý "ngay tại chỗ" để chọn phong hoá.
 > Hình câu hỏi là núi đá vôi trên biển (không phải hình của lựa chọn nào). [CẦN KIỂM] Nước mưa làm mặt đá vôi mòn dần tại chỗ là phong hoá (như bài 7).
@@ -401,7 +401,7 @@ image.alt.vi: Góc vườn rau
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vị trí đáp án đúng bảng `_topic.md`: q1 chỗ thứ ba; q2 thẻ thứ nhất; q3 chỗ thứ nhất và thứ hai; q4 chỗ thứ nhất (bốn lựa chọn); q5 chỗ thứ ba.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Ôn trộn: q2 ôn bài 4, q3 ôn bài 3, 5 (và lọ đất bài 11 làm lựa chọn sai), q5 ôn bài 11. Không hình lựa chọn nào xuất hiện ở hai câu (kể cả câu Khởi động).
 
 ### q1
@@ -455,52 +455,51 @@ image.alt.vi: Búa địa chất đặt trên tảng đá
 ### q2
 id: 8745c790-7d29-4758-ae6f-af63328acb5c
 format: fill_blank_bank
-version: 1
+version: 3
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `explore_samples`. Từ khoá tìm ảnh (EN): rock sample collection tray
 image.alt.en: A tray of rock samples
 image.alt.vi: Khay đựng các mẫu đá
-sentence.en: The hardest mineral of all is {1}.
-sentence.vi: Khoáng vật cứng nhất là {1}.
-answers: q2_diamond
-hint.en: Remember the hardness scale in lesson four.
-hint.vi: Em nhớ lại thang độ cứng ở bài bốn nhé.
-explanation_correct.en: Diamond is number ten, the top of Mohs' scale.
-explanation_correct.vi: Kim cương ở bậc mười, cao nhất thang Mohs.
-explanation_wrong.en: Diamond is the hardest mineral of all.
-explanation_wrong.vi: Kim cương là khoáng vật cứng nhất.
-> Ôn bài 4 (khoáng vật, kim cương cứng nhất), đúng ý bảng Khởi động bài 5 ("bài 4 dạy kim cương cứng nhất"). Ba thẻ là ba khoáng vật của chính thang Mohs bài 4 (hoạt thạch mềm nhất, thạch anh, kim cương cứng nhất). Thạch anh có sức hút (cũng rất cứng, lựa chọn sai có sức hút ghi ở `_topic.md`); hoạt thạch có sức hút với bé nhớ nhầm bậc thang.
-> Rà chữ tester 11/11 (N1): thẻ `q2_chalk` (đá phấn) đổi thành `q2_talc` (hoạt thạch): đá phấn là đá, không phải khoáng vật (bài 3, bài 4), nên không được đứng trong danh sách khoáng vật.
-> Chuỗi VI không có chữ "Mohs" (khỏi cần dòng `READINGS` ở bài này); chuỗi EN giữ "Mohs' scale".
-> Ba thẻ là ba ảnh trong Bộ mẫu đá, cùng nền.
+sentence.en: The science of rocks and soil is called {1}.
+sentence.vi: Khoa học về đá và đất gọi là {1}.
+answers: q2_geology
+hint.en: Think of the people who test rock and soil samples.
+hint.vi: Em nghĩ tới những người mang mẫu đá, mẫu đất về thử nhé.
+> SK-047 (15/11, nháp AI): gợi ý trước có chữ "geologist" · "nhà địa chất", gần như chữ của thẻ đúng (geology · địa chất học). Gợi ý mới chỉ trỏ trang Từ mới.
+> SK-047 (16/11, nháp AI, tester "nên sửa" 3): gợi ý 15/11 "Remember the New words page of this lesson." · "Em nhớ lại trang Từ mới của bài này nhé." trỏ thẳng trang in sẵn "geology · địa chất học". Gợi ý mới trỏ bằng chứng là việc của người làm ngành này trong bài (ô Mẫu: mang mẫu đá, mẫu đất về thử), không có chữ "geolog-" hay "địa chất". Bé tự nối người đó với tên ngành, và loại "palaeontology" (chỉ hoá thạch), "fieldwork" (việc làm, không phải ngành). `version` 3.
+explanation_correct.en: Geologists study rocks at cliffs, quarries and rivers.
+explanation_correct.vi: Nhà địa chất tìm hiểu đá ở vách đá, mỏ đá, bờ sông.
+explanation_wrong.en: Geology is the science of rocks and soil.
+explanation_wrong.vi: Địa chất học là khoa học về đá và đất.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (fieldwork, sample, geology); câu cũ điền "diamond", ôn bài 4. Câu mới là câu ví dụ của từ `geology`. Hai thẻ sai là hai từ gần nghĩa bé đã học: cổ sinh vật học (bài 9, nghiên cứu hoá thạch) và đi thực địa (từ của bài này, là việc làm, không phải ngành khoa học). `version` 2; ba thẻ khoáng vật (kim cương, thạch anh, hoạt thạch) bỏ, nên bài này không còn ôn "kim cương cứng nhất" ở Quiz (bài 5 Khởi động vẫn ôn).
+> Thẻ đúng dùng ảnh nhà địa chất (`geologist` của bài 4, cũng là hình câu hỏi q1), không dùng ảnh ống mẫu đất của từ `geology`: ảnh đó cho thấy các lớp đất, là bằng chứng của câu q5. Ba thẻ cùng là ảnh chụp, không cần hình mới.
 
-#### bank q2_diamond
-label.en: diamond
-label.vi: kim cương
-image.brief: Dùng lại hình `diamond` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): rough diamond crystal
-image.alt.en: A small clear piece
-image.alt.vi: Mẩu nhỏ trong suốt
+#### bank q2_geology
+label.en: geology
+label.vi: địa chất học
+image.brief: Dùng lại hình `geologist` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): geologist field work back view rock outcrop
+image.alt.en: A geologist looking at rocks
+image.alt.vi: Nhà địa chất đang xem đá
 
-#### bank q2_quartz
-label.en: quartz
-label.vi: thạch anh
-feedback.en: Quartz is hard, but something is harder.
-feedback.vi: Thạch anh cứng, nhưng còn thứ cứng hơn.
-image.brief: Dùng lại hình `quartz` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): white quartz crystal
-image.alt.en: A white piece
-image.alt.vi: Mẩu màu trắng
+#### bank q2_palaeontology
+label.en: palaeontology
+label.vi: cổ sinh vật học
+feedback.en: Palaeontology is the study of fossils, not all rocks.
+feedback.vi: Cổ sinh vật học nghiên cứu hoá thạch, không phải mọi loại đá.
+image.brief: Dùng lại hình `palaeontologist` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): palaeontologist hands tool fossil rock quarry
+image.alt.en: A palaeontologist digging out a fossil
+image.alt.vi: Nhà cổ sinh vật học đào hoá thạch
 
-#### bank q2_talc
-label.en: talc
-label.vi: hoạt thạch
-feedback.en: Talc is the softest mineral on the scale.
-feedback.vi: Hoạt thạch là khoáng vật mềm nhất.
-image.brief: Dùng lại hình `tray_talc` ở bài `da-va-dat/thang-do-cung-mohs`. Từ khoá tìm ảnh (EN): talc mineral sample
-image.alt.en: A pale cream piece
-image.alt.vi: Mẩu màu trắng ngà
-> `alt` của ba thẻ chép đúng khuôn mới của bài 4 ("A <màu> piece" · "Mẩu <màu>", người A sửa theo tester N5): chỉ tả màu, không tả độ cứng (Quy ước hình mục năm). [CẦN KIỂM] tên "hoạt thạch" theo sách (bảng Tên gọi).
+#### bank q2_fieldwork
+label.en: fieldwork
+label.vi: đi thực địa
+feedback.en: Fieldwork is going out to look, not a science.
+feedback.vi: Đi thực địa là ra ngoài tìm hiểu, không phải một ngành.
+image.brief: Dùng lại hình `magnifying_glass` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): magnifying glass plain background
+image.alt.en: A magnifying glass
+image.alt.vi: Chiếc kính lúp
 
 ### q3
 id: becb4081-748d-419a-ab9e-78731681ad1f
@@ -694,8 +693,9 @@ image.brief: [ảnh] Một hòn đá rơi từ vũ trụ xuống Trái Đất (m
 image.alt.en: A dark rock with many dents
 image.alt.vi: Hòn đá sẫm màu có nhiều vết lõm
 > Theo ảnh designer chọn 11/11 (mảnh thiên thạch sắt Sikhote-Alin, nền sáng): brief sửa nền; `alt` sửa vì ảnh không chụp trong bảo tàng (trước: "A dark rock on show in a museum" · "Hòn đá sẫm màu trưng bày trong bảo tàng"). `alt` vẫn không gọi tên loại đá.
-hint.en: Remember the Rocks from space picture.
-hint.vi: Em nhớ lại ô Đá ngoài vũ trụ nhé.
+hint.en: Remember where some rocks on Earth came from.
+hint.vi: Em nhớ lại có những hòn đá trên Trái Đất từ đâu tới nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "Rocks from space" · "Đá ngoài vũ trụ" gần như là lời Na. Gợi ý mới chỉ trỏ ý cần nhớ, bé tự nối với việc nhà địa chất nghiên cứu được đá đó.
 explanation_correct.en: Rocks from space tell us about faraway worlds.
 explanation_correct.vi: Đá từ vũ trụ kể cho ta về những nơi rất xa.
 explanation_wrong.en: Geologists study rocks from space, too.
@@ -810,7 +810,9 @@ image.alt.vi: Hòn đá xám từ Mặt Trăng
   - Khởi động: `single_choice` (w1, w2; ba lựa chọn), `true_false` (w3, Sai, câu "Em nghĩ sao?" của bài 1, không gắn key). DOK một. `recall_from.lesson`: `da-va-dat/nuoc-tham-qua-dat-nao-nhanh-hon`, `da-va-dat/da-bi-bao-mon-theo-thoi-gian`, `da-va-dat/lam-quen-voi-da`.
   - Quiz: `single_choice` (q1 ba lựa chọn, q4 bốn lựa chọn, q5 ba lựa chọn), `fill_blank_bank` (q2, ba thẻ), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q6 Đúng, `speaker: na`, `misconception: geologists_only_earth`).
 - **Tham chiếu:** chạy `ids` cho bài 1, bài 7, bài 14 trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ hai; w2 thứ hai; q1 thứ ba; q2 thẻ thứ nhất; q3 thứ nhất và thứ hai; q4 thứ nhất; q5 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "geology", `version` 2.
+- **q2 (16/11, SK-047, tester "nên sửa" 3):** đổi `hint` (EN, VI), `version` 3. Sinh lại giọng cho hai chuỗi này.
 - **Câu "Em nghĩ sao?":** w3 hỏi lại đúng câu của bài 1 (đề xuất schema v1.1 `think_first`, ghi ở Ghi chú cho dev bài 1).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;

@@ -329,31 +329,47 @@ image.alt.vi: Mấy viên kẹo
 ### q2
 id: aeb7debc-28ed-4fd8-a192-8a9e5a581455
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
-sentence.en: Carbohydrates give us {1}.
-sentence.vi: Chất bột đường cho ta {1}.
-answers: q2_energy
-hint.en: Rice helps you run and play. What does it give you?
-hint.vi: Cơm giúp em chạy nhảy, vui chơi. Cơm cho em thứ gì?
-explanation_correct.en: Carbohydrates give us energy to run and play.
-explanation_correct.vi: Chất bột đường cho ta năng lượng để chạy nhảy, vui chơi.
-explanation_wrong.en: The answer is energy. Rice and bread give us energy.
-explanation_wrong.vi: Đáp án là năng lượng. Cơm và bánh mì cho ta năng lượng.
+sentence.en: Food gives us {1}, like protein and fat.
+sentence.vi: Thức ăn cho ta {1}, như chất đạm và chất béo.
+answers: q2_nutrients
+hint.en: Think what helps your body grow and stay well.
+hint.vi: Em nghĩ xem thứ gì giúp cơ thể lớn và khoẻ nhé.
+explanation_correct.en: Nutrients help your body grow, move and stay well.
+explanation_correct.vi: Chất dinh dưỡng giúp cơ thể lớn lên, vận động và khoẻ mạnh.
+explanation_wrong.en: Food gives us nutrients, like protein, fat and vitamins.
+explanation_wrong.vi: Thức ăn cho ta chất dinh dưỡng, như đạm, béo, vitamin.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (nutrient, carbohydrate, protein, fat); câu cũ điền "energy" (từ extra). Không nâng "energy" lên core vì bài đã có bốn từ core. Câu mới là câu ví dụ của từ `nutrient`. Không dùng "carbohydrate" hay "protein": câu q3 hỏi bún thuộc nhóm nào, câu q5 hỏi món giàu chất đạm. Giữ hai thẻ sai cũ (không khí, ánh nắng); `q2_energy` bỏ, thêm `q2_nutrients`. `version` 2.
+> Theo luật SK-044 và SK-047 (bài này chưa qua lượt viết lại A2): thêm hình cho ba thẻ (dùng lại hình có sẵn), `feedback` cho hai thẻ sai; giải thích khi sai bỏ "The answer is …" · "Đáp án là …". Câu chưa có hình câu hỏi; ở A2 hình câu hỏi ẩn vì mọi thẻ từ có hình, nên không thêm.
 
-#### bank q2_energy
-label.en: energy
-label.vi: năng lượng
+#### bank q2_nutrients
+label.en: nutrients
+label.vi: chất dinh dưỡng
+image.brief: Dùng lại hình `nutrient`.
+image.alt.en: Rice, an egg, oil and vegetables together
+image.alt.vi: Cơm, trứng, dầu ăn và rau đặt cạnh nhau
 
 #### bank q2_air
 label.en: air
 label.vi: không khí
+feedback.en: We breathe in air; it does not come from food.
+feedback.vi: Mình hít không khí vào, không phải từ thức ăn.
+image.brief: Dùng lại hình `w1` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): rice field wind waves Vietnam
+image.alt.en: Wind blowing over a rice field
+image.alt.vi: Gió thổi trên cánh đồng lúa
 
 #### bank q2_sunlight
 label.en: sunlight
 label.vi: ánh nắng
+feedback.en: Sunlight comes from the sun, not from food.
+feedback.vi: Ánh nắng đến từ Mặt Trời, không từ thức ăn.
+image.brief: Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky
+image.alt.en: The bright sun in the sky
+image.alt.vi: Mặt Trời chói sáng trên trời
+> SK-047 (15/11): ba hình dùng lại; không cần hình mới. Chủ đề này chưa có file chọn ảnh (SK-043 dev 14/11); designer thêm ba mục khi làm file. Hình `nutrient` là hình tả bằng chữ kiểu cũ (chưa theo luật SK-033), designer xem có cần đổi brief không.
 
 ### q3
 id: b06b6e26-f1b1-412e-b110-78e00e3d510f
@@ -502,8 +518,9 @@ dok: 3
 misconception: all_fat_bad
 prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
-instruction.en: Challenge: spot the mistake
-instruction.vi: Thử thách: bắt lỗi sai
+instruction.en: Challenge: check Na's idea
+instruction.vi: Thử thách: kiểm tra ý của Na
+> SK-047 (15/11, nháp AI): nhãn cũ "spot the mistake" · "bắt lỗi sai" báo trước Na sai; đổi sang nhãn trung tính của TEMPLATE (mục Quiz), như mọi câu sáu Discoverer khác.
 statement.en: All fat is bad for you.
 statement.vi: Chất béo lúc nào cũng có hại.
 speaker: na
@@ -512,8 +529,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Remember: fats give us energy and keep us warm.
-hint.vi: Nhớ lại phần học: Chất béo cho ta năng lượng và giữ ấm cơ thể.
+hint.en: Think about what fat does for your body.
+hint.vi: Em nghĩ xem chất béo làm gì cho cơ thể nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ nói thẳng "chất béo cho ta năng lượng và giữ ấm", tức là lời bác bỏ. Gợi ý mới chỉ cách nghĩ.
 explanation_correct.en: A little fat gives us energy and keeps us warm.
 explanation_correct.vi: Cơ thể cần một ít chất béo để có năng lượng và giữ ấm.
 explanation_wrong.en: Na is not right. We need a little fat, not too much.

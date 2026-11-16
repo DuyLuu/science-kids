@@ -13,7 +13,8 @@ import Testing
 /// - right: no background, lá tre, bold;
 /// - wrong: giấy lõm background, secondary ink, regular.
 /// Multi-word answers keep together with no-break spaces.
-/// Lesson 1 fixture: w1 has its blank mid-sentence, q2 has it right before the full stop.
+/// Lesson 1 fixture: w1 has its blank mid-sentence, q2 has it right before a comma (SK-047:
+/// content-editor rewrote q2, "Food gives us {1}, like protein and fat."; before, a full stop).
 @MainActor
 struct FillBlankSentenceTests {
     struct NotFillBlank: Error { let key: String }
@@ -67,14 +68,14 @@ struct FillBlankSentenceTests {
 
     // MARK: - Spacing (L9)
 
-    @Test("Blank before the full stop (q2): the word touches the full stop, EN and VI", arguments: states)
-    func wordAtTheEnd(state: ChoiceState?) throws {
+    @Test("Blank before a comma (q2): the word touches the comma, EN and VI", arguments: states)
+    func wordBeforePunctuation(state: ChoiceState?) throws {
         let fill = try Self.fill("q2")
         for line in Self.lines {
-            let en = Self.text(FillBlankSentence.sentence(fill, filled: ["q2_energy"], language: .en, line: line, state: state))
-            let vi = Self.text(FillBlankSentence.sentence(fill, filled: ["q2_energy"], language: .vi, line: line, state: state))
-            #expect(en == "Carbohydrates give us energy.")
-            #expect(vi == "Chất bột đường cho ta năng\(Self.nbsp)lượng.")
+            let en = Self.text(FillBlankSentence.sentence(fill, filled: ["q2_nutrients"], language: .en, line: line, state: state))
+            let vi = Self.text(FillBlankSentence.sentence(fill, filled: ["q2_nutrients"], language: .vi, line: line, state: state))
+            #expect(en == "Food gives us nutrients, like protein and fat.")
+            #expect(vi == "Thức ăn cho ta chất\(Self.nbsp)dinh\(Self.nbsp)dưỡng, như chất đạm và chất béo.")
             #expect(Self.strayWhitespace(in: en).isEmpty, "\(Self.strayWhitespace(in: en))")
             #expect(Self.strayWhitespace(in: vi).isEmpty, "\(Self.strayWhitespace(in: vi))")
         }
@@ -99,7 +100,7 @@ struct FillBlankSentenceTests {
     func filledWordLook(state: ChoiceState?) throws {
         let want = Self.expected(state)
         let cases: [(key: String, word: String, filled: String, language: ContentLanguage)] = [
-            ("q2", "energy", "q2_energy", .en), ("q2", "năng\(Self.nbsp)lượng", "q2_energy", .vi),
+            ("q2", "nutrients", "q2_nutrients", .en), ("q2", "chất\(Self.nbsp)dinh\(Self.nbsp)dưỡng", "q2_nutrients", .vi),
             ("w1", "air", "w1_air", .en), ("w1", "không\(Self.nbsp)khí", "w1_air", .vi),
         ]
         for item in cases {
@@ -138,10 +139,10 @@ struct FillBlankSentenceTests {
     @Test("Only the word's own spaces become no-break spaces")
     func noBreakOnlyInsideTheWord() throws {
         let fill = try Self.fill("q2")
-        let vi = FillBlankSentence.sentence(fill, filled: ["q2_energy"], language: .vi, line: Tokens.Typography.body, state: .correct)
+        let vi = FillBlankSentence.sentence(fill, filled: ["q2_nutrients"], language: .vi, line: Tokens.Typography.body, state: .correct)
         let text = Self.text(vi)
-        #expect(text.filter { $0 == "\u{00A0}" }.count == 1, "one no-break space, in 'năng lượng'")
-        #expect(text.hasPrefix("Chất bột đường cho ta "), "the sentence keeps its plain spaces")
+        #expect(text.filter { $0 == "\u{00A0}" }.count == 2, "two no-break spaces, in 'chất dinh dưỡng'")
+        #expect(text.hasPrefix("Thức ăn cho ta "), "the sentence keeps its plain spaces")
     }
 
     @Test("Empty blank keeps the sunken box with \"?\" (unchanged)", arguments: lines)
@@ -156,6 +157,6 @@ struct FillBlankSentenceTests {
             #expect(run[SwiftUIKeys.FontAttribute.self] == nil, "the box keeps the line font")
         }
         #expect(Self.text(FillBlankSentence.sentence(fill, filled: [], language: .en, line: Tokens.Typography.sentence, state: nil))
-            == "Carbohydrates give us \u{2007}\u{2007}?\u{2007}\u{2007}.")
+            == "Food gives us \u{2007}\u{2007}?\u{2007}\u{2007}, like protein and fat.")
     }
 }

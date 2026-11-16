@@ -72,8 +72,9 @@ describe("build (cache giả, không cần model)", () => {
   test("gói đúng B4.3: manifest, pack.json, assets; sha256 và size khớp; không còn brief", () => {
     const run = build(outA());
     assert.equal(run.status, 0, run.stderr);
-    assert.match(run.stdout, /Chủ đề: 1 · bài: 1 · asset: 107 \(audio en 107\)/);
-    assert.match(run.stdout, /Tổng dung lượng gói: .*109 file/);
+    // 110 distinct EN strings in lesson 1 since SK-047 (15/11, q2 rewritten): 107 before.
+    assert.match(run.stdout, /Chủ đề: 1 · bài: 1 · asset: 110 \(audio en 110\)/);
+    assert.match(run.stdout, /Tổng dung lượng gói: .*112 file/);
     const manifest = readJsonFile(path.join(outA(), "catalog/v1/manifest.json"));
     assert.deepEqual(Object.keys(manifest), ["schema_version", "generated_at", "content_version", "topics", "rules", "assets"]);
     assert.equal(manifest.schema_version, 1);
@@ -99,7 +100,8 @@ describe("build (cache giả, không cần model)", () => {
     const at = (doc: Record<string, any>, pointer: string) => pointer.slice(1).split("/").reduce((node, token) => node[token], doc);
     const input = readJsonFile(ws.files[1]!);
     const images = locateCommon("lesson", input, "Image");
-    assert.equal(images.length, 36);
+    // 39 since SK-047 (15/11): the three q2 bank words got a picture.
+    assert.equal(images.length, 39);
     const restored = structuredClone(pack.lessons[0]);
     for (const pointer of images) {
       const { brief } = at(input, pointer);
@@ -109,8 +111,8 @@ describe("build (cache giả, không cần model)", () => {
     assert.equal(JSON.stringify(pack.topic), JSON.stringify(readJsonFile(ws.files[0]!)));
 
     const assetFiles = readdirSync(path.join(outA(), "assets")).sort();
-    assert.equal(assetFiles.length, 107);
-    assert.equal(manifest.assets.length, 107);
+    assert.equal(assetFiles.length, 110);
+    assert.equal(manifest.assets.length, 110);
     for (const asset of manifest.assets) {
       const bytes = readFileSync(path.join(outA(), asset.path));
       assert.equal(asset.path, `assets/${asset.sha256}.m4a`);
@@ -121,7 +123,7 @@ describe("build (cache giả, không cần model)", () => {
     }
     const used = new Set<string>();
     for (const doc of [pack.topic, ...pack.lessons]) for (const { node } of collectSpoken(doc.kind, doc)) used.add(node.audio!.en!);
-    assert.equal(used.size, 107);
+    assert.equal(used.size, 110);
     for (const hash of used) assert.ok(existsSync(path.join(outA(), "assets", `${hash}.m4a`)), hash);
   });
 
@@ -264,6 +266,16 @@ describe("build (cache giả, không cần model)", () => {
     assert.equal(run.status, 1);
     assert.match(run.stderr, /rules-typo\.json \/discoverer\/max_tries/);
     assert.match(run.stderr, /rules-typo\.json \/discoverer .*xp_per_corect/);
+
+    // SK-047: multi_choice_correct_spread is a number in (0, 1].
+    const spread = path.join(root, "rules-spread.json");
+    for (const value of [0, 1.5, "a"]) {
+      writeFileSync(spread, JSON.stringify({ ...rules, discoverer: { ...rules.discoverer, authoring: { ...rules.discoverer.authoring, multi_choice_correct_spread: value } } }));
+      run = build(path.join(root, "pack-rules"), "--rules", spread);
+      assert.equal(run.status, 1, `${JSON.stringify(value)}: ${run.stderr}`);
+      assert.match(run.stderr, /rules-spread\.json \/discoverer\/authoring\/multi_choice_correct_spread /, JSON.stringify(value));
+      assert.equal(existsSync(path.join(root, "pack-rules")), false);
+    }
   });
 
   /** The tts-shaped lesson (audio on every Spoken), edited, next to a copy of its topic. */
@@ -419,7 +431,7 @@ describe("build với ảnh (SK-033: file chọn ảnh + cache ảnh giả)", ()
     const lesson = readJsonFile(ws.files[1]!);
     const total = locateCommon("lesson", lesson, "Image").length;
     assert.match(run.stdout, new RegExp(`Hình: 2 file ảnh cho 5 Image · ${total - 5} Image chưa có ảnh`));
-    assert.match(run.stdout, /asset: 109 \(audio en 107, image 2\)/);
+    assert.match(run.stdout, /asset: 112 \(audio en 110, image 2\)/);
     assert.match(run.stdout, /cảnh báo hình \(image_missing, image_brief_keywords\); xem từng dòng bằng validate/);
 
     const manifest = readJsonFile(path.join(out, "catalog/v1/manifest.json"));

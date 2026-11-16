@@ -655,7 +655,7 @@ image.alt.vi: Con voọc trên cây
   - Khởi động: `single_choice` (w1, ba lựa chọn), `true_false` (w2, Sai). Cả hai `prior_knowledge`, DOK một.
   - Quiz: `true_false` (q1 Đúng, q3 Sai), `single_choice` (q2, q4, q5, q6, mỗi câu ba lựa chọn). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`pets_have_four_legs`).
   - `true_false` không có `labels` (Explorer hiện biểu tượng gật đầu, lắc đầu).
-- **Vị trí đáp án đúng:** w1 thứ hai; q2 thứ ba; q4 thứ nhất; q5 thứ hai; q6 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** mở màn → `start`; Con chó, Vẹt yến phụng, Cá vàng → `balanced`; Con mèo, Con chó, Cá vàng (thiếu nhóm bay) → `missing.tray_fly`; chạm thêm Con cò → `full`; bỏ Con mèo, đặt Con cò → `has_limited`.
 - **Số từ EN trên một màn (Explorer tối đa mười lăm):** Khởi động và Quiz đều dưới mười lăm nếu chỉ tính câu hỏi (hình không chữ, lựa chọn không chữ). Màn nhiều chữ nhất là q4 (tám từ câu hỏi). Gợi ý và giải thích hiện sau khi chạm, nên tính riêng. Màn Học: mỗi ô một câu tối đa tám từ. Màn Chơi: lệnh ba từ, lời nhắn tối đa tám từ, nhưng nhãn bảy món và bốn chip nhóm cộng lại vượt mười lăm; xem câu hỏi cho ios-dev ở ticket.
 - **Câu "Em nghĩ sao?"** (đề xuất schema v1.1 `think_first`, như các chủ đề Discoverer), đặt trước phần Học:

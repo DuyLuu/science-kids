@@ -255,8 +255,8 @@
       "title": "A child walking to the cliffs alone",
       "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
     },
-    "q3.q3_museum": {
-      "same_as": "tray.tray_museum"
+    "q3.q3_climb": {
+      "same_as": "tray.tray_climb"
     },
     "q4": {
       "same_as": "tray.tray_lens_rock"

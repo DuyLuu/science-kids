@@ -650,7 +650,7 @@ image.alt.vi: Đàn kiến vàng làm tổ bằng lá
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` năm nhóm + `word_list` (backbone, insect, spider). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, tám món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Sai, w3 Đúng). Quiz `single_choice` (q1, q5), `true_false` (q2 Đúng, q3 Sai, q6 Đúng), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`bugs_not_animals`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ hai; q5 thứ ba. q4 thẻ trong file: cuốn chiếu, kiến, nhện; thứ tự đúng: kiến, nhện, cuốn chiếu.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: kiến, nhện, cuốn chiếu.
 - **Màn Chơi, ví dụ để kiểm:** Con kiến, Con nhện, Con cua → `balanced`; Con bướm, Con nhện, Thằn lằn → `has_limited`; Con kiến, Con bướm, Con tôm → `missing.tray_eight`.
 - **Bộ thẻ** `set: animals` như sáu bài trước.
 - **Syllabus:** bài mới, chưa có trong `content/syllabus.json`; PM/phiên chính thêm trước khi chạy `ids` (không có `oak_lessons`).

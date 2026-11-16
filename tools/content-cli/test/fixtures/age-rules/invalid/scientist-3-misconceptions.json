@@ -365,34 +365,34 @@
         "vi": "Mình xem lại nhé."
       },
       "sentence": {
-        "en": "Plants need light and {1} to grow.",
-        "vi": "Cây cần ánh sáng và {1} để lớn."
+        "en": "A {1} lives in water.",
+        "vi": "{1} sống dưới nước."
       },
       "bank": [
         {
-          "key": "q4_water",
+          "key": "q4_fish",
           "label": {
-            "en": "water",
-            "vi": "nước"
+            "en": "fish",
+            "vi": "con cá"
           }
         },
         {
-          "key": "q4_sand",
+          "key": "q4_cow",
           "label": {
-            "en": "sand",
-            "vi": "cát"
+            "en": "cow",
+            "vi": "con bò"
           }
         },
         {
-          "key": "q4_salt",
+          "key": "q4_hen",
           "label": {
-            "en": "salt",
-            "vi": "muối"
+            "en": "hen",
+            "vi": "gà mái"
           }
         }
       ],
       "answers": [
-        "q4_water"
+        "q4_fish"
       ]
     },
     {

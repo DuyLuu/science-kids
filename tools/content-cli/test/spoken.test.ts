@@ -8,10 +8,11 @@ describe("chuỗi Spoken lấy theo schema", () => {
   const topic = collectSpoken("topic", readJson(TOPIC_FILE));
   const lesson = collectSpoken("lesson", readJson(LESSON_FILE));
 
-  test("bài 1: topic 2, bài 126, tổng 128, 107 chuỗi EN khác nhau", () => {
+  // SK-047 (15/11): q2 of lesson 1 became "nutrients" and its two wrong bank words got feedback (126 -> 128).
+  test("bài 1: topic 2, bài 128, tổng 130, 110 chuỗi EN khác nhau", () => {
     assert.equal(topic.length, 2);
-    assert.equal(lesson.length, 126);
-    assert.equal(new Set([...topic, ...lesson].map(({ node }) => node.en)).size, 107);
+    assert.equal(lesson.length, 128);
+    assert.equal(new Set([...topic, ...lesson].map(({ node }) => node.en)).size, 110);
     assert.deepEqual(topic.map(({ pointer }) => pointer), ["/title", "/question"]);
   });
 

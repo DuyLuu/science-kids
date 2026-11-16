@@ -130,6 +130,25 @@ Ví dụ Explorer, câu "Which one is a bird?" (dơi, chuồn chuồn, chim cán
 - `hint`: "Look for feathers and a beak." · "Em tìm con có lông vũ và có mỏ nhé."
 - `explanation_correct`: "Yes! A penguin is a bird. It swims." · "Đúng rồi! Chim cánh cụt là chim. Nó bơi, không bay."
 
+**Thứ tự trên màn, câu nhiều đáp án, câu Từ mới, gợi ý (SK-047)** *(nháp AI, 15/11)*
+
+Áp cho mọi nhóm tuổi, cả Khởi động và Quiz.
+
+- **App xáo thứ tự.** Lựa chọn của `single_choice`, `multi_choice`, thẻ trong kho `fill_blank_bank` và thẻ `order_sequence` được xáo mỗi lần hiện câu; iPhone và iPad còn xếp thẻ khác nhau. Vì vậy:
+  - Biên tập không cân vị trí đáp án đúng nữa. Các bảng và dòng "Vị trí đáp án đúng" trong `_topic.md` và Ghi chú cho dev hết hiệu lực 15/11.
+  - `hint`, `feedback`, `explanation_correct`, `explanation_wrong` không nhắc vị trí thẻ trên màn: không "the first card", "the one on the left", "the last picture", "thẻ đầu", "hình bên trái", "thẻ cuối". Gọi vật bằng tên hoặc bằng điều nhìn thấy.
+  - Nhãn lựa chọn tự đứng được, không dựa vào thẻ đứng cạnh: không "both of these", "all of the above", "the one above", "cả hai cái trên".
+  - Được tả vị trí **bên trong một hình** ("cột bên trái" của một biểu đồ vẽ sẵn), vì hình không bị xáo. Cột `picture_bar_chart` giữ thứ tự `#### bar` và luôn hiện tên dưới cột.
+  - `prompt` tránh kể các lựa chọn theo một thứ tự (bé dễ chọn theo chỗ thẻ trùng thứ tự vừa nghe).
+- **`multi_choice`.** Giữ `instruction` "Pick all the right answers." · "Chọn tất cả đáp án đúng.", kể cả câu chỉ có một đáp án đúng. Trong một chủ đề, không số đáp án đúng nào (một, hai, ba) chiếm quá một nửa số câu `multi_choice`; chủ đề có từ hai câu trở lên thì nên có câu một đáp án đúng và câu ba đáp án đúng. Đổi số đáp án thì sửa lời giải thích có chữ "both" · "cả hai". Máy kiểm: `multi_choice_correct_spread`.
+- **Câu Từ mới (`fill_blank_bank` ở Quiz).** Ô trống là một từ `tier: core` của chính bài, tức một từ có trong `word_list.term_keys` (dạng số nhiều thêm "-s" vẫn tính). Kho ba đến bốn thẻ cùng loại từ (cùng là danh từ chỉ vật, cùng số ít hay số nhiều); thẻ nào cũng có hình; thẻ sai có `feedback`. Câu không chứa gốc từ của đáp án. Muốn dùng một từ `extra` thì nâng từ đó lên `tier: core` và thêm vào `term_keys`, giữ ngân sách từ core của nhóm tuổi (Discoverer ba đến bốn từ). Máy kiểm: `vocab_item_uses_lesson_word`.
+- **`hint` hiện trước khi bé trả lời** (nút gợi ý; câu `true_false` chỉ có một lượt), nên `hint` không được gần như nói đáp án:
+  - không trỏ tới một thẻ, ô Học hay vật mà tên hoặc câu của nó chính là phán quyết;
+  - không hỏi một câu có hay không, hay một câu hỏi thẳng, mà câu trả lời quyết định đáp án;
+  - trỏ tới bằng chứng, một cảnh quen, hoặc cách nghĩ.
+  - Không đạt, cho câu Na "Dust is too tiny to hurt your lungs.": "Remember the Tiny dust card." (tên ô đã nói bụi nhỏ vẫn hại). Đạt: "Think of a sunbeam shining into a dark room." · "Em nghĩ tới tia nắng chiếu vào phòng tối nhé."
+- **Thẻ ôn "Ý sai → Ý đúng".** Cuối bài, app hiện lại câu bé làm sai: chữ của câu (`statement` hoặc `prompt`) rồi `explanation_correct`. Vì vậy `explanation_correct` của câu 6 lời Na và của mọi câu `true_false` đáp án Sai phải đứng một mình: một câu nói ý đúng, đủ nghĩa khi đọc tách khỏi câu hỏi. Không "Yes!" · "Đúng rồi!", không "Na is not right." · "Na chưa đúng", không "This is false." · "Câu này sai". Đạt (câu Na "Eating only water spinach is enough."): "One food alone cannot give every nutrient we need." · "Một món thôi không cho đủ mọi chất cơ thể cần."
+
 **Luật soạn câu Explorer** *(nháp AI)*
 
 Bé 5–7 tuổi phần lớn chưa đọc được, nên phải làm trọn Khởi động và Quiz chỉ bằng nghe và nhìn (SK-026, quyết định D2 và D4). Ở Explorer:
@@ -160,7 +179,7 @@ Bảy luật dưới đây áp cho mọi câu Explorer, ở cả Khởi động 
    - Kiểm: máy báo `age_image_required` khi câu thiếu `image`; người duyệt kiểm câu phủ định và `labels`.
    - Đạt: `image.brief: [ảnh] Một con dơi đang bay lúc chập tối, nền trời đơn giản, không có chữ. Từ khoá tìm ảnh (EN): bat flying dusk sky` · `prompt.en: A bat is a bird.` · `prompt.vi: Con dơi là một loài chim.` · `answer: false`. Câu này cũng hợp làm câu misconception ở câu 6.
    - Không đạt: không có `image` · `prompt.en: A bat is not a bird.` · `answer: true`.
-6. **Gợi ý và giải thích viết để app tự đọc.** App tự đọc `hint` khi bé chọn sai, và đọc `explanation_correct` hoặc `explanation_wrong` khi xong câu. Mỗi câu tối đa 8 từ, như câu hỏi. `hint` chỉ vào một điều nhìn thấy trong hình, không nói thẳng đáp án. Không nhắc tới chữ trên màn hay vị trí thẻ ("the second card", "the top one"), vì iPhone xếp thẻ dọc còn iPad xếp một hàng. `explanation_wrong` nói tên đáp án, vì app làm sáng thẻ đúng cùng lúc. Bản tiếng Việt viết để nghe: số bằng chữ, không ký hiệu, không viết tắt.
+6. **Gợi ý và giải thích viết để app tự đọc.** App tự đọc `hint` khi bé chọn sai, và đọc `explanation_correct` hoặc `explanation_wrong` khi xong câu. Mỗi câu tối đa 8 từ, như câu hỏi. `hint` chỉ vào một điều nhìn thấy trong hình, không nói thẳng đáp án. Không nhắc tới chữ trên màn hay vị trí thẻ ("the second card", "the top one"), vì iPhone xếp thẻ dọc còn iPad xếp một hàng (từ 15/11 luật này áp cho mọi nhóm tuổi và app còn xáo thẻ, xem mục SK-047 ở trên). `explanation_wrong` nói tên đáp án, vì app làm sáng thẻ đúng cùng lúc. Bản tiếng Việt viết để nghe: số bằng chữ, không ký hiệu, không viết tắt.
    - Kiểm: máy cảnh báo `age_words_en`; người duyệt đọc to từng câu.
    - Đạt, cho câu `Which one is a bird?` (ba thẻ: con gà mái, con mèo, cá rô đồng): `hint.en: Look for feathers and a beak.` · `hint.vi: Em tìm con có lông vũ và có mỏ nhé.` · `explanation_wrong.en: The answer is the hen. It has feathers.` · `explanation_wrong.vi: Đáp án là con gà. Gà có lông vũ.`
    - Không đạt: `hint.en: Read the words under the pictures.` · `explanation_wrong.en: Oops! Try the second card next time.`

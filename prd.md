@@ -3,7 +3,7 @@
 > Bản copy để review từ artifact (https://claude.ai/artifact/LvMccnKLBikQZFfJYuX2fe).
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
 > Syllabus chi tiết: [syllabus.md](syllabus.md), danh sách từng bài [syllabus-lessons.md](syllabus-lessons.md), danh mục app đọc `content/syllabus.json` · Wireframes: [design/wireframes/](design/wireframes/) và https://claude.ai/artifact/1sqc8tNvXN5h14zfLpyXZZ
-> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con); 1/11/2026 (mục 3: quiz của bé 5–7 làm được bằng nghe và nhìn, không hiện điểm; Duy chốt SK-026); 9/11/2026 (Duy duyệt syllabus mới: 45 chủ đề, 384 bài, chủ đề mới đứng đầu rồi unit Oak theo thứ tự Oak, không khoá bài, gói trả phí tạm tắt; sửa mục 1, 4, 5, 6, 7, 8, 9, 11. Phạm vi pilot GĐ 0: Duy chốt 6 chủ đề đầu Discoverer, 38 bài); 16/11/2026 (thêm chủ đề Explorer #4 *Những nơi sống trên Trái Đất*, 8 bài, Duy chốt, SK-048; danh mục nay 46 chủ đề, 394 bài; sửa mục 1, 9, 11)
+> Cập nhật: 28/10/2026 (thêm mục 6 · Tài khoản phụ huynh và hồ sơ con); 1/11/2026 (mục 3: quiz của bé 5–7 làm được bằng nghe và nhìn, không hiện điểm; Duy chốt SK-026); 9/11/2026 (Duy duyệt syllabus mới: 45 chủ đề, 384 bài, chủ đề mới đứng đầu rồi unit Oak theo thứ tự Oak, không khoá bài, gói trả phí tạm tắt; sửa mục 1, 4, 5, 6, 7, 8, 9, 11. Phạm vi pilot GĐ 0: Duy chốt 6 chủ đề đầu Discoverer, 38 bài); 16/11/2026 (thêm chủ đề Explorer #4 *Những nơi sống trên Trái Đất*, 8 bài, Duy chốt, SK-048; danh mục nay 46 chủ đề, 394 bài; sửa mục 1, 9, 11); 16/11/2026 (Quiz Đợt 1, SK-047: thêm bước Tổng kết bài sau quiz và nút gợi ý; sửa mục 5)
 
 ## 1. Tổng quan & quyết định đã chốt
 
@@ -61,7 +61,7 @@ Pipeline sản xuất: chốt syllabus ([syllabus.md](syllabus.md)) → Claude A
 | --- | --- | --- |
 | Onboarding chọn tuổi + ngôn ngữ | Map Year 1–6 sang độ tuổi/lớp VN; 3 chế độ ngôn ngữ | MVP |
 | Hành trình học (9/11/2026) | Trang chủ hiện đủ chủ đề của nhóm theo thứ tự syllabus, màn chủ đề hiện đủ bài. Không khoá bài: app gợi ý bài tiếp theo và đánh dấu bài đã học; bài chưa soạn hiện tên và báo chưa có nội dung | MVP |
-| Vòng lặp bài học | Khởi động (ôn bài cũ) → nội dung → exit quiz 6 câu | MVP |
+| Vòng lặp bài học | Khởi động (ôn bài cũ) → nội dung → exit quiz 6 câu → Tổng kết bài → phần thưởng. Tổng kết (16/11/2026, SK-047): 2 màn, bé xem lại 3 ý chính, ý sai → ý đúng, từ mới và mục tiêu "I can…"; không chấm, bỏ qua được; có bản cho bé 5–7 (Explorer) và bé 7–9 (Discoverer). Bé 7–9 có nút gợi ý ở mỗi câu, mở được cả trước khi trả lời mà vẫn được điểm; bé 5–7 không có nút, nghe gợi ý sau lần sai | MVP |
 | Quiz engine | MCQ, true/false, multi-select, điền từ, câu hình; giải thích sau mỗi câu | MVP |
 | Media bài học | MVP: hình minh hoạ tĩnh + audio EN và VI; animation đầy đủ ở GĐ 2 | MVP |
 | Flashcards từ vựng EN–VI | Sinh từ keywords mỗi bài; nghe được cả từ EN lẫn nghĩa VI | MVP |

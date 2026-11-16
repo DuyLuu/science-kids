@@ -345,8 +345,12 @@ struct ExplorerTests {
         while case .warmup = session.step { answerRight(session, phase: .warmup); session.advance() }
         while session.step == .learn || session.step == .play { session.advance() }
         while case .quiz = session.step { answerRight(session, phase: .quiz); session.advance() }
-        #expect(session.step == .reward)
+        // SK-047: Tổng kết first, already scored; then the reward.
+        #expect(session.step == .recap)
         let summary = try #require(session.summary)
+        session.advance()
+        #expect(session.step == .reward)
+        #expect(session.summary == summary)
         #expect(summary.score.correct == 6)
         #expect(summary.stars.stars >= 1)
         // D1: no XP, on the screen, on the attempt sent to the server, or per question, even

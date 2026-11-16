@@ -41,7 +41,7 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 522,
+          "line": 540,
           "pointer": "/",
           "code": "md_unknown_section"
         }
@@ -110,13 +110,13 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 400,
+          "line": 416,
           "pointer": "/quiz/3/id",
           "code": "md_id_duplicate"
         }
       ],
       "message_includes": [
-        "dòng 359"
+        "dòng 375"
       ]
     },
     {
@@ -135,7 +135,7 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 359,
+          "line": 375,
           "pointer": "/quiz/2/id",
           "code": "md_id_duplicate"
         }
@@ -159,7 +159,7 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 359,
+          "line": 375,
           "pointer": "/quiz/2/id",
           "code": "md_id_missing"
         }
@@ -279,13 +279,13 @@
     },
     {
       "name": "12b-answers-brackets",
-      "description": "answers: [q2_energy]",
+      "description": "answers: [q2_nutrients]",
       "edits": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
           "replace": [
-            "answers: q2_energy\n",
-            "answers: [q2_energy]\n"
+            "answers: q2_nutrients\n",
+            "answers: [q2_nutrients]\n"
           ]
         }
       ],
@@ -379,7 +379,7 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 502,
+          "line": 518,
           "pointer": "/quiz/5/misconception_id",
           "code": "md_ref_unknown"
         }
@@ -416,8 +416,8 @@
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
           "replace": [
-            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 1\ndok: 1\n",
-            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 1\ndok: hai\n"
+            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 2\ndok: 1\n",
+            "### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\nformat: fill_blank_bank\nversion: 2\ndok: hai\n"
           ]
         }
       ],
@@ -544,7 +544,7 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 358,
+          "line": 374,
           "pointer": "/quiz/1/bank/2",
           "code": "md_unknown_field"
         }
@@ -762,13 +762,13 @@
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 522,
+          "line": 540,
           "pointer": "/quiz",
           "code": "md_missing_section"
         }
       ],
       "message_includes": [
-        "giữa \"## Chơi\" (dòng 172) và \"## Từ vựng\" (dòng 522)",
+        "giữa \"## Chơi\" (dòng 172) và \"## Từ vựng\" (dòng 540)",
         "dòng 289 \"### Quiz\""
       ]
     },
@@ -857,20 +857,20 @@
     },
     {
       "name": "35-bank-image-no-alt",
-      "description": "(SK-033) #### bank q2_air có image.brief mà thiếu image.alt: chỉ vào dòng image.brief, gọi tên markdown",
+      "description": "(SK-033) #### bank q2_air có image.brief mà thiếu image.alt (bỏ hai dòng image.alt): chỉ vào dòng image.brief, gọi tên markdown",
       "edits": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
           "replace": [
-            "#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\n",
-            "#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\nimage.brief: Bọt khí trong cốc nước\n"
+            "image.alt.en: Wind blowing over a rice field\nimage.alt.vi: Gió thổi trên cánh đồng lúa\n",
+            ""
           ]
         }
       ],
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 353,
+          "line": 360,
           "pointer": "/quiz/1/bank/1/image/alt",
           "code": "schema"
         }
@@ -931,26 +931,26 @@
     },
     {
       "name": "38-feedback-on-answer-bank-word",
-      "description": "(SK-044) feedback dưới thẻ đáp án q2_energy (có trong answers): chỉ vào dòng feedback.en",
+      "description": "(SK-044) feedback dưới thẻ đáp án q2_nutrients (có trong answers): chỉ vào dòng feedback.en",
       "edits": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
           "replace": [
-            "#### bank q2_energy\nlabel.en: energy\nlabel.vi: năng lượng\n",
-            "#### bank q2_energy\nlabel.en: energy\nlabel.vi: năng lượng\nfeedback.en: Energy helps us run.\nfeedback.vi: Năng lượng giúp ta chạy.\n"
+            "#### bank q2_nutrients\nlabel.en: nutrients\nlabel.vi: chất dinh dưỡng\n",
+            "#### bank q2_nutrients\nlabel.en: nutrients\nlabel.vi: chất dinh dưỡng\nfeedback.en: Nutrients help us grow.\nfeedback.vi: Chất dinh dưỡng giúp ta lớn.\n"
           ]
         }
       ],
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 349,
+          "line": 351,
           "pointer": "/quiz/1/bank/0/feedback",
           "code": "schema"
         }
       ],
       "message_includes": [
-        "q2_energy",
+        "q2_nutrients",
         "answers"
       ]
     },
@@ -961,15 +961,15 @@
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
           "replace": [
-            "answer: false\nhint.en: Remember: fats",
-            "answer: false\nfeedback_false.en: Na is not right.\nfeedback_false.vi: Na chưa đúng.\nhint.en: Remember: fats"
+            "answer: false\nhint.en: Think about what fat",
+            "answer: false\nfeedback_false.en: Na is not right.\nfeedback_false.vi: Na chưa đúng.\nhint.en: Think about what fat"
           ]
         }
       ],
       "errors": [
         {
           "file": "discoverer/an-uong-lanh-manh/01-thuc-an-cho-ta-nhung-gi.md",
-          "line": 515,
+          "line": 532,
           "pointer": "/quiz/5/feedback_false",
           "code": "schema"
         }

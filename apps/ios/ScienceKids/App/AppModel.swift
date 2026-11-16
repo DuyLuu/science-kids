@@ -219,6 +219,9 @@ final class AppModel {
         model.contentFolder = options.contentFolder.map { URL(filePath: $0, directoryHint: .isDirectory) }
         model.contentPack = options.contentPack.map { URL(filePath: $0, directoryHint: .isDirectory) }
         model.openLessonAtLaunch = options.openLesson
+        #if DEBUG
+        if let mode = options.testProfile { model.makeTestProfileIfNone(languageMode: mode) }
+        #endif
         if model.sync?.phase != .off {
             model.network = NetworkWatcher { [weak model] in
                 Task { await model?.syncNow() }
@@ -272,6 +275,28 @@ final class AppModel {
         applyVoiceSplit()
         Task { await syncNow() }
     }
+
+    #if DEBUG
+    /// Debug (`-SKTestProfile`, SK-047 tester 16/11): a UI test on a fresh install has no profile,
+    /// so the app would open on Welcome. Saves the test profile (Lớp 3, Discoverer, `languageMode`)
+    /// when there is none; a saved profile is left as it is. Release builds never call this.
+    @discardableResult
+    func makeTestProfileIfNone(languageMode: LanguageMode, now: Date = Date()) -> Bool {
+        guard profile == nil else { return false }
+        do {
+            let made = try ChildProfile.create(
+                displayName: "Test", avatar: "meo", grade: 3, languageMode: languageMode,
+                voiceMode: .suggested(for: languageMode, ageGroup: .discoverer), now: now
+            )
+            try createProfile(made)
+            log.notice("test profile saved (launch argument)")
+            return true
+        } catch {
+            log.error("test profile not saved: \(String(describing: error), privacy: .public)")
+            return false
+        }
+    }
+    #endif
 
     // MARK: Sync (SK-022)
 

@@ -102,8 +102,9 @@ image.alt.en: The wide blue sea
 image.alt.vi: Biển xanh rộng
 > SK-033 (9/11): hình cũ là cánh đồng muối. Đổi sang ảnh biển (vật được nói tới), vì ảnh muối là bằng chứng của gợi ý, xem trước khi chọn là lộ đáp án; đống muối trắng còn dễ bị nhìn thành đường. Ảnh cánh đồng muối chuyển sang từ `salty` ở bài hai.
 answer: false
-hint.en: Salt for cooking can come from sea water.
-hint.vi: Muối ăn có thể làm từ nước biển.
+hint.en: Think of swimming in the sea.
+hint.vi: Em nhớ lại lúc tắm biển nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ nói thẳng "muối làm từ nước biển", gần như là đáp án. Gợi ý mới gọi lại trải nghiệm (vị nước biển); ý "làm muối" vẫn ở giải thích khi sai.
 explanation_correct.en: Sea water is salty, so we cannot drink it.
 explanation_correct.vi: Nước biển mặn nên mình không uống được.
 explanation_wrong.en: Sea water is salty, and we make salt from it.
@@ -407,7 +408,7 @@ image.alt.vi: Đám mây trắng trên trời
 ### q3
 id: 838568dd-ddad-48c1-8f1e-20175fdf1d8d
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Tap all the pictures of land.
 prompt.vi: Chạm vào tất cả những nơi là đất.
@@ -419,11 +420,12 @@ instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Land is dry. Where can you walk?
 hint.vi: Đất thì khô ráo. Em đi bộ được ở đâu?
 > Rà chữ 9/11: gợi ý cũ "Em có thể dựng nhà ở đâu?" dẫn sang nhà nổi trên sông, bè trên hồ; nay dùng lại gợi ý của câu q1.
-explanation_correct.en: You can walk in a forest and on an island.
-explanation_correct.vi: Em đi bộ được trong rừng và trên đảo.
+explanation_correct.en: People build houses and grow food on islands.
+explanation_correct.vi: Trên đảo, người ta xây nhà và trồng trọt.
 explanation_wrong.en: An island has water around it, but it is land.
 explanation_wrong.vi: Đảo có nước bao quanh, nhưng đảo vẫn là đất.
 > Câu phân loại có hai chỗ chuyển: hòn đảo (ở phần Chơi là bẫy, nay là đáp án đúng) và cái ao (nơi mới ở phần Chơi).
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_forest` thay bằng `q3_lake` (hồ, sai), dùng lại hình kệ Chơi; `version` 2. Ba lựa chọn sai đều là nơi có nước, nên câu kiểm đúng chỗ dễ nhầm: đảo có nước bao quanh nhưng là đất. Giải thích khi đúng sửa vì không còn khu rừng.
 
 #### option q3_island
 correct: true
@@ -443,13 +445,16 @@ image.brief: Dùng lại hình `tray_river`. Từ khoá tìm ảnh (EN): river b
 image.alt.en: A river with a small boat
 image.alt.vi: Dòng sông có con đò nhỏ
 
-#### option q3_forest
-correct: true
-label.en: forest
-label.vi: khu rừng
-image.brief: Dùng lại hình `tray_forest`. Từ khoá tìm ảnh (EN): forest green canopy aerial
-image.alt.en: A green forest
-image.alt.vi: Khu rừng xanh
+#### option q3_lake
+correct: false
+feedback.en: A lake is water, with land around it.
+feedback.vi: Hồ là nước, có bờ đất bao quanh.
+label.en: lake
+label.vi: hồ
+image.brief: Dùng lại hình `tray_lake`. Từ khoá tìm ảnh (EN): lake calm trees shore
+image.alt.en: A calm lake with trees
+image.alt.vi: Hồ nước có hàng cây
+> SK-047 (15/11): thay `q3_forest`; hình kệ Chơi, không cần hình mới.
 
 #### option q3_pond
 correct: false
@@ -583,8 +588,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Think of a globe. Which colour do you see most?
-hint.vi: Em nghĩ tới quả địa cầu. Em thấy màu nào nhiều nhất?
+hint.en: Think of a globe turning on its stand.
+hint.vi: Em nghĩ tới quả địa cầu xoay trên giá nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "màu nào nhiều nhất", câu trả lời (xanh dương, tức nước) là lời bác bỏ. Gợi ý mới chỉ chỗ có bằng chứng (quả địa cầu, câu q5), bé tự nhìn và so.
 explanation_correct.en: We live on land, but water covers most of Earth.
 explanation_correct.vi: Mình sống trên đất, nhưng nước phủ phần lớn Trái Đất.
 explanation_wrong.en: A globe shows more blue water than land.
@@ -750,10 +756,8 @@ image.alt.vi: Các hòn đảo ở vịnh Hạ Long
   - Quiz: `single_choice` ×3 (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`). Bốn format, đều hiện được ở app 0.1.0.
   - DOK q1 đến q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Câu có `misconception`: q6, key `earth_mostly_land`.
 - **Tham chiếu:** `topic: be-mat-trai-dat` → `topic_id`. `misconception: earth_mostly_land` → `misconception_id`. `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng; `answers: q2_model` trỏ `#### bank`. Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ hai;
-  - q1: thứ ba; q2: từ thứ hai trong ngân hàng; q3: thứ nhất và thứ ba; q4: thứ hai; q5: thứ nhất.
-  - Kệ Chơi xếp xen đất và nước: đảo, sông, núi, ao, biển, rừng, hồ, suối.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và kệ Chơi).
+- **q3 (15/11, SK-047):** `multi_choice` một đáp án đúng (đảo), `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm biển, sông, hồ → đạt (`balanced`);
   - chạm hòn đảo → `has_limited`;

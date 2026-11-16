@@ -123,7 +123,8 @@ describe("tỉ lệ khung (aspect.ts)", () => {
     const ratio = (group: string, kind: Parameters<typeof slotRatio>[2]) => slotRatio(table, group, kind).ratio;
     assert.deepEqual(
       { choice_2: ratio("discoverer", "choice_2"), choice_3: ratio("discoverer", "choice_3"), choice_4: ratio("discoverer", "choice_4"), bank_item: ratio("discoverer", "bank_item"), learn_group: ratio("discoverer", "learn_group"), tray_item: ratio("discoverer", "tray_item"), vocab: ratio("discoverer", "vocab") },
-      { choice_2: 2.5, choice_3: 2.5, choice_4: 0.8, bank_item: 0.6, learn_group: 1, tray_item: 1, vocab: 4 / 3 },
+      // bank_item 1:1: image-slots.json note, "designer chốt 14/11" (square bank chip of the A2 code).
+      { choice_2: 2.5, choice_3: 2.5, choice_4: 0.8, bank_item: 1, learn_group: 1, tray_item: 1, vocab: 4 / 3 },
     );
     assert.equal(table.age_groups?.discoverer?.hide_question_image_with_picture_choices, true);
     assert.deepEqual({ choice_2: ratio("explorer", "choice_2"), choice_3: ratio("explorer", "choice_3") }, { choice_2: 1.7, choice_3: 2.5 });

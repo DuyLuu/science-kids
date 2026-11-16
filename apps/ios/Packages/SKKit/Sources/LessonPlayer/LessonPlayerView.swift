@@ -19,7 +19,8 @@ public struct LessonHeading: Hashable, Sendable {
     }
 }
 
-/// A whole lesson, step by step (B7.6: warmup → learn → play → quiz → reward). The screen of each
+/// A whole lesson, step by step (B7.6: warmup → learn → play → quiz → reward; SK-047: Tổng kết
+/// between the quiz and the reward). The screen of each
 /// step comes from a registry on the content's `type` and `format`: what has no renderer was left
 /// out by `LessonSession` (SK-009).
 ///
@@ -83,6 +84,9 @@ public struct LessonPlayerView: View {
                                      isLast: index == session.quizItems.count - 1, onClose: exit)
                     .id(item.id)
             }
+        case .recap:
+            // SK-047: Tổng kết; the attempt is saved, closing skips the reward.
+            RecapStep(session: session, onClose: onExit)
         case .reward:
             if let summary = session.summary {
                 ExplorerRewardStep(session: session, summary: summary, onClose: onExit)
@@ -124,6 +128,8 @@ public struct LessonPlayerView: View {
                                        isLast: index == session.quizItems.count - 1, onClose: exit)
                     .id(item.id)
             }
+        case .recap:
+            RecapStep(session: session, onClose: onExit)
         case .reward:
             if let summary = session.summary {
                 RewardStep(session: session, summary: summary, heading: heading, onClose: onExit, onShowCards: onShowCards)

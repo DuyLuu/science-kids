@@ -228,8 +228,8 @@
     "q3.q3_ride": {
       "same_as": "tray.tray_bike"
     },
-    "q3.q3_sweat": {
-      "same_as": "tray.tray_sweat"
+    "q3.q3_puzzle": {
+      "same_as": "learn.explore.explore_think"
     },
     "q4": {
       "same_as": "tray.tray_bike"

@@ -455,8 +455,6 @@ explanation_correct.vi: Hộp sọ cứng che chở cho bộ não mềm.
 explanation_wrong.en: Your skull wraps all around your brain.
 explanation_wrong.vi: Hộp sọ bao quanh bộ não của em.
 > Ba thẻ từ là bộ cơ quan (Quy ước hình, mục hai): bộ não là hình gốc của bài này; trái tim, dạ dày dùng lại hình vẽ của *Hô hấp* (rà chữ tester 10/11, chéo với *Hô hấp*). Bộ não vẽ cùng nét hai hình đó.
-> Rà chữ tester 10/11 (N1): thẻ đúng chuyển lên thứ nhất (trước ở thứ hai, như cả bốn câu điền từ của chủ đề).
-
 #### bank q2_brain
 label.en: brain
 label.vi: bộ não
@@ -485,7 +483,7 @@ image.alt.vi: Dạ dày
 ### q3
 id: d34a445b-da81-4395-b073-4c7663125aa2
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: What does Mai's brain still do while she sleeps?
 prompt.vi: Khi Mai ngủ, bộ não vẫn làm gì?
@@ -496,10 +494,11 @@ image.alt.en: A child asleep under a mosquito net
 image.alt.vi: Bạn nhỏ ngủ trong màn
 hint.en: Remember the Without thinking group in the game.
 hint.vi: Em nhớ lại nhóm Không cần nghĩ ở trò chơi nhé.
-explanation_correct.en: These jobs happen without Mai thinking about them.
-explanation_correct.vi: Những việc này diễn ra mà Mai không cần nghĩ.
-explanation_wrong.en: Her brain keeps her heart beating and makes her sweat.
-explanation_wrong.vi: Não giữ cho tim đập, và làm Mai đổ mồ hôi.
+explanation_correct.en: Her brain keeps her heart beating all night long.
+explanation_correct.vi: Bộ não giữ cho tim Mai đập suốt đêm.
+explanation_wrong.en: A heartbeat goes on without Mai thinking about it.
+explanation_wrong.vi: Tim vẫn đập mà Mai không cần nghĩ tới.
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_sweat` thay bằng `q3_puzzle` (ghép tranh, sai: cần thức và suy nghĩ), dùng lại hình kệ Chơi; `version` 2. Hai lời giải thích sửa theo.
 > DOK 2: áp ý chính ba vào tình huống mới (bạn đang ngủ), không chỉ nhận lại món đã xếp. Hai lựa chọn sai là việc cần thức và cần nghĩ. Bốn ảnh dùng lại kệ Chơi, cùng là ảnh chụp.
 
 #### option q3_heart
@@ -530,13 +529,16 @@ image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_bike`
 image.alt.en: A child riding a bike
 image.alt.vi: Bạn nhỏ đang đạp xe
 
-#### option q3_sweat
-correct: true
-label.en: sweat on a hot night
-label.vi: đổ mồ hôi khi đêm nóng
-image.brief: Dùng lại hình `nao-dieu-khien-co-the/tray_sweat`
-image.alt.en: Drops of sweat on skin
-image.alt.vi: Giọt mồ hôi trên da
+#### option q3_puzzle
+correct: false
+feedback.en: A puzzle needs Mai awake and thinking.
+feedback.vi: Ghép tranh thì Mai phải thức và suy nghĩ.
+label.en: do a puzzle
+label.vi: ghép tranh
+image.brief: Dùng lại hình `nao-dieu-khien-co-the/explore_think`
+image.alt.en: Hands doing a jigsaw puzzle
+image.alt.vi: Đôi tay đang ghép tranh
+> SK-047 (15/11): thay `q3_sweat`. Cùng hình với món `tray_puzzle` (hình gốc `explore_think`); không cần hình mới.
 
 ### q4
 id: 151de614-4db8-40b8-9f3f-5b1fc8e4b8f2
@@ -653,8 +655,9 @@ image.brief: Dùng lại hình `q3_hammock` ở bài `ho-hap/tho-khi-chay-nhay`
 image.alt.en: A hammock between two trees
 image.alt.vi: Cái võng mắc giữa hai cây
 > Rà chữ tester 10/11 (chéo với *Hô hấp*): dùng chung ảnh võng trống của *Hô hấp* (cùng dòng từ khoá với brief cũ); `alt` chép của hình gốc. Món `tray_nap` và từ `nap` bài bốn trỏ thẳng về hình gốc đó.
-hint.en: Remember the All the time picture in the lesson.
-hint.vi: Em nhớ lại ô Suốt ngày đêm trong bài học nhé.
+hint.en: Feel your wrist while you lie still.
+hint.vi: Em đặt ngón tay lên cổ tay lúc nằm yên nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô "All the time" · "Suốt ngày đêm": tên ô và câu của ô chính là lời bác bỏ. Gợi ý mới cho bé tự thấy bằng chứng (mạch vẫn đập khi nằm nghỉ), rồi nối với "não giữ cho tim đập".
 explanation_correct.en: Even at rest, your brain keeps your heart beating.
 explanation_correct.vi: Cả khi nghỉ, bộ não vẫn giữ cho tim đập.
 explanation_wrong.en: Na's brain is still working while she rests.
@@ -767,7 +770,7 @@ image.alt.vi: Bộ não
   - Khởi động: `single_choice` (w1, `prior_knowledge`), `true_false` (w2, `prior_knowledge`, đáp án Đúng), `single_choice` (w3, ôn `ho-hap/giu-phoi-khoe`; khối mới, `id:` trống).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2, một ô trống, ba thẻ từ có hình), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Sai). Bốn format, đều hiện được ở app 0.1.0.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `brain_stops_when_resting`.
-- **Vị trí đáp án đúng** (app không xáo): w1 thứ ba; w3 thứ nhất; q1 thứ hai; q4 thứ nhất; q5 thứ ba; q3 thứ nhất và thứ tư; thẻ đúng của q2 thứ nhất (rà chữ 10/11, N1).
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Tham chiếu:** `topic: nao-bo-va-giac-quan`; `misconception: brain_stops_when_resting`; `recall_from.lesson: ho-hap/giu-phoi-khoe` (w3, đã có id).
 - **Bộ thẻ `set: body`:** mới, riêng của chủ đề này (*Hô hấp* dùng `set: breathing`). Đề xuất ios-dev thêm khoá `collectible.set.body` "Body cards" · "Thẻ cơ thể".
 - **Màn Chơi, ví dụ để kiểm:**

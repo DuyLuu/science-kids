@@ -58,8 +58,6 @@ explanation_wrong.vi: Thằn lằn bay và bò sát biển không phải khủng
 > Câu phân loại (luật rà chéo 9/11, `_topic.md` mục "Khi soạn năm bài"): nhãn và `alt` của ba lựa chọn tả cách di chuyển, không ghi tên. Bản trước để nhãn "khủng long ba sừng", nên phụ đề tiếng Việt tự nói đáp án. Nhãn "walked on strong legs" lấy từ giải thích của câu q2 bài hai ("Dinosaurs walked on strong legs."). Giải thích sau khi bé chọn vẫn gọi tên ba con vật.
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Khủng long là bò sát sống trên cạn. Em nhìn chân của từng con nhé." nhắc đúng tiêu chí của nhãn đáp án ("đi bằng những đôi chân khoẻ"). Gợi ý mới chỉ cách nghĩ: nhìn từng con, tự hỏi con đó di chuyển ra sao; bé phải tự nhớ khủng long sống ở đâu (bài hai). Giải thích không nói "thằn lằn bay không đi trên mặt đất", vì thằn lằn bay cũng đi được trên mặt đất; nhãn "flew with big wings" chỉ nói cách nó di chuyển chủ yếu.
 > Ba hình dùng lại ba tranh nền kem ở kệ Chơi bài hai: cùng kiểu, cùng cỡ, bé nhận ra ba con vật đã gặp.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ hai (trước đây thứ ba).
-
 #### option w1_flying
 correct: false
 feedback.en: This one flew, so it was a flying reptile.
@@ -420,8 +418,6 @@ explanation_correct.vi: Vì vậy xương hoá thạch cứng và nặng.
 explanation_wrong.en: Over millions of years, buried bones slowly turn to rock.
 explanation_wrong.vi: Qua hàng triệu năm, xương bị vùi dần hoá thành đá.
 > DOK 1: nhớ lại ý hai. Hai lựa chọn sai là bùn và cát, chính là hai thứ phủ lên xương ở ô Học thứ ba; bé nhớ nhầm bước thì chọn hai thứ này. Gợi ý trỏ về món "hard and heavy like rock" ở ô Xương và răng, không nói thẳng đáp án.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
-
 #### option q1_rock
 correct: true
 label.en: rock
@@ -471,8 +467,6 @@ explanation_wrong.en: Fossils and skeletons are kept in museums.
 explanation_wrong.vi: Hoá thạch và bộ xương được giữ ở bảo tàng.
 > DOK 1: nhớ lại ô Xương và răng và từ `museum`. Câu hỏi nói "skeleton" nhưng không lựa chọn nào có chữ "skeleton" hay "bộ xương", để bé không đọc nhãn mà đoán. Hình câu hỏi là vật được hỏi (hộp sọ của một bộ xương), không thấy phòng trưng bày để không lộ đáp án; hình lựa chọn bảo tàng không có bộ xương khủng long.
 > Lựa chọn sở thú bắt ý ngây thơ "khủng long còn sống ở đâu đó". Câu này cũng nối mục An toàn ở `_topic.md`: khuyến khích bé xem hoá thạch ở bảo tàng cùng gia đình.
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ nhất).
-
 #### option q2_zoo
 correct: false
 feedback.en: A zoo keeps living animals, like zebras.
@@ -632,8 +626,6 @@ explanation_wrong.vi: Chỉ khúc xương trong bùn sông được phủ kín s
 > DOK 2: áp dụng ý hai vào tình huống mới, ở thời nay. Ba lựa chọn là cùng một khúc xương ở ba chỗ; chỉ một chỗ có bùn phủ lên. Câu này cũng cho bé thấy chuyện hoá thạch không chỉ xảy ra thời khủng long, mà không nói tới tiến hoá hay loài nào khác.
 > Rà chữ tester 9/11 (N1): câu cũ hỏi "could become a fossil" · "có thể thành hoá thạch", nên "trên bãi cỏ khô" cũng hợp lý (xương trên cỏ bị lũ hay đất phủ lên vẫn có thể thành hoá thạch). Câu mới hỏi "most likely" · "dễ thành hoá thạch nhất", chỉ còn một đáp án; hai giải thích nhấn ý "bùn phủ kín sớm".
 > [CẦN KIỂM] Cách nói giản lược: xương được bùn cát phủ kín sớm thì dễ thành hoá thạch hơn; xương nằm phơi nắng trên mặt đất thường nứt vỡ, mục dần; xương bị con vật gặm thì vỡ vụn. Chuyên môn xác nhận nói với trẻ "một khúc xương ngày nay vùi trong bùn, sau hàng triệu năm có thể thành hoá thạch" là đúng.
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ hai).
-
 #### option q5_grass
 correct: false
 feedback.en: In sun and wind, this bone cracks and breaks.
@@ -686,8 +678,9 @@ image.brief: [ảnh] Một khúc xương đùi hoá thạch khủng long cổ d�
 image.alt.en: A fossil bone in rock
 image.alt.vi: Khúc xương hoá thạch trong đá
 answer: false
-hint.en: What happened to the bone over millions of years?
-hint.vi: Qua hàng triệu năm, khúc xương đã thay đổi ra sao?
+hint.en: Remember the steps of how a fossil forms.
+hint.vi: Em nhớ lại các bước hoá thạch hình thành nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "khúc xương đã thay đổi ra sao", câu trả lời ("hoá thành đá") chính là lời bác bỏ. Gợi ý mới trỏ cả quá trình (ô Hoá thạch hình thành ra sao, câu q3), bé tự tìm bước quyết định.
 explanation_correct.en: Over millions of years, the bone slowly turned to rock.
 explanation_correct.vi: Qua hàng triệu năm, khúc xương đã dần hoá thành đá.
 explanation_wrong.en: This bone was buried and slowly turned to rock.
@@ -835,11 +828,7 @@ image.alt.vi: Phân khủng long hoá thạch
   - w1, w2: `recall_from.lesson: khung-long/khung-long-la-gi` → `lesson_id` của bài hai. w3: `recall_from.lesson: khung-long/trai-dat-rat-lau-ve-truoc` → `lesson_id` của bài một. Hai bài đã có id; slug đúng (rà chéo 9/11).
   - `misconception: fossil_is_old_bone` → `misconception_id` trong `_topic.md` (đã có id).
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng; `messages.missing.<key>` trỏ ba nhóm `required`. Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay, rải đều:
-  - w1: thứ hai; w3: thứ nhất;
-  - q1: thứ nhất; q2: thứ ba; q3: thứ hai; q4: thứ nhất và thứ tư; q5: thứ ba.
-  - Rà chữ tester 9/11 (n1) đã xáo lại tay w1, q1, q2, q5 (thứ tự `#### option` trong file đổi, key không đổi).
-  - Kệ Chơi app tự xáo mỗi lượt; thứ tự trong file vẫn xếp xen nhóm.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kệ Chơi).
 - **Màn Chơi, ví dụ để kiểm** (thứ tự ưu tiên lời nhắn theo SK-012: balanced, full, has_limited, start, missing):
   - chạm răng trong đá, dấu chân in trên đá, trứng đã hoá thành đá → đạt (`balanced`);
   - chạm xương gà → `has_limited`;
@@ -861,6 +850,6 @@ image.alt.vi: Phân khủng long hoá thạch
 - **Chính tả Anh:** palaeontologist, colours.
 - **Không dùng dấu "—"** và không có ký hiệu trong chuỗi tiếng Việt; không có chữ tiếng Anh trong chuỗi VI.
 - **Bộ thẻ `set: dinosaurs`:** ios-dev đã thêm khoá `collectible.set.dinosaurs` "Dinosaur cards" · "Thẻ khủng long" (SK-033, 9/11).
-- **Câu w1 đã đổi nhãn** (rà chéo 9/11, luật câu phân loại): ba nhãn tả cách di chuyển ("flew with big wings", "walked on strong legs", "swam with flippers", theo thứ tự trong file), `alt` tả đặc điểm; key lựa chọn và đáp án không đổi. Vị trí đáp án đúng đổi từ thứ ba sang thứ hai (rà chữ tester 9/11 n1). Ba hình dùng lại ba tranh nền kem của bài hai.
+- **Câu w1 đã đổi nhãn** (rà chéo 9/11, luật câu phân loại): ba nhãn tả cách di chuyển ("flew with big wings", "walked on strong legs", "swam with flippers", theo thứ tự trong file), `alt` tả đặc điểm; key lựa chọn và đáp án không đổi. Ghi chú vị trí đáp án của rà chữ 9/11: hết hiệu lực 15/11 (SK-047, app xáo). Ba hình dùng lại ba tranh nền kem của bài hai.
 - **Đề xuất khi app hiện được `order_sequence`** (GĐ 1 S4): câu q3 nên đổi thành câu sắp thứ tự ba thẻ, dùng ba khung của `explore_forms`: "bones in mud" · "covered by mud and sand" · "dug out of rock". Khi đổi thì tăng `version`.
 - **Asset:** không có audio và `asset` trong markdown; máy điền khi chạy `tts` và `assets`. Na là asset chung của app.

@@ -1,4 +1,5 @@
 import Foundation
+import Profiles
 
 /// Debug switches read from launch arguments (`xcrun simctl launch … -SKGallery YES`).
 /// Read from `ProcessInfo.arguments`, not `UserDefaults`, so no required-reason API is used
@@ -47,6 +48,12 @@ struct LaunchOptions: Equatable {
     /// lesson as if picked on its topic. For screenshots and UI tests of a lesson the journey puts
     /// far down the map (SK-040: the Explorer test lesson of `apps/ios/TestContent`).
     var openLesson: UUID?
+    /// `-SKTestProfile YES` (or a language mode: `bilingual`, `en_first`, `vi_first`): when the
+    /// device has no child profile at launch, save a test profile (Lớp 3, Discoverer, that language;
+    /// `YES` is Song ngữ) before the first screen, so a UI test on a fresh install skips Welcome and
+    /// Profile (SK-047, tester 16/11). A saved profile is kept as it is. With `-SKResetProfile YES`
+    /// every launch starts from a clean test profile.
+    var testProfile: LanguageMode?
 
     init(arguments: [String], environment: [String: String] = [:]) {
         #if DEBUG
@@ -63,6 +70,9 @@ struct LaunchOptions: Equatable {
         contentFolder = Self.value("-SKContentFolder", in: arguments)
         contentPack = Self.value("-SKContentPack", in: arguments)
         openLesson = Self.value("-SKOpenLesson", in: arguments).flatMap(UUID.init(uuidString:))
+        testProfile = Self.value("-SKTestProfile", in: arguments).flatMap { value in
+            Self.flag("-SKTestProfile", in: arguments) ? .bilingual : LanguageMode(rawValue: value.lowercased())
+        }
         #endif
     }
 

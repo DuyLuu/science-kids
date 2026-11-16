@@ -55,7 +55,7 @@ explanation_correct.en: The fern is gone, but its shape stayed in rock.
 explanation_correct.vi: Lá dương xỉ đã mất, chỉ còn hình in trên đá.
 explanation_wrong.en: The fern left its shape in the rock.
 explanation_wrong.vi: Lá dương xỉ để lại hình của nó trên đá.
-> Câu phân loại: nhãn và `alt` tả vật, không có chữ "imprint" · "dấu in", "fossil" · "hoá thạch". Câu hỏi tiếng Việt không có chữ "trên đá", để phụ đề không khớp chữ với nhãn đáp án. Lá ép trong sách có sức hút: cũng phẳng, cũng là "ép, in". Lựa chọn và vị trí đáp án (thứ ba) theo bảng Khởi động.
+> Câu phân loại: nhãn và `alt` tả vật, không có chữ "imprint" · "dấu in", "fossil" · "hoá thạch". Câu hỏi tiếng Việt không có chữ "trên đá", để phụ đề không khớp chữ với nhãn đáp án. Lá ép trong sách có sức hút: cũng phẳng, cũng là "ép, in". Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 > Hình câu hỏi là bộ dụng cụ tìm hoá thạch (không có hoá thạch), không dùng hình đất nặn của ô Dấu in bài tám (đó là bằng chứng của gợi ý).
 
 #### option w1_dry_leaf
@@ -100,8 +100,9 @@ image.brief: Dùng lại hình `w1_stone` ở bài `ho-hap/vi-sao-ta-phai-tho`. 
 image.alt.en: A smooth stone
 image.alt.vi: Hòn đá cuội
 answer: true
-hint.en: Remember the Minerals picture in lesson four.
-hint.vi: Em nhớ lại ô Khoáng vật ở bài bốn nhé.
+hint.en: Remember the grains in granite.
+hint.vi: Em nhớ lại những hạt nhỏ trong đá hoa cương nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "Minerals" · "Khoáng vật" là chữ của câu khẳng định. Gợi ý mới trỏ một bằng chứng bé đã thấy (mỗi hạt trong đá hoa cương là một khoáng vật, bài bốn).
 explanation_correct.en: Most rocks are a mix of different minerals.
 explanation_correct.vi: Phần lớn đá là hỗn hợp nhiều khoáng vật khác nhau.
 explanation_wrong.en: Rocks are made of minerals, like granite's grains.
@@ -338,7 +339,7 @@ image.alt.vi: Đèn dầu cổ
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án theo bảng `_topic.md` (bài chín): q1 thứ nhất, thẻ đúng q2 thứ hai, q3 thứ nhất và thứ ba, q4 thứ ba trong bốn, q5 thứ hai.
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Mỗi hình chỉ một vai trong bài: ảnh nhựa thông (`resin`) là hình câu q1 và lựa chọn sai q4 (không trái nhau); nước đá chỉ ở q1; ảnh gỗ hoá đá chỉ là hình câu q4.
 
 ### q1
@@ -391,39 +392,39 @@ image.alt.vi: Mấy mảnh thuỷ tinh biển
 ### q2
 id: 55c0ccc7-e53c-48d1-8fc4-2235c61454b2
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `q2_museum` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): natural history museum gallery interior display cases
 image.alt.en: Inside a museum
 image.alt.vi: Bên trong bảo tàng
-sentence.en: Palaeontology is the study of {1}.
-sentence.vi: Cổ sinh vật học là ngành nghiên cứu {1}.
-answers: q2_fossils
-hint.en: Remember the Palaeontology picture in the lesson.
-hint.vi: Em nhớ lại ô Cổ sinh vật học trong bài học nhé.
+sentence.en: We call the study of fossils {1}.
+sentence.vi: Ngành nghiên cứu hoá thạch gọi là {1}.
+answers: q2_palaeontology
+hint.en: Remember the scientists in the lesson who dig up fossils.
+hint.vi: Em nhớ lại các nhà khoa học đào hoá thạch trong bài nhé.
 explanation_correct.en: Fossils show how animals lived long ago.
 explanation_correct.vi: Nhờ hoá thạch, ta biết con vật xưa sống ra sao.
-explanation_wrong.en: Palaeontologists study fossils from long ago.
-explanation_wrong.vi: Nhà cổ sinh vật học nghiên cứu hoá thạch thời xa xưa.
-> DOK 1: nhớ lại nghĩa của từ mới `palaeontology`. Câu không có gốc từ "fossil". Thẻ sai "rocks" · "đá" có sức hút (nhà cổ sinh vật học đào hoá thạch trong đá; nghiên cứu đá là việc của nhà địa chất, bài bốn); "stars" · "các vì sao" cũng là một ngành nghiên cứu. Thẻ đúng ở chỗ thứ hai (bảng vị trí). Ba thẻ là ảnh chụp.
+explanation_wrong.en: Palaeontology is the study of fossils from long ago.
+explanation_wrong.vi: Cổ sinh vật học là ngành nghiên cứu hoá thạch xưa.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (resin, amber, palaeontology); câu cũ điền "fossils". Câu mới đảo câu cũ: cho nghĩa, bé chọn từ `palaeontology`. Không dùng "amber" hay "resin": câu q1 đã hỏi nhựa cây hoá hổ phách, và theo luật "mỗi hình một vai" của bài, hình hổ phách (đúng ở q1) không làm thẻ sai được. Giữ hai thẻ sai cũ (đá, các vì sao), cùng vai sai như trước; thẻ `q2_fossils` bỏ, thêm `q2_palaeontology` (dùng lại hình của từ `palaeontology`). `version` 2. Gợi ý cũ trỏ ô "Palaeontology", tên ô là đáp án. Gợi ý không nói "từ dài nhất" (nhìn kho thẻ là thấy ngay) và không trỏ trang Từ mới (trong kho chỉ thẻ đúng là từ mới của bài); gợi ý trỏ người làm ngành đó.
 
 #### bank q2_rocks
 label.en: rocks
 label.vi: đá
-feedback.en: Rocks were never alive.
-feedback.vi: Đá chưa từng là sinh vật sống.
+feedback.en: Rocks hold fossils, but that is not this study's name.
+feedback.vi: Đá chứa hoá thạch, nhưng đó không phải tên ngành học.
 image.brief: Dùng lại hình `granite` ở bài `da-va-dat/nhin-ky-cac-loai-da`. Từ khoá tìm ảnh (EN): granite rock sample
 image.alt.en: A grey rock
 image.alt.vi: Hòn đá màu xám
 
-#### bank q2_fossils
-label.en: fossils
-label.vi: hoá thạch
-image.brief: Dùng lại hình `tray_ammonite` ở bài `da-va-dat/hoa-thach-hinh-thanh-the-nao`. Từ khoá tìm ảnh (EN): ammonite fossil specimen
-image.alt.en: A spiral shell in rock
-image.alt.vi: Vỏ xoắn trong đá
+#### bank q2_palaeontology
+label.en: palaeontology
+label.vi: cổ sinh vật học
+image.brief: Dùng lại hình `palaeontologist` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): palaeontologist hands tool fossil rock quarry
+image.alt.en: A palaeontologist digging out a fossil
+image.alt.vi: Nhà cổ sinh vật học đào hoá thạch
 
 #### bank q2_stars
 label.en: stars
@@ -437,7 +438,7 @@ image.alt.vi: Bầu trời đêm đầy sao
 ### q3
 id: 9b41301f-6e22-4f52-bc28-1454d58acaf4
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones came from something once alive?
 prompt.vi: Những thứ nào có từ một sinh vật từng sống?
@@ -448,12 +449,12 @@ image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
 hint.en: Think about who or what made each one.
 hint.vi: Em nghĩ xem mỗi thứ do ai hay do gì tạo nên nhé.
-explanation_correct.en: Fossils in amber and in rock both come from life.
-explanation_correct.vi: Hoá thạch trong hổ phách hay trong đá đều từ sinh vật.
-explanation_wrong.en: The insect and the shell were once alive.
-explanation_wrong.vi: Con côn trùng và con ốc từng là sinh vật sống.
-> DOK 2: phân loại theo ý chính ba. Cối đá có sức hút mạnh: làm bằng đá, rất cũ, nhưng do con người làm ra, chưa từng sống. Viên gạch nối `bricks_are_rocks` của bài một: làm từ đất sét, do con người làm ra, chưa từng sống. Đáp án ở chỗ thứ nhất và thứ ba (bảng vị trí).
-> Rà chữ tester 11/11 (N4): lựa chọn sai `q3_pot` (bình gốm cổ, món bẫy của kệ) đổi thành `q3_brick` (dùng lại ảnh bài một), để hai lựa chọn sai đều là vật ngoài kệ, bé không trả lời bằng trí nhớ trò chơi. Nay hai đáp án là món kệ Chơi, hai lựa chọn sai là ảnh bài một; cả bốn là ảnh chụp đồ vật.
+explanation_correct.en: A footprint fossil shows where an animal once walked.
+explanation_correct.vi: Dấu chân hoá thạch cho thấy nơi con vật từng đi qua.
+explanation_wrong.en: The insect, shell and footprint all came from animals.
+explanation_wrong.vi: Côn trùng, vỏ ốc và dấu chân đều có từ con vật.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_brick` thay bằng `q3_footprint` (dấu chân in trên đá, đúng: do con vật để lại), dùng lại hình kệ Chơi; `version` 2. Bẫy còn lại là cối đá (bằng đá, rất cũ, nhưng do người làm). Hai lời giải thích sửa theo.
+> DOK 2: phân loại theo ý chính ba. Cối đá có sức hút mạnh: làm bằng đá, rất cũ, nhưng do con người làm ra, chưa từng sống. Viên gạch nối `bricks_are_rocks` của bài một: làm từ đất sét, do con người làm ra, chưa từng sống.> Rà chữ tester 11/11 (N4): lựa chọn sai `q3_pot` (bình gốm cổ, món bẫy của kệ) đổi thành `q3_brick` (dùng lại ảnh bài một), để hai lựa chọn sai đều là vật ngoài kệ, bé không trả lời bằng trí nhớ trò chơi. Nay hai đáp án là món kệ Chơi, hai lựa chọn sai là ảnh bài một; cả bốn là ảnh chụp đồ vật.
 
 #### option q3_amber
 correct: true
@@ -482,16 +483,14 @@ image.brief: Dùng lại hình `tray_stone_shell`. Từ khoá tìm ảnh (EN): f
 image.alt.en: A shell turned to rock
 image.alt.vi: Vỏ ốc hoá thành đá
 
-#### option q3_brick
-correct: false
-feedback.en: People bake clay to make bricks.
-feedback.vi: Gạch do người nung từ đất sét.
-label.en: clay brick
-label.vi: viên gạch
-image.brief: Dùng lại hình `tray_brick` ở bài `da-va-dat/lam-quen-voi-da`. Từ khoá tìm ảnh (EN): red clay brick plain background
-image.alt.en: Red bricks in a stack
-image.alt.vi: Mấy viên gạch xếp chồng
-> `alt` theo bảng designer 11/11 (ảnh chồng gạch); A sửa `alt` gốc ở bài một theo cùng chữ.
+#### option q3_footprint
+correct: true
+label.en: footprint in rock
+label.vi: dấu chân in trên đá
+image.brief: Dùng lại hình `tray_rock_print` ở bài `khung-long/hoa-thach-ke-chuyen-khung-long`. Từ khoá tìm ảnh (EN): dinosaur footprint fossil three toed rock top view
+image.alt.en: A footprint in rock
+image.alt.vi: Dấu chân in trên đá
+> SK-047 (15/11): thay `q3_brick`; cùng hình với món `tray_rock_print` của kệ Chơi (ảnh chụp, như ba lựa chọn kia), không cần hình mới. `alt` không có chữ "dinosaur", để phụ đề không nói thêm điều câu đang hỏi.
 
 ### q4
 id: 102e086d-5c63-4a77-bd09-15c857067f72
@@ -510,7 +509,7 @@ explanation_correct.vi: Chất khoáng dần lấp đầy gỗ qua hàng triệu
 explanation_wrong.en: Minerals in water slowly filled the wood.
 explanation_wrong.vi: Chất khoáng trong nước dần lấp đầy khúc gỗ.
 > A2 (SK-043, 14/11): câu hỏi cũ mười tám chữ (hai câu), nay tám chữ; ý "hàng triệu năm" chuyển sang giải thích khi đúng.
-> DOK 2: áp ý chính hai vào vật bé vừa gặp ở kệ Chơi, hỏi nguyên nhân. Bốn lựa chọn, đáp án ở chỗ thứ ba (bảng vị trí). Lựa chọn sai có sức hút: lửa (gỗ cháy thành than đen, cứng), nắng (gỗ phơi khô, cứng), nhựa cây (cũng từ cây, cũng tạo hoá thạch, nhưng là cách khác). Gợi ý chỉ cách nghĩ (chậm, sâu dưới đất), không gọi tên ô "Filled with minerals" (trùng chữ nhãn đáp án).
+> DOK 2: áp ý chính hai vào vật bé vừa gặp ở kệ Chơi, hỏi nguyên nhân. Bốn lựa chọn. Lựa chọn sai có sức hút: lửa (gỗ cháy thành than đen, cứng), nắng (gỗ phơi khô, cứng), nhựa cây (cũng từ cây, cũng tạo hoá thạch, nhưng là cách khác). Gợi ý chỉ cách nghĩ (chậm, sâu dưới đất), không gọi tên ô "Filled with minerals" (trùng chữ nhãn đáp án).
 > Bốn nhãn cùng một khuôn "X from/in Y".
 
 #### option q4_fire
@@ -622,8 +621,9 @@ answer: false
 image.brief: [ảnh] Một chiếc trống đồng Đông Sơn trưng bày trong bảo tàng, mặt trống nhìn chéo từ trên xuống thấy hoa văn, nền trơn; không có người, không có biển tên, không có chữ. Nhiều ảnh trống đồng trên Commons là CC BY-SA, phải loại. Từ khoá tìm ảnh (EN): Dong Son bronze drum museum
 image.alt.en: An old bronze drum
 image.alt.vi: Chiếc trống đồng cổ
-hint.en: Who made this drum? What is it made of?
-hint.vi: Ai làm ra chiếc trống này? Trống làm bằng gì?
+hint.en: Remember what fossils come from.
+hint.vi: Em nhớ lại hoá thạch có từ đâu nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là hai câu hỏi mà hai câu trả lời ("người làm", "bằng đồng") là lời bác bỏ. Gợi ý mới trỏ tiêu chí của ý chính ba (chỉ những gì từng sống), bé tự áp vào chiếc trống.
 explanation_correct.en: Old things that people made are not fossils.
 explanation_correct.vi: Đồ cổ do người làm ra không phải hoá thạch.
 explanation_wrong.en: Only things that were once alive become fossils.
@@ -729,7 +729,8 @@ image.alt.vi: Con kiến nhỏ trong hổ phách
   - Khởi động: `single_choice` (w1 ôn bài tám), `true_false` (w2 ôn bài bốn, Đúng).
   - Quiz: `single_choice` (q1, q4 bốn lựa chọn, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, Sai). Bốn format.
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `old_things_are_fossils`.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ nhất; thẻ đúng q2 thứ hai; q3 thứ nhất và thứ ba; q4 thứ ba (bốn lựa chọn); q5 thứ hai. Khớp bảng `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **15/11 (SK-047):** q2 câu Từ mới "palaeontology", `version` 2; q3 `multi_choice` ba đáp án đúng, `version` 2.
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/hoa-thach-hinh-thanh-the-nao` (w1), `da-va-dat/thang-do-cung-mohs` (w2).
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Côn trùng trong hổ phách, Gỗ hoá thành đá, Dấu chân in trên đá → đạt;

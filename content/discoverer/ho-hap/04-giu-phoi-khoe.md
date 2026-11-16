@@ -59,8 +59,7 @@ explanation_correct.en: Skipping had the tallest bar in Mai's chart.
 explanation_correct.vi: Nhảy dây có cột cao nhất trong biểu đồ của Mai.
 explanation_wrong.en: Skipping works your leg muscles the hardest.
 explanation_wrong.vi: Nhảy dây làm cơ bắp ở chân làm việc nhiều nhất.
-> Đi bộ là lựa chọn sai có sức hút (cũng là vận động, cũng có trong biểu đồ câu q4 bài ba). Đáp án ở chỗ thứ tư; câu w1 của bốn bài ở bốn chỗ khác nhau.
-
+> Đi bộ là lựa chọn sai có sức hút (cũng là vận động, cũng có trong biểu đồ câu q4 bài ba).
 #### option w1_walking
 correct: false
 feedback.en: Walking moves your legs, but gently.
@@ -102,7 +101,7 @@ image.alt.vi: Sợi dây nhảy
 ### w2
 id: cfd71442-6015-459d-a599-b1513fff833b
 format: true_false
-version: 1
+version: 2
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: ho-hap/duong-di-cua-khong-khi
@@ -112,8 +111,9 @@ image.brief: Dùng lại hình `q6` ở bài `ho-hap/duong-di-cua-khong-khi`.
 image.alt.en: A child lying down with a teddy on the belly
 image.alt.vi: Bạn nhỏ nằm ngửa, gấu bông trên bụng
 answer: false
-hint.en: Remember the Food and air card.
-hint.vi: Em nhớ lại ô Thức ăn và không khí nhé.
+hint.en: Put a hand on your chest and breathe in.
+hint.vi: Em đặt tay lên ngực rồi hít vào nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember the Food and air card." · "Em nhớ lại ô Thức ăn và không khí nhé." trỏ ô có câu "Food goes to your stomach, and air to your lungs.", chính là phán quyết. Gợi ý mới cho bé tự thử: ngực phồng lên khi hít vào (như ô Hít vào thở ra bài một). `version` 2.
 explanation_correct.en: Your belly moves, but the air goes into your lungs.
 explanation_correct.vi: Bụng em nhấp nhô, còn không khí đi vào phổi.
 explanation_wrong.en: The air goes down your windpipe into your lungs.
@@ -408,7 +408,7 @@ explanation_wrong.en: A mask helps stop dust going into your nose.
 explanation_wrong.vi: Khẩu trang giúp ngăn bụi đi vào mũi.
 > Câu nhớ lại ý chính hai. Ba thứ đều là đồ người Việt Nam hay mang khi đi xe máy (mũ vải, áo mưa, khẩu trang), nên hai lựa chọn sai có sức hút. Không dùng mũ bảo hiểm (bài bốn của *Não bộ và giác quan* dạy mũ bảo hiểm).
 > Gợi ý nêu cách nghĩ (bụi vào qua đâu, tức là mũi), không gọi tên lựa chọn.
-> Rà chữ tester 10/11 (n1): khẩu trang chuyển xuống chỗ thứ ba (trước đây thứ hai). Chỉ đổi thứ tự khối, không đổi chữ hay hình.
+> Rà chữ tester 10/11 (n1): đổi thứ tự khối để cân vị trí đáp án; hết hiệu lực từ 15/11 (SK-047, app xáo lựa chọn).
 
 #### option q1_hat
 correct: false
@@ -442,38 +442,28 @@ image.alt.vi: Chiếc khẩu trang vải trên bàn
 ### q2
 id: be21d1bc-e6eb-4b21-a369-5e4bace511e4
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: [ảnh] Bầu trời xanh có mây trắng trên những ngọn cây, chụp từ dưới lên; không có người, không có chữ. Câu q3 dùng lại ảnh này. Từ khoá tìm ảnh (EN): blue sky white clouds tree tops
 image.alt.en: Blue sky over the trees
 image.alt.vi: Bầu trời xanh trên ngọn cây
-sentence.en: Our body needs {1} from the air.
-sentence.vi: Cơ thể mình cần {1} từ không khí.
-answers: q2_oxygen
-hint.en: Remember the first lesson, Why we breathe.
-hint.vi: Em nhớ lại bài đầu tiên, Vì sao ta phải thở.
-explanation_correct.en: Every breath brings oxygen to your whole body.
-explanation_correct.vi: Mỗi hơi thở đưa ô-xi tới khắp cơ thể.
-explanation_wrong.en: Your body needs oxygen, while dust and smoke hurt lungs.
-explanation_wrong.vi: Cơ thể cần ô-xi, còn bụi và khói làm hại phổi.
-> Câu ôn ý chính ba bài một, đặt trong bối cảnh bài này: bụi và khói cũng ở trong không khí, nên có sức hút ("cũng từ không khí"), nhưng cơ thể không cần.
-
-#### bank q2_dust
-label.en: dust
-label.vi: bụi
-feedback.en: Dust in the air can hurt your lungs.
-feedback.vi: Bụi trong không khí làm hại phổi.
-image.brief: Dùng lại hình `explore_dust`. Từ khoá tìm ảnh (EN): dusty road truck dust cloud
-image.alt.en: A dusty road
-image.alt.vi: Con đường bụi mù
+sentence.en: Fires make {1} that is bad for your lungs.
+sentence.vi: Lửa tạo ra {1}, có hại cho phổi em.
+answers: q2_smoke
+hint.en: Think of farmers burning straw after the harvest.
+hint.vi: Em nghĩ tới cảnh đốt rơm rạ sau mùa gặt nhé.
+> SK-047 (15/11, nháp AI): gợi ý trước ("thứ gì bốc lên từ đống lửa") là câu hỏi mà câu trả lời chính là đáp án; nút gợi ý mở được trước khi trả lời. Gợi ý mới trỏ một cảnh quen, cũng là món "Straw smoke" của kệ Chơi.
+explanation_correct.en: Smoke from burning straw or rubbish hurts your lungs.
+explanation_correct.vi: Khói đốt rơm rạ, đốt rác làm hại phổi em.
+explanation_wrong.en: Fires make smoke, and smoke hurts your lungs.
+explanation_wrong.vi: Lửa tạo ra khói, mà khói làm hại phổi em.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (dust, smoke, mask); câu cũ điền "oxygen", từ của bài một. Nay câu nhớ lại ô Khói (ý chính hai). Hai thẻ sai là hai thứ "tốt" trong không khí (ô-xi, không khí trong lành), bé phải chọn thứ có hại. Ba thẻ đều là hình vẽ. `version` 2; thẻ `q2_dust` bỏ, thêm `q2_fresh_air`.
 
 #### bank q2_smoke
 label.en: smoke
 label.vi: khói
-feedback.en: Smoke is bad for your lungs.
-feedback.vi: Khói có hại cho phổi em.
 image.brief: Dùng lại hình `explore_smoke`. Từ khoá tìm ảnh (EN): burning rice straw field smoke
 image.alt.en: Smoke from burning straw in a field
 image.alt.vi: Khói đốt rơm rạ trên cánh đồng
@@ -481,15 +471,27 @@ image.alt.vi: Khói đốt rơm rạ trên cánh đồng
 #### bank q2_oxygen
 label.en: oxygen
 label.vi: khí ô-xi
+feedback.en: Fire uses up oxygen; it does not make it.
+feedback.vi: Lửa dùng ô-xi, chứ không tạo ra ô-xi.
 image.brief: Dùng lại hình `oxygen` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): aquarium air stone bubbles fish
 image.alt.en: Bubbles from an air pump in a fish tank
 image.alt.vi: Bọt khí từ máy sục khí trong bể cá
-> Rà chữ tester 10/11 (n14): trước dùng lại ảnh thợ lặn mang bình khí (bình chứa không khí nén, không phải ô-xi); nay dùng lại ảnh bể cá có máy sục khí của từ `oxygen` bài một. Ba thẻ vẫn cùng là ảnh chụp.
+> Rà chữ tester 10/11 (n14): trước dùng lại ảnh thợ lặn mang bình khí (bình chứa không khí nén, không phải ô-xi); nay dùng lại ảnh bể cá có máy sục khí của từ `oxygen` bài một.
+
+#### bank q2_fresh_air
+label.en: fresh air
+label.vi: không khí trong lành
+feedback.en: Fresh air is clean, with no smoke in it.
+feedback.vi: Không khí trong lành thì sạch, không có khói.
+image.brief: Dùng lại hình `tray_park`. Từ khoá tìm ảnh (EN): green park big trees lawn morning
+image.alt.en: A green park with big trees
+image.alt.vi: Công viên nhiều cây xanh
+> SK-047 (15/11): thẻ mới, dùng lại hình kệ Chơi (cũng là hình từ `fresh_air`); không cần hình mới.
 
 ### q3
 id: f4b064fb-8ed6-4e08-b520-7945d3ef7908
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones put dust or smoke into the air?
 prompt.vi: Thứ nào làm bụi, khói bay vào không khí?
@@ -500,10 +502,11 @@ image.alt.en: Blue sky over the trees
 image.alt.vi: Bầu trời xanh trên ngọn cây
 hint.en: Which ones make something you should not breathe?
 hint.vi: Thứ nào tạo ra thứ mà em không nên hít vào?
-explanation_correct.en: Cars and digging both throw dust up into the air.
-explanation_correct.vi: Xe cộ và việc đào đất đều làm bụi bay lên.
-explanation_wrong.en: Roads and building sites put dust into the air.
-explanation_wrong.vi: Đường đông xe và công trường làm bụi bay lên.
+explanation_correct.en: Cars, digging and coal fires all make the air dirty.
+explanation_correct.vi: Xe cộ, đào đất và bếp than đều làm bẩn không khí.
+explanation_wrong.en: Roads and building sites make dust; coal stoves make smoke.
+explanation_wrong.vi: Đường đông xe, công trường tạo bụi; bếp than tạo khói.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_park` thay bằng `q3_coal` (bếp than tổ ong, đúng), dùng lại hình kệ Chơi; `version` 2. Hơi nồi cơm vẫn là bẫy (trông như khói). Hai lời giải thích sửa theo.
 > DOK 2: phân loại nơi tạo ra bụi, khói, ở những cảnh chưa có ở phần Học (ô Bụi chỉ có đường đất đỏ). Hơi nồi cơm có sức hút vì trông như khói trắng; công viên có sức hút ngược (bé biết công viên là chỗ tốt, nên kiểm lại cách nghĩ).
 > [CẦN KIỂM] Hơi bốc lên từ nồi cơm là hơi nước, không hại phổi. Ý này nối với *Các thể của vật chất* (Discoverer số mười ba, "hơi nồi cơm").
 
@@ -513,7 +516,7 @@ feedback.en: Steam from rice is just water, like tiny clouds.
 feedback.vi: Hơi nồi cơm chỉ là hơi nước thôi.
 label.en: steam from rice
 label.vi: hơi nồi cơm
-image.brief: [hình vẽ] Góc bếp trong nhà nhìn rộng: một nồi cơm đang sôi trên bếp, làn hơi nước trắng bốc cao từ khe vung, thấy cả mặt bếp và bức tường phía sau. Bắt buộc vẽ rộng cả góc bếp, cùng cỡ cảnh với ba hình kia (đường phố, công viên, công trường); không vẽ cận nồi. Không có người, không có nhãn hiệu trên nồi, không có chữ, không phải nồi cơm điện có logo. Từ khoá tìm ảnh (EN): kitchen stove pot steam rising
+image.brief: [hình vẽ] Góc bếp trong nhà nhìn rộng: một nồi cơm đang sôi trên bếp, làn hơi nước trắng bốc cao từ khe vung, thấy cả mặt bếp và bức tường phía sau. Bắt buộc vẽ rộng cả góc bếp, cùng cỡ cảnh với ba hình kia (đường phố, công viên, công trường); không vẽ cận nồi. Không có người, không có nhãn hiệu trên nồi, không có chữ, không phải nồi cơm điện có logo. Thẻ q5_steam dùng lại hình này (16/11). Từ khoá tìm ảnh (EN): kitchen stove pot steam rising
 image.alt.en: Steam rising from a pot of rice
 image.alt.vi: Hơi bốc lên từ nồi cơm
 > Rà chữ tester 10/11 (n10): ảnh cận nồi cơm lệch cỡ cảnh với ba lựa chọn kia, nên món bẫy dễ bị loại bằng kiểu ảnh. Brief nay ghi chụp rộng là yêu cầu bắt buộc; từ khoá đổi theo.
@@ -522,19 +525,18 @@ image.alt.vi: Hơi bốc lên từ nồi cơm
 correct: true
 label.en: busy road
 label.vi: đường đông xe
-image.brief: [hình vẽ] Một con đường đông xe máy và ô tô ở thành phố Việt Nam, nhìn từ trên cao (cầu vượt hay toà nhà) xuống, xe nhỏ; không có biển số, không vẽ nét mặt người, không có biển hiệu, quảng cáo hay chữ. Cả bốn lựa chọn của câu là hình vẽ. Câu q4 dùng lại ảnh này. Từ khoá tìm ảnh (EN): busy road motorbikes aerial view Vietnam
+image.brief: [hình vẽ] Một con đường đông xe máy và ô tô ở thành phố Việt Nam, nhìn từ trên cao (cầu vượt hay toà nhà) xuống, xe nhỏ; không có biển số, không vẽ nét mặt người, không có biển hiệu, quảng cáo hay chữ. Cả bốn lựa chọn của câu là hình vẽ. Câu q4 không còn dùng lại ảnh này (16/11). Từ khoá tìm ảnh (EN): busy road motorbikes aerial view Vietnam
 image.alt.en: A busy road seen from above
 image.alt.vi: Con đường đông xe nhìn từ trên cao
 
-#### option q3_park
-correct: false
-feedback.en: Trees in a park help keep the air fresh.
-feedback.vi: Cây trong công viên giúp không khí trong lành.
-label.en: green park
-label.vi: công viên nhiều cây
-image.brief: Dùng lại hình `tray_park`. Từ khoá tìm ảnh (EN): green park big trees lawn morning
-image.alt.en: A green park with big trees
-image.alt.vi: Công viên nhiều cây xanh
+#### option q3_coal
+correct: true
+label.en: coal stove
+label.vi: bếp than tổ ong
+image.brief: Dùng lại hình `tray_coal`. Từ khoá tìm ảnh (EN): honeycomb briquette coal stove smoke
+image.alt.en: A coal stove with smoke
+image.alt.vi: Bếp than tổ ong bốc khói
+> SK-047 (15/11): thay `q3_park`. Hình kệ Chơi (hình vẽ, cùng nét ba lựa chọn kia); không cần hình mới. [CẦN KIỂM] như món `tray_coal`.
 
 #### option q3_building
 correct: true
@@ -547,7 +549,7 @@ image.alt.vi: Công trường xây dựng có bụi
 ### q4
 id: 45431ccf-b994-43e4-b619-a7468aee53e7
 format: single_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Where should Nam play on a smoky day?
 prompt.vi: Hôm nhiều khói bụi, Nam nên chơi ở đâu?
@@ -581,63 +583,65 @@ image.brief: Dùng lại hình `tray_park`. Từ khoá tìm ảnh (EN): green pa
 image.alt.en: A green park with big trees
 image.alt.vi: Công viên nhiều cây xanh
 
-#### option q4_road
+#### option q4_schoolyard
 correct: false
-feedback.en: Cars by the road add even more dust.
-feedback.vi: Xe cộ bên đường còn làm thêm bụi.
-label.en: by the road
-label.vi: bên đường
-image.brief: Dùng lại hình `q3_road`. Từ khoá tìm ảnh (EN): busy road motorbikes aerial view Vietnam
-image.alt.en: A busy road seen from above
-image.alt.vi: Con đường đông xe nhìn từ trên cao
+feedback.en: The schoolyard is outside, in the same smoky air.
+feedback.vi: Sân trường ở ngoài trời, cũng đầy khói bụi.
+label.en: in the schoolyard
+label.vi: ở sân trường
+image.brief: Dùng lại hình `q1` ở bài `ho-hap/tho-khi-chay-nhay`. Từ khoá tìm ảnh (EN): empty schoolyard Vietnam trees
+image.alt.en: An empty schoolyard
+image.alt.vi: Sân trường vắng
+> SK-047 (16/11, nháp AI, quét cùng loại): thay lựa chọn sai `q4_road` ("by the road" · "bên đường"). Thẻ cũ dùng hình `q3_road`, mà hình đó là đáp án đúng ở câu q3, nên một hình vừa đúng vừa sai trong bài. Thẻ mới là sân trường: nơi bé chơi hằng ngày nên có sức hút, nhưng ở ngoài trời. Hình vẽ sân trường vắng của bài ba (cùng là hình vẽ như hai lựa chọn kia; câu w1 bài này dùng làm hình câu hỏi, không phải lựa chọn). Không cần hình mới. Designer: thêm key `q4_schoolyard` trỏ ảnh `q1` của `ho-hap/tho-khi-chay-nhay`, gỡ key `q4_road`.
 
 ### q5
 id: cbfc5d1b-857c-4fef-a6a3-d3db2cb51c11
 format: fill_blank_bank
-version: 1
+version: 3
 dok: 2
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
+image.brief: Dùng lại hình `q1_sleeping` ở bài `ho-hap/tho-khi-chay-nhay`.
+image.alt.en: A pillow and a blanket
+image.alt.vi: Chiếc gối và chiếc chăn
+sentence.en: Shaking out an old blanket sends {1} into the air.
+sentence.vi: Giũ một tấm chăn cũ làm {1} bay vào không khí.
+answers: q5_dust
+hint.en: Think of what happens when you sweep the floor.
+hint.vi: Em nghĩ tới lúc em quét nhà nhé.
+> SK-047 (15/11, nháp AI): gợi ý trước hỏi thẳng "đồ để lâu bám gì", câu trả lời là đáp án. Gợi ý mới trỏ ví dụ quét nhà của ô Học, bé tự áp sang việc giũ chăn.
+explanation_correct.en: Shake blankets outside, away from your face.
+explanation_correct.vi: Em giũ chăn ở ngoài trời, tránh xa mặt mình.
+explanation_wrong.en: Old blankets hold dust, and shaking sends it flying.
+explanation_wrong.vi: Chăn cũ bám bụi, giũ lên là bụi bay ra.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài; câu cũ điền "windpipe", từ của bài hai. Câu mới vẫn DOK 2: áp ý "bụi bay vào không khí" (ô Bụi) vào một việc nhà chưa có ở Học (giũ chăn; ô Bụi chỉ nói quét nhà). Khói là thẻ sai có sức hút (cũng làm bẩn không khí) nhưng cần có lửa. `version` 2; ba thẻ cũ bỏ, thay bằng `q5_dust`, `q5_smoke`, `q5_oxygen` (đều là hình vẽ dùng lại). 16/11: `q5_smoke` đổi thành `q5_steam` (hơi nước), vì hình khói là thẻ đúng ở câu q2; `version` 3. Hình câu hỏi là gối chăn của bài ba (hình vẽ), không có bụi, nên không lộ đáp án.
+> [CẦN KIỂM] Chăn để lâu bám bụi, giũ chăn làm bụi bay lên; nên giũ ngoài trời (biên tập nhớ, lời khuyên chung).
+
+#### bank q5_dust
+label.en: dust
+label.vi: bụi
 image.brief: Dùng lại hình `explore_dust`. Từ khoá tìm ảnh (EN): dusty road truck dust cloud
 image.alt.en: A dusty road
 image.alt.vi: Con đường bụi mù
-sentence.en: Tiny dust can go down your {1} into your lungs.
-sentence.vi: Bụi mịn có thể đi xuống {1}, vào tới phổi.
-answers: q5_windpipe
-hint.en: Follow the journey of air from the nose.
-hint.vi: Em lần theo đường đi của không khí từ mũi nhé.
-explanation_correct.en: Tiny dust slips past nose hairs, down the windpipe.
-explanation_correct.vi: Bụi mịn lọt qua lông mũi, đi xuống khí quản.
-explanation_wrong.en: Air and dust go down the windpipe to the lungs.
-explanation_wrong.vi: Không khí và bụi đi xuống khí quản, vào phổi.
-> DOK 2: áp dụng đường đi của không khí (bài hai) cho bụi mịn (bài này). Thực quản và dạ dày là hai thẻ sai, nối với `air_goes_to_belly`.
-> Ba thẻ là ba hình tự vẽ dùng lại của bài hai, cùng nét. Hình câu hỏi là ảnh chụp; luật "cùng kiểu hình" áp cho các thẻ với nhau.
-> [CẦN KIỂM] Bụi mịn nhỏ tới mức lông mũi không giữ hết, vào sâu tới phổi (biên tập nhớ).
 
-#### bank q5_food_pipe
-label.en: food pipe
-label.vi: thực quản
-feedback.en: The food pipe is for food you swallow.
-feedback.vi: Thực quản là đường của thức ăn em nuốt.
-image.brief: Dùng lại hình `tray_food_pipe` ở bài `ho-hap/duong-di-cua-khong-khi`.
-image.alt.en: A food pipe
-image.alt.vi: Thực quản
+#### bank q5_steam
+label.en: steam
+label.vi: hơi nước
+feedback.en: Steam rises from hot water, not from a dry blanket.
+feedback.vi: Hơi nước bốc lên từ nước nóng, không phải từ chăn khô.
+image.brief: Dùng lại hình `q3_steam`. Từ khoá tìm ảnh (EN): kitchen stove pot steam rising
+image.alt.en: Steam rising from a pot of rice
+image.alt.vi: Hơi bốc lên từ nồi cơm
+> SK-047 (16/11, nháp AI, tester "nên sửa" 2): thay thẻ sai `q5_smoke`. Thẻ cũ dùng hình `explore_smoke`, mà hình đó là thẻ đúng `q2_smoke` của câu q2, nên một hình vừa đúng vừa sai trong bài. Thẻ mới "steam" · "hơi nước" cùng loại với "dust", "oxygen" (danh từ không đếm được, thứ bay trong không khí). Hình dùng lại `q3_steam` (hình vẽ góc bếp có nồi cơm bốc hơi), hình này chỉ mang vai sai trong bài (lựa chọn sai ở câu q3), nên không phạm luật; không cần hình mới. Hơi nước có sức hút vì giũ chăn cũng làm bay lên một làn trắng. Designer: thêm key `q5_steam` trỏ cùng ảnh `q3_steam` vào file chọn ảnh, gỡ key `q5_smoke`.
 
-#### bank q5_windpipe
-label.en: windpipe
-label.vi: khí quản
-image.brief: Dùng lại hình `tray_windpipe` ở bài `ho-hap/duong-di-cua-khong-khi`.
-image.alt.en: A windpipe
-image.alt.vi: Khí quản
-
-#### bank q5_stomach
-label.en: stomach
-label.vi: dạ dày
-feedback.en: The stomach is where food goes, not air.
-feedback.vi: Dạ dày chứa thức ăn, không chứa không khí.
-image.brief: Dùng lại hình `tray_stomach` ở bài `ho-hap/duong-di-cua-khong-khi`.
-image.alt.en: A stomach
-image.alt.vi: Dạ dày
+#### bank q5_oxygen
+label.en: oxygen
+label.vi: khí ô-xi
+feedback.en: Oxygen is always in the air, blanket or not.
+feedback.vi: Lúc nào trong không khí cũng có sẵn ô-xi.
+image.brief: Dùng lại hình `oxygen` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): aquarium air stone bubbles fish
+image.alt.en: Bubbles from an air pump in a fish tank
+image.alt.vi: Bọt khí từ máy sục khí trong bể cá
 
 ### q6
 id: f24a8564-4465-45a2-9a85-a4a276fc3894
@@ -660,8 +664,9 @@ answer: false
 image.brief: [hình vẽ] Bầu trời xanh trong trên những mái nhà của một thị trấn, buổi trưa nắng, nhìn hơi chếch lên; không thấy khói hay bụi, không có biển hiệu, không có chữ, không có người. Từ khoá tìm ảnh (EN): clear blue sky over rooftops town
 image.alt.en: A clear sky over the roofs
 image.alt.vi: Trời trong xanh trên những mái nhà
-hint.en: Remember the Tiny dust card.
-hint.vi: Em nhớ lại ô Bụi mịn nhé.
+hint.en: Think of a sunbeam shining into a dark room.
+hint.vi: Em nghĩ tới vệt nắng chiếu vào phòng tối nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Bụi mịn, mà câu của ô ("Some dust is too tiny to see") gần như là đáp án (ví dụ PM nêu trong SK-047). Gợi ý mới chỉ vào một điều bé từng thấy: trong vệt nắng hiện ra những hạt bụi mà thường ngày mắt không thấy; bé tự nối sang "trời trông trong vẫn có bụi".
 explanation_correct.en: Clear air can still hold dust too tiny to see.
 explanation_correct.vi: Trời trong vẫn có thể có bụi mịn, mắt không thấy.
 explanation_wrong.en: Tiny dust can hide in clear air.
@@ -774,7 +779,7 @@ image.alt.vi: Cây đa cổ thụ
   - q2: ba ảnh chụp (đường bụi, khói rơm, bể cá có máy sục khí). Từ rà chữ 10/11 (n14), thẻ ô-xi là bể cá chụp ngang mặt kính, không còn là thợ lặn; ảnh bể cá cùng cỡ cảnh vừa, không chụp cận viên đá sục.
   - q3: bốn ảnh cảnh rộng, **bắt buộc** cả ảnh nồi cơm (chụp cả góc bếp; rà chữ tester 10/11, n10).
   - q4: ba ảnh nơi chốn.
-  - q5: ba hình tự vẽ dùng lại của bài hai.
+  - q5: ba hình dùng lại (từ 15/11, SK-047): bụi (`explore_dust`), hơi nồi cơm (`q3_steam`, thay hình khói từ 16/11), bể cá (`oxygen` của bài một).
 - **Kệ Chơi:** chín món đều là hình vẽ (designer 10/11); ba món bẫy cũng là hình vẽ. Món Cánh đồng lúa vẽ riêng, không dùng lại ảnh `q2_rice`.
 - **Màu:** Học: bụi `nau_dat`, khói `do_son`, khẩu trang `cham`, bụi mịn `vang_hoe`. Chơi: tránh bụi `cham`, không khí trong lành `gi_dong`, vận động `vang_hoe`, nhóm "Không tốt cho phổi" `do_son`.
 
@@ -784,11 +789,13 @@ image.alt.vi: Cây đa cổ thụ
   - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, ba từ core: dust, smoke, mask).
   - Chơi: `build_tray` (`tray`): ba chỗ, ba nhóm `required`, một nhóm `limit`, chín món.
   - Khởi động: `single_choice` (w1, bốn lựa chọn), `true_false` (w2 Sai, w3 Đúng). DOK một. `recall_from.lesson`: `ho-hap/tho-khi-chay-nhay` (w1), `ho-hap/duong-di-cua-khong-khi` (w2), `be-mat-trai-dat/nui-lua` (w3, đã có id).
-  - Quiz: `single_choice` (q1, q4), `fill_blank_bank` (q2, q5; một ô trống, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q6 Sai, `speaker: na`).
+  - Quiz: `single_choice` (q1, q4), `fill_blank_bank` (q2 "smoke", q5 "dust"; một ô trống, ba thẻ có hình; đổi 15/11, SK-047), `multi_choice` (q3, bốn lựa chọn, ba đúng từ 15/11), `true_false` (q6 Sai, `speaker: na`).
+  - 16/11 (SK-047, tester "nên sửa" 2): q5 thẻ sai `q5_smoke` đổi thành `q5_steam` ("steam" · "hơi nước"), `version` 3. Sinh giọng cho `label` và `feedback` (EN, VI) của thẻ mới.
+  - 16/11 (quét cùng loại): q4 lựa chọn sai `q4_road` đổi thành `q4_schoolyard`, `version` 2; w2 đổi `hint`, `version` 2. Sinh giọng cho `label`, `feedback` của `q4_schoolyard` và `hint` của w2.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `clear_air_is_clean`.
 - **Tham chiếu:** chạy `ids` cho bài hai và bài ba trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ tư; q1 thứ ba (đổi từ thứ hai, rà chữ tester 10/11 n1); q2 thẻ thứ ba; q3 thứ hai và thứ tư; q4 thứ nhất; q5 thẻ thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Đeo khẩu trang, Công viên nhiều cây, Nhảy dây → `balanced`;

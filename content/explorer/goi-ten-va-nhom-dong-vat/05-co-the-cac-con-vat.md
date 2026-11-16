@@ -662,6 +662,6 @@ image.alt.vi: Chim bói cá đậu trên cành
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, tám món.
   - Khởi động: `single_choice` (w1, ba lựa chọn, ôn bài bốn), `true_false` (w2 Đúng, ôn bài hai).
   - Quiz: `single_choice` (q1, q3, q5, q6), `true_false` (q2 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`all_animals_four_legs`).
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ nhất; q3 thứ hai; q5 thứ ba; q6 thứ hai. q4 thẻ trong file: trâu, cá vàng, chim cánh cụt; thứ tự đúng: cá vàng, chim cánh cụt, trâu.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: cá vàng, chim cánh cụt, trâu.
 - **Màn Chơi, ví dụ để kiểm:** Con rắn, Con gà mái, Con mèo → `balanced`; Cá chép, Con cò, Ghế đẩu → `has_limited`; Con rắn, Cá chép, Con ếch → `missing.tray_two`.
 - **Từ EN có thể ngoài Starters/Movers:** body part, wing, fin, shell, trunk, horns, beak, stool, rubber duck, kingfisher.

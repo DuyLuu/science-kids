@@ -233,9 +233,9 @@ Tên bài, slug và thứ tự theo `content/syllabus.json`; không đổi. Ngư
 
 ### Kế hoạch từng bài
 
-Mỗi bài theo đúng khung dưới đây: Khởi động hai tới ba câu; Học một `explore_groups` bốn ô và một `word_list`; Chơi một `build_tray`; Quiz sáu câu theo bảng "Vị trí đáp án"; Từ vựng; Thưởng một thẻ. Câu EN trong mục này là bản đề xuất: người soạn được sửa chữ, nhưng **giữ ý**, vì bài sau ôn đúng ý này (bảng Khởi động). Ô Học là gợi ý tên và ví dụ; người soạn chốt câu và ví dụ (mỗi ô tối đa bốn ví dụ).
+Mỗi bài theo đúng khung dưới đây: Khởi động hai tới ba câu; Học một `explore_groups` bốn ô và một `word_list`; Chơi một `build_tray`; Quiz sáu câu theo khuôn Quiz chung dưới đây (bảng "Vị trí đáp án" cũ hết hiệu lực 15/11, SK-047); Từ vựng; Thưởng một thẻ. Câu EN trong mục này là bản đề xuất: người soạn được sửa chữ, nhưng **giữ ý**, vì bài sau ôn đúng ý này (bảng Khởi động). Ô Học là gợi ý tên và ví dụ; người soạn chốt câu và ví dụ (mỗi ô tối đa bốn ví dụ).
 
-**Khuôn Quiz chung (cả mười lăm bài):** q1 `single_choice` DOK 1 · q2 `fill_blank_bank` DOK 1 (ba thẻ, một ô trống) · q3 `multi_choice` DOK 2 (bốn lựa chọn) · q4 `single_choice` DOK 2 · q5 `single_choice` DOK 2 · q6 `true_false` DOK 3, lời Na, gắn key. Đủ bốn format app 0.1.0 hiện được, DOK 1·1·2·2·2·3 (Discoverer 2·3·1). Số lựa chọn theo bảng "Vị trí đáp án". Muốn đổi khuôn thì ghi đề xuất vào SK-039 trước.
+**Khuôn Quiz chung (cả mười lăm bài):** q1 `single_choice` DOK 1 · q2 `fill_blank_bank` DOK 1 (ba thẻ, một ô trống) · q3 `multi_choice` DOK 2 (bốn lựa chọn) · q4 `single_choice` DOK 2 · q5 `single_choice` DOK 2 · q6 `true_false` DOK 3, lời Na, gắn key. Đủ bốn format app 0.1.0 hiện được, DOK 1·1·2·2·2·3 (Discoverer 2·3·1). Số lựa chọn theo mục "Vị trí đáp án đúng" (phần số lựa chọn vẫn dùng; phần vị trí hết hiệu lực 15/11, SK-047). Muốn đổi khuôn thì ghi đề xuất vào SK-039 trước.
 
 #### Bài 1 · Làm quen với đá · Introduction to rocks (`opener`, người A)
 - Slug `lam-quen-voi-da`. Oak lesson 1.
@@ -611,35 +611,15 @@ Mười lăm câu Đúng, mười lăm câu Sai. Mỗi bài đúng một câu Đ
 
 ### Vị trí đáp án đúng
 
-App không xáo lựa chọn; vị trí theo thứ tự `####` trong file. Mỗi người soạn đặt đúng bảng này. Mặc định ba lựa chọn; ô ghi "/4" là câu bốn lựa chọn. `fill_blank_bank` ba thẻ, một ô trống. `multi_choice` bốn lựa chọn, ghi các vị trí đúng.
+Hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và thẻ xếp thứ tự). Bảng cân vị trí bằng tay đã bỏ; thứ tự `####` trong file không còn là thứ tự trên màn. Phần còn dùng của mục cũ là **số lựa chọn**: mặc định ba lựa chọn; câu bốn lựa chọn là bài 4 q5, bài 6 q4, bài 9 q4, bài 12 q4, bài 13 w1, bài 15 q4; `fill_blank_bank` ba thẻ, một ô trống; `multi_choice` bốn lựa chọn.
 
-| Bài | w1 | w2 hoặc w3 (`single_choice`) | q1 | q2 thẻ đúng | q3 (nhiều đáp án) | q4 | q5 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 2 | — | 3 | 1 | 1, 4 | 1 | 1 |
-| 2 | 1 | — | 3 | 3 | 2, 3 | 1 | 2 |
-| 3 | 1 | — | 2 | 2 | 1, 2, 4 | 1 | 3 |
-| 4 | 3 | — | 1 | 2 | 2, 4 | 1 | 4/4 |
-| 5 | 2 | — | 3 | 3 | 1, 3 | 2 | 1 |
-| 6 | 3 | w3: 1 | 3 | 1 | 3, 4 | 2/4 | 2 |
-| 7 | 1 | — | 3 | 3 | 1, 2 | 2 | 2 |
-| 8 | 1 | — | 2 | 1 | 2, 3, 4 | 2 | 3 |
-| 9 | 3 | — | 1 | 2 | 1, 3 | 3/4 | 2 |
-| 10 | 2 | w3: 1 | 3 | 1 | 2, 4 | 3 | 1 |
-| 11 | 3 | — | 2 | 3 | 1, 2, 3 | 3 | 1 |
-| 12 | 2 | w3: 3 | 3 | 3 | 1, 3, 4 | 1/4 | 2 |
-| 13 | 4/4 | w3: 2 (tuỳ chọn) | 1 | 2 | 1, 4 | 3 | 2 |
-| 14 | 1 | — | 3 | 2 | 2, 3 | 2 | 1 |
-| 15 | 2 | w2: 2 | 3 | 1 | 1, 2 | 1/4 | 3 |
+**Câu `multi_choice` (SK-047, 15/11):** trong chủ đề, không số đáp án đúng nào chiếm quá một nửa số câu MC (bảy trên mười lăm câu). Sau sửa: một đáp án đúng ở bài 10; hai đáp án đúng ở bài 1, 2, 4, 5, 6, 13, 15; ba đáp án đúng ở bài 3, 7, 8, 9, 11, 12, 14.
 
-- **Câu một đáp án** (sáu mươi lăm câu, tính cả w3 tuỳ chọn bài 13): chỗ thứ nhất hai mươi mốt, thứ hai hai mươi mốt, thứ ba hai mươi mốt, thứ tư hai. Sáu câu bốn lựa chọn đặt đáp án ở chỗ 4, 2, 3, 1, 4, 1.
-- **Thẻ đúng câu điền từ:** thứ nhất năm, thứ hai năm, thứ ba năm.
-- **Câu nhiều đáp án:** mười một câu hai đáp án, bốn câu ba đáp án (bài 3, 8, 11, 12), để bé không quen "luôn chọn hai". Mỗi chỗ là đáp án đúng tám tới chín lần.
-- **Câu w1** mười lăm bài không cùng một chỗ, không theo chu kỳ.
-- Bài 13 bỏ w3 (khi *Thời tiết* chưa có id) thì bảng giữ nguyên các ô khác.
+**Câu Từ mới (SK-047, 15/11):** câu `fill_blank_bank` q2 điền một từ `tier: core` của chính bài (từ trong dải Từ mới). Đổi 15/11: bài 9 "palaeontology", bài 11 nâng "clay" lên core, bài 12 "alluvial soil", bài 14 "fair test", bài 15 "geology".
 
 ### Khởi động
 
-Giãn cách theo syllabus-progression mục 7. Quy ước đếm: mỗi bài là một ngày học; "một tuần" là khoảng năm tới chín bài trước; "một tháng" là chủ đề *Bề mặt Trái Đất* hay *Khủng long* (khoảng hai mươi bài trước bài 1). Mọi câu DOK 1, có hình ở câu hỏi và mọi lựa chọn. `recall_from.lesson` viết `<slug chủ đề>/<slug bài>`. Câu `true_false` dùng đúng chữ EN trong bảng; câu `single_choice` giữ ý, thứ tự lựa chọn và vị trí đáp án như bảng, người soạn chốt chữ.
+Giãn cách theo syllabus-progression mục 7. Quy ước đếm: mỗi bài là một ngày học; "một tuần" là khoảng năm tới chín bài trước; "một tháng" là chủ đề *Bề mặt Trái Đất* hay *Khủng long* (khoảng hai mươi bài trước bài 1). Mọi câu DOK 1, có hình ở câu hỏi và mọi lựa chọn. `recall_from.lesson` viết `<slug chủ đề>/<slug bài>`. Câu `true_false` dùng đúng chữ EN trong bảng; câu `single_choice` giữ ý và lựa chọn như bảng, người soạn chốt chữ (vị trí đáp án đúng: hết hiệu lực 15/11, SK-047, app xáo).
 
 | Bài | w1 (`single_choice`) | w2 | w3 |
 | --- | --- | --- | --- |
@@ -655,7 +635,7 @@ Giãn cách theo syllabus-progression mục 7. Quy ước đếm: mỗi bài là
 | 10 | `da-va-dat/nhieu-cach-tao-thanh-hoa-thach`: hổ phách tạo thành từ gì (mật ong · nhựa cây · nước đá) | `da-va-dat/nhieu-cach-tao-thanh-hoa-thach`, `true_false`: "An old clay pot is a fossil." (Sai) | `khung-long/khung-long-la-gi`, `single_choice`: con nào bơi dưới biển thời khủng long (bò sát biển · khủng long ba sừng · thằn lằn bay; một tháng) |
 | 11 | `da-va-dat/mary-anning-nguoi-san-hoa-thach`: Mary Anning tìm thấy gì ở vách đá (khủng long đồ chơi · đồng xu cổ · bộ xương bò sát biển) | `da-va-dat/da-bi-bao-mon-theo-thoi-gian`, `true_false`: "Weathering breaks rock into small pieces." (Đúng) | không có |
 | 12 | `da-va-dat/dat-gom-nhung-gi`: lớp nào chìm xuống đáy lọ (đất sét · sỏi · lá mục) | `da-va-dat/dat-gom-nhung-gi`, `true_false`: "Soil is made only of tiny bits of rock." (Sai) | `be-mat-trai-dat/nui-lua`, `single_choice`: loại đất nào có từ đá núi lửa xưa (đất cát · đất ruộng lúa · đất đỏ; hơn một tháng) |
-| 13 | `da-va-dat/cac-loai-dat-o-viet-nam`, bốn lựa chọn: nơi nào có đất phù sa (đồi cà phê · rừng phi lao trên cát · mỏ đá · ruộng lúa đồng bằng) | `da-va-dat/cac-loai-dat-o-viet-nam`, `true_false`: "All soils are the same." (Sai) | Tuỳ chọn, chỉ khi bài *Thời tiết* được ôn đã có id: `single_choice` ôn một ý chủ đề đó đã dạy (người soạn đọc bài đó trước), ba lựa chọn, đáp án ở chỗ thứ hai, hình lấy của chủ đề đó. Không dùng ảnh đất nứt nẻ hay ruộng ngập làm lựa chọn (hai cảnh này là món bẫy ở kệ Chơi bài 13). Chưa có id thì bỏ w3. |
+| 13 | `da-va-dat/cac-loai-dat-o-viet-nam`, bốn lựa chọn: nơi nào có đất phù sa (đồi cà phê · rừng phi lao trên cát · mỏ đá · ruộng lúa đồng bằng) | `da-va-dat/cac-loai-dat-o-viet-nam`, `true_false`: "All soils are the same." (Sai) | Tuỳ chọn, chỉ khi bài *Thời tiết* được ôn đã có id: `single_choice` ôn một ý chủ đề đó đã dạy (người soạn đọc bài đó trước), ba lựa chọn, hình lấy của chủ đề đó (luật "đáp án ở chỗ thứ hai" hết hiệu lực 15/11, SK-047, app xáo). Không dùng ảnh đất nứt nẻ hay ruộng ngập làm lựa chọn (hai cảnh này là món bẫy ở kệ Chơi bài 13). Chưa có id thì bỏ w3. |
 | 14 | `da-va-dat/the-nao-la-dat-tot`: con vật nào giúp đất khoẻ (giun đất · sâu ăn lá · con muỗi) | `da-va-dat/da-nao-tham-nuoc`, `true_false`: "Some rocks let water soak in." (Đúng; khoảng hai tuần) | không có |
 | 15 | `da-va-dat/nuoc-tham-qua-dat-nao-nhanh-hon`: nước chảy qua đất nào nhanh nhất (đất sét · đất cát · đất vườn) | `da-va-dat/da-bi-bao-mon-theo-thoi-gian`, `single_choice`: rễ cây làm nứt đá, đó là gì (xói mòn · phong hoá · phun trào; một tuần) | `da-va-dat/lam-quen-voi-da`, `true_false`: "Rocks stay the same forever." (Sai; câu "Em nghĩ sao?" của bài 1, không gắn key) |
 
@@ -884,6 +864,7 @@ Rút kinh nghiệm SK-031, SK-032, SK-033, SK-036, SK-037, SK-038.
 - **Số từ:** mỗi câu EN tối đa mười từ, kể cả gợi ý, giải thích, lời nhắn, ví dụ ô Học. Chuỗi `.en` không có dấu tiếng Việt. Chuỗi VI: số viết bằng chữ, không ký hiệu, không viết tắt, không dấu "—".
 - **Lựa chọn trong một câu:** cùng loại hình, cùng khung, cùng số ít hay số nhiều, cùng dạng ngữ pháp, cùng số vế; không nhãn nào nổi bật bằng dấu phẩy hay chữ riêng. Mỗi câu chỉ một đáp án hợp lý. Lựa chọn sai có sức hút (nối misconception hay một liên tưởng có thật); lựa chọn không ai chọn thì bỏ.
 - **Câu `fill_blank_bank`:** câu không chứa gốc từ của đáp án (*Hô hấp* N4); `sentence.vi` để `{1}` đúng chỗ; mỗi thẻ có hình; thẻ đúng theo bảng vị trí.
+  - **15/11 (SK-047):** bỏ "thẻ đúng theo bảng vị trí" (app xáo kho thẻ). Ô trống là một từ `tier: core` của chính bài; ba thẻ cùng loại từ; thẻ sai có `feedback`.
 - **Gợi ý:** chỉ chỗ cần nhớ (ô Học nào, trò Chơi nào, bài nào) hoặc cách nghĩ. Không hỏi một câu mà câu trả lời chính là đáp án, không nêu phản ví dụ, không đọc lại lựa chọn, không nhắc đúng chữ của nhãn đáp án (kể cả chữ VI). Đặt tên ô Học khác chữ nhãn đáp án nếu gợi ý cần trỏ về ô đó.
 - **Giải thích:** `explanation_wrong` của câu chọn mở đầu "The answer is …" · "Đáp án là …" (nhiều đáp án: "The answers are …" · "Đáp án là …"); câu Đúng/Sai theo mục "Đáp án Đúng/Sai".
   - **Hết hiệu lực 14/11 (SK-044, Discoverer A2 Duy duyệt):** `explanation_correct` một câu, không "Yes!" · "Đúng rồi!", thêm một ý; `explanation_wrong` một câu lý do, không "The answer is …" · "Đáp án là …", không "This is true/false." · "Câu này đúng/sai", không "Na is (not) right." · "Na nói đúng/chưa đúng" (màn đã chỉ đáp án). Mỗi câu tối đa mười từ EN, mười hai tiếng VI. Lựa chọn sai có `feedback` một câu (tối đa mười từ, mười tiếng); `true_false` có `feedback_true` hoặc `feedback_false` cho phía bé chọn nhầm.
@@ -925,7 +906,7 @@ Rút kinh nghiệm SK-031, SK-032, SK-033, SK-036, SK-037, SK-038.
 
 **Đọc trước khi viết:** file này; `content/TEMPLATE.md`; sườn Oak của năm bài mình (`docs/oak/rocks-and-soils.md`); một bài mẫu gần nhất (`content/discoverer/nao-bo-va-giac-quan/04-ngu-du-giac-va-doi-mu-bao-hiem.md` hay `content/discoverer/ho-hap/04-giu-phoi-khoe.md`); các mục rà chữ của tester ở SK-036, SK-037.
 
-**Những thứ cố định (không tự đổi):** slug, tên bài, `stage`; ý của ba ý chính; key câu q6 và đáp án Na; ba từ core; key thẻ; bảng Đúng/Sai; bảng vị trí đáp án; bảng Khởi động; key ở bảng Hình dùng chung; bảng Tên gọi. Cần đổi thì ghi đề xuất vào SK-039 (mục của mình, ghi rõ bài và lý do); topic editor sửa file này rồi báo hai người kia.
+**Những thứ cố định (không tự đổi):** slug, tên bài, `stage`; ý của ba ý chính; key câu q6 và đáp án Na; ba từ core; key thẻ; bảng Đúng/Sai; bảng Khởi động (bảng vị trí đáp án đúng: hết hiệu lực 15/11, SK-047); key ở bảng Hình dùng chung; bảng Tên gọi. Cần đổi thì ghi đề xuất vào SK-039 (mục của mình, ghi rõ bài và lý do); topic editor sửa file này rồi báo hai người kia.
 
 **Luật đặt key** (key chỉ cần không trùng trong một bài; luật dưới đây để ba người viết giống nhau và trỏ được hình của nhau):
 - Câu: `w1`…`w3`, `q1`…`q6`. Lựa chọn, thẻ từ: `<key câu>_<tên ngắn>` (`q1_chalk`, `q2_mineral`).
@@ -944,7 +925,7 @@ Rút kinh nghiệm SK-031, SK-032, SK-033, SK-036, SK-037, SK-038.
 3. Topic editor rà chéo: bảng Đúng/Sai, bảng vị trí, bảng Khởi động (câu ôn khớp chữ bài gốc), bảng Hình dùng chung (mọi "Dùng lại hình" trỏ đúng key có thật), bảng Tên gọi, từ vựng; cập nhật file này theo chữ thật của mười lăm bài.
 4. Tester rà chữ; designer làm hình theo file chọn ảnh.
 
-**Bàn giao (mỗi người):** ghi mục "## content-editor 11/11 · bài a–b" vào SK-039: file đã viết; mỗi bài một dòng (ý chính, q6, Chơi); bảng Đúng/Sai và vị trí đáp án của năm bài (đối chiếu file này); mọi `[CẦN KIỂM]`; hình khó tìm và phương án thay; chữ chưa chắc; đề xuất đổi (nếu có).
+**Bàn giao (mỗi người):** ghi mục "## content-editor 11/11 · bài a–b" vào SK-039: file đã viết; mỗi bài một dòng (ý chính, q6, Chơi); bảng Đúng/Sai của năm bài (đối chiếu file này; vị trí đáp án đúng: hết hiệu lực 15/11, SK-047); mọi `[CẦN KIỂM]`; hình khó tìm và phương án thay; chữ chưa chắc; đề xuất đổi (nếu có).
 
 ### Đề xuất cho người khác
 

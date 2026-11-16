@@ -160,15 +160,14 @@
     "q1": {
       "same_as": "learn.explore.explore_continents"
     },
-    "q1.q1_water": {
-      "same_as": "tray.tray_sea",
-      "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
+    "q1.q1_oceans": {
+      "same_as": "tray.tray_pacific"
     },
-    "q1.q1_sky": {
-      "same_as": "w1.w1_sky"
+    "q1.q1_continents": {
+      "same_as": "learn.explore.explore_continents"
     },
-    "q1.q1_land": {
-      "same_as": "learn.explore.explore_land",
+    "q1.q1_islands": {
+      "same_as": "tray.tray_island",
       "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
     },
     "q2": {
@@ -200,8 +199,21 @@
       "same_as": "tray.tray_sea",
       "lesson": "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat"
     },
-    "q3.q3_africa": {
-      "same_as": "tray.tray_africa"
+    "q3.q3_atlantic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Waves_(54369360806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Atlantic_Ocean_Waves_%2854369360806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic Ocean Waves (54369360806)",
+      "author": "Michael Gaylard from Horsham, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.274,
+        "top": 0,
+        "width": 0.452,
+        "height": 1
+      },
+      "note": "SK-047 15/11 (designer): cùng ảnh với tray.tray_atlantic, cắt riêng khung 4:5 (lưới 2×2) quanh hai lớp sóng; ảnh gốc 16:9 vào thẳng khung 4:5 lệch ×2,21, quá ngưỡng 2,2."
     },
     "q3.q3_arctic": {
       "same_as": "tray.tray_arctic"

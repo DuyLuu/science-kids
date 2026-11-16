@@ -42,6 +42,7 @@ UI test mở bài fixture (`LessonFixture`, bài "Thức ăn cho ta những gì?
   cat "$(xcrun simctl get_app_container booted vn.sciencekids.app data)/Library/Application Support/child_profile.json"
   ```
 - Mở lại từ màn Chào mừng như cài mới (bản Debug): `xcrun simctl launch booted vn.sciencekids.app -SKResetProfile YES`, hoặc `xcrun simctl uninstall booted vn.sciencekids.app` rồi cài lại.
+- Bỏ qua Chào mừng khi máy chưa có hồ sơ (bản Debug, cho UI test trên máy cài sạch, SK-047): `-SKTestProfile YES` lưu một hồ sơ thử (tên "Test", Lớp 3, Discoverer, Song ngữ) trước màn đầu tiên; thay `YES` bằng `en_first` hoặc `vi_first` để chọn ngôn ngữ. Máy đã có hồ sơ thì giữ nguyên hồ sơ đó, không ghi đè. Đi cùng `-SKOpenLesson <lesson id>` thì mở thẳng bài. Thêm `-SKResetProfile YES` thì mỗi lần mở là một hồ sơ thử mới, không lịch sử, không lượt dở (đừng dùng cho test cần mở lại bài đang dở). Bản Release bỏ qua tham số này. Ví dụ: `xcrun simctl launch booted vn.sciencekids.app -SKTestProfile YES -SKSyncOff YES -SKOpenLesson <id>`.
 - Ngôn ngữ giao diện theo máy; thử EN: thêm `-AppleLanguages "(en)"` khi launch. Chữ của bài theo `language_mode` của hồ sơ.
 - Nội dung bản thử: từ SK-016 là gói của content-cli (mục "Gói nội dung và giọng đọc"); fixture `packages/content-schema/fixtures/valid` (folder reference, trong bundle là `valid/…`) chỉ dùng khi bản build không có gói.
 - Thử nội dung chưa có trong bundle (bản Debug, SK-033): `xcrun simctl launch booted vn.sciencekids.app -SKContentFolder <đường dẫn tuyệt đối> -SKSyncOff YES`. Thư mục có dạng `fixtures/valid` (`<nhóm tuổi>/<chủ đề>/topic.json` và các bài), đọc như fixture: không gói, không audio, `rules.json` và `syllabus.json` vẫn của bundle. Ví dụ chép `fixtures/valid` ra một thư mục tạm rồi thêm `image` cho thẻ từ để xem thẻ có hình.
@@ -60,7 +61,7 @@ UI test mở bài fixture (`LessonFixture`, bài "Thức ăn cho ta những gì?
 
 ## Bài học (SK-012)
 
-- `LessonPlayer` (SKKit): `LessonSession` chạy bài theo bước Khởi động → Học → Chơi → Quiz → Thưởng; mọi phép chấm gọi `LessonEngine` (`scoreItem`, `scoreLesson`, `computeStars`, `computeXP`, `buildTray`) với tham số từ `content/rules.json` (bundle là `rules.json`, khai trong `project.yml`). `LessonPlayerView` vẽ từng bước; app gắn vào route `AppRoute.lesson` (`MainFlow`).
+- `LessonPlayer` (SKKit): `LessonSession` chạy bài theo bước Khởi động → Học → Chơi → Quiz → Tổng kết → Thưởng (Tổng kết từ SK-047; bài được chấm và ghi lịch sử khi vào Tổng kết); mọi phép chấm gọi `LessonEngine` (`scoreItem`, `scoreLesson`, `computeStars`, `computeXP`, `buildTray`) với tham số từ `content/rules.json` (bundle là `rules.json`, khai trong `project.yml`). `LessonPlayerView` vẽ từng bước; app gắn vào route `AppRoute.lesson` (`MainFlow`).
 - Dừng giữa bài: tiến độ ghi sau mỗi bước và mỗi lần kiểm tra vào `Library/Application Support/lessons/in_progress/<lesson id>.json`; bài xong ghi vào `lessons/history.json` (dạng `lesson_attempts` + `quiz_answers` cho SK-022). App bị tắt giữa bài thì mở lại vào đúng bước; bé bấm nút đóng thì lần sau mở app ở Trang chủ, vào bài lại thì tiếp đúng chỗ. Bỏ dở quá 7 ngày thì làm lại từ đầu.
   ```sh
   D="$(xcrun simctl get_app_container booted vn.sciencekids.app data)/Library/Application Support/lessons"
@@ -68,6 +69,16 @@ UI test mở bài fixture (`LessonFixture`, bài "Thức ăn cho ta những gì?
   ```
 - `-SKResetProfile YES` xoá cả hồ sơ lẫn thư mục `lessons/`.
 - UI test: `-only-testing:ScienceKidsUITests/LessonUITests` (luồng vàng, 4/6, dừng giữa bài, 7 lời nhắn mâm cơm, vùng chạm, audit, ảnh). Đáp án và chữ mong đợi đọc từ fixture và `content/rules.json` (`ScienceKidsUITests/LessonFixture.swift`). `testGoldenPathWithSystemReduceMotion` chỉ chạy khi simulator bật Reduce Motion.
+
+## Quiz Đợt 1 (SK-047)
+
+- **Xáo:** lựa chọn SC, MC, kho từ FB, thẻ OS hiện theo `SeededOrder` (Fisher–Yates trên SplitMix64, hạt giống `attemptId` + key câu, viết tay để Android dựng lại được; thuật toán ghi trong chú thích `SeededOrder.swift`, vector ở `SeededOrderTests.goldenPermutations`). Thẻ OS không bao giờ ra đúng thứ tự `answer`. Không xáo hai thẻ TF, cột biểu đồ, chỗ trống. Kệ Chơi dùng cùng thuật toán (khoá `play`).
+- **`order_sequence`:** sai còn lượt thì thẻ đúng chỗ khoá lại (lá tre + triện), thẻ sai về kho; mũi tên giữa các ô; iPhone từ 4 thẻ xếp 2 hàng (`OrderLayout`), iPad một hàng.
+- **Biểu đồ:** tên cột luôn hiện; giá trị nguyên ≤ 10 thì vẽ khối đếm được (`BarChartLayout`).
+- **Gợi ý** (Discoverer): bóng đèn cạnh nút nghe; chạm thì in, đọc `hint` và ghi `hint_used` (`markHintUsed`), câu xong thì nút ẩn giữ chỗ. Explorer không có nút.
+- **Tổng kết:** bước `.recap` (`RecapStep`, `LessonRecap`): Màn 1 ba ý chính (hình nhóm Học ghép theo chữ, `KeyPointPictures`), Màn 2 thẻ "Ý sai → Ý đúng", từ mới, mục tiêu.
+- Chữ tiếng Việt có gạch nối giữa hai chữ cái (ô-xi) hiển thị bằng U+2011 (`String.keepingHyphenatedWords`).
+- **Nhãn bé đọc để chọn** (thẻ kho FB, tên lựa chọn SC/MC, chữ thẻ Đúng/Sai, tên cột biểu đồ, từ mới ở Học và Tổng kết): `WordFitText` (`Views/WordFit.swift`) đo bằng font thật ở cỡ chữ đang dùng; một từ nằm một dòng, thu nhỏ tới 0,5, không bao giờ "…" hay ngắt giữa từ; cụm nhiều chữ xuống dòng ở dấu cách (tối đa 2 dòng, lựa chọn không hình 3 dòng). Bề rộng thẻ lấy từ `LabelWidths` (cùng số với `WordFitLayoutTests`); kho từ và lưới từ Tổng kết bớt một cột khi một từ vẫn không vừa ở 0,5 (Slide Over 320, cỡ chữ lớn). `WordFitLayoutTests` quét mọi nhãn của gói nhúng (EN và VI) trên bề rộng iPhone 16e, iPhone 16, iPad Pro 11 ở cỡ chữ mặc định và cỡ trần `xLarge`.
 
 ## Gói nội dung và giọng đọc (SK-016)
 

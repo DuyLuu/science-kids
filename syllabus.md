@@ -4,6 +4,8 @@
 > **File này là nguồn review chính — sửa trực tiếp ở đây; khi plan chốt sẽ publish lại artifact.**
 > **16/11/2026 — thêm chủ đề Explorer #4 *Những nơi sống trên Trái Đất* (8 bài; Duy chốt, [SK-048](docs/backlog/SK-048-explorer-habitats-around-the-world.md)).** Explorer nay xếp theo `content/syllabus.json`: *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11), chủ đề mới ở #4, các unit Oak còn lại ở #5–#13. Explorer #1 có 8 bài (6 bài Oak và 2 bài mở rộng). Tổng **46 chủ đề, 394 bài** (sửa mục 0, 1, 2, 3, 7, 9).
 >
+> **16/11/2026 — Quiz Đợt 1 ([SK-047](docs/backlog/SK-047-quiz-system-wave-1.md)):** thêm bước Tổng kết bài và nút gợi ý vào cấu trúc một bài (sửa mục 1).
+>
 > **9/11/2026 — gom lại theo yêu cầu của Duy; còn 1 câu hỏi ở mục 8 (tên hai chủ đề mùa).** Duy chốt ngày 9/11 (pilot GĐ 0 = 6 chủ đề đầu Discoverer, 38 bài, mục 8):
 > 1. giữ 3 nhóm tuổi; trong mỗi nhóm, các chủ đề mới đứng đầu, rồi tới các unit Oak theo đúng thứ tự trên trang Oak;
 > 2. 1 bài app = 1 lesson Oak; riêng thí nghiệm Oak tách plan/do/review thì gộp thành 1 bài;
@@ -42,7 +44,9 @@ Chia theo giai đoạn đọc–viết thay vì theo lớp: trẻ VN cùng tuổ
 
 Theo thị trường: phụ huynh VN đại trà → mặc định chế độ Song ngữ (EN + phụ đề VI); trường quốc tế/trung tâm → mặc định EN-first. Nội dung và syllabus giống nhau, chỉ khác ngôn ngữ hiển thị mặc định.
 
-Cấu trúc 1 bài (mọi nhóm, theo learning cycle của Oak): **Khởi động** (2–3 câu ôn bài trước) → **Học** (mục tiêu "I can…" + 3 ý chính + hình/animation) → **Từ vựng** (3–5 từ EN kèm nghĩa VI) → **Quiz** (6 câu) → **Thưởng** (sao, huy hiệu). Mục tiêu "I can…" của bài lấy theo lesson Oak tương ứng.
+Cấu trúc 1 bài (mọi nhóm, theo learning cycle của Oak): **Khởi động** (2–3 câu ôn bài trước) → **Học** (mục tiêu "I can…" + 3 ý chính + hình/animation) → **Từ vựng** (3–5 từ EN kèm nghĩa VI) → **Quiz** (6 câu) → **Tổng kết bài** (2 màn: 3 ý chính; ý sai → ý đúng, từ mới, mục tiêu) → **Thưởng** (sao, huy hiệu). Mục tiêu "I can…" của bài lấy theo lesson Oak tương ứng.
+- *(16/11, SK-047)* Tổng kết bài có bản Explorer và bản Discoverer (Scientist tạm dùng bản Discoverer), không chấm, bỏ qua được. Đây là một bước trong mỗi bài, khác bài "Tổng kết" cuối chủ đề ([syllabus-progression.md](syllabus-progression.md) mục 6).
+- *(16/11, SK-047)* Discoverer và Scientist có nút gợi ý ở mỗi câu Khởi động và Quiz, mở được cả trước khi trả lời mà vẫn được điểm. Explorer không có nút; gợi ý tự đọc sau lần sai.
 
 Cột trong các bảng chủ đề (mục 3–5):
 - **Nguồn:** unit Oak (Year, số thứ tự trên trang Oak) hoặc **Mới**.

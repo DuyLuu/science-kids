@@ -16,7 +16,7 @@ import { runImport, runIds, runMarkdownValidate } from "../src/markdown/command.
 import { DIFFICULTY_KEYS, LEARN_TYPES, PLAY_TYPES, QUIZ_FORMATS_MD } from "../src/markdown/convert.ts";
 import { formatMdIssue, MD_CODES, type MdIssue } from "../src/markdown/source.ts";
 import { QUIZ_FORMATS } from "../src/validate/format-renderers.ts";
-import { CLI_ROOT, LESSON_FILE, rulesFileWithoutImageChecks, TOPIC_FILE } from "./helpers.ts";
+import { CLI_ROOT, LESSON_FILE, rulesFileWithoutLaterWarnings, TOPIC_FILE } from "./helpers.ts";
 
 const cli = path.join(CLI_ROOT, "src", "cli.ts");
 const REPO = path.resolve(CLI_ROOT, "..", "..");
@@ -76,7 +76,7 @@ function check(root: string, inputs: string[] = [TOPIC_REL]): Extract<MdReport, 
   const report = checkMarkdown({
     inputs: inputs.map((input) => path.join(root, input)),
     contentRoot: root,
-    rulesFile: rulesFileWithoutImageChecks(),
+    rulesFile: rulesFileWithoutLaterWarnings(),
     minAppVersion: "0.1.0",
     display: relativeTo(root),
     idsCommand: (file) => `ids ${file}`,
@@ -102,7 +102,7 @@ function quiet(run: () => number): { status: number; out: string } {
 const mdOptions = (root: string, inputs: string[]) => ({
   inputs: inputs.map((input) => path.join(root, input)),
   contentRoot: root,
-  rulesFile: rulesFileWithoutImageChecks(),
+  rulesFile: rulesFileWithoutLaterWarnings(),
   minAppVersion: "0.1.0",
   cwd: root,
   display: relativeTo(root),
@@ -155,7 +155,7 @@ describe("bài 1: markdown -> JSON khớp fixture (A1, A2)", () => {
       { file: LESSON_REL, line: 41, pointer: "/", code: "md_needs_check" },
     ]);
     assert.match(warningsOf(report)[0]!.message, /2 dòng \[CẦN KIỂM\] \(dòng 46, 55\)/);
-    assert.match(warningsOf(report)[1]!.message, /5 dòng \[CẦN KIỂM\] \(dòng 41, 74, 162, 447, 625\)/);
+    assert.match(warningsOf(report)[1]!.message, /5 dòng \[CẦN KIỂM\] \(dòng 41, 74, 162, 463, 643\)/);
   });
 
   test("CLI import (spawn): exit 0, ghi <age_group>/<slug>/topic.json + 01-….json trùng fixture, in lệnh tts/build tiếp theo", () => {
@@ -220,7 +220,7 @@ describe("một lỗi, một dòng (B1, B3)", () => {
     const root = materialize("order", [
       { file: LESSON_REL, replace: ["#### option q1_orange\ncorrect: true\n", "#### option q1_orange\ncorrect: yes\n"] },
       { file: `${TOPIC_REL}/_topic.md`, replace: ["is_free: true\n", "is_free: yes\n"] },
-      { file: LESSON_REL, replace: ["answers: q2_energy\n", "answers: [q2_energy]\n"] },
+      { file: LESSON_REL, replace: ["answers: q2_nutrients\n", "answers: [q2_nutrients]\n"] },
     ]);
     const lines = check(root).issues.map(formatMdIssue);
     assert.match(lines[0]!, /^discoverer\/an-uong-lanh-manh\/_topic\.md:15 \/is_free \[md_bad_value\] /);
@@ -257,7 +257,7 @@ describe("id (C1, C2)", () => {
     const first = quiet(() => runIds(mdOptions(root, [TOPIC_REL])));
     assert.equal(first.status, 0, first.out);
     const printed = first.out.split("\n").filter((line) => /:\d+ [0-9a-f-]{36}$/.test(line));
-    assert.deepEqual(printed.map((line) => line.replace(/ .*$/, "")), [`${TOPIC_REL}/_topic.md:33`, `${LESSON_REL}:2`, `${LESSON_REL}:359`]);
+    assert.deepEqual(printed.map((line) => line.replace(/ .*$/, "")), [`${TOPIC_REL}/_topic.md:33`, `${LESSON_REL}:2`, `${LESSON_REL}:375`]);
     const uuids = printed.map((line) => line.split(" ")[1]!);
     for (const uuid of uuids) assert.match(uuid, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
     const allIds = Object.values(before).join("\n").match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/g) ?? [];
@@ -269,7 +269,7 @@ describe("id (C1, C2)", () => {
       const b = now.split(/(?<=\n)/);
       assert.equal(a.length, b.length, file);
       const changed = a.flatMap((line, i) => (line === b[i] ? [] : [i + 1]));
-      const expected = file.endsWith("_topic.md") ? [33] : file.endsWith("01-thuc-an-cho-ta-nhung-gi.md") ? [2, 359] : [];
+      const expected = file.endsWith("_topic.md") ? [33] : file.endsWith("01-thuc-an-cho-ta-nhung-gi.md") ? [2, 375] : [];
       assert.deepEqual(changed, expected, file);
       for (const n of changed) assert.match(b[n - 1]!, file.endsWith(".md") && file === lessonFile ? /^id: [0-9a-f-]{36}\r\n$/ : /^id: [0-9a-f-]{36}\n$/);
     }
@@ -299,15 +299,15 @@ describe("id (C1, C2)", () => {
     const lines = readFileSync(path.join(root, LESSON_REL), "utf8").split("\n");
     assert.equal(lines[0], "---");
     assert.match(lines[1]!, /^id: [0-9a-f-]{36}$/);
-    assert.equal(lines[357], "### q3");
-    assert.match(lines[358]!, /^id: [0-9a-f-]{36}$/);
+    assert.equal(lines[373], "### q3");
+    assert.match(lines[374]!, /^id: [0-9a-f-]{36}$/);
   });
 
   test("ids không chèn id vào tiêu đề sai cấp hay khối chưa rõ loại; in rõ dòng bỏ qua (nghiệm thu L2)", () => {
     const cases: [string, Edit, RegExp][] = [
       ["ids-extra-hash", { file: LESSON_REL, replace: ["### q2\nid: aeb7debc-28ed-4fd8-a192-8a9e5a581455\n", "#### q2\n"] }, /:329 bỏ qua "#### q2": tiêu đề sai cấp/],
       ["ids-missing-hash", { file: LESSON_REL, replace: ["#### option q1_rice\n", "### option q1_rice\n"] }, /:313 bỏ qua "### option q1_rice": tiêu đề sai cấp/],
-      ["ids-unknown-block", { file: LESSON_REL, replace: ["## Từ vựng\n", "### q7\nprompt.en: a\n\n## Từ vựng\n"] }, /:522 bỏ qua "### q7": chưa có dòng "id:"/],
+      ["ids-unknown-block", { file: LESSON_REL, replace: ["## Từ vựng\n", "### q7\nprompt.en: a\n\n## Từ vựng\n"] }, /:540 bỏ qua "### q7": chưa có dòng "id:"/],
     ];
     for (const [name, edit, note] of cases) {
       const root = materialize(name, [edit]);
@@ -330,7 +330,7 @@ describe("id (C1, C2)", () => {
       { file: LESSON_REL, line: 2, pointer: "/id", code: "md_id_missing" },
       { file: LESSON_REL, line: 315, pointer: "/quiz/0/options/1/label/vi", code: "schema" },
     ]);
-    assert.match(errorsOf(report)[1]!.message, /và 1 chỗ nữa ở dòng 358/);
+    assert.match(errorsOf(report)[1]!.message, /và 1 chỗ nữa ở dòng 374/);
     const out = path.join(scratch, "c2-out");
     const result = quiet(() => runImport({ ...mdOptions(root, [TOPIC_REL]), out }));
     assert.equal(result.status, 1);
@@ -370,7 +370,7 @@ describe("gọi lệnh (D2) và không nạp tts (D1)", () => {
   });
 
   test("validate JSON giữ nguyên hành vi (exit 0, không có dòng nào có [)", () => {
-    const result = run(["validate", TOPIC_FILE, LESSON_FILE, "--rules", rulesFileWithoutImageChecks()]);
+    const result = run(["validate", TOPIC_FILE, LESSON_FILE, "--rules", rulesFileWithoutLaterWarnings()]);
     assert.equal(result.status, 0);
     assert.match(result.out, /nhóm discoverer · 0 lỗi · 0 cảnh báo/);
   });
@@ -516,8 +516,8 @@ describe("SK-044 feedback cho lựa chọn sai", () => {
   const LESSON = LESSON_REL;
   const edits: Edit[] = [
     { file: LESSON, replace: ["#### option q1_rice\ncorrect: false\n", "#### option q1_rice\ncorrect: false\nfeedback.en: Rice gives us energy.\nfeedback.vi: Cơm cho ta năng lượng.\n"] },
-    { file: LESSON, replace: ["#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\n", "#### bank q2_air\nlabel.en: air\nlabel.vi: không khí\nfeedback.en: We breathe air.\nfeedback.vi: Ta hít thở không khí.\n"] },
-    { file: LESSON, replace: ["answer: false\nhint.en: Remember: fats", "answer: false\nfeedback_true.en: A little fat keeps us warm.\nfeedback_true.vi: Một ít chất béo giữ ấm cơ thể.\nhint.en: Remember: fats"] },
+    // #### bank q2_air already has feedback in lesson 1 since SK-047 (15/11): no edit needed for it.
+    { file: LESSON, replace: ["answer: false\nhint.en: Think about what fat", "answer: false\nfeedback_true.en: A little fat keeps us warm.\nfeedback_true.vi: Một ít chất béo giữ ấm cơ thể.\nhint.en: Think about what fat"] },
   ];
 
   test("đọc thành Spoken ở đúng chỗ, khoá theo schema, không lỗi; câu không có feedback giữ nguyên", () => {
@@ -528,8 +528,10 @@ describe("SK-044 feedback cho lựa chọn sai", () => {
     assert.deepEqual(Object.keys(lesson.quiz[0].options[1]), ["key", "label", "correct", "image", "feedback"]);
     assert.equal(lesson.quiz[0].options[0].feedback, undefined);
     assert.equal(lesson.quiz[0].options[2].feedback, undefined);
-    assert.deepEqual(lesson.quiz[1].bank[1].feedback, { en: "We breathe air.", vi: "Ta hít thở không khí." });
-    assert.deepEqual(Object.keys(lesson.quiz[1].bank[1]), ["key", "label", "feedback"]);
+    assert.deepEqual(lesson.quiz[1].bank[1].feedback, { en: "We breathe in air; it does not come from food.", vi: "Mình hít không khí vào, không phải từ thức ăn." });
+    // Schema order: feedback after image, though the markdown writes it before.
+    assert.deepEqual(Object.keys(lesson.quiz[1].bank[1]), ["key", "label", "image", "feedback"]);
+    assert.equal(lesson.quiz[1].bank[0].feedback, undefined, "q2_nutrients is the answer: no feedback");
     assert.deepEqual(lesson.quiz[5].feedback_true, { en: "A little fat keeps us warm.", vi: "Một ít chất béo giữ ấm cơ thể." });
     assert.equal(lesson.quiz[5].feedback_false, undefined);
     const order = Object.keys(lesson.quiz[5]);

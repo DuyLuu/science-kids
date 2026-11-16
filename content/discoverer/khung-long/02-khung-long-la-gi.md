@@ -60,8 +60,6 @@ explanation_wrong.vi: Voi ma mút và con người có muộn hơn khủng long 
 > Hình câu hỏi là cảnh chung, không phải hình đáp án (Quy ước hình, mục bốn). Ảnh rừng dương xỉ là hình của lựa chọn q2_ferns bài một (rừng ẩm, nhiều dương xỉ thân gỗ cao), dùng lại cả ở lựa chọn q2_land.
 > Câu hỏi nói "Loài nào", vì cả ba lựa chọn đều là một loài hay một nhóm con vật, kể cả con người.
 > [CẦN KIỂM] Thứ tự xuất hiện: khủng long (khoảng hai trăm ba mươi triệu năm trước), voi ma mút (khoảng năm triệu năm trước), con người (khoảng ba trăm nghìn năm trước). Voi ma mút và con người từng sống cùng thời; câu chỉ hỏi loài nào có trước. Biên tập nhớ, chưa tra nguồn; chữ cho trẻ không có số.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
-
 #### option w1_dinosaurs
 correct: true
 label.en: dinosaurs
@@ -167,8 +165,6 @@ label.vi: con thằn lằn
 image.brief: [ảnh] Một con thằn lằn bóng da nâu óng trên tảng đá có rêu, chụp chéo từ trên xuống, thấy rõ lớp vảy và chân, cắt sát con vật; không có chữ. Từ khoá tìm ảnh (EN): common sun skink Eutropis multifasciata on rock
 image.alt.en: A lizard on a rock
 image.alt.vi: Con thằn lằn trên hòn đá
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ nhất).
-
 ## Học
 
 > Ba ô ứng với ba ý chính, đúng thứ tự của bảng kế hoạch, từ cụ thể tới trừu tượng:
@@ -466,8 +462,6 @@ image.brief: [ảnh] Một con cá sấu Xiêm nằm phơi nắng trên bờ sô
 image.alt.en: A crocodile on a riverbank
 image.alt.vi: Con cá sấu trên bờ sông
 > Hình gốc, dùng lại ở bài năm (thẻ thưởng `crocodile`, lựa chọn q3_croc).
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ hai).
-
 ### q2
 id: 6ea3afd2-4746-4218-900f-e72943058745
 format: single_choice
@@ -488,8 +482,6 @@ explanation_wrong.vi: Khủng long là bò sát trên cạn, không ở biển h
 > Rà chéo 9/11: hình câu hỏi đổi từ ảnh mô hình trên tường trơn sang tranh tray_triceratops của kệ Chơi (nền kem, thấy rõ bốn chân). Hai hình cùng ý "không có cảnh nền cây cỏ hay nước", đỡ tìm một ảnh.
 > [CẦN KIỂM] "Trên trời" là sai khi không tính chim (Duy 9/11). Biên tập nhớ có loài khủng long nhỏ lượn được giữa các cây (ví dụ Microraptor), nhưng không sống trên trời; bài không nhắc loài này.
 > Rà chữ tester 9/11 (N2): gợi ý cũ "Chân của nó dùng để đi, để bơi hay để bay?" đọc gần như ba lựa chọn, và hình câu hỏi thấy rõ bốn chân, nên đã trả lời thay bé. Gợi ý mới chỉ chỗ cần nhớ (ô Học "Không phải khủng long": thằn lằn bay, bò sát biển) để bé tự loại trừ, không nêu đáp án.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ hai (trước đây thứ ba).
-
 #### option q2_sea
 correct: false
 feedback.en: Sea reptiles swam there, but they were not dinosaurs.
@@ -696,8 +688,9 @@ image.alt.vi: Tranh vẽ thằn lằn bay
 answer: true
 hint.en: Where did dinosaurs live? Where is this one?
 hint.vi: Khủng long sống ở đâu? Còn con này đang ở đâu?
-explanation_correct.en: It flew in the sky, but dinosaurs lived on land.
-explanation_correct.vi: Nó bay trên trời, còn khủng long sống trên cạn.
+explanation_correct.en: Flying reptiles flew, but dinosaurs lived on land.
+explanation_correct.vi: Thằn lằn bay bay lượn, còn khủng long sống trên cạn.
+> SK-047 (15/11, nháp AI): câu này đứng riêng trên thẻ "Ý sai → Ý đúng" của màn Tổng kết, không có hình bên cạnh, nên "It" · "Nó" đổi thành tên con vật.
 explanation_wrong.en: Not every animal from long ago was a dinosaur.
 explanation_wrong.vi: Không phải con vật nào thời xa xưa cũng là khủng long.
 feedback_false.en: Living with dinosaurs does not make it a dinosaur.
@@ -849,7 +842,7 @@ image.alt.vi: Tranh vẽ thằn lằn bay khổng lồ
   - `misconception: big_old_animal_is_dinosaur` → `misconception_id` (key đã có trong `_topic.md`).
   - `group:` trỏ nhóm của `tray`; `messages.missing.*` trỏ ba nhóm `required`; `term_keys` trỏ Từ vựng. Mọi key duy nhất trong bài.
 - **Luật hình (Duy 9/11) máy chưa kiểm** (`image_required: []` ở Discoverer). Tester kiểm tay: câu hỏi của w1, w2, w3, q1 tới q6 đều có `image`; hai mươi hai lựa chọn đều có `image`; mười món, ba nhóm Học, năm từ vựng, một thẻ đều có `image`. Mỗi `brief` của hình mới mở đầu bằng loại hình trong ngoặc vuông và kết thúc bằng "Từ khoá tìm ảnh (EN)"; hình dùng lại ghi "Dùng lại hình `<slug bài>/<key>`" (`_topic.md`, Quy ước hình mục ba), nên `validate` có thể cảnh báo thiếu từ khoá ở những dòng đó.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay: w1 thứ nhất; w3 thứ ba; q1 thứ ba; q2 thứ hai; q3 thứ nhất và thứ ba; q4 thứ nhất; q5 thứ hai. Rà chữ tester 9/11 (n1) đã xáo lại tay w1, w3, q1, q2: bản trước theo chu kỳ 3-1-2-3-1-2, đoán được.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Đúng/Sai:** w2 Sai, q6 Đúng, khớp bảng của `_topic.md`.
 - **Màn Chơi, ví dụ để kiểm** (ưu tiên lời nhắn: balanced, full, has_limited, start, missing):
   - chạm khủng long cổ dài, khủng long nhỏ cỡ con gà, khủng long ba sừng → đạt (`balanced`);

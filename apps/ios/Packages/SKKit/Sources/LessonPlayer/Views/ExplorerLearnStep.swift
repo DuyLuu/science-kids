@@ -190,11 +190,8 @@ struct ExplorerLearnStep: View {
                                 .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous))
                             VStack(alignment: .leading, spacing: Tokens.Space.s2) {
                                 // A long word ("MAGNIFYING GLASS") breaks between words, never
-                                // inside one: it shrinks a little first.
-                                Text(verbatim: term.term.en.uppercased())
-                                    .typography(Tokens.Typography.titleS)
-                                    .lineLimit(2)
-                                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                                // inside one; one word shrinks on its line (SK-047 `WordFitText`).
+                                WordFitText(term.term.en.uppercased(), style: Tokens.Typography.titleS, width: nil, fixedBox: false, alignment: .leading)
                                 if mode != .enFirst {
                                     Text(verbatim: term.term.vi)
                                         .typography(Tokens.Typography.bodyStrong)
@@ -269,10 +266,7 @@ struct ExplorerLearnStep: View {
                     } label: {
                         VStack(spacing: Tokens.Space.s6) {
                             ContentPicture(image: term.image, color: nil, size: metrics.illustration(LessonMetrics.sheetArt), box: .fillWidth)
-                            Text(verbatim: term.term.en)
-                                .typography(Tokens.Typography.itemTitle, fixedBox: true)
-                                .lineLimit(1)
-                                .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                            WordFitText(term.term.en, style: Tokens.Typography.itemTitle, width: LabelWidths.explorerWordCardText(metrics: metrics))
                         }
                         .padding(Tokens.Space.s8)
                         .frame(maxWidth: .infinity)

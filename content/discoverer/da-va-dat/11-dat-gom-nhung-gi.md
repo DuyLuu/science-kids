@@ -55,7 +55,7 @@ explanation_correct.en: Her skeletons showed sea reptiles nobody had seen.
 explanation_correct.vi: Bộ xương bà tìm là loài bò sát biển chưa ai thấy.
 explanation_wrong.en: Mary found sea reptile skeletons in the cliffs.
 explanation_wrong.vi: Mary tìm thấy bộ xương bò sát biển ở vách đá.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ ba) đúng bảng Khởi động. Khủng long đồ chơi có sức hút (bé gắn hoá thạch với khủng long); đồng xu cổ có sức hút (vật cổ đào được, món bẫy bài chín).
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Khủng long đồ chơi có sức hút (bé gắn hoá thạch với khủng long); đồng xu cổ có sức hút (vật cổ đào được, món bẫy bài chín).
 > Hình câu hỏi là vách đá ven biển của bài mười (`q1_cliffs`, hình gốc mà câu q6 bài đó dùng lại), không phải đáp án. Từ khoá và `alt` chép từ bài chín, bài mười.
 > "Mary Anning" trong chuỗi VI cần dòng `READINGS` như bài mười.
 > Rà chữ tester 11/11 (trả lời "Còn chưa chắc" 2): ba ảnh lựa chọn khác nền và cỡ. Theo hình designer làm 11/11 (SK-039, "designer 11/11 · hình bài 8–15"): hai lựa chọn khủng long đồ chơi và đồng xu là hình ghép tách nền, đặt nền kem (`b11-w1_toy.jpg`, `b11-w1_coin.jpg`); brief đổi sang `[sơ đồ ghép ảnh]`, `alt` giữ.
@@ -215,7 +215,8 @@ type: word_list
 version: 1
 title.en: New words
 title.vi: Từ mới
-term_keys: soil, silt, organic_matter
+term_keys: soil, silt, organic_matter, clay
+> SK-047 (15/11): thêm `clay` vào dải Từ mới (từ `tier: core`), vì câu q2 (câu Từ mới) điền "clay". Bài có bốn từ core, trong giới hạn của Discoverer; đất sét là từ bài 12 đến 14 dùng tiếp.
 
 ## Chơi
 
@@ -346,7 +347,7 @@ image.alt.vi: Vỏ lon bẹp nằm trên đất
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vị trí đáp án đúng bảng `_topic.md`: q1 chỗ thứ hai; q2 thẻ thứ ba; q3 chỗ thứ nhất, hai, ba; q4 chỗ thứ ba; q5 chỗ thứ nhất.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Không hình lựa chọn nào xuất hiện ở hai câu (kể cả câu Khởi động). Ba hình câu q1 đều là món kệ Chơi (bé đã thấy cả ba), nên đáp án không là hình duy nhất bé đã gặp.
 
 ### q1
@@ -676,7 +677,8 @@ image.alt.vi: Lớp đất mặt sẫm màu có rễ cây và vụn lá
 
 ### clay
 id: de4d5c61-b882-4ea3-a8c3-744f24d2e0ba
-tier: extra
+tier: core
+> SK-047 (15/11): `extra` → `core`, cùng dải Từ mới.
 term.en: clay
 term.vi: đất sét
 example.en: Wet clay feels sticky.
@@ -736,12 +738,12 @@ image.alt.vi: Một thìa đầy đất
 ## Ghi chú cho dev
 
 - **Block và format:**
-  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, ba từ core: soil, silt, organic_matter).
+  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, bốn từ core: soil, silt, organic_matter, clay; `clay` thêm 15/11, SK-047).
   - Chơi: `build_tray` (`tray`): ba chỗ, ba nhóm `required` (mỗi nhóm hai món), một nhóm `limit` (ba món), chín món.
   - Khởi động: `single_choice` (w1, ba lựa chọn), `true_false` (w2, Đúng). DOK một. `recall_from.lesson`: `da-va-dat/mary-anning-nguoi-san-hoa-thach`, `da-va-dat/da-bi-bao-mon-theo-thoi-gian`.
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2, ba thẻ), `multi_choice` (q3, bốn lựa chọn, ba đúng), `true_false` (q6 Sai, `speaker: na`, `misconception: soil_was_always_there`).
 - **Tham chiếu:** chạy `ids` cho bài bảy và bài mười trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ hai; q2 thẻ thứ ba; q3 thứ nhất, hai, ba; q4 thứ ba; q5 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Cát, Lá mục, Nước mưa → `balanced`;

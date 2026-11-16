@@ -77,8 +77,9 @@ image.alt.vi: Dầu ăn và lạc rang
 answer: true
 hint.en: Remember: fats give us energy and keep us warm.
 hint.vi: Nhớ lại bài trước: chất béo cho ta năng lượng và giữ ấm cơ thể.
-explanation_correct.en: Yes! A little fat gives us energy and keeps us warm.
-explanation_correct.vi: Đúng rồi! Một ít chất béo cho ta năng lượng và giữ ấm cơ thể.
+explanation_correct.en: A little fat gives us energy and keeps us warm.
+explanation_correct.vi: Một ít chất béo cho ta năng lượng và giữ ấm cơ thể.
+> SK-047 (15/11, nháp AI): bỏ "Yes!" · "Đúng rồi!" theo luật giải thích Discoverer (SK-044, A2).
 explanation_wrong.en: This is true. We need a little fat, not too much.
 explanation_wrong.vi: Câu này đúng. Mình cần một ít chất béo, nhưng không ăn quá nhiều.
 
@@ -299,8 +300,9 @@ prompt.en: What does a balanced meal have?
 prompt.vi: Bữa ăn cân bằng có những gì?
 hint.en: Remember the tray you just built.
 hint.vi: Nhớ lại mâm cơm em vừa xếp nhé.
-explanation_correct.en: Yes! A balanced meal mixes foods from different groups.
-explanation_correct.vi: Đúng rồi! Bữa ăn cân bằng phối hợp thức ăn của nhiều nhóm.
+explanation_correct.en: A balanced meal mixes foods from different groups.
+explanation_correct.vi: Bữa ăn cân bằng phối hợp thức ăn của nhiều nhóm.
+> SK-047 (15/11, nháp AI): bỏ "Yes!" · "Đúng rồi!" theo luật giải thích Discoverer (SK-044, A2).
 explanation_wrong.en: The answer is foods from different groups.
 explanation_wrong.vi: Đáp án là thức ăn của nhiều nhóm khác nhau.
 
@@ -322,33 +324,47 @@ label.vi: Nhiều đồ ngọt
 ### q2
 id: e1120072-6b34-4996-b804-8f9212584895
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
-sentence.en: Rice, vegetables and fruit are the {1} part.
-sentence.vi: Cơm, rau và quả là phần {1}.
-answers: q2_biggest
-hint.en: We eat more rice than oil or sugar.
-hint.vi: Mình ăn cơm nhiều hơn dầu ăn hay đường.
-explanation_correct.en: Rice, vegetables and fruit are the biggest part.
-explanation_correct.vi: Cơm, rau và quả là phần nhiều nhất của bữa ăn.
-explanation_wrong.en: The answer is biggest. Most of the meal is rice, vegetables and fruit.
-explanation_wrong.vi: Đáp án là nhiều nhất. Cơm, rau và quả chiếm phần lớn bữa ăn.
+sentence.en: Breakfast, lunch and dinner are each a {1}.
+sentence.vi: Bữa sáng, bữa trưa, bữa tối đều là một {1}.
+answers: q2_meal
+hint.en: Think of the times your family eats together.
+hint.vi: Em nghĩ tới những lúc cả nhà ngồi ăn cùng nhau nhé.
+explanation_correct.en: Each meal should mix foods from different groups.
+explanation_correct.vi: Bữa nào cũng nên phối hợp thức ăn của nhiều nhóm.
+explanation_wrong.en: Breakfast, lunch and dinner are the meals of the day.
+explanation_wrong.vi: Bữa sáng, trưa, tối là các bữa ăn trong ngày.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (balanced, meal, mix); câu cũ điền "biggest" (không phải từ vựng). Không dùng "balanced": câu q1 đã hỏi bữa ăn cân bằng có gì. Ba thẻ cùng là danh từ chỉ món hay bữa: bữa ăn, món tráng miệng (từ `dessert`), viên kẹo (món của bài một). Ý "cơm, rau, quả là phần nhiều nhất" vẫn được kiểm ở câu q5. `version` 2; ba thẻ cũ (ít hơn, nhiều nhất, ít nhất) bỏ.
+> Theo luật SK-044 và SK-047 (bài này chưa qua lượt viết lại A2): ba thẻ có hình (dùng lại), hai thẻ sai có `feedback`; giải thích khi sai bỏ "The answer is …". Câu chưa có hình câu hỏi; ở A2 hình câu hỏi ẩn vì mọi thẻ từ có hình.
 
-> Ba từ trong ngân hàng ứng với ba ô ở phần Học: "biggest" là phần nhiều nhất, "smaller" là phần ít hơn, "smallest" gần với chỉ một chút. Bỏ "sweetest/ngọt nhất" vì quả ngọt nên từ này hơi có lý (tester R11).
+#### bank q2_meal
+label.en: meal
+label.vi: bữa ăn
+image.brief: Dùng lại hình `meal`.
+image.alt.en: A family eating a meal together
+image.alt.vi: Cả nhà ăn cơm cùng nhau
 
-#### bank q2_smaller
-label.en: smaller
-label.vi: ít hơn
+#### bank q2_dessert
+label.en: dessert
+label.vi: món tráng miệng
+feedback.en: Dessert is a small dish at the end of a meal.
+feedback.vi: Tráng miệng là món nhỏ ăn cuối bữa.
+image.brief: Dùng lại hình `dessert`.
+image.alt.en: A plate of fruit for dessert
+image.alt.vi: Đĩa quả tráng miệng
 
-#### bank q2_biggest
-label.en: biggest
-label.vi: nhiều nhất
-
-#### bank q2_smallest
-label.en: smallest
-label.vi: ít nhất
+#### bank q2_sweet
+label.en: sweet
+label.vi: viên kẹo
+feedback.en: A sweet is a small treat, not a whole meal.
+feedback.vi: Kẹo là món ăn vặt nhỏ, không phải cả bữa.
+image.brief: Dùng lại hình `tray_candy` ở bài `an-uong-lanh-manh/thuc-an-cho-ta-nhung-gi`.
+image.alt.en: Some sweets
+image.alt.vi: Mấy viên kẹo
+> SK-047 (15/11): ba hình dùng lại; không cần hình mới. Chủ đề này chưa có file chọn ảnh; designer thêm ba mục khi làm file.
 
 ### q3
 id: 913280ef-2348-4573-b892-04eaee11db3e
@@ -359,8 +375,9 @@ prompt.en: Which tray is balanced?
 prompt.vi: Mâm nào cân bằng?
 hint.en: Find the tray with one food from each group.
 hint.vi: Em tìm mâm có mỗi nhóm một món.
-explanation_correct.en: Yes! Rice, tofu, carrot and banana make a balanced tray.
-explanation_correct.vi: Đúng rồi! Cơm, đậu phụ, cà rốt và chuối là một mâm cân bằng.
+explanation_correct.en: Rice, tofu, carrot and banana make a balanced tray.
+explanation_correct.vi: Cơm, đậu phụ, cà rốt và chuối là một mâm cân bằng.
+> SK-047 (15/11, nháp AI): bỏ "Yes!" · "Đúng rồi!" theo luật giải thích Discoverer (SK-044, A2).
 explanation_wrong.en: The answer is rice, tofu, carrot and banana. It has every group.
 explanation_wrong.vi: Đáp án là cơm, đậu phụ, cà rốt và chuối. Mâm này có đủ các nhóm.
 > Mỗi mâm sai có bốn món nhưng hai món cùng một nhóm nên thiếu một nhóm khác: mâm thứ nhất hai món đạm, không có rau; mâm thứ hai hai món bột đường, không có đạm. Lựa chọn chỉ có chữ, lý do ở Ghi chú cho dev.
@@ -444,8 +461,9 @@ image.alt.en: A bowl with lots of meat
 image.alt.vi: Bát cơm có nhiều thịt
 hint.en: Remember the biggest part of a meal.
 hint.vi: Nhớ lại phần nhiều nhất của bữa ăn nhé.
-explanation_correct.en: Yes! Rice and vegetables should be the biggest part.
-explanation_correct.vi: Đúng rồi! Cơm và rau nên là phần nhiều nhất.
+explanation_correct.en: Rice and vegetables should be the biggest part.
+explanation_correct.vi: Cơm và rau nên là phần nhiều nhất.
+> SK-047 (15/11, nháp AI): bỏ "Yes!" · "Đúng rồi!" theo luật giải thích Discoverer (SK-044, A2).
 explanation_wrong.en: The answer is rice and vegetables. Meat is a smaller part.
 explanation_wrong.vi: Đáp án là cơm và rau. Thịt chỉ là phần ít hơn.
 > [CẦN KIỂM] Câu dùng chữ "nên" (lời khuyên về tỉ lệ trong bát cơm của trẻ). Chuyên môn xác nhận được nói với trẻ bảy đến chín tuổi, và "cơm và rau nhiều hơn thịt" đúng với khuyến nghị cho lứa tuổi này.
@@ -474,8 +492,9 @@ dok: 3
 misconception: one_food_enough
 prompt.en: Is Na right?
 prompt.vi: Na nói đúng không?
-instruction.en: Challenge: spot the mistake
-instruction.vi: Thử thách: bắt lỗi sai
+instruction.en: Challenge: check Na's idea
+instruction.vi: Thử thách: kiểm tra ý của Na
+> SK-047 (15/11, nháp AI): nhãn cũ "spot the mistake" · "bắt lỗi sai" báo trước Na sai; đổi sang nhãn trung tính của TEMPLATE.
 statement.en: Water spinach is healthy. Eating only water spinach is enough.
 statement.vi: Rau muống rất tốt cho sức khoẻ. Chỉ ăn rau muống thôi là đủ.
 speaker: na
@@ -484,10 +503,11 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Think about fish and rice. Does water spinach give the same?
-hint.vi: Em nghĩ tới cá và cơm. Rau muống có cho mình giống vậy không?
-explanation_correct.en: No single food has every nutrient. We need a mix.
-explanation_correct.vi: Không có món nào có đủ mọi chất dinh dưỡng. Mình cần ăn phối hợp nhiều nhóm.
+hint.en: Think about what fish and rice give you.
+hint.vi: Em nghĩ xem cá và cơm cho em những gì nhé.
+explanation_correct.en: One food alone cannot give every nutrient we need.
+explanation_correct.vi: Một món thôi không cho đủ mọi chất cơ thể cần.
+> SK-047 (15/11, nháp AI): gợi ý cũ có vế hỏi có/không ("rau muống có cho giống vậy không?") mà câu trả lời là đáp án; nay chỉ trỏ bằng chứng (cá, cơm). Giải thích khi đúng gộp thành một câu (A2), đứng riêng được trên thẻ "Ý sai → Ý đúng"; ý "cần ăn phối hợp" đã có ở câu q1 và từ `mix`.
 > [CẦN KIỂM] Khẳng định "không có món nào có đủ mọi chất dinh dưỡng" (ở đây, ở Ý chính ba và ở `messages.balanced`): xem `_topic.md`, misconception `one_food_enough`.
 explanation_wrong.en: Na is not right. Water spinach is great, but not enough.
 explanation_wrong.vi: Na chưa đúng. Rau muống rất tốt, nhưng chỉ ăn rau muống thì chưa đủ.
@@ -596,7 +616,8 @@ image.alt.vi: Quả thanh long và cây thanh long
   - App 0.1.0 vẽ hình giữ chỗ, nên câu so sánh mâm hay bát chỉ bằng hình thì bé không trả lời được.
   - Lưới hình ba cột cắt nhãn dài (`lineLimit(2)` ở `QuestionViews.swift`). Lựa chọn không có hình thì app xếp thành hàng chữ, đủ chỗ cho nhãn dài.
   - q4 có hình ở lựa chọn, như q5 của bài một. q4 và q5 có hình của cả câu.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay: w1 thứ hai; q1 thứ hai; q3 thứ ba; q4 thứ hai và thứ tư; q5 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "meal", ba thẻ có hình, `version` 2.
 - **Màn Chơi:** thứ tự nhắc theo thứ tự `#### group`: đạm, rau, quả, bột đường. Kệ tám món xếp xen nhóm, lưới 4×2 như SK-004. Mâm đầy mà thiếu nhóm (ví dụ cơm, khoai lang, thịt gà, rau muống) thì lời nhắn là `missing.tray_fruit` ("Your tray needs some fruit for dessert."); chạm thanh long ra lời nhắn `full`; bé bỏ khoai lang ra rồi đặt thanh long vào là đạt (giống ca `build-tray-022`). Lời nhắn `missing.*` không dùng "Add/Thêm" vì lúc đó mâm thường đã đầy (tester R6).
   - Đề xuất cho dev và ios-dev (không gấp): một lời nhắn riêng khi mâm có hai món cùng nhóm, ví dụ "Two foods from one group. Swap one!". Cần khoá mới trong `messages` và luật mới trong engine (`build-tray.json`).
 - **Thêm misconception vào `_topic.md` làm đổi `topic.json`:**

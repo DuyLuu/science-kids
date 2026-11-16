@@ -173,29 +173,14 @@
     "q2": {
       "same_as": "learn.explore.explore_better"
     },
-    "q2.q2_two": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q2_two.jpg",
-        "method": "drawn"
-      },
-      "title": "Two wooden blocks",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    "q2.q2_fair_test": {
+      "same_as": "learn.explore.explore_fair"
     },
-    "q2.q2_one": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q2_one.jpg",
-        "method": "drawn"
-      },
-      "title": "One wooden block",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    "q2.q2_result": {
+      "same_as": "learn.explore.explore_results"
     },
-    "q2.q2_all": {
-      "own": {
-        "file": "content/images/own/da-va-dat/b14-q2_all.jpg",
-        "method": "drawn"
-      },
-      "title": "A big pile of wooden blocks",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ, Thời tiết: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    "q2.q2_chart": {
+      "same_as": "vocab.data"
     },
     "q3": {
       "same_as": "learn.explore.explore_setup"
@@ -214,13 +199,21 @@
     "q3.q3_water": {
       "same_as": "tray.tray_same_water"
     },
-    "q3.q3_drips": {
-      "same_as": "tray.tray_drips"
+    "q3.q3_bottles": {
+      "own": {
+        "file": "content/images/own/da-va-dat/b14-q3_bottles.jpg",
+        "method": "drawn"
+      },
+      "title": "Two bottles the same size",
+      "note": "SK-047 15/11 (designer): bản khung 4:5 (lưới 2×2) của hình kệ tray_same_bottles: cắt sát hai chai, đệm trên dưới bằng chính nền kem (lật gương); không vẽ thêm vật. Cắt giữa thì mỗi chai mất một nửa."
     },
     "q4": {
-      "same_as": "sandy_soil",
-      "lesson": "da-va-dat/cac-loai-dat-o-viet-nam",
-      "note": "14/11 (SK-044): hình câu hỏi biểu đồ cột (ô 64 cạnh câu hỏi, màn chart-ask) dùng lại ảnh đất cát bài 12. Ba hình biểu đồ có vầng sáng (q4_left, q4_middle, q4_right) đã bỏ cùng file vẽ."
+      "own": {
+        "file": "content/images/own/da-va-dat/b14-q4-chart.jpg",
+        "method": "drawn"
+      },
+      "title": "Two test bottles of soil and a jug of water",
+      "note": "SK-047 16/11 (designer): bản dải ngang 1024×352 (≈ 2,9:1) của hình vẽ explore_setup cho hình câu hỏi biểu đồ. Khung app trên câu biểu đồ rộng ~3,0–3,6:1 (329×104 trên iPhone 390, 523×164 trên iPad), nên ảnh 4:3 cũ lệch quá 2,2 và hiện nhỏ giữa giấy lõm. Không vẽ thêm vật: chai đất cát, ca nước, chai đất sét đặt thành một hàng trên cùng nền kem (dời từng vật theo phần khác nền, nên không có đường nối); nội dung cao 79 % để khung rộng nhất (Pro Max 3,6:1) không cắt miệng chai. 2,9:1 là tỉ lệ rộng nhất mà khung question 4:3 của image-slots.json còn nhận (lệch ×2,18 ≤ 2,2)."
     },
     "q5": {
       "own": {

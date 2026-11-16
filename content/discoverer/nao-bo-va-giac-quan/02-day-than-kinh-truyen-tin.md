@@ -372,7 +372,7 @@ explanation_wrong.en: Nerves carry messages, not food or water.
 explanation_wrong.vi: Dây thần kinh mang tin, không mang thức ăn hay nước.
 > Hình câu hỏi là dây thần kinh (chủ ngữ của câu), không phải tin (đáp án). Ba thẻ từ là ảnh chụp cùng kiểu: một vật trên nền trơn. "Tin" là một ý; hình là lá thư trong phong bì, vật quen gắn với "gửi tin".
 > Gợi ý không nhắc tên bài (tên bài có chữ "messages").
-> Rà chữ tester 10/11: thẻ đúng chuyển xuống thứ ba (N1); câu tiếng Việt rút gọn cho khớp câu tiếng Anh (n3). Giữ chữ "tin" (tester đồng ý, n3).
+> Rà chữ tester 10/11: câu tiếng Việt rút gọn cho khớp câu tiếng Anh (n3). Giữ chữ "tin" (tester đồng ý, n3).
 
 #### bank q1_food
 label.en: food
@@ -618,8 +618,9 @@ answer: true
 image.brief: [ảnh] Mấy bạn nhỏ đi chân trần trên đường, chụp từ phía sau, thấy lưng và đôi bàn chân trần; không thấy mặt, không có vết thương, không có chữ. Ảnh chân trần trên lối sỏi không có ảnh hợp giấy phép (designer 10/11). Từ khoá tìm ảnh (EN): bare feet walking pebble path
 image.alt.en: Children walking barefoot
 image.alt.vi: Các bạn nhỏ đi chân trần
-hint.en: When you stub your toe, how soon does it hurt?
-hint.vi: Em nhớ lúc vấp ngón chân, bao lâu thì thấy đau?
+hint.en: Think of stubbing your toe on a step.
+hint.vi: Em nhớ lại lúc vấp ngón chân vào bậc thềm nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi mà câu trả lời ("ngay lập tức") trùng vế hai của Na. Gợi ý mới chỉ gọi lại trải nghiệm, bé tự xét nhanh hay chậm.
 explanation_correct.en: Nerve messages are very fast, even from your toes.
 explanation_correct.vi: Tin trên dây thần kinh rất nhanh, kể cả từ ngón chân.
 explanation_wrong.en: You feel a stubbed toe almost right away.
@@ -713,7 +714,7 @@ image.alt.vi: Bạn nhỏ có dây thần kinh vẽ khắp cơ thể
   - Khởi động: `single_choice` (w1 ôn bài một, w2 ôn *Hô hấp* bài ba). w2 giữ `id` cũ nhưng là câu mới (rà chữ 10/11); nếu phiên chính muốn id mới thì xoá dòng `id:` của w2 rồi chạy `ids`.
   - Quiz: `fill_blank_bank` (q1, một ô trống, ba thẻ từ có hình), `single_choice` (q2, q4, q5), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Đúng). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `nerve_messages_slow`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; w2 thứ hai; q2 thứ nhất; q4 thứ ba; q5 thứ hai; q3 thứ nhất và thứ ba; thẻ đúng của q1 thứ ba (rà chữ 10/11, N1).
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Tham chiếu:** `recall_from.lesson: nao-bo-va-giac-quan/nao-dieu-khien-co-the` (w1) và `ho-hap/tho-khi-chay-nhay` (w2); cả hai đã có id.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Da trên cánh tay, Dây thần kinh, Bộ não → đạt;

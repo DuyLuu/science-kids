@@ -133,15 +133,20 @@
       "same_as": "q1_storm",
       "lesson": "khung-long/vi-sao-khung-long-bien-mat"
     },
-    "q2.q2_rain": {
-      "same_as": "q1_rain",
-      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
+    "q2.q2_storm": {
+      "same_as": "learn.explore.explore_storm"
     },
-    "q2.q2_wind": {
-      "same_as": "tray.tray_leaves"
+    "q2.q2_sunny": {
+      "same_as": "q2_sun",
+      "lesson": "khung-long/vi-sao-khung-long-bien-mat"
     },
-    "q2.q2_clouds": {
-      "same_as": "tray.tray_dark"
+    "q2.q2_rainbow": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/mua-mua-bao.q2.q2_rainbow.jpg",
+        "method": "drawn"
+      },
+      "title": "A rainbow over the fields",
+      "note": "SK-047 15/11 (designer): designer (agent) vẽ bằng SVG, xuất JPEG 1024×1024 (khung thẻ từ 1:1), theo brief: cầu vồng trên cánh đồng lúa sau mưa, còn vài đám mây xám, nắng từ phía sau người xem, cây đứng yên; không người, không chữ. Cùng nét với explore_storm và q2_sun (hai thẻ kia cũng là hình vẽ): màu chuyển nhẹ, mây mờ, không viền đen."
     },
     "q3": {
       "own": {
@@ -166,9 +171,9 @@
       "same_as": "explore_thermometer",
       "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
     },
-    "q3.q3_umbrella": {
-      "same_as": "tray_umbrella",
-      "lesson": "thoi-tiet-va-thien-tai/do-thoi-tiet"
+    "q3.q3_radio": {
+      "same_as": "q2.q2_news",
+      "lesson": "thoi-tiet-va-thien-tai/an-toan-khi-co-bao-lu"
     },
     "q4": {
       "same_as": "q3"

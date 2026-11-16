@@ -183,9 +183,8 @@
     "q3.q3_dunes": {
       "same_as": "tray.tray_dunes"
     },
-    "q3.q3_stream": {
-      "same_as": "tray.tray_stream",
-      "note": "Câu q3 toàn hình vẽ của kệ."
+    "q3.q3_banyan": {
+      "same_as": "tray.tray_banyan"
     },
     "q4": {
       "source": "Wikimedia Commons",

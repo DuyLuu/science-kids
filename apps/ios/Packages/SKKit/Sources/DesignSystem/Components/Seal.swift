@@ -35,12 +35,18 @@ public struct Seal: View {
         case small
         /// 28 × 28, check icon 17: a topic done on the journey map (SK-034).
         case medium
+        /// 32 × 32, check icon 19: an order row done right (SK-047).
+        case row
+        /// 42 × 42, check icon 25: the lesson goal on Explorer's Tổng kết (SK-047).
+        case goal
 
         var side: CGFloat {
             switch self {
             case .large: PaperMetrics.sealLarge
             case .small: PaperMetrics.sealSmall
             case .medium: PaperMetrics.sealMedium
+            case .row: PaperMetrics.sealRow
+            case .goal: PaperMetrics.sealGoal
             }
         }
 
@@ -49,6 +55,8 @@ public struct Seal: View {
             case .large: PaperMetrics.iconSize
             case .small: PaperMetrics.sealSmallGlyph
             case .medium: PaperMetrics.sealMediumGlyph
+            case .row: PaperMetrics.sealRowGlyph
+            case .goal: PaperMetrics.sealGoalGlyph
             }
         }
     }

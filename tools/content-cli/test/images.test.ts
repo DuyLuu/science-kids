@@ -273,8 +273,9 @@ describe("luật hình của validate (SK-033)", () => {
     assert.ok(expected.length > 10);
     assert.deepEqual(of(issues, "image_missing").sort(), expected.sort());
     for (const issue of issues.filter((entry) => entry.code === "image_missing")) assert.equal(issue.severity, "warning");
-    const bankWord = issues.find((issue) => issue.pointer === "/quiz/1/bank/0")!;
-    assert.match(bankWord.message, /^thẻ từ q2_\w+ thiếu image; nhóm discoverer cần mọi thẻ từ trong ngân hàng có hình \(SK-033\)$/);
+    // SK-047 (15/11): the q2 bank words have pictures; the warm-up w1 bank words still do not.
+    const bankWord = issues.find((issue) => issue.pointer === "/warmup/0/bank/0")!;
+    assert.match(bankWord.message, /^thẻ từ w1_\w+ thiếu image; nhóm discoverer cần mọi thẻ từ trong ngân hàng có hình \(SK-033\)$/);
     assert.match(issues.find((issue) => issue.pointer === "/quiz/0")!.message, /^câu q1 thiếu image \(hình minh hoạ câu hỏi\)/);
   });
 
@@ -292,7 +293,10 @@ describe("luật hình của validate (SK-033)", () => {
     assert.ok(pointers.includes("/quiz/0/options/2/image/brief"), "dùng lại key sai");
     assert.ok(pointers.includes("/vocab/0/image"), "không có brief");
     assert.ok(pointers.includes("/play/items/0/image/brief"));
-    const reuseOk = refs.filter((ref) => isReuseBrief(ref.image.brief) && reuseTarget(ref.image.brief, refs, ref.key) !== undefined).length;
+    // SK-047 (15/11): q2_air and q2_sunlight reuse pictures of other lessons ("… ở bài `<chủ đề>/<bài>`"): no warning either.
+    const here = { topic: "an-uong-lanh-manh", slug: String(lesson.slug), order: Number(lesson.order) };
+    assert.ok(!pointers.includes("/quiz/1/bank/1/image/brief"), "dùng lại hình bài khác");
+    const reuseOk = refs.filter((ref) => isReuseBrief(ref.image.brief) && (crossReuse(ref.image.brief, here) !== undefined || reuseTarget(ref.image.brief, refs, ref.key) !== undefined)).length;
     assert.equal(pointers.length, refs.length - 1 - reuseOk);
     assert.match(issues.find((issue) => issue.pointer === "/play/items/0/image/brief")!.message, /brief của hình tray\.tray_rice thiếu "Từ khoá tìm ảnh \(EN\): …"/);
   });
@@ -335,7 +339,7 @@ describe("luật hình của validate (SK-033)", () => {
     const errors = issues.filter((issue) => issue.severity === "error");
     assert.ok(errors.length > 0);
     for (const error of errors) assert.equal(error.code, "age_image_required");
-    assert.ok(errors.some((error) => error.pointer === "/quiz/1/bank/0" && /bắt buộc mọi thẻ từ trong ngân hàng có hình$/.test(error.message)));
+    assert.ok(errors.some((error) => error.pointer === "/warmup/0/bank/0" && /bắt buộc mọi thẻ từ trong ngân hàng có hình$/.test(error.message)));
     assert.ok(errors.some((error) => error.pointer === "/quiz/0" && /^câu q1 thiếu image \(hình minh hoạ câu hỏi\); nhóm discoverer bắt buộc/.test(error.message)));
     // Options are still only expected: warnings.
     assert.ok(issues.some((issue) => issue.code === "image_missing" && /\/options\/\d+$/.test(issue.pointer)));

@@ -157,8 +157,9 @@ image.brief: Dùng lại hình `tray_asia` ở bài `be-mat-trai-dat/cac-chau-lu
 image.alt.en: Rice terraces on the mountains
 image.alt.vi: Ruộng bậc thang trên núi
 answer: false
-hint.en: Think of Vietnam and Japan. Where are they?
-hint.vi: Em nghĩ tới Việt Nam và Nhật Bản. Hai quốc gia này ở đâu?
+hint.en: Remember the countries game in the continents lesson.
+hint.vi: Em nhớ lại trò xếp quốc gia ở bài châu lục nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ gọi tên hai quốc gia và hỏi chúng ở đâu, nghe xong là có lời bác bỏ. Gợi ý mới chỉ trỏ chỗ cần nhớ (nhóm Quốc gia ở kệ Chơi bài hai).
 explanation_correct.en: Asia is the biggest continent, with many countries.
 explanation_correct.vi: Châu Á là châu lục lớn nhất, có nhiều quốc gia.
 explanation_wrong.en: Asia is a continent with many countries.
@@ -470,56 +471,58 @@ image.alt.vi: Núi lửa đang phun trào
 ### q2
 id: 3ef40af2-c802-4954-90b8-ffed99258be5
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: [ảnh] Mặt ruộng khô nứt nẻ thành nhiều mảng lớn nhỏ, chụp từ trên xuống; không có người, không có chữ. Ảnh gợi ý "vỡ thành nhiều mảng" mà không chỉ lớp nào của Trái Đất, để không lộ đáp án. Không dùng hình ô explore_plates (quả trứng nứt vỏ): bé đã học vỏ trứng giống vỏ Trái Đất, nên hình đó lộ đáp án. Từ khoá tìm ảnh (EN): mud cracked dry ground
 image.alt.en: Dry ground cracked into pieces
 image.alt.vi: Mặt đất khô nứt thành nhiều mảng
-sentence.en: Plates are giant pieces of Earth's {1}.
-sentence.vi: Các mảng là những phần rất lớn của {1}.
-answers: q2_crust
-hint.en: Which layer do we live on?
-hint.vi: Mình sống trên lớp nào của Trái Đất?
+sentence.en: Earth's crust is broken into giant {1}.
+sentence.vi: Vỏ Trái Đất vỡ thành những {1} khổng lồ.
+answers: q2_plates
+hint.en: Remember why the ground shakes in an earthquake.
+hint.vi: Em nhớ lại vì sao mặt đất rung khi có động đất nhé.
+> SK-047 (15/11, nháp AI): gợi ý trước hỏi "thứ gì trượt dưới chân", câu trả lời chính là đáp án; nút gợi ý mở được trước khi trả lời. Gợi ý mới trỏ ý chính một, bé tự nhớ tên.
 explanation_correct.en: We live on these plates, and they move slowly.
 explanation_correct.vi: Mình sống trên các mảng ấy, chúng dịch chuyển rất chậm.
-explanation_wrong.en: Plates are pieces of the crust we live on.
-explanation_wrong.vi: Các mảng là phần của vỏ, nơi mình sống.
-> Câu nhắc lại ý chính một bằng cách nói khác, và ôn ba lớp của bài ba: ngân hàng từ là vỏ Trái Đất, lớp manti, nhân Trái Đất. Gợi ý nối với ý chính một và câu q1 của bài ba ("mình sống trên vỏ Trái Đất").
-> Rà chéo 9/11: ngân hàng từ đổi sang tên đầy đủ như bài ba ("vỏ" thành "vỏ Trái Đất", "nhân" thành "nhân Trái Đất"), và câu tiếng Việt bỏ chữ "Trái Đất" sau ô trống cho khỏi lặp. [CẦN KIỂM] tên ba lớp theo sách giáo khoa hiện hành, xem bảng Tên gọi ở `_topic.md` và ghi chú ở ý chính một.
-> [CẦN KIỂM] (tester, lỗi nhỏ 10) Câu này có một đáp án duy nhất "các mảng là phần của vỏ Trái Đất", còn "lớp manti" là lựa chọn sai. Thật ra mảng gồm vỏ Trái Đất và phần trên cùng của lớp manti. Biên tập giữ câu vì khớp ý chính một, từ `plate` và ô `explore_plates` (cùng một cách giản lược). Nếu chuyên môn muốn nói "lớp ngoài cùng cứng" thay cho "vỏ Trái Đất", phải sửa cả bốn chỗ; riêng câu này thì đổi sang hỏi lớp mình sống bên trên (ví dụ "We live on the {1}, and it is broken into plates."), để không dạy bé "mảng chỉ là vỏ".
+explanation_wrong.en: The crust is cut into giant pieces called plates.
+explanation_wrong.vi: Vỏ Trái Đất chia thành những phần lớn gọi là mảng.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (earthquake, tsunami, plate, shake); câu cũ điền "crust", từ của bài ba. Câu mới gần câu ví dụ của từ `plate`, nhớ lại ý chính một. Ba thẻ cùng số nhiều; hai thẻ sai (sóng, núi lửa) là hai thứ bé đã gặp trong chủ đề. `version` 2; ba thẻ cũ (nhân, manti, vỏ) bỏ. Hình câu hỏi ẩn ở A2 vì mọi thẻ từ có hình; giữ để dùng khi không ẩn.
+> (Bản trước 15/11: ngân hàng từ là vỏ Trái Đất, lớp manti, nhân Trái Đất; ghi chú cũ về tên ba lớp chuyển sang câu này không còn áp.)
+> [CẦN KIỂM] (tester, lỗi nhỏ 10, vẫn áp) Thật ra mảng gồm vỏ Trái Đất và phần trên cùng của lớp manti. Câu "Earth's crust is broken into giant plates" là cùng cách giản lược của ý chính một, từ `plate` và ô `explore_plates`. Nếu chuyên môn muốn nói "lớp ngoài cùng cứng" thay cho "vỏ Trái Đất", sửa cả bốn chỗ cùng lúc.
 > SK-033 (9/11), chỗ chưa chắc: ảnh ruộng khô nứt nẻ là cách so sánh như quả trứng nứt vỏ. Bé có thể nghĩ mảng là những vết nứt nhỏ trên mặt đất, hoặc ruộng nứt vì động đất. Nhờ tester xem; nếu thấy hiểu nhầm thì đổi sang ảnh Trái Đất từ vũ trụ của từ surface ở bài một (gợi "bên ngoài" nhẹ hơn nhưng không gợi "mảng").
 
-#### bank q2_core
-label.en: core
-label.vi: nhân Trái Đất
-feedback.en: The core is deep in the middle, not outside.
-feedback.vi: Nhân nằm sâu ở giữa, không ở ngoài cùng.
-image.brief: Dùng lại hình `q1_core` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
-image.alt.en: Earth cut open, the core shown
-image.alt.vi: Mặt cắt Trái Đất, tô rõ nhân
+#### bank q2_plates
+label.en: plates
+label.vi: mảng
+image.brief: Dùng lại hình `explore_plates`. Từ khoá tìm ảnh (EN): boiled egg cracked shell
+image.alt.en: A cracked boiled egg
+image.alt.vi: Quả trứng luộc nứt vỏ
 
-#### bank q2_mantle
-label.en: mantle
-label.vi: lớp manti
-feedback.en: The mantle is the hot layer below the plates.
-feedback.vi: Lớp manti là lớp đá nóng bên dưới các mảng.
-image.brief: Dùng lại hình `q1_mantle` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
-image.alt.en: Earth cut open, the mantle shown
-image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp manti
+#### bank q2_waves
+label.en: waves
+label.vi: con sóng
+feedback.en: Waves move across the sea, not under the ground.
+feedback.vi: Sóng chạy trên mặt biển, không ở dưới đất.
+image.brief: Dùng lại hình `wave`. Từ khoá tìm ảnh (EN): children beach waves sunset
+image.alt.en: Children playing at the edge of the waves
+image.alt.vi: Các bạn nhỏ chơi ở mép sóng
 
-#### bank q2_crust
-label.en: crust
-label.vi: vỏ Trái Đất
-image.brief: Dùng lại hình `q1_crust` ở bài `be-mat-trai-dat/ben-trong-trai-dat`. Từ khoá tìm ảnh (EN): Earth layers cutaway diagram
-image.alt.en: Earth cut open, the crust shown
-image.alt.vi: Mặt cắt Trái Đất, tô rõ lớp vỏ
+#### bank q2_volcanoes
+label.en: volcanoes
+label.vi: núi lửa
+feedback.en: Volcanoes are where melted rock comes out.
+feedback.vi: Núi lửa là nơi đá nóng chảy trào ra.
+image.brief: Dùng lại hình `q1_lava`. Từ khoá tìm ảnh (EN): volcano erupting lava night distant
+image.alt.en: A volcano erupting
+image.alt.vi: Núi lửa đang phun trào
+> SK-047 (15/11): ba thẻ dùng lại hình có sẵn của bài (ô `explore_plates`, từ `wave`, lựa chọn `q1_lava`); không cần hình mới. Thẻ đúng là hình quả trứng nứt (cách so của bài), không phải hình của câu.
 
 ### q3
 id: 429f6670-befe-4b33-9297-6c5903dd761f
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: When the classroom shakes, what is safe?
 prompt.vi: Lớp học rung lắc, việc nào an toàn?
@@ -531,8 +534,9 @@ instruction.en: Pick all the right answers.
 instruction.vi: Chọn tất cả đáp án đúng
 hint.en: Remember the three steps you just played.
 hint.vi: Em nhớ lại ba bước vừa chơi nhé.
-explanation_correct.en: A desk and your arms protect your head.
-explanation_correct.vi: Gầm bàn và cánh tay giúp che chở đầu em.
+explanation_correct.en: Drop, cover and hold on: all three keep you safe.
+explanation_correct.vi: Cúi xuống, che đầu, bám chắc: cả ba giữ em an toàn.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng, đúng ba bước (luật phân bố MC của chủ đề). Lựa chọn sai `q3_window` thay bằng `q3_leg` (bám chân bàn, đúng), dùng lại hình kệ Chơi; `version` 2. Lựa chọn sai còn lại là việc mới chưa có ở phần Chơi (chạy xuống cầu thang). Giải thích khi đúng sửa theo; giải thích khi sai giữ.
 explanation_wrong.en: Stay where you are, get low and cover your head.
 explanation_wrong.vi: Em ở yên tại chỗ, cúi thấp và che đầu.
 > Phần Chơi diễn ra ở nhà; câu này đưa ba bước sang lớp học, một tình huống quen khác. Có một việc mới chưa gặp ở phần Chơi: chạy xuống cầu thang.
@@ -547,15 +551,14 @@ image.brief: Dùng lại hình `tray_table`. Từ khoá tìm ảnh (EN): child u
 image.alt.en: A child gets under a strong table
 image.alt.vi: Bạn nhỏ chui xuống gầm bàn chắc chắn
 
-#### option q3_window
-correct: false
-feedback.en: Glass can break and fall when the ground shakes.
-feedback.vi: Kính có thể vỡ và rơi khi đất rung.
-label.en: By a window
-label.vi: Đứng cạnh cửa sổ kính
-image.brief: Dùng lại hình `tray_window`. Từ khoá tìm ảnh (EN): child window from behind
-image.alt.en: A child stands by a glass window
-image.alt.vi: Bạn nhỏ đứng cạnh cửa kính
+#### option q3_leg
+correct: true
+label.en: Hold a desk leg
+label.vi: Bám chân bàn
+image.brief: Dùng lại hình `tray_leg`. Từ khoá tìm ảnh (EN): hand holding table leg
+image.alt.en: A hand holds a table leg
+image.alt.vi: Bàn tay bám chắc chân bàn
+> SK-047 (15/11): thay `q3_window`; hình kệ Chơi, không cần hình mới.
 
 #### option q3_stairs
 correct: false
@@ -705,8 +708,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: true
-hint.en: Can you tell how big it will get?
-hint.vi: Em có biết trước trận động đất sẽ mạnh tới đâu không?
+hint.en: Think of the moment the ground starts to shake.
+hint.vi: Em nghĩ tới lúc đất vừa bắt đầu rung nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời ("không biết trước") gần như là lý do của đáp án. Gợi ý mới chỉ đặt bé vào đúng lúc cần xét, bé tự suy.
 explanation_correct.en: Shaking can grow stronger, so act right away.
 explanation_correct.vi: Đất có thể rung mạnh hơn, nên em làm ngay.
 explanation_wrong.en: No one knows how strong the shaking will get.
@@ -896,10 +900,8 @@ image.alt.vi: Máy đo động đất vẽ đường nhấp nhô
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng.
   - `answers: q2_crust` và `answers: q4_shakes, q4_tsunami` trỏ `#### bank`.
   - Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ ba; w2: thứ hai;
-  - q1: thứ hai; q2: từ thứ ba trong ngân hàng; q3: thứ nhất và thứ tư; q4: từ thứ hai và thứ tư; q5: thứ ba.
-  - Kệ Chơi xếp xen việc an toàn và chưa an toàn: quỳ xuống, cửa kính, gầm bàn, chạy ra ngoài, bám chân bàn, tủ cao, tay che đầu, thang máy.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và kệ Chơi).
+- **15/11 (SK-047):** q2 câu Từ mới "plates", `version` 2; q3 `multi_choice` ba đáp án đúng, `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn, chưa chạm gì → `start`;
   - chạm Quỳ xuống, Chui gầm bàn, Bám chân bàn → đạt (`balanced`);

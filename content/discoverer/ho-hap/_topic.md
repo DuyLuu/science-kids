@@ -227,18 +227,9 @@ note: Thêm để người duyệt thấy ý này nằm ở đâu, nhưng không
 
 Sáu câu Đúng, sáu câu Sai. Câu sáu là Sai, Đúng, Đúng, Sai. Trong mỗi bài có cả Đúng lẫn Sai. Câu `true_false` thêm sau này thì giữ cân bằng này.
 
-**Vị trí đáp án đúng** (app không xáo lựa chọn; thứ tự theo `####` trong file)
+**Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn). Bảng cân vị trí bằng tay đã bỏ; thứ tự `####` trong file không còn là thứ tự trên màn.
 
-| Bài | w1 | Quiz |
-| --- | --- | --- |
-| 1 | thứ nhất | q2 thẻ thứ nhất; q3 thứ nhất và thứ tư; q4 thứ ba; q5 thứ hai |
-| 2 | thứ ba | q1 thứ hai; q2 thẻ thứ hai và thứ tư; q3 thứ ba; q4 thứ nhất và thứ ba |
-| 3 | thứ hai | q1 thứ nhất; q2 thẻ thứ ba; q3 thứ hai và thứ ba; q4 thứ nhất |
-| 4 | thứ tư (bốn lựa chọn) | q1 thứ ba; q2 thẻ thứ ba; q3 thứ hai và thứ tư; q4 thứ nhất; q5 thẻ thứ hai |
-
-Rà chữ tester 10/11 (n1): ba câu đổi chỗ đáp án (bài một q2, bài ba q4, bài bốn q1), để mười sáu câu một đáp án của cả chủ đề không dồn vào chỗ thứ hai. Sau khi sửa: chỗ thứ nhất năm câu, thứ hai bốn, thứ ba sáu, thứ tư một.
-
-Câu w1 của bốn bài ở bốn chỗ khác nhau. Không bài nào theo chu kỳ.
+**Câu `multi_choice` (SK-047, 15/11):** trong chủ đề, không số đáp án đúng nào chiếm quá một nửa số câu MC (luật `multi_choice_correct_spread`). Bốn câu: bài 1 q3 hai đúng, bài 2 q4 hai đúng, bài 3 q3 một đúng, bài 4 q3 ba đúng. Câu hướng dẫn giữ "Pick all the right answers.", không báo số.
 
 **Khi soạn bốn bài** (áp cho cả bốn bài; rút kinh nghiệm SK-031, SK-032, SK-033)
 

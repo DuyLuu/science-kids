@@ -161,19 +161,18 @@
       "note": "Ruộng lúa xanh vẽ sẵn của Hô hấp; câu q1 toàn hình vẽ."
     },
     "q2": {
-      "same_as": "tray.tray_dry_pond"
-    },
-    "q2.q2_wind": {
-      "same_as": "w1",
-      "lesson": "ho-hap/vi-sao-ta-phai-tho"
-    },
-    "q2.q2_sun": {
-      "same_as": "q3_sun",
-      "lesson": "be-mat-trai-dat/nui-lua"
-    },
-    "q2.q2_rain": {
       "same_as": "q1_rain",
       "lesson": "be-mat-trai-dat/nui-lua"
+    },
+    "q2.q2_drought": {
+      "same_as": "tray.tray_dry_pond"
+    },
+    "q2.q2_flood": {
+      "same_as": "tray.tray_river_over"
+    },
+    "q2.q2_storm": {
+      "same_as": "learn.explore.explore_storm",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
     },
     "q3": {
       "same_as": "q3_sun",

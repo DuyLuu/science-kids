@@ -56,7 +56,7 @@ explanation_correct.en: Worm tunnels let air and water into soil.
 explanation_correct.vi: Đường hầm của giun cho không khí, nước vào đất.
 explanation_wrong.en: Earthworms dig tunnels and mix the soil.
 explanation_wrong.vi: Giun đất đào đường hầm và xới trộn đất.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ nhất) đúng bảng Khởi động. VI "giúp đất tốt" (không viết "giúp đất khoẻ" như bảng gợi ý) cho khớp chữ "đất tốt" của bài 13.
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). VI "giúp đất tốt" (không viết "giúp đất khoẻ" như bảng gợi ý) cho khớp chữ "đất tốt" của bài 13.
 > Sâu ăn lá có sức hút (thân dài, mềm, trông giống giun). Ảnh muỗi cùng ảnh nguồn với *Não bộ và giác quan* bài hai, nên đáp án không là ảnh duy nhất bé đã thấy. Ba ảnh là con vật nhỏ chụp gần; ảnh muỗi cắt sát (ghi chú dưới `w1_mosquito`).
 
 #### option w1_earthworm
@@ -337,7 +337,7 @@ image.alt.vi: Một đống đất khô và một đống đất ướt
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vị trí đáp án đúng bảng `_topic.md`: q1 chỗ thứ ba; q2 thẻ thứ hai; q3 chỗ thứ hai và thứ ba; q4 chỗ thứ hai; q5 chỗ thứ nhất.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn). Cột biểu đồ q4 không xáo (thứ tự `#### bar`).
 > Không hình lựa chọn nào xuất hiện ở hai câu. Câu q4 là biểu đồ cột trong câu `single_choice` (app 0.1.0 chưa hiện `picture_bar_chart`).
 > 14/11: q4 nay là `picture_bar_chart` (dev chốt ở SK-043), nên bài có năm format; hai dòng trên về q4 là bản cũ.
 
@@ -391,54 +391,54 @@ image.alt.vi: Chiếc đồng hồ bấm giờ không có số
 ### q2
 id: ced310ac-a095-488d-8ab3-050b63fed413
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `explore_better`.
 image.alt.en: Gloved hands pouring water into a test bottle
 image.alt.vi: Bàn tay đeo găng rót nước vào chai thí nghiệm
-sentence.en: A fair test changes {1}.
-sentence.vi: Thí nghiệm công bằng thay đổi {1}.
-answers: q2_one
-hint.en: Remember the Keep it fair picture.
-hint.vi: Em nhớ lại ô Giữ công bằng nhé.
+sentence.en: In a {1}, you change only one thing.
+sentence.vi: Trong {1}, em chỉ thay đổi một thứ.
+answers: q2_fair_test
+hint.en: Think of the test with two bottles of soil.
+hint.vi: Em nghĩ tới thí nghiệm hai chai đất nhé.
 explanation_correct.en: Then you know the one change caused the result.
 explanation_correct.vi: Nhờ vậy em biết kết quả là do thứ được đổi.
-explanation_wrong.en: Change one thing and keep everything else the same.
-explanation_wrong.vi: Em thay đổi một thứ, mọi thứ khác giữ nguyên.
-> Câu nhớ lại ý chính hai. Câu EN và VI không có chữ "only" · "chỉ", để câu không tự nói đáp án. "Mọi thứ" có sức hút với bé nghĩ thí nghiệm là đổi thật nhiều để xem; "hai thứ" có sức hút vì thí nghiệm có hai chai.
-> Ba thẻ là ba hình vẽ khối gỗ đồ chơi (một, hai, nhiều khối), cùng nét, không có chữ số.
+explanation_wrong.en: A fair test changes one thing and keeps the rest.
+explanation_wrong.vi: Thí nghiệm công bằng chỉ đổi một thứ, giữ nguyên phần còn lại.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (fair test, measure, result); câu cũ điền "one thing". Câu mới là ý chính hai, chỗ trống là từ `fair_test`. Ba thẻ là ba danh từ của bài thí nghiệm: thí nghiệm công bằng, kết quả (từ `result`), biểu đồ cột (hình của từ `data`); đều là hình vẽ dùng lại, không cần hình mới. `version` 2; ba thẻ khối gỗ bỏ (ba hình đó không còn dùng). Gợi ý cũ trỏ ô "Keep it fair", tên ô gần như là đáp án.
+> (Bản trước 15/11: "A fair test changes {1}." với ba thẻ một thứ, hai thứ, mọi thứ; câu đó hỏi đúng nghĩa của luật, câu mới hỏi tên của luật.)
 
-#### bank q2_two
-label.en: two things
-label.vi: hai thứ
-feedback.en: With two changes, you cannot tell which one mattered.
-feedback.vi: Đổi hai thứ thì khó biết do thứ nào.
-image.brief: [hình vẽ] Hai khối gỗ đồ chơi vuông, màu gỗ trơn, đặt cạnh nhau trên nền kem trơn; không có chữ, không có chữ số, không có hình in trên khối; cùng nét, cùng cỡ khối với hai thẻ kia.
-image.alt.en: Two wooden blocks
-image.alt.vi: Hai khối gỗ
+#### bank q2_fair_test
+label.en: fair test
+label.vi: thí nghiệm công bằng
+image.brief: Dùng lại hình `explore_fair`.
+image.alt.en: Two same bottles, two same jugs, two soils
+image.alt.vi: Hai chai giống nhau, hai ca nước giống nhau, hai loại đất
 
-#### bank q2_one
-label.en: one thing
-label.vi: một thứ
-image.brief: [hình vẽ] Cùng nét với `q2_two`: một khối gỗ đồ chơi vuông trên nền kem trơn; không có chữ, không có chữ số.
-image.alt.en: One wooden block
-image.alt.vi: Một khối gỗ
+#### bank q2_result
+label.en: result
+label.vi: kết quả
+feedback.en: A result is what you find out at the end.
+feedback.vi: Kết quả là điều em biết được lúc cuối.
+image.brief: Dùng lại hình `explore_results`.
+image.alt.en: Lots of water under one bottle, little under the other
+image.alt.vi: Một cốc hứng nhiều nước, cốc kia ít nước
 
-#### bank q2_all
-label.en: everything
-label.vi: mọi thứ
-feedback.en: If everything changes, the test tells you nothing.
-feedback.vi: Đổi mọi thứ thì thí nghiệm chẳng cho biết gì.
-image.brief: [hình vẽ] Cùng nét với `q2_two`: một đống nhiều khối gỗ đồ chơi vuông chồng lên nhau trên nền kem trơn; không có chữ, không có chữ số.
-image.alt.en: A big pile of wooden blocks
-image.alt.vi: Một đống khối gỗ
+#### bank q2_chart
+label.en: bar chart
+label.vi: biểu đồ cột
+feedback.en: A bar chart shows your results as bars.
+feedback.vi: Biểu đồ cột vẽ kết quả thành các cột.
+image.brief: Dùng lại hình `data`.
+image.alt.en: A bar chart with three bars
+image.alt.vi: Biểu đồ cột có ba cột
 
 ### q3
 id: 74c83e04-0402-40ae-bb8c-962dae147405
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Testing which soil holds water, what stays the same?
 prompt.vi: Thử xem đất nào giữ nước, thứ gì giữ nguyên?
@@ -449,10 +449,11 @@ image.alt.en: Two test bottles of soil and a jug of water
 image.alt.vi: Hai chai thí nghiệm đựng đất và một ca nước
 hint.en: Remember the Keep it fair picture.
 hint.vi: Em nhớ lại ô Giữ công bằng nhé.
-explanation_correct.en: Same amounts make the test fair for both soils.
-explanation_correct.vi: Lượng bằng nhau thì thí nghiệm công bằng cho cả hai.
-explanation_wrong.en: Keep the amount of soil and water the same.
-explanation_wrong.vi: Lượng đất và lượng nước đổ vào phải giữ nguyên.
+explanation_correct.en: Same bottles and same amounts make the test fair.
+explanation_correct.vi: Chai giống nhau, lượng bằng nhau thì thí nghiệm công bằng.
+explanation_wrong.en: Keep the soil, the water and the bottles the same.
+explanation_wrong.vi: Giữ nguyên lượng đất, lượng nước và cỡ chai.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_drips` thay bằng `q3_bottles` (cỡ chai, đúng), dùng lại hình kệ Chơi; `version` 2. Bẫy mạnh nhất giữ: loại đất là thứ được thay đổi. Hai lời giải thích sửa theo.
 > A2 (SK-043, 14/11): câu hỏi cũ mười sáu chữ (hai câu, có nhân vật Lan), nay mười chữ.
 > DOK 2: áp luật thí nghiệm công bằng vào một câu hỏi mới (đất nào giữ nước tốt nhất). Hai lựa chọn sai có sức hút mạnh: loại đất là thứ được thay đổi; lượng nước chảy xuống là thứ cần đo (sẽ khác nhau). Bốn lựa chọn ứng với ba nhóm phần Chơi, cùng là hình vẽ bộ "Thí nghiệm chai".
 
@@ -482,36 +483,40 @@ image.brief: Dùng lại hình `tray_same_water`.
 image.alt.en: One jug of water for both bottles
 image.alt.vi: Một ca nước dùng cho cả hai chai
 
-#### option q3_drips
-correct: false
-feedback.en: The water that drips out is what you measure.
-feedback.vi: Lượng nước chảy xuống là thứ em cần đo.
-label.en: the amount that drips out
-label.vi: lượng nước chảy xuống
-image.brief: Dùng lại hình `tray_drips`.
-image.alt.en: Water dripping into a cup
-image.alt.vi: Nước nhỏ giọt xuống cốc
+#### option q3_bottles
+correct: true
+label.en: the size of the bottles
+label.vi: cỡ chai
+image.brief: Dùng lại hình `tray_same_bottles`.
+image.alt.en: Two bottles the same size
+image.alt.vi: Hai chai cùng cỡ
+> SK-047 (15/11): thay `q3_drips`; hình kệ Chơi (bộ "Thí nghiệm chai"), không cần hình mới.
 
 ### q4
 id: 5451bce6-f12d-4fe4-ab79-3eab7e552760
 format: picture_bar_chart
-version: 2
+version: 3
 dok: 2
-prompt.en: Which bar shows water through sandy soil?
-prompt.vi: Cột nào là nước chảy qua đất cát?
-image.brief: Dùng lại hình `sandy_soil` ở bài `da-va-dat/cac-loai-dat-o-viet-nam`. Từ khoá tìm ảnh (EN): sandy soil close up coast grains
-image.alt.en: Sandy soil with big grains
-image.alt.vi: Đất cát hạt to
-chart.unit.en: water caught in one minute
-chart.unit.vi: nước hứng được trong một phút
-hint.en: Remember the Results picture.
-hint.vi: Em nhớ lại ô Kết quả nhé.
-explanation_correct.en: In one minute, the most water ran through sand.
-explanation_correct.vi: Trong một phút, nước qua đất cát nhiều nhất.
-explanation_wrong.en: Most water ran through sand, so its bar is tallest.
-explanation_wrong.vi: Nước qua đất cát nhiều nhất, nên cột cao nhất.
+prompt.en: Which soil let the most water through?
+prompt.vi: Đất nào cho nhiều nước chảy qua nhất?
+image.brief: [hình vẽ] Bản dải ngang của hình `explore_setup` (file riêng content/images/own/da-va-dat/b14-q4-chart.jpg, khoảng 2,9:1, designer cắt và dời vật từ hình gốc, không vẽ thêm vật): chai đất cát, ca nước, chai đất sét xếp thành một hàng ngang trên nền kem trơn, trước khi đổ nước. Hình là dụng cụ thí nghiệm, không phải ba loại đất của biểu đồ: biểu đồ có ba cột (đất vườn, đất cát, đất sét), hình chỉ có hai chai, không có chai đất vườn. Hình không cho thấy nước chảy qua, không có cốc hứng nước đầy, nên không lộ đáp án; không có chữ, không có số.
+> 16/11 (sửa chữ brief theo hình designer dựng lại, ticket SK-047 mục "designer 16/11", việc 2): brief cũ "Dùng lại hình `explore_setup`." Hình gốc 4:3 bị app vẽ nhỏ giữa ô ảnh rộng khoảng 3:1 của câu biểu đồ, nên designer làm bản dải ngang riêng. Brief nay ghi rõ hình có hai chai trong khi biểu đồ có ba loại đất. `alt` vẫn đúng ("hai chai thí nghiệm và một ca nước"), không đổi. Chỉ đổi ghi chú, không đổi chữ bé đọc hay nghe; `version` giữ 3.
+image.alt.en: Two test bottles of soil and a jug of water
+image.alt.vi: Hai chai thí nghiệm đựng đất và một ca nước
+chart.unit.en: cups of water caught in one minute
+chart.unit.vi: số cốc nước hứng được trong một phút
+hint.en: More water makes a taller bar.
+hint.vi: Nước càng nhiều thì cột càng cao.
+explanation_correct.en: Sandy soil has big grains, so water ran through fast.
+explanation_correct.vi: Đất cát hạt to, nên nước chảy qua nhanh.
+explanation_wrong.en: Sandy soil has the tallest bar, so the most water.
+explanation_wrong.vi: Cột đất cát cao nhất, tức là nhiều nước nhất.
+> SK-047 (15/11, nháp AI): tên dưới cột nay luôn hiện, nên câu cũ "Which bar shows water through sandy soil?" chỉ còn là câu đọc nhãn. Câu mới hỏi dữ liệu (đất nào nhiều nước nhất); đáp án vẫn là cột đất cát, `#### option` và `#### bar` không đổi. `version` 3.
+> Hình câu hỏi đổi từ ảnh đất cát (lộ đáp án khi câu hỏi là "đất nào") sang hình `explore_setup` của bài (hai chai đất trước khi đổ nước), theo đề xuất của designer 15/11 (khung `c-ask`).
+> Đơn vị đổi sang đếm được ("số cốc nước"), vì ba `value` là số nguyên ≤ 10 và app vẽ cột bằng khối đếm được (designer 15/11). [CẦN KIỂM] như trước: sáu, chín, hai cốc là số minh hoạ; cốc ở đây là cốc nhỏ hứng nước dưới chai.
+> Gợi ý mới chỉ cách đọc biểu đồ, không trỏ ô Kết quả (ô đó nói luật cỡ hạt, gần như là đáp án). Giải thích khi đúng nối dữ liệu với luật cỡ hạt; giải thích khi sai nói cách đọc cột.
 > 14/11 (SK-043 dev chốt, SK-044): đổi từ `single_choice` (ba hình biểu đồ có vầng sáng) sang `picture_bar_chart`, `version` 2. Bé chạm thẳng vào cột; `#### option` thứ i là đáp án của `#### bar` thứ i, cùng thứ tự, cùng nhãn; lựa chọn không có hình. Giữ ba key `q4_left`, `q4_middle`, `q4_right` và hai feedback. Nhãn đổi từ vị trí ("cột bên trái") sang tên đất, vì A2 chỉ hiện nhãn sau khi chấm. Hình câu hỏi đổi sang ô ảnh đất cát (màn `chart-ask` của A2); hình biểu đồ cũ chuyển về từ vựng `data`.
-> DOK 2: đọc biểu đồ và nối với kết quả thí nghiệm (đất cát cho nhiều nước qua nhất, nên cột cao nhất). Cột là lượng nước hứng được trong một phút, không phải thời gian, để "nhiều hơn" khớp với "cao hơn". Thứ tự cột giữ như hình cũ: trái cao vừa (đất vườn), giữa cao nhất (đất cát), phải thấp nhất (đất sét); đáp án vẫn ở chỗ thứ hai như bảng `_topic.md`.
+> DOK 2: đọc biểu đồ và nối với kết quả thí nghiệm (đất cát cho nhiều nước qua nhất, nên cột cao nhất). Cột là lượng nước hứng được trong một phút, không phải thời gian, để "nhiều hơn" khớp với "cao hơn". Thứ tự cột giữ như hình cũ: trái cao vừa (đất vườn), giữa cao nhất (đất cát), phải thấp nhất (đất sét). Cột biểu đồ giữ thứ tự `#### bar`, không bị xáo (SK-047), nên tả vị trí cột trong hình vẫn đúng.
 > Rút kinh nghiệm *Hô hấp* bài ba (SK-036 N3): ba cột cùng một màu; câu hỏi không kể tên ba loại đất theo một thứ tự rồi xếp cột khác thứ tự đó.
 > [CẦN KIỂM] Tỉ lệ ba cột: `value` sáu, chín, hai là số minh hoạ (cát nhiều nhất, đất sét ít nhất), chưa lấy từ thí nghiệm thật.
 
@@ -532,8 +537,8 @@ value: 2
 
 #### option q4_left
 correct: false
-feedback.en: This medium bar shows only some water got through.
-feedback.vi: Cột này cao vừa, nước qua chưa nhiều nhất.
+feedback.en: Garden soil let some water through, but not the most.
+feedback.vi: Đất vườn cho nước qua, nhưng chưa nhiều nhất.
 label.en: garden soil
 label.vi: đất vườn
 
@@ -544,8 +549,9 @@ label.vi: đất cát
 
 #### option q4_right
 correct: false
-feedback.en: This short bar shows little water got through.
-feedback.vi: Cột này thấp, ít nước chảy qua.
+feedback.en: Clay soil has the shortest bar, so little water.
+feedback.vi: Đất sét có cột thấp nhất, ít nước chảy qua.
+> SK-047 (15/11, nháp AI): hai `feedback` gọi tên đất thay cho "cột này", vì tên cột nay luôn hiện; vẫn chỉ nói về cột bé vừa chạm.
 label.en: clay soil
 label.vi: đất sét
 
@@ -737,7 +743,8 @@ image.alt.vi: Ruộng lúa bậc thang
   - Quiz: `single_choice` (q1, q5; ba lựa chọn), `picture_bar_chart` (q4, ba cột), `fill_blank_bank` (q2, ba thẻ), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q6 Sai, `speaker: na`, `misconception: all_soil_drains_same`). Năm format.
   - **q4 `picture_bar_chart` (14/11, `version` 2, theo dev SK-043):** `#### option` thứ i ứng với `#### bar` thứ i, cùng nhãn; lựa chọn không có hình; cột không có hình. Cột trái sang phải: `q4_bar_garden` (sáu), `q4_bar_sand` (chín), `q4_bar_clay` (hai), `value` [CẦN KIỂM]. `chart.unit` "water caught in one minute". Hình câu hỏi là ô ảnh đất cát (màn `chart-ask`). `FORMAT_FIRST_APP_VERSION.picture_bar_chart` còn `null` tới khi ios-dev có renderer, nên `build` có thể báo `format_not_rendered` cho bài này.
 - **Tham chiếu:** chạy `ids` cho bài 5 và bài 13 trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ ba; q2 thẻ thứ hai; q3 thứ hai và thứ ba; q4 thứ hai; q5 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ; cột biểu đồ không xáo).
+- **15/11 (SK-047):** q2 câu Từ mới "fair test", `version` 2; q3 `multi_choice` ba đáp án đúng, `version` 2; q4 hỏi dữ liệu ("Which soil let the most water through?"), hình câu hỏi `explore_setup`, đơn vị "cups of water", `version` 3.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Cùng một ca nước, Đất cát và đất sét, Thời gian nước chảy hết → `balanced`;

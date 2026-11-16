@@ -337,7 +337,7 @@ image.alt.vi: Cái cối xay tròn
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, thẻ từ có hình; trong một câu các lựa chọn cùng là ảnh chụp.
-> Vị trí đáp án đúng theo bảng ở `_topic.md`: q1 thứ ba, thẻ đúng q2 thứ nhất, q3 thứ nhất và thứ tư, q4 thứ nhất, q5 thứ nhất.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 
 ### q1
 id: 43e528cd-ba13-4828-ab5c-2cf3e08756a2
@@ -720,7 +720,7 @@ image.alt.vi: Hòn đá cuội
   - Khởi động: `single_choice` (w1, `prior_knowledge`), `true_false` (w2, ôn `be-mat-trai-dat/nui-lua`, đáp án Đúng).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Sai). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `bricks_are_rocks`.
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ ba; thẻ đúng q2 thứ nhất; q3 thứ nhất và thứ tư; q4 thứ nhất; q5 thứ nhất. Đúng bảng "Vị trí đáp án đúng" ở `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `be-mat-trai-dat/nui-lua` (w2), đã có id.
 - **Câu "Em nghĩ sao?"** (đề xuất schema v1.1 `think_first`, như các chủ đề trước): "Rocks stay the same forever. What do you think?" · "Đá giữ nguyên mãi mãi. Em nghĩ sao?"; lựa chọn không chấm điểm "True" · "Đúng", "False" · "Sai", "I am not sure" · "Em chưa chắc". Bài bảy dạy ý này; bài mười lăm hỏi lại ở w3 (đáp án Sai). Misconception `rocks_never_change`, không gắn key ở câu nào.
 - **Màn Chơi, ví dụ để kiểm:**

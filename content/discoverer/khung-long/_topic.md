@@ -338,7 +338,7 @@ Sáu câu Đúng, sáu câu Sai; câu sáu là Sai, Đúng, Sai, Sai, Đúng. Kh
   - `messages.full`: "No more room! Tap one to take it off." · "Hết chỗ rồi! Em chạm vào để bỏ ra nhé."
   - Câu sáu: `instruction` là "Challenge: check Na's idea" · "Thử thách: kiểm tra ý của Na"; `labels` là "Yes" · "Na đúng", "No" · "Na chưa đúng"; `speaker: na`.
   - Mỗi câu chỉ có một đáp án hợp lý (tester N2). Gợi ý chỉ cách nghĩ, không lộ đáp án (tester N5).
-  - App không xáo lựa chọn: vị trí đáp án đúng rải đều, không dồn vào vị trí thứ hai.
+  - Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn). Thay bằng luật `multi_choice` (SK-047): trong chủ đề, không số đáp án đúng nào chiếm quá một nửa số câu MC. Năm câu MC: bài 1 q3 ba đúng, bài 2 q3 hai đúng, bài 3 q4 hai đúng, bài 4 q5 ba đúng, bài 5 q3 một đúng.
   - Lời nhắn ở phần Chơi không gọi tên vật chứa (không "tray", "mâm", "khay"). Nhắc thiếu nhóm nói "You still need…" · "Em còn thiếu…", không nói "Add" · "Thêm".
   - Món trong một nhóm phải rõ thuộc nhóm đó. Ví dụ ở bài hai, khủng long ba sừng cũng to, nhưng chỉ xếp vào nhóm "Có sừng hoặc giáp". Lời nhắn thiếu nhóm nói theo đặc điểm ("You still need a small dinosaur"), để bé không thấy mình bị chấm sai.
 - **Ba luật chữ thêm khi rà chéo** (9/11, áp cho cả năm bài):
@@ -350,7 +350,7 @@ Sáu câu Đúng, sáu câu Sai; câu sáu là Sai, Đúng, Sai, Sai, Đúng. Kh
   - Câu chọn một đáp án tránh chữ "could" · "có thể" khi lựa chọn sai cũng có thể xảy ra; hỏi "most likely" · "dễ … nhất".
   - Các lựa chọn trong một câu cùng số (số ít hay số nhiều) và cùng kiểu hình. Hình câu hỏi không cùng loại riêng với lựa chọn đúng (ví dụ cùng là hoá thạch trong đá, còn lựa chọn sai là ảnh ngày nay).
   - Món bẫy không gợi một liên hệ bài không dạy (dấu chân chim cạnh dấu chân khủng long). Lựa chọn sai phải có sức hút; lựa chọn không ai chọn làm câu còn hai lựa chọn.
-  - Vị trí đáp án đúng trong một bài không theo chu kỳ, và câu w1 của các bài không cùng một chỗ.
+  - Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
   - `has_limited` nói lý do khi một câu chung đúng cho cả ba món bẫy ("It has not turned to rock.").
 - **Khởi động** (giãn cách theo syllabus-progression mục 7; mọi câu có hình). Rà chéo 9/11: `recall_from.lesson` của năm bài đúng slug dưới đây, và mỗi câu ôn hỏi đúng ý bài trước đã dạy.
 

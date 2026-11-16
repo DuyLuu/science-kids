@@ -193,9 +193,8 @@
       "same_as": "tray.tray_veins",
       "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
     },
-    "q2.q2_nerves": {
-      "same_as": "q4.q4_nerve",
-      "lesson": "nao-bo-va-giac-quan/day-than-kinh-truyen-tin"
+    "q2.q2_senses": {
+      "same_as": "learn.explore.explore_five"
     },
     "q2.q2_wires": {
       "same_as": "tray.tray_wire",

@@ -624,6 +624,6 @@ image.alt.vi: Con cá thòi lòi trên bùn
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (habitat, pond, forest). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, w3; hai lựa chọn), `true_false` (w2 Sai). Quiz `single_choice` (q1, q3, q4), `true_false` (q2 Đúng, q5 Sai, q6 Đúng). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`habitat_is_a_home`).
-- **Vị trí đáp án đúng:** w1 thứ hai; w3 thứ nhất; q1 thứ ba; q3 thứ hai; q4 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** Cá rô đồng, Con ếch, Chuồn chuồn → `balanced`; Cá chép, Con ếch, Cá heo → `has_limited`; Cá chép, Cá rô đồng, Con ếch → `missing.tray_insect`.
 - **Từ EN có thể ngoài Starters/Movers:** habitat, pond, forest, mangrove, mudskipper, amphibian, insect, douc, coral, salty, hiding places.

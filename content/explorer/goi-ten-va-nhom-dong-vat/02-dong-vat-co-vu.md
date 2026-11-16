@@ -607,6 +607,6 @@ image.alt.vi: Con dơi treo trên cành
   - Khởi động: `true_false` (w1, Đúng), `single_choice` (w2, ba lựa chọn). Cả hai `recall_from.lesson: goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha`.
   - Quiz: `single_choice` (q1, q5), `true_false` (q2 Đúng, q3 Sai, q6 Đúng), `order_sequence` (q4, ba thẻ). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`people_not_animals`).
   - `order_sequence` cần renderer của SK-040 (bản 0.1.0 chưa hiện được; `build --min-app-version 0.1.0` sẽ báo `format_not_rendered`).
-- **Vị trí đáp án đúng:** w2 thứ hai; q1 thứ ba; q5 thứ nhất. q4 thẻ trong file: voi, mèo, trâu; thứ tự đúng: mèo, trâu, voi.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: mèo, trâu, voi.
 - **Màn Chơi, ví dụ để kiểm:** Con trâu, Con dơi, Cá heo → `balanced`; Con mèo, Con dơi, Cá vàng → `has_limited`; Con trâu, Con mèo, Con dơi → `missing.tray_water`.
 - **Từ EN có thể ngoài Starters/Movers:** mammal, fur, bat, dolphin, kitten, sparrow, egret.

@@ -127,7 +127,8 @@ const scientistLesson = lesson(210, scientistTopic.id, "fixture-scientist-lesson
   base(230, "q1", "single_choice", 1, ["Which part of a plant makes food?", "Bộ phận nào của cây làm ra thức ăn?"], { options: four("q1") }),
   base(231, "q2", "multi_choice", 2, ["Which things does a plant need?", "Cây cần những gì?"], { options: [option("q2_light", "light", "ánh sáng", true, false), option("q2_water", "water", "nước", true, false), option("q2_sweets", "sweets", "kẹo", false, false), option("q2_music", "music", "âm nhạc", false, false)] }),
   base(232, "q3", "true_false", 2, ["A heavy ball falls faster than a light one.", "Quả bóng nặng rơi nhanh hơn quả bóng nhẹ."], { misconception_id: scientistTopic.misconceptions[0].id, answer: false }),
-  base(233, "q4", "fill_blank_bank", 2, ["Fill in the gap.", "Điền vào chỗ trống."], { sentence: sp("Plants need light and {1} to grow.", "Cây cần ánh sáng và {1} để lớn."), bank: [{ key: "q4_water", label: sp("water", "nước") }, { key: "q4_sand", label: sp("sand", "cát") }, { key: "q4_salt", label: sp("salt", "muối") }], answers: ["q4_water"] }),
+  // SK-047: a quiz fill_blank_bank puts a word of the lesson's vocab in the blank (vocab_item_uses_lesson_word).
+  base(233, "q4", "fill_blank_bank", 2, ["Fill in the gap.", "Điền vào chỗ trống."], { sentence: sp("A {1} lives in water.", "{1} sống dưới nước."), bank: [{ key: "q4_fish", label: sp("fish", "con cá") }, { key: "q4_cow", label: sp("cow", "con bò") }, { key: "q4_hen", label: sp("hen", "gà mái") }], answers: ["q4_fish"] }),
   base(234, "q5", "single_choice", 3, ["Where does a plant get its food from?", "Cây lấy thức ăn từ đâu?"], { misconception_id: scientistTopic.misconceptions[1].id, options: four("q5") }),
   base(235, "q6", "true_false", 3, ["A plant in a dark box will stay green for months.", "Cây trong hộp tối sẽ xanh tốt nhiều tháng."], { answer: false }),
 ]);

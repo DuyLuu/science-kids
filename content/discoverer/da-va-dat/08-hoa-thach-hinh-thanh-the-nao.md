@@ -54,7 +54,7 @@ explanation_correct.en: Rivers drop the sand far away, sometimes at the sea.
 explanation_correct.vi: Sông thả cát ở nơi xa, có khi tận biển.
 explanation_wrong.en: Erosion carries bits of rock to new places.
 explanation_wrong.vi: Xói mòn mang mảnh đá vụn đi tới nơi khác.
-> Hình câu hỏi là con suối (tình huống), không phải hình của đáp án. Gợi ý chỉ cách nghĩ, không gọi tên ô "Erosion" · "Xói mòn" của bài bảy (tên ô trùng nhãn đáp án). Lựa chọn và vị trí đáp án (thứ nhất) theo bảng Khởi động.
+> Hình câu hỏi là con suối (tình huống), không phải hình của đáp án. Gợi ý chỉ cách nghĩ, không gọi tên ô "Erosion" · "Xói mòn" của bài bảy (tên ô trùng nhãn đáp án). Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 
 #### option w1_erosion
 correct: true
@@ -334,7 +334,7 @@ image.alt.vi: Hình chiếc lá trên đá
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án theo bảng `_topic.md` (bài tám): q1 thứ hai, thẻ đúng q2 thứ nhất, q3 thứ hai, ba, bốn, q4 thứ hai, q5 thứ ba.
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự).
 > q4 thay `order_sequence` (app 0.1.0 chưa hiện): hỏi bước xảy ra trước tiên. q5 khác hẳn câu q5 *Khủng long* bài ba: vật là vỏ sò (không phải xương), bối cảnh biển và nhà (không phải sông và bãi cỏ), ba lựa chọn khác hẳn.
 
 ### q1
@@ -403,7 +403,7 @@ explanation_correct.en: Sediment settles in layers and slowly buries things.
 explanation_correct.vi: Trầm tích lắng thành từng lớp và dần vùi lấp mọi thứ.
 explanation_wrong.en: Sediment is mud and sand settling in layers.
 explanation_wrong.vi: Trầm tích là bùn cát lắng thành từng lớp.
-> DOK 1: nhớ lại câu ô Trầm tích. Câu không có gốc từ "sediment". Hai thẻ sai có sức hút: "soil" · "đất" (cũng có cát, bùn), "lava" · "dung nham" (cũng phủ lên mọi thứ, bài *Núi lửa*). Thẻ đúng ở chỗ thứ nhất (bảng vị trí). Ba thẻ là ảnh chụp.
+> DOK 1: nhớ lại câu ô Trầm tích. Câu không có gốc từ "sediment". Hai thẻ sai có sức hút: "soil" · "đất" (cũng có cát, bùn), "lava" · "dung nham" (cũng phủ lên mọi thứ, bài *Núi lửa*). Ba thẻ là ảnh chụp.
 > Gợi ý không gọi tên ô "Sediment" · "Trầm tích" (trùng chữ nhãn đáp án).
 
 #### bank q2_sediment
@@ -722,9 +722,9 @@ image.alt.vi: Cúc đá cắt đôi
   - Khởi động: `single_choice` (w1 ôn bài bảy), `true_false` (w2 ôn *Khủng long* bài ba, Đúng).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3, ba đáp án), `true_false` (q6, `speaker: na`, Sai). Bốn format.
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `only_dinosaurs_fossils`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; thẻ đúng q2 thứ nhất; q3 thứ hai, ba, bốn; q4 thứ hai; q5 thứ ba. Khớp bảng `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và thẻ xếp thứ tự).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/da-bi-bao-mon-theo-thoi-gian` (w1), `khung-long/hoa-thach-ke-chuyen-khung-long` (w2, đã có id).
-- **q4 đã đổi sang `order_sequence` (14/11, `version` 2):** bốn thẻ bộ "Mặt cắt lòng đất" (khung không `q4_snail`, khung một `q4_decay`, khung hai `q4_layers`, khung bốn `q4_found`), `answer: q4_snail, q4_decay, q4_layers, q4_found`; thẻ trong file không theo thứ tự đúng. Bài nay có năm format (thêm `order_sequence`); dòng "Quiz" và "Vị trí đáp án" ở trên là bản cũ cho q4. Khung không chuyển từ hình câu hỏi sang thẻ; hình câu hỏi mới dùng lại `explore_not_dino`.
+- **q4 đã đổi sang `order_sequence` (14/11, `version` 2):** bốn thẻ bộ "Mặt cắt lòng đất" (khung không `q4_snail`, khung một `q4_decay`, khung hai `q4_layers`, khung bốn `q4_found`), `answer: q4_snail, q4_decay, q4_layers, q4_found`; thẻ trong file không theo thứ tự đúng. Bài nay có năm format (thêm `order_sequence`); dòng "Quiz" ở trên là bản cũ cho q4 (dòng vị trí đáp án: hết hiệu lực 15/11, SK-047). Khung không chuyển từ hình câu hỏi sang thẻ; hình câu hỏi mới dùng lại `explore_not_dino`.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Vỏ xoắn trong đá, Hình lá dương xỉ trên đá, Hình con cá trên đá → đạt;
   - chạm Cá khô → `has_limited`;

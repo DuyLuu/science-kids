@@ -94,8 +94,9 @@ image.brief: Dùng lại hình `explore_mantle` ở bài `be-mat-trai-dat/ben-tr
 image.alt.en: Earth's mantle next to an egg white
 image.alt.vi: Lớp manti bên cạnh lòng trắng trứng
 answer: false
-hint.en: Remember the mantle. Is most of it melted or solid?
-hint.vi: Em nhớ lại lớp manti. Phần lớn lớp đó nóng chảy hay vẫn rắn?
+hint.en: Remember the Mantle card in the last lesson.
+hint.vi: Em nhớ lại ô Lớp manti ở bài trước nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "nóng chảy hay vẫn rắn", nghe xong là chọn được. Gợi ý mới chỉ trỏ chỗ cần nhớ, như các câu Khởi động khác.
 explanation_correct.en: The mantle is very hot, but mostly solid.
 explanation_correct.vi: Lớp manti rất nóng, nhưng phần lớn vẫn rắn.
 explanation_wrong.en: Only some places deep down have melted rock.
@@ -119,8 +120,9 @@ image.brief: [ảnh] Bãi cát trên một hòn đảo nhỏ, chụp ngang tầm
 image.alt.en: A beach on a small island
 image.alt.vi: Bãi cát trên một hòn đảo nhỏ
 answer: true
-hint.en: Can you walk on an island?
-hint.vi: Em đi bộ trên đảo được không?
+hint.en: Remember the island in the first Earth lesson.
+hint.vi: Em nhớ lại hòn đảo ở bài Đất và nước nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời quyết định đáp án; nay chỉ trỏ chỗ cần nhớ.
 explanation_correct.en: Cat Ba and Ly Son are islands of Vietnam.
 explanation_correct.vi: Cát Bà và Lý Sơn là những hòn đảo của Việt Nam.
 explanation_wrong.en: An island is land, with sea on every side.
@@ -807,10 +809,7 @@ image.alt.vi: Đảo Lý Sơn bên biển xanh
   - w1, w2: `recall_from.lesson: be-mat-trai-dat/ben-trong-trai-dat` → `lesson_id` của bài ba (đã có id, slug khớp).
   - w3: `recall_from.lesson: be-mat-trai-dat/dat-va-nuoc-tren-trai-dat` → `lesson_id` của bài một (đã có id).
   - `misconception: volcanoes_far_away` → `misconception_id`. `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng; `answers: q2_magma, q2_lava` trỏ `#### bank`. Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ hai;
-  - q1: thứ hai; q2: ô một là từ thứ ba trong ngân hàng, ô hai là từ thứ nhất; q3: thứ ba; q4: thứ hai và thứ tư; q5: thứ nhất.
-  - Kệ Chơi xếp xen: đá sẫm màu, vỏ ốc, miệng núi lửa trên đảo, cây dừa, đất đỏ, ghềnh đá, thuyền gỗ.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và kệ Chơi).
 - **Màn Chơi, ví dụ để kiểm** (thứ tự ưu tiên lời nhắn theo SK-012: balanced, full, has_limited, start, missing):
   - chạm đá sẫm màu, đất đỏ, miệng núi lửa trên đảo → đạt (`balanced`);
   - chạm vỏ ốc → `has_limited`;

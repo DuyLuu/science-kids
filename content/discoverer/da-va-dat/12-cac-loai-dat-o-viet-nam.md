@@ -57,7 +57,7 @@ explanation_correct.en: The heaviest bits always settle at the bottom first.
 explanation_correct.vi: Hạt nặng luôn lắng xuống đáy trước tiên.
 explanation_wrong.en: Small stones are heavy, so they sink first.
 explanation_wrong.vi: Sỏi nhỏ nặng nên chìm xuống trước.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ hai) đúng bảng Khởi động. Bài 11 dạy ý này ở ô Lọ đất lắng (ví dụ "hạt nặng chìm xuống trước", hình lọ đã lắng) và câu q4.
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Bài 11 dạy ý này ở ô Lọ đất lắng (ví dụ "hạt nặng chìm xuống trước", hình lọ đã lắng) và câu q4.
 > Lệch `_topic.md` (bảng Hình dùng chung ghi `explore_jar` là hình câu w1 bài 12): hình `explore_jar` vẽ sỏi nằm dưới đáy lọ, tức là cho thấy đáp án. Câu này dùng hình `prediction` (lọ vừa lắc, chưa thấy lớp) của bài 11.
 
 #### option w1_clay
@@ -130,7 +130,7 @@ explanation_correct.en: Old lava rock slowly crumbled into this red soil.
 explanation_correct.vi: Đá dung nham xưa vỡ vụn dần thành đất đỏ.
 explanation_wrong.en: Red soil formed from old volcano rock.
 explanation_wrong.vi: Đất đỏ có từ đá núi lửa xưa.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ ba) đúng bảng Khởi động. Ôn món ví dụ "red soil from lava rock" · "đất đỏ ba-dan từ đá dung nham" của ô "Ở Việt Nam" bài *Núi lửa*.
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Ôn món ví dụ "red soil from lava rock" · "đất đỏ ba-dan từ đá dung nham" của ô "Ở Việt Nam" bài *Núi lửa*.
 > Hình câu hỏi là núi lửa đang yên lặng, không thấy đất đỏ.
 > Lệch `_topic.md` (bảng Hình dùng chung ghi `q2_rice` cho lựa chọn "đất ruộng lúa"): ảnh `q2_rice` là cánh đồng lúa xanh chụp rộng, lệch khung với hai ảnh mặt đất chụp gần. Lựa chọn này dùng ảnh đất phù sa chụp gần `alluvial_soil` (từ vựng bài này); nhãn giữ "rice field soil" · "đất ruộng lúa" như bảng Khởi động. Ảnh `q2_rice` vẫn dùng ở kệ Chơi và câu q3.
 > [CẦN KIỂM] Đất đỏ ba-dan do đá dung nham núi lửa thời xưa nguội lại rồi phong hoá mà thành (như *Núi lửa*).
@@ -405,7 +405,7 @@ image.alt.vi: Nền gạch đỏ
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vị trí đáp án đúng bảng `_topic.md`: q1 chỗ thứ ba; q2 thẻ thứ ba; q3 chỗ thứ nhất, ba, bốn; q4 chỗ thứ nhất (bốn lựa chọn); q5 chỗ thứ hai.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Không hình lựa chọn nào xuất hiện ở hai câu (kể cả câu Khởi động): ba ảnh đất chụp gần của câu w3 (`sandy_soil`, `alluvial_soil`, `tray_red_soil`) không làm lựa chọn ở Quiz; câu q4, q5 dùng hai bộ hình vẽ riêng.
 
 ### q1
@@ -458,18 +458,19 @@ image.alt.vi: Rừng phi lao mọc trên cát
 ### q2
 id: 41549f7d-16e1-4956-acc9-8f692859ff15
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `alluvial_soil`. Từ khoá tìm ảnh (EN): alluvial soil field close up Mekong Delta
 image.alt.en: Soft grey-brown soil in a field
 image.alt.vi: Đất nâu xám mềm trên ruộng
-sentence.en: Rivers bring {1} that makes alluvial soil.
-sentence.vi: Sông mang {1} về, bồi thành đất phù sa.
-answers: q2_silt
-hint.en: Remember the Alluvial soil picture.
-hint.vi: Em nhớ lại ô Đất phù sa nhé.
+sentence.en: Rivers bring silt that makes {1}.
+sentence.vi: Sông mang bùn mịn về, bồi thành {1}.
+answers: q2_alluvial
+hint.en: Think of the Mekong Delta after the floods.
+hint.vi: Em nghĩ tới đồng bằng sông Cửu Long sau mùa lũ nhé.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (alluvial soil, red soil, sandy soil); câu cũ điền "silt", từ của bài 11. Chỗ trống chuyển sang "alluvial soil", cùng câu. Giữ hai thẻ sai (đá bọt, đá dung nham) và lý do của chúng; thẻ `q2_silt` bỏ, thêm `q2_alluvial`. Không dùng thẻ "đất đỏ", "đất cát" với ảnh đất chụp gần, vì ba ảnh đó là lựa chọn của câu w3 (luật "không hình lựa chọn nào ở hai câu" của bài). `version` 2. Gợi ý cũ trỏ ô "Alluvial soil", tên ô là đáp án.
 explanation_correct.en: Each flood season, rivers leave new silt on fields.
 explanation_correct.vi: Mỗi mùa lũ, sông để lại bùn mịn mới trên ruộng.
 explanation_wrong.en: Rivers carry silt that builds alluvial soil.
@@ -495,12 +496,13 @@ image.brief: Dùng lại hình `tray_dark_rock` ở bài `be-mat-trai-dat/nui-lu
 image.alt.en: A dark rock with tiny holes
 image.alt.vi: Hòn đá sẫm màu có lỗ nhỏ
 
-#### bank q2_silt
-label.en: silt
-label.vi: bùn mịn
+#### bank q2_alluvial
+label.en: alluvial soil
+label.vi: đất phù sa
 image.brief: Dùng lại hình `silt` ở bài `da-va-dat/dat-gom-nhung-gi`. Từ khoá tìm ảnh (EN): silt deposit riverbank close up
-image.alt.en: Smooth grey silt
-image.alt.vi: Lớp bùn mịn màu xám
+image.alt.en: Smooth grey soil
+image.alt.vi: Lớp đất mịn màu xám
+> SK-047 (15/11): dùng lại ảnh bùn mịn của thẻ cũ (thứ bồi thành đất phù sa), để ba thẻ vẫn cùng là ảnh mẫu chụp gần; không dùng ảnh `alluvial_soil` vì đó là lựa chọn của câu w3. `alt` bỏ chữ "silt" (chữ đó đã có trong câu). Không cần hình mới.
 
 ### q3
 id: cef06d4d-3b10-44de-aec1-ce2add498e1e
@@ -688,8 +690,9 @@ answer: true
 image.brief: [ảnh] Một nắm đất màu nâu nhạt trong lòng bàn tay, chụp gần; chỉ thấy bàn tay, không thấy mặt; không có chữ; không lấy ảnh bãi cát hay cát biển. Từ khoá tìm ảnh (EN): gloved hand holding light brown soil
 image.alt.en: A handful of soil in a hand
 image.alt.vi: Nắm đất trong lòng bàn tay
-hint.en: Remember the Sandy soil and Feel and look pictures.
-hint.vi: Em nhớ lại ô Đất cát và ô Sờ và nhìn nhé.
+hint.en: Imagine rubbing each soil between your fingers.
+hint.vi: Em tưởng tượng xoa từng loại đất giữa các ngón tay nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ đúng hai ô tả đất cát (nhám, khô nhanh), bé chỉ cần ghép chữ. Gợi ý mới chỉ cách thử bằng tay, bé tự nhớ loại đất nào nhám.
 explanation_correct.en: Big grains feel rough and let water drain fast.
 explanation_correct.vi: Hạt to sờ ráp, nước thoát nhanh nên mau khô.
 explanation_wrong.en: Rough soil that dries fast is sandy soil.
@@ -805,7 +808,8 @@ image.alt.vi: Những hàng cà phê trên đồi
   - Khởi động: `single_choice` (w1, w3; ba lựa chọn), `true_false` (w2, Sai). DOK một. `recall_from.lesson`: `da-va-dat/dat-gom-nhung-gi` (w1, w2), `be-mat-trai-dat/nui-lua` (w3, đã có id).
   - Quiz: `single_choice` (q1 ba lựa chọn, q4 bốn lựa chọn, q5 ba lựa chọn), `fill_blank_bank` (q2, ba thẻ), `multi_choice` (q3, bốn lựa chọn, ba đúng), `true_false` (q6 Đúng, `speaker: na`, `misconception: all_soil_is_same`).
 - **Tham chiếu:** chạy `ids` cho bài 11 trước bài này.
-- **Vị trí đáp án đúng:** w1 thứ hai; w3 thứ ba; q1 thứ ba; q2 thẻ thứ ba; q3 thứ nhất, ba, bốn; q4 thứ nhất; q5 thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "alluvial soil", `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Ruộng lúa đồng bằng, Đồi cà phê, Rừng phi lao → `balanced`;

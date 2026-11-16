@@ -158,7 +158,7 @@
       "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
     },
     "q2": {
-      "same_as": "learn.explore.explore_cloudy"
+      "same_as": "tray.tray_puddle"
     },
     "q2.q2_smoke": {
       "own": {
@@ -176,13 +176,9 @@
       "title": "White cotton balls",
       "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
     },
-    "q2.q2_water": {
-      "own": {
-        "file": "content/images/own/thoi-tiet-va-thien-tai/nang-mua-gio-may.q2.q2_water.jpg",
-        "method": "drawn"
-      },
-      "title": "Tiny drops of water",
-      "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
+    "q2.q2_clouds": {
+      "same_as": "tray.tray_dark",
+      "lesson": "thoi-tiet-va-thien-tai/mua-mua-bao"
     },
     "q3": {
       "same_as": "tray.tray_dark",

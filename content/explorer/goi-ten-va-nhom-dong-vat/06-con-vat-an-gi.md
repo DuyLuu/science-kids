@@ -539,7 +539,7 @@ explanation_wrong.en: The answer is the fish. Animals eat different foods.
 explanation_wrong.vi: Đáp án là con cá. Mỗi con vật ăn thức ăn khác nhau.
 > Câu misconception (`all_animals_eat_same`), bằng hình: câu mở đầu nói trâu ăn cỏ, rồi hỏi mèo; lựa chọn sai "bó cỏ" đúng là thứ trâu ăn. Bé còn nghĩ "con vật nào cũng ăn như nhau" sẽ chọn bó cỏ. Nải chuối là thức ăn của người và nhiều con vật khác, không phải của mèo.
 > DOK 2: so sánh hai con vật. Hai câu EN bốn và năm từ, cả màn chín từ.
-> Bài một q4 đã hỏi mèo con ăn gì (cá nhỏ); câu này lặp ý có chủ ý ở bài ôn, có thêm vế so với con trâu (`all_animals_eat_same`). Ba ảnh giống bài một; vị trí đáp án khác (bài một thứ nhất, bài này thứ ba).
+> Bài một q4 đã hỏi mèo con ăn gì (cá nhỏ); câu này lặp ý có chủ ý ở bài ôn, có thêm vế so với con trâu (`all_animals_eat_same`). Ba ảnh giống bài một (vị trí đáp án đúng: hết hiệu lực 15/11, SK-047, app xáo).
 
 #### option q6_grass
 correct: false
@@ -665,7 +665,7 @@ image.alt.vi: Con trâu gặm cỏ
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, tám món.
   - Khởi động: `true_false` (w1 Sai, ôn bài năm), `single_choice` (w2, hai lựa chọn, ôn bài ba), `true_false` (w3 Đúng, ôn bài hai và câu "Em nghĩ sao?" của bài một).
   - Quiz: `single_choice` (q1, q3, q4, q6), `true_false` (q2 Sai, q5 Đúng). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`all_animals_eat_same`).
-- **Vị trí đáp án đúng:** w2 thứ nhất; q1 thứ nhất; q3 thứ ba; q4 thứ hai; q6 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự).
 - **Màn Chơi, ví dụ để kiểm:** Con trâu, Cá sấu, Con gà mái → `balanced`; Con thỏ, Con cò, Sư tử đá → `has_limited`; Con trâu, Con thỏ, Con vịt → `missing.tray_meat`.
 - **"Em nghĩ sao?" quay lại:** w3 là câu hỏi lại của bài một. Nếu sau này app lưu câu trả lời "Em nghĩ sao?" (đề xuất schema v1.1 `think_first`), màn này có thể nhắc "Lúc đầu em nghĩ…" (đề xuất, chưa có trong schema; không thêm vào chữ cho bé trước khi có `think_first`).
 - **Từ EN có thể ngoài Starters/Movers:** herbivore, carnivore, omnivore, plant-eater, meat-eater, sugar cane, egret, worm, nibble (gợi ý q2).

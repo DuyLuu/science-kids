@@ -98,3 +98,11 @@ Duy 2/11: thiết kế bộ app icon và màn khởi động trước khi build 
 | [SK-033](SK-033-real-images.md) | Hình minh hoạ thật (ảnh chụp, hình vẽ gần thực tế, nguồn miễn phí) cho mọi câu hỏi và lựa chọn; đường đưa hình vào gói và app | dev, ios-dev, content-editor, designer | tester | review (10/11: đường ảnh xong — validate luật hình, `images search`/`fetch`/`build`, app hiện ảnh thật và màn Nguồn hình; bài thử *Đất và nước* 18 ảnh (CC0 6, PD 4, CC BY 8), Duy duyệt, đã cài lên iPhone Luu; 7 chỗ chưa có ảnh đề xuất tự chụp) | — |
 | [SK-032](SK-032-discoverer-2-dinosaurs.md) | Soạn chủ đề Discoverer #2 "Khủng long và Trái Đất thời xa xưa" (5 bài; mọi câu hỏi và lựa chọn có hình) | content-editor; phiên chính chạy lệnh | tester | review (10/11: 5 bài đủ hình theo luật mới; tester rà chữ 0 chặn, đã sửa 7 lỗi nên sửa; `validate` 0 lỗi; TTS EN 531 + VI 525 clip, 31 clip VI bị đánh dấu chờ Duy nghe; gói 3 chủ đề 12 bài; đã cài lên iPhone Luu) | SK-031 |
 | [SK-031](SK-031-discoverer-1-earth-surface.md) | Soạn chủ đề Discoverer #1 "Bề mặt Trái Đất: núi lửa, động đất, đại dương" (5 bài, chủ đề đầu của pilot) | content-editor; phiên chính chạy lệnh | tester | review (9/11: 5 bài soạn xong, tester rà chữ 0 chặn, đã sửa 6 lỗi nên sửa; `validate` 0 lỗi; gói 2 chủ đề, 7 bài, 33,3 MB, check-pack OK; iOS unit test qua; đã cài lên iPhone Luu. Chờ duyệt chuyên môn, duyệt pháp lý bản đồ bài 2, Duy nghe 16 clip VI bị đánh dấu) | SK-030 |
+
+## Hệ thống quiz (mở 15/11/2026)
+
+Duy 15/11 chọn hướng B của [docs/quiz-system-proposal.md](../quiz-system-proposal.md) và thêm bước Tổng kết bài (T1). Làm theo 3 đợt; đợt 1 không đổi schema.
+
+| Id | Tên | Phụ trách | Tester | Trạng thái | Phụ thuộc |
+| --- | --- | --- | --- | --- | --- |
+| [SK-047](SK-047-quiz-system-wave-1.md) | Quiz Đợt 1: xáo lựa chọn, nút gợi ý, xếp thứ tự giữ thẻ đúng, tên cột biểu đồ, Tổng kết bài bản cơ bản; luật MC trong CLI; sửa MC, FB ở 40 bài Discoverer | designer → ios-dev; dev, content-editor song song | tester | review (16/11: tester kiểm lại 2 lượt, 51 đạt, 3 chưa kiểm, 0 chặn; PM đã cập nhật tài liệu: technical-plan A3, B4.4, B7.6; PRD mục 5; syllabus mục 1; danh sách việc Đợt 2 ở cuối ticket; chờ Duy review, commit) | SK-043, SK-044 |

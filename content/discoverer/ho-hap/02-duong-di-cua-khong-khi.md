@@ -57,8 +57,7 @@ explanation_correct.en: A carp's gills are just behind its head.
 explanation_correct.vi: Mang cá chép nằm ngay sau phần đầu.
 explanation_wrong.en: A carp lives in water and breathes with gills.
 explanation_wrong.vi: Cá chép sống dưới nước, thở bằng mang.
-> Ba con vật quen, ba nơi sống (trên cạn, trên trời, dưới nước), ba ảnh đã có từ bài một. Đáp án ở chỗ thứ ba (bài một w1 ở chỗ thứ nhất).
-
+> Ba con vật quen, ba nơi sống (trên cạn, trên trời, dưới nước), ba ảnh đã có từ bài một.
 #### option w1_cat
 correct: false
 feedback.en: A cat lives on land and breathes air.
@@ -599,8 +598,9 @@ answer: true
 image.brief: [hình vẽ] Một bạn nhỏ nằm ngửa trên chiếc chiếu, một chú gấu bông nhỏ (không nhãn hiệu) đặt trên bụng, vẽ nghiêng từ phía chân lên nên không thấy nét mặt; vài nét cong nhỏ quanh gấu bông cho thấy gấu bông đang nhấp nhô; không có chữ. Câu w2 bài bốn dùng lại hình này.
 image.alt.en: A child lying down with a teddy on the belly
 image.alt.vi: Bạn nhỏ nằm ngửa, gấu bông trên bụng
-hint.en: Remember the Food and air card.
-hint.vi: Em nhớ lại ô Thức ăn và không khí nhé.
+hint.en: Where does your windpipe take the air?
+hint.vi: Khí quản đưa không khí đi đâu?
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Thức ăn và không khí, mà câu của ô ("air to your lungs") chính là vế hai của Na. Gợi ý mới hỏi một bước trên đường đi của không khí; bé còn phải tự nối với vế "bụng phình ra".
 explanation_correct.en: A muscle under your lungs pushes your belly out.
 explanation_correct.vi: Một cơ dưới phổi đẩy bụng em phình ra.
 explanation_wrong.en: Air goes down the windpipe to the lungs.
@@ -720,7 +720,7 @@ image.alt.vi: Con voi với chiếc vòi dài
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `air_goes_to_belly`.
 - **Tham chiếu:** `recall_from.lesson: ho-hap/vi-sao-ta-phai-tho` (w1, w2) cần bài một đã có id: chạy `ids` cho bài một trước.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ hai; q2 thẻ thứ hai và thứ tư (`answers: q2_nose, q2_windpipe`); q3 thứ ba; q4 thứ nhất và thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Mũi, Khí quản, Phổi → `balanced`;

@@ -10,8 +10,6 @@ import SwiftUI
 
 /// Canvas sizes of the picture-book screens with no token.
 enum PictureBookMetrics {
-    /// Compact header: the four step squares (`14 × 14`), the current one with its name.
-    static let stepSquare: CGFloat = 14
     /// Explorer · Học: the page picture (`322 × 380`, the only part that grows or shrinks).
     static let pagePictureMax: CGFloat = 380
     /// Discoverer A2 · Học (`learn-2`): the picture up to `440` (the sentence is under it).
@@ -32,74 +30,6 @@ enum PictureBookMetrics {
     /// Page dots (`10 × 10`, current `22 × 10`).
     static let pageDot: CGFloat = 10
     static let pageDotCurrent: CGFloat = 22
-}
-
-/// Header gọn (A): back, the lesson's title on one or two lines, and under it the four steps as
-/// small squares with only the current step named. No lesson caption, no objective (it is read,
-/// not printed).
-struct CompactLessonHeader: View {
-    let title: String
-    let backLabel: Text
-    let session: LessonSession
-    let onBack: () -> Void
-
-    private static let labels: [LocalizedStringKey] = ["lesson.step.warmup", "lesson.step.learn", "lesson.step.play", "lesson.step.quiz"]
-
-    var body: some View {
-        let current = session.phaseIndex
-        HStack(spacing: Tokens.Space.s12) {
-            PaperIconButton(.arrowBack, accessibilityLabel: backLabel, action: onBack)
-                .accessibilityIdentifier("lesson.back")
-            VStack(alignment: .leading, spacing: Tokens.Space.s4) {
-                Text(verbatim: title)
-                    .typography(Tokens.Typography.title)
-                    .lineLimit(2)
-                    .minimumScaleFactor(PaperMetrics.labelMinimumScale)
-                    .accessibilityAddTraits(.isHeader)
-                    .accessibilityIdentifier("lesson.title")
-                HStack(spacing: Tokens.Space.s4) {
-                    ForEach(0..<Self.labels.count, id: \.self) { index in
-                        RoundedRectangle(cornerRadius: Tokens.Radius.bar, style: .continuous)
-                            .fill(ProgressSquares.state(of: index, current: current).fill)
-                            .frame(width: PictureBookMetrics.stepSquare, height: PictureBookMetrics.stepSquare)
-                            .paperDropShadow(Tokens.Shadow.paper1)
-                    }
-                    Text(Self.labels[min(current, Self.labels.count - 1)])
-                        .typography(Tokens.Typography.captionS, fixedBox: true)
-                        .foregroundStyle(Tokens.Role.textSecondary)
-                        .padding(.leading, Tokens.Space.s4)
-                }
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel(Text("lesson.step_a11y \(current + 1) \(Self.labels.count) \(Text(Self.labels[min(current, Self.labels.count - 1)]))"))
-                .accessibilityIdentifier("lesson.steps")
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            SecondLanguageSwitch(session: session)
-        }
-    }
-}
-
-/// Page dots and "n/N" under a picture-book page.
-struct PageDots: View {
-    let count: Int
-    let current: Int
-
-    var body: some View {
-        HStack(spacing: Tokens.Space.s6) {
-            ForEach(0..<count, id: \.self) { index in
-                RoundedRectangle(cornerRadius: Tokens.Radius.bar, style: .continuous)
-                    .fill(index < current ? Tokens.Palette.giDong : (index == current ? Tokens.Role.stateCurrent : Tokens.Role.surfaceInactive))
-                    .frame(width: index == current ? PictureBookMetrics.pageDotCurrent : PictureBookMetrics.pageDot, height: PictureBookMetrics.pageDot)
-            }
-            Text(verbatim: "\(current + 1)/\(count)")
-                .typography(Tokens.Typography.captionS, fixedBox: true)
-                .foregroundStyle(Tokens.Role.textSecondary)
-                .padding(.leading, Tokens.Space.s4)
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(Text("lesson.learn.page_a11y \(current + 1) \(count)"))
-        .accessibilityIdentifier("lesson.learn.page")
-    }
 }
 
 /// Explorer header (SK-043 Explorer-A, "header bước giữ như SK-040"): back and the four step

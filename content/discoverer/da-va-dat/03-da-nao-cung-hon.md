@@ -340,7 +340,7 @@ image.alt.vi: Hòn đá màu xám nhạt
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, thẻ từ có hình; trong một câu các lựa chọn cùng một loại hình (q5 toàn hình tự vẽ, các câu khác toàn ảnh chụp).
-> Vị trí đáp án đúng theo bảng ở `_topic.md`: q1 thứ hai, thẻ đúng q2 thứ hai, q3 thứ nhất, thứ hai và thứ tư, q4 thứ nhất, q5 thứ ba.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Mỗi ảnh mẫu đá chỉ làm lựa chọn ở một câu. Không hỏi thang Mohs, không hỏi "nặng hay cứng" (bài bốn).
 
 ### q1
@@ -410,8 +410,7 @@ explanation_correct.vi: Vết xước cho thấy đá mềm hơn móng tay.
 explanation_wrong.en: A fingernail easily scratches a soft rock.
 explanation_wrong.vi: Đá mềm dễ bị móng tay cào xước.
 > Gợi ý không gọi tên ô "Scratch test" (trùng nhãn đáp án). Câu không có gốc từ "scratch" · "xước".
-> Ba thẻ là ba mẫu đá cùng nền kem: lỗ (dùng lại ảnh đá bọt của bài hai), vết xước (ảnh mới), lớp (dùng lại ảnh sa thạch của bài hai). Hai thẻ sai nối bài hai (hạt, lỗ, lớp), nên có sức hút. Không thẻ nào là ảnh bé vừa thấy ở phần Học của bài này. Thẻ đúng ở chỗ thứ hai.
-
+> Ba thẻ là ba mẫu đá cùng nền kem: lỗ (dùng lại ảnh đá bọt của bài hai), vết xước (ảnh mới), lớp (dùng lại ảnh sa thạch của bài hai). Hai thẻ sai nối bài hai (hạt, lỗ, lớp), nên có sức hút. Không thẻ nào là ảnh bé vừa thấy ở phần Học của bài này.
 #### bank q2_hole
 label.en: hole
 label.vi: cái lỗ
@@ -613,8 +612,9 @@ answer: false
 image.brief: Dùng lại hình `chalk`. Từ khoá tìm ảnh (EN): chalk rock sample
 image.alt.en: A white rock
 image.alt.vi: Hòn đá màu trắng
-hint.en: Remember the Fingernail group in the game.
-hint.vi: Em nhớ lại nhóm Móng tay cào xước được ở trò chơi nhé.
+hint.en: Think what happens when you scratch chalk.
+hint.vi: Em nghĩ xem cào móng tay lên đá phấn thì sao nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ nhóm "Móng tay cào xước được", nơi bé vừa đặt đá phấn, nên gần như là đáp án. Gợi ý mới chỉ vào phép thử, bé tự nhớ kết quả.
 explanation_correct.en: Chalk is a rock, but soft enough to draw with.
 explanation_correct.vi: Đá phấn là đá, nhưng mềm tới mức vẽ được.
 explanation_wrong.en: Most rocks are hard, but some, like chalk, are soft.
@@ -733,7 +733,7 @@ image.alt.vi: Vách đá phấn trắng bên bờ biển
   - Khởi động: `single_choice` (w1, ôn bài hai), `true_false` (w2, ôn bài một, đáp án Đúng).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3, ba đáp án đúng), `true_false` (q6, `speaker: na`, đáp án Sai). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `all_rocks_are_hard`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; thẻ đúng q2 thứ hai; q3 thứ nhất, thứ hai và thứ tư; q4 thứ nhất; q5 thứ ba. Đúng bảng ở `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/nhin-ky-cac-loai-da` (w1), `da-va-dat/lam-quen-voi-da` (w2); hai bài đó phải có id trước.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Đá phấn, Đá vôi, Đá hoa cương → đạt;

@@ -158,8 +158,9 @@
       "title": "A kite on the grass on a cloudy day",
       "note": "Designer (agent) 11/11 vẽ bằng SVG, xuất JPEG 1024×768 (Duy 10/11 cho vẽ khi không có ảnh miễn phí hợp lệ); cùng nét hình tự vẽ của Hô hấp, Não bộ: màu chuyển nhẹ, bóng mềm, không viền đen, không chữ, không số, không nét mặt người; trẻ vẽ từ phía sau."
     },
-    "q3.q3_bring": {
-      "same_as": "tray.tray_bring_in"
+    "q3.q3_window": {
+      "same_as": "tray.tray_window",
+      "lesson": "be-mat-trai-dat/dong-dat-va-song-than"
     },
     "q3.q3_torch": {
       "own": {

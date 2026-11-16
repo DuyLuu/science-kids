@@ -176,17 +176,17 @@
     "q2": {
       "same_as": "learn.explore.explore_samples"
     },
-    "q2.q2_diamond": {
-      "same_as": "diamond",
+    "q2.q2_geology": {
+      "same_as": "vocab.geologist",
       "lesson": "da-va-dat/thang-do-cung-mohs"
     },
-    "q2.q2_quartz": {
-      "same_as": "quartz",
-      "lesson": "da-va-dat/thang-do-cung-mohs"
+    "q2.q2_palaeontology": {
+      "same_as": "vocab.palaeontologist",
+      "lesson": "khung-long/hoa-thach-ke-chuyen-khung-long"
     },
-    "q2.q2_talc": {
-      "same_as": "tray_talc",
-      "lesson": "da-va-dat/thang-do-cung-mohs"
+    "q2.q2_fieldwork": {
+      "same_as": "vocab.magnifying_glass",
+      "lesson": "da-va-dat/nhin-ky-cac-loai-da"
     },
     "q3": {
       "same_as": "tray_dark_rock",

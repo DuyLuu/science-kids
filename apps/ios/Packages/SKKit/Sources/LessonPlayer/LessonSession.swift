@@ -150,6 +150,8 @@ public final class LessonSession {
         if exploreBlock != nil || wordList != nil { steps.append(.learn) }
         if tray != nil { steps.append(.play) }
         steps += quizItems.indices.map { .quiz(index: $0) }
+        // SK-047: Tổng kết between the last quiz question and the reward.
+        steps.append(.recap)
         steps.append(.reward)
         self.steps = steps
 
@@ -158,7 +160,14 @@ public final class LessonSession {
         if var saved = store?.inProgress(lessonId: lesson.id, childId: context.childId, now: date),
            steps.contains(saved.step) {
             saved.isPaused = false
-            attempt = saved
+            let checked = Self.reconciled(
+                saved, warmup: warmupItems, quiz: quizItems, rules: rules,
+                trayItems: tray.map { Set($0.items.map(\.key)) }, groups: exploreBlock.map { $0.groups.map(\.key) }
+            )
+            if !checked.dropped.isEmpty {
+                log.notice("saved tries no longer fit the content, questions open again: \(checked.dropped.joined(separator: ","), privacy: .public)")
+            }
+            attempt = checked.progress
         } else {
             attempt = AttemptProgress(childId: context.childId, lessonId: lesson.id, now: date, firstStep: steps[0])
         }
@@ -176,11 +185,66 @@ public final class LessonSession {
             log.notice("question \(item.key, privacy: .public) (\(item.format, privacy: .public)) has no \(context.presentation.rawValue, privacy: .public) screen: left out")
         }
         prepareStep()
-        if progress.step == .reward {
+        if progress.step.finishesTheAttempt {
             finish()
         } else {
             save()
         }
+    }
+
+    /// SK-047: a lesson stopped half way and opened again on a newer content pack (options, bank
+    /// words or order cards renamed or removed, fewer tries allowed). The engine refuses such a
+    /// saved try, so its question would show as wrong without being asked and the attempt could
+    /// never be complete. Each question whose saved tries the engine refuses for the content now
+    /// loses them (and its `hint_used`) and opens again; an attempt standing after such a quiz
+    /// question goes back to the first one. Tray items and Học groups that are gone are dropped.
+    /// `dropped`: the question keys that open again, for the log.
+    static func reconciled(
+        _ saved: AttemptProgress, warmup: [QuizItem], quiz: [QuizItem], rules: LessonRules,
+        trayItems: Set<String>?, groups: [String]?
+    ) -> (progress: AttemptProgress, dropped: [String]) {
+        var progress = saved
+        var dropped: [String] = []
+        func fits(_ item: QuizItem, _ tries: [Try]) -> Bool {
+            guard let scoring = item.answer.scoringItem else { return false }
+            if case .success = scoreItem(item: scoring, tries: tries, rules: rules.scoring(forFormat: item.format)) { return true }
+            return false
+        }
+        let warmupKeys = Set(warmup.map(\.key))
+        progress.warmupTries = progress.warmupTries.filter { warmupKeys.contains($0.key) }
+        for item in warmup {
+            if let tries = progress.warmupTries[item.key], !fits(item, tries) {
+                progress.warmupTries[item.key] = nil
+                progress.hintsUsed.remove(hintKey(item, in: .warmup))
+                dropped.append(item.key)
+            }
+        }
+        let quizKeys = Set(quiz.map(\.key))
+        progress.quizTries = progress.quizTries.filter { quizKeys.contains($0.key) }
+        var firstReopened: Int?
+        for (index, item) in quiz.enumerated() {
+            if let tries = progress.quizTries[item.key], !fits(item, tries) {
+                progress.quizTries[item.key] = nil
+                progress.hintsUsed.remove(hintKey(item, in: .quiz))
+                dropped.append(item.key)
+                if firstReopened == nil { firstReopened = index }
+            }
+        }
+        if let first = firstReopened {
+            switch progress.step {
+            case .quiz(let index) where index > first: progress.step = .quiz(index: first)
+            case .recap, .reward: progress.step = .quiz(index: first)
+            default: break
+            }
+        }
+        if let trayItems {
+            progress.tray = progress.tray.filter { trayItems.contains($0) }
+        }
+        if let groups {
+            progress.exploreSeen = progress.exploreSeen.filter { groups.contains($0) }
+            if let selected = progress.exploreSelected, !groups.contains(selected) { progress.exploreSelected = nil }
+        }
+        return (progress, dropped)
     }
 
     public var step: Step { progress.step }
@@ -196,18 +260,18 @@ public final class LessonSession {
         case .warmup: 0
         case .learn: 1
         case .play: 2
-        case .quiz, .reward: 3
+        case .quiz, .recap, .reward: 3
         }
     }
 
-    /// Goes to the next step; the step after the last quiz question is the reward, which finishes
-    /// the attempt.
+    /// Goes to the next step. The step after the last quiz question is Tổng kết (SK-047), which
+    /// finishes the attempt on the way in: a child who closes the app there keeps the lesson.
     public func advance() {
         guard let index = steps.firstIndex(of: step), index + 1 < steps.count else { return }
         if step == .play, trayState?.success == true { progress.playCompleted = true }
         progress.step = steps[index + 1]
         prepareStep()
-        if progress.step == .reward {
+        if progress.step.finishesTheAttempt {
             finish()
         } else {
             save()
@@ -292,10 +356,56 @@ public final class LessonSession {
         return status(of: item, in: phase)
     }
 
-    public func markHintUsed(_ item: QuizItem) {
-        guard !progress.hintsUsed.contains(item.key) else { return }
-        progress.hintsUsed.insert(item.key)
+    // MARK: Gợi ý (SK-047)
+
+    /// The child tapped "Gợi ý" (Discoverer, Scientist): `hint_used` of the question. Only while
+    /// the question is not done; the hint the app reads by itself after a wrong try does not
+    /// count (it never calls this). Opening the hint does not change the points (Duy 15/11).
+    public func markHintUsed(_ item: QuizItem, in phase: QuestionPhase) {
+        guard !status(of: item, in: phase).isDone else { return }
+        let key = Self.hintKey(item, in: phase)
+        guard !progress.hintsUsed.contains(key) else { return }
+        progress.hintsUsed.insert(key)
         save()
+    }
+
+    /// Whether the child opened the hint of this question (its slip stays open, also after the
+    /// lesson reopens).
+    public func hintOpened(_ item: QuizItem, in phase: QuestionPhase) -> Bool {
+        progress.hintsUsed.contains(Self.hintKey(item, in: phase))
+    }
+
+    /// Key in `hintsUsed`: the quiz key as before (`finish` reads it for `hint_used`), Khởi động
+    /// keys apart so they never mark a quiz question.
+    static func hintKey(_ item: QuizItem, in phase: QuestionPhase) -> String {
+        phase == .warmup ? "warmup/" + item.key : item.key
+    }
+
+    // MARK: Order on the screen (SK-047)
+
+    /// The choices of a `single_choice` or `multi_choice` as the screen shows them
+    /// (`SeededOrder`, by attempt id and question key). Other formats: their content order.
+    public func shownOptions(_ item: QuizItem) -> [QuizItem.ChoiceOption] {
+        switch item.answer {
+        case .singleChoice(let choice): SeededOrder.shuffled(choice.options, attemptId: progress.attemptId, key: item.key)
+        case .multiChoice(let choice): SeededOrder.shuffled(choice.options, attemptId: progress.attemptId, key: item.key)
+        // `options[i]` answers `bars[i]`: the chart keeps its order.
+        case .pictureBarChart(let chart): chart.options
+        default: []
+        }
+    }
+
+    /// The word cards of a `fill_blank_bank` as the screen shows them. The blanks keep the
+    /// sentence's order.
+    public func shownBank(_ item: QuizItem) -> [QuizItem.FillBlankBank.BankWord] {
+        guard case .fillBlankBank(let fill) = item.answer else { return [] }
+        return SeededOrder.shuffled(fill.bank, attemptId: progress.attemptId, key: item.key)
+    }
+
+    /// The cards of an `order_sequence` as the bank shows them: never in `answer` order.
+    public func shownOrderCards(_ item: QuizItem) -> [QuizItem.OrderSequence.SequenceItem] {
+        guard case .orderSequence(let order) = item.answer else { return [] }
+        return SeededOrder.orderCards(order.items, answer: order.answer, attemptId: progress.attemptId, key: item.key)
     }
 
     /// Quiz questions answered so far (for the squares and "Câu n/6").
@@ -341,7 +451,8 @@ public final class LessonSession {
     // MARK: Finish
 
     /// Scores the attempt, writes it to the history, removes the progress. Called once, on the
-    /// way into the reward (and again, harmlessly, if the app stopped half way through it).
+    /// way into Tổng kết (SK-047; before, the reward), and again, harmlessly, if the app stopped
+    /// half way through it.
     private func finish() {
         guard summary == nil else { return }
         let completedAt = now().wholeSeconds
@@ -419,5 +530,12 @@ public final class LessonSession {
         } catch {
             log.error("progress not saved: \(String(describing: error), privacy: .public)")
         }
+    }
+}
+
+extension AttemptProgress.Step {
+    /// Tổng kết and the reward come after the attempt is scored and written (SK-047).
+    var finishesTheAttempt: Bool {
+        self == .recap || self == .reward
     }
 }

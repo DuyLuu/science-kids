@@ -336,7 +336,7 @@ image.alt.vi: Đôi tay đục một khối đá
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án theo bảng `_topic.md` (bài bảy): q1 thứ ba, thẻ đúng q2 thứ ba, q3 thứ nhất và thứ hai, q4 thứ hai, q5 thứ hai.
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Mỗi hình chỉ một vai trong bài: `explore_weathering`, `explore_erosion` chỉ có ở câu q4; câu q3 dùng bốn món của kệ Chơi.
 
 ### q1
@@ -404,7 +404,7 @@ explanation_correct.en: As roots grow thicker, the crack gets wider.
 explanation_correct.vi: Rễ càng to ra, vết nứt càng rộng thêm.
 explanation_wrong.en: Roots slowly push into rock and crack it.
 explanation_wrong.vi: Rễ cây len vào đá và dần làm đá nứt.
-> DOK 1: nhớ lại ô Phong hoá và từ `crack`. Câu không có gốc từ "crack". Hai thẻ sai có sức hút: "layer" (đá có từng lớp, bài hai), "fossil" (thứ nằm trong đá, *Khủng long*). Thẻ đúng ở chỗ thứ ba (bảng vị trí). Hình câu hỏi là cây đa, không thấy rễ trên đá.
+> DOK 1: nhớ lại ô Phong hoá và từ `crack`. Câu không có gốc từ "crack". Hai thẻ sai có sức hút: "layer" (đá có từng lớp, bài hai), "fossil" (thứ nằm trong đá, *Khủng long*). Hình câu hỏi là cây đa, không thấy rễ trên đá.
 
 #### bank q2_layer
 label.en: layer
@@ -435,7 +435,7 @@ image.alt.vi: Vết nứt dài trên hòn đá
 ### q3
 id: 1ba09575-739d-45af-9775-4213b19beadd
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones are weathering?
 prompt.vi: Những cảnh nào là phong hoá?
@@ -450,8 +450,8 @@ explanation_correct.en: The broken bits stay put until erosion moves them.
 explanation_correct.vi: Mảnh vỡ nằm tại chỗ, tới khi xói mòn mang đi.
 explanation_wrong.en: Roots and rain broke the rock right where it is.
 explanation_wrong.vi: Rễ cây và mưa làm đá vỡ ngay tại chỗ.
-> DOK 2: phân loại bốn cảnh của kệ Chơi theo phong hoá và xói mòn (ở kệ Chơi bé xếp theo lực: nước, gió, cây; ở đây xếp theo việc đá vỡ hay bị mang đi). Hai lựa chọn sai là hai cảnh mang cát, sỏi đi (xói mòn): gió thổi cát, suối cuốn sỏi đá. Bốn hình đều là hình vẽ của kệ Chơi. Đáp án ở chỗ thứ nhất và thứ hai (bảng vị trí).
-> Bốn nhãn cùng một khuôn (vật đang làm gì), để đáp án không lộ bằng dạng câu (SK-037, tester N5). Nhãn ở đây khác nhãn món ở kệ Chơi: kệ gọi tên cảnh, câu này nói việc đang xảy ra, nên nhãn suối là "stream carrying pebbles" để câu chỉ có một cách hiểu. [CẦN KIỂM] Nước suối vừa mài mòn vừa mang sỏi đá đi; chữ cho trẻ xếp cảnh này vào xói mòn.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_stream` thay bằng `q3_banyan` (rễ đa trùm tường đá, đúng), dùng lại hình kệ Chơi; `version` 2. Bỏ suối luôn bỏ được chỗ chưa chắc của lựa chọn đó (suối vừa mài đá vừa mang sỏi đi). Lựa chọn sai còn lại là gió thổi cát bay đi (xói mòn). Hai lời giải thích vẫn đúng, không đổi.
+> DOK 2: phân loại bốn cảnh của kệ Chơi theo phong hoá và xói mòn (ở kệ Chơi bé xếp theo lực: nước, gió, cây; ở đây xếp theo việc đá vỡ hay bị mang đi). Hai lựa chọn sai là hai cảnh mang cát, sỏi đi (xói mòn): gió thổi cát, suối cuốn sỏi đá. Bốn hình đều là hình vẽ của kệ Chơi.> Bốn nhãn cùng một khuôn (vật đang làm gì), để đáp án không lộ bằng dạng câu (SK-037, tester N5). Nhãn ở đây khác nhãn món ở kệ Chơi: kệ gọi tên cảnh, câu này nói việc đang xảy ra, nên nhãn suối là "stream carrying pebbles" để câu chỉ có một cách hiểu. [CẦN KIỂM] Nước suối vừa mài mòn vừa mang sỏi đá đi; chữ cho trẻ xếp cảnh này vào xói mòn.
 
 #### option q3_roots
 correct: true
@@ -479,15 +479,14 @@ image.brief: Dùng lại hình `tray_dunes`.
 image.alt.en: Wind blowing sand over dunes
 image.alt.vi: Gió thổi cát bay trên đồi cát
 
-#### option q3_stream
-correct: false
-feedback.en: A stream carrying pebbles away is erosion.
-feedback.vi: Suối cuốn sỏi đi nơi khác, đó là xói mòn.
-label.en: stream carrying pebbles
-label.vi: suối cuốn sỏi đá đi
-image.brief: Dùng lại hình `tray_stream`.
-image.alt.en: A small stream over rocks
-image.alt.vi: Con suối nhỏ chảy qua đá
+#### option q3_banyan
+correct: true
+label.en: roots cracking a stone wall
+label.vi: rễ đa làm nứt tường đá
+image.brief: Dùng lại hình `tray_banyan`.
+image.alt.en: Tree roots over an old stone wall
+image.alt.vi: Rễ cây trùm lên bức tường đá cũ
+> SK-047 (15/11): thay `q3_stream`; hình kệ Chơi (hình vẽ, cùng nét ba lựa chọn kia), không cần hình mới. Nhãn cùng khuôn "vật đang làm gì" như ba nhãn kia.
 
 ### q4
 id: 20b231a3-0d56-4ca4-973b-09b5304f95c1
@@ -607,10 +606,11 @@ answer: true
 image.brief: [ảnh] Rễ một cái cây trong rừng trùm lên và len vào khe một tảng đá lớn, chụp gần vừa (ảnh designer chọn 11/11: không thấy rõ hai mảnh đá tách đôi); khác ảnh `explore_weathering` (tường đá) và hình món `tray_roots_steps` (bậc đá); không có người, không có chữ. Từ khoá tìm ảnh (EN): tree roots splitting boulder forest
 image.alt.en: Tree roots over a big rock
 image.alt.vi: Rễ cây trùm lên tảng đá lớn
-hint.en: Think: did the bits go anywhere?
-hint.vi: Em thử nghĩ: mảnh đá có bị mang đi đâu không?
-explanation_correct.en: It becomes erosion only when the bits are carried away.
-explanation_correct.vi: Khi mảnh vỡ bị mang đi mới là xói mòn.
+hint.en: Remember how weathering and erosion are different.
+hint.vi: Em nhớ lại phong hoá khác xói mòn ở điểm nào nhé.
+explanation_correct.en: Erosion starts only when the broken bits are carried away.
+explanation_correct.vi: Chỉ khi mảnh vỡ bị mang đi mới là xói mòn.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không ("mảnh đá có bị mang đi không?") mà câu trả lời quyết định đáp án; gợi ý mới trỏ chỗ phân biệt hai từ, bé tự áp vào cảnh rễ cây. Giải thích khi đúng bỏ "It" để đứng riêng được trên thẻ "Ý sai → Ý đúng" của màn Tổng kết.
 explanation_wrong.en: The rock broke in place, so that is weathering.
 explanation_wrong.vi: Hòn đá vỡ ngay tại chỗ, đó là phong hoá.
 feedback_false.en: The cracked bits are still in the same place.
@@ -701,7 +701,8 @@ image.alt.vi: Bên trong động Phong Nha
   - Khởi động: `single_choice` (w1 ôn bài sáu), `true_false` (w2 ôn bài ba, Sai).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, Đúng). Bốn format.
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `weathering_is_erosion`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ ba; thẻ đúng q2 thứ ba; q3 thứ nhất và thứ hai; q4 thứ hai; q5 thứ hai. Khớp bảng `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q3 (15/11, SK-047):** `multi_choice` ba đáp án đúng, `version` 2.
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/da-dung-lam-gi` (w1), `da-va-dat/da-nao-cung-hon` (w2).
 - **Câu "Em nghĩ sao?"** của bài một (`rocks_never_change`): bài này dạy ở ô `explore_forces`; bài mười lăm hỏi lại ở w3.
 - **Màn Chơi, ví dụ để kiểm:**

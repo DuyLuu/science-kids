@@ -602,8 +602,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: true
-hint.en: When people dig deep, do they find melted rock?
-hint.vi: Khi người ta đào thật sâu, có gặp đá nóng chảy không?
+hint.en: Think of people digging a deep well.
+hint.vi: Em nghĩ tới lúc người ta đào một cái giếng sâu nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời quyết định đáp án. Gợi ý mới chỉ vào bằng chứng đời thường (đào giếng chỉ gặp đất, đá, nước), bé tự xét vế "vỏ thì rắn chắc".
 explanation_correct.en: Even the mantle below the crust is mostly solid.
 explanation_correct.vi: Ngay cả lớp manti bên dưới cũng phần lớn vẫn rắn.
 explanation_wrong.en: Melted rock is deep down, not just under our feet.
@@ -783,10 +784,7 @@ image.alt.vi: Tháp khoan và một hố khoan rất sâu
   - `recall_from.lesson: be-mat-trai-dat/cac-chau-luc-va-dai-duong` (w1) → id bài hai, đã có (slug khớp file `02-cac-chau-luc-va-dai-duong.md`).
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng; `answers: w2_surface`, `answers: q2_core` trỏ `#### bank`. Mọi key duy nhất trong bài.
 - **Câu w1 thay thế:** không cần nữa, vì bài hai đã có id (rà chéo 9/11).
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ ba; w2: từ thứ hai trong ngân hàng;
-  - q1: thứ nhất; q2: từ thứ hai trong ngân hàng; q3: thứ nhất và thứ tư; q4: thứ hai; q5: thứ ba.
-  - Kệ Chơi xếp xen các nhóm và hai mô hình: hạt bơ, vỏ trứng, biển đá nóng chảy, thịt bơ, lòng đỏ, vỏ bơ, lòng trắng.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và kệ Chơi).
 - **Kệ bảy món, không phải tám:** món thứ tám phải là bẫy thứ hai hợp cùng lời nhắn `has_limited` ("There is no sea of melted rock just below us"). Biên tập không tìm được món nào vừa hợp vừa đúng khoa học. Ví dụ bát canh nóng sai, vì nhân ngoài là kim loại lỏng nên "chất lỏng nóng" không sai với mọi lớp. Nhờ ios-dev kiểm lưới bốn cột với bảy món trên iPhone và iPad (hàng hai có ba món).
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm vỏ trứng, lòng trắng, lòng đỏ → đạt (`balanced`);

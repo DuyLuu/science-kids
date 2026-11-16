@@ -61,7 +61,7 @@
         ]
       },
       "title": "Three rocks in a row",
-      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Trái sang phải: đá phấn, đá cẩm thạch, đá hoa cương."
+      "note": "Designer (agent) 11/11 tách nền từng ảnh, đặt thành một hàng ngang trên cùng nền kem, cùng cỡ; không chữ, không số, không mũi tên. Trái sang phải: đá phấn, đá cẩm thạch, đá hoa cương. SK-047 16/11 (designer, sửa lại sau khi tester kiểm iPhone 16): hình vuông 1024, hàng ba hòn đá rộng 740 ở giữa. Trang Học Discoverer là khung dọc 0,78–0,9:1 (đo từ code ExplorerLearnStep.pagePicture), nên ảnh 4:3 chỉ còn thấy 600–680 px giữa; bản 4:3 cũ (hàng 991 px) và bản 4:3 rộng 760 đều mất mép hòn đầu và hòn cuối. Hình vuông thấy ít nhất 795 px giữa ở trang Học, thấy trọn ở thẻ ý chính 136, khung Từ mới 4:3 và câu Đ/S w2 của bài 4 (329×224). Câu q1 không hiện hình câu hỏi (ba lựa chọn đều có hình)."
     },
     "tray.tray_marble": {
       "same_as": "vocab.marble"

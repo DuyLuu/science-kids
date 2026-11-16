@@ -618,7 +618,7 @@ image.alt.vi: Con sâu trên lá cải
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món.
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn bài một), `true_false` (w2 Đúng, ôn chủ đề số một bài hai).
   - Quiz: `single_choice` (q1, q3, q5), `true_false` (q2 Đúng, q6 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`arrow_means_eats`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q3 thứ ba; q5 thứ nhất. q4: thẻ trong file chim sẻ, lá cải, sâu → đúng: lá cải, sâu, chim sẻ.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: lá cải, sâu, chim sẻ.
 - **Màn Chơi, ví dụ để kiểm:** Con châu chấu, Lá cải, Rơm → `balanced`; Con giun, Lá cải, Châu chấu lá dừa → `has_limited`; Con châu chấu, Cỏ, Rơm → `missing.tray_caterpillar`.
 - **`order_sequence` Explorer:** đề xuất ô đặt thẻ có mũi tên chỉ sang phải giữa các ô (`_topic.md`, Đề xuất cho ios-dev). Nếu app xáo thẻ thì càng tốt.
 - **q6 dùng hình câu hỏi:** câu `true_false` Explorer hiện hình câu (khung 4:3), nên hình chuỗi ngược phải hiện đủ. Nhờ kiểm trên iPhone nhỏ: ba món nhỏ vẫn nhận ra được.

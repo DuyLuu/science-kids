@@ -577,34 +577,41 @@
       "id": "aeb7debc-28ed-4fd8-a192-8a9e5a581455",
       "key": "q2",
       "format": "fill_blank_bank",
-      "version": 1,
+      "version": 2,
       "dok": 1,
       "prompt": {
         "en": "Pick the missing word",
         "vi": "Chọn từ còn thiếu"
       },
       "hint": {
-        "en": "Rice helps you run and play. What does it give you?",
-        "vi": "Cơm giúp em chạy nhảy, vui chơi. Cơm cho em thứ gì?"
+        "en": "Think what helps your body grow and stay well.",
+        "vi": "Em nghĩ xem thứ gì giúp cơ thể lớn và khoẻ nhé."
       },
       "explanation_correct": {
-        "en": "Carbohydrates give us energy to run and play.",
-        "vi": "Chất bột đường cho ta năng lượng để chạy nhảy, vui chơi."
+        "en": "Nutrients help your body grow, move and stay well.",
+        "vi": "Chất dinh dưỡng giúp cơ thể lớn lên, vận động và khoẻ mạnh."
       },
       "explanation_wrong": {
-        "en": "The answer is energy. Rice and bread give us energy.",
-        "vi": "Đáp án là năng lượng. Cơm và bánh mì cho ta năng lượng."
+        "en": "Food gives us nutrients, like protein, fat and vitamins.",
+        "vi": "Thức ăn cho ta chất dinh dưỡng, như đạm, béo, vitamin."
       },
       "sentence": {
-        "en": "Carbohydrates give us {1}.",
-        "vi": "Chất bột đường cho ta {1}."
+        "en": "Food gives us {1}, like protein and fat.",
+        "vi": "Thức ăn cho ta {1}, như chất đạm và chất béo."
       },
       "bank": [
         {
-          "key": "q2_energy",
+          "key": "q2_nutrients",
           "label": {
-            "en": "energy",
-            "vi": "năng lượng"
+            "en": "nutrients",
+            "vi": "chất dinh dưỡng"
+          },
+          "image": {
+            "alt": {
+              "en": "Rice, an egg, oil and vegetables together",
+              "vi": "Cơm, trứng, dầu ăn và rau đặt cạnh nhau"
+            },
+            "brief": "Dùng lại hình `nutrient`."
           }
         },
         {
@@ -612,6 +619,17 @@
           "label": {
             "en": "air",
             "vi": "không khí"
+          },
+          "image": {
+            "alt": {
+              "en": "Wind blowing over a rice field",
+              "vi": "Gió thổi trên cánh đồng lúa"
+            },
+            "brief": "Dùng lại hình `w1` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): rice field wind waves Vietnam"
+          },
+          "feedback": {
+            "en": "We breathe in air; it does not come from food.",
+            "vi": "Mình hít không khí vào, không phải từ thức ăn."
           }
         },
         {
@@ -619,11 +637,22 @@
           "label": {
             "en": "sunlight",
             "vi": "ánh nắng"
+          },
+          "image": {
+            "alt": {
+              "en": "The bright sun in the sky",
+              "vi": "Mặt Trời chói sáng trên trời"
+            },
+            "brief": "Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky"
+          },
+          "feedback": {
+            "en": "Sunlight comes from the sun, not from food.",
+            "vi": "Ánh nắng đến từ Mặt Trời, không từ thức ăn."
           }
         }
       ],
       "answers": [
-        "q2_energy"
+        "q2_nutrients"
       ]
     },
     {
@@ -889,12 +918,12 @@
         "vi": "Na nói đúng không?"
       },
       "instruction": {
-        "en": "Challenge: spot the mistake",
-        "vi": "Thử thách: bắt lỗi sai"
+        "en": "Challenge: check Na's idea",
+        "vi": "Thử thách: kiểm tra ý của Na"
       },
       "hint": {
-        "en": "Remember: fats give us energy and keep us warm.",
-        "vi": "Nhớ lại phần học: Chất béo cho ta năng lượng và giữ ấm cơ thể."
+        "en": "Think about what fat does for your body.",
+        "vi": "Em nghĩ xem chất béo làm gì cho cơ thể nhé."
       },
       "explanation_correct": {
         "en": "A little fat gives us energy and keeps us warm.",

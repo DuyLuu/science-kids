@@ -124,6 +124,33 @@ import UIKit
         #expect(AppModel(store: store, library: .empty).speech.firstLanguageOnly == "en")
     }
 
+    /// SK-047 (tester 16/11, `-SKTestProfile`): no profile → the test profile is saved (Lớp 3,
+    /// Discoverer, the mode asked) and Home opens; a saved profile is never replaced.
+    @Test func testProfileOnlyWhenThereIsNone() throws {
+        let (store, dir) = Self.tempStore()
+        defer { try? FileManager.default.removeItem(at: dir) }
+        let fresh = AppModel(store: store, library: .empty)
+        #expect(fresh.makeTestProfileIfNone(languageMode: .bilingual))
+        let made = try #require(fresh.profile)
+        #expect(made.grade == 3)
+        #expect(made.ageGroup == .discoverer)
+        #expect(made.languageMode == .bilingual)
+        #expect(made.voiceMode == .both)
+        #expect(try store.load() == made, "saved, so a relaunch opens Home")
+
+        let relaunched = AppModel(store: store, library: .empty)
+        #expect(!relaunched.makeTestProfileIfNone(languageMode: .enFirst))
+        #expect(relaunched.profile == made)
+
+        let (other, otherDir) = Self.tempStore()
+        defer { try? FileManager.default.removeItem(at: otherDir) }
+        let minh = try Self.minh()
+        try AppModel(store: other, library: .empty).createProfile(minh)
+        let kept = AppModel(store: other, library: .empty)
+        #expect(!kept.makeTestProfileIfNone(languageMode: .bilingual))
+        #expect(kept.profile == minh)
+    }
+
     @Test func settingsLanguageWithoutAFileChangesNothing() throws {
         let model = AppModel(store: nil, library: .empty)
         #expect(!model.setLanguage(.enFirst))

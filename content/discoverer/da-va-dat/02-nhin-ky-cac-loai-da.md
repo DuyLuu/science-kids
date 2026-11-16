@@ -98,8 +98,9 @@ image.brief: Dùng lại hình `tray_concrete` ở bài `da-va-dat/lam-quen-voi-
 image.alt.en: A grey concrete block
 image.alt.vi: Khối bê tông màu xám
 answer: false
-hint.en: Remember the Made by people picture in lesson one.
-hint.vi: Em nhớ lại ô Do con người làm ra ở bài một nhé.
+hint.en: Think about how concrete is made.
+hint.vi: Em nghĩ xem bê tông được làm ra thế nào nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "Made by people" · "Do con người làm ra" là lời bác bỏ của câu "Concrete is a natural rock.". Gợi ý mới chỉ cách nghĩ.
 explanation_correct.en: People mix concrete, so it is not natural rock.
 explanation_correct.vi: Bê tông do con người trộn, không phải đá tự nhiên.
 explanation_wrong.en: Concrete is made by people, not by nature.
@@ -337,7 +338,7 @@ image.alt.vi: Hòn đá màu vàng nâu
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, thẻ từ có hình; trong một câu các lựa chọn cùng là ảnh chụp, cùng nền.
-> Vị trí đáp án đúng theo bảng ở `_topic.md`: q1 thứ ba, thẻ đúng q2 thứ ba, q3 thứ hai và thứ ba, q4 thứ nhất, q5 thứ hai.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Mỗi ảnh mẫu đá chỉ làm lựa chọn ở một câu (không giữ hai vai trong bài). Câu q4 dùng trước ảnh `chalk` của bài ba (Bộ mẫu đá: mỗi loại đá một ảnh gốc).
 > Không hỏi cứng, mềm hay thấm nước (kế hoạch bài hai).
 
@@ -409,8 +410,7 @@ explanation_wrong.en: Granite is full of shiny grains you can see.
 explanation_wrong.vi: Đá hoa cương có nhiều hạt lấp lánh nhìn thấy được.
 > A2 (SK-043, 14/11): câu điền bỏ "nhiều màu" cho ngắn (còn tám chữ có ô trống); ý "nhiều màu" còn ở ví dụ ô Hạt.
 > Gợi ý không gọi tên ô "Grains" (trùng nhãn đáp án). Hình câu hỏi là kính lúp, không phải ảnh đá hoa cương (ảnh đó cho thấy hạt).
-> Ba thẻ là ba món ăn quen ở Việt Nam minh hoạ ba từ: bánh bò nhiều lỗ, bánh lớp, hạt gạo. Cùng là hình vẽ đồ ăn (theo hình designer 11/11); không thẻ nào là hình bé vừa thấy ở phần Học. Thẻ đúng ở chỗ thứ ba.
-
+> Ba thẻ là ba món ăn quen ở Việt Nam minh hoạ ba từ: bánh bò nhiều lỗ, bánh lớp, hạt gạo. Cùng là hình vẽ đồ ăn (theo hình designer 11/11); không thẻ nào là hình bé vừa thấy ở phần Học.
 #### bank q2_holes
 label.en: holes
 label.vi: lỗ
@@ -616,8 +616,9 @@ image.alt.en: Two grey rocks side by side
 image.alt.vi: Hai hòn đá xám đặt cạnh nhau
 hint.en: Think about what makes each kind of rock different.
 hint.vi: Em nghĩ xem điều gì làm các loại đá khác nhau nhé.
-explanation_correct.en: Only one has holes, so colour is not enough.
-explanation_correct.vi: Chỉ một hòn có lỗ, nên nhìn màu thôi chưa đủ.
+explanation_correct.en: Colour is not enough; look closely at holes and grains.
+explanation_correct.vi: Nhìn màu thôi chưa đủ, em xem kỹ lỗ và hạt.
+> SK-047 (15/11, nháp AI): câu cũ "Only one has holes…" cần hình hai hòn đá bên cạnh mới hiểu; trên thẻ "Ý sai → Ý đúng" của màn Tổng kết không có hình đó, nên câu mới tự đứng được.
 explanation_wrong.en: Look for grains, holes and layers, not just colour.
 explanation_wrong.vi: Em nhìn hạt, lỗ và lớp, không chỉ nhìn màu.
 feedback_false.en: One rock has holes, and the other does not.
@@ -729,7 +730,7 @@ image.alt.vi: Đá bọt nổi trên mặt nước
   - Khởi động: `single_choice` (w1), `true_false` (w2, đáp án Sai); cả hai ôn bài một.
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Đúng). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `rocks_all_look_same`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ ba; thẻ đúng q2 thứ ba; q3 thứ hai và thứ ba; q4 thứ nhất; q5 thứ hai. Đúng bảng ở `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/lam-quen-voi-da` (w1, w2); bài một phải có id trước.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Đá hoa cương hồng, Đá bọt, Sa thạch → đạt;

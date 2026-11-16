@@ -87,6 +87,8 @@ extension LessonSession {
     /// - Khởi động and Quiz: the question (`questionUtterance`);
     /// - Học: the instruction of `explore_groups` ("Tap each group");
     /// - Chơi: the mascot's message of the tray as it is ("Pick foods for a healthy tray.");
+    /// - Tổng kết (SK-047): the first key point; the page reads the next ones after it
+    ///   (`recapFirstPageReading`), and page 2 its own lines;
     /// - Thưởng: nothing (the screen celebrates; the card and its fact have a listen button).
     public func autoplayUtterance(for step: Step) -> Utterance? {
         switch step {
@@ -106,6 +108,10 @@ extension LessonSession {
             // SK-040 lượt 2, A2: the game's instruction too, then the message.
             if let tray { return utterance("play.message", tray.prompt, trayMessage) }
             return nil
+        case .recap:
+            // Explorer and Discoverer read the key points one after the other; Scientist will
+            // not (D5) once it has screens of its own (it plays as Discoverer for now).
+            return recapFirstPageReading.first
         case .reward:
             // Explorer: the mascot names the new sticker (SK-040); Discoverer celebrates quietly.
             guard isExplorer, let collectible = lesson.reward.collectible else { return nil }
@@ -137,6 +143,13 @@ extension LessonSession {
             return [tray.prompt] + tray.groups.map(\.label) + tray.items.map(\.label)
                 + [messages.start, messages.full, messages.balanced, messages.hasLimited]
                 + tray.missingMessagesInGroupOrder.map(\.message)
+        case .recap:
+            let recap = recap
+            var spoken = recap.keyPoints.map(\.text)
+            if let myth = recap.myth { spoken += [myth.claim, myth.truth] }
+            spoken += recap.words.map(\.term)
+            spoken.append(recap.objective)
+            return spoken
         case .reward:
             guard let collectible = lesson.reward.collectible else { return [lesson.title] }
             return [lesson.title, collectible.name, collectible.tag, collectible.fact].compactMap { $0 }

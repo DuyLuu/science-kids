@@ -652,7 +652,7 @@ image.alt.vi: Con bạch tuộc dưới biển
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (octopus, starfish, sponge). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Sai, w3 Sai). Quiz `single_choice` (q1, q3, q4, q5), `true_false` (q2 Đúng, q6 Sai). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`starfish_is_fish`).
 - **q4 và q5 chỉ khác chữ "không"** ("Which animal has no backbone?" rồi "Which one has a backbone?"; rà chữ tester 13/11 n13): đề xuất ios-dev cho giọng đọc chậm hơn ở hai câu này hoặc nhấn chữ "no" · "không" (ví dụ chèn khoảng lặng ngắn trước chữ đó khi sinh giọng). Giữ thứ tự q4 trước q5.
 - **Khoá `q3`** (n16, không đổi): hình gốc bãi biển mang khoá của câu hỏi `q3` bài này (khoá câu theo luật `q1`…`q6`, không đổi tên được). Câu q4 trỏ `q3` không có `ở bài`; câu q5 trỏ `q3` ở bài `ho-hap/vi-sao-ta-phai-tho` (sân nhà). Designer lưu ý khi dựng `same_as`.
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ ba; q3 thứ nhất; q4 thứ hai; q5 thứ ba.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** Bạch tuộc, Sao biển, Bọt biển → `balanced`; Con ốc sên, Nhím biển, Cá ngựa → `has_limited`; Bạch tuộc, Con ốc sên, Sao biển → `missing.tray_holes`.
 - **Syllabus:** bài mới, chưa có trong `content/syllabus.json`.
 - **Từ EN có thể ngoài Starters/Movers:** octopus, starfish, sponge, jellyfish, sea urchin, seahorse, squid, mollusc, spiny, sting.

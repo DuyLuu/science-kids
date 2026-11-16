@@ -151,8 +151,8 @@
       "same_as": "tray_dark_rock",
       "lesson": "be-mat-trai-dat/nui-lua"
     },
-    "q2.q2_silt": {
-      "same_as": "silt",
+    "q2.q2_alluvial": {
+      "same_as": "vocab.silt",
       "lesson": "da-va-dat/dat-gom-nhung-gi"
     },
     "q3": {

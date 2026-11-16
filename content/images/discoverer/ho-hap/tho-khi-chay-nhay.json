@@ -156,7 +156,8 @@
       "lesson": "khung-long/trai-dat-rat-lau-ve-truoc"
     },
     "q2.q2_jumps": {
-      "same_as": "tray.tray_rope"
+      "same_as": "tray.tray_hopscotch",
+      "note": "SK-047 16/11 (designer): trước trỏ tray.tray_rope, mà dây nhảy là đáp án đúng ở q1. Nay là ô lò cò vẽ trên sân (cùng kiểu hình vẽ với hai thẻ kia); khung thẻ từ 1:1 cắt giữa vẫn thấy trọn các ô."
     },
     "q2.q2_steps": {
       "own": {
@@ -189,13 +190,13 @@
       "title": "A set of stairs",
       "note": "designer vẽ 10/11 (SVG, SK-036)"
     },
-    "q3.q3_bike": {
+    "q3.q3_crayons": {
       "own": {
-        "file": "content/images/own/ho-hap/bicycle.jpg",
+        "file": "content/images/own/ho-hap/crayons-4x5.jpg",
         "method": "drawn"
       },
-      "title": "A bicycle",
-      "note": "designer vẽ 10/11 (SVG, SK-036)"
+      "title": "Crayons and paper",
+      "note": "SK-047 15/11 (designer): bản khung 4:5 (lưới 2×2) của hình kệ tray_crayons (crayons.jpg): cắt sát tờ giấy và hộp bút, đệm trên dưới bằng chính vân gỗ (lật gương); không vẽ thêm vật. Cắt giữa thì mất nửa bó bút sáp."
     },
     "q3.q3_chess": {
       "own": {

@@ -88,7 +88,7 @@
         ]
       },
       "title": "Grass, a grasshopper, then a frog",
-      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ."
+      "note": "SK-045 (designer 14/11): ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm chỉ sang phải, không chữ. SK-047 16/11 (designer): đổi sang hình vuông 1024, chuỗi đặt giữa, rộng 856 px (vừa khung dọc 322×380 của trang Học). Bản 4:3 cũ bị cắt mất ảnh đầu (cây) và ảnh cuối ở mọi khung vuông hay dọc: thẻ ý chính Tổng kết (vuông 153), trang Học Explorer (322×380), thẻ Từ mới. Cùng ảnh nguồn, cùng mũi tên, chỉ thu nhỏ và đặt lại; khung ngang (câu q6, hàng từ 140×92) vẫn lấp đầy."
     },
     "tray.tray_grasshopper": {
       "same_as": "learn.explore.explore_insects",

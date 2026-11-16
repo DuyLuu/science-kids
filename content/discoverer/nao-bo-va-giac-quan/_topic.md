@@ -234,16 +234,11 @@ note: Cảnh quen ở Việt Nam: chở con ra chợ, tới trường gần nhà
 
 Bốn câu Đúng, bốn câu Sai. Câu sáu là Sai, Đúng, Sai, Đúng. Không bài nào có câu Đúng/Sai ở q1 tới q5. Rà chữ 10/11 thêm hai câu Khởi động ôn *Hô hấp* (bài một w3, bài hai w2), cả hai `single_choice`, nên bảng không đổi. Câu Đúng/Sai thêm sau này thì giữ cân bằng này. Giải thích khi đúng của câu đáp án Sai không mở đầu bằng "Yes!" · "Đúng rồi!"; giải thích khi sai nói "This is false" · "Câu này sai", "This is true" · "Câu này đúng", "Na is right" · "Na nói đúng" hoặc "Na is not right" · "Na chưa đúng". **Hết hiệu lực 14/11** (SK-044, ngân sách A2): màn đã chỉ đáp án, nên hai lời giải thích bỏ "Yes!", "This is …", "Na is …", "The answer is …", mỗi lời còn một câu nêu lý do; phía bé chọn nhầm có `feedback_true` hoặc `feedback_false`.
 
-**Vị trí đáp án đúng** (app không xáo lựa chọn; xáo tay, không theo chu kỳ)
+**Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ). Bảng cân vị trí bằng tay đã bỏ.
 
-| Bài | Câu một đáp án, theo thứ tự trong bài | Nhiều đáp án | Thẻ đúng của câu điền từ (`fill_blank_bank`) |
-| --- | --- | --- | --- |
-| 1 | w1 3, w3 1, q1 2, q4 1, q5 3 | q3: 1, 4 | q2: 1 |
-| 2 | w1 1, w2 2, q2 1, q4 3, q5 2 | q3: 1, 3 | q1: 3 |
-| 3 | w1 2, q1 1, q4 2, q5 3 | q3: 2, 3 | q2: 2 |
-| 4 | w1 3, q1 1, q4 3, q5 2 | q3: 2, 4 | q2: 3 |
+**Câu `multi_choice` (SK-047, 15/11):** trong chủ đề, không số đáp án đúng nào chiếm quá một nửa số câu MC. Bốn câu q3: bài 1 một đúng, bài 2 hai đúng, bài 3 hai đúng, bài 4 ba đúng.
 
-Tổng câu một đáp án: thứ nhất sáu, thứ hai sáu, thứ ba sáu. Câu w1 bốn bài: 3, 1, 2, 3. Thẻ đúng của bốn câu điền từ: 1, 3, 2, 3 (rà chữ tester 10/11, N1: trước đây cả bốn là thẻ thứ hai). Tính cả thẻ: thứ nhất bảy, thứ hai bảy, thứ ba tám.
+**Câu Từ mới (SK-047, 15/11):** câu `fill_blank_bank` ở Quiz điền một từ `tier: core` của chính bài (từ trong dải Từ mới). Bài 1 "brain", bài 2 "messages", bài 3 "senses" (đổi 15/11), bài 4 "strap".
 
 **Khi soạn bốn bài** (nháp AI; rút kinh nghiệm SK-031, SK-032, SK-033, áp cho cả bốn bài)
 

@@ -43,6 +43,12 @@ public enum PaperMetrics {
     /// Seal of a topic done on the journey map (SK-034 spec 3: `28 × 28`, check `17`).
     public static let sealMedium: CGFloat = 28
     public static let sealMediumGlyph: CGFloat = 17
+    /// SK-047: one seal for a whole order row done right (`32`, check `19`, as A2
+    /// `ex-x-q4-order-right`), and the lesson goal on Explorer's Tổng kết (`r-x2-a`: `42`, check `25`).
+    public static let sealRow: CGFloat = 32
+    public static let sealRowGlyph: CGFloat = 19
+    public static let sealGoal: CGFloat = 42
+    public static let sealGoalGlyph: CGFloat = 25
 
     // MARK: Progress squares
 

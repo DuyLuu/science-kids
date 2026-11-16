@@ -57,8 +57,7 @@ explanation_correct.en: Tiny hairs inside your nose catch dust.
 explanation_correct.vi: Lông mũi nhỏ li ti giữ bụi lại.
 explanation_wrong.en: Your nose warms the air and cleans it.
 explanation_wrong.vi: Mũi làm ấm và làm sạch không khí.
-> Câu giữ đúng ý câu của ô Mũi bài hai. Gợi ý chỉ tên bài, không nói chặng nào. Ba lựa chọn là ba bản tô màu của sơ đồ đường thở bài hai, cùng nét. Đáp án ở chỗ thứ hai.
-
+> Câu giữ đúng ý câu của ô Mũi bài hai. Gợi ý chỉ tên bài, không nói chặng nào. Ba lựa chọn là ba bản tô màu của sơ đồ đường thở bài hai, cùng nét.
 #### option w1_lungs
 correct: false
 feedback.en: Air is already clean when it reaches the lungs.
@@ -215,7 +214,8 @@ type: word_list
 version: 1
 title.en: New words
 title.vi: Từ mới
-term_keys: exercise, muscle, blood
+term_keys: exercise, muscle, blood, breath
+> SK-047 (15/11): thêm `breath` (câu Từ mới q2).
 
 ## Chơi
 
@@ -365,8 +365,7 @@ explanation_correct.en: Skipping works your legs hard, so they need more oxygen.
 explanation_correct.vi: Nhảy dây làm chân vận động mạnh, cần thêm ô-xi.
 explanation_wrong.en: You move a lot when you skip.
 explanation_wrong.vi: Lúc nhảy dây, em vận động rất nhiều.
-> Câu nhớ lại ý chính một. Ba lựa chọn là ba ảnh đồ vật (dây nhảy, gối chăn, quyển truyện), cùng kiểu với kệ Chơi. Đáp án ở chỗ thứ nhất.
-
+> Câu nhớ lại ý chính một. Ba lựa chọn là ba ảnh đồ vật (dây nhảy, gối chăn, quyển truyện), cùng kiểu với kệ Chơi.
 #### option q1_skipping
 correct: true
 label.en: skipping
@@ -398,7 +397,7 @@ image.alt.vi: Quyển truyện trên bàn
 ### q2
 id: 79204f4a-1701-4a49-ad6e-fc95b7628053
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
@@ -424,9 +423,10 @@ label.en: jumps
 label.vi: lần nhảy
 feedback.en: This count happens before any skipping starts.
 feedback.vi: Lúc này em chưa bắt đầu nhảy dây.
-image.brief: Dùng lại hình `tray_rope`. Từ khoá tìm ảnh (EN): skipping rope wooden handles ground
-image.alt.en: A skipping rope
-image.alt.vi: Sợi dây nhảy
+image.brief: Dùng lại hình `tray_hopscotch`. Từ khoá tìm ảnh (EN): hopscotch chalk pavement
+image.alt.en: A hopscotch drawn on the ground
+image.alt.vi: Ô nhảy lò cò vẽ trên sân
+> SK-047 (16/11, nháp AI, quét cùng loại): thẻ sai này trước dùng hình `tray_rope` (sợi dây nhảy), mà hình đó là đáp án đúng `q1_skipping` của câu q1, nên một hình vừa đúng vừa sai trong bài. Nay dùng hình ô lò cò của kệ Chơi (cũng là hình vẽ, cũng là một kiểu nhảy, chưa là lựa chọn ở câu nào). Nhãn, `feedback` giữ nguyên, không cần sinh lại giọng. `version` 2. Designer: trỏ key `q2.q2_jumps` sang ảnh `tray_hopscotch`.
 
 #### bank q2_steps
 label.en: steps
@@ -447,7 +447,7 @@ image.alt.vi: Bàn tay đặt lên ngực
 ### q3
 id: 030de36f-a05f-450a-a0a2-95840f508766
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones make you breathe faster?
 prompt.vi: Những việc nào làm em thở nhanh hơn?
@@ -458,10 +458,11 @@ image.alt.en: An empty schoolyard
 image.alt.vi: Sân trường vắng
 hint.en: Which ones make your leg muscles work hard?
 hint.vi: Việc nào làm cơ bắp ở chân em hoạt động mạnh?
-explanation_correct.en: Stairs and bikes make your legs work hard.
-explanation_correct.vi: Leo cầu thang và đạp xe làm chân hoạt động mạnh.
-explanation_wrong.en: Climbing stairs and cycling move your legs a lot.
-explanation_wrong.vi: Leo cầu thang và đạp xe làm chân vận động nhiều.
+explanation_correct.en: Climbing stairs makes your leg muscles work hard.
+explanation_correct.vi: Leo cầu thang làm cơ bắp ở chân hoạt động mạnh.
+explanation_wrong.en: Climbing stairs works your legs; the others are resting.
+explanation_wrong.vi: Leo cầu thang làm chân vận động, mấy việc kia là nghỉ.
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_bike` thay bằng `q3_crayons` (tô màu, sai), dùng lại hình kệ Chơi; `version` 2. Hai lời giải thích sửa theo.
 > DOK 2: chuyển từ trò chơi ở phần Chơi sang việc hằng ngày, bé phải nghĩ cơ bắp nào hoạt động. Cờ vua có sức hút vì là "môn thể thao" (có thi đấu) nhưng ngồi yên; nằm võng là việc nghỉ quen ở Việt Nam.
 > Gợi ý nêu cách nghĩ (cơ bắp ở chân), nối với ô Cơ bắp, không gọi tên lựa chọn.
 
@@ -483,13 +484,16 @@ image.brief: [hình vẽ] Một cầu thang bộ có tay vịn, vẽ từ chân 
 image.alt.en: A set of stairs
 image.alt.vi: Cầu thang bộ
 
-#### option q3_bike
-correct: true
-label.en: riding a bike
-label.vi: đạp xe
-image.brief: [hình vẽ] Một chiếc xe đạp dựng chân chống trên đường làng hoặc lối đi trong công viên, vẽ ngang cả xe; không có người, không có nhãn hiệu, không có chữ, không có biển số. Từ khoá tìm ảnh (EN): bicycle parked side view path
-image.alt.en: A bicycle
-image.alt.vi: Chiếc xe đạp
+#### option q3_crayons
+correct: false
+feedback.en: When you colour, you sit and your legs rest.
+feedback.vi: Tô màu thì em ngồi, chân được nghỉ.
+label.en: colouring
+label.vi: tô màu
+image.brief: Dùng lại hình `tray_crayons`. Từ khoá tìm ảnh (EN): crayons drawing paper table top view
+image.alt.en: Crayons and paper
+image.alt.vi: Bút sáp màu và tờ giấy vẽ
+> SK-047 (15/11, nháp AI): thay `q3_bike` (đạp xe, đúng). Hình kệ Chơi, cùng nét vẽ đồ vật với ba lựa chọn kia; không cần hình mới.
 
 #### option q3_chess
 correct: false
@@ -524,7 +528,7 @@ explanation_wrong.vi: Nhảy dây thở nhiều nhất, nên cột cao nhất.
 > Rà chữ tester 10/11 (N3, main session chốt):
 > - a) câu hỏi cũ kể ba việc theo thứ tự (đọc, đi bộ, nhảy dây) trong khi các cột cố ý không theo thứ tự đó, nên bé đọc biểu đồ theo quy ước "việc thứ ba là cột thứ ba" bị sai. Câu mới không kể thứ tự, theo chữ tester đề xuất. Bé dựa vào ô Nhanh hơn (nhảy dây là ví dụ đầu tiên của việc làm thở nhanh) và gợi ý; giải thích khi đúng mới nói hai việc kia (đọc truyện, đi bộ), để bé kiểm lại.
 > - b) nhãn cũ chỉ phân biệt bằng màu (đỏ, xanh dương, vàng), bé mù màu và bé dùng VoiceOver không phân biệt được. Nhãn mới theo vị trí cột **trong hình** (trái, giữa, phải), `alt` theo cùng cách; ba cột vẽ cùng một màu, cột được đánh dấu giữ màu đậm, hai cột kia xám nhạt. TEMPLATE mục A chỉ cấm nhắc vị trí thẻ trên màn, không cấm tả vị trí trong hình.
-> - Thêm (n1): cột cao nhất chuyển sang bên trái, nên đáp án là lựa chọn thứ nhất (trước đây thứ hai). Ba lựa chọn xếp trái, giữa, phải cho dễ đối chiếu với hình.
+> - Thêm (n1): cột cao nhất chuyển sang bên trái trong hình (vị trí trong hình vẫn đúng; thứ tự lựa chọn trên màn do app xáo từ 15/11, SK-047). Ba lựa chọn xếp trái, giữa, phải cho dễ đối chiếu với hình.
 
 #### option q4_left
 correct: true
@@ -565,8 +569,9 @@ image.brief: Dùng lại hình `tray_track`. Từ khoá tìm ảnh (EN): empty r
 image.alt.en: An empty running track
 image.alt.vi: Đường chạy vắng
 answer: false
-hint.en: Remember the Rest card.
-hint.vi: Em nhớ lại ô Nghỉ ngơi nhé.
+hint.en: Think how you breathe a few minutes after a race.
+hint.vi: Em nhớ lại chạy xong vài phút, em thở thế nào.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Nghỉ ngơi, mà câu của ô ("your breathing slows down") là lời bác bỏ. Gợi ý mới chỉ vào trải nghiệm của bé.
 explanation_correct.en: Rest for a few minutes, and breathing slows down.
 explanation_correct.vi: Em nghỉ vài phút, hơi thở sẽ chậm lại.
 explanation_wrong.en: Breathing slows down when you rest.
@@ -596,8 +601,9 @@ answer: true
 image.brief: Dùng lại hình `explore_faster`. Từ khoá tìm ảnh (EN): children silhouettes playing sunset
 image.alt.en: Children playing at sunset
 image.alt.vi: Các bạn nhỏ chơi đùa lúc hoàng hôn
-hint.en: Remember the Muscles card.
-hint.vi: Em nhớ lại ô Cơ bắp nhé.
+hint.en: Where does the oxygen for your legs come from?
+hint.vi: Ô-xi cho đôi chân lấy từ đâu ra?
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô Cơ bắp, câu của ô là vế một của Na. Gợi ý mới hỏi một mắt xích (ô-xi vào qua phổi), bé còn phải tự nối tới "thở nhanh hơn".
 explanation_correct.en: Blood takes more oxygen to your working legs.
 explanation_correct.vi: Máu mang thêm ô-xi tới đôi chân đang chạy.
 explanation_wrong.en: Your lungs take in oxygen for your muscles.
@@ -659,7 +665,8 @@ image.alt.vi: Trái tim
 
 ### breath
 id: c01ff292-8346-455e-a2be-ac12b300b51f
-tier: extra
+tier: core
+> SK-047 (15/11): `extra` → `core` và thêm vào dải Từ mới, vì câu q2 (câu Từ mới) điền "breaths". Bài có bốn từ core, trong giới hạn của Discoverer.
 term.en: breath
 term.vi: hơi thở
 example.en: Count your breaths for one minute.
@@ -710,14 +717,14 @@ image.alt.vi: Hai lá phổi
 ## Ghi chú cho dev
 
 - **Block và format:**
-  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, ba từ core: exercise, muscle, blood).
+  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, bốn từ core: exercise, muscle, blood, breath; `breath` thêm 15/11, SK-047).
   - Chơi: `build_tray` (`tray`): ba chỗ, ba nhóm `required`, một nhóm `limit`, chín món.
   - Khởi động: `single_choice` (w1, `recall_from.lesson: ho-hap/duong-di-cua-khong-khi`), `true_false` (w2, `recall_from.lesson: ho-hap/vi-sao-ta-phai-tho`, đáp án Sai). DOK một.
-  - Quiz: `single_choice` (q1, q4), `fill_blank_bank` (q2, một ô trống, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q5 Sai; q6 Đúng, `speaker: na`).
+  - Quiz: `single_choice` (q1, q4), `fill_blank_bank` (q2, một ô trống, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, một đúng từ 15/11), `true_false` (q5 Sai; q6 Đúng, `speaker: na`).
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `only_lungs_need_oxygen`.
 - **Tham chiếu:** w1 trỏ bài hai, w2 trỏ bài một: chạy `ids` cho hai bài đó trước.
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q2 thẻ thứ ba; q3 thứ hai và thứ ba; q4 thứ nhất (đổi từ thứ hai, rà chữ tester 10/11 N3 và n1).
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Key đổi sau rà chữ (10/11):** câu q4 bỏ `q4_yellow`, `q4_blue`, `q4_red`, thêm `q4_left`, `q4_middle`, `q4_right`. Bài chưa phát hành nên đổi key được; file chọn ảnh và clip của ba key cũ bỏ.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;

@@ -29,6 +29,12 @@ const WARMUP_FORMATS = ["single_choice", "multi_choice", "true_false", "fill_bla
  * 12–15, as Explorer 8 and Discoverer 10), Scientist picture_bar_chart 4 (TEMPLATE before 1/11).
  * "multi_choice ≤ 6" is [2, 6]: 2 is the content schema minimum.
  */
+/**
+ * SK-047 (Duy 15/11, proposal 4.6, 4.7): in one topic at most half of the multi_choice items share a
+ * number of right answers; a quiz fill_blank_bank uses a word of the lesson's vocab. Discoverer and
+ * Scientist only (Explorer has neither format).
+ */
+const SK047 = { multi_choice_correct_spread: 0.5, vocab_item_uses_lesson_word: true };
 /** SK-033 (Duy 9/11): every question, option, bank word and tray item should have a picture; a warning until Duy approves the pilot lesson. */
 const IMAGE_EXPECTED = ["question", "choice_option", "sequence_item", "bank_word", "tray_item"];
 const AUTHORING = {
@@ -57,6 +63,7 @@ const AUTHORING = {
     misconception_items: [1, 1],
     min_formats: 3,
     max_words_en: 10,
+    ...SK047,
   },
   scientist: {
     quiz_formats: V1_FORMATS,
@@ -70,6 +77,7 @@ const AUTHORING = {
     misconception_items: [1, 2],
     min_formats: 3,
     max_words_en: 15,
+    ...SK047,
   },
 };
 
@@ -190,6 +198,19 @@ describe("loadRules: authoring", () => {
     assert.ok(result.errors.some((e) => e.pointer === "/discoverer/authoring/option_count" && e.message.includes("true_false")), JSON.stringify(result.errors));
     result = withAuthoring("discoverer", (a) => (a.misconception_items = [1]));
     assert.ok(result.errors.some((e) => e.pointer === "/discoverer/authoring/misconception_items"), JSON.stringify(result.errors));
+  });
+
+  test("multi_choice_correct_spread chỉ nhận số trong (0, 1]; vocab_item_uses_lesson_word chỉ nhận boolean (SK-047)", () => {
+    for (const value of [0, 1.5, "a", -0.5]) {
+      const result = withAuthoring("discoverer", (a) => (a.multi_choice_correct_spread = value));
+      assert.equal(result.rules, undefined, JSON.stringify(value));
+      assert.ok(result.errors.length > 0 && result.errors.every((e) => e.pointer === "/discoverer/authoring/multi_choice_correct_spread"), `${JSON.stringify(value)}: ${JSON.stringify(result.errors)}`);
+    }
+    for (const value of [1, 0.25]) assert.deepEqual(withAuthoring("scientist", (a) => (a.multi_choice_correct_spread = value)).errors, [], String(value));
+    const result = withAuthoring("scientist", (a) => (a.vocab_item_uses_lesson_word = "yes"));
+    assert.ok(result.errors.some((e) => e.pointer === "/scientist/authoring/vocab_item_uses_lesson_word"), JSON.stringify(result.errors));
+    // Optional keys: Explorer has neither, and a group without them is valid.
+    assert.deepEqual(withAuthoring("discoverer", (a) => (delete a.multi_choice_correct_spread, delete a.vocab_item_uses_lesson_word)).errors, []);
   });
 
   test("min > max và dok_mix không cộng ra 6: lỗi có pointer", () => {

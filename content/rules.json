@@ -62,7 +62,9 @@
       "first_item_dok": 1,
       "misconception_items": [1, 1],
       "min_formats": 3,
-      "max_words_en": 10
+      "max_words_en": 10,
+      "multi_choice_correct_spread": 0.5,
+      "vocab_item_uses_lesson_word": true
     }
   },
   "scientist": {
@@ -95,7 +97,9 @@
       "first_item_dok": 1,
       "misconception_items": [1, 2],
       "min_formats": 3,
-      "max_words_en": 15
+      "max_words_en": 15,
+      "multi_choice_correct_spread": 0.5,
+      "vocab_item_uses_lesson_word": true
     }
   }
 }

@@ -616,6 +616,6 @@ image.alt.vi: Cây trinh nữ có hoa màu hồng
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (move, alive). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, tám món. Khởi động `single_choice` (w1, w2; hai lựa chọn). Quiz `single_choice` (q1, q3, q6), `true_false` (q2 Đúng, q5 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`moving_means_alive`).
-- **Vị trí đáp án đúng:** w1 thứ nhất; w2 thứ hai; q1 thứ ba; q3 thứ hai; q6 thứ nhất. q4 thẻ trong file: ốc sên, con cò, dây mướp; thứ tự đúng: dây mướp, ốc sên, con cò.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: dây mướp, ốc sên, con cò.
 - **Màn Chơi, ví dụ để kiểm:** Con mèo, Cá chép, Chim sẻ → `balanced`; Con chó, Cá chép, Quả bóng bay → `has_limited`; Con mèo, Con chó, Con cò → `missing.tray_swim`.
 - **Từ EN có thể ngoài Starters/Movers:** move, alive, slowly, sensitive plant, vine, egret, carp, balloon, swing, fold.

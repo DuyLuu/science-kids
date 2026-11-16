@@ -57,7 +57,7 @@ explanation_correct.en: Vietnam grows much of its rice on alluvial soil.
 explanation_correct.vi: Việt Nam trồng nhiều lúa trên đất phù sa.
 explanation_wrong.en: Rivers bring silt to delta rice fields.
 explanation_wrong.vi: Sông mang bùn mịn về bồi cho ruộng lúa đồng bằng.
-> Ý, thứ tự lựa chọn và vị trí đáp án (chỗ thứ tư, bốn lựa chọn) đúng bảng Khởi động. Hình câu hỏi là đất phù sa chụp gần (thứ được hỏi), không phải nơi chốn của đáp án.
+> Ý và lựa chọn đúng bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo). Hình câu hỏi là đất phù sa chụp gần (thứ được hỏi), không phải nơi chốn của đáp án.
 > Bốn lựa chọn đều là ảnh cảnh chụp rộng bé đã gặp (ba ảnh ở bài 12, mỏ đá ở bài 1), nên đáp án không là ảnh duy nhất bé đã thấy. Mỏ đá có sức hút (nơi người ta đào đất đá); đồi cà phê, rừng phi lao là nơi của hai loại đất kia.
 
 #### option w1_coffee
@@ -141,7 +141,7 @@ explanation_correct.vi: Mỗi ngày em đọc mực nước trong ống đo mưa
 explanation_wrong.en: A rain gauge catches rain to show how much fell.
 explanation_wrong.vi: Ống đo mưa hứng nước để biết mưa nhiều hay ít.
 > **Câu tuỳ chọn** (bảng Khởi động ở `_topic.md`): điều kiện đã đủ, bài `thoi-tiet-va-thien-tai/do-thoi-tiet` đã có id (kiểm 11/11, sau khi soạn xong). Nếu sau này bài đó bị bỏ hay đổi slug thì xoá cả khối w3 (bảng vị trí giữ nguyên các ô khác).
-> Ôn ý chính hai của *Thời tiết* bài hai ("A rain gauge measures how much rain falls."). Ba lựa chọn là ba hình vẽ ô Học của bài đó, cùng nét; đáp án ở chỗ thứ hai như bảng. Không dùng ảnh đất nứt nẻ hay ruộng ngập (món bẫy kệ Chơi bài này).
+> Ôn ý chính hai của *Thời tiết* bài hai ("A rain gauge measures how much rain falls."). Ba lựa chọn là ba hình vẽ ô Học của bài đó, cùng nét. Không dùng ảnh đất nứt nẻ hay ruộng ngập (món bẫy kệ Chơi bài này).
 > Hình câu hỏi là ảnh mưa to (tình huống), khác loại với ba hình lựa chọn; luật "cùng loại hình" áp cho các lựa chọn với nhau.
 
 #### option w3_thermometer
@@ -412,7 +412,7 @@ image.alt.vi: Mấy viên pin cũ trên mặt đất
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3 (Discoverer 2·3·1). Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, mọi thẻ từ có hình.
-> Vị trí đáp án đúng bảng `_topic.md`: q1 chỗ thứ nhất; q2 thẻ thứ hai; q3 chỗ thứ nhất và thứ tư; q4 chỗ thứ ba; q5 chỗ thứ hai.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Không hình lựa chọn nào xuất hiện ở hai câu (kể cả câu Khởi động). Không câu nào hỏi nguyên nhân lũ, hạn hay cây khô héo khi hạn (*Thời tiết* bài bốn đã dạy).
 
 ### q1
@@ -686,8 +686,9 @@ answer: true
 image.brief: [hình vẽ] Đồi thông một ngày nắng, trời xanh, vẽ rộng; không có người, không có biển chữ, không có nhà có bảng hiệu. Theo hình designer làm 11/11: không có ảnh đồi thông ngày nắng hợp lệ (ảnh Đà Lạt trên Commons là CC BY-SA); chữ của câu vẫn nói Đà Lạt. Từ khoá tìm ảnh (EN): Da Lat pine hills sunny
 image.alt.en: Pine hills on a sunny day
 image.alt.vi: Đồi thông ngày nắng
-hint.en: Remember the One day or many years picture.
-hint.vi: Em nhớ lại ô Một ngày hay nhiều năm nhé.
+hint.en: Think how long weather lasts, and how long climate lasts.
+hint.vi: Em so xem thời tiết và khí hậu nói về bao lâu nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô "One day or many years" · "Một ngày hay nhiều năm", tên ô là lời giải của câu này. Gợi ý mới hỏi bé tự so hai từ.
 explanation_correct.en: Da Lat is high up, so most days stay cool.
 explanation_correct.vi: Đà Lạt nằm trên cao nên phần lớn ngày đều mát.
 explanation_wrong.en: One hot day does not change the climate.
@@ -799,7 +800,7 @@ image.alt.vi: Con giun đất trên đất ẩm
   - Khởi động: `single_choice` (w1 bốn lựa chọn, w3 ba lựa chọn), `true_false` (w2, Sai). DOK một. `recall_from.lesson`: `da-va-dat/cac-loai-dat-o-viet-nam` (w1, w2), `thoi-tiet-va-thien-tai/do-thoi-tiet` (w3, tuỳ chọn).
   - Quiz: `single_choice` (q1, q4, q5; ba lựa chọn), `fill_blank_bank` (q2, ba thẻ), `multi_choice` (q3, bốn lựa chọn, hai đúng), `true_false` (q6 Đúng, `speaker: na`, `misconception: weather_is_climate`).
 - **Tham chiếu:** chạy `ids` cho bài 12 trước bài này; câu w3 trỏ bài hai của *Thời tiết* (đã có id).
-- **Vị trí đáp án đúng:** w1 thứ tư; w3 thứ hai; q1 thứ nhất; q2 thẻ thứ hai; q3 thứ nhất và thứ tư; q4 thứ ba; q5 thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Giun đất, Phân ủ, Nước tưới gốc → `balanced`;

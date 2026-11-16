@@ -1,4 +1,5 @@
 import DesignSystem
+import Profiles
 import Testing
 @testable import ScienceKids
 
@@ -43,6 +44,19 @@ import Testing
         #expect(LaunchOptions(arguments: ["app", "-SKOpenLesson", id]).openLesson?.uuidString == id)
         #expect(LaunchOptions(arguments: ["app", "-SKOpenLesson", "not-an-id"]).openLesson == nil)
         #expect(LaunchOptions(arguments: ["app"]).openLesson == nil)
+    }
+
+    /// SK-047 (tester 16/11): `-SKTestProfile YES` or a language mode saves a test profile when
+    /// there is none, so a UI test on a fresh install skips Welcome.
+    @Test func testProfile() {
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile", "YES"]).testProfile == .bilingual)
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile", "1"]).testProfile == .bilingual)
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile", "en_first"]).testProfile == .enFirst)
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile", "vi_first"]).testProfile == .viFirst)
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile", "NO"]).testProfile == nil)
+        #expect(LaunchOptions(arguments: ["app", "-SKTestProfile"]).testProfile == nil, "value missing")
+        #expect(LaunchOptions(arguments: ["app"]).testProfile == nil)
+        #expect(LaunchOptions.current.testProfile == nil)
     }
 
     /// SK-011: `-SKResetProfile YES` starts from Welcome as after a fresh install.

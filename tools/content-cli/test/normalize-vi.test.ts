@@ -230,16 +230,16 @@ describe("chuỗi VI của bài 1", () => {
     return collectSpoken(doc.kind, doc).map(({ pointer, node }) => ({ pointer, vi: node.vi }));
   });
 
-  test("128 chuỗi; chỉ chuỗi có ô trống, gạch ngang hay 'vitamin' bị đổi", () => {
-    assert.equal(spoken.length, 128);
+  test("130 chuỗi; chỉ chuỗi có ô trống, gạch ngang hay 'vitamin' bị đổi", () => {
+    assert.equal(spoken.length, 130);
     const changed = spoken.filter(({ vi }) => read(vi) !== vi);
     for (const { pointer, vi } of changed) {
       assert.match(vi, /\{\d\}|—|[Vv]itamin/, `${pointer}: "${vi}" -> "${read(vi)}"`);
     }
     const kept = spoken.filter(({ vi }) => !/\{\d\}|—|[Vv]itamin/.test(vi));
     for (const { pointer, vi } of kept) assert.equal(read(vi), vi, pointer);
-    // 2 blanks, 2 dashes, 10 strings with "vitamin"; /reward/collectible/fact has both a dash and "vitamin".
-    assert.equal(changed.length, 2 + 2 + 10 - 1);
+    // 2 blanks, 2 dashes, 11 strings with "vitamin" (SK-047: q2 explanation_wrong.vi is the 11th); /reward/collectible/fact has both a dash and "vitamin".
+    assert.equal(changed.length, 2 + 2 + 11 - 1);
   });
 
   test("không cảnh báo nào (vitamin đã có trong bảng đọc ép)", () => {

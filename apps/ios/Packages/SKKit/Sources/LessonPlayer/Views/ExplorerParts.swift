@@ -30,14 +30,13 @@ enum ExplorerMetrics {
     /// picture; `validate` asks one on every Explorer question, SK-033).
     static let questionSheetHeightWithCards: CGFloat = 112
     static let questionArtWithCards: CGFloat = 96
-    /// Picture card of a choice (Quiz-A: `height: 128px`), its art.
+    /// Picture card of a choice (Quiz-A: `height: 128px`).
     static let choiceHeight: CGFloat = 136
     /// SK-043 hướng A: with two picture choices each card is taller, so the cropped photo keeps
     /// the animal whole (the question picture is gone, the room is there).
     static let choiceHeightTwo: CGFloat = 200
     /// iPad (regular): the picture cards stand in one row, `170 × 300` (Explorer-A `ipad-q1`).
     static let choiceHeightRegular: CGFloat = 300
-    static let choiceArt: CGFloat = 108
     /// True / false card (QuizTF: `height: 168px`), its icon (`132 × 132`).
     static let trueFalseHeight: CGFloat = 168
     static let trueFalseIcon: CGFloat = 132
@@ -57,9 +56,6 @@ enum ExplorerMetrics {
     static let pipGap: CGFloat = 9
     /// "Reading the name" beat after a tap, before the result shows (canvas `setTimeout(…, 900)`).
     static let nameBeat: Duration = .milliseconds(900)
-    /// Order sequence: a place (sunken slot) and its position dots (`7 × 7`).
-    static let slotHeight: CGFloat = 128
-    static let slotDot: CGFloat = 7
     /// Reward: sticker disc (`172 × 172`, tilted −6°), its art; star (`56`).
     /// SK-043 Explorer-A: the reward's photo as a round sticker `250`.
     static let sticker: CGFloat = 250
@@ -230,7 +226,7 @@ struct PeeledCard: SwiftUI.Shape {
 }
 
 /// The folded flap of the peeled corner: the lower-left half of its square.
-private struct PeelFlap: SwiftUI.Shape {
+struct PeelFlap: SwiftUI.Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: rect.minX, y: rect.minY))

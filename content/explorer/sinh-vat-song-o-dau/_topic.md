@@ -278,19 +278,18 @@ Hai mươi hai câu: mười một Đúng, mười một Sai; bài nào cũng c�
 
 ### Vị trí đáp án đúng
 
-App không xáo lựa chọn; thứ tự theo `####` trong file.
+Hết hiệu lực 15/11 (SK-047, app xáo). App xáo lựa chọn, thẻ trong kho và thẻ `order_sequence` mỗi lần hiện câu, nên bảng cân vị trí đáp án cũ đã bỏ. Biên tập không cần cân chỗ đáp án đúng nữa. `hint`, `feedback` và giải thích không nhắc vị trí thẻ ("thẻ đầu", "bên trái").
 
-| Bài | Khởi động | Quiz `single_choice` | Quiz `order_sequence` (thẻ trong file → thứ tự đúng) |
-| --- | --- | --- | --- |
-| 1 | w1 thứ hai (hai) | q1 thứ hai; q3 thứ ba; q4 thứ nhất; q5 thứ hai; q6 thứ ba | — |
-| 2 | w1 thứ nhất (hai); w2 thứ hai (hai) | q1 thứ ba; q3 thứ hai; q6 thứ nhất | q4: ốc sên, con cò, dây mướp → dây mướp, ốc sên, con cò |
-| 3 | w1 thứ hai (hai) | q1 thứ nhất (hai); q3 thứ nhất; q5 thứ hai | q4: lá vàng, lá khô, lá xanh → lá xanh, lá vàng, lá khô |
-| 4 | w1 thứ hai (hai); w3 thứ nhất (hai) | q1 thứ ba; q3 thứ hai; q4 thứ nhất | — |
-| 5 | w1 thứ nhất (hai) | q1 thứ hai; q3 thứ nhất; q5 thứ ba | q4: ao, đồi cát, rừng râm mát → đồi cát, rừng râm mát, ao |
-| 6 | w1 thứ hai (hai) | q1 thứ ba; q3 thứ hai; q4 thứ nhất | q5: biển, dưới hòn đá, ao → dưới hòn đá, ao, biển |
-| 7 | w1 thứ nhất (hai) | q1 thứ hai; q3 thứ ba; q5 thứ hai; q6 thứ nhất | — |
+Thứ tự đúng của các câu `order_sequence` (để tra, không liên quan vị trí):
 
-Ba mươi ba câu một đáp án (tính cả Khởi động; mười câu chỉ có hai lựa chọn): chỗ thứ nhất mười hai, thứ hai mười bốn, thứ ba bảy. Riêng hai mươi ba câu ba lựa chọn: thứ nhất bảy, thứ hai chín, thứ ba bảy. Không bài nào theo chu kỳ. Không thẻ `order_sequence` nào nằm sẵn đúng thứ tự trong file.
+| Bài | Câu | Thứ tự đúng |
+| --- | --- | --- |
+| 2 | q4 | dây mướp, ốc sên, con cò |
+| 3 | q4 | lá xanh, lá vàng, lá khô |
+| 5 | q4 | đồi cát, rừng râm mát, ao |
+| 6 | q5 | dưới hòn đá, ao, biển |
+
+> SK-047 (15/11, nháp AI): thay bảng vị trí đáp án bằng ghi chú hết hiệu lực; giữ thứ tự đúng của `order_sequence`.
 
 ### Khởi động (giãn cách)
 

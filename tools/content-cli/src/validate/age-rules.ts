@@ -24,7 +24,9 @@ export type IssueCode =
   | "age_words_en"
   | "format_not_rendered"
   | "image_missing"
-  | "image_brief_keywords";
+  | "image_brief_keywords"
+  | "multi_choice_correct_spread"
+  | "vocab_item_uses_lesson_word";
 
 /** Level of each code. format_not_rendered: error in build, warning in validate. */
 export const ISSUE_LEVELS: Readonly<Record<IssueCode, Severity | "build: error, validate: warning">> = {
@@ -41,6 +43,11 @@ export const ISSUE_LEVELS: Readonly<Record<IssueCode, Severity | "build: error, 
   format_not_rendered: "build: error, validate: warning",
   image_missing: "warning",
   image_brief_keywords: "warning",
+  // SK-047: a warning while content-editor reworked the 40 Discoverer lessons; an error since the
+  // content passed (15/11), so validate exits 1 and build stops on it.
+  multi_choice_correct_spread: "error",
+  // SK-047 wave 1: an approximation (label vs vocab term), so it stays a warning.
+  vocab_item_uses_lesson_word: "warning",
 };
 
 /** SK-033 codes: build folds them into one count line per file instead of one line each. */
@@ -57,7 +64,7 @@ export type AgeRulesOptions = {
   rulesDisplay: string;
 };
 
-type Entry = { key: string; image?: unknown };
+type Entry = { key: string; image?: unknown; label?: { en?: string }; correct?: boolean };
 type QuizItem = {
   key: string;
   format: string;
@@ -67,7 +74,9 @@ type QuizItem = {
   options?: Entry[];
   items?: Entry[];
   bank?: Entry[];
+  answers?: string[];
 };
+type VocabTerm = { key: string; term?: { en?: string }; tier?: "core" | "extra" };
 
 /** Array counted by option_count, per format; true_false has none. */
 const COUNTED: Readonly<Record<string, { field: "options" | "items" | "bank"; noun: string }>> = {
@@ -145,7 +154,9 @@ export function checkAgeRules(docs: AgeDoc[], rules: Rules, options: AgeRulesOpt
       }
       if (authoring) checkQuiz(lesson, (lesson.data.quiz ?? []) as QuizItem[], authoring, group, push);
       if (authoring) checkTray(lesson, lesson.data.play as Tray | undefined, authoring, group, push);
+      if (authoring?.vocab_item_uses_lesson_word === true) checkVocabItems(lesson, push);
     }
+    if (authoring?.multi_choice_correct_spread !== undefined) checkCorrectSpread(topic, own, authoring.multi_choice_correct_spread, group, push);
     if (authoring?.image_search_keywords === true) {
       for (const doc of [topic, ...own]) checkBriefs(doc, { topic: String(topic.data.slug), slug: doc.data.kind === "lesson" ? String(doc.data.slug) : undefined, order: doc.data.kind === "lesson" ? Number(doc.data.order) : undefined }, push);
     }
@@ -287,4 +298,118 @@ function checkWords(doc: AgeDoc, max: number, group: string, push: Push) {
       if (n > max) push(doc, `${pointer}/en`, "age_words_en", `câu EN ${n} từ, nhóm ${group} tối đa ${max}: "${sentence}"`);
     }
   }
+}
+
+/** "01-vi-sao-ta-phai-tho": order and slug of a lesson, as its file name. */
+function lessonName(doc: AgeDoc): string {
+  return `${String(doc.data.order).padStart(2, "0")}-${String(doc.data.slug)}`;
+}
+
+/** SK-047: max(1, floor(ratio × n)); the epsilon keeps 0.29 × 100 at 29. */
+export function correctSpreadLimit(n: number, ratio: number): number {
+  return Math.max(1, Math.floor(ratio * n + 1e-9));
+}
+
+/**
+ * SK-047 (proposal 4.6, 4.7): a topic-level rule. Gathers every multi_choice of the topic's
+ * lessons in this call, warm-up and quiz, and counts them by number of right answers. A number
+ * of right answers held by more than correctSpreadLimit items gets one line on the topic file.
+ * Only the lessons in the call count: run it on the whole topic folder.
+ */
+function checkCorrectSpread(topic: AgeDoc, lessons: AgeDoc[], ratio: number, group: string, push: Push) {
+  const items: { where: string; right: number }[] = [];
+  const ordered = [...lessons].sort((a, b) => Number(a.data.order) - Number(b.data.order));
+  for (const lesson of ordered) {
+    for (const section of SECTIONS) {
+      for (const item of (lesson.data[section.field] ?? []) as QuizItem[]) {
+        if (item.format !== "multi_choice") continue;
+        items.push({ where: `${lessonName(lesson)} ${item.key}`, right: (item.options ?? []).filter((option) => option.correct === true).length });
+      }
+    }
+  }
+  const n = items.length;
+  const limit = correctSpreadLimit(n, ratio);
+  const byRight = new Map<number, string[]>();
+  for (const item of items) byRight.set(item.right, [...(byRight.get(item.right) ?? []), item.where]);
+  const spread = [...byRight.entries()].sort(([a], [b]) => a - b).map(([right, list]) => `${right} đúng × ${list.length}`).join(" · ");
+  for (const [right, list] of [...byRight.entries()].sort(([a], [b]) => a - b)) {
+    if (list.length <= limit) continue;
+    push(
+      topic,
+      "",
+      "multi_choice_correct_spread",
+      `chủ đề ${String(topic.data.slug)}: ${list.length}/${n} câu multi_choice có ${right} đáp án đúng; nhóm ${group} cho tối đa ${limit} câu cùng số đáp án đúng ` +
+        `(max(1, floor(${ratio} × ${n}))), cần đổi ít nhất ${list.length - limit} câu sang số đáp án đúng khác. Phân bố: ${spread}. Các câu: ${list.join(", ")}`,
+    );
+  }
+}
+
+const IRREGULAR: Readonly<Record<string, string>> = { teeth: "tooth", feet: "foot", mice: "mouse", geese: "goose", children: "child", people: "person", men: "man", women: "woman" };
+
+/** Lower case, hyphens as spaces, no edge punctuation, no leading article: "The Air-sacs." -> "air sacs". */
+function normalizeWord(text: string): string {
+  return text
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[-‐–—]/g, " ")
+    .replace(/[^\p{L}\p{N}' ]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^(a|an|the) /, "");
+}
+
+/**
+ * Possible base forms of the last word (wave 1, no dictionary): the word itself, plus what is
+ * left after -s, -es, -ies, -ves, -ed, -ied, -ing (with or without a final e, undoubling the last
+ * consonant), plus a few irregular plurals. Stems under 3 letters are dropped.
+ */
+export function wordForms(text: string): Set<string> {
+  const phrase = normalizeWord(text);
+  const cut = phrase.lastIndexOf(" ");
+  const [head, word] = cut < 0 ? ["", phrase] : [phrase.slice(0, cut + 1), phrase.slice(cut + 1)];
+  const bases = new Set([word]);
+  const add = (base: string) => base.length >= 3 && bases.add(base);
+  const undouble = (base: string) => (/([b-df-hj-np-tv-z])\1$/.test(base) ? base.slice(0, -1) : base);
+  if (IRREGULAR[word]) add(IRREGULAR[word]!);
+  if (word.endsWith("ies") || word.endsWith("ied")) add(`${word.slice(0, -3)}y`);
+  if (word.endsWith("ves")) (add(`${word.slice(0, -3)}f`), add(`${word.slice(0, -3)}fe`));
+  if (word.endsWith("es")) add(word.slice(0, -2));
+  if (word.endsWith("s") && !word.endsWith("ss")) add(word.slice(0, -1));
+  if (word.endsWith("ed")) (add(word.slice(0, -2)), add(word.slice(0, -1)), add(undouble(word.slice(0, -2))));
+  if (word.endsWith("ing")) (add(word.slice(0, -3)), add(`${word.slice(0, -3)}e`), add(undouble(word.slice(0, -3))));
+  return new Set([...bases].map((base) => `${head}${base}`));
+}
+
+/** Same word up to case and -s, -es, -ed, -ing: the two sets of base forms meet. */
+export function sameWord(a: string, b: string): boolean {
+  const left = wordForms(a);
+  for (const form of wordForms(b)) if (left.has(form)) return true;
+  return false;
+}
+
+/**
+ * SK-047 wave 1 of vocab_item_uses_lesson_word: every fill_blank_bank of the quiz is a "new word"
+ * item, so at least one of its answers (bank label.en) is a term.en of a core word of the lesson's
+ * vocab. Core only (coordinator 15/11): content-schema calls core "new words of the lesson, tested"
+ * and extra "further reading"; the recap's new-word strip shows the core words (word_list).
+ * Wave 2 also checks items with skill vocab. Warm-up items recall other lessons: not checked.
+ */
+function checkVocabItems(doc: AgeDoc, push: Push) {
+  const vocab = (doc.data.vocab ?? []) as VocabTerm[];
+  const termsOf = (tier: "core" | "extra") => vocab.filter((entry) => (entry.tier ?? "core") === tier).map((entry) => entry.term?.en ?? "").filter(Boolean);
+  const [core, extra] = [termsOf("core"), termsOf("extra")];
+  ((doc.data.quiz ?? []) as QuizItem[]).forEach((item, i) => {
+    if (item.format !== "fill_blank_bank") return;
+    const labels = (item.answers ?? []).map((key) => item.bank?.find((word) => word.key === key)?.label?.en ?? key);
+    if (labels.some((label) => core.some((term) => sameWord(label, term)))) return;
+    const words = core.length > 0 ? core.join(", ") : "bài chưa có từ core nào";
+    const extraHit = extra.filter((term) => labels.some((label) => sameWord(label, term)));
+    const extraNote = extraHit.length > 0 ? `; ${extraHit.join(", ")} là từ đọc thêm (tier: extra) của bài, chưa phải từ mới: dùng một từ core, hoặc đổi tier của từ đó thành core` : "";
+    push(
+      doc,
+      `/quiz/${i}/answers`,
+      "vocab_item_uses_lesson_word",
+      `câu ${item.key}: từ trong chỗ trống (${labels.join(" + ")}) không trùng từ mới nào của bài (vocab tier core: ${words})${extraNote}; fill_blank_bank ở Quiz là câu Từ mới, chỗ trống dùng một từ mới của bài (so không phân biệt hoa thường, nhận -s, -es, -ed, -ing)`,
+    );
+  });
 }

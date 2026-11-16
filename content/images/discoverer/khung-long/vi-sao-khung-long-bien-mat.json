@@ -140,21 +140,18 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "note": "Rùa mai cứng, đúng nhãn «con rùa». Alt giữ được: «A turtle walking»."
     },
-    "q3.q3_croc": {
-      "source": "Wikimedia Commons",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
-      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "title": "Siamese crocodile on a riverbank",
-      "author": "Philsacor",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "crop": {
-        "left": 0.64,
-        "top": 0.3,
-        "width": 0.25,
-        "height": 0.416
+    "q3.q3_pterosaur": {
+      "composed": {
+        "file": "content/images/composed/khung-long/vi-sao-khung-long-bien-mat.q3.q3_pterosaur.jpg",
+        "parts": [
+          {
+            "same_as": "tray_pterosaur",
+            "lesson": "khung-long/khung-long-la-gi"
+          }
+        ]
       },
-      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/khung-long-la-gi q1.q1_reptiles, cắt riêng cho khung 4:5 (trước: same_as q1_reptiles (khung-long/khung-long-la-gi)). Khung đặt quanh đầu và thân trước con cá sấu, mở rộng lên trên vùng crop cũ (top 0,38) để con vật ở giữa; vùng mới chưa xem tận mắt vì Commons trả 429, cần nhìn lại sau khi fetch."
+      "title": "A painting of a flying reptile",
+      "note": "SK-047 15/11 (designer): hình ghép một phần (đệm khung, không cắt vật chính), như các tranh khủng long nền trắng của A2 14/11. Tranh Pteranodon (TotalDino, CC BY 4.0) cắt sát vật, đặt giữa khung 4:5 nền trắng 816×1020 để thấy trọn hai cánh; ảnh gốc 2:1 vào thẳng khung 4:5 lệch ×2,5."
     },
     "q3.q3_trike": {
       "same_as": "q5_triceratops",
@@ -216,8 +213,20 @@
       "same_as": "learn.explore.explore_survivors"
     },
     "reward.crocodile": {
-      "same_as": "q3.q3_croc",
-      "note": "A2 14/11 (designer, SK-043): trỏ sang q3.q3_croc (bản cắt gần vuông)."
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siamese_crocodile_in_the_wild,_Bueng_Boraphet_Non-hunting_Area.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Siamese_crocodile_in_the_wild%2C_Bueng_Boraphet_Non-hunting_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.64,
+        "top": 0.3,
+        "width": 0.25,
+        "height": 0.416
+      },
+      "note": "A2 14/11 (designer, SK-043): cùng ảnh với khung-long/khung-long-la-gi q1.q1_reptiles, cắt riêng cho khung 4:5 (trước: same_as q1_reptiles (khung-long/khung-long-la-gi)). Khung đặt quanh đầu và thân trước con cá sấu, mở rộng lên trên vùng crop cũ (top 0,38) để con vật ở giữa; vùng mới chưa xem tận mắt vì Commons trả 429, cần nhìn lại sau khi fetch. SK-047 15/11 (designer): mục ảnh chuyển từ q3.q3_croc (lựa chọn đã bỏ) sang reward.crocodile, giữ nguyên crop nên không tải lại."
     },
     "learn.explore.explore_dust": {
       "source": "Wikimedia Commons",

@@ -563,7 +563,7 @@ image.alt.vi: Lá bàng chuyển màu đỏ
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` ba nhóm + `word_list` (dead, never alive). Chơi `build_tray` hai chỗ, hai nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Đúng). Quiz `single_choice` (q1, q3, q5), `true_false` (q2 Đúng, q6 Sai), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`non_living_means_dead`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất (hai lựa chọn); q3 thứ nhất; q5 thứ hai. q4 thẻ trong file: lá vàng, lá khô, lá xanh; thứ tự đúng: lá xanh, lá vàng, lá khô.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: lá xanh, lá vàng, lá khô.
 - **Màn Chơi, ví dụ để kiểm:** Con ốc sên, Lá khô → `balanced`; Cây non, Hòn đá → `has_limited`; Cây non, Con ốc sên → `missing.tray_dead`.
 - **Câu hỏi chiều phủ định** (rà chữ tester 14/11 n4): q3 "Which one was never alive?" · "Cái nào chưa từng sống?" không viết khẳng định được; đề xuất ios-dev cho giọng đọc chậm và nhấn "never" · "chưa từng".
 - **Giọng đọc:** chữ "dead" · "đã chết" đọc bình thường, không nhấn; không thêm âm thanh buồn ở màn này.

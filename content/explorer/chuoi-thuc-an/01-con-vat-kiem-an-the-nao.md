@@ -612,7 +612,7 @@ image.alt.vi: Con cú đậu trên cành
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món.
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn chủ đề số một bài sáu), `true_false` (w2 Đúng, ôn chủ đề số một bài một; w3 Sai, ôn chủ đề số một bài bảy).
   - Quiz: `single_choice` (q1, q3, q4), `true_false` (q2 Đúng, q5 Đúng, q6 Sai). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`people_feed_all_animals`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ nhất; q3 thứ ba; q4 thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** Con trâu, Con cú, Cá vàng → `balanced`; Con cò, Con chó, Cánh diều → `has_limited`; Con cú, Con cò, Con chó → `missing.tray_graze`.
 - **Chạy `ids`:** sau `_topic.md`. Bài 2, 3 trỏ Khởi động về bài này.
 - **Từ EN có thể ngoài Starters/Movers:** graze, hunt, owl, egret, douc, silkworm, mulberry, flat, quietly, scratches.

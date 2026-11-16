@@ -631,7 +631,7 @@ image.alt.vi: Con đom đóm trên lá
 ## Ghi chú cho dev
 
 - **Block và format:** Học `explore_groups` bốn nhóm + `word_list` (protect, rubbish). Chơi `build_tray` ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món. Khởi động `single_choice` (w1, hai lựa chọn), `true_false` (w2 Đúng, w3 Sai). Quiz `single_choice` (q1, q3, q5, q6), `true_false` (q2 Đúng, q4 Sai). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`tiny_animals_same_place`).
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; q3 thứ ba; q5 thứ hai; q6 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:** Đống cành khô, Đĩa nước, Luống hoa → `balanced`; Bó ống tre, Đĩa nước, Đốt lá khô → `has_limited`; Đống cành khô, Bó ống tre, Luống hoa → `missing.tray_water`.
 - **An toàn (cho người duyệt, không vào chữ bé nghe):** dưới đá, đống lá có thể có rết, bọ cạp, rắn; vì vậy mọi lời rủ quan sát đều kèm "đi cùng người lớn", và không câu nào bảo bé tự lật đá.
 - **Từ EN có thể ngoài Starters/Movers:** protect, rubbish, harm, habitat, bug spray, bamboo tubes, firefly, scaly, damp, grown-up.

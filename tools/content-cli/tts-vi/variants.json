@@ -1179,6 +1179,25 @@
           ],
           "chosen_at": "2026-11-14T12:05:54.020Z"
         },
+        "Chỉ voi ma mút là có sau thời khủng long.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chỉ voi ma múc là có sau thời khủng long",
+            "chỉ voi ma múc là có sau thời khủng long"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.092Z"
+        },
         "Chọn từ còn thiếu": {
           "variant": 1,
           "flags_before": [
@@ -3444,6 +3463,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.187Z"
         },
+        "Côn trùng, vỏ ốc và dấu chân đều có từ con vật.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "côn trùng vỏ ốc và dấu chân đều có từ con vật",
+            "côn trùng vỏ ốc và dấu chân đều có từ con vật"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.281Z"
+        },
         "Cú săn chuột ngoài cánh đồng.": {
           "variant": 1,
           "flags_before": [
@@ -3633,6 +3671,27 @@
             4
           ],
           "chosen_at": "2026-11-14T06:36:14.629Z"
+        },
+        "Cầu vồng hiện ra sau mưa, khi có nắng.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cầu vòng hiện ra sau mưa khi có nắng",
+            "cầu vòng hiện ra sau mưa khi có nắng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.651Z"
         },
         "Cốc nước không cào xước được hòn đá.": {
           "variant": 0,
@@ -4693,6 +4752,103 @@
           ],
           "chosen_at": "2026-11-14T05:58:42.002Z"
         },
+        "Em nghĩ tới cái loa xã trước khi bão tới nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới cái loa xã trước khi bão tới nhé",
+            "em nghĩ tới cái loa xả trước khi bão tới nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-16T01:50:25.862Z"
+        },
+        "Em nghĩ tới cánh diều, đám mây trên cao nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "em nghĩ tới cánh dìu đám mây trên cao nhé",
+            "em nghĩ tới cánh dìu đám mây trên cao nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.644Z"
+        },
+        "Em nghĩ tới cây cối ngả rạp trong cơn bão nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới cây cối ngã rạp trong cơn bão nhé",
+            "em nghĩ tới cây cối ngã rạp trong cơn bão nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-16T01:50:25.866Z"
+        },
+        "Em nghĩ tới lúc người ta đào một cái giếng sâu nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới lúc người ta đào một cái giếng sâu nhé",
+            "em nghĩ tới lúc người ta đào một cái giếng sâu nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:09:48.467Z"
+        },
+        "Em nghĩ tới lúc đất vừa bắt đầu rung nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới lúc đất vừa bắt đầu rung nhé",
+            "em nghĩ tới lúc đất vừa bắt đầu rung nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:09:48.475Z"
+        },
         "Em nghĩ tới miệng núi lửa và đất đỏ em vừa tìm thấy nhé.": {
           "variant": 1,
           "flags_before": [
@@ -4711,6 +4867,25 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.307Z"
+        },
+        "Em nghĩ tới những người mang mẫu đá, mẫu đất về thử nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới những người mang mẫu đá mẫu đất về thử nhé",
+            "em nghĩ tới những người mang mẫu đá mẫu đất về thử nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-16T01:54:29.631Z"
         },
         "Em nghĩ tới nền rừng mát rượi nhé.": {
           "variant": 4,
@@ -4749,6 +4924,65 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.303Z"
+        },
+        "Em nghĩ tới ổ gà, xe cộ trên quãng đường ngắn nhé.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghĩ tới ổ gà xe cộ trên quảng đường ngắn nhé",
+            "em nghĩ tới ổ gà xe cộ trên quảng đường ngắn nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.727Z"
+        },
+        "Em nghĩ xem Me ri tìm được gì, ai học được từ đó nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "em nghĩ xem mary tìm được gì ai học được từ đó nhé",
+            "em nghĩ xem mary tìm được gì ai học được từ đó nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.286Z"
+        },
+        "Em nghĩ xem ban đêm tim em làm gì nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nghỉ xem ban đêm tim em làm gì nhé",
+            "em nghỉ xem ban đêm tim em làm gì nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.724Z"
         },
         "Em nghĩ xem mỗi thứ từ đâu mà có nhé.": {
           "variant": 3,
@@ -4980,6 +5214,25 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.442Z"
         },
+        "Em nhớ lại chạy xong vài phút, em thở thế nào.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại chạy xong vài phút em thở thế nào",
+            "em nhớ lại chạy xong vài phút em thở thế nào"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:21:22.016Z"
+        },
         "Em nhớ lại con côn trùng trong bài hôm nay nhé.": {
           "variant": 0,
           "flags_before": [
@@ -5119,6 +5372,44 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.176Z"
         },
+        "Em nhớ lại lúc vấp ngón chân vào bậc thềm nhé.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại lúc vấp ngón chân vào bật thềm nhé",
+            "em nhớ lại lúc vấp ngón chân vào bật thềm nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.722Z"
+        },
+        "Em nhớ lại manh mối trên các mô hình khủng long nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại manh mối trên các mô hình khủng long nhé",
+            "em nhớ lại manh mối trên các mô hình khủng long nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.094Z"
+        },
         "Em nhớ lại những bước đầu tiên khi hoá thạch hình thành nhé.": {
           "variant": 1,
           "flags_before": [
@@ -5255,6 +5546,25 @@
             4
           ],
           "chosen_at": "2026-11-11T09:52:29.477Z"
+        },
+        "Em nhớ lại ô Lớp manti ở bài trước nhé.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại ô lớp manti ở bài trước nhé",
+            "em nhớ lại ô lớp manti ở bài trước nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:09:48.473Z"
         },
         "Em nhớ lại ô Me ri An ninh trong bài học nhé.": {
           "variant": 0,
@@ -5394,6 +5704,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.256Z"
+        },
+        "Em nhớ lại đá hoa cương dưới kính lúp nhé.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em nhớ lại đá hoa cương dưới kính lúp nhé",
+            "em nhớ lại đá hoa cương dưới kính lúp nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.279Z"
         },
         "Em nói được vì sao việc săn hoá thạch của Me ri An ninh quan trọng.": {
           "variant": 0,
@@ -5711,6 +6040,27 @@
           ],
           "chosen_at": "2026-11-14T06:36:14.621Z"
         },
+        "Em tìm trên bãi cuội, cách xa vách đá.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "em tìm trên bãi củi cách xa vách đá",
+            "em tìm trên bãi củi cách xa vách đá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.281Z"
+        },
         "Em tìm đá, đất đỏ và miệng núi lửa nhé. Dung nham nguội đi thành đá mới, đất mới.": {
           "variant": 1,
           "flags_before": [
@@ -5787,6 +6137,25 @@
           ],
           "chosen_at": "2026-11-14T06:36:14.592Z"
         },
+        "Em đếm xem câu của Na nói tới mấy quốc gia nhé.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "em đếm xem câu của na nói tới mấy quốc gia nhé",
+            "em đếm xem câu của na nói tới mấy quốc gia nhé"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:09:48.465Z"
+        },
         "Em ở yên tại chỗ, cúi thấp và che đầu.": {
           "variant": 2,
           "flags_before": [
@@ -5824,6 +6193,25 @@
             4
           ],
           "chosen_at": "2026-11-10T17:03:49.015Z"
+        },
+        "Ghép tranh thì Mai phải thức và suy nghĩ.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ghép tranh thì mai phải thức và suy nghĩ",
+            "ghép tranh thì mai phải thức và suy nghĩ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.721Z"
         },
         "Ghềnh đá đen ven biển": {
           "variant": 0,
@@ -7628,6 +8016,27 @@
           ],
           "chosen_at": "2026-11-10T02:15:02.129Z"
         },
+        "Khủng long bạo chúa ăn thịt, nhưng nhiều loài ăn thực vật.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "khủng long bảo chúa ăn thịt nhưng nhiều loài ăn thực vật",
+            "khủng long bảo chúa ăn thịt nhưng nhiều loài ăn thực vật"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.095Z"
+        },
         "Khủng long bạo chúa ăn thịt, vậy loài nào cũng thế.": {
           "variant": 1,
           "flags_before": [
@@ -8837,6 +9246,25 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.041Z"
         },
+        "Lửa tạo ra khói, mà khói làm hại phổi em.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "lửa tạo ra khói mà khói làm hại phổi em",
+            "lửa tạo ra khói mà khói làm hại phổi em"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:21:22.020Z"
+        },
         "Lửa đốt gỗ thành tro, không thành đá.": {
           "variant": 0,
           "flags_before": [
@@ -9613,6 +10041,27 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.413Z"
         },
+        "Mây là giọt nước li ti, giọt to thì rơi thành mưa.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "mây là giọt nước ly ti giọt to thì rơi thành mưa",
+            "mây là giọt nước ly ti giọt to thì rơi thành mưa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.643Z"
+        },
         "Mây đen": {
           "variant": 0,
           "flags_before": [
@@ -9808,6 +10257,25 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.307Z"
+        },
+        "Mình dùng … để hứng mưa, xem mưa nhiều hay ít.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "mình dùng để hứng mưa xem mưa nhiều hay ít",
+            "mình dùng để hứng mưa xem mưa nhiều hay ít"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.648Z"
         },
         "Mình sống trên các mảng ấy, chúng dịch chuyển rất chậm.": {
           "variant": 1,
@@ -11330,6 +11798,25 @@
           ],
           "chosen_at": "2026-11-10T17:03:49.024Z"
         },
+        "Ngửi, nếm và sờ là ba giác quan còn lại.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ngửi nếm và sờ là ba giác quan còn lại",
+            "ngửi nếm và sờ là ba giác quan còn lại"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.724Z"
+        },
         "Ngực em phồng lên khi em hít vào.": {
           "variant": 0,
           "flags_before": [
@@ -11505,6 +11992,25 @@
           ],
           "chosen_at": "2026-11-14T22:28:07.906Z"
         },
+        "Nhà địa chất tìm hiểu đá ở vách đá, mỏ đá, bờ sông.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "nhà địa chất tìm hiểu đá ở vách đá mỏ đá bờ sông",
+            "nhà địa chất tìm hiểu đá ở vách đá mỏ đá bờ sông"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.289Z"
+        },
         "Nhân Trái Đất còn nóng hơn cả lớp manti.": {
           "variant": 4,
           "flags_before": [
@@ -11582,6 +12088,25 @@
             4
           ],
           "chosen_at": "2026-11-14T12:41:07.832Z"
+        },
+        "Nhìn …, mình biết trời đổ xuống bao nhiêu nước.": {
+          "variant": 1,
+          "flags_before": [
+            "engine_retry"
+          ],
+          "flags_after": [],
+          "heard": [
+            "nhìn mình biết trời đổ xuống bao nhiêu nước",
+            "nhìn mình biết trời đổ xuống bao nhiêu nước"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-16T01:50:25.860Z"
         },
         "Nhím biển cứng và đầy gai.": {
           "variant": 0,
@@ -12507,6 +13032,27 @@
           ],
           "chosen_at": "2026-11-14T22:28:07.959Z"
         },
+        "Phích giữ nước nóng, không dùng để hứng mưa.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "phích giữ nước nóng không dùng để hứng mưa",
+            "phít giữ nước nóng không dùng để hướng mưa"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.648Z"
+        },
         "Phích giữ nước nóng, nhưng không đo được gì.": {
           "variant": 1,
           "flags_before": [
@@ -12896,6 +13442,27 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.248Z"
         },
+        "Rùa có vảy, ngày nay vẫn còn.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "rùa có vẫy ngày nay vẫn còn",
+            "rùa có vẫy ngày nay vẫn còn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.097Z"
+        },
         "Rùa và cá sấu có vảy, ngày nay vẫn còn.": {
           "variant": 0,
           "flags_before": [
@@ -12916,6 +13483,25 @@
             4
           ],
           "chosen_at": "2026-11-14T12:41:07.842Z"
+        },
+        "Rùa vẫn sống sót sau khi khủng long tuyệt chủng.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "rùa vẫn sống sót sau khi khủng long tuyệt chủng",
+            "rùa vẫn sống sót sau khi khủng long tuyệt chủng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.097Z"
         },
         "Răng": {
           "variant": 1,
@@ -13458,6 +14044,25 @@
             4
           ],
           "chosen_at": "2026-11-12T06:30:07.217Z"
+        },
+        "Sông mang bùn mịn về, bồi thành …": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "sông mang bùng mịn về bồi thành",
+            "sông mang bùng mịn về bồi thành"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.287Z"
         },
         "Sỏi không mục, nên không nuôi được đất.": {
           "variant": 0,
@@ -14093,6 +14698,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.801Z"
         },
+        "Thằn lằn bay bay lượn, còn khủng long sống trên cạn.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "thằng lằn bay bay lượng còn khủng long sống trên cạn",
+            "thằng lằn bay bay lượng còn khủng long sống trên cạn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.094Z"
+        },
         "Thằn lằn bay khổng lồ": {
           "variant": 2,
           "flags_before": [
@@ -14191,6 +14815,27 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.131Z"
+        },
+        "Thằn lằn bay đã tuyệt chủng cùng khủng long.": {
+          "variant": 3,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "thằng làng bay đã tuyệt chủng cùng khủng long",
+            "thằng lằn bay đã tuyệt chủng cùng khủng long"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:16:15.098Z"
         },
         "Thằn lằn có bốn chân, không có cánh.": {
           "variant": 2,
@@ -14634,6 +15279,27 @@
           ],
           "chosen_at": "2026-11-14T13:55:59.694Z"
         },
+        "Ti vi, đài và loa phát thanh làng đưa tin dự báo.": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "tv đài và loa phát thanh làng đưa tin dự báo",
+            "tv đài và loa phát thanh làng đưa tin dự báo"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.651Z"
+        },
         "Tin bắt đầu từ đâu, và đi bằng đường nào?": {
           "variant": 1,
           "flags_before": [
@@ -15018,6 +15684,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.198Z"
         },
+        "Trèo vách đá dễ làm đá lở rơi xuống.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "chèo vách đá dễ làm đá lỡ rơi xuống",
+            "trèo vách đá dễ làm đá lỡ rơi xuống"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.286Z"
+        },
         "Trên đồi cát": {
           "variant": 0,
           "flags_before": [
@@ -15311,6 +15996,27 @@
             4
           ],
           "chosen_at": "2026-11-10T17:03:49.008Z"
+        },
+        "Tìm an toàn là tìm trên bãi cuội cùng người lớn.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "tìm an toàn là tìm trên bãi cụi cùng người lớn",
+            "tìm an toàn là tìm trên bãi cụi cùng người lớn"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.283Z"
         },
         "Tìm ba con khủng long khác nhau": {
           "variant": 0,
@@ -15964,6 +16670,25 @@
           ],
           "chosen_at": "2026-11-14T22:28:07.895Z"
         },
+        "Vỏ Trái Đất vỡ thành những … khổng lồ.": {
+          "variant": 1,
+          "flags_before": [
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "vỏ trái đất vỡ thành những khổng lồ",
+            "vỏ trái đất vỡ thành những khổng lồ"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:09:48.475Z"
+        },
         "Vỏ sò trong đá": {
           "variant": 1,
           "flags_before": [
@@ -16041,6 +16766,25 @@
             4
           ],
           "chosen_at": "2026-11-14T13:04:33.623Z"
+        },
+        "Xe cộ, đào đất và bếp than đều làm bẩn không khí.": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "xe cộ đào đất và bếp thang đều làm bẩn không khí",
+            "xe cộ đào đất và bếp thang đều làm bẩn không khí"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:21:22.022Z"
         },
         "Xi măng làm từ đá vôi giúp gắn gạch với nhau.": {
           "variant": 1,
@@ -17193,6 +17937,25 @@
           ],
           "chosen_at": "2026-11-14T05:58:42.003Z"
         },
+        "cài quai mũ bảo hiểm": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "cài quai mũ bảo hiểm",
+            "cài quai mũ bảo hiểm"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.726Z"
+        },
         "cá thòi lòi": {
           "variant": 0,
           "flags_before": [
@@ -17561,6 +18324,27 @@
             4
           ],
           "chosen_at": "2026-11-10T02:15:02.137Z"
+        },
+        "cầu vồng": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "cầu vòng",
+            "cầu vòng"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.651Z"
         },
         "cột bên phải": {
           "variant": 1,
@@ -19481,6 +20265,25 @@
           ],
           "chosen_at": "2026-11-12T06:30:07.169Z"
         },
+        "phích nước": {
+          "variant": 0,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "phích nước",
+            "phít nước"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.648Z"
+        },
         "phần lớn cá có vảy": {
           "variant": 0,
           "flags_before": [
@@ -19653,6 +20456,28 @@
             4
           ],
           "chosen_at": "2026-11-09T09:10:02.315Z"
+        },
+        "ruy băng trên que": {
+          "variant": 1,
+          "flags_before": [
+            "asr",
+            "cut_end"
+          ],
+          "flags_after": [
+            "asr"
+          ],
+          "heard": [
+            "ri băng trên que",
+            "ruy băng trên que"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.651Z"
         },
         "ruộng lúa": {
           "variant": 1,
@@ -20367,6 +21192,25 @@
           ],
           "chosen_at": "2026-11-12T09:13:38.750Z"
         },
+        "trèo lên vách đá": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "trèo lên vách đá",
+            "trèo lên vách đá"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:44:21.285Z"
+        },
         "trên ghềnh đá bị sóng đánh": {
           "variant": 0,
           "flags_before": [
@@ -20942,6 +21786,25 @@
             4
           ],
           "chosen_at": "2026-11-14T13:04:33.621Z"
+        },
+        "Ô-xi cho đôi chân lấy từ đâu ra?": {
+          "variant": 2,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "oxy cho đôi chân lấy từ đâu ra",
+            "oxy cho đôi chân lấy từ đâu ra"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:21:22.020Z"
         },
         "ánh nắng": {
           "variant": 1,
@@ -24844,6 +25707,25 @@
           ],
           "chosen_at": "2026-11-14T13:55:59.691Z"
         },
+        "Đọc sách, ngủ đủ và cài quai mũ đều giúp bộ não.": {
+          "variant": 1,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "đọc sách ngủ đủ và cài quai mũ đều giúp bộ não",
+            "đọc sách ngủ đủ và cài quai mũ đều giúp bộ não"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:27:00.725Z"
+        },
         "Đối chiếu": {
           "variant": 2,
           "flags_before": [
@@ -25833,6 +26715,25 @@
           ],
           "chosen_at": "2026-11-11T09:52:29.444Z"
         },
+        "Ống gió, lá cờ và dải ruy băng bay theo hướng gió.": {
+          "variant": 4,
+          "flags_before": [
+            "asr"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ống gió lá cờ và giải ruy băng bay theo hướng gió",
+            "ống gió lá cờ và giải ruy băng bay theo hướng gió"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-15T15:33:22.650Z"
+        },
         "Ống nhòm giúp em nhìn vật ở thật xa.": {
           "variant": 0,
           "flags_before": [
@@ -26068,6 +26969,26 @@
             4
           ],
           "chosen_at": "2026-11-14T12:41:07.835Z"
+        },
+        "ở sân trường": {
+          "variant": 1,
+          "flags_before": [
+            "asr",
+            "cut_end"
+          ],
+          "flags_after": [],
+          "heard": [
+            "ở sân trường",
+            "ở sân trường"
+          ],
+          "tried": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "chosen_at": "2026-11-16T01:52:38.053Z"
         }
       }
     }

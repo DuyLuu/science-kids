@@ -45,6 +45,25 @@ enum DiscovererMetrics {
     static let barMinHeight: CGFloat = 12
     static let barPicture: CGFloat = 44
     static let barPeel: CGFloat = 20
+    /// SK-047 `c-ask`: a counted block (height at most `28`, `3` between blocks; the odd ones
+    /// `1` to the left, cut by hand), the axis under the bars (`8`), the peeled corner of the top
+    /// block of a tried bar (`16`); bars are blocks when every value is a whole number up to `10`.
+    static let blockMaxHeight: CGFloat = 28
+    static let blockGap: CGFloat = 3
+    static let blockJog: CGFloat = 1
+    static let blockMaxCount: Double = 10
+    static let chartAxis: CGFloat = 8
+    static let blockPeel: CGFloat = 16
+    /// SK-047 `h-sc-open`: the bulb drawn 1.1× the speaker's glyph; the bulb square on the slip
+    /// (`36`, tilted −4°).
+    static let hintGlyphScale: CGFloat = 1.1
+    static let hintMark: CGFloat = 36
+    static let hintMarkTilt: Angle = .degrees(-4)
+    /// Designer 15/11 (rà bản dựng): the question row is top-aligned, its first line level with
+    /// the centre of the 56 buttons (`15` above the text), so the speaker never floats above it in
+    /// "Cả hai" (VI under the speaker); the right bar's seal (`28`) on the top block's corner.
+    static let promptTopInset: CGFloat = 15
+    static let barSealOffset = CGSize(width: 7, height: -8)
 }
 
 /// One Discoverer question, in Khởi động or the Quiz, after A2 (SK-043, Duy 14/11).
@@ -61,6 +80,10 @@ enum DiscovererMetrics {
 ///   slip prints the option's `feedback` (or the hint without one); its speaker says the feedback
 ///   then the hint (point 4). Right or out of tries: the result sheet with the seal (or the
 ///   mascot), one sentence, its speaker, the XP and the arrow.
+/// - SK-047: choices, bank words and order cards in the attempt's order (`shownOptions`…);
+///   "Gợi ý" (the bulb left of the speaker; under it on Na's line) prints the hint under the
+///   question and reads it, and marks `hint_used`; once the question is done the bulb hides and
+///   keeps its room.
 struct DiscovererQuestionStep: View {
     let session: LessonSession
     let phase: QuestionPhase
@@ -77,6 +100,7 @@ struct DiscovererQuestionStep: View {
     @State private var placed: [String] = []
     @Environment(\.speechPlayer) private var speech
     @Environment(\.layoutMetrics) private var metrics
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ReducedMotion private var reduced
 
     private var mode: LanguageMode { session.languageMode }
@@ -115,7 +139,7 @@ struct DiscovererQuestionStep: View {
                 }
                 question.reveal(order: 1)
                 answers.id(ScrollMark.answers)
-                if case .retry = status, naming == nil {
+                if case .retry = status, naming == nil, showsRetrySlip {
                     FeedbackSlip(
                         line: retryLine, mode: mode,
                         listen: session.resultUtterance(item, status: status) ?? Utterance(id: "retry", clips: [])
@@ -143,6 +167,13 @@ struct DiscovererQuestionStep: View {
         }
     }
 
+    /// SK-047 `h-sc-open`: with the hint already open, the folded slip prints only a `feedback`;
+    /// without one it does not show (the hint is on the screen; the voice still says it).
+    private var showsRetrySlip: Bool {
+        guard hintOpened, case .retry(let last) = status else { return true }
+        return LessonSession.feedback(item, for: last) != nil
+    }
+
     /// What the slip prints after a wrong try: the option's `feedback`, else the hint.
     private var retryLine: Spoken {
         guard case .retry(let last) = status else { return item.hint }
@@ -158,31 +189,74 @@ struct DiscovererQuestionStep: View {
                 if let image = item.image {
                     questionPicture(image, height: DiscovererMetrics.questionPhotoHeightNa)
                 }
-                SpeakerLine(statement: tf.statement!, speaker: tf.speaker, mode: mode, listen: session.questionUtterance(item))
+                // `h-na-open`: on Na's line the bulb goes under the speaker (no room beside it).
+                SpeakerLine(statement: tf.statement!, speaker: tf.speaker, mode: mode, listen: session.questionUtterance(item)) {
+                    hintButton
+                }
+                hintSlip
             }
         case .fillBlankBank(let fill):
-            HStack(alignment: .center, spacing: Tokens.Space.s10) {
-                FillBlankSentence(fill: fill, filled: blankKeys(fill), mode: mode, showsSecond: false, state: blankState)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                ListenButton(session.questionUtterance(item), label: "lesson.listen.question")
-            }
-            .padding(EdgeInsets(top: Tokens.Space.s12, leading: Tokens.Space.s14, bottom: Tokens.Space.s12, trailing: Tokens.Space.s10))
-            .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
-        default:
             VStack(alignment: .leading, spacing: LessonMetrics.gap) {
                 HStack(alignment: .center, spacing: Tokens.Space.s10) {
+                    FillBlankSentence(fill: fill, filled: blankKeys(fill), mode: mode, showsSecond: false, state: blankState)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    HStack(alignment: .top, spacing: Tokens.Space.s8) {
+                        hintButton
+                        ListenButton(session.questionUtterance(item), label: "lesson.listen.question")
+                    }
+                }
+                .padding(EdgeInsets(top: Tokens.Space.s12, leading: Tokens.Space.s14, bottom: Tokens.Space.s12, trailing: Tokens.Space.s10))
+                .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
+                hintSlip
+            }
+        default:
+            VStack(alignment: .leading, spacing: LessonMetrics.gap) {
+                HStack(alignment: .top, spacing: Tokens.Space.s10) {
                     Text(verbatim: mode.sentence(item.prompt))
                         .typography(Tokens.Typography.itemTitle)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, DiscovererMetrics.promptTopInset)
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("lesson.prompt")
-                    ListenButton(session.questionUtterance(item), label: "lesson.listen.question")
+                    HStack(alignment: .top, spacing: Tokens.Space.s8) {
+                        hintButton
+                        ListenButton(session.questionUtterance(item), label: "lesson.listen.question")
+                    }
                 }
+                hintSlip
                 if let image = item.image, let height = questionPictureHeight {
                     questionPicture(image, height: height)
                 }
             }
+        }
+    }
+
+    // MARK: Gợi ý (SK-047)
+
+    /// The question has a hint to give (the schema requires one; an empty one gets no button).
+    private var hasHint: Bool {
+        !item.hint.en.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            || !item.hint.vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    private var hintOpened: Bool { session.hintOpened(item, in: phase) }
+
+    private var hintUtterance: Utterance { session.utterance("hint.\(item.key)", item.hint) }
+
+    @ViewBuilder private var hintButton: some View {
+        if hasHint {
+            HintButton(opened: hintOpened, hidden: status.isDone) {
+                session.markHintUsed(item, in: phase)
+                speech?.play(hintUtterance)
+            }
+        }
+    }
+
+    /// The hint printed under the question once opened; it stays, also after the question is done.
+    @ViewBuilder private var hintSlip: some View {
+        if hasHint, hintOpened {
+            HintSlip(hint: item.hint, mode: mode, listen: hintUtterance)
         }
     }
 
@@ -218,17 +292,17 @@ struct DiscovererQuestionStep: View {
 
     @ViewBuilder private var answers: some View {
         switch item.answer {
-        case .singleChoice(let choice):
-            choiceCards(choice.options, multiple: false)
-        case .multiChoice(let choice):
-            choiceCards(choice.options, multiple: true)
+        case .singleChoice:
+            choiceCards(session.shownOptions(item), multiple: false)
+        case .multiChoice:
+            choiceCards(session.shownOptions(item), multiple: true)
         case .trueFalse(let tf):
             trueFalseCards(tf)
         case .fillBlankBank(let fill):
             bankCards(fill)
         case .orderSequence(let order):
             ExplorerOrderSequence(
-                order: order, status: status, tried: tries, naming: naming, mode: mode,
+                order: order, cards: session.shownOrderCards(item), status: status, tried: tries, naming: naming, mode: mode,
                 onPlace: { key in speech?.play(session.utterance("word.\(key)", LessonSession.answerName(item, key: key))) },
                 onComplete: { keys in answer(.order(keys), pick: keys.joined(separator: ","), name: keys.last.flatMap { LessonSession.answerName(item, key: $0) }) }
             )
@@ -240,52 +314,58 @@ struct DiscovererQuestionStep: View {
         }
     }
 
-    /// `picture_bar_chart` (A2 `chart-ask`; dev 14/11): paper bars in chàm, as high as their
-    /// `value` against the highest, left to right in `bars` order. Bar i is the button of
-    /// `options[i]`: a tap answers, like a single choice. Its name shows under it once scored.
+    /// `picture_bar_chart` (A2 `chart-ask`; dev 14/11; SK-047 `c-ask`): bars left to right in
+    /// `bars` order; bar i is the button of `options[i]` (a tap answers, like a single choice).
+    /// SK-047: every bar's name shows under the axis from the start (Duy 15/11, an exception to the
+    /// A2 few-words rule), and when every value is a whole number up to 10 a bar is a stack of
+    /// chàm blocks the child can count (`BarChartLayout`); else a solid bar as high as its value
+    /// against the highest. No number, no scale.
     private func barChart(_ chart: QuizItem.PictureBarChart) -> some View {
         let bars = chart.chart.bars
-        let top = max(bars.map(\.value).max() ?? 1, 1)
+        let values = bars.map(\.value)
+        let top = max(values.max() ?? 1, 1)
         let height = metrics.illustration(DiscovererMetrics.chartHeight)
-        return HStack(alignment: .bottom, spacing: Tokens.Space.s14) {
-            ForEach(Array(bars.enumerated()), id: \.element.key) { index, bar in
-                if chart.options.indices.contains(index) {
+        let blocks = BarChartLayout.usesBlocks(values)
+        let blockHeight = BarChartLayout.blockHeight(chartHeight: height, top: top)
+        let columns = Array(bars.enumerated()).filter { chart.options.indices.contains($0.offset) }
+        return VStack(spacing: 0) {
+            HStack(alignment: .bottom, spacing: Tokens.Space.s14) {
+                ForEach(columns, id: \.element.key) { index, bar in
                     let option = chart.options[index]
                     let look = ExplorerCardLook.of(key: option.key, tried: tried, isCorrect: option.correct, status: status, naming: naming)
                     Button {
                         answer(.selected(option.key), pick: option.key, name: bar.label)
                     } label: {
-                        VStack(spacing: Tokens.Space.s6) {
-                            ZStack(alignment: .top) {
+                        Group {
+                            if blocks {
+                                blockStack(count: Int(bar.value), blockHeight: blockHeight, look: look)
+                            } else {
                                 PeeledCard(radius: Tokens.Radius.tag, peel: look == .tried ? DiscovererMetrics.barPeel : 0)
                                     .fill(barFill(look))
                                     .paperShadow(look == .tried ? Tokens.Shadow.sunken : Tokens.Shadow.paper2,
                                                  in: PeeledCard(radius: Tokens.Radius.tag, peel: look == .tried ? DiscovererMetrics.barPeel : 0))
-                                if look == .right {
-                                    Seal(icon: .check, tone: .correct).offset(y: -Tokens.Space.s20)
-                                }
+                                    .frame(height: max(height * CGFloat(bar.value / top), DiscovererMetrics.barMinHeight))
                             }
-                            .frame(height: max(height * CGFloat(bar.value / top), DiscovererMetrics.barMinHeight))
-                            .frame(maxWidth: .infinity)
-                            .padding(.horizontal, Tokens.Space.s6)
-                            .background(alignment: .bottom) {
-                                // Out of tries: vàng hoè nhạt behind the right bar.
-                                if look == .answer {
-                                    RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous)
-                                        .fill(Tokens.Role.feedbackMissed)
-                                        .frame(height: height + Tokens.Space.s12)
-                                }
-                            }
-                            if let image = bar.image {
-                                ContentPicture(asset: image.asset, color: nil, size: DiscovererMetrics.barPicture, box: .fillWidth, accessibilityLabel: nil)
-                                    .frame(height: DiscovererMetrics.barPicture)
-                                    .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.tag, style: .continuous))
-                            }
-                            NameLabel(text: mode.sentence(bar.label))
-                                .opacity(look == .right || look == .answer ? 1 : 0)
-                                .accessibilityHidden(true)
                         }
-                        .frame(maxHeight: .infinity, alignment: .bottom)
+                        // `c-right`: the seal on the top block's corner, over its edge.
+                        .overlay(alignment: .topTrailing) {
+                            if look == .right {
+                                Seal(icon: .check, size: .medium, tone: .correct)
+                                    .offset(DiscovererMetrics.barSealOffset)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, Tokens.Space.s6)
+                        .reveal(order: 3 + index, step: Tokens.Motion.Stagger.stepDense, preset: Tokens.Motion.Preset.grow)
+                        .frame(height: height + Tokens.Space.s20, alignment: .bottom)
+                        .background(alignment: .bottom) {
+                            // Out of tries: vàng hoè nhạt behind the right bar.
+                            if look == .answer {
+                                RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous)
+                                    .fill(Tokens.Role.feedbackMissed)
+                                    .frame(height: height + Tokens.Space.s12)
+                            }
+                        }
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.paperPress)
@@ -293,16 +373,78 @@ struct DiscovererQuestionStep: View {
                     .accessibilityLabel(Text(verbatim: barLabel(bar, unit: chart.chart.unit)))
                     .accessibilityValue(look.accessibilityValue ?? Text(verbatim: ""))
                     .accessibilityIdentifier("lesson.bar.\(option.key)")
-                    .reveal(order: 3 + index, step: Tokens.Motion.Stagger.stepDense)
                 }
             }
+            // The axis the bars stand on.
+            Rectangle()
+                .fill(Tokens.Role.textPrimary)
+                .frame(height: DiscovererMetrics.chartAxis)
+                .accessibilityHidden(true)
+            // The names, always shown, each under its bar (same columns as the bars). A tap on a
+            // name answers like a tap on its bar; VoiceOver reads the name on the bar.
+            HStack(alignment: .top, spacing: Tokens.Space.s14) {
+                ForEach(columns, id: \.element.key) { index, bar in
+                    let option = chart.options[index]
+                    Button {
+                        answer(.selected(option.key), pick: option.key, name: bar.label)
+                    } label: {
+                        VStack(spacing: Tokens.Space.s4) {
+                            if let image = bar.image {
+                                ContentPicture(asset: image.asset, color: nil, size: DiscovererMetrics.barPicture, box: .fillWidth, accessibilityLabel: nil)
+                                    .frame(height: DiscovererMetrics.barPicture)
+                                    .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.tag, style: .continuous))
+                            }
+                            // SK-047 (tester 16/11): never cut, never broken inside a word.
+                            WordFitText(
+                                mode.sentence(bar.label), style: Tokens.Typography.bodyStrong,
+                                width: LabelWidths.barName(count: columns.count, metrics: metrics), fixedBox: false
+                            )
+                        }
+                        .frame(maxWidth: .infinity)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    // Not `.disabled`: a disabled plain button greys its name, and the names
+                    // stay in text_primary (`c-retry`).
+                    .allowsHitTesting(canTap(option.key, multiple: false))
+                    .accessibilityHidden(true)
+                    .accessibilityIdentifier("lesson.bar.name.\(option.key)")
+                }
+            }
+            .padding(.top, Tokens.Space.s8)
         }
-        .frame(height: height + DiscovererMetrics.barPicture + Tokens.Space.s20 * 3)
         .padding(Tokens.Space.s14)
         .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.discoverer)
         .padding(.trailing, metrics.gridTrailingInset)
         .accessibilityElement(children: .contain)
         .accessibilityLabel(Text(verbatim: chart.chart.title.map { mode.sentence($0) } ?? ""))
+    }
+
+    /// One bar as counted blocks (SK-047 `c-ask`): `count` paper blocks one on the other, the odd
+    /// ones a point to the left (cut by hand). Tried: all sunken, the top one peeled (`c-retry`);
+    /// right: lá tre (`c-right`).
+    private func blockStack(count: Int, blockHeight: CGFloat, look: ExplorerCardLook) -> some View {
+        let tried = look == .tried
+        return VStack(spacing: DiscovererMetrics.blockGap) {
+            ForEach(0..<max(count, 0), id: \.self) { row in
+                let peel = tried && row == 0 ? DiscovererMetrics.blockPeel : 0
+                PeeledCard(radius: Tokens.Radius.tag, peel: peel)
+                    .fill(barFill(look))
+                    .paperShadow(tried ? Tokens.Shadow.sunkenS : Tokens.Shadow.paper1, in: PeeledCard(radius: Tokens.Radius.tag, peel: peel))
+                    .overlay(alignment: .topTrailing) {
+                        if peel > 0 {
+                            PeelFlap()
+                                .fill(Tokens.Palette.giayLomDeep)
+                                .frame(width: peel, height: peel)
+                                .paperDropShadow(Tokens.Shadow.dropFold)
+                        }
+                    }
+                    .frame(height: blockHeight)
+                    // Counted from the bottom: the 1st, 3rd… block sits a point to the left.
+                    .offset(x: (count - 1 - row) % 2 == 0 ? -DiscovererMetrics.blockJog : 0)
+            }
+        }
+        .accessibilityHidden(true)
     }
 
     private func barFill(_ look: ExplorerCardLook) -> Color {
@@ -324,7 +466,7 @@ struct DiscovererQuestionStep: View {
     /// Picture cards. iPhone: up to three one under the other, four or more in a 2 × 2 grid
     /// (always the grid for multi choice); iPad (regular): up to three in a row, else the grid.
     @ViewBuilder private func choiceCards(_ options: [QuizItem.ChoiceOption], multiple: Bool) -> some View {
-        let grid = multiple || options.count > 3
+        let grid = LabelWidths.choiceIsGrid(count: options.count, multiple: multiple)
         let height: CGFloat = {
             if grid { return metrics.isRegular ? DiscovererMetrics.gridCardHeightRegular : DiscovererMetrics.gridCardHeight }
             if metrics.isRegular { return DiscovererMetrics.rowCardHeightRegular }
@@ -334,7 +476,7 @@ struct DiscovererQuestionStep: View {
             if grid {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: Tokens.Space.s12), GridItem(.flexible())], spacing: Tokens.Space.s12) {
                     ForEach(Array(options.enumerated()), id: \.element.key) { offset, option in
-                        choiceCard(option, height: height, multiple: multiple, order: offset)
+                        choiceCard(option, height: height, multiple: multiple, order: offset, count: options.count)
                     }
                 }
             } else {
@@ -343,7 +485,7 @@ struct DiscovererQuestionStep: View {
                     : AnyLayout(VStackLayout(spacing: Tokens.Space.s12))
                 layout {
                     ForEach(Array(options.enumerated()), id: \.element.key) { offset, option in
-                        choiceCard(option, height: height, multiple: multiple, order: offset)
+                        choiceCard(option, height: height, multiple: multiple, order: offset, count: options.count)
                     }
                 }
             }
@@ -354,7 +496,7 @@ struct DiscovererQuestionStep: View {
         .accessibilityLabel(Text("lesson.explorer.choices"))
     }
 
-    private func choiceCard(_ option: QuizItem.ChoiceOption, height: CGFloat, multiple: Bool, order: Int) -> some View {
+    private func choiceCard(_ option: QuizItem.ChoiceOption, height: CGFloat, multiple: Bool, order: Int, count: Int) -> some View {
         let look = multiple ? multiLook(option) : ExplorerCardLook.of(key: option.key, tried: tried, isCorrect: option.correct, status: status, naming: naming)
         let showsName = option.image == nil || look == .right || look == .answer
         return Button {
@@ -366,16 +508,18 @@ struct DiscovererQuestionStep: View {
                         .clipShape(RoundedRectangle(cornerRadius: Tokens.Radius.discoverer, style: .continuous))
                         .padding(Tokens.Space.s8)
                 } else {
-                    Text(verbatim: mode.sentence(option.label))
-                        .typography(Tokens.Typography.title)
-                        .multilineTextAlignment(.center)
-                        .minimumScaleFactor(PaperMetrics.labelMinimumScale)
-                        .padding(Tokens.Space.s10)
+                    // SK-047 (tester 16/11): never cut, never broken inside a word.
+                    WordFitText(
+                        mode.sentence(option.label), style: Tokens.Typography.title,
+                        width: LabelWidths.choiceText(count: count, multiple: multiple, metrics: metrics),
+                        maxLines: LabelWidths.choiceTextLines, fixedBox: false
+                    )
+                    .padding(Tokens.Space.s10)
                 }
             }
             .overlay(alignment: .bottomLeading) {
                 if showsName, option.image != nil {
-                    NameLabel(text: mode.sentence(option.label))
+                    NameLabel(text: mode.sentence(option.label), width: LabelWidths.nameLabelText(count: count, multiple: multiple, metrics: metrics))
                         .padding(Tokens.Space.s12)
                         .motion(Tokens.Motion.Preset.lay)
                         .accessibilityHidden(true)
@@ -452,10 +596,7 @@ struct DiscovererQuestionStep: View {
                                 .scaledToFit()
                                 .frame(width: metrics.illustration(DiscovererMetrics.trueFalseIcon), height: metrics.illustration(DiscovererMetrics.trueFalseIcon))
                                 .paperDropShadow(Tokens.Shadow.paper1)
-                            Text(verbatim: trueFalseWord(tf, value: value))
-                                .typography(Tokens.Typography.title, fixedBox: true)
-                                .lineLimit(1)
-                                .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                            WordFitText(trueFalseWord(tf, value: value), style: Tokens.Typography.title, width: LabelWidths.trueFalseText(metrics: metrics))
                         }
                         .padding(Tokens.Space.s8)
                     }
@@ -482,11 +623,25 @@ struct DiscovererQuestionStep: View {
     /// One blank: the tap is the answer. Several: each tap fills the next blank, the last one
     /// checks; tapping a placed word takes it back.
     private func bankCards(_ fill: QuizItem.FillBlankBank) -> some View {
-        let columns = Array(repeating: GridItem(.flexible(), spacing: Tokens.Space.s10), count: min(max(fill.bank.count, 1), metrics.isRegular ? 4 : 3))
+        // SK-047 (tester 16/11, "PALAEONTO…"): a word fits its card whole (`WordFitText`); a card
+        // too narrow for a word even at the floor (Slide Over) takes a column less.
+        let words = fill.bank.map { mode.sentence($0.label) }
+        let count = LabelWidths.bankColumns(count: fill.bank.count, metrics: metrics) { width in
+            words.allSatisfy { word in
+                WordFit.rawFit(word, style: Tokens.Typography.title, width: width, maxLines: LabelWidths.bankLines,
+                               dynamicTypeSize: dynamicTypeSize).scale >= WordFit.floor
+            }
+        }
+        let textWidth = LabelWidths.bankText(columns: count, metrics: metrics)
+        // One height for every card: as many lines as the longest label takes.
+        let lines = words.map {
+            WordFit.fit($0, style: Tokens.Typography.title, width: textWidth, maxLines: LabelWidths.bankLines, dynamicTypeSize: dynamicTypeSize).lines
+        }.max() ?? 1
+        let columns = Array(repeating: GridItem(.flexible(), spacing: Tokens.Space.s10), count: count)
         // While the try is named its result does not show yet.
         let wrong = wrongBankKeys(fill, tries: naming == nil ? tries : Array(tries.dropLast()))
         return LazyVGrid(columns: columns, spacing: Tokens.Space.s10) {
-            ForEach(Array(fill.bank.enumerated()), id: \.element.key) { offset, word in
+            ForEach(Array(session.shownBank(item).enumerated()), id: \.element.key) { offset, word in
                 let look = bankLook(word.key, fill: fill, wrong: wrong)
                 Button {
                     tapBank(word, fill: fill)
@@ -499,10 +654,8 @@ struct DiscovererQuestionStep: View {
                                 .grayscale(look == .tried ? 1 : 0)
                                 .opacity(look == .tried ? ExplorerMetrics.triedOpacity : 1)
                         }
-                        Text(verbatim: mode.sentence(word.label))
-                            .typography(Tokens.Typography.title, fixedBox: true)
-                            .lineLimit(1)
-                            .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+                        WordFitText(mode.sentence(word.label), style: Tokens.Typography.title, width: textWidth,
+                                    maxLines: LabelWidths.bankLines, reservedLines: lines)
                             .foregroundStyle(placed.contains(word.key) ? Tokens.Role.textSecondary : Tokens.Role.textPrimary)
                     }
                     .padding(Tokens.Space.s8)
@@ -600,8 +753,9 @@ struct DiscovererQuestionStep: View {
     }
 
     private var nextLabel: LocalizedStringKey {
-        guard isLast else { return "lesson.next" }
-        return phase == .warmup ? "lesson.warmup.done" : "lesson.quiz.done"
+        // SK-047: after the last quiz question comes Tổng kết, not the result.
+        guard isLast, phase == .warmup else { return "lesson.next" }
+        return "lesson.warmup.done"
     }
 
     // MARK: Taps
@@ -667,6 +821,21 @@ struct DiscovererQuestionStep: View {
 
 // MARK: - Pieces
 
+/// How a bar chart is drawn (SK-047, designer 15/11 "khối đếm được"), without SwiftUI.
+enum BarChartLayout {
+    /// Blocks when every value is a whole number from 0 to 10 (the child counts them); else solid
+    /// bars. One kind per chart.
+    static func usesBlocks(_ values: [Double]) -> Bool {
+        !values.isEmpty && values.allSatisfy { $0 >= 0 && $0 <= DiscovererMetrics.blockMaxCount && $0.rounded() == $0 }
+    }
+
+    /// A block's height: `min(28, (H − (top − 1) · 3) / top)`, so the highest bar fills the chart.
+    static func blockHeight(chartHeight: CGFloat, top: Double) -> CGFloat {
+        let count = CGFloat(max(top, 1))
+        return min(DiscovererMetrics.blockMaxHeight, (chartHeight - (count - 1) * DiscovererMetrics.blockGap) / count)
+    }
+}
+
 /// Close and the question squares, no word (A2): done squares in lá tre with a tick, the
 /// current one vàng hoè.
 struct DiscovererTopBar: View {
@@ -688,15 +857,27 @@ struct DiscovererTopBar: View {
     }
 }
 
-/// Na (or another child of the story) says the statement: her face, the bubble, the speaker.
-struct SpeakerLine: View {
+/// Na (or another child of the story) says the statement: her face, the bubble, the speaker
+/// (and under it, SK-047, the hint's bulb: `below`).
+struct SpeakerLine<Below: View>: View {
     let statement: Spoken
     let speaker: String?
     let mode: LanguageMode
     let listen: Utterance
+    @ViewBuilder let below: Below
+
+    init(statement: Spoken, speaker: String?, mode: LanguageMode, listen: Utterance, @ViewBuilder below: () -> Below = { EmptyView() }) {
+        self.statement = statement
+        self.speaker = speaker
+        self.mode = mode
+        self.listen = listen
+        self.below = below()
+    }
 
     var body: some View {
-        HStack(alignment: .center, spacing: Tokens.Space.s10) {
+        // Designer 15/11: top-aligned, so Na and her bubble stay level with the speaker when the
+        // column under it is long ("Cả hai": VI, then the bulb).
+        HStack(alignment: .top, spacing: Tokens.Space.s10) {
             if let speaker {
                 Image("ArtSpeaker" + speaker.prefix(1).uppercased() + speaker.dropFirst(), bundle: .main)
                     .resizable()
@@ -715,8 +896,69 @@ struct SpeakerLine: View {
                     bottomTrailingRadius: Tokens.Radius.bubble, topTrailingRadius: Tokens.Radius.bubble, style: .continuous
                 ))
                 .accessibilityIdentifier("lesson.statement")
-            ListenButton(listen, label: "lesson.listen.question")
+            VStack(spacing: Tokens.Space.s8) {
+                ListenButton(listen, label: "lesson.listen.question")
+                below
+            }
         }
+    }
+}
+
+/// "Gợi ý" (SK-047, `h-sc-ask`, `h-sc-open`): the bulb on a disc beside the speaker, icon only.
+/// Opened, the disc turns vàng hoè and a tap reads the hint again. Once the question is done
+/// (right or out of tries) the button hides but keeps its room, so the question does not move;
+/// not dimmed, because a dim button looks broken to a child.
+struct HintButton: View {
+    let opened: Bool
+    /// The question is done: hidden, not tappable, skipped by VoiceOver.
+    let hidden: Bool
+    let action: () -> Void
+    @Environment(\.ageGroup) private var ageGroup
+
+    var body: some View {
+        Button(action: action) {
+            PaperIconView(.hint, size: PaperMetrics.iconGlyphSize * DiscovererMetrics.hintGlyphScale, color: Tokens.Role.textPrimary)
+                .frame(width: PaperMetrics.iconDiscDiameter, height: PaperMetrics.iconDiscDiameter)
+                .paperSurface(opened ? Tokens.Role.stateSelected : Tokens.Role.bgScreen, shadow: Tokens.Shadow.paper2, in: Circle())
+                .frame(width: ageGroup.touchTarget, height: ageGroup.touchTarget)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.paperPress)
+        .accessibilityLabel(Text("lesson.hint.button", bundle: .main))
+        .accessibilityValue(opened ? Text("lesson.hint.opened_a11y", bundle: .main) : Text(verbatim: ""))
+        .accessibilityIdentifier("lesson.hint.button")
+        .opacity(hidden ? 0 : 1)
+        .disabled(hidden)
+        .accessibilityHidden(hidden)
+    }
+}
+
+/// The hint once opened (SK-047 `h-sc-open`): a paper slip under the question, not folded (the
+/// folded corner means "wrong, try again" in A2), with a vàng hoè square repeating the bulb.
+/// "Cả hai" prints English; the VI button plays the Vietnamese. It stays open.
+struct HintSlip: View {
+    let hint: Spoken
+    let mode: LanguageMode
+    let listen: Utterance
+
+    var body: some View {
+        HStack(alignment: .center, spacing: Tokens.Space.s10) {
+            PaperIconView(.hint, size: PaperMetrics.iconGlyphSize, color: Tokens.Role.textPrimary)
+                .frame(width: DiscovererMetrics.hintMark, height: DiscovererMetrics.hintMark)
+                .paperSurface(Tokens.Role.stateSelected, shadow: Tokens.Shadow.paper1, cornerRadius: Tokens.Radius.tag)
+                .rotationEffect(DiscovererMetrics.hintMarkTilt)
+                .accessibilityHidden(true)
+            Text(verbatim: mode.sentence(hint))
+                .typography(Tokens.Typography.itemTitle)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityIdentifier("lesson.hint.slip")
+            SecondVoiceButton(listen)
+        }
+        .padding(EdgeInsets(top: Tokens.Space.s8, leading: Tokens.Space.s10, bottom: Tokens.Space.s8, trailing: Tokens.Space.s10))
+        .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper3, cornerRadius: Tokens.Radius.discoverer)
+        .accessibilityElement(children: .contain)
+        .motion(Tokens.Motion.Preset.lay)
     }
 }
 
@@ -831,15 +1073,15 @@ struct ArrowButton: View {
     }
 }
 
-/// The name pasted on a picture card once scored (A2 `q1-right`): a small paper label.
+/// The name pasted on a picture card once scored (A2 `q1-right`): a small paper label. SK-047
+/// (tester 16/11): the name fits the card whole (`WordFitText`; a phrase on two lines at most).
 struct NameLabel: View {
     let text: String
+    /// Width the name may take (`LabelWidths.nameLabelText`).
+    let width: CGFloat
 
     var body: some View {
-        Text(verbatim: text)
-            .typography(Tokens.Typography.bodyStrong, fixedBox: true)
-            .lineLimit(1)
-            .minimumScaleFactor(PaperMetrics.labelMinimumScale)
+        WordFitText(text, style: Tokens.Typography.bodyStrong, width: width, alignment: .leading)
             .padding(.horizontal, Tokens.Space.s8)
             .padding(.vertical, Tokens.Space.s4)
             .paperSurface(Tokens.Role.surfacePaper, shadow: Tokens.Shadow.paper2, cornerRadius: Tokens.Radius.tag)

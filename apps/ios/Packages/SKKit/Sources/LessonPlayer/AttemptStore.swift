@@ -12,6 +12,9 @@ public struct AttemptProgress: Codable, Hashable, Sendable {
         case learn
         case play
         case quiz(index: Int)
+        /// Tổng kết (SK-047): two pages after the last quiz question, before the reward. The
+        /// attempt is finished on the way in, so a progress file normally never holds it.
+        case recap
         case reward
     }
 
@@ -25,7 +28,9 @@ public struct AttemptProgress: Codable, Hashable, Sendable {
     /// Tries per question key, in order (the engine's `Try`, also the shape of `quiz_answers.answer`).
     public var warmupTries: [String: [Try]]
     public var quizTries: [String: [Try]]
-    /// Questions where the child opened "Gợi ý" before answering (`quiz_answers.hint_used`).
+    /// Questions where the child opened "Gợi ý" before the question was done
+    /// (`quiz_answers.hint_used`, SK-047): quiz questions by key, Khởi động ones as
+    /// `warmup/<key>` (`LessonSession.hintKey`).
     public var hintsUsed: Set<String>
     /// Keys of the `explore_groups` groups the child has opened, and the one open now.
     public var exploreSeen: [String]
@@ -90,6 +95,7 @@ extension AttemptProgress.Step: Codable {
         case "learn": self = .learn
         case "play": self = .play
         case "quiz": self = .quiz(index: try c.decode(Int.self, forKey: .index))
+        case "recap": self = .recap
         case "reward": self = .reward
         case let other:
             throw DecodingError.dataCorruptedError(forKey: .name, in: c, debugDescription: "unknown step \(other)")
@@ -107,6 +113,7 @@ extension AttemptProgress.Step: Codable {
         case .quiz(let index):
             try c.encode("quiz", forKey: .name)
             try c.encode(index, forKey: .index)
+        case .recap: try c.encode("recap", forKey: .name)
         case .reward: try c.encode("reward", forKey: .name)
         }
     }

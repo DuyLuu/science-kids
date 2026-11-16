@@ -85,17 +85,14 @@
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "note": "Openverse/Flickr: đã mở trang gốc 10/11, Flickr ghi license 4 = CC BY 2.0."
     },
-    "q2.q2_core": {
-      "same_as": "q1.q1_core",
-      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    "q2.q2_plates": {
+      "same_as": "learn.explore.explore_plates"
     },
-    "q2.q2_mantle": {
-      "same_as": "q1.q1_mantle",
-      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    "q2.q2_waves": {
+      "same_as": "vocab.wave"
     },
-    "q2.q2_crust": {
-      "same_as": "q1.q1_crust",
-      "lesson": "be-mat-trai-dat/ben-trong-trai-dat"
+    "q2.q2_volcanoes": {
+      "same_as": "q1.q1_lava"
     },
     "q3": {
       "source": "Openverse/Flickr",
@@ -274,8 +271,8 @@
     "q3.q3_desk": {
       "same_as": "tray.tray_table"
     },
-    "q3.q3_window": {
-      "same_as": "tray.tray_window"
+    "q3.q3_leg": {
+      "same_as": "tray.tray_leg"
     },
     "q3.q3_stairs": {
       "own": {

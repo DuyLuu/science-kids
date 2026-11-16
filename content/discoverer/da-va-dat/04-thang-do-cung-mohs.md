@@ -343,7 +343,7 @@ image.alt.vi: Mẩu màu trắng
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format: `single_choice` (q1, q4, q5 bốn lựa chọn), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, thẻ từ có hình; trong một câu các lựa chọn cùng là ảnh chụp (q4 là ba hình ghép từ ảnh chụp).
-> Vị trí đáp án đúng theo bảng ở `_topic.md`: q1 thứ nhất, thẻ đúng q2 thứ hai, q3 thứ hai và thứ tư, q4 thứ nhất, q5 thứ tư (bốn lựa chọn).
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Mỗi ảnh khoáng vật chỉ làm lựa chọn ở một câu (kể cả câu w1).
 
 ### q1
@@ -744,7 +744,7 @@ image.alt.vi: Mẩu màu đỏ
   - Khởi động: `single_choice` (w1), `true_false` (w2, đáp án Sai); cả hai ôn bài ba.
   - Quiz: `single_choice` (q1, q4, q5 bốn lựa chọn), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Đúng). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `heavy_means_hard`. `breaks_means_soft` chỉ ở ô Học và câu q5, không gắn key.
-- **Vị trí đáp án đúng:** w1 thứ ba; q1 thứ nhất; thẻ đúng q2 thứ hai; q3 thứ hai và thứ tư; q4 thứ nhất; q5 thứ tư. Đúng bảng ở `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/da-nao-cung-hon` (w1, w2); bài ba phải có id trước.
 - **`READINGS`:** "Mohs" có trong chuỗi VI ở tiêu đề, mục tiêu, ý chính hai và ba, ô `explore_scale`, `explore_check`, `messages.balanced`, câu q1 (giải thích khi sai), từ `scale`, từ `diamond`, thẻ `ruby_card`. Đề xuất đọc "mốt", nghe thử rồi chốt (`_topic.md` mục Đề xuất).
 - **Màn Chơi, ví dụ để kiểm:**

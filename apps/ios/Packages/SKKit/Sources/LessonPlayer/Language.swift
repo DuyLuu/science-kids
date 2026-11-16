@@ -1,4 +1,5 @@
 import ContentModel
+import Foundation
 import Profiles
 
 // Which language of a content string shows where, by the profile's `language_mode` (rules in
@@ -7,8 +8,10 @@ import Profiles
 // in SK-012 so the lesson screens and the app share one rule.
 
 extension Spoken {
+    /// The text in `language`. Vietnamese keeps its hyphenated loan words on one line
+    /// (`keepingHyphenatedWords`, SK-047: "ô-xi" broke after "ô-").
     public func text(in language: ContentLanguage) -> String {
-        language == .en ? en : vi
+        language == .en ? en : vi.keepingHyphenatedWords
     }
 
     /// Hashes of the clips the profile's voice plays (`voiceClips(for:)`); empty with the
@@ -20,7 +23,27 @@ extension Spoken {
 
 extension BilingualText {
     public func text(in language: ContentLanguage) -> String {
-        language == .en ? en : vi
+        language == .en ? en : vi.keepingHyphenatedWords
+    }
+}
+
+extension String {
+    /// SK-047: a hyphen between two letters becomes U+2011 NON-BREAKING HYPHEN, so a Vietnamese
+    /// loan word ("ô-xi", "các-bon", "a-xít") never breaks after its hyphen. Only for display:
+    /// Be Vietnam Pro and Phudu both draw U+2011 with their own hyphen glyph (checked 15/11), and
+    /// the clips do not use this text. A hyphen with a space beside it is left alone.
+    public var keepingHyphenatedWords: String {
+        guard contains("-") else { return self }
+        var scalars = Array(unicodeScalars)
+        for index in scalars.indices.dropFirst().dropLast()
+        where scalars[index] == "-"
+            && CharacterSet.letters.contains(scalars[index - 1])
+            && CharacterSet.letters.contains(scalars[index + 1]) {
+            scalars[index] = "\u{2011}"
+        }
+        var result = String.UnicodeScalarView()
+        result.append(contentsOf: scalars)
+        return String(result)
     }
 }
 

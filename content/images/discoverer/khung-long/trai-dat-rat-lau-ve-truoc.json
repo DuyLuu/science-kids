@@ -78,7 +78,7 @@
         ]
       },
       "title": "Dinosaur paintings from three different times",
-      "note": "Ba tranh, mỗi tranh một mảnh giấy riêng xếp hàng ngang theo thời gian (Plateosaurus kỷ Tam Điệp, Stegosaurus kỷ Jura, khủng long bạo chúa cuối kỷ Phấn Trắng), mũi tên giấy đỏ son bên dưới chạy từ trái sang phải; không có chữ (ba kỷ là món ví dụ của ô). Đã cắt bỏ dấu ký tên nhỏ ở góc tranh của Plegadis. Hình vuông 1024."
+      "note": "SK-047 16/11 (designer, dựng lại vì ở thẻ ý chính 136 pt ba mảnh xếp chéo trông như ba thẻ rơi): ba tranh, mỗi tranh một khung giấy riêng, xếp thành một cột cùng bề rộng, cũ nhất ở trên (Plateosaurus kỷ Tam Điệp, Stegosaurus kỷ Jura, khủng long bạo chúa cuối kỷ Phấn Trắng); mũi tên giấy đỏ son chạy dọc bên trái từ trên xuống. Mỗi khung cắt sát con vật. Không chữ, không người, không loài nào chung khung. Đã cắt bỏ dấu ký tên nhỏ ở góc tranh của Plegadis. Hình vuông 1024; cột rộng 760 (x 132–892), cao 850. Từ million dùng bản 4:3 riêng (vocab.million). Cập nhật 16/11 chiều (tester kiểm iPhone 16): trang Học Discoverer cắt hai bên hình vuông, vì khung ảnh dọc (đo từ code ExplorerLearnStep.pagePicture: rộng = màn − 61, cao = chỗ còn lại tối đa 440 − 16; 0,78:1 ở máy rộng 390 chế độ một ngôn ngữ, 0,89:1 ở iPhone 16 Cả hai). Mọi mảnh nay nằm trong 760 px giữa (vùng hiện tối thiểu ≈ 795 px của 1024)."
     },
     "learn.explore.explore_people": {
       "composed": {
@@ -103,7 +103,7 @@
         ]
       },
       "title": "Timeline from dinosaur times to today",
-      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khoảng 230 tới 66 triệu năm trước) có ảnh khủng long cổ dài tray_longneck, đoạn giấy lõm nhạt 29 % (66 triệu năm trước tới nay); sát cuối trục: voi ma mút (dưới trục) và cánh diều (trên trục). Designer (agent) 10/11 chiều: thay cánh diều cắt từ tray_kite (diều hình chim có cánh nhọn, ở cỡ ô Học trông như thằn lằn bay) bằng ảnh diều thoi bảy màu có đuôi ruy băng trên trời mây (WordPress Photo Directory, CC0, đã mở trang gốc 10/11). Không người, không chữ. Hình vuông 1024."
+      "note": "SK-047 16/11 (designer, dựng lại vì ở thẻ ý chính 136 pt chỉ còn một dải nâu với mấy ảnh nhỏ lơ lửng): trục thời gian giấy dày, chạy hết bề ngang: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck) to, phủ gần hết dải nâu và đứng trên dải; ở cuối trục, trên đoạn nhạt, cánh diều (trên) và voi ma mút (dưới, đứng trên trục) xếp sát nhau thành một cột. Mọi ảnh đều chạm trục, không mảnh nào lơ lửng. Không người, không chữ. Hình vuông 1024, nội dung trong ô giữa 770×502 (x 127–897, y 266–768), nên trang Học (khung dọc) và khung Từ mới 4:3 (vocab.timeline dùng lại) đều thấy trọn. Cập nhật 16/11 chiều (tester kiểm iPhone 16): trang Học Discoverer cắt hai bên hình vuông, vì khung ảnh dọc (đo từ code ExplorerLearnStep.pagePicture: rộng = màn − 61, cao = chỗ còn lại tối đa 440 − 16; 0,78:1 ở máy rộng 390 chế độ một ngôn ngữ, 0,89:1 ở iPhone 16 Cả hai). Mọi mảnh nay nằm trong 760 px giữa (vùng hiện tối thiểu ≈ 795 px của 1024)."
     },
     "learn.explore.explore_how_long": {
       "source": "Openverse/WordPress Photo Directory",
@@ -278,9 +278,21 @@
     "q3.q3_dragonfly": {
       "same_as": "tray.tray_dragonfly"
     },
-    "q3.q3_buffalo": {
-      "same_as": "tray.tray_buffalo",
-      "note": "A2 14/11 (designer, SK-043): trỏ sang tray.tray_buffalo (crop cũ)."
+    "q3.q3_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Northern_Green_Frog_on_Decaying_Lotus_Leaf_-_Flickr_-_treegrow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Northern_Green_Frog_on_Decaying_Lotus_Leaf_-_Flickr_-_treegrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Northern Green Frog on Decaying Lotus Leaf - Flickr - treegrow",
+      "author": "Katja Schulz from Washington, D. C., USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.25,
+        "top": 0,
+        "width": 0.6,
+        "height": 1
+      },
+      "note": "SK-047 15/11 (designer): cùng ảnh với tray.tray_frog, cắt riêng khung 4:5 (lưới 2×2), dời sang trái để thấy trọn đầu và chân sau con ếch (cắt giữa thì mất mõm)."
     },
     "q3.q3_cycad": {
       "same_as": "tray.tray_cycad"
@@ -295,7 +307,7 @@
         ]
       },
       "title": "Timeline with dinosaur times",
-      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Như ô explore_people, bỏ voi ma mút và cánh diều; không có chấm. Hình vuông 1024."
+      "note": "SK-047 16/11 (designer): dựng lại cùng lượt với explore_people, cùng mẩu xám (dấu ngắt hai khe chéo), dải nâu 71 %, đoạn nhạt 29 % và cùng cách cắt ảnh khủng long cổ dài (tray_longneck) đứng trên dải nâu; bỏ cánh diều và voi ma mút, không có chấm. Hình vuông 1024 (app ẩn hình câu hỏi vì mọi lựa chọn đều có hình). Cập nhật 16/11 chiều: thu nhỏ ×0,8 cùng explore_people (cùng tỉ lệ mọi phần với ba lựa chọn 2:1)."
     },
     "q4.q4_before": {
       "composed": {
@@ -307,7 +319,7 @@
         ]
       },
       "title": "A red dot before dinosaur times",
-      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, trên mẩu xám bên trái."
+      "note": "SK-047 16/11 (designer): dựng lại cùng lượt với explore_people, cùng mẩu xám (dấu ngắt hai khe chéo), dải nâu 71 %, đoạn nhạt 29 % và cùng cách cắt ảnh khủng long cổ dài (tray_longneck) đứng trên dải nâu; bỏ cánh diều và voi ma mút. Bản ngang 2:1 cho thẻ lựa chọn 5:2 (nội dung trong dải giữa, thẻ cắt trên dưới không mất gì); chấm tròn đỏ son trên mảnh giấy sáng, trên phần trái của mẩu xám; hai khe chéo nằm ở phần phải mẩu xám nên vẫn thấy bên phải chấm."
     },
     "q4.q4_with": {
       "composed": {
@@ -319,7 +331,7 @@
         ]
       },
       "title": "A red dot in dinosaur times",
-      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, trên dải nâu, ngay cạnh ảnh khủng long cổ dài."
+      "note": "SK-047 16/11 (designer): dựng lại cùng lượt với explore_people, cùng mẩu xám (dấu ngắt hai khe chéo), dải nâu 71 %, đoạn nhạt 29 % và cùng cách cắt ảnh khủng long cổ dài (tray_longneck) đứng trên dải nâu; bỏ cánh diều và voi ma mút. Bản ngang 2:1 cho thẻ lựa chọn 5:2 (nội dung trong dải giữa, thẻ cắt trên dưới không mất gì); chấm tròn đỏ son trên mảnh giấy sáng, trên dải nâu, ngay bên phải ảnh khủng long cổ dài."
     },
     "q4.q4_after": {
       "composed": {
@@ -331,7 +343,7 @@
         ]
       },
       "title": "A red dot at the far end",
-      "note": "Trục thời gian bằng giấy: mẩu xám có dấu ngắt hai khe chéo (trước khủng long, không theo tỉ lệ), dải nâu đất 71 % (khủng long, từ khoảng 230 tới 66 triệu năm trước), đoạn giấy lõm nhạt 29 % (từ 66 triệu năm trước tới nay). Ảnh khủng long cổ dài (tray_longneck, đã cắt) cài trên dải nâu. Bản ngang 2:1 cho ô lựa chọn, cùng trục với hình câu q4; chấm tròn đỏ son trên mảnh giấy sáng, ở tận cùng mép phải của đoạn nhạt."
+      "note": "SK-047 16/11 (designer): dựng lại cùng lượt với explore_people, cùng mẩu xám (dấu ngắt hai khe chéo), dải nâu 71 %, đoạn nhạt 29 % và cùng cách cắt ảnh khủng long cổ dài (tray_longneck) đứng trên dải nâu; bỏ cánh diều và voi ma mút. Bản ngang 2:1 cho thẻ lựa chọn 5:2 (nội dung trong dải giữa, thẻ cắt trên dưới không mất gì); chấm tròn đỏ son trên mảnh giấy sáng, ở tận cùng mép phải của đoạn nhạt."
     },
     "q5": {
       "source": "Wikimedia Commons",
@@ -372,7 +384,30 @@
       "same_as": "w1.w1_triceratops"
     },
     "vocab.million": {
-      "same_as": "learn.explore.explore_dinosaurs"
+      "composed": {
+        "file": "content/images/composed/khung-long/trai-dat-rat-lau-ve-truoc.vocab.million.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:1837_-_Plateosaurus.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/1837_-_Plateosaurus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Plateosaurus reconstruction",
+            "author": "Atlantis536",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "same_as": "tray.tray_stegosaurus",
+            "lesson": "khung-long/khung-long-la-gi"
+          },
+          {
+            "same_as": "tray.tray_t_rex",
+            "lesson": "khung-long/khung-long-la-gi"
+          }
+        ]
+      },
+      "title": "Dinosaur paintings from three different times",
+      "note": "SK-047 16/11 (designer): bản 4:3 của explore_dinosaurs cho khung Từ mới (4:3, trang Học 150×104 ≈ 1,44:1). Cùng ba khung, cùng mũi tên, thu nhỏ cả cột cho vừa chiều cao 4:3; hình vuông của ô Học bị khung Từ mới cắt mất đầu khung trên và chân khủng long bạo chúa. Cập nhật 16/11 chiều: dựng lại từ cột 760 px mới của explore_dinosaurs."
     },
     "vocab.timeline": {
       "same_as": "learn.explore.explore_people"

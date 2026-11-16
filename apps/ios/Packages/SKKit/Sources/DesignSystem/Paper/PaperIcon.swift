@@ -43,6 +43,10 @@ public enum PaperIcon: String, CaseIterable, Sendable {
     /// Gear with its hub cut out: Cài đặt on Home (SK-042; no canvas yet, drawn like the others:
     /// one filled shape). 24 box.
     case gear
+    /// Light bulb with five rays: "Gợi ý" (SK-047, design `Quiz-Dot1.html`, constant `BULB`).
+    /// Filled pieces only; the glint is cut out, so the disc colour shows through. 24 box; the
+    /// design draws it at 1.1× so it weighs as much as the speaker.
+    case hint
 
     /// Side of the SVG view box the path is written in.
     var viewBox: CGFloat {
@@ -193,6 +197,50 @@ public enum PaperIcon: String, CaseIterable, Sendable {
                 gear = gear.union(tooth.applying(turn))
             }
             p = gear.subtracting(Self.circle(12, 12, 3))
+        case .hint:
+            // Bulb: M12 5.8a5.2 5.2 0 0 1 3.34 9.18c-.75.66-1.15 1.35-1.24 2.02H9.9
+            // c-.09-.67-.49-1.36-1.24-2.02A5.2 5.2 0 0 1 12 5.8z (arcs centred at 12, 11).
+            var bulb = Path()
+            bulb.move(to: pt(12, 5.8))
+            bulb.addRelativeArc(center: pt(12, 11), radius: 5.2, startAngle: .degrees(-90), delta: .degrees(140))
+            bulb.addCurve(to: pt(14.1, 17), control1: pt(14.59, 15.64), control2: pt(14.19, 16.33))
+            bulb.addLine(to: pt(9.9, 17))
+            bulb.addCurve(to: pt(8.66, 14.98), control1: pt(9.81, 16.33), control2: pt(9.41, 15.64))
+            bulb.addRelativeArc(center: pt(12, 11), radius: 5.2, startAngle: .degrees(130), delta: .degrees(140))
+            bulb.closeSubpath()
+            // Glint: M9.3 11.1a2.7 2.7 0 0 1 2.7-2.7v1.4a1.3 1.3 0 0 0-1.3 1.3z.
+            var glint = Path()
+            glint.move(to: pt(9.3, 11.1))
+            glint.addRelativeArc(center: pt(12, 11.1), radius: 2.7, startAngle: .degrees(180), delta: .degrees(90))
+            glint.addLine(to: pt(12, 9.8))
+            glint.addRelativeArc(center: pt(12, 11.1), radius: 1.3, startAngle: .degrees(270), delta: .degrees(-90))
+            glint.closeSubpath()
+            // Neck (9.6, 18, 4.8 × 1.5) and cap (10.2, 20.2, 3.6 × 1.9, bottom corners 1).
+            var neck = Path(CGRect(x: 9.6, y: 18, width: 4.8, height: 1.5))
+            var cap = Path()
+            cap.move(to: pt(10.2, 20.2))
+            cap.addLine(to: pt(13.8, 20.2))
+            cap.addLine(to: pt(13.8, 21.1))
+            cap.addRelativeArc(center: pt(12.8, 21.1), radius: 1, startAngle: .degrees(0), delta: .degrees(90))
+            cap.addLine(to: pt(11.2, 22.1))
+            cap.addRelativeArc(center: pt(11.2, 21.1), radius: 1, startAngle: .degrees(90), delta: .degrees(90))
+            cap.closeSubpath()
+            neck = neck.union(cap)
+            // Five rays, rx .85: top, left, right, and the two diagonals turned ±45° on their centres.
+            func ray(_ rect: CGRect, turn degrees: CGFloat = 0) -> Path {
+                let path = Path(roundedRect: rect, cornerSize: CGSize(width: 0.85, height: 0.85))
+                guard degrees != 0 else { return path }
+                let turn = CGAffineTransform(translationX: rect.midX, y: rect.midY)
+                    .rotated(by: degrees * .pi / 180)
+                    .translatedBy(x: -rect.midX, y: -rect.midY)
+                return path.applying(turn)
+            }
+            let rays = ray(CGRect(x: 11.15, y: 1.2, width: 1.7, height: 2.8))
+                .union(ray(CGRect(x: 1.6, y: 10.15, width: 2.8, height: 1.7)))
+                .union(ray(CGRect(x: 19.6, y: 10.15, width: 2.8, height: 1.7)))
+                .union(ray(CGRect(x: 4.7, y: 3.4, width: 1.7, height: 2.8), turn: -45))
+                .union(ray(CGRect(x: 17.6, y: 3.4, width: 1.7, height: 2.8), turn: 45))
+            p = bulb.subtracting(glint).union(neck).union(rays)
         case .tick, .close:
             break
         }
@@ -227,7 +275,7 @@ public enum PaperIcon: String, CaseIterable, Sendable {
             p.addRelativeArc(center: pt(12, 12.856), radius: 7, startAngle: .degrees(-140.5), delta: .degrees(319.3))
             return (p, 2.8)
         case .check, .arrowForward, .arrowBack, .lock, .shield, .star, .flame, .flameCore, .journey, .cards,
-             .badge, .book, .more, .leaf, .gear:
+             .badge, .book, .more, .leaf, .gear, .hint:
             return nil
         }
     }

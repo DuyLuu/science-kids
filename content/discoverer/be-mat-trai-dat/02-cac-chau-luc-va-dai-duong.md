@@ -95,8 +95,9 @@ image.brief: Dùng lại hình `tray_island` ở bài `be-mat-trai-dat/dat-va-nu
 image.alt.en: A small island in the sea
 image.alt.vi: Hòn đảo nhỏ giữa biển
 answer: true
-hint.en: Can you walk on an island?
-hint.vi: Em có đi bộ trên đảo được không?
+hint.en: Remember the island in the last lesson's game.
+hint.vi: Em nhớ lại hòn đảo trong trò chơi bài trước nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời quyết định luôn đáp án. Gợi ý mới trỏ món đảo ở kệ Chơi bài một (món bẫy "không phải nước"), bé tự nhớ đảo thuộc nhóm nào.
 explanation_correct.en: An island is land with water all around it.
 explanation_correct.vi: Đảo là đất, có nước bao quanh.
 explanation_wrong.en: An island is dry land, even in the sea.
@@ -355,49 +356,50 @@ image.alt.vi: Gấu trắng trên tảng băng trôi
 ### q1
 id: 9ede6140-e425-4c0d-a407-9cc789d9eec2
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
 image.brief: Dùng lại hình `explore_continents`. Từ khoá tìm ảnh (EN): Earth from space Africa Europe
+image.alt.en: Land and sea on Earth
+image.alt.vi: Đất và biển trên Trái Đất
+sentence.en: Very big areas of salty water are called {1}.
+sentence.vi: Những vùng nước mặn rất rộng lớn gọi là {1}.
+answers: q1_oceans
+hint.en: Think of the blue parts on a globe.
+hint.vi: Em nghĩ tới những phần màu xanh dương trên quả địa cầu nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ loại thẳng thẻ châu lục rồi hỏi "vùng nước gọi là gì", gần như nói đáp án; nút gợi ý nay mở được trước khi trả lời. Gợi ý mới trỏ bằng chứng bé đã thấy (quả địa cầu, bài một).
+explanation_correct.en: The Pacific is the biggest ocean on Earth.
+explanation_correct.vi: Thái Bình Dương là đại dương lớn nhất Trái Đất.
+explanation_wrong.en: Oceans are water; continents and islands are land.
+explanation_wrong.vi: Đại dương là nước, còn châu lục và đảo là đất.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (continent, ocean, Asia, Pacific Ocean); câu cũ điền "land", từ của bài một. Câu mới nhớ lại ý chính hai (đại dương là vùng nước mặn rộng lớn). Ba thẻ cùng số nhiều, cùng loại tên vùng trên Trái Đất; hai thẻ sai là đất (châu lục, hòn đảo). `version` 2; ba thẻ cũ (nước, bầu trời, đất) bỏ. `alt` hình câu hỏi đổi để không nói "đất"; hình câu hỏi ẩn ở A2 vì mọi thẻ từ có hình.
+
+#### bank q1_oceans
+label.en: oceans
+label.vi: đại dương
+image.brief: Dùng lại hình `tray_pacific`. Từ khoá tìm ảnh (EN): humpback whale breaching ocean
+image.alt.en: A whale in a wide blue ocean
+image.alt.vi: Cá voi giữa đại dương xanh
+
+#### bank q1_continents
+label.en: continents
+label.vi: châu lục
+feedback.en: Continents are very big areas of land.
+feedback.vi: Châu lục là những vùng đất rất rộng lớn.
+image.brief: Dùng lại hình `explore_continents`. Từ khoá tìm ảnh (EN): Earth from space Africa Europe
 image.alt.en: Big areas of land on Earth
 image.alt.vi: Những vùng đất rộng lớn trên Trái Đất
-sentence.en: Continents are very big areas of {1}.
-sentence.vi: Châu lục là những vùng {1} rất rộng lớn.
-answers: q1_land
-hint.en: Can you walk on a continent?
-hint.vi: Em có đi bộ trên châu lục được không?
-explanation_correct.en: Asia and Africa are two of these big lands.
-explanation_correct.vi: Châu Á và châu Phi là hai vùng đất lớn như thế.
-explanation_wrong.en: Continents are land, like Asia and Africa.
-explanation_wrong.vi: Châu lục là đất, như châu Á và châu Phi.
-> Gợi ý giống cách của bài một (đất thì đi bộ được), không nói thẳng đáp án.
 
-#### bank q1_water
-label.en: water
-label.vi: nước
-feedback.en: Very big areas of water are oceans.
-feedback.vi: Vùng nước rất rộng lớn là đại dương.
-image.brief: Dùng lại hình `tray_sea` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): sea horizon fishing boat
-image.alt.en: The wide blue sea
-image.alt.vi: Biển xanh rộng
-
-#### bank q1_sky
-label.en: sky
-label.vi: bầu trời
-feedback.en: The sky is above Earth's surface.
-feedback.vi: Bầu trời ở phía trên bề mặt Trái Đất.
-image.brief: Dùng lại hình `w1_sky`. Từ khoá tìm ảnh (EN): sky blue clear clouds
-image.alt.en: A blue sky
-image.alt.vi: Bầu trời xanh
-
-#### bank q1_land
-label.en: land
-label.vi: đất
-image.brief: Dùng lại hình `explore_land` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): hills tea plantation Vietnam village
-image.alt.en: Hills, mountains and a village
-image.alt.vi: Đồi, núi và làng quê
-> Ba thẻ từ dùng đúng ba ảnh của câu w1 (đất, bầu trời, nước), để một từ luôn đi với một ảnh trong bài.
+#### bank q1_islands
+label.en: islands
+label.vi: hòn đảo
+feedback.en: An island is land with water all around it.
+feedback.vi: Đảo là đất, có nước bao quanh.
+image.brief: Dùng lại hình `tray_island` ở bài `be-mat-trai-dat/dat-va-nuoc-tren-trai-dat`. Từ khoá tìm ảnh (EN): island small sea aerial
+image.alt.en: A small island in the sea
+image.alt.vi: Hòn đảo nhỏ giữa biển
+> SK-047 (15/11): ba thẻ dùng lại hình có sẵn (hình của từ `ocean`, từ `continent`, món đảo của bài một); không cần hình mới.
 
 ### q2
 id: f0461c78-c98a-4949-ac03-879b8f34022c
@@ -449,7 +451,7 @@ image.alt.vi: Cối xay gió ở Hà Lan, châu Âu
 ### q3
 id: 7910f977-eff4-4a0d-aaa4-a95d67b9c54c
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Tap all the oceans.
 prompt.vi: Chạm vào tất cả các đại dương.
@@ -467,16 +469,15 @@ explanation_wrong.en: Antarctica is land, but the Arctic Ocean is water.
 explanation_wrong.vi: Châu Nam Cực là đất, Bắc Băng Dương là nước.
 > Câu phân loại có một chỗ khó có chủ ý: châu Nam Cực và Bắc Băng Dương đều lạnh, đều có băng, tên tiếng Anh lại gần giống nhau (Antarctica, Arctic). Hình giúp bé phân biệt: chim cánh cụt đứng trên đất phủ băng, gấu trắng đứng trên băng trôi giữa nước.
 > Bắc Băng Dương có băng trôi phủ một phần mặt nước, nhưng vẫn là đại dương. Câu không nói "phủ kín" để khỏi sai theo mùa.
+> SK-047 (15/11, nháp AI): câu có ba đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn sai `q3_africa` thay bằng `q3_atlantic` (Đại Tây Dương, đúng), dùng lại hình kệ Chơi; `version` 2. Bẫy châu Nam Cực giữ, là lựa chọn sai duy nhất. Hai lời giải thích vẫn đúng, không đổi. Hình Đại Tây Dương cũng là lựa chọn sai của câu q5 (Mai không bơi ở đó); hai câu hỏi hai việc khác nhau, nên không mâu thuẫn.
 
-#### option q3_africa
-correct: false
-feedback.en: Africa is land where giraffes walk.
-feedback.vi: Châu Phi là đất, nơi hươu cao cổ đi lại.
-label.en: Africa
-label.vi: châu Phi
-image.brief: Dùng lại hình `tray_africa`. Từ khoá tìm ảnh (EN): savanna giraffe acacia
-image.alt.en: A giraffe on wide grassland
-image.alt.vi: Hươu cao cổ trên đồng cỏ rộng
+#### option q3_atlantic
+correct: true
+label.en: Atlantic Ocean
+label.vi: Đại Tây Dương
+image.brief: Dùng lại hình `tray_atlantic`. Từ khoá tìm ảnh (EN): Atlantic Ocean waves
+image.alt.en: Big waves on a wide ocean
+image.alt.vi: Sóng lớn giữa đại dương rộng
 
 #### option q3_arctic
 correct: true
@@ -629,8 +630,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: false
-hint.en: Are Japan and Vietnam the same country?
-hint.vi: Nhật Bản và Việt Nam có phải cùng một quốc gia không?
+hint.en: Count the countries in Na's sentence.
+hint.vi: Em đếm xem câu của Na nói tới mấy quốc gia nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời ("không") gần như là đáp án. Gợi ý mới chỉ chỗ có bằng chứng trong lời Na, bé còn phải tự suy: một quốc gia không chứa hai quốc gia.
 explanation_correct.en: Asia is a continent with many countries, like Laos.
 explanation_correct.vi: Châu Á là châu lục có nhiều quốc gia, như Lào.
 explanation_wrong.en: Japan and Vietnam are two countries in Asia.
@@ -825,10 +827,8 @@ image.alt.vi: Trái Đất với Thái Bình Dương rộng mênh mông
   - `misconception: continent_is_country` → `misconception_id`.
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng; `answers: q1_land` trỏ `#### bank`.
   - Mọi key duy nhất trong bài.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ ba;
-  - q1: từ thứ ba trong ngân hàng; q2: thứ nhất; q3: thứ hai và thứ tư; q4: thứ hai; q5: thứ ba.
-  - Kệ Chơi xếp xen ba loại: Việt Nam, Đại Tây Dương, châu Phi, châu Á (hàng một); Thái Bình Dương, Nhật Bản, châu Nam Cực, Bắc Băng Dương (hàng hai).
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn, kho thẻ từ và kệ Chơi).
+- **15/11 (SK-047):** q1 câu Từ mới "oceans", `version` 2; q3 `multi_choice` ba đáp án đúng, `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm châu Á, châu Phi, Thái Bình Dương → đạt (`balanced`);
   - chạm Việt Nam → `has_limited`;

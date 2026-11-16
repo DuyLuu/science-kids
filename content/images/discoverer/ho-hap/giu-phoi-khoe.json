@@ -158,8 +158,8 @@
       "license_url": "https://commons.wikimedia.org/wiki/File:Fall_Colors_and_Beautiful_Clouds_(50569643158).jpg",
       "note": "chụp từ dưới lên ngọn cây"
     },
-    "q2.q2_dust": {
-      "same_as": "learn.explore.explore_dust"
+    "q2.q2_fresh_air": {
+      "same_as": "tray.tray_park"
     },
     "q2.q2_smoke": {
       "same_as": "learn.explore.explore_smoke"
@@ -187,8 +187,8 @@
       "title": "A busy road seen from above",
       "note": "designer vẽ 10/11 (SVG, SK-036); không biển số, không chữ"
     },
-    "q3.q3_park": {
-      "same_as": "tray.tray_park"
+    "q3.q3_coal": {
+      "same_as": "tray.tray_coal"
     },
     "q3.q3_building": {
       "own": {
@@ -212,23 +212,25 @@
     "q4.q4_park": {
       "same_as": "tray.tray_park"
     },
-    "q4.q4_road": {
-      "same_as": "q3.q3_road"
+    "q4.q4_schoolyard": {
+      "same_as": "q1",
+      "lesson": "ho-hap/tho-khi-chay-nhay",
+      "note": "SK-047 16/11 (designer): thay q4.q4_road (hình q3_road là đáp án đúng ở q3). Hình vẽ sân trường vắng, cùng kiểu hình vẽ với q4_inside và q4_park; khung 5:2 cắt giữa còn thấy dãy lớp, hai cây phượng và sân."
     },
     "q5": {
+      "same_as": "q1_sleeping",
+      "lesson": "ho-hap/tho-khi-chay-nhay"
+    },
+    "q5.q5_dust": {
       "same_as": "learn.explore.explore_dust"
     },
-    "q5.q5_food_pipe": {
-      "same_as": "tray_food_pipe",
-      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    "q5.q5_steam": {
+      "same_as": "q3.q3_steam",
+      "note": "SK-047 16/11 (designer): thay q5.q5_smoke (content-editor 16/11: một hình khói vừa đúng ở q2 vừa sai ở q5). Cùng hình vẽ góc bếp của q3.q3_steam; ở q3 hình này cũng là lựa chọn sai, nên không mang hai vai trái nhau. Khung thẻ từ 1:1 cắt giữa vẫn thấy trọn nồi và làn hơi."
     },
-    "q5.q5_windpipe": {
-      "same_as": "tray_windpipe",
-      "lesson": "ho-hap/duong-di-cua-khong-khi"
-    },
-    "q5.q5_stomach": {
-      "same_as": "tray_stomach",
-      "lesson": "ho-hap/duong-di-cua-khong-khi"
+    "q5.q5_oxygen": {
+      "same_as": "vocab.oxygen",
+      "lesson": "ho-hap/vi-sao-ta-phai-tho"
     },
     "q6": {
       "own": {

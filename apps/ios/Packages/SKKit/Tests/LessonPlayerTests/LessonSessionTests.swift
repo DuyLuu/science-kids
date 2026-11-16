@@ -126,6 +126,10 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
         #expect(session.status(of: item, in: .quiz).isDone)
         session.advance()
     }
+    // SK-047: Tổng kết comes first; the attempt is already finished there.
+    #expect(session.step == .recap)
+    #expect(session.summary != nil)
+    session.advance()
     #expect(session.step == .reward)
 }
 
@@ -138,7 +142,7 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
         #expect(session.steps == [
             .warmup(index: 0), .warmup(index: 1), .learn, .play,
             .quiz(index: 0), .quiz(index: 1), .quiz(index: 2), .quiz(index: 3), .quiz(index: 4), .quiz(index: 5),
-            .reward,
+            .recap, .reward,
         ])
         #expect(session.step == .warmup(index: 0))
         #expect(session.quizItems.map(\.key) == ["q1", "q2", "q3", "q4", "q5", "q6"])
@@ -498,7 +502,7 @@ func play(_ session: LessonSession, quizTries: (QuizItem) -> [Try]) {
             ScoringOption(key: "q5_tofu", correct: true), ScoringOption(key: "q5_bread", correct: false),
         ]))
         let q2 = try #require(lesson.quiz.first { $0.key == "q2" })
-        let expected = ScoringItem.fillBlankBank(bank: ["q2_energy", "q2_air", "q2_sunlight"], answers: ["q2_energy"])
+        let expected = ScoringItem.fillBlankBank(bank: ["q2_nutrients", "q2_air", "q2_sunlight"], answers: ["q2_nutrients"])
         let actual = q2.answer.scoringItem
         #expect(actual == expected)
         let renderable = lesson.quiz.allSatisfy { $0.answer.hasRenderer }

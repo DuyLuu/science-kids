@@ -117,19 +117,17 @@
       "same_as": "tray.tray_fan"
     },
     "q2": {
-      "same_as": "learn.explore.explore_windsock"
-    },
-    "q2.q2_wind": {
-      "same_as": "w1",
-      "lesson": "ho-hap/vi-sao-ta-phai-tho"
-    },
-    "q2.q2_rain": {
       "same_as": "q1_rain",
       "lesson": "be-mat-trai-dat/nui-lua"
     },
-    "q2.q2_sun": {
-      "same_as": "q3_sun",
-      "lesson": "be-mat-trai-dat/nui-lua"
+    "q2.q2_rain_gauge": {
+      "same_as": "learn.explore.explore_rain_gauge"
+    },
+    "q2.q2_umbrella": {
+      "same_as": "tray.tray_umbrella"
+    },
+    "q2.q2_flask": {
+      "same_as": "tray.tray_flask"
     },
     "q3": {
       "same_as": "w1_sky",
@@ -141,10 +139,13 @@
     "q3.q3_windsock": {
       "same_as": "learn.explore.explore_windsock"
     },
-    "q3.q3_clock": {
-      "same_as": "tray.tray_clock",
-      "lesson": "nao-bo-va-giac-quan/nao-dieu-khien-co-the",
-      "note": "Đồng hồ treo tường vẽ sẵn của Não bộ (mặt chỉ có vạch, không số), đúng brief."
+    "q3.q3_ribbon": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-thien-tai/do-thoi-tiet.q3.q3_ribbon.jpg",
+        "method": "drawn"
+      },
+      "title": "A red ribbon blowing on a stick",
+      "note": "SK-047 15/11 (designer): bản khung 4:5 (lưới 2×2) của hình kệ tray_ribbon: cắt từ chính file đó quanh que tre và trọn dải ruy băng (cắt giữa thì mất đuôi ruy băng, phần cho biết chiều gió)."
     },
     "q3.q3_flag": {
       "own": {

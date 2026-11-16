@@ -57,7 +57,7 @@ explanation_correct.en: Amber is hardened resin, often golden in colour.
 explanation_correct.vi: Hổ phách là nhựa cây đã cứng, thường màu vàng.
 explanation_wrong.en: Amber is tree resin that hardened.
 explanation_wrong.vi: Hổ phách là nhựa cây đã cứng lại.
-> Hình câu hỏi là hổ phách (vật được hỏi), theo bảng Hình dùng chung. Mật ong có sức hút (cũng vàng, dính). Lựa chọn và vị trí đáp án (thứ hai) theo bảng Khởi động.
+> Hình câu hỏi là hổ phách (vật được hỏi), theo bảng Hình dùng chung. Mật ong có sức hút (cũng vàng, dính). Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 
 #### option w1_honey
 correct: false
@@ -129,7 +129,7 @@ explanation_correct.vi: Bò sát biển có chân chèo, nhưng thở bằng ph�
 explanation_wrong.en: The sea reptile swam with its flippers.
 explanation_wrong.vi: Bò sát biển bơi bằng chân chèo.
 > Nhãn tả bộ phận ("has flippers", "has horns", "has big wings"), không gọi tên con vật: tên "sea reptile" · "bò sát biển" có chữ "sea" · "biển" trùng câu hỏi, phụ đề sẽ lộ đáp án. Cách làm như câu w1 *Hoá thạch kể chuyện khủng long*. Giải thích sau khi chọn vẫn gọi tên.
-> Hình câu hỏi là cảnh đất, biển, trời của câu w1 bài đó (không có con vật). `alt` ba lựa chọn sửa so với gốc (gốc gọi tên con vật), chép đúng `alt` đã sửa ở câu w1 bài đó. Lựa chọn và vị trí đáp án (thứ nhất) theo bảng Khởi động.
+> Hình câu hỏi là cảnh đất, biển, trời của câu w1 bài đó (không có con vật). `alt` ba lựa chọn sửa so với gốc (gốc gọi tên con vật), chép đúng `alt` đã sửa ở câu w1 bài đó. Lựa chọn theo bảng Khởi động; vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo).
 
 #### option w3_sea
 correct: true
@@ -388,7 +388,7 @@ image.alt.vi: Bạn nhỏ giơ búa định đập đá
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án theo bảng `_topic.md` (bài mười): q1 thứ ba, thẻ đúng q2 thứ nhất, q3 thứ hai và thứ tư, q4 thứ ba, q5 thứ nhất.
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > q1, q5 theo câu gợi ý ở `_topic.md` (bà tìm hoá thạch ở đâu; ngày nay xem ở đâu). Câu gợi ý q4 ("vì sao bộ xương là bằng chứng quan trọng") chuyển thành câu điền từ q2 (từ `evidence`), vì câu "vì sao" cần ba lựa chọn là ba lý do, khó có hình; q3, q4 hỏi cách săn hoá thạch an toàn và đúng cách (ý chính ba).
 
 ### q1
@@ -458,8 +458,7 @@ explanation_correct.vi: Bằng chứng giúp nhà khoa học biết điều gì 
 explanation_wrong.en: Fossils are evidence of what lived long ago.
 explanation_wrong.vi: Hoá thạch là bằng chứng về sự sống thời xa xưa.
 > A2 (SK-043, 14/11): câu điền tiếng Việt cũ mười sáu chữ, nay mười chữ có ô trống (bỏ "những loài… thời xa xưa"; ý "xa xưa" còn ở câu EN và giải thích).
-> DOK 1: nhớ lại từ mới `evidence` và ô "Her finds" (ví dụ bốn). Câu không có gốc từ "evident". Hai thẻ sai bắt quan niệm cũ của *Khủng long* bài ba (`dinosaur_pictures_are_photos`): "photos" · "ảnh chụp" và "models" · "mô hình" (mô hình do người làm theo hoá thạch). Thẻ đúng ở chỗ thứ nhất (bảng vị trí).
-> Rà chữ tester 11/11 (N5): thẻ đúng trước đây dùng lại `explore_finds` (ảnh ô Học), trong khi một thẻ sai là ảnh mới: đáp án là ảnh duy nhất bé đã thấy ở Học. `explore_finds` chuyển sang làm hình câu q1.
+> DOK 1: nhớ lại từ mới `evidence` và ô "Her finds" (ví dụ bốn). Câu không có gốc từ "evident". Hai thẻ sai bắt quan niệm cũ của *Khủng long* bài ba (`dinosaur_pictures_are_photos`): "photos" · "ảnh chụp" và "models" · "mô hình" (mô hình do người làm theo hoá thạch).> Rà chữ tester 11/11 (N5): thẻ đúng trước đây dùng lại `explore_finds` (ảnh ô Học), trong khi một thẻ sai là ảnh mới: đáp án là ảnh duy nhất bé đã thấy ở Học. `explore_finds` chuyển sang làm hình câu q1.
 > Theo hình designer 11/11: không có ảnh hợp lệ xấp ảnh cũ (ảnh trên Commons đều có người), nên ba thẻ là ba hình vẽ mới cùng nét: hòn đá có vỏ xoắn, xấp ảnh phong cảnh cũ, mô hình khủng long cổ dài. Thẻ đúng không còn dùng lại `tray_ammonite` bài tám, `q2_models` không còn dùng lại ảnh `tray_longneck` của *Khủng long*; ba thẻ đều mới nên không thẻ nào nổi bật vì đã gặp.
 
 #### bank q2_evidence
@@ -490,7 +489,7 @@ image.alt.vi: Mô hình khủng long cổ dài
 ### q3
 id: 16168380-b3b3-4de9-99a7-75cd03b6539b
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which ones are safe on a fossil hunt?
 prompt.vi: Những việc nào an toàn khi đi tìm hoá thạch?
@@ -501,11 +500,12 @@ image.alt.en: Dark rocks by the sea
 image.alt.vi: Ghềnh đá đen ven biển
 hint.en: Remember the Fossil hunters today picture.
 hint.vi: Em nhớ lại ô Người săn hoá thạch hôm nay nhé.
-explanation_correct.en: Search with a grown-up, or ask at a museum.
-explanation_correct.vi: Em tìm cùng người lớn, hoặc mang tới bảo tàng hỏi.
-explanation_wrong.en: Safe hunters search pebbles and ask museum experts.
-explanation_wrong.vi: Tìm trên bãi cuội và hỏi bảo tàng là an toàn.
-> DOK 2: phân loại, áp mục An toàn và ô "Fossil hunters today" vào hai việc mới, chưa có ở kệ Chơi: ra bãi đá khi nước đang lên (mục An toàn của `_topic.md`), đi ra vách đá một mình (ô Học: "with a grown-up"). Bốn hình vẽ cùng nét kệ Chơi: hai đáp án là hai món kệ, hai lựa chọn sai là hai hình mới. Đáp án ở chỗ thứ hai và thứ tư (bảng vị trí). Hình câu hỏi là ghềnh đá ven biển (ảnh chụp, tình huống chung), không có người.
+explanation_correct.en: Look on the beach pebbles, far from the cliff.
+explanation_correct.vi: Em tìm trên bãi cuội, cách xa vách đá.
+explanation_wrong.en: Safe hunters search the pebbles with a grown-up.
+explanation_wrong.vi: Tìm an toàn là tìm trên bãi cuội cùng người lớn.
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_museum` thay bằng `q3_climb` (trèo lên vách đá, sai; món bẫy của kệ Chơi, không phải món câu q4 dùng lại); `version` 2. Hai lời giải thích sửa theo.
+> DOK 2: phân loại, áp mục An toàn và ô "Fossil hunters today" vào hai việc mới, chưa có ở kệ Chơi: ra bãi đá khi nước đang lên (mục An toàn của `_topic.md`), đi ra vách đá một mình (ô Học: "with a grown-up"). Bốn hình vẽ cùng nét kệ Chơi: hai đáp án là hai món kệ, hai lựa chọn sai là hai hình mới. Hình câu hỏi là ghềnh đá ven biển (ảnh chụp, tình huống chung), không có người.
 > Rà chữ tester 11/11 (N3): gợi ý cũ gọi tên nhóm bẫy "Not safe" của trò chơi, và lựa chọn sai `q3_cliff_base` là đúng món bẫy của kệ, nên bé trả lời bằng trí nhớ trò chơi. Gợi ý nay trỏ ô Học; `q3_cliff_base` đổi thành `q3_alone` (hình vẽ mới, cùng bộ).
 
 #### option q3_tide
@@ -536,13 +536,16 @@ image.brief: [hình vẽ] Cùng nét kệ Chơi: một bạn nhỏ vẽ từ ph�
 image.alt.en: A child walking to the cliffs alone
 image.alt.vi: Bạn nhỏ đi một mình ra vách đá
 
-#### option q3_museum
-correct: true
-label.en: show a museum expert
-label.vi: mang tới bảo tàng hỏi
-image.brief: Dùng lại hình `tray_museum`.
-image.alt.en: A child showing a rock at a museum
-image.alt.vi: Bạn nhỏ mang hòn đá tới bảo tàng
+#### option q3_climb
+correct: false
+feedback.en: Climbing a cliff can make loose rocks fall.
+feedback.vi: Trèo vách đá dễ làm đá lở rơi xuống.
+label.en: climb up the cliff
+label.vi: trèo lên vách đá
+image.brief: Dùng lại hình `tray_climb`.
+image.alt.en: A child climbing a cliff
+image.alt.vi: Bạn nhỏ trèo lên vách đá
+> SK-047 (15/11): thay `q3_museum`; hình kệ Chơi (cùng nét ba lựa chọn kia), không cần hình mới.
 
 ### q4
 id: b78fc83b-71d8-4ef0-bb14-4bbf46673d08
@@ -661,8 +664,9 @@ answer: true
 image.brief: Dùng lại hình `q1_cliffs`. Từ khoá tìm ảnh (EN): Lyme Regis cliffs Jurassic Coast
 image.alt.en: Layered cliffs by the sea
 image.alt.vi: Vách đá nhiều lớp ven biển
-hint.en: Remember the Not fair picture in the lesson.
-hint.vi: Em nhớ lại ô Chưa công bằng trong bài học nhé.
+hint.en: Think about what Mary found, and who learned from it.
+hint.vi: Em nghĩ xem Mary tìm được gì, ai học được từ đó nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ đúng ô nói thẳng điều Na khẳng định. Gợi ý mới chỉ vào bằng chứng (những hoá thạch bà tìm, các nhà khoa học học từ đó), bé tự đánh giá.
 explanation_correct.en: Women did science long ago, like Mary.
 explanation_correct.vi: Ngày xưa đã có phụ nữ làm khoa học, như Mary.
 explanation_wrong.en: Mary's finds helped scientists learn a lot.
@@ -763,7 +767,8 @@ image.alt.vi: Bộ xương bò sát biển trong đá
   - Khởi động: `single_choice` (w1 ôn bài chín, w3 ôn *Khủng long* bài hai), `true_false` (w2 ôn bài chín, Sai).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, Đúng). Bốn format.
   - DOK q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `women_did_no_science`.
-- **Vị trí đáp án đúng:** w1 thứ hai; w3 thứ nhất; q1 thứ ba; thẻ đúng q2 thứ nhất; q3 thứ hai và thứ tư; q4 thứ ba; q5 thứ nhất. Khớp bảng `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q3 (15/11, SK-047):** `multi_choice` một đáp án đúng (bãi cuội), `version` 2.
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/nhieu-cach-tao-thanh-hoa-thach` (w1, w2), `khung-long/khung-long-la-gi` (w3, đã có id).
 - **`READINGS`:** "Mary Anning" và "Mary" đứng riêng có trong nhiều chuỗi VI (tên bài, ô Học, câu hỏi, giải thích, lời Na, thẻ). Đề xuất đọc "me-ri a-ninh", "me-ri" (`_topic.md`, Đề xuất cho dev); nghe thử rồi chốt.
 - **Màn Chơi, ví dụ để kiểm:**

@@ -69,8 +69,6 @@ explanation_correct.vi: Cổ dài giúp chúng với tới lá trên cây cao.
 explanation_wrong.en: Long-necked dinosaurs ate plants, like ferns.
 explanation_wrong.vi: Khủng long cổ dài ăn thực vật, như dương xỉ.
 > [CẦN KIỂM] Khủng long cổ dài ăn dương xỉ, cây lá kim, cây vạn tuế và các cây khác thời đó (biên tập nhớ, chưa tra nguồn).
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ ba (trước đây thứ hai).
-
 #### option w1_fish
 correct: false
 feedback.en: Fish was food for meat-eaters.
@@ -114,8 +112,9 @@ image.alt.en: A T. rex skeleton in a museum
 image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 > Câu hỏi giữ đúng chữ câu "Em nghĩ sao?" của bài một (`_topic.md`, mục "Câu Em nghĩ sao?"), bỏ vế "What do you think?". Khi schema có `think_first` (v1.1), app so được câu bé trả lời ở bài một với câu trả lời ở đây.
 > Hình không có người, theo luật hình cả chủ đề. Bài một chưa có hình riêng cho câu "Em nghĩ sao?" (chờ schema `think_first`), nên dùng bộ xương khủng long bạo chúa của thẻ thưởng bài một.
-hint.en: Remember the timeline. Who came first?
-hint.vi: Em nhớ lại trục thời gian. Khủng long hay con người có trước?
+hint.en: Remember the timeline in the first lesson.
+hint.vi: Em nhớ lại trục thời gian ở bài đầu tiên nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "ai có trước", câu trả lời là lời bác bỏ. Gợi ý mới chỉ trỏ chỗ cần nhớ.
 explanation_correct.en: Dinosaurs died out millions of years before people came.
 explanation_correct.vi: Khủng long tuyệt chủng hàng triệu năm trước khi có người.
 explanation_wrong.en: People came long after the dinosaurs.
@@ -139,8 +138,9 @@ image.alt.en: A bird footprint in mud
 image.alt.vi: Dấu chân chim trên bùn
 > Hình là dấu chân còn mới trên bùn, chưa phải hoá thạch, nên không lộ đáp án. Bé phải tự nghĩ: bùn có dấu chân, bị vùi lâu, có hoá thành đá không.
 > SK-033: ảnh Duy duyệt là dấu chân chim công, không phải dấu chân khủng long. Chữ của câu không đổi: câu hỏi, gợi ý và hai giải thích chỉ nói "dấu chân", đúng cho mọi dấu chân, và không nhắc chim cạnh khủng long (Duy 9/11).
-hint.en: Remember the fossil game. What kinds did you find?
-hint.vi: Em nhớ lại trò tìm hoá thạch. Em đã tìm những loại nào?
+hint.en: Remember the fossil game in lesson three.
+hint.vi: Em nhớ lại trò tìm hoá thạch ở bài ba nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "em đã tìm những loại nào", câu trả lời (có dấu chân) là câu khẳng định. Gợi ý mới chỉ trỏ chỗ cần nhớ.
 explanation_correct.en: Some fossil footprints show herds walking together.
 explanation_correct.vi: Có dấu chân hoá thạch cho thấy cả đàn đi cùng nhau.
 explanation_wrong.en: Mud with footprints can slowly turn to rock.
@@ -426,8 +426,6 @@ explanation_wrong.en: A giant rock flew in from space and hit Earth.
 explanation_wrong.vi: Một khối đá khổng lồ từ vũ trụ đâm vào Trái Đất.
 > SK-044 (14/11, A2): giải thích khi đúng dùng ví dụ hai của ô Khối đá; [CẦN KIỂM] "to hơn ngọn núi cao nhất" như ghi chú ở ô đó.
 > Hai lựa chọn sai đều là thứ "từ trên trời xuống" mà trẻ quen: bão, mưa đá. Không dùng núi lửa (xem ghi chú ý chính ba), sóng thần hay động đất (khối đá cũng gây ra những thứ đó) làm lựa chọn sai.
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ ba).
-
 #### option q1_rock
 correct: true
 label.en: a giant rock from space
@@ -474,8 +472,6 @@ explanation_wrong.en: Dust hid the Sun, plants died, and food ran out.
 explanation_wrong.vi: Bụi che nắng, cây chết, thức ăn cạn dần.
 > Câu nhớ lại ý chính ba, cũng là mục tiêu của bài. Ba lựa chọn là ba cảnh chụp được; lựa chọn "quá nhiều nắng" ngược hẳn với điều đã xảy ra (thiếu nắng).
 > [CẦN KIỂM] Biên tập nhớ có giả thuyết về mưa a-xít sau va chạm. Lựa chọn "quá nhiều mưa" vẫn sai rõ với điều bài dạy, nhưng nhờ chuyên môn xem có cần đổi sang cảnh khác không.
-> Rà chữ tester 9/11 (n1): đáp án chuyển xuống thứ hai (trước đây thứ nhất).
-
 #### option q2_sun
 correct: false
 feedback.en: Dust hid the Sun, so there was less sunshine.
@@ -509,7 +505,7 @@ image.alt.vi: Mưa to
 ### q3
 id: 96658609-a15b-403c-baf8-9abd3699555d
 format: multi_choice
-version: 1
+version: 2
 dok: 2
 prompt.en: Which reptiles still live today?
 prompt.vi: Những con bò sát nào ngày nay vẫn còn?
@@ -523,14 +519,13 @@ image.alt.vi: Nhìn gần lớp da có vảy của mô hình khủng long
 > Chỗ chưa chắc: hình câu hỏi và lựa chọn sai `q3_trike` cùng là mô hình khủng long ba sừng (khác công viên, khác góc). Hình câu hỏi không lộ đáp án đúng, nhưng có thể kéo bé chọn `q3_trike` vì giống hình. Đây là bẫy hợp ý câu hỏi (khủng long là bò sát nhưng đã tuyệt chủng); nhờ tester xem bé có chọn theo hình không.
 hint.en: Each one needs scales and must still live today.
 hint.vi: Mỗi con phải có vảy, và ngày nay vẫn còn sống.
-explanation_correct.en: Turtles and crocodiles lived on after the dinosaurs.
-explanation_correct.vi: Rùa và cá sấu vẫn sống sót sau thời khủng long.
-explanation_wrong.en: Turtles and crocodiles have scales and still live today.
-explanation_wrong.vi: Rùa và cá sấu có vảy, ngày nay vẫn còn.
+explanation_correct.en: Turtles lived on after the dinosaurs died out.
+explanation_correct.vi: Rùa vẫn sống sót sau khi khủng long tuyệt chủng.
+explanation_wrong.en: Turtles have scales and still live today.
+explanation_wrong.vi: Rùa có vảy, ngày nay vẫn còn.
+> SK-047 (15/11, nháp AI): câu còn một đáp án đúng (luật phân bố MC của chủ đề). Lựa chọn đúng `q3_croc` thay bằng `q3_pterosaur` (thằn lằn bay, sai: là bò sát nhưng đã tuyệt chủng), dùng lại tranh kệ Chơi bài hai; `version` 2. Hai bẫy "bò sát đã tuyệt chủng" (khủng long ba sừng, thằn lằn bay) và một bẫy "còn sống nhưng không phải bò sát" (ếch). Hai lời giải thích sửa theo.
 > Câu ôn bài hai (khủng long là bò sát, có vảy) theo bảng kế hoạch, ghép với ô "Sống sót" của bài này. DOK 2: bé phân loại theo hai điều kiện cùng lúc. Khủng long ba sừng là bò sát nhưng đã tuyệt chủng; ếch vẫn còn nhưng không phải bò sát.
 > [CẦN KIỂM] Rùa có vảy ở chân, đầu và đẻ trứng trên cạn; ếch không có vảy. Rà chéo 9/11 đã đối chiếu bài hai: bài hai dạy "vảy" là đặc điểm của bò sát (từ core `scales`, ô "Bò sát trên cạn", câu w3 "Con nào là bò sát?" với gợi ý "vảy phủ khắp mình", câu q1 "khủng long là bò sát, cùng nhóm với thằn lằn và cá sấu").
-> Rà chữ tester 9/11 (n1): hai đáp án chuyển sang thứ hai và thứ ba (trước đây thứ nhất và thứ ba, trùng câu q3 bài hai).
-
 #### option q3_frog
 correct: false
 feedback.en: A frog has smooth, wet skin, not scales.
@@ -549,13 +544,16 @@ image.brief: [ảnh] Một con rùa nước ngọt mai cứng đang bò trên t�
 image.alt.en: A turtle walking
 image.alt.vi: Con rùa đang bò
 
-#### option q3_croc
-correct: true
-label.en: crocodile
-label.vi: cá sấu
-image.brief: Dùng lại hình `khung-long-la-gi/q1_reptiles`
-image.alt.en: A crocodile on a riverbank
-image.alt.vi: Cá sấu nằm trên bờ sông
+#### option q3_pterosaur
+correct: false
+feedback.en: Flying reptiles died out with the dinosaurs.
+feedback.vi: Thằn lằn bay đã tuyệt chủng cùng khủng long.
+label.en: flying reptile
+label.vi: thằn lằn bay
+image.brief: Dùng lại hình `khung-long-la-gi/tray_pterosaur`
+image.alt.en: A painting of a flying reptile
+image.alt.vi: Tranh vẽ thằn lằn bay
+> SK-047 (15/11): thay `q3_croc`; tranh phục dựng của kệ Chơi bài hai, không cần hình mới. Lựa chọn đúng (rùa) vẫn là ảnh chụp như ếch, nên không nổi bật vì kiểu hình.
 
 #### option q3_trike
 correct: false
@@ -586,8 +584,6 @@ explanation_wrong.en: Without sunlight, a plant turns yellow and weak.
 explanation_wrong.vi: Thiếu ánh nắng, cây vàng úa và yếu dần.
 > DOK 2: bé dùng ý chính hai (thiếu ánh nắng thì cây chết) cho một tình huống quen, gần với giờ trồng cây ở lớp. Đây là cách bé tự thấy được ở nhà vì sao bụi che nắng làm cây cối chết. Có thể làm thí nghiệm này cùng bố mẹ.
 > [CẦN KIỂM] Cây đậu non để trong tối khoảng hai tuần thì thân dài, mảnh, lá vàng nhạt, yếu dần (biên tập nhớ, chưa tra nguồn).
-> Rà chữ tester 9/11 (n1): đáp án chuyển lên thứ nhất (trước đây thứ hai).
-
 #### option q4_yellow
 correct: true
 label.en: yellow and weak
@@ -688,8 +684,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: true
-hint.en: Where did the dust go?
-hint.vi: Bụi đã bay đi những đâu?
+hint.en: Remember what happened after the dust went up.
+hint.vi: Em nhớ lại chuyện gì xảy ra sau khi bụi bay lên nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ hỏi "bụi bay đi những đâu", câu trả lời ("khắp Trái Đất") gần như là vế hai của Na. Gợi ý mới trỏ cả chuỗi (bụi, thiếu nắng, cây chết), bé tự nối.
 explanation_correct.en: Dust spread around Earth and blocked the sunlight.
 explanation_correct.vi: Bụi lan khắp Trái Đất và che ánh nắng Mặt Trời.
 explanation_wrong.en: Dust from that one place spread all around Earth.
@@ -843,11 +840,8 @@ image.alt.vi: Cá sấu nằm trên bờ sông
   - `misconception: space_rock_hit_every_dinosaur` → `misconception_id`.
   - `group:` trỏ nhóm của `tray`; `term_keys` trỏ Từ vựng. Mọi key duy nhất trong bài.
 - **Luật hình (Duy 9/11), máy chưa kiểm** (`image_required: []` của Discoverer). Biên tập đã tự kiểm: có `image` ở câu hỏi của cả ba câu Khởi động và sáu câu Quiz (kể cả ba câu `true_false`); có `image` ở mọi lựa chọn (w1 ba, q1 ba, q2 ba, q3 bốn, q4 ba, q5 ba); có `image` ở chín món Chơi, bốn ô Học, năm từ vựng và thẻ thưởng. Mọi `brief` của hình mới mở đầu bằng loại hình trong ngoặc vuông và kết thúc bằng "Từ khoá tìm ảnh (EN): …"; hình dùng lại ghi "Dùng lại hình `<slug bài>/<key>`" (`_topic.md`, Quy ước hình mục ba), nên `validate` có thể cảnh báo thiếu từ khoá ở những dòng đó.
-- **App không xáo lựa chọn**, nên vị trí đáp án đúng đặt tay:
-  - w1: thứ ba;
-  - q1: thứ nhất; q2: thứ hai; q3: thứ hai và thứ ba; q4: thứ nhất; q5: thứ ba.
-  - Rà chữ tester 9/11 (n1) đã xáo lại tay w1, q1 tới q4: bản trước theo chu kỳ 2-3-1-2-3, đoán được. Thứ tự `#### option` trong file đổi, key không đổi (riêng q5 đổi key `q5_toys` thành `q5_books`).
-  - Kệ Chơi app tự xáo mỗi lượt học.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kệ Chơi). Key q5 từng đổi `q5_toys` thành `q5_books` (rà chữ 9/11).
+- **q3 (15/11, SK-047):** `multi_choice` một đáp án đúng (rùa), `version` 2; `q3_croc` bỏ, thêm `q3_pterosaur`.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn, chưa chạm gì → `start`;
   - chạm Bụi dày che Mặt Trời, Dương xỉ khô héo, Khủng long ăn thực vật bị đói → đạt (`balanced`);

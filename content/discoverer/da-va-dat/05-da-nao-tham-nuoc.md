@@ -100,8 +100,9 @@ image.brief: Dùng lại hình `magnifying_glass` ở bài `da-va-dat/nhin-ky-ca
 image.alt.en: A magnifying glass
 image.alt.vi: Chiếc kính lúp
 answer: true
-hint.en: Remember the Grains picture in lesson two.
-hint.vi: Em nhớ lại ô Hạt ở bài hai nhé.
+hint.en: Think of granite under a magnifying glass.
+hint.vi: Em nhớ lại đá hoa cương dưới kính lúp nhé.
+> SK-047 (15/11, nháp AI): tên ô cũ "Grains" · "Hạt" là chữ của câu khẳng định ("Some rocks have grains you can see."). Gợi ý mới trỏ một bằng chứng bé đã thấy.
 explanation_correct.en: You can see granite's grains even without a magnifying glass.
 explanation_correct.vi: Hạt đá hoa cương nhìn được cả bằng mắt thường.
 explanation_wrong.en: Granite is one rock with grains you can see.
@@ -335,7 +336,7 @@ image.alt.vi: Vết ướt trên hòn đá nâu
 ## Quiz
 
 > Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Bốn format: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6). Mọi câu có hình ở câu hỏi; mọi lựa chọn, thẻ từ có hình. Một câu một loại hình: q1, q3 toàn ảnh chụp; q2, q4, q5 toàn hình vẽ của bộ "Bàn tay thử đá".
-> Vị trí đáp án đúng theo bảng ở `_topic.md`: q1 thứ ba, thẻ đúng q2 thứ ba, q3 thứ nhất và thứ ba, q4 thứ hai, q5 thứ nhất.
+> Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Không hỏi đá nào hợp lợp mái (bài sáu).
 
 ### q1
@@ -405,8 +406,7 @@ explanation_correct.vi: Sa thạch thấm nước, nên nước thấm được 
 explanation_wrong.en: A permeable rock lets water soak in.
 explanation_wrong.vi: Đá thấm nước cho nước thấm vào bên trong.
 > Câu EN không có gốc "perme-", câu VI không có chữ "thấm" (đáp án VI là "thấm nước"). Thẻ sai có sức hút: "impermeable" (chữ gần giống), "hard" (bé hay nghĩ đá cứng thì nước không vào được).
-> Ba thẻ là hình vẽ: hai hình của ô Học (thấm, không thấm; một đúng một sai, cùng là hình bé đã thấy) và hình hòn đá không vết xước của bài ba (cứng). Thẻ đúng ở chỗ thứ ba.
-
+> Ba thẻ là hình vẽ: hai hình của ô Học (thấm, không thấm; một đúng một sai, cùng là hình bé đã thấy) và hình hòn đá không vết xước của bài ba (cứng).
 #### bank q2_impermeable
 label.en: impermeable
 label.vi: không thấm nước
@@ -508,7 +508,7 @@ explanation_wrong.en: On a permeable rock, the drop disappears.
 explanation_wrong.vi: Trên đá thấm nước, giọt nước biến mất.
 > A2 (SK-043, 14/11): câu hỏi cũ mười hai chữ (có nhân vật Mai), nay chín chữ; hình câu hỏi giữ ngữ cảnh.
 > DOK 2: đọc kết quả thử nhỏ nước (kế hoạch bài năm ở `_topic.md`). Nhãn gọi theo kết quả, cùng một dạng (việc xảy ra với giọt nước), không gọi tên đá. Nước trượt khỏi đá phiến dễ bị nhầm là "nước đi đâu mất".
-> Rà chữ tester 11/11 (N1): trước đây ba lựa chọn dùng lại ba món kệ Chơi (đáp án là món bắt buộc, hai lựa chọn sai là hai món bẫy), nên bé chọn được nhờ nhớ trò chơi. Nay ba lựa chọn là ba hình vẽ mới của chính tình huống câu hỏi: cùng ba hòn đá của hình câu hỏi sau khi nhỏ giọt, mỗi hình khoanh một hòn. Ba hình giống hệt nhau trừ vòng khoanh, nên bé phải đọc kết quả ở hòn được khoanh. Thứ tự lựa chọn trùng vị trí hòn đá (trái, giữa, phải); đáp án vẫn ở chỗ thứ hai.
+> Rà chữ tester 11/11 (N1): trước đây ba lựa chọn dùng lại ba món kệ Chơi (đáp án là món bắt buộc, hai lựa chọn sai là hai món bẫy), nên bé chọn được nhờ nhớ trò chơi. Nay ba lựa chọn là ba hình vẽ mới của chính tình huống câu hỏi: cùng ba hòn đá của hình câu hỏi sau khi nhỏ giọt, mỗi hình khoanh một hòn. Ba hình giống hệt nhau trừ vòng khoanh, nên bé phải đọc kết quả ở hòn được khoanh. Nhãn lựa chọn gọi hòn đá theo vị trí trong hình (trái, giữa, phải), không theo chỗ thẻ, nên app xáo thứ tự (SK-047) vẫn đúng.
 
 #### option q4_round
 correct: false
@@ -714,7 +714,7 @@ image.alt.vi: Nước chảy ra từ cây bơm tay của giếng khoan
   - Khởi động: `single_choice` (w1, ôn bài bốn), `true_false` (w2, ôn bài hai, đáp án Đúng).
   - Quiz: `single_choice` (q1, q4, q5), `fill_blank_bank` (q2), `multi_choice` (q3), `true_false` (q6, `speaker: na`, đáp án Sai). Bốn format.
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3. Câu có `misconception`: q6, key `rocks_never_soak_water`.
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ ba; thẻ đúng q2 thứ ba; q3 thứ nhất và thứ ba; q4 thứ hai; q5 thứ nhất. Đúng bảng ở `_topic.md`.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
 - **Tham chiếu:** `recall_from.lesson` trỏ `da-va-dat/thang-do-cung-mohs` (w1), `da-va-dat/nhin-ky-cac-loai-da` (w2); hai bài đó phải có id trước. "Mohs" có trong chuỗi VI ở w1 (gợi ý, giải thích khi đúng): cần `READINGS`.
 - **Màn Chơi, ví dụ để kiểm:**
   - chạm Giọt nước biến mất trên sa thạch, Bọt khí cứ nổi lên từ đá phấn, Vết ướt loang rộng trên sa thạch → đạt;

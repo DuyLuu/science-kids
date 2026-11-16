@@ -631,6 +631,6 @@ image.alt.vi: Con cò bên cạnh con trâu
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món.
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn bài ba), `true_false` (w2 Đúng, ôn bài hai; w3 Sai, ôn chủ đề số một bài sáu).
   - Quiz: `single_choice` (q1, q3, q4), `true_false` (q2 Đúng, q6 Sai), `order_sequence` (q5). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`chain_shows_all_food`).
-- **Vị trí đáp án đúng:** w1 thứ hai; q1 thứ ba; q3 thứ ba; q4 thứ nhất. q5: thẻ trong file châu chấu, gà mái, lúa → đúng: lúa, châu chấu, gà mái.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q5 thứ tự đúng: lúa, châu chấu, gà mái.
 - **Màn Chơi, ví dụ để kiểm:** Con châu chấu, Con chuột, Con vịt → `balanced`; Con chuột, Chim sẻ, Con cú → `has_limited`; Con gà mái, Chim sẻ, Con chuột → `missing.tray_insect`.
 - **Từ EN có thể ngoài Starters/Movers:** compare, different, egret, grasshopper, insect, mammal, peck, grains.

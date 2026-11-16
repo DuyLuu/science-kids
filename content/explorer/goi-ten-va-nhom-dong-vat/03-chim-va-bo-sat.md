@@ -660,6 +660,6 @@ image.alt.vi: Con thạch sùng trên tường
   - Chơi: `build_tray`: ba chỗ, ba nhóm `required`, một nhóm `limit`, bảy món (bỏ vịt, rà chữ tester 12/11 N6).
   - Khởi động: `single_choice` (w1, hai lựa chọn, ôn bài hai), `true_false` (w2, Sai, ôn bài một).
   - Quiz: `single_choice` (q1, q3, q5, q6), `true_false` (q2, Đúng), `order_sequence` (q4). DOK 1, 1, 1, 2, 2, 2. Câu có `misconception`: q6 (`all_birds_fly`).
-- **Vị trí đáp án đúng:** w1 thứ nhất; q1 thứ hai; q3 thứ nhất; q5 thứ hai; q6 thứ ba. q4 thẻ trong file: gà con, gà mái, trứng; thứ tự đúng: trứng, gà con, gà mái.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và thẻ xếp thứ tự). q4 thứ tự đúng: trứng, gà con, gà mái.
 - **Màn Chơi, ví dụ để kiểm:** Chim sẻ, Chim cánh cụt, Thạch sùng → `balanced`; Con cò, Chim cánh cụt, Con ếch → `has_limited`; Chim sẻ, Con cò, Con rùa → `missing.tray_swim`.
 - **Từ EN có thể ngoài Starters/Movers:** reptile, feathers, scales, beak, penguin, gecko, ostrich, dragonfly, egret.

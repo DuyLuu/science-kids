@@ -43,7 +43,7 @@ vi: Em nói được lũ lụt và hạn hán khác nhau thế nào.
 ### w1
 id: 3bb982df-bb8e-48a5-befa-b966639e547d
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: thoi-tiet-va-thien-tai/mua-mua-bao
@@ -55,14 +55,14 @@ image.alt.vi: Bản tin dự báo thời tiết trên ti vi
 sentence.en: Many storms come from the {1}.
 sentence.vi: Nhiều cơn bão kéo tới từ {1}.
 answers: w1_sea
-hint.en: Remember the Storm season card.
-hint.vi: Em nhớ lại ô Mùa mưa bão nhé.
+hint.en: Think of the storm photo taken from space.
+hint.vi: Em nghĩ tới tấm ảnh cơn bão chụp từ vũ trụ nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember the Storm season card." · "Em nhớ lại ô Mùa mưa bão nhé." trỏ ô có câu "Many storms come from the sea in the rainy season.", tức chính câu này có sẵn đáp án. Gợi ý mới trỏ bằng chứng: ảnh vệ tinh cơn bão của ô đó chỉ thấy mây xoáy trên biển. `version` 2.
 explanation_correct.en: Storms start over the warm sea.
 explanation_correct.vi: Bão hình thành trên vùng biển ấm.
 explanation_wrong.en: Storms form over the sea, then move to land.
 explanation_wrong.vi: Bão hình thành trên biển, rồi đi vào đất liền.
-> Hình câu hỏi là ti vi dự báo, không dùng ảnh cơn bão trên biển (ảnh đó cho thấy biển, lộ đáp án). Ba thẻ là ba ảnh nơi chốn của phần Chơi bài *Đất và nước trên Trái Đất*, cùng số ít, cùng ảnh chụp. Thẻ đúng ở chỗ thứ nhất.
-> Rà chữ tester 11/11 (N8): bỏ thẻ "city" · "thành phố" (ảnh thành phố mù bụi của *Hô hấp*, `alt` "Thành phố mù bụi" đưa ý khói bụi vào bài; `_topic.md` đã hẹn không nhắc). Thẻ "mountains" đổi thành "mountain" cho cùng số ít với hai thẻ kia. Lệch đề xuất một chỗ: tester đề xuất thẻ "lake" (hồ nước); ảnh hồ đã là lựa chọn sai ở câu w2 ("Which one is a river?"), dùng thêm ở đây thành hai câu trong một bài chung một hình cùng vai (`_topic.md`, Quy ước hình mục bảy). Nên thẻ thứ ba là "forest" · "rừng" (ảnh khu rừng cùng phần Chơi đó).
+> Hình câu hỏi là ti vi dự báo, không dùng ảnh cơn bão trên biển (ảnh đó cho thấy biển, lộ đáp án). Ba thẻ là ba ảnh nơi chốn của phần Chơi bài *Đất và nước trên Trái Đất*, cùng số ít, cùng ảnh chụp.> Rà chữ tester 11/11 (N8): bỏ thẻ "city" · "thành phố" (ảnh thành phố mù bụi của *Hô hấp*, `alt` "Thành phố mù bụi" đưa ý khói bụi vào bài; `_topic.md` đã hẹn không nhắc). Thẻ "mountains" đổi thành "mountain" cho cùng số ít với hai thẻ kia. Lệch đề xuất một chỗ: tester đề xuất thẻ "lake" (hồ nước); ảnh hồ đã là lựa chọn sai ở câu w2 ("Which one is a river?"), dùng thêm ở đây thành hai câu trong một bài chung một hình cùng vai (`_topic.md`, Quy ước hình mục bảy). Nên thẻ thứ ba là "forest" · "rừng" (ảnh khu rừng cùng phần Chơi đó).
 
 #### bank w1_sea
 label.en: sea
@@ -107,8 +107,7 @@ explanation_correct.en: A river flows a long way across the land.
 explanation_correct.vi: Dòng sông chảy dài qua đồng ruộng, làng mạc.
 explanation_wrong.en: A river's water keeps flowing along.
 explanation_wrong.vi: Nước sông chảy thành dòng không ngừng.
-> Ba ảnh là ba món của phần Chơi bài một *Bề mặt Trái Đất* (nhóm "Sông và suối", "Hồ và ao"). Hồ và ao có sức hút vì cũng là nơi có nước. Đáp án ở chỗ thứ ba.
-
+> Ba ảnh là ba món của phần Chơi bài một *Bề mặt Trái Đất* (nhóm "Sông và suối", "Hồ và ao"). Hồ và ao có sức hút vì cũng là nơi có nước.
 #### option w2_lake
 correct: false
 feedback.en: A lake is still water that stays in one place.
@@ -140,7 +139,7 @@ image.alt.vi: Dòng sông có con đò nhỏ
 ### w3
 id: 33e203aa-c1fe-47ab-957b-a17f87a676fe
 format: true_false
-version: 1
+version: 2
 dok: 1
 recall_from.kind: lesson
 recall_from.lesson: thoi-tiet-va-thien-tai/nang-mua-gio-may
@@ -150,8 +149,9 @@ image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. T�
 image.alt.en: Heavy rain falling
 image.alt.vi: Mưa to đang rơi
 answer: true
-hint.en: Remember the Rainy card in the first lesson.
-hint.vi: Em nhớ lại ô Trời mưa ở bài đầu tiên nhé.
+hint.en: Look up at the sky just before it rains.
+hint.vi: Em nhìn lên trời ngay trước khi mưa nhé.
+> SK-047 (16/11, nháp AI, quét cùng loại): gợi ý cũ "Remember the Rainy card in the first lesson." · "Em nhớ lại ô Trời mưa ở bài đầu tiên nhé." trỏ ô có câu "Rain is water that falls from clouds.", trùng từng chữ với câu khẳng định. Gợi ý mới trỏ một điều bé thấy được: trước cơn mưa trời kéo mây đen. `version` 2.
 explanation_correct.en: Lots of rain fills up the rivers.
 explanation_correct.vi: Mưa nhiều thì sông đầy nước.
 explanation_wrong.en: Rain falls from the clouds.
@@ -413,8 +413,7 @@ explanation_correct.en: Brown floodwater covers the field and even the road.
 explanation_correct.vi: Nước lũ nâu đục tràn ngập cả ruộng lẫn đường.
 explanation_wrong.en: Floodwater covers land that is usually dry.
 explanation_wrong.vi: Nước lũ tràn lên chỗ thường ngày khô ráo.
-> Câu nhớ lại ý chính một. Ba hình vẽ cùng một kiểu: một cánh đồng ở ba trạng thái (ngập nước, khô nứt, lúa xanh bình thường). Hình ngập nước là hình ô Học, hình ruộng nứt là món của kệ Chơi, hình lúa xanh là hình vẽ của *Hô hấp*, nên đáp án không là hình duy nhất bé đã thấy. Đáp án ở chỗ thứ hai.
-> Theo hình designer 11/11: ô Lũ lụt là hình vẽ, nên hai lựa chọn sai đổi sang hình vẽ cho cùng loại (trước: ảnh đất nứt của *Động đất và sóng thần*, ảnh ruộng lúa của *Khủng long*).
+> Câu nhớ lại ý chính một. Ba hình vẽ cùng một kiểu: một cánh đồng ở ba trạng thái (ngập nước, khô nứt, lúa xanh bình thường). Hình ngập nước là hình ô Học, hình ruộng nứt là món của kệ Chơi, hình lúa xanh là hình vẽ của *Hô hấp*, nên đáp án không là hình duy nhất bé đã thấy.> Theo hình designer 11/11: ô Lũ lụt là hình vẽ, nên hai lựa chọn sai đổi sang hình vẽ cho cùng loại (trước: ảnh đất nứt của *Động đất và sóng thần*, ảnh ruộng lúa của *Khủng long*).
 > Hình câu hỏi là dòng sông lúc bình thường (vật liên quan, không phải đáp án).
 
 #### option q1_cracked
@@ -449,49 +448,49 @@ image.alt.vi: Ruộng lúa xanh
 ### q2
 id: a60492ec-94bc-4a70-843e-7339aa2bd573
 format: fill_blank_bank
-version: 1
+version: 2
 dok: 1
 prompt.en: Pick the missing word
 prompt.vi: Chọn từ còn thiếu
-image.brief: Dùng lại hình `tray_dry_pond`.
-image.alt.en: A pond with almost no water
-image.alt.vi: Cái ao gần cạn hết nước
-sentence.en: A drought is a long time with too little {1}.
-sentence.vi: Hạn hán là khi thiếu {1} trong thời gian dài.
-answers: q2_rain
-hint.en: Remember the Drought card.
-hint.vi: Em nhớ lại ô Hạn hán nhé.
+image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
+image.alt.en: Heavy rain falling
+image.alt.vi: Mưa to đang rơi
+sentence.en: A long time with too little rain is a {1}.
+sentence.vi: Mưa quá ít trong thời gian dài gọi là {1}.
+answers: q2_drought
+hint.en: Think of ponds and fields after many dry weeks.
+hint.vi: Em nghĩ tới ao, ruộng sau nhiều tuần không mưa nhé.
 explanation_correct.en: A drought can last for weeks or even months.
 explanation_correct.vi: Hạn hán có thể kéo dài nhiều tuần, cả nhiều tháng.
 explanation_wrong.en: Too little rain for a long time makes a drought.
 explanation_wrong.vi: Quá ít mưa trong thời gian dài thì có hạn hán.
-> Câu nhớ lại ý chính hai. Thẻ "nắng" nối với `drought_is_one_hot_day` (bé nghĩ hạn hán là do nắng). Ba thẻ là ba ảnh thời tiết của bài một (gió, nắng, mưa). Thẻ đúng ở chỗ thứ ba.
+> SK-047 (15/11, nháp AI): câu Từ mới phải điền một từ core của bài (flood, drought, rise); câu cũ điền "rain". Câu mới đảo câu của ô Hạn hán: cho nghĩa, bé chọn từ. Ba thẻ là ba thiên tai bé đã học (hạn hán, lũ lụt, bão), cùng là hình vẽ; hai thẻ sai đều là "nhiều nước", ngược với hạn hán. Hình câu hỏi đổi sang mưa to (không cho thấy hạn hán), vốn là hình câu hỏi của câu w3; ở A2 hình này ẩn vì mọi thẻ từ có hình. `version` 2; ba thẻ cũ (gió, nắng, mưa) bỏ. Gợi ý cũ trỏ ô "Drought", tên ô là đáp án.
 
-#### bank q2_wind
-label.en: wind
-label.vi: gió
-feedback.en: Wind blows in every season, wet or dry.
-feedback.vi: Mùa nào cũng có gió, mưa nhiều hay ít.
-image.brief: Dùng lại hình `w1` ở bài `ho-hap/vi-sao-ta-phai-tho`. Từ khoá tìm ảnh (EN): rice field wind waves Vietnam
-image.alt.en: Wind blowing over a rice field
-image.alt.vi: Gió thổi trên cánh đồng lúa
+#### bank q2_drought
+label.en: drought
+label.vi: hạn hán
+image.brief: Dùng lại hình `tray_dry_pond`.
+image.alt.en: A pond with almost no water
+image.alt.vi: Cái ao gần cạn hết nước
 
-#### bank q2_sun
-label.en: sunshine
-label.vi: nắng
-feedback.en: One sunny day is not a drought.
-feedback.vi: Một ngày nắng chưa phải là hạn hán.
-image.brief: Dùng lại hình `q3_sun` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): sun bright blue sky
-image.alt.en: The bright sun in the sky
-image.alt.vi: Mặt Trời chói sáng trên trời
+#### bank q2_flood
+label.en: flood
+label.vi: lũ lụt
+feedback.en: A flood is too much water, not too little.
+feedback.vi: Lũ lụt là quá nhiều nước, không phải quá ít.
+image.brief: Dùng lại hình `tray_river_over`.
+image.alt.en: A brown river spilling over its banks
+image.alt.vi: Dòng sông nước nâu tràn qua bờ
 
-#### bank q2_rain
-label.en: rain
-label.vi: mưa
-image.brief: Dùng lại hình `q1_rain` ở bài `be-mat-trai-dat/nui-lua`. Từ khoá tìm ảnh (EN): heavy rain house garden
-image.alt.en: Heavy rain falling
-image.alt.vi: Mưa to đang rơi
-> Câu w3 dùng ảnh này làm hình câu hỏi (không phải lựa chọn), nên ảnh không mang vai nào khác trong bài.
+#### bank q2_storm
+label.en: storm
+label.vi: bão
+feedback.en: A storm brings lots of rain, not too little.
+feedback.vi: Bão mang tới nhiều mưa, không phải quá ít.
+image.brief: Dùng lại hình `explore_storm` ở bài `thoi-tiet-va-thien-tai/mua-mua-bao`.
+image.alt.en: A seaside village in a storm
+image.alt.vi: Làng ven biển trong cơn bão
+> SK-047 (15/11): ba thẻ dùng lại hình vẽ có sẵn (hai món kệ Chơi, ô Bão của bài ba); không cần hình mới. Mỗi hình giữ một vai trong bài (ao cạn và sông tràn bờ không là lựa chọn ở câu nào khác).
 
 ### q3
 id: 477ba184-1af7-4634-b385-6673bf228d70
@@ -511,8 +510,7 @@ explanation_correct.en: With little rain, water in the ground runs low.
 explanation_correct.vi: Ít mưa thì nước dưới đất cũng cạn dần.
 explanation_wrong.en: In a drought, wells run dry and fields turn brown.
 explanation_wrong.vi: Khi hạn hán, giếng cạn nước và cỏ úa vàng.
-> DOK 2: phân loại bốn cảnh mới (không có ở Học hay Chơi) thành cảnh hạn hán và cảnh lũ. Hai lựa chọn sai là cảnh quá nhiều nước, có sức hút với bé chưa tách được hai hiện tượng. Bốn nhãn cùng dạng "danh từ số nhiều + động từ". Đáp án ở chỗ thứ ba và thứ tư.
-> Rà chữ tester 11/11 (n8): hai đáp án cũ "rivers get low", "crops dry up" gần như chép ví dụ ô Hạn hán, gợi ý cũ còn trỏ thẳng các ví dụ đó, nên câu chỉ là nhớ lại. Nay hai đáp án là hai cảnh hạn hán ô Học chưa nói (giếng cạn, đồng cỏ úa), gợi ý chỉ cách nghĩ; câu giữ `dok: 2` và thứ tự câu.
+> DOK 2: phân loại bốn cảnh mới (không có ở Học hay Chơi) thành cảnh hạn hán và cảnh lũ. Hai lựa chọn sai là cảnh quá nhiều nước, có sức hút với bé chưa tách được hai hiện tượng. Bốn nhãn cùng dạng "danh từ số nhiều + động từ".> Rà chữ tester 11/11 (n8): hai đáp án cũ "rivers get low", "crops dry up" gần như chép ví dụ ô Hạn hán, gợi ý cũ còn trỏ thẳng các ví dụ đó, nên câu chỉ là nhớ lại. Nay hai đáp án là hai cảnh hạn hán ô Học chưa nói (giếng cạn, đồng cỏ úa), gợi ý chỉ cách nghĩ; câu giữ `dok: 2` và thứ tự câu.
 > [CẦN KIỂM] Hạn hán làm giếng cạn nước, cỏ úa vàng.
 
 #### option q3_streets
@@ -569,8 +567,7 @@ explanation_correct.vi: Nước chảy xuống và làm ngập chỗ trũng trư
 explanation_wrong.en: The low field by the river fills with water first.
 explanation_wrong.vi: Ruộng trũng ven sông bị ngập nước trước.
 > DOK 2: dự đoán từ ý chính ba (nước mưa chảy từ núi xuống theo sông) và hiểu biết đời sống (nước chảy chỗ trũng). Ô Học không nói "chỗ trũng ngập trước".
-> Rà chữ tester 11/11 (N1): gợi ý cũ "Water always runs down to lower places." · "Nước luôn chảy xuống chỗ thấp hơn." vừa nói nguyên tắc vừa dùng chữ "low/lower" của nhãn đáp án. Gợi ý mới (đề xuất của tester) đưa bé nhìn vào hình, không nói "thấp". Nhãn gọi tên chỗ, không gọi vị trí trong hình; ba bản hình đánh dấu một chỗ bằng vầng sáng vàng nhạt. Đáp án ở chỗ thứ nhất.
-> [CẦN KIỂM] Chỗ trũng ven sông thường ngập trước khi sông dâng.
+> Rà chữ tester 11/11 (N1): gợi ý cũ "Water always runs down to lower places." · "Nước luôn chảy xuống chỗ thấp hơn." vừa nói nguyên tắc vừa dùng chữ "low/lower" của nhãn đáp án. Gợi ý mới (đề xuất của tester) đưa bé nhìn vào hình, không nói "thấp". Nhãn gọi tên chỗ, không gọi vị trí trong hình; ba bản hình đánh dấu một chỗ bằng vầng sáng vàng nhạt.> [CẦN KIỂM] Chỗ trũng ven sông thường ngập trước khi sông dâng.
 
 #### option q4_low
 correct: true
@@ -611,8 +608,9 @@ image.brief: Dùng lại hình `tray_lake` ở bài `be-mat-trai-dat/dat-va-nuoc
 image.alt.en: A calm lake with trees
 image.alt.vi: Hồ nước có hàng cây
 answer: false
-hint.en: Is the land under a lake usually dry?
-hint.vi: Chỗ hồ nước thường ngày có khô ráo không?
+hint.en: Remember where a flood puts water.
+hint.vi: Em nhớ lại lũ lụt làm nước tràn lên chỗ nào nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ là câu hỏi có/không mà câu trả lời ("không khô") quyết định đáp án. Gợi ý mới trỏ định nghĩa ở ý chính một, bé tự áp vào cái hồ.
 explanation_correct.en: A flood is water where land is usually dry.
 explanation_correct.vi: Lũ lụt là nước tràn lên chỗ thường ngày khô.
 explanation_wrong.en: A full lake is just a lake.
@@ -643,8 +641,9 @@ labels.true.vi: Na đúng
 labels.false.en: No
 labels.false.vi: Na chưa đúng
 answer: true
-hint.en: Remember the Rain far away card.
-hint.vi: Em nhớ lại ô Mưa ở nơi xa nhé.
+hint.en: Think of where this river's water comes from.
+hint.vi: Em nghĩ xem nước sông này từ đâu chảy về nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô "Rain far away" · "Mưa ở nơi xa", tên ô gần như là lời giải. Gợi ý mới hỏi nguồn nước của sông, bé tự nối với mưa trên núi.
 explanation_correct.en: Rain in the mountains can flow down here.
 explanation_correct.vi: Mưa trên núi có thể theo sông chảy về đây.
 explanation_wrong.en: This brown river may carry rain from far away.
@@ -760,7 +759,8 @@ image.alt.vi: Cánh đồng mùa nước nổi ở đồng bằng sông Cửu Lo
   - DOK từ q1 tới q6: 1, 1, 2, 2, 2, 3.
   - Câu có `misconception`: q6, key `flood_only_where_it_rains`.
 - **Tham chiếu:** chạy `ids` cho bài một, bài ba trước bài này.
-- **Vị trí đáp án đúng:** w1 thẻ thứ nhất; w2 thứ ba; q1 thứ hai; q2 thẻ thứ ba; q3 thứ ba và thứ tư; q4 thứ nhất.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn và kho thẻ từ).
+- **q2 (15/11, SK-047):** câu Từ mới "drought", `version` 2.
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Ruộng ngập nước, Ruộng khô nứt nẻ, Chum hứng nước mưa → `balanced`;

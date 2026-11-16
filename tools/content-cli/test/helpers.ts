@@ -9,30 +9,36 @@ export const TOPIC_FILE = path.join(FIXTURE_DIR, "topic.json");
 export const LESSON_FILE = path.join(FIXTURE_DIR, "01-thuc-an-cho-ta-nhung-gi.json");
 
 /**
- * content/rules.json without the SK-033 image keys (image_expected, image_search_keywords): the
- * rules as they were before SK-033, for tests of SK-026/SK-027/SK-030 that count every warning.
- * The images tests (test/images.test.ts, age rules part) use the real file.
+ * content/rules.json without the warning-only keys added after SK-026, for tests of
+ * SK-026/SK-027/SK-030 that count every warning:
+ * - SK-033 image keys (image_expected, image_search_keywords); test/images.test.ts uses the real file;
+ * - SK-047 vocab_item_uses_lesson_word: those tests edit lesson 1 (other formats, other words) and
+ *   count every warning, so they should not depend on a later warning-only rule. Lesson 1 itself
+ *   passes it since 15/11 (q2 asks "nutrients", a core word). The SK-047 tests in
+ *   test/age-rules.test.ts use the real file.
+ * multi_choice_correct_spread stays: lesson 1 has one multi_choice, so it never fires on it.
  */
-export function withoutImageChecks<T extends Record<string, any>>(rules: T): T {
+export function withoutLaterWarnings<T extends Record<string, any>>(rules: T): T {
   const copy = structuredClone(rules);
   for (const group of Object.values(copy)) {
     delete group?.authoring?.image_expected;
     delete group?.authoring?.image_search_keywords;
+    delete group?.authoring?.vocab_item_uses_lesson_word;
   }
   return copy;
 }
 
-let noImageRulesFile: string | undefined;
-/** withoutImageChecks(content/rules.json), written once per test process into the OS temp folder. */
-export function rulesFileWithoutImageChecks(): string {
-  if (!noImageRulesFile) {
-    const dir = mkdtempSync(path.join(tmpdir(), "content-cli-rules-no-image-"));
-    noImageRulesFile = path.join(dir, "rules.json");
+let laterWarningsRulesFile: string | undefined;
+/** withoutLaterWarnings(content/rules.json), written once per test process into the OS temp folder. */
+export function rulesFileWithoutLaterWarnings(): string {
+  if (!laterWarningsRulesFile) {
+    const dir = mkdtempSync(path.join(tmpdir(), "content-cli-rules-026-"));
+    laterWarningsRulesFile = path.join(dir, "rules.json");
     const rules = JSON.parse(readFileSync(path.resolve(CLI_ROOT, "../../content/rules.json"), "utf8"));
-    writeFileSync(noImageRulesFile, JSON.stringify(withoutImageChecks(rules), null, 2));
+    writeFileSync(laterWarningsRulesFile, JSON.stringify(withoutLaterWarnings(rules), null, 2));
     process.on("exit", () => rmSync(dir, { recursive: true, force: true }));
   }
-  return noImageRulesFile;
+  return laterWarningsRulesFile;
 }
 
 export function readJson(file: string): Record<string, unknown> & { kind: "topic" | "lesson" } {

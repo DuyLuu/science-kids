@@ -59,7 +59,7 @@ explanation_correct.en: You blow your breath into a balloon to fill it.
 explanation_correct.vi: Em thổi hơi thở vào để bóng căng lên.
 explanation_wrong.en: Balloons hold air, even though you cannot see it.
 explanation_wrong.vi: Bóng bay chứa không khí, dù mắt em không thấy.
-> Gợi ý chỉ tới một bối cảnh quen (tiệc sinh nhật), không nói tên vật. Câu w1 của bài này đặt đáp án ở chỗ thứ nhất; ba bài sau ở chỗ thứ ba, thứ hai, thứ tư (bảng Vị trí đáp án đúng ở `_topic.md`).
+> Gợi ý chỉ tới một bối cảnh quen (tiệc sinh nhật), không nói tên vật. Vị trí đáp án đúng: hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 > Hình câu hỏi dùng lại ở câu q4 bài hai và câu w1 bài ba.
 
 #### option w1_balloon
@@ -104,8 +104,9 @@ image.brief: Dùng lại hình `t_rex` ở bài `khung-long/trai-dat-rat-lau-ve-
 image.alt.en: A T. rex skeleton in a museum
 image.alt.vi: Bộ xương khủng long bạo chúa trong bảo tàng
 answer: true
-hint.en: Remember the Lived on card in the dinosaur lessons.
-hint.vi: Em nhớ lại ô Sống sót trong bài khủng long nhé.
+hint.en: Think of reptiles you can still see today.
+hint.vi: Em nghĩ tới những loài bò sát ngày nay vẫn còn nhé.
+> SK-047 (15/11, nháp AI): gợi ý cũ trỏ ô "Lived on" · "Sống sót", tên ô gần như là câu khẳng định; nay bé mở được gợi ý trước khi trả lời, nên gợi ý chỉ tới bằng chứng (cá sấu, rùa), bé tự nối với thời khủng long.
 explanation_correct.en: Crocodiles still live today, and they breathe air like you.
 explanation_correct.vi: Cá sấu vẫn sống tới nay, và thở không khí như em.
 explanation_wrong.en: Some animals lived on, like crocodiles and turtles.
@@ -219,7 +220,8 @@ type: word_list
 version: 1
 title.en: New words
 title.vi: Từ mới
-term_keys: breathe, oxygen, chest
+term_keys: breathe, oxygen, chest, gills
+> SK-047 (15/11): thêm `gills` vào dải Từ mới (từ `tier: core`), vì câu q2 (câu Từ mới) điền "gills". Bài có bốn từ core, trong giới hạn ba đến bốn của Discoverer.
 
 ## Chơi
 
@@ -403,7 +405,7 @@ explanation_wrong.en: Fish breathe through gills on the sides of their head.
 explanation_wrong.vi: Cá thở bằng mang ở hai bên đầu.
 > Câu nhớ lại ý chính hai và ô Con vật. Ba thẻ là ba bộ phận của cá, cùng số nhiều (fins, gills, scales), cùng kiểu ảnh cận. Vây hấp dẫn vì cá dùng vây để bơi.
 > Ô trống ở cùng chỗ trong câu EN và câu VI.
-> Rà chữ tester 10/11 (n1): thẻ đúng chuyển lên chỗ thứ nhất (trước đây thứ hai), để cả chủ đề bớt dồn đáp án vào chỗ thứ hai. Chỉ đổi thứ tự khối, không đổi chữ hay hình.
+> Rà chữ tester 10/11 (n1): đổi chỗ thẻ đúng để cân vị trí đáp án; hết hiệu lực từ 15/11 (SK-047, app xáo kho thẻ). Chỉ đổi thứ tự khối, không đổi chữ hay hình.
 
 #### bank q2_gills
 label.en: gills
@@ -660,7 +662,8 @@ image.alt.vi: Bàn tay đặt lên ngực
 
 ### gills
 id: b6bf66d0-db0c-4e0b-9452-9d487e954727
-tier: extra
+tier: core
+> SK-047 (15/11): `extra` → `core`, cùng dải Từ mới. Giữ câu q2 và ba thẻ cá (hai thẻ là hình gốc cho bài Explorer `ca-va-luong-cu`, `co-the-cac-con-vat`).
 term.en: gills
 term.vi: mang
 example.en: Fish breathe with gills.
@@ -719,7 +722,7 @@ image.alt.vi: Cá voi thở ra trên mặt biển
 ## Ghi chú cho dev
 
 - **Block và format:**
-  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, ba từ core: breathe, oxygen, chest).
+  - Học: `explore_groups` (`explore`, bốn nhóm), `word_list` (`new_words`, bốn từ core: breathe, oxygen, chest, gills; `gills` thêm 15/11, SK-047).
   - Chơi: `build_tray` (`tray`): ba chỗ, ba nhóm `required`, một nhóm `limit`, chín món.
   - Khởi động: `single_choice` (w1, `prior_knowledge`), `true_false` (w2, `recall_from.lesson: khung-long/vi-sao-khung-long-bien-mat`, đáp án Đúng). DOK một.
   - Quiz: `true_false` (q1 Đúng, q6 Sai, `speaker: na`), `fill_blank_bank` (q2, một ô trống, ba thẻ có hình), `multi_choice` (q3, bốn lựa chọn, hai đúng), `single_choice` (q4, q5, ba lựa chọn). Bốn format, đều hiện được ở app 0.1.0.
@@ -727,7 +730,7 @@ image.alt.vi: Cá voi thở ra trên mặt biển
   - Câu có `misconception`: q6, key `breathe_out_same_air`.
 - **Hình:** câu hỏi có `image`: w1, w2, q1 tới q6; mọi option, mọi thẻ từ, chín món Chơi, bốn nhóm Học, bốn từ vựng, thẻ thưởng.
 - **Tham chiếu:** `topic: ho-hap`; `recall_from.lesson` của w2 trỏ bài năm *Khủng long* (đã có id); `misconception: breathe_out_same_air` (id điền khi chạy `ids` cho `_topic.md`).
-- **Vị trí đáp án đúng** (app không xáo lựa chọn): w1 thứ nhất; q2 thẻ thứ nhất (đổi từ thứ hai, rà chữ tester 10/11 n1); q3 thứ nhất và thứ tư; q4 thứ ba; q5 thứ hai.
+- **Vị trí đáp án đúng:** hết hiệu lực 15/11 (SK-047, app xáo lựa chọn).
 - **Màn Chơi, ví dụ để kiểm:**
   - mở màn → `start`;
   - Con mèo, Cá chép, Chim sẻ → `balanced`;
