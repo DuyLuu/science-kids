@@ -1,0 +1,349 @@
+{
+  "note": "SK-048 bài 2 (Nam Cực). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Bốn ảnh mới là hình gốc của cả chủ đề: explore_huddle, explore_sea_food, explore_seal, tray_emperor.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_walrus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlantic_walrus_%28Odobenus_rosmarus_rosmarus%29_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic walrus (Odobenus rosmarus rosmarus) NOAA Photo Library",
+      "author": "Mike Dunn, NC State Museum of Natural Sciences.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.11,
+        "width": 1,
+        "height": 0.8605
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_walrus` của bài 1 (hải mã nằm trên băng, NOAA, PD). Crop thẻ hai lựa chọn 17:10: đầu, hai ngà và thân."
+    },
+    "w1.w1_douc": {
+      "same_as": "w2.w2_douc",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Penguin_on_a_rock_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Penguin_on_a_rock_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A penguin on a rock",
+      "author": "Jay Ruzesky wolsenburg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0.08,
+        "width": 0.8,
+        "height": 0.8
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `tray.tray_penguin` của goi-ten-va-nhom-dong-vat/chim-va-bo-sat (chim cánh cụt Gentoo đứng trên đá, Nam Cực). Crop 4:3 cho hình câu đúng/sai."
+    },
+    "learn.explore.explore_land": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Transantarctic_Mountains_(10986929324).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Transantarctic_Mountains_%2810986929324%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snowy mountains in Antarctica",
+      "author": "NASA ICE",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Transantarctic_Mountains_(10986929324).jpg",
+      "crop": {
+        "left": 0.15,
+        "top": 0,
+        "width": 0.5625,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): dãy núi Xuyên Nam Cực gần sông băng Beardmore phủ băng tuyết, cánh đồng băng trắng trải rộng, trời xanh (NASA Operation IceBridge, ảnh Jim Yungel từ máy bay P-3, 19/11/2013; Public domain). Ảnh gốc có cánh máy bay ở mép phải (x từ 0,75): mọi crop dừng ở x 0,72. Không người, trạm, lều, xe, cờ. Hình gốc mới của bài 2 cho ô Icy land và từ antarctic (thay ảnh chim cánh cụt Gentoo trên bãi sỏi). Crop vuông cho ô Học Icy land: đỉnh núi phủ tuyết giữa cánh đồng băng."
+    },
+    "learn.explore.explore_huddle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:EmperorPenguinColonyClose.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/EmperorPenguinColonyClose.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "EmperorPenguinColonyClose",
+      "author": "The original uploader was Mtpaley at English Wikipedia .",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.3,
+        "top": 0.25,
+        "width": 0.5625,
+        "height": 0.75
+      },
+      "note": "SK-048 (designer 16/11): đàn chim cánh cụt hoàng đế đứng sát nhau trên băng giữa mùa đông (trang gốc: closeup of emperor penguin colony in winter); không chim non nổi bật, không người. Ảnh chỉ 1024 px. Hình gốc của chủ đề. Crop vuông: khối chim đứng sát nhau."
+    },
+    "learn.explore.explore_sea_food": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adelie_penguin_(Pygoscelis_adeliae),_walking.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Adelie penguin (Pygoscelis adeliae), walking",
+      "author": "Jason Auch",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.45,
+        "top": 0.04,
+        "width": 0.44,
+        "height": 0.66
+      },
+      "note": "SK-048 (designer 16/11): chim cánh cụt Adélie (mỏ đen, vòng trắng quanh mắt) đứng ở mép băng sát biển có băng trôi, Nam Cực; một con, không người, không tàu. Hình gốc của chủ đề. Crop vuông."
+    },
+    "learn.explore.explore_seal": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leptonychotes weddellii - Алексей Логинов - 464662481",
+      "author": "Алексей Логинов",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.07,
+        "top": 0,
+        "width": 0.665,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): một con hải cẩu Weddell nằm nghỉ một mình trên mặt băng phẳng, nhìn ngang, ngẩng đầu (Nam Cực, iNaturalist); không thẻ gắn, không vết sơn. Hình gốc của chủ đề. Crop vuông."
+    },
+    "tray.tray_emperor": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "22a34e8c-8372-4883-a0cf-a7490e35b381",
+      "source_url": "https://www.inaturalist.org/photos/353907170",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/353907170/original.jpeg",
+      "title": "Emperor penguin on the ice",
+      "author": "steve b",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.55,
+        "top": 0.12,
+        "width": 0.4,
+        "height": 0.6
+      },
+      "note": "SK-048 (designer 16/11): một con chim cánh cụt hoàng đế trưởng thành đứng một mình trên băng, nhìn ngang (iNaturalist, CC0, quan sát hoang dã). Mọi crop bỏ con chim nhỏ màu trắng ở góc dưới trái. Hình gốc của chủ đề. Crop vuông."
+    },
+    "tray.tray_bear": {
+      "same_as": "learn.explore.explore_bear",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_seal": {
+      "same_as": "learn.explore.explore_seal"
+    },
+    "tray.tray_owl": {
+      "same_as": "tray.tray_owl",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_whale": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/HIHWNMS_-_Humpback_Whale_Breach_%2833154058312%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "HIHWNMS - Humpback Whale Breach (33154058312)",
+      "author": "National Marine Sanctuaries",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+      "crop": {
+        "left": 0.15,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_pacific` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong; cá voi lưng gù nhảy khỏi mặt biển (NOAA, PD). Crop vuông: cả con cá voi và mặt biển."
+    },
+    "tray.tray_walrus": {
+      "same_as": "learn.explore.explore_walrus",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_adelie": {
+      "same_as": "learn.explore.explore_sea_food"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_douc": {
+      "same_as": "q2.q2_douc",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_emperor": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "22a34e8c-8372-4883-a0cf-a7490e35b381",
+      "source_url": "https://www.inaturalist.org/photos/353907170",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/353907170/original.jpeg",
+      "title": "Emperor penguin on the ice",
+      "author": "steve b",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0.2,
+        "width": 0.7,
+        "height": 0.42
+      },
+      "note": "SK-048 (designer 16/11): một con chim cánh cụt hoàng đế trưởng thành đứng một mình trên băng, nhìn ngang (iNaturalist, CC0, quan sát hoang dã). Mọi crop bỏ con chim nhỏ màu trắng ở góc dưới trái. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q1.q1_buffalo": {
+      "same_as": "q3.q3_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q2": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "22a34e8c-8372-4883-a0cf-a7490e35b381",
+      "source_url": "https://www.inaturalist.org/photos/353907170",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/353907170/original.jpeg",
+      "title": "Emperor penguin on the ice",
+      "author": "steve b",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.42,
+        "top": 0.1,
+        "width": 0.578,
+        "height": 0.65
+      },
+      "note": "SK-048 (designer 16/11): một con chim cánh cụt hoàng đế trưởng thành đứng một mình trên băng, nhìn ngang (iNaturalist, CC0, quan sát hoang dã). Mọi crop bỏ con chim nhỏ màu trắng ở góc dưới trái. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai q2."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_forest": {
+      "same_as": "q3.q3_forest",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "q3.q3_pond": {
+      "same_as": "q3.q3_pond",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q3.q3_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Waves_(54369360806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Atlantic_Ocean_Waves_%2854369360806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic Ocean Waves (54369360806)",
+      "author": "Michael Gaylard from Horsham, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.7072
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_atlantic` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (same_as không sang được nhóm tuổi khác); sóng lớn giữa đại dương, không tàu. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_seal": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leptonychotes weddellii - Алексей Логинов - 464662481",
+      "author": "Алексей Логинов",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.03,
+        "top": 0.24,
+        "width": 0.8,
+        "height": 0.4812
+      },
+      "note": "SK-048 (designer 16/11): một con hải cẩu Weddell nằm nghỉ một mình trên mặt băng phẳng, nhìn ngang, ngẩng đầu (Nam Cực, iNaturalist); không thẻ gắn, không vết sơn. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4.q4_reindeer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fortymile_caribou_group_in_winter_(52534938094).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Fortymile_caribou_group_in_winter_%2852534938094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Caribou in the snow",
+      "author": "BLM Alaska",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Fortymile_caribou_group_in_winter_(52534938094).jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1,
+        "width": 1.0,
+        "height": 0.711
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `tray.tray_reindeer` của bài 1 (đàn tuần lộc hoang dã trên tuyết, Alaska, BLM, PD). Crop thẻ ba lựa chọn 5:2: cả đàn trên tuyết (trước đây là mục q4.q4_reindeer của bài 1; bài 1 nay có ảnh riêng không tuyết)."
+    },
+    "q4.q4_owl": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "7ff05ca5-5bfe-488f-9470-3fd6769d369f",
+      "source_url": "https://www.flickr.com/photos/49208525@N08/53625561759",
+      "file_url": "https://live.staticflickr.com/65535/53625561759_dd759229cf_b.jpg",
+      "title": "Snowy owl",
+      "author": "U.S. Fish and Wildlife Service - Midwest Region",
+      "license": "PDM 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "crop": {
+        "left": 0.22,
+        "top": 0.4,
+        "width": 0.7,
+        "height": 0.3733
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `tray.tray_owl` của bài 1 (cú tuyết trên cánh đồng tuyết, USFWS, PDM). Crop thẻ ba lựa chọn 5:2."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adelie_penguin_(Pygoscelis_adeliae),_walking.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Adelie penguin (Pygoscelis adeliae), walking",
+      "author": "Jason Auch",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.3,
+        "top": 0,
+        "width": 0.6222,
+        "height": 0.7
+      },
+      "note": "SK-048 (designer 16/11): chim cánh cụt Adélie (mỏ đen, vòng trắng quanh mắt) đứng ở mép băng sát biển có băng trôi, Nam Cực; một con, không người, không tàu. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q6": {
+      "same_as": "q5",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "vocab.antarctic": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Transantarctic_Mountains_(10986929324).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Transantarctic_Mountains_%2810986929324%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Snowy mountains in Antarctica",
+      "author": "NASA ICE",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Transantarctic_Mountains_(10986929324).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 0.72,
+        "height": 0.64
+      },
+      "note": "SK-048 (designer 16/11): dãy núi Xuyên Nam Cực gần sông băng Beardmore phủ băng tuyết, cánh đồng băng trắng trải rộng, trời xanh (NASA Operation IceBridge, ảnh Jim Yungel từ máy bay P-3, 19/11/2013; Public domain). Ảnh gốc có cánh máy bay ở mép phải (x từ 0,75): mọi crop dừng ở x 0,72. Không người, trạm, lều, xe, cờ. Hình gốc mới của bài 2 cho ô Icy land và từ antarctic (thay ảnh chim cánh cụt Gentoo trên bãi sỏi). Crop 2:1 cho thẻ từ antarctic (thẻ từ Explorer trên máy là khung ngang 2:1)."
+    },
+    "vocab.huddle": {
+      "same_as": "learn.explore.explore_huddle"
+    },
+    "vocab.seal": {
+      "same_as": "learn.explore.explore_seal"
+    },
+    "vocab.emperor_penguin": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "22a34e8c-8372-4883-a0cf-a7490e35b381",
+      "source_url": "https://www.inaturalist.org/photos/353907170",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/353907170/original.jpeg",
+      "title": "Emperor penguin on the ice",
+      "author": "steve b",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.4,
+        "top": 0.2,
+        "width": 0.6,
+        "height": 0.45
+      },
+      "note": "SK-048 (designer 16/11): một con chim cánh cụt hoàng đế trưởng thành đứng một mình trên băng, nhìn ngang (iNaturalist, CC0, quan sát hoang dã). Mọi crop bỏ con chim nhỏ màu trắng ở góc dưới trái. Hình gốc của chủ đề. Crop 2:1 cho thẻ từ (thẻ từ Explorer trên máy là khung ngang 2:1). Thấy cả con."
+    },
+    "reward.emperor_penguin_card": {
+      "same_as": "tray.tray_emperor"
+    }
+  }
+}

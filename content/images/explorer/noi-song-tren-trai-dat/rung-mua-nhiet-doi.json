@@ -1,0 +1,344 @@
+{
+  "note": "SK-048 bài 3 (Rừng mưa nhiệt đới). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Bảy ảnh mới là hình gốc của cả chủ đề: explore_vietnam, explore_amazon, explore_trees, explore_ground, tray_hornbill, tray_gibbon, tray_macaw.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_seal": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Leptonychotes_weddellii_-_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9B%D0%BE%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2_-_464662481.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Leptonychotes weddellii - Алексей Логинов - 464662481",
+      "author": "Алексей Логинов",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 0.85,
+        "height": 0.7519
+      },
+      "note": "SK-048 (designer 16/11): một con hải cẩu Weddell nằm nghỉ một mình trên mặt băng phẳng, nhìn ngang, ngẩng đầu (Nam Cực, iNaturalist); không thẻ gắn, không vết sơn. Hình gốc của chủ đề. Crop thẻ hai lựa chọn 17:10."
+    },
+    "w1.w1_huddle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:EmperorPenguinColonyClose.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/EmperorPenguinColonyClose.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "EmperorPenguinColonyClose",
+      "author": "The original uploader was Mtpaley at English Wikipedia .",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0.2157,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-048 (designer 16/11): đàn chim cánh cụt hoàng đế đứng sát nhau trên băng giữa mùa đông (trang gốc: closeup of emperor penguin colony in winter); không chim non nổi bật, không người. Ảnh chỉ 1024 px. Hình gốc của chủ đề. Crop thẻ hai lựa chọn 17:10."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_on_Barro_Colorado.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forest_on_Barro_Colorado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Forest on Barro Colorado",
+      "author": "Photos courtesy of Christian Ziegler.",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.6421
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_forest` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat; rừng xanh nhìn từ trên cao (đảo Barro Colorado, Panama). Crop 4:3 cho hình câu đúng/sai."
+    },
+    "learn.explore.explore_vietnam": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cat_Tien_Park,_Vietnam,_tropical_forest,_roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Cat_Tien_Park%2C_Vietnam%2C_tropical_forest%2C_roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat Tien Park, Vietnam, tropical forest, roots",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): bên trong rừng mưa nhiệt đới ở vườn quốc gia Cát Tiên (trang gốc ghi đúng nơi): cây cổ thụ có rễ bạnh, dây leo, cây bụi, nhiều tầng lá; không con vật, không người, không đường mòn. Hình gốc của chủ đề. Crop vuông (ô Học, từ, thẻ xếp, hình ghép earth)."
+    },
+    "learn.explore.explore_amazon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Amazon_rainforest_manaus_APA_Margem_Esquerda_do_Rio_Negro_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Amazon_rainforest_manaus_APA_Margem_Esquerda_do_Rio_Negro_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Amazon rainforest manaus APA Margem Esquerda do Rio Negro - panoramio",
+      "author": "James Martins",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.6665,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): rừng A-ma-dôn nhìn từ trên cao, sông Rio Negro gần Manaus (Brazil, trang gốc ghi APA Margem Esquerda do Rio Negro); không đường, nhà, khói. Hình gốc của chủ đề. Crop vuông: tán rừng và dòng sông."
+    },
+    "learn.explore.explore_trees": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "9ac6e6b1-d419-418a-afc9-dfb9eb968304",
+      "source_url": "https://www.inaturalist.org/photos/410795063",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/410795063/original.jpg",
+      "title": "brown-throated sloth, brown-throated three-toed sloth",
+      "author": "cello caruso-turiello",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "crop": {
+        "left": 0.18,
+        "top": 0,
+        "width": 0.6665,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): con lười ba ngón họng nâu treo trên cành giữa tán lá (iNaturalist, Puerto Jiménez, Costa Rica, quan sát hoang dã; giấy phép đã đối chiếu ở iNaturalist). Hình gốc của chủ đề. Crop vuông: cả con."
+    },
+    "learn.explore.explore_ground": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "32dd082b-41d3-42e5-9c50-5067af902de1",
+      "source_url": "https://www.inaturalist.org/photos/12432857",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12432857/original.jpeg",
+      "title": "Dendrobates leucomelas",
+      "author": "Paul Prior",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0.07,
+        "width": 0.594,
+        "height": 0.7702
+      },
+      "note": "SK-048 (designer 16/11): ếch phi tiêu độc vàng đen ngồi trên lá rụng ở mặt đất rừng (Annai, Guyana; iNaturalist, quan sát hoang dã, giấy phép đã đối chiếu). Hình gốc của chủ đề. Crop vuông."
+    },
+    "tray.tray_sloth": {
+      "same_as": "learn.explore.explore_trees"
+    },
+    "tray.tray_owl": {
+      "same_as": "tray.tray_owl",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_hornbill": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_hornbill_in_bardiya.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Great_hornbill_in_bardiya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great hornbill in bardiya",
+      "author": "Dasrath Shrestha Beejukchhen (Bablu)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.05,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chim hồng hoàng hoang dã đậu trên cành sung ở vườn quốc gia Bardiya, Nepal (Wiki Loves Earth 2025, CC0); không lưới, không chuồng. Hình gốc của chủ đề. Crop vuông: cả con, mỏ và mũ sừng."
+    },
+    "tray.tray_dart_frog": {
+      "same_as": "learn.explore.explore_ground"
+    },
+    "tray.tray_fox": {
+      "same_as": "learn.explore.explore_fox",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_gibbon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nomascus_gabriellae_256465346.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Nomascus_gabriellae_256465346.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nomascus gabriellae 256465346",
+      "author": "Audrey Kauppila",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.6375,
+        "height": 0.85
+      },
+      "note": "SK-048 (designer 16/11): vượn đen má vàng cái (lông vàng nâu) nằm trên cành, một tay dài với lên cành trên (iNaturalist, Việt Nam, quan sát hoang dã). Hình gốc của chủ đề. Crop vuông: cả con, thấy rõ cánh tay dài."
+    },
+    "tray.tray_emperor": {
+      "same_as": "tray.tray_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "tray.tray_macaw": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ara_macao_451888362.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Ara_macao_451888362.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ara macao 451888362",
+      "author": "Daniel S. Katz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "SK-048 (designer 16/11): vẹt đuôi dài đỏ đậu ở thân cây cạnh hốc tổ, thấy cả con và đuôi dài (iNaturalist, Puntarenas, Costa Rica, quan sát hoang dã). Ảnh vuông, không cần crop. Hình gốc của chủ đề."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_walrus": {
+      "same_as": "q1.q1_walrus",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q1.q1_emperor": {
+      "same_as": "q1.q1_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q1.q1_hornbill": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_hornbill_in_bardiya.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Great_hornbill_in_bardiya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great hornbill in bardiya",
+      "author": "Dasrath Shrestha Beejukchhen (Bablu)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-048 (designer 16/11): chim hồng hoàng hoang dã đậu trên cành sung ở vườn quốc gia Bardiya, Nepal (Wiki Loves Earth 2025, CC0); không lưới, không chuồng. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Amazon_rainforest_manaus_APA_Margem_Esquerda_do_Rio_Negro_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Amazon_rainforest_manaus_APA_Margem_Esquerda_do_Rio_Negro_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Amazon rainforest manaus APA Margem Esquerda do Rio Negro - panoramio",
+      "author": "James Martins",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.8886,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): rừng A-ma-dôn nhìn từ trên cao, sông Rio Negro gần Manaus (Brazil, trang gốc ghi APA Margem Esquerda do Rio Negro); không đường, nhà, khói. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai q2."
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cat_Tien_Park,_Vietnam,_tropical_forest,_roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Cat_Tien_Park%2C_Vietnam%2C_tropical_forest%2C_roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat Tien Park, Vietnam, tropical forest, roots",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0,
+        "width": 0.8889,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): bên trong rừng mưa nhiệt đới ở vườn quốc gia Cát Tiên (trang gốc ghi đúng nơi): cây cổ thụ có rễ bạnh, dây leo, cây bụi, nhiều tầng lá; không con vật, không người, không đường mòn. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_gibbon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nomascus_gabriellae_256465346.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Nomascus_gabriellae_256465346.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nomascus gabriellae 256465346",
+      "author": "Audrey Kauppila",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-048 (designer 16/11): vượn đen má vàng cái (lông vàng nâu) nằm trên cành, một tay dài với lên cành trên (iNaturalist, Việt Nam, quan sát hoang dã). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4.q4_fox": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Vulpes_lagopus_in_Iceland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vulpes lagopus in Iceland",
+      "author": "Jonatan Pie ( unsplash.com/@r3dmax )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.28,
+        "width": 1,
+        "height": 0.5995
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_fox` của bài 1 (cáo Bắc Cực trên tuyết, Iceland, CC0). Crop thẻ ba lựa chọn 5:2, thấy rõ đôi tai nhỏ."
+    },
+    "q4.q4_seal": {
+      "same_as": "q4.q4_seal",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_ice": {
+      "same_as": "q3.q3_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q5.q5_rainforest": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cat_Tien_Park,_Vietnam,_tropical_forest,_roots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Cat_Tien_Park%2C_Vietnam%2C_tropical_forest%2C_roots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat Tien Park, Vietnam, tropical forest, roots",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-048 (designer 16/11): bên trong rừng mưa nhiệt đới ở vườn quốc gia Cát Tiên (trang gốc ghi đúng nơi): cây cổ thụ có rễ bạnh, dây leo, cây bụi, nhiều tầng lá; không con vật, không người, không đường mòn. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q5.q5_icy_land": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gentoo_Penguins_of_Danco_Island.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gentoo_Penguins_of_Danco_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Gentoo Penguins of Danco Island",
+      "author": "owamux",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 0.54,
+        "height": 0.384
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_antarctica` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (chim cánh cụt Gentoo, đảo Danco, CC BY 2.0, giữ tên gốc). Ảnh gốc có khoảng năm du khách ở góc trên phải (x 0,56–0,80, y 0,17–0,29): mọi crop ở đây dừng ở x 0,54. Crop thẻ ba lựa chọn 5:2: núi tuyết, biển có băng vụn, chim cánh cụt trên bờ (thân hai con phía trước bị cắt ngang)."
+    },
+    "q6": {
+      "same_as": "q3"
+    },
+    "vocab.rainforest": {
+      "same_as": "learn.explore.explore_vietnam"
+    },
+    "vocab.treetop": {
+      "same_as": "learn.explore.explore_amazon"
+    },
+    "vocab.sloth": {
+      "same_as": "learn.explore.explore_trees"
+    },
+    "vocab.hornbill": {
+      "same_as": "tray.tray_hornbill"
+    },
+    "vocab.gibbon": {
+      "same_as": "tray.tray_gibbon"
+    },
+    "reward.hornbill_card": {
+      "same_as": "tray.tray_hornbill"
+    }
+  }
+}

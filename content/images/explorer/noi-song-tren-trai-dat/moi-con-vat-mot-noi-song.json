@@ -1,0 +1,261 @@
+{
+  "note": "SK-048 bài 8 (Mỗi con vật một nơi sống). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Không ảnh mới; một hình ghép (vocab.earth) từ bốn ảnh cảnh của bài 1, 3, 5, 7.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_camel": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "c0f65887-7401-4c12-a267-98d2da7ed6e2",
+      "source_url": "https://www.flickr.com/photos/49399018@N00/52744592560",
+      "file_url": "https://live.staticflickr.com/65535/52744592560_f9216b6d6a_b.jpg",
+      "title": "Dromedary Desert near Nefta Tunisia",
+      "author": "amanderson2",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-048 (designer 16/11): lạc đà một bướu đứng trên cát sa mạc gần Nefta, Tunisia; không yên, không dây cương, không người (Flickr, CC BY 2.0, đã mở trang gốc kiểm). Hình gốc của chủ đề. Crop thẻ hai lựa chọn 17:10."
+    },
+    "w1.w1_walrus": {
+      "same_as": "w1.w1_walrus",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "w2": {
+      "same_as": "q5",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lotus_flower_(978659).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lotus_flower_%28978659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus flower (978659)",
+      "author": "Hong Zhang ( jennyzhh2008 )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.05,
+        "top": 0,
+        "width": 0.8885,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `w1.w1_lotus` của goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha (bông sen hồng trên mặt ao). Crop 4:3 cho hình câu đúng/sai."
+    },
+    "learn.explore.explore_cold": {
+      "same_as": "learn.explore.explore_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "learn.explore.explore_hot_dry": {
+      "same_as": "learn.explore.explore_sahara",
+      "lesson": "noi-song-tren-trai-dat/sa-mac"
+    },
+    "learn.explore.explore_hot_wet": {
+      "same_as": "learn.explore.explore_vietnam",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "learn.explore.explore_water": {
+      "same_as": "learn.explore.explore_reef",
+      "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+    },
+    "tray.tray_bear": {
+      "same_as": "learn.explore.explore_bear",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_fennec": {
+      "same_as": "learn.explore.explore_fennec",
+      "lesson": "noi-song-tren-trai-dat/sa-mac"
+    },
+    "tray.tray_buffalo": {
+      "same_as": "tray.tray_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_sloth": {
+      "same_as": "learn.explore.explore_trees",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "tray.tray_emperor": {
+      "same_as": "tray.tray_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "tray.tray_hen": {
+      "same_as": "tray.tray_hen",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "tray.tray_lizard": {
+      "same_as": "tray.tray_lizard",
+      "lesson": "noi-song-tren-trai-dat/sa-mac"
+    },
+    "tray.tray_hornbill": {
+      "same_as": "tray.tray_hornbill",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_camel": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "c0f65887-7401-4c12-a267-98d2da7ed6e2",
+      "source_url": "https://www.flickr.com/photos/49399018@N00/52744592560",
+      "file_url": "https://live.staticflickr.com/65535/52744592560_f9216b6d6a_b.jpg",
+      "title": "Dromedary Desert near Nefta Tunisia",
+      "author": "amanderson2",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.26,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-048 (designer 16/11): lạc đà một bướu đứng trên cát sa mạc gần Nefta, Tunisia; không yên, không dây cương, không người (Flickr, CC BY 2.0, đã mở trang gốc kiểm). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2 (chân sát mép dưới)."
+    },
+    "q1.q1_sloth": {
+      "same_as": "q3.q3_sloth",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "q1.q1_walrus": {
+      "same_as": "q1.q1_walrus",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q2": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "9ac6e6b1-d419-418a-afc9-dfb9eb968304",
+      "source_url": "https://www.inaturalist.org/photos/410795063",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/410795063/original.jpg",
+      "title": "brown-throated sloth, brown-throated three-toed sloth",
+      "author": "cello caruso-turiello",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0,
+        "width": 0.8886,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): con lười ba ngón họng nâu treo trên cành giữa tán lá (iNaturalist, Puerto Jiménez, Costa Rica, quan sát hoang dã; giấy phép đã đối chiếu ở iNaturalist). Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_desert": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Erg_chebbi_sunrise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Erg_chebbi_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Erg chebbi sunrise",
+      "author": "JanSuchy",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Erg_chebbi_sunrise.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.05,
+        "width": 1,
+        "height": 0.5724
+      },
+      "note": "SK-048 (designer 16/11): đồi cát Erg Chebbi (Ma Rốc, sa mạc Xa-ha-ra) lúc mặt trời mọc, gợn sóng trên cát; không người, lạc đà, dấu chân, xương rồng. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q3.q3_reef": {
+      "same_as": "q3.q3_reef",
+      "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+    },
+    "q3.q3_ice": {
+      "same_as": "q3.q3_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_ocean": {
+      "same_as": "vocab.ocean",
+      "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+    },
+    "q4.q4_desert": {
+      "same_as": "learn.explore.explore_sahara",
+      "lesson": "noi-song-tren-trai-dat/sa-mac"
+    },
+    "q4.q4_swamp": {
+      "same_as": "learn.explore.explore_swamp",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_fennec": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vulpes_zerda_615513692.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Vulpes_zerda_615513692.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vulpes zerda 615513692",
+      "author": "Horatiu Stefanie",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.15,
+        "width": 0.92,
+        "height": 0.7286
+      },
+      "note": "SK-048 (designer 16/11): cáo fennec hoang dã đứng trên cát sa mạc ban ngày, tai rất to (Ma Rốc; iNaturalist 615513692, quan sát hoang dã ở Errachidia; bản Commons). Mọi crop bỏ vật tối mờ ở mép trái. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2: thấy rõ đôi tai."
+    },
+    "q5.q5_fox": {
+      "same_as": "q4.q4_fox",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "q5.q5_seal": {
+      "same_as": "q4.q4_seal",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q6": {
+      "same_as": "q5",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "vocab.earth": {
+      "composed": {
+        "file": "content/images/composed/noi-song-tren-trai-dat/moi-con-vat-mot-noi-song.vocab.earth.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_ice",
+            "lesson": "noi-song-tren-trai-dat/bac-cuc"
+          },
+          {
+            "same_as": "learn.explore.explore_sahara",
+            "lesson": "noi-song-tren-trai-dat/sa-mac"
+          },
+          {
+            "same_as": "learn.explore.explore_vietnam",
+            "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+          },
+          {
+            "same_as": "learn.explore.explore_reef",
+            "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+          }
+        ]
+      },
+      "title": "Ice, sand, forest and sea",
+      "note": "SK-048 (designer 16/11): hình ghép 1024×512 (khung 2:1 của thẻ từ Explorer), lưới 2×2, mỗi ô 2:1 cắt từ ảnh cảnh vuông đã chọn (băng biển bài 1, đồi cát Xa-ha-ra bài 7, rừng Cát Tiên bài 3, rạn san hô NOAA dùng ở bài 5), khe 12 px màu giấy điệp #F0E6CF, không viền nét. Không quả địa cầu, không bản đồ, không ảnh Trái Đất từ vũ trụ."
+    },
+    "vocab.hot": {
+      "same_as": "vocab.desert",
+      "lesson": "noi-song-tren-trai-dat/sa-mac"
+    },
+    "vocab.cold": {
+      "same_as": "learn.explore.explore_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "vocab.habitat": {
+      "same_as": "vocab.swamp",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "reward.sloth_card": {
+      "same_as": "learn.explore.explore_trees",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    }
+  }
+}

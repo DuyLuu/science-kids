@@ -1,0 +1,285 @@
+{
+  "note": "SK-048 bài 5 (Biển và đại dương). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Ba ảnh mới là hình gốc của cả chủ đề: explore_deep, tray_clownfish, tray_sea_turtle.",
+  "images": {
+    "w1": {
+      "same_as": "q2",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "learn.explore.explore_beach": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_empty_beach_(4374002596).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Big_empty_beach_%284374002596%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Big empty beach (4374002596)",
+      "author": "Damian Gadal",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.665,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `q3` của goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien (bãi biển vắng, nước nông). Crop vuông cho ô Học và thẻ xếp q4: mép nước và bãi cát ướt."
+    },
+    "learn.explore.explore_reef": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "crop": {
+        "left": 0.08,
+        "top": 0,
+        "width": 0.6571,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho; rạn san hô có quạt biển (NOAA, PD), không thợ lặn. Crop vuông."
+    },
+    "learn.explore.explore_open_sea": {
+      "same_as": "tray.tray_whale",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "learn.explore.explore_deep": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bathykorus_bouilloni.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Bathykorus_bouilloni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bathykorus bouilloni",
+      "author": "Kevin Raskoff",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bathykorus_bouilloni.jpg",
+      "note": "SK-048 (designer 16/11): sứa biển sâu Bathykorus bouilloni trong suốt trên nền tối (NOAA, chuyến Hidden Ocean Bắc Băng Dương 2005; trang gốc ghi deep-sea). Ảnh vuông 800 px. Hình gốc của chủ đề."
+    },
+    "tray.tray_clownfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_clownfish.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Common_clownfish.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Clownfish in an anemone",
+      "author": "Janderk",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_clownfish.jpg",
+      "crop": {
+        "left": 0.13,
+        "top": 0,
+        "width": 0.5625,
+        "height": 0.75
+      },
+      "note": "SK-048 (designer 16/11): cá hề trong hải quỳ ngoài biển (Great Barrier Reef, Úc; brief và alt không ghi tên nơi). Hình gốc của chủ đề. Crop vuông."
+    },
+    "tray.tray_carp": {
+      "same_as": "tray.tray_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_whale": {
+      "same_as": "tray.tray_whale",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "tray.tray_jellyfish": {
+      "same_as": "learn.explore.explore_deep"
+    },
+    "tray.tray_frog": {
+      "same_as": "tray.tray_frog",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_sea_turtle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_Turtle_in_Apo_Island.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sea_Turtle_in_Apo_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea Turtle in Apo Island",
+      "author": "Anna Varona",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.32,
+        "top": 0.12,
+        "width": 0.567,
+        "height": 0.85
+      },
+      "note": "SK-048 (designer 16/11): rùa biển nằm nghỉ trên rạn san hô (đảo Apo, Philippines; brief và alt không ghi tên nơi). Không thợ lặn, không thiết bị. Hình gốc của chủ đề. Crop vuông: cả con."
+    },
+    "tray.tray_croc": {
+      "same_as": "tray.tray_croc",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_dolphin": {
+      "same_as": "tray.tray_dolphin",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_carp": {
+      "same_as": "q5.q5_carp",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "q1.q1_mudskipper": {
+      "same_as": "q1.q1_mudskipper",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q1.q1_whale": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/HIHWNMS_-_Humpback_Whale_Breach_%2833154058312%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "HIHWNMS - Humpback Whale Breach (33154058312)",
+      "author": "National Marine Sanctuaries",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+      "crop": {
+        "left": 0.1,
+        "top": 0.385,
+        "width": 0.8,
+        "height": 0.48
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_pacific` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong; cá voi lưng gù nhảy khỏi mặt biển (NOAA, PD). Crop thẻ ba lựa chọn 5:2: cả con cá voi."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Waves_(54369360806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Atlantic_Ocean_Waves_%2854369360806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic Ocean Waves (54369360806)",
+      "author": "Michael Gaylard from Horsham, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0,
+        "width": 0.7541,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_atlantic` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (same_as không sang được nhóm tuổi khác); sóng lớn giữa đại dương, không tàu. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_deep": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bathykorus_bouilloni.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Bathykorus_bouilloni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bathykorus bouilloni",
+      "author": "Kevin Raskoff",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bathykorus_bouilloni.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.4
+      },
+      "note": "SK-048 (designer 16/11): sứa biển sâu Bathykorus bouilloni trong suốt trên nền tối (NOAA, chuyến Hidden Ocean Bắc Băng Dương 2005; trang gốc ghi deep-sea). Ảnh vuông 800 px. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2: thân sứa (mất một phần tua)."
+    },
+    "q3.q3_reef": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "crop": {
+        "left": 0,
+        "top": 0.25,
+        "width": 1,
+        "height": 0.6087
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho; rạn san hô có quạt biển (NOAA, PD), không thợ lặn. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q3.q3_ice": {
+      "same_as": "q3.q3_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_reef": {
+      "same_as": "learn.explore.explore_reef"
+    },
+    "q4.q4_deep": {
+      "same_as": "learn.explore.explore_deep"
+    },
+    "q4.q4_beach": {
+      "same_as": "learn.explore.explore_beach"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_jellyfish": {
+      "same_as": "q3.q3_deep"
+    },
+    "q5.q5_clownfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Common_clownfish.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Common_clownfish.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Clownfish in an anemone",
+      "author": "Janderk",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Common_clownfish.jpg",
+      "crop": {
+        "left": 0.05,
+        "top": 0,
+        "width": 0.9,
+        "height": 0.48
+      },
+      "note": "SK-048 (designer 16/11): cá hề trong hải quỳ ngoài biển (Great Barrier Reef, Úc; brief và alt không ghi tên nơi). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q5.q5_turtle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_Turtle_in_Apo_Island.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sea_Turtle_in_Apo_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea Turtle in Apo Island",
+      "author": "Anna Varona",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.22,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-048 (designer 16/11): rùa biển nằm nghỉ trên rạn san hô (đảo Apo, Philippines; brief và alt không ghi tên nơi). Không thợ lặn, không thiết bị. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q6": {
+      "same_as": "q2"
+    },
+    "vocab.ocean": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Waves_(54369360806).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Atlantic_Ocean_Waves_%2854369360806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic Ocean Waves (54369360806)",
+      "author": "Michael Gaylard from Horsham, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.5656,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_atlantic` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (same_as không sang được nhóm tuổi khác); sóng lớn giữa đại dương, không tàu. Crop vuông (từ, thẻ xếp)."
+    },
+    "vocab.coral_reef": {
+      "same_as": "learn.explore.explore_reef"
+    },
+    "vocab.deep_sea": {
+      "same_as": "learn.explore.explore_deep"
+    },
+    "vocab.whale": {
+      "same_as": "tray.tray_whale",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "vocab.sea_turtle": {
+      "same_as": "tray.tray_sea_turtle"
+    },
+    "reward.sea_turtle_card": {
+      "same_as": "tray.tray_sea_turtle"
+    }
+  }
+}

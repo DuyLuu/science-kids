@@ -12,7 +12,7 @@ Designer · 10/11/2026 · Nguồn: góp ý của Duy 10/11 ("phần road map x�
 | `Discoverer-Home-Roadmap-B.dc.html` | 390×844, cuộn được | Phương án B · đường mòn sát trái |
 | `Discoverer-Home-Roadmap-Full.dc.html` | 390×3000 | A, cả trang cuộn, 17 chủ đề |
 | `Discoverer-Home-Roadmap-B-Full.dc.html` | 390×2286 | B, cả trang cuộn |
-| `Topic-Icons.dc.html` | 1440×2050 | 45 icon chủ đề, 6 trạng thái chặng, phương án màu triện |
+| `Topic-Icons.dc.html` | 1440×2050 | 46 icon chủ đề, 6 trạng thái chặng, phương án màu triện |
 
 Tình huống vẽ trên artboard (khớp nội dung thật hôm nay): chủ đề 1 Bề mặt Trái Đất đang học 3/5 (thẻ Học tiếp, bài 4 Núi lửa), chủ đề 2 Khủng long đã xong 5/5, chủ đề 9 Ăn uống lành mạnh chưa học 0/2 bài đã soạn, 14 chủ đề còn lại "Sắp có".
 
@@ -111,9 +111,9 @@ B gọn (vùng bản đồ khoảng 1720 pt cho 17 chủ đề, A khoảng 2430)
 
 ## 8. Icon chủ đề
 
-**File.** `design/icons/topics/<key>.svg`, key theo `content/syllabus.json`. Khung 64×64, chỉ dùng `path`, `circle`, `ellipse`, `rect`, `g fill`, `transform` (rotate, translate), `fill-rule="evenodd"`. Không filter, không `opacity`, không text, không gradient, không clipPath, không `use`, không stroke, nên CoreSVG của Xcode và trình nhập VectorDrawable của Android đều đọc được. Mỗi file 2–4 màu giấy cộng chi tiết nhỏ (mắt, khe). Ba ngoại lệ có chủ đích: khối băng của `introduction-to-states-of-matter-and-changing-states` là 3 sắc của một mảnh; mắt và vân là chi tiết.
+**File.** `design/icons/topics/<key>.svg`, key theo `content/syllabus.json`. Khung 64×64, chỉ dùng `path`, `circle`, `ellipse`, `rect`, `g fill`, `transform` (rotate, translate), `fill-rule="evenodd"`. Không filter, không `opacity`, không text, không gradient, không clipPath, không `use`, không stroke, nên CoreSVG của Xcode và trình nhập VectorDrawable của Android đều đọc được. Mỗi file 2–4 màu giấy cộng chi tiết nhỏ (mắt, khe). Ba ngoại lệ có chủ đích: khối băng của `introduction-to-states-of-matter-and-changing-states` là 3 sắc của một mảnh; mắt và vân là chi tiết. `new-habitats-around-the-world` ghép hai nơi sống nên có 6 màu giấy (mặt trời, xương rồng, biển, đồi cát, tảng băng, chim cánh cụt); mặt trước tảng băng, vân cát, mỏ, chân, mắt là chi tiết.
 
-Màu ngoài bảng token (màu tự nhiên dịu, trộn từ token): `#D98A76` hồng (não, ruột; đỏ son 45% + giấy 55%), `#CFDCD8` băng/thuỷ tinh (giấy 70% + gỉ đồng 30%), `#9FBDB8`, `#7EA39E` (hai mặt khối băng), `#D9A066` da tay (đã có trên canvas: quả trứng), `#D7C8A5`, `#3D352B`, `#A26E28` (mặt khuất của đá và khối gỗ).
+Màu ngoài bảng token (màu tự nhiên dịu, trộn từ token): `#D98A76` hồng (não, ruột; đỏ son 45% + giấy 55%), `#CFDCD8` băng/thuỷ tinh (giấy 70% + gỉ đồng 30%), `#9FBDB8`, `#7EA39E` (hai mặt khối băng; `#CFDCD8` và `#9FBDB8` cũng là mặt trên và mặt trước tảng băng của `new-habitats-around-the-world`), `#D9A066` da tay (đã có trên canvas: quả trứng), `#D7C8A5`, `#3D352B`, `#A26E28` (mặt khuất của đá và khối gỗ).
 
 **Nhập vào app.**
 
@@ -142,7 +142,7 @@ Màu ngoài bảng token (màu tự nhiên dịu, trộn từ token): `#D98A76` 
 
 Về sau (GĐ 2) có thể chuyển icon vào content pack (`topic.icon`), nhưng hôm nay key danh mục đủ để tra, không cần đổi schema.
 
-**Danh sách 45 icon** (đã vẽ đủ cả ba nhóm):
+**Danh sách 46 icon** (đã vẽ đủ cả ba nhóm; 16/11 thêm `new-habitats-around-the-world` cho SK-048):
 
 **Discoverer** (17)
 
@@ -166,22 +166,23 @@ Về sau (GĐ 2) có thể chuyển icon vào content pack (`topic.icon`), nhưn
 | 16 | `living-things-and-the-environment` | Sinh vật và môi trường | đồi, sông, cây |
 | 17 | `more-about-food-chains` | Chuỗi thức ăn nâng cao | cá lớn đuổi cá nhỏ |
 
-**Explorer** (12)
+**Explorer** (13, thứ tự theo `content/syllabus.json`)
 
 | # | key = tên file | Chủ đề | Hình |
 | --- | --- | --- | --- |
 | 1 | `naming-and-grouping-animals` | Gọi tên và nhóm động vật | gà trống Đông Hồ |
-| 2 | `seasonal-changes-autumn-and-winter` | Thu, đông và mùa khô | lá rơi mùa thu |
-| 3 | `human-body-parts` | Cơ thể của em | bàn tay |
-| 4 | `identifying-plants-and-their-basic-parts` | Cây quanh em | cây ăn quả |
-| 5 | `seasonal-changes-spring-and-summer` | Xuân, hè và mùa mưa | ô che mưa, nắng sau mây |
-| 6 | `everyday-materials` | Vật liệu quanh em | khối gỗ và lon kim loại |
-| 7 | `uses-of-everyday-materials` | Vật liệu dùng làm gì? | ghế gỗ có nệm |
-| 8 | `growing-plants` | Trồng cây | hạt nảy mầm trong đất, giọt nước |
-| 9 | `new-life` | Sự sống mới | tổ chim, trứng, chim non |
-| 10 | `introduction-to-food-chains` | Chuỗi thức ăn | sâu ăn lá |
-| 11 | `living-things-and-where-they-live` | Sinh vật sống ở đâu? | ếch trên lá súng |
-| 12 | `healthy-me` | Em khoẻ mạnh | răng và bàn chải |
+| 2 | `living-things-and-where-they-live` | Sinh vật sống ở đâu? | ếch trên lá súng |
+| 3 | `introduction-to-food-chains` | Chuỗi thức ăn | sâu ăn lá |
+| 4 | `new-habitats-around-the-world` | Những nơi sống trên Trái Đất | nơi lạnh, nơi nóng: chim cánh cụt trên tảng băng giữa biển, xương rồng trên đồi cát dưới mặt trời (SK-048; không bản đồ, không quả địa cầu) |
+| 5 | `seasonal-changes-autumn-and-winter` | Thu, đông và mùa khô | lá rơi mùa thu |
+| 6 | `human-body-parts` | Cơ thể của em | bàn tay |
+| 7 | `identifying-plants-and-their-basic-parts` | Cây quanh em | cây ăn quả |
+| 8 | `seasonal-changes-spring-and-summer` | Xuân, hè và mùa mưa | ô che mưa, nắng sau mây |
+| 9 | `everyday-materials` | Vật liệu quanh em | khối gỗ và lon kim loại |
+| 10 | `uses-of-everyday-materials` | Vật liệu dùng làm gì? | ghế gỗ có nệm |
+| 11 | `growing-plants` | Trồng cây | hạt nảy mầm trong đất, giọt nước |
+| 12 | `new-life` | Sự sống mới | tổ chim, trứng, chim non |
+| 13 | `healthy-me` | Em khoẻ mạnh | răng và bàn chải |
 
 **Scientist** (16)
 

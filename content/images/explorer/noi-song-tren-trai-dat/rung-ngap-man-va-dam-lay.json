@@ -1,0 +1,290 @@
+{
+  "note": "SK-048 bài 4 (Rừng ngập mặn và đầm lầy). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Ba ảnh mới là hình gốc của cả chủ đề: explore_swamp, explore_crab, explore_crane. Cá sấu: ảnh mới của chủ đề (ảnh q1_reptiles của Khủng long há miệng, trái Quy ước hình số 4), mục gốc ở bac-cuc.json.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_gibbon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nomascus_gabriellae_256465346.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Nomascus_gabriellae_256465346.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nomascus gabriellae 256465346",
+      "author": "Audrey Kauppila",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-048 (designer 16/11): vượn đen má vàng cái (lông vàng nâu) nằm trên cành, một tay dài với lên cành trên (iNaturalist, Việt Nam, quan sát hoang dã). Hình gốc của chủ đề. Crop thẻ hai lựa chọn 17:10."
+    },
+    "w1.w1_dart_frog": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "32dd082b-41d3-42e5-9c50-5067af902de1",
+      "source_url": "https://www.inaturalist.org/photos/12432857",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12432857/original.jpeg",
+      "title": "Dendrobates leucomelas",
+      "author": "Paul Prior",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.7628
+      },
+      "note": "SK-048 (designer 16/11): ếch phi tiêu độc vàng đen ngồi trên lá rụng ở mặt đất rừng (Annai, Guyana; iNaturalist, quan sát hoang dã, giấy phép đã đối chiếu). Hình gốc của chủ đề. Crop thẻ hai lựa chọn 17:10."
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_mangrove",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "learn.explore.explore_mangrove": {
+      "same_as": "tray.tray_mangrove",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "learn.explore.explore_swamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/American_lotus_%2815117454682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus marsh with trees",
+      "author": "USFWSmidwest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.08,
+        "width": 0.465,
+        "height": 0.62
+      },
+      "note": "SK-048 (designer 16/11): đầm lầy nước ngọt xanh tốt phủ đầy lá sen và hoa sen, hàng cây phía sau (Monopoly Marsh, Mingo National Wildlife Refuge, Missouri, Mỹ; USFWS). Ảnh gốc có một con vịt nhỏ giữa ảnh (x 0,47–0,58, y 0,64–0,73): mọi crop tránh vùng này. Không người, không thuyền. Hình gốc của chủ đề. Crop vuông: hoa sen, lá sen, mặt nước, hàng cây."
+    },
+    "learn.explore.explore_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Male_fiddler_crab_displaying_an_enlarged_claw_on_wet_mud,_Margarita_Island,_Venezuela.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Male_fiddler_crab_displaying_an_enlarged_claw_on_wet_mud%2C_Margarita_Island%2C_Venezuela.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fiddler crab on wet mud",
+      "author": "Wilfredor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.255,
+        "top": 0.15,
+        "width": 0.5312,
+        "height": 0.8
+      },
+      "note": "SK-048 (designer 16/11): con còng đực trên bùn ướt, một càng rất to (đảo Margarita, Venezuela; CC0). Hình gốc của chủ đề. Crop vuông."
+    },
+    "learn.explore.explore_crane": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sarus_Crane_(7148529151).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sarus_Crane_%287148529151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sarus Crane (7148529151)",
+      "author": "Koshy Koshy from Faridabad, Haryana, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0.1,
+        "width": 0.567,
+        "height": 0.85
+      },
+      "note": "SK-048 (designer 16/11): hai con sếu đầu đỏ đứng trong đồng cỏ ngập nước nông, thấy cả con (Ấn Độ; brief và alt không ghi tên nơi). Hình gốc của chủ đề. Crop vuông: hai con sếu."
+    },
+    "tray.tray_mudskipper": {
+      "same_as": "reward.mudskipper_card",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "tray.tray_dolphin": {
+      "same_as": "tray.tray_dolphin",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "tray.tray_fiddler_crab": {
+      "same_as": "learn.explore.explore_crab"
+    },
+    "tray.tray_hornbill": {
+      "same_as": "tray.tray_hornbill",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "tray.tray_crane": {
+      "same_as": "learn.explore.explore_crane"
+    },
+    "tray.tray_perch": {
+      "same_as": "tray.tray_perch",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_emperor": {
+      "same_as": "tray.tray_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "tray.tray_egret": {
+      "same_as": "tray.tray_egret",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_emperor": {
+      "same_as": "q1.q1_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q1.q1_crane": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sarus_Crane_(7148529151).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sarus_Crane_%287148529151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sarus Crane (7148529151)",
+      "author": "Koshy Koshy from Faridabad, Haryana, India",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.19,
+        "width": 1,
+        "height": 0.5997
+      },
+      "note": "SK-048 (designer 16/11): hai con sếu đầu đỏ đứng trong đồng cỏ ngập nước nông, thấy cả con (Ấn Độ; brief và alt không ghi tên nơi). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q1.q1_owl": {
+      "same_as": "q4.q4_owl",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/American_lotus_%2815117454682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus marsh with trees",
+      "author": "USFWSmidwest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "crop": {
+        "left": 0.38,
+        "top": 0,
+        "width": 0.62,
+        "height": 0.62
+      },
+      "note": "SK-048 (designer 16/11): đầm lầy nước ngọt xanh tốt phủ đầy lá sen và hoa sen, hàng cây phía sau (Monopoly Marsh, Mingo National Wildlife Refuge, Missouri, Mỹ; USFWS). Ảnh gốc có một con vịt nhỏ giữa ảnh (x 0,47–0,58, y 0,64–0,73): mọi crop tránh vùng này. Không người, không thuyền. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_sloth": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "9ac6e6b1-d419-418a-afc9-dfb9eb968304",
+      "source_url": "https://www.inaturalist.org/photos/410795063",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/410795063/original.jpg",
+      "title": "brown-throated sloth, brown-throated three-toed sloth",
+      "author": "cello caruso-turiello",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.6002
+      },
+      "note": "SK-048 (designer 16/11): con lười ba ngón họng nâu treo trên cành giữa tán lá (iNaturalist, Puerto Jiménez, Costa Rica, quan sát hoang dã; giấy phép đã đối chiếu ở iNaturalist). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2: mặt và thân."
+    },
+    "q3.q3_seal": {
+      "same_as": "q4.q4_seal",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q3.q3_crab": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Male_fiddler_crab_displaying_an_enlarged_claw_on_wet_mud,_Margarita_Island,_Venezuela.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Male_fiddler_crab_displaying_an_enlarged_claw_on_wet_mud%2C_Margarita_Island%2C_Venezuela.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fiddler crab on wet mud",
+      "author": "Wilfredor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0.34,
+        "width": 0.84,
+        "height": 0.506
+      },
+      "note": "SK-048 (designer 16/11): con còng đực trên bùn ướt, một càng rất to (đảo Margarita, Venezuela; CC0). Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_mangrove": {
+      "same_as": "q3.q3_mangrove",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "q4.q4_swamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/American_lotus_%2815117454682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus marsh with trees",
+      "author": "USFWSmidwest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-048 (designer 16/11): đầm lầy nước ngọt xanh tốt phủ đầy lá sen và hoa sen, hàng cây phía sau (Monopoly Marsh, Mingo National Wildlife Refuge, Missouri, Mỹ; USFWS). Ảnh gốc có một con vịt nhỏ giữa ảnh (x 0,47–0,58, y 0,64–0,73): mọi crop tránh vùng này. Không người, không thuyền. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4.q4_pond": {
+      "same_as": "q3.q3_pond",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q5": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "cfea8f2d-b305-4398-8002-5689c975bc54",
+      "source_url": "https://www.inaturalist.org/photos/254420162",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/254420162/original.jpeg",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Светлана Царахова",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.07,
+        "top": 0.25,
+        "width": 0.56,
+        "height": 0.748
+      },
+      "note": "SK-048 (designer 16/11): cá sấu Xiêm non hoang dã nằm trên bờ sông bùn, miệng khép (Nakhon Sawan, Thái Lan; iNaturalist 254420162, quan sát hoang dã, CC0, đã đối chiếu ở iNaturalist). Thay ảnh q1_reptiles của Khủng long (miệng há, thấy răng; trái Quy ước hình số 4). Mục gốc ở bac-cuc.json. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "q6": {
+      "same_as": "q2"
+    },
+    "vocab.swamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/American_lotus_%2815117454682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus marsh with trees",
+      "author": "USFWSmidwest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:American_lotus_(15117454682).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.95,
+        "height": 0.6333
+      },
+      "note": "SK-048 (designer 16/11): đầm lầy nước ngọt xanh tốt phủ đầy lá sen và hoa sen, hàng cây phía sau (Monopoly Marsh, Mingo National Wildlife Refuge, Missouri, Mỹ; USFWS). Ảnh gốc có một con vịt nhỏ giữa ảnh (x 0,47–0,58, y 0,64–0,73): mọi crop tránh vùng này. Không người, không thuyền. Hình gốc của chủ đề. Crop 2:1 cho thẻ từ (thẻ từ Explorer trên máy là khung ngang 2:1). Hàng cây, lá sen, hoa sen; tránh con vịt."
+    },
+    "vocab.mud": {
+      "same_as": "tray.tray_mangrove",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "vocab.fiddler_crab": {
+      "same_as": "learn.explore.explore_crab"
+    },
+    "vocab.crane": {
+      "same_as": "learn.explore.explore_crane"
+    },
+    "reward.sarus_crane_card": {
+      "same_as": "learn.explore.explore_crane"
+    }
+  }
+}

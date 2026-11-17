@@ -24,8 +24,8 @@ import Testing
         #expect(syllabus.schemaVersion == 1)
         #expect(!syllabus.syllabusVersion.isEmpty)
         #expect(syllabus.groups.map(\.ageGroup) == [.explorer, .discoverer, .scientist])
-        #expect(syllabus.groups.map(\.topics.count) == [12, 17, 16])
-        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [75, 155, 156], "content/syllabus.json 13/11: Explorer has 75 lessons")
+        #expect(syllabus.groups.map(\.topics.count) == [13, 17, 16])
+        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [83, 155, 156], "content/syllabus.json 16/11 (SK-048): Explorer has 83 lessons")
         #expect(syllabus.groups.flatMap(\.topics).allSatisfy { $0.strand.isKnown })
     }
 
@@ -50,7 +50,11 @@ import Testing
         let syllabus = try Self.syllabus()
         #expect(syllabus.topics(for: .discoverer).map(\.oakYear) == [nil, nil, nil, nil, nil, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4])
         // Duy 14/11: Explorer #2 "Sinh vật sống ở đâu?" and #3 "Chuỗi thức ăn" (Oak Year 2) move up.
-        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == [1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2])
+        // SK-048 (Duy 16/11): Explorer #4 "Những nơi sống trên Trái Đất" is a topic of our own (no year).
+        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == [1, 2, 2, nil, 1, 1, 1, 1, 1, 2, 2, 2, 2])
+        #expect(syllabus.topics(for: .explorer).filter { (3...5).contains($0.number) }.map(\.key) == [
+            "introduction-to-food-chains", "new-habitats-around-the-world", "seasonal-changes-autumn-and-winter",
+        ])
         #expect(syllabus.topics(for: .scientist).prefix(3).allSatisfy { $0.oakYear == nil })
         let topic = try #require(syllabus.topics(for: .discoverer).first { $0.key == "healthy-eating" })
         let again = try JSONDecoder().decode(Syllabus.TopicEntry.self, from: JSONEncoder().encode(topic))

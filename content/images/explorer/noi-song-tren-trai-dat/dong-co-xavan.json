@@ -1,0 +1,342 @@
+{
+  "note": "SK-048 bài 6 (Đồng cỏ xavan). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng (đặt ở bài đầu tiên dùng khung đó). Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép mục gốc (same_as không sang được nhóm tuổi khác). Sáu ảnh mới là hình gốc của cả chủ đề: explore_savanna, explore_dry, explore_herd, tray_zebra, tray_lion, tray_elephant.",
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Sea_fans_coral_reef_Pagan_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sea fans on a coral reef",
+      "author": "NOAA Fisheries/Andrew Gray",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Sea_fans_coral_reef_Pagan_2022.png",
+      "crop": {
+        "left": 0.06,
+        "top": 0,
+        "width": 0.8762,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `q4` ở discoverer/ho-hap/vi-sao-ta-phai-tho; rạn san hô có quạt biển (NOAA, PD), không thợ lặn. Crop 4:3 cho hình câu đúng/sai."
+    },
+    "w2": {
+      "same_as": "q5",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "learn.explore.explore_savanna": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Landscape,_Masai_Mara,_Kenya_(52452028118).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Landscape%2C_Masai_Mara%2C_Kenya_%2852452028118%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Landscape, Masai Mara, Kenya (52452028118)",
+      "author": "flowcomm",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.054,
+        "width": 0.62,
+        "height": 0.9457
+      },
+      "note": "SK-048 (designer 16/11): đồng cỏ xavan Masai Mara (Kenya) trải tới chân trời thấp, vài cây keo tán phẳng rải rác; không đồi, không rừng rậm, không người, không xe. Ảnh gốc có hai con linh dương (hartebeest) ở phần phải (x từ 0,68): mọi crop dừng ở x 0,66. Hình gốc của chủ đề (thay ảnh Acacia Kenya Savannah sau lượt chạy thử 16/11). Crop vuông (ô Học, thẻ xếp bài 7): cỏ chiếm khoảng hai phần ba khung, ba cây keo."
+    },
+    "learn.explore.explore_dry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Savanna_Grasslands_(199168845).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Savanna_Grasslands_%28199168845%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Savanna Grasslands",
+      "author": "Javier Puig Ochoa",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.48,
+        "top": 0.15,
+        "width": 0.4781,
+        "height": 0.85
+      },
+      "note": "SK-048 (designer 16/11): đồng cỏ xavan khô vàng lúc bình minh, một cây ở xa (vườn quốc gia Kruger, Nam Phi, mùa đông khô); không con vật, không khói, lửa. Hình gốc của chủ đề. Crop vuông."
+    },
+    "learn.explore.explore_herd": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wildebeest_migration_(7513599090).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Wildebeest_migration_%287513599090%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Wildebeest migration (7513599090)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.17,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): đàn linh dương đầu bò rất đông đứng sát nhau trên đồng cỏ Maasai Mara (Kenya) mùa di cư, vài con ngựa vằn ở xa; không sông, không thú săn mồi, không xe. Ảnh toàn cảnh Serengeti của William Warby đã thử nhưng chỉ cao 349 px sau khi tải bản 1280 px của Commons, nên đổi. Hình gốc của chủ đề. Crop vuông (ô Học, món Chơi, từ)."
+    },
+    "learn.explore.explore_giraffe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lascar_Giraffes_-_Nairobi_National_Park_(4540802988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lascar_Giraffes_-_Nairobi_National_Park_%284540802988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lascar Giraffes - Nairobi National Park (4540802988)",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.14,
+        "top": 0,
+        "width": 0.664,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_africa` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong; hươu cao cổ ở vườn quốc gia Nairobi (CC BY 2.0, giữ tên gốc). Crop vuông: cả con hươu, cây keo bên trái."
+    },
+    "tray.tray_zebra": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zebra_in_the_Serengeti_(28596410006).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Zebra_in_the_Serengeti_%2828596410006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zebra in the Serengeti (28596410006)",
+      "author": "Richard Mortel from Riyadh, Saudi Arabia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.24,
+        "top": 0.08,
+        "width": 0.6,
+        "height": 0.9
+      },
+      "note": "SK-048 (designer 16/11): một con ngựa vằn đứng trên đồng cỏ ở Serengeti, nhìn ngang. Mọi crop bỏ con ngựa vằn bị cắt ở mép trái. Hình gốc của chủ đề. Crop vuông: cả con (kệ Chơi, thẻ xếp q4, từ)."
+    },
+    "tray.tray_sloth": {
+      "same_as": "learn.explore.explore_trees",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "tray.tray_giraffe": {
+      "same_as": "learn.explore.explore_giraffe"
+    },
+    "tray.tray_lion": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lion_Resting_in_Ngorongoro_Crater_(48532350976).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Lion_Resting_in_Ngorongoro_Crater_%2848532350976%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lion Resting in Ngorongoro Crater (48532350976)",
+      "author": "Jay Galvin from Pleasanton, CA, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.17,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): sư tử đực hoang dã nằm nghỉ, miệng khép, mắt lim dim (miệng núi lửa Ngorongoro, Tanzania); nền đất trống, không con mồi, không xe. Hình gốc của chủ đề. Crop vuông: đầu, bờm, thân (mất chóp đuôi)."
+    },
+    "tray.tray_buffalo": {
+      "same_as": "tray.tray_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_wildebeest": {
+      "same_as": "learn.explore.explore_herd"
+    },
+    "tray.tray_bear": {
+      "same_as": "learn.explore.explore_bear",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "tray.tray_elephant": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "48bb762f-aece-4974-bae3-00315db249d8",
+      "source_url": "https://www.flickr.com/photos/13604536@N02/52277816507",
+      "file_url": "https://live.staticflickr.com/65535/52277816507_954113a3f7_b.jpg",
+      "title": "African Savanna Elephant",
+      "author": "danielle.brigida",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): voi châu Phi đứng nhìn thẳng trên đồng cỏ xavan, hai tai xoè rất to, cặp ngà (Flickr danielle.brigida, mô tả: Credit: Danielle Brigida, WWFUS). Hình gốc của chủ đề. Crop vuông: cả con (kệ Chơi, thẻ xếp q4)."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_emperor": {
+      "same_as": "q1.q1_emperor",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "q1.q1_zebra": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zebra_in_the_Serengeti_(28596410006).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Zebra_in_the_Serengeti_%2828596410006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Zebra in the Serengeti (28596410006)",
+      "author": "Richard Mortel from Riyadh, Saudi Arabia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.19,
+        "top": 0.2,
+        "width": 0.8,
+        "height": 0.48
+      },
+      "note": "SK-048 (designer 16/11): một con ngựa vằn đứng trên đồng cỏ ở Serengeti, nhìn ngang. Mọi crop bỏ con ngựa vằn bị cắt ở mép trái. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q1.q1_sloth": {
+      "same_as": "q3.q3_sloth",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Savanna_Grasslands_(199168845).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Savanna_Grasslands_%28199168845%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Savanna Grasslands",
+      "author": "Javier Puig Ochoa",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.4,
+        "top": 0.25,
+        "width": 0.5625,
+        "height": 0.75
+      },
+      "note": "SK-048 (designer 16/11): đồng cỏ xavan khô vàng lúc bình minh, một cây ở xa (vườn quốc gia Kruger, Nam Phi, mùa đông khô); không con vật, không khói, lửa. Hình gốc của chủ đề. Crop 4:3 cho hình câu đúng/sai q2."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_sloth": {
+      "same_as": "q3.q3_sloth",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "q3.q3_crab": {
+      "same_as": "q3.q3_crab",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "q3.q3_herd": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wildebeest_migration_(7513599090).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Wildebeest_migration_%287513599090%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Wildebeest migration (7513599090)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-048 (designer 16/11): đàn linh dương đầu bò rất đông đứng sát nhau trên đồng cỏ Maasai Mara (Kenya) mùa di cư, vài con ngựa vằn ở xa; không sông, không thú săn mồi, không xe. Ảnh toàn cảnh Serengeti của William Warby đã thử nhưng chỉ cao 349 px sau khi tải bản 1280 px của Commons, nên đổi. Hình gốc của chủ đề. Crop thẻ ba lựa chọn 5:2."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_giraffe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lascar_Giraffes_-_Nairobi_National_Park_(4540802988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lascar_Giraffes_-_Nairobi_National_Park_%284540802988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lascar Giraffes - Nairobi National Park (4540802988)",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.27,
+        "top": 0,
+        "width": 0.664,
+        "height": 1
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_africa` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong; hươu cao cổ ở vườn quốc gia Nairobi (CC BY 2.0, giữ tên gốc). Crop vuông cho thẻ xếp q4: cả con hươu, cắt gần hết cây keo bên trái (cây làm thước đo)."
+    },
+    "q4.q4_zebra": {
+      "same_as": "tray.tray_zebra"
+    },
+    "q4.q4_elephant": {
+      "same_as": "tray.tray_elephant"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_savanna": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Landscape,_Masai_Mara,_Kenya_(52452028118).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Landscape%2C_Masai_Mara%2C_Kenya_%2852452028118%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Landscape, Masai Mara, Kenya (52452028118)",
+      "author": "flowcomm",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.33,
+        "width": 0.66,
+        "height": 0.4027
+      },
+      "note": "SK-048 (designer 16/11): đồng cỏ xavan Masai Mara (Kenya) trải tới chân trời thấp, vài cây keo tán phẳng rải rác; không đồi, không rừng rậm, không người, không xe. Ảnh gốc có hai con linh dương (hartebeest) ở phần phải (x từ 0,68): mọi crop dừng ở x 0,66. Hình gốc của chủ đề (thay ảnh Acacia Kenya Savannah sau lượt chạy thử 16/11). Crop thẻ ba lựa chọn 5:2: dải trời mỏng, cỏ và cây keo."
+    },
+    "q5.q5_rainforest": {
+      "same_as": "q5.q5_rainforest",
+      "lesson": "noi-song-tren-trai-dat/rung-mua-nhiet-doi"
+    },
+    "q5.q5_ice": {
+      "same_as": "q3.q3_ice",
+      "lesson": "noi-song-tren-trai-dat/bac-cuc"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lion_Resting_in_Ngorongoro_Crater_(48532350976).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Lion_Resting_in_Ngorongoro_Crater_%2848532350976%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lion Resting in Ngorongoro Crater (48532350976)",
+      "author": "Jay Galvin from Pleasanton, CA, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.45,
+        "top": 0.18,
+        "width": 0.5,
+        "height": 0.5
+      },
+      "note": "SK-048 (designer 16/11): sư tử đực hoang dã nằm nghỉ, miệng khép, mắt lim dim (miệng núi lửa Ngorongoro, Tanzania); nền đất trống, không con mồi, không xe. Hình gốc của chủ đề. Crop 4:3 sát đầu và bờm cho câu q6, nền đất, không thấy cỏ hay cây."
+    },
+    "vocab.savanna": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Landscape,_Masai_Mara,_Kenya_(52452028118).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Landscape%2C_Masai_Mara%2C_Kenya_%2852452028118%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Landscape, Masai Mara, Kenya (52452028118)",
+      "author": "flowcomm",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.27,
+        "width": 0.66,
+        "height": 0.5034
+      },
+      "note": "SK-048 (designer 16/11): đồng cỏ xavan Masai Mara (Kenya) trải tới chân trời thấp, vài cây keo tán phẳng rải rác; không đồi, không rừng rậm, không người, không xe. Ảnh gốc có hai con linh dương (hartebeest) ở phần phải (x từ 0,68): mọi crop dừng ở x 0,66. Hình gốc của chủ đề (thay ảnh Acacia Kenya Savannah sau lượt chạy thử 16/11). Crop 2:1 cho thẻ từ savanna (thẻ từ Explorer trên máy là khung ngang 2:1)."
+    },
+    "vocab.herd": {
+      "same_as": "learn.explore.explore_herd"
+    },
+    "vocab.zebra": {
+      "same_as": "tray.tray_zebra"
+    },
+    "vocab.giraffe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lascar_Giraffes_-_Nairobi_National_Park_(4540802988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lascar_Giraffes_-_Nairobi_National_Park_%284540802988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lascar Giraffes - Nairobi National Park (4540802988)",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.753
+      },
+      "note": "SK-048 (designer 16/11): chép mục gốc `tray.tray_africa` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong; hươu cao cổ ở vườn quốc gia Nairobi (CC BY 2.0, giữ tên gốc). Crop 2:1 cho thẻ từ (thẻ từ Explorer trên máy là khung ngang 2:1). Giữ đầu và cổ, mất phần chân."
+    },
+    "vocab.dry_season": {
+      "same_as": "learn.explore.explore_dry"
+    },
+    "reward.giraffe_card": {
+      "same_as": "learn.explore.explore_giraffe"
+    }
+  }
+}

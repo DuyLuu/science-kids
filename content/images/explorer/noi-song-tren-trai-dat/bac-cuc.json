@@ -1,0 +1,376 @@
+{
+  "note": "SK-048 bài 1 (Bắc Cực). Designer (agent) chọn 16/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh dùng lại từ chủ đề Explorer khác trỏ thẳng tới mục có crop đúng khung; ảnh của chủ đề Discoverer được chép nguyên mục gốc; ảnh dùng ở khung khác có mục riêng với crop riêng. Năm ảnh mới là hình gốc của cả chủ đề (bảng Hình dùng chung ở _topic.md). 16/11 (lượt bài 2–8): đổi ảnh gấu trắng (explore_bear, q5), ảnh cá sấu (tray_croc, q4_croc) và ảnh q4_reindeer (theo rà chữ); các mục khác giữ.",
+  "images": {
+    "w1": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_cat": {
+      "same_as": "w1.w1_cat",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "w2.w2_douc": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pygathrix_nemaeus_339167163.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Pygathrix_nemaeus_339167163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pygathrix nemaeus 339167163",
+      "author": "Abby Darrah",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.2454,
+        "width": 0.85,
+        "height": 0.5792
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_wild` của goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha, crop riêng cho thẻ hai lựa chọn 17:10; con voọc chính ở giữa, con thứ hai phía dưới bên trái."
+    },
+    "learn.explore.explore_ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arctic_ice.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Arctic_ice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arctic ice",
+      "author": "Patrick Kelley",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0.18,
+        "width": 0.5445,
+        "height": 0.82
+      },
+      "note": "SK-048 (designer 16/11): băng biển Bắc Băng Dương (trang gốc: Photographs of the Arctic Ocean; ảnh USGS, Patrick Kelley 9/2009), không con vật, không tàu, không người. Ô vuông: nhiều mảng băng phẳng nổi trên biển, thấy mặt biển phía xa. Hình gốc của cả chủ đề."
+    },
+    "learn.explore.explore_bear": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Male_Polar_Bear_on_Pack_Ice_(5165200832).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Male_Polar_Bear_on_Pack_Ice_%285165200832%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Polar bear walking on sea ice",
+      "author": "USFWSAlaska",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Male_Polar_Bear_on_Pack_Ice_(5165200832).jpg",
+      "crop": {
+        "left": 0.13,
+        "top": 0.2,
+        "width": 0.48,
+        "height": 0.64
+      },
+      "note": "SK-048 (designer 16/11, lượt bài 2–8): ảnh gấu trắng mới (USFWS Alaska, Eric Regehr, Public domain) thay ảnh NASA cũ có giấy phép không rõ (Commons ghi PD-NASA, Flickr gốc ghi CC BY 2.0, tác giả Mario Hoppmann). Crop vuông: gấu đi trên băng biển."
+    },
+    "learn.explore.explore_fox": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Vulpes_lagopus_in_Iceland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vulpes lagopus in Iceland",
+      "author": "Jonatan Pie ( unsplash.com/@r3dmax )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.06,
+        "top": 0.16,
+        "width": 0.534,
+        "height": 0.8
+      },
+      "note": "SK-048 (designer 16/11): cáo Bắc Cực lông mùa đông ngồi trên tuyết (Iceland), thấy cả con, đuôi xù, tai nhỏ. Ô vuông. Hình gốc của cả chủ đề; ảnh rộng, còn chỗ cắt 5:2 cho bài sau."
+    },
+    "learn.explore.explore_walrus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlantic_walrus_%28Odobenus_rosmarus_rosmarus%29_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic walrus (Odobenus rosmarus rosmarus) NOAA Photo Library",
+      "author": "Mike Dunn, NC State Museum of Natural Sciences.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0.05,
+        "top": 0.0,
+        "width": 0.6837,
+        "height": 1.0
+      },
+      "note": "SK-048 (designer 16/11): một con hải mã nằm trên băng ở Bắc Băng Dương, phía bắc miền tây nước Nga (trang gốc NOAA anim0054), hai ngà dài. Ô vuông: đầu, ngà, vây trước và phần lớn thân (mất phần đuôi). Hình gốc của cả chủ đề."
+    },
+    "tray.tray_bear": {
+      "same_as": "learn.explore.explore_bear"
+    },
+    "tray.tray_penguin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gentoo_Penguins_of_Danco_Island.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gentoo_Penguins_of_Danco_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Gentoo Penguins of Danco Island",
+      "author": "owamux",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1904,
+        "top": 0.2604,
+        "width": 0.3662,
+        "height": 0.651
+      },
+      "note": "Chép mục gốc `tray.tray_antarctica` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Crop vuông riêng: hai con chim cánh cụt Gentoo phía trước, biển có băng vụn và núi tuyết phía sau; cắt bỏ nhóm du khách ở góc trên phải của ảnh gốc."
+    },
+    "tray.tray_walrus": {
+      "same_as": "learn.explore.explore_walrus"
+    },
+    "tray.tray_douc": {
+      "same_as": "tray.tray_douc",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_owl": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "7ff05ca5-5bfe-488f-9470-3fd6769d369f",
+      "source_url": "https://www.flickr.com/photos/49208525@N08/53625561759",
+      "file_url": "https://live.staticflickr.com/65535/53625561759_dd759229cf_b.jpg",
+      "title": "Snowy owl",
+      "author": "U.S. Fish and Wildlife Service - Midwest Region",
+      "license": "PDM 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "crop": {
+        "left": 0.34,
+        "top": 0.22,
+        "width": 0.465,
+        "height": 0.62
+      },
+      "note": "SK-048 (designer 16/11): cú tuyết hoang dã ngồi trên cánh đồng tuyết ở Minnesota (trang Flickr USFWS Midwest, ảnh Kimberly Emerson), cạnh một mô tuyết. Ô vuông. Ảnh 1024×768, còn chỗ cắt 5:2 cho bài sau."
+    },
+    "tray.tray_fox": {
+      "same_as": "learn.explore.explore_fox"
+    },
+    "tray.tray_croc": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "cfea8f2d-b305-4398-8002-5689c975bc54",
+      "source_url": "https://www.inaturalist.org/photos/254420162",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/254420162/original.jpeg",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Светлана Царахова",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.135,
+        "top": 0.216,
+        "width": 0.44,
+        "height": 0.7836
+      },
+      "note": "SK-048 (designer 16/11, lượt bài 2–8): ảnh cá sấu mới cho cả chủ đề (cá sấu Xiêm hoang dã, miệng khép, Nakhon Sawan, Thái Lan; iNaturalist, CC0). Thay ảnh q1_reptiles của Khủng long (miệng há, thấy răng). Crop vuông."
+    },
+    "tray.tray_reindeer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fortymile_caribou_group_in_winter_(52534938094).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Fortymile_caribou_group_in_winter_%2852534938094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Caribou in the snow",
+      "author": "BLM Alaska",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Fortymile_caribou_group_in_winter_(52534938094).jpg",
+      "crop": {
+        "left": 0.625,
+        "top": 0.13,
+        "width": 0.375,
+        "height": 0.6667
+      },
+      "note": "SK-048 (designer 16/11): tuần lộc hoang dã (đàn caribou Fortymile, Alaska, BLM 11/2016) kiếm ăn trên sườn đồi tuyết; không dây cương, không người. Ảnh public domain nên đổi `title` trung tính. Ô vuông: hai con, con phía trên có gạc."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_douc": {
+      "same_as": "q2.q2_douc",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_mudskipper": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Periophthalmus_cantonensis_new.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Periophthalmus_cantonensis_new.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Periophthalmus cantonensis new",
+      "author": "Periophthalmus_cantonensis.jpg : Webridge derivative work: Webridge ( talk )",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.183,
+        "width": 1.0,
+        "height": 0.6236
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `vocab.mudskipper` của sinh-vat-song-o-dau/noi-song-cua-con-vat, crop riêng cho thẻ ba lựa chọn 5:2, cả con cá."
+    },
+    "q1.q1_walrus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlantic_walrus_%28Odobenus_rosmarus_rosmarus%29_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic walrus (Odobenus rosmarus rosmarus) NOAA Photo Library",
+      "author": "Mike Dunn, NC State Museum of Natural Sciences.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.11,
+        "width": 1.0,
+        "height": 0.585
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_walrus`, crop cho thẻ ba lựa chọn 5:2: đầu, hai ngà, thân (mất vây)."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Vulpes_lagopus_in_Iceland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vulpes lagopus in Iceland",
+      "author": "Jonatan Pie ( unsplash.com/@r3dmax )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.12,
+        "width": 0.7119,
+        "height": 0.8
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_fox`, crop 4:3 cho hình câu đúng/sai."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arctic_ice.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Arctic_ice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arctic ice",
+      "author": "Patrick Kelley",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.22,
+        "width": 1.0,
+        "height": 0.6023
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `learn.explore.explore_ice`, crop cho thẻ ba lựa chọn 5:2, giữ đường chân trời trên biển."
+    },
+    "q3.q3_forest": {
+      "same_as": "q3.q3_forest",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-con-vat"
+    },
+    "q3.q3_pond": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duckweed-covered_pond_near_Chodzie%C5%BC,_Poland.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Duckweed-covered_pond_near_Chodzie%C5%BC%2C_Poland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Duckweed-covered pond near Chodzież, Poland",
+      "author": "Paavo01",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.4,
+        "width": 1.0,
+        "height": 0.5333
+      },
+      "note": "SK-048 (designer 16/11): cùng ảnh `q1` của goi-ten-va-nhom-dong-vat/ca-va-luong-cu, crop riêng cho thẻ ba lựa chọn 5:2 (mặt ao phủ bèo và bờ cỏ)."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_croc": {
+      "source": "Openverse/iNaturalist",
+      "openverse_id": "cfea8f2d-b305-4398-8002-5689c975bc54",
+      "source_url": "https://www.inaturalist.org/photos/254420162",
+      "file_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/254420162/original.jpeg",
+      "title": "Siamese crocodile on a riverbank",
+      "author": "Светлана Царахова",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.11,
+        "top": 0.45,
+        "width": 0.5,
+        "height": 0.3562
+      },
+      "note": "SK-048 (designer 16/11, lượt bài 2–8): cùng ảnh cá sấu mới, crop thẻ ba lựa chọn 5:2."
+    },
+    "q4.q4_reindeer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_caribou_just_off_the_park_road_east_of_Eielson_Visitor_Center_on_July_19,_2019._(0219e9d0-9736-467c-8632-408ab3e5fe15).JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/A_caribou_just_off_the_park_road_east_of_Eielson_Visitor_Center_on_July_19%2C_2019._%280219e9d0-9736-467c-8632-408ab3e5fe15%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Caribou on the tundra",
+      "author": "NPS Photo / Emily Mesner",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:A_caribou_just_off_the_park_road_east_of_Eielson_Visitor_Center_on_July_19,_2019._(0219e9d0-9736-467c-8632-408ab3e5fe15).JPG",
+      "crop": {
+        "left": 0,
+        "top": 0.095,
+        "width": 1,
+        "height": 0.529
+      },
+      "note": "SK-048 (designer 16/11, lượt bài 2–8, theo rà chữ): ảnh riêng cho lựa chọn đúng q4, một con tuần lộc trên đồng rêu không tuyết (Denali, NPS, Public domain). Crop 5:2."
+    },
+    "q4.q4_buffalo": {
+      "same_as": "q3.q3_buffalo",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Male_Polar_Bear_on_Pack_Ice_(5165200832).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Male_Polar_Bear_on_Pack_Ice_%285165200832%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Polar bear walking on sea ice",
+      "author": "USFWSAlaska",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Male_Polar_Bear_on_Pack_Ice_(5165200832).jpg",
+      "crop": {
+        "left": 0.05,
+        "top": 0.15,
+        "width": 0.65,
+        "height": 0.65
+      },
+      "note": "SK-048 (designer 16/11, lượt bài 2–8): cùng ảnh gấu trắng mới, crop 4:3 cho hình câu đúng/sai (q5, q6)."
+    },
+    "q6": {
+      "same_as": "q5"
+    },
+    "vocab.arctic": {
+      "same_as": "learn.explore.explore_ice"
+    },
+    "vocab.ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Danmark_O,_Fohn_Fjord,_Renodde.70%C2%B0N_26%C2%B0W_(76566707).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Danmark_O%2C_Fohn_Fjord%2C_Renodde.70%C2%B0N_26%C2%B0W_%2876566707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Danmark O, Fohn Fjord, Renodde.70°N 26°W (76566707)",
+      "author": "Rita Willaert from 9890 Gavere, Belgium",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.28,
+        "top": 0.05,
+        "width": 0.6313,
+        "height": 0.95
+      },
+      "note": "Chép mục gốc `learn.explore.explore_more_oceans` ở discoverer/be-mat-trai-dat/cac-chau-luc-va-dai-duong (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Crop vuông cho thẻ từ: cả khối băng trôi và bóng dưới nước (vịnh hẹp Fohn, Greenland, 70 độ bắc)."
+    },
+    "vocab.polar_bear": {
+      "same_as": "learn.explore.explore_bear"
+    },
+    "vocab.walrus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlantic_walrus_%28Odobenus_rosmarus_rosmarus%29_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Atlantic walrus (Odobenus rosmarus rosmarus) NOAA Photo Library",
+      "author": "Mike Dunn, NC State Museum of Natural Sciences.",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Atlantic_walrus_(Odobenus_rosmarus_rosmarus)_NOAA_Photo_Library.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.7314
+      },
+      "note": "SK-048 (designer 16/11, sau chạy thử): cùng ảnh hải mã của `learn.explore.explore_walrus`, crop 2:1 cho thẻ từ (thẻ từ Explorer trên máy là khung ngang 2:1; crop vuông bị app cắt mất đầu)."
+    },
+    "vocab.arctic_fox": {
+      "same_as": "learn.explore.explore_fox"
+    },
+    "reward.polar_bear_card": {
+      "same_as": "learn.explore.explore_bear"
+    }
+  }
+}

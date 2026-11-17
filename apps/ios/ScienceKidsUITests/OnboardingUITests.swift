@@ -192,7 +192,7 @@ final class OnboardingUITests: XCTestCase {
     }
 
     /// SK-030: Home shows the 17 Discoverer topics of a Lớp 3 profile; the chips show Explorer
-    /// (12) and Scientist (16). A topic with no content (Discoverer #5 since SK-031 and SK-032
+    /// (13) and Scientist (16). A topic with no content (Discoverer #5 since SK-031 and SK-032
     /// wrote #1 and #2) opens with its 5 lessons, no big question, no words chip. 10/11: the count
     /// reads "17 chủ đề" (no "dễ → khó"; nothing started on a new profile).
     func testEveryGroupAndAnUnwrittenTopic() throws {
@@ -201,7 +201,7 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertTrue(app.buttons["home.group.discoverer"].isSelected, "the profile's group by default")
         XCTAssertTrue(app.staticTexts["17 chủ đề"].exists)
         app.buttons["home.group.explorer"].tap()
-        XCTAssertTrue(app.staticTexts["12 chủ đề"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.staticTexts["13 chủ đề"].waitForExistence(timeout: 2))
         XCTAssertEqual(element(app, "home.journey.title").label, "Hành trình Explorer")
         XCTAssertFalse(app.buttons["home.start_lesson"].exists, "nothing written for Explorer")
         app.buttons["home.group.scientist"].tap()

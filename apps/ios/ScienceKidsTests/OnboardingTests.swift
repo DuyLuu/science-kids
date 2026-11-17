@@ -216,7 +216,7 @@ import UIKit
         let an = try ChildProfile.create(displayName: "An", avatar: "ca", grade: 1, languageMode: .bilingual, voiceMode: .both)
         try model.createProfile(an)
         #expect(model.shownGroup(for: an) == .explorer)
-        #expect(model.journey(for: .explorer).count == 12)
+        #expect(model.journey(for: .explorer).count == 13)
     }
 
     /// Every topic opens, written or not (SK-030); an unknown key finds nothing.
@@ -295,7 +295,7 @@ import UIKit
     @Test func syllabusIsBundled() throws {
         #expect(Bundle.main.url(forResource: BundledContent.syllabusName, withExtension: "json") != nil)
         let syllabus = try #require(BundledContent.bundledSyllabus())
-        #expect(syllabus.groups.map(\.topics.count) == [12, 17, 16])
+        #expect(syllabus.groups.map(\.topics.count) == [13, 17, 16])
         #expect(BundledContent.fixtures().syllabus == syllabus, "the fixtures get it too")
     }
 

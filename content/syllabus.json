@@ -295,8 +295,104 @@
           "topic_id": "79585c90-8456-4217-929b-20cccc22f6df"
         },
         {
-          "key": "seasonal-changes-autumn-and-winter",
+          "key": "new-habitats-around-the-world",
           "number": 4,
+          "title": {
+            "en": "Habitats around the world",
+            "vi": "Những nơi sống trên Trái Đất"
+          },
+          "strand": "living_environment",
+          "level": 3,
+          "source": {
+            "kind": "new"
+          },
+          "lessons": [
+            {
+              "number": 1,
+              "title": {
+                "en": "The Arctic",
+                "vi": "Bắc Cực"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "918c3f77-fcf5-4b48-b0d2-b2e58ec13d85"
+            },
+            {
+              "number": 2,
+              "title": {
+                "en": "The Antarctic",
+                "vi": "Nam Cực"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "ae90f951-6f11-4569-bab3-208c272011c3"
+            },
+            {
+              "number": 3,
+              "title": {
+                "en": "Rainforests",
+                "vi": "Rừng mưa nhiệt đới"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "367300a5-2826-4b9b-a2b3-8bf913e502ed"
+            },
+            {
+              "number": 4,
+              "title": {
+                "en": "Mangroves and swamps",
+                "vi": "Rừng ngập mặn và đầm lầy"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "bb7e1de6-9fe2-49ab-b015-65c570375d2d"
+            },
+            {
+              "number": 5,
+              "title": {
+                "en": "Oceans",
+                "vi": "Biển và đại dương"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "6519effd-2611-4489-8f11-3853a88185b8"
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Savannas",
+                "vi": "Đồng cỏ xavan"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "f64fffc7-207f-4f54-9f01-c3fd5c3a51e1"
+            },
+            {
+              "number": 7,
+              "title": {
+                "en": "Deserts",
+                "vi": "Sa mạc"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "ead3df2f-8be3-4dd1-a9b8-3796d7e021a0"
+            },
+            {
+              "number": 8,
+              "title": {
+                "en": "Every animal has its place",
+                "vi": "Mỗi con vật một nơi sống"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "c18ec458-eed3-4107-8bc8-23d0c4986e06"
+            }
+          ],
+          "topic_id": "60baa168-c573-4efd-853d-61b7f748e2b1"
+        },
+        {
+          "key": "seasonal-changes-autumn-and-winter",
+          "number": 5,
           "title": {
             "en": "Autumn, winter and the dry season",
             "vi": "Thu, đông và mùa khô"
@@ -369,7 +465,7 @@
         },
         {
           "key": "human-body-parts",
-          "number": 5,
+          "number": 6,
           "title": {
             "en": "Human body parts",
             "vi": "Cơ thể của em"
@@ -453,7 +549,7 @@
         },
         {
           "key": "identifying-plants-and-their-basic-parts",
-          "number": 6,
+          "number": 7,
           "title": {
             "en": "Identifying plants and their basic parts",
             "vi": "Cây quanh em"
@@ -548,7 +644,7 @@
         },
         {
           "key": "seasonal-changes-spring-and-summer",
-          "number": 7,
+          "number": 8,
           "title": {
             "en": "Spring, summer and the rainy season",
             "vi": "Xuân, hè và mùa mưa"
@@ -621,7 +717,7 @@
         },
         {
           "key": "everyday-materials",
-          "number": 8,
+          "number": 9,
           "title": {
             "en": "Everyday materials",
             "vi": "Vật liệu quanh em"
@@ -718,7 +814,7 @@
         },
         {
           "key": "uses-of-everyday-materials",
-          "number": 9,
+          "number": 10,
           "title": {
             "en": "Uses of everyday materials",
             "vi": "Vật liệu dùng làm gì?"
@@ -803,7 +899,7 @@
         },
         {
           "key": "growing-plants",
-          "number": 10,
+          "number": 11,
           "title": {
             "en": "Growing plants",
             "vi": "Trồng cây"
@@ -909,7 +1005,7 @@
         },
         {
           "key": "new-life",
-          "number": 11,
+          "number": 12,
           "title": {
             "en": "New life",
             "vi": "Sự sống mới"
@@ -982,7 +1078,7 @@
         },
         {
           "key": "healthy-me",
-          "number": 12,
+          "number": 13,
           "title": {
             "en": "Healthy me",
             "vi": "Em khoẻ mạnh"
