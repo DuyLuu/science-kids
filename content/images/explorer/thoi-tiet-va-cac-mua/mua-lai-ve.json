@@ -1,0 +1,241 @@
+{
+  "note": "SK-050 bài 6 (Mùa lại về). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson, chọn mục có khung gần nhất (thẻ ba lựa chọn trỏ tới thẻ ba lựa chọn, thẻ từ trỏ tới thẻ từ). Ảnh Explorer chủ đề khác trỏ thẳng tới mục có crop đúng khung; ảnh Discoverer chép mục gốc. Ảnh mới: 1 (áo sơ mi tay dài); đèn ông sao là hình tự vẽ (18/11); bốn hình ghép (explore_south, explore_clothes và hai bản 2:1 cho thẻ từ).",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_tet": {
+      "same_as": "tray.tray_banh_chung",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "w1.w1_holiday": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_summer",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "w3": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "learn.explore.explore_north": {
+      "same_as": "learn.explore.explore_seasons",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "learn.explore.explore_south": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-lai-ve.learn.explore.explore_south.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_rainy_season",
+            "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+          },
+          {
+            "same_as": "learn.explore.explore_dry_season",
+            "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+          }
+        ]
+      },
+      "title": "Heavy rain and a sunny road",
+      "note": "SK-050 (designer 17/11): hình ghép 1024×1024 (khung vuông của trang Học), hai ô dọc bằng nhau cạnh nhau, khe 12 px màu giấy điệp #F0E6CF, không viền nét, không chữ, không mũi tên: trái mưa to trên phố (Luang Prabang, Lào), phải con đường khô dưới hàng cây (đường tới Vat Phou, Lào); cùng hai ảnh gốc của bài 4."
+    },
+    "learn.explore.explore_clothes": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-lai-ve.learn.explore.explore_clothes.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_cold",
+            "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+          },
+          {
+            "same_as": "q4.q4_long_sleeve"
+          },
+          {
+            "same_as": "tray.tray_tshirt",
+            "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+          }
+        ]
+      },
+      "title": "A coat, a shirt and a T-shirt",
+      "note": "SK-050 (designer 17/11, ghép lại 18/11 theo góp ý g1 của tester): hình ghép 1024×1024 nền giấy điệp #F0E6CF, khe 12 px, không viền nét, không chữ, không mũi tên. Ba ô vuông 506 px: hàng trên trái áo khoác ấm (bài 1 explore_cold), hàng trên phải áo sơ mi tay dài (q4_long_sleeve), hàng dưới giữa áo cộc tay (bài 1 tray_tshirt); đọc trái → phải, trên → dưới ra dày → mỏng. Mỗi ô to gấp 2,3 lần bản ba ô một hàng cũ; giấy trống còn khoảng 1/4 khung (hai bên ô dưới)."
+    },
+    "learn.explore.explore_again": {
+      "same_as": "learn.explore.explore_spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_ball": {
+      "same_as": "tray.tray_ball",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay",
+      "note": "SK-050 (designer 18/11): trỏ quả bóng của bài 1 (ảnh sạch chữ), thay cho same_as sang sinh-vat-song-o-dau (ảnh có chữ \"Baden\")."
+    },
+    "tray.tray_raincoat": {
+      "same_as": "tray.tray_raincoat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_hat": {
+      "same_as": "tray.tray_hat",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_scarf": {
+      "same_as": "tray.tray_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_pillow": {
+      "same_as": "tray.tray_pillow",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_tshirt": {
+      "same_as": "tray.tray_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_boots": {
+      "same_as": "tray.tray_boots",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_coat": {
+      "same_as": "q1.q1_coat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q1.q1_scarf": {
+      "same_as": "q4.q4_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q1.q1_tshirt": {
+      "same_as": "q1.q1_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_peach": {
+      "same_as": "q1.q1_peach",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q3.q3_yellow": {
+      "same_as": "q3.q3_yellow",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he",
+      "note": "Lá vàng mới của chủ đề (An autumn leaf, cùng ảnh w2, q4.q4_yellow của mua-thu-va-mua-dong); trỏ tới mục 5:2 của bài 2 vì đúng khung thẻ ba lựa chọn. Không dùng q4_yellow của sinh-vat-song-o-dau (ảnh gốc có tuyết)."
+    },
+    "q3.q3_flame": {
+      "same_as": "q1.q1_flame",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_tshirt": {
+      "same_as": "tray.tray_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q4.q4_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q4.q4_long_sleeve": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Studio_Shots_for_HangSavvy_(3535063505).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Studio_Shots_for_HangSavvy_%283535063505%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Studio Shots for HangSavvy (3535063505)",
+      "author": "THOR",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.31,
+        "width": 1,
+        "height": 0.662
+      },
+      "note": "SK-050 (designer 17/11, sửa 18/11): một chiếc sơ mi tay dài trơn màu treo trên móc, thấy rõ hai tay áo dài tới cổ tay; ánh đèn xanh lam; không người mặc. 18/11: crop dời xuống (top 0,31) để bỏ chữ nhãn hiệu \"HangSavvy\" in nổi trên móc ở cổ áo (lộ rõ khi ghép ô to); mất phần cổ và vai, còn thân và hai tay áo."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_spring": {
+      "same_as": "q5.q5_spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q5.q5_autumn": {
+      "same_as": "vocab.autumn",
+      "lesson": "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong"
+    },
+    "q5.q5_winter": {
+      "same_as": "vocab.winter",
+      "lesson": "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_seasons",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "vocab.change": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-lai-ve.vocab.change.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_rainy_season",
+            "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+          },
+          {
+            "same_as": "learn.explore.explore_dry_season",
+            "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+          }
+        ]
+      },
+      "title": "Heavy rain and a sunny road",
+      "note": "SK-050 (designer 17/11): bản 1024×512 (khung 2:1 của thẻ từ) của hình ghép explore_south: hai ô vuông cạnh nhau, khe 12 px màu giấy điệp #F0E6CF."
+    },
+    "vocab.warm": {
+      "same_as": "vocab.spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "vocab.clothes": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-lai-ve.vocab.clothes.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_cold",
+            "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+          },
+          {
+            "same_as": "q4.q4_long_sleeve"
+          },
+          {
+            "same_as": "tray.tray_tshirt",
+            "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+          }
+        ]
+      },
+      "title": "A coat, a shirt and a T-shirt",
+      "note": "SK-050 (designer 17/11): bản 1024×512 (khung 2:1 của thẻ từ) của hình ghép explore_clothes: ba ô vuông một hàng giữa nền giấy điệp #F0E6CF, khe 12 px."
+    },
+    "vocab.t_shirt": {
+      "same_as": "q1.q1_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "reward.star_lantern_card": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-cac-mua/mua-lai-ve.reward.star_lantern_card.jpg",
+        "method": "drawn"
+      },
+      "title": "A red paper star lantern",
+      "note": "Designer (agent) 18/11 vẽ bằng SVG theo style E giấy cắt (phiên chính duyệt 18/11, SK-050: ảnh thật hợp lệ duy nhất có nhiều trẻ rõ mặt, crop còn mờ): đèn ông sao năm cánh giấy đỏ son, mỗi cánh hai mặt sáng tối như gấp giấy, lớp dưới #6E2216, sao nhỏ lớp trên và bông giấy vàng hoè ở giữa; tua giấy vàng, nghệ, gỉ đồng treo ở bốn cánh dưới (cánh trên không tua); cán tre có hai đốt; đặt trên một mảnh giấy điệp tròn. Không chữ, không người, không nét viền; bóng giấy (filter paperE) nướng sẵn; nền giấy sáng #FBF6EA. JPEG 1024×1024 (khung 1:1 thẻ thưởng)."
+    }
+  }
+}

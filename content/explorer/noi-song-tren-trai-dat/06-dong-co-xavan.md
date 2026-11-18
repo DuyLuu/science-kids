@@ -30,7 +30,7 @@ vi: Em nói được đồng cỏ xavan như thế nào.
 3.en: Big herds walk far to find water.
 3.vi: Những đàn thú lớn đi rất xa để tìm nước.
 > Lệch `_topic.md`: ý một bản VI ở `_topic.md` là "Đồng cỏ xavan nóng, cỏ cao, ít cây.", nói thêm "ít cây" mà bản EN không có (Lỗi hay gặp số bảy). Bản EN thêm "and few trees" thì thành mười từ, nên giữ EN và bỏ "ít cây" ở VI. Ý "ít cây" dạy ở câu chính ô "Savanna" (cũng là chữ câu q2). Đề nghị phiên chính sửa dòng ý chính bài 6 ở `_topic.md`.
-> Từ cụ thể tới trừu tượng: cảnh nhìn thấy (cỏ cao, nóng), rồi thay đổi theo mùa (mùa mưa, mùa khô, chỉ giới thiệu, hai chủ đề mùa đứng sau), rồi điều con vật làm vì nơi đó khô (đàn thú đi xa tìm nước).
+> Từ cụ thể tới trừu tượng: cảnh nhìn thấy (cỏ cao, nóng), rồi thay đổi theo mùa (mùa mưa, mùa khô, chỉ giới thiệu; mùa dạy ở chủ đề Explorer số năm *Thời tiết và các mùa*, đứng ngay sau), rồi điều con vật làm vì nơi đó khô (đàn thú đi xa tìm nước).
 > [CẦN KIỂM] Xavan châu Phi có mùa mưa và mùa khô; đàn linh dương đầu bò, ngựa vằn đi theo mưa để tìm cỏ và nước.
 
 ## Khởi động
@@ -90,7 +90,7 @@ feedback_true.vi: Cá sấu bắt cá dưới sông.
 
 > Bốn ô, từ cảnh tới con vật: nơi sống (cỏ cao, ít cây, nóng), mùa khô (một ô nói cả hai mùa bằng lời, chỉ có ảnh mùa khô), đàn thú đi xa tìm nước, hươu cao cổ (con vật ăn lá cây cao, chuẩn bị câu q4 và thẻ thưởng).
 > Ô "Savanna" mang ý sửa misconception: ví dụ ba "lions rest in the tall grass". Ảnh ô này không có sư tử (cảnh trống, là đáp án câu q5).
-> Không nói Việt Nam có xavan, không so mùa ở xavan với mùa ở miền Nam nước mình (`_topic.md` mục Đúng khoa học còn `[CẦN KIỂM]`; hai chủ đề mùa đứng sau).
+> Không nói Việt Nam có xavan, không so mùa ở xavan với mùa ở miền Nam nước mình (`_topic.md` mục Đúng khoa học còn `[CẦN KIỂM]`; mùa ở Việt Nam dạy ở chủ đề Explorer số năm *Thời tiết và các mùa*, bài 4 của chủ đề đó có câu Khởi động ôn ô này bằng ý "mùa khô", không nói miền Nam giống xavan).
 
 ### explore
 id: 6b987166-826d-426c-b6d3-d2bab270cb6f
@@ -608,7 +608,7 @@ example.vi: Mùa khô trời rất ít mưa.
 image.brief: Dùng lại hình `explore_dry`. Từ khoá tìm ảnh (EN): savanna dry season
 image.alt.en: Yellow grass in the dry season
 image.alt.vi: Cỏ vàng mùa khô
-> Chỉ là từ đọc thêm, không câu hỏi nào dùng (mùa dạy ở hai chủ đề mùa đứng sau).
+> Chỉ là từ đọc thêm, không câu hỏi nào dùng (mùa dạy ở chủ đề Explorer số năm *Thời tiết và các mùa*; bài 4 của chủ đề đó nâng `dry_season` lên `core`, cố ý trùng từ này).
 
 ## Thưởng
 

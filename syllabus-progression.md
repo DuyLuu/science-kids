@@ -5,6 +5,8 @@
 > **9/11/2026, sau đó: Duy đổi thứ tự.** Chủ đề mới đứng đầu mỗi nhóm, rồi các unit Oak đúng thứ tự Oak; 1 bài = 1 lesson Oak (gộp thí nghiệm plan/do/review); thêm 8 chủ đề cơ bản hợp Việt Nam; không khoá bài. Xem [syllabus.md](syllabus.md) và [syllabus-lessons.md](syllabus-lessons.md). Thứ tự theo độ khó ở mục 5 và quyết định ở 13.3 mục 3 hết hiệu lực (theo Oak, *Giữ gìn sức khoẻ* đứng sau *Hệ tuần hoàn*). Rubric độ khó (mục 3), tiến trình trong bài (mục 6–10) và bản địa hoá (mục 11) vẫn dùng.
 >
 > **16/11/2026:** Explorer thêm chủ đề mới *Những nơi sống trên Trái Đất* ở #4 (8 bài; Duy chốt, SK-048), chấm theo rubric mục 3: 11 điểm (2-3-2-2-2), Mức 3, mạch Sinh vật & môi trường. Sửa mục 4 (bảng mạch) và ghi chú ở mục 5.1. Số đếm hiện hành ở [syllabus.md](syllabus.md): 46 chủ đề, 394 bài; Explorer 13 chủ đề, 83 bài. Các con số 38 chủ đề, 56 bài… trong file này là của bản phân tích 22/10–26/10, giữ nguyên làm hồ sơ.
+>
+> **17/11/2026:** Explorer gộp hai chủ đề mùa (Oak Y1 *Seasonal changes*, #5, #8 cũ) thành chủ đề mới *Thời tiết và các mùa* ở #5 (6 bài; Duy yêu cầu và chốt, SK-050), chấm theo rubric mục 3: 9 điểm (2-1-2-2-2), Mức 2, mạch Trái Đất & bầu trời. Sửa mục 4 (bảng mạch), ghi chú ở mục 5.1 và mục 11 dòng "Mùa". Số đếm hiện hành ở [syllabus.md](syllabus.md): 45 chủ đề, 390 bài (35 unit Oak, 10 chủ đề mới); Explorer 12 chủ đề, 79 bài.
 > Liên quan: [prd.md](prd.md) · [syllabus.md](syllabus.md) · Nguồn research ở [cuối file](#nguồn-tham-khảo)
 > Cập nhật: 22/10/2026
 
@@ -90,7 +92,7 @@ Gom 15 Big Questions của Oak thành 6 mạch. Tên mạch gần như trùng t�
 | 🫀 Con người & sức khoẻ | Con người và sức khoẻ | BQ01, 02, 05 | Cơ thể (5) · Em khoẻ mạnh (7) | Ăn uống (9) · Bộ xương (11) · Tiêu hoá (13) | Giữ gìn sức khoẻ (11) · Phát triển (12) · Tuần hoàn (14) |
 | 🧪 Chất & vật liệu | Chất | BQ06–08, 10 | Vật liệu (8) · Vật liệu dùng làm gì (9) | Các thể của vật chất (13) | Tính chất & biến đổi (15) · Vật liệu mở rộng (15) |
 | ⚡ Năng lượng & lực | Năng lượng | BQ11–13 | **— (trống)** | Ánh sáng (11) · Lực & nam châm (11) · Âm thanh (11) · Mạch điện (12) | Lực & máy (13) · Ánh sáng truyền (13) · Mạch điện nâng cao (14) |
-| 🌏 Trái Đất & bầu trời | Trái Đất và bầu trời | BQ09, 14 | Mùa ×2 (6) | Đá và đất (11) | Trái Đất–Mặt Trời–Mặt Trăng (13) |
+| 🌏 Trái Đất & bầu trời | Trái Đất và bầu trời | BQ09, 14 | Thời tiết và các mùa (9; mới 17/11, thay Mùa ×2 (6)) | Đá và đất (11) | Trái Đất–Mặt Trời–Mặt Trăng (13) |
 
 Số trong ngoặc là điểm độ khó. Hai điều rút ra:
 - **Mạch nào cũng quay lại ở nhóm sau với điểm cao hơn.** Đây đúng là nguyên tắc xoắn ốc mà Oak và Bruner mô tả: câu hỏi giữ nguyên, câu trả lời sâu dần.
@@ -135,6 +137,8 @@ Tổng 56 bài, không đổi. Thay đổi so với bản cũ:
 > - chủ đề mới *Những nơi sống trên Trái Đất* ở #4 (Duy chốt 16/11, SK-048). Điểm 11 (A2-B3-C2-D2-E2), Mức 3; cách chấm ở [docs/explorer-habitats-proposal.md](docs/explorer-habitats-proposal.md) mục 1.2.
 >
 > Ba chủ đề Mức 3 ở #2–#4 đứng trước các chủ đề Mức 1–2, lệch quy tắc 2 ở mục 3 ("Mức không được giảm"). Duy chấp nhận chỗ lệch này ngày 14/11 cho #2, #3; vị trí #4 Duy chốt 16/11 kéo theo cùng chỗ lệch.
+>
+> **Ghi chú 17/11/2026 (SK-050):** hai chủ đề mùa ở bảng trên (#5, #6 của bản 26/10; #5, #8 của danh mục 16/11) đã gộp thành chủ đề mới *Thời tiết và các mùa*, Explorer #5 (Duy yêu cầu và chốt 17/11). Điểm 9 (A2-B1-C2-D2-E2), Mức 2; cách chấm ở [docs/explorer-weather-seasons-proposal.md](docs/explorer-weather-seasons-proposal.md) mục 1.2. Thứ tự hiện hành 12 chủ đề, 79 bài; *Vật liệu quanh em* … *Em khoẻ mạnh* thành #8–#12. Mức 2 ở #5 sau ba chủ đề Mức 3 là cùng chỗ lệch quy tắc 2 đã chấp nhận ở trên.
 
 ### 5.2 Discoverer (7–9 tuổi, nhóm pilot) — Mức 2 → 4
 
@@ -358,7 +362,7 @@ Phụ huynh luôn đổi được. GĐ 2 có thể thêm bài kiểm tra xếp l
 | Đá, hoá thạch, tiến hoá | Y3, Y6 | **Không có** (đất học ở lớp 5) | Đá S1–S6; không có tiến hoá | Như trên; chủ đề tiến hoá cần viết cẩn thận |
 | Mạch điện | Y4, Y6 | Lớp 5 (**muộn hơn**, chỉ mạch cơ bản) | S2 (sớm) | Giữ ở Y4 như Oak; Cambridge cho thấy trẻ nhỏ vẫn học được |
 | Các thể của vật chất | Y4 | Lớp 4–5 (nước, không khí) | S3–S4 | Dùng ví dụ VN: mưa, sương, hơi nồi cơm |
-| Mùa | Y1 (4 mùa kiểu Anh) | Lớp 2 (mùa, thiên tai) | S5 (trục nghiêng) | Bản địa hoá mùa mưa / mùa khô, bão |
+| Mùa | Y1 (4 mùa kiểu Anh) | Lớp 2 (mùa, thiên tai) | S5 (trục nghiêng) | Bản địa hoá mùa mưa / mùa khô, bão. *17/11 (SK-050):* Explorer #5 *Thời tiết và các mùa* dạy cả hai miền (miền Bắc bốn mùa, miền Nam mùa mưa, mùa khô) và mười hai tháng; bão, lũ để Discoverer #5; trục nghiêng để Scientist #6 |
 | Vật liệu đời sống | Y1–2 | Đã chuyển khỏi môn Khoa học (sang Công nghệ) | S1–S2 | Mới với trẻ VN nhưng rất trực quan |
 
 ## 12. Ảnh hưởng tới kế hoạch và việc cần chốt
@@ -399,7 +403,7 @@ Phụ huynh luôn đổi được. GĐ 2 có thể thêm bài kiểm tra xếp l
 - [ ] Nâng ngưỡng đạt lên 5/6, kèm hệ sao 3 mức?
 - [ ] Có thêm 1 chủ đề vật lý tự thiết kế cho Explorer không? Ví dụ "Đẩy, kéo và âm thanh quanh em", tham khảo Cambridge Stage 1 và NGSS K–1, không có sườn Oak.
 - [ ] Huy hiệu theo 6 mạch thay cho 15 Big Questions?
-- [ ] Gộp 2 chủ đề mùa của Explorer thành 1 chủ đề "Mùa và thời tiết" bản địa hoá VN?
+- [x] Gộp 2 chủ đề mùa của Explorer thành 1 chủ đề "Mùa và thời tiết" bản địa hoá VN? Duy yêu cầu và chốt 17/11: gộp thành *Thời tiết và các mùa*, Explorer #5, 6 bài, có cả mười hai tháng (SK-050).
 
 ## 13. Đối chiếu với trang Oak (8/11/2026)
 

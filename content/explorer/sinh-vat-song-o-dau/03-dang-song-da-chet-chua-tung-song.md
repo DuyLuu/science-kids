@@ -397,7 +397,7 @@ explanation_correct.vi: Đúng rồi! Lá già vàng đi, rồi rụng xuống.
 explanation_wrong.en: The order is green, yellow, then dry.
 explanation_wrong.vi: Thứ tự là lá xanh, lá vàng, rồi lá khô.
 > DOK 2: sắp thứ tự một vật từ đang sống tới đã chết. Thẻ trong file không theo thứ tự đúng. Ba thẻ cùng cỡ lá trong khung vuông; khác nhau rõ bằng màu.
-> [CẦN KIỂM] Nhiều loài cây có lá già chuyển vàng (hay đỏ, như lá bàng) trước khi rụng. Chủ đề *Thu, đông và mùa khô* (Explorer số bốn) có thể dạy lá đổi màu theo mùa; câu này chỉ dùng ý "lá từ sống tới chết", không nói chuyện mùa.
+> [CẦN KIỂM] Nhiều loài cây có lá già chuyển vàng (hay đỏ, như lá bàng) trước khi rụng. Chủ đề *Thời tiết và các mùa* (Explorer số năm) dạy lá đổi màu theo mùa ở bài 3 (có cây lá vàng mùa thu, lá bàng đỏ mùa đông); câu này chỉ dùng ý "lá từ sống tới chết", không nói chuyện mùa.
 
 #### item q4_yellow
 label.en: yellow leaf

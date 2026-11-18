@@ -336,7 +336,7 @@ Thứ tự đúng của các câu `order_sequence` (để tra, không liên quan
 
 Chủ đề Explorer đầu tiên nên không có câu ôn chủ đề trước. Bé Explorer chưa học chủ đề Discoverer nào, nên không trỏ sang chủ đề Discoverer dù có hình dùng chung.
 
-> Rà chữ tester 12/11 (n15), cập nhật 13/11 (n9): với bài 7, 8, Khởi động có mốc gần một tuần (bài 7 w2 ôn bài 2, cách năm bài; bài 8 w2 ôn bài 5), nhưng vẫn chưa có mốc một tháng. Khi soạn chủ đề Explorer số 2 (*Thu, đông và mùa khô*), bài 1 và bài cuối của chủ đề đó nên có một câu ôn chủ đề này (ví dụ bài 3 w2 "Every bird can fly." hoặc bài 6 q6), để nhóm Explorer có mốc giãn cách dài.
+> Rà chữ tester 12/11 (n15), cập nhật 13/11 (n9): với bài 7, 8, Khởi động có mốc gần một tuần (bài 7 w2 ôn bài 2, cách năm bài; bài 8 w2 ôn bài 5), nhưng vẫn chưa có mốc một tháng. Chủ đề Explorer số 5 (*Thời tiết và các mùa*, thay hai chủ đề mùa cũ từ 17/11) làm việc này: bài 1 w2 ôn bài 3 (chim cánh cụt, ý của `all_birds_fly`), bài 6 w3 ôn bài 6 (trâu ăn cỏ), để nhóm Explorer có mốc giãn cách dài.
 
 ### Phần Chơi tám bài (`build_tray`)
 

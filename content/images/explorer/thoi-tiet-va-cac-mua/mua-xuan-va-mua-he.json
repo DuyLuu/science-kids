@@ -1,0 +1,446 @@
+{
+  "note": "SK-050 bài 2 (Mùa xuân và mùa hè). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Cùng nếp như bài 1. Hình ghép bốn mùa explore_seasons ở content/images/composed/thoi-tiet-va-cac-mua/. Lá vàng không dùng ảnh của sinh-vat-song-o-dau (có tuyết), dùng ảnh mới ở bài 3 q4.q4_yellow.",
+  "images": {
+    "w1": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "e9b7cf8e-e9ae-4b4e-9cb8-604b8727f197",
+      "source_url": "https://www.flickr.com/photos/58411470@N00/54221197912",
+      "file_url": "https://live.staticflickr.com/65535/54221197912_94425a7332_b.jpg",
+      "title": "Cumulus cloud formation over rural landscape",
+      "author": "kewl",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0547,
+        "top": 0.0,
+        "width": 0.8906,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `q3_cloudy` ở thoi-tiet-hom-nay (chép từ Discoverer), crop 4:3 cho hình câu đúng/sai."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_dunes": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dune.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Vietnam%2C_Mui_Ne_sand_dune.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam, Mui Ne sand dune",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.06,
+        "width": 1,
+        "height": 0.8824
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `q4_dunes` ở sinh-vat-song-o-dau/noi-song-cua-con-vat (đồi cát Mũi Né), crop 17:10 riêng."
+    },
+    "w2.w2_pond": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duckweed-covered_pond_near_Chodzie%C5%BC,_Poland.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Duckweed-covered_pond_near_Chodzie%C5%BC%2C_Poland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Duckweed-covered pond near Chodzież, Poland",
+      "author": "Paavo01",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.7843
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `q1` ở goi-ten-va-nhom-dong-vat/ca-va-luong-cu (ao phủ bèo), crop 17:10 riêng."
+    },
+    "learn.explore.explore_seasons": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-xuan-va-mua-he.learn.explore.explore_seasons.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_spring"
+          },
+          {
+            "same_as": "learn.explore.explore_summer"
+          },
+          {
+            "same_as": "q4.q4_yellow",
+            "lesson": "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong"
+          },
+          {
+            "same_as": "learn.explore.explore_cold",
+            "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+          }
+        ]
+      },
+      "title": "Four pictures from one year",
+      "note": "SK-050 (designer 18/11, ghép lại sau chạy thử): hình ghép 1024×1024, lưới 2×2 ô vuông bằng nhau, khe 12 px màu giấy điệp #F0E6CF, không viền, không chữ, không số, không mũi tên. Đọc trái → phải, trên → dưới ra đúng vòng mùa: trên trái hoa đào (xuân, `explore_spring`), trên phải hoa phượng (hè, `explore_summer`), dưới trái lá vàng (thu, `q4_yellow` bài 3, lá bạch quả 18/11), dưới phải áo phao (đông, `explore_cold` bài 1). Thứ tự `parts` trùng thứ tự đọc. Mỗi ô lấy từ crop vuông của mục đó."
+    },
+    "learn.explore.explore_spring": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peach_Blossom_(102375993).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Peach_Blossom_%28102375993%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peach Blossom",
+      "author": "Alto Clef",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.287,
+        "top": 0.0,
+        "width": 0.6665,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Cành hoa đào hồng thắm nở, vài nụ, nền lá xanh mờ; không cành mai, không đồ trang trí, không người, không chữ. Trang gốc (500px) không ghi nơi chụp. Crop vuông."
+    },
+    "learn.explore.explore_buds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:New_Spring_Leaf_Bud_(5654352678).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/New_Spring_Leaf_Bud_%285654352678%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "New Spring Leaf Bud (5654352678)",
+      "author": "Pink Sherbet Photography from Utah, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.25,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Lộc non xanh nhạt vừa nhú trên một cành nhỏ, nền xanh mờ; không hoa, không lá vàng. Crop vuông."
+    },
+    "learn.explore.explore_summer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0.1,
+        "top": 0,
+        "width": 0.4649,
+        "height": 0.7
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Cây phượng nở đỏ rực, tán rộng, trời trắng mây (không xanh như brief) (Coral Gables, Florida; Public domain). Ảnh gốc có xe đỗ và số nhà ở mép phải: mọi crop tránh hai vùng đó (x ≤ 0,95, y ≤ 0,72 quanh xe). Crop vuông: tán và thân cây."
+    },
+    "tray.tray_flame": {
+      "same_as": "learn.explore.explore_summer"
+    },
+    "tray.tray_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_cicada": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cicada. Cicadidae - Flickr - gailhampshire",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.7594
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Con ve sầu trưởng thành màu xanh bạc bám trên thân cây, nhìn từ trên xuống, thấy rõ cánh trong; không xác lột, không tay người. Crop vuông."
+    },
+    "tray.tray_peach": {
+      "same_as": "learn.explore.explore_spring"
+    },
+    "tray.tray_banh_chung": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Banh_chung_vuong_2.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Banh_chung_vuong_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Banh chung vuong 2",
+      "author": "Viethavvh at vi.wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Banh_chung_vuong_2.JPG",
+      "crop": {
+        "left": 0.12,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Bánh chưng vuông gói lá dong xanh, buộc lạt, đặt trên ghế da đỏ; thật ra là hai chiếc chồng lên nhau. Không bao bì, không chữ, không người. Crop vuông."
+    },
+    "tray.tray_scarf": {
+      "same_as": "tray.tray_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_lotus": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lotus_flower_(978659).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lotus_flower_%28978659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus flower (978659)",
+      "author": "Hong Zhang ( jennyzhh2008 )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1667,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `w1_lotus` ở goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha (sen hồng, CC0), crop vuông riêng."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_flame": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.05,
+        "width": 0.95,
+        "height": 0.5721
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_summer`, crop 5:2 cả tán hoa (tránh xe, số nhà)."
+    },
+    "q1.q1_peach": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peach_Blossom_(102375993).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Peach_Blossom_%28102375993%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peach Blossom",
+      "author": "Alto Clef",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.6001
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_spring`, crop 5:2."
+    },
+    "q1.q1_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cicada. Cicadidae - Flickr - gailhampshire",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.5696
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_cicada`, crop 4:3 cho hình câu đúng/sai."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_yellow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-10-24 - vivid yellow ginkgo leaf on distant twig against a blue sky - DSM4694",
+      "author": "Franz van Duns",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.288,
+        "width": 1,
+        "height": 0.2667
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `q4_yellow` ở thoi-tiet-va-cac-mua/mua-thu-va-mua-dong (lá bạch quả vàng, trời xanh), crop 5:2 lấy phiến lá trên."
+    },
+    "q3.q3_dry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/170927-FS-Superior-SAR-leaves_on_ground_%2837325046602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fallen leaves on the ground",
+      "author": "Superior National Forest",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:170927-FS-Superior-SAR-leaves_on_ground_(37325046602).jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `q4_dry` ở sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song (lá rụng trên đất), crop 5:2 riêng."
+    },
+    "q3.q3_buds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:New_Spring_Leaf_Bud_(5654352678).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/New_Spring_Leaf_Bud_%285654352678%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "New Spring Leaf Bud (5654352678)",
+      "author": "Pink Sherbet Photography from Utah, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.4,
+        "width": 1,
+        "height": 0.2667
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_buds`, crop 5:2."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_scarf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2016-366-334_Always_Count_on_Mom%27s_Scarf_(30960879140).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/2016-366-334_Always_Count_on_Mom%27s_Scarf_%2830960879140%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2016-366-334 Always Count on Mom's Scarf (30960879140)",
+      "author": "cogdogblog",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_scarf` ở bài 1, crop 5:2 phần khăn vắt trên lưng ghế."
+    },
+    "q4.q4_coat": {
+      "same_as": "q1.q1_coat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q4.q4_hat": {
+      "same_as": "w1.w1_hat",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_summer": {
+      "same_as": "q1.q1_flame"
+    },
+    "q5.q5_spring": {
+      "same_as": "q3.q3_buds"
+    },
+    "q5.q5_winter": {
+      "same_as": "q1.q1_coat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0.05,
+        "top": 0,
+        "width": 0.6199,
+        "height": 0.7
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_summer`, crop 4:3 (tránh xe, số nhà)."
+    },
+    "vocab.season": {
+      "composed": {
+        "file": "content/images/composed/thoi-tiet-va-cac-mua/mua-xuan-va-mua-he.vocab.season.jpg",
+        "parts": [
+          {
+            "same_as": "vocab.spring"
+          },
+          {
+            "same_as": "vocab.summer"
+          },
+          {
+            "same_as": "q3.q3_yellow"
+          },
+          {
+            "same_as": "vocab.coat",
+            "lesson": "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong"
+          }
+        ]
+      },
+      "title": "Four pictures from one year",
+      "note": "SK-050 (designer 18/11, ghép lại): bản 2:1 của hình ghép bốn mùa cho thẻ từ (1024×512), lưới 2×2 ô 2:1, khe 12 px màu giấy điệp, không chữ; cùng thứ tự đọc với `explore_seasons`: trên trái hoa đào, trên phải phượng, dưới trái lá vàng, dưới phải áo phao."
+    },
+    "vocab.spring": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peach_Blossom_(102375993).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Peach_Blossom_%28102375993%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peach Blossom",
+      "author": "Alto Clef",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.05,
+        "width": 1,
+        "height": 0.7502
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_spring`, crop 2:1."
+    },
+    "vocab.summer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.95,
+        "height": 0.7152
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_summer`, crop 2:1."
+    },
+    "vocab.flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lotus_flower_(978659).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Lotus_flower_%28978659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lotus flower (978659)",
+      "author": "Hong Zhang ( jennyzhh2008 )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `w1_lotus`, crop 2:1."
+    },
+    "vocab.cicada": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cicada. Cicadidae - Flickr - gailhampshire",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.3797
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_cicada`, crop 2:1."
+    },
+    "reward.flame_tree_card": {
+      "same_as": "learn.explore.explore_summer"
+    }
+  }
+}

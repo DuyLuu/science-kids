@@ -347,7 +347,7 @@ Cần ios-dev thêm khoá `collectible.set.living_things` (đề xuất "Living 
 ### Ranh giới với chủ đề khác
 
 - ***Chuỗi thức ăn* (Explorer số ba, biên tập khác đang soạn):** chủ đề này không nói con nào ăn con nào, không xếp chuỗi; chữ bé nghe không dùng "săn mồi", "gặm cỏ", "là thức ăn của" (ảnh trâu gặm cỏ dùng lại ở bài 6 chỉ có `alt` của ảnh gốc nói "gặm cỏ"). Chỉ nói nơi sống **có** thức ăn (bài 4 "tiny bugs to eat", "leaves and fruit to eat"; q6 "A frog finds food in its pond"); hoa "cho bướm thức ăn" ở bài 7. Rà chữ tester 14/11 (n2): giải thích và phản hồi câu q6 bài 4 không còn nói "ếch ăn côn trùng" (*Chuỗi thức ăn* bài hai dạy "Ếch ăn châu chấu"), chỉ nói "ao có thức ăn cho ếch". Không dùng các chuỗi Việt Nam của sườn *Chuỗi thức ăn* (lúa, chuột, rắn; cỏ, châu chấu, ếch; rong, tôm, cá, cò).
-- ***Thu, đông và mùa khô* (Explorer số bốn):** bài 3 câu q4 có lá xanh, lá vàng, lá khô chỉ để nói "từ đang sống tới đã chết", không nói chuyện mùa; thẻ cây bàng có một vế "lá đỏ rồi rụng". Biên tập chủ đề mùa có thể dùng lại ảnh lá bàng.
+- ***Thời tiết và các mùa* (Explorer số năm, thay hai chủ đề mùa cũ từ 17/11):** bài 3 câu q4 có lá xanh, lá vàng, lá khô chỉ để nói "từ đang sống tới đã chết", không nói chuyện mùa; thẻ cây bàng có một vế "lá đỏ rồi rụng". Biên tập chủ đề mùa có thể dùng lại ảnh lá bàng.
 - ***Trồng cây*, *Cây quanh em*:** không dạy bộ phận cây, cách cây lớn; chỉ dùng tên cây quen.
 - ***Sinh vật và môi trường* (Discoverer):** chủ đề đó dạy nơi sống thay đổi thì sinh vật sống sót ra sao; ở đây chỉ dừng ở "giữ an toàn cho nơi sống nhỏ".
 

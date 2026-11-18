@@ -183,3 +183,9 @@ Sau *Gọi tên và nhóm động vật*, hai chủ đề tiếp theo là *Sinh 
 - Số đếm hiện hành: Explorer 13 chủ đề / 83 bài; cả app 46 chủ đề / 394 bài ([syllabus.md](../syllabus.md) mục 0, 3).
 - Bảng mục 2.1 và 2.4 ở trên là thứ tự, số đếm trước 14/11. Con số "14 / 83" ở mục 2.4 là đề xuất D3 cũ (12 chủ đề + 2 chủ đề mới, 73 + 10 bài), chỉ trùng số bài với số hiện hành, không cùng nghĩa.
 - D3 vẫn chờ Duy. Nếu Duy chốt D3, PM xếp hai chủ đề còn lại (bầu trời; đẩy, kéo và âm thanh) tính cả chủ đề #4 này, và đánh số từ thứ tự hiện hành ở `content/syllabus.json`.
+
+## Ghi chú 17/11 (câu D4, SK-050)
+- Duy 17/11 trả lời D4 theo hướng **gộp** (PM khi đó đề xuất không gộp): "chủ đề thời tiết và sự chuyển đổi giữa các mùa, rồi các tháng trong năm thì gôm chung lại thành 1 topic kiểu generic. không cần quá phụ thuộc vào oak."
+- Hai chủ đề mùa (Explorer #5, #8 cũ) thay bằng chủ đề mới *Thời tiết và các mùa* ở Explorer #5, 6 bài, có thêm mười hai tháng ([SK-050](backlog/SK-050-explorer-weather-and-seasons.md), [đề xuất](explorer-weather-seasons-proposal.md)). Sáu câu chi tiết chốt 17/11 theo đề xuất PM (Duy: "bật mode auto, không cần hỏi thêm").
+- Số đếm khi danh mục đổi xong: Explorer 12 chủ đề / 79 bài; cả app 45 / 390.
+- D3 vẫn chờ Duy; chủ đề mới không dạy ngày và đêm.

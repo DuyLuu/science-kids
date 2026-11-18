@@ -1,0 +1,511 @@
+{
+  "note": "SK-050 bài 1 (Thời tiết hôm nay). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Ảnh chụp thật, chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Hình gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson khi khung khớp, không khớp thì mục riêng có crop riêng. Ảnh Discoverer được chép mục (same_as không sang nhóm tuổi khác). Nón lá: trỏ mục vuông có sẵn của chuoi-thuc-an/chuoi-thuc-an-la-gi (xem ticket SK-050).",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arctic_ice.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Arctic_ice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arctic ice",
+      "author": "Patrick Kelley",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.114,
+        "width": 1,
+        "height": 0.8858
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_ice` ở noi-song-tren-trai-dat/bac-cuc (băng biển Bắc Băng Dương), crop 17:10 riêng cho thẻ 2 lựa chọn."
+    },
+    "w1.w1_desert": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Erg_chebbi_sunrise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Erg_chebbi_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Erg chebbi sunrise",
+      "author": "JanSuchy",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Erg_chebbi_sunrise.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0.158,
+        "width": 1,
+        "height": 0.8418
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_sahara` ở noi-song-tren-trai-dat/sa-mac (đồi cát Erg Chebbi), crop 17:10 riêng."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Penguin_on_a_rock_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Penguin_on_a_rock_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A penguin on a rock",
+      "author": "Jay Ruzesky wolsenburg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.2,
+        "width": 0.8,
+        "height": 0.8
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_penguin` ở goi-ten-va-nhom-dong-vat/chim-va-bo-sat (chim cánh cụt Gentoo trên đá), crop 4:3 riêng cho hình câu đúng/sai."
+    },
+    "learn.explore.explore_sunny": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): chép mục `q3_sun` ở discoverer/be-mat-trai-dat/nui-lua (CC0), crop vuông: Mặt Trời trên trời xanh, tán cây, lan can."
+    },
+    "learn.explore.explore_cloudy": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.218,
+        "top": 0.0,
+        "width": 0.6644,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Tia nắng toả lên từ sau một đám mây dày, đĩa Mặt Trời bị mây che kín, không chói; trời xanh; không người, không máy bay, không cầu vồng, không chữ. Không có mặt đất trong ảnh. Crop vuông."
+    },
+    "learn.explore.explore_rainy": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heavy_rain_in_K%C3%B5rvemaa,_Estonia_(Fall_2024).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Heavy_rain_in_K%C3%B5rvemaa%2C_Estonia_%28Fall_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heavy rain in Kõrvemaa, Estonia (Fall 2024)",
+      "author": "Sillerkiil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.0,
+        "width": 0.6038,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): chép mục `q1_rain` ở discoverer/be-mat-trai-dat/nui-lua (CC0, mưa to ở Estonia), crop vuông riêng."
+    },
+    "learn.explore.explore_cold": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Anorak01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red puffer jacket on a hanger",
+      "author": "sand",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "crop": {
+        "left": 0.1288,
+        "top": 0.0,
+        "width": 0.7423,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Áo phao đỏ treo trên móc nhựa vàng, nền vải tối trơn, thấy cả chiếc áo; không người mặc, không chữ in trên áo (nhãn nhỏ trong cổ áo không đọc được). Nền tối, không phải tường sáng như brief. Crop vuông."
+    },
+    "tray.tray_hat": {
+      "same_as": "tray.tray_hat",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_raincoat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Friesennerze.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yellow raincoats with hoods on the grass",
+      "author": "Schneehase17 at German Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "crop": {
+        "left": 0.2656,
+        "top": 0.0885,
+        "width": 0.5938,
+        "height": 0.7917
+      },
+      "note": "SK-050 (designer 18/11, sửa sau chạy thử): hình gốc của chủ đề, thay ảnh áo mưa cánh dơi (crop cũ chỉ còn khối vàng hình thang). Áo mưa vàng có mũ trùm, hai tay áo, túi, trải trên cỏ; phía sau có thêm hai áo mưa xanh than và một áo vàng. Không người, không chữ, không nhãn. Crop vuông sát chiếc áo vàng ở giữa: đủ mũ, thân, túi, hai tay áo (đầu cổ tay hơi lẹm), bớt cỏ."
+    },
+    "tray.tray_coat": {
+      "same_as": "learn.explore.explore_cold"
+    },
+    "tray.tray_pillow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TW_%E5%8F%B0%E6%B9%BE_Taipei_%E5%8F%B0%E5%8C%97_Hotel_Metropolitan_Premier_Taipei_%E9%85%92%E5%BA%97%E6%88%BF%E9%96%93_hotel_room_%E6%9E%95%E9%A0%AD_white_pillows_n_%E5%B7%A8%E5%BA%8A_big_big_bed_March_2024_R12S_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/TW_%E5%8F%B0%E6%B9%BE_Taipei_%E5%8F%B0%E5%8C%97_Hotel_Metropolitan_Premier_Taipei_%E9%85%92%E5%BA%97%E6%88%BF%E9%96%93_hotel_room_%E6%9E%95%E9%A0%AD_white_pillows_n_%E5%B7%A8%E5%BA%8A_big_big_bed_March_2024_R12S_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White pillows on a hotel bed",
+      "author": "Ounfs Robmmy 238",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.555,
+        "top": 0.053,
+        "width": 0.25,
+        "height": 0.3333
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Một chiếc gối trắng trơn trên giường khách sạn, đầu giường gỗ; crop vuông chỉ lấy một gối, bỏ dấu ngày giờ ở góc dưới phải ảnh gốc, bỏ đèn, không người, không chữ."
+    },
+    "tray.tray_tshirt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ringflash_Tshirt_Blank_Template_(3214240974).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ringflash_Tshirt_Blank_Template_%283214240974%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ringflash Tshirt Blank Template (3214240974)",
+      "author": "THOR",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.6621
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Áo cộc tay trắng trơn treo trên móc dây, nền xám sáng; không chữ, không hình in. Crop vuông cắt bớt gấu áo."
+    },
+    "tray.tray_scarf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2016-366-334_Always_Count_on_Mom%27s_Scarf_(30960879140).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/2016-366-334_Always_Count_on_Mom%27s_Scarf_%2830960879140%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2016-366-334 Always Count on Mom's Scarf (30960879140)",
+      "author": "cogdogblog",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.17,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Khăn len đan màu kem vắt trên lưng ghế gỗ, thấy rõ mũi đan; nền phòng tối mờ, không người, không chữ. Crop vuông."
+    },
+    "tray.tray_ball": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/23307937@N04/3850507754",
+      "file_url": "https://live.staticflickr.com/2574/3850507754_eff1e02a6b_b.jpg",
+      "title": "rubber ball convention",
+      "author": "frankieleon",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fa060af6-494d-4523-b48e-9d20abcfbb8f",
+      "crop": {
+        "left": 0.125,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 18/11, sửa sau chạy thử): thay quả bóng đỏ Red Inflatable Ball (chữ \"Baden\", tem nhãn, chữ trên lốp xe đạp; không crop nào sạch, nên không chép mục của sinh-vat-song-o-dau). Những quả bóng nảy cao su nhiều màu (đỏ, vàng, xanh lá, xanh ngọc, hồng) chụp gần trên nền trắng; không chữ, không nhãn, không người. Crop vuông. Hình gốc của chủ đề cho kệ Chơi; bài 6 trỏ same_as."
+    },
+    "tray.tray_boots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:My_red_wellies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/My_red_wellies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "My red wellies",
+      "author": "Jenene from Chinatown, New York City, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.7733
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Đôi ủng cao su đỏ trơn đứng trên thảm, chụp từ trên chếch xuống, một bông cúc nhỏ dưới chân; không người, không nhãn hiệu thấy được. Ảnh gốc nhỏ (648 px), crop vuông 648 px."
+    },
+    "q1.q1_coat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Anorak01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red puffer jacket on a hanger",
+      "author": "sand",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.5389
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_cold`, crop 5:2: móc, cổ áo, vai và ngực áo phao."
+    },
+    "q1.q1_raincoat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Friesennerze.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yellow raincoats with hoods on the grass",
+      "author": "Schneehase17 at German Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "crop": {
+        "left": 0.0,
+        "top": 0.224,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `tray_raincoat`, crop 5:2 lấy trọn hàng áo, áo vàng ở giữa còn đủ mũ, tay, vạt."
+    },
+    "q1.q1_tshirt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ringflash_Tshirt_Blank_Template_(3214240974).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ringflash_Tshirt_Blank_Template_%283214240974%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ringflash Tshirt Blank Template (3214240974)",
+      "author": "THOR",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.16,
+        "width": 1,
+        "height": 0.2648
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_tshirt`, crop 5:2: cổ và hai tay áo."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.5625
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_sunny`, crop 4:3."
+    },
+    "q3.q3_sunny": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.07,
+        "width": 1,
+        "height": 0.3
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_sunny`, crop 5:2."
+    },
+    "q3.q3_cloudy": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "e9b7cf8e-e9ae-4b4e-9cb8-604b8727f197",
+      "source_url": "https://www.flickr.com/photos/58411470@N00/54221197912",
+      "file_url": "https://live.staticflickr.com/65535/54221197912_94425a7332_b.jpg",
+      "title": "Cumulus cloud formation over rural landscape",
+      "author": "kewl",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.5988
+      },
+      "note": "SK-050 (designer 17/11): chép mục `explore_cloudy` ở discoverer/thoi-tiet-va-thien-tai/nang-mua-gio-may (Flickr, CC BY 2.0, đã kiểm tay 11/11): mây trắng xen mây xám trên đồng. Crop 5:2."
+    },
+    "q3.q3_rainy": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heavy_rain_in_K%C3%B5rvemaa,_Estonia_(Fall_2024).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Heavy_rain_in_K%C3%B5rvemaa%2C_Estonia_%28Fall_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heavy rain in Kõrvemaa, Estonia (Fall 2024)",
+      "author": "Sillerkiil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.6624
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_rainy`, crop 5:2."
+    },
+    "q4.q4_rainy": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heavy_rain_in_K%C3%B5rvemaa,_Estonia_(Fall_2024).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Heavy_rain_in_K%C3%B5rvemaa%2C_Estonia_%28Fall_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heavy rain in Kõrvemaa, Estonia (Fall 2024)",
+      "author": "Sillerkiil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.9742
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_rainy`, crop 17:10."
+    },
+    "q4.q4_sunny": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.4412
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_sunny`, crop 17:10."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2016-366-334_Always_Count_on_Mom%27s_Scarf_(30960879140).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/2016-366-334_Always_Count_on_Mom%27s_Scarf_%2830960879140%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2016-366-334 Always Count on Mom's Scarf (30960879140)",
+      "author": "cogdogblog",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.06,
+        "top": 0.0,
+        "width": 0.8889,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_scarf`, crop 4:3."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.057,
+        "top": 0.0,
+        "width": 0.8858,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_cloudy`, crop 4:3."
+    },
+    "vocab.weather": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2474,
+        "width": 1,
+        "height": 0.7526
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_cloudy`, crop 2:1 phần mây và tia nắng."
+    },
+    "vocab.sunny": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_sun_shines_back_from_the_blue_skies.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/The_sun_shines_back_from_the_blue_skies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The sun shines back from the blue skies",
+      "author": "Philsacor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.03,
+        "width": 1,
+        "height": 0.375
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_sunny`, crop 2:1."
+    },
+    "vocab.rainy": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heavy_rain_in_K%C3%B5rvemaa,_Estonia_(Fall_2024).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Heavy_rain_in_K%C3%B5rvemaa%2C_Estonia_%28Fall_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heavy rain in Kõrvemaa, Estonia (Fall 2024)",
+      "author": "Sillerkiil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0,
+        "width": 1,
+        "height": 0.8281
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_rainy`, crop 2:1."
+    },
+    "vocab.cloudy": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "e9b7cf8e-e9ae-4b4e-9cb8-604b8727f197",
+      "source_url": "https://www.flickr.com/photos/58411470@N00/54221197912",
+      "file_url": "https://live.staticflickr.com/65535/54221197912_94425a7332_b.jpg",
+      "title": "Cumulus cloud formation over rural landscape",
+      "author": "kewl",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.7485
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `q3_cloudy`, crop 2:1."
+    },
+    "vocab.raincoat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Friesennerze.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yellow raincoats with hoods on the grass",
+      "author": "Schneehase17 at German Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Friesennerze.JPG",
+      "crop": {
+        "left": 0.109,
+        "top": 0.198,
+        "width": 0.8438,
+        "height": 0.5625
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `tray_raincoat`, crop 2:1."
+    },
+    "reward.rainbow_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Rainbow_over_Hanalei_National_Wildlife_Refuge_%2854108999762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rainbow over Hanalei National Wildlife Refuge",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "crop": {
+        "left": 0.335,
+        "top": 0.0,
+        "width": 0.665,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cầu vồng rõ màu trên ruộng khoai nước, núi và trời xám mưa phía sau (Hanalei, Kauaʻi; USFWS, Public domain); không người, không xe, không chữ. Crop vuông bên phải: đỉnh cung và một chân cầu vồng xuống đồi."
+    }
+  }
+}

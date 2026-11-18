@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Science Kids · topic icon · new-weather-and-seasons · nắng sau mây, cành đào nở hoa và một chiếc lá vàng rơi (thời tiết, mùa xuân, mùa thu). Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
+  <g fill="#E2A52A"><circle cx="44" cy="17" r="12"/></g>
+  <g fill="#D7C8A5"><path d="M14 41 C 7 41, 6 32, 13 30.5 C 13 23, 21 19, 27 22.5 C 30 16.5, 40 16.5, 42.5 23.5 C 48.5 23, 52 28, 50 33 C 54 35, 52 41, 47 41 Z"/></g>
+  <g fill="#E2D4B4"><path d="M12 38 C 5 38, 4 29, 11 27.5 C 11 20, 19 16, 25 19.5 C 28 13.5, 38 13.5, 40.5 20.5 C 46.5 20, 50 25, 48 30 C 52 32, 50 38, 45 38 Z"/></g>
+  <g fill="#8A5E3B"><path d="M3 58.6 C 18 54, 34 50, 50 44.4 C 54 43, 57.6 41.6, 61 40.2 L61.8 42.2 C 52 46.4, 36 53, 4 61.4 Z"/><path d="M28.6 52 C 30.4 47.6, 32.6 44.4, 36 41.6 L37.6 43 C 34.6 45.8, 32.6 48.8, 31.4 51.2 Z"/></g>
+  <g fill="#E2A52A"><path d="M41 61 C 42 53, 49 49, 59 49.6 C 58 57.6, 50.6 62.4, 41 61 Z"/></g>
+  <g fill="#B97F16"><path d="M41.8 60.4 C 46 57, 51 53.4, 58 50.2 L58.6 51.2 C 52 54.4, 47 57.8, 43 61 Z"/></g>
+  <g fill="#D98A76"><circle cx="37" cy="37.8" r="3"/><circle cx="40.1" cy="40" r="3"/><circle cx="38.9" cy="43.6" r="3"/><circle cx="35.1" cy="43.6" r="3"/><circle cx="33.9" cy="40" r="3"/><circle cx="18" cy="49.8" r="2.7"/><circle cx="20.8" cy="51.8" r="2.7"/><circle cx="19.7" cy="55" r="2.7"/><circle cx="16.3" cy="55" r="2.7"/><circle cx="15.2" cy="51.8" r="2.7"/><circle cx="60" cy="37.6" r="2.6"/></g>
+  <g fill="#A93A27"><circle cx="37" cy="41" r="1.7"/><circle cx="18" cy="52.8" r="1.5"/></g>
+</svg>

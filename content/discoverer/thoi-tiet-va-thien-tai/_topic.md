@@ -305,7 +305,7 @@ Tám câu Đúng, tám câu Sai. Câu sáu là Sai, Sai, Đúng, Đúng, Sai. M�
 - ***Đá và đất* (Discoverer số sáu):** mưa và gió làm mòn đá (phong hoá, xói mòn), phù sa.
 - ***Sinh vật và môi trường* (Discoverer số mười sáu):** lũ, nắng nóng, cháy rừng ảnh hưởng tới sinh vật; biến đổi khí hậu.
 - ***Ánh sáng và bóng tối* (Discoverer số mười một):** vì sao trời nắng thì bóng đậm.
-- **Explorer số hai, số năm (các mùa):** bốn mùa ở miền Bắc, mùa mưa và mùa khô ở miền Nam.
+- **Explorer số năm *Thời tiết và các mùa* (thay hai chủ đề mùa cũ từ 17/11):** bốn mùa ở miền Bắc, mùa mưa và mùa khô ở miền Nam, mười hai tháng.
 
 **Đề xuất cho người khác** (biên tập không sửa vùng này)
 - **PM:** ghi `level` cho `new-weather` (chín điểm, Mức 2; mười điểm, Mức 3 nếu chấm A = 3 hoặc D = 3); xem lại quy tắc "Mức không giảm". Chạy `ids` theo thứ tự ở dòng Trạng thái.

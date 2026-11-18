@@ -1,0 +1,296 @@
+{
+  "note": "SK-050 bài 5 (Mười hai tháng). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson, chọn mục có khung gần nhất (thẻ ba lựa chọn trỏ tới thẻ ba lựa chọn, thẻ từ trỏ tới thẻ từ). Ảnh Explorer chủ đề khác trỏ thẳng tới mục có crop đúng khung; ảnh Discoverer chép mục gốc. Ảnh mới: 6 (mai vàng, cặp sách, bàn chải, xô xẻng, bát cơm, phao bơi); một hình tự vẽ (vòng mười hai hạt, ba bản theo khung).",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_can": {
+      "same_as": "tray.tray_watering_can",
+      "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+    },
+    "w1.w1_raincoat": {
+      "same_as": "tray.tray_raincoat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "learn.explore.explore_months": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-cac-mua/muoi-hai-thang.learn.explore.explore_months.jpg",
+        "method": "drawn"
+      },
+      "title": "Twelve beads in a ring",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG theo style E giấy cắt (PM đồng ý 17/11, SK-050): mười hai hạt gỗ tròn cùng cỡ, cùng màu, xâu trên một sợi dây thành vòng khép kín, đặt trên một mảnh giấy điệp; không chữ, không chữ số, không mũi tên, không hạt nào khác màu hay to hơn, không nét viền; bóng giấy (filter paperE) nướng sẵn; nền giấy sáng #FBF6EA. JPEG 1024×1024."
+    },
+    "learn.explore.explore_tet": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ช้างน้าว_Ochna_integerrima_(Lour.)_Merr_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%A7_Ochna_integerrima_%28Lour.%29_Merr_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "ช้างน้าว Ochna integerrima (Lour.) Merr (1)",
+      "author": "PEAK99",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cành mai vàng (Ochna integerrima) nở trên nền trời xanh, thấy rõ hoa năm cánh và nhị dài (Thái Lan, CC BY 3.0). Không đào, không câu đối, không chữ."
+    },
+    "learn.explore.explore_holiday": {
+      "same_as": "learn.explore.explore_beach",
+      "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+    },
+    "learn.explore.explore_school": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heiwa_elementary_school_16.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Heiwa_elementary_school_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heiwa elementary school 16",
+      "author": "ajari from Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.333,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): chiếc cặp sách đeo lưng (randoseru) màu đen treo trên bàn học trong lớp, cạnh một chiếc đỏ; trơn màu, không người, không chữ, không hình in. Crop bỏ đồng hồ và bảng chữ ở mép trái. Không tìm được ảnh ba lô học sinh đứng một mình trên nền trơn hợp lệ (ảnh hợp lệ đều có người, trẻ em hoặc nhãn hiệu)."
+    },
+    "tray.tray_banh_chung": {
+      "same_as": "tray.tray_banh_chung",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_toothbrush": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toothbrush_20050716_004.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Toothbrush_20050716_004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Toothbrush 20050716 004",
+      "author": "Jonas Bergsten",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Toothbrush_20050716_004.jpg",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): một bàn chải đánh răng xanh lam trên nền vải trắng, chụp gần đầu bàn chải và một phần cán; không kem, không chữ, không nhãn hiệu (PD-user)."
+    },
+    "tray.tray_bucket": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sand_bucket.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sand_bucket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sand bucket",
+      "author": "David",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.286,
+        "top": 0,
+        "width": 0.714,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): xô nhựa xanh lam có xẻng nhựa vàng cắm bên trong, đặt trên bãi cát; không người, không chữ."
+    },
+    "tray.tray_bag": {
+      "same_as": "learn.explore.explore_school"
+    },
+    "tray.tray_mai": {
+      "same_as": "learn.explore.explore_tet"
+    },
+    "tray.tray_rice_bowl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Steamed_rice_in_bowl_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Steamed_rice_in_bowl_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Steamed rice in bowl 01",
+      "author": "Anna Frodesiak",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.113,
+        "top": 0,
+        "width": 0.774,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): bát cơm trắng đầy trên nền tối, chụp chếch; không món khác, không đũa, không chữ."
+    },
+    "tray.tray_swim_ring": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Translucent_green_and_pink_swim_rings_on_water_2645435443.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Translucent_green_and_pink_swim_rings_on_water_2645435443.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Translucent green and pink swim rings on water 2645435443",
+      "author": "Ian Ransley from Berkeley, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.54,
+        "height": 0.8143
+      },
+      "note": "SK-050 (designer 17/11): phao bơi tròn bơm hơi trong suốt màu xanh lá nổi trên mặt nước; trơn màu, không hình in, không người. Crop lấy chiếc xanh, mép phải còn thấy một chút phao hồng."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_coat": {
+      "same_as": "q1.q1_coat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q1.q1_bucket": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sand_bucket.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sand_bucket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sand bucket",
+      "author": "David",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.34,
+        "width": 1,
+        "height": 0.56
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh tray.tray_bucket, crop 5:2 cho thẻ ba lựa chọn."
+    },
+    "q1.q1_banh_chung": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Banh_chung_vuong_2.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Banh_chung_vuong_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Banh chung vuong 2",
+      "author": "Viethavvh at vi.wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Banh_chung_vuong_2.JPG",
+      "crop": {
+        "left": 0.1,
+        "top": 0.1,
+        "width": 0.9,
+        "height": 0.48
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh tray.tray_banh_chung của mua-xuan-va-mua-he (bánh chưng vuông gói lá dong, Public domain), chép mục để có crop 5:2 cho thẻ ba lựa chọn (bài 2 chưa có bản 5:2)."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-cac-mua/muoi-hai-thang.q2.jpg",
+        "method": "drawn"
+      },
+      "title": "Twelve beads in a ring",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG theo style E giấy cắt (PM đồng ý 17/11, SK-050): mười hai hạt gỗ tròn cùng cỡ, cùng màu, xâu trên một sợi dây thành vòng khép kín, đặt trên một mảnh giấy điệp; không chữ, không chữ số, không mũi tên, không hạt nào khác màu hay to hơn, không nét viền; bóng giấy (filter paperE) nướng sẵn; nền giấy sáng #FBF6EA. Bản 1024×768 cho hình câu hỏi (khung 4:3), cùng bản vẽ với learn.explore.explore_months."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_mai": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ช้างน้าว_Ochna_integerrima_(Lour.)_Merr_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%A7_Ochna_integerrima_%28Lour.%29_Merr_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "ช้างน้าว Ochna integerrima (Lour.) Merr (1)",
+      "author": "PEAK99",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.6
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_tet, crop 5:2 cho thẻ ba lựa chọn."
+    },
+    "q3.q3_flame": {
+      "same_as": "q1.q1_flame",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_school": {
+      "same_as": "learn.explore.explore_school"
+    },
+    "q4.q4_tet": {
+      "same_as": "tray.tray_banh_chung",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q4.q4_holiday": {
+      "same_as": "learn.explore.explore_beach",
+      "lesson": "noi-song-tren-trai-dat/bien-va-dai-duong"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_tet": {
+      "same_as": "q1.q1_banh_chung"
+    },
+    "q5.q5_holiday": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "q5.q5_school": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heiwa_elementary_school_16.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Heiwa_elementary_school_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Heiwa elementary school 16",
+      "author": "ajari from Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0.1805,
+        "width": 0.7,
+        "height": 0.4197
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_school, crop 5:2 cho thẻ ba lựa chọn: phần trên của hai chiếc cặp đỏ và đen, bỏ đồng hồ và bảng chữ."
+    },
+    "q6": {
+      "same_as": "q2"
+    },
+    "vocab.month": {
+      "own": {
+        "file": "content/images/own/thoi-tiet-va-cac-mua/muoi-hai-thang.vocab.month.jpg",
+        "method": "drawn"
+      },
+      "title": "Twelve beads in a ring",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG theo style E giấy cắt (PM đồng ý 17/11, SK-050): mười hai hạt gỗ tròn cùng cỡ, cùng màu, xâu trên một sợi dây thành vòng khép kín, đặt trên một mảnh giấy điệp; không chữ, không chữ số, không mũi tên, không hạt nào khác màu hay to hơn, không nét viền; bóng giấy (filter paperE) nướng sẵn; nền giấy sáng #FBF6EA. Bản 1024×512 cho thẻ từ (khung 2:1), cùng bản vẽ với learn.explore.explore_months."
+    },
+    "vocab.year": {
+      "same_as": "vocab.season",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "vocab.holiday": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "vocab.festival": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ช้างน้าว_Ochna_integerrima_(Lour.)_Merr_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%A7_Ochna_integerrima_%28Lour.%29_Merr_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "ช้างน้าว Ochna integerrima (Lour.) Merr (1)",
+      "author": "PEAK99",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_tet, crop 2:1 cho thẻ từ."
+    },
+    "reward.banh_chung_card": {
+      "same_as": "tray.tray_banh_chung",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    }
+  }
+}

@@ -3,6 +3,8 @@
 > Đi kèm [syllabus.md](syllabus.md). Trong mỗi nhóm, các chủ đề **Mới** đứng đầu (Duy chốt 9/11), rồi tới các unit Oak theo đúng thứ tự trên trang Oak. Mỗi chủ đề Oak liệt kê đủ lesson theo thứ tự trên trang unit (đọc ngày 9/11/2026), kèm đề xuất cho từng lesson. Tên lesson giữ tiếng Anh của Oak; tên tiếng Việt soạn sau khi Duy duyệt danh sách. Chủ đề **Mới** là nháp AI, chưa duyệt.
 >
 > **16/11/2026:** nhóm Explorer xếp lại theo danh mục `content/syllabus.json`: *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11); thêm chủ đề mới #4 *Những nơi sống trên Trái Đất*, 8 bài (Duy chốt 16/11, SK-048); các unit Oak còn lại thành #5–#13. Explorer #1 ghi thêm 2 bài mở rộng đã có trong danh mục. Explorer: 13 chủ đề, 83 bài; cả app 46 chủ đề, 394 bài.
+>
+> **17/11/2026:** gộp hai unit Oak Y1 *Seasonal changes* (Explorer #5, #8 cũ) thành chủ đề mới #5 *Thời tiết và các mùa*, 6 bài (Duy yêu cầu và chốt 17/11, [SK-050](docs/backlog/SK-050-explorer-weather-and-seasons.md)); *Vật liệu quanh em* … *Em khoẻ mạnh* đánh lại #8–#12. Explorer: 12 chủ đề, 79 bài; cả app 45 chủ đề, 390 bài (35 unit Oak, 10 chủ đề mới).
 
 Cột "Bài app": số thứ tự bài trong app. Mỗi lesson Oak là một bài app, trừ hai trường hợp:
 
@@ -70,17 +72,20 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 7 | Sa mạc | Deserts | Y2 unit 4 lesson 3 `hot-deserts-climate-and-location` |
 | 8 | Mỗi con vật một nơi sống | Every animal has its place | — (bài tổng kết) |
 
-### 5. Thu, đông và mùa khô · Oak Y1 #2 [Seasonal changes: autumn and winter](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-autumn-and-winter/lessons)
+### 5. Thời tiết và các mùa · Mới
 
-5 lesson Oak (5 bắt buộc) → **5 bài app**.
+Lý do: Duy yêu cầu 17/11 ("chủ đề thời tiết và sự chuyển đổi giữa các mùa, rồi các tháng trong năm thì gôm chung lại thành 1 topic kiểu generic. không cần quá phụ thuộc vào oak") và chốt cùng ngày ([SK-050](docs/backlog/SK-050-explorer-weather-and-seasons.md), [đề xuất](docs/explorer-weather-seasons-proposal.md)). Tên EN: *Weather and seasons*; key `new-weather-and-seasons`. Thay hai unit Oak Y1 #2 *Seasonal changes: autumn and winter* và Y1 #5 *Seasonal changes: spring and summer* (trước là Explorer #5, #8; bỏ khỏi danh mục 17/11, chưa bài nào soạn). Đứng #5, ngay sau *Những nơi sống trên Trái Đất* (lệch luật "chủ đề mới đứng đầu", [syllabus.md](syllabus.md) mục 2). Trong danh mục, mọi bài `oak_lessons: []`, `statutory: false` (schema: chủ đề mới không gắn lesson Oak); mười lesson Oak cũ chỉ làm sườn một phần.
 
-| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
+| Bài app | Tên bài (VI) | EN | Lesson Oak Y1 gộp vào (sườn một phần) |
 | --- | --- | --- | --- |
-| 1. Signs of autumn | ✓ | 1 | Bản địa hoá: mùa thu miền Bắc; cuối mùa mưa miền Nam |
-| 2. Weather in autumn | ✓ | 2 | Bản địa hoá: thời tiết thu miền Bắc; cuối mùa mưa miền Nam |
-| 3. Signs of winter | ✓ | 3 | Bản địa hoá: mùa đông miền Bắc; mùa khô miền Nam |
-| 4. Weather in winter | ✓ | 4 | Bản địa hoá: rét, gió mùa đông bắc; nắng khô miền Nam |
-| 5. Day length in winter | ✓ | 5 | Bản địa hoá: ngày ngắn rõ ở miền Bắc; miền Nam đổi ít |
+| 1 | Thời tiết hôm nay | Weather today | `weather-in-autumn`, `weather-in-winter`, `weather-in-spring`, `weather-in-summer` (gộp) |
+| 2 | Mùa xuân và mùa hè | Spring and summer | `signs-of-spring`, `signs-of-summer`, `day-length-in-summer` (một ý); thời tiết xuân, hè một ý |
+| 3 | Mùa thu và mùa đông | Autumn and winter | `signs-of-autumn`, `signs-of-winter`, `day-length-in-winter` (một ý); thời tiết thu, đông một ý |
+| 4 | Mùa mưa và mùa khô | Rainy and dry seasons | — (Oak không có; miền Nam) |
+| 5 | Mười hai tháng | Twelve months | — (Oak Science không có) |
+| 6 | Mùa lại về | Seasons come back | — (bài tổng kết; ứng với mục tiêu bắt buộc Year 1 "quan sát thay đổi qua bốn mùa") |
+
+Bài 2, 3 nói miền Bắc (bốn mùa); bài 4 nói miền Nam (mùa mưa, mùa khô); miền Trung không có bài riêng. Chỉ dương lịch, Tết là một mốc. Chỗ lệch Oak: [đề xuất](docs/explorer-weather-seasons-proposal.md) mục 2.2.
 
 ### 6. Cơ thể của em · Oak Y1 #3 [Human body parts](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/human-body-parts/lessons)
 
@@ -109,19 +114,7 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 6. Common flowering plants | ✓ | 6 | Bản địa hoá: hoa Việt Nam: sen, mai, đào, hoa giấy |
 | 7. Wildflowers | ✓ | 7 | Bản địa hoá: hoa dại Việt Nam thay hoa dại Anh |
 
-### 8. Xuân, hè và mùa mưa · Oak Y1 #5 [Seasonal changes: spring and summer](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/seasonal-changes-spring-and-summer/lessons)
-
-5 lesson Oak (5 bắt buộc) → **5 bài app**.
-
-| Lesson Oak | Bắt buộc | Bài app | Đề xuất |
-| --- | --- | --- | --- |
-| 1. Signs of spring | ✓ | 1 | Bản địa hoá: mùa xuân miền Bắc, Tết; cuối mùa khô miền Nam |
-| 2. Weather in spring | ✓ | 2 | Bản địa hoá: mưa phùn, nồm miền Bắc |
-| 3. Signs of summer | ✓ | 3 | Bản địa hoá: mùa hè; đầu mùa mưa miền Nam |
-| 4. Weather in summer | ✓ | 4 | Bản địa hoá: nắng nóng, mưa rào, giông |
-| 5. Day length in summer | ✓ | 5 | Bản địa hoá: ngày dài rõ ở miền Bắc; miền Nam đổi ít |
-
-### 9. Vật liệu quanh em · Oak Y1 #6 [Everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/everyday-materials/lessons)
+### 8. Vật liệu quanh em · Oak Y1 #6 [Everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/everyday-materials/lessons)
 
 9 lesson Oak (7 bắt buộc) → **7 bài app**.
 
@@ -137,7 +130,7 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 8. Transparent and opaque materials: plan and do | ✓ | 7 | Gộp lesson 8, 9 |
 | 9. Transparent and opaque materials: review | ✓ | — | Gộp vào bài 7 |
 
-### 10. Vật liệu dùng làm gì? · Oak Y2 #1 [Uses of everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/uses-of-everyday-materials/lessons)
+### 9. Vật liệu dùng làm gì? · Oak Y2 #1 [Uses of everyday materials](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/uses-of-everyday-materials/lessons)
 
 7 lesson Oak (7 bắt buộc) → **6 bài app**.
 
@@ -151,7 +144,7 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 6. Changing shape: plan and do | ✓ | 6 | Gộp lesson 6, 7 |
 | 7. Changing shape: review | ✓ | — | Gộp vào bài 6 |
 
-### 11. Trồng cây · Oak Y2 #2 [Growing plants](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/growing-plants/lessons)
+### 10. Trồng cây · Oak Y2 #2 [Growing plants](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/growing-plants/lessons)
 
 8 lesson Oak (7 bắt buộc) → **8 bài app**.
 
@@ -166,7 +159,7 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 7. Plants without light | ✓ | 7 | Giữ |
 | 8. Grow your own food | — | 8 | Giữ |
 
-### 12. Sự sống mới · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
+### 11. Sự sống mới · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
 
 5 lesson Oak (5 bắt buộc) → **5 bài app**.
 
@@ -178,7 +171,7 @@ Lý do: Duy yêu cầu và chốt ngày 16/11 ([SK-048](docs/backlog/SK-048-expl
 | 4. Changes in animal life cycles | ✓ | 4 | Giữ |
 | 5. The basic needs of animals | ✓ | 5 | Giữ |
 
-### 13. Em khoẻ mạnh · Oak Y2 #6 [Healthy me](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/healthy-me/lessons)
+### 12. Em khoẻ mạnh · Oak Y2 #6 [Healthy me](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/healthy-me/lessons)
 
 7 lesson Oak (7 bắt buộc) → **7 bài app**.
 

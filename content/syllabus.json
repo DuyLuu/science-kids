@@ -391,77 +391,80 @@
           "topic_id": "60baa168-c573-4efd-853d-61b7f748e2b1"
         },
         {
-          "key": "seasonal-changes-autumn-and-winter",
+          "key": "new-weather-and-seasons",
           "number": 5,
           "title": {
-            "en": "Autumn, winter and the dry season",
-            "vi": "Thu, đông và mùa khô"
+            "en": "Weather and seasons",
+            "vi": "Thời tiết và các mùa"
           },
           "strand": "earth_sky",
-          "level": 1,
+          "level": 2,
           "source": {
-            "kind": "oak",
-            "unit_slug": "seasonal-changes-autumn-and-winter",
-            "year": 1,
-            "unit_index": 2
+            "kind": "new"
           },
           "lessons": [
             {
               "number": 1,
               "title": {
-                "en": "Signs of autumn",
-                "vi": "Dấu hiệu mùa thu và cuối mùa mưa"
+                "en": "Weather today",
+                "vi": "Thời tiết hôm nay"
               },
-              "oak_lessons": [
-                "signs-of-autumn"
-              ],
-              "statutory": true
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "821c68e7-6b92-48f7-b282-13f3b9d57884"
             },
             {
               "number": 2,
               "title": {
-                "en": "Weather in autumn",
-                "vi": "Thời tiết mùa thu và cuối mùa mưa"
+                "en": "Spring and summer",
+                "vi": "Mùa xuân và mùa hè"
               },
-              "oak_lessons": [
-                "weather-in-autumn"
-              ],
-              "statutory": true
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "c6866516-856e-4527-8da6-b140be5cd08a"
             },
             {
               "number": 3,
               "title": {
-                "en": "Signs of winter",
-                "vi": "Dấu hiệu mùa đông và mùa khô"
+                "en": "Autumn and winter",
+                "vi": "Mùa thu và mùa đông"
               },
-              "oak_lessons": [
-                "signs-of-winter"
-              ],
-              "statutory": true
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "447565f9-50da-407e-b52b-7b3a33468761"
             },
             {
               "number": 4,
               "title": {
-                "en": "Weather in winter",
-                "vi": "Thời tiết mùa đông và mùa khô"
+                "en": "Rainy and dry seasons",
+                "vi": "Mùa mưa và mùa khô"
               },
-              "oak_lessons": [
-                "weather-in-winter"
-              ],
-              "statutory": true
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "adf7d86b-7434-4ed8-b039-5e4f627a038c"
             },
             {
               "number": 5,
               "title": {
-                "en": "Day length in winter",
-                "vi": "Ngày mùa đông ngắn hơn"
+                "en": "Twelve months",
+                "vi": "Mười hai tháng"
               },
-              "oak_lessons": [
-                "day-length-in-winter"
-              ],
-              "statutory": true
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "9d0fd724-1478-4ca1-9b5a-7186f12434b8"
+            },
+            {
+              "number": 6,
+              "title": {
+                "en": "Seasons come back",
+                "vi": "Mùa lại về"
+              },
+              "oak_lessons": [],
+              "statutory": false,
+              "lesson_id": "0262e1c8-cc03-44c3-8e43-affeacda44fb"
             }
-          ]
+          ],
+          "topic_id": "ac6f6c40-bcf9-4a4c-a2ee-66a32f6e1a75"
         },
         {
           "key": "human-body-parts",
@@ -488,7 +491,8 @@
               "oak_lessons": [
                 "humans-are-animals"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "a97a94ad-607f-4c22-a238-8ab0d37f34f5"
             },
             {
               "number": 2,
@@ -499,7 +503,8 @@
               "oak_lessons": [
                 "body-parts-on-the-outside"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "4f3a74f1-5d9d-48e0-afc7-63e3e174ee45"
             },
             {
               "number": 3,
@@ -510,7 +515,8 @@
               "oak_lessons": [
                 "body-parts-on-the-inside"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "6d5442da-139c-4f79-9610-3715e2d16e75"
             },
             {
               "number": 4,
@@ -521,7 +527,8 @@
               "oak_lessons": [
                 "body-parts-for-our-senses"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "86501543-271f-4091-91e7-f7c694ea7220"
             },
             {
               "number": 5,
@@ -532,7 +539,8 @@
               "oak_lessons": [
                 "more-about-sight-smell-and-sound"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "60647423-4dc9-468c-ae6c-4f0b19dc0869"
             },
             {
               "number": 6,
@@ -543,9 +551,11 @@
               "oak_lessons": [
                 "more-about-taste-and-touch"
               ],
-              "statutory": true
+              "statutory": true,
+              "lesson_id": "5959b0bb-c2a9-4581-99e8-2c93a1f86ca2"
             }
-          ]
+          ],
+          "topic_id": "e0a34a96-0707-43a8-a84e-20c20d596111"
         },
         {
           "key": "identifying-plants-and-their-basic-parts",
@@ -643,81 +653,8 @@
           ]
         },
         {
-          "key": "seasonal-changes-spring-and-summer",
-          "number": 8,
-          "title": {
-            "en": "Spring, summer and the rainy season",
-            "vi": "Xuân, hè và mùa mưa"
-          },
-          "strand": "earth_sky",
-          "level": 1,
-          "source": {
-            "kind": "oak",
-            "unit_slug": "seasonal-changes-spring-and-summer",
-            "year": 1,
-            "unit_index": 5
-          },
-          "lessons": [
-            {
-              "number": 1,
-              "title": {
-                "en": "Signs of spring",
-                "vi": "Dấu hiệu mùa xuân và cuối mùa khô"
-              },
-              "oak_lessons": [
-                "signs-of-spring"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 2,
-              "title": {
-                "en": "Weather in spring",
-                "vi": "Thời tiết mùa xuân và cuối mùa khô"
-              },
-              "oak_lessons": [
-                "weather-in-spring"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 3,
-              "title": {
-                "en": "Signs of summer",
-                "vi": "Dấu hiệu mùa hè và mùa mưa"
-              },
-              "oak_lessons": [
-                "signs-of-summer"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 4,
-              "title": {
-                "en": "Weather in summer",
-                "vi": "Thời tiết mùa hè và mùa mưa"
-              },
-              "oak_lessons": [
-                "weather-in-summer"
-              ],
-              "statutory": true
-            },
-            {
-              "number": 5,
-              "title": {
-                "en": "Day length in summer",
-                "vi": "Ngày mùa hè dài hơn"
-              },
-              "oak_lessons": [
-                "day-length-in-summer"
-              ],
-              "statutory": true
-            }
-          ]
-        },
-        {
           "key": "everyday-materials",
-          "number": 9,
+          "number": 8,
           "title": {
             "en": "Everyday materials",
             "vi": "Vật liệu quanh em"
@@ -814,7 +751,7 @@
         },
         {
           "key": "uses-of-everyday-materials",
-          "number": 10,
+          "number": 9,
           "title": {
             "en": "Uses of everyday materials",
             "vi": "Vật liệu dùng làm gì?"
@@ -899,7 +836,7 @@
         },
         {
           "key": "growing-plants",
-          "number": 11,
+          "number": 10,
           "title": {
             "en": "Growing plants",
             "vi": "Trồng cây"
@@ -1005,7 +942,7 @@
         },
         {
           "key": "new-life",
-          "number": 12,
+          "number": 11,
           "title": {
             "en": "New life",
             "vi": "Sự sống mới"
@@ -1078,7 +1015,7 @@
         },
         {
           "key": "healthy-me",
-          "number": 13,
+          "number": 12,
           "title": {
             "en": "Healthy me",
             "vi": "Em khoẻ mạnh"

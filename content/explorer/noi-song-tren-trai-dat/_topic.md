@@ -191,7 +191,7 @@ note: Key ở bảng SK-048, cặp đôi với plants_grow_anywhere của chủ 
 - Ý chính: "A savanna is hot, with tall grass." · "Đồng cỏ xavan nóng và có cỏ cao." / "It has a rainy and a dry season." · "Ở đó có mùa mưa và mùa khô." / "Big herds walk far to find water." · "Những đàn thú lớn đi rất xa để tìm nước."
 - Học (bốn ô): `explore_savanna` Savanna · Đồng cỏ xavan (ảnh mới, cây keo tán rộng, không con vật; ví dụ "in Africa, very far away" · "ở châu Phi, rất xa"); `explore_dry` Dry season · Mùa khô (ảnh mới, cỏ vàng; ví dụ nói mùa mưa cỏ xanh bằng lời, không có ảnh cặp mùa); `explore_herd` Herd · Đàn thú (ảnh mới, đàn linh dương đầu bò); `explore_giraffe` Giraffe · Hươu cao cổ (dùng lại `tray_africa`; câu "Giraffes eat leaves from tall trees.").
 - Con vật: ngựa vằn (`tray_zebra`), linh dương đầu bò, hươu cao cổ, voi châu Phi (`tray_elephant`), sư tử nằm nghỉ (`tray_lion`). Không dùng voi châu Á của #1. Món bẫy trâu có nhãn EN "Water buffalo" (VI "Con trâu"), vì xavan châu Phi có trâu rừng châu Phi (*Syncerus caffer*) tiếng Anh cũng gọi là "buffalo".
-- Misconception: `lions_live_in_jungle`. Mùa mưa, mùa khô chỉ giới thiệu bằng một câu (hai chủ đề mùa đứng sau); không câu hỏi nào dựa vào ảnh mùa.
+- Misconception: `lions_live_in_jungle`. Mùa mưa, mùa khô chỉ giới thiệu bằng một câu (mùa dạy ở chủ đề Explorer số năm *Thời tiết và các mùa*, đứng ngay sau); không câu hỏi nào dựa vào ảnh mùa.
 
 **Bài 7 · Sa mạc · Deserts (`apply`)**
 - Mục tiêu: "I can say how animals live in deserts." · "Em biết con vật sống ở sa mạc ra sao."
@@ -710,7 +710,7 @@ Thứ tự đúng của các câu `order_sequence` (mỗi câu đúng một th�
 - ***Gọi tên và nhóm động vật* (#1):** dùng tên con vật, động vật hoang dã, lông, lông vũ, vảy; không lặp key `water_animals_are_fish`, `all_birds_fly`, `starfish_is_fish`.
 - ***Sinh vật sống ở đâu?* (#2):** dùng "nơi sống", mặn, ngọt, rừng, rừng ngập mặn, cá thòi lòi; không dạy lại "nơi sống là gì", nơi sống nhỏ. Đồi cát Việt Nam không bao giờ gọi là sa mạc.
 - ***Chuỗi thức ăn* (#3):** dùng nhẹ "con vật ăn gì" (bài 1 hải cẩu, bài 6 nhóm ăn cỏ, ăn lá, ăn thịt); không chuỗi, không mũi tên, không cảnh săn mồi.
-- ***Thu, đông và mùa khô*, *Xuân, hè và mùa mưa* (#5, #8):** bài 1, 2 không dạy mùa; bài 6 nói mùa mưa, mùa khô bằng một câu; không dạy mùa ở Việt Nam.
+- ***Thời tiết và các mùa* (#5, thay hai chủ đề mùa cũ từ 17/11):** bài 1, 2 không dạy mùa; bài 6 nói mùa mưa, mùa khô bằng một câu; không dạy mùa ở Việt Nam. Chủ đề #5 dùng lại `explore_dry` của bài 6 ở bài 4 câu w2, nâng `dry_season` lên `core` ở bài 4.
 - ***Cây quanh em*, *Trồng cây* (#7, #11):** cây chỉ làm cảnh (cây keo, chà là, đước, sen); không dạy bộ phận cây.
 - ***Sự sống mới* (#12):** không vòng đời, không ấp trứng.
 - **Discoverer #1 *Bề mặt Trái Đất*:** châu lục, đại dương, bản đồ để dành; Bắc Cực không nói là đất liền, Nam Cực không nói là biển.

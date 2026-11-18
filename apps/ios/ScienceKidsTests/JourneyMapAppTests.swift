@@ -10,12 +10,12 @@ import UIKit
 /// a topic, the items of the map for each group, the seals stamped once.
 @MainActor
 @Suite struct JourneyMapAppTests {
-    /// The 46 icons of the designer are in the catalog as `Topic-<key>`, one for every topic of the
+    /// The 45 icons of the designer are in the catalog as `Topic-<key>`, one for every topic of the
     /// bundled syllabus (no more "•••" on the journey).
     @Test func everySyllabusTopicHasItsIcon() throws {
         let content = BundledContent.fixtures()
         let topics = Topic.AgeGroup.known.flatMap { content.journey(for: $0) }
-        #expect(topics.count == 46)
+        #expect(topics.count == 45)
         for topic in topics {
             #expect(UIImage(named: TopicIcon.assetName(key: topic.key)) != nil, "Topic-\(topic.key)")
             #expect(TopicIcon.name(key: topic.key, strand: topic.strand) == "Topic-\(topic.key)", "\(topic.key) uses its own icon")
@@ -38,7 +38,7 @@ import UIKit
     }
 
     /// The map of each group: a post per stage then its topics, the flag at the end; ids unique,
-    /// topics in journey order. Discoverer 3 stages (5 + 6 + 6), Explorer 5 (1 + 2 + 1 + 5 + 4), Scientist 3.
+    /// topics in journey order. Discoverer 3 stages (5 + 6 + 6), Explorer 5 (1 + 2 + 2 + 3 + 4), Scientist 3.
     @Test func mapItemsOfEachGroup() throws {
         let content = BundledContent.fixtures()
         func entries(_ group: Topic.AgeGroup) -> [JourneyMapEntry] {
@@ -71,8 +71,8 @@ import UIKit
         let firstWritten = content.journey(for: .discoverer).first { $0.firstPlayable != nil }?.key
         #expect(firstWritten != nil)
         #expect(current == [firstWritten].compactMap { $0 })
-        // Explorer since SK-048 (Duy 16/11): five stages (Year 1, 2, new, 1, 2), 13 stops, the flag.
-        #expect(entries(.explorer).count == 5 + 13 + 1)
+        // Explorer since SK-050 (Duy 17/11): five stages (Year 1, 2, new, 1, 2), 12 stops, the flag.
+        #expect(entries(.explorer).count == 5 + 12 + 1)
         #expect(entries(.scientist).count == 3 + 16 + 1)
         #expect(JourneyMapEntry.entries(JourneyProgress(topics: [], progress: .empty)).isEmpty)
         // Laid out on a 390 phone, the map is the canvas's 2430 tall (rows at their minimum).

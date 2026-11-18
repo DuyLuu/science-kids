@@ -1,0 +1,299 @@
+{
+  "note": "SK-050 bài 4 (Mùa mưa và mùa khô). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson, chọn mục có khung gần nhất (thẻ ba lựa chọn trỏ tới thẻ ba lựa chọn, thẻ từ trỏ tới thẻ từ). Ảnh Explorer chủ đề khác trỏ thẳng tới mục có crop đúng khung; ảnh Discoverer chép mục gốc. Ảnh mới: 6 (mưa trên phố, mây đen, đường mùa khô, bình tưới cây, vũng nước, quả xoài).",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_hat": {
+      "same_as": "w1.w1_hat",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_scarf": {
+      "same_as": "tray.tray_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_dry",
+      "lesson": "noi-song-tren-trai-dat/dong-co-xavan"
+    },
+    "learn.explore.explore_rainy_season": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_typical_Bangkok_style_tuk_tuk_in_LP,_and_rain!_(14605627055).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/A_typical_Bangkok_style_tuk_tuk_in_LP%2C_and_rain%21_%2814605627055%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A typical Bangkok style tuk tuk in LP, and rain! (14605627055)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.04,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): mưa to trên phố ở Luang Prabang, Lào (trang gốc, thể loại Rain in Laos), thấy rõ vệt mưa, mặt đường ướt, không ngập; xe tuk tuk đỗ bên lề, không thấy người lái; không ai nhìn rõ mặt. Crop vuông bỏ biển hiệu chữ ở hai mép và biển số xe con bên phải. Hình gốc của chủ đề (bài 6 ghép lại). Không tìm được ảnh mưa phố miền Nam Việt Nam hợp lệ (ảnh Commons về mưa ở Việt Nam đa số CC BY-SA hoặc chỉ là đường ướt không thấy vệt mưa)."
+    },
+    "learn.explore.explore_dark_clouds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rain_tree_laos_4000_islands.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Rain_tree_laos_4000_islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rain tree laos 4000 islands",
+      "author": "Basilemorin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): mây đen dày kéo tới trên sông Mê Kông và một cây me tây lớn ở Don Det (Si Phan Don, Lào), chưa mưa, không sét, không người. Hình gốc của chủ đề. Không có mái nhà: không tìm được ảnh mây đen trên mái nhà hay phố hợp luật."
+    },
+    "learn.explore.explore_dry_season": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-11-15_Road_to_Vat_Phou.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/2024-11-15_Road_to_Vat_Phou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-11-15 Road to Vat Phou",
+      "author": "Alexkom000",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.1667,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): con đường đất đỏ khô dưới hàng cây xanh hai bên, nắng xuyên tán lá, bóng cây đổ trên mặt đường (đường tới Vat Phou, Champasak, Lào; chụp 15/11/2024, đầu mùa khô). Không đất nứt, không bụi, không người; một chiếc xe rất nhỏ ở cuối đường. Không thấy bầu trời. Hình gốc của chủ đề (bài 6 ghép lại)."
+    },
+    "learn.explore.explore_fields": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Field_in_Vietnam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rice_Field_in_Vietnam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Field in Vietnam - panoramio",
+      "author": "Gonzo Gooner",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "SK-050 (designer 17/11): chép nguyên mục q2.q2_rice của Discoverer khung-long/trai-dat-rat-lau-ve-truoc (ruộng lúa xanh Việt Nam, CC BY 3.0); same_as không sang nhóm tuổi khác."
+    },
+    "tray.tray_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_raincoat": {
+      "same_as": "tray.tray_raincoat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_watering_can": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "d6fe030b-7220-4b85-9031-97af6e9d8d72",
+      "source_url": "https://www.flickr.com/photos/60944636@N00/52399196242",
+      "file_url": "https://live.staticflickr.com/65535/52399196242_9f855d5de7_b.jpg",
+      "title": "planted seeds and watering can 20220926_065444",
+      "author": "el cajon yacht club",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): bình tưới cây nhựa xanh vòi dài đặt trên nền xi măng, phía sau là các chậu cây; không người, không chữ đọc được (Flickr, CC BY 2.0, đã mở trang gốc kiểm). Hình gốc của chủ đề (bài 5 dùng lại)."
+    },
+    "tray.tray_scarf": {
+      "same_as": "tray.tray_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_hat": {
+      "same_as": "tray.tray_hat",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_boots": {
+      "same_as": "tray.tray_boots",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_quilt": {
+      "same_as": "tray.tray_quilt",
+      "lesson": "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_scarf": {
+      "same_as": "q4.q4_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q1.q1_raincoat": {
+      "same_as": "q1.q1_raincoat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q1.q1_can": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "d6fe030b-7220-4b85-9031-97af6e9d8d72",
+      "source_url": "https://www.flickr.com/photos/60944636@N00/52399196242",
+      "file_url": "https://live.staticflickr.com/65535/52399196242_9f855d5de7_b.jpg",
+      "title": "planted seeds and watering can 20220926_065444",
+      "author": "el cajon yacht club",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.42,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh tray.tray_watering_can, crop 5:2 cho thẻ ba lựa chọn."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_dry_season"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_rain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_typical_Bangkok_style_tuk_tuk_in_LP,_and_rain!_(14605627055).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/A_typical_Bangkok_style_tuk_tuk_in_LP%2C_and_rain%21_%2814605627055%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A typical Bangkok style tuk tuk in LP, and rain! (14605627055)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.04,
+        "top": 0.22,
+        "width": 0.76,
+        "height": 0.596
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_rainy_season, crop 17:10 cho thẻ hai lựa chọn; bỏ biển hiệu chữ ở hai mép, không thấy biển số xe."
+    },
+    "q3.q3_dry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-11-15_Road_to_Vat_Phou.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/2024-11-15_Road_to_Vat_Phou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-11-15 Road to Vat Phou",
+      "author": "Alexkom000",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1176,
+        "width": 1,
+        "height": 0.8824
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_dry_season, crop 17:10 cho thẻ hai lựa chọn."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_puddle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:CUBA_-_panoramio_(16).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CUBA_-_panoramio_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "CUBA - panoramio (16)",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.09,
+        "top": 0.6,
+        "width": 0.267,
+        "height": 0.4
+      },
+      "note": "SK-050 (designer 17/11): vũng nước trên mặt đường sau mưa ở La Habana, Cuba, mặt nước phản chiếu trời xanh đã sáng và hàng cây, toà nhà; không xe, người ở rất xa. Crop chỉ lấy vũng nước và mặt đường, bỏ tấm biển chữ của quán, vạch sơn trên đường, người và xe máy ở xa."
+    },
+    "q4.q4_clouds": {
+      "same_as": "learn.explore.explore_dark_clouds"
+    },
+    "q5": {
+      "same_as": "tray.tray_watering_can"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_seasons",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "vocab.rainy_season": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_typical_Bangkok_style_tuk_tuk_in_LP,_and_rain!_(14605627055).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/A_typical_Bangkok_style_tuk_tuk_in_LP%2C_and_rain%21_%2814605627055%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A typical Bangkok style tuk tuk in LP, and rain! (14605627055)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.04,
+        "top": 0.25,
+        "width": 0.76,
+        "height": 0.507
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_rainy_season, crop 2:1 cho thẻ từ."
+    },
+    "vocab.dry_season": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-11-15_Road_to_Vat_Phou.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/2024-11-15_Road_to_Vat_Phou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-11-15 Road to Vat Phou",
+      "author": "Alexkom000",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.25,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_dry_season, crop 2:1 cho thẻ từ."
+    },
+    "vocab.puddle": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:CUBA_-_panoramio_(16).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CUBA_-_panoramio_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "CUBA - panoramio (16)",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.09,
+        "top": 0.66,
+        "width": 0.42,
+        "height": 0.3146
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh q4.q4_puddle, crop 2:1 cho thẻ từ, tránh tấm biển chữ, bóng của nó và người ở xa."
+    },
+    "vocab.dark_cloud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rain_tree_laos_4000_islands.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Rain_tree_laos_4000_islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rain tree laos 4000 islands",
+      "author": "Basilemorin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh learn.explore.explore_dark_clouds, crop 2:1 cho thẻ từ."
+    },
+    "reward.mango_card": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "26302b91-645c-43bf-9c63-04cbb6cdceee",
+      "source_url": "https://www.flickr.com/photos/11211909@N00/51989672334",
+      "file_url": "https://live.staticflickr.com/65535/51989672334_b01784a4fe_b.jpg",
+      "title": "Mango tree",
+      "author": "corsi photo",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): chùm quả xoài còn xanh treo trên cây giữa tán lá dài (Flickr, CC BY 2.0, tác giả julie corsi, đã mở trang gốc kiểm). Quả chưa ngả vàng: không tìm được ảnh hợp lệ có quả xoài chín vàng trên cây (ảnh Rawpixel CC0 không mở được trang gốc để kiểm; ảnh CSIRO quả màu tím)."
+    }
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "note": "SK-050 bài 3 (Mùa thu và mùa đông). Designer (agent) chọn 17/11/2026, chờ Duy duyệt. Cùng nếp như bài 1. Không ảnh nào có tuyết, băng. q4.q4_yellow là hình gốc lá vàng mới của cả chủ đề.",
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_flame": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.8,
+        "height": 0.7085
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_summer` ở bài 2, crop 17:10 (tránh xe, số nhà)."
+    },
+    "w1.w1_peach": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peach_Blossom_(102375993).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Peach_Blossom_%28102375993%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peach Blossom",
+      "author": "Alto Clef",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.05,
+        "width": 1,
+        "height": 0.8826
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_spring` ở bài 2, crop 17:10."
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-10-24 - vivid yellow ginkgo leaf on distant twig against a blue sky - DSM4694",
+      "author": "Franz van Duns",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.29,
+        "width": 1,
+        "height": 0.5
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `q4_yellow`, crop 4:3."
+    },
+    "learn.explore.explore_autumn": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Darjeeling,_India,_Tree_canopy_against_the_clear_blue_sky.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Darjeeling%2C_India%2C_Tree_canopy_against_the_clear_blue_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Darjeeling, India, Tree canopy against the clear blue sky",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.217,
+        "top": 0,
+        "width": 0.6667,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Tán cây lá xanh ngả vàng nhạt nhìn từ dưới lên, trời xanh trong, ít mây (Darjeeling, Ấn Độ); không lá đỏ, không tuyết, không người. Không phải hàng cây ven phố Việt Nam như brief ưu tiên. Crop vuông."
+    },
+    "learn.explore.explore_winter": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fog_in_Hanoi,_Vietnam_in_5_March_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fog_in_Hanoi%2C_Vietnam_in_5_March_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fog in Hanoi, Vietnam in 5 March 2012",
+      "author": "Banhtrung1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.33,
+        "top": 0.107,
+        "width": 0.67,
+        "height": 0.893
+      },
+      "note": "SK-050 (designer 18/11, sửa sau chạy thử): thay ảnh phố Hà Nội 2/2008 (người gần rõ mặt, biển số, biển hiệu, băng rôn, mã vạch; không crop nào sạch). Một khoảng đường trong sương mù dày ở Ba Đình, Hà Nội (5/3/2012, trang gốc ghi đúng nơi), mặt đường ướt, cây mờ trong sương; không tuyết, không người, không chữ. Crop bỏ dải xe đỗ bên trái (biển số) và giỏ rác. Crop vuông. Đã tìm ảnh phố Hà Nội mùa đông có người mặc áo ấm ở xa: Commons (chuỗi Syced 2/2008, các thể loại Winter in Vietnam, Fog in Vietnam), Openverse/Flickr; ảnh hợp giấy phép đều có người gần hoặc chữ, ảnh phố Hà Nội 2021–2026 đều CC BY-SA."
+    },
+    "learn.explore.explore_red_leaves": {
+      "same_as": "reward.almond_card",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "learn.explore.explore_short_days": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Canal_of_S%C3%A8te_at_dusk_cf01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Canal_of_S%C3%A8te_at_dusk_cf01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Canal of Sète at dusk cf01",
+      "author": "Christian Ferrer",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.05,
+        "top": 0,
+        "width": 0.5624,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Kênh và dãy phố lúc chập tối, đèn phố và cửa sổ đã sáng, trời xanh sẫm (Sète, Pháp). Ảnh gốc có số đăng ký trên thuyền ở mép phải (x 0,84–0,9): mọi crop dừng ở x 0,75. Không người ở gần. Crop vuông."
+    },
+    "tray.tray_hat": {
+      "same_as": "tray.tray_hat",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_fan": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:9845Cuisine_foods_goods_in_Bulacan_47.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/9845Cuisine_foods_goods_in_Bulacan_47.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Woven palm hand fans",
+      "author": "Judgefloro",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0,
+        "width": 0.6375,
+        "height": 0.85
+      },
+      "note": "SK-050 (designer 17/11): Quạt nan đan bằng lá cọ treo thành chồng ở sạp hàng (Bulacan, Philippines), chụp gần thấy rõ nan đan; không người, không chữ (nhãn ở góc dưới trái ảnh gốc đã cắt bỏ). Không phải nền trơn như brief. Crop vuông."
+    },
+    "tray.tray_scarf": {
+      "same_as": "tray.tray_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_wool_hat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grandpa%27s_hat_(21985138971).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Grandpa%27s_hat_%2821985138971%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Grandpa's hat (21985138971)",
+      "author": "sammydavisdog from East Midlands, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): Mũ len đan sọc kem, xanh, đỏ trải phẳng trên tấm lót đen; không người đội, không nhãn hiệu, không chữ. Crop vuông."
+    },
+    "tray.tray_tshirt": {
+      "same_as": "tray.tray_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_quilt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bed_with_Duvet.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bed_with_Duvet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bed with a duvet",
+      "author": "Maniago",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bed_with_Duvet.JPG",
+      "crop": {
+        "left": 0.1,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): hình gốc của chủ đề. Chăn bông trắng dày phủ trên giường đơn, không người, không chữ; chăn trải phẳng, không gấp như brief. Crop vuông."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_flame": {
+      "same_as": "q1.q1_flame",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q1.q1_red": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Pointe_d%27Antigue_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Terminalia_catappa_near_Pointe_d%27Antigue_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Pointe d'Antigue (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.05,
+        "width": 1,
+        "height": 0.6222
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `almond_card` ở sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song (lá bàng đỏ), crop 5:2 riêng."
+    },
+    "q1.q1_cicada": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cicada._Cicadidae_-_Flickr_-_gailhampshire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cicada. Cicadidae - Flickr - gailhampshire",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.15,
+        "width": 1,
+        "height": 0.3038
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_cicada` ở bài 2, crop 5:2."
+    },
+    "q2": {
+      "same_as": "w2"
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Canal_of_S%C3%A8te_at_dusk_cf01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Canal_of_S%C3%A8te_at_dusk_cf01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Canal of Sète at dusk cf01",
+      "author": "Christian Ferrer",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.7499,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_short_days`, crop 4:3 (dừng ở x 0,75, tránh số trên thuyền)."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_yellow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/2024-10-24_-_vivid_yellow_ginkgo_leaf_on_distant_twig_against_a_blue_sky_-_DSM4694.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2024-10-24 - vivid yellow ginkgo leaf on distant twig against a blue sky - DSM4694",
+      "author": "Franz van Duns",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.28125,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "SK-050 (designer 18/11, sửa sau chạy thử): thay lá phong có đốm đen, lỗ thủng. Lá bạch quả vàng tươi, lành, trên cành nhỏ, nền trời xanh trong; không tuyết, không người, không chữ. Không tìm được ảnh lá vàng của cây hay gặp ở Việt Nam hợp luật và sạch (lá bàng đã dùng cho lá đỏ, `almond_card`). Hình gốc của chủ đề; crop vuông lấy trọn chiếc lá trên và một phần lá dưới."
+    },
+    "q4.q4_peach": {
+      "same_as": "learn.explore.explore_spring",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q4.q4_flame": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Coral_Gables_Royal_Poinciana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Royal poinciana in bloom",
+      "author": "NancyHeise",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_Royal_Poinciana.jpg",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.4,
+        "height": 0.6022
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_summer` ở bài 2, crop vuông phần tán hoa bên trái (512 px; crop sát chùm hoa chỉ còn 256 px vì fetch lấy bản 1280 px)."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_summer": {
+      "same_as": "q1.q1_flame",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q5.q5_spring": {
+      "same_as": "q3.q3_buds",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q5.q5_winter": {
+      "same_as": "q1.q1_coat",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fog_in_Hanoi,_Vietnam_in_5_March_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fog_in_Hanoi%2C_Vietnam_in_5_March_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fog in Hanoi, Vietnam in 5 March 2012",
+      "author": "Banhtrung1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.33,
+        "top": 0.33,
+        "width": 0.67,
+        "height": 0.67
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `explore_winter`, crop 4:3, bỏ dải xe đỗ bên trái."
+    },
+    "vocab.autumn": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Darjeeling,_India,_Tree_canopy_against_the_clear_blue_sky.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Darjeeling%2C_India%2C_Tree_canopy_against_the_clear_blue_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Darjeeling, India, Tree canopy against the clear blue sky",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_autumn`, crop 2:1."
+    },
+    "vocab.winter": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fog_in_Hanoi,_Vietnam_in_5_March_2012.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fog_in_Hanoi%2C_Vietnam_in_5_March_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fog in Hanoi, Vietnam in 5 March 2012",
+      "author": "Banhtrung1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.33,
+        "top": 0.4557,
+        "width": 0.67,
+        "height": 0.4466
+      },
+      "note": "SK-050 (designer 18/11): cùng ảnh `explore_winter`, crop 2:1, bỏ dải xe đỗ bên trái."
+    },
+    "vocab.cool": {
+      "same_as": "vocab.autumn"
+    },
+    "vocab.coat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Anorak01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Red puffer jacket on a hanger",
+      "author": "sand",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Anorak01.jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.01,
+        "width": 1,
+        "height": 0.6736
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `explore_cold` ở bài 1, crop 2:1."
+    },
+    "vocab.scarf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2016-366-334_Always_Count_on_Mom%27s_Scarf_(30960879140).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/2016-366-334_Always_Count_on_Mom%27s_Scarf_%2830960879140%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2016-366-334 Always Count on Mom's Scarf (30960879140)",
+      "author": "cogdogblog",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-050 (designer 17/11): cùng ảnh `tray_scarf` ở bài 1, crop 2:1."
+    },
+    "reward.blackboard_tree_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alstonia_scholaris_-_Flower_01.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alstonia_scholaris_-_Flower_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Alstonia scholaris - Flower 01",
+      "author": "Forestowlet",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.175,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "SK-050 (designer 17/11): Chùm hoa sữa trắng ngà, lá dài xếp vòng quanh cành (Alstonia scholaris, trang gốc ghi đúng loài); không người, không chữ. Crop vuông."
+    }
+  }
+}
