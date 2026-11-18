@@ -1,0 +1,272 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_knee": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/knee.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A knee",
+      "note": "Designer (agent) 17/11: bản khung 17:10 của co-the-cua-em/knee.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "w1.w1_hand": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/hand.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand",
+      "note": "Designer (agent) 17/11: bản khung 17:10 của nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_hand.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "co-the-cua-em/con-nguoi-cung-la-dong-vat"
+    },
+    "learn.explore.explore_inside": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-inside.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with parts inside",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "learn.explore.explore_heart": {
+      "own": {
+        "file": "content/images/own/ho-hap/blood-vessels.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with blood paths to the arms and legs",
+      "note": "Chép mục gốc discoverer/ho-hap/tho-khi-chay-nhay vocab.blood (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "learn.explore.explore_breathe": {
+      "own": {
+        "file": "content/images/own/ho-hap/airway-lungs.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, lungs coloured",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi learn.explore.explore_lungs (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "learn.explore.explore_food": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-stomach.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with the stomach coloured",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt); ghép từ ba bản tô của sơ đồ đường thở (Hô hấp, airway-nose/-lungs/-food-air): phổi, khí quản, mũi nhạt; chỉ thực quản và dạ dày tô nâu đất"
+    },
+    "learn.explore.explore_brain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.learn.explore.explore_head.jpg",
+        "method": "drawn"
+      },
+      "title": "A head with the brain inside the skull",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the learn.explore.explore_head (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_brain": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q2.q2_brain.jpg",
+        "method": "drawn"
+      },
+      "title": "A brain",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the q2.q2_brain (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_ear": {
+      "same_as": "q4.q4_ear",
+      "lesson": "co-the-cua-em/bo-phan-ben-ngoai-co-the"
+    },
+    "tray.tray_heart": {
+      "own": {
+        "file": "content/images/own/ho-hap/heart.jpg",
+        "method": "drawn"
+      },
+      "title": "A heart",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_heart (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_nose": {
+      "own": {
+        "file": "content/images/own/ho-hap/nose-side.jpg",
+        "method": "drawn"
+      },
+      "title": "A nose, side view",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_nose (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_stomach": {
+      "own": {
+        "file": "content/images/own/ho-hap/stomach.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_stomach (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_hand": {
+      "same_as": "tray.tray_hand",
+      "lesson": "co-the-cua-em/bo-phan-ben-ngoai-co-the"
+    },
+    "tray.tray_lungs": {
+      "own": {
+        "file": "content/images/own/ho-hap/lungs.jpg",
+        "method": "drawn"
+      },
+      "title": "Two lungs",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_lungs (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_brain": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/brain.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A brain",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.q2.q2_brain.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q1.q1_stomach": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/stomach.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của ho-hap/stomach.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q1.q1_lungs": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/lungs.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "Two lungs",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của ho-hap/lungs.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/ho-hap/stomach.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_stomach (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_heart": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/heart.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A heart",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của ho-hap/heart.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "q3.q3_lungs": {
+      "same_as": "q1.q1_lungs"
+    },
+    "q3.q3_brain": {
+      "same_as": "q1.q1_brain"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_stomach": {
+      "same_as": "tray.tray_stomach"
+    },
+    "q4.q4_banana": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao.q5.q5_banana.jpg",
+        "method": "drawn"
+      },
+      "title": "A ripe banana",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao q5.q5_banana (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q4.q4_mouth": {
+      "own": {
+        "file": "content/images/own/ho-hap/mouth-side.jpg",
+        "method": "drawn"
+      },
+      "title": "A mouth, side view",
+      "note": "Chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_mouth (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_head": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-head.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the head shaded yellow",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_head.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q5.q5_tummy": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-tummy.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the tummy shaded yellow",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_tummy.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q5.q5_chest": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-chest.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the chest shaded yellow",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_chest.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.jpg",
+        "method": "drawn"
+      },
+      "title": "A child seen from the side",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the q1 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "vocab.heart": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/heart.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A heart",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của ho-hap/heart.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.lungs": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-lungs.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "Body drawing, lungs coloured",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của ho-hap/airway-lungs.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.stomach": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-stomach.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with the stomach coloured",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của co-the-cua-em/body-stomach.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.brain": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/brain.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A brain",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.q2.q2_brain.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.inside": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/body-inside.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A body drawing with parts inside",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của co-the-cua-em/body-inside.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "reward.heart_card": {
+      "same_as": "tray.tray_heart"
+    }
+  }
+}

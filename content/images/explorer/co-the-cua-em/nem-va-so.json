@@ -1,0 +1,441 @@
+{
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Two_pieces_of_burnt_toast.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Two_pieces_of_burnt_toast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Two pieces of burnt toast",
+      "author": "Sheep purple",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 17/11, SK-049: hai lát bánh mì nướng cháy đen trên đĩa trắng, không khói, không lửa, không máy nướng. Hình gốc của chủ đề."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_heart": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/heart.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A heart",
+      "note": "Designer (agent) 17/11: bản khung 17:10 của ho-hap/heart.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "w2.w2_stomach": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/stomach.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "Designer (agent) 17/11: bản khung 17:10 của ho-hap/stomach.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "w3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Man_feeds_his_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Man_feeds_his_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Man feeds his chickens",
+      "author": "Matt Seppings from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.53,
+        "top": 0.11,
+        "width": 0.45,
+        "height": 0.45
+      },
+      "note": "Chép mục gốc explorer/chuoi-thuc-an/con-vat-kiem-an-the-nao learn.explore.explore_fed (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-045 (designer 14/11): Hai bàn tay đưa thức ăn cho hai con gà mái trên bậc đá; cắt bỏ người, không thấy mặt. Thay ảnh StockSnap (không kiểm được giấy phép ở trang gốc). Crop cho khung learn."
+    },
+    "learn.explore.explore_tastes": {
+      "same_as": "tray.tray_lime",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    },
+    "learn.explore.explore_feel": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artocarpus_heterophyllus_Malaysia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Artocarpus_heterophyllus_Malaysia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Artocarpus heterophyllus Malaysia",
+      "author": "Tu7uh",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.005,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "Designer (agent) 17/11, SK-049: quả mít nguyên quả treo trên thân cây (Malaysia), cắt sát quả, rõ gai; không bổ, không dao, không người. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_mango": {
+      "same_as": "learn.explore.explore_look",
+      "lesson": "co-the-cua-em/nhin-ngui-va-nghe"
+    },
+    "learn.explore.explore_ask": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chi_Linh_Park_Hanoi_market_(62066).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Chi_Linh_Park_Hanoi_market_%2862066%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chi Linh Park Hanoi market (62066)",
+      "author": "JakobHosp",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.3385,
+        "top": 0.12,
+        "width": 0.243,
+        "height": 0.5
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao q5 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Sạp hoa quả ở chợ Hà Nội; cắt lấy phần trên (đu đủ, chuối, cam, xoài), bỏ hai người bán, thẻ mã QR và nhãn có chữ."
+    },
+    "tray.tray_lime": {
+      "same_as": "tray.tray_lime",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    },
+    "tray.tray_marbles": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Several_marbles.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Several_marbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Several marbles",
+      "author": "Conrad 7",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.0168,
+        "width": 1,
+        "height": 0.9663
+      },
+      "note": "Chép mục gốc explorer/sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song tray.tray_marble (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-046 (designer 14/11): Bi thuỷ tinh có vân màu trên nền trắng. Crop cho khung sq."
+    },
+    "tray.tray_ripe_mango": {
+      "same_as": "learn.explore.explore_look",
+      "lesson": "co-the-cua-em/nhin-ngui-va-nghe"
+    },
+    "tray.tray_salt": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Salt-crystals.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Salt-crystals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Salt-crystals",
+      "author": "Nate Steiner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2258,
+        "top": 0,
+        "width": 0.7484,
+        "height": 1
+      },
+      "note": "Designer (agent) 17/11, SK-049: đống hạt muối to trắng chụp gần (không thấy bát). Không có ảnh hợp lệ bát muối hột: các ảnh bát muối đều là lọ muối, đồ bạc cổ hay ảnh có chữ."
+    },
+    "tray.tray_green_mango": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:An_Unripe_Mango_Of_Ratnagiri_(India).JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/An_Unripe_Mango_Of_Ratnagiri_%28India%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An Unripe Mango Of Ratnagiri (India)",
+      "author": "Pranav011 at en.wikipedia",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.055,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "Designer (agent) 17/11, SK-049: một quả xoài xanh nguyên quả treo trên cây (Ratnagiri, Ấn Độ), khác rõ màu xoài chín vàng."
+    },
+    "tray.tray_soap": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Soap_in_blue_dish.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Soap_in_blue_dish.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Soap in blue dish",
+      "author": "TheLewisRepublic",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Soap_in_blue_dish.JPG",
+      "crop": {
+        "left": 0.075,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "Designer (agent) 17/11, SK-049: một bánh xà phòng trắng trong đĩa xà phòng xanh, không chữ khắc, không nhãn hiệu."
+    },
+    "tray.tray_banana": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lakatan_banana_bunch_(Philippines)_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lakatan_banana_bunch_%28Philippines%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lakatan banana bunch (Philippines) 01",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0.1444,
+        "width": 0.4,
+        "height": 0.7111
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha q4.q4_banana (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_lime": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lime-Whole-Split.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lime-Whole-Split.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lime-Whole-Split",
+      "author": "Evan-Amos",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.5,
+        "top": 0.2919,
+        "width": 0.5,
+        "height": 0.4163
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao q1 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Cắt lấy nửa quả chanh cắt đôi (ảnh gốc có cả quả nguyên)."
+    },
+    "q1.q1_sugar": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_Bowl_of_Sugar_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/A_Bowl_of_Sugar_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A Bowl of Sugar 2",
+      "author": "Sparkveela",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.32,
+        "width": 0.82,
+        "height": 0.4373
+      },
+      "note": "Designer (agent) 17/11, SK-049: bát gốm đựng đầy đường cát trắng. Mọi crop bỏ hộp in chữ ở mép phải. Hình gốc của chủ đề."
+    },
+    "q1.q1_bread": {
+      "same_as": "q4.q4_bread",
+      "lesson": "co-the-cua-em/nhin-ngui-va-nghe"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_Bowl_of_Sugar_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/A_Bowl_of_Sugar_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A Bowl of Sugar 2",
+      "author": "Sparkveela",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.16,
+        "width": 0.82,
+        "height": 0.82
+      },
+      "note": "Designer (agent) 17/11, SK-049: bát gốm đựng đầy đường cát trắng. Mọi crop bỏ hộp in chữ ở mép phải. Hình gốc của chủ đề."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_pillow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2014-04-22 IMG 7242 베개",
+      "author": "최광모 (Choe Kwangmo)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.2333,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the q5.q5_pillow (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q3.q3_jackfruit": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artocarpus_heterophyllus_Malaysia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Artocarpus_heterophyllus_Malaysia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Artocarpus heterophyllus Malaysia",
+      "author": "Tu7uh",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2833,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "Designer (agent) 17/11, SK-049: quả mít nguyên quả treo trên thân cây (Malaysia), cắt sát quả, rõ gai; không bổ, không dao, không người. Hình gốc của chủ đề."
+    },
+    "q3.q3_ice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cloudy_ice_cubes.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Cloudy_ice_cubes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cloudy ice cubes",
+      "author": "liz west",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2492,
+        "width": 1,
+        "height": 0.6016
+      },
+      "note": "Designer (agent) 17/11, SK-049: những viên đá lạnh xếp sát nhau, chụp gần, không đồ uống, không chữ."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_bitter_melon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HK_food_vegetable_%E8%8B%A6%E7%93%9C_Momordica_charantia_fruit_July_2024_R12S_02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/HK_food_vegetable_%E8%8B%A6%E7%93%9C_Momordica_charantia_fruit_July_2024_R12S_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "HK food vegetable 苦瓜 Momordica charantia fruit July 2024 R12S 02",
+      "author": "FourVZS 2024",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.02,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "Designer (agent) 17/11, SK-049: hai quả mướp đắng xanh nằm ngang trên nền trắng; crop lấy quả trên, bỏ dấu ngày giờ ở góc dưới. Đầu phải quả hơi bị cắt ở mép ảnh gốc. Hình gốc của chủ đề."
+    },
+    "q4.q4_lime": {
+      "same_as": "q1.q1_lime"
+    },
+    "q4.q4_banana": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lakatan_banana_bunch_(Philippines)_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lakatan_banana_bunch_%28Philippines%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lakatan banana bunch (Philippines) 01",
+      "author": "Obsidian Soul",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1444,
+        "width": 1,
+        "height": 0.7111
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha q4.q4_banana (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung thẻ 3 lựa chọn 5:2, con vật nằm trọn trong khung."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bare_feet_in_Central_Park,_New_York_City.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Bare_feet_in_Central_Park%2C_New_York_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bare feet in Central Park, New York City",
+      "author": "Northeastern Nomad",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0546,
+        "top": 0,
+        "width": 0.8308,
+        "height": 1
+      },
+      "note": "Designer (agent) 17/11, SK-049: đôi bàn chân trần (người lớn, gan bàn chân hướng về máy ảnh) trên bãi cỏ xanh, chỉ thấy bàn chân, cẳng chân, gấu quần; không mặt, không giày dép, không vết thương. Không tìm được ảnh hợp lệ bàn chân trẻ em trên cỏ. Hình gốc của chủ đề."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Big_Bowl_-_The_Big_Bowl_2024-12-18.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/The_Big_Bowl_-_The_Big_Bowl_2024-12-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The Big Bowl - The Big Bowl 2024-12-18",
+      "author": "Andy Li",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.2514,
+        "width": 0.66,
+        "height": 0.6573
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao learn.explore.explore_taste (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Bát phở bò viên và đĩa rau trên bàn gỗ, không người; cắt bỏ giấy gói đũa có chữ ở bên phải."
+    },
+    "vocab.taste": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Sweetness_By_Raju_C_Reddy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Golden_Sweetness_By_Raju_C_Reddy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Sweetness By Raju C Reddy",
+      "author": "rajucreddy",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1249,
+        "width": 1,
+        "height": 0.7503
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao learn.explore.explore_join (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "vocab.touch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/2014-04-22_IMG_7242_%EB%B2%A0%EA%B0%9C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2014-04-22 IMG 7242 베개",
+      "author": "최광모 (Choe Kwangmo)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1667,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the q5.q5_pillow (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "vocab.sour": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lime-Whole-Split.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lime-Whole-Split.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lime-Whole-Split",
+      "author": "Evan-Amos",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.5,
+        "top": 0.2398,
+        "width": 0.5,
+        "height": 0.5203
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao q1 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Cắt lấy nửa quả chanh cắt đôi (ảnh gốc có cả quả nguyên)."
+    },
+    "vocab.bitter": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HK_food_vegetable_%E8%8B%A6%E7%93%9C_Momordica_charantia_fruit_July_2024_R12S_02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/HK_food_vegetable_%E8%8B%A6%E7%93%9C_Momordica_charantia_fruit_July_2024_R12S_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "HK food vegetable 苦瓜 Momordica charantia fruit July 2024 R12S 02",
+      "author": "FourVZS 2024",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "Designer (agent) 17/11, SK-049: hai quả mướp đắng xanh nằm ngang trên nền trắng; crop lấy quả trên, bỏ dấu ngày giờ ở góc dưới. Đầu phải quả hơi bị cắt ở mép ảnh gốc. Hình gốc của chủ đề."
+    },
+    "vocab.prickly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artocarpus_heterophyllus_Malaysia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Artocarpus_heterophyllus_Malaysia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Artocarpus heterophyllus Malaysia",
+      "author": "Tu7uh",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2167,
+        "width": 1,
+        "height": 0.6667
+      },
+      "note": "Designer (agent) 17/11, SK-049: quả mít nguyên quả treo trên thân cây (Malaysia), cắt sát quả, rõ gai; không bổ, không dao, không người. Hình gốc của chủ đề."
+    },
+    "reward.skin_card": {
+      "same_as": "learn.explore.explore_touch",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    }
+  }
+}

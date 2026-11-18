@@ -1,0 +1,490 @@
+{
+  "images": {
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha learn.explore.explore_pets (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Chó trắng đốm nâu nằm trên sàn gạch trong nhà (không có ảnh hợp lệ chó vàng trên hiên). · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_elephant": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants_with_calf_(7568633672).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Elephants_with_calf_%287568633672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Elephants with calf (7568633672)",
+      "author": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2184,
+        "top": 0.1596,
+        "width": 0.7031,
+        "height": 0.6206
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/dong-vat-co-vu learn.explore.explore_big_small (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Thay ảnh voi của Khủng long (có hàng rào cọc dây thép phía sau, lộ chuồng). Cắt lấy một con voi châu Á trưởng thành đứng dưới nước. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "w2.w2_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2327,
+        "top": 0.48,
+        "width": 0.3945,
+        "height": 0.333
+      },
+      "note": "Chép mục gốc discoverer/khung-long/trai-dat-rat-lau-ve-truoc w1.w1_buffalo (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.14, \"top\": 0.12, \"width\": 0.58, \"height\": 0.75})."
+    },
+    "learn.explore.explore_needs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2268,
+        "top": 0.0654,
+        "width": 0.4664,
+        "height": 0.6693
+      },
+      "note": "Chép mục gốc discoverer/khung-long/trai-dat-rat-lau-ve-truoc w1.w1_buffalo (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · A2 14/11 (designer, SK-043): crop đổi cho khung 5:2 (crop cũ {\"left\": 0.14, \"top\": 0.12, \"width\": 0.58, \"height\": 0.75})."
+    },
+    "learn.explore.explore_sort": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hen_with_chicks_on_red_soil.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hen_with_chicks_on_red_soil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A hen and chicks looking for food",
+      "author": "Johnnybam",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1712,
+        "top": 0.2134,
+        "width": 0.4976,
+        "height": 0.3731
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha learn.explore.explore_animals (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Gà mẹ và ba gà con trên sườn đất đỏ. · SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
+    },
+    "learn.explore.explore_mammals": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cat_petted.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Cat_petted.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat petted",
+      "author": "Josephguy15 2.0",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.7499
+      },
+      "note": "Designer (agent) 17/11, SK-049: bàn tay xoa đầu một con mèo đen trắng nằm trên cỏ; chỉ thấy bàn tay và cẳng tay, không mặt, mèo không đeo vòng. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_humans": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boy_exploring_the_wilderness_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Boy_exploring_the_wilderness_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boy exploring the wilderness",
+      "author": "Annie Spratt",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.192,
+        "top": 0,
+        "width": 0.6668,
+        "height": 1
+      },
+      "note": "Designer (agent) 18/11, SK-049 (Duy duyệt thay ảnh bát mì: trên máy ô tròn khay Chơi và thẻ từ chỉ thấy bát mì): một bạn nhỏ tóc vàng nhạt mặc áo khoác vàng nghệ, nhìn từ phía sau, đứng giữa bãi thạch nam; thấy rõ đầu, tóc, vai, không thấy mặt, không chữ, không logo. Hình gốc của chủ đề. Khung 1:1: cả đầu và áo, bạn nhỏ ở giữa."
+    },
+    "tray.tray_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1318,
+        "top": 0,
+        "width": 0.6664,
+        "height": 1
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_carp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D1%80%D0%BF.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/%D0%9A%D0%B0%D1%80%D0%BF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A carp swimming",
+      "author": "Роман АлексеевичЕ",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2488,
+        "top": 0,
+        "width": 0.5625,
+        "height": 1
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/ca-va-luong-cu learn.explore.explore_fish (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "tray.tray_buffalo": {
+      "same_as": "learn.explore.explore_needs"
+    },
+    "tray.tray_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.166,
+        "top": 0,
+        "width": 0.668,
+        "height": 1
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi q4.q4_frog (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_person": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boy_exploring_the_wilderness_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Boy_exploring_the_wilderness_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boy exploring the wilderness",
+      "author": "Annie Spratt",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.259,
+        "top": 0.2,
+        "width": 0.5334,
+        "height": 0.8
+      },
+      "note": "Designer (agent) 18/11, SK-049 (Duy duyệt thay ảnh bát mì: trên máy ô tròn khay Chơi và thẻ từ chỉ thấy bát mì): một bạn nhỏ tóc vàng nhạt mặc áo khoác vàng nghệ, nhìn từ phía sau, đứng giữa bãi thạch nam; thấy rõ đầu, tóc, vai, không thấy mặt, không chữ, không logo. Hình gốc của chủ đề. Khung kệ 1:1 cắt sát (ô tròn trên khay nhỏ): đầu ở giữa phía trên, vai và áo lấp nửa dưới."
+    },
+    "tray.tray_dog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.15,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha learn.explore.explore_pets (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Chó trắng đốm nâu nằm trên sàn gạch trong nhà (không có ảnh hợp lệ chó vàng trên hiên). · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "tray.tray_lizard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail,_Taichung_2022-05-31.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eutropis_multifasciata_at_Zhigao_Canal_Walking_Trail%2C_Taichung_2022-05-31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Eutropis multifasciata at Zhigao Canal Walking Trail, Taichung 2022-05-31",
+      "author": "LiCheng Shih",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.4843,
+        "top": 0.1338,
+        "width": 0.5014,
+        "height": 0.7524
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_lizard (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_duck": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yellow_rubber_duck.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Yellow_rubber_duck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Yellow rubber duck",
+      "author": "terri_bateman",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1672,
+        "top": 0.3,
+        "width": 0.7156,
+        "height": 0.4
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/co-the-cac-con-vat tray.tray_rubber_duck (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "q1.q1_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1,
+        "height": 0.345
+      },
+      "note": "Chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho w1.w1_water (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · A2 14/11 (designer, SK-043): cùng ảnh với be-mat-trai-dat/dat-va-nuoc-tren-trai-dat q4, cắt riêng cho khung 5:2 (trước: same_as q4 (be-mat-trai-dat/dat-va-nuoc-tren-trai-dat))."
+    },
+    "q1.q1_stool": {
+      "composed": {
+        "file": "content/images/composed/co-the-cua-em/stool-5x2.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "source_url": "https://www.flickr.com/photos/127283891@N07/55457069064",
+            "file_url": "https://live.staticflickr.com/65535/55457069064_2cbcf96d0f_b.jpg",
+            "title": "Untitled",
+            "author": "The Man-Machine",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "openverse_id": "c12d77e7-2161-4e59-907f-1478f392fa18",
+            "crop": {
+              "left": 0.395,
+              "top": 0,
+              "width": 0.56,
+              "height": 0.8395
+            }
+          }
+        ]
+      },
+      "title": "A wooden stool",
+      "note": "Designer (agent) 17/11: hình ghép một phần (đệm khung, không cắt vật chính), như các hình đệm khung A2. Ảnh ghế đẩu (crop vuông của explorer/goi-ten-va-nhom-dong-vat/co-the-cac-con-vat tray.tray_stool) bỏ dải tường trắng bên trái, đặt giữa khung 5:2, hai bên kéo dài nền tối của chính ảnh để thấy trọn ghế."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boy_exploring_the_wilderness_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Boy_exploring_the_wilderness_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boy exploring the wilderness",
+      "author": "Annie Spratt",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0815,
+        "top": 0,
+        "width": 0.889,
+        "height": 1
+      },
+      "note": "Designer (agent) 18/11, SK-049 (Duy duyệt thay ảnh bát mì: trên máy ô tròn khay Chơi và thẻ từ chỉ thấy bát mì): một bạn nhỏ tóc vàng nhạt mặc áo khoác vàng nghệ, nhìn từ phía sau, đứng giữa bãi thạch nam; thấy rõ đầu, tóc, vai, không thấy mặt, không chữ, không logo. Hình gốc của chủ đề. Khung 4:3."
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_goldfish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Aquarium_tropical_de_Pierrefitte-Nestalas_03082018_Carassius_auratus_Lionhead_goldfish_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Aquarium tropical de Pierrefitte-Nestalas 03082018 Carassius auratus Lionhead goldfish 2",
+      "author": "Vassil",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.2299,
+        "width": 1,
+        "height": 0.5602
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha tray.tray_goldfish (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "q3.q3_frog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.0006,
+        "width": 1,
+        "height": 0.5988
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi q4.q4_frog (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q3.q3_rabbit": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1841,
+        "top": 0.2651,
+        "width": 0.8159,
+        "height": 0.4897
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/dong-vat-co-vu learn.explore.explore_fur (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_dog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_lying_on_the_floor_(2008).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Jack_Russell_Terrier_lying_on_the_floor_%282008%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jack Russell Terrier lying on the floor (2008)",
+      "author": "JazTan",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2333,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha learn.explore.explore_pets (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Chó trắng đốm nâu nằm trên sàn gạch trong nhà (không có ảnh hợp lệ chó vàng trên hiên). · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "q4.q4_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1,
+        "width": 1,
+        "height": 0.4762
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_hen (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-049 (designer 18/11): crop cũ {\"left\": 0, \"top\": 0.2333, \"width\": 1, \"height\": 0.5333} mất đầu gà ở mép trên; cắt lại 2,8:1 (khung thẻ lựa chọn đo trên iPhone 16, tester 18/11; vẫn trong ngưỡng của khung 5:2) từ top 0.10: thấy đủ mào và mỏ, kể cả khi app cắt thêm cho khung 2,5:1."
+    },
+    "q4.q4_carp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D1%80%D0%BF.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/%D0%9A%D0%B0%D1%80%D0%BF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A carp swimming",
+      "author": "Роман АлексеевичЕ",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1344,
+        "width": 1,
+        "height": 0.7111
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/ca-va-luong-cu learn.explore.explore_fish (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chat_regardant_le_ciel.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Chat_regardant_le_ciel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A kitten looking up",
+      "author": "Susann (susannp4)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.0429,
+        "width": 0.7031,
+        "height": 0.8643
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha q4 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Mèo con ngồi ngẩng nhìn lên (nền cây xanh, không có sàn gạch)."
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adult-baby-bed-225744.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Adult-baby-bed-225744.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A baby's hand holding a finger",
+      "author": "Wayne Evans",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2382,
+        "top": 0,
+        "width": 0.7235,
+        "height": 0.8162
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/dong-vat-co-vu learn.explore.explore_people (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Cắt bỏ mặt em bé, chỉ còn hai bàn tay. · SK-043 (designer 13/11): crop cho khung trang Học 4:3, con vật nằm trọn trong khung."
+    },
+    "vocab.human": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boy_exploring_the_wilderness_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Boy_exploring_the_wilderness_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boy exploring the wilderness",
+      "author": "Annie Spratt",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.126,
+        "top": 0.26,
+        "width": 0.8,
+        "height": 0.6
+      },
+      "note": "Designer (agent) 18/11, SK-049 (Duy duyệt thay ảnh bát mì: trên máy ô tròn khay Chơi và thẻ từ chỉ thấy bát mì): một bạn nhỏ tóc vàng nhạt mặc áo khoác vàng nghệ, nhìn từ phía sau, đứng giữa bãi thạch nam; thấy rõ đầu, tóc, vai, không thấy mặt, không chữ, không logo. Hình gốc của chủ đề. Khung 2:1: từ đỉnh đầu tới giữa áo."
+    },
+    "vocab.feature": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_rabbit_on_grass_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/White_rabbit_on_grass_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White rabbit on grass (Unsplash)",
+      "author": "Andy Brunner andy_brunner",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3473,
+        "top": 0.2651,
+        "width": 0.6527,
+        "height": 0.4897
+      },
+      "note": "Chép mục gốc explorer/goi-ten-va-nhom-dong-vat/dong-vat-co-vu learn.explore.explore_fur (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · SK-043 (designer 13/11): crop cho khung trang Học 1:1, con vật nằm trọn trong khung."
+    },
+    "vocab.mammal": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cat_petted.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Cat_petted.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat petted",
+      "author": "Josephguy15 2.0",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1425,
+        "width": 1,
+        "height": 0.3749
+      },
+      "note": "Designer (agent) 17/11, SK-049: bàn tay xoa đầu một con mèo đen trắng nằm trên cỏ; chỉ thấy bàn tay và cẳng tay, không mặt, mèo không đeo vòng. Hình gốc của chủ đề."
+    },
+    "vocab.hair": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/hair-back.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A child's hair, seen from behind",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của co-the-cua-em/hair-back.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "reward.hair_card": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/hair-back.jpg",
+        "method": "drawn"
+      },
+      "title": "A child's hair, seen from behind",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    }
+  }
+}

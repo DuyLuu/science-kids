@@ -1,0 +1,314 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_stool": {
+      "composed": {
+        "file": "content/images/composed/co-the-cua-em/stool-17x10.jpg",
+        "parts": [
+          {
+            "source": "Openverse/Flickr",
+            "source_url": "https://www.flickr.com/photos/127283891@N07/55457069064",
+            "file_url": "https://live.staticflickr.com/65535/55457069064_2cbcf96d0f_b.jpg",
+            "title": "Untitled",
+            "author": "The Man-Machine",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "openverse_id": "c12d77e7-2161-4e59-907f-1478f392fa18",
+            "crop": {
+              "left": 0.395,
+              "top": 0,
+              "width": 0.56,
+              "height": 0.8395
+            }
+          }
+        ]
+      },
+      "title": "A wooden stool",
+      "note": "Designer (agent) 17/11: hình ghép một phần (đệm khung, không cắt vật chính), như các hình đệm khung A2. Ảnh ghế đẩu (crop vuông của explorer/goi-ten-va-nhom-dong-vat/co-the-cac-con-vat tray.tray_stool) bỏ dải tường trắng bên trái, đặt giữa khung 17:10, hai bên kéo dài nền tối của chính ảnh để thấy trọn ghế."
+    },
+    "w1.w1_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0044,
+        "top": 0.0885,
+        "width": 0.9211,
+        "height": 0.8131
+      },
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_hen (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "learn.explore.explore_hands": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.learn.explore.explore_think.jpg",
+        "method": "drawn"
+      },
+      "title": "Hands doing a jigsaw puzzle",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the learn.explore.explore_think (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "learn.explore.explore_bend": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/bend.jpg",
+        "method": "drawn"
+      },
+      "title": "A child with the elbow and knee shaded",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "learn.explore.explore_legs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A-Boy-Playing-Football.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/A-Boy-Playing-Football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A-Boy-Playing-Football",
+      "author": "Pavan Prasad",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3134,
+        "top": 0.44,
+        "width": 0.3732,
+        "height": 0.56
+      },
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the learn.explore.explore_move (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Cắt lấy chân và quả bóng; bỏ phần đầu, không thấy mặt."
+    },
+    "learn.explore.explore_together": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.tray.tray_bike.jpg",
+        "method": "drawn"
+      },
+      "title": "A child riding a bike",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the tray.tray_bike (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_hand": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_hand.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/day-than-kinh-truyen-tin q5.q5_hand (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_glove": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/glove.jpg",
+        "method": "drawn"
+      },
+      "title": "A glove",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "tray.tray_elbow": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/elbow.jpg",
+        "method": "drawn"
+      },
+      "title": "An elbow",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "tray.tray_foot": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_toe.jpg",
+        "method": "drawn"
+      },
+      "title": "A foot with toes",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/day-than-kinh-truyen-tin q5.q5_toe (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_finger": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_fingertip.jpg",
+        "method": "drawn"
+      },
+      "title": "A fingertip touching a table",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/day-than-kinh-truyen-tin tray.tray_fingertip (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "tray.tray_sandals": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/sandals.jpg",
+        "method": "drawn"
+      },
+      "title": "A pair of sandals",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "tray.tray_knee": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/knee.jpg",
+        "method": "drawn"
+      },
+      "title": "A knee",
+      "note": "Designer (agent) 17/11 vẽ bằng SVG, xuất JPEG 1024×768, cùng nét bộ hình vẽ của Hô hấp và Não bộ và giác quan (màu chuyển nhẹ, bóng mềm, không viền, không chữ, không nét mặt)"
+    },
+    "tray.tray_legs": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q3.q3_run.jpg",
+        "method": "drawn"
+      },
+      "title": "Legs running",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/day-than-kinh-truyen-tin q3.q3_run (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_foot": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/toe.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A foot with toes",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_toe.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q1.q1_ear": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/ear.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "An ear",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.w1.w1_ear.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "q1.q1_hand": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/hand.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A hand",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_hand.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q2": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.q1.q1_head.jpg",
+        "method": "drawn"
+      },
+      "title": "A child, the head shaded yellow",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the q1.q1_head (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_foot": {
+      "same_as": "q1.q1_foot"
+    },
+    "q3.q3_mouth": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/mouth.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A mouth, side view",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của ho-hap/mouth-side.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "q3.q3_eye": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/eye.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "An eye",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của nao-bo-va-giac-quan/nao-dieu-khien-co-the.w1.w1_eye.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_knee": {
+      "same_as": "tray.tray_knee"
+    },
+    "q4.q4_foot": {
+      "same_as": "tray.tray_foot"
+    },
+    "q4.q4_ear": {
+      "own": {
+        "file": "content/images/own/nao-bo-va-giac-quan/nao-dieu-khien-co-the.w1.w1_ear.jpg",
+        "method": "drawn"
+      },
+      "title": "An ear",
+      "note": "Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the w1.w1_ear (same_as không trỏ sang nhóm tuổi khác hoặc khung khác)"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_knee": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/knee.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "A knee",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của co-the-cua-em/knee.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q5.q5_elbow": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/elbow.5x2.jpg",
+        "method": "drawn"
+      },
+      "title": "An elbow",
+      "note": "Designer (agent) 17/11: bản khung 5:2 của co-the-cua-em/elbow.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "q5.q5_foot": {
+      "same_as": "q1.q1_foot"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Children playing at sunset",
+      "author": "Charles O'Rear",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:FARM_YOUNGSTERS_PLAYING_AT_SUNSET_NEAR_THEIR_HOME_IN_RIPLEY_-_NARA_-_547738.jpg",
+      "crop": {
+        "left": 0.1049,
+        "top": 0.05,
+        "width": 0.7902,
+        "height": 0.88
+      },
+      "note": "Chép mục gốc discoverer/ho-hap/tho-khi-chay-nhay learn.explore.explore_faster (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · NARA Documerica, bóng trẻ chạy nhảy ngược sáng, cắt bỏ viền phim; đề xuất sửa alt (không phải đá bóng)"
+    },
+    "vocab.elbow": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/elbow.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "An elbow",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của co-the-cua-em/elbow.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.knee": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/knee.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A knee",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của co-the-cua-em/knee.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.toe": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/toe.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A foot with toes",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của nao-bo-va-giac-quan/day-than-kinh-truyen-tin.q5.q5_toe.jpg (cắt bớt nền trống trên dưới, đệm nền kem hai bên, không cắt mất bộ phận); cùng hình, cùng nét."
+    },
+    "vocab.finger": {
+      "own": {
+        "file": "content/images/own/co-the-cua-em/fingertip.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A fingertip touching a table",
+      "note": "Designer (agent) 17/11: bản khung 2:1 của nao-bo-va-giac-quan/day-than-kinh-truyen-tin.tray.tray_fingertip.jpg (cắt dải giữa, không mất bộ phận); cùng hình, cùng nét."
+    },
+    "reward.fingers_card": {
+      "same_as": "tray.tray_finger"
+    }
+  }
+}
