@@ -28,6 +28,9 @@ struct RootView: View {
     var body: some View {
         firstScreen
             .layoutMetricsFromContainer()
+            // SK-052: numbers in the app's own language ("1,666" in English), not the device's
+            // region (an English app on a Vietnamese-region device wrote "1.666").
+            .environment(\.locale, AppLocale.interface())
             .environment(\.prefersAccessibilityTextLayout, systemTypeSize.isAccessibilitySize)
             .environment(\.ageGroup, Tokens.AgeGroup(rawValue: AppFeatures.trialWorld.rawValue) ?? .discoverer)
             .environment(\.reduceMotionOverride, options.reducesMotion)
@@ -85,5 +88,15 @@ struct RootView: View {
         } else {
             OnboardingFlow(model: app.onboarding) { try app.createProfile($0) }
         }
+    }
+}
+
+/// SK-052: the locale of the app's interface language: the localization the app runs in (`en` or
+/// `vi`, chosen by iOS from the device or per-app language), not the device's region. Screens
+/// format their numbers with it (SwiftUI `Text` reads `\.locale`), so English writes "1,666" and
+/// Vietnamese "1.666" whatever the region.
+enum AppLocale {
+    static func interface(preferredLocalizations: [String] = Bundle.main.preferredLocalizations) -> Locale {
+        Locale(identifier: preferredLocalizations.first ?? "en")
     }
 }

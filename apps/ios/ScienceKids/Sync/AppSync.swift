@@ -49,7 +49,14 @@ struct HomeProgress: Equatable {
         server: HomeData?, queued: Int, now: Date
     ) -> HomeProgress {
         let own = history.filter { $0.childId == childId }
+        // Stars are the best of each lesson, summed (server `get_home.total_stars` = sum of
+        // `lesson_progress.stars`). SK-052: the device's number counts the lessons the server
+        // already has too (its last `get_home`), the higher of the two per lesson, as
+        // `LessonProgressSnapshot` does: a lesson the server knows and this device does not (played
+        // before a reinstall, on the adopted profile) is not lost while an attempt waits, so
+        // finishing a lesson never shows fewer stars than before.
         var bestStars: [UUID: Int] = [:]
+        for lesson in server?.lessons ?? [] { bestStars[lesson.lessonId] = max(bestStars[lesson.lessonId] ?? 0, lesson.stars) }
         for record in own { bestStars[record.lessonId] = max(bestStars[record.lessonId] ?? 0, record.stars) }
         let localStars = bestStars.values.reduce(0, +)
         let today = Self.today(at: now, timeZone: timeZone)

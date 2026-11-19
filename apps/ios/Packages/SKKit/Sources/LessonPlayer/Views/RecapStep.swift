@@ -42,13 +42,13 @@ enum RecapMetrics {
     static let explorerWordRadius: CGFloat = 18
     static let explorerWordPictureRadius: CGFloat = 12
     /// `r-x2-a`: the question's photo (`120` high, radius `14`), the shake on its bottom-left corner
-    /// (`64`, inset `10`), the speaker (and "Cả hai" VI) on its bottom-right corner (inset `8`);
-    /// the two lines under it (padding 10 / 10 / 8). `r-x2-none`: word rows (`140 × 92`).
+    /// (`64`, inset `10`); the two lines under it (padding 10 / 10 / 8) with the speaker (and the
+    /// "Cả hai" VI under it) at their right (SK-052: no longer on the photo's corner).
+    /// `r-x2-none`: word rows (`140 × 92`).
     static let explorerPhoto: CGFloat = 120
     static let explorerPhotoRadius: CGFloat = 14
     static let explorerShake: CGFloat = 64
     static let explorerShakeInset: CGFloat = 10
-    static let explorerControlsInset: CGFloat = 8
     static let explorerLinesPadding = EdgeInsets(top: 10, leading: 10, bottom: 8, trailing: 10)
     static let explorerWordRowPicture = CGSize(width: 140, height: 92)
     /// "I can…": Discoverer padding 10 / 14 / 10 / 10, "Cả hai" 8 top and 4 bottom (the VI's
@@ -126,6 +126,32 @@ struct RecapStep: View {
             insertion: .move(edge: forward ? .trailing : .leading).combined(with: .opacity),
             removal: .move(edge: forward ? .leading : .trailing).combined(with: .opacity)
         )
+    }
+
+    // MARK: Second language
+
+    /// SK-052: the line in the other language under a Tổng kết sentence, as on the other steps
+    /// (`ExplorerSpeechRow`): only in "Cả hai" (`showsSecondLanguage`), smaller and quieter.
+    @ViewBuilder
+    private func secondLine(_ spoken: Spoken, struck: Bool = false, identifier: String) -> some View {
+        if let text = Self.secondLine(spoken, mode: mode, shows: session.showsSecondLanguage) {
+            Text(verbatim: text)
+                .typography(Tokens.Typography.bodyS)
+                .foregroundStyle(Tokens.Role.textSecondary)
+                .strikethrough(struck, color: Tokens.Role.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityIdentifier(identifier)
+        }
+    }
+
+    /// The other language of `spoken` when the profile shows it; `nil` when it does not, or the
+    /// line is blank or the same words.
+    static func secondLine(_ spoken: Spoken, mode: LanguageMode, shows: Bool) -> String? {
+        guard shows else { return nil }
+        let text = mode.secondSentence(spoken)
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty, trimmed != mode.sentence(spoken).trimmingCharacters(in: .whitespacesAndNewlines) else { return nil }
+        return text
     }
 
     // MARK: Reading
@@ -247,26 +273,32 @@ struct RecapStep: View {
         return VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .center, spacing: RecapMetrics.claimGap) {
                 SpeakerBadge(speaker: myth.speaker, nods: myth.claimIsTrue)
-                Text(verbatim: mode.sentence(myth.claim))
-                    .typography(Tokens.Typography.itemTitle)
-                    .foregroundStyle(wrong ? Tokens.Role.textSecondary : Tokens.Role.textPrimary)
-                    .strikethrough(wrong, color: Tokens.Role.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .accessibilityIdentifier("lesson.recap.claim")
+                VStack(alignment: .leading, spacing: Tokens.Space.s2) {
+                    Text(verbatim: mode.sentence(myth.claim))
+                        .typography(Tokens.Typography.itemTitle)
+                        .foregroundStyle(wrong ? Tokens.Role.textSecondary : Tokens.Role.textPrimary)
+                        .strikethrough(wrong, color: Tokens.Role.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("lesson.recap.claim")
+                    secondLine(myth.claim, struck: wrong, identifier: "lesson.recap.claim_second")
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(RecapMetrics.claimPadding)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(wrong ? Tokens.Role.surfaceSunken : Tokens.Role.surfacePaper)
             .alignmentGuide(.recapSeam) { $0[.bottom] }
-            Text(verbatim: mode.sentence(myth.truth))
-                .typography(Tokens.Typography.sentence)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(truthPadding)
-                // "Cả hai": the part is at least as high as the VI's touch frame under the seam.
-                .frame(minHeight: withVI ? RecapMetrics.truthMinHeightWithVI : nil, alignment: .topLeading)
-                .accessibilityIdentifier("lesson.recap.truth")
+            VStack(alignment: .leading, spacing: Tokens.Space.s2) {
+                Text(verbatim: mode.sentence(myth.truth))
+                    .typography(Tokens.Typography.sentence)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("lesson.recap.truth")
+                secondLine(myth.truth, identifier: "lesson.recap.truth_second")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(truthPadding)
+            // "Cả hai": the part is at least as high as the VI's touch frame under the seam.
+            .frame(minHeight: withVI ? RecapMetrics.truthMinHeightWithVI : nil, alignment: .topLeading)
         }
         .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
         // The round arrow on the seam, under the face's centre.
@@ -298,18 +330,23 @@ struct RecapStep: View {
     }
 
     /// "I can…" with its check seal. Discoverer: the speaker with the VI under it ("Cả hai").
-    /// Explorer (`r-x2-a`): seal 42, [VI][speaker] in one row, so the card stays low.
+    /// Explorer (`r-x2-a`): seal 42, [VI][speaker] in one row, so the card stays low; with the VI
+    /// line of "Cả hai" (SK-052) the two stack as on Discoverer.
     private var objectiveCard: some View {
         let say = session.recapObjectiveUtterance
         let withVI = hasSecondVoice(say)
         return HStack(alignment: .center, spacing: Tokens.Space.s12) {
             Seal(icon: .check, size: isExplorer ? .goal : .medium, tone: .correct, accessibilityLabel: Text("lesson.recap.goal_a11y"))
-            Text(verbatim: mode.sentence(session.lesson.objective))
-                .typography(isExplorer ? Tokens.Typography.itemTitle : Tokens.Typography.sentence)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .accessibilityIdentifier("lesson.recap.objective")
-            if isExplorer {
+            VStack(alignment: .leading, spacing: Tokens.Space.s2) {
+                Text(verbatim: mode.sentence(session.lesson.objective))
+                    .typography(isExplorer ? Tokens.Typography.itemTitle : Tokens.Typography.sentence)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("lesson.recap.objective")
+                secondLine(session.lesson.objective, identifier: "lesson.recap.objective_second")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            // SK-052: "Cả hai" with its VI line too: the two buttons stack, so the text keeps room.
+            if isExplorer, !(withVI && session.showsSecondLanguage) {
                 HStack(spacing: Tokens.Space.s4) {
                     SecondVoiceButton(say)
                     RecapSpeaker(utterance: say, label: "lesson.listen.objective", speaking: isReading(say.id))
@@ -461,9 +498,10 @@ struct RecapStep: View {
         .padding(.trailing, metrics.gridTrailingInset)
     }
 
-    /// The question's photo (`120`) with the shake on its bottom-left corner and the speaker (and
-    /// the "Cả hai" VI) on its bottom-right corner; under it the claim struck and the truth, the
-    /// whole width (designer 15/11, `r-x2-a`, `r-x2-a-bi`). Without a photo: [shake][lines][speaker].
+    /// The question's photo (`120`) with the shake on its bottom-left corner; under it the claim
+    /// struck and the truth, the speaker (and the "Cả hai" VI under it) at their right (designer
+    /// 15/11, `r-x2-a`, `r-x2-a-bi`; SK-052 moved the controls off the photo). In "Cả hai" each
+    /// line has its Vietnamese line under it. Without a photo: [shake][lines][speaker].
     private func explorerMythCard(_ myth: LessonRecap.Myth) -> some View {
         let say = session.recapMythUtterance(myth)
         let shake = Image("ArtExplorerShake", bundle: .main)
@@ -473,11 +511,13 @@ struct RecapStep: View {
             .paperDropShadow(Tokens.Shadow.dropTag)
             .accessibilityLabel(Text("lesson.recap.not_true_a11y"))
             .accessibilitySortPriority(3)
-        let controls = HStack(spacing: Tokens.Space.s4) {
-            SecondVoiceButton(say)
+        // SK-052: under the photo the speaker and the VI stack at the right of the lines, so they
+        // never cover the photo (Duy 18/11: on the photo they hid it).
+        let controls = VStack(spacing: Tokens.Space.s4) {
             RecapSpeaker(utterance: say, label: "lesson.listen.myth", speaking: isReading(say.id))
+            SecondVoiceButton(say)
         }
-        // VoiceOver: the shake, the two lines, then the speaker and VI (on the photo, read last).
+        // VoiceOver: the shake, the lines, then the speaker and VI (read last).
         .accessibilitySortPriority(-1)
         let lines = VStack(alignment: .leading, spacing: Tokens.Space.s4) {
             Text(verbatim: mode.sentence(myth.claim))
@@ -486,10 +526,14 @@ struct RecapStep: View {
                 .strikethrough(true, color: Tokens.Role.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityIdentifier("lesson.recap.claim")
+            secondLine(myth.claim, struck: true, identifier: "lesson.recap.claim_second")
             Text(verbatim: mode.sentence(myth.truth))
                 .typography(Tokens.Typography.sentence)
                 .fixedSize(horizontal: false, vertical: true)
+                // A little more room when the claim has its Vietnamese line, so the pairs part.
+                .padding(.top, Self.secondLine(myth.claim, mode: mode, shows: session.showsSecondLanguage) == nil ? 0 : Tokens.Space.s4)
                 .accessibilityIdentifier("lesson.recap.truth")
+            secondLine(myth.truth, identifier: "lesson.recap.truth_second")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .accessibilitySortPriority(2)
@@ -502,8 +546,11 @@ struct RecapStep: View {
                         .clipShape(RoundedRectangle(cornerRadius: RecapMetrics.explorerPhotoRadius, style: .continuous))
                         .accessibilityHidden(true)
                         .overlay(alignment: .bottomLeading) { shake.padding(RecapMetrics.explorerShakeInset) }
-                        .overlay(alignment: .bottomTrailing) { controls.padding(RecapMetrics.explorerControlsInset) }
-                    lines.padding(RecapMetrics.explorerLinesPadding)
+                    HStack(alignment: .top, spacing: Tokens.Space.s10) {
+                        lines
+                        controls
+                    }
+                    .padding(RecapMetrics.explorerLinesPadding)
                 }
             } else {
                 HStack(alignment: .center, spacing: Tokens.Space.s10) {

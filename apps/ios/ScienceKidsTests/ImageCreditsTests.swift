@@ -33,6 +33,69 @@ import Testing
         #expect(app.path == [.imageCredits])
     }
 
+    /// SK-052: one card per source picture. Two crops of one photo (same `source_url`) are one
+    /// card with the first file's title and every change; a drawn picture stays its own card; a
+    /// composed picture used twice is one card; a file without a credit stays on its own.
+    @Test func creditsGroupedBySourcePicture() {
+        func entry(_ sha: String, _ credit: PackManifest.ImageCredit?) -> PackManifest.AssetEntry {
+            PackManifest.AssetEntry(sha256: sha, size: 1, kind: "image", path: "assets/\(sha).webp", credit: credit)
+        }
+        let page = "https://commons.wikimedia.org/wiki/File:Common_Carp.jpg"
+        func carp(_ title: String, _ changes: [String]) -> PackManifest.ImageCredit {
+            PackManifest.ImageCredit(
+                title: title, author: "USFWS", license: "Public domain", licenseURL: page, source: "Wikimedia Commons",
+                sourceURL: page, changes: changes
+            )
+        }
+        let leaf = PackManifest.ImageCredit(title: "A leaf", author: "Science Kids", license: "Science Kids", source: "Science Kids", changes: ["drawn"])
+        let part = PackManifest.ImageCredit.Part(title: "Globe", author: "Ann", license: "CC0 1.0", source: "Wikimedia Commons")
+        let globe = PackManifest.ImageCredit(title: "Globe", author: "Science Kids", license: "CC0 1.0", source: "composed", changes: ["composed"], parts: [part])
+        let entries = [
+            entry("aaa", carp("Common carp", ["cropped"])),
+            entry("bbb", leaf),
+            entry("ccc", carp("Common carp, tail fin", ["cropped", "resized"])),
+            entry("ddd", globe),
+            entry("eee", nil),
+            entry("fff", globe),
+            entry("ggg", carp("Common carp", ["resized"])),
+            entry("hhh", nil),
+        ]
+        let items = ImageCreditItem.group(entries)
+        #expect(items.map(\.id) == ["aaa", "bbb", "ddd", "eee", "hhh"])
+        #expect(items.map(\.files) == [3, 1, 2, 1, 1])
+        let carpItem = items[0]
+        #expect(carpItem.lines.title == "Common carp")
+        #expect(carpItem.lines.author == "USFWS")
+        #expect(carpItem.lines.license == "Public domain")
+        #expect(carpItem.lines.source == "Wikimedia Commons")
+        #expect(carpItem.lines.sourceURL == page)
+        #expect(carpItem.lines.changes == [.cropped, .resized], "every change of the crops, once each")
+        #expect(items[1].lines.changes == [.drawn])
+        #expect(items[2].lines.changes == [.composed])
+        #expect(items[2].lines.parts.count == 1)
+    }
+
+    /// The bundled pack (when the build has one): fewer cards than files, every file in one card.
+    @Test(.enabled(if: BundledContentTests.hasPack)) func bundledPackCreditsGrouped() async throws {
+        let content = try #require(await BundledContent.load().ready)
+        let items = ImageCreditItem.group(content.imageCredits)
+        #expect(items.count < content.imageCredits.count)
+        #expect(items.map(\.files).reduce(0, +) == content.imageCredits.count)
+        #expect(Set(items.map(\.id)).count == items.count)
+    }
+
+    /// SK-052: numbers in the app's language, not the device's region: "1,666" in English.
+    @Test func numbersFollowTheInterfaceLanguage() {
+        let en = AppLocale.interface(preferredLocalizations: ["en"])
+        let vi = AppLocale.interface(preferredLocalizations: ["vi"])
+        #expect(1666.formatted(.number.locale(en)) == "1,666")
+        #expect(1666.formatted(.number.locale(vi)) == "1.666")
+        #expect(AppLocale.interface(preferredLocalizations: []).identifier == "en")
+        // `Text("credits.count \(n)")` formats `n` with the environment's locale, which RootView sets.
+        let key = String(localized: "credits.count \(1666)", locale: en)
+        #expect(key.contains("1,666"), "\(key)")
+    }
+
     @Test func creditLines() {
         let credit = PackManifest.ImageCredit(
             title: "Volcano", author: "USGS", license: "Public domain", licenseURL: "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",

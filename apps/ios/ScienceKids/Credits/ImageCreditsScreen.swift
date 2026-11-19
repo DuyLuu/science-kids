@@ -9,31 +9,46 @@ import SwiftUI
 /// Home, so nothing here opens anything: the source page and the licence page are plain text,
 /// not links (`Text(verbatim:)` never detects links). When Góc phụ huynh exists, the screen
 /// moves behind its gate and the two addresses become links that open in Safari.
+///
+/// SK-052: one card per source picture (`ImageCreditItem.group`), not one per file of the pack:
+/// the crops of one photo share its card, whose change line lists every change made.
+///
+/// SK-052: the screen opened scrolled down, the title and the back button out of view: the
+/// header and the note sat above a `LazyVStack` of cards in a `VStack`, and the scroll view kept
+/// the first card in place while the lazy rows were measured. Now the header, the note and the
+/// cards are rows of one `LazyVStack` (about 1,100 cards, so it stays lazy), the header its first
+/// row: the screen opens on it. Only the header and the note play the reveal (a lazy card would
+/// play it again each time it scrolls back into view).
 struct ImageCreditsScreen: View {
-    let credits: [PackManifest.AssetEntry]
+    let items: [ImageCreditItem]
     let onBack: () -> Void
+
+    init(credits: [PackManifest.AssetEntry], onBack: @escaping () -> Void) {
+        items = ImageCreditItem.group(credits)
+        self.onBack = onBack
+    }
 
     var body: some View {
         PaperFrame(scrolls: true) {
-            VStack(alignment: .leading, spacing: ScreenMetrics.homeGap) {
+            LazyVStack(alignment: .leading, spacing: 0) {
                 ScreenHeader(
                     back: .init(label: Text("credits.back"), action: onBack),
                     title: Text("credits.title"),
-                    caption: Text("credits.count \(credits.count)"),
+                    caption: Text("credits.count \(items.count)"),
                     titleIdentifier: "credits.title"
                 )
                 .reveal(order: 0)
+                .padding(.bottom, ScreenMetrics.homeGap)
                 Text("credits.intro")
                     .typography(Tokens.Typography.body)
                     .foregroundStyle(Tokens.Role.textSecondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .reveal(order: 1)
-                LazyVStack(alignment: .leading, spacing: Tokens.Space.s10) {
-                    ForEach(credits, id: \.sha256) { entry in
-                        ImageCreditCard(entry: entry)
-                    }
+                    .padding(.bottom, ScreenMetrics.homeGap)
+                ForEach(items) { item in
+                    ImageCreditCard(item: item)
+                        .padding(.bottom, item.id == items.last?.id ? 0 : Tokens.Space.s10)
                 }
-                .reveal(order: 2)
             }
         }
     }
@@ -43,10 +58,10 @@ struct ImageCreditsScreen: View {
 /// then the two addresses in small print. A composed picture adds a well "Source images" under
 /// it, one credit per source picture, in smaller type.
 private struct ImageCreditCard: View {
-    let entry: PackManifest.AssetEntry
+    let item: ImageCreditItem
 
     var body: some View {
-        let lines = ImageCreditLines(entry.credit)
+        let lines = item.lines
         PaperCard {
             VStack(alignment: .leading, spacing: Tokens.Space.s10) {
                 ImageCreditFields(lines: lines, titleStyle: Tokens.Typography.bodyStrong, lineStyle: Tokens.Typography.caption)
@@ -58,7 +73,64 @@ private struct ImageCreditCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .accessibilityElement(children: .contain)
-        .accessibilityIdentifier("credits.item.\(entry.sha256.prefix(12))")
+        .accessibilityIdentifier("credits.item.\(item.id.prefix(12))")
+    }
+}
+
+/// SK-052: one card of "Image credits": a source picture and every file of the pack made from it.
+/// The pack lists each file (each crop or size of a photo has its own `sha256`), so one photo used
+/// in several lessons came several times ("Cropped", "Cropped · Resized"…).
+///
+/// Files are the same source picture when their credit has the same `source_url` (the picture's
+/// page at its source); a credit without one (a picture Science Kids drew or composed) when every
+/// field but `changes` is the same. A file without a credit stays on its own. The card shows the
+/// first file's credit (its title: the crops of one photo may have their own titles, the author,
+/// licence and source are the photo's) and every change made to any of the files, so "Cropped"
+/// is still said when one crop was. Order: where the first file of each picture comes in the pack.
+struct ImageCreditItem: Identifiable, Equatable {
+    /// `sha256` of the first file of the picture.
+    let id: String
+    let lines: ImageCreditLines
+    /// How many files of the pack are this picture.
+    let files: Int
+
+    static func group(_ entries: [PackManifest.AssetEntry]) -> [ImageCreditItem] {
+        var order: [GroupKey] = []
+        var groups: [GroupKey: [PackManifest.AssetEntry]] = [:]
+        for entry in entries {
+            let key = GroupKey(entry)
+            if groups[key] == nil { order.append(key) }
+            groups[key, default: []].append(entry)
+        }
+        return order.compactMap { key in
+            guard let files = groups[key], let first = files.first else { return nil }
+            let changes = files.flatMap { $0.credit?.changes ?? [] }
+            let composed = files.contains { $0.credit?.isComposed ?? false }
+            return ImageCreditItem(
+                id: first.sha256, lines: ImageCreditLines(first.credit, changes: changes, composed: composed), files: files.count
+            )
+        }
+    }
+
+    private enum GroupKey: Hashable {
+        case page(String)
+        case credit(title: String?, author: String?, license: String?, licenseURL: String?, source: String?, parts: [PackManifest.ImageCredit.Part])
+        case file(String)
+
+        init(_ entry: PackManifest.AssetEntry) {
+            guard let credit = entry.credit else {
+                self = .file(entry.sha256)
+                return
+            }
+            if let page = credit.sourceURL?.trimmingCharacters(in: .whitespacesAndNewlines), !page.isEmpty {
+                self = .page(page)
+            } else {
+                self = .credit(
+                    title: credit.title, author: credit.author, license: credit.license,
+                    licenseURL: credit.licenseURL, source: credit.source, parts: credit.parts
+                )
+            }
+        }
     }
 }
 
@@ -149,7 +221,7 @@ struct ImageCreditLines: Equatable {
     let sourceURL: String?
     let licenseURL: String?
     /// What was changed, without repeats, "composed" first. Empty: no change line.
-    let changes: [ImageCreditChange]
+    private(set) var changes: [ImageCreditChange]
     /// Source pictures of a composed picture (each without changes or parts of its own).
     let parts: [ImageCreditLines]
 
@@ -164,6 +236,13 @@ struct ImageCreditLines: Equatable {
         licenseURL = credit?.licenseURL
         changes = ImageCreditChange.lines(credit?.changes ?? [], composed: credit?.isComposed ?? false)
         parts = (credit?.parts ?? []).map(ImageCreditLines.init(part:))
+    }
+
+    /// SK-052: the credit of a picture whose files had these changes between them
+    /// (`ImageCreditItem`).
+    init(_ credit: PackManifest.ImageCredit?, changes manifestValues: [String], composed: Bool) {
+        self.init(credit)
+        changes = ImageCreditChange.lines(manifestValues, composed: composed)
     }
 
     private static func isHouse(_ value: String?) -> Bool {

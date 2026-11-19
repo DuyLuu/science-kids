@@ -67,6 +67,46 @@ import Testing
         #expect(yesterday.source == .device, "the server's answer was for another day")
     }
 
+    /// SK-052 (Explorer #7 run, 18/11): Home said 8 stars before and after a lesson won with 2.
+    /// The server had 4 lessons × 2 (one of them never played on this device); the device had 3
+    /// of them and the new one, still queued, so the device's own sum was 8 too. The device's
+    /// number now counts the server's lessons as well, the best per lesson: 10.
+    @Test func homeStarsKeepTheServersLessonsWhileAnAttemptWaits() {
+        let a = UUID(), b = UUID(), c = UUID(), onlyOnServer = UUID(), played = UUID()
+        let history = [
+            Self.record(day: "2026-11-17", stars: 2, lesson: a),
+            Self.record(day: "2026-11-17", stars: 2, lesson: b),
+            Self.record(day: "2026-11-17", stars: 2, lesson: c),
+            Self.record(day: "2026-11-18", stars: 2, lesson: played), // the Explorer lesson, queued
+        ]
+        let serverChild = UUID()
+        let server = HomeData(
+            today: "2026-11-18",
+            lessons: [a, b, c, onlyOnServer].map { LessonProgress(childId: serverChild, lessonId: $0, stars: 2) },
+            totalStars: 8, totalXP: 0, lastLessonId: c,
+            streak: .init(studiedDays: 1, chainStart: "2026-11-18", restDays: [], studiedToday: true), minutesToday: 12
+        )
+        let now = ISO8601DateFormatter().date(from: "2026-11-18T10:31:00Z")!
+        let rules = StreakRules(restDaysPerWeek: 1)
+        let waiting = HomeProgress.compute(history: history, childId: Self.child, timeZone: "Asia/Ho_Chi_Minh", rules: rules, server: server, queued: 1, now: now)
+        #expect(waiting.source == .device)
+        #expect(waiting.stars == 10, "8 before the lesson, + 2")
+
+        // A lesson played again with fewer stars does not take any away (best per lesson).
+        let again = history + [Self.record(day: "2026-11-18", stars: 1, lesson: onlyOnServer)]
+        #expect(HomeProgress.compute(history: again, childId: Self.child, timeZone: "Asia/Ho_Chi_Minh", rules: rules, server: server, queued: 1, now: now).stars == 10)
+
+        // Settled: the server's total, which now has the lesson.
+        let settledServer = HomeData(
+            today: "2026-11-18",
+            lessons: [a, b, c, onlyOnServer, played].map { LessonProgress(childId: serverChild, lessonId: $0, stars: 2) },
+            totalStars: 10, totalXP: 0, lastLessonId: played,
+            streak: .init(studiedDays: 1, chainStart: "2026-11-18", restDays: [], studiedToday: true), minutesToday: 12
+        )
+        let settled = HomeProgress.compute(history: history, childId: Self.child, timeZone: "Asia/Ho_Chi_Minh", rules: rules, server: settledServer, queued: 0, now: now)
+        #expect(settled == HomeProgress(streakDays: 1, stars: 10, source: .server))
+    }
+
     /// SK-011 tester: a broken profile file is kept aside; the child id of the lessons played is
     /// found, and the new profile keeps it.
     @Test func brokenProfileKeepsTheChildOfTheLessons() throws {
