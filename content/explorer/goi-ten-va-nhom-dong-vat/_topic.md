@@ -382,9 +382,9 @@ Cần ios-dev thêm khoá `collectible.set.animals` (đề xuất "Animal cards"
 
 ### Để dành cho chủ đề khác
 
-- *Sự sống mới* (Explorer số 9): vòng đời đầy đủ (trứng, con non, con trưởng thành). Chủ đề này chỉ chạm ở bài 3 q4 (trứng, gà con, gà mái) và bài 4 q4 (trứng ếch, nòng nọc, ếch).
-- *Chuỗi thức ăn* (Explorer số 10): ai ăn ai. Bài 6 chỉ xếp con vật theo loại thức ăn.
-- *Sinh vật sống ở đâu?* (Explorer số 11): môi trường sống. Chủ đề này chỉ dùng chỗ sống để chọn món ở phần Chơi.
+- *Lớn lên* (Explorer số 8 trong danh mục, SK-053, SK-057; trước 18/11 tên *Sự sống mới*): vòng đời đầy đủ (sinh ra, lớn lên, có con, già đi). Chủ đề này chỉ chạm ở bài 3 q4 (trứng, gà con, gà mái) và bài 4 q4 (trứng ếch, nòng nọc, ếch); *Lớn lên* bài 3, 4 không dùng lại hai câu đó.
+- *Chuỗi thức ăn* (Explorer số 3): ai ăn ai. Bài 6 chỉ xếp con vật theo loại thức ăn.
+- *Sinh vật sống ở đâu?* (Explorer số 2): môi trường sống. Chủ đề này chỉ dùng chỗ sống để chọn món ở phần Chơi.
 - *Sinh sản ở động vật* (Scientist số 1): đẻ con, đẻ trứng, thú mỏ vịt.
 - "Máu nóng, máu lạnh" (sườn bài 2, 3): không đưa vào chữ cho bé 5 đến 7 tuổi; để dành *Phân loại sinh vật* (Scientist số 8).
 

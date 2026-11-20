@@ -45,6 +45,19 @@ extension ColorToken {
         default: Tokens.Role.surfaceInactive
         }
     }
+
+    /// Letters and icons on `color` (SK-060, designer 20/11: `color.role.text_on_content`, every
+    /// pair ≥ 4.5:1; than tre on vàng hoè, giấy on the others, text primary on the fallback).
+    var textColor: Color {
+        switch self {
+        case .doSon: Tokens.Role.TextOnContent.doSon
+        case .vangHoe: Tokens.Role.TextOnContent.vangHoe
+        case .giDong: Tokens.Role.TextOnContent.giDong
+        case .cham: Tokens.Role.TextOnContent.cham
+        case .nauDat: Tokens.Role.TextOnContent.nauDat
+        default: Tokens.Role.textPrimary
+        }
+    }
 }
 
 /// A "VI" chip that showed or hid every Vietnamese line in Tiếng Anh trước. SK-042 (Duy 12/11):

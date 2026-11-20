@@ -711,8 +711,9 @@ Thứ tự đúng của các câu `order_sequence` (mỗi câu đúng một th�
 - ***Sinh vật sống ở đâu?* (#2):** dùng "nơi sống", mặn, ngọt, rừng, rừng ngập mặn, cá thòi lòi; không dạy lại "nơi sống là gì", nơi sống nhỏ. Đồi cát Việt Nam không bao giờ gọi là sa mạc.
 - ***Chuỗi thức ăn* (#3):** dùng nhẹ "con vật ăn gì" (bài 1 hải cẩu, bài 6 nhóm ăn cỏ, ăn lá, ăn thịt); không chuỗi, không mũi tên, không cảnh săn mồi.
 - ***Thời tiết và các mùa* (#5, thay hai chủ đề mùa cũ từ 17/11):** bài 1, 2 không dạy mùa; bài 6 nói mùa mưa, mùa khô bằng một câu; không dạy mùa ở Việt Nam. Chủ đề #5 dùng lại `explore_dry` của bài 6 ở bài 4 câu w2, nâng `dry_season` lên `core` ở bài 4.
-- ***Cây quanh em*, *Trồng cây* (#7, #11):** cây chỉ làm cảnh (cây keo, chà là, đước, sen); không dạy bộ phận cây.
-- ***Sự sống mới* (#12):** không vòng đời, không ấp trứng.
+- ***Cây quanh em* (#7):** cây chỉ làm cảnh (cây keo, chà là, đước, sen); không dạy bộ phận cây.
+- ***Lớn lên* (#8 trong danh mục, SK-053, SK-057; trước 18/11 tên *Sự sống mới*):** không vòng đời, không ấp trứng.
+- ***Núi, sông và biển* (#9, SK-058; thêm 19/11):** #9 dạy hình dạng mặt đất ở mức thấy (núi, đồi, đồng bằng, sông, hồ, bãi biển, đảo, vịnh, hang), không dạy lại biển mặn, rạn san hô, biển sâu, con vật biển (bài 5) hay rừng ngập mặn, đầm lầy (bài 4); chỉ ôn bài 5 (biển mặn), bài 2 (đất phủ băng), bài 4 (đầm lầy nước ngọt) ở Khởi động.
 - **Discoverer #1 *Bề mặt Trái Đất*:** châu lục, đại dương, bản đồ để dành; Bắc Cực không nói là đất liền, Nam Cực không nói là biển.
 - **Discoverer #5, #16, #17; Scientist #14:** thời tiết, khí hậu; mối đe doạ, bảo tồn; kẻ săn mồi, con mồi; thích nghi: để dành.
 

@@ -1,0 +1,376 @@
+{
+  "note": "SK-051 Cây quanh em, bài cay-co-hoa-re-than-la-hoa. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 6. Hình tự vẽ (PM đồng ý, SK-051): flowering-plant-roots.2x1.jpg, flowering-plant-roots.jpg.",
+  "images": {
+    "learn.explore.explore_parts": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/flowering-plant-roots.jpg",
+        "method": "drawn"
+      },
+      "title": "A flowering plant with its roots",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). Không có ảnh cây có hoa thấy đủ rễ hợp giấy phép. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_stem": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Corn_marigold_with_knapweed.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Corn_marigold_with_knapweed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green stem with a flower",
+      "author": "Lee Raye",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 18/11, SK-051: hoa vàng trên thân xanh cao."
+    },
+    "learn.explore.explore_look": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arya-portulaca_grandiflora-mawar-2019_00.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Arya-portulaca_grandiflora-mawar-2019_00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arya-portulaca grandiflora-mawar-2019 00",
+      "author": "Aris riyanto",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: hoa mười giờ (Portulaca grandiflora) hồng, lá mọng hình kim. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_changes": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "bb5bc6b1-6598-4c04-b00e-d34b6b239f80",
+      "source_url": "https://www.flickr.com/photos/47439717@N05/6621198185",
+      "file_url": "https://live.staticflickr.com/7162/6621198185_a9f6c2aba2_b.jpg",
+      "title": "Chili 'Sarit Gat'",
+      "author": "blumenbiene",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Designer (agent) 18/11, SK-051: cây ớt có quả xanh và hoa trắng nhỏ.",
+      "crop": {
+        "left": 0,
+        "top": 0.137,
+        "width": 1,
+        "height": 0.726
+      }
+    },
+    "tray.tray_pumpkin_flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Hokkaido-K%C3%BCrbis_flower.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cucurbita_maxima_Hokkaido-K%C3%BCrbis_flower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cucurbita maxima Hokkaido-Kürbis flower",
+      "author": "Maja Dumat from Deutschland (Germany)",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: hoa bí vàng đã nở trên dây. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.182,
+        "top": 0,
+        "width": 0.636,
+        "height": 1
+      }
+    },
+    "tray.tray_bud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cucurbita_maxima_leaf_node.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Closed yellow petals on a vine",
+      "author": "Juliancolton",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "note": "Designer (agent) 18/11, SK-051: nụ hoa bí còn khép trên dây. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.165,
+        "top": 0,
+        "width": 0.669,
+        "height": 1
+      }
+    },
+    "q4.q4_pumpkin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Zapallo_Plomo_semiller%C3%ADa_Costanzi_-_2014_01_21_-_squash_-1_photo1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Cucurbita_maxima_Zapallo_Plomo_semiller%C3%ADa_Costanzi_-_2014_01_21_-_squash_-1_photo1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A small pumpkin on the vine",
+      "author": "RoRo",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: quả bí non trên dây, còn hoa héo ở đầu. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.165,
+        "top": 0,
+        "width": 0.67,
+        "height": 1
+      }
+    },
+    "vocab.flowering_plant": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/flowering-plant-roots.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A flowering plant with its roots",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). bản khung 2:1."
+    },
+    "w1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w1.w1_leaves": {
+      "same_as": "learn.explore.explore_alive",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "w1.w1_trunk": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A thick tree trunk",
+      "author": "W.carter",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_tree_trunk.",
+      "crop": {
+        "left": 0,
+        "top": 0.292,
+        "width": 1,
+        "height": 0.416
+      }
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_sensitive",
+      "lesson": "sinh-vat-song-o-dau/vat-song-nao-cung-cu-dong"
+    },
+    "tray.tray_eggs": {
+      "same_as": "learn.explore.explore_eggs",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_mango": {
+      "same_as": "tray.tray_green_mango",
+      "lesson": "co-the-cua-em/nem-va-so"
+    },
+    "tray.tray_marble": {
+      "same_as": "tray.tray_marble",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_portulaca": {
+      "same_as": "learn.explore.explore_look"
+    },
+    "tray.tray_pumpkin": {
+      "same_as": "q4.q4_pumpkin"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_roots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_roots.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q1.q1_flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arya-portulaca_grandiflora-mawar-2019_00.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Arya-portulaca_grandiflora-mawar-2019_00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arya-portulaca grandiflora-mawar-2019 00",
+      "author": "Aris riyanto",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_look. Alt riêng q1 \"Bright pink petals\" (quyết định 15).",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q1.q1_leaves": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Corn_marigold_with_knapweed.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Corn_marigold_with_knapweed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green stem with a flower",
+      "author": "Lee Raye",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.094,
+        "width": 1,
+        "height": 0.562
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_stem."
+    },
+    "q3": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q3.q3_flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arya-portulaca_grandiflora-mawar-2019_00.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Arya-portulaca_grandiflora-mawar-2019_00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arya-portulaca grandiflora-mawar-2019 00",
+      "author": "Aris riyanto",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_look.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q3.q3_mango": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:An_Unripe_Mango_Of_Ratnagiri_(India).JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/An_Unripe_Mango_Of_Ratnagiri_%28India%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An Unripe Mango Of Ratnagiri (India)",
+      "author": "Pranav011 at en.wikipedia",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.055,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của co-the-cua-em/nem-va-so tray.tray_green_mango."
+    },
+    "q3.q3_bud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cucurbita_maxima_leaf_node.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Closed yellow petals on a vine",
+      "author": "Juliancolton",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của tray.tray_bud.",
+      "crop": {
+        "left": 0.165,
+        "top": 0.3,
+        "width": 0.669,
+        "height": 0.4
+      }
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_flower": {
+      "same_as": "tray.tray_pumpkin_flower"
+    },
+    "q4.q4_bud": {
+      "same_as": "tray.tray_bud"
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_leaf": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q5.q5_flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Hokkaido-K%C3%BCrbis_flower.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cucurbita_maxima_Hokkaido-K%C3%BCrbis_flower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cucurbita maxima Hokkaido-Kürbis flower",
+      "author": "Maja Dumat from Deutschland (Germany)",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của tray.tray_pumpkin_flower.",
+      "crop": {
+        "left": 0.182,
+        "top": 0.3,
+        "width": 0.636,
+        "height": 0.4
+      }
+    },
+    "q5.q5_root": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_roots.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_parts"
+    },
+    "vocab.stem": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Corn_marigold_with_knapweed.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Corn_marigold_with_knapweed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green stem with a flower",
+      "author": "Lee Raye",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1,
+        "height": 0.375
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_stem. Giữ phần hoa và thân trên."
+    },
+    "vocab.flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arya-portulaca_grandiflora-mawar-2019_00.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Arya-portulaca_grandiflora-mawar-2019_00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Arya-portulaca grandiflora-mawar-2019 00",
+      "author": "Aris riyanto",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_look.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.25,
+        "width": 0.75,
+        "height": 0.5
+      }
+    },
+    "vocab.bud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cucurbita_maxima_leaf_node.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Closed yellow petals on a vine",
+      "author": "Juliancolton",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của tray.tray_bud.",
+      "crop": {
+        "left": 0.165,
+        "top": 0.25,
+        "width": 0.669,
+        "height": 0.5
+      }
+    },
+    "reward.portulaca_card": {
+      "same_as": "learn.explore.explore_look"
+    }
+  }
+}

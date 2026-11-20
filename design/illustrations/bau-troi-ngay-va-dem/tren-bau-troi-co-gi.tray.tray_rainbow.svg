@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="5" stdDeviation="4" flood-color="#5B3B17" flood-opacity="0.30"/>
+  </filter>
+  <filter id="paperS" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="3" stdDeviation="2.5" flood-color="#2A1A08" flood-opacity="0.30"/>
+  </filter>
+</defs><rect width="1024" height="1024" fill="#FBF6EA"/><g filter="url(#paperE)"><circle cx="512" cy="512" r="380" fill="#EADFC4"/></g><g filter="url(#paperE)"><path d="M132 720 A 380 380 0 0 1 892 720 L 848 720 A 336 336 0 0 0 176 720 Z" fill="#A93A27"/></g><g filter="url(#paperE)"><path d="M176 720 A 336 336 0 0 1 848 720 L 804 720 A 292 292 0 0 0 220 720 Z" fill="#D97A3A"/></g><g filter="url(#paperE)"><path d="M220 720 A 292 292 0 0 1 804 720 L 760 720 A 248 248 0 0 0 264 720 Z" fill="#E2A52A"/></g><g filter="url(#paperE)"><path d="M264 720 A 248 248 0 0 1 760 720 L 716 720 A 204 204 0 0 0 308 720 Z" fill="#7FA25A"/></g><g filter="url(#paperE)"><path d="M308 720 A 204 204 0 0 1 716 720 L 672 720 A 160 160 0 0 0 352 720 Z" fill="#3B6E6A"/></g><g filter="url(#paperE)"><path d="M352 720 A 160 160 0 0 1 672 720 L 628 720 A 116 116 0 0 0 396 720 Z" fill="#2E4A6E"/></g><g filter="url(#paperE)"><g transform="translate(190 700) scale(1.7)"><path d="M-90 30 C-110 30 -112 0 -86 -4 C-84 -36 -40 -44 -26 -20 C-14 -52 40 -50 46 -14 C70 -24 100 -6 92 18 C108 22 104 30 90 30 Z" fill="#FBF6EA"/></g></g><g filter="url(#paperE)"><g transform="translate(840 700) scale(1.7)"><path d="M-90 30 C-110 30 -112 0 -86 -4 C-84 -36 -40 -44 -26 -20 C-14 -52 40 -50 46 -14 C70 -24 100 -6 92 18 C108 22 104 30 90 30 Z" fill="#FBF6EA"/></g></g></svg>

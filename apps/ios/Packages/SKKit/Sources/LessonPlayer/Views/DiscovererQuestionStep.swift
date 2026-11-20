@@ -101,6 +101,7 @@ struct DiscovererQuestionStep: View {
     @Environment(\.speechPlayer) private var speech
     @Environment(\.layoutMetrics) private var metrics
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.ageGroup) private var ageGroup
     @ReducedMotion private var reduced
 
     private var mode: LanguageMode { session.languageMode }
@@ -659,7 +660,9 @@ struct DiscovererQuestionStep: View {
                             .foregroundStyle(placed.contains(word.key) ? Tokens.Role.textSecondary : Tokens.Role.textPrimary)
                     }
                     .padding(Tokens.Space.s8)
-                    .frame(maxWidth: .infinity)
+                    // SK-060 (finding 1): a word card without a picture is still a full touch
+                    // target (56pt Discoverer, B7.8), not just the word plus padding (42pt).
+                    .frame(maxWidth: .infinity, minHeight: ageGroup.touchTarget)
                     .background {
                         PeeledCard(radius: Tokens.Radius.discoverer, peel: look == .tried ? ExplorerMetrics.peel / 2 : 0)
                             .fill(look.fill)

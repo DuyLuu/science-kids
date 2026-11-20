@@ -1,0 +1,296 @@
+{
+  "note": "SK-053 Lớn lên, bài con-vat-de-con. Designer (agent) chọn 19/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Hình của Discoverer chép đủ mục. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1, câu 4:3) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 3. Hình tự vẽ (SK-053 quyết định 8): people-four-ages.jpg, person-adult.2x1.jpg, person-adult.4x3.jpg, person-adult.jpg, person-baby.2x1.jpg, person-baby.jpg, person-child.jpg. Hình ghép: không.",
+  "images": {
+    "learn.explore.explore_piglets": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piglets_and_sow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Piglets_and_sow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Piglets and sow",
+      "author": "rockindave1",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: lợn nái nằm trên rơm, bốn lợn con lông đỏ đang bú. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_calf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo_suckling_calf,_Bario,_Sarawak_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Water_buffalo_suckling_calf%2C_Bario%2C_Sarawak_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo suckling calf, Bario, Sarawak 1",
+      "author": "watchsmart",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.3438,
+        "top": 0.1042,
+        "width": 0.4844,
+        "height": 0.6458
+      },
+      "note": "Designer (agent) 19/11, SK-053: nghé đang bú trâu mẹ (trâu nước, Sarawak). Hình gốc của chủ đề. Lượt 2 (tester c9): cắt bỏ đầu trâu mẹ đang gặm cỏ, khung vuông còn nghé và nửa sau trâu mẹ để đọc ra \"nghé bú sữa\"; sợi dây thép vẫn còn ở nửa dưới khung."
+    },
+    "learn.explore.explore_kittens": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Suckling_kittens.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Suckling_kittens.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat with kittens on the grass",
+      "author": "Artur Andrzej",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: mèo mẹ vằn xám nằm trên cỏ, ba mèo con lông đen rúc bú: con khác màu mẹ. Ảnh mèo tam thể với đàn con nhiều màu (1200 px) bị Wikimedia chặn tải bản gốc (HTTP 429), đổi sang ảnh này."
+    },
+    "learn.explore.explore_humans": {
+      "own": {
+        "file": "content/images/own/lon-len/people-four-ages.jpg",
+        "method": "drawn"
+      },
+      "title": "A baby, a child, a grown-up and a grandparent",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). em bé bò, bạn nhỏ, người lớn, người già tóc bạc lưng còng chống gậy; vẽ nghiêng, không nét mặt, nền kem, không chữ, không nét viền."
+    },
+    "q4.q4_adult": {
+      "own": {
+        "file": "content/images/own/lon-len/person-adult.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). cùng nét với explore_humans."
+    },
+    "q4.q4_baby": {
+      "own": {
+        "file": "content/images/own/lon-len/person-baby.jpg",
+        "method": "drawn"
+      },
+      "title": "A baby crawling",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). cùng nét với explore_humans."
+    },
+    "q4.q4_child": {
+      "own": {
+        "file": "content/images/own/lon-len/person-child.jpg",
+        "method": "drawn"
+      },
+      "title": "A child standing",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). cùng nét với explore_humans."
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/lon-len/person-adult.4x3.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). bản khung 4:3 của person-adult.jpg (cùng hình người lớn)."
+    },
+    "vocab.baby": {
+      "own": {
+        "file": "content/images/own/lon-len/person-baby.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A baby crawling",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). bản khung 2:1 của person-baby.jpg."
+    },
+    "vocab.adult": {
+      "own": {
+        "file": "content/images/own/lon-len/person-adult.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up",
+      "note": "Designer (agent) 19/11, SK-053: hình tự vẽ (PM đồng ý, ticket SK-053, quyết định 8). bản khung 2:1 của person-adult.jpg."
+    },
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không sang nhóm tuổi khác)."
+    },
+    "w1.w1_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_hen (same_as không sang nhóm tuổi khác)."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_old": {
+      "same_as": "learn.explore.explore_old",
+      "lesson": "lon-len/vat-song-nao-cung-co-vong-doi"
+    },
+    "w2.w2_puppies": {
+      "same_as": "learn.explore.explore_born",
+      "lesson": "lon-len/vat-song-nao-cung-co-vong-doi"
+    },
+    "tray.tray_litter": {
+      "same_as": "learn.explore.explore_kittens"
+    },
+    "tray.tray_chick": {
+      "same_as": "w1.w1_chick",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_calf_milk": {
+      "same_as": "learn.explore.explore_calf"
+    },
+    "tray.tray_kitten_up": {
+      "same_as": "q4",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_piglets": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piglets_and_sow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Piglets_and_sow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Piglets and sow",
+      "author": "rockindave1",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1993,
+        "width": 0.4844,
+        "height": 0.7268
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester c5): bản cắt khung vuông món Chơi của learn.explore.explore_piglets, sát vào bốn lợn con đang bú, lợn mẹ chỉ còn mép bụng bên phải."
+    },
+    "tray.tray_calf_field": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_chick": {
+      "same_as": "w1.w1_chick",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "q1.q1_piglets": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piglets_and_sow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Piglets_and_sow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Piglets and sow",
+      "author": "rockindave1",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 19/11, SK-053: bản cắt khung choice_3 của learn.explore.explore_piglets."
+    },
+    "q1.q1_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_calf"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_piglets"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không sang nhóm tuổi khác)."
+    },
+    "q5.q5_buffalo": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_buffalo._(9391143988).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Water_buffalo._%289391143988%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Water buffalo drinking at a stream",
+      "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.14,
+        "top": 0.48,
+        "width": 0.58,
+        "height": 0.333
+      },
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/trai-dat-rat-lau-ve-truoc w1.w1_buffalo (same_as không sang nhóm tuổi khác)."
+    },
+    "q5.q5_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_hen (same_as không sang nhóm tuổi khác)."
+    },
+    "vocab.kitten": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Suckling_kittens.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Suckling_kittens.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cat with kittens on the grass",
+      "author": "Artur Andrzej",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.2667,
+        "width": 0.667,
+        "height": 0.5005
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_kittens, dải ngang qua mèo mẹ và ba mèo con."
+    },
+    "vocab.piglet": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piglets_and_sow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Piglets_and_sow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Piglets and sow",
+      "author": "rockindave1",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.2931,
+        "width": 0.75,
+        "height": 0.5627
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_piglets, bốn lợn con cạnh bụng lợn mẹ."
+    },
+    "reward.pig_card": {
+      "same_as": "learn.explore.explore_piglets"
+    }
+  }
+}

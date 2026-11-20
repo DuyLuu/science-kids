@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // content-cli: Science Kids content pipeline (MVP). Commands: validate, import, ids (markdown),
-// tts, build, images (search, fetch: SK-033), fetch-model. Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
+// tts, build, images (search, fetch: SK-033), ui-voice build (SK-059), fetch-model. Exit 0 = ok, 1 = content or runtime error, 2 = wrong usage.
 // validate, import and ids never load a module of src/tts (no model, no Python, no network).
 
 // .ts runs through Node's type stripping (no build step): needs ^22.18 or >= 23.6.
@@ -71,6 +71,25 @@ fetch: tải mọi ảnh trong file chọn ảnh (content/images/<age_group>/<to
   --force              tải và kiểm lại cả ảnh đã có trong cache
   --cache <thư mục>    cache ảnh, mặc định content/.images`;
 
+const UI_VOICE_USAGE = `Cách dùng (chữ giao diện có giọng, SK-059):
+  node src/cli.ts ui-voice build [--source <file>] [--out <thư mục>] [--lang en,vi] [--force] [--no-review]
+                                 [--review-dir <thư mục>] [--cache <thư mục>] [--no-self-check]
+  Từ gốc repo: npm --prefix tools/content-cli run ui-voice -- build
+
+build: đọc content/ui-voice/strings.json (key = key của Localizable.xcstrings, đủ en và vi), sinh mỗi key × thứ tiếng
+     một clip y như tts (cùng chuẩn hoá, giọng, chuẩn âm lượng, m4a, cache content/.audio; vi có tự kiểm và đổi seed),
+     rồi ghi --out (mặc định content/.build/ui-voice): <key>.<en|vi>.m4a + manifest.json (key → file, sha256, bytes,
+     duration_ms, text, read). Thay cả --out (chỉ khi trống hoặc là ui-voice build trước đó). App iOS nhúng thư mục này
+     thành ui-voice/ trong bundle.
+  --source <file>      file nguồn, mặc định content/ui-voice/strings.json
+  --out <thư mục>      nơi ghi, mặc định content/.build/ui-voice
+  --lang en,vi         thứ tiếng, mặc định cả hai
+  --force              sinh lại mọi clip, bỏ qua cache
+  --no-review          không tạo file nghe thử
+  --review-dir <dir>   nơi ghi review-ui-voice-<en|vi>.m4a + .txt, mặc định content/.build/tts/ui-voice
+  --cache <thư mục>    cache clip, mặc định content/.audio
+  --no-self-check      vi: không chạy bước tự kiểm (evaluate.py) trên clip mới`;
+
 function usage(defaults: { DEFAULT_DTYPE: string; DEFAULT_VOICE: string; DEFAULT_VI_VOICE: string }) {
   const { DEFAULT_DTYPE, DEFAULT_VOICE, DEFAULT_VI_VOICE } = defaults;
   return `Cách dùng:
@@ -81,11 +100,14 @@ function usage(defaults: { DEFAULT_DTYPE: string; DEFAULT_VOICE: string; DEFAULT
   node src/cli.ts build <topic.json> <lesson.json>... [--out <thư mục>] [tuỳ chọn]
   node src/cli.ts validate <topic.json> <lesson.json>... [--rules <file>] [--min-app-version <x.y.z>]
   node src/cli.ts images search|fetch …                             (ảnh, xem dưới)
+  node src/cli.ts ui-voice build [tuỳ chọn]                        (chữ giao diện có giọng, xem dưới)
   node src/cli.ts fetch-model [--dtype fp32|fp16|q8]
 
 ${MD_USAGE}
 
 ${IMAGES_USAGE}
+
+${UI_VOICE_USAGE}
 
 tts: sinh clip cho mọi chuỗi Spoken (en hoặc vi) của các file topic/lesson, ghi bản sao có
      audio.<lang> (sha256 của file m4a) vào --out. Bài lẻ thì đưa kèm topic.json của chủ đề.
@@ -472,6 +494,61 @@ async function main(): Promise<number> {
     if (command === "ids") return markdownCommand.runIds(options);
     const out = (values as { out?: string }).out;
     return markdownCommand.runImport({ ...options, out: out ? fromUser(out) : markdownCommand.DEFAULT_JSON_DIR });
+  }
+  if (command === "ui-voice") {
+    const [sub, ...args] = rest;
+    if (!sub || sub === "-h" || sub === "--help" || sub === "help") {
+      console.log(UI_VOICE_USAGE);
+      return sub ? 0 : 2;
+    }
+    if (sub !== "build") {
+      console.error(`Lệnh ui-voice lạ: ${sub}\n\n${UI_VOICE_USAGE}`);
+      return 2;
+    }
+    let parsed;
+    try {
+      parsed = parseArgs({
+        args,
+        allowPositionals: false,
+        allowNegative: true,
+        options: {
+          source: { type: "string" },
+          out: { type: "string" },
+          cache: { type: "string" },
+          lang: { type: "string", default: "en,vi" },
+          force: { type: "boolean", default: false },
+          review: { type: "boolean", default: true },
+          "review-dir": { type: "string" },
+          "self-check": { type: "boolean", default: true },
+          help: { type: "boolean", short: "h", default: false },
+        },
+      });
+    } catch (error) {
+      console.error(`${(error as Error).message}\n\n${UI_VOICE_USAGE}`);
+      return 2;
+    }
+    const { values } = parsed;
+    if (values.help) {
+      console.log(UI_VOICE_USAGE);
+      return 0;
+    }
+    const langs = [...new Set(values.lang.split(",").map((lang) => lang.trim()).filter(Boolean))];
+    if (langs.length === 0 || langs.some((lang) => lang !== "en" && lang !== "vi")) {
+      console.error(`--lang ${values.lang} không hợp lệ (en, vi hoặc en,vi).`);
+      return 2;
+    }
+    const uiVoice = await import("./ui-voice/command.ts");
+    return uiVoice.runUiVoiceBuild({
+      source: values.source ? fromUser(values.source) : uiVoice.DEFAULT_UI_VOICE_SOURCE,
+      out: values.out ? fromUser(values.out) : uiVoice.DEFAULT_UI_VOICE_OUT,
+      cacheDir: values.cache ? fromUser(values.cache) : DEFAULT_AUDIO_DIR,
+      langs: langs as ("en" | "vi")[],
+      force: values.force,
+      review: values.review,
+      reviewDir: values["review-dir"] ? fromUser(values["review-dir"]) : uiVoice.DEFAULT_UI_VOICE_REVIEW_DIR,
+      selfCheck: values["self-check"],
+      display: shown,
+    });
   }
   if (command === "fetch-model") {
     const { DEFAULT_DTYPE, ensureModel, isDtype } = await import("./tts/kokoro-model.ts");

@@ -1,0 +1,243 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_city",
+      "lesson": "bau-troi-ngay-va-dem/cac-vi-sao"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_owl",
+      "lesson": "bau-troi-ngay-va-dem/ngay-va-dem"
+    },
+    "w3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w3.w3_lights": {
+      "same_as": "learn.explore.explore_lights",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-moc-mat-troi-lan"
+    },
+    "w3.w3_rooster": {
+      "same_as": "tray.tray_rooster",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    },
+    "learn.explore.explore_day_sky": {
+      "same_as": "learn.explore.explore_cloudy",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "learn.explore.explore_night_sky": {
+      "same_as": "reward.night_sky_card",
+      "lesson": "bau-troi-ngay-va-dem/ngay-va-dem"
+    },
+    "learn.explore.explore_near": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Single_Line_Kite_in_Sky_-_DPLA_-_7a29acc44821c56b3a12cf7b43acc2cd.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Single_Line_Kite_in_Sky_-_DPLA_-_7a29acc44821c56b3a12cf7b43acc2cd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Single Line Kite in Sky - DPLA - 7a29acc44821c56b3a12cf7b43acc2cd",
+      "author": "Unknown",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Single_Line_Kite_in_Sky_-_DPLA_-_7a29acc44821c56b3a12cf7b43acc2cd.jpg",
+      "note": "SK-061 (designer 19/11): một con diều giấy nhiều màu bay trên trời xanh, thấy dây diều kéo xuống."
+    },
+    "learn.explore.explore_far_away": {
+      "same_as": "learn.explore.explore_far",
+      "lesson": "bau-troi-ngay-va-dem/cac-vi-sao"
+    },
+    "tray.tray_sun": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/tren-bau-troi-co-gi.tray.tray_sun.jpg",
+        "method": "drawn"
+      },
+      "title": "A yellow paper circle on blue",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Kệ Chơi bài 6, bộ năm món cùng kiểu: mỗi món một vật lớn giữa ô, nền giấy sáng #FBF6EA với đĩa giấy điệp, cùng nền với đèn ông sao star_lantern_card (lượt 3, tester B12: nền màu không còn lộ nhóm ngày, đêm). Mặt Trời: đĩa giấy vàng hoè trên vành giấy vàng nhạt lượn sóng, không tia nhọn, không mặt. Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×1024."
+    },
+    "tray.tray_rainbow": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/tren-bau-troi-co-gi.tray.tray_rainbow.jpg",
+        "method": "drawn"
+      },
+      "title": "Curved paper stripes of many colours",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Kệ Chơi bài 6 (cùng kiểu tray_sun): cầu vồng sáu dải giấy cong đỏ son, cam, vàng hoè, xanh lá, gỉ đồng, chàm; hai đám mây giấy trắng ở hai chân; . Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×1024. Lượt 3 (20/11): đổi nền sang giấy sáng có đĩa giấy điệp như cả kệ (tester B12); trăng, sao màu vàng hoè."
+    },
+    "tray.tray_moon": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/tren-bau-troi-co-gi.tray.tray_moon.jpg",
+        "method": "drawn"
+      },
+      "title": "A pale paper curve on navy",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Kệ Chơi bài 6 (cùng kiểu tray_sun): trăng lưỡi liềm giấy vàng nhạt, ba sao bốn cánh nhỏ, ; không mặt người, không chú Cuội. Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×1024. Lượt 3 (20/11): đổi nền sang giấy sáng có đĩa giấy điệp như cả kệ (tester B12); trăng, sao màu vàng hoè."
+    },
+    "tray.tray_stars": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/tren-bau-troi-co-gi.tray.tray_stars.jpg",
+        "method": "drawn"
+      },
+      "title": "Tiny paper sparkles on navy",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Kệ Chơi bài 6 (cùng kiểu tray_sun): mười chín ngôi sao là chấm tròn và sao bốn cánh trắng, vàng nhạt rải đều trên ; không sao năm cánh, không nối nét, không trăng. Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×1024. Lượt 3 (20/11): đổi nền sang giấy sáng có đĩa giấy điệp như cả kệ (tester B12); trăng, sao màu vàng hoè."
+    },
+    "tray.tray_star_lantern": {
+      "same_as": "reward.star_lantern_card",
+      "lesson": "thoi-tiet-va-cac-mua/mua-lai-ve"
+    },
+    "tray.tray_round_lantern": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/tren-bau-troi-co-gi.tray.tray_round_lantern.jpg",
+        "method": "drawn"
+      },
+      "title": "A round paper lamp with a handle",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Kệ Chơi bài 6 (cùng kiểu tray_sun): đèn lồng giấy tròn vàng nhạt có năm nan tre, nẹp đỏ son trên dưới, quai tre và móc treo, tua đỏ phía dưới, ; tròn gần như trăng nhưng thấy rõ quai, nan, tua. Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×1024. Lượt 3 (20/11): đổi nền sang giấy sáng có đĩa giấy điệp như cả kệ (tester B12); trăng, sao màu vàng hoè."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_clouds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.218,
+        "top": 0.4498,
+        "width": 0.6644,
+        "height": 0.5003
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của thoi-tiet-va-cac-mua/thoi-tiet-hom-nay learn.explore.explore_cloudy (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-050 (designer 17/11): hình gốc của chủ đề. Tia nắng toả lên từ sau một đám mây dày, đĩa Mặt Trời bị mây che kín, không chói; trời xanh; không người, không máy bay, không cầu vồng, không chữ. Không "
+    },
+    "q1.q1_rainbow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Rainbow_over_Hanalei_National_Wildlife_Refuge_%2854108999762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rainbow over Hanalei National Wildlife Refuge (54108999762)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Hanalei_National_Wildlife_Refuge_(54108999762).jpg",
+      "crop": {
+        "left": 0.1672,
+        "top": 0.0,
+        "width": 0.6656,
+        "height": 0.625
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của co-the-cua-em/nam-giac-quan-cua-em tray.tray_rainbow (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). Chép mục gốc discoverer/nao-bo-va-giac-quan/giac-quan-gui-tin-ve-nao tray.tray_rainbow (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Cầu vồng trên ruộng khoai môn xanh (Hawaii), gần cảnh r"
+    },
+    "q1.q1_moon": {
+      "same_as": "learn.explore.explore_full",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_near"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_cloudy",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_moon": {
+      "same_as": "learn.explore.explore_day_moon",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "q4.q4_kite": {
+      "same_as": "learn.explore.explore_near"
+    },
+    "q4.q4_plane": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Airplane_flying_in_the_sky.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Airplane_flying_in_the_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Airplane flying in the sky",
+      "author": "Yann Kemper",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-061 (designer 19/11): máy bay nhỏ bay trên nền trời xanh trong, chụp xa, không đọc được chữ."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_kite": {
+      "same_as": "learn.explore.explore_near"
+    },
+    "q5.q5_stars": {
+      "same_as": "learn.explore.explore_twinkle",
+      "lesson": "bau-troi-ngay-va-dem/cac-vi-sao"
+    },
+    "q5.q5_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Great_horned_owl_along_lower_Columbia_River_%2851904109965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great horned owl along lower Columbia River (51904109965)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.0468,
+        "width": 1,
+        "height": 0.883
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của bau-troi-ngay-va-dem/ngay-va-dem learn.explore.explore_owl (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-061 (designer 19/11): cú sừng lớn mở to đôi mắt vàng tròn, đậu trên cành thông lúc trời chiều tối (U.S. Fish and Wildlife Service, Public domain); không người, không chữ. Ảnh cú riêng cho chủ đề (t"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_full",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "vocab.sky": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.218,
+        "top": 0.4498,
+        "width": 0.6644,
+        "height": 0.5003
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 2:1 thẻ từ của thoi-tiet-va-cac-mua/thoi-tiet-hom-nay learn.explore.explore_cloudy (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-050 (designer 17/11): hình gốc của chủ đề. Tia nắng toả lên từ sau một đám mây dày, đĩa Mặt Trời bị mây che kín, không chói; trời xanh; không người, không máy bay, không cầu vồng, không chữ. Không "
+    },
+    "vocab.near": {
+      "same_as": "learn.explore.explore_near"
+    },
+    "vocab.cloud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunbeams_(2349813260).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunbeams_%282349813260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunbeams (2349813260)",
+      "author": "Chris Eason from London",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.218,
+        "top": 0.4498,
+        "width": 0.6644,
+        "height": 0.5003
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 2:1 thẻ từ của thoi-tiet-va-cac-mua/thoi-tiet-hom-nay learn.explore.explore_cloudy (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-050 (designer 17/11): hình gốc của chủ đề. Tia nắng toả lên từ sau một đám mây dày, đĩa Mặt Trời bị mây che kín, không chói; trời xanh; không người, không máy bay, không cầu vồng, không chữ. Không "
+    },
+    "vocab.kite": {
+      "same_as": "learn.explore.explore_near"
+    },
+    "reward.day_moon_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:028_Moon_in_Blue_Sky_(9022584780).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/028_Moon_in_Blue_Sky_%289022584780%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "028 Moon in Blue Sky (9022584780)",
+      "author": "Photo Dharma from Sadao, Thailand",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2187,
+        "top": 0.0,
+        "width": 0.5625,
+        "height": 1.0
+      },
+      "note": "SK-061 (designer 19/11): nửa vầng trăng trắng nhạt giữa trời xanh ban ngày, khác explore_day_moon bài 4 (trăng gần tròn có ngọn thông); cắt vuông, trăng giữa khung. Không có cành cây (ảnh trăng ban ngày có cành hợp giấy phép đều trăng quá nhỏ)."
+    }
+  }
+}

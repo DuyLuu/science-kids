@@ -336,7 +336,7 @@ image.alt.vi: Con vịt đứng trên bãi cỏ
 
 ## Quiz
 
-> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 1, 2, 2, 2. Hai format: `single_choice` (q1, q3, q4, q6; ba lựa chọn), `true_false` (q2, q5). Bài này không dùng `order_sequence`: thức ăn không có thứ tự tự nhiên (chuỗi thức ăn để dành *Chuỗi thức ăn*, Explorer số mười).
+> Sáu câu, dễ tới khó. DOK từ q1 tới q6: 1, 1, 1, 2, 2, 2. Hai format: `single_choice` (q1, q3, q4, q6; ba lựa chọn), `true_false` (q2, q5). Bài này không dùng `order_sequence`: thức ăn không có thứ tự tự nhiên (chuỗi thức ăn để dành *Chuỗi thức ăn*, Explorer số ba).
 
 ### q1
 id: 9448eddc-4c78-4570-9169-93aecdfa3f62

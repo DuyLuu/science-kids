@@ -573,8 +573,19 @@ func packSession(_ lesson: Lesson, presentation: LessonPresentation, directory: 
 // MARK: - Key point pictures
 
 @Suite struct KeyPointPicturesTests {
-    /// The designer's table (`Quiz-Dot1.html`, "Hình thẻ ý chính", 15/11): the 34 lessons whose
+    /// The designer's table (`Quiz-Dot1.html`, "Hình thẻ ý chính", 15/11): the lessons whose
     /// key point n does not take group n, as 1-based group numbers. Every other lesson keeps 1, 2, 3.
+    ///
+    /// Tester 19/11 (SK-053, "Rà ảnh (tester 19/11, lượt 2)" and "lượt 3"): added the 18 Explorer
+    /// lessons written since 15/11 (*Nơi sống trên Trái Đất* 4, *Thời tiết và các mùa* 3, *Cơ thể
+    /// của em* 3, *Cây quanh em* 3, *Lớn lên* 5), each read line by line against the Học group it
+    /// takes. The matcher was re-implemented outside Swift and reproduces all 34 old rows byte for
+    /// byte, so the new rows are what the engine really does, not a guess.
+    ///
+    /// Two *Lớn lên* lessons matched wrongly at first (lượt 2, B6 and B7: the animal line took the
+    /// *People* picture, and "the young start a new life cycle" took the old banyan tree). They
+    /// were kept out of this table until content-editor reworded the two Học groups (lượt 3);
+    /// they now take `[2, 1, 4]` and `[1, 4, 3]` and are in the table like the rest.
     static let table: [String: [Int]] = [
         "an-uong-lanh-manh/mam-com-can-bang": [2, 1, 3],
         "be-mat-trai-dat/dat-va-nuoc-tren-trai-dat": [1, 3, 2],
@@ -610,6 +621,42 @@ func packSession(_ lesson: Lesson, presentation: LessonPresentation, directory: 
         "sinh-vat-song-o-dau/vat-song-hay-khong-song": [1, 2, 4],
         "sinh-vat-song-o-dau/vat-song-nao-cung-cu-dong": [1, 2, 4],
         "sinh-vat-song-o-dau/nhung-noi-song-nho-xiu": [1, 4, 3],
+        // Added by the tester 19/11 (SK-053 lượt 2); each one read against its Học groups.
+        "noi-song-tren-trai-dat/moi-con-vat-mot-noi-song": [2, 1, 3],
+        "noi-song-tren-trai-dat/bien-va-dai-duong": [1, 2, 4],
+        "noi-song-tren-trai-dat/bac-cuc": [1, 3, 2],
+        "noi-song-tren-trai-dat/nam-cuc": [1, 3, 2],
+        "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay": [2, 1, 3],
+        "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho": [2, 1, 3],
+        "thoi-tiet-va-cac-mua/mua-thu-va-mua-dong": [1, 2, 4],
+        "co-the-cua-em/bo-phan-ben-ngoai-co-the": [1, 2, 4],
+        "co-the-cua-em/nam-giac-quan-cua-em": [1, 2, 5],
+        // Weak but not wrong: key point 1 names eyes, noses and ears and takes the nose group
+        // (two shared words); key point 3 is a safety line that no group illustrates.
+        "co-the-cua-em/nhin-ngui-va-nghe": [2, 4, 3],
+        "cay-quanh-em/cay-co-hoa-re-than-la-hoa": [1, 3, 4],
+        // Weak but not wrong: key point 3 ("do not pick them") has no group of its own and takes
+        // the leftover one.
+        "cay-quanh-em/hoa-nhieu-mau-nhieu-hinh": [1, 3, 2],
+        "cay-quanh-em/rau-qua-ta-an-la-phan-nao-cua-cay": [1, 2, 4],
+        "lon-len/vat-song-nao-cung-co-vong-doi": [1, 4, 3],
+        "lon-len/con-vat-de-con": [1, 2, 4],
+        "lon-len/con-vat-doi-hinh-dang": [1, 2, 4],
+        "lon-len/vong-doi-cua-cay": [1, 2, 4],
+        "lon-len/muon-lon-len-con-vat-can-gi": [2, 1, 4],
+        // Added by the tester 19/11 (SK-058, "Rà ảnh (tester 19/11, lượt 2)"): *Núi, sông và biển*,
+        // read against the Học group and the picture each one takes. *Đồng bằng và ruộng lúa* keeps
+        // 1, 2, 3 after content-editor swapped its last two groups, so it is not in this table.
+        "nui-song-va-bien/dat-lien-va-bien": [1, 2, 4],
+        "nui-song-va-bien/nui-va-doi": [1, 2, 4],
+        "nui-song-va-bien/song-va-ho": [1, 2, 4],
+        // Key point 1 says beaches can be sandy *or* rocky and takes the sandy group (a tie with
+        // the rocky one, broken by place); the recap card shows sand only. Written down in
+        // `_topic.md`, "Ghép ý chính với ô Học".
+        "nui-song-va-bien/bai-bien-dao-va-vinh": [1, 3, 4],
+        "nui-song-va-bien/hang-dong": [1, 2, 4],
+        // SK-061 (ios-dev 20/11): the six lessons of *Bầu trời ngày và đêm* all keep 1, 2, 3 (each
+        // key point read against Học group n on the pack of 20/11), so none is in this table.
     ]
 
     @Test func wordsAndStems() {

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="5" stdDeviation="4" flood-color="#5B3B17" flood-opacity="0.30"/>
+  </filter>
+  <filter id="paperS" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="3" stdDeviation="2.5" flood-color="#2A1A08" flood-opacity="0.30"/>
+  </filter>
+</defs><rect width="1024" height="1024" fill="#FBF6EA"/><g filter="url(#paperE)"><circle cx="512" cy="512" r="380" fill="#EADFC4"/></g><g filter="url(#paperS)"><path d="M470 209 Q479.18 250.82 521 260 Q479.18 269.18 470 311 Q460.82 269.18 419 260 Q460.82 250.82 470 209 Z" fill="#C98E2A"/><circle cx="720" cy="390" r="20.4" fill="#C98E2A"/><path d="M540 439.4 Q545.508 464.492 570.6 470 Q545.508 475.508 540 500.6 Q534.492 475.508 509.4 470 Q534.492 464.492 540 439.4 Z" fill="#E2A52A"/><path d="M360 379.2 Q367.344 412.656 400.8 420 Q367.344 427.344 360 460.8 Q352.656 427.344 319.2 420 Q352.656 412.656 360 379.2 Z" fill="#C98E2A"/><path d="M260 589 Q269.18 630.82 311 640 Q269.18 649.18 260 691 Q250.82 649.18 209 640 Q250.82 630.82 260 589 Z" fill="#C98E2A"/><path d="M450 622.8 Q454.896 645.104 477.2 650 Q454.896 654.896 450 677.2 Q445.104 654.896 422.8 650 Q445.104 645.104 450 622.8 Z" fill="#E2A52A"/><circle cx="620" cy="620" r="16.8" fill="#C98E2A"/><path d="M820 606 Q826.12 633.88 854 640 Q826.12 646.12 820 674 Q813.88 646.12 786 640 Q813.88 633.88 820 606 Z" fill="#E2A52A"/><path d="M560 786 Q566.12 813.88 594 820 Q566.12 826.12 560 854 Q553.88 826.12 526 820 Q553.88 813.88 560 786 Z" fill="#C98E2A"/></g></svg>

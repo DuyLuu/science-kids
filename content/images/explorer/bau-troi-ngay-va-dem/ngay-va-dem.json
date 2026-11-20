@@ -1,0 +1,274 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "tray.tray_cat",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am"
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_owl": {
+      "same_as": "learn.explore.explore_owl"
+    },
+    "w2.w2_rabbit": {
+      "same_as": "learn.explore.explore_fur",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "learn.explore.explore_day": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/ngay-va-dem.learn.explore.explore_day.jpg",
+        "method": "drawn"
+      },
+      "title": "A house under a blue, sunny sky",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Cùng một khung cảnh cho cả năm hình (explore_day, explore_night bài 2; q4_morning, q4_noon, q4_evening bài 3): nhà mái ngói đỏ son, hiên có chum nước, cây cau, bụi chuối, hàng rào tre, sân đất, ruộng lúa và rặng tre phía sau; chỉ đổi trời, Mặt Trời hay trăng, đèn cửa sổ và một chi tiết sống của từng giờ. Ban ngày: trời xanh sáng, Mặt Trời là đĩa giấy vàng hoè có vành giấy lượn sóng ở góc trên trái (không tia nhọn, không mặt), hai đám mây trắng, một con gà mái trong sân, cửa sổ tối. Mặt Trời và mái nhà nằm trong dải giữa để khung 17:10, 4:3 vẫn thấy. JPEG 1024×1024."
+    },
+    "learn.explore.explore_night": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/ngay-va-dem.learn.explore.explore_night.jpg",
+        "method": "drawn"
+      },
+      "title": "The same house under a dark sky",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Cùng một khung cảnh cho cả năm hình (explore_day, explore_night bài 2; q4_morning, q4_noon, q4_evening bài 3): nhà mái ngói đỏ son, hiên có chum nước, cây cau, bụi chuối, hàng rào tre, sân đất, ruộng lúa và rặng tre phía sau; chỉ đổi trời, Mặt Trời hay trăng, đèn cửa sổ và một chi tiết sống của từng giờ. Ban đêm: trời xanh than, trăng lưỡi liềm vàng nhạt ở đúng chỗ Mặt Trời của explore_day, bảy ngôi sao bốn cánh nhỏ (không sao năm cánh, không nối nét), hai cửa sổ sáng đèn vàng, không còn gà; một con cú đậu trên cành tre ở mép trái. JPEG 1024×1024."
+    },
+    "learn.explore.explore_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Great_horned_owl_along_lower_Columbia_River_%2851904109965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great horned owl along lower Columbia River (51904109965)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "note": "SK-061 (designer 19/11): cú sừng lớn mở to đôi mắt vàng tròn, đậu trên cành thông lúc trời chiều tối (U.S. Fish and Wildlife Service, Public domain); không người, không chữ. Ảnh cú riêng cho chủ đề (tester A6)."
+    },
+    "learn.explore.explore_sleep": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "052ae75b-a8b5-4764-9f63-584454e33952",
+      "source_url": "https://www.flickr.com/photos/33598632@N00/3450775475",
+      "file_url": "https://live.staticflickr.com/3326/3450775475_15080e2ce5_b.jpg",
+      "title": "mosquito net",
+      "author": "missy & the universe",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "SK-061 (designer 19/11): giường có màn buông, đèn ngủ vàng dịu, phòng tối; không người."
+    },
+    "tray.tray_owl_item": {
+      "same_as": "learn.explore.explore_owl"
+    },
+    "tray.tray_bat_item": {
+      "same_as": "tray.tray_bat",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "tray.tray_firefly_item": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lupines_and_Fireflies_No._4_(14505155544).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Lupines_and_Fireflies_No._4_%2814505155544%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lupines and Fireflies No. 4 (14505155544)",
+      "author": "Mike Lewinski from Tres Piedras, NM, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-061 (designer 19/11): đom đóm đang phát sáng thành đốm và vệt ngắn trên bãi cỏ, hoa lupin ban đêm; không người, không đèn."
+    },
+    "tray.tray_rooster": {
+      "same_as": "tray.tray_rooster",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    },
+    "tray.tray_butterfly": {
+      "same_as": "q4.q4_butterfly",
+      "lesson": "lon-len/con-vat-doi-hinh-dang"
+    },
+    "tray.tray_school": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "a2bc4456-aa05-4dbe-afde-4ef5f43619b3",
+      "source_url": "https://www.flickr.com/photos/62476801@N05/6181658390",
+      "file_url": "https://live.staticflickr.com/6171/6181658390_be7c323a8f_b.jpg",
+      "title": "Home from the store",
+      "author": "lhepler",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.3,
+        "width": 0.45,
+        "height": 0.6
+      },
+      "note": "SK-061 (designer 19/11): nhóm trẻ nhỏ đi bộ cùng người lớn ban ngày, nhìn từ phía sau; cắt lấy nửa trái (hai bạn quay lưng, áo hoa, áo kẻ), bỏ hai bạn quay mặt bên phải (tester A2). Bản Flickr của ảnh (bản Commons hay bị 429)."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_day": {
+      "same_as": "learn.explore.explore_day"
+    },
+    "q1.q1_night": {
+      "same_as": "learn.explore.explore_night"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_day"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_rooster": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2011-04-02_Viking_Rooster.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/2011-04-02_Viking_Rooster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2011-04-02 Viking Rooster",
+      "author": "Bernard McManus",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1813,
+        "width": 1,
+        "height": 0.3749
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của co-the-cua-em/nam-giac-quan-cua-em tray.tray_rooster (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). Chép mục gốc discoverer/nao-bo-va-giac-quan/nao-dieu-khien-co-the w1 (same_as không trỏ sang nhóm tuổi khác hoặc khung khác) · Gà trống gáy chụp cận đầu, mỏ há (không có ảnh cả con đang gáy hợp giấy p"
+    },
+    "q3.q3_owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Great_horned_owl_along_lower_Columbia_River_%2851904109965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great horned owl along lower Columbia River (51904109965)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.0468,
+        "width": 1,
+        "height": 0.883
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của bau-troi-ngay-va-dem/ngay-va-dem learn.explore.explore_owl (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-061 (designer 19/11): cú sừng lớn mở to đôi mắt vàng tròn, đậu trên cành thông lúc trời chiều tối (U.S. Fish and Wildlife Service, Public domain); không người, không chữ. Ảnh cú riêng cho chủ đề (t"
+    },
+    "q3.q3_butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20220702_Pieris_rapae_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/20220702_Pieris_rapae_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20220702 Pieris rapae 01",
+      "author": "Flocci Nivis",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.24,
+        "top": 0.4701,
+        "width": 0.4,
+        "height": 0.2998
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 5:2 thẻ ba lựa chọn của lon-len/con-vat-doi-hinh-dang q4.q4_butterfly (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). Designer (agent) 19/11, SK-053: bướm cải trắng Pieris rapae đậu trên hoa kế tím. Hình gốc của chủ đề."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_school": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "a2bc4456-aa05-4dbe-afde-4ef5f43619b3",
+      "source_url": "https://www.flickr.com/photos/62476801@N05/6181658390",
+      "file_url": "https://live.staticflickr.com/6171/6181658390_be7c323a8f_b.jpg",
+      "title": "Home from the store",
+      "author": "lhepler",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.33,
+        "width": 0.45,
+        "height": 0.5
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang cho thẻ ba lựa chọn 5:2 của cùng ảnh tray_school: nửa trái, các bạn quay lưng."
+    },
+    "q4.q4_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:S%C3%A9chage_du_riz_au_bord_des_routes_(Delta_du_M%C3%A9kong,_Vietnam)_(6635535829).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/S%C3%A9chage_du_riz_au_bord_des_routes_%28Delta_du_M%C3%A9kong%2C_Vietnam%29_%286635535829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Séchage du riz au bord des routes (Delta du Mékong, Vietnam) (6635535829)",
+      "author": "dalbera from Paris, France",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.55,
+        "width": 0.65,
+        "height": 0.45
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung 5:2 của cùng ảnh tray_rice (bài 1): lớp thóc vàng trải dưới nắng."
+    },
+    "q4.q4_bed": {
+      "same_as": "learn.explore.explore_sleep"
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_night"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_owl"
+    },
+    "vocab.day": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/ngay-va-dem.vocab.day.jpg",
+        "method": "drawn"
+      },
+      "title": "A house under a blue, sunny sky",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Bản khung 2:1 của explore_day cho thẻ từ (cùng hình, cắt dải giữa: Mặt Trời, mây, rặng tre, mái nhà). Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×512."
+    },
+    "vocab.night": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/ngay-va-dem.vocab.night.jpg",
+        "method": "drawn"
+      },
+      "title": "The same house under a dark sky",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. Bản khung 2:1 của explore_night cho thẻ từ (cùng hình, cắt dải giữa: trăng, sao, cú, mái nhà, cửa sổ sáng đèn). Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (SK-061 khuyến nghị designer 2; Duy cho phép ở SK-058): lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ, không người; bóng giấy (filter paperE) nướng sẵn; màu gần bảng style E. JPEG 1024×512."
+    },
+    "vocab.owl": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Great_horned_owl_along_lower_Columbia_River_%2851904109965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Great horned owl along lower Columbia River (51904109965)",
+      "author": "USFWS Pacific",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Great_horned_owl_along_lower_Columbia_River_(51904109965).jpg",
+      "crop": {
+        "left": 0,
+        "top": 0.086,
+        "width": 1,
+        "height": 0.7849
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 2:1 thẻ từ của bau-troi-ngay-va-dem/ngay-va-dem learn.explore.explore_owl (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-061 (designer 19/11): cú sừng lớn mở to đôi mắt vàng tròn, đậu trên cành thông lúc trời chiều tối (U.S. Fish and Wildlife Service, Public domain); không người, không chữ. Ảnh cú riêng cho chủ đề (t"
+    },
+    "vocab.awake": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/64249609@N08/51939968430",
+      "file_url": "https://live.staticflickr.com/65535/51939968430_7f713c7427_b.jpg",
+      "title": "Grey-headed flying fox",
+      "author": "CazzJj",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "openverse_id": "99219638-2482-4119-b360-d81ffafa62a6",
+      "crop": {
+        "left": 0.0,
+        "top": 0.4912,
+        "width": 1.0,
+        "height": 0.4193
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 2:1 thẻ từ của goi-ten-va-nhom-dong-vat/dong-vat-co-vu tray.tray_bat (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-043 (designer 13/11): crop cho khung ô kệ Chơi 1:1, con vật nằm trọn trong khung."
+    },
+    "reward.night_sky_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sedona,_Arizona,_night_time_with_Moon.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Sedona%2C_Arizona%2C_night_time_with_Moon.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sedona, Arizona, night time with Moon",
+      "author": "TwinsofSedona",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.25,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-061 (designer 19/11): vầng trăng sáng trên thị trấn nhỏ dưới chân đồi lúc đêm, đèn nhà le lói, trời xanh thẫm (Sedona, Arizona); không người rõ mặt, không chữ đọc được. Cắt vuông, trăng gần giữa."
+    }
+  }
+}

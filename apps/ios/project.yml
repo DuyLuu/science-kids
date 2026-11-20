@@ -69,8 +69,10 @@ targets:
         inputFiles:
           - $(SRCROOT)/scripts/embed-content-pack.sh
           - $(SK_CONTENT_PACK_DIR)
+          - $(SK_UI_VOICE_DIR)
         outputFiles:
           - $(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/pack
+          - $(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ui-voice
         script: |
           sh "${SRCROOT}/scripts/embed-content-pack.sh"
     dependencies:
@@ -104,6 +106,8 @@ targets:
         # SK-016: the content pack to embed (`content-cli build --out`). Override on the command
         # line to try another pack, or a missing one: `xcodebuild … SK_CONTENT_PACK_DIR=/nowhere`.
         SK_CONTENT_PACK_DIR: $(SRCROOT)/../../content/.build/pack
+        # SK-059: app-line voice clips (`content-cli`, Chơi hint), embedded as `ui-voice/`.
+        SK_UI_VOICE_DIR: $(SRCROOT)/../../content/.build/ui-voice
         # "Embed content pack" copies a tree whose files are not known before the build. The user
         # script sandbox lets a script write only the exact paths in outputFiles, not files under
         # them, so it denied `cp` into `pack/` (2/11, SK-016). That script is this target's only

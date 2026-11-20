@@ -25,7 +25,7 @@ final class IPadLayoutUITests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = [
             "-AppleLanguages", "(vi)", "-AppleLocale", "vi_VN", "-SKResetProfile", "YES", "-SKReduceMotion", "YES", "-SKSyncOff", "YES",
-        ]
+        ] + PlayDrag.noHint
         app.launch()
         return app
     }
@@ -56,16 +56,11 @@ final class IPadLayoutUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 10), "Home did not open")
     }
 
+    /// Right on the first try, then on to the next screen (SK-060: the tap is the answer since
+    /// SK-043; multi choice has "Xong").
     private func answer(_ question: LessonFixture.Question, check: Bool, in app: XCUIApplication) {
-        for key in question.right {
-            switch question.format {
-            case "true_false": tap(app, "lesson.tf.\(key)")
-            case "fill_blank_bank": tap(app, "lesson.word.\(key)")
-            default: tap(app, "lesson.option.\(key)")
-            }
-        }
-        if check { tap(app, "lesson.check") }
-        tap(app, "lesson.result.next")
+        A2Lesson.answer(question, question.right, in: app)
+        A2Lesson.next(app)
     }
 
     private func toLearn(_ app: XCUIApplication, shots: Bool = false) throws {
@@ -73,29 +68,27 @@ final class IPadLayoutUITests: XCTestCase {
         // first written lesson, another one).
         fixture.open(in: app)
         if shots {
-            // Khởi động 1 answered right: the word on its paper chip and "Đúng rồi!" in lá tre (Duy 29/10).
+            // Khởi động 1 answered right: the word in the blank and the result sheet.
             let w1 = fixture.warmup[0]
-            for key in w1.right { tap(app, "lesson.word.\(key)") }
-            XCTAssertTrue(element(app, "lesson.result.title").waitForExistence(timeout: 5))
+            A2Lesson.answer(w1, w1.right, in: app)
+            A2Lesson.waitResult(app, "w1")
             try shot("08-warmup-right")
-            tap(app, "lesson.result.next")
+            A2Lesson.next(app)
             for question in fixture.warmup.dropFirst() { answer(question, check: false, in: app) }
         } else {
             for question in fixture.warmup { answer(question, check: false, in: app) }
         }
-        XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5), "Học did not open")
+        XCTAssertTrue(element(app, "lesson.learn.page").waitForExistence(timeout: 5), "Học did not open")
     }
 
     private func toPlay(_ app: XCUIApplication) {
-        for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }
-        tap(app, "lesson.learn.next")
-        XCTAssertTrue(element(app, "lesson.play.message").waitForExistence(timeout: 5), "Chơi did not open")
+        A2Lesson.learn(app)
     }
 
     private func toQuiz(_ app: XCUIApplication) {
-        for food in fixture.balancedTray { tap(app, "lesson.shelf.\(food)") }
+        for food in fixture.balancedTray { PlayDrag.pick(app, food) }
         tap(app, "lesson.play.done")
-        XCTAssertTrue(element(app, "lesson.quiz.counter").waitForExistence(timeout: 5), "Quiz did not open")
+        A2Lesson.waitQuiz(app)
     }
 
     private func shot(_ name: String) throws {
@@ -172,28 +165,43 @@ final class IPadLayoutUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 5))
 
         try toLearn(app, shots: true)
-        checkPaperFrame(app, anchor: "lesson.title", "Học")
-        XCTAssertGreaterThanOrEqual(app.buttons["lesson.word_list.nutrient"].frame.height, 55.5, "Từ mới raised to 56")
+        checkPaperFrame(app, anchor: "lesson.learn.sentence", "Học")
         try shotBothWays("09-learn")
+        // SK-043: "Từ mới" is the last page of the picture book.
+        let words = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.word_list."))
+        for _ in 0..<fixture.exploreGroups.count where !words.firstMatch.exists {
+            tap(app, "lesson.explorer.next")
+            _ = words.firstMatch.waitForExistence(timeout: 2)
+        }
+        XCTAssertTrue(words.firstMatch.exists, "no Từ mới page")
+        for word in words.allElementsBoundByIndex {
+            XCTAssertGreaterThanOrEqual(word.frame.height, 55.5, "Từ mới \(word.identifier) raised to 56")
+        }
+        try shotBothWays("09-learn-words")
         toPlay(app)
-        tap(app, "lesson.shelf.tray_rice")
+        // SK-059: picked by a drag; a tap on the tray takes it off.
+        PlayDrag.pick(app, "tray_rice")
         checkPaperFrame(app, anchor: "lesson.play.message", "Chơi")
+        // SK-059: the shelf cell is 96–132 on a phone (`PlayShelf.compactCell…`), bigger on iPad.
         let cell = app.buttons["lesson.shelf.tray_bread"].frame
-        XCTAssertEqual(cell.height, isPad ? 124 : 96, accuracy: 1, "shelf cell \(cell)")
+        if isPad {
+            XCTAssertGreaterThanOrEqual(cell.height, 124, "shelf cell \(cell)")
+        } else {
+            XCTAssertTrue((95...133).contains(cell.height), "shelf cell \(cell)")
+        }
         try shotBothWays("10-play")
-        tap(app, "lesson.shelf.tray_rice")
+        PlayDrag.unpick(app, "tray_rice")
         toQuiz(app)
         checkPaperFrame(app, anchor: "lesson.prompt", "Quiz")
-        let option = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.option.")).firstMatch.frame
-        XCTAssertEqual(option.height, isPad ? 150 : 104, accuracy: 1, "quiz cell \(option)")
+        // A2 `q1-ask`: three picture cards, 136 high one under the other (iPad: one row, 200).
+        let option = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.choice.")).firstMatch.frame
+        XCTAssertEqual(option.height, isPad ? 200 : 136, accuracy: 1, "quiz cell \(option)")
         try shotBothWays("11-quiz")
         // The result sheet and its button line up with the frame.
         answer(fixture.quiz[0], check: true, in: app)
         let next = fixture.quiz[1]
-        for key in next.right {
-            tap(app, next.format == "fill_blank_bank" ? "lesson.word.\(key)" : "lesson.option.\(key)")
-        }
-        tap(app, "lesson.check")
+        A2Lesson.answer(next, next.right, in: app)
+        A2Lesson.waitResult(app, next.key)
         let button = app.buttons["lesson.result.next"].frame
         if isPad {
             XCTAssertEqual(button.width, 544, accuracy: 2, "result button as wide as the frame content: \(button)")
@@ -202,7 +210,10 @@ final class IPadLayoutUITests: XCTestCase {
         try shot("11-quiz-result")
         tap(app, "lesson.result.next")
         for question in fixture.quiz.dropFirst(2) { answer(question, check: true, in: app) }
-        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 5))
+        XCTAssertTrue(element(app, "lesson.recap.key_point.1").waitForExistence(timeout: 10), "Tổng kết did not open")
+        checkPaperFrame(app, anchor: "lesson.recap.key_point.1", "Tổng kết")
+        try shotBothWays("12-recap")
+        A2Lesson.throughRecap(app)
         checkPaperFrame(app, anchor: "lesson.reward.score", "Thưởng")
         try shotBothWays("13-reward")
     }
@@ -217,26 +228,27 @@ final class IPadLayoutUITests: XCTestCase {
         toPlay(app)
         toQuiz(app)
         for question in fixture.quiz.prefix(4) { answer(question, check: true, in: app) }
-        let counter = element(app, "lesson.quiz.counter")
-        XCTAssertEqual(counter.label, "Câu 5/6")
+        A2Lesson.waitQuiz(app)
+        let counter = element(app, "lesson.progress")
+        XCTAssertEqual(counter.label, "Câu 5 trên 6")
         let q5 = fixture.quiz[4]
         XCTAssertEqual(q5.format, "multi_choice")
         let picks = Array(q5.right.prefix(2))
-        for key in picks { tap(app, "lesson.option.\(key)") }
-        for key in picks { XCTAssertTrue(app.buttons["lesson.option.\(key)"].isSelected, "\(key) picked") }
+        for key in picks { tap(app, "lesson.choice.\(key)") }
+        for key in picks { XCTAssertTrue(app.buttons["lesson.choice.\(key)"].isSelected, "\(key) picked") }
 
         for orientation in [UIDeviceOrientation.landscapeLeft, .portrait, .landscapeRight, .portrait] {
             XCUIDevice.shared.orientation = orientation
             sleep(1)
-            XCTAssertEqual(counter.label, "Câu 5/6", "after turning to \(orientation.rawValue)")
+            XCTAssertEqual(counter.label, "Câu 5 trên 6", "after turning to \(orientation.rawValue)")
             for key in picks {
-                XCTAssertTrue(app.buttons["lesson.option.\(key)"].isSelected, "\(key) still picked after turning to \(orientation.rawValue)")
+                XCTAssertTrue(app.buttons["lesson.choice.\(key)"].isSelected, "\(key) still picked after turning to \(orientation.rawValue)")
             }
             let others = q5.right.dropFirst(2) + q5.wrongs[0]
-            for key in others { XCTAssertFalse(app.buttons["lesson.option.\(key)"].isSelected, "\(key) not picked") }
+            for key in others { XCTAssertFalse(app.buttons["lesson.choice.\(key)"].isSelected, "\(key) not picked") }
             checkPaperFrame(app, anchor: "lesson.prompt", "Quiz \(orientation.rawValue)")
         }
-        print("rotation: 'Câu 5/6' and picks \(picks) kept through landscape left, portrait, landscape right, portrait")
+        print("rotation: 'Câu 5 trên 6' and picks \(picks) kept through landscape left, portrait, landscape right, portrait")
     }
 
     /// Every button ≥ 56 × 56 on Trang chủ in both orientations (sidebar rows, chips, journey).

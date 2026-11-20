@@ -5,6 +5,14 @@
 > **16/11/2026:** nhóm Explorer xếp lại theo danh mục `content/syllabus.json`: *Sinh vật sống ở đâu?*, *Chuỗi thức ăn* lên #2, #3 (Duy chốt 14/11); thêm chủ đề mới #4 *Những nơi sống trên Trái Đất*, 8 bài (Duy chốt 16/11, SK-048); các unit Oak còn lại thành #5–#13. Explorer #1 ghi thêm 2 bài mở rộng đã có trong danh mục. Explorer: 13 chủ đề, 83 bài; cả app 46 chủ đề, 394 bài.
 >
 > **17/11/2026:** gộp hai unit Oak Y1 *Seasonal changes* (Explorer #5, #8 cũ) thành chủ đề mới #5 *Thời tiết và các mùa*, 6 bài (Duy yêu cầu và chốt 17/11, [SK-050](docs/backlog/SK-050-explorer-weather-and-seasons.md)); *Vật liệu quanh em* … *Em khoẻ mạnh* đánh lại #8–#12. Explorer: 12 chủ đề, 79 bài; cả app 45 chủ đề, 390 bài (35 unit Oak, 10 chủ đề mới).
+>
+> **19/11/2026:** mục 11 viết lại theo *Lớn lên* (Life cycles), 6 bài (Duy chốt 18/11, [SK-053](docs/backlog/SK-053-explorer-8-life-cycles.md)). Danh mục hiện tại: Explorer 11 chủ đề, 72 bài; cả app 44 chủ đề, 383 bài (34 unit Oak, 10 chủ đề mới). **Chưa sửa** mục 7 *Cây quanh em* và mục 10 *Trồng cây* theo [SK-051](docs/backlog/SK-051-explorer-7-plants-around-us.md) (#7 thay 7 bài, bỏ #10); hai mục đó vẫn là bản 17/11, danh mục `content/syllabus.json` mới là nguồn đúng.
+>
+> **19/11/2026 (lượt 2):** Duy chốt lộ trình Explorer theo cách (a) ([SK-057](docs/backlog/SK-057-explorer-catalog-earth-sky.md)). Mục 8 *Vật liệu quanh em*, mục 9 *Vật liệu dùng làm gì?*, mục 12 *Em khoẻ mạnh* **hết hiệu lực** (bỏ khỏi danh mục). Ba chủ đề mới #9 *Núi, sông và biển*, #10 *Nước quanh em*, #11 *Bầu trời ngày và đêm* chưa có mục ở file này; danh sách bài dự kiến xem [docs/syllabus-review-2026-11-18.md](docs/syllabus-review-2026-11-18.md) mục 4.1 và SK-057. Khi danh mục đổi: Explorer 11 chủ đề, 70 bài; cả app 44 chủ đề, 381 bài. PM viết lại phần Explorer của file này ở lượt sau.
+>
+> **19/11/2026 (lượt 3):** #9 *Núi, sông và biển* đã soạn 6 bài, chờ Duy review ([SK-058](docs/backlog/SK-058-explorer-9-mountains-rivers-seas.md)). Tên 6 bài theo `content/syllabus.json` và bảng trong SK-058: Land and sea, Mountains and hills, Plains and rice fields, Rivers and lakes, Beaches islands and bays, Caves. File này vẫn chưa có mục riêng cho #9–#11.
+>
+> **19/11/2026 (lượt 4):** Duy bỏ *Nước quanh em* khỏi Explorer, ý nước để Discoverer #9 đào sâu. *Bầu trời ngày và đêm* thành #10, `level: 1`, 6 bài PM chốt ([SK-061](docs/backlog/SK-061-explorer-10-sky-day-and-night.md)). Khi danh mục đổi: Explorer 10 chủ đề, 64 bài; cả app 43 chủ đề, 375 bài (31 unit Oak, 12 chủ đề mới). Mục "Chủ đề mới Trái Đất và bầu trời" ở cuối phần Explorer ghi danh sách bài của #9, #10.
 
 Cột "Bài app": số thứ tự bài trong app. Mỗi lesson Oak là một bài app, trừ hai trường hợp:
 
@@ -159,17 +167,24 @@ Bài 2, 3 nói miền Bắc (bốn mùa); bài 4 nói miền Nam (mùa mưa, mù
 | 7. Plants without light | ✓ | 7 | Giữ |
 | 8. Grow your own food | — | 8 | Giữ |
 
-### 11. Sự sống mới · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
+### 11. Lớn lên (Life cycles; tên cũ *Sự sống mới*) · Oak Y2 #3 [New life](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/new-life/lessons)
 
-5 lesson Oak (5 bắt buộc) → **5 bài app**.
+*19/11, theo [SK-053](docs/backlog/SK-053-explorer-8-life-cycles.md) (Duy chốt 18/11):* key danh mục giữ `new-life`, vẫn là #10 trong `content/syllabus.json` (lộ trình [syllabus.md](syllabus.md) mục 3 ghi #8). 5 lesson Oak (5 bắt buộc) → **6 bài app**: 4 bài gắn slug Oak, 2 bài mở rộng (`extension: true`). **Lệch Oak:**
+- L1 không thành bài riêng; ý của L1 chia vào bài 2 và bài 4;
+- ý chung của L3 đưa lên đầu (bài 1);
+- bài 3 lấy ý từ L3 nhưng không gắn slug, vì mỗi slug chỉ được gắn một bài;
+- bài 5 là bài mới;
+- L4 bỏ phần ghi lại vòng đời nhiều ngày.
 
 | Lesson Oak | Bắt buộc | Bài app | Đề xuất |
 | --- | --- | --- | --- |
-| 1. Young animals | ✓ | 1 | Giữ |
-| 2. Growing up | ✓ | 2 | Giữ |
-| 3. Animal life cycles | ✓ | 3 | Giữ |
-| 4. Changes in animal life cycles | ✓ | 4 | Giữ |
-| 5. The basic needs of animals | ✓ | 5 | Giữ |
+| 3. Animal life cycles | ✓ | 1 | *Living things have life cycles* · Vật sống nào cũng có vòng đời |
+| 1. Young animals | ✓ | 2 | Gộp với L2 thành *Animals that give birth* · Con vật đẻ con. Ý "con giống mẹ" ở bài 2, ý "con không giống mẹ" ở bài 4 |
+| 2. Growing up | ✓ | 2 | Gộp vào bài 2; misconception của L2 dùng ở bài 4 |
+| (ý của L3, không gắn slug) | — | 3 | Bài mở rộng: *Animals that lay eggs* · Con vật đẻ trứng |
+| 4. Changes in animal life cycles | ✓ | 4 | *Animals that change shape* · Con vật đổi hình dạng; bỏ phần ghi lại, theo dõi nhiều ngày |
+| (không có lesson Oak) | — | 5 | Bài mở rộng: *The life cycle of a plant* · Vòng đời của cây |
+| 5. The basic needs of animals | ✓ | 6 | *What animals need to grow* · Muốn lớn lên, con vật cần gì? |
 
 ### 12. Em khoẻ mạnh · Oak Y2 #6 [Healthy me](https://www.thenational.academy/teachers/programmes/science-primary-ks1/units/healthy-me/lessons)
 
@@ -184,6 +199,34 @@ Bài 2, 3 nói miền Bắc (bốn mùa); bài 4 nói miền Nam (mùa mưa, mù
 | 5. Different amounts of food | ✓ | 5 | Giữ |
 | 6. Food scientists | ✓ | 6 | Giữ |
 | 7. Staying healthy | ✓ | 7 | Giữ |
+
+### Chủ đề mới Trái Đất và bầu trời (danh mục #9, #10; thêm 19/11/2026)
+
+Không có lesson Oak (`oak_lessons: []`, `source.kind: new`). Thứ tự theo `content/syllabus.json`; tên bài khớp từng chữ.
+
+**#9 Núi, sông và biển** · Mountains, rivers and seas (`new-mountains-rivers-and-seas`, Duy chốt 19/11, [SK-058](docs/backlog/SK-058-explorer-9-mountains-rivers-seas.md))
+
+| Bài app | EN | VI |
+| --- | --- | --- |
+| 1 | Land and sea | Đất liền và biển |
+| 2 | Mountains and hills | Núi và đồi |
+| 3 | Plains and rice fields | Đồng bằng và ruộng lúa |
+| 4 | Rivers and lakes | Sông và hồ |
+| 5 | Beaches, islands and bays | Bãi biển, đảo và vịnh |
+| 6 | Caves | Hang động |
+
+~~**#10 Nước quanh em**~~ (`new-water-around-us`): Duy bỏ 19/11, chưa soạn; ý nước để Discoverer #9, #10 ([SK-061](docs/backlog/SK-061-explorer-10-sky-day-and-night.md) mục A5).
+
+**#10 Bầu trời ngày và đêm** · The sky by day and night (`new-sky-day-and-night`, #11 cũ; `level: 1`; PM chốt 19/11 theo chế độ auto, [SK-061](docs/backlog/SK-061-explorer-10-sky-day-and-night.md))
+
+| Bài app | EN | VI | Ghi chú |
+| --- | --- | --- | --- |
+| 1 | The Sun gives light and warmth | Mặt Trời cho ánh sáng và hơi ấm | Có ý không nhìn thẳng Mặt Trời |
+| 2 | Day and night | Ngày và đêm | |
+| 3 | Sunrise and sunset | Mặt Trời mọc, Mặt Trời lặn | Thay *Bóng nắng đổi theo giờ* (bóng để Discoverer #12) |
+| 4 | The Moon changes shape | Mặt Trăng đổi hình | |
+| 5 | The stars | Các vì sao | |
+| 6 | What is in the sky? | Trên bầu trời có gì? | Bài ôn; thay *Trái Đất là một quả cầu lớn* (lên Discoverer #7 bài 1) |
 
 ## Discoverer (7–9 tuổi) · Oak Year 3–4
 

@@ -1,0 +1,471 @@
+{
+  "note": "SK-051 Cây quanh em, bài rau-qua-ta-an-la-phan-nao-cua-cay. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 10. Hình tự vẽ (PM đồng ý, SK-051): không.",
+  "images": {
+    "learn.explore.explore_eat_roots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bó cà rốt còn lá xanh. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.162,
+        "top": 0,
+        "width": 0.675,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_eat_leaves": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_spinach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Water_spinach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bunch of water spinach",
+      "author": "Fumikas Sagisavas",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bó rau muống.",
+      "crop": {
+        "left": 0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "learn.explore.explore_eat_flowers": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cauliflower_heads_on_a_shelf.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cauliflower_heads_on_a_shelf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A white cauliflower",
+      "author": "Jeffery Martin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.12,
+        "width": 0.75,
+        "height": 0.88
+      },
+      "note": "Designer (agent) 18/11, SK-051: súp lơ trắng còn lá; cắt bỏ góc trên có biển giá."
+    },
+    "learn.explore.explore_eat_fruits": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_plant_2026_G3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Tomato_plant_2026_G3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tomato plant 2026 G3",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: cây cà chua có quả đỏ.",
+      "crop": {
+        "left": 0.143,
+        "top": 0,
+        "width": 0.714,
+        "height": 1
+      }
+    },
+    "tray.tray_peanuts": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peanuts_(2365314146).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Peanuts_%282365314146%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peanuts (2365314146)",
+      "author": "Andrew Malone",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: lạc còn vỏ.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      }
+    },
+    "tray.tray_lotus_seeds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:White_lotus_seeds.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/White_lotus_seeds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "White lotus seeds",
+      "author": "Fumikas Sagisavas",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: hạt sen trắng."
+    },
+    "tray.tray_radish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Daikon_-_Harbourside_Market,_Wellington,_New_Zealand_-_DSC09775.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Daikon_-_Harbourside_Market%2C_Wellington%2C_New_Zealand_-_DSC09775.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A long white radish",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.6,
+        "height": 0.9
+      },
+      "note": "Designer (agent) 18/11, SK-051: bốn củ cải trắng dài còn cuống lá trên mặt gỗ; cắt bỏ mép dưới. Hình gốc của chủ đề."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr-160912-0586-Saccharum_officinarum-Hawaiian_variety_Honuaula_dark_red_stems-Maui_Nui_Botanical_Garden_Kahului-Maui_(29587391121).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Starr-160912-0586-Saccharum_officinarum-Hawaiian_variety_Honuaula_dark_red_stems-Maui_Nui_Botanical_Garden_Kahului-Maui_%2829587391121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr-160912-0586-Saccharum officinarum-Hawaiian variety Honuaula dark red stems-Maui Nui Botanical Garden Kahului-Maui (29587391121)",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "note": "Designer (agent) 18/11, SK-051: thân mía tím (cây đứng, không phải bó đã chặt).",
+      "crop": {
+        "left": 0,
+        "top": 0.219,
+        "width": 1,
+        "height": 0.562
+      }
+    },
+    "q3.q3_mustard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_vegetable_026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Chinese_vegetable_026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fresh mustard greens",
+      "author": "Anna Frodesiak",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: hai cây cải xanh lá to. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0,
+        "top": 0.268,
+        "width": 1,
+        "height": 0.465
+      }
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:India_-_Koyambedu_Market_-_Carrots_03_(3986950000).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/India_-_Koyambedu_Market_-_Carrots_03_%283986950000%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "India - Koyambedu Market - Carrots 03 (3986950000)",
+      "author": "McKay Savage from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: rổ cà rốt đã cắt lá."
+    },
+    "w1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w1.w1_bud": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cucurbita_maxima_leaf_node.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Closed yellow petals on a vine",
+      "author": "Juliancolton",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_leaf_node.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/cay-co-hoa-re-than-la-hoa tray.tray_bud.",
+      "crop": {
+        "left": 0.165,
+        "top": 0.206,
+        "width": 0.669,
+        "height": 0.588
+      }
+    },
+    "w1.w1_pumpkin": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Zapallo_Plomo_semiller%C3%ADa_Costanzi_-_2014_01_21_-_squash_-1_photo1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Cucurbita_maxima_Zapallo_Plomo_semiller%C3%ADa_Costanzi_-_2014_01_21_-_squash_-1_photo1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A small pumpkin on the vine",
+      "author": "RoRo",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/cay-co-hoa-re-than-la-hoa q4.q4_pumpkin.",
+      "crop": {
+        "left": 0.165,
+        "top": 0.206,
+        "width": 0.67,
+        "height": 0.589
+      }
+    },
+    "w2": {
+      "same_as": "tray.tray_lime",
+      "lesson": "co-the-cua-em/nam-giac-quan-cua-em"
+    },
+    "tray.tray_carrot": {
+      "same_as": "learn.explore.explore_eat_roots"
+    },
+    "tray.tray_eggs": {
+      "same_as": "learn.explore.explore_eggs",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_cauliflower": {
+      "same_as": "learn.explore.explore_eat_flowers"
+    },
+    "tray.tray_fish": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/39136124@N00/52022433570",
+      "file_url": "https://live.staticflickr.com/65535/52022433570_5c7e128d06_b.jpg",
+      "title": "Sheepshead Minnow Cyprinodon variegatus",
+      "author": "Paul and Jill",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "8f30d227-6912-4a67-b2f0-8441d58220cd",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung tray_item của goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha q4.q4_fish.",
+      "crop": {
+        "left": 0.336,
+        "top": 0.254,
+        "width": 0.328,
+        "height": 0.493
+      }
+    },
+    "tray.tray_pumpkin_flower": {
+      "same_as": "tray.tray_pumpkin_flower",
+      "lesson": "cay-quanh-em/cay-co-hoa-re-than-la-hoa"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_cauliflower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cauliflower_heads_on_a_shelf.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cauliflower_heads_on_a_shelf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A white cauliflower",
+      "author": "Jeffery Martin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.36,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_flowers."
+    },
+    "q1.q1_carrot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_roots.",
+      "crop": {
+        "left": 0.162,
+        "top": 0.3,
+        "width": 0.675,
+        "height": 0.4
+      }
+    },
+    "q1.q1_tomato": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_plant_2026_G3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Tomato_plant_2026_G3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tomato plant 2026 G3",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_fruits.",
+      "crop": {
+        "left": 0.143,
+        "top": 0.3,
+        "width": 0.714,
+        "height": 0.4
+      }
+    },
+    "q3": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q3.q3_peanuts": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peanuts_(2365314146).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Peanuts_%282365314146%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Peanuts (2365314146)",
+      "author": "Andrew Malone",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của tray.tray_peanuts.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      }
+    },
+    "q3.q3_carrot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_roots.",
+      "crop": {
+        "left": 0.162,
+        "top": 0.3,
+        "width": 0.675,
+        "height": 0.4
+      }
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_banana": {
+      "same_as": "q4.q4_banana",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_radish": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Daikon_-_Harbourside_Market,_Wellington,_New_Zealand_-_DSC09775.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Daikon_-_Harbourside_Market%2C_Wellington%2C_New_Zealand_-_DSC09775.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A long white radish",
+      "author": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.27,
+        "width": 0.6,
+        "height": 0.36
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của tray.tray_radish."
+    },
+    "q4.q4_cauliflower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cauliflower_heads_on_a_shelf.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cauliflower_heads_on_a_shelf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A white cauliflower",
+      "author": "Jeffery Martin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.36,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_flowers."
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_carrot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_eat_roots.",
+      "crop": {
+        "left": 0.162,
+        "top": 0.3,
+        "width": 0.675,
+        "height": 0.4
+      }
+    },
+    "q5.q5_mango": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:An_Unripe_Mango_Of_Ratnagiri_(India).JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/An_Unripe_Mango_Of_Ratnagiri_%28India%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An Unripe Mango Of Ratnagiri (India)",
+      "author": "Pranav011 at en.wikipedia",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.055,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của co-the-cua-em/nem-va-so tray.tray_green_mango."
+    },
+    "q5.q5_mustard": {
+      "same_as": "q3.q3_mustard"
+    },
+    "vocab.vegetable": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_spinach.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Water_spinach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A bunch of water spinach",
+      "author": "Fumikas Sagisavas",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_eat_leaves.",
+      "crop": {
+        "left": 0,
+        "top": 0.312,
+        "width": 1,
+        "height": 0.375
+      }
+    },
+    "vocab.fruit": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_plant_2026_G3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Tomato_plant_2026_G3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tomato plant 2026 G3",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_eat_fruits.",
+      "crop": {
+        "left": 0.143,
+        "top": 0.25,
+        "width": 0.714,
+        "height": 0.5
+      }
+    },
+    "vocab.plant_part": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cauliflower_heads_on_a_shelf.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cauliflower_heads_on_a_shelf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A white cauliflower",
+      "author": "Jeffery Martin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.31,
+        "width": 0.75,
+        "height": 0.5
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_eat_flowers."
+    },
+    "vocab.carrot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_eat_roots.",
+      "crop": {
+        "left": 0.162,
+        "top": 0.25,
+        "width": 0.675,
+        "height": 0.5
+      }
+    },
+    "reward.sugarcane_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr-160912-0586-Saccharum_officinarum-Hawaiian_variety_Honuaula_dark_red_stems-Maui_Nui_Botanical_Garden_Kahului-Maui_(29587391121).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Starr-160912-0586-Saccharum_officinarum-Hawaiian_variety_Honuaula_dark_red_stems-Maui_Nui_Botanical_Garden_Kahului-Maui_%2829587391121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr-160912-0586-Saccharum officinarum-Hawaiian variety Honuaula dark red stems-Maui Nui Botanical Garden Kahului-Maui (29587391121)",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung reward của q2.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.219,
+        "width": 0.749,
+        "height": 0.562
+      }
+    }
+  }
+}

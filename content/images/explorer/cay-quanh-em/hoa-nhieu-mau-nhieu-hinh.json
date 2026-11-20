@@ -1,0 +1,369 @@
+{
+  "note": "SK-051 Cây quanh em, bài hoa-nhieu-mau-nhieu-hinh. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 2. Hình tự vẽ (PM đồng ý, SK-051): không.",
+  "images": {
+    "learn.explore.explore_sunflower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bông hướng dương chính diện. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_bougainvillea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr 030418-0058 Bougainvillea spectabilis",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: hoa giấy một màu hồng tím. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "w1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w1.w1_banana": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_banana_plant_7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Young_banana_plant_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young banana plant 7",
+      "author": "Denis kasozi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/la-cay-nhieu-hinh-nhieu-co learn.explore.explore_banana_leaf.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.206,
+        "width": 0.667,
+        "height": 0.589
+      }
+    },
+    "w1.w1_flame": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flamboyant_(Delonix_regia)_leaves_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Flamboyant_%28Delonix_regia%29_leaves_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Flame tree leaves",
+      "author": "David E Mead",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/la-cay-nhieu-hinh-nhieu-co learn.explore.explore_flame_leaf.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.206,
+        "width": 0.75,
+        "height": 0.588
+      }
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_roots.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.125,
+        "width": 0.75,
+        "height": 0.75
+      }
+    },
+    "w3": {
+      "same_as": "w3",
+      "lesson": "noi-song-tren-trai-dat/moi-con-vat-mot-noi-song"
+    },
+    "learn.explore.explore_petals": {
+      "same_as": "tray.tray_lotus",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "learn.explore.explore_no_flowers": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: chép mục gốc discoverer/khung-long/trai-dat-rat-lau-ve-truoc tray_fern (same_as không sang nhóm tuổi khác)."
+    },
+    "tray.tray_sunflower": {
+      "same_as": "learn.explore.explore_sunflower"
+    },
+    "tray.tray_moss": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moss-covered_wall_fragment,_Emerald_View_Park_off_Greenleaf_Street,_2020-12-04.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Moss-covered_wall_fragment%2C_Emerald_View_Park_off_Greenleaf_Street%2C_2020-12-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moss-covered wall fragment, Emerald View Park off Greenleaf Street, 2020-12-04",
+      "author": "Cbaile19",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung tray_item của sinh-vat-song-o-dau/nhung-noi-song-nho-xiu learn.explore.explore_wall."
+    },
+    "tray.tray_flame": {
+      "same_as": "learn.explore.explore_summer",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_lotus": {
+      "same_as": "tray.tray_lotus",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung tray_item của learn.explore.explore_no_flowers.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.666,
+        "height": 1
+      }
+    },
+    "tray.tray_apricot": {
+      "same_as": "learn.explore.explore_tet",
+      "lesson": "thoi-tiet-va-cac-mua/muoi-hai-thang"
+    },
+    "tray.tray_bougainvillea": {
+      "same_as": "learn.explore.explore_bougainvillea"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_sunflower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_sunflower.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      }
+    },
+    "q1.q1_bougainvillea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr 030418-0058 Bougainvillea spectabilis",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_bougainvillea.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_sunflower.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.125,
+        "width": 0.667,
+        "height": 0.75
+      }
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20110830_Vannes_(21).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/20110830_Vannes_%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20110830 Vannes (21)",
+      "author": "Donar Reiskoffer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.41,
+        "width": 0.5,
+        "height": 0.5
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của sinh-vat-song-o-dau/bao-ve-nhung-noi-song-nho tray.tray_flower_bed."
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_flame": {
+      "same_as": "q1.q1_flame",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q4.q4_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_sunflower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_sunflower.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      }
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_roots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_roots.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q5.q5_leaves": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q5.q5_flower": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_sunflower.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      }
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "vocab.petal": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "vocab.colour": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr 030418-0058 Bougainvillea spectabilis",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_bougainvillea.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.25,
+        "width": 0.75,
+        "height": 0.5
+      }
+    },
+    "vocab.fern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_no_flowers.",
+      "crop": {
+        "left": 0,
+        "top": 0.124,
+        "width": 1,
+        "height": 0.751
+      }
+    },
+    "vocab.bloom": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunflower_head_2026_G1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_head_2026_G1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunflower head 2026 G1",
+      "author": "George Chernilevsky",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_sunflower.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.25,
+        "width": 0.667,
+        "height": 0.5
+      }
+    },
+    "reward.fern_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nephrolepis_cordifolia_kz02.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nephrolepis_cordifolia_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Nephrolepis cordifolia kz02",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung reward của learn.explore.explore_no_flowers.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.666,
+        "height": 1
+      }
+    }
+  }
+}

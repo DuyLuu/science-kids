@@ -9,7 +9,8 @@
 //   syllabus_oak         oak_lessons empty under an Oak topic (except an `extension` lesson), not
 //                        empty under a new one; source.year outside the group's oak_years;
 //                        `extension` lesson (Duy 13/11): only in an Oak topic, oak_lessons [],
-//                        statutory false, after every Oak lesson of the topic, not the only kind
+//                        statutory false, not the only kind; anywhere in the topic (SK-051, 18/11:
+//                        it may stand between Oak lessons, no longer only after them)
 //   syllabus_topic_ref   topic_id not in the content, or a topic of another age group
 //   syllabus_lesson_ref  lesson_id not in the content, in another topic, or under a topic without topic_id
 //   syllabus_unlisted    (warning) a topic or lesson of the content that no slot points at
@@ -182,19 +183,16 @@ function structure(data) {
       if (other) add(at, "syllabus_duplicate", `topic_id ${topic.topic_id} đã gắn cho ${placeOf(data, other)} (${other}); mỗi chủ đề nội dung gắn một ô`);
     }
 
-    let extensionSeen;
     for (const [l, lesson] of topic.lessons.entries()) {
       const lessonPointer = `${topicPointer}/lessons/${l}`;
       if (lesson.extension === true) {
-        // Extension lesson (Duy 13/11): a lesson of our own added at the end of an Oak unit.
+        // Extension lesson (Duy 13/11): a lesson of our own in an Oak unit, at any place (SK-051).
         if (!oak) add(`${lessonPointer}/extension`, "syllabus_oak", `extension chỉ dùng trong chủ đề lấy từ Oak; chủ đề mới (source.kind = new) thì mọi bài đã là bài riêng, bỏ extension`);
         if (oak && lesson.oak_lessons.length > 0) add(`${lessonPointer}/oak_lessons`, "syllabus_oak", `bài mở rộng (extension) không có lesson Oak: oak_lessons phải là [], đang có ${lesson.oak_lessons.length} slug`);
         if (lesson.statutory !== false) add(`${lessonPointer}/statutory`, "syllabus_oak", `bài mở rộng (extension) không thuộc chương trình bắt buộc: statutory phải là false`);
-        extensionSeen ??= lessonPointer;
       } else if (oak) {
-        if (extensionSeen) add(lessonPointer, "syllabus_oak", `bài Oak đứng sau bài mở rộng ${placeOf(data, extensionSeen)} (${extensionSeen}); bài mở rộng chỉ đứng sau mọi bài Oak của chủ đề`);
         if (lesson.oak_lessons.length === 0) {
-          add(`${lessonPointer}/oak_lessons`, "syllabus_oak", `chủ đề lấy từ Oak (source.kind = oak): oak_lessons cần ít nhất 1 slug lesson của Oak (bài riêng thêm vào cuối chủ đề thì ghi "extension": true)`);
+          add(`${lessonPointer}/oak_lessons`, "syllabus_oak", `chủ đề lấy từ Oak (source.kind = oak): oak_lessons cần ít nhất 1 slug lesson của Oak (bài riêng thêm vào chủ đề thì ghi "extension": true)`);
         }
       }
       if (!oak && lesson.oak_lessons.length > 0) {

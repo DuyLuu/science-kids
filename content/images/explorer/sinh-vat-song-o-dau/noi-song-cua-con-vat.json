@@ -256,7 +256,13 @@
       "author": "Photos courtesy of Christian Ziegler.",
       "license": "CC BY 2.5",
       "license_url": "https://creativecommons.org/licenses/by/2.5",
-      "note": "Chép mục gốc `tray.tray_forest` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "crop": {
+        "left": 0,
+        "top": 0.286,
+        "width": 1,
+        "height": 0.428
+      },
+      "note": "Chép mục gốc `tray.tray_forest` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Crop 2:1 cho thẻ từ (designer 16/11, thẻ từ Explorer trên máy là khung ngang 2:1; ảnh dọc cũ lệch ×2,3 nên app hiện ảnh nhỏ): giữa ảnh, tán rừng xanh có vài cây hoa tím."
     },
     "vocab.mangrove": {
       "source": "Wikimedia Commons",

@@ -1,0 +1,218 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_full": {
+      "same_as": "learn.explore.explore_full",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "w1.w1_crescent": {
+      "same_as": "learn.explore.explore_crescent",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_lights",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-moc-mat-troi-lan"
+    },
+    "w3": {
+      "same_as": "learn.explore.explore_safe",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am"
+    },
+    "learn.explore.explore_starry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument,_Utah._(6bd9a8c7-155d-451f-6704-cdbe39baad12).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument%2C_Utah._%286bd9a8c7-155d-451f-6704-cdbe39baad12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "The starry night sky casts celestial light onto a meadow framed by conifer trees at Cedar Breaks National Monument, Utah. (6bd9a8c7-155d-451f-6704-cdbe39baad12)",
+      "author": "NPS",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument,_Utah._(6bd9a8c7-155d-451f-6704-cdbe39baad12).jpg",
+      "note": "SK-061 (designer 19/11): bầu trời đầy sao trên đồng cỏ có rặng thông in đen (ảnh NPS, Public domain); không người, không đèn."
+    },
+    "learn.explore.explore_twinkle": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "47ae1265-c8cf-4824-8dba-4c97059aecfe",
+      "source_url": "https://www.flickr.com/photos/12357841@N02/35868666531",
+      "file_url": "https://live.staticflickr.com/4307/35868666531_c5bc336ce5_b.jpg",
+      "title": "The Stars At Night Are Big And Bright",
+      "author": "Me in ME",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 1.0,
+        "height": 0.45
+      },
+      "note": "SK-061 (designer 19/11): nhiều ngôi sao sáng trên nền trời đêm xanh tím, cắt phần trời phía trên, bỏ đường, cỏ và ánh đèn ở chân trời; không chữ, không Ngân Hà rõ (thay ảnh có watermark, tester A1). Bản Flickr qua Openverse."
+    },
+    "learn.explore.explore_far": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/cac-vi-sao.learn.explore.explore_far.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up and child gazing upward",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Vẽ vì không tìm được ảnh CC0/PD/CC BY hợp lệ: ảnh người lớn và trẻ ngắm sao hợp giấy phép không có (chỉ có kiểm lâm một mình, kính thiên văn). Dáng in đen một người lớn chỉ tay lên trời và một em nhỏ đứng cạnh trên đồi cỏ, nhìn từ phía sau, trời đầy sao bốn cánh; không kính thiên văn, không đèn pin. JPEG 1024×1024."
+    },
+    "learn.explore.explore_city": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NewYork-Skyline-night-May-2007.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NewYork-Skyline-night-May-2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "NewYork-Skyline-night-May-2007",
+      "author": "Acediscovery",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "SK-061 (designer 19/11): thành phố New York về đêm sáng rực đèn, bầu trời trên sáng mờ màu cam xám, không thấy sao; không biển hiệu đọc được."
+    },
+    "tray.tray_starry": {
+      "same_as": "learn.explore.explore_starry"
+    },
+    "tray.tray_bright_stars": {
+      "same_as": "learn.explore.explore_twinkle"
+    },
+    "tray.tray_full_moon": {
+      "same_as": "learn.explore.explore_full",
+      "lesson": "bau-troi-ngay-va-dem/mat-trang-doi-hinh"
+    },
+    "tray.tray_fireflies": {
+      "same_as": "tray.tray_firefly_item",
+      "lesson": "bau-troi-ngay-va-dem/ngay-va-dem"
+    },
+    "tray.tray_streetlights": {
+      "same_as": "learn.explore.explore_lights",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-moc-mat-troi-lan"
+    },
+    "tray.tray_fireworks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fireworks_in_Sevierville,_Tennessee_on_4th_of_July_-_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Fireworks_in_Sevierville%2C_Tennessee_on_4th_of_July_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fireworks in Sevierville, Tennessee on 4th of July - 1",
+      "author": "Roc0ast3r",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-061 (designer 19/11): pháo hoa vàng và xanh nở trên trời đêm; không người."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_fireflies": {
+      "same_as": "tray.tray_firefly_item",
+      "lesson": "bau-troi-ngay-va-dem/ngay-va-dem"
+    },
+    "q1.q1_starry": {
+      "same_as": "learn.explore.explore_starry"
+    },
+    "q1.q1_fireworks": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fireworks_in_Sevierville,_Tennessee_on_4th_of_July_-_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Fireworks_in_Sevierville%2C_Tennessee_on_4th_of_July_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fireworks in Sevierville, Tennessee on 4th of July - 1",
+      "author": "Roc0ast3r",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.08,
+        "width": 1.0,
+        "height": 0.62
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang cho thẻ ba lựa chọn (cùng ảnh tray_fireworks): hai chùm pháo hoa vàng, xanh trên trời đêm."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_twinkle"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_town": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Late_Night_12th_Street_(51220184983).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Late_Night_12th_Street_%2851220184983%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Late Night 12th Street (51220184983)",
+      "author": "Eden, Janine and Jim from New York City",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.45,
+        "top": 0.05,
+        "width": 0.55,
+        "height": 0.5
+      },
+      "note": "SK-061 (designer 19/11): phố đêm sáng đèn đường, cây xanh dưới đèn, trời tối không sao (New York); cắt bỏ ki-ốt có màn hình bên trái và hàng xe phía dưới (không thấy biển số). Thay ảnh Porto có tranh tường chấm trắng và biển hiệu (tester A5)."
+    },
+    "q3.q3_countryside": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Purple_starry_sky_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Purple_starry_sky_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Purple starry sky (Unsplash)",
+      "author": "Dawid Zawiła davealmine",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-061 (designer 19/11): mái nhà tối in đen dưới bầu trời đêm nhiều sao (không rõ Ngân Hà); không người, không chữ."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_fireflies": {
+      "same_as": "tray.tray_firefly_item",
+      "lesson": "bau-troi-ngay-va-dem/ngay-va-dem"
+    },
+    "q4.q4_streetlights": {
+      "same_as": "learn.explore.explore_lights",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-moc-mat-troi-lan"
+    },
+    "q4.q4_stars": {
+      "same_as": "learn.explore.explore_twinkle"
+    },
+    "q5": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Night_Clouds_(11424718863).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Night_Clouds_%2811424718863%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Night Clouds (11424718863)",
+      "author": "Bureau of Land Management Oregon and Washington",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Night_Clouds_(11424718863).jpg",
+      "note": "SK-061 (designer 19/11): trời đêm phủ mây dày xanh thẫm trên dãy đồi tối, không thấy sao (ảnh Bureau of Land Management, Public domain)."
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_starry"
+    },
+    "vocab.star": {
+      "same_as": "learn.explore.explore_twinkle"
+    },
+    "vocab.twinkle": {
+      "same_as": "learn.explore.explore_starry"
+    },
+    "vocab.far": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/cac-vi-sao.vocab.far.jpg",
+        "method": "drawn"
+      },
+      "title": "A grown-up and child gazing upward",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Vẽ vì không tìm được ảnh CC0/PD/CC BY hợp lệ: bản khung 2:1 của explore_far cho thẻ từ. JPEG 1024×512."
+    },
+    "vocab.countryside": {
+      "same_as": "learn.explore.explore_starry"
+    },
+    "reward.starry_sky_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stars_Great_Smoky_Mountains_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Stars_Great_Smoky_Mountains_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Stars Great Smoky Mountains (Unsplash)",
+      "author": "JD  Mason jmason",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0.0,
+        "width": 0.6667,
+        "height": 1.0
+      },
+      "note": "SK-061 (designer 19/11): bầu trời đầy sao dày đặc trên rặng cây in đen ở dãy núi Great Smoky; không trăng, không người. Cắt vuông."
+    }
+  }
+}

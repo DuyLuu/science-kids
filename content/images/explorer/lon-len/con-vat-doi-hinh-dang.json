@@ -1,0 +1,272 @@
+{
+  "note": "SK-053 Lớn lên, bài con-vat-doi-hinh-dang. Designer (agent) chọn 19/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Hình của Discoverer chép đủ mục. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1, câu 4:3) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 4. Hình tự vẽ (SK-053 quyết định 8): không. Hình ghép: learn.explore.explore_frog, learn.explore.explore_butterfly.",
+  "images": {
+    "learn.explore.explore_frog": {
+      "composed": {
+        "file": "content/images/composed/lon-len/con-vat-doi-hinh-dang.learn.explore.explore_frog.jpg",
+        "parts": [
+          {
+            "same_as": "q4_eggs",
+            "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+          },
+          {
+            "same_as": "explore_tadpoles",
+            "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+          },
+          {
+            "same_as": "tray.tray_tadpole_legs"
+          },
+          {
+            "same_as": "tray.tray_froglet"
+          },
+          {
+            "same_as": "w1"
+          }
+        ]
+      },
+      "title": "Frog eggs, tadpoles and frogs in a circle",
+      "note": "Designer (agent) 19/11, SK-053: năm ảnh tròn xếp vòng theo chiều kim đồng hồ (trứng ếch, nòng nọc, nòng nọc mọc chân, ếch con còn đuôi, ếch), mũi tên cong giữa hai ảnh, mũi tên cuối từ ếch về trứng; ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm, không chữ, không số, không nét viền (khuôn chuoi-thuc-an explore_chain)."
+    },
+    "learn.explore.explore_butterfly": {
+      "composed": {
+        "file": "content/images/composed/lon-len/con-vat-doi-hinh-dang.learn.explore.explore_butterfly.jpg",
+        "parts": [
+          {
+            "source": "Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Pierisrapae2.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Pierisrapae2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "title": "Pierisrapae2",
+            "author": "Tom Wess",
+            "license": "CC BY 2.5",
+            "license_url": "https://creativecommons.org/licenses/by/2.5",
+            "crop": {
+              "left": 0.3,
+              "top": 0.2,
+              "width": 0.26,
+              "height": 0.35
+            }
+          },
+          {
+            "same_as": "explore_plant_food",
+            "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+          },
+          {
+            "same_as": "tray.tray_chrysalis"
+          },
+          {
+            "same_as": "q4.q4_butterfly"
+          }
+        ]
+      },
+      "title": "Eggs, caterpillar, chrysalis and butterfly in a circle",
+      "note": "Designer (agent) 19/11, SK-053: bốn ảnh tròn xếp vòng theo chiều kim đồng hồ (trứng trên lá cải, sâu, nhộng, bướm; cả bốn là Pieris rapae), mũi tên cong giữa hai ảnh, mũi tên cuối từ bướm về trứng. Trứng là ảnh thật (Tom Wess, CC BY 2.5), không vẽ; ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm, không chữ, không số, không nét viền (khuôn chuoi-thuc-an explore_chain)."
+    },
+    "tray.tray_chrysalis": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "557b4cb1-8524-4ebe-8cb7-c9dde6b41e9b",
+      "source_url": "https://www.flickr.com/photos/52450054@N04/54151178675",
+      "file_url": "https://live.staticflickr.com/65535/54151178675_66d16ee562_b.jpg",
+      "title": "Cabbage White - Pieris rapae chrysalis, Occoquan Regional Park, Lorton, Virginia, October 25, 2019",
+      "author": "Judy Gallagher",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Designer (agent) 19/11, SK-053: nhộng Pieris rapae màu nâu nhạt bám trên mặt lá (không phải màu xanh, không trên thân); Flickr ghi CC BY 2.0 (đã mở trang 19/11). Hình gốc của chủ đề."
+    },
+    "tray.tray_tadpole_legs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tadpole_-_Flickr_-_GregTheBusker.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Tadpole_-_Flickr_-_GregTheBusker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tadpole - Flickr - GregTheBusker",
+      "author": "Greg Schechter from San Francisco, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.3027,
+        "top": 0.1432,
+        "width": 0.4297,
+        "height": 0.5729
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B3): thay ảnh nòng nọc cũ (chân sau mờ) bằng nòng nọc to chụp từ trên xuống trong suối nông, nền đá vàng và nước xanh thẫm; hai chân sau có bàn chân thấy rõ ở gốc đuôi. Ảnh gốc 3072×2304, Commons (từ Flickr), không ghi loài. Hình gốc của chủ đề."
+    },
+    "tray.tray_froglet": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fully-formed_Tadpole.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Fully-formed_Tadpole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fully-formed Tadpole",
+      "author": "Semuasiji",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 19/11, SK-053: ếch con đủ bốn chân còn đuôi (giai đoạn chuyển), chụp trên nền trắng; trang gốc ghi Unidentified Anura (Indonesia). Ảnh thật nên không vẽ."
+    },
+    "q4.q4_butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20220702_Pieris_rapae_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/20220702_Pieris_rapae_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20220702 Pieris rapae 01",
+      "author": "Flocci Nivis",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.24,
+        "top": 0.32,
+        "width": 0.4,
+        "height": 0.6
+      },
+      "note": "Designer (agent) 19/11, SK-053: bướm cải trắng Pieris rapae đậu trên hoa kế tím. Hình gốc của chủ đề."
+    },
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi q4.q4_frog (same_as không sang nhóm tuổi khác)."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_ducklings": {
+      "same_as": "learn.explore.explore_ducklings",
+      "lesson": "lon-len/con-vat-de-trung"
+    },
+    "w2.w2_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "learn.explore.explore_like": {
+      "same_as": "learn.explore.explore_calf",
+      "lesson": "lon-len/con-vat-de-con"
+    },
+    "learn.explore.explore_caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "tray.tray_kitten": {
+      "same_as": "q4",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_calf": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_worm": {
+      "same_as": "q1.q1_worm",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "q1.q1_caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q1.q1_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q3": {
+      "same_as": "q4.q4_butterfly"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q4.q4_chrysalis": {
+      "same_as": "tray.tray_chrysalis"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_tadpoles": {
+      "same_as": "learn.explore.explore_tadpoles",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q5.q5_kitten": {
+      "same_as": "q3.q3_kitten",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q5.q5_caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_Bullfrog_(Hoplobatrachus_rugulosus)_%E8%99%8E%E7%B4%8B%E8%9B%99(%E7%94%B0%E9%9B%9E)7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Chinese_Bullfrog_%28Hoplobatrachus_rugulosus%29_%E8%99%8E%E7%B4%8B%E8%9B%99%28%E7%94%B0%E9%9B%9E%297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chinese Bullfrog (Hoplobatrachus rugulosus) 虎紋蛙(田雞)7",
+      "author": "Thomas Brown",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi q4.q4_frog (same_as không sang nhóm tuổi khác). Lượt 2: cắt vào đầu ếch (bỏ dải dưới và mép phải), khung khoảng 2,1:1 để đầu nằm giữa; thẻ Tổng kết trang 2 (cao 120, rộng gần hết màn, khoảng 2,85:1, iPad rộng hơn) lấy dải giữa vẫn thấy đủ hai mắt và miệng; khung câu 4:3 lấy giữa vẫn thấy cả đầu.",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 0.7812,
+        "height": 0.5556
+      }
+    },
+    "vocab.tadpole": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tadpole_-_Flickr_-_GregTheBusker.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Tadpole_-_Flickr_-_GregTheBusker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tadpole - Flickr - GregTheBusker",
+      "author": "Greg Schechter from San Francisco, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.2246,
+        "top": 0.2148,
+        "width": 0.6055,
+        "height": 0.4036
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B3, B5): bản cắt khung thẻ từ 2:1 của tray.tray_tadpole_legs, thân, chân sau và một phần đuôi."
+    },
+    "vocab.caterpillar": {
+      "same_as": "learn.explore.explore_plant_food",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "vocab.butterfly": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20220702_Pieris_rapae_01.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/20220702_Pieris_rapae_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "20220702 Pieris rapae 01",
+      "author": "Flocci Nivis",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2083,
+        "top": 0.3744,
+        "width": 0.5312,
+        "height": 0.3978
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của q4.q4_butterfly, cả con bướm và bông hoa kế bên."
+    },
+    "vocab.chrysalis": {
+      "same_as": "tray.tray_chrysalis"
+    },
+    "reward.butterfly_card": {
+      "same_as": "q4.q4_butterfly"
+    }
+  }
+}

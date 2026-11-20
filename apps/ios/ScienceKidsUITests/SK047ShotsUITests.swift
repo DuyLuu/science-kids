@@ -177,7 +177,7 @@ final class SK047ShotsUITests: XCTestCase {
     /// `-SKResetProfile YES` để hồ sơ cũ không thắng.
     private func launch(openLesson: String? = nil, profile: String = "YES") -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments = ["-AppleLanguages", "(en)", "-AppleLocale", "en_US", "-SKSyncOff", "YES", "-SKReduceMotion", "YES", "-SKTestProfile", profile]
+        app.launchArguments = ["-AppleLanguages", "(en)", "-AppleLocale", "en_US", "-SKSyncOff", "YES", "-SKReduceMotion", "YES", "-SKTestProfile", profile] + PlayDrag.noHint
         if profile != "YES" { app.launchArguments += ["-SKResetProfile", "YES"] }
         if let openLesson { app.launchArguments += ["-SKOpenLesson", openLesson] }
         app.launch()
@@ -271,9 +271,8 @@ final class SK047ShotsUITests: XCTestCase {
     /// Chạm một món trên kệ rồi kiểm món đã lên mâm (chạm lại món đã có trên mâm là bỏ nó ra,
     /// nên một cú chạm trượt không được lọt qua).
     private func tapShelf(_ app: XCUIApplication, _ key: String, file: StaticString = #filePath, line: UInt = #line) {
-        tapElement(app, "lesson.shelf.\(key)", file: file, line: line)
-        XCTAssertTrue(app.buttons["lesson.tray.\(key)"].firstMatch.waitForExistence(timeout: 3),
-                      "món \(key) không lên mâm", file: file, line: line)
+        // SK-059: kéo lên mâm (chạm trên kệ giờ là xem to).
+        PlayDrag.pick(app, key, file: file, line: line)
     }
 
     private func shot(_ app: XCUIApplication, _ name: String) {

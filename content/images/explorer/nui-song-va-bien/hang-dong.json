@@ -1,0 +1,277 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_island",
+      "lesson": "nui-song-va-bien/bai-bien-dao-va-vinh"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_cool",
+      "lesson": "nui-song-va-bien/nui-va-doi"
+    },
+    "w3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w3.w3_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "w3.w3_plain": {
+      "same_as": "learn.explore.explore_plain",
+      "lesson": "nui-song-va-bien/dong-bang-va-ruong-lua"
+    },
+    "learn.explore.explore_cave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Phongnhakebang2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Phongnhakebang2",
+      "author": "Genghiskhanviet",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "crop": {
+        "left": 0.12,
+        "top": 0.3,
+        "width": 0.78,
+        "height": 0.62
+      },
+      "note": "SK-058 (designer 19/11): cửa hang tối lớn dưới chân vách núi đá vôi phủ cây (Phong Nha - Kẻ Bàng, Quảng Bình), dòng sông xanh phía trước, vài thuyền rất nhỏ ở cửa hang; không người nhìn rõ, không chữ. Lượt 2: crop bỏ tấm biển nhỏ ở mép trái, cửa hang nằm giữa dưới khung (tester c3)."
+    },
+    "learn.explore.explore_dark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sung_Sot_Cave_-_SungSot1380.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Sung_Sot_Cave_-_SungSot1380.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sung Sot Cave - SungSot1380",
+      "author": "lumoplank",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.5,
+        "width": 0.43,
+        "height": 0.5
+      },
+      "note": "SK-058 (designer 19/11): lối đi trong hang Sửng Sốt (vịnh Hạ Long) có hàng đèn vàng ấm soi đường, xung quanh tối dần, vách đá gồ ghề; crop lấy nửa dưới (lối đi, đèn), bỏ phần trần có nhũ đá (SK-058 n11). Không người, không chữ. Lượt 2: chỉ lấy nửa trái (lối đi lát đá, hàng đèn, vách đá), bỏ hai biển báo, lan can giữa khung và người ở xa (tester c1). Lượt 3: cắt thêm phía trên để bỏ biển tròn đỏ trên cột (tester d1)."
+    },
+    "learn.explore.explore_rock_icicles": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stalactites_at_Rawhiti_Cave_entrance.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Stalactites_at_Rawhiti_Cave_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Stalactites at Rawhiti Cave entrance",
+      "author": "Pseudopanax at English Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Stalactites_at_Rawhiti_Cave_entrance.jpg",
+      "note": "SK-058 (designer 19/11): rất nhiều nhũ đá trắng dài, nhọn rủ xuống từ trần cửa hang Rawhiti (New Zealand), thấy rõ đầu nhọn chĩa xuống; ánh sáng tự nhiên, không đèn màu, không người, không chữ."
+    },
+    "learn.explore.explore_big_cave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cueva_Paraíso,_Phong_Nha,_Vietnam_(36277324796).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Cueva_Para%C3%ADso%2C_Phong_Nha%2C_Vietnam_%2836277324796%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cueva Paraíso, Phong Nha, Vietnam (36277324796)",
+      "author": "Edgardo W. Olivera from Montevideo, Uruguay",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-058 lượt 2 (designer 19/11): lòng hang Thiên Đường (vườn quốc gia Phong Nha - Kẻ Bàng) rộng và cao, đầy khối đá vôi dưới ánh đèn vàng ấm, lối đi gỗ ở góc dưới phải có vài người rất nhỏ (thay ảnh cũ có du khách đứng giữa khung, tester c14). Không chữ, không thác."
+    },
+    "tray.tray_cave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Phongnhakebang2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Phongnhakebang2",
+      "author": "Genghiskhanviet",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "crop": {
+        "left": 0.12,
+        "top": 0.18,
+        "width": 0.78,
+        "height": 0.64
+      },
+      "note": "SK-058 lượt 4 (designer 19/11): cùng ảnh learn.explore.explore_cave, mục cắt riêng cho món kệ Chơi: cửa hang trong vách đá, bỏ dải sông và thuyền phía dưới để món không lẫn với nhóm Nơi có nước."
+    },
+    "tray.tray_icicles": {
+      "same_as": "learn.explore.explore_rock_icicles"
+    },
+    "tray.tray_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "tray.tray_sea": {
+      "same_as": "tray.tray_sea",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_tunnel": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Modestas_Urbonas_2015-04-14_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Modestas_Urbonas_2015-04-14_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Modestas Urbonas 2015-04-14 (Unsplash)",
+      "author": "Modestas Urbonas modestasu",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1,
+        "top": 0.25,
+        "width": 0.6,
+        "height": 0.75
+      },
+      "note": "SK-058 (designer 19/11): con đường nhựa có vạch vàng uốn vào cửa đường hầm vòm đá xuyên qua sườn núi phủ cây; không xe, không người, không biển báo, không chữ. Khung vuông lấy cửa hầm và con đường."
+    },
+    "tray.tray_pool": {
+      "same_as": "tray.tray_pool",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1.q1_cave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Phongnhakebang2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Phongnhakebang2",
+      "author": "Genghiskhanviet",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "crop": {
+        "left": 0.1,
+        "top": 0.42,
+        "width": 0.9,
+        "height": 0.48
+      },
+      "note": "SK-058 (designer 19/11): cửa hang tối lớn dưới chân vách núi đá vôi phủ cây (Phong Nha - Kẻ Bàng, Quảng Bình), dòng sông xanh phía trước, vài thuyền rất nhỏ ở cửa hang; không người nhìn rõ, không chữ. Lượt 2: cùng ảnh learn.explore.explore_cave, mục cắt 5:2 riêng cho thẻ ba lựa chọn, cửa hang không dính mép dưới, không có biển."
+    },
+    "q1.q1_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_dark"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_path": {
+      "same_as": "learn.explore.explore_dark"
+    },
+    "q3.q3_icicles": {
+      "same_as": "learn.explore.explore_rock_icicles"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_plain": {
+      "same_as": "learn.explore.explore_plain",
+      "lesson": "nui-song-va-bien/dong-bang-va-ruong-lua"
+    },
+    "q4.q4_beach": {
+      "same_as": "learn.explore.explore_sandy",
+      "lesson": "nui-song-va-bien/bai-bien-dao-va-vinh"
+    },
+    "q4.q4_mountain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fog-shrouded_mountain_peak_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Fog-shrouded_mountain_peak_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fog-shrouded mountain peak (Unsplash)",
+      "author": "Slawek K s1awek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 5 (designer 19/11): cùng ảnh tray.tray_mountain ở bài 1, mục cắt dọc (~0,8:1) riêng cho thẻ order_sequence dọc (ios-dev 19/11: ảnh ngang không lấp thẻ dọc); giữ đỉnh núi và mây.",
+      "crop": {
+        "left": 0.17,
+        "top": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_cave": {
+      "same_as": "learn.explore.explore_cave"
+    },
+    "q5.q5_tunnel": {
+      "same_as": "tray.tray_tunnel"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_cave"
+    },
+    "vocab.cave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Phongnhakebang2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Phongnhakebang2",
+      "author": "Genghiskhanviet",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Phongnhakebang2.jpg",
+      "crop": {
+        "left": 0.1,
+        "top": 0.32,
+        "width": 0.9,
+        "height": 0.6
+      },
+      "note": "SK-058 (designer 19/11): cửa hang tối lớn dưới chân vách núi đá vôi phủ cây (Phong Nha - Kẻ Bàng, Quảng Bình), dòng sông xanh phía trước, vài thuyền rất nhỏ ở cửa hang; không người nhìn rõ, không chữ. Lượt 2: cùng ảnh learn.explore.explore_cave, mục cắt 2:1 riêng cho thẻ từ."
+    },
+    "vocab.rock": {
+      "same_as": "learn.explore.explore_rock_icicles"
+    },
+    "vocab.stalactite": {
+      "same_as": "learn.explore.explore_rock_icicles"
+    },
+    "vocab.dark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sung_Sot_Cave_-_SungSot1380.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Sung_Sot_Cave_-_SungSot1380.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sung Sot Cave - SungSot1380",
+      "author": "lumoplank",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.45,
+        "width": 0.43,
+        "height": 0.33
+      },
+      "note": "SK-058 (designer 19/11): lối đi trong hang Sửng Sốt (vịnh Hạ Long) có hàng đèn vàng ấm soi đường, xung quanh tối dần, vách đá gồ ghề; crop lấy nửa dưới (lối đi, đèn), bỏ phần trần có nhũ đá (SK-058 n11). Không người, không chữ. Lượt 2: cùng ảnh learn.explore.explore_dark, mục cắt 2:1 riêng cho thẻ từ, không có biển báo."
+    },
+    "vocab.torch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Enlygte_latarka_ubt.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Enlygte_latarka_ubt.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Enlygte latarka ubt",
+      "author": "© 2010 by Tomasz Sienicki [user: tsca , mail: tomasz.sienicki at gmail.com]",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "SK-058 (designer 19/11): một chiếc đèn pin kim loại đang bật, đầu đèn sáng xanh, đặt trên nền sáng; không chữ, không nhãn hiệu thấy được. Không có ảnh đèn pin chiếu chùm sáng trong bóng tối mà không có người hay nhãn hiệu."
+    },
+    "reward.son_doong_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Son_Doong_Cave_by_Daniel_Burka.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Son_Doong_Cave_by_Daniel_Burka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Son Doong Cave by Daniel Burka",
+      "author": "Daniel Burka",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.2,
+        "width": 1,
+        "height": 0.667
+      },
+      "note": "SK-058 (designer 19/11): lòng hang Sơn Đoòng (trang gốc: \"Bên trong Hang Sơn Đoòng ... Quảng Bình\"), ánh sáng rọi xuống từ hố trần, rêu và cây xanh trong lòng hang; người (nếu có) rất nhỏ, không chữ. Khung vuông lấy khoảng sáng và khu rừng."
+    }
+  }
+}

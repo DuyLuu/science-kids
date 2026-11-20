@@ -1,0 +1,260 @@
+{
+  "note": "SK-053 Lớn lên, bài muon-lon-len-con-vat-can-gi. Designer (agent) chọn 19/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Hình của Discoverer chép đủ mục. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1, câu 4:3) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 3. Hình tự vẽ (SK-053 quyết định 8): không. Hình ghép: không.",
+  "images": {
+    "learn.explore.explore_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dharma_the_Akbash_dog_drinking_from_a_pond_in_Arizona_(2881394693).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Dharma_the_Akbash_dog_drinking_from_a_pond_in_Arizona_%282881394693%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dharma the Akbash dog drinking from a pond in Arizona (2881394693)",
+      "author": "Ken Bosma",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: chó trắng cúi uống nước ở mép ao; vòng cổ trơn."
+    },
+    "learn.explore.explore_air": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Panting-dog-No.3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Panting-dog-No.3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A panting dog",
+      "author": "Raffael Herrmann",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.22,
+        "top": 0,
+        "width": 0.664,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: chó đen trắng thè lưỡi thở hổn hển trên nền cỏ khô."
+    },
+    "learn.explore.explore_you": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2017_10_01_17_25_56_Italy-Turin_(36916171043).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/2017_10_01_17_25_56_Italy-Turin_%2836916171043%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "2017 10 01 17 25 56 Italy-Turin (36916171043)",
+      "author": "Ralf Steinberger from Milan, Berlin + Munich, Italy + Germany",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.333,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: nhiều bong bóng xà phòng to bay trong không khí trước dãy nhà; không người. Không có bạn nhỏ (ảnh bạn nhỏ thổi bong bóng có ảnh hợp lệ nhưng lộ mặt, phần chỉ có bàn tay của ảnh đó 1234 px bị chặn tải bản gốc)."
+    },
+    "w1": {
+      "same_as": "learn.explore.explore_dry",
+      "lesson": "lon-len/vong-doi-cua-cay"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_old",
+      "lesson": "lon-len/vat-song-nao-cung-co-vong-doi"
+    },
+    "w3": {
+      "own": {
+        "file": "content/images/own/ho-hap/stomach.jpg",
+        "method": "drawn"
+      },
+      "title": "A stomach",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/duong-di-cua-khong-khi tray.tray_stomach (same_as không sang nhóm tuổi khác)."
+    },
+    "learn.explore.explore_food": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_grass": {
+      "same_as": "vocab.plant",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "tray.tray_car": {
+      "same_as": "tray.tray_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_glass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0.13,
+        "width": 0.4,
+        "height": 0.345
+      },
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho w1.w1_water (same_as không sang nhóm tuổi khác). Bản cắt khung tray_item."
+    },
+    "tray.tray_wind": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "727b29a0-1963-4df0-89ce-941ffda63216",
+      "source_url": "https://www.flickr.com/photos/56796376@N00/6610508987",
+      "file_url": "https://live.staticflickr.com/7014/6610508987_6a0cc6b4c5_b.jpg",
+      "title": "Tunisia 10-12 - 212 - Atlas Mountains & Mides Canyon",
+      "author": "mckaysavage",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.3906,
+        "top": 0.0586,
+        "width": 0.5469,
+        "height": 0.8199
+      },
+      "note": "Designer (agent) 19/11 lượt 4, SK-053: thay ảnh diều (lượt 3; trùng nhóm bẫy \"Toys\" trên kệ) bằng một dây phơi đầy khăn vải nhiều màu (đỏ, tím, xanh lá, xanh dương, trắng, vàng, cam) bay lệch theo gió dưới trời xanh mây gió; dải cam bên phải tung ngang. Không người, không chữ, không đồ chơi; dưới khung còn dải đất khô, vài bụi cỏ nhỏ và mái lều chợ xa. Khung vuông món Chơi, lấy nửa phải dây phơi. Flickr ghi CC BY 2.0, tên thật McKay Savage (đã mở trang 19/11). Ảnh ruộng lúa ở chủ đề khác giữ nguyên."
+    },
+    "tray.tray_bananas": {
+      "same_as": "tray.tray_banana",
+      "lesson": "co-the-cua-em/nem-va-so"
+    },
+    "tray.tray_ball": {
+      "same_as": "tray.tray_ball",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_stone": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_pebble.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Beach_pebble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A pebble on the sand",
+      "author": "Foncea ( talk )",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho w1.w1_stone (same_as không sang nhóm tuổi khác)."
+    },
+    "q1.q1_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1.0,
+        "height": 0.345
+      },
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho w1.w1_water (same_as không sang nhóm tuổi khác)."
+    },
+    "q1.q1_car": {
+      "same_as": "q5.q5_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_air"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_water"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_grass": {
+      "same_as": "q4.q4_grass",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glass_of_Water_(50838445027).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Glass_of_Water_%2850838445027%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Glass of Water (50838445027)",
+      "author": "Alabama Extension",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1.0,
+        "height": 0.345
+      },
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho w1.w1_water (same_as không sang nhóm tuổi khác)."
+    },
+    "q4.q4_mouse": {
+      "same_as": "w2",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_you"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không sang nhóm tuổi khác)."
+    },
+    "vocab.air": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "727b29a0-1963-4df0-89ce-941ffda63216",
+      "source_url": "https://www.flickr.com/photos/56796376@N00/6610508987",
+      "file_url": "https://live.staticflickr.com/7014/6610508987_6a0cc6b4c5_b.jpg",
+      "title": "Tunisia 10-12 - 212 - Atlas Mountains & Mides Canyon",
+      "author": "mckaysavage",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.0293,
+        "top": 0.1025,
+        "width": 0.9375,
+        "height": 0.7028
+      },
+      "note": "Designer (agent) 19/11 lượt 4, SK-053: bản cắt khung thẻ từ 2:1 của tray.tray_wind, cả dây phơi khăn bay trong gió."
+    },
+    "vocab.need": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
+    },
+    "vocab.breathe": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Panting-dog-No.3.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Panting-dog-No.3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A panting dog",
+      "author": "Raffael Herrmann",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.22,
+        "top": 0.22,
+        "width": 0.664,
+        "height": 0.5
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_air, dải ngang qua đầu chó đang thè lưỡi thở; vòng cổ gần như ra ngoài khung."
+    },
+    "vocab.drink": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dharma_the_Akbash_dog_drinking_from_a_pond_in_Arizona_(2881394693).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Dharma_the_Akbash_dog_drinking_from_a_pond_in_Arizona_%282881394693%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Dharma the Akbash dog drinking from a pond in Arizona (2881394693)",
+      "author": "Ken Bosma",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.08,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.5005
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_water, cả con chó đang cúi uống nước."
+    },
+    "reward.elephant_card": {
+      "same_as": "learn.explore.explore_big_small",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    }
+  }
+}

@@ -442,6 +442,39 @@ public final class LessonSession {
         }
     }
 
+    /// SK-059: an item dropped on the tray (or chosen with VoiceOver "Pick it"). Already in: no
+    /// change (the old tap would take it out). Returns whether it went in; a full tray stays
+    /// as it is and the engine's message is `full`.
+    @discardableResult
+    public func addToTray(_ key: String) -> Bool {
+        guard !progress.tray.contains(key) else { return false }
+        tapTrayItem(key)
+        return progress.tray.contains(key)
+    }
+
+    /// SK-059: an item dragged out of the tray (or VoiceOver "Remove it"). Not in: no change.
+    public func removeFromTray(_ key: String) {
+        guard progress.tray.contains(key) else { return }
+        tapTrayItem(key)
+    }
+
+    /// SK-059 §4: the Chơi hint shows the first time this child opens Chơi on this device.
+    public var playHintFirstTime: Bool {
+        #if DEBUG
+        // UI tests that are not about the hint (`-SKNoPlayHint YES`): the lesson's message only.
+        if let index = ProcessInfo.processInfo.arguments.firstIndex(of: "-SKNoPlayHint"),
+           ProcessInfo.processInfo.arguments.dropFirst(index + 1).first?.lowercased() == "yes" { return false }
+        #endif
+        guard let store else { return false }
+        return !PlayHintStore(directory: store.directory).seen(childId: context.childId)
+    }
+
+    /// The hint was shown: not again for this child on this device.
+    public func markPlayHintSeen() {
+        guard let store else { return }
+        PlayHintStore(directory: store.directory).markSeen(childId: context.childId)
+    }
+
     /// The message text of the tray now.
     public var trayMessage: Spoken? {
         guard let tray, let state = trayState else { return nil }

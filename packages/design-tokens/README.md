@@ -413,6 +413,12 @@ Tỉ lệ WCAG 2.1 tính từ mã hex. Ngưỡng B7.8: chữ thường ≥ 4.5:1
 | `text_accent` | `surface_inactive` `#E2D4B4` | 4.31 | canvas không dùng | chỉ chữ ≥ 18pt đậm; tránh |
 | `text_primary` | `action_primary` `#A93A27` | 2.71 | canvas không dùng | **không dùng cho chữ** |
 | `text_on_accent` | `food_group.fat` `#8A5E3B` | 5.20 | canvas không đặt chữ lên màu nhóm chất | đạt nếu cần |
+| `text_on_content.vang_hoe` `#1E1B18` | `vang_hoe` `#E2A52A` | 7.88 | nhãn giấy cắt tên nhóm trên trang sách Học, dấu tích trên chấm nhóm ở Chơi (SK-060) | đạt |
+| `text_on_content.do_son` `#FBF6EA` | `do_son` `#A93A27` | 5.86 | như trên | đạt |
+| `text_on_content.gi_dong` `#FBF6EA` | `gi_dong` `#3B6E6A` | 5.37 | như trên | đạt |
+| `text_on_content.cham` `#FBF6EA` | `cham` `#2E4A6E` | 8.39 | như trên | đạt |
+| `text_on_content.nau_dat` `#FBF6EA` | `nau_dat` `#8A5E3B` | 5.20 | như trên | đạt |
+| `text_primary` | `bg_screen` dưới bóng `drop_sheet_up` (≈ `#CFC0A7`) | 9.59 | chữ cuộn sát mép trên thanh tab | đạt; `text_secondary` 5.39, `gi_dong` 3.24, `text_accent` 3.54 thì không, nên vùng cuộn phải dừng trên bóng (SK-060 lỗi 4) |
 
 Ma trận đủ mọi cặp vai chữ × vai nền của `color.role` (và màu thế giới có chữ đè lên). "(dùng)" là cặp canvas có dùng cho chữ; số **đậm** là dưới 4.5:1, không cặp đậm nào có "(dùng)". `age_group.discoverer` và `stamp_mark` trùng `action_primary` (đỏ son).
 
@@ -434,6 +440,8 @@ Ma trận đủ mọi cặp vai chữ × vai nền của `color.role` (và màu 
 | chữ giấy `#FBF6EA` trên lá tre (triện "ĐÚNG") | 4.82 | 4.99 | 4.56 | 4.89 | đạt 4.5 ở mọi loại |
 | lá tre – đỏ son `#A93A27` (triện đúng – nút chính) | 1.22 | 1.03 | 1.63 | 1.20 | mù màu lục thấy gần như cùng màu ô liu; phân biệt bằng chữ "ĐÚNG", dấu tích và vị trí (nút luôn ở đáy). Trước 29/10 hai thứ này cùng một màu nên không kém đi |
 | lá tre – gỉ đồng `#3B6E6A` | 1.12 | 1.12 | 1.10 | 1.10 | khác nhau bằng sắc (lá tre ngả vàng, gỉ đồng ngả lam); không đặt lá tre làm báo đúng trên nền gỉ đồng (thế giới Explorer) |
+
+**Chữ trên màu nội dung** (SK-060): khi một màu nội dung (`ColorToken` của bài) làm nền cho chữ hay icon, lấy màu chữ ở `color.role.text_on_content.<tên màu>`, không dùng thẳng `text_on_accent`: vàng hoè cần than tre, bốn màu kia giấy. Canvas `options/lesson-less-text/Explorer-A.html` đã vẽ đúng như vậy (`--fg:#1E1B18` trên `#E2A52A`).
 
 Màu nhóm chất (`food_group.*`) trên canvas chỉ là chấm màu và mảng hình, luôn đi kèm tên nhóm bằng chữ, nên màu không phải nguồn thông tin duy nhất. `vang_hoe` trên `giay` chỉ đạt 2.02: không dùng vàng hoè làm chữ hay làm nét icon trên giấy.
 

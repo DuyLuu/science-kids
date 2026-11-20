@@ -48,7 +48,7 @@ export function formatSyllabusIssue(file: string, issue: SyllabusIssue): string 
   return `${file} ${displayPointer(issue.pointer)} [${issue.code}] ${issue.severity === "warning" ? "cảnh báo: " : ""}${issue.message}`;
 }
 
-/** " · syllabus content/syllabus.json (3 nhóm, 45 chủ đề, 384 bài; 2 bài có lesson_id, 347 bài chưa có tên vi)" for the summary line. */
+/** " · syllabus content/syllabus.json (3 nhóm, 43 chủ đề, 375 bài; 79 bài có lesson_id, 3 bài chưa có tên vi)" for the summary line. */
 export function syllabusSummary(result: SyllabusResult): string {
   const { counts } = result;
   if (!counts) return ` · syllabus ${result.file} (${result.issues.some((issue) => issue.code === "syllabus_json") ? "JSON không hợp lệ" : "chưa qua schema"})`;

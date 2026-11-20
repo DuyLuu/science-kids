@@ -1,0 +1,210 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_lake": {
+      "same_as": "learn.explore.explore_lake",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "w1.w1_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "w2": {
+      "same_as": "tray.tray_turtles",
+      "lesson": "lon-len/con-vat-de-trung"
+    },
+    "w3": {
+      "same_as": "learn.explore.explore_sandy"
+    },
+    "learn.explore.explore_sandy": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "50fafe28-ce1e-4cf1-a5a7-db7d8654e83b",
+      "source_url": "https://www.flickr.com/photos/85675121@N04/7848767300",
+      "file_url": "https://live.staticflickr.com/8304/7848767300_609fb198f4_b.jpg",
+      "title": "Qui Nhon Beach",
+      "author": "Loi Nguyen Duc",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.08,
+        "top": 0.3,
+        "width": 0.6,
+        "height": 0.7
+      },
+      "note": "SK-058 lượt 2 (designer 19/11): bãi biển Quy Nhơn (Bình Định), trang Flickr đã mở 19/11, CC BY 2.0: dải cát trắng khô, mịn, cong theo mép nước xanh lặng, hàng dừa và đồi cây phía sau; vắng người, vài thanh gỗ trôi dạt trên cát; không chữ. Thay ảnh bãi triều ướt dùng lại của goi-ten-va-nhom-dong-vat (tester c5). Crop lấy bãi cát làm chủ thể."
+    },
+    "learn.explore.explore_rocky": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boulders_Beach,_South_Africa.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Boulders_Beach%2C_South_Africa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boulders Beach, South Africa",
+      "author": "jeffgreenca",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.6,
+        "height": 1
+      },
+      "note": "SK-058 (designer 19/11): bãi biển đầy tảng đá granit tròn lớn sát mép nước, nước xanh trong, biển phía sau (Boulders Beach, Nam Phi); sóng nhỏ, không người nhìn rõ, không chữ."
+    },
+    "learn.explore.explore_island": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr-141025-2555-aerial_view-Mokapu_Islet-north_coast-Molokai_(24617292654).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Starr-141025-2555-aerial_view-Mokapu_Islet-north_coast-Molokai_%2824617292654%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Starr-141025-2555-aerial view-Mokapu Islet-north coast-Molokai (24617292654)",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "note": "SK-058 (designer 19/11): một đảo đá nhỏ phủ cây xanh giữa biển xanh, nước bao quanh bốn phía, chụp từ máy bay (Mokapu, Hawaii); không nhà, không người, không chữ."
+    },
+    "learn.explore.explore_bay": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Huge_attractive_beach_rock_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Huge_attractive_beach_rock_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Huge attractive beach rock (Unsplash)",
+      "author": "Rob Bye robertbye",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): một vịnh nhỏ chụp từ trên đồi: bãi cát cong hình vòng cung, mỏm đất đá ôm lấy mặt nước xanh, phía ngoài mở ra biển (West Lulworth, Anh); người trên bãi rất nhỏ, không chữ."
+    },
+    "tray.tray_sand_beach": {
+      "same_as": "learn.explore.explore_sandy"
+    },
+    "tray.tray_rock_beach": {
+      "same_as": "learn.explore.explore_rocky"
+    },
+    "tray.tray_island": {
+      "same_as": "learn.explore.explore_island"
+    },
+    "tray.tray_rock_islands": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ha_Long_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Ha Long Bay",
+      "author": "Ondřej Žváček",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "left": 0.25,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "SK-058 (designer 19/11): chép mục reward.ha_long của Discoverer (Ha_Long_Bay.jpg, CC BY 2.5; trang gốc mở lại 19/11: \"Ha Long Bay (Vietnam)\"): các đảo đá vôi phủ cây nhô lên giữa mặt nước xanh, một thuyền đỏ ở xa; không chữ đọc được."
+    },
+    "tray.tray_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "tray.tray_lake": {
+      "same_as": "learn.explore.explore_lake",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_sandy": {
+      "same_as": "learn.explore.explore_sandy"
+    },
+    "q1.q1_island": {
+      "same_as": "learn.explore.explore_island"
+    },
+    "q1.q1_rocky": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boulders_Beach,_South_Africa.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Boulders_Beach%2C_South_Africa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Boulders Beach, South Africa",
+      "author": "jeffgreenca",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.8
+      },
+      "note": "SK-058 lượt 5 (designer 19/11): cùng ảnh learn.explore.explore_rocky, mục cắt ngang (~2,5:1) riêng cho thẻ ba lựa chọn q1."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_rocky"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_bay": {
+      "same_as": "learn.explore.explore_bay"
+    },
+    "q3.q3_island": {
+      "same_as": "learn.explore.explore_island"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_rocky": {
+      "same_as": "learn.explore.explore_rocky"
+    },
+    "q4.q4_sandy": {
+      "same_as": "learn.explore.explore_sandy"
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_lake",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_island"
+    },
+    "vocab.beach": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "50fafe28-ce1e-4cf1-a5a7-db7d8654e83b",
+      "source_url": "https://www.flickr.com/photos/85675121@N04/7848767300",
+      "file_url": "https://live.staticflickr.com/8304/7848767300_609fb198f4_b.jpg",
+      "title": "Qui Nhon Beach",
+      "author": "Loi Nguyen Duc",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.05,
+        "top": 0.45,
+        "width": 0.75,
+        "height": 0.55
+      },
+      "note": "SK-058 lượt 2 (designer 19/11): cùng ảnh learn.explore.explore_sandy, mục cắt 2:1 riêng cho thẻ từ."
+    },
+    "vocab.island": {
+      "same_as": "learn.explore.explore_island"
+    },
+    "vocab.bay": {
+      "same_as": "learn.explore.explore_bay"
+    },
+    "vocab.sand": {
+      "same_as": "vocab.beach"
+    },
+    "vocab.wave": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Waves_crashing_on_rocky_coast_at_Heceta_Beach_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Waves_crashing_on_rocky_coast_at_Heceta_Beach_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Waves crashing on rocky coast at Heceta Beach (Unsplash)",
+      "author": "Nathan Anderson nathananderson",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "SK-058 (designer 19/11): sóng biển xanh trắng xô vào một tảng đá tối, tung bọt (Heceta, Oregon, Mỹ); không người, không chữ. Thay ảnh bãi đá learn.explore.explore_rocky cho thẻ từ wave vì ảnh Boulders Beach nước lặng, sóng nhỏ, không đọc ra \"sóng\"."
+    },
+    "reward.ha_long_bay_card": {
+      "same_as": "tray.tray_rock_islands"
+    }
+  }
+}

@@ -90,6 +90,8 @@ struct PageBar: View {
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("lesson.learn.page_a11y \(current + 1) \(colors.count)"))
+        // SK-060 (finding 3): a page count read aloud, not a control (no hit-region audit).
+        .accessibilityAddTraits(.isStaticText)
         .accessibilityIdentifier("lesson.learn.page")
     }
 }

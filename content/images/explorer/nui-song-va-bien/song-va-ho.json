@@ -1,0 +1,190 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_plain",
+      "lesson": "nui-song-va-bien/dong-bang-va-ruong-lua"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_swamp",
+      "lesson": "noi-song-tren-trai-dat/rung-ngap-man-va-dam-lay"
+    },
+    "learn.explore.explore_river": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Song_Lo_@Nam_TpHaGiang%272005.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Song_Lo_%40Nam_TpHaGiang%272005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Song Lo @Nam TpHaGiang'2005",
+      "author": "BacLuong at Vietnamese Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Song_Lo_@Nam_TpHaGiang%272005.jpg",
+      "crop": {
+        "left": 0.36,
+        "top": 0.44,
+        "width": 0.62,
+        "height": 0.56
+      },
+      "note": "SK-058 lượt 2 (designer 19/11): sông Lô ở Hà Giang: dòng sông nước nâu phù sa rộng chảy uốn qua bờ tre xanh, mặt nước gợn; crop bỏ phố, núi phía sau (thay ảnh sông Yellowstone có tuyết, hơi nước, tester c8). Không người, không chữ."
+    },
+    "learn.explore.explore_lake": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Calm_Waters_(34595165103).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Calm_Waters_%2834595165103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Calm Waters (34595165103)",
+      "author": "U.S. Fish and Wildlife Service - Midwest Region",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Calm_Waters_(34595165103).jpg",
+      "note": "SK-058 (designer 19/11): chép mục tray.tray_lake của Discoverer (mặt hồ lặng phản chiếu trời mây, hàng cây trên bờ bên kia; Public domain)."
+    },
+    "learn.explore.explore_mekong": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_148_-_life_on_the_Mekong_(3185100723).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Vietnam_08_-_148_-_life_on_the_Mekong_%283185100723%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam 08 - 148 - life on the Mekong (3185100723)",
+      "author": "McKay Savage from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-058 lượt 2 (designer 19/11): sông Mê Kông ở đồng bằng (trang gốc: \"Life on the Mekong delta in the many boats large, and small\"): mặt sông nước nâu gợn sóng, một chiếc thuyền gỗ nhỏ có mui bạt chở củi, người chèo ở xa (không nhận ra mặt), bờ cây xanh và lục bình; không chữ, không số (thay ảnh cũ có chữ quảng cáo trên thuyền, tester B1)."
+    },
+    "learn.explore.explore_by_river": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_087_-_An_Binh_and_Binh_Hoa_Phuoc_islands_(3184878592).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Vietnam_08_-_087_-_An_Binh_and_Binh_Hoa_Phuoc_islands_%283184878592%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam 08 - 087 - An Binh and Binh Hoa Phuoc islands (3184878592)",
+      "author": "McKay Savage from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-058 (designer 19/11): bờ sông ở cù lao An Bình (Vĩnh Long): nhiều thuyền gỗ neo dọc bờ, nhà mái đỏ và cây xanh, một cây cầu nhỏ phía sau; không người nhìn rõ, không chữ đọc được. Lượt 2: crop bỏ thuyền bên trái có chữ sơn mờ (tester c2); còn dãy thuyền gỗ, cầu, cây xanh, một nhà nhỏ mép phải.",
+      "crop": {
+        "left": 0.35,
+        "top": 0.25,
+        "width": 0.65,
+        "height": 0.6
+      }
+    },
+    "tray.tray_river": {
+      "same_as": "learn.explore.explore_river"
+    },
+    "tray.tray_river_above": {
+      "same_as": "learn.explore.explore_water",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_lake": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "tray.tray_ba_be": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "1c8609e6-4186-4281-aace-fc005118eade",
+      "source_url": "https://www.flickr.com/photos/41000732@N04/48102341768",
+      "file_url": "https://live.staticflickr.com/65535/48102341768_80977a315d_b.jpg",
+      "title": "Scenery at Ba Be Lake - Ba Be National Park - Vietnam - 03",
+      "author": "Adam Jones, Ph.D. - Global Photo Archive",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "SK-058 (designer 19/11): hồ Ba Bể (trang gốc: \"Scenery at Ba Be Lake - Ba Be National Park - Vietnam\"): mặt hồ xanh lặng phản chiếu rừng và núi bao quanh, trời xanh mây trắng; không người, không thuyền, không chữ."
+    },
+    "tray.tray_sea": {
+      "same_as": "tray.tray_sea",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_pool": {
+      "same_as": "tray.tray_pool",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_fishtank": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "bc35e10a-b921-4985-b827-8703c0b6e263",
+      "source_url": "https://www.flickr.com/photos/36943025@N07/3646757960",
+      "file_url": "https://live.staticflickr.com/3610/3646757960_873e1d1b45_b.jpg",
+      "title": "My fish tank",
+      "author": "Lottie's pets & stuff",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 2 (designer 19/11): trọn một bể cá kính có nắp đen đặt trên mặt bàn gỗ, trong có cây thuỷ sinh, đá, sỏi và ba con cá vàng (thay ảnh cận cá trong bể cửa hàng, tester c10); trang Flickr đã mở 19/11, CC0. Không người, không chữ."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_river": {
+      "same_as": "learn.explore.explore_river"
+    },
+    "q1.q1_lake": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "q1.q1_sea": {
+      "same_as": "tray.tray_sea",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_river": {
+      "same_as": "learn.explore.explore_by_river"
+    },
+    "q3.q3_pool": {
+      "same_as": "tray.tray_pool",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_lake": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "q4.q4_sea": {
+      "same_as": "tray.tray_sea",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q4.q4_pond": {
+      "same_as": "q1",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_river": {
+      "same_as": "learn.explore.explore_water",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q5.q5_lake": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_river"
+    },
+    "vocab.river": {
+      "same_as": "learn.explore.explore_river"
+    },
+    "vocab.lake": {
+      "same_as": "learn.explore.explore_lake"
+    },
+    "vocab.flow": {
+      "same_as": "learn.explore.explore_water",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "vocab.boat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_087_-_An_Binh_and_Binh_Hoa_Phuoc_islands_(3184878592).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Vietnam_08_-_087_-_An_Binh_and_Binh_Hoa_Phuoc_islands_%283184878592%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Vietnam 08 - 087 - An Binh and Binh Hoa Phuoc islands (3184878592)",
+      "author": "McKay Savage from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-058 (designer 19/11): bờ sông ở cù lao An Bình (Vĩnh Long): nhiều thuyền gỗ neo dọc bờ, nhà mái đỏ và cây xanh, một cây cầu nhỏ phía sau; không người nhìn rõ, không chữ đọc được. Lượt 2: cùng ảnh learn.explore.explore_by_river, mục cắt 2:1 riêng cho thẻ từ boat (dãy thuyền gỗ).",
+      "crop": {
+        "left": 0.36,
+        "top": 0.3,
+        "width": 0.62,
+        "height": 0.41
+      }
+    },
+    "reward.ba_be_card": {
+      "same_as": "tray.tray_ba_be"
+    }
+  }
+}

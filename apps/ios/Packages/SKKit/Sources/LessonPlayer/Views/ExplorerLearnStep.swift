@@ -136,7 +136,7 @@ struct ExplorerLearnStep: View {
                         .offset(x: Tokens.Space.s6, y: Tokens.Space.s8)
                 }
                 .overlay(alignment: .topLeading) {
-                    PaperTag(Text(verbatim: name), style: .cut(fill: group.color.color))
+                    PaperTag(Text(verbatim: name), style: .cut(fill: group.color.color, text: group.color.textColor))
                         .offset(x: -Tokens.Space.s6, y: -Tokens.Space.s10)
                         .accessibilityAddTraits(.isHeader)
                 }
@@ -239,7 +239,7 @@ struct ExplorerLearnStep: View {
                     }
                     // The group's name: one word on a cut tag over the picture's corner.
                     .overlay(alignment: .topLeading) {
-                        PaperTag(Text(verbatim: mode.name(group.label)), style: .cut(fill: group.color.color))
+                        PaperTag(Text(verbatim: mode.name(group.label)), style: .cut(fill: group.color.color, text: group.color.textColor))
                             .offset(x: -Tokens.Space.s6, y: -Tokens.Space.s10)
                             .accessibilityAddTraits(.isHeader)
                     }

@@ -154,12 +154,15 @@ const CASES = [
   ["Oak topic, lesson without oak_lessons", (d) => (d.groups[1].topics[1].lessons[0].oak_lessons = []), [`${HE}/lessons/0/oak_lessons syllabus_oak`]],
   ["new topic, lesson with oak_lessons", (d) => (d.groups[1].topics[0].lessons[1].oak_lessons = ["rain"]), [`${NEW}/lessons/1/oak_lessons syllabus_oak`]],
   ["source.year outside oak_years", (d) => (d.groups[1].topics[1].source.year = 5), [`${HE}/source/year syllabus_oak`]],
-  // extension (Duy 13/11): a lesson of our own at the end of an Oak topic
+  // extension (Duy 13/11): a lesson of our own in an Oak topic; anywhere in it since SK-051 (18/11)
   ["extension lesson after the Oak lessons", (d) => d.groups[1].topics[1].lessons.push(extension(4)), []],
   ["two extension lessons, sensitive", (d) => d.groups[1].topics[1].lessons.push(extension(4), { ...extension(5), sensitive: true }), []],
   ["extension with oak_lessons", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), oak_lessons: ["insects"] }), [`${HE}/lessons/3/oak_lessons syllabus_oak`]],
   ["extension statutory true", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), statutory: true }), [`${HE}/lessons/3/statutory syllabus_oak`]],
-  ["Oak lesson after an extension lesson", (d) => d.groups[1].topics[1].lessons.splice(2, 0, extension(3)) && renumber(d.groups[1].topics[1]), [`${HE}/lessons/3 syllabus_oak`]],
+  ["extension lesson between Oak lessons (SK-051)", (d) => d.groups[1].topics[1].lessons.splice(2, 0, extension(3)) && renumber(d.groups[1].topics[1]), []],
+  ["extension lesson first, Oak lessons after it (SK-051)", (d) => d.groups[1].topics[1].lessons.splice(0, 0, extension(1)) && renumber(d.groups[1].topics[1]), []],
+  ["extension in the middle with oak_lessons", (d) => d.groups[1].topics[1].lessons.splice(1, 0, { ...extension(2), oak_lessons: ["insects"] }) && renumber(d.groups[1].topics[1]), [`${HE}/lessons/1/oak_lessons syllabus_oak`]],
+  ["extension in the middle statutory true", (d) => d.groups[1].topics[1].lessons.splice(1, 0, { ...extension(2), statutory: true }) && renumber(d.groups[1].topics[1]), [`${HE}/lessons/1/statutory syllabus_oak`]],
   ["extension in a new topic", (d) => d.groups[1].topics[0].lessons.push(extension(3)), [`${NEW}/lessons/2/extension syllabus_oak`]],
   ["Oak topic with only extension lessons", (d) => (d.groups[1].topics[1].lessons = [extension(1)]), [`${HE}/lessons syllabus_oak`], { refs: false }],
   ["extension not boolean", (d) => d.groups[1].topics[1].lessons.push({ ...extension(4), extension: "yes" }), [`${HE}/lessons/3/extension schema`]],
@@ -296,17 +299,25 @@ describe("content/syllabus.json (file thật)", () => {
     for (const warning of report.issues) t.diagnostic(`${warning.pointer || "/"} [${warning.code}] ${warning.message}`);
   });
 
-  test("nghiệm thu SK-030: 3 nhóm explorer, discoverer, scientist; 12, 17, 16 chủ đề; 75, 155, 156 bài, tổng 386 (75 có 2 bài mở rộng của naming-and-grouping-animals, Duy 13/11)", () => {
+  // SK-051 (18/11): Explorer #10 growing-plants merged into #7, so 11 topics / 71 lessons (incl. extension
+  // lessons: 2 of naming-and-grouping-animals, 1 of identifying-plants-and-their-basic-parts), total 382.
+  // SK-053 (18/11): new-life ("Life cycles") goes from 5 Oak lessons to 6 (lessons 3 and 5 are extension
+  // lessons), so Explorer 11 topics / 72 lessons, total 383.
+  // SK-057 (19/11): Explorer drops everyday-materials (7), uses-of-everyday-materials (6) and healthy-me (7),
+  // new-life becomes #8, three new earth_sky topics #9-#11 (6 lessons each): 11 topics / 70 lessons, total 381.
+  // SK-061 (19/11): Explorer drops new-water-around-us (6 lessons, moved to Discoverer), new-sky-day-and-night
+  // becomes #10 (level 1): 10 topics / 64 lessons, total 375.
+  test("nghiệm thu SK-030, số đếm SK-061: 3 nhóm explorer, discoverer, scientist; 10, 17, 16 chủ đề; 64, 155, 156 bài, tổng 375", () => {
     const { counts } = validateSyllabus(data);
     assert.deepEqual(
       counts.byGroup.map((group) => [group.age_group, group.topics, group.lessons]),
       [
-        ["explorer", 12, 75],
+        ["explorer", 10, 64],
         ["discoverer", 17, 155],
         ["scientist", 16, 156],
       ],
     );
-    assert.equal(counts.lessons, 386);
+    assert.equal(counts.lessons, 375);
   });
 
   test("tên: chủ đề luôn có vi (schema); bài còn vi null thì đếm được (nghiệm thu: 0 sau khi gộp tên của content-editor)", (t) => {

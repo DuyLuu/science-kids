@@ -87,7 +87,7 @@ Gom 15 Big Questions của Oak thành 6 mạch. Tên mạch gần như trùng t�
 
 | Mạch | Khớp CT GDPT 2018 | Oak BQ | Explorer (5–7) | Discoverer (7–9) | Scientist (9–11) |
 | --- | --- | --- | --- | --- | --- |
-| 🌱 Thực vật & động vật | Thực vật và động vật | BQ01, 02, 04 | Động vật (7) · Cây (7) · Sự sống mới (8) · Trồng cây (10) | Cây làm gì (11) | Sinh sản ĐV (11) · Sinh sản TV (11) · Phân loại (13) · Tiến hoá (15) |
+| 🌱 Thực vật & động vật | Thực vật và động vật | BQ01, 02, 04 | Động vật (7) · Cây (7) · Lớn lên (8; tên cũ *Sự sống mới*, 19/11 SK-053) · Trồng cây (10) | Cây làm gì (11) | Sinh sản ĐV (11) · Sinh sản TV (11) · Phân loại (13) · Tiến hoá (15) |
 | 🌳 Sinh vật & môi trường | Sinh vật và môi trường | BQ03, 15 | Chuỗi thức ăn (11) · Sinh vật sống ở đâu (11) · Những nơi sống trên Trái Đất (11; mới 16/11) | Sinh vật & môi trường (12) · Chuỗi thức ăn nâng cao (12) | Biến đổi khí hậu (15) |
 | 🫀 Con người & sức khoẻ | Con người và sức khoẻ | BQ01, 02, 05 | Cơ thể (5) · Em khoẻ mạnh (7) | Ăn uống (9) · Bộ xương (11) · Tiêu hoá (13) | Giữ gìn sức khoẻ (11) · Phát triển (12) · Tuần hoàn (14) |
 | 🧪 Chất & vật liệu | Chất | BQ06–08, 10 | Vật liệu (8) · Vật liệu dùng làm gì (9) | Các thể của vật chất (13) | Tính chất & biến đổi (15) · Vật liệu mở rộng (15) |
@@ -120,7 +120,7 @@ Cột "Điểm" ghi tổng kèm 5 tiêu chí theo thứ tự A-B-C-D-E. Cột "#
 | 5 | Mùa thu và mùa đông | Seasonal changes: autumn and winter | Trái Đất & bầu trời | 4 | 6 (1-1-1-1-2) | 1 | 2 | — |
 | 6 | Mùa xuân và mùa hè | Seasonal changes: spring and summer | Trái Đất & bầu trời | 4 | 6 (1-1-1-1-2) | 1 | 5 | — |
 | 7 | Vật liệu quanh em | Everyday materials | Chất & vật liệu | 5 | 8 (1-1-2-2-2) | 2 | 6 | — |
-| 8 | Sự sống mới | New life | Thực vật & động vật | 4 | 8 (2-2-1-2-1) | 2 | 9 | — |
+| 8 | Sự sống mới (từ 18/11: *Lớn lên* · Life cycles, 6 bài, SK-053) | New life | Thực vật & động vật | 4 | 8 (2-2-1-2-1) | 2 | 9 | — |
 | 9 | Vật liệu dùng làm gì? | Uses of everyday materials | Chất & vật liệu | 5 | 9 (1-2-2-2-2) | 2 | 7 | — |
 | 10 | Trồng cây | Growing plants | Thực vật & động vật | 5 | 10 (2-2-2-2-2) | 3 | 8 | — |
 | 11 | Chuỗi thức ăn | Introduction to food chains | Sinh vật & môi trường | 4 | 11 (2-3-2-2-2) | 3 | 10 | — |
@@ -129,7 +129,7 @@ Cột "Điểm" ghi tổng kèm 5 tiêu chí theo thứ tự A-B-C-D-E. Cột "#
 Tổng 56 bài, không đổi. Thay đổi so với bản cũ:
 - **Em khoẻ mạnh** lên #3, ngay sau *Cơ thể của em*. Đây là chủ đề tiên quyết của nó theo Oak, và cũng là nội dung VN dạy ở lớp 1 (vệ sinh, ăn uống, vận động).
 - **Hai chủ đề mùa** đứng liền nhau sau *Cây quanh em*: trẻ học tên cây rồi mới quan sát cây thay lá theo mùa.
-- **Vật liệu** chuyển xuống Mức 2 vì có misconception "đồ vật hay vật liệu" và bắt đầu cần thí nghiệm đơn giản. Hai chủ đề vật liệu được xen bằng *Sự sống mới* để có giãn cách.
+- **Vật liệu** chuyển xuống Mức 2 vì có misconception "đồ vật hay vật liệu" và bắt đầu cần thí nghiệm đơn giản. Hai chủ đề vật liệu được xen bằng *Sự sống mới* (nay là *Lớn lên*) để có giãn cách.
 - **Chuỗi thức ăn** và **Sinh vật sống ở đâu** để cuối vì cần cả kiến thức về động vật lẫn thực vật. Riêng *Sinh vật sống ở đâu* chạm misconception "sống / không sống" (trẻ hay nghĩ cái gì chuyển động là sống).
 
 > **Ghi chú 16/11/2026:** bảng trên là thứ tự theo độ khó của bản 26/10, đã hết hiệu lực từ 9/11. Thứ tự Explorer hiện hành ở [syllabus.md](syllabus.md) mục 3 (13 chủ đề, 83 bài):
@@ -139,6 +139,8 @@ Tổng 56 bài, không đổi. Thay đổi so với bản cũ:
 > Ba chủ đề Mức 3 ở #2–#4 đứng trước các chủ đề Mức 1–2, lệch quy tắc 2 ở mục 3 ("Mức không được giảm"). Duy chấp nhận chỗ lệch này ngày 14/11 cho #2, #3; vị trí #4 Duy chốt 16/11 kéo theo cùng chỗ lệch.
 >
 > **Ghi chú 17/11/2026 (SK-050):** hai chủ đề mùa ở bảng trên (#5, #6 của bản 26/10; #5, #8 của danh mục 16/11) đã gộp thành chủ đề mới *Thời tiết và các mùa*, Explorer #5 (Duy yêu cầu và chốt 17/11). Điểm 9 (A2-B1-C2-D2-E2), Mức 2; cách chấm ở [docs/explorer-weather-seasons-proposal.md](docs/explorer-weather-seasons-proposal.md) mục 1.2. Thứ tự hiện hành 12 chủ đề, 79 bài; *Vật liệu quanh em* … *Em khoẻ mạnh* thành #8–#12. Mức 2 ở #5 sau ba chủ đề Mức 3 là cùng chỗ lệch quy tắc 2 đã chấp nhận ở trên.
+>
+> **Ghi chú 19/11/2026 (SK-061):** Duy bỏ *Nước quanh em* khỏi Explorer. *Bầu trời ngày và đêm* thành #10 (10 chủ đề, 64 bài), Mức **1** (PM chấm tạm 6 điểm, A1-B1-C1-D2-E1: mức **thấy**, chỉ gọi tên, nhận ra). content-editor chấm lại khi soạn. Mức 1 đứng cuối nhóm là thêm một chỗ lệch quy tắc 2; Mức chỉ để tham khảo, không quyết định thứ tự (syllabus.md mục 0).
 
 ### 5.2 Discoverer (7–9 tuổi, nhóm pilot) — Mức 2 → 4
 
@@ -200,7 +202,7 @@ Tổng 78 bài, không đổi. ⚠ là cờ "nội dung nhạy cảm" như đã 
 
 Thay đổi so với bản cũ:
 - **Bỏ khối Year 5 / Year 6 và xếp lại cả 14 chủ đề**, vì KS2 chỉ yêu cầu dạy xong trước cuối Year 6. *Giữ gìn sức khoẻ* (Y6, 11 điểm) lên #3. *Tính chất và biến đổi vật liệu* (Y5, 15 điểm) xuống #11.
-- **Sinh sản ở động vật lên #1 và thành Free.** Vòng đời và biến thái (ếch, bướm) rất trực quan, ôn lại *Sự sống mới* của Explorer.
+- **Sinh sản ở động vật lên #1 và thành Free.** Vòng đời và biến thái (ếch, bướm) rất trực quan, ôn lại *Lớn lên* (tên cũ *Sự sống mới*) của Explorer.
 - **Mạch Lực → Trái Đất → Ánh sáng (#5–7)** nối thành câu chuyện: trọng lực → quỹ đạo → ánh sáng Mặt Trời và bóng.
 - **Mạch điện nâng cao (#10)** đặt ngay trước *Tính chất vật liệu* (#11), vì chủ đề sau cần khái niệm vật dẫn điện.
 - **Biến đổi khí hậu để cuối** làm chủ đề tổng kết. Nó cần kiến thức về hoá thạch, đốt cháy (biến đổi không thuận nghịch) và mạch điện.
@@ -422,7 +424,7 @@ Nguồn: trang [unit sequence](https://www.thenational.academy/teachers/programm
 | Chỗ đổi trong app | Oak ghi unit đó cần | Kết luận |
 | --- | --- | --- |
 | *Em khoẻ mạnh* lên #3 Explorer | Human body parts | Đúng, đứng ngay sau #2 |
-| *Sinh sản ở động vật* (#1) trước *thực vật* (#2), Scientist | Động vật cần New life; thực vật cần What plants do | Hai unit không phụ thuộc nhau |
+| *Sinh sản ở động vật* (#1) trước *thực vật* (#2), Scientist | Động vật cần New life (Explorer *Lớn lên*); thực vật cần What plants do | Hai unit không phụ thuộc nhau |
 | *Âm thanh* (#7) trước *Các thể của vật chất* (#11) | Chỉ trải nghiệm âm thanh đời sống | Đúng |
 | *Hệ tiêu hoá* cuối Discoverer | Bộ xương và cơ, ăn uống, động vật ăn thịt/cỏ/tạp | Đúng, cả ba đã học trước |
 | *Tính chất và biến đổi vật liệu* (#11) | Đá, nam châm, các thể, vật dẫn điện | Đúng. Vật dẫn điện đã có từ *Mạch điện đơn giản* (Discoverer #10), nên lý do "đặt sau Mạch điện nâng cao" ở mục 5.3 không cần; thứ tự vẫn ổn |

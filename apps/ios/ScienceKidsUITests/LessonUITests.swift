@@ -25,7 +25,7 @@ final class LessonUITests: XCTestCase {
         var arguments = ["-AppleLanguages", "(vi)", "-AppleLocale", "vi_VN", "-SKSyncOff", "YES"]
         if reset { arguments += ["-SKResetProfile", "YES"] }
         if !motion { arguments += ["-SKReduceMotion", "YES"] }
-        app.launchArguments = arguments
+        app.launchArguments = arguments + PlayDrag.noHint
         app.launch()
         return app
     }
@@ -44,13 +44,7 @@ final class LessonUITests: XCTestCase {
     }
 
     /// The lesson screen showing now, for failure messages: its anchors and the visible buttons.
-    private func screenNow(_ app: XCUIApplication) -> String {
-        let anchors = ["lesson.title", "lesson.quiz.counter", "lesson.learn.seen", "lesson.play.message", "lesson.result.title", "lesson.hint", "lesson.reward.title", "home.greeting"]
-            .filter { app.descendants(matching: .any)[$0].firstMatch.exists }
-        let prompt = app.descendants(matching: .any)["lesson.prompt"].firstMatch
-        let buttons = app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)\($0.isHittable ? "" : "(not hittable)")" }
-        return "anchors \(anchors), prompt '\(prompt.exists ? prompt.label : "-")', buttons \(buttons)"
-    }
+    private func screenNow(_ app: XCUIApplication) -> String { A2Lesson.screenNow(app) }
 
     private func createProfile(_ app: XCUIApplication) {
         XCTAssertTrue(app.buttons["welcome.mode.bilingual"].waitForExistence(timeout: 15), "Welcome did not open")
@@ -68,52 +62,47 @@ final class LessonUITests: XCTestCase {
 
     /// Opens the fixture lesson through its topic (SK-035 tester #1: the Home card opens the
     /// journey's first written lesson, another one); `landing` is an element of the screen it
-    /// should open on.
-    private func startLesson(_ app: XCUIApplication, landing: String = "lesson.title", file: StaticString = #filePath, line: UInt = #line) {
+    /// should open on (SK-060: the first Khởi động question, no title screen since SK-043).
+    private func startLesson(_ app: XCUIApplication, landing: String = "lesson.progress", file: StaticString = #filePath, line: UInt = #line) {
         fixture.open(in: app, landing: landing, file: file, line: line)
     }
 
-    /// Taps the answer `keys` of a question (choices, bank words, or "true"/"false"), then "Kiểm tra" if asked.
+    /// Taps the answer `keys` of a question (choices, bank words, or "true"/"false"). SK-060: the
+    /// tap is the answer since SK-043; only multi choice has "Xong" (`lesson.check`), tapped when
+    /// `check` is true.
     private func answer(_ question: LessonFixture.Question, _ keys: [String], check: Bool, in app: XCUIApplication) {
-        for key in keys {
-            switch question.format {
-            case "true_false": tap(app, "lesson.tf.\(key)")
-            case "fill_blank_bank": tap(app, "lesson.word.\(key)")
-            default: tap(app, "lesson.option.\(key)")
-            }
-        }
-        if check { tap(app, "lesson.check") }
+        A2Lesson.answer(question, keys, check: check, in: app)
     }
 
     private func next(_ app: XCUIApplication) {
-        tap(app, "lesson.result.next")
+        A2Lesson.next(app)
     }
 
     private func doWarmup(_ app: XCUIApplication) {
         for question in fixture.warmup {
-            answer(question, question.right, check: false, in: app)
+            answer(question, question.right, check: true, in: app)
             next(app)
         }
-        XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5), "Học did not open")
+        XCTAssertTrue(element(app, "lesson.learn.page").waitForExistence(timeout: 5), "Học did not open")
     }
 
+    /// Học (SK-043): a picture book, one page per group then "Từ mới"; Chơi comes after the last page.
     private func doLearn(_ app: XCUIApplication) {
-        XCTAssertFalse(app.buttons["lesson.learn.next"].isEnabled, "Chơi opens only when every group is seen")
-        for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }
-        XCTAssertEqual(element(app, "lesson.learn.seen").label, "\(fixture.exploreGroups.count)/\(fixture.exploreGroups.count)")
-        tap(app, "lesson.learn.next")
-        XCTAssertTrue(element(app, "lesson.play.message").waitForExistence(timeout: 5), "Chơi did not open")
+        XCTAssertEqual(element(app, "lesson.learn.page").label, "Trang 1 trên \(fixture.exploreGroups.count + 1)")
+        A2Lesson.learn(app)
     }
 
     private func doPlay(_ app: XCUIApplication) {
-        for food in fixture.balancedTray { tap(app, "lesson.shelf.\(food)") }
+        for food in fixture.balancedTray { PlayDrag.pick(app, food) }
         tap(app, "lesson.play.done")
-        XCTAssertTrue(element(app, "lesson.quiz.counter").waitForExistence(timeout: 5), "Quiz did not open")
+        A2Lesson.waitQuiz(app)
     }
 
+    /// Right on the first try: the result sheet with the ĐÚNG seal and the question's XP.
     private func answerRight(_ question: LessonFixture.Question, in app: XCUIApplication) {
         answer(question, question.right, check: true, in: app)
-        XCTAssertEqual(element(app, "lesson.result.title").label, "Chính xác!", question.key)
+        A2Lesson.waitResult(app, question.key)
+        XCTAssertTrue(element(app, "lesson.result.xp").exists, "\(question.key): right on the first try earns XP")
         if question.format == "fill_blank_bank" {
             expectWordMarks(app, question, [question.right[0]: "Đúng"])
         }
@@ -124,12 +113,12 @@ final class LessonUITests: XCTestCase {
     /// reads it (label, then value: "energy, Đúng"). Words not in `marks` carry no mark.
     private func expectWordMarks(_ app: XCUIApplication, _ question: LessonFixture.Question, _ marks: [String: String],
                                  file: StaticString = #filePath, line: UInt = #line) {
-        let words = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.word."))
+        let words = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.bank."))
         let found = words.allElementsBoundByIndex.map { ($0.identifier, $0.label, $0.value as? String ?? "") }
         XCTAssertFalse(found.isEmpty, "\(question.key): no bank words", file: file, line: line)
         print("\(question.key) word marks: " + found.map { "\($0.1), \($0.2.isEmpty ? "-" : $0.2)" }.joined(separator: " | "))
         for (identifier, label, value) in found {
-            let key = String(identifier.dropFirst("lesson.word.".count))
+            let key = String(identifier.dropFirst("lesson.bank.".count))
             XCTAssertFalse(label.isEmpty, "\(identifier) has a label", file: file, line: line)
             XCTAssertEqual(value, marks[key] ?? "", "\(question.key) \(key) ('\(label)') mark", file: file, line: line)
         }
@@ -139,8 +128,9 @@ final class LessonUITests: XCTestCase {
         correct * fixture.xpPerCorrect + fixture.xpGameComplete + fixture.xpLessonComplete
     }
 
+    /// SK-047: Tổng kết (two pages) comes between the last question and Thưởng.
     private func reward(_ app: XCUIApplication) -> (score: String, stars: String, xp: String) {
-        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 5), "Thưởng did not open")
+        A2Lesson.throughRecap(app)
         return (element(app, "lesson.reward.score").label, element(app, "lesson.reward.stars").label, element(app, "lesson.reward.xp").label)
     }
 
@@ -169,7 +159,7 @@ final class LessonUITests: XCTestCase {
         for question in fixture.quiz { answerRight(question, in: app) }
         let result = reward(app)
         print("golden path reward: score '\(result.score)', stars '\(result.stars)', xp '\(result.xp)'")
-        XCTAssertTrue(result.score.hasPrefix("6/6"), result.score)
+        XCTAssertTrue(result.score.hasPrefix("Đúng 6 trên 6"), result.score)
         XCTAssertEqual(result.stars, "Được 2 trên 3 sao")
         XCTAssertTrue(result.xp.hasPrefix("+\(expectedXP(correct: 6))"), result.xp)
         // Back to the journey.
@@ -193,24 +183,26 @@ final class LessonUITests: XCTestCase {
             }
             answer(question, question.wrongs[0], check: true, in: app)
             let hint = element(app, "lesson.hint")
-            XCTAssertTrue(hint.waitForExistence(timeout: 3), "\(question.key): no hint after the first wrong try")
-            XCTAssertTrue(hint.label.contains(question.hintVI), "\(question.key) hint: \(hint.label)")
+            XCTAssertTrue(hint.waitForExistence(timeout: 8), "\(question.key): no hint after the first wrong try")
+            // A2 point 4: the slip prints the option's feedback, or the hint without one (EN in Song ngữ).
+            XCTAssertTrue(hint.label.contains(question.hintEN), "\(question.key) hint: \(hint.label)")
             print("\(question.key) try 1 wrong → hint '\(hint.label)'")
-            tap(app, "lesson.retry")
-            // Multi choice keeps the picks (canvas): tap only what the second wrong answer adds.
+            // No "Thử lại" since SK-043: answer again. Multi choice keeps the right picks and a
+            // tried card cannot be tapped again: tap only what the second wrong answer adds.
             let second = question.format == "multi_choice"
                 ? question.wrongs[1].filter { !question.wrongs[0].contains($0) }
                 : question.wrongs[1]
             answer(question, second, check: true, in: app)
-            XCTAssertEqual(element(app, "lesson.result.title").label, "Cùng xem lại nhé", question.key)
+            A2Lesson.waitResult(app, question.key)
+            XCTAssertFalse(element(app, "lesson.result.xp").exists, "\(question.key): out of tries, no XP")
             let explanation = element(app, "lesson.result.explanation")
-            XCTAssertEqual(explanation.label, question.explanationWrongEN, question.key)
+            XCTAssertTrue(explanation.label.contains(question.explanationWrongEN), "\(question.key): '\(explanation.label)'")
             print("\(question.key) try 2 wrong → '\(explanation.label)'")
             next(app)
         }
         let result = reward(app)
         print("4/6 reward: score '\(result.score)', stars '\(result.stars)', xp '\(result.xp)'")
-        XCTAssertTrue(result.score.hasPrefix("4/6"), result.score)
+        XCTAssertTrue(result.score.hasPrefix("Đúng 4 trên 6"), result.score)
         XCTAssertEqual(result.stars, "Được 1 trên 3 sao")
         XCTAssertTrue(result.xp.hasPrefix("+\(expectedXP(correct: 4))"), result.xp)
         XCTAssertTrue(element(app, "lesson.reward.stars").exists)
@@ -226,17 +218,18 @@ final class LessonUITests: XCTestCase {
         doLearn(app)
         doPlay(app)
         for question in fixture.quiz.prefix(2) { answerRight(question, in: app) }
-        XCTAssertEqual(element(app, "lesson.quiz.counter").label, "Câu 3/6")
+        A2Lesson.waitQuiz(app)
+        XCTAssertEqual(A2Lesson.quizCounter(app), "Câu 3 trên 6")
         app.terminate()
 
         let again = launch(reset: false)
-        let counter = element(again, "lesson.quiz.counter")
+        let counter = element(again, "lesson.progress")
         XCTAssertTrue(counter.waitForExistence(timeout: 15), "the app did not reopen the lesson")
-        XCTAssertEqual(counter.label, "Câu 3/6")
+        XCTAssertEqual(counter.label, "Câu 3 trên 6")
         print("relaunch → '\(counter.label)'")
         for question in fixture.quiz.dropFirst(2) { answerRight(question, in: again) }
         let result = reward(again)
-        XCTAssertTrue(result.score.hasPrefix("6/6"), "q1–q2 kept: \(result.score)")
+        XCTAssertTrue(result.score.hasPrefix("Đúng 6 trên 6"), "q1–q2 kept: \(result.score)")
     }
 
     /// Leaving with the close button: the app opens on Home next time, and the lesson goes on at the
@@ -261,10 +254,11 @@ final class LessonUITests: XCTestCase {
 
         let again = launch(reset: false)
         XCTAssertTrue(again.staticTexts["home.greeting"].waitForExistence(timeout: 15), "a paused lesson waits on Home")
-        startLesson(again, landing: "lesson.quiz.counter")
-        XCTAssertEqual(element(again, "lesson.quiz.counter").label, "Câu 2/6")
+        startLesson(again, landing: "lesson.prompt")
+        XCTAssertEqual(A2Lesson.quizCounter(again), "Câu 2 trên 6")
         XCTAssertTrue(element(again, "lesson.hint").exists, "the wrong first try of q2 is kept")
-        XCTAssertTrue(again.buttons["lesson.retry"].exists)
+        // The tried word is peeled and cannot be tapped again; the others still can.
+        XCTAssertEqual(again.buttons["lesson.bank.\(q2.wrongs[0][0])"].value as? String, "Chưa đúng")
     }
 
     /// Criterion 4 (app part): the seven tray messages, in one sequence of taps. Missing groups follow
@@ -287,30 +281,32 @@ final class LessonUITests: XCTestCase {
         }
         // Foods by group, from the fixture: carb, protein (two), veg, sweet.
         let carb = "tray_rice", bread = "tray_bread", fish = "tray_fish", egg = "tray_egg", greens = "tray_greens", candy = "tray_candy"
-        expect("start", after: "empty tray")
-        tap(app, "lesson.shelf.\(carb)")
+        expect("prompt", after: "empty tray (A2 prints the prompt)")
+        // SK-059: a drag onto the tray picks; a tap on the tray takes off.
+        PlayDrag.pick(app, carb)
         expect("missing.tray_protein", after: "+ rice")
-        tap(app, "lesson.shelf.\(fish)")
+        PlayDrag.pick(app, fish)
         expect("missing.tray_veg", after: "+ braised fish")
-        tap(app, "lesson.shelf.\(greens)")
+        PlayDrag.pick(app, greens)
         expect("balanced", after: "+ water spinach")
         XCTAssertTrue(app.buttons["lesson.play.done"].exists, "balanced tray: the quiz button shows")
-        tap(app, "lesson.shelf.\(candy)")
+        PlayDrag.pick(app, candy)
         expect("has_limited", after: "+ sweets (tray full, 4/4)")
-        tap(app, "lesson.shelf.\(egg)")
+        PlayDrag.pick(app, egg, expectOnTray: false)
         expect("full", after: "+ egg refused (no room)")
-        tap(app, "lesson.shelf.\(carb)")
+        XCTAssertFalse(app.buttons["lesson.tray.\(egg)"].exists, "a full tray does not take the egg")
+        PlayDrag.unpick(app, carb)
         expect("has_limited", after: "− rice")
-        tap(app, "lesson.shelf.\(candy)")
+        PlayDrag.unpick(app, candy)
         expect("missing.tray_carb", after: "− sweets")
         XCTAssertEqual(Set(seen).count, 7, "all seven messages: \(seen)")
 
         // Decision 3, T2: a balanced tray that is full keeps "Great!" when a fifth food is refused.
-        tap(app, "lesson.shelf.\(carb)")
+        PlayDrag.pick(app, carb)
         expect("balanced", after: "+ rice")
-        tap(app, "lesson.shelf.\(bread)")
+        PlayDrag.pick(app, bread)
         expect("balanced", after: "+ bread (tray full, 4/4)")
-        tap(app, "lesson.shelf.\(egg)")
+        PlayDrag.pick(app, egg, expectOnTray: false)
         expect("balanced", after: "+ egg refused, tray balanced")
         XCTAssertFalse(app.buttons["lesson.tray.\(egg)"].exists, "the refused food stays on the shelf")
         XCTAssertTrue(app.buttons["lesson.play.done"].exists)
@@ -336,13 +332,17 @@ final class LessonUITests: XCTestCase {
         check("warmup 1")
         let w1 = fixture.warmup[0]
         answer(w1, w1.wrongs[0], check: false, in: app)
+        XCTAssertTrue(element(app, "lesson.hint").waitForExistence(timeout: 5), "w1: no slip after a wrong try")
         check("warmup 1 after a wrong try")
         answer(w1, w1.right, check: false, in: app)
+        A2Lesson.waitResult(app, "w1")
         check("warmup 1 result")
         next(app)
         check("warmup 2")
         answer(fixture.warmup[1], fixture.warmup[1].right, check: false, in: app)
+        A2Lesson.waitResult(app, "w2")
         next(app)
+        XCTAssertTrue(element(app, "lesson.learn.page").waitForExistence(timeout: 5), "Học did not open")
         check("learn")
         app.swipeUp()
         check("learn (scrolled)")
@@ -353,10 +353,17 @@ final class LessonUITests: XCTestCase {
         for question in fixture.quiz {
             check("quiz \(question.key)")
             answer(question, question.right, check: true, in: app)
+            A2Lesson.waitResult(app, question.key)
             check("quiz \(question.key) result")
             next(app)
         }
-        _ = reward(app)
+        XCTAssertTrue(element(app, "lesson.recap.key_point.1").waitForExistence(timeout: 10), "Tổng kết did not open")
+        check("recap 1")
+        tap(app, "lesson.recap.next")
+        XCTAssertTrue(element(app, "lesson.recap.objective").waitForExistence(timeout: 5))
+        check("recap 2")
+        tap(app, "lesson.recap.to_reward")
+        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 10), "Thưởng did not open")
         check("reward")
         print("touch targets checked: \(checked.joined(separator: ", "))")
     }
@@ -381,11 +388,17 @@ final class LessonUITests: XCTestCase {
                     print(line + " | " + issue.detailedDescription)
                     if issue.auditType == .dynamicType, issue.compactDescription.contains("partially") { return true }
                     if let frame = issue.element?.frame, !window.insetBy(dx: -1, dy: -1).contains(frame) { return true }
-                    if let reason = Self.allowed(issue.auditType, label: label) {
+                    if let reason = Self.allowed(issue.auditType, label: label, identifier: issue.element?.identifier ?? "", screen: screen,
+                                                    groupLabels: self.fixture.trayGroupLabels) {
                         print("audit[\(screen)]: allowed (\(reason)): '\(label)'")
                         return true
                     }
                     problems.append(line)
+                    // SK-060 (lỗi 2): a contrast issue left keeps a picture of the element and of
+                    // the screen, so the colour the audit measured can be seen (designer 20/11).
+                    if issue.auditType == .contrast, let element = issue.element {
+                        self.saveContrastShot(element, screen: screen, label: label)
+                    }
                     return true
                 }
             }
@@ -393,68 +406,51 @@ final class LessonUITests: XCTestCase {
         }
         try audit("warmup")
         doWarmup(app)
-        // SK-013 (Duy 31/10): audit Học with the whole "Từ mới" row above the bottom bar.
-        guard scrollWordListAboveBottomBar(app) else { return }
+        // SK-060: Học is a picture book since SK-043; audit its first page and the "Từ mới" page
+        // (the last), whose cards sit above the bottom bar on their own page.
         try saveAuditScreenshot("audit-learn")
         try audit("learn")
-        app.swipeDown()
-        app.swipeDown()
-        doLearn(app)
+        let words = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.word_list."))
+        for _ in 0..<fixture.exploreGroups.count where !words.firstMatch.exists {
+            tap(app, "lesson.explorer.next")
+            _ = words.firstMatch.waitForExistence(timeout: 2)
+        }
+        XCTAssertTrue(words.firstMatch.exists, "no Từ mới page; on screen: \(screenNow(app))")
+        try saveAuditScreenshot("audit-learn-words")
+        try audit("learn words")
+        A2Lesson.learn(app)
         try audit("play")
         doPlay(app)
         for question in fixture.quiz {
             if question.key == "q5" || question.key == "q6" { try audit("quiz \(question.key)") }
             answer(question, question.right, check: true, in: app)
+            A2Lesson.waitResult(app, question.key)
             next(app)
         }
+        XCTAssertTrue(element(app, "lesson.recap.key_point.1").waitForExistence(timeout: 10), "Tổng kết did not open")
+        try audit("recap")
         _ = reward(app)
         try audit("reward")
         XCTAssertTrue(problems.isEmpty, problems.joined(separator: "\n"))
     }
 
-    /// SK-013 (Duy 31/10): on a phone, when Học opens, the "Từ mới" cards sit under the bottom bar
-    /// ("Chạm hết các nhóm…" and "Chơi thôi"). The contrast audit then measured their text against
-    /// the bar (iPhone 16 Pro, 31/10). Before auditing Học, drag the page up just enough for every
-    /// card to sit wholly above the bar, and check it by frame. If they do not fit, the test fails
-    /// with the numbers and Học is not audited. Nothing is added to `allowed(_:label:)`.
-    ///
-    /// What scrolls off the top is not audited on Học. That is the lesson header (back button,
-    /// title, step squares), which the audits of Khởi động and Chơi cover, and possibly the top of
-    /// the "I can" card. Elements outside the window are skipped by `audit`.
-    private func scrollWordListAboveBottomBar(_ app: XCUIApplication, file: StaticString = #filePath, line: UInt = #line) -> Bool {
-        let cards = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "lesson.word_list."))
-        let hint = app.staticTexts["Chạm hết các nhóm để mở phần chơi."]
-        let next = app.buttons["lesson.learn.next"]
-        guard cards.firstMatch.waitForExistence(timeout: 5), next.waitForExistence(timeout: 5) else {
-            XCTFail("Học: no Từ mới cards or no bottom bar; on screen: \(screenNow(app))", file: file, line: line)
-            return false
+    /// SK-060 (lỗi 2): the element the contrast audit complains about, and the whole screen, kept in
+    /// the result bundle and written to `SK_CONTRAST_SHOT_DIR` (as `TEST_RUNNER_SK_CONTRAST_SHOT_DIR`
+    /// for xcodebuild) when it is set. Its own variable, so asking for these pictures does not turn
+    /// the skipped screenshot tests on.
+    private func saveContrastShot(_ element: XCUIElement, screen: String, label: String) {
+        let name = "contrast-\(screen)-\(label)".replacingOccurrences(of: " ", with: "-")
+            .replacingOccurrences(of: "/", with: "-")
+        let shots = [(name, element.screenshot()), ("\(name)-screen", XCUIScreen.main.screenshot())]
+        for (shotName, screenshot) in shots {
+            let attachment = XCTAttachment(screenshot: screenshot)
+            attachment.name = shotName
+            attachment.lifetime = .keepAlways
+            add(attachment)
+            guard let directory = ProcessInfo.processInfo.environment["SK_CONTRAST_SHOT_DIR"], !directory.isEmpty else { continue }
+            try? screenshot.pngRepresentation
+                .write(to: URL(fileURLWithPath: directory).appendingPathComponent("\(shotName).png"))
         }
-        let window = app.windows.firstMatch.frame
-        // `BottomBar` pads its content by 8pt (`Tokens.Space.s8`) above the hint line.
-        let barPadding: CGFloat = 8
-        func barTop() -> CGFloat { (hint.exists ? min(hint.frame.minY, next.frame.minY) : next.frame.minY) - barPadding }
-        func frames() -> [CGRect] { cards.allElementsBoundByIndex.map(\.frame) }
-        func bottom() -> CGFloat { frames().map(\.maxY).max() ?? .infinity }
-        func top() -> CGFloat { frames().map(\.minY).min() ?? 0 }
-        print("audit[learn] scroll: before, cards \(frames()), bar top \(barTop())")
-        var drags = 0
-        while bottom() > barTop(), drags < 3 {
-            // Drag (no fling) by what is missing, from the left of the group sheet (its picture, not a
-            // button; a drag that starts on a button does not tap it anyway).
-            let distance = bottom() - barTop() + 16
-            let start = app.windows.firstMatch.coordinate(withNormalizedOffset: CGVector(dx: 0.25, dy: 0.62))
-            start.press(forDuration: 0.1, thenDragTo: start.withOffset(CGVector(dx: 0, dy: -distance)),
-                        withVelocity: .slow, thenHoldForDuration: 0.3)
-            drags += 1
-        }
-        let measured = "cards \(frames()), cards bottom \(bottom()), bar top \(barTop()) "
-            + "(hint \(hint.exists ? "\(hint.frame)" : "-"), button \(next.frame)), window \(window), after \(drags) drag(s)"
-        print("audit[learn] scroll: " + measured)
-        guard bottom() <= barTop(), top() >= window.minY else {
-            XCTFail("Học: the Từ mới cards are not wholly between the top of the screen and the bottom bar: " + measured, file: file, line: line)
-            return false
-        }
-        return true
     }
 
     /// The screen as it is audited: kept in the result bundle, and saved to SK_SCREENSHOT_DIR if set.
@@ -501,9 +497,35 @@ final class LessonUITests: XCTestCase {
     ///   together with the text; text on paper is than tre / chữ phụ (≥ 7:1);
     /// - text clipped on "fish": the same finding as the SK-008 gallery (the word shows whole at
     ///   AccessibilityXXXL there).
-    private static func allowed(_ type: XCUIAccessibilityAuditType, label: String) -> String? {
+    /// - SK-060 (phiên chính 20/11, cách b): contrast on Chơi's "VI" button (`listen.vi.*`): its
+    ///   touch area (56 × 56) is larger than the paper chip (56 × 28), so the audit compares the
+    ///   chip's paper with the điệp under it; the letters, chàm on giấy, are 8.39:1;
+    /// - SK-060 (cách b): contrast on the Chơi group chip "Carbohydrates" (`lesson.meter.*`): the
+    ///   audit measures the vàng hoè dot on giấy (2.02:1), the pair SK-011 allows on Home; the
+    ///   name is than tre on giấy (15.89:1).
+    ///   The audit reports these as the text inside the button (type 48, label "VI" /
+    ///   "Carbohydrates", no identifier), so each is matched on Chơi by its identifier when there is
+    ///   one, else by that exact text.
+    /// - SK-060 (phiên chính 20/11, cách b, B7.8 "Dynamic Type có giới hạn trên để không vỡ bố cục
+    ///   giấy"): Dynamic Type "unsupported" on a Chơi group chip (`lesson.meter.*`, or with no id
+    ///   one of the lesson's tray group names): a two-line name already fills its chip, so
+    ///   `WordFit` keeps it at the same drawn size when the text grows.
+    private static func allowed(
+        _ type: XCUIAccessibilityAuditType, label: String, identifier: String, screen: String, groupLabels: Set<String>
+    ) -> String? {
         if type == .contrast, label.contains("\u{2007}?\u{2007}") { return "empty blank, sunken background" }
         if type == .textClipped, label == "fish" { return "SK-008 known finding" }
+        if type == .dynamicType, screen == "play",
+           identifier.hasPrefix("lesson.meter.") || (identifier.isEmpty && groupLabels.contains(label)) {
+            return "SK-060: group chip, Dynamic Type capped (B7.8)"
+        }
+        guard type == .contrast, screen == "play" else { return nil }
+        if identifier.hasPrefix("listen.vi.") || (identifier.isEmpty && label == "VI") {
+            return "SK-060: VI touch area larger than its paper chip"
+        }
+        if (identifier.hasPrefix("lesson.meter.") || identifier.isEmpty) && label == "Carbohydrates" {
+            return "SK-060: vàng hoè dot on giấy, as SK-011"
+        }
         return nil
     }
 
@@ -538,20 +560,19 @@ final class LessonUITests: XCTestCase {
         XCTAssertTrue(prompt.label.contains("?"), "q2 starts with an empty blank: '\(prompt.label)'")
 
         answer(q2, q2.wrongs[0], check: true, in: app)
-        XCTAssertTrue(element(app, "lesson.hint").waitForExistence(timeout: 3), "q2: no hint after the first wrong try")
-        XCTAssertFalse(prompt.label.contains("?"), "q2 try 1: the wrong word stays in the blank: '\(prompt.label)'")
+        XCTAssertTrue(element(app, "lesson.hint").waitForExistence(timeout: 5), "q2: no hint after the first wrong try")
+        // SK-043 (A2): the wrong word peels on the bank and the blank empties for the next try
+        // (no "Thử lại" button); the right word is not shown yet.
+        XCTAssertTrue(prompt.label.contains("?"), "q2 try 1: the blank empties again: '\(prompt.label)'")
         print("q2 try 1 wrong: prompt '\(prompt.label)'")
-        // Only the word put in is marked; the right word is not shown yet.
         expectWordMarks(app, q2, [q2.wrongs[0][0]: "Chưa đúng"])
         try shot("11-quiz-q2-wrong")
 
-        tap(app, "lesson.retry")
-        XCTAssertTrue(prompt.label.contains("?"), "q2 Thử lại empties the blank: '\(prompt.label)'")
-        expectWordMarks(app, q2, [:])
         answer(q2, q2.wrongs[1], check: true, in: app)
-        XCTAssertEqual(element(app, "lesson.result.title").label, "Cùng xem lại nhé")
+        A2Lesson.waitResult(app, "q2 try 2")
+        XCTAssertTrue(element(app, "lesson.result.explanation").label.contains(q2.explanationWrongEN), element(app, "lesson.result.explanation").label)
         print("q2 try 2 wrong: prompt '\(prompt.label)'")
-        expectWordMarks(app, q2, [q2.wrongs[1][0]: "Chưa đúng", q2.right[0]: "Đáp án"])
+        expectWordMarks(app, q2, [q2.wrongs[0][0]: "Chưa đúng", q2.wrongs[1][0]: "Chưa đúng", q2.right[0]: "Đáp án"])
         try shot("11-quiz-q2-wrong-last")
     }
 
@@ -586,17 +607,13 @@ final class LessonUITests: XCTestCase {
         try shot("08-warmup-2-right")
         next(app)
         try shot("09-learn")
-        for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }
-        try shot("09-learn-all-seen")
-        app.swipeUp()
-        try shot("09-learn-bottom")
-        tap(app, "lesson.learn.next")
-        tap(app, "lesson.shelf.tray_rice")
+        A2Lesson.learn(app)
+        PlayDrag.pick(app, "tray_rice")
         try shot("10-play")
-        tap(app, "lesson.shelf.tray_candy")
+        PlayDrag.pick(app, "tray_candy")
         try shot("10-play-sweets")
-        tap(app, "lesson.shelf.tray_candy")
-        for food in fixture.balancedTray where food != "tray_rice" { tap(app, "lesson.shelf.\(food)") }
+        PlayDrag.unpick(app, "tray_candy")
+        for food in fixture.balancedTray where food != "tray_rice" { PlayDrag.pick(app, food) }
         try shot("10-play-balanced")
         tap(app, "lesson.play.done")
         for question in fixture.quiz {
@@ -604,9 +621,7 @@ final class LessonUITests: XCTestCase {
                 try shot("11-quiz-q5")
                 answer(question, question.wrongs[0], check: true, in: app)
                 try shot("11-quiz-q5-wrong")
-                tap(app, "lesson.retry")
-                for key in question.right where !question.wrongs[0].contains(key) { tap(app, "lesson.option.\(key)") }
-                tap(app, "lesson.option.\(question.wrongs[0][0])")
+                for key in question.right where !question.wrongs[0].contains(key) { tap(app, "lesson.choice.\(key)") }
                 tap(app, "lesson.check")
                 try shot("11-quiz-q5-right-later")
                 next(app)
@@ -622,8 +637,6 @@ final class LessonUITests: XCTestCase {
             if question.key == "q2" {
                 // SK-013 designer table: the word in the blank while choosing, then right.
                 answer(question, question.right, check: false, in: app)
-                try shot("11-quiz-q2-chosen")
-                tap(app, "lesson.check")
                 try shot("11-quiz-q2-right")
                 next(app)
                 continue

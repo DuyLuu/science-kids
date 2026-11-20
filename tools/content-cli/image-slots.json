@@ -1,6 +1,9 @@
 {
-  "note": "Tỉ lệ khung (rộng:cao) app đặt ảnh vào, theo chỗ dùng (Duy 13/11, SK-043). build và images fetch cảnh báo (không chặn) khi ảnh lệch khung quá max_factor (lệch 2 = lấp khung mất nửa ảnh). max_factor 2,2 khớp PictureFit.maxCropRatio của app iOS (phiên chính chốt 13/11): quá mức đó app không cắt nữa mà hiện cả ảnh thu nhỏ giữa giấy, tức ảnh sai hướng so với khung. Hạ xuống (vd 1,5) để thấy cả ảnh bị cắt nhiều. default là số dev đặt tạm theo đề xuất của phiên chính; age_groups ghi đè: explorer theo bảng designer 13/11 (code iOS iPhone 390), discoverer theo thiết kế A2 Duy duyệt 14/11. Designer ghi bảng tỉ lệ khung vào docs/backlog/SK-043-lesson-screens-picture-book.md thì sửa ở đây. Giá trị: \"rộng:cao\" hoặc số (rộng/cao).",
+  "note": "Tỉ lệ khung (rộng:cao) app đặt ảnh vào, theo chỗ dùng (Duy 13/11, SK-043). build và images fetch cảnh báo (không chặn) khi ảnh lệch khung quá max_factor (lệch 2 = lấp khung mất nửa ảnh). max_factor 2,2 khớp PictureFit.maxCropRatio của app iOS (phiên chính chốt 13/11): quá mức đó app không cắt nữa mà hiện cả ảnh thu nhỏ giữa giấy, tức ảnh sai hướng so với khung. Hạ xuống (vd 1,5) để thấy cả ảnh bị cắt nhiều. max_factors: ngưỡng riêng theo khung, chặt hơn max_factor, cho chỗ app vẫn cắt nhưng cắt chừng đó là mất con vật (SK-053 19/11: vocab 1,6, để ảnh vuông ở thẻ từ 2:1 của Explorer, lệch ×2, bị cảnh báo; ảnh 4:3 lệch ×1,5 vẫn qua). Thứ tự ưu tiên: age_groups.<nhóm>.max_factors.<khung>, max_factors.<khung>, age_groups.<nhóm>.max_factor, max_factor. default là số dev đặt tạm theo đề xuất của phiên chính; age_groups ghi đè: explorer theo bảng designer 13/11 (code iOS iPhone 390), discoverer theo thiết kế A2 Duy duyệt 14/11. Designer ghi bảng tỉ lệ khung vào docs/backlog/SK-043-lesson-screens-picture-book.md thì sửa ở đây. Giá trị: \"rộng:cao\" hoặc số (rộng/cao).",
   "max_factor": 2.2,
+  "max_factors": {
+    "vocab": 1.6
+  },
   "default": {
     "question": "4:3",
     "choice_2": "2:1",
@@ -15,11 +18,12 @@
   },
   "age_groups": {
     "explorer": {
-      "note": "Explorer A (SK-043, ios-dev 13/11), iPhone: thẻ lựa chọn lấp đầy, rộng ~342, cao 136 (3 lựa chọn) hoặc 200 (2 lựa chọn); hình câu hỏi ẩn khi mọi lựa chọn hoặc thẻ xếp đều có hình. iPad xếp 3 thẻ một hàng cao 300 (gần 2:3 dọc): chưa kiểm.",
+      "note": "Explorer A (SK-043, ios-dev 13/11), iPhone: thẻ lựa chọn lấp đầy, rộng ~342, cao 136 (3 lựa chọn) hoặc 200 (2 lựa chọn); hình câu hỏi ẩn khi mọi lựa chọn hoặc thẻ xếp đều có hình. iPad xếp 3 thẻ một hàng cao 300 (gần 2:3 dọc): chưa kiểm. Thẻ từ (trang Học 'Từ mới', wordsPage của ExplorerLearnStep): lưới 2 cột, ảnh lấp ngang ô, cao 76 (sheetArt, iPad × 1,5) → iPhone 16 152×76 (2:1, đo trên ảnh chụp máy), 375 ~143×76 (1,9:1), Pro Max ~176×76 (2,3:1), iPad ~247×114 (2,2:1) → vocab 2:1 (SK-048 16/11 phát hiện bảng cũ thiếu, rơi về default 1:1 nên không kiểm được ảnh vuông bị cắt giữa). Ảnh vuông trong khung 2:1 lệch ×2, dưới max_factor 2,2, nên từ SK-053 (19/11) thẻ từ có ngưỡng riêng max_factors.vocab 1,6: fetch/build cảnh báo ảnh vuông ở thẻ từ chưa có crop 2:1.",
       "hide_question_image_with_picture_choices": true,
       "ratios": {
         "choice_3": "5:2",
-        "choice_2": "17:10"
+        "choice_2": "17:10",
+        "vocab": "2:1"
       }
     },
     "discoverer": {

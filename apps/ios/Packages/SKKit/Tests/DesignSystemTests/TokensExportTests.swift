@@ -199,8 +199,9 @@ struct TokensExportTests {
                 && path.allSatisfy { $0.isLowercase || $0.isNumber || $0 == "_" || $0 == "." }
             if isTokenPath { marked.append(String(path)) }
         }
-        // 176 in tokens v1 + color.la_tre, role.text_correct, role.stamp_mark (SK-013, 29/10).
-        #expect(leaves.count == 179)
+        // 176 in tokens v1 + color.la_tre, role.text_correct, role.stamp_mark (SK-013, 29/10)
+        // + role.text_on_content.{do_son, vang_hoe, gi_dong, cham, nau_dat} (SK-060, designer 20/11).
+        #expect(leaves.count == 184)
         #expect(constants == leaves.count)
         #expect(marked.sorted() == leaves.sorted())
     }

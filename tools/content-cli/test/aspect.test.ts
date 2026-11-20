@@ -80,6 +80,9 @@ describe("tỉ lệ khung (aspect.ts)", () => {
     assert.throws(() => checkSlotTable({ ...TABLE, default: partial as SlotTable["default"] }), /default thiếu khung choice_3/);
     assert.throws(() => checkSlotTable({ ...TABLE, age_groups: { explorer: { ratios: { card: "1:1" } as never } } }), /khung lạ/);
     assert.throws(() => checkSlotTable({ ...TABLE, max_factor: 1 }), /max_factor/);
+    assert.throws(() => checkSlotTable({ ...TABLE, max_factors: { vocab: 1 } }), /max_factors\.vocab phải là số > 1/);
+    assert.throws(() => checkSlotTable({ ...TABLE, max_factors: { card: 1.5 } as never }), /max_factors\.card: khung lạ/);
+    assert.throws(() => checkSlotTable({ ...TABLE, age_groups: { explorer: { max_factors: { vocab: "1.6" as never } } } }), /age_groups\.explorer\.max_factors\.vocab/);
     assert.equal(checkSlotTable(TABLE), TABLE);
   });
 
@@ -87,6 +90,15 @@ describe("tỉ lệ khung (aspect.ts)", () => {
     assert.deepEqual(slotRatio(TABLE, "explorer", "choice_3"), { ratio: 2.5, maxFactor: 1.5 });
     assert.deepEqual(slotRatio(TABLE, "discoverer", "choice_3"), { ratio: 3, maxFactor: 2 });
     assert.deepEqual(slotRatio(TABLE, "adventurer", "question"), { ratio: 4 / 3, maxFactor: 1.5 });
+  });
+
+  test("slotRatio: max_factors theo khung thắng max_factor; của nhóm tuổi thắng chung (SK-053)", () => {
+    const table: SlotTable = { ...TABLE, max_factors: { vocab: 1.6 }, age_groups: { ...TABLE.age_groups, adventurer: { max_factors: { vocab: 1.3 } } } };
+    assert.equal(slotRatio(table, "explorer", "vocab").maxFactor, 1.6);
+    assert.equal(slotRatio(table, "discoverer", "vocab").maxFactor, 1.6, "nhóm có max_factor 2 vẫn theo ngưỡng riêng của khung");
+    assert.equal(slotRatio(table, "discoverer", "choice_3").maxFactor, 2);
+    assert.equal(slotRatio(table, "adventurer", "vocab").maxFactor, 1.3);
+    assert.equal(slotRatio(table, "adventurer", "question").maxFactor, 1.5);
   });
 
   test("slotOf: mỗi chỗ dùng hình ra đúng khung", () => {
@@ -127,8 +139,28 @@ describe("tỉ lệ khung (aspect.ts)", () => {
       { choice_2: 2.5, choice_3: 2.5, choice_4: 0.8, bank_item: 1, learn_group: 1, tray_item: 1, vocab: 4 / 3 },
     );
     assert.equal(table.age_groups?.discoverer?.hide_question_image_with_picture_choices, true);
-    assert.deepEqual({ choice_2: ratio("explorer", "choice_2"), choice_3: ratio("explorer", "choice_3") }, { choice_2: 1.7, choice_3: 2.5 });
+    // vocab 2:1: Explorer word card 152×76 on iPhone 16 (wordsPage, SK-048 16/11); it fell back to default 1:1 before.
+    assert.deepEqual({ choice_2: ratio("explorer", "choice_2"), choice_3: ratio("explorer", "choice_3"), vocab: ratio("explorer", "vocab") }, { choice_2: 1.7, choice_3: 2.5, vocab: 2 });
     assert.equal(formatRatio(0.6), "3:5");
+  });
+
+  test("image-slots.json thật: ảnh vuông ở thẻ từ Explorer 2:1 bị cảnh báo, ảnh 4:3 và ảnh đã crop 2:1 thì không (SK-053 19/11)", () => {
+    const table = loadSlotTable();
+    assert.equal(table.max_factor, 2.2);
+    assert.equal(slotRatio(table, "explorer", "vocab").maxFactor, 1.6);
+    const lesson = { vocab: [{ key: "a", image: img }, { key: "b", image: img }, { key: "c", image: img }] };
+    const refs = [
+      { key: "vocab.a", pointer: "/vocab/0/image", size: { width: 1024, height: 1024 } },
+      { key: "vocab.b", pointer: "/vocab/1/image", size: { width: 1024, height: 768 } },
+      { key: "vocab.c", pointer: "/vocab/2/image", size: { width: 1024, height: 512 } },
+    ];
+    const warnings = aspectWarnings(lesson, "explorer", refs, table);
+    assert.deepEqual(warnings.map((w) => [w.key, w.factor]), [["vocab.a", 2]]);
+    assert.match(aspectWarningText("01-vong-doi", warnings[0]!), /thẻ từ vựng.*ảnh 1024×1024 vuông 1:1, khung 2:1 ngang; lệch ×2/);
+    // Discoverer vocab 4:3: a square picture is ×1,33, under 1,6.
+    assert.deepEqual(aspectWarnings(lesson, "discoverer", refs, table), []);
+    // Other slots keep max_factor 2,2: a 2:1 picture on a 1:1 tray item (×2) passes.
+    assert.deepEqual(aspectWarnings({ play: { items: [{ key: "t", image: img }] } }, "explorer", [{ key: "tray.t", pointer: "/play/items/0/image", size: { width: 1024, height: 512 } }], table), []);
   });
 
   test("aspectWarnings: ảnh dọc trong thẻ ngang thì cảnh báo; gần khung thì không; chưa có ảnh thì bỏ qua", () => {

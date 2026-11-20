@@ -48,7 +48,7 @@ struct AvatarArt: View {
     }
 }
 
-/// SK-034: the designer's icon of each syllabus topic (`design/icons/topics/<key>.svg`, 45 icons),
+/// SK-034: the designer's icon of each syllabus topic (`design/icons/topics/<key>.svg`, 43 icons),
 /// in the asset catalog as `Topic-<key>` (`scripts/import-topic-icons.sh`). A topic with no icon
 /// (one only the content has) takes the icon of a topic of its strand; an unknown strand has none.
 enum TopicIcon {
@@ -57,10 +57,11 @@ enum TopicIcon {
 
     /// Icon of each strand, for a topic without its own: a topic of that strand everyone knows.
     static let strandIcons: [String: String] = [
-        Topic.Strand.plantsAnimals.rawValue: "growing-plants",
+        Topic.Strand.plantsAnimals.rawValue: "identifying-plants-and-their-basic-parts",
         Topic.Strand.livingEnvironment.rawValue: "living-things-and-the-environment",
         Topic.Strand.humansHealth.rawValue: "healthy-eating",
-        Topic.Strand.materials.rawValue: "everyday-materials",
+        // SK-057: "Vật liệu quanh em" left the syllabus; Discoverer #10 "Nước đổi dạng" stands in.
+        Topic.Strand.materials.rawValue: "introduction-to-states-of-matter-and-changing-states",
         Topic.Strand.energyForces.rawValue: "simple-forces-including-magnets",
         Topic.Strand.earthSky.rawValue: "earth-sun-and-moon",
     ]

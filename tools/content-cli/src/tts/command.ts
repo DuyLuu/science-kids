@@ -52,9 +52,10 @@ export type TtsOptions = {
   display: (target: string) => string;
 };
 
-type Input = { path: string; name: string; display: string; text: string; data: Record<string, unknown> & { kind: ContentKind } };
-type Use = { input: Input; pointer: string; node: SpokenNode; source: string; read: string };
-type Clip = {
+export type Input = { path: string; name: string; display: string; text: string; data: Record<string, unknown> & { kind: ContentKind } };
+export type Use = { input: Input; pointer: string; node: SpokenNode; source: string; read: string };
+/** One distinct clip of a run (exported for `ui-voice build`, SK-059: same generation path, `uses` empty there). */
+export type Clip = {
   key: string;
   text: string;
   uses: Use[];
@@ -488,7 +489,7 @@ export async function runTts(options: TtsOptions): Promise<number> {
   return 0;
 }
 
-function checkFromEntry(id: string, stored: NonNullable<ClipEntry["check"]>): CheckResult {
+export function checkFromEntry(id: string, stored: NonNullable<ClipEntry["check"]>): CheckResult {
   return {
     id,
     hyp: stored.heard,
@@ -519,7 +520,7 @@ function summarizeCheck(check: CheckResult) {
 }
 
 /** One clip: speak (blank-aware), WAV, m4a at `file` (written atomically). */
-async function render(synthesizer: Synthesizer, engine: EngineSpec, post: PostSpec, text: string, variant: number, file: string, work: string, zeroTimes: boolean) {
+export async function render(synthesizer: Synthesizer, engine: EngineSpec, post: PostSpec, text: string, variant: number, file: string, work: string, zeroTimes: boolean) {
   const pcm = await speak(synthesizer, text, { variant, blankPauseMs: engine.blankPauseMs });
   const processed = postProcess(pcm.samples, pcm.sampleRate, post);
   const wav = path.join(work, `${path.basename(file, ".m4a")}.wav`);
@@ -541,7 +542,7 @@ async function render(synthesizer: Synthesizer, engine: EngineSpec, post: PostSp
  * the lowest badness is kept (ties: the lowest variant). The choice goes into variants.json so a
  * later run regenerates the same clip.
  */
-async function checkAndRetry(ctx: {
+export async function checkAndRetry(ctx: {
   todo: Clip[];
   /** Searched again whatever their state (--recheck); the result is recorded even when variant 0 wins. */
   forced: Clip[];
@@ -650,7 +651,7 @@ async function checkAndRetry(ctx: {
   cache.save();
 }
 
-function entryFor(clip: Clip, file: string, bytes: Buffer, duration: number, created: Date, engine: EngineSpec, cacheDir: string, lang: Lang, seeds?: number[]): ClipEntry {
+export function entryFor(clip: Clip, file: string, bytes: Buffer, duration: number, created: Date, engine: EngineSpec, cacheDir: string, lang: Lang, seeds?: number[]): ClipEntry {
   const d = engine.descriptor;
   return {
     lang,

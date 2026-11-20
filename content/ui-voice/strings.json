@@ -1,0 +1,26 @@
+{
+  "format": "science-kids/ui-voice-strings@1",
+  "note": "Chữ giao diện có giọng đọc (lời mascot ngoài gói bài). Key trùng key trong apps/ios/ScienceKids/Resources/Localizable.xcstrings. Sinh clip: npm --prefix tools/content-cli run ui-voice -- build (SK-059).",
+  "strings": {
+    "lesson.play.hint.first.explorer": {
+      "ticket": "SK-059",
+      "en": "Tap a picture to see it bigger. Hold and drag it into a circle.",
+      "vi": "Em chạm vào hình để xem to. Em giữ hình rồi kéo vào ô tròn."
+    },
+    "lesson.play.hint.first.discoverer": {
+      "ticket": "SK-059",
+      "en": "Tap a picture to see it up close. To pick it, hold and drag it to a circle.",
+      "vi": "Em chạm vào hình để xem to hơn. Muốn chọn, em giữ hình rồi kéo vào ô tròn."
+    },
+    "lesson.play.hint.again.explorer": {
+      "ticket": "SK-059",
+      "en": "Let's pick now! Hold one and drag it into a circle.",
+      "vi": "Chọn thôi nào! Em giữ một hình rồi kéo vào ô tròn nhé."
+    },
+    "lesson.play.hint.again.discoverer": {
+      "ticket": "SK-059",
+      "en": "Ready to choose? Hold a picture and drag it to a circle.",
+      "vi": "Em chọn được chưa? Em giữ một hình rồi kéo vào ô tròn nhé."
+    }
+  }
+}

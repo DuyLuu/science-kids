@@ -484,7 +484,7 @@ explanation_correct.en: Yes! Your arm bends to reach your mouth.
 explanation_correct.vi: Đúng rồi! Cánh tay co lại để đưa bàn chải lên miệng.
 explanation_wrong.en: The answer is the elbow. Your arm bends there.
 explanation_wrong.vi: Đáp án là khuỷu tay. Cánh tay gập lại ở đó.
-> DOK 2: áp ô "Elbows and knees help you bend" vào việc quen mới (đánh răng; ô Học dùng ví dụ "ăn cơm"). Đầu gối là bẫy cùng ô (cũng gập được). Câu chỉ dùng "đánh răng" làm tình huống, không dạy đánh răng (để dành *Em khoẻ mạnh*).
+> DOK 2: áp ô "Elbows and knees help you bend" vào việc quen mới (đánh răng; ô Học dùng ví dụ "ăn cơm"). Đầu gối là bẫy cùng ô (cũng gập được). Câu chỉ dùng "đánh răng" làm tình huống, không dạy đánh răng (Explorer không có bài dạy đánh răng: *Em khoẻ mạnh* đã bỏ, Duy chốt 19/11, SK-057; chăm sóc răng chỉ còn ở Discoverer *Hệ tiêu hoá*).
 > Khuỷu tay và đầu gối đều là hình vẽ mới, bàn chân là hình dùng lại: đáp án không là hình mới duy nhất.
 
 #### option q5_knee

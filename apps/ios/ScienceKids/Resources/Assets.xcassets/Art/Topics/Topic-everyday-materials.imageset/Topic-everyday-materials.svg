@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <!-- Science Kids · topic icon · everyday-materials · khối gỗ và lon kim loại. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
-  <g fill="#8A5E3B"><path d="M4 32 H32 V60 H4 Z"/></g>
-  <g fill="#B97F16"><path d="M4 32 L13 23 H41 L32 32 Z"/><path d="M32 32 L41 23 V51 L32 60 Z"/></g>
-  <g fill="#B97F16"><ellipse cx="15" cy="47" rx="5" ry="3.2"/><path d="M6 38 C 14 36, 22 40, 30 37 L30 39.2 C 22 42, 14 38.2, 6 40.2 Z"/><path d="M20 54 C 24 52, 27 53.6, 30 52.4 L30 54.6 C 27 55.8, 24 54.2, 20 56.2 Z"/></g>
-  <g fill="#8A5E3B"><ellipse cx="15" cy="47" rx="2.4" ry="1.4"/></g>
-  <g fill="#C9B993"><path d="M38 16 H60 V54 C 60 57.4, 38 57.4, 38 54 Z"/></g>
-  <g fill="#E2D4B4"><ellipse cx="49" cy="16" rx="11" ry="4"/><rect x="38" y="27" width="22" height="3"/><rect x="38" y="42" width="22" height="3"/></g>
-</svg>

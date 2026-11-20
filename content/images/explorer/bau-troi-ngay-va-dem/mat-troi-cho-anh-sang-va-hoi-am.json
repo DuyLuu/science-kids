@@ -1,0 +1,274 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_cloudy",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_needs",
+      "lesson": "cay-quanh-em/cay-can-gi-de-lon"
+    },
+    "learn.explore.explore_light": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sunlight_Through_The_Trees_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Sunlight_Through_The_Trees_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sunlight Through The Trees (Unsplash)",
+      "author": "Darren Bockman bockman",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-061 (designer 19/11): nắng sớm xuyên qua hàng cây thành từng vệt sáng rơi xuống bãi cỏ; Mặt Trời là đốm sáng nhỏ sau thân cây, không chói cả khung; không người, không chữ."
+    },
+    "learn.explore.explore_warm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Laundry_hanging_to_dry_in_the_sun_P1010175.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Laundry_hanging_to_dry_in_the_sun_P1010175.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Laundry hanging to dry in the sun P1010175",
+      "author": "el cajon yacht club",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-061 (designer 19/11): quần áo (quần bò, áo trơn) phơi trên dây ngoài sân nắng, trời xanh, bóng nắng in trên đất; không người. Không phải sân Việt Nam (không có ảnh hợp lệ)."
+    },
+    "learn.explore.explore_safe": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am.learn.explore.explore_safe.jpg",
+        "method": "drawn"
+      },
+      "title": "A child in a sun hat, from behind",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Vẽ vì không tìm được ảnh CC0/PD/CC BY hợp lệ: ảnh trẻ đội nón đi dưới nắng chụp từ phía sau đều có mặt người lớn, nhãn hiệu hoặc không rõ giấy phép. Bạn nhỏ đội nón lá, áo trắng quần chàm, đi trên đường đất giữa ruộng, nhìn từ phía sau, đầu hơi cúi; không thấy Mặt Trời. Dùng ở ô Học (một mình) và câu Đúng/Sai w3 bài 5 (một hình), nên không trộn kiểu trong một câu. JPEG 1024×1024."
+    },
+    "learn.explore.explore_plants": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "1cad5170-245b-4823-969a-900bbfbf9bc3",
+      "source_url": "https://www.flickr.com/photos/62528187@N00/2833923675",
+      "file_url": "https://live.staticflickr.com/3186/2833923675_87aee92e4b_b.jpg",
+      "title": "Lettuce",
+      "author": "photofarmer",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "SK-061 (designer 19/11): luống rau xà lách xanh mướt dưới nắng sáng, chụp thấp thấy rõ từng luống; không người, không chữ, không nhà kính."
+    },
+    "tray.tray_clothes": {
+      "same_as": "learn.explore.explore_warm"
+    },
+    "tray.tray_rice": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:S%C3%A9chage_du_riz_au_bord_des_routes_(Delta_du_M%C3%A9kong,_Vietnam)_(6635535829).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/S%C3%A9chage_du_riz_au_bord_des_routes_%28Delta_du_M%C3%A9kong%2C_Vietnam%29_%286635535829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Séchage du riz au bord des routes (Delta du Mékong, Vietnam) (6635535829)",
+      "author": "dalbera from Paris, France",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.38,
+        "top": 0.1,
+        "width": 0.6,
+        "height": 0.9
+      },
+      "note": "SK-061 (designer 19/11): thóc vàng phơi trải trên sân bên đường ở đồng bằng sông Cửu Long dưới nắng, trời xanh mây trắng; cắt bỏ người cào thóc bên trái (tester B1)."
+    },
+    "tray.tray_veg": {
+      "same_as": "learn.explore.explore_plants"
+    },
+    "tray.tray_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lucky_sunbathing.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Lucky_sunbathing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lucky sunbathing",
+      "author": "Absoluteterritori",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2,
+        "width": 1.0,
+        "height": 0.75
+      },
+      "note": "SK-061 (designer 19/11): mèo nằm duỗi dài trên vỉa hè trong vệt nắng; không người, không chữ."
+    },
+    "tray.tray_lamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Retro_desk_lamp.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Retro_desk_lamp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Retro desk lamp",
+      "author": "WANGYIFAN2024",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.56,
+        "top": 0.12,
+        "width": 0.44,
+        "height": 0.88
+      },
+      "note": "SK-061 (designer 19/11): đèn bàn chao vàng đang bật trên mặt bàn, phòng tối; cắt lấy chiếc đèn bên phải, bỏ khung ảnh treo tường bên trái; không chữ, không người."
+    },
+    "tray.tray_dryer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_hairdryer.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Close-up_of_a_hairdryer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Close-up of a hairdryer",
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.25,
+        "top": 0.33,
+        "width": 0.65,
+        "height": 0.44
+      },
+      "note": "SK-061 (designer 19/11): máy sấy tóc đen dựng trong giá kim loại, thấy dây điện; cắt vuông bỏ gương và cửa hàng phía sau; chữ nhỏ trên tay cầm không đọc được; không người."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_sun": {
+      "same_as": "learn.explore.explore_light"
+    },
+    "q1.q1_lamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Retro_desk_lamp.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Retro_desk_lamp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Retro desk lamp",
+      "author": "WANGYIFAN2024",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.4,
+        "top": 0.22,
+        "width": 0.6,
+        "height": 0.78
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang cho thẻ lựa chọn (cùng ảnh tray_lamp): hai đèn bàn chao vàng đang bật trên bàn, phòng tối; cắt bỏ khung ảnh treo tường bên trái."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_warm"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_lamp": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Retro_desk_lamp.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Retro_desk_lamp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Retro desk lamp",
+      "author": "WANGYIFAN2024",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.4,
+        "top": 0.22,
+        "width": 0.6,
+        "height": 0.78
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang cho thẻ ba lựa chọn (cùng ảnh tray_lamp): hai đèn bàn chao vàng đang bật trên bàn; cắt bỏ khung ảnh treo tường."
+    },
+    "q3.q3_veg": {
+      "same_as": "learn.explore.explore_plants"
+    },
+    "q3.q3_dryer": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_hairdryer.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Close-up_of_a_hairdryer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Close-up of a hairdryer",
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.22,
+        "top": 0.37,
+        "width": 0.72,
+        "height": 0.36
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang cho thẻ ba lựa chọn (cùng ảnh tray_dryer): máy sấy tóc trong giá, thấy dây điện."
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_cupboard": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am.q4.q4_cupboard.jpg",
+        "method": "drawn"
+      },
+      "title": "Dim shelves inside a wooden cabinet",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ, không người; bóng giấy nướng sẵn. Cả ba lựa chọn câu q4 cùng là hình vẽ (một câu một kiểu hình): không có ảnh CC0/PD/CC BY hợp lệ cho tủ tối, bậc thềm nắng, phòng tắm tối (ảnh tìm được có nhãn hiệu, người, hoặc nguồn không phù hợp). JPEG 1024×768. Tủ gỗ mở cửa, ngăn tủ tối, khăn gấp và hộp, tông nâu sẫm."
+    },
+    "q4.q4_step": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am.q4.q4_step.jpg",
+        "method": "drawn"
+      },
+      "title": "Bright steps by a front door",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ, không người; bóng giấy nướng sẵn. Cả ba lựa chọn câu q4 cùng là hình vẽ (một câu một kiểu hình): không có ảnh CC0/PD/CC BY hợp lệ cho tủ tối, bậc thềm nắng, phòng tắm tối (ảnh tìm được có nhãn hiệu, người, hoặc nguồn không phù hợp). JPEG 1024×768. Hai bậc thềm sáng trước cửa gỗ đỏ son, sân vàng nắng, trời xanh, bậc trống trơn."
+    },
+    "q4.q4_bathroom": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am.q4.q4_bathroom.jpg",
+        "method": "drawn"
+      },
+      "title": "A small, dim room with tiles",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ, không người; bóng giấy nướng sẵn. Cả ba lựa chọn câu q4 cùng là hình vẽ (một câu một kiểu hình): không có ảnh CC0/PD/CC BY hợp lệ cho tủ tối, bậc thềm nắng, phòng tắm tối (ảnh tìm được có nhãn hiệu, người, hoặc nguồn không phù hợp). JPEG 1024×768. Góc phòng tắm gạch xám tối, xô chàm, gáo đỏ, vệt nước trên sàn, cửa sổ nhỏ mờ."
+    },
+    "q5": {
+      "same_as": "q4.q4_cupboard"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_light"
+    },
+    "vocab.sun": {
+      "same_as": "learn.explore.explore_light"
+    },
+    "vocab.sunshine": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:S%C3%A9chage_du_riz_au_bord_des_routes_(Delta_du_M%C3%A9kong,_Vietnam)_(6635535829).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/S%C3%A9chage_du_riz_au_bord_des_routes_%28Delta_du_M%C3%A9kong%2C_Vietnam%29_%286635535829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Séchage du riz au bord des routes (Delta du Mékong, Vietnam) (6635535829)",
+      "author": "dalbera from Paris, France",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.35,
+        "top": 0.55,
+        "width": 0.65,
+        "height": 0.45
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung 2:1 của cùng ảnh tray_rice: lớp thóc vàng trải dưới nắng, sông và cây phía sau."
+    },
+    "vocab.bright": {
+      "same_as": "learn.explore.explore_light"
+    },
+    "vocab.warmth": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lucky_sunbathing.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Lucky_sunbathing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Lucky sunbathing",
+      "author": "Absoluteterritori",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.2,
+        "width": 1.0,
+        "height": 0.4411
+      },
+      "note": "SK-061 (designer 20/11): mục cắt riêng khung 2:1 thẻ từ của bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am tray.tray_cat (chép mục gốc, không same_as, vì ảnh gốc vuông hay dọc bị lệch khung ở chỗ này). SK-061 (designer 19/11): mèo nằm duỗi dài trên vỉa hè trong vệt nắng; không người, không chữ."
+    },
+    "reward.sun_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Foggy_Morning_on_the_River_(51295469387).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Foggy_Morning_on_the_River_%2851295469387%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Foggy Morning on the River (51295469387)",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Foggy_Morning_on_the_River_(51295469387).jpg",
+      "crop": {
+        "left": 0.125,
+        "top": 0.0,
+        "width": 0.75,
+        "height": 1.0
+      },
+      "note": "SK-061 (designer 19/11): Mặt Trời buổi sáng qua lớp sương trên sông, vầng tròn dịu không chói, không chụp qua kính lọc; ảnh của U.S. Fish and Wildlife Service (Public domain). Cắt vuông, vầng Mặt Trời giữa khung."
+    }
+  }
+}

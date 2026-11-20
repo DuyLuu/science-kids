@@ -2,7 +2,10 @@
 // picture (scaled to fill, centred), so a portrait photo in a landscape answer card loses its
 // top and bottom (the animal's head). build and `images fetch` compare the processed picture
 // (width × height after `crop`) with the slot ratio of image-slots.json and warn when they differ
-// by more than max_factor; they never fail on it.
+// by more than the slot's threshold; they never fail on it. Threshold of a slot, first found:
+// age_groups.<g>.max_factors.<kind>, max_factors.<kind>, age_groups.<g>.max_factor, max_factor.
+// max_factors is for a slot where the app does crop (factor below PictureFit.maxCropRatio) but
+// cropping that much loses the subject, e.g. a square photo on a 2:1 vocab card (SK-053 19/11).
 //
 // Slot of an Image, from its JSON pointer:
 //   /quiz|warmup/<i>/image                 question   (hide_question_image_with_picture_choices, Explorer and
@@ -26,8 +29,9 @@ export const SLOT_TABLE_FILE = path.join(CLI_ROOT, "image-slots.json");
 export const SLOT_KINDS = ["question", "choice_2", "choice_3", "choice_4", "order_item", "bank_item", "learn_group", "tray_item", "vocab", "reward"] as const;
 export type SlotKind = (typeof SLOT_KINDS)[number];
 type RatioValue = string | number;
-type GroupTable = { note?: string; max_factor?: number; ratios?: Partial<Record<SlotKind, RatioValue>>; hide_question_image_with_picture_choices?: boolean };
-export type SlotTable = { note?: string; max_factor: number; default: Record<SlotKind, RatioValue>; age_groups?: Record<string, GroupTable> };
+type MaxFactors = Partial<Record<SlotKind, number>>;
+type GroupTable = { note?: string; max_factor?: number; max_factors?: MaxFactors; ratios?: Partial<Record<SlotKind, RatioValue>>; hide_question_image_with_picture_choices?: boolean };
+export type SlotTable = { note?: string; max_factor: number; max_factors?: MaxFactors; default: Record<SlotKind, RatioValue>; age_groups?: Record<string, GroupTable> };
 
 /** "3:1" -> 3, "4:3" -> 1.333…, 1.5 -> 1.5. Throws on anything else. */
 export function parseRatio(value: RatioValue): number {
@@ -37,15 +41,24 @@ export function parseRatio(value: RatioValue): number {
   throw new Error(`tỉ lệ khung "${String(value)}" sai dạng; viết "rộng:cao" (vd "4:3") hoặc một số dương`);
 }
 
-/** Checks the table (every slot kind has a valid ratio, max_factor > 1); throws with the place. */
+function checkMaxFactors(place: string, factors: MaxFactors | undefined): void {
+  for (const [kind, value] of Object.entries(factors ?? {})) {
+    if (!(SLOT_KINDS as readonly string[]).includes(kind)) throw new Error(`${place}.${kind}: khung lạ (có: ${SLOT_KINDS.join(", ")})`);
+    if (!(typeof value === "number" && value > 1)) throw new Error(`${place}.${kind} phải là số > 1`);
+  }
+}
+
+/** Checks the table (every slot kind has a valid ratio, every max_factor > 1); throws with the place. */
 export function checkSlotTable(table: SlotTable): SlotTable {
   if (!(typeof table.max_factor === "number" && table.max_factor > 1)) throw new Error("max_factor phải là số > 1");
+  checkMaxFactors("max_factors", table.max_factors);
   for (const kind of SLOT_KINDS) {
     if (table.default?.[kind] === undefined) throw new Error(`default thiếu khung ${kind}`);
     parseRatio(table.default[kind]);
   }
   for (const [group, own] of Object.entries(table.age_groups ?? {})) {
     if (own.max_factor !== undefined && !(own.max_factor > 1)) throw new Error(`age_groups.${group}.max_factor phải là số > 1`);
+    checkMaxFactors(`age_groups.${group}.max_factors`, own.max_factors);
     for (const [kind, value] of Object.entries(own.ratios ?? {})) {
       if (!(SLOT_KINDS as readonly string[]).includes(kind)) throw new Error(`age_groups.${group}.ratios.${kind}: khung lạ (có: ${SLOT_KINDS.join(", ")})`);
       parseRatio(value as RatioValue);
@@ -65,7 +78,8 @@ export function loadSlotTable(file: string = SLOT_TABLE_FILE): SlotTable {
 /** Ratio (width / height) of a slot for an age group, and the factor above which build warns. */
 export function slotRatio(table: SlotTable, ageGroup: string, kind: SlotKind): { ratio: number; maxFactor: number } {
   const own = table.age_groups?.[ageGroup];
-  return { ratio: parseRatio(own?.ratios?.[kind] ?? table.default[kind]), maxFactor: own?.max_factor ?? table.max_factor };
+  const maxFactor = own?.max_factors?.[kind] ?? table.max_factors?.[kind] ?? own?.max_factor ?? table.max_factor;
+  return { ratio: parseRatio(own?.ratios?.[kind] ?? table.default[kind]), maxFactor };
 }
 
 export type Slot = { kind: SlotKind; label: string };

@@ -216,6 +216,10 @@ struct CollectionPage<Content: View>: View {
         PaperFrame(scrolls: true) {
             content
         }
+        // SK-060 (finding 4): scrolled to its end, the last item stops `s16` above the tab strip's
+        // torn edge and shadow. The strip's `safeAreaInset` (HomeScreen) already lifts the scroll
+        // content by `PaperMetrics.navStripHeight`, so only the gap is added here.
+        .contentMargins(.bottom, Tokens.Space.s16, for: .scrollContent)
     }
 }
 

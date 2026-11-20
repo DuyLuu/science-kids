@@ -1,0 +1,201 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w1.w1_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "w1.w1_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "learn.explore.explore_plain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._(46229046541).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._%2846229046541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Drone view of rice plantation on bali island with path to walk around and palms. (46229046541)",
+      "author": "Artem Beliaikin from Moscow, Russia",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): đồng bằng trồng lúa nhìn từ flycam: nhiều thửa ruộng xanh phẳng, một con đường thẳng có hàng dừa, cụm mái nhà và cây xanh, phẳng tới chân trời (Bali, Indonesia; không có ảnh đồng bằng Việt Nam nhìn từ trên cao hợp giấy phép). Không ruộng bậc thang, không núi gần, không người nhìn rõ, không chữ. Lượt 3: crop lấy nửa phải (đường thẳng, ruộng phẳng, nhà mái ngói ở trên), bỏ nửa trái có bờ thửa bậc (tester c7).",
+      "crop": {
+        "left": 0.45,
+        "top": 0.12,
+        "width": 0.55,
+        "height": 0.6
+      }
+    },
+    "learn.explore.explore_near_rivers": {
+      "same_as": "learn.explore.explore_water",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "learn.explore.explore_village": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "a05f7cde-f520-4c81-bd92-fb0391221954",
+      "source_url": "https://www.flickr.com/photos/191211375@N03/50694127107",
+      "file_url": "https://live.staticflickr.com/65535/50694127107_71d4177004_b.jpg",
+      "title": "rice field",
+      "author": "cosmicwindblown1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.3,
+        "top": 0.5,
+        "width": 0.56,
+        "height": 0.48
+      },
+      "note": "SK-058 lượt 2 (designer 19/11): làng quê ở Quảng Ngãi (trang Flickr ghi \"Vietnam, Quang Ngai\", CC0 đã mở trang 19/11): nhà mái tôn đỏ, xanh nằm giữa luỹ tre, cây xanh và hàng dừa, phía trước là ruộng lúa xanh phẳng; không người, không chữ. Crop bỏ dải núi mờ phía sau (để không lẫn với nhóm bẫy đất cao), giữ ngọn cây, mái nhà và ruộng."
+    },
+    "learn.explore.explore_rice": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_fields": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_young_rice": {
+      "same_as": "tray.tray_rice",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "tray.tray_village": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "a05f7cde-f520-4c81-bd92-fb0391221954",
+      "source_url": "https://www.flickr.com/photos/191211375@N03/50694127107",
+      "file_url": "https://live.staticflickr.com/65535/50694127107_71d4177004_b.jpg",
+      "title": "rice field",
+      "author": "cosmicwindblown1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.52,
+        "top": 0.47,
+        "width": 0.33,
+        "height": 0.33
+      },
+      "note": "SK-058 lượt 4 (designer 19/11): cùng ảnh learn.explore.explore_village, mục cắt riêng cho món kệ Chơi: chỉ lấy cụm mái nhà giữa cây, bỏ gần hết ruộng lúa phía trước để món không lẫn với nhóm Ruộng lúa."
+    },
+    "tray.tray_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "tray.tray_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_hill": {
+      "same_as": "tray.tray_grass_hills",
+      "lesson": "nui-song-va-bien/nui-va-doi"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1.q1_plain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._(46229046541).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._%2846229046541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Drone view of rice plantation on bali island with path to walk around and palms. (46229046541)",
+      "author": "Artem Beliaikin from Moscow, Russia",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 5 (designer 19/11): cùng ảnh learn.explore.explore_plain, mục cắt 5:2 riêng cho thẻ ba lựa chọn q1 (ios-dev: ảnh dọc không lấp khung ngang): ruộng phẳng, đường, nhà mái ngói.",
+      "crop": {
+        "left": 0.45,
+        "top": 0.17,
+        "width": 0.55,
+        "height": 0.3
+      }
+    },
+    "q1.q1_sea": {
+      "same_as": "tray.tray_sea",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_water",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_plain": {
+      "same_as": "learn.explore.explore_plain"
+    },
+    "q4.q4_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q5": {
+      "same_as": "learn.explore.explore_plain"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_plain"
+    },
+    "vocab.plain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._(46229046541).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._%2846229046541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Drone view of rice plantation on bali island with path to walk around and palms. (46229046541)",
+      "author": "Artem Beliaikin from Moscow, Russia",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 3 (designer 19/11): cùng ảnh learn.explore.explore_plain, mục cắt ngang riêng cho thẻ từ 2:1, bỏ nửa trái có bờ thửa bậc.",
+      "crop": {
+        "left": 0.4,
+        "top": 0.2,
+        "width": 0.6,
+        "height": 0.5
+      }
+    },
+    "vocab.rice_field": {
+      "same_as": "q1.q1_fields",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "vocab.village": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "a05f7cde-f520-4c81-bd92-fb0391221954",
+      "source_url": "https://www.flickr.com/photos/191211375@N03/50694127107",
+      "file_url": "https://live.staticflickr.com/65535/50694127107_71d4177004_b.jpg",
+      "title": "rice field",
+      "author": "cosmicwindblown1",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.18,
+        "top": 0.5,
+        "width": 0.7,
+        "height": 0.48
+      },
+      "note": "SK-058 lượt 2 (designer 19/11): cùng ảnh learn.explore.explore_village, mục cắt 2:1 riêng cho thẻ từ, bỏ dải núi."
+    },
+    "vocab.wide": {
+      "same_as": "vocab.plain"
+    },
+    "reward.mekong_delta_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Canal_in_Mekong_Delta_-_My_Tho_-_Vietnam_(15726848817).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Canal_in_Mekong_Delta_-_My_Tho_-_Vietnam_%2815726848817%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Canal in Mekong Delta - My Tho - Vietnam (15726848817)",
+      "author": "Esin Üstün from Istanbul, Turkey",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-058 (designer 19/11): kênh rạch ở đồng bằng sông Cửu Long (Mỹ Tho; trang gốc ghi \"Canal in Mekong Delta - My Tho - Vietnam\"), nước nâu, hai bờ dừa nước, một chiếc xuồng nhỏ ở xa; không chữ, không số."
+    }
+  }
+}

@@ -1321,6 +1321,60 @@
         }
       }
     },
+    "collectible.set.landforms" : {
+      "comment" : "Name of the collectible set landforms (Explorer #9 Núi, sông và biển, SK-058).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Landform cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ núi sông"
+          }
+        }
+      }
+    },
+    "collectible.set.life_cycles" : {
+      "comment" : "Name of the collectible set life_cycles (Explorer #8 Lớn lên, SK-053).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Life cycle cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ vòng đời"
+          }
+        }
+      }
+    },
+    "collectible.set.plants" : {
+      "comment" : "Name of the collectible set plants (Explorer #7 Cây quanh em, SK-051).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plant cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ cây"
+          }
+        }
+      }
+    },
     "collectible.set.rocks" : {
       "comment" : "Name of the collectible set rocks (đá và đất).",
       "extractionState" : "manual",
@@ -1335,6 +1389,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thẻ đá và đất"
+          }
+        }
+      }
+    },
+    "collectible.set.sky" : {
+      "comment" : "Name of the collectible set sky (Explorer #10 Bầu trời ngày và đêm, SK-061).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sky cards"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thẻ bầu trời"
           }
         }
       }
@@ -3421,6 +3493,132 @@
         }
       }
     },
+    "lesson.play.a11y.pick" : {
+      "comment" : "Chơi (SK-059): VoiceOver custom action, item not picked.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick it"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn"
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.picked" : {
+      "comment" : "Chơi (SK-059): VoiceOver value of a picked item (shelf and big view).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Picked"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã chọn"
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.shelf_hint" : {
+      "comment" : "Chơi (SK-059): VoiceOver hint of a shelf item.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double-tap to see it bigger."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm hai lần để xem to."
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.unpick" : {
+      "comment" : "Chơi (SK-059): VoiceOver custom action, item picked (on the shelf).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove it"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ chọn"
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.zoom" : {
+      "comment" : "Chơi (SK-059): VoiceOver name of the shelf item's default action (double tap).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See it bigger"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem to"
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.zoom_close" : {
+      "comment" : "Chơi (SK-059): close button of the big view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng"
+          }
+        }
+      }
+    },
+    "lesson.play.a11y.zoom_speaker" : {
+      "comment" : "Chơi (SK-059): speaker button in the big view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hear the name"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe tên"
+          }
+        }
+      }
+    },
     "lesson.play.back" : {
       "comment" : "Play header: back button (icon only), to Learn.",
       "extractionState" : "manual",
@@ -3453,6 +3651,78 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xong rồi! Làm quiz"
+          }
+        }
+      }
+    },
+    "lesson.play.hint.again.discoverer" : {
+      "comment" : "Chơi (SK-059): reminder after three big views with no pick, Discoverer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ready to choose? Hold a picture and drag it to a circle."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em chọn được chưa? Em giữ một hình rồi kéo vào ô tròn nhé."
+          }
+        }
+      }
+    },
+    "lesson.play.hint.again.explorer" : {
+      "comment" : "Chơi (SK-059): reminder after three big views with no pick, Explorer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's pick now! Hold one and drag it into a circle."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn thôi nào! Em giữ một hình rồi kéo vào ô tròn nhé."
+          }
+        }
+      }
+    },
+    "lesson.play.hint.first.discoverer" : {
+      "comment" : "Chơi (SK-059): the mascot's first-time hint, Discoverer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap a picture to see it up close. To pick it, hold and drag it to a circle."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em chạm vào hình để xem to hơn. Muốn chọn, em giữ hình rồi kéo vào ô tròn."
+          }
+        }
+      }
+    },
+    "lesson.play.hint.first.explorer" : {
+      "comment" : "Chơi (SK-059): the mascot's first-time hint, Explorer (content-editor 19/11).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap a picture to see it bigger. Hold and drag it into a circle."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em chạm vào hình để xem to. Em giữ hình rồi kéo vào ô tròn."
           }
         }
       }

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <!-- Science Kids · topic icon · growing-plants · hạt nảy mầm trong đất, giọt nước. Style E, paper layers bottom to top, no filter: the app adds shadow.paper_1 (journey-roadmap-spec.md). -->
-  <g fill="#2E4A6E"><path d="M48 4 C 48 4, 54 11, 54 14.8 A6 6 0 0 1 42 14.8 C 42 11, 48 4, 48 4 Z"/></g>
-  <g fill="#3B6E6A"><rect x="30.6" y="22" width="2.8" height="24" rx="1.4"/><path d="M32 28 C 27 28, 18 26, 15 17 C 24 15, 31 20, 32 28 Z"/><path d="M32 26 C 34 19, 42 15, 50 18 C 47 26, 38 28, 32 26 Z"/></g>
-  <g fill="#8A5E3B"><path d="M2 42 C 14 36, 50 36, 62 42 V60 H2 Z"/></g>
-  <g fill="#B97F16"><ellipse cx="32" cy="50" rx="6.5" ry="4.5"/><rect x="31" y="40" width="2" height="8" rx="1"/><path d="M28 53 C 26 56, 24 57, 21 57.5 L21.2 56 C 23.5 55.5, 25 54.5, 26.6 52 Z"/><path d="M36 53 C 38 56, 40 57, 43 57.5 L42.8 56 C 40.5 55.5, 39 54.5, 37.4 52 Z"/></g>
-</svg>

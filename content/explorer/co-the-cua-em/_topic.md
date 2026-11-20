@@ -754,7 +754,7 @@ Chữ `prompt`, nhãn nhóm, nhãn món, `messages.start`, `messages.has_limited
 - ***Bộ xương và cơ bắp* (Discoverer):** xương, cơ, khớp, khung xương (Oak để Year 3). Explorer chỉ nói khuỷu tay, đầu gối "giúp co", không dạy "khớp"; "hộp sọ" chỉ ở một ví dụ.
 - ***Tiêu hoá* (Discoverer), *Hệ tuần hoàn* (Scientist):** đường đi của thức ăn sau dạ dày, ruột, máu và mạch máu, tim bơm thế nào.
 - ***Âm thanh*, *Ánh sáng và bóng tối* (Discoverer):** rung động vào tai, ánh sáng vào mắt.
-- ***Em khoẻ mạnh* (Explorer số mười ba):** rửa tay, đánh răng, ăn uống lành mạnh, vận động, giữ vệ sinh giác quan. Bài 2 q5 chỉ dùng "đánh răng" làm tình huống co khuỷu tay, không dạy đánh răng.
+- **Rửa tay, đánh răng, ăn uống lành mạnh, vận động, giữ vệ sinh giác quan:** chủ đề *Em khoẻ mạnh* dự kiến dạy phần này đã bỏ khỏi Explorer (Duy chốt 19/11, SK-057); nay Explorer không có bài nào dạy đánh răng (chăm sóc răng chỉ còn ở Discoverer #12 *Hệ tiêu hoá*, bài "Đồ uống nào làm hại răng?", lộ trình Discoverer chờ Duy chốt). Bài 2 q5 vẫn chỉ dùng "đánh răng" làm tình huống co khuỷu tay, không dạy đánh răng.
 - ***Sự phát triển của con người* (Scientist):** lớn lên, dậy thì, vùng kín. Bài 3 w2 chỉ nói "con người lớn lên".
 - ***Gọi tên và nhóm động vật* (Explorer số một):** dùng lại "động vật có vú", "bộ phận cơ thể"; không lặp key `people_not_animals`, `all_animals_four_legs` thành câu hỏi riêng.
 

@@ -1,0 +1,229 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/oc-bach-tuoc-va-con-vat-bien"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_land",
+      "lesson": "noi-song-tren-trai-dat/nam-cuc"
+    },
+    "learn.explore.explore_above": {
+      "own": {
+        "file": "content/images/own/nui-song-va-bien/dat-lien-va-bien.learn.explore.explore_above.jpg",
+        "method": "drawn"
+      },
+      "title": "Land and sea seen from up high",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy chốt 19/11, SK-058 khuyến nghị 1): nhìn chếch từ trên cao, lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ; đường chân trời thẳng, không quả cầu, không bản đồ, không la bàn, bờ biển là một đường cong đơn giản không giống bờ biển nước nào; bóng giấy (filter paperE) nướng sẵn; nền giấy điệp #F0E6CF. Toàn cảnh: dãy núi nhọn gỉ đồng, đồi tròn xanh, đồng bằng chia ô ruộng, một dòng sông uốn khúc chảy ra biển, một hồ nhỏ có bờ, vài mái nhà đỏ son, bãi cát, biển có sóng giấy, một đảo nhỏ có cây. JPEG 1024×1024."
+    },
+    "learn.explore.explore_high": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moc-chau-tea-doi-2094890_960_720.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Moc-chau-tea-doi-2094890_960_720.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moc-chau-tea-doi-2094890 960 720",
+      "author": "ToanNguyen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): chép nguyên mục learn.explore.explore_land của Discoverer be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (đồi chè Mộc Châu, núi phía sau, Pixabay CC0); same_as không sang nhóm tuổi khác."
+    },
+    "learn.explore.explore_flat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Field_in_Vietnam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rice_Field_in_Vietnam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Field in Vietnam - panoramio",
+      "author": "Gonzo Gooner",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0.34,
+        "width": 0.6,
+        "height": 0.66
+      },
+      "note": "SK-058 (designer 19/11): chép mục q2.q2_rice của Discoverer khung-long/trai-dat-rat-lau-ve-truoc (ruộng lúa xanh Việt Nam, CC BY 3.0), crop bỏ dải núi xa và hàng cây phía trên (SK-058 n6: ảnh là đáp án \"đất bằng\"): còn ruộng lúa phẳng. Khung gần vuông cho ô Học, kệ Chơi, câu Đúng/Sai."
+    },
+    "learn.explore.explore_water": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:River_and_tourists_boats,_northern_Vietnam.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/River_and_tourists_boats%2C_northern_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "River and tourists boats, northern Vietnam",
+      "author": "Quangpraha",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.12,
+        "top": 0.4,
+        "width": 0.7,
+        "height": 0.6
+      },
+      "note": "SK-058 (designer 19/11): chép mục tray.tray_river của Discoverer be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (sông uốn qua ruộng lúa ở Tràng An, Ninh Bình, nhìn từ trên cao, Pixabay CC0); crop bỏ phần lớn vách núi đá phía trên, còn dòng sông có thuyền nhỏ và ruộng hai bên."
+    },
+    "tray.tray_mountain": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fog-shrouded_mountain_peak_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Fog-shrouded_mountain_peak_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fog-shrouded mountain peak (Unsplash)",
+      "author": "Slawek K s1awek",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): một đỉnh núi đá nhọn, sườn dốc, mây trắng vờn quanh chân và sườn; ít tuyết; không người, không chữ, không công trình."
+    },
+    "tray.tray_hill": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "5264a3f2-1524-4599-a934-eed2c305f753",
+      "source_url": "https://www.flickr.com/photos/76025239@N02/54749671788",
+      "file_url": "https://live.staticflickr.com/65535/54749671788_c2900ddb83_b.jpg",
+      "title": "Long Coc tea hill",
+      "author": "Oliver Nguyen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): đồi chè Long Cốc (Phú Thọ): những quả đồi tròn thấp phủ chè xanh, vài cây đứng lẻ; không núi nhọn, không người, không chữ. Khung vuông lấy quả đồi tròn ở giữa."
+    },
+    "tray.tray_fields": {
+      "same_as": "learn.explore.explore_flat"
+    },
+    "tray.tray_sea": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Avşa_Adası_horizon_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Av%C5%9Fa_Adas%C4%B1_horizon_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Avşa Adası horizon (Unsplash)",
+      "author": "Shoot N' Design shootndesign",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 2 (designer 19/11): biển khơi xanh gợn sóng tới chân trời thẳng, trời nhạt; không thấy đất, đảo, thuyền, người, chữ (thay ảnh Open Ocean có dải núi mờ ở chân trời, tester c4)."
+    },
+    "tray.tray_river": {
+      "same_as": "learn.explore.explore_river",
+      "lesson": "nui-song-va-bien/song-va-ho"
+    },
+    "tray.tray_building": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:San_Francisco_skyscraper_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/San_Francisco_skyscraper_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "San Francisco skyscraper (Unsplash)",
+      "author": "Jenna Beekhuis 2jennabean",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): một toà nhà chọc trời chụp từ dưới lên trên nền trời xanh; không biển hiệu, không chữ đọc được, không người."
+    },
+    "tray.tray_pool": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Drone_pool_and_deck_chairs_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Drone_pool_and_deck_chairs_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Drone pool and deck chairs (Unsplash)",
+      "author": "Tim Gouw punttim",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): bể bơi ngoài trời nước xanh trong, thành lát gạch, ghế nằm, chụp từ trên cao; vắng người, không chữ."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_mountain": {
+      "same_as": "tray.tray_mountain"
+    },
+    "q1.q1_sea": {
+      "same_as": "tray.tray_sea"
+    },
+    "q1.q1_fields": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Field_in_Vietnam_-_panoramio.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rice_Field_in_Vietnam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rice Field in Vietnam - panoramio",
+      "author": "Gonzo Gooner",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.34,
+        "width": 1,
+        "height": 0.66
+      },
+      "note": "SK-058 (designer 19/11): cùng ảnh learn.explore.explore_flat, crop ngang (khoảng 2:1) bỏ dải núi xa (n6), cho thẻ lựa chọn 5:2, 17:10 và thẻ từ 2:1."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_high"
+    },
+    "q3": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q3.q3_hill": {
+      "same_as": "tray.tray_hill"
+    },
+    "q3.q3_fields": {
+      "same_as": "q1.q1_fields"
+    },
+    "q3.q3_building": {
+      "same_as": "tray.tray_building"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_only_land": {
+      "own": {
+        "file": "content/images/own/nui-song-va-bien/dat-lien-va-bien.q4.q4_only_land.jpg",
+        "method": "drawn"
+      },
+      "title": "Green hills and fields",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy chốt 19/11, SK-058 khuyến nghị 1): nhìn chếch từ trên cao, lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ; đường chân trời thẳng, không quả cầu, không bản đồ, không la bàn, bờ biển là một đường cong đơn giản không giống bờ biển nước nào; bóng giấy (filter paperE) nướng sẵn; nền giấy điệp #F0E6CF. Ba hình câu q4 cùng bầu trời, cùng mặt trời, cùng đường chân trời; hình này: đồi tròn, ruộng chia ô, con đường đất uốn khúc, mái nhà, cây; không có nước ở đâu. JPEG 1024×410 (khung 5:2)."
+    },
+    "q4.q4_land_sea": {
+      "own": {
+        "file": "content/images/own/nui-song-va-bien/dat-lien-va-bien.q4.q4_land_sea.jpg",
+        "method": "drawn"
+      },
+      "title": "Hills, sand and waves",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy chốt 19/11, SK-058 khuyến nghị 1): nhìn chếch từ trên cao, lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ; đường chân trời thẳng, không quả cầu, không bản đồ, không la bàn, bờ biển là một đường cong đơn giản không giống bờ biển nước nào; bóng giấy (filter paperE) nướng sẵn; nền giấy điệp #F0E6CF. Ba hình câu q4 cùng bầu trời, cùng đường chân trời; hình này: nửa trái đồi xanh và bụi cây, hàng dừa trên dải bãi cát cong ở giữa, nửa phải biển có sóng giấy; không đảo, không núi, không sông. JPEG 1024×410 (khung 5:2)."
+    },
+    "q4.q4_only_water": {
+      "own": {
+        "file": "content/images/own/nui-song-va-bien/dat-lien-va-bien.q4.q4_only_water.jpg",
+        "method": "drawn"
+      },
+      "title": "Waves as far as you see",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy chốt 19/11, SK-058 khuyến nghị 1): nhìn chếch từ trên cao, lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ; đường chân trời thẳng, không quả cầu, không bản đồ, không la bàn, bờ biển là một đường cong đơn giản không giống bờ biển nước nào; bóng giấy (filter paperE) nướng sẵn; nền giấy điệp #F0E6CF. Ba hình câu q4 cùng bầu trời, cùng đường chân trời; hình này: chỉ có biển nhiều lớp sóng giấy tới chân trời; không đất, đảo, thuyền. JPEG 1024×410 (khung 5:2)."
+    },
+    "q5": {
+      "same_as": "tray.tray_building"
+    },
+    "q6": {
+      "own": {
+        "file": "content/images/own/nui-song-va-bien/dat-lien-va-bien.q6.jpg",
+        "method": "drawn"
+      },
+      "title": "Land and sea seen from up high",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy chốt 19/11, SK-058 khuyến nghị 1): nhìn chếch từ trên cao, lớp giấy phẳng chồng nhau, không nét viền, không gradient, không chữ; đường chân trời thẳng, không quả cầu, không bản đồ, không la bàn, bờ biển là một đường cong đơn giản không giống bờ biển nước nào; bóng giấy (filter paperE) nướng sẵn; nền giấy điệp #F0E6CF. Cùng bản vẽ với learn.explore.explore_above, cắt khung 4:3 (bỏ dải trời trên và dải biển dưới) cho hình câu q6 và bài 2 w1. JPEG 1024×768."
+    },
+    "vocab.land": {
+      "same_as": "learn.explore.explore_high"
+    },
+    "vocab.sea": {
+      "same_as": "tray.tray_sea"
+    },
+    "vocab.flat": {
+      "same_as": "q1.q1_fields"
+    },
+    "vocab.high": {
+      "same_as": "tray.tray_mountain"
+    },
+    "reward.cape_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cape_Schanck_aerial_panorama._April_2024.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Cape_Schanck_aerial_panorama._April_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cape Schanck aerial panorama. April 2024",
+      "author": "BobTanGo",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.2,
+        "top": 0,
+        "width": 0.62,
+        "height": 1
+      },
+      "note": "SK-058 (designer 19/11): mũi đất đá có cây bụi chìa ra biển, sóng trắng quanh chân, chụp từ flycam (Cape Schanck, Úc); chỉ một đoạn bờ ngắn; không ảnh vệ tinh, không người, không chữ. Khung vuông lấy mũi đất ở giữa. Lượt 2: nới khung ngang hơn (c11) để ảnh trong cache lớn hơn; thẻ vuông app tự cắt giữa."
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "note": "SK-051 Cây quanh em, bài cay-moc-len-tu-hat. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 5. Hình tự vẽ (PM đồng ý, SK-051 quyết định 10, 13): bean-seedling.jpg, bean-seeds.jpg, bean-sprout.2x1.jpg, bean-sprout.jpg.",
+  "images": {
+    "learn.explore.explore_seeds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Pasulj_mung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung beans",
+      "author": "Maduixa at Serbian Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "note": "Designer (agent) 18/11, SK-051: đậu xanh khô trên nền trắng. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_jackfruit_seeds": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jackfrukt_(Artocarpus_Heterophyllus)_-_2022.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Jackfrukt_%28Artocarpus_Heterophyllus%29_-_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jackfrukt (Artocarpus Heterophyllus) - 2022",
+      "author": "Foto: Jonn Leffmann",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: hạt mít trên lòng bàn tay người lớn (không phải tay trẻ). Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.131,
+        "top": 0,
+        "width": 0.738,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_sprout": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/bean-sprout.jpg",
+        "method": "drawn"
+      },
+      "title": "A bean seed with a root and shoot",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). Không có ảnh PD/CC0/CC BY thấy rõ cả rễ lẫn mầm của một hạt (đã tìm Commons, Openverse 18/11). Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_big_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mango_tree_(Mangifera_indica).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Mango_tree_%28Mangifera_indica%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mango tree (Mangifera indica)",
+      "author": "Philipola",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: cả cây xoài to ngoài trời. Hình gốc của chủ đề."
+    },
+    "q4.q4_seedling": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/bean-seedling.jpg",
+        "method": "drawn"
+      },
+      "title": "A young bean plant in soil",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 13: hình tự vẽ, cùng nét, cùng nền với bean-sprout.jpg (cùng cây, lớn hơn: rễ nhiều nhánh, hai lá mầm teo, lá thật). Ba thẻ q4 đều là hình vẽ."
+    },
+    "vocab.shoot": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/bean-sprout.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A bean seed with a root and shoot",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). bản khung 2:1 của bean-sprout.jpg."
+    },
+    "reward.jackfruit_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jackfruit_growing_on_tree_trunk.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Jackfruit_growing_on_tree_trunk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jackfruit growing on tree trunk",
+      "author": "Karthikasiva03",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: quả mít mọc trên thân cây.",
+      "crop": {
+        "left": 0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "w1": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artocarpus_heterophyllus_Malaysia.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Artocarpus_heterophyllus_Malaysia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Artocarpus heterophyllus Malaysia",
+      "author": "Tu7uh",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0.005,
+        "top": 0.125,
+        "width": 0.75,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của co-the-cua-em/nem-va-so learn.explore.explore_feel."
+    },
+    "tray.tray_beans": {
+      "same_as": "learn.explore.explore_seeds"
+    },
+    "tray.tray_marble": {
+      "same_as": "tray.tray_marble",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_sprout": {
+      "same_as": "learn.explore.explore_dark",
+      "lesson": "cay-quanh-em/cay-can-gi-de-lon",
+      "note": "Quyết định 13: giá đỗ (ảnh chụp) thay hình vẽ hạt nảy mầm trên kệ Chơi."
+    },
+    "tray.tray_young_plants": {
+      "same_as": "tray.tray_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_jackfruit": {
+      "same_as": "learn.explore.explore_jackfruit_seeds"
+    },
+    "tray.tray_ball": {
+      "same_as": "tray.tray_ball",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "tray.tray_seedling": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pinto_Bean_Plant_Growth.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Pinto_Bean_Plant_Growth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pinto Bean Plant Growth",
+      "author": "Datadoggieein",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 0.8,
+        "height": 0.6
+      },
+      "note": "Designer (agent) 18/11, SK-051: cây đậu con trong chậu; cắt bỏ ống nước. Hình gốc của chủ đề (quyết định 13: chuyển từ q4_seedling sang món kệ Chơi; dùng cho từ soil)."
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_leaf": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q1.q1_beans": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Pasulj_mung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung beans",
+      "author": "Maduixa at Serbian Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_seeds.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q1.q1_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jackfrukt_(Artocarpus_Heterophyllus)_-_2022.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Jackfrukt_%28Artocarpus_Heterophyllus%29_-_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Jackfrukt (Artocarpus Heterophyllus) - 2022",
+      "author": "Foto: Jonn Leffmann",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_jackfruit_seeds.",
+      "crop": {
+        "left": 0.131,
+        "top": 0.125,
+        "width": 0.738,
+        "height": 0.75
+      }
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_sprout"
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_sprout": {
+      "same_as": "learn.explore.explore_sprout"
+    },
+    "q4.q4_seed": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/bean-seeds.jpg",
+        "method": "drawn"
+      },
+      "title": "Mung bean seeds on soil",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 13: hình tự vẽ, một nhúm hạt đậu xanh trên mặt đất, cùng nét, cùng nền với bean-sprout.jpg. Ba thẻ q4 đều là hình vẽ."
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_rice": {
+      "same_as": "q5.q5_rice",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "q5.q5_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mango_tree_(Mangifera_indica).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Mango_tree_%28Mangifera_indica%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mango tree (Mangifera indica)",
+      "author": "Philipola",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_big_tree. Dời lên để thấy ngọn cây.",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.459
+      }
+    },
+    "q5.q5_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_big_tree"
+    },
+    "vocab.seed": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Pasulj_mung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung beans",
+      "author": "Maduixa at Serbian Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_seeds.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.25,
+        "width": 0.75,
+        "height": 0.5
+      }
+    },
+    "vocab.root": {
+      "same_as": "vocab.shoot"
+    },
+    "vocab.soil": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pinto_Bean_Plant_Growth.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Pinto_Bean_Plant_Growth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Pinto Bean Plant Growth",
+      "author": "Datadoggieein",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.27,
+        "width": 0.8,
+        "height": 0.3
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của tray.tray_seedling."
+    }
+  }
+}

@@ -799,6 +799,8 @@ private struct RecapPageBar: View {
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("lesson.learn.page_a11y \(current + 1) \(count)"))
+        // SK-060 (finding 8): a page count read aloud, not a control (as `PageBar`).
+        .accessibilityAddTraits(.isStaticText)
         .accessibilityIdentifier("lesson.recap.page")
     }
 }

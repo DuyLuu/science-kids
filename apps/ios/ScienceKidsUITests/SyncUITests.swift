@@ -64,7 +64,7 @@ final class SyncUITests: XCTestCase {
         let app = XCUIApplication()
         var arguments = ["-AppleLanguages", "(vi)", "-AppleLocale", "vi_VN", "-SKReduceMotion", "YES", "-SKSyncProbe", "YES"]
         if reset { arguments += ["-SKResetProfile", "YES"] }
-        app.launchArguments = arguments + extra
+        app.launchArguments = arguments + PlayDrag.noHint + extra
         app.launch()
         return app
     }
@@ -103,16 +103,10 @@ final class SyncUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 10), "Home did not open")
     }
 
+    /// Right on the first try, then on (SK-060: the A2 screens, `A2Lesson`).
     private func answer(_ question: LessonFixture.Question, check: Bool, in app: XCUIApplication) {
-        for key in question.right {
-            switch question.format {
-            case "true_false": tap(app, "lesson.tf.\(key)")
-            case "fill_blank_bank": tap(app, "lesson.word.\(key)")
-            default: tap(app, "lesson.option.\(key)")
-            }
-        }
-        if check { tap(app, "lesson.check") }
-        tap(app, "lesson.result.next")
+        A2Lesson.answer(question, question.right, in: app)
+        A2Lesson.next(app)
     }
 
     /// Lesson 1 all right on the first try; returns the stars label of Thưởng.
@@ -120,13 +114,12 @@ final class SyncUITests: XCTestCase {
         // SK-035 tester #1: the fixture lesson through its topic, not the Home card.
         fixture.open(in: app)
         for question in fixture.warmup { answer(question, check: false, in: app) }
-        XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5))
-        for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }
-        tap(app, "lesson.learn.next")
-        for food in fixture.balancedTray { tap(app, "lesson.shelf.\(food)") }
+        A2Lesson.learn(app)
+        for food in fixture.balancedTray { PlayDrag.pick(app, food) }
         tap(app, "lesson.play.done")
+        A2Lesson.waitQuiz(app)
         for question in fixture.quiz { answer(question, check: true, in: app) }
-        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 5), "Thưởng did not open")
+        A2Lesson.throughRecap(app)
         return element(app, "lesson.reward.stars").label
     }
 
@@ -158,7 +151,16 @@ final class SyncUITests: XCTestCase {
             $0.queued == 0 && $0.phase == "synced" && ($0.homeAttempts ?? 0) == before + 1
         }
         print("sync after lesson: \(synced.map(String.init(describing:)) ?? "-")")
-        XCTAssertEqual(synced?.homeStars, shownStars, "server stars = Thưởng stars (one lesson played)")
+        if before == 0 {
+            XCTAssertEqual(synced?.homeStars, shownStars, "server stars = Thưởng stars (one lesson played)")
+        } else {
+            // SK-060: the guest session stays in the Keychain after `-SKResetProfile` (as after a
+            // reinstall), so the profile is adopted with the attempts of earlier runs; the server
+            // keeps each lesson's best stars, so the total never drops and grows by at most this lesson.
+            let earlier = linked?.homeStars ?? 0
+            XCTAssertGreaterThanOrEqual(synced?.homeStars ?? -1, earlier, "server stars never drop (adopted profile, \(before) earlier attempts)")
+            XCTAssertLessThanOrEqual(synced?.homeStars ?? Int.max, earlier + (shownStars ?? 0), "server stars grow by at most this lesson's stars")
+        }
         XCTAssertEqual(synced?.shownSource, "server", "Home shows the server's numbers once nothing waits")
         XCTAssertGreaterThanOrEqual(synced?.homeStreak ?? 0, 1)
         XCTAssertEqual(element(app, "home.stars").label.contains("\(synced?.shownStars ?? -1)"), true, element(app, "home.stars").label)

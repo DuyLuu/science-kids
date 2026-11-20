@@ -20,7 +20,7 @@ en: I can name animals of the Antarctic.
 vi: Em kể được tên con vật sống ở Nam Cực.
 > Trạng thái: **nháp do AI soạn (content-editor), chưa duyệt.** Ngày 16/11/2026. Ticket SK-048. Mọi dòng `id:` để trống; chạy `ids` sau `_topic.md` và bài 1 (câu w1 trỏ tới bài 1).
 > Sườn một phần: Oak Địa lý Year 2, unit 3 *Cold places*, lesson 6 `antarctic-wildlife` (`docs/oak/geography-y2-cold-and-hot-places.md`). Dùng ý: con vật Nam Cực kiếm ăn ở biển; chim cánh cụt hoàng đế đứng sát nhau cho ấm; misconception của lesson. Viết lại, không chép câu quiz.
-> Bỏ: chim cánh cụt tới và đi theo mùa, "chỉ chim cánh cụt hoàng đế ở lại qua mùa đông" (mùa, để dành cho chủ đề Explorer số năm *Thời tiết và các mùa*; chủ đề đó chỉ dạy mùa ở Việt Nam, nên ý này vẫn chưa dạy ở đâu); chim bố ấp trứng (vòng đời, *Sự sống mới*); từ "breeding", "species", "survive"; ý "chim cánh cụt chỉ sống ở nửa phía nam" không thành ý chính (chim cánh cụt Galápagos).
+> Bỏ: chim cánh cụt tới và đi theo mùa, "chỉ chim cánh cụt hoàng đế ở lại qua mùa đông" (mùa, để dành cho chủ đề Explorer số năm *Thời tiết và các mùa*; chủ đề đó chỉ dạy mùa ở Việt Nam, nên ý này vẫn chưa dạy ở đâu); chim bố ấp trứng (vòng đời, *Lớn lên*, Explorer số 8 trong danh mục); từ "breeding", "species", "survive"; ý "chim cánh cụt chỉ sống ở nửa phía nam" không thành ý chính (chim cánh cụt Galápagos).
 > Bài `core` thứ nhất, nối bài 1 từ phía ngược lại. Sửa `polar_bears_in_antarctic` ở ví dụ ba ô Học "Icy land", món bẫy gấu trắng ở Chơi và câu q6 (gắn key).
 
 ## Ý chính
@@ -610,7 +610,7 @@ image.alt.vi: Chim cánh cụt hoàng đế trên băng
 
 ## Ghi chú cho hoạ sĩ
 
-- **Loại hình:** toàn ảnh chụp thật. Không bản đồ, không quả địa cầu, không ảnh Trái Đất từ vũ trụ. Con vật hoang dã: không thẻ gắn, vết sơn đánh dấu, vòng đeo nghiên cứu, người, tàu, trạm nghiên cứu, chữ. Không cảnh săn mồi (không hải cẩu báo bắt chim cánh cụt); gấu trắng và chim cánh cụt không chung một ảnh. Không trứng, chim non nổi bật (vòng đời để dành cho *Sự sống mới*).
+- **Loại hình:** toàn ảnh chụp thật. Không bản đồ, không quả địa cầu, không ảnh Trái Đất từ vũ trụ. Con vật hoang dã: không thẻ gắn, vết sơn đánh dấu, vòng đeo nghiên cứu, người, tàu, trạm nghiên cứu, chữ. Không cảnh săn mồi (không hải cẩu báo bắt chim cánh cụt); gấu trắng và chim cánh cụt không chung một ảnh. Không trứng, chim non nổi bật (vòng đời để dành cho *Lớn lên*, Explorer số 8 trong danh mục).
 - **Ảnh mới (năm):** vùng đất Nam Cực phủ băng, núi Xuyên Nam Cực, NASA, phạm vi công cộng (`explore_land`: ô "Icy land", từ `antarctic`; thêm 16/11 sau kiểm nghiệm thu, crop cắt bỏ cánh máy bay ở mép phải); đàn chim cánh cụt hoàng đế đứng sát nhau (`explore_huddle`); một con chim cánh cụt hoàng đế đứng trên băng (`tray_emperor`); chim cánh cụt Adélie bên mép băng sát mặt biển (`explore_sea_food`); hải cẩu Weddell nằm nghỉ một mình trên băng (`explore_seal`). Bốn ảnh là hình gốc của cả chủ đề (bảng Hình dùng chung ở `_topic.md`): giữ đúng key.
 - **Ảnh dùng lại:**
   - *Bề mặt Trái Đất* bài hai: `tray_pacific` (cá voi lưng gù: món cá voi), `tray_atlantic` (sóng biển: đáp án q3); *Bề mặt Trái Đất* bài một: `tray_forest` (q3).

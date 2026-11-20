@@ -24,8 +24,8 @@ import Testing
         #expect(syllabus.schemaVersion == 1)
         #expect(!syllabus.syllabusVersion.isEmpty)
         #expect(syllabus.groups.map(\.ageGroup) == [.explorer, .discoverer, .scientist])
-        #expect(syllabus.groups.map(\.topics.count) == [12, 17, 16])
-        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [79, 155, 156], "content/syllabus.json 17/11 (SK-050): Explorer has 79 lessons")
+        #expect(syllabus.groups.map(\.topics.count) == [10, 17, 16])
+        #expect(syllabus.groups.map { $0.topics.reduce(0) { $0 + $1.lessons.count } } == [64, 155, 156], "content/syllabus.json 20/11 (SK-061): Explorer has 64 lessons")
         #expect(syllabus.groups.flatMap(\.topics).allSatisfy { $0.strand.isKnown })
     }
 
@@ -52,7 +52,11 @@ import Testing
         // Duy 14/11: Explorer #2 "Sinh vật sống ở đâu?" and #3 "Chuỗi thức ăn" (Oak Year 2) move up.
         // SK-048 (Duy 16/11): Explorer #4 "Những nơi sống trên Trái Đất" is a topic of our own (no year).
         // SK-050 (Duy 17/11): the two Oak season topics become #5 "Thời tiết và các mùa", also our own.
-        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == [1, 2, 2, nil, nil, 1, 1, 1, 2, 2, 2, 2])
+        // SK-051 (Duy 18/11): #10 "Trồng cây" (Oak Year 2) merges into #7 "Cây quanh em", 11 topics.
+        // SK-057 (Duy 19/11): the two materials topics and "Em khoẻ mạnh" go, "Lớn lên" (Year 2)
+        // is #8, three Earth and sky topics of our own are #9–#11.
+        // SK-061 (Duy 20/11): "Nước quanh em" goes, "Bầu trời ngày và đêm" is #10; 10 topics.
+        #expect(syllabus.topics(for: .explorer).map(\.oakYear) == [1, 2, 2, nil, nil, 1, 1, 2, nil, nil])
         #expect(syllabus.topics(for: .explorer).filter { (3...5).contains($0.number) }.map(\.key) == [
             "introduction-to-food-chains", "new-habitats-around-the-world", "new-weather-and-seasons",
         ])

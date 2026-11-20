@@ -31,10 +31,10 @@ import Testing
     /// Every topic of every group, by number; nothing hidden.
     @Test func everyTopicOfTheSyllabus() throws {
         let journeys = Journey.all(syllabus: try Self.syllabus(), library: Self.fixtures())
-        #expect(journeys[.explorer]?.count == 12)
+        #expect(journeys[.explorer]?.count == 10)
         #expect(journeys[.discoverer]?.count == 17)
         #expect(journeys[.scientist]?.count == 16)
-        #expect(journeys.values.flatMap { $0 }.reduce(0) { $0 + $1.lessons.count } == 390, "content/syllabus.json 17/11 (SK-050)")
+        #expect(journeys.values.flatMap { $0 }.reduce(0) { $0 + $1.lessons.count } == 375, "content/syllabus.json 20/11 (SK-061)")
         for (group, topics) in journeys {
             #expect(topics.map(\.number) == Array(1..<topics.count + 1), "\(group.rawValue)")
             #expect(topics.allSatisfy { $0.ageGroup == group })

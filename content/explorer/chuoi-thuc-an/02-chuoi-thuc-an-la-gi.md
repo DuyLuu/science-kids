@@ -597,7 +597,7 @@ fact.vi: Con sâu này lớn lên sẽ hoá thành bướm.
 image.brief: Dùng lại hình `explore_plant_food`. Từ khoá tìm ảnh (EN): cabbage white caterpillar eating leaf
 image.alt.en: A caterpillar on a cabbage leaf
 image.alt.vi: Con sâu trên lá cải
-> [CẦN KIỂM] Sâu bướm cải trắng hoá nhộng rồi thành bướm cải trắng. Câu nói "con sâu này" vì không phải con sâu nào cũng thành bướm (nhiều loài thành bướm đêm); người chọn ảnh phải ghi đúng loài. Vòng đời đầy đủ để dành chủ đề *Sự sống mới*.
+> [CẦN KIỂM] Sâu bướm cải trắng hoá nhộng rồi thành bướm cải trắng. Câu nói "con sâu này" vì không phải con sâu nào cũng thành bướm (nhiều loài thành bướm đêm); người chọn ảnh phải ghi đúng loài. Vòng đời đầy đủ để dành chủ đề *Lớn lên* (Explorer số 8 trong danh mục; bài 4 dùng đúng loài bướm cải trắng cho trứng, sâu, nhộng, bướm).
 
 ## Ghi chú cho hoạ sĩ
 

@@ -1,0 +1,295 @@
+{
+  "note": "SK-053 Lớn lên, bài vat-song-nao-cung-co-vong-doi. Designer (agent) chọn 19/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Hình của Discoverer chép đủ mục. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1, câu 4:3) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 5. Hình tự vẽ (SK-053 quyết định 8): không. Hình ghép: vocab.life_cycle.",
+  "images": {
+    "learn.explore.explore_born": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Newborn_Golden_Retriever_Puppies.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Newborn_Golden_Retriever_Puppies.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Newborn Golden Retriever Puppies",
+      "author": "SapphireDreamPhotography",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 19/11, SK-053: chó con Golden Retriever mới sinh, mắt nhắm, đang rúc bú bụng mẹ. Hình gốc của chủ đề. Lượt 2 (tester c1): cắt bỏ dải trên 12% để mất vệt đỏ trên bụng chó mẹ cạnh đầu chó con.",
+      "crop": {
+        "left": 0,
+        "top": 0.12,
+        "width": 1,
+        "height": 0.88
+      }
+    },
+    "learn.explore.explore_grow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_puppy_standing.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Golden_Retriever_puppy_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Retriever puppy standing",
+      "author": "Scott",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.12,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: chó con Golden Retriever vài tháng tuổi đứng trên bãi cỏ (có ống nước tưới), vòng cổ trơn, thẻ nhỏ không đọc được chữ."
+    },
+    "learn.explore.explore_young": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sheepdog_mother_nurses_pups.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Sheepdog_mother_nurses_pups.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sheepdog mother nurses pups",
+      "author": "Brian Eager",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0.24,
+        "width": 0.9,
+        "height": 0.76
+      },
+      "note": "Designer (agent) 19/11, SK-053: chó mẹ (chó chăn cừu lông trắng nâu) đứng trên đồng cỏ cho bốn chó con đã mở mắt, vài tuần tuổi, bú; cắt bỏ phần trời có xe ở xa. Không cùng màu lông vàng với ba ảnh chó kia (ảnh chó ta vàng 1280 px bị Wikimedia chặn tải bản gốc, HTTP 429)."
+    },
+    "learn.explore.explore_old": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An old dog with a grey face",
+      "author": "Leo_65",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      },
+      "note": "Designer (agent) 19/11, SK-053: chó Labrador vàng già, mõm và quanh mắt bạc trắng, nằm nghỉ; vòng cổ xích trơn, không chữ. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_plants_too": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:C%C3%A2y_da.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/C%C3%A2y_da.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cây da",
+      "author": "Bùi Thụy Đào Nguyên",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.04,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 19/11, SK-053: cây đa (Ficus) rất to và già ở Việt Nam, thân to sần nhiều rễ phụ bện vào nhau, vài cành trơ; theo brief mới 19/11 (cây to già, gốc sần). Cắt bỏ hàng rào, biển và người ở chân cây."
+    },
+    "vocab.life_cycle": {
+      "composed": {
+        "file": "content/images/composed/lon-len/vat-song-nao-cung-co-vong-doi.vocab.life_cycle.jpg",
+        "parts": [
+          {
+            "same_as": "learn.explore.explore_born"
+          },
+          {
+            "same_as": "learn.explore.explore_grow"
+          },
+          {
+            "same_as": "learn.explore.explore_young"
+          },
+          {
+            "same_as": "learn.explore.explore_old"
+          }
+        ]
+      },
+      "title": "Four dog pictures with arrows going round",
+      "note": "Designer (agent) 19/11, SK-053: bốn ảnh chó xếp một hàng, mũi tên thẳng giữa hai ảnh, mũi tên cong phía trên từ chó mẹ với đàn con về chó con mới sinh; ảnh tròn cùng cỡ trên nền giấy điệp, mũi tên giấy cắt màu chàm, không chữ, không số, không nét viền (khuôn chuoi-thuc-an explore_chain)."
+    },
+    "w1": {
+      "same_as": "tray.tray_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_big_tree",
+      "lesson": "cay-quanh-em/cay-moc-len-tu-hat"
+    },
+    "tray.tray_puppies": {
+      "same_as": "learn.explore.explore_born"
+    },
+    "tray.tray_dinosaur": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "de92c4a7-6181-4844-bebf-aa362d2ed49c",
+      "source_url": "https://www.flickr.com/photos/50192230@N07/32715292503",
+      "file_url": "https://live.staticflickr.com/2866/32715292503_72b3e3f2e8_b.jpg",
+      "title": "Spielzeugdino",
+      "author": "SebastianBartoschek",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/trai-dat-rat-lau-ve-truoc q6 (same_as không sang nhóm tuổi khác)."
+    },
+    "tray.tray_hen": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Posing_(209225885).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Chicken_Posing_%28209225885%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken Posing",
+      "author": "Aleksei Belta",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_hen (same_as không sang nhóm tuổi khác)."
+    },
+    "tray.tray_old_tree": {
+      "same_as": "learn.explore.explore_plants_too"
+    },
+    "tray.tray_chick": {
+      "same_as": "w1.w1_chick",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_rubber_duck": {
+      "same_as": "tray.tray_rubber_duck",
+      "lesson": "goi-ten-va-nhom-dong-vat/co-the-cac-con-vat"
+    },
+    "tray.tray_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không sang nhóm tuổi khác)."
+    },
+    "tray.tray_old_dog": {
+      "same_as": "learn.explore.explore_old"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_cat": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tabby_cat_sitting_at_hallow_block_at_Japan_(edited).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tabby_cat_sitting_at_hallow_block_at_Japan_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Tabby cat sitting at hallow block at Japan (edited)",
+      "author": "Toshihiro Gamo from Yokohama, Kanagawa, Japan",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/khung-long/khung-long-la-gi w3.w3_cat (same_as không sang nhóm tuổi khác)."
+    },
+    "q1.q1_puppies": {
+      "same_as": "learn.explore.explore_born"
+    },
+    "q1.q1_old_dog": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An old dog with a grey face",
+      "author": "Leo_65",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 19/11, SK-053: bản cắt khung choice_3 của learn.explore.explore_old."
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_grow"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_born"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_old": {
+      "same_as": "learn.explore.explore_old"
+    },
+    "q4.q4_born": {
+      "same_as": "learn.explore.explore_born"
+    },
+    "q4.q4_grow": {
+      "same_as": "learn.explore.explore_grow"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_young": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q5.q5_old_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:C%C3%A2y_da.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/C%C3%A2y_da.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Cây da",
+      "author": "Bùi Thụy Đào Nguyên",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "left": 0,
+        "top": 0.48,
+        "width": 1,
+        "height": 0.3
+      },
+      "note": "Designer (agent) 19/11, SK-053: bản cắt khung choice_3 của learn.explore.explore_plants_too. Cắt vào phần thân sần to nhất."
+    },
+    "q5.q5_mango": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sannomaru_Square_The_sakura_J%C5%8Dnai_Ch%C5%AB%C5%8D-ku_Fukuoka_20260629_153636.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Sannomaru_Square_The_sakura_J%C5%8Dnai_Ch%C5%AB%C5%8D-ku_Fukuoka_20260629_153636.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sannomaru Square The sakura Jōnai Chūō-ku Fukuoka 20260629 153636",
+      "author": "Hirho",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0,
+        "top": 0.28,
+        "width": 1,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 19/11 lượt 3, SK-053 (tester B2, ios-dev chạy thử): thay cây xoài non lượt 2 vì không cắt được khung 5:2 nào vừa bỏ hai cây chuối vừa giữ thân cây xoài ở giữa (chuối mọc sát ngay trái thân). Ảnh mới: cây anh đào non mới trồng giữa bãi cỏ công viên, thân mảnh thẳng có cọc gỗ chống, tán lá xanh thưa phía trên; nền rừng cây xanh thẫm và trời xanh. Khung 5:2 lấy nửa dưới tán và cả thân xuống tới cọc. Không người, không chữ. Ảnh gốc 6144×6144."
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_young"
+    },
+    "vocab.born": {
+      "same_as": "learn.explore.explore_born"
+    },
+    "vocab.grow": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_puppy_standing.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Golden_Retriever_puppy_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Golden Retriever puppy standing",
+      "author": "Scott",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.1719,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_grow, lấy cả bề ngang ảnh gốc để chó con đứng trọn trong khung."
+    },
+    "vocab.old": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Dog_for_Senior_Dog_Food_Diet_Wikipedia_Page.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "An old dog with a grey face",
+      "author": "Leo_65",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.02,
+        "top": 0.17,
+        "width": 0.667,
+        "height": 0.5005
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_old, dải ngang qua mắt và mõm bạc."
+    },
+    "reward.dog_card": {
+      "same_as": "learn.explore.explore_young"
+    }
+  }
+}

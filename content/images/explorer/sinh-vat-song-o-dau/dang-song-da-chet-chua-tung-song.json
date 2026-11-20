@@ -361,7 +361,13 @@
       "author": "Jiafei Slay Queen",
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "note": "Chép mục gốc `q4.q4_bottle` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "crop": {
+        "left": 0,
+        "top": 0.08,
+        "width": 1,
+        "height": 0.375
+      },
+      "note": "Chép mục gốc `q4.q4_bottle` ở discoverer/ho-hap/vi-sao-ta-phai-tho (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Crop 2:1 cho thẻ từ (designer 16/11, thẻ từ Explorer trên máy là khung ngang 2:1; ảnh dọc cũ lệch ×2,7 nên app hiện ảnh nhỏ): nắp, vai chai và mực nước, như crop 5:2 `q4_bottle` của Discoverer."
     },
     "reward.almond_card": {
       "source": "Wikimedia Commons",

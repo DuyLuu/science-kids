@@ -1,0 +1,248 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "learn.explore.explore_sunset",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-moc-mat-troi-lan"
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_plants",
+      "lesson": "bau-troi-ngay-va-dem/mat-troi-cho-anh-sang-va-hoi-am"
+    },
+    "learn.explore.explore_full": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Full_Perigee_(not_Super!)_Moon_on_1-1-18_(39442516491).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Full_Perigee_%28not_Super%21%29_Moon_on_1-1-18_%2839442516491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Full Perigee (not Super!) Moon on 1-1-18 (39442516491)",
+      "author": "Stephen Rahn from Macon, GA, USA",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.225,
+        "width": 1.0,
+        "height": 0.55
+      },
+      "note": "SK-061 (designer 19/11): trăng tròn sáng trắng xám, thấy rõ các vệt sẫm, giữa nền trời đêm tối (Stephen Rahn, CC0); cắt ngang để dùng chung ô vuông, thẻ 5:2, thẻ từ 2:1 mà không mất vầng trăng. Thay ảnh trăng cam (tester B6); không có ảnh trăng trắng rõ vệt sẫm trên rặng cây hợp giấy phép."
+    },
+    "learn.explore.explore_crescent": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Twilight_crescent_Moon.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Twilight_crescent_Moon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Twilight crescent Moon",
+      "author": "ESO/G. Brammer",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.3,
+        "top": 0.0,
+        "width": 0.38,
+        "height": 0.34
+      },
+      "note": "SK-061 (designer 19/11): trăng lưỡi liềm mảnh trên trời chạng vạng xanh chuyển cam (ESO/G. Brammer); cắt cho trăng nằm giữa khung; không cây, không người."
+    },
+    "learn.explore.explore_day_moon": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_Moon_in_Daytime_(9105997796).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Big_Moon_in_Daytime_%289105997796%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Big Moon in Daytime (9105997796)",
+      "author": "denebola2025 from North Ogden, UT, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "SK-061 (designer 19/11): trăng gần tròn trắng nhạt trên trời xanh ban ngày, ngọn thông in đen ở góc trái dưới; không Mặt Trời, không người."
+    },
+    "learn.explore.explore_mid_autumn": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-trang-doi-hinh.learn.explore.explore_mid_autumn.jpg",
+        "method": "drawn"
+      },
+      "title": "Paper lanterns and a glowing night",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Vẽ vì không tìm được ảnh CC0/PD/CC BY hợp lệ: ảnh đèn lồng có trăng tròn đều có người, chữ trên đèn hoặc trăng không thật (ghép). Bốn đèn lồng giấy đỏ son, vàng hoè treo trên cành cây, trăng tròn vàng nhạt có vệt sẫm, vài sao bốn cánh, mái nhà in đen; không người, không chữ. Dùng ở ô Học, câu Đúng/Sai q3 (một hình). JPEG 1024×1024."
+    },
+    "tray.tray_full_moon": {
+      "same_as": "learn.explore.explore_full"
+    },
+    "tray.tray_moon_roofs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moon_over_a_house_(9572153400).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Moon_over_a_house_%289572153400%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Moon over a house (9572153400)",
+      "author": "Tomi Lattu",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 1.0,
+        "height": 0.675
+      },
+      "note": "SK-061 (designer 19/11): trăng tròn vàng trên mái nhà lúc chạng vạng xanh thẫm; cắt vuông lấy trăng và mái; không người, không chữ."
+    },
+    "tray.tray_crescent": {
+      "same_as": "learn.explore.explore_crescent"
+    },
+    "tray.tray_crescent_palm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mm37a_0907_Forest_(73448985).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Mm37a_0907_Forest_%2873448985%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mm37a 0907 Forest (73448985)",
+      "author": "Marsel Minga",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.1393,
+        "top": 0.0,
+        "width": 0.8607,
+        "height": 1.0
+      },
+      "note": "SK-061 (designer 19/11): trăng lưỡi liềm lớn, rõ nét trên trời đêm xanh thẫm, rặng cây thông in đen ở dưới; cắt vuông; không người, không chữ. (Thay ảnh lá cọ trời xanh lục, tester B5: không có ảnh lá cọ trăng đủ to.)"
+    },
+    "tray.tray_lantern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bubble_Field_-_Flickr_-_Todd_Baker_((_technowannabe.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bubble_Field_-_Flickr_-_Todd_Baker_%28%28_technowannabe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bubble Field - Flickr - Todd Baker (( technowannabe",
+      "author": "Todd Baker from Elmhurst, IL, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.5,
+        "top": 0.3,
+        "width": 0.5,
+        "height": 0.7
+      },
+      "note": "SK-061 (designer 19/11): đèn lồng giấy tròn màu trắng ngà đang sáng trên nền tối; cắt lấy một chiếc đèn tròn ở góc phải dưới; không chữ, không người. (Đã thử thay ảnh để tránh tên gốc 'Bubble Field … ((' nhưng ảnh thay thế bị Commons trả 429 liên tục.)"
+    },
+    "tray.tray_banana": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SingleYelakki_banana,_bangalore,_karnataka_single.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/SingleYelakki_banana%2C_bangalore%2C_karnataka_single.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "SingleYelakki banana, bangalore, karnataka single",
+      "author": "Mohanramus",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "SK-061 (designer 19/11): một quả chuối chín vàng nằm cong trên mặt đá granite sẫm; không nhãn dán, không chữ, không tay."
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_crescent": {
+      "same_as": "learn.explore.explore_crescent"
+    },
+    "q1.q1_lantern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bubble_Field_-_Flickr_-_Todd_Baker_((_technowannabe.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bubble_Field_-_Flickr_-_Todd_Baker_%28%28_technowannabe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bubble Field - Flickr - Todd Baker (( technowannabe",
+      "author": "Todd Baker from Elmhurst, IL, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.45,
+        "width": 1.0,
+        "height": 0.55
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang (thẻ lựa chọn 5:2, thẻ từ 2:1) của cùng ảnh tray_lantern: hai đèn lồng giấy tròn đang sáng ở nửa dưới ảnh, nền tối; không chữ, không người."
+    },
+    "q1.q1_full": {
+      "same_as": "learn.explore.explore_full"
+    },
+    "q2": {
+      "same_as": "learn.explore.explore_crescent"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_mid_autumn"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_full": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-trang-doi-hinh.q4.q4_full.jpg",
+        "method": "drawn"
+      },
+      "title": "A bright white disc above dark trees",
+      "note": "Designer (agent) 20/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058; lượt 3 sửa A3, A4 của tester): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Câu q4 bài 4 (xếp lưỡi liềm → nửa → tròn) đổi sang ba hình vẽ cùng nền xanh than, cùng cỡ, cùng màu trăng (tester B6, B7: ba ảnh cũ khác màu, nền, cỡ nên bé xếp theo màu). Trăng tròn có vài vệt sẫm. JPEG 1024×1024."
+    },
+    "q4.q4_thin": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-trang-doi-hinh.q4.q4_thin.jpg",
+        "method": "drawn"
+      },
+      "title": "A bright curve of light",
+      "note": "Designer (agent) 20/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058; lượt 3 sửa A3, A4 của tester): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Câu q4 bài 4 (xếp lưỡi liềm → nửa → tròn) đổi sang ba hình vẽ cùng nền xanh than, cùng cỡ, cùng màu trăng (tester B6, B7: ba ảnh cũ khác màu, nền, cỡ nên bé xếp theo màu). Trăng lưỡi liềm. JPEG 1024×1024."
+    },
+    "q4.q4_half": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-trang-doi-hinh.q4.q4_half.jpg",
+        "method": "drawn"
+      },
+      "title": "Half a bright disc in the dark",
+      "note": "Designer (agent) 20/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058; lượt 3 sửa A3, A4 của tester): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Câu q4 bài 4 (xếp lưỡi liềm → nửa → tròn) đổi sang ba hình vẽ cùng nền xanh than, cùng cỡ, cùng màu trăng (tester B6, B7: ba ảnh cũ khác màu, nền, cỡ nên bé xếp theo màu). Nửa vầng trăng. JPEG 1024×1024."
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_lantern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bubble_Field_-_Flickr_-_Todd_Baker_((_technowannabe.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bubble_Field_-_Flickr_-_Todd_Baker_%28%28_technowannabe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bubble Field - Flickr - Todd Baker (( technowannabe",
+      "author": "Todd Baker from Elmhurst, IL, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.45,
+        "width": 1.0,
+        "height": 0.55
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang (thẻ lựa chọn 5:2, thẻ từ 2:1) của cùng ảnh tray_lantern: hai đèn lồng giấy tròn đang sáng ở nửa dưới ảnh, nền tối; không chữ, không người."
+    },
+    "q5.q5_crescent": {
+      "same_as": "learn.explore.explore_crescent"
+    },
+    "q5.q5_banana": {
+      "same_as": "tray.tray_banana"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_day_moon"
+    },
+    "vocab.moon": {
+      "same_as": "learn.explore.explore_full"
+    },
+    "vocab.full_moon": {
+      "same_as": "learn.explore.explore_full"
+    },
+    "vocab.crescent": {
+      "same_as": "learn.explore.explore_crescent"
+    },
+    "vocab.lantern": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bubble_Field_-_Flickr_-_Todd_Baker_((_technowannabe.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bubble_Field_-_Flickr_-_Todd_Baker_%28%28_technowannabe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bubble Field - Flickr - Todd Baker (( technowannabe",
+      "author": "Todd Baker from Elmhurst, IL, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.45,
+        "width": 1.0,
+        "height": 0.55
+      },
+      "note": "SK-061 (designer 19/11): mục cắt riêng khung ngang (thẻ lựa chọn 5:2, thẻ từ 2:1) của cùng ảnh tray_lantern: hai đèn lồng giấy tròn đang sáng ở nửa dưới ảnh, nền tối; không chữ, không người."
+    },
+    "reward.mid_autumn_moon_card": {
+      "own": {
+        "file": "content/images/own/bau-troi-ngay-va-dem/mat-trang-doi-hinh.reward.mid_autumn_moon_card.jpg",
+        "method": "drawn"
+      },
+      "title": "A big golden Moon behind lanterns",
+      "note": "Designer (agent) 19/11 vẽ bằng SVG theo style E giấy cắt (Duy cho phép ở SK-058, SK-061 khuyến nghị designer 2): lớp giấy phẳng, không nét viền, không gradient, không chữ; bóng giấy nướng sẵn. Vẽ vì không tìm được ảnh CC0/PD/CC BY hợp lệ: như explore_mid_autumn; thẻ thưởng: trăng tròn lớn chiếm giữa khung, ba đèn lồng đỏ, vàng phía trước, mái nhà in đen. JPEG 1024×1024 (khung vuông)."
+    }
+  }
+}

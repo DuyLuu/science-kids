@@ -498,3 +498,91 @@ nao-bo-va-giac-quan (10) và thoi-tiet-va-thien-tai (17) chỉ có cảnh báo t
   - `q3_croc`: cá sấu lẫn vào nền, ảnh nhỏ sau khi cắt.
   - `w1_ball`: bóng đỏ một màu, brief muốn bóng nhiều màu, không chữ. Chữ đã xoá trong hình ghép.
 - Main session 14/11: đặt `discoverer.ratios.bank_item` = "1:1" trong tools/content-cli/image-slots.json theo chốt của designer (thẻ từ vuông theo code ios-dev).
+
+## dev + designer 16/11 · thẻ từ Explorer 2:1, cắt lại ảnh chủ đề #1–#3
+
+Việc kéo theo từ SK-048 (mục "designer 16/11 · ảnh bài 2–8" và "phiên chính 16/11"). Bảng Explorer 13/11 chỉ ghi `choice_3`, `choice_2`. Thẻ từ (`vocab`) rơi về `default` 1:1, nên `fetch` và `build` không kiểm được ảnh vuông mà app cắt giữa. Không sửa `.md`.
+
+### Luật (dev)
+- `tools/content-cli/image-slots.json`: `age_groups.explorer.ratios.vocab` = `"2:1"`. `note` của explorer ghi số đo ô ảnh thẻ từ, đo từ code `wordsPage` của `ExplorerLearnStep`: lưới 2 cột, ảnh lấp ngang ô, cao 76 (`sheetArt`), iPad cao × 1,5.
+
+  | Máy | Ô ảnh | Tỉ lệ |
+  | --- | --- | --- |
+  | iPhone 16 | 152×76 | 2:1 (khớp ảnh chụp máy) |
+  | Máy rộng 375 | ~143×76 | 1,9:1 |
+  | Pro Max | ~176×76 | 2,3:1 |
+  | iPad | ~247×114 | 2,2:1 |
+
+- **Lưu ý trong `note`:** ảnh vuông trong khung 2:1 lệch ×2, vẫn dưới `max_factor` 2,2, nên `fetch`/`build` không cảnh báo. Thẻ từ ảnh vuông phải kiểm tay.
+- `tools/content-cli/test/aspect.test.ts`: test "image-slots.json thật" kiểm thêm explorer `vocab` = 2. `npm test` **399/399**.
+
+### Kiểm thẻ từ (designer)
+Cách kiểm:
+- Script ở scratchpad dựng lại cách app hiện **mọi** thẻ từ: lấy ảnh đã xử lý trong cache, lấp khung 2:1, cắt giữa, làm tối phần bị cắt. Đã xem từng thẻ.
+- Chạy thêm `selectionShapeWarnings` (hàm `images fetch` dùng) với `max_factor` 1,05.
+
+| Chủ đề | Thẻ từ | Đã đúng 2:1 | Lệch dưới ngưỡng, giữ | Sửa |
+| --- | --- | --- | --- | --- |
+| goi-ten-va-nhom-dong-vat | 37 | 37 (crop có từ trước, đủ phần chính) | 0 | 0 |
+| sinh-vat-song-o-dau | 29 | 20 | 6 | 3 |
+| chuoi-thuc-an | 16 | 11 | 4 | 1 |
+
+**Lệch dưới ngưỡng, giữ (cắt giữa vẫn đủ ý):**
+- sinh-vat-song-o-dau: `air` ×1,5, `dead` ×1,5, `never_alive` ×1,5, `habitat` ×1,5, `shade` ×1,2, `garden` ×1,14.
+- chuoi-thuc-an:
+  - `field` ×1,5;
+  - ba hình ghép: `food_chain` ×2, `arrow` ×1,5, `role` ×2. Cả chuỗi vòng tròn và mũi tên nằm trọn trong dải giữa.
+
+**Sửa: bốn thẻ, mỗi thẻ có `crop` 2:1 riêng.** Mỗi mục có `note`. Đã quét `same_as`: không chỗ dùng nào khác trỏ tới bốn mục này, nên các chỗ dùng khác không đổi.
+
+| Bài · thẻ | Trước | Sau |
+| --- | --- | --- |
+| `sinh-vat-song-o-dau/vat-song-hay-khong-song` `vocab.non_living` | Ảnh dọc 888×1024, lệch ×2,31, quá 2,2, nên app không cắt mà hiện ảnh nhỏ giữa giấy | Crop `{0.071, 0.187, 0.532, 0.4}`, ảnh 681×340: cả quả bóng, to giữa khung, xe đạp phía sau |
+| `sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song` `vocab.plastic` | Ảnh dọc 768×1024, ×2,67, hiện ảnh nhỏ | Crop `{0, 0.08, 1, 0.375}`, 1024×512: nắp, vai chai và mực nước, như crop 5:2 `q4_bottle` của Discoverer |
+| `sinh-vat-song-o-dau/noi-song-cua-con-vat` `vocab.forest` | Ảnh dọc 877×1024, ×2,34, hiện ảnh nhỏ | Crop `{0, 0.286, 1, 0.428}`, 1000×500: tán rừng xanh có vài cây hoa tím |
+| `chuoi-thuc-an/con-vat-kiem-an-the-nao` `vocab.feed` | `same_as` crop Học `explore_fed`, ảnh 576×605, ×2,1. Cắt giữa chỉ còn đầu ngón tay | Mục riêng, cùng ảnh, crop `{0.515, 0.245, 0.485, 0.3233}`, 621×310: hai bàn tay đưa thức ăn và đầu hai con gà mái. Mép trái dừng ở x 0,515 nên không thấy mặt người. `explore_fed` giữ nguyên |
+
+(Crop ghi theo thứ tự left, top, width, height.)
+
+### Lệnh và kết quả
+- **`images fetch`** từng thư mục, lần lượt, bảng mới:
+
+  | Chủ đề | File | Ảnh | Tải mới | Lỗi | Cảnh báo tỉ lệ |
+  | --- | --- | --- | --- | --- | --- |
+  | sinh-vat-song-o-dau | 7 | 160 | 3 | 0 | 0 |
+  | chuoi-thuc-an | 4 | 72 | 1 | 0 | 0 |
+  | goi-ten-va-nhom-dong-vat | 8 | 192 | 0 | 0 | 0 |
+
+- **Nhịp gọi Commons:** preload giãn mọi lời gọi `*.wikimedia.org` ≥ 5 s trong một tiến trình. Có 8 lượt gọi, cộng 2 lượt tải ảnh gốc để xem khung (cách nhau 5 s); 0 lần 429. **Sót một chỗ:** preload không giữ nhịp qua tiến trình, nên lượt đầu của tiến trình 2 chỉ cách lượt cuối của tiến trình 1 khoảng 1 s. Lần sau nghỉ ≥ 5 s giữa hai tiến trình.
+- **`max_factor` 1,05:** thẻ từ còn lệch ở sinh-vat-song-o-dau 6, chuoi-thuc-an 4, đúng các thẻ "giữ" ở trên; goi-ten-va-nhom-dong-vat 0. noi-song-tren-trai-dat còn 25 thẻ vuông; SK-048 đã kiểm, không thuộc việc này.
+- **Trước build:** `import` lại `content/explorer` và `content/discoverer` ra scratchpad, đối chiếu với `content/.build/tts` (bỏ `audio`): 78 file, 0 khác. Đầu ra `tts` là bản hiện tại.
+- **`build` 11 chủ đề** (4 Explorer + 7 Discoverer) từ `content/.build/tts` vào `content/.build/pack`:
+  - exit 0; `content_version` `78e094863536`.
+  - Hai chủ đề đổi version: sinh-vat-song-o-dau `66db53d2c142` → `11dadf18899c`, chuoi-thuc-an `ecf52a33df0d` → `4d50dfe6e841`. 9 chủ đề còn lại giữ version.
+  - 1329 ảnh (thêm 4). **0 cảnh báo lệch khung.** Cảnh báo còn lại có từ trước: 2 `age_words_en` Discoverer, `image_missing` ở an-uong-lanh-manh.
+  - Bốn thẻ từ trong gói trỏ đúng asset mới.
+- **`check-pack.sh content/.build/pack`: OK**, exit 0. 14953 asset; 1329 ảnh kiểm JPEG, metadata, kích thước, credit, giấy phép: lỗi 0.
+- **Simulator (17/11):** iPhone 16, Debug, gói `78e094863536` nhúng (14965 file), mở bằng `-SKOpenLesson`. Trang "Từ mới" bài vat-song-hay-khong-song: thẻ `non_living` hiện cả quả bóng, to, lấp khung 2:1. Ba thẻ còn lại chỉ xem bằng ảnh dựng lại.
+
+### Ba khung của một ảnh thẻ từ (thấy khi xem simulator 17/11)
+Một ảnh thẻ từ Explorer hiện ở ba chỗ, mỗi chỗ một khung:
+
+| Chỗ | Thẻ nào | Khung (iPhone 16) |
+| --- | --- | --- |
+| Học, trang "Từ mới" (`wordsPage`) | Chỉ từ trong `word_list` | 152×76, 2:1 |
+| Tổng kết, hàng từ mới (`explorerWordRow`) | Chỉ từ trong `word_list` | 140×92, ~1,5:1 |
+| Tab Từ vựng (`WordsTab`, `.square`) | Mọi `vocab` của bài đã xong | 136×136, 1:1 |
+
+- `plastic` và `feed` không nằm trong `word_list` của bài, nên không lên trang "Từ mới" lẫn Tổng kết; chỉ hiện vuông ở tab Từ vựng.
+- Đã dựng lại bốn ảnh mới ở cả ba khung:
+  - `non_living`, `forest`, `plastic`: đủ ý ở cả ba khung.
+  - `feed`: khung vuông chỉ còn một con gà ăn trên một bàn tay; vẫn hiểu là "cho ăn".
+- Luật `vocab` 2:1 vì thế chỉ đúng cho từ trong `word_list`. Từ ngoài `word_list` đáng kiểm theo 1:1.
+
+### Còn mở
+- **`max_factor` 2,2 dùng chung cho mọi khung:** ảnh vuông trong thẻ từ 2:1 (×2) không bao giờ bị cảnh báo; lệch ×1,5 cũng vậy. Muốn máy tự bắt thì cần ngưỡng cảnh báo theo khung, ví dụ `vocab` 1,6. Ngưỡng này phải tách khỏi mốc 2,2 (`PictureFit.maxCropRatio`), là mốc app chuyển sang hiện ảnh nhỏ. Dev đề xuất, PM chốt.
+- **Quả bóng còn chữ "Baden" và nhãn trắng trên bóng.** Crop cũ cũng thấy, không phải lỗi mới. Brief gốc `w1_ball` muốn bóng không chữ; Discoverer đã xoá chữ trong hình ghép riêng, Explorer chưa.
+- **iPad (~2,2:1)** chỉ tính từ code, chưa kiểm trên máy.
+- **Khung theo chỗ hiện:** `image-slots.json` chỉ có một `vocab` cho mọi thẻ từ. Có hai cách, PM chốt:
+  - Tách thành từ trong `word_list` (2:1) và từ ngoài `word_list` (1:1).
+  - Giữ một khung, rồi kiểm tay khung vuông của tab Từ vựng.

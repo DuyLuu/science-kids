@@ -70,7 +70,9 @@ final class SK047FlowUITests: XCTestCase {
     /// again as a new attempt and the topic shows its stars (`history.json` checked outside).
     func testClosingAtRecapKeepsTheLesson() throws {
         let lesson = try pack.lesson("tho-khi-chay-nhay")
-        let app = launch(openLesson: lesson.id)
+        // SK-060: fresh, or a lesson another test of this class left in the middle (B7.6) opens at
+        // the second launch instead of Home.
+        let app = launch(openLesson: lesson.id, reset: true)
         open(lesson, in: app)
         playWarmupLearnPlay(lesson, in: app)
         for item in lesson.quiz {
@@ -233,9 +235,46 @@ final class SK047FlowUITests: XCTestCase {
     /// `openLesson`: `-SKOpenLesson`, so a test does not have to find its lesson on the journey
     /// map (a lesson left half way reopens at launch, `AppModel.reopenCutOffLesson`, and then Home
     /// is not on the screen at all).
-    private func launch(openLesson: String? = nil) -> XCUIApplication {
+    /// SK-059: a tap on a shelf picture opens it big (the tray does not change) and the close
+    /// button shuts it; a long press then a drag onto the tray picks it; a picked picture still
+    /// opens big; a drop outside the tray changes nothing; a drag from the tray to the shelf takes
+    /// it off.
+    func testShelfTapZoomsAndDragPicks() throws {
+        let lesson = try pack.lesson("vi-sao-ta-phai-tho")
+        let app = launch(openLesson: lesson.id)
+        open(lesson, in: app)
+        playWarmupLearnPlay(lesson, in: app, stopAtPlay: true)
+        let keys = lesson.trayOneOfEachGroup
+        XCTAssertGreaterThanOrEqual(keys.count, 2)
+        let first = keys[0], second = keys[1]
+
+        tapElement(app, "lesson.shelf.\(first)")
+        XCTAssertTrue(element(app, "lesson.play.zoom").waitForExistence(timeout: 3), "a tap opens the big view")
+        XCTAssertFalse(app.buttons["lesson.tray.\(first)"].exists, "a tap does not pick")
+        XCTAssertTrue(app.buttons["lesson.play.zoom.listen"].exists)
+        tapElement(app, "lesson.play.zoom.close")
+        XCTAssertTrue(element(app, "lesson.play.zoom").waitForNonExistence(timeout: 3), "close shuts the big view")
+
+        PlayDrag.pick(app, first)
+        tapElement(app, "lesson.shelf.\(first)")
+        XCTAssertTrue(element(app, "lesson.play.zoom").waitForExistence(timeout: 3), "a picked picture opens big")
+        tapElement(app, "lesson.play.zoom.close")
+        XCTAssertTrue(app.buttons["lesson.tray.\(first)"].exists, "and stays picked")
+
+        let shelfSecond = app.buttons["lesson.shelf.\(second)"].firstMatch
+        shelfSecond.press(forDuration: 0.6, thenDragTo: app.buttons["lesson.shelf.\(first)"].firstMatch)
+        XCTAssertFalse(app.buttons["lesson.tray.\(second)"].waitForExistence(timeout: 1.5), "a drop on the shelf does not pick")
+
+        app.buttons["lesson.tray.\(first)"].firstMatch.press(forDuration: 0.6, thenDragTo: shelfSecond)
+        XCTAssertTrue(app.buttons["lesson.tray.\(first)"].firstMatch.waitForNonExistence(timeout: 3), "a drag out of the tray takes it off")
+    }
+
+    /// `reset`: as after a fresh install (`-SKResetProfile`, then `-SKTestProfile` saves the test
+    /// profile again), so a lesson another test left in the middle is not opened again at launch (B7.6).
+    private func launch(openLesson: String? = nil, reset: Bool = false) -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments = ["-AppleLanguages", "(en)", "-AppleLocale", "en_US", "-SKSyncOff", "YES", "-SKReduceMotion", "YES", "-SKTestProfile", "YES"]
+        app.launchArguments = ["-AppleLanguages", "(en)", "-AppleLocale", "en_US", "-SKSyncOff", "YES", "-SKReduceMotion", "YES", "-SKTestProfile", "YES"] + PlayDrag.noHint
+        if reset { app.launchArguments += ["-SKResetProfile", "YES"] }
         if let openLesson { app.launchArguments += ["-SKOpenLesson", openLesson] }
         app.launch()
         return app
@@ -256,7 +295,7 @@ final class SK047FlowUITests: XCTestCase {
             swipes < 6 ? app.swipeDown() : app.swipeUp()
             swipes += 1
         }
-        XCTAssertTrue(topic.waitForExistence(timeout: 5), "no topic \(key) on Home after \(swipes) swipes")
+        XCTAssertTrue(topic.waitForExistence(timeout: 5), "no topic \(key) on Home after \(swipes) swipes; on screen: \(screenNow(app))")
         for _ in 0..<3 where !topic.isHittable { app.swipeUp() }
         topic.tap()
     }
@@ -273,7 +312,7 @@ final class SK047FlowUITests: XCTestCase {
 
     /// Khởi động (every question right), the picture book (every page), and the tray (one food of
     /// every required group), up to the first quiz question.
-    private func playWarmupLearnPlay(_ lesson: Pack.Lesson, in app: XCUIApplication) {
+    private func playWarmupLearnPlay(_ lesson: Pack.Lesson, in app: XCUIApplication, stopAtPlay: Bool = false) {
         for item in lesson.warmup {
             answerRight(item, in: app)
             tapNext(app)
@@ -285,6 +324,7 @@ final class SK047FlowUITests: XCTestCase {
         }
         if lesson.trayRequired.isEmpty { return }
         XCTAssertTrue(element(app, "lesson.play.message").waitForExistence(timeout: 10), "Chơi did not open (\(lesson.slug))")
+        if stopAtPlay { return }
         for key in lesson.trayOneOfEachGroup { tapShelf(app, key) }
         let done = app.buttons["lesson.play.done"].firstMatch
         XCTAssertTrue(done.waitForExistence(timeout: 5), "the tray is not balanced (\(lesson.slug))")
@@ -348,9 +388,8 @@ final class SK047FlowUITests: XCTestCase {
     /// Taps a shelf item and checks it reached the tray (tapping one already on the tray takes
     /// it off again, so a missed tap must not pass unnoticed).
     private func tapShelf(_ app: XCUIApplication, _ key: String, file: StaticString = #filePath, line: UInt = #line) {
-        tapElement(app, "lesson.shelf.\(key)", file: file, line: line)
-        XCTAssertTrue(app.buttons["lesson.tray.\(key)"].firstMatch.waitForExistence(timeout: 3),
-                      "\(key) did not reach the tray", file: file, line: line)
+        // SK-059: a tap on the shelf opens the picture big; a drag picks it.
+        PlayDrag.pick(app, key, file: file, line: line)
     }
 
     private func screenNow(_ app: XCUIApplication) -> String {

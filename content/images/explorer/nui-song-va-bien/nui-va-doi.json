@@ -1,0 +1,173 @@
+{
+  "images": {
+    "w1": {
+      "same_as": "q6",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_coat": {
+      "same_as": "learn.explore.explore_cold",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "w2.w2_tshirt": {
+      "same_as": "tray.tray_tshirt",
+      "lesson": "thoi-tiet-va-cac-mua/thoi-tiet-hom-nay"
+    },
+    "learn.explore.explore_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "learn.explore.explore_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "learn.explore.explore_fansipan": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Der_Fansipan.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Der_Fansipan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Der Fansipan",
+      "author": "Dr. Kathrin Dräger",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): đỉnh Phan Xi Păng chụp từ Sa Pa (trang gốc: \"Der Fansipan\", \"Von Sa Pa aus aufgenommen\"), dãy núi cao nhiều lớp mờ sương dưới trời xanh; trên đỉnh có vài công trình rất nhỏ, mờ, không đọc ra; không cáp treo, không chữ, không người."
+    },
+    "learn.explore.explore_cool": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "2446d96f-055c-44b4-ae23-bcaa0422d132",
+      "source_url": "https://www.flickr.com/photos/76025239@N02/54777169576",
+      "file_url": "https://live.staticflickr.com/65535/54777169576_15326e40eb_b.jpg",
+      "title": "cloud hunting",
+      "author": "Oliver Nguyen",
+      "license": "PDM 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "crop": {
+        "left": 0.08,
+        "top": 0.03,
+        "width": 0.66,
+        "height": 0.64
+      },
+      "note": "SK-058 (designer 19/11): biển mây trắng dày dưới chân núi, một đỉnh núi tối nhô lên giữa mây, trời xanh, chụp từ đỉnh Phan Xi Păng (cùng loạt ảnh \"On top of Fansipan\" của tác giả; alt không nêu tên nơi). Crop bỏ mái nhà và phần lớn bóng cây ở góc dưới, giữ đỉnh núi nhô khỏi mây; còn ngọn một cành cây mảnh ở mép trái dưới. Không người, không chữ."
+    },
+    "tray.tray_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_fansipan": {
+      "same_as": "learn.explore.explore_fansipan"
+    },
+    "tray.tray_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_grass_hills": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Roadtrip_(Unsplash_bY5ULeKr4bk).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Roadtrip_%28Unsplash_bY5ULeKr4bk%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Roadtrip (Unsplash bY5ULeKr4bk)",
+      "author": "Roman Bozhko romanbozhko",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 (designer 19/11): những quả đồi cỏ xanh thoai thoải nối nhau dưới trời mây; không núi nhọn, không người, không nhà, không chữ."
+    },
+    "tray.tray_fields": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "tray.tray_straw": {
+      "same_as": "tray.tray_straw",
+      "lesson": "chuoi-thuc-an/chuoi-thuc-an-la-gi"
+    },
+    "tray.tray_building": {
+      "same_as": "tray.tray_building",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_hill": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1.q1_mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q1.q1_fields": {
+      "same_as": "q1.q1_fields",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q2": {
+      "same_as": "tray.tray_hill",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_fansipan"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_hill": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "5264a3f2-1524-4599-a934-eed2c305f753",
+      "source_url": "https://www.flickr.com/photos/76025239@N02/54749671788",
+      "file_url": "https://live.staticflickr.com/65535/54749671788_c2900ddb83_b.jpg",
+      "title": "Long Coc tea hill",
+      "author": "Oliver Nguyen",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "SK-058 lượt 5 (designer 19/11): cùng ảnh tray.tray_hill ở bài 1, mục cắt dọc (~0,8:1) riêng cho thẻ order_sequence dọc; lấy quả đồi chè tròn ở giữa.",
+      "crop": {
+        "left": 0.3,
+        "top": 0,
+        "width": 0.45,
+        "height": 1
+      }
+    },
+    "q4.q4_fields": {
+      "same_as": "learn.explore.explore_flat",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q4.q4_mountain": {
+      "same_as": "q4.q4_mountain",
+      "lesson": "nui-song-va-bien/hang-dong"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_cool": {
+      "same_as": "learn.explore.explore_cool"
+    },
+    "q5.q5_fields": {
+      "same_as": "q1.q1_fields",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "q6": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "vocab.mountain": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "vocab.hill": {
+      "same_as": "tray.tray_grass_hills"
+    },
+    "vocab.steep": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "vocab.peak": {
+      "same_as": "tray.tray_mountain",
+      "lesson": "nui-song-va-bien/dat-lien-va-bien"
+    },
+    "reward.fansipan_card": {
+      "same_as": "learn.explore.explore_fansipan"
+    }
+  }
+}

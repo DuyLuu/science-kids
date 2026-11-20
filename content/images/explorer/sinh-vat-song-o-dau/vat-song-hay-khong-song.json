@@ -327,12 +327,12 @@
       "license": "CC0 1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "crop": {
-        "left": 0.17,
-        "top": 0.12,
-        "width": 0.3,
-        "height": 0.52
+        "left": 0.071,
+        "top": 0.187,
+        "width": 0.532,
+        "height": 0.4
       },
-      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép."
+      "note": "Chép mục gốc `w1.w1_ball` ở discoverer/be-mat-trai-dat/dat-va-nuoc-tren-trai-dat (same_as không trỏ được sang nhóm tuổi khác); cùng ảnh, cùng giấy phép. Crop 2:1 cho thẻ từ (designer 16/11, thẻ từ Explorer trên máy là khung ngang 2:1; crop dọc cũ lệch ×2,3 nên app hiện ảnh nhỏ): cả quả bóng, to giữa khung, xe đạp phía sau."
     },
     "vocab.air": {
       "same_as": "w1",

@@ -1,0 +1,322 @@
+{
+  "note": "SK-051 Cây quanh em, bài la-cay-nhieu-hinh-nhieu-co. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 4. Hình tự vẽ (PM đồng ý, SK-051): không.",
+  "images": {
+    "learn.explore.explore_banana_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_banana_plant_7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Young_banana_plant_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young banana plant 7",
+      "author": "Denis kasozi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: tàu lá chuối to, dài trên cây. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_coconut_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fruiting_Coconut_Palm_Canopy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Fruiting_Coconut_Palm_Canopy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fruiting Coconut Palm Canopy",
+      "author": "Paul The Writer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: tàu lá dừa xẻ nhiều lá nhỏ trên nền trời. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0,
+        "top": 0.124,
+        "width": 1,
+        "height": 0.753
+      }
+    },
+    "learn.explore.explore_flame_leaf": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flamboyant_(Delonix_regia)_leaves_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Flamboyant_%28Delonix_regia%29_leaves_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Flame tree leaves",
+      "author": "David E Mead",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: lá phượng (Delonix regia) chụp gần, thấy lá li ti. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "w1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w1.w1_carrot": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bunches_of_carrots.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bunches_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bunches of carrots",
+      "author": "Robert Couse-Baker",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/rau-qua-ta-an-la-phan-nao-cua-cay learn.explore.explore_eat_roots.",
+      "crop": {
+        "left": 0.162,
+        "top": 0.206,
+        "width": 0.675,
+        "height": 0.588
+      }
+    },
+    "w1.w1_mustard": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_vegetable_026.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Chinese_vegetable_026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fresh mustard greens",
+      "author": "Anna Frodesiak",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/rau-qua-ta-an-la-phan-nao-cua-cay q3.q3_mustard.",
+      "crop": {
+        "left": 0.16,
+        "top": 0.268,
+        "width": 0.681,
+        "height": 0.465
+      }
+    },
+    "w2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa at Plage de l'Anse de Nogent (1)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của cay-quanh-em/cay-to-re-than-canh-la learn.explore.explore_tree.",
+      "crop": {
+        "left": 0.175,
+        "top": 0.125,
+        "width": 0.649,
+        "height": 0.75
+      }
+    },
+    "learn.explore.explore_almond_leaf": {
+      "same_as": "q4.q4_green",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_red_almond": {
+      "same_as": "reward.almond_card",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_flame": {
+      "same_as": "learn.explore.explore_flame_leaf"
+    },
+    "tray.tray_mimosa": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_leaves_close_up.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mimosa_pudica_leaves_close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica leaves close up",
+      "author": "NonNerd",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051 tester B2: bản cắt khung tray_item (1:1) của q5.q5_mimosa, cho bé gặp lá trinh nữ trên kệ Chơi trước q5. Cắt vuông bỏ vệt hồng góc trái trên và gờ trắng phía dưới.",
+      "crop": {
+        "left": 0.1042,
+        "top": 0,
+        "width": 0.6042,
+        "height": 0.8056
+      }
+    },
+    "tray.tray_lotus": {
+      "same_as": "tray.tray_lotus",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_banana_leaf": {
+      "same_as": "learn.explore.explore_banana_leaf"
+    },
+    "tray.tray_mango": {
+      "same_as": "tray.tray_green_mango",
+      "lesson": "co-the-cua-em/nem-va-so"
+    },
+    "tray.tray_green_almond": {
+      "same_as": "q4.q4_green",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_coconut": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fruiting_Coconut_Palm_Canopy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Fruiting_Coconut_Palm_Canopy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fruiting Coconut Palm Canopy",
+      "author": "Paul The Writer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_coconut_leaf.",
+      "crop": {
+        "left": 0,
+        "top": 0.35,
+        "width": 1,
+        "height": 0.301
+      }
+    },
+    "q1.q1_almond": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q1.q1_flame": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flamboyant_(Delonix_regia)_leaves_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Flamboyant_%28Delonix_regia%29_leaves_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Flame tree leaves",
+      "author": "David E Mead",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_flame_leaf.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flamboyant_(Delonix_regia)_leaves_2.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Flamboyant_%28Delonix_regia%29_leaves_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Flame tree leaves",
+      "author": "David E Mead",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_flame_leaf.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.125,
+        "width": 0.75,
+        "height": 0.75
+      }
+    },
+    "q3": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_banana_plant_7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Young_banana_plant_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young banana plant 7",
+      "author": "Denis kasozi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_banana_leaf.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.125,
+        "width": 0.667,
+        "height": 0.75
+      }
+    },
+    "q4": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_near_Pointe_d%27Antigue_(3).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Terminalia_catappa_near_Pointe_d%27Antigue_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa near Pointe d'Antigue (3)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.199,
+        "top": 0.125,
+        "width": 0.643,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song reward.almond_card."
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_banana": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_banana_plant_7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Young_banana_plant_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young banana plant 7",
+      "author": "Denis kasozi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_banana_leaf.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      }
+    },
+    "q5.q5_mimosa": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_leaves_close_up.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mimosa_pudica_leaves_close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mimosa pudica leaves close up",
+      "author": "NonNerd",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.215,
+        "width": 1,
+        "height": 0.5333
+      },
+      "note": "Designer (agent) 18/11, SK-051 quyết định 16: ảnh riêng (4320×3240), trang gốc ghi CC0, Category:Mimosa pudica. Lá kép trinh nữ chụp gần, không hoa; cắt 5:2 bỏ vệt hồng góc trên trái và gờ trắng phía dưới."
+    },
+    "q5.q5_almond": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_alive",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "vocab.leaf": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "vocab.shape": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fruiting_Coconut_Palm_Canopy.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Fruiting_Coconut_Palm_Canopy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Fruiting Coconut Palm Canopy",
+      "author": "Paul The Writer",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_coconut_leaf.",
+      "crop": {
+        "left": 0,
+        "top": 0.312,
+        "width": 1,
+        "height": 0.377
+      }
+    },
+    "vocab.long": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_banana_plant_7.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Young_banana_plant_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young banana plant 7",
+      "author": "Denis kasozi",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_banana_leaf.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.25,
+        "width": 0.667,
+        "height": 0.5
+      }
+    },
+    "vocab.round": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "reward.coconut_card": {
+      "same_as": "learn.explore.explore_coconut_leaf"
+    }
+  }
+}

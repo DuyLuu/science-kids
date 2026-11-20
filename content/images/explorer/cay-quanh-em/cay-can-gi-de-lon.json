@@ -1,0 +1,315 @@
+{
+  "note": "SK-051 Cây quanh em, bài cay-can-gi-de-lon. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 4. Hình tự vẽ (PM đồng ý, SK-051): pot-drooping.17x10.jpg, pot-drooping.2x1.jpg, pot-drooping.jpg, pot-dry.jpg, pot-fresh.17x10.jpg, pot-fresh.jpg.",
+  "images": {
+    "learn.explore.explore_needs": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sedum_morganianum_(donkey%27s_tail).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Sedum_morganianum_%28donkey%27s_tail%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green plant by a sunny window",
+      "author": "Paradoxurus",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: chậu cây xanh trên bậu cửa sổ có nắng. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_wilt": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-drooping.jpg",
+        "method": "drawn"
+      },
+      "title": "A drooping plant in a pot",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ chậu đất nung trước cửa sổ có nắng, cây rũ: thân cong, lá còn xanh cụp xuống, đất vẫn sẫm như q4_fresh (dấu hiệu là lá rũ). Bộ ba chậu tươi, rũ, khô (PM quyết định 10, 12): ô Học, q3, q4, từ wilt. Hình gốc của chủ đề."
+    },
+    "learn.explore.explore_dark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mung_bean_sprouts_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mung_bean_sprouts_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung bean sprouts 1",
+      "author": "chomjong",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: đĩa giá đỗ sống chụp gần (thân trắng dài, lá mầm vàng nhạt), mép khung thấy một phần nồi inox và cái nĩa; không tem giá, không người, không chữ. Hình gốc của chủ đề: ô Học, món Chơi (tray_sprouts, bài 1 tray_sprout), thẻ thưởng; q5 dùng bản cắt 5:2 q5.q5_sprouts. Từ 18/11 câu q2 không dùng ảnh này (tester B1)."
+    },
+    "learn.explore.explore_warm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seedlings_in_Green_House.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seedlings_in_Green_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seedlings in Green House",
+      "author": "ProFlowers.com",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: cây non dưới mái nilon nhà kính (quyết định 14, alt mới \"Young plants under a plastic roof\"). Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      }
+    },
+    "q3.q3_green": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-fresh.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A green plant by a sunny window",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 12: bản khung 17:10 của q4.q4_fresh (pot-fresh.jpg); hai lựa chọn q3 cùng kiểu hình."
+    },
+    "q3.q3_wilted": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-drooping.17x10.jpg",
+        "method": "drawn"
+      },
+      "title": "A drooping plant in a pot",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). bản khung 17:10 của pot-drooping.jpg."
+    },
+    "q4.q4_dry": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-dry.jpg",
+        "method": "drawn"
+      },
+      "title": "A dry brown plant in a pot",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 12: hình tự vẽ cùng chậu, cùng cửa sổ với q4_fresh, explore_wilt: cây khô hẳn, thân và lá nâu rũ, đất nâu nhạt, vành chậu vài vết nứt nhỏ, hai lá khô rơi ở mặt trước tủ."
+    },
+    "q4.q4_fresh": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-fresh.jpg",
+        "method": "drawn"
+      },
+      "title": "A green plant by a sunny window",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 12: hình tự vẽ, hình gốc chậu tươi; ba thẻ q4 cùng một chậu, cùng cửa sổ."
+    },
+    "vocab.wilt": {
+      "own": {
+        "file": "content/images/own/cay-quanh-em/pot-drooping.2x1.jpg",
+        "method": "drawn"
+      },
+      "title": "A drooping plant in a pot",
+      "note": "Designer (agent) 18/11, SK-051: hình tự vẽ (PM đồng ý, ticket SK-051). bản khung 2:1 của pot-drooping.jpg."
+    },
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Young_paddy_in_promise.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Young_paddy_in_promise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Young paddy in promise",
+      "author": "Aerospectra",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "left": 0.0,
+        "top": 0.269,
+        "width": 1,
+        "height": 0.562
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của sinh-vat-song-o-dau/noi-song-cua-cay tray.tray_rice."
+    },
+    "w2": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w2.w2_marble": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Several_marbles.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Several_marbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Several marbles",
+      "author": "Conrad 7",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.0,
+        "top": 0.216,
+        "width": 1,
+        "height": 0.568
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song tray.tray_marble."
+    },
+    "w2.w2_beans": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Pasulj_mung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung beans",
+      "author": "Maduixa at Serbian Wikipedia",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Pasulj_mung.JPG",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_2 của cay-quanh-em/cay-moc-len-tu-hat learn.explore.explore_seeds.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.206,
+        "width": 0.75,
+        "height": 0.588
+      }
+    },
+    "tray.tray_dry_grass": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Last_year%27s_tufts_of_grass_-_overcast_day.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Last_year%27s_tufts_of_grass_-_overcast_day.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Last year's tufts of grass - overcast day",
+      "author": "W.carter",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.2187,
+        "top": 0,
+        "width": 0.5626,
+        "height": 1
+      },
+      "note": "Designer (agent) 18/11, SK-051 tester B3: thay same_as dong-co-xavan explore_dry (khung vuông có cây to giữa ảnh). Không cắt lại được ảnh xavan: dải cỏ trong bản 1280×720 chỉ cao ~220 px, khung vuông quá nhỏ. Đã thử ảnh cỏ vàng Maui (CC0) nhưng khung vuông chỉ cỏ ra 324 px, bỏ. Ảnh riêng 4963×2792 (Gåseberg, Thuỵ Điển), trang gốc ghi CC0, Category:Dry grass in Sweden. Cắt vuông giữa: kín khung là bụi cỏ khô vàng nâu rạp xuống, vài chỗ còn chút xanh; không cây, không trời, không người, không chữ."
+    },
+    "tray.tray_stick": {
+      "same_as": "tray.tray_stick",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_window": {
+      "same_as": "learn.explore.explore_needs"
+    },
+    "tray.tray_sprouts": {
+      "same_as": "learn.explore.explore_dark"
+    },
+    "tray.tray_car": {
+      "same_as": "tray.tray_car",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "tray.tray_young_plants": {
+      "same_as": "tray.tray_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_scarf": {
+      "same_as": "q4.q4_scarf",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "q1.q1_can": {
+      "same_as": "q1.q1_can",
+      "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+    },
+    "q1.q1_ball": {
+      "source": "Openverse/Flickr",
+      "source_url": "https://www.flickr.com/photos/23307937@N04/3850507754",
+      "file_url": "https://live.staticflickr.com/2574/3850507754_eff1e02a6b_b.jpg",
+      "title": "rubber ball convention",
+      "author": "frankieleon",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "openverse_id": "fa060af6-494d-4523-b48e-9d20abcfbb8f",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của thoi-tiet-va-cac-mua/thoi-tiet-hom-nay tray.tray_ball."
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sedum_morganianum_(donkey%27s_tail).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Sedum_morganianum_%28donkey%27s_tail%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green plant by a sunny window",
+      "author": "Paradoxurus",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051 tester B1: bản cắt khung question (4:3) của learn.explore.explore_needs (trước là bản cắt của explore_dark). Chép mục vì same_as không mang crop riêng; cắt bỏ một dải trên (lưới cửa sổ) và dưới (gờ tủ tối), giữ cả chậu và cây.",
+      "crop": {
+        "left": 0,
+        "top": 0.13,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "q3": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_drooping": {
+      "same_as": "learn.explore.explore_wilt"
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_young": {
+      "same_as": "q5.q5_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q5.q5_sprouts": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mung_bean_sprouts_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mung_bean_sprouts_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung bean sprouts 1",
+      "author": "chomjong",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051 quyết định 11: bản cắt khung choice_3 (5:2) của learn.explore.explore_dark; đáp án q5 là giá đỗ.",
+      "crop": {
+        "left": 0,
+        "top": 0.3,
+        "width": 1,
+        "height": 0.4
+      }
+    },
+    "q5.q5_rice": {
+      "same_as": "q5.q5_rice",
+      "lesson": "sinh-vat-song-o-dau/noi-song-cua-cay"
+    },
+    "q6": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "d6fe030b-7220-4b85-9031-97af6e9d8d72",
+      "source_url": "https://www.flickr.com/photos/60944636@N00/52399196242",
+      "file_url": "https://live.staticflickr.com/65535/52399196242_9f855d5de7_b.jpg",
+      "title": "planted seeds and watering can 20220926_065444",
+      "author": "el cajon yacht club",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0.125,
+        "top": 0.125,
+        "width": 0.75,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của thoi-tiet-va-cac-mua/mua-mua-va-mua-kho tray.tray_watering_can."
+    },
+    "vocab.water": {
+      "same_as": "q1.q1_can",
+      "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+    },
+    "vocab.light": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sedum_morganianum_(donkey%27s_tail).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Sedum_morganianum_%28donkey%27s_tail%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A green plant by a sunny window",
+      "author": "Paradoxurus",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_needs.",
+      "crop": {
+        "left": 0,
+        "top": 0.25,
+        "width": 1,
+        "height": 0.5
+      }
+    },
+    "vocab.warm": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Seedlings_in_Green_House.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seedlings_in_Green_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Seedlings in Green House",
+      "author": "ProFlowers.com",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_warm.",
+      "crop": {
+        "left": 0.167,
+        "top": 0.25,
+        "width": 0.667,
+        "height": 0.5
+      }
+    },
+    "reward.bean_sprout_card": {
+      "same_as": "learn.explore.explore_dark"
+    }
+  }
+}

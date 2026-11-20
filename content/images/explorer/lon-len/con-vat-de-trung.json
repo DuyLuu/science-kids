@@ -1,0 +1,238 @@
+{
+  "note": "SK-053 Lớn lên, bài con-vat-de-trung. Designer (agent) chọn 19/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Hình của Discoverer chép đủ mục. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1, câu 4:3) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 5. Hình tự vẽ (SK-053 quyết định 8): không. Hình ghép: không.",
+  "images": {
+    "learn.explore.explore_hatch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Newly-hatched_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Newly-hatched_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Newly-hatched chickens",
+      "author": "Otwarte Klatki",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.0234,
+        "top": 0.3006,
+        "width": 0.4844,
+        "height": 0.6212
+      },
+      "note": "Designer (agent) 19/11, SK-053: gà con đang chui ra khỏi vỏ trứng giữa ổ trứng và gà con vừa nở (lò ấp); không máu, không lộ phôi. Lượt 2 (tester B4): cắt khung vuông vào một gà con ướt đang chui ra từ vỏ trứng nứt (thấy mỏ, lông ướt, nửa vỏ trên), các trứng khác làm nền; gà con khô chỉ còn một mảng lông ở mép trên."
+    },
+    "learn.explore.explore_ducklings": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duckling_chicks_(Unsplash).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Duckling_chicks_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Duckling chicks (Unsplash)",
+      "author": "Roksolana Zasiadko cieloadentro",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 19/11, SK-053: đàn vịt con (vịt xiêm/Muscovy con) lông vàng, đầu nâu, chụp gần trong hộp; không vịt mẹ, không tay. Không phải trên cỏ (ảnh vịt con trên cỏ 1280 px bị Wikimedia chặn tải bản gốc, HTTP 429). Hình gốc của chủ đề."
+    },
+    "tray.tray_turtles": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Loggerhead_sea_turtle_hatchlings_caretta_caretta.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Loggerhead_sea_turtle_hatchlings_caretta_caretta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Loggerhead sea turtle hatchlings caretta caretta",
+      "author": "U.S. Fish and Wildlife Service",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Loggerhead_sea_turtle_hatchlings_caretta_caretta.jpg",
+      "note": "Designer (agent) 19/11, SK-053: hai rùa biển con (Caretta caretta) bò trên cát."
+    },
+    "tray.tray_fry": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rainbow_Trout_Fry_(51309699084).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Rainbow_Trout_Fry_%2851309699084%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rainbow Trout Fry (51309699084)",
+      "author": "USFWS Mountain Prairie",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Rainbow_Trout_Fry_(51309699084).jpg",
+      "note": "Designer (agent) 19/11, SK-053: đàn cá hồi vân con (Oncorhynchus mykiss, loài đẻ trứng) bơi trong bể ương; không có ảnh cá chép con hợp giấy phép."
+    },
+    "q4.q4_egg": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duck_eggs.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Duck_eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Duck eggs",
+      "author": "Wilfredor",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 19/11, SK-053: ổ trứng vịt trắng trên vụn gỗ có lông tơ; trứng nguyên, không chữ."
+    },
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sparrow_(136201105).jpeg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sparrow_%28136201105%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Sparrow",
+      "author": "Vitalii Shmorgun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "note": "Designer (agent) 19/11, SK-053: chép mục gốc discoverer/ho-hap/vi-sao-ta-phai-tho tray.tray_sparrow (same_as không sang nhóm tuổi khác)."
+    },
+    "w2": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "w2.w2_calf": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "w2.w2_piglets": {
+      "same_as": "learn.explore.explore_piglets",
+      "lesson": "lon-len/con-vat-de-con"
+    },
+    "learn.explore.explore_lay": {
+      "same_as": "learn.explore.explore_eggs",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "learn.explore.explore_grow": {
+      "same_as": "learn.explore.explore_animals",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_chick": {
+      "same_as": "w1.w1_chick",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_kitten": {
+      "same_as": "q4",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "tray.tray_ducklings": {
+      "same_as": "learn.explore.explore_ducklings"
+    },
+    "tray.tray_piglets": {
+      "same_as": "learn.explore.explore_piglets",
+      "lesson": "lon-len/con-vat-de-con"
+    },
+    "q1": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q1.q1_kitten": {
+      "same_as": "q3.q3_kitten",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q1.q1_ducklings": {
+      "same_as": "learn.explore.explore_ducklings"
+    },
+    "q1.q1_calf": {
+      "same_as": "q3",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Newly-hatched_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Newly-hatched_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Newly-hatched chickens",
+      "author": "Otwarte Klatki",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.3307,
+        "width": 0.5625,
+        "height": 0.5411
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B4): bản cắt khung câu 4:3 của learn.explore.explore_hatch, cùng gà con đang chui khỏi vỏ."
+    },
+    "q3": {
+      "same_as": "learn.explore.explore_ducklings"
+    },
+    "q4": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q4.q4_duck": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "35607c2a-2e06-496d-b264-6858e2133075",
+      "source_url": "https://www.flickr.com/photos/24490288@N04/54658620907",
+      "file_url": "https://live.staticflickr.com/65535/54658620907_c23903a840_b.jpg",
+      "title": "Mallard Duck",
+      "author": "Oneterry AKA Terry Kearney",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.1953,
+        "width": 1,
+        "height": 0.75
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester c3): thay vịt Laufente xám bằng vịt mái lông nâu đốm (vịt trời Anas platyrhynchos, tổ tiên của vịt nhà) đang bước trên bờ ao, mỏ vàng cam, chân cam; vài con vịt bơi mờ phía sau. Hợp chuỗi trứng vịt → vịt con lông vàng đầu nâu hơn vịt xám đứng thẳng. Flickr ghi CC0 (đã mở trang 19/11)."
+    },
+    "q4.q4_ducklings": {
+      "same_as": "learn.explore.explore_ducklings"
+    },
+    "q5": {
+      "same_as": "w1",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q5.q5_piglets": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piglets_and_sow.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Piglets_and_sow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Piglets and sow",
+      "author": "rockindave1",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.06,
+        "top": 0.3,
+        "width": 0.667,
+        "height": 0.4
+      },
+      "note": "Designer (agent) 19/11, SK-053: bản cắt khung choice_3 của lon-len/con-vat-de-con learn.explore.explore_piglets."
+    },
+    "q5.q5_turtles": {
+      "same_as": "tray.tray_turtles"
+    },
+    "q5.q5_kitten": {
+      "same_as": "q3.q3_kitten",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    },
+    "q6": {
+      "same_as": "learn.explore.explore_eggs",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "vocab.egg": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_eggs_in_nest_(4782183732).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Chicken_eggs_in_nest_%284782183732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Chicken eggs in nest (4782183732)",
+      "author": "brittgow",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.1234,
+        "top": 0.2407,
+        "width": 0.7031,
+        "height": 0.4688
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B5): chép mục learn.explore.explore_eggs của goi-ten-va-nhom-dong-vat/chim-va-bo-sat kèm khung thẻ từ 2:1, dải ngang qua ba quả trứng trong ổ rơm."
+    },
+    "vocab.hatch": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Newly-hatched_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Newly-hatched_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Newly-hatched chickens",
+      "author": "Otwarte Klatki",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0,
+        "top": 0.3307,
+        "width": 0.6875,
+        "height": 0.4409
+      },
+      "note": "Designer (agent) 19/11 lượt 2, SK-053 (tester B4, B5): bản cắt khung thẻ từ 2:1 của learn.explore.explore_hatch; gà con đang nở ở giữa trái, mép phải lộ đầu một gà con khác."
+    },
+    "vocab.chick": {
+      "same_as": "w1.w1_chick",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "vocab.duckling": {
+      "same_as": "learn.explore.explore_ducklings"
+    },
+    "reward.duck_card": {
+      "same_as": "tray.tray_duck",
+      "lesson": "goi-ten-va-nhom-dong-vat/ca-va-luong-cu"
+    }
+  }
+}

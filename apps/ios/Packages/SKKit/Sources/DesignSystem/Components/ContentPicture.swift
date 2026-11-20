@@ -24,6 +24,19 @@ public struct ContentPicture: View {
         /// Chơi shelf), so the photo spans the cell instead of a small square in its middle. The
         /// cell's height does not change: the box is exactly as high as the stand-in art.
         case fillWidth
+        /// SK-059 (xem to): the whole photo, never cropped, at most `size` wide and `maxHeight`
+        /// high, its own shape (`wholeSize`); square until the photo is read.
+        case whole(maxHeight: CGFloat)
+    }
+
+    /// The box of a whole photo of `aspect` (width ÷ height) in `maxWidth` × `maxHeight`.
+    nonisolated public static func wholeSize(aspect: CGFloat, maxWidth: CGFloat, maxHeight: CGFloat) -> CGSize {
+        guard aspect.isFinite, aspect > 0, maxWidth > 0, maxHeight > 0 else {
+            let side = max(0, min(maxWidth, maxHeight))
+            return CGSize(width: side, height: side)
+        }
+        let width = min(maxWidth, maxHeight * aspect)
+        return CGSize(width: width, height: width / aspect)
     }
 
     private let asset: String?
@@ -100,6 +113,7 @@ private struct PhotoPiece: View {
                 switch box {
                 case .square: square
                 case .fillWidth: photo(width: nil).frame(maxWidth: .infinity)
+                case .whole(let maxHeight): wholePhoto(maxHeight: maxHeight)
                 }
             }
         }
@@ -159,6 +173,28 @@ private struct PhotoPiece: View {
             } action: { newSize in
                 boxSize = newSize
             }
+            .paperDropShadow(Tokens.Shadow.paper1)
+            .task(id: "\(hash)@\(side)") {
+                await load(side: side)
+            }
+    }
+
+    /// SK-059: the whole photo in a box of its own shape (no crop), the paper's radius.
+    private func wholePhoto(maxHeight: CGFloat) -> some View {
+        let shape = RoundedRectangle(cornerRadius: PaperMetrics.pictureRadius, style: .continuous)
+        let side = PictureStore.pixelSide(for: CGSize(width: size, height: maxHeight), scale: scale)
+        let shown = loaded.flatMap { $0.hash == hash ? $0.picture : nil } ?? store.cachedPicture(hash, side: side)
+        let aspect = shown.map { CGFloat($0.pixelWidth) / CGFloat(max($0.pixelHeight, 1)) } ?? 1
+        let fitted = ContentPicture.wholeSize(aspect: aspect, maxWidth: size, maxHeight: maxHeight)
+        return shape
+            .fill(Tokens.Role.surfaceSunken)
+            .overlay {
+                if let shown {
+                    Image(decorative: shown.cgImage, scale: scale).resizable().scaledToFill().allowsHitTesting(false)
+                }
+            }
+            .frame(width: fitted.width, height: fitted.height)
+            .clipShape(shape)
             .paperDropShadow(Tokens.Shadow.paper1)
             .task(id: "\(hash)@\(side)") {
                 await load(side: side)

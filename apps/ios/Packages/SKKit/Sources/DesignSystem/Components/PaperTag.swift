@@ -18,7 +18,8 @@ import SwiftUI
 /// ```
 public struct PaperTag: View {
     public enum Style: Sendable, Equatable {
-        case cut(fill: Color = Tokens.Role.actionPrimary, eyebrow: Bool = false)
+        /// `text`: the letters' colour; on a content colour pass its `text_on_content` (SK-060).
+        case cut(fill: Color = Tokens.Role.actionPrimary, text: Color = Tokens.Role.textOnAccent, eyebrow: Bool = false)
         case chip(dot: Color)
         case label
     }
@@ -37,10 +38,10 @@ public struct PaperTag: View {
 
     public var body: some View {
         switch style {
-        case .cut(let fill, let eyebrow):
+        case .cut(let fill, let ink, let eyebrow):
             text
                 .typography(eyebrow ? Tokens.Typography.eyebrow : Tokens.Typography.label)
-                .foregroundStyle(Tokens.Role.textOnAccent)
+                .foregroundStyle(ink)
                 .padding(.vertical, Tokens.Space.s4)
                 .padding(.horizontal, Tokens.Space.s10)
                 .background(ChamferShape().fill(fill))

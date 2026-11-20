@@ -442,7 +442,7 @@ explanation_correct.en: Yes! Egg, then chick, then hen.
 explanation_correct.vi: Đúng rồi! Quả trứng, rồi gà con, rồi gà mái.
 explanation_wrong.en: The order is egg, chick, hen.
 explanation_wrong.vi: Thứ tự là quả trứng, gà con, gà mái.
-> DOK 2: sắp xếp theo ý "chim đẻ trứng" (ý chính ba, ví dụ ba của ô "Eggs"). Không dạy vòng đời đầy đủ (để dành *Sự sống mới*). Thẻ trong file không theo thứ tự đúng.
+> DOK 2: sắp xếp theo ý "chim đẻ trứng" (ý chính ba, ví dụ ba của ô "Eggs"). Không dạy vòng đời đầy đủ (để dành *Lớn lên*, Explorer số 8 trong danh mục). Thẻ trong file không theo thứ tự đúng.
 > Hình câu hỏi là sân nhà trống, không dùng ảnh gà mẹ và gà con của bài một (có sẵn hai trong ba thẻ).
 
 #### item q4_chick

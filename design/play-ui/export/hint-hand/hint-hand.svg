@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="89" viewBox="-4 -2 72 94.2">
+<!-- SK-059 · Bàn tay gợi ý (chạm, giữ rồi kéo) ở màn Chơi. Sáu mảnh giấy cắt, không nét viền; bóng paperE từng mảnh.
+     Nguồn của ArtHintHand (PNG @2x/@3x bóng nướng sẵn, xuất bằng export.sh). Đầu ngón trỏ: (26, 5) pt trong khung 68×89. -->
+<defs>
+<filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+<feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="t"/>
+<feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feDropShadow in="d" dx="0" dy="2.5" stdDeviation="1.8" flood-color="#5B3B17" flood-opacity="0.32"/>
+</filter>
+</defs>
+<g filter="url(#paperE)"><path d="M20 66h30l3 18H17z" fill="#3B6E6A"/></g>
+<g filter="url(#paperE)"><path d="M13 42q0-8 8-8h26q9 0 9 9v14q0 13-13 13H27q-14 0-14-13z" fill="#E4B48A"/></g>
+<g filter="url(#paperE)"><rect x="30" y="30" width="10" height="17" rx="5" fill="#D6A074"/><rect x="39" y="31" width="10" height="16" rx="5" fill="#D6A074"/><rect x="47.5" y="34" width="9" height="14" rx="4.5" fill="#D6A074"/></g>
+<g filter="url(#paperE)"><rect x="17" y="3" width="13.5" height="44" rx="6.75" fill="#E4B48A"/></g>
+<g filter="url(#paperE)"><path d="M14 52q-9-3-8.5-11 .5-6 6.5-4l11 8z" fill="#D6A074"/></g>
+<rect x="19.5" y="5" width="8.5" height="9" rx="4.25" fill="#F2D6BA"/>
+</svg>

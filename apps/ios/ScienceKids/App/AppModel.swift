@@ -164,7 +164,8 @@ final class AppModel {
     }
 
     private func use(_ ready: AppContent, now: Date) {
-        speech.loader = ready.clips
+        // SK-059: the app-line clips (`ui-voice/`) first, then the pack's.
+        speech.loader = UIVoiceClips(catalog: UIVoiceCatalog.main, next: ready.clips)
         onboarding.worldsWithLessons = Set(Topic.AgeGroup.known.filter { group in
             ready.journey(for: group).contains { $0.firstPlayable != nil }
         }.map(\.rawValue))

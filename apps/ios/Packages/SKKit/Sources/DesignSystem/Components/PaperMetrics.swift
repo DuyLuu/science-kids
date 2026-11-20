@@ -146,6 +146,8 @@ public enum PaperMetrics {
     /// Strip padding (`padding: 14px 8px 18px 8px`); below the content the home indicator area
     /// adds its own room, so the bottom padding is smaller than the canvas's.
     public static let navPadding = EdgeInsets(top: Tokens.Space.s14, leading: Tokens.Space.s8, bottom: Tokens.Space.s8, trailing: Tokens.Space.s8)
+    /// The strip's height above the home indicator area: 14 + 58 + 8 = 80 (SK-060, designer 20/11).
+    public static let navStripHeight: CGFloat = navPadding.top + navItemMinHeight + navPadding.bottom
 
     // MARK: Header chips (SK-011, canvas Home)
 

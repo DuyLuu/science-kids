@@ -69,6 +69,36 @@ final class OnboardingUITests: XCTestCase {
         }
     }
 
+    /// SK-060: the syllabus the app bundles (`content/syllabus.json`), read through `#filePath`, so
+    /// the topic counts and "a topic with no lesson written" follow the content as it is written.
+    private struct SyllabusGroup {
+        let topics: [(key: String, lessons: Int, written: Bool)]
+    }
+
+    private static func syllabus(file: String = #filePath) throws -> [String: SyllabusGroup] {
+        var dir = URL(fileURLWithPath: file).deletingLastPathComponent()
+        while dir.path != "/", !FileManager.default.fileExists(atPath: dir.appendingPathComponent("content/syllabus.json").path) {
+            dir.deleteLastPathComponent()
+        }
+        let data = try Data(contentsOf: dir.appendingPathComponent("content/syllabus.json"))
+        let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] ?? [:]
+        var groups: [String: SyllabusGroup] = [:]
+        for group in json["groups"] as? [[String: Any]] ?? [] {
+            let topics = (group["topics"] as? [[String: Any]] ?? []).map { topic in
+                let lessons = topic["lessons"] as? [[String: Any]] ?? []
+                return (key: topic["key"] as? String ?? "", lessons: lessons.count, written: lessons.contains { $0["lesson_id"] != nil })
+            }
+            groups[group["age_group"] as? String ?? ""] = SyllabusGroup(topics: topics)
+        }
+        return groups
+    }
+
+    /// The lesson opened from a topic row or the Home card: since SK-043 a lesson opens on its
+    /// first question (Discoverer: the header squares; Explorer: its own squares), no title screen.
+    private func lessonOpened(_ app: XCUIApplication, timeout: TimeInterval = 5) -> Bool {
+        element(app, "lesson.progress").waitForExistence(timeout: timeout) || element(app, "lesson.explorer.progress").exists
+    }
+
     private func openTopic(_ app: XCUIApplication) {
         // SK-030: Ăn uống lành mạnh is Discoverer #9 (the tap scrolls to it).
         app.buttons["home.topic.healthy-eating"].tap()
@@ -137,9 +167,14 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertFalse(start.isEnabled)
         app.buttons["profile.grade.1"].tap()
         XCTAssertTrue(start.isEnabled)
-        // Lớp 1 is Explorer, which has no content yet: the card says the child tries Discoverer.
-        XCTAssertTrue(element(app, "profile.world").label.contains("Explorer"))
-        XCTAssertTrue(element(app, "profile.world").label.contains("Discoverer"))
+        // SK-060: Lớp 1 is Explorer, which has lessons since SK-045/046: no "học thử Discoverer".
+        XCTAssertTrue(element(app, "profile.world").label.contains("Explorer"), element(app, "profile.world").label)
+        XCTAssertFalse(element(app, "profile.world").label.contains("Discoverer"), element(app, "profile.world").label)
+        // Lớp 5 is Scientist, which has no content yet: the card says the child tries Discoverer.
+        app.buttons["profile.grade.5"].tap()
+        XCTAssertTrue(start.isEnabled)
+        XCTAssertTrue(element(app, "profile.world").label.contains("Scientist"), element(app, "profile.world").label)
+        XCTAssertTrue(element(app, "profile.world").label.contains("Discoverer"), element(app, "profile.world").label)
     }
 
     /// Criterion 4, SK-030: Home → Topic: title, big question, 10 lessons, none locked. Lesson 2
@@ -167,12 +202,13 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "label CONTAINS[c] 'mở sau bài'")).firstMatch.exists)
         app.buttons["topic.lesson.soon.1"].tap()
         XCTAssertTrue(app.staticTexts["Bài này đang được soạn, sắp có nhé."].waitForExistence(timeout: 2), "the note")
-        XCTAssertFalse(app.staticTexts["lesson.title"].exists, "an unwritten lesson opened")
+        XCTAssertFalse(element(app, "lesson.progress").exists, "an unwritten lesson opened")
         XCTAssertTrue(app.staticTexts["topic.title"].exists)
 
         lesson.tap()
-        XCTAssertTrue(app.staticTexts["lesson.title"].waitForExistence(timeout: 5), "lesson 2 did not open")
-        XCTAssertEqual(app.staticTexts["lesson.title"].label, "Thức ăn cho ta những gì?")
+        // SK-043: the lesson opens on its first Khởi động question (no title screen).
+        XCTAssertTrue(lessonOpened(app), "lesson 2 did not open")
+        XCTAssertTrue(element(app, "lesson.warmup.tag").exists, "lesson 2 opens on Khởi động")
         app.buttons["lesson.back"].tap()
         app.buttons["header.back"].tap()
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 5))
@@ -185,41 +221,51 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertGreaterThan(start.frame.minY, app.windows.firstMatch.frame.minY + 60, "the card is clear of the status bar")
         let named = app.otherElements["home.continue"].staticTexts.matching(NSPredicate(format: "label BEGINSWITH 'Bài '")).firstMatch
         XCTAssertTrue(named.exists, "the card names its lesson")
-        let cardLine = named.label
+        print("Home card: '\(named.label)'")
         start.tap()
-        XCTAssertTrue(app.staticTexts["lesson.title"].waitForExistence(timeout: 5))
-        XCTAssertTrue(cardLine.hasSuffix(app.staticTexts["lesson.title"].label), "'\(cardLine)' opened '\(app.staticTexts["lesson.title"].label)'")
+        // No title screen since SK-043 to compare the card's name with: the lesson opens.
+        XCTAssertTrue(lessonOpened(app), "the Home card did not open a lesson")
     }
 
-    /// SK-030: Home shows the 17 Discoverer topics of a Lớp 3 profile; the chips show Explorer
-    /// (13) and Scientist (16). A topic with no content (Discoverer #5 since SK-031 and SK-032
-    /// wrote #1 and #2) opens with its 5 lessons, no big question, no words chip. 10/11: the count
-    /// reads "17 chủ đề" (no "dễ → khó"; nothing started on a new profile).
+    /// SK-030: Home shows the Discoverer topics of a Lớp 3 profile; the chips show Explorer and
+    /// Scientist, each with its topic count. A topic with no content opens with its lessons, no big
+    /// question, no words chip. SK-060: the counts and the unwritten topic come from
+    /// `content/syllabus.json` (Explorer has lessons since SK-045, Discoverer #5 since SK-051…).
     func testEveryGroupAndAnUnwrittenTopic() throws {
+        let syllabus = try Self.syllabus()
+        let discoverer = try XCTUnwrap(syllabus["discoverer"]), explorer = try XCTUnwrap(syllabus["explorer"]), scientist = try XCTUnwrap(syllabus["scientist"])
+        let unwritten = try XCTUnwrap(discoverer.topics.first { !$0.written }, "every Discoverer topic has a lesson")
         let app = launch(reset: true)
         createProfile(app, mode: "bilingual")
         XCTAssertTrue(app.buttons["home.group.discoverer"].isSelected, "the profile's group by default")
-        XCTAssertTrue(app.staticTexts["17 chủ đề"].exists)
+        XCTAssertTrue(app.staticTexts["\(discoverer.topics.count) chủ đề"].exists)
         app.buttons["home.group.explorer"].tap()
-        XCTAssertTrue(app.staticTexts["13 chủ đề"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.staticTexts["\(explorer.topics.count) chủ đề"].waitForExistence(timeout: 2))
         XCTAssertEqual(element(app, "home.journey.title").label, "Hành trình Explorer")
-        XCTAssertFalse(app.buttons["home.start_lesson"].exists, "nothing written for Explorer")
+        XCTAssertEqual(app.buttons["home.start_lesson"].exists, explorer.topics.contains { $0.written }, "the card when Explorer has a lesson")
         app.buttons["home.group.scientist"].tap()
-        XCTAssertTrue(app.staticTexts["16 chủ đề"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.staticTexts["\(scientist.topics.count) chủ đề"].waitForExistence(timeout: 2))
         app.buttons["home.group.discoverer"].tap()
-        XCTAssertTrue(app.staticTexts["17 chủ đề"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.staticTexts["\(discoverer.topics.count) chủ đề"].waitForExistence(timeout: 2))
         // Lớp 3 is UK Year 4 (`Grade.ukYear`).
         XCTAssertEqual(element(app, "home.journey.title").label, "Hành trình Year 4")
 
-        app.buttons["home.topic.new-weather"].tap()
-        XCTAssertTrue(app.staticTexts["topic.title"].waitForExistence(timeout: 5), "an unwritten topic opens")
-        for number in 1...5 {
+        // The map draws its stops lazily: scroll to the unwritten topic.
+        let stop = app.buttons["home.topic.\(unwritten.key)"]
+        var swipes = 0
+        while !stop.isHittable, swipes < 12 {
+            swipes < 6 ? app.swipeUp() : app.swipeDown()
+            swipes += 1
+        }
+        stop.tap()
+        XCTAssertTrue(app.staticTexts["topic.title"].waitForExistence(timeout: 5), "an unwritten topic opens (\(unwritten.key))")
+        for number in 1...unwritten.lessons {
             XCTAssertTrue(app.buttons["topic.lesson.soon.\(number)"].exists, "lesson \(number)")
         }
-        XCTAssertFalse(app.buttons["topic.lesson.soon.6"].exists)
+        XCTAssertFalse(app.buttons["topic.lesson.soon.\(unwritten.lessons + 1)"].exists)
         XCTAssertFalse(app.staticTexts["topic.question"].exists)
         XCTAssertFalse(app.buttons["topic.words"].exists)
-        app.buttons["topic.lesson.soon.3"].tap()
+        app.buttons["topic.lesson.soon.1"].tap()
         XCTAssertTrue(app.staticTexts["Bài này đang được soạn, sắp có nhé."].waitForExistence(timeout: 2))
         app.buttons["header.back"].tap()
         XCTAssertTrue(app.staticTexts["home.greeting"].waitForExistence(timeout: 5))
@@ -243,6 +289,12 @@ final class OnboardingUITests: XCTestCase {
             XCTAssertFalse(app.staticTexts["Sắp có"].exists, tab)
             problems += try auditProblems(app, screen: id)
         }
+        // SK-060 (lỗi 4, ios-dev 20/11): scrolled to its end, the last item of Thẻ and Huy hiệu
+        // stops at least s16 (16 pt) above the tab strip's torn top edge.
+        for tab in ["Thẻ", "Huy hiệu"] {
+            app.buttons[tab].tap()
+            problems += bottomGapProblem(app, tab: tab)
+        }
         app.buttons["Huy hiệu"].tap()
         XCTAssertTrue(app.buttons["badges.badge.humans_health"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["badges.streak"].exists)
@@ -257,7 +309,7 @@ final class OnboardingUITests: XCTestCase {
         app.buttons["Từ vựng"].tap()
         XCTAssertTrue(app.staticTexts["words.title"].waitForExistence(timeout: 5))
         app.buttons["collection.empty.start"].tap()
-        XCTAssertTrue(app.staticTexts["lesson.title"].waitForExistence(timeout: 5))
+        XCTAssertTrue(lessonOpened(app), "Học bài đầu tiên did not open a lesson")
     }
 
     /// English (en_first, SK-042): English only, no Vietnamese line and no button to show it.
@@ -346,6 +398,10 @@ final class OnboardingUITests: XCTestCase {
     private func auditProblems(_ app: XCUIApplication, screen: String) throws -> [String] {
         var problems: [String] = []
         let window = app.windows.firstMatch.frame
+        // SK-060 (lỗi 4, phiên chính chốt 20/11, cách a): the top of the tab strip's solid paper
+        // (14 pt above its buttons); `nil` on a screen without the strip.
+        let stripPaperTop = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "tab."))
+            .allElementsBoundByIndex.map(\.frame.minY).min().map { $0 - 14 }
         for types: XCUIAccessibilityAuditType in [.contrast, .elementDetection, .hitRegion, .sufficientElementDescription, .trait, .textClipped, .dynamicType] {
             try app.performAccessibilityAudit(for: types) { issue in
                 let line = "audit[\(screen)]: \(issue.auditType.rawValue) \(issue.compactDescription) · "
@@ -353,6 +409,16 @@ final class OnboardingUITests: XCTestCase {
                 print(line + " | " + issue.detailedDescription)
                 if issue.auditType == .dynamicType, issue.compactDescription.contains("partially") { return true }
                 if let frame = issue.element?.frame, !window.insetBy(dx: -1, dy: -1).contains(frame) { return true }
+                // SK-060 (lỗi 4, cách a): page text that runs below the top of the tab strip's paper
+                // is sliding under solid paper (the child does not see it there); the audit measures
+                // the paper and its shadow. Only contrast, only page items (not the strip's own tabs);
+                // scrolled to the end those items stop ≥ 16 pt above it (`bottomGapProblem`).
+                if issue.auditType == .contrast, let top = stripPaperTop, let element = issue.element,
+                   !element.identifier.hasPrefix("tab."),
+                   !["Hành trình", "Thẻ", "Huy hiệu", "Từ vựng"].contains(element.label), element.frame.maxY > top {
+                    print("audit[\(screen)]: under the tab strip (paper top \(top)), not seen: '\(element.label)' \(element.frame)")
+                    return true
+                }
                 // The audit's element carries the visible text, not the identifier: match by label.
                 if issue.auditType == .contrast, let label = issue.element?.label,
                    Self.contrastAllowed[screen, default: []].contains(label) {
@@ -364,6 +430,50 @@ final class OnboardingUITests: XCTestCase {
             }
         }
         return problems
+    }
+
+    /// SK-060 (lỗi 4, ios-dev 20/11): scrolls the tab to its end and measures the gap between the
+    /// lowest item of the page and the top of the tab strip's paper (`PaperMetrics.navPadding.top`
+    /// = 14 above the tab buttons). A problem line when the gap is under `Tokens.Space.s16` (16);
+    /// what it measured is always printed, and the tab is left scrolled back to the top.
+    private func bottomGapProblem(_ app: XCUIApplication, tab: String) -> [String] {
+        var previous: [CGRect] = []
+        var swipes = 0
+        while swipes < 12 {
+            let frames = app.staticTexts.allElementsBoundByIndex.map(\.frame)
+            if !frames.isEmpty, frames == previous { break }
+            previous = frames
+            app.swipeUp()
+            swipes += 1
+            usleep(500_000)
+        }
+        defer { for _ in 0...swipes { app.swipeDown() } }
+        let strip = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "tab."))
+            .allElementsBoundByIndex.map(\.frame)
+        guard let stripTop = strip.map(\.minY).min() else { return ["bottom gap[\(tab)]: no tab strip"] }
+        let paperTop = stripTop - 14
+        let window = app.windows.firstMatch.frame
+        let tabNames: Set<String> = ["Hành trình", "Thẻ", "Huy hiệu", "Từ vựng"]
+        var lowest: (maxY: CGFloat, what: String)?
+        let candidates = app.staticTexts.allElementsBoundByIndex
+            + app.images.allElementsBoundByIndex
+            + app.buttons.allElementsBoundByIndex
+        for element in candidates {
+            let frame = element.frame
+            // Items of the page only: not the strip's own buttons and labels, nothing page-sized,
+            // nothing fully off screen. An item sliding under the strip still counts: that is the bug.
+            guard frame.width > 0, frame.height > 0, frame.height < 400 else { continue }
+            if element.identifier.hasPrefix("tab.") || tabNames.contains(element.label) { continue }
+            if frame.minY > window.maxY { continue }
+            if lowest == nil || frame.maxY > lowest!.maxY {
+                lowest = (frame.maxY, "\(element.elementType.rawValue) '\(element.label)' \(element.identifier) \(frame)")
+            }
+        }
+        guard let last = lowest else { return ["bottom gap[\(tab)]: nothing on the page"] }
+        let gap = paperTop - last.maxY
+        let line = "bottom gap[\(tab)]: \(String(format: "%.1f", gap)) pt after \(swipes) swipes · strip paper top \(paperTop) · last \(last.what)"
+        print(line)
+        return gap < 15.5 ? ["\(line) — under s16 (SK-060 lỗi 4)"] : []
     }
 
     func testAccessibilityAudit() throws {
@@ -416,7 +526,7 @@ final class OnboardingUITests: XCTestCase {
         app.swipeUp()
         try shot("5-topic-bottom")
         app.buttons["topic.lesson.2"].tap()
-        XCTAssertTrue(app.staticTexts["lesson.title"].waitForExistence(timeout: 5))
+        XCTAssertTrue(lessonOpened(app))
         try shot("6-lesson-warmup")
         app.buttons["lesson.back"].tap()
         app.buttons["header.back"].tap()

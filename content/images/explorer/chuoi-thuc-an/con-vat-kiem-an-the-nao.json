@@ -248,7 +248,20 @@
       "lesson": "goi-ten-va-nhom-dong-vat/con-vat-an-gi"
     },
     "vocab.feed": {
-      "same_as": "learn.explore.explore_fed"
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Man_feeds_his_chickens.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Man_feeds_his_chickens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Man feeds his chickens",
+      "author": "Matt Seppings from London, UK",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "crop": {
+        "left": 0.515,
+        "top": 0.245,
+        "width": 0.485,
+        "height": 0.3233
+      },
+      "note": "Cùng ảnh `learn.explore.explore_fed`, crop 2:1 riêng cho thẻ từ (designer 16/11, thẻ từ Explorer trên máy là khung ngang 2:1; app cắt giữa crop learn thì chỉ còn đầu ngón tay): cả hai bàn tay đưa thức ăn và đầu hai con gà mái; mép trái dừng ở x 0,515, không thấy mặt người."
     },
     "reward.owl_card": {
       "same_as": "tray.tray_owl"

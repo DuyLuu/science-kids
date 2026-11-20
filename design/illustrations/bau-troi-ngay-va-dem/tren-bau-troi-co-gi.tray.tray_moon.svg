@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+  <filter id="paperE" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="5" stdDeviation="4" flood-color="#5B3B17" flood-opacity="0.30"/>
+  </filter>
+  <filter id="paperS" x="-10%" y="-10%" width="120%" height="135%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDropShadow in="d" dx="0" dy="3" stdDeviation="2.5" flood-color="#2A1A08" flood-opacity="0.30"/>
+  </filter>
+</defs><rect width="1024" height="1024" fill="#FBF6EA"/><g filter="url(#paperE)"><circle cx="512" cy="512" r="380" fill="#EADFC4"/></g><g filter="url(#paperE)"><path d="M 500 282 A 230 230 0 0 0 500 742 A 299 299 0 0 1 500 282 Z" fill="#E2A52A" transform="rotate(-25 500 512)"/></g><g filter="url(#paperS)"><path d="M760 274 Q764.68 295.32 786 300 Q764.68 304.68 760 326 Q755.32 304.68 734 300 Q755.32 295.32 760 274 Z" fill="#C98E2A"/><path d="M790 670 Q793.6 686.4 810 690 Q793.6 693.6 790 710 Q786.4 693.6 770 690 Q786.4 686.4 790 670 Z" fill="#C98E2A"/><path d="M270 242 Q273.24 256.76 288 260 Q273.24 263.24 270 278 Q266.76 263.24 252 260 Q266.76 256.76 270 242 Z" fill="#C98E2A"/></g></svg>

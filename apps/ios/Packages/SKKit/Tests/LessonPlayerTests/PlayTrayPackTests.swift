@@ -48,7 +48,8 @@ import Testing
         #expect(try buildTray(block: tray.trayRules, tray: ["tray_ant"], taps: ["tray_ant"]).get().tray.isEmpty)
     }
 
-    /// Every tray of the pack (19 Explorer, 40 Discoverer): one item of each required group, in the
+    /// Every tray of the pack (20/11, SK-061 pack with "Bầu trời ngày và đêm": 104 trays, 64 Explorer,
+    /// 40 Discoverer; counted from `content/.build/pack`): one item of each required group, in the
     /// content's order or the other way round, balances; no required group is empty and the tray
     /// has room for one of each. So the harness' choice is right for every lesson.
     @Test(.enabled(if: EmbeddedPack.isBuilt))
@@ -71,7 +72,7 @@ import Testing
                 }
             }
         }
-        #expect(trays == 59)
-        #expect(explorer == 19)
+        #expect(trays == 104, "pack of 20/11 (SK-061)")
+        #expect(explorer == 64, "pack of 20/11 (SK-061): 10 Explorer topics written")
     }
 }

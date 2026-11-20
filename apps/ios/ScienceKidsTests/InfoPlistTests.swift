@@ -188,12 +188,14 @@ import UIKit
     }
 
     /// SK-031: the card names its set (`collectible.set.<set>`); a set the app has no name for yet
-    /// shows the generic "Cards" · "Thẻ", never the raw key. SK-032 (Duy 9/11) adds `dinosaurs`.
+    /// shows the generic "Cards" · "Thẻ", never the raw key. SK-032 (Duy 9/11) adds `dinosaurs`,
+    /// SK-053 (Explorer #8 "Lớn lên") `life_cycles`, SK-058 (Explorer #9 "Núi, sông và biển") `landforms`,
+    /// SK-061 (Explorer #10 "Bầu trời ngày và đêm") `sky`.
     @Test(arguments: [
-        ("en", "Earth cards", "Food cards", "Dinosaur cards", "Cards"),
-        ("vi", "Thẻ Trái Đất", "Thẻ thực phẩm", "Thẻ khủng long", "Thẻ"),
+        ("en", "Earth cards", "Food cards", "Dinosaur cards", "Life cycle cards", "Landform cards", "Sky cards", "Cards"),
+        ("vi", "Thẻ Trái Đất", "Thẻ thực phẩm", "Thẻ khủng long", "Thẻ vòng đời", "Thẻ núi sông", "Thẻ bầu trời", "Thẻ"),
     ])
-    func collectibleSetNames(language: String, earth: String, food: String, dinosaurs: String, generic: String) throws {
+    func collectibleSetNames(language: String, earth: String, food: String, dinosaurs: String, lifeCycles: String, landforms: String, sky: String, generic: String) throws {
         let bundle = try Self.bundle(language)
         func name(_ set: String) -> String {
             bundle.localizedString(forKey: CollectibleSetName.key(for: set, in: bundle), value: "<missing>", table: nil)
@@ -203,6 +205,12 @@ import UIKit
         #expect(name("food") == food)
         #expect(CollectibleSetName.key(for: "dinosaurs", in: bundle) == "collectible.set.dinosaurs")
         #expect(name("dinosaurs") == dinosaurs)
+        #expect(CollectibleSetName.key(for: "life_cycles", in: bundle) == "collectible.set.life_cycles")
+        #expect(name("life_cycles") == lifeCycles)
+        #expect(CollectibleSetName.key(for: "landforms", in: bundle) == "collectible.set.landforms")
+        #expect(name("landforms") == landforms)
+        #expect(CollectibleSetName.key(for: "sky", in: bundle) == "collectible.set.sky")
+        #expect(name("sky") == sky)
         #expect(CollectibleSetName.key(for: "volcanoes", in: bundle) == CollectibleSetName.genericKey)
         #expect(name("volcanoes") == generic)
         #expect(name("") == generic)

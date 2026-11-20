@@ -1,0 +1,327 @@
+{
+  "note": "SK-051 Cây quanh em, bài cay-to-re-than-canh-la. Designer (agent) chọn 18/11/2026, chờ Duy duyệt. Ảnh chụp thật, nguồn chỉ CC0, Public domain, PDM, CC BY (ghi công), đã mở trang gốc kiểm. Ảnh gốc của chủ đề nằm ở bài phụ trách theo bảng Hình dùng chung (_topic.md); bài khác trỏ same_as + lesson. Chỗ khung lệch xa (thẻ 5:2, 17:10, thẻ từ 2:1) dùng mục cắt khung riêng của cùng ảnh. Ảnh mới: 5. Hình tự vẽ (PM đồng ý, SK-051): không.",
+  "images": {
+    "learn.explore.explore_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa at Plage de l'Anse de Nogent (1)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: cả cây bàng (Terminalia catappa), thấy gốc, thân, tán. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.175,
+        "top": 0,
+        "width": 0.649,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_roots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: rễ to trồi lên quanh gốc cây (không phải cây đa). Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "learn.explore.explore_tree_trunk": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A thick tree trunk",
+      "author": "W.carter",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "note": "Designer (agent) 18/11, SK-051: thân cây to nhìn từ gốc lên, thấy cành toả ra. Hình gốc của chủ đề.",
+      "crop": {
+        "left": 0,
+        "top": 0.146,
+        "width": 1,
+        "height": 0.707
+      }
+    },
+    "tray.tray_bark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_bark_brown.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Tree_bark_brown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rough tree bark",
+      "author": "Cs268",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: vỏ cây sần cận cảnh.",
+      "crop": {
+        "left": 0.125,
+        "top": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "reward.kapok_card": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bombax_ceiba_253588271.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Bombax_ceiba_253588271.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Bombax ceiba 253588271",
+      "author": "madhavan a.p",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: cây gạo (Bombax ceiba, đúng loài theo trang gốc) nở hoa đỏ trên cành trụi lá.",
+      "crop": {
+        "left": 0.167,
+        "top": 0,
+        "width": 0.667,
+        "height": 1
+      }
+    },
+    "w1": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mung_bean_sprouts_1.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mung_bean_sprouts_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Mung bean sprouts 1",
+      "author": "chomjong",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của cay-quanh-em/cay-can-gi-de-lon learn.explore.explore_dark.",
+      "crop": {
+        "left": 0,
+        "top": 0.125,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "w2": {
+      "same_as": "learn.explore.explore_trunk",
+      "lesson": "sinh-vat-song-o-dau/nhung-noi-song-nho-xiu"
+    },
+    "learn.explore.explore_branches": {
+      "same_as": "reward.mango_card",
+      "lesson": "thoi-tiet-va-cac-mua/mua-mua-va-mua-kho"
+    },
+    "tray.tray_sparrow": {
+      "same_as": "tray.tray_sparrow",
+      "lesson": "goi-ten-va-nhom-dong-vat/chim-va-bo-sat"
+    },
+    "tray.tray_roots": {
+      "same_as": "learn.explore.explore_roots"
+    },
+    "tray.tray_red_leaves": {
+      "same_as": "reward.almond_card",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "tray.tray_big_trunk": {
+      "same_as": "learn.explore.explore_tree_trunk"
+    },
+    "tray.tray_cicada": {
+      "same_as": "tray.tray_cicada",
+      "lesson": "thoi-tiet-va-cac-mua/mua-xuan-va-mua-he"
+    },
+    "tray.tray_green_leaves": {
+      "same_as": "q4.q4_green",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q1": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q1.q1_leaves": {
+      "same_as": "vocab.leaf",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q1.q1_roots": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exposed_tree_roots_along_Clearwater_River.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Exposed_tree_roots_along_Clearwater_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Exposed tree roots along Clearwater River",
+      "author": "PinchyCC",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_roots.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.3,
+        "width": 0.75,
+        "height": 0.4
+      }
+    },
+    "q1.q1_trunk": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A thick tree trunk",
+      "author": "W.carter",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_tree_trunk.",
+      "crop": {
+        "left": 0,
+        "top": 0.358,
+        "width": 1,
+        "height": 0.283
+      }
+    },
+    "q2": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_bark_brown.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Tree_bark_brown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rough tree bark",
+      "author": "Cs268",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của tray.tray_bark.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.125,
+        "width": 0.75,
+        "height": 0.75
+      }
+    },
+    "q3": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "26302b91-645c-43bf-9c63-04cbb6cdceee",
+      "source_url": "https://www.flickr.com/photos/11211909@N00/51989672334",
+      "file_url": "https://live.staticflickr.com/65535/51989672334_b01784a4fe_b.jpg",
+      "title": "Mango tree",
+      "author": "corsi photo",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.219,
+        "width": 1,
+        "height": 0.562
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của thoi-tiet-va-cac-mua/mua-mua-va-mua-kho reward.mango_card."
+    },
+    "q4": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q4.q4_trunk": {
+      "same_as": "learn.explore.explore_tree_trunk"
+    },
+    "q4.q4_leaves": {
+      "same_as": "q4.q4_green",
+      "lesson": "sinh-vat-song-o-dau/dang-song-da-chet-chua-tung-song"
+    },
+    "q4.q4_roots": {
+      "same_as": "learn.explore.explore_roots"
+    },
+    "q5": {
+      "same_as": "q6",
+      "lesson": "goi-ten-va-nhom-dong-vat/dong-vat-co-vu"
+    },
+    "q5.q5_young": {
+      "same_as": "q5.q5_seedlings",
+      "lesson": "sinh-vat-song-o-dau/vat-song-hay-khong-song"
+    },
+    "q5.q5_tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa at Plage de l'Anse de Nogent (1)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung choice_3 của learn.explore.explore_tree.",
+      "crop": {
+        "left": 0.175,
+        "top": 0.3,
+        "width": 0.649,
+        "height": 0.4
+      }
+    },
+    "q5.q5_lotus": {
+      "same_as": "w1.w1_lotus",
+      "lesson": "goi-ten-va-nhom-dong-vat/con-vat-nuoi-trong-nha"
+    },
+    "q6": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa at Plage de l'Anse de Nogent (1)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung question của learn.explore.explore_tree.",
+      "crop": {
+        "left": 0.175,
+        "top": 0.125,
+        "width": 0.649,
+        "height": 0.75
+      }
+    },
+    "vocab.tree": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_(1).jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Terminalia_catappa_at_Plage_de_l%27Anse_de_Nogent_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Terminalia catappa at Plage de l'Anse de Nogent (1)",
+      "author": "Tournasol7",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_tree.",
+      "crop": {
+        "left": 0.175,
+        "top": 0.25,
+        "width": 0.649,
+        "height": 0.5
+      }
+    },
+    "vocab.tree_trunk": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "A thick tree trunk",
+      "author": "W.carter",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Trunk_and_top_of_a_bare_tree_in_Gullmarsskogen.jpg",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của learn.explore.explore_tree_trunk.",
+      "crop": {
+        "left": 0,
+        "top": 0.323,
+        "width": 1,
+        "height": 0.353
+      }
+    },
+    "vocab.branch": {
+      "source": "Openverse/Flickr",
+      "openverse_id": "26302b91-645c-43bf-9c63-04cbb6cdceee",
+      "source_url": "https://www.flickr.com/photos/11211909@N00/51989672334",
+      "file_url": "https://live.staticflickr.com/65535/51989672334_b01784a4fe_b.jpg",
+      "title": "Mango tree",
+      "author": "corsi photo",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "crop": {
+        "left": 0,
+        "top": 0.312,
+        "width": 1,
+        "height": 0.375
+      },
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của thoi-tiet-va-cac-mua/mua-mua-va-mua-kho reward.mango_card."
+    },
+    "vocab.bark": {
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tree_bark_brown.jpg",
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Tree_bark_brown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "title": "Rough tree bark",
+      "author": "Cs268",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Designer (agent) 18/11, SK-051: bản cắt khung vocab của tray.tray_bark.",
+      "crop": {
+        "left": 0.125,
+        "top": 0.25,
+        "width": 0.75,
+        "height": 0.5
+      }
+    }
+  }
+}

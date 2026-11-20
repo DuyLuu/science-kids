@@ -7,8 +7,8 @@ import Testing
 /// year) and the 0–3 stars of a topic (Duy 10/11: the mean of its lessons' stars, rounded down).
 @Suite struct JourneySegmentTests {
     /// The real syllabus: Discoverer 1–5 (new topics), 6–11 (Year 3), 12–17 (Year 4); Explorer
-    /// 1 (Year 1), 2–3 (Year 2), 4–5 (new), 6–8 (Year 1), 9–12 (Year 2); Scientist 1–3 (new), 4–9
-    /// (Year 5), 10–16 (Year 6).
+    /// 1 (Year 1), 2–3 (Year 2), 4–5 (new), 6–7 (Year 1), 8 (Year 2), 9–10 (new); Scientist 1–3
+    /// (new), 4–9 (Year 5), 10–16 (Year 6).
     @Test func stagesOfTheSyllabus() throws {
         let syllabus = try JourneyTests.syllabus()
         func stages(_ group: Topic.AgeGroup) -> [JourneySegment] {
@@ -23,8 +23,12 @@ import Testing
         // Duy 14/11: Explorer #2–#3 are Year 2 topics moved up, so the years alternate. SK-048
         // (Duy 16/11): the new topic #4 has no year and is a stage of its own: five stages. SK-050
         // (Duy 17/11): the new #5 "Thời tiết và các mùa" joins it, the two Oak season topics are gone.
-        #expect(explorer.map(\.stopRange) == [0..<1, 1..<3, 3..<5, 5..<8, 8..<12])
-        #expect(explorer.map(\.oakYear) == [1, 2, nil, 1, 2])
+        // SK-051 (Duy 18/11): "Trồng cây" merges into #7, the last stage has #9–#11. SK-057 (Duy
+        // 19/11, stages kept by Oak year, option A): "Lớn lên" (Year 2) alone at #8, the three new
+        // Earth and sky topics #9–#11: six stages. SK-061 (Duy 20/11): "Nước quanh em" goes, the last
+        // stage is #9–#10.
+        #expect(explorer.map(\.stopRange) == [0..<1, 1..<3, 3..<5, 5..<7, 7..<8, 8..<10])
+        #expect(explorer.map(\.oakYear) == [1, 2, nil, 1, 2, nil])
         let scientist = stages(.scientist)
         #expect(scientist.map(\.stopRange) == [0..<3, 3..<9, 9..<16])
         #expect(scientist.map(\.oakYear) == [nil, 5, 6])

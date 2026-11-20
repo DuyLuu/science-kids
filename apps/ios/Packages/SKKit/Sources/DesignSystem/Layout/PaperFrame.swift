@@ -35,6 +35,7 @@ public struct PaperFrame<Content: View>: View {
                     framedContent
                 }
                 .scrollIndicators(.hidden)
+                .hidingBottomScrollEdgeEffect()
                 .safeAreaInset(edge: .top, spacing: 0) {
                     // A strip of điệp under the status bar (a background reaches into the safe
                     // area), so scrolled content passes under paper, not behind the clock.
@@ -63,6 +64,21 @@ public struct PaperFrame<Content: View>: View {
 }
 
 extension View {
+    /// SK-060 (designer 20/11): iOS 26 blurs a scroll view's bottom edge under a `safeAreaInset`;
+    /// style E has no blur (content slides under solid paper). The API exists from the iOS 26
+    /// SDK (Swift 6.2) on; built with an older SDK (Xcode 16.3) there is nothing to hide.
+    @ViewBuilder func hidingBottomScrollEdgeEffect() -> some View {
+        #if compiler(>=6.2)
+        if #available(iOS 26, *) {
+            scrollEdgeEffectHidden(true, for: .bottom)
+        } else {
+            self
+        }
+        #else
+        self
+        #endif
+    }
+
     /// A bar pinned above or below a `PaperFrame` (the main button, a result sheet, SK-013): as wide
     /// as the paper frame and centred in regular width, so it lines up with the content; the whole
     /// width in compact.

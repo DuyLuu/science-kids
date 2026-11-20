@@ -12,7 +12,7 @@ Designer · 10/11/2026 · Nguồn: góp ý của Duy 10/11 ("phần road map x�
 | `Discoverer-Home-Roadmap-B.dc.html` | 390×844, cuộn được | Phương án B · đường mòn sát trái |
 | `Discoverer-Home-Roadmap-Full.dc.html` | 390×3000 | A, cả trang cuộn, 17 chủ đề |
 | `Discoverer-Home-Roadmap-B-Full.dc.html` | 390×2286 | B, cả trang cuộn |
-| `Topic-Icons.dc.html` | 1440×2050 | 45 icon chủ đề, 6 trạng thái chặng, phương án màu triện |
+| `Topic-Icons.dc.html` | 1440×2050 | 43 icon chủ đề, 6 trạng thái chặng, phương án màu triện |
 
 Tình huống vẽ trên artboard (khớp nội dung thật hôm nay): chủ đề 1 Bề mặt Trái Đất đang học 3/5 (thẻ Học tiếp, bài 4 Núi lửa), chủ đề 2 Khủng long đã xong 5/5, chủ đề 9 Ăn uống lành mạnh chưa học 0/2 bài đã soạn, 14 chủ đề còn lại "Sắp có".
 
@@ -26,7 +26,7 @@ Cần thêm:
 
 1. **Năm Oak của chủ đề** để chia chặng: `Syllabus.TopicEntry.source.year` (`null` với chủ đề `new-…`). Đề xuất `JourneyTopic.oakYear: Int?`; chủ đề chỉ có trong nội dung (không có trong danh mục) lấy `nil`.
 2. **Sao của chủ đề** (chỉ để hiện, không phải luật mới ở server): lấy từ `lessonStates` các bài `.done(stars:)`. Đề xuất: số sao = làm tròn xuống trung bình sao các bài đã soạn, 1–3 (chờ Duy, mục 13).
-3. **Chặng** (tính trong app, thuần, dễ test): đi theo thứ tự hành trình, gom các chủ đề liền nhau có cùng `oakYear` (mọi `nil` liền nhau là một chặng). Đánh số 1…n. Mỗi chặng biết `doneCount` (số chủ đề `state == .done`) và tổng số chủ đề. Discoverer ra 3 chặng: 1–5 (chủ đề mới), 6–11 (Year 3), 12–17 (Year 4). Explorer (từ 17/11, SK-050) ra 5 chặng: 1 (Year 1), 2–3 (Year 2), 4–5 (chủ đề mới), 6–8 (Year 1), 9–12 (Year 2); `stopRange` `[0..<1, 1..<3, 3..<5, 5..<8, 8..<12]`. Scientist: 1–3 (mới), 4–9 (Year 5), 10–16 (Year 6).
+3. **Chặng** (tính trong app, thuần, dễ test): đi theo thứ tự hành trình, gom các chủ đề liền nhau có cùng `oakYear` (mọi `nil` liền nhau là một chặng). Đánh số 1…n. Mỗi chặng biết `doneCount` (số chủ đề `state == .done`) và tổng số chủ đề. Discoverer ra 3 chặng: 1–5 (chủ đề mới), 6–11 (Year 3), 12–17 (Year 4). Explorer (từ 19/11, SK-057; SK-061 bỏ *Nước quanh em*) ra 6 chặng: 1 (Year 1), 2–3 (Year 2), 4–5 (chủ đề mới), 6–7 (Year 1), 8 (Year 2, chỉ *Lớn lên*), 9–10 (chủ đề mới: *Núi, sông và biển*, *Bầu trời ngày và đêm*); `stopRange` `[0..<1, 1..<3, 3..<5, 5..<7, 7..<8, 8..<10]`, `oakYear` `[1, 2, nil, 1, 2, nil]`. Chặng một chủ đề đã có từ trước (chặng 1), không cần vẽ khác; cột mốc chặng 6 không có năm nên ghi "0/2 xong". SK-057 giữ luật chia theo năm Oak (phương án A ở ticket); xét lại cả ba nhóm khi Duy chốt lộ trình Discoverer, Scientist (gắn với mục 13 câu 4). Scientist: 1–3 (mới), 4–9 (Year 5), 10–16 (Year 6).
 
 ## 3. Trạng thái một chặng
 
@@ -111,7 +111,7 @@ B gọn (vùng bản đồ khoảng 1720 pt cho 17 chủ đề, A khoảng 2430)
 
 ## 8. Icon chủ đề
 
-**File.** `design/icons/topics/<key>.svg`, key theo `content/syllabus.json`. Khung 64×64, chỉ dùng `path`, `circle`, `ellipse`, `rect`, `g fill`, `transform` (rotate, translate), `fill-rule="evenodd"`. Không filter, không `opacity`, không text, không gradient, không clipPath, không `use`, không stroke, nên CoreSVG của Xcode và trình nhập VectorDrawable của Android đều đọc được. Mỗi file 2–4 màu giấy cộng chi tiết nhỏ (mắt, khe). Ba ngoại lệ có chủ đích: khối băng của `introduction-to-states-of-matter-and-changing-states` là 3 sắc của một mảnh; mắt và vân là chi tiết. `new-habitats-around-the-world` ghép hai nơi sống nên có 6 màu giấy (mặt trời, xương rồng, biển, đồi cát, tảng băng, chim cánh cụt); mặt trước tảng băng, vân cát, mỏ, chân, mắt là chi tiết. `new-weather-and-seasons` có 4 màu giấy (vàng hoè cho mặt trời và lá, mây, cành nâu, hoa đào hồng); mây là 2 sắc của một mảnh (`#E2D4B4` trên, `#D7C8A5` lớp dưới lệch xuống); nhuỵ hoa, gân lá là chi tiết.
+**File.** `design/icons/topics/<key>.svg`, key theo `content/syllabus.json`. Khung 64×64, chỉ dùng `path`, `circle`, `ellipse`, `rect`, `g fill`, `transform` (rotate, translate), `fill-rule="evenodd"`. Không filter, không `opacity`, không text, không gradient, không clipPath, không `use`, không stroke, nên CoreSVG của Xcode và trình nhập VectorDrawable của Android đều đọc được. Mỗi file 2–4 màu giấy cộng chi tiết nhỏ (mắt, khe). Các ngoại lệ và ghi chú màu có chủ đích: khối băng của `introduction-to-states-of-matter-and-changing-states` là 3 sắc của một mảnh; mắt và vân là chi tiết. `new-habitats-around-the-world` ghép hai nơi sống nên có 6 màu giấy (mặt trời, xương rồng, biển, đồi cát, tảng băng, chim cánh cụt); mặt trước tảng băng, vân cát, mỏ, chân, mắt là chi tiết. `new-weather-and-seasons` có 4 màu giấy (vàng hoè cho mặt trời và lá, mây, cành nâu, hoa đào hồng); mây là 2 sắc của một mảnh (`#E2D4B4` trên, `#D7C8A5` lớp dưới lệch xuống); nhuỵ hoa, gân lá là chi tiết. `new-mountains-rivers-and-seas` có 4 màu giấy (núi gỉ đồng 2 sắc `#3B6E6A` mặt sáng / `#2F5B57` mặt khuất, đồng lúa vàng hoè, sông và biển chàm); luống lúa `#B97F16`, bọt sóng giấy sáng, thuyền (thân nâu đất, buồm đỏ son) là chi tiết. `new-sky-day-and-night` có 5 màu giấy vì ghép ngày và đêm (trời ngày `#CFDCD8`, trời đêm chàm, Mặt Trời và sao vàng hoè, trăng `#F0C873`, đồi gỉ đồng); hai nửa trời là hai mảnh tách nhau 2 pt.
 
 Màu ngoài bảng token (màu tự nhiên dịu, trộn từ token): `#D98A76` hồng (não, ruột, hoa đào; đỏ son 45% + giấy 55%), `#CFDCD8` băng/thuỷ tinh (giấy 70% + gỉ đồng 30%), `#9FBDB8`, `#7EA39E` (hai mặt khối băng; `#CFDCD8` và `#9FBDB8` cũng là mặt trên và mặt trước tảng băng của `new-habitats-around-the-world`), `#D9A066` da tay (đã có trên canvas: quả trứng), `#D7C8A5`, `#3D352B`, `#A26E28` (mặt khuất của đá và khối gỗ).
 
@@ -142,7 +142,7 @@ Màu ngoài bảng token (màu tự nhiên dịu, trộn từ token): `#D98A76` 
 
 Về sau (GĐ 2) có thể chuyển icon vào content pack (`topic.icon`), nhưng hôm nay key danh mục đủ để tra, không cần đổi schema.
 
-**Danh sách 45 icon** (đã vẽ đủ cả ba nhóm; 16/11 thêm `new-habitats-around-the-world` cho SK-048; 17/11 SK-050 thêm `new-weather-and-seasons`, bỏ hai icon `seasonal-changes-*`, file cũ chuyển sang `design/icons/topics/_retired/`):
+**Danh sách 43 icon** (đã vẽ đủ cả ba nhóm; 16/11 thêm `new-habitats-around-the-world` cho SK-048; 17/11 SK-050 thêm `new-weather-and-seasons`, bỏ hai icon `seasonal-changes-*`, file cũ chuyển sang `design/icons/topics/_retired/`; 18/11 SK-051 bỏ `growing-plants` (chủ đề gộp vào #7 *Cây quanh em*), file chuyển sang `_retired/`; 19/11 SK-057 bỏ `everyday-materials`, `uses-of-everyday-materials`, `healthy-me` (file chuyển sang `_retired/`, không nhóm nào khác dùng), thêm `new-mountains-rivers-and-seas`, `new-water-around-us`, `new-sky-day-and-night`; *Lớn lên* thành Explorer #8; 19/11 SK-061 bỏ `new-water-around-us` (Duy: nước để Discoverer đào sâu), file chuyển sang `_retired/`, *Bầu trời ngày và đêm* thành Explorer #10):
 
 **Discoverer** (17)
 
@@ -166,7 +166,7 @@ Về sau (GĐ 2) có thể chuyển icon vào content pack (`topic.icon`), nhưn
 | 16 | `living-things-and-the-environment` | Sinh vật và môi trường | đồi, sông, cây |
 | 17 | `more-about-food-chains` | Chuỗi thức ăn nâng cao | cá lớn đuổi cá nhỏ |
 
-**Explorer** (12, thứ tự theo `content/syllabus.json`)
+**Explorer** (10, thứ tự theo `content/syllabus.json`)
 
 | # | key = tên file | Chủ đề | Hình |
 | --- | --- | --- | --- |
@@ -176,12 +176,10 @@ Về sau (GĐ 2) có thể chuyển icon vào content pack (`topic.icon`), nhưn
 | 4 | `new-habitats-around-the-world` | Những nơi sống trên Trái Đất | nơi lạnh, nơi nóng: chim cánh cụt trên tảng băng giữa biển, xương rồng trên đồi cát dưới mặt trời (SK-048; không bản đồ, không quả địa cầu) |
 | 5 | `new-weather-and-seasons` | Thời tiết và các mùa | nắng sau mây, cành đào nở hoa, một chiếc lá vàng rơi (SK-050; khác `new-weather`: không mây giông, sét, mưa) |
 | 6 | `human-body-parts` | Cơ thể của em | bàn tay |
-| 7 | `identifying-plants-and-their-basic-parts` | Cây quanh em | cây ăn quả |
-| 8 | `everyday-materials` | Vật liệu quanh em | khối gỗ và lon kim loại |
-| 9 | `uses-of-everyday-materials` | Vật liệu dùng làm gì? | ghế gỗ có nệm |
-| 10 | `growing-plants` | Trồng cây | hạt nảy mầm trong đất, giọt nước |
-| 11 | `new-life` | Sự sống mới | tổ chim, trứng, chim non |
-| 12 | `healthy-me` | Em khoẻ mạnh | răng và bàn chải |
+| 7 | `identifying-plants-and-their-basic-parts` | Cây quanh em (Plants around us; từ SK-051 gộp cả *Trồng cây*) | cây ăn quả |
+| 8 | `new-life` | Lớn lên (Life cycles; từ SK-053, tên cũ *Sự sống mới*; #8 từ SK-057) | tổ chim, trứng, chim non (giữ icon cũ, hợp tên mới) |
+| 9 | `new-mountains-rivers-and-seas` | Núi, sông và biển (Mountains, rivers and seas) | hai đỉnh núi nhọn, sông uốn qua đồng lúa vàng ra biển, thuyền buồm đỏ (SK-057; khác `new-earth-surface`: không núi lửa; khác `living-things-and-the-environment`: núi nhọn chứ không đồi tròn, không cây, không mặt trời; không bản đồ, không bờ biển thật) |
+| 10 | `new-sky-day-and-night` | Bầu trời ngày và đêm (The sky by day and night) | bầu trời tròn cắt đôi: nửa ngày xanh nhạt có Mặt Trời, nửa đêm chàm có trăng khuyết và sao, đồi phía dưới (SK-057; khác `earth-sun-and-moon`: không quả địa cầu, nhìn từ mặt đất lên) |
 
 **Scientist** (16)
 

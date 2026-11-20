@@ -36,8 +36,10 @@ final class AudioUITests: XCTestCase {
         let stats: Stats
 
         var description: String {
-            "speaking \(speaking ?? "-"), sounded \(stats.sounded.suffix(5)), finished \(stats.finished.suffix(5)), "
-                + "failed \(stats.failed), autoplayed \(stats.autoplayed.suffix(3)), skipped \(stats.autoplaySkipped), maxPlaying \(stats.maxPlaying)"
+            // SK-060 finding 6: `requested` and `interrupted` tell a dropped tap (requested unchanged)
+            // from a voice stopped before it sounded (the id in `interrupted`).
+            "speaking \(speaking ?? "-"), requested \(stats.requested), sounded \(stats.sounded.suffix(5)), finished \(stats.finished.suffix(5)), "
+                + "interrupted \(stats.interrupted.suffix(5)), failed \(stats.failed), autoplayed \(stats.autoplayed.suffix(3)), skipped \(stats.autoplaySkipped), maxPlaying \(stats.maxPlaying)"
         }
     }
 
@@ -73,7 +75,7 @@ final class AudioUITests: XCTestCase {
         let app = XCUIApplication()
         var arguments = ["-AppleLanguages", "(vi)", "-AppleLocale", "vi_VN", "-SKReduceMotion", "YES", "-SKAudioProbe", "YES", "-SKSyncOff", "YES"]
         if reset { arguments += ["-SKResetProfile", "YES"] }
-        app.launchArguments = arguments + extra
+        app.launchArguments = arguments + PlayDrag.noHint + extra
         app.launch()
         return app
     }
@@ -126,7 +128,11 @@ final class AudioUITests: XCTestCase {
 
     private func tap(_ app: XCUIApplication, _ identifier: String, file: StaticString = #filePath, line: UInt = #line) {
         let target = app.buttons[identifier].firstMatch
-        XCTAssertTrue(target.waitForExistence(timeout: 5), "no button \(identifier)", file: file, line: line)
+        guard target.waitForExistence(timeout: 5) else {
+            let shown = app.buttons.allElementsBoundByIndex.map { "\($0.identifier)『\($0.label)』" }
+            XCTFail("no button \(identifier); buttons: \(shown)", file: file, line: line)
+            return
+        }
         reveal(app, target)
         target.tap()
     }
@@ -135,19 +141,51 @@ final class AudioUITests: XCTestCase {
     private var words: [String] = []
 
     /// Taps a listen button and waits until its utterance sounds.
-    private func listen(_ app: XCUIApplication, _ id: String, file: StaticString = #filePath, line: UInt = #line) {
+    /// `button`: the speaker's identifier when it is not `listen.<id>`. Chơi's bubble speaker is
+    /// `lesson.explorer.listen`; `lesson.play.message` is the bubble itself (SK-060, app finding 5).
+    private func listen(_ app: XCUIApplication, _ id: String, button: String? = nil, file: StaticString = #filePath, line: UInt = #line) {
         let before = probe(app).stats.sounded.count
-        tap(app, "listen.\(id)", file: file, line: line)
+        tap(app, button ?? "listen.\(id)", file: file, line: line)
         waitProbe(app, "listen.\(id) did not sound", file: file, line: line) { $0.stats.sounded.count > before && $0.stats.sounded.last == id }
         listened.append(id)
     }
 
-    /// Every listen button on screen now, top to bottom.
-    private func listenToAll(_ app: XCUIApplication, file: StaticString = #filePath, line: UInt = #line) {
+    /// Every listen button on screen now, top to bottom (the "VI" second-voice buttons aside).
+    private func listenToAll(_ app: XCUIApplication, required: Bool = true, file: StaticString = #filePath, line: UInt = #line) {
         let ids = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listen."))
             .allElementsBoundByIndex.map { String($0.identifier.dropFirst("listen.".count)) }
-        XCTAssertFalse(ids.isEmpty, "no listen button here", file: file, line: line)
+            .filter { !$0.hasPrefix("vi.") }
+        if required { XCTAssertFalse(ids.isEmpty, "no listen button here", file: file, line: line) }
         for id in ids { listen(app, id, file: file, line: line) }
+    }
+
+    /// SK-060, A2 (SK-043/044): a wrong try (a tap answers; multi choice: every card chosen says
+    /// its name, then "Xong"), whose word and feedback play as `answer.<key>.1` and replay on the
+    /// slip (`retry.<key>`); then the right answer (`answer.<key>.2`) and the explanation's speaker.
+    private func answerAndListen(_ app: XCUIApplication, _ question: LessonFixture.Question, hintOpen: Bool = false, file: StaticString = #filePath, line: UInt = #line) {
+        let key = question.key
+        if question.format == "multi_choice" {
+            let all = keys(app, prefix: "lesson.choice.")
+            for option in all { say(app, button: "lesson.choice.\(option)", as: "word.\(option)", file: file, line: line) }
+            for option in all where !question.right.contains(option) { tap(app, "lesson.choice.\(option)", file: file, line: line) }
+            say(app, button: "lesson.check", as: "answer.\(key).1", file: file, line: line)
+        } else if question.format == "true_false" {
+            // One try for true/false (`rules.json` max_tries_by_format): the right tap says itself.
+            say(app, button: A2Lesson.answerID(question.format, question.right[0]), as: "answer.\(key).1", file: file, line: line)
+        } else {
+            say(app, button: A2Lesson.answerID(question.format, question.wrongs[0][0]), as: "answer.\(key).1", file: file, line: line)
+            if hintOpen {
+                // SK-047 `h-sc-open`: with the hint open the slip shows only an option's `feedback`.
+                if element(app, "lesson.hint").waitForExistence(timeout: 3) { listen(app, "retry.\(key)", file: file, line: line) }
+            } else {
+                XCTAssertTrue(element(app, "lesson.hint").waitForExistence(timeout: 10), "\(key): no slip after the wrong try", file: file, line: line)
+                listen(app, "retry.\(key)", file: file, line: line)
+            }
+            say(app, button: A2Lesson.answerID(question.format, question.right[0]), as: "answer.\(key).2", file: file, line: line)
+        }
+        A2Lesson.waitResult(app, key, file: file, line: line)
+        listen(app, "explanation.\(key).correct", file: file, line: line)
+        A2Lesson.next(app, file: file, line: line)
     }
 
     /// Taps a word (answer, food, group, new word) and waits until it says itself.
@@ -220,102 +258,79 @@ final class AudioUITests: XCTestCase {
         // Khởi động opens and says its question by itself.
         waitProbe(app, "w1 did not play by itself") { $0.stats.autoplayed.contains("question.w1") }
 
-        // Khởi động 1 (fill the blank, a tap answers): wrong → hint, then right → explanation.
+        // Khởi động 1 (fill the blank, a tap answers): wrong → the word, then the feedback and the
+        // hint in one utterance (SK-043/044: `answer.<key>.<try>`), the slip's speaker says them
+        // again (`retry.<key>`); then right → the word and the explanation.
         let w1 = fixture.warmup[0]
         listenToAll(app)
-        say(app, button: "lesson.word.\(w1.wrongs[0][0])", as: "word.\(w1.wrongs[0][0])")
-        listen(app, "hint.w1")
-        try shot("\(voice)-08-warmup-hint")
-        say(app, button: "lesson.word.\(w1.right[0])", as: "word.\(w1.right[0])")
-        listen(app, "explanation.w1.correct")
-        try shot("\(voice)-08-warmup-result")
-        tap(app, "lesson.result.next")
+        answerAndListen(app, w1)
 
-        // Khởi động 2 (true/false with the app's Đúng · Sai: no clip, they are not content).
+        // Khởi động 2 (true/false with the app's nod and shake: no name, the line only).
         let w2 = fixture.warmup[1]
         waitProbe(app, "w2 did not play by itself") { $0.stats.autoplayed.contains("question.w2") }
         listenToAll(app)
-        tap(app, "lesson.tf.\(w2.wrongs[0][0])")
-        listen(app, "hint.w2")
-        tap(app, "lesson.tf.\(w2.right[0])")
-        listen(app, "explanation.w2.correct")
-        tap(app, "lesson.result.next")
+        answerAndListen(app, w2)
 
-        // Học: instruction, goal, every group (its name, then its sentence and foods), every new word.
-        XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5))
-        waitProbe(app, "Học instruction did not play by itself") { $0.stats.autoplayed.contains("learn.prompt") }
+        // Học (SK-043): a picture book; each page says its group (name, sentence, examples) by
+        // itself and on its speaker; the last page has the new words, each says itself.
+        XCTAssertTrue(element(app, "lesson.learn.page").waitForExistence(timeout: 5))
         try shot("\(voice)-09-learn")
-        listenToAll(app)
         for group in fixture.exploreGroups {
-            say(app, button: "lesson.group.\(group)", as: "word.\(group)")
-            listen(app, "learn.group.\(group)")
+            XCTAssertTrue(element(app, "lesson.learn.group.\(group)").waitForExistence(timeout: 5), "no Học page for \(group)")
+            waitProbe(app, "Học page \(group) did not play by itself") { $0.stats.autoplayed.contains("learn.explore.\(group)") }
+            listen(app, "learn.explore.\(group)")
+            tap(app, "lesson.explorer.next")
         }
         for key in keys(app, prefix: "lesson.word_list.") {
             say(app, button: "lesson.word_list.\(key)", as: "word.\(key)")
             newWords.append(key)
         }
         try shot("\(voice)-09-learn-words")
-        tap(app, "lesson.learn.next")
+        tap(app, "lesson.explorer.next")
 
         // Chơi: the mascot's message by itself and by its button; every food on the shelf and on the tray.
         XCTAssertTrue(element(app, "lesson.play.message").waitForExistence(timeout: 5))
         waitProbe(app, "Chơi message did not play by itself") { $0.stats.autoplayed.contains("play.message") }
-        listen(app, "play.message")
+        listen(app, "play.message", button: "lesson.explorer.listen")
+        // SK-059: a tap on a shelf picture opens it big and says its name; the drag picks.
         for key in keys(app, prefix: "lesson.shelf.") {
-            say(app, button: "lesson.shelf.\(key)", as: "word.\(key)")
+            say(app, button: "lesson.shelf.\(key)", as: "play.name.\(key)")
+            tap(app, "lesson.play.zoom.close")
         }
-        listen(app, "play.message") // the tray is full now: another message
-        try shot("\(voice)-10-play-full")
-        for key in keys(app, prefix: "lesson.tray.") {
-            say(app, button: "lesson.tray.\(key)", as: "word.\(key)")
-        }
-        for food in fixture.balancedTray { say(app, button: "lesson.shelf.\(food)", as: "word.\(food)") }
-        listen(app, "play.message")
+        for food in fixture.balancedTray { PlayDrag.pick(app, food) }
+        listen(app, "play.message", button: "lesson.explorer.listen")
+        try shot("\(voice)-10-play-balanced")
         tap(app, "lesson.play.done")
 
-        // Quiz: the question by itself and by its button, the hint, every answer word, the explanation.
+        // Quiz: the question by itself and by its button, "Gợi ý" (SK-047: the button says the hint), a
+        // wrong try and the right one (multi choice: every card says its name as it is chosen), the
+        // explanation.
         for question in fixture.quiz {
-            XCTAssertTrue(element(app, "lesson.quiz.counter").waitForExistence(timeout: 5))
+            A2Lesson.waitQuiz(app)
             waitProbe(app, "\(question.key) did not play by itself") { $0.stats.autoplayed.contains("question.\(question.key)") }
             listen(app, "question.\(question.key)")
-            tap(app, "lesson.hint_button")
-            listen(app, "hint.\(question.key)")
-            switch question.format {
-            case "fill_blank_bank":
-                for key in keys(app, prefix: "lesson.word.") where !question.right.contains(key) {
-                    say(app, button: "lesson.word.\(key)", as: "word.\(key)") // fills the blank
-                    say(app, button: "lesson.word.\(key)", as: "word.\(key)") // takes it out
-                }
-                for key in question.right { say(app, button: "lesson.word.\(key)", as: "word.\(key)") }
-            case "true_false":
-                // q6: the content's labels (Na đúng · Na chưa đúng) have clips.
-                for value in question.wrongs[0] + question.right {
-                    say(app, button: "lesson.tf.\(value)", as: "word.\(question.key).\(value)")
-                }
-            case "multi_choice":
-                let all = keys(app, prefix: "lesson.option.")
-                for key in all { say(app, button: "lesson.option.\(key)", as: "word.\(key)") }
-                for key in all where !question.right.contains(key) { say(app, button: "lesson.option.\(key)", as: "word.\(key)") }
-            default:
-                for key in keys(app, prefix: "lesson.option.") where !question.right.contains(key) {
-                    say(app, button: "lesson.option.\(key)", as: "word.\(key)")
-                }
-                for key in question.right { say(app, button: "lesson.option.\(key)", as: "word.\(key)") }
-            }
+            say(app, button: "lesson.hint.button", as: "hint.\(question.key)")
+            // SK-047 `h-sc-open`: the slip has no speaker of its own (the button said it); only the
+            // "VI" button in "Cả hai".
+            XCTAssertTrue(element(app, "lesson.hint.slip").waitForExistence(timeout: 5), "\(question.key): the hint slip did not open")
             if question.key == "q6" { try shot("\(voice)-12-quiz-myth") }
-            tap(app, "lesson.check")
-            XCTAssertEqual(element(app, "lesson.result.title").label, "Chính xác!", question.key)
-            listen(app, "explanation.\(question.key).correct")
+            answerAndListen(app, question, hintOpen: true)
             if question.key == "q5" { try shot("\(voice)-11-quiz-result") }
-            tap(app, "lesson.result.next")
         }
 
-        // Thưởng: nothing by itself; the card's name, then its back.
-        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 5))
+        // Tổng kết (SK-047): page 1 reads its key points by itself; every speaker on both pages.
+        XCTAssertTrue(element(app, "lesson.recap.key_point.1").waitForExistence(timeout: 10), "Tổng kết did not open")
+        waitProbe(app, "Tổng kết did not play by itself") { !$0.stats.autoplayed.filter { $0.hasPrefix("recap.") }.isEmpty }
+        listenToAll(app, required: false)
+        tap(app, "lesson.recap.next")
+        XCTAssertTrue(element(app, "lesson.recap.objective").waitForExistence(timeout: 5))
+        listenToAll(app, required: false)
+        tap(app, "lesson.recap.to_reward")
+
+        // Thưởng: nothing by itself; the card's speaker says its name and its fact.
+        XCTAssertTrue(element(app, "lesson.reward.title").waitForExistence(timeout: 10))
         listen(app, "reward.card")
-        tap(app, "lesson.reward.card")
-        listen(app, "reward.fact")
-        try shot("\(voice)-13-reward-fact")
+        try shot("\(voice)-13-reward")
 
         let final = probe(app)
         XCTAssertTrue(final.stats.failed.isEmpty, "clips that did not play: \(final.stats.failed)")
@@ -330,26 +345,32 @@ final class AudioUITests: XCTestCase {
         return final
     }
 
-    /// SK-025 criterion 4a: voice `both`. Khởi động 1 plays by itself, EN then VI for each string
-    /// (EN1 → VI1 → EN2 → VI2: "Pick the missing word", "Chọn từ còn thiếu", the sentence, "câu"),
-    /// then stops; nothing fails. Replaces `testBothPlaysEnglishThenStops` (SK-016: no VI clip yet,
-    /// so EN and then nothing).
+    /// SK-025 criterion 4a, as SK-042 changed it (Duy 13/11): voice `both` ("Cả hai") says English
+    /// by itself and on the main listen button ("Pick the missing word", then the sentence), then
+    /// stops; Vietnamese plays only on the small "VI" button next to it. Nothing fails, never two
+    /// voices at once.
     func testBothPlaysEnglishThenVietnamesePerString() throws {
         let app = try launch()
         createProfile(app, voice: "both")
         startLesson(app)
         try requirePack(app)
+        func languages(_ probe: Probe) -> [String] { probe.stats.heard.map { String($0.prefix(while: { $0 != ":" })) } }
         let done = waitProbe(app, timeout: 40, "w1 did not finish") { $0.stats.finished.contains("question.w1") }
         XCTAssertTrue(done.stats.failed.isEmpty, "\(done.stats.failed)")
-        XCTAssertEqual(done.stats.heard.map { String($0.prefix(while: { $0 != ":" })) }, ["en", "vi", "en", "vi"], "\(done.stats.heard)")
-        XCTAssertNil(done.speaking, "nothing after the last VI clip")
+        XCTAssertEqual(languages(done), ["en", "en"], "\(done.stats.heard)")
+        XCTAssertNil(done.speaking, "nothing after the last EN clip")
         XCTAssertEqual(done.stats.maxPlaying, 1)
         print("both w1 by itself: heard \(done.stats.heard), finished \(done.stats.finished), maxPlaying \(done.stats.maxPlaying)")
         listen(app, "question.w1")
         let again = waitProbe(app, timeout: 40, "w1 did not finish again") { $0.stats.finished.filter { $0 == "question.w1" }.count == 2 }
         XCTAssertTrue(again.stats.failed.isEmpty)
-        XCTAssertEqual(again.stats.heard.count, 8, "the listen button plays the same four clips: \(again.stats.heard)")
-        print("both w1 listen button: \(again)")
+        XCTAssertEqual(languages(again), ["en", "en", "en", "en"], "the listen button plays the same two EN clips: \(again.stats.heard)")
+        tap(app, "listen.vi.question.w1")
+        let vi = waitProbe(app, timeout: 40, "the VI button did not play") { $0.stats.heard.count >= 6 && $0.speaking == nil }
+        XCTAssertTrue(vi.stats.failed.isEmpty)
+        XCTAssertEqual(Array(languages(vi).suffix(2)), ["vi", "vi"], "the VI button plays the two VI clips: \(vi.stats.heard)")
+        XCTAssertEqual(vi.stats.maxPlaying, 1)
+        print("both w1 VI button: \(vi)")
     }
 
     /// SK-016 criterion 4: five foods tapped fast (each says its name): only the last plays to its
@@ -368,26 +389,25 @@ final class AudioUITests: XCTestCase {
         createProfile(app, voice: voice)
         startLesson(app)
         try requirePack(app)
-        tap(app, "lesson.word.\(fixture.warmup[0].right[0])")
-        tap(app, "lesson.result.next")
-        tap(app, "lesson.tf.\(fixture.warmup[1].right[0])")
-        tap(app, "lesson.result.next")
-        XCTAssertTrue(element(app, "lesson.learn.seen").waitForExistence(timeout: 5))
-        for group in fixture.exploreGroups.dropFirst() { tap(app, "lesson.group.\(group)") }
-        tap(app, "lesson.learn.next")
-        // Chơi: the eight foods of the shelf are on screen together; five of them, fast.
+        for question in fixture.warmup {
+            A2Lesson.answer(question, question.right, in: app)
+            A2Lesson.next(app)
+        }
+        A2Lesson.learn(app)
+        // Chơi: SK-059 a shelf tap opens a modal big view, so the fast taps go to the group chips
+        // (each says its group's name): every chip, fast.
         XCTAssertTrue(element(app, "lesson.play.message").waitForExistence(timeout: 5))
-        let foods = keys(app, prefix: "lesson.shelf.")
-        XCTAssertGreaterThanOrEqual(foods.count, 5)
-        let five = Array(foods.prefix(5))
-        for key in five { XCTAssertTrue(app.buttons["lesson.shelf.\(key)"].isHittable, key) }
-        let targets = five.map { app.buttons["lesson.shelf.\($0)"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)) }
+        let chips = keys(app, prefix: "lesson.meter.")
+        XCTAssertGreaterThanOrEqual(chips.count, 3)
+        let five = chips
+        for key in five { XCTAssertTrue(app.buttons["lesson.meter.\(key)"].isHittable, key) }
+        let targets = five.map { app.buttons["lesson.meter.\($0)"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)) }
         let before = probe(app)
         for target in targets { target.tap() }
-        let last = "word.\(five[4])"
+        let last = "play.group.\(five[five.count - 1])"
         let after = waitProbe(app, timeout: 10, "the last word did not finish") { $0.stats.finished.last == last && $0.speaking == nil }
         let newFinished = Array(after.stats.finished.dropFirst(before.stats.finished.count))
-        let earlier = Set(five.dropLast().map { "word.\($0)" })
+        let earlier = Set(five.dropLast().map { "play.group.\($0)" })
         XCTAssertTrue(newFinished.allSatisfy { !earlier.contains($0) }, "an earlier tap played to its end: \(newFinished)")
         XCTAssertEqual(after.stats.maxPlaying, 1, "two voices at once")
         XCTAssertTrue(after.stats.failed.isEmpty)
@@ -406,8 +426,8 @@ final class AudioUITests: XCTestCase {
         XCTAssertTrue(opened.stats.sounded.isEmpty, "something played by itself: \(opened)")
         XCTAssertTrue(opened.stats.autoplayed.isEmpty)
         listen(app, "question.w1")
-        tap(app, "lesson.word.\(fixture.warmup[0].right[0])")
-        tap(app, "lesson.result.next")
+        A2Lesson.answer(fixture.warmup[0], fixture.warmup[0].right, in: app)
+        A2Lesson.next(app)
         let w2 = waitProbe(app, "w2 autoplay not skipped") { $0.stats.autoplaySkipped.contains("question.w2") }
         XCTAssertTrue(w2.stats.autoplayed.isEmpty)
         listen(app, "question.w2")
